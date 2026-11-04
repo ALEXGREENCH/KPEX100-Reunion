@@ -265,7 +265,21 @@ function chooseRom(rom) {
   updateTransport();
 }
 
+function updateLibraryHint() {
+  const entries = catalog[libraryTab];
+  const available = entries.filter((entry) => entry.available).length;
+  $('libraryHint').textContent =
+    libraryTab === 'games'
+      ? available === entries.length && available > 0
+        ? 'Оригинальные SGS · GNEX'
+        : `Доступно ${available} из ${entries.length} · добавьте свои файлы`
+      : available > 0
+        ? 'Выберите ROM для холодного старта'
+        : 'Добавьте ROM для запуска прошивки';
+}
+
 function renderLibrary() {
+  updateLibraryHint();
   const query = $('librarySearch').value.trim().toLocaleLowerCase();
   const entries = catalog[libraryTab].filter((item) =>
     `${item.title} ${item.id}`.toLocaleLowerCase().includes(query),
@@ -335,8 +349,14 @@ function populateCatalog() {
   const games = catalog.games.filter((entry) => entry.available);
   const roms = catalog.firmwares.filter((entry) => entry.available);
   const gnexReady = roms.some((entry) => entry.id === 'kingston-2.12');
-  $('gamesCount').textContent = `${games.length} / ${catalog.games.length}`;
-  $('romsCount').textContent = `${roms.length} / ${catalog.firmwares.length}`;
+  $('gamesCount').textContent =
+    games.length === catalog.games.length
+      ? String(games.length)
+      : `${games.length} / ${catalog.games.length}`;
+  $('romsCount').textContent =
+    roms.length === catalog.firmwares.length
+      ? String(roms.length)
+      : `${roms.length} / ${catalog.firmwares.length}`;
   $('collectionCount').textContent = String(games.length + roms.length);
   $('setupHint').hidden = gnexReady && games.length > 0;
   $('assetStatus').textContent =
@@ -348,6 +368,10 @@ function populateCatalog() {
       gnexReady && games.length ? 'Откройте игру из библиотеки' : 'Kingston 2.12 + ваши SGS';
     $('nowPlaying').textContent =
       gnexReady && games.length ? 'Выберите игру' : 'Ваша коллекция — на вашем устройстве';
+    $('sourceLabel').textContent =
+      gnexReady && games.length
+        ? 'Оригинальный код. Маленький экран. Большое возвращение.'
+        : 'Добавьте свою коллекцию и запустите оригинальный код устройства.';
   }
   $('firmwareSelect').replaceChildren(
     ...roms.map((rom) => {
@@ -366,23 +390,25 @@ function populateCatalog() {
   if (!selectedRom?.available)
     selectedRom = roms.find((rom) => rom.id === 'kingston-2.12') || roms[0] || null;
   if (selectedRom) $('firmwareSelect').value = selectedRom.id;
+  const states = catalog.states.filter((state) => state.available);
+  $('quickStateHint').textContent = states.length
+    ? 'Быстрый запуск восстанавливает настоящее состояние прошивки. Поддержка аппаратуры экспериментальная.'
+    : 'Быстрый запуск появится после добавления проверенного файла .reunion-state. Поддержка аппаратуры экспериментальная.';
   $('quickStates').replaceChildren(
-    ...catalog.states
-      .filter((state) => state.available)
-      .map((state) => {
-        const button = document.createElement('button');
-        button.className = 'quick-state';
-        button.disabled = !roms.some((rom) => rom.id === state.romId);
-        button.title = button.disabled
-          ? 'Добавьте ROM Kingston 2.12 для этого состояния'
-          : state.title;
-        button.append(document.createTextNode(state.title));
-        const icon = document.createElement('span');
-        icon.textContent = '↗';
-        button.append(icon);
-        button.addEventListener('click', () => loadCheckpoint(state));
-        return button;
-      }),
+    ...states.map((state) => {
+      const button = document.createElement('button');
+      button.className = 'quick-state';
+      button.disabled = !roms.some((rom) => rom.id === state.romId);
+      button.title = button.disabled
+        ? 'Добавьте ROM Kingston 2.12 для этого состояния'
+        : state.title;
+      button.append(document.createTextNode(state.title));
+      const icon = document.createElement('span');
+      icon.textContent = '↗';
+      button.append(icon);
+      button.addEventListener('click', () => loadCheckpoint(state));
+      return button;
+    }),
   );
   renderLibrary();
   updateTransport();
@@ -939,10 +965,6 @@ document.querySelectorAll('[data-tab]').forEach((button) =>
     $('libraryList').setAttribute('aria-labelledby', button.id);
     $('librarySearch').value = '';
     $('librarySearch').placeholder = libraryTab === 'games' ? 'Найти игру…' : 'Найти прошивку…';
-    $('libraryHint').textContent =
-      libraryTab === 'games'
-        ? 'Оригинальный GNEX · Kingston 2.12'
-        : 'Выберите ROM для холодного старта';
     renderLibrary();
   }),
 );
@@ -1049,7 +1071,13 @@ const libraryReady = (async () => {
     }
   }
   populateCatalog();
-  log('Добавляйте свои ROM и SGS. Файлы и сохранения остаются в этом браузере.');
+  const gameCount = catalog.games.filter((entry) => entry.available).length;
+  const romCount = catalog.firmwares.filter((entry) => entry.available).length;
+  log(
+    gameCount || romCount
+      ? `Библиотека готова: ${gameCount} SGS и ${romCount} ROM.`
+      : 'Добавьте свои ROM и SGS, чтобы начать игру.',
+  );
 })().catch((error) => {
   $('libraryList').textContent = 'Не удалось загрузить каталог.';
   fail(error.message, 'Каталог недоступен');

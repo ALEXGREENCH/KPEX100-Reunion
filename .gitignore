@@ -13,11 +13,7 @@ dist/
 htmlcov/
 *.egg-info/
 local/
-# Original firmware, games, memory snapshots and Swerve stay local.
-web/data/firmware/
-web/data/games/
-web/data/states/
-web/engine/vendor/swerve/*.mod
+# Desktop runtime data is prepared from the shared, tracked web collection.
 desktop/data/firmware/
 desktop/data/games/
 desktop/data/states/
@@ -26,8 +22,6 @@ desktop/bin/
 desktop/*.exe
 validation/gameplay/
 validation/corpus/
-*.rom
-*.sgs
-*.SGS
-*.kps
-*.kps.gz
+research-input/
+research-work/
+repository-manifest.json

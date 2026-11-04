@@ -18,6 +18,10 @@ def main():
         help="Also verify imported ROM, games and optional firmware checkpoints",
     )
     args = parser.parse_args()
+    if not args.self_test or args.self_test_originals:
+        from kpex.assets import prepare_bundled_assets
+
+        prepare_bundled_assets()
     if args.self_test:
         from kpex.frozen_smoke import run
 

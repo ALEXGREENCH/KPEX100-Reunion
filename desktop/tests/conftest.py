@@ -25,6 +25,9 @@ def pytest_configure(config):
     )
     if not config.getoption("--with-originals"):
         return
+    from kpex.assets import prepare_bundled_assets
+
+    prepare_bundled_assets(ROOT)
     records = json.loads((ROOT / "data/manifest.json").read_text(encoding="utf-8"))
     required = [record for record in records if not record.get("optional")]
     problems = []

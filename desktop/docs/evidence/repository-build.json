@@ -53,12 +53,21 @@
     "pyinstaller": "6.22.3",
     "unicorn": "2.1.4",
     "toolchain": "LLVM-MinGW 20260616 (x86_64 UCRT)",
-    "smaf": "Built from the shared vendor source",
+    "smaf": "Built from shared vendor source",
     "date": "2026-11-05",
     "asset_free_tests": {
-      "passed": 32,
+      "passed": 35,
       "skipped": 66
     },
-    "stale_asset_cleanup_verified": true
+    "original_tests": {
+      "passed": 100,
+      "skipped": 1
+    },
+    "automatic_collection_preparation": {
+      "source": "web/",
+      "files": 16,
+      "verified": 16
+    },
+    "originals_in_default_package": true
   }
 }

@@ -82,13 +82,19 @@ The Swerve binary itself is not part of either project's source licence.
 
 ## Historical binary inputs
 
-`web/data/catalog.json` records the size and SHA-256 of each supported original
-file. Firmware, SGS, proprietary Swerve and native quick-start snapshots are
-excluded from this repository and from the Pages build. Snapshot RAM contains
-original firmware/game data and is treated the same way as those inputs.
+The repository and default Pages build include 9 firmware images, 38 SGS
+applications, 3 native quick-start snapshots and the original Swerve 2.1 module.
+These 51 historical files are preserved byte-for-byte. `web/data/catalog.json`
+records catalogue sizes, SHA-256 hashes and runtime profiles; the Swerve module
+has separate [archive provenance](doc/swerve-provenance.json). Snapshot RAM
+contains original firmware/game data. These materials retain their own
+provenance and are not relicensed under Reunion's MIT licence.
 
-Use the browser file importer or `python tools/assets.py import /local/path`
-to supply your own files locally. There is no automatic download of historical
-binaries. Original SDK installers, extracted SDK programs and manual PDFs are
-also excluded. Research documents retain URLs, hashes and derived findings.
-The original Swerve module has separate [archive provenance](doc/swerve-provenance.json).
+`python tools/assets.py verify` checks the collection. The browser importer and
+`python tools/assets.py import /local/path` can supply or restore local files.
+No additional historical binaries are downloaded automatically. The optional
+`npm run build:source-only` omits the collection from the site output; the default
+`npm run build` includes it.
+
+Original SDK installers, extracted SDK programs and manual PDFs are not bundled.
+Research documents retain their URLs, hashes and derived findings.

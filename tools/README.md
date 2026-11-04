@@ -11,8 +11,8 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 - `build.mjs` / `check-site.mjs`: create and verify the public GitHub Pages artifact.
 - `check-repo.py` / `check-doc-links.py`: check tracked files and local documentation links.
 - `assets.py`: verify original assets or import matching local files by SHA-256.
-- `package-source.py`: export Git-tracked source files as a deterministic ZIP without historical binaries.
+- `package-repo.py`: export the Git-tracked repository and verified collection as a deterministic ZIP.
 - `update-catalog.py`: apply explicit handset profiles and recorded gameplay evidence to catalogue labels.
 - `build-smaf.py` and `smaf-wrapper.cpp`: build the optional audio renderer.
 
-No original SDK, firmware or game binaries are included in these tools. The extraction tools never launch the installer or load native code. Existing extraction outputs are not overwritten.
+The shared original collection is in `web/data/`; SDK installers are external inputs. The extraction tools never launch the installer or load native code. Existing extraction outputs are not overwritten.

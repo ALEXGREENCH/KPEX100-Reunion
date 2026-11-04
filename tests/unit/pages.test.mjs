@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createStaticServer } from '../../tools/serve.mjs';
 import { isPublicWebFile } from '../../tools/public-files.mjs';
 
-test('Pages selection excludes original data and imported binary modules', () => {
+test('Runtime selection leaves original assets to the explicit verified catalogue', () => {
   for (const file of [
     'data/games/HELLFIRE.SGS',
     'data/firmware/Kingston-2.12.rom',

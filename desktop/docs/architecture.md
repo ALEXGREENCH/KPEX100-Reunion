@@ -115,8 +115,9 @@ Unicorn's generated-code returns. ASLR and NX remain enabled; operating-system
 settings are unchanged. See [PyInstaller bootloader documentation](https://pyinstaller.org/en/stable/bootloader-building.html)
 and [the upstream compatibility issue](https://github.com/pyinstaller/pyinstaller/issues/9352).
 The release build runs ARM in the frozen main and worker threads.
-With `-WithOriginals` it also checks all four SGS games and available checkpoints.
+The default build also checks all four SGS games and available checkpoints.
 
 Firmware, games, glyphs and artwork remain the property of their original
-rightsholders. Original data must be imported locally and is not included in this repository.
-The source licence does not cover these external historical files.
+rightsholders. The original collection is included in `web/`; the desktop launcher
+prepares its known subset locally by SHA-256 on first use. The source licence
+does not cover these historical files.

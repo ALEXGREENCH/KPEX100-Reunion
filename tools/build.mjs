@@ -1,14 +1,20 @@
 #!/usr/bin/env node
-/** Build a static, original-free GitHub Pages artifact, even after local asset imports. */
+/** Build a complete static GitHub Pages artifact, with an optional source-only mode. */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { isPublicWebFile, walkFiles } from './public-files.mjs';
+import { historicalAssets, verifyAsset } from './catalog-assets.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = path.join(root, 'web');
 const target = path.resolve(root, 'site');
+if (process.argv.slice(2).some((arg) => arg !== '--source-only'))
+  throw Error('Usage: node tools/build.mjs [--source-only]');
+const includeOriginals = !process.argv.includes('--source-only');
+const assets = includeOriginals ? historicalAssets(source) : [];
+for (const entry of assets) verifyAsset(source, entry);
 // Only this generated directory can be removed. Do not follow a junction/symlink.
 if (path.dirname(target) !== path.resolve(root) || path.basename(target) !== 'site')
   throw Error('Invalid build target');
@@ -22,9 +28,10 @@ function copy(from, name) {
   fs.copyFileSync(from, destination);
 }
 for (const file of walkFiles(source).filter(isPublicWebFile)) copy(path.join(source, file), file);
+for (const entry of assets) copy(path.join(source, entry.url), entry.url);
 fs.writeFileSync(
   path.join(target, 'data/availability.json'),
-  JSON.stringify({ version: 1, assets: [] }) + '\n',
+  JSON.stringify({ version: 1, assets: assets.map((entry) => entry.id) }) + '\n',
 );
 fs.writeFileSync(path.join(target, '.nojekyll'), '');
 // Serve the corresponding sources alongside redistributed runtime binaries.
@@ -33,6 +40,7 @@ for (const file of walkFiles(path.join(root, 'vendor')))
 for (const file of ['build-smaf.py', 'smaf-wrapper.cpp'])
   copy(path.join(root, 'tools', file), 'sources/tools/' + file);
 for (const file of ['LICENSE', 'THIRD_PARTY.md']) copy(path.join(root, file), 'licenses/' + file);
+copy(path.join(root, 'doc/swerve-provenance.json'), 'licenses/swerve-provenance.json');
 const sourceArchives = walkFiles(path.join(root, 'vendor/unicorn-sources'));
 fs.writeFileSync(
   path.join(target, 'licenses/index.html'),
@@ -49,7 +57,9 @@ Corresponding source: ${sourceArchives.map((name) => `<a href="../sources/vendor
 <a href="../sources/tools/build-smaf.py">build script</a>, <a href="../sources/tools/smaf-wrapper.cpp">wrapper</a>,
 <a href="../sources/files.json">source file index</a>.</li>
 <li>fflate 0.8.2 — <a href="../vendor/fflate-LICENSE.txt">MIT</a>.</li></ul>
-<p>No original firmware, SGS games, native quickstates, GNEX SDK installers, or Swerve binary are included.</p></html>\n`,
+<p>${includeOriginals ? 'This build includes the original firmware, SGS collection, native quickstates and Swerve module. Their original rights and provenance are separate from the Reunion MIT license.' : 'This optional source-only build contains no original firmware, SGS games, quickstates or Swerve module.'}
+<a href="../data/catalog.json">Original file sizes and SHA-256 catalogue</a> · <a href="swerve-provenance.json">Swerve provenance</a>.
+GNEX SDK installers and manuals are referenced in the repository documentation.</p></html>\n`,
 );
 fs.writeFileSync(
   path.join(target, 'sources/files.json'),
@@ -75,8 +85,8 @@ const files = walkFiles(target).map((name) => {
 });
 fs.writeFileSync(
   path.join(target, 'build-manifest.json'),
-  JSON.stringify({ schema: 1, historicalAssets: false, files }, null, 2) + '\n',
+  JSON.stringify({ schema: 1, historicalAssets: includeOriginals, files }, null, 2) + '\n',
 );
 console.log(
-  `Built site/ — ${files.length + 1} files, no historical assets. Preview: npm run preview`,
+  `Built site/ — ${files.length + 1} files, ${assets.length} verified original assets. Preview: npm run preview`,
 );

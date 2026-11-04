@@ -52,6 +52,10 @@ def main(argv=None):
     boot.add_argument("--png", type=Path)
     boot.add_argument("--report", type=Path)
     args = parser.parse_args(argv)
+    if args.command != "inspect":
+        from .assets import prepare_bundled_assets
+
+        prepare_bundled_assets()
     if args.command in (None, "gui"):
         from .app import main as gui
 

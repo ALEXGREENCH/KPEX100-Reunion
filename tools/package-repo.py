@@ -1,4 +1,4 @@
-"""Create a deterministic source ZIP from Git-tracked working files, without originals."""
+"""Create a deterministic repository ZIP from Git-tracked working files, including the verified collection."""
 
 from pathlib import Path
 import argparse
@@ -31,8 +31,6 @@ def main():
     ) as archive:
         for name in sorted(checker.tracked_files()):
             data = (ROOT / name).read_bytes()
-            if name == "web/data/availability.json":
-                data = b'{"version":1,"assets":[]}\n'
             info = zipfile.ZipInfo(
                 "KPEX100-Reunion/" + name, date_time=(2026, 11, 5, 0, 0, 0)
             )
@@ -47,13 +45,13 @@ def main():
                 }
             )
         info = zipfile.ZipInfo(
-            "KPEX100-Reunion/source-manifest.json", date_time=(2026, 11, 5, 0, 0, 0)
+            "KPEX100-Reunion/repository-manifest.json", date_time=(2026, 11, 5, 0, 0, 0)
         )
         info.compress_type = zipfile.ZIP_DEFLATED
         info.external_attr = 0o644 << 16
         archive.writestr(info, json.dumps(manifest, indent=2) + "\n")
     print(
-        f"Created {output.name}: {len(manifest)} source files, SHA-256 {hashlib.sha256(output.read_bytes()).hexdigest()}"
+        f"Created {output.name}: {len(manifest)} repository files, SHA-256 {hashlib.sha256(output.read_bytes()).hexdigest()}"
     )
 
 

@@ -1,10 +1,32 @@
-"""Check tracked source files for historical binaries and build/cache directories."""
+"""Check tracked source files, bundled original hashes and excluded build directories."""
 
 from pathlib import Path
 import subprocess
 import sys
+import hashlib
+import json
+from functools import cache
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+@cache
+def original_files():
+    catalog = json.loads((ROOT / "web/data/catalog.json").read_text(encoding="utf-8"))
+    entries = [
+        entry for group in ("firmwares", "games", "states") for entry in catalog[group]
+    ]
+    entries.append(
+        {
+            "url": "engine/vendor/swerve/swv21brew.mod",
+            "bytes": 273188,
+            "sha256": "1e76412e158bc3948bf6ad173b181368e0f0d554d6b0e1488a29402d96b0cdab",
+        }
+    )
+    for entry in entries:
+        if not (ROOT / "web" / entry["url"]).resolve().is_relative_to(ROOT / "web"):
+            raise ValueError("Catalogue asset escapes web directory")
+    return {"web/" + entry["url"]: entry for entry in entries}
 
 
 def tracked_files():
@@ -15,6 +37,8 @@ def tracked_files():
 
 
 def forbidden(name):
+    if name in original_files():
+        return False
     path = Path(name)
     if any(
         part
@@ -30,7 +54,16 @@ def forbidden(name):
         for part in path.parts
     ):
         return True
-    if path.suffix.lower() in {".rom", ".sgs", ".mod", ".exe", ".dll", ".kps", ".pyc"}:
+    if path.suffix.lower() in {
+        ".rom",
+        ".sgs",
+        ".mod",
+        ".exe",
+        ".dll",
+        ".kps",
+        ".pyc",
+        ".reunion-state",
+    }:
         return True
     if name.startswith("web/data/") and name not in {
         "web/data/catalog.json",
@@ -51,8 +84,18 @@ def main():
     if not names:
         print("No tracked files; initialize and stage the source repository first.")
         return 1
+    for name, entry in original_files().items():
+        path = ROOT / name
+        if (
+            name not in names
+            or not path.is_file()
+            or path.stat().st_size != entry["bytes"]
+            or hashlib.sha256(path.read_bytes()).hexdigest() != entry["sha256"]
+        ):
+            print("Missing or changed bundled original: " + name)
+            return 1
     print(
-        f"Checked {len(names)} tracked source files: no historical binaries or generated directories."
+        f"Checked {len(names)} tracked files and all 51 original hashes; no generated directories."
     )
     return 0
 

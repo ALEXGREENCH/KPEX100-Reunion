@@ -23,6 +23,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
+      - run: npm run test:integration
   desktop:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -40,5 +41,11 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt -r desktop/requirements.txt
       - run: python -m black --check tools desktop
       - run: python -m pytest desktop/tests -q
+      - name: Prepare native collection
+        if: matrix.os == 'windows-latest'
+        run: python desktop/tools/assets.py import web
+      - name: Native original-file integration
+        if: matrix.os == 'windows-latest'
+        run: python -m pytest desktop/tests --with-originals -q
       - run: python tools/check-doc-links.py
       - run: python tools/check-repo.py

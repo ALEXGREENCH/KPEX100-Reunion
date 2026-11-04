@@ -14,7 +14,7 @@
 
 ```sh
 python tools/build-smaf.py --emcc /path/to/emsdk/upstream/emscripten/em++.py
-# После импорта оригинальных SGS для аудиопроверок:
+# Аудиопроверки используют включённые оригинальные SGS:
 node --test tests/smaf.test.mjs tests/browser-audio.test.mjs
 ```
 

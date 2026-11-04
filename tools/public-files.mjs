@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-/** Only emulator code, runtime libraries and catalogue metadata enter Pages. */
+/** Select runtime files; bundled originals are copied separately after SHA-256 verification. */
 export function isPublicWebFile(name) {
   const file = name.replaceAll('\\', '/');
   if (file === 'data/catalog.json') return true;
