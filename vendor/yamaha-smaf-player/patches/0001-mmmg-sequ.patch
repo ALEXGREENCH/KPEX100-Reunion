@@ -1,0 +1,146 @@
+--- a/src/smaf_file.h
++++ b/src/smaf_file.h
+@@ -54,6 +54,7 @@
+ struct TrackChunk {
+     int  trackNumber   = 0;         // 4th byte of the chunk id
+     bool isAudioTrack  = false;     // ATR* (pcm-only track) vs MTR* (score)
++    bool isSequTrack   = false;     // MMMG/SEQU, four channels, fixed 20 ms ticks
+     int  formatType    = -1;        // 0x00/0x01/0x02 (see banner)
+     int  sequenceType  = 0;         // 0x00 stream / 0x01 sub-sequence
+     int  durationTimeBase = 0;      // raw byte, use timeBaseMs() to decode
+@@ -104,6 +105,7 @@
+     void parseOpda_(const uint8_t* p, size_t n);
+     void parseScoreTrack_(const uint8_t* p, size_t n, int trackNo);
+     void parseAudioTrack_(const uint8_t* p, size_t n, int trackNo);
++    void parseMmmg_(const uint8_t* p, size_t n);
+     void parseWaves_(const uint8_t* p, size_t n, TrackChunk& t);
+     std::string decodeText_(const uint8_t* p, size_t n) const;
+ };
+--- a/src/smaf_file.cpp
++++ b/src/smaf_file.cpp
+@@ -249,6 +249,42 @@
+     tracks.push_back(std::move(t));
+ }
+ 
++// Reunion addition: MMMG has a two-byte prefix, VOIC/EXVO setup chunks,
++// and one or more SEQU streams. See PATCHES.md for the observed resource
++// and independent format reference. Never search past a declared child chunk.
++void SmafFile::parseMmmg_(const uint8_t* p, size_t n) {
++    if (n < 2) return;
++    std::vector<uint8_t> setup;
++    std::vector<std::vector<uint8_t>> sequences;
++    for (size_t pos = 2; pos + 8 <= n;) {
++        const uint8_t* c = p + pos;
++        size_t size = be32(c + 4), body = pos + 8;
++        if (size > n - body) return;
++        if (!std::memcmp(c, "VOIC", 4)) {
++            size_t end = body + size;
++            for (size_t v = body; v + 8 <= end;) {
++                size_t vn = be32(p + v + 4), vb = v + 8;
++                if (vn > end - vb) return;
++                if (!std::memcmp(p + v, "EXVO", 4))
++                    setup.insert(setup.end(), p + vb, p + vb + vn);
++                v = vb + vn;
++            }
++        } else if (!std::memcmp(c, "SEQU", 4) && size && sequences.size() < 32) {
++            sequences.emplace_back(p + body, p + body + size);
++        }
++        pos = body + size;
++    }
++    for (size_t i = 0; i < sequences.size(); ++i) {
++        TrackChunk t;
++        t.trackNumber = int(i);
++        t.formatType = 0;
++        t.isSequTrack = true;
++        t.sequenceData = std::move(sequences[i]);
++        if (i == 0) t.setupData = std::move(setup);
++        tracks.push_back(std::move(t));
++    }
++}
++
+ bool SmafFile::parse(const uint8_t* d, size_t n) {
+     tracks.clear();
+     title.clear(); artist.clear(); writer.clear(); copyright.clear(); vendor.clear();
+@@ -273,6 +309,7 @@
+         else if (id3(c, "OPD")) parseOpda_(d + body, sz);
+         else if (id3(c, "MTR")) parseScoreTrack_(d + body, sz, c[3]);
+         else if (id3(c, "ATR")) parseAudioTrack_(d + body, sz, c[3]);
++        else if (!std::memcmp(c, "MMMG", 4)) parseMmmg_(d + body, sz);
+         // MTSU/MTSP at top-level, MMMD-nested vendor chunks, etc. -> skipped.
+ 
+         pos = body + sz;
+--- a/src/ma_player.h
++++ b/src/ma_player.h
+@@ -118,7 +118,7 @@
+     // atrWaveMode: the audio-track sequence reuses the handyphone grammar with
+     // the note nibble carrying a WAVE NUMBER; notes become WaveOn triggers.
+     void decodeHandyPhone_(const uint8_t* p, size_t n, int base, double tbDms, double tbGms,
+-                           bool atrWaveMode = false);
++                           bool atrWaveMode = false, bool sequMode = false);
+     void decodeMobile_(const uint8_t* p, size_t n, int base, double tbDms, double tbGms);
+ 
+     // resolve a channel's current patch (voice table hit or gm fallback).
+--- a/src/ma_player.cpp
++++ b/src/ma_player.cpp
+@@ -260,8 +260,8 @@
+ }
+ 
+ void MaPlayer::decodeTrack_(const TrackChunk& t, int base) {
+-    double tbD = TrackChunk::timeBaseMs(t.durationTimeBase);
+-    double tbG = TrackChunk::timeBaseMs(t.gateTimeBase);
++    double tbD = t.isSequTrack ? 20.0 : TrackChunk::timeBaseMs(t.durationTimeBase);
++    double tbG = t.isSequTrack ? 20.0 : TrackChunk::timeBaseMs(t.gateTimeBase);
+     // MTR channel status: per-channel 2-bit type field (0 no-care / 1 melody /
+     // 2 no-melody / 3 RHYTHM). handyphone packs 4 nibbles into 2 bytes (high
+     // nibble first), mobile carries one byte per channel. a rhythm channel's
+@@ -278,7 +278,7 @@
+             chans_[(base + i) & 127].rhythm = ((t.channelStatus[i] & 0x03) == 3);
+     }
+     if (t.formatType == 0x00) {
+-        decodeHandyPhone_(t.sequenceData.data(), t.sequenceData.size(), base, tbD, tbG);
++        decodeHandyPhone_(t.sequenceData.data(), t.sequenceData.size(), base, tbD, tbG, false, t.isSequTrack);
+     } else if (t.formatType == 0x01) {
+         // huffman-compressed mobile body.
+         auto inflated = smafHuffmanInflate(t.sequenceData.data(), t.sequenceData.size());
+@@ -291,12 +291,13 @@
+ 
+ // ── handyphone standard event stream ────────────────────────────────────────
+ void MaPlayer::decodeHandyPhone_(const uint8_t* p, size_t n, int base, double tbDms, double tbGms,
+-                                 bool atrWaveMode) {
++                                 bool atrWaveMode, bool sequMode) {
+     const uint8_t* end = p + n;
+     double curMs = 0.0;
+     auto msToSample = [&](double ms) { return uint64_t(ms * rate_ / 1000.0); };
+     int guard = 0;
+     while (p < end && guard++ < 2000000 && events_.size() < kMaxEvents) {
++        if (sequMode && end - p == 4 && p[0] == 0 && p[1] == 0 && p[2] == 0 && p[3] == 0) break;
+         uint32_t dur = readVarHps(p, end);
+         curMs += dur * tbDms;
+         if (p >= end) break;
+@@ -322,7 +323,14 @@
+         if (e1 == 0x00) {
+             if (p >= end) break;
+             uint8_t e2 = *p++;
+-            if (e2 == 0x00) {                         // extended / EOS
++            if (sequMode && (e2 & 0x3f) == 0) {
++                // SEQU fine-tune is a one-byte controller, not HPS EOS.
++                // This synthesizer does not yet model that controller.
++                if (p >= end) break;
++                ++p;
++                continue;
++            }
++            if (!sequMode && e2 == 0x00) {             // extended / EOS
+                 if (p >= end) break;
+                 uint8_t e3 = *p++;
+                 if (e3 == 0x00) break;                // End Of Sequence
+@@ -346,7 +354,9 @@
+                         else if (v >= 0x01 && v <= 0x04) semis = 12 * v;
+                         events_.push_back({s, Ev::Modulation, uint16_t(ch), int16_t(1000 + semis), 1 /*octave marker*/});
+                     } break;
+-                    case 0x4: events_.push_back({s, Ev::PitchBend, uint16_t(ch), int16_t((int(v) - 64) * 128), 0}); break;
++                    case 0x3: if (sequMode) events_.push_back({s, Ev::Modulation, uint16_t(ch), int16_t(v), 0}); break;
++                    case 0x4: events_.push_back({s, Ev::PitchBend, uint16_t(ch), int16_t(sequMode ? (int(v) - 128) * 64 : (int(v) - 64) * 128), 0}); break;
++                    case 0x6: if (sequMode) events_.push_back({s, Ev::Expression, uint16_t(ch), int16_t(v & 0x7f), 0}); break;
+                     case 0x7: events_.push_back({s, Ev::Volume, uint16_t(ch), int16_t(v & 0x7f), 0}); break;
+                     case 0xA: events_.push_back({s, Ev::Pan, uint16_t(ch), int16_t(v & 0x7f), 0}); break;
+                     case 0xB: events_.push_back({s, Ev::Expression, uint16_t(ch), int16_t(v & 0x7f), 0}); break;

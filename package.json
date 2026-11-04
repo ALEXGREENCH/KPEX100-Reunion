@@ -1,0 +1,24 @@
+{
+  "name": "kpex100-reunion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "build": "node tools/build.mjs",
+    "preview": "node tools/serve.mjs --root site",
+    "test": "node tools/test.mjs unit",
+    "test:integration": "node tools/test.mjs integration",
+    "check:site": "node tools/check-site.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm test && npm run build && npm run check:site"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2"
+  },
+  "license": "MIT"
+}

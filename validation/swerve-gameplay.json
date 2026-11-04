@@ -1,0 +1,1189 @@
+{
+  "scope": "Unmodified Independence Day 3D SGS executed by original Kingston ARM GNEX and isolated original Swerve ARM software renderer; explicit manual virtual time, not scheduled browser cadence.",
+  "games": {
+    "gnex26_independence_day_3d": {
+      "frame": "gameplay/gnex26_independence_day_3d.png",
+      "beforeFrame": "gameplay/gnex26_independence_day_3d-before.png",
+      "status": "idle",
+      "actions": [
+        ["manualTick", 4, 10000],
+        ["key", 20],
+        ["manualTick", 1, 10000],
+        ["manualTick", 5, 5000],
+        ["hold", 20],
+        ["manualTick", 3, 50],
+        ["release", 20],
+        ["manualTick", 10, 100],
+        ["hold", 5],
+        ["manualTick", 12, 50],
+        ["release", 5],
+        ["hold", 19],
+        ["manualTick", 4, 50],
+        ["release", 19],
+        ["hold", 5],
+        ["manualTick", 12, 50],
+        ["release", 5],
+        ["hold", 5],
+        ["manualTick", 12, 50],
+        ["release", 5],
+        ["hold", 1],
+        ["manualTick", 12, 50],
+        ["release", 1],
+        ["hold", 6],
+        ["manualTick", 8, 50],
+        ["release", 6],
+        ["hold", 5],
+        ["manualTick", 4, 50],
+        ["release", 5]
+      ],
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "clockMode": "Explicit manual time steps; each manualTick delivers active timer channels once per step",
+      "replay": "node tools/replay-sgs.mjs gnex26_independence_day_3d validation/independence-actions.json validation/swerve-replay",
+      "evidence": "Original intro -> menu -> New Game -> Continue -> briefing -> active city mission and HUD. Numeric 1 increases thrust, numeric 6 steers, numeric 5 launches a missile. Missile counter visibly changes 4 to 3; thrust display changes 180 to 432 after acceleration and release. Phone release 0xFF is enabled in this replay. No SGS or native Swerve code patched.",
+      "changedPixels": 395,
+      "beforeRgbaSha256": "93ca1c04866dbd2416a5790b161c39996d76966d9464093d9342ae170e47f000",
+      "rgbaSha256": "ffec3954375dee36cd6c5fd9f2d15e66d5ae0121624ea28652674586cbf50e3e",
+      "events": 106,
+      "diagnostics": {
+        "status": "idle",
+        "error": null,
+        "title": "인디펜던스 데이",
+        "engine": "GNEX phone compatibility / original ARM interpreter + Swerve 2.1 ARM",
+        "profile": "phone",
+        "events": 106,
+        "timer_ms": 50,
+        "bytecode_pc": "0x00003f08",
+        "interpreter_pc": "0x21003f08",
+        "syscalls": {
+          "0x00000091": 1,
+          "0x000001e3": 1,
+          "0x00000231": 1,
+          "0x000000b6": 2059,
+          "0x000000c5": 2059,
+          "0x0000009f": 400,
+          "0x00000062": 1,
+          "0x00000063": 3,
+          "0x0000006a": 1,
+          "0x00000064": 3,
+          "0x000000a5": 16751,
+          "0x000000a2": 361,
+          "0x000000a6": 1352,
+          "0x000000a7": 181,
+          "0x000000a1": 389,
+          "0x00000318": 149,
+          "0x000000be": 29,
+          "0x00000241": 1,
+          "0x000002e0": 3,
+          "0x0000009b": 389,
+          "0x0000024a": 2,
+          "0x00000251": 44,
+          "0x00000203": 2,
+          "0x0000020f": 2,
+          "0x0000020e": 2,
+          "0x0000009c": 1,
+          "0x00000095": 1,
+          "0x00000312": 2,
+          "0x0000029d": 105,
+          "0x00000248": 41,
+          "0x0000005f": 87,
+          "0x00000027": 297,
+          "0x00000045": 75,
+          "0x00000046": 198,
+          "0x000000a8": 180,
+          "0x000000a3": 41,
+          "0x0000001f": 22,
+          "0x0000003f": 669,
+          "0x0000005b": 669,
+          "0x00000069": 2,
+          "0x000000b7": 237,
+          "0x0000029e": 325,
+          "0x0000029a": 1142,
+          "0x00000299": 1143,
+          "0x000001f0": 147,
+          "0x000001e9": 24,
+          "0x000001e8": 24,
+          "0x000001ed": 24,
+          "0x00000325": 2901,
+          "0x000002fa": 396,
+          "0x000002a2": 1168,
+          "0x00000232": 214,
+          "0x00000215": 44,
+          "0x00000219": 44,
+          "0x000000ff": 228,
+          "0x000000fd": 1391,
+          "0x000002f7": 346,
+          "0x000000c0": 23,
+          "0x000002a9": 21,
+          "0x00000292": 89,
+          "0x00000294": 232,
+          "0x000002ed": 368,
+          "0x00000324": 1340,
+          "0x000002f3": 139,
+          "0x000002f5": 31,
+          "0x000002f8": 163,
+          "0x00000256": 61,
+          "0x00000255": 628,
+          "0x000001ea": 69,
+          "0x000001ee": 63,
+          "0x0000031b": 32,
+          "0x000001ec": 32,
+          "0x00000326": 32,
+          "0x00000087": 3,
+          "0x000002f0": 69,
+          "0x0000022c": 64,
+          "0x000001fa": 6,
+          "0x00000288": 2,
+          "0x00000307": 2,
+          "0x00000038": 46,
+          "0x00000086": 7,
+          "0x000000a0": 58,
+          "0x0000001e": 17,
+          "0x0000031c": 116,
+          "0x00000187": 42,
+          "0x00000020": 434,
+          "0x00000042": 24,
+          "0x000000ad": 1,
+          "0x000000c1": 12,
+          "0x00000310": 1,
+          "0x0000030e": 36,
+          "0x00000216": 1,
+          "0x00000289": 4,
+          "0x000002ef": 26,
+          "0x000002e3": 41,
+          "0x000002b6": 11,
+          "0x00000258": 11,
+          "0x000002b7": 11
+        },
+        "trace": [
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x00000027 @ SGS 0x0000f44a",
+          "calls 0x00000045 @ SGS 0x0000f462",
+          "calls 0x000000ff @ SGS 0x0000ac14",
+          "calls 0x00000027 @ SGS 0x0000f644",
+          "calls 0x00000046 @ SGS 0x0000f65c",
+          "calls 0x00000027 @ SGS 0x0000f44a",
+          "calls 0x00000045 @ SGS 0x0000f462",
+          "calls 0x000000ff @ SGS 0x0000ac14",
+          "calls 0x00000027 @ SGS 0x0000f644",
+          "calls 0x00000046 @ SGS 0x0000f65c",
+          "calls 0x000000a6 @ SGS 0x0001c976",
+          "calls 0x000000a1 @ SGS 0x0001ccae",
+          "calls 0x000000a3 @ SGS 0x0001ccc0",
+          "calls 0x000000a1 @ SGS 0x0000908a",
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x000000a8 @ SGS 0x00009024",
+          "calls 0x000000a1 @ SGS 0x0000908a",
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x0000009b @ SGS 0x0000fa72",
+          "calls 0x0000030e @ SGS 0x0002b4b0",
+          "calls 0x000000b6 @ SGS 0x0002cf20",
+          "calls 0x000000c5 @ SGS 0x0002cf30",
+          "calls 0x00000325 @ SGS 0x0002a928",
+          "calls 0x00000325 @ SGS 0x0002a93c",
+          "calls 0x00000325 @ SGS 0x0002a954",
+          "calls 0x000002a2 @ SGS 0x0002a976",
+          "calls 0x00000294 @ SGS 0x0002aa54",
+          "calls 0x000002e3 @ SGS 0x0002aa8e",
+          "calls 0x000002ed @ SGS 0x0002aaaa",
+          "calls 0x00000324 @ SGS 0x0002aabc",
+          "calls 0x00000324 @ SGS 0x0002aace",
+          "calls 0x00000324 @ SGS 0x0002aae4",
+          "calls 0x00000232 @ SGS 0x0002d03a",
+          "calls 0x000000b7 @ SGS 0x0002cf48",
+          "calls 0x000000fd @ SGS 0x0002b07c",
+          "calls 0x000000fd @ SGS 0x0002b090",
+          "calls 0x000000fd @ SGS 0x0002b0ae",
+          "calls 0x000000a1 @ SGS 0x0001c7b6",
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x000000a8 @ SGS 0x00009024",
+          "calls 0x000000a1 @ SGS 0x0000908a",
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x000000a8 @ SGS 0x00009024",
+          "calls 0x000000a1 @ SGS 0x0000908a",
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x000000a6 @ SGS 0x000091cc",
+          "calls 0x00000027 @ SGS 0x0000f644",
+          "calls 0x00000046 @ SGS 0x0000f65c",
+          "calls 0x0000003f @ SGS 0x0000f5c6",
+          "calls 0x0000005b @ SGS 0x0000f5fc",
+          "calls 0x0000005f @ SGS 0x0000f812"
+        ],
+        "audio": {
+          "requests": 7,
+          "ignoredNativeSubtypes": [],
+          "lastError": null,
+          "lastFormat": "SMAF"
+        },
+        "filesystem": {
+          "files": ["gnex.m3g", "kor.lng", "scene.m3g"],
+          "openHandles": 0,
+          "readonlyFiles": 3,
+          "operations": 10,
+          "persistence": "reunion.saves.9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+          "persistenceError": null
+        },
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 50,
+            "repeat": true,
+            "revision": 1
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ],
+        "externalRequest": null,
+        "environment": {
+          "phoneMIN": "Synthetic virtual handset identifier",
+          "tickResolutionMs": 20,
+          "phoneClock": "Host monotonic plus 10 MHz virtual ARM block clock"
+        },
+        "graphics": [
+          "Original ROM RGB565 renderer, palette, ASCII and Korean fonts",
+          "Original Swerve 2.1 ARM software 3D renderer"
+        ],
+        "swerve": {
+          "backend": "Original Swerve 2.1 ARM",
+          "recentCalls": [
+            {
+              "id": "2a2",
+              "name": "swv_object3d_getUserID",
+              "args": [100676912, 6639],
+              "result": 599040450
+            },
+            {
+              "id": "2f5",
+              "name": "swv_transformable_preRotate",
+              "args": [100676928, 6523],
+              "result": 0
+            },
+            {
+              "id": "2a2",
+              "name": "swv_object3d_getUserID",
+              "args": [100676928, 6639],
+              "result": 243740017
+            },
+            {
+              "id": "29d",
+              "name": "swv_object3d_animate",
+              "args": [100834080, 114340, 5258],
+              "result": 0
+            },
+            {
+              "id": "1ea",
+              "name": "swv_animationcontroller_getPosition",
+              "args": [100672144, 114340, -1907359742],
+              "result": 1166147584
+            },
+            {
+              "id": "248",
+              "name": "swv_graphics3d_renderWorld",
+              "args": [100669968, 100834080],
+              "result": 0
+            },
+            {
+              "id": "30e",
+              "name": "swv_world_getActiveCamera",
+              "args": [100834080, 6784],
+              "result": 0
+            },
+            {
+              "id": "2a2",
+              "name": "swv_object3d_getUserID",
+              "args": [100687360, 6492],
+              "result": 350517587
+            },
+            {
+              "id": "294",
+              "name": "swv_node_getTransformTo",
+              "args": [100687360, 100834080, 100670144, 6491],
+              "result": 0
+            },
+            {
+              "id": "2e3",
+              "name": "swv_transform_invert",
+              "args": [100670144],
+              "result": 0
+            },
+            {
+              "id": "2ed",
+              "name": "swv_transform_transformPoints",
+              "args": [100670144, 4, 6493],
+              "result": 0
+            },
+            {
+              "id": "232",
+              "name": "swv_engine_releaseHandle",
+              "args": [100687360],
+              "result": 0
+            }
+          ]
+        }
+      },
+      "trace": [
+        {
+          "label": "start",
+          "filename": "gnex26_independence_day_3d-start.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 0,
+          "events": 1,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "0-manualTick4",
+          "filename": "gnex26_independence_day_3d-0-manualTick4.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 40000,
+          "events": 5,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "1-key20",
+          "filename": "gnex26_independence_day_3d-1-key20.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 40000,
+          "events": 7,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "2-manualTick1",
+          "filename": "gnex26_independence_day_3d-2-manualTick1.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 50000,
+          "events": 8,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "3-manualTick5",
+          "filename": "gnex26_independence_day_3d-3-manualTick5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 75000,
+          "events": 13,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "4-hold20",
+          "filename": "gnex26_independence_day_3d-4-hold20.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 75000,
+          "events": 14,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "5-manualTick3",
+          "filename": "gnex26_independence_day_3d-5-manualTick3.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 75150,
+          "events": 17,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "6-release20",
+          "filename": "gnex26_independence_day_3d-6-release20.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 75150,
+          "events": 18,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "7-manualTick10",
+          "filename": "gnex26_independence_day_3d-7-manualTick10.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76150,
+          "events": 28,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "8-hold5",
+          "filename": "gnex26_independence_day_3d-8-hold5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76150,
+          "events": 29,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "9-manualTick12",
+          "filename": "gnex26_independence_day_3d-9-manualTick12.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76750,
+          "events": 41,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "10-release5",
+          "filename": "gnex26_independence_day_3d-10-release5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76750,
+          "events": 42,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "11-hold19",
+          "filename": "gnex26_independence_day_3d-11-hold19.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76750,
+          "events": 43,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "12-manualTick4",
+          "filename": "gnex26_independence_day_3d-12-manualTick4.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76950,
+          "events": 47,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "13-release19",
+          "filename": "gnex26_independence_day_3d-13-release19.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76950,
+          "events": 48,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "14-hold5",
+          "filename": "gnex26_independence_day_3d-14-hold5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 76950,
+          "events": 49,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "15-manualTick12",
+          "filename": "gnex26_independence_day_3d-15-manualTick12.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 77550,
+          "events": 61,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "16-release5",
+          "filename": "gnex26_independence_day_3d-16-release5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 77550,
+          "events": 62,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "17-hold5",
+          "filename": "gnex26_independence_day_3d-17-hold5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 77550,
+          "events": 63,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "18-manualTick12",
+          "filename": "gnex26_independence_day_3d-18-manualTick12.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 78150,
+          "events": 75,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "19-release5",
+          "filename": "gnex26_independence_day_3d-19-release5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 78150,
+          "events": 76,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "20-hold1",
+          "filename": "gnex26_independence_day_3d-20-hold1.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 78150,
+          "events": 77,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "21-manualTick12",
+          "filename": "gnex26_independence_day_3d-21-manualTick12.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 78750,
+          "events": 89,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "22-release1",
+          "filename": "gnex26_independence_day_3d-22-release1.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 78750,
+          "events": 90,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "23-hold6",
+          "filename": "gnex26_independence_day_3d-23-hold6.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 78750,
+          "events": 91,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "24-manualTick8",
+          "filename": "gnex26_independence_day_3d-24-manualTick8.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 79150,
+          "events": 99,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "25-release6",
+          "filename": "gnex26_independence_day_3d-25-release6.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 79150,
+          "events": 100,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "26-hold5",
+          "filename": "gnex26_independence_day_3d-26-hold5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 79150,
+          "events": 101,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "27-manualTick4",
+          "filename": "gnex26_independence_day_3d-27-manualTick4.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 79350,
+          "events": 105,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        },
+        {
+          "label": "28-release5",
+          "filename": "gnex26_independence_day_3d-28-release5.png",
+          "status": "idle",
+          "error": null,
+          "timeMs": 79350,
+          "events": 106,
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

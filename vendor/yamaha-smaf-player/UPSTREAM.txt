@@ -1,0 +1,8 @@
+Yamaha SMAF Player by Andreas Wendorf (Akustikrausch)
+https://github.com/akustikrausch/yamaha-smaf-player
+Commit: 627f7ad8583ce34c5fec0269ef9778167af080d6
+License: Apache-2.0 (see LICENSE)
+Local changes: MMMG/VOIC/EXVO/SEQU and validated mono Mwa StreamPCM support;
+see PATCHES.md and patches/0001-mmmg-sequ.patch, 0002-mwa-stream-pcm.patch.
+Browser binary is compiled locally with tools/build-smaf.py and Emscripten 3.1.64.
+Preset FM instruments are approximate, not the original Yamaha ROM.

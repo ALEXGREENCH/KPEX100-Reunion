@@ -1,0 +1,64 @@
+{
+  "frozen": true,
+  "status": "passed",
+  "main_thread": "ARM MOV executed",
+  "worker_thread": "ARM MOV executed",
+  "games": [
+    {
+      "name": "Godori.sgs",
+      "status": "idle",
+      "events": 10,
+      "frame_sha256": "5dc85881ee292ff54a272ffb12cf486e033ff1e4e36f98f1c135e73301073ab6"
+    },
+    {
+      "name": "hell_fire.sgs",
+      "status": "idle",
+      "events": 10,
+      "frame_sha256": "3053d5384a6a919915c51b85b59964e7a210b0fa66398a232591c005fe513391"
+    },
+    {
+      "name": "ikaria.sgs",
+      "status": "idle",
+      "events": 10,
+      "frame_sha256": "cd478cbd0c6a2b4a6aa7e11d409a45b989250207aa60d342cb609d23a7713275"
+    },
+    {
+      "name": "kpetris_beta.sgs",
+      "status": "idle",
+      "events": 10,
+      "frame_sha256": "86b17832087f821196dbdab715ec9f2808a31f4f6c556b6942f8f843fd5ada05"
+    }
+  ],
+  "firmware": {
+    "checkpoint": "Kingston-2.12-menu.reunion-state",
+    "instructions_before": 500000000,
+    "instructions_after": 500100000,
+    "status": "paused",
+    "firmware_resources_loaded": true,
+    "lcd_nonblack": true,
+    "frame_sha256": "c09848257fbac75d3e9ffdbcf7a8a1bd22f797790c015f38835984a49673f6ae"
+  },
+  "native_gameplay": {
+    "checkpoint": "Kingston-2.12-HellFire-gameplay.reunion-state",
+    "instructions_before": 1082738842,
+    "instructions_after": 1082838842,
+    "status": "paused",
+    "firmware_resources_loaded": true,
+    "lcd_nonblack": true,
+    "frame_sha256": "2000b2a411580161b98c8a5b3bb57d7b82ca9cd8ca17d661515c02f908e41c61"
+  },
+  "originals_requested": true,
+  "build": {
+    "python": "3.11.9",
+    "pyinstaller": "6.22.3",
+    "unicorn": "2.1.4",
+    "toolchain": "LLVM-MinGW 20260616 (x86_64 UCRT)",
+    "smaf": "Built from the shared vendor source",
+    "date": "2026-11-05",
+    "asset_free_tests": {
+      "passed": 32,
+      "skipped": 66
+    },
+    "stale_asset_cleanup_verified": true
+  }
+}

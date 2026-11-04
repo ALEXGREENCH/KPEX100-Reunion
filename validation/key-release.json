@@ -1,0 +1,17 @@
+{
+  "scope": "Modern GNEX phone v4/v36 only. SDK filters FF from old 16-bit v1/v2 VM; K-PEX device profile unchanged.",
+  "documentation": "GNEXSDK MCC_PRG_301_311 page48 EVENT_KEYPRESS: sinceGNEX1.0 release callsEVENT_KEYPRESS with SWAP_KEY_RELEASE. Table3-5 definesFF.",
+  "sdkExecutable": "GNEXSDK2.12 Emulator.exe",
+  "chain": [
+    "MFCWM_KEYUP tableVA4B1AF8 ->405420",
+    "4094B0 resolves virtual button ->40BE10",
+    "40BE10 checks individual held flag[this+A0], clears it, parentvirtual+DC",
+    "40D810 invokes virtual+D4 ->409B90",
+    "409DC9 recognized button release calls callback(1,0x2F)",
+    "44BF90 activeSGS callback maps table50F254[0x2F]=0xFF, dispatches event0x12 through442820",
+    "After host dispatch,443BB8 tests VMmode518CDC;zero branch443BCC compares inputFF and returns without oldVM416540 dispatch. Modernbranchcalls41B790 withFF.",
+    "Loader442D25 compares parsedversion[518D0E] with4: below4 reads0x68header andsets518CDC=0 at442DB5;atleast4 reads0x80header andsets1 at442D69."
+  ],
+  "simultaneousKeys": "Each actually held button release emits FF, without an all-keys-up condition. GetKeyState still exposes remaining held buttons. Duplicate/unheld release emits no event. Closed/exited/error runtimes receive no event.",
+  "validation": "phone.test.mjs checks actual guest swData255, exactly one event, remaining held key and duplicate/closed release guards; four KPEX native goldens unchanged"
+}

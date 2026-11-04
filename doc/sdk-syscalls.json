@@ -1,0 +1,11239 @@
+[
+  {
+    "id": 0,
+    "hex": "0x000",
+    "name": "GetHwConfig",
+    "compiler_id": 1,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 1,
+    "hex": "0x001",
+    "name": "GetSysMin",
+    "compiler_id": 2,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 2,
+    "hex": "0x002",
+    "name": "GetSysUserID",
+    "compiler_id": 3,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 3,
+    "hex": "0x003",
+    "name": "GetLocInfo",
+    "compiler_id": 4,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 4,
+    "hex": "0x004",
+    "name": "GetDate",
+    "compiler_id": 5,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 5,
+    "hex": "0x005",
+    "name": "GetTime",
+    "compiler_id": 6,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 6,
+    "hex": "0x006",
+    "name": "SendSMS",
+    "compiler_id": 7,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 7,
+    "hex": "0x007",
+    "name": "BackToBrowser",
+    "compiler_id": 8,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 8,
+    "hex": "0x008",
+    "name": "RegMusicBell",
+    "compiler_id": 9,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": 9,
+    "hex": "0x009",
+    "name": "RegScreen",
+    "compiler_id": 10,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 10,
+    "hex": "0x00A",
+    "name": "VoiceCall",
+    "compiler_id": 11,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 11,
+    "hex": "0x00B",
+    "name": "PlayVOD",
+    "compiler_id": 12,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      6,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 12,
+    "hex": "0x00C",
+    "name": "GetLcdInfo",
+    "compiler_id": 13,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 13,
+    "hex": "0x00D",
+    "name": "//_GetCenterPoint"
+  },
+  {
+    "id": 14,
+    "hex": "0x00E",
+    "name": "GetClip",
+    "compiler_id": 15,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 15,
+    "hex": "0x00F",
+    "name": "GetGamma",
+    "compiler_id": 16,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 16,
+    "hex": "0x010",
+    "name": "GetActiveBuffer",
+    "compiler_id": 17,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 17,
+    "hex": "0x011",
+    "name": "GetColor",
+    "compiler_id": 18,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 18,
+    "hex": "0x012",
+    "name": "GetPixel",
+    "compiler_id": 19,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 19,
+    "hex": "0x013",
+    "name": "GetDDB",
+    "compiler_id": 20,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      2,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 20,
+    "hex": "0x014",
+    "name": "GetPaletteColor",
+    "compiler_id": 21,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      2,
+      11
+    ]
+  },
+  {
+    "id": 21,
+    "hex": "0x015",
+    "name": "GetPaletteColorRGB",
+    "compiler_id": 22,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      2,
+      11,
+      14
+    ]
+  },
+  {
+    "id": 22,
+    "hex": "0x016",
+    "name": "GetImageAlpha",
+    "compiler_id": 23,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 23,
+    "hex": "0x017",
+    "name": "GetImageZoom",
+    "compiler_id": 24,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 24,
+    "hex": "0x018",
+    "name": "GetImageMirror",
+    "compiler_id": 25,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 25,
+    "hex": "0x019",
+    "name": "GetImageRotate",
+    "compiler_id": 26,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 26,
+    "hex": "0x01A",
+    "name": "GetFontColor",
+    "compiler_id": 27,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 27,
+    "hex": "0x01B",
+    "name": "GetFont",
+    "compiler_id": 28,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 28,
+    "hex": "0x01C",
+    "name": "GetFontAlign",
+    "compiler_id": 29,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 29,
+    "hex": "0x01D",
+    "name": "GetFontStyle",
+    "compiler_id": 30,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 30,
+    "hex": "0x01E",
+    "name": "GetFontWidth",
+    "compiler_id": 31,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 31,
+    "hex": "0x01F",
+    "name": "GetFontHeight",
+    "compiler_id": 32,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 32,
+    "hex": "0x020",
+    "name": "GetStrWidth",
+    "compiler_id": 33,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 33,
+    "hex": "0x021",
+    "name": "//_SetCenterPoint"
+  },
+  {
+    "id": 34,
+    "hex": "0x022",
+    "name": "SetClip",
+    "compiler_id": 35,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 35,
+    "hex": "0x023",
+    "name": "ResetClip",
+    "compiler_id": 36,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 36,
+    "hex": "0x024",
+    "name": "SetActiveBuffer",
+    "compiler_id": 37,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 37,
+    "hex": "0x025",
+    "name": "SetGamma",
+    "compiler_id": 38,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 38,
+    "hex": "0x026",
+    "name": "SetColor",
+    "compiler_id": 39,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 39,
+    "hex": "0x027",
+    "name": "SetColorRGB",
+    "compiler_id": 40,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 40,
+    "hex": "0x028",
+    "name": "SetFontType",
+    "compiler_id": 41,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 41,
+    "hex": "0x029",
+    "name": "SetFont",
+    "compiler_id": 42,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 42,
+    "hex": "0x02A",
+    "name": "SetFontColor",
+    "compiler_id": 43,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 43,
+    "hex": "0x02B",
+    "name": "SetFontAlign",
+    "compiler_id": 44,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 44,
+    "hex": "0x02C",
+    "name": "SetFontStyle",
+    "compiler_id": 45,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 45,
+    "hex": "0x02D",
+    "name": "SetPalette",
+    "compiler_id": 46,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      14
+    ]
+  },
+  {
+    "id": 46,
+    "hex": "0x02E",
+    "name": "SetPaletteColor",
+    "compiler_id": 47,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      2,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 47,
+    "hex": "0x02F",
+    "name": "SetPaletteColorRGB",
+    "compiler_id": 48,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      2,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 48,
+    "hex": "0x030",
+    "name": "SetImageAlpha",
+    "compiler_id": 49,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 49,
+    "hex": "0x031",
+    "name": "SetImageZoom",
+    "compiler_id": 50,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 50,
+    "hex": "0x032",
+    "name": "SetImageMirror",
+    "compiler_id": 51,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 51,
+    "hex": "0x033",
+    "name": "SetImageRotate",
+    "compiler_id": 52,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 52,
+    "hex": "0x034",
+    "name": "SetShadeColor",
+    "compiler_id": 53,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 53,
+    "hex": "0x035",
+    "name": "SetShadeColorRGB",
+    "compiler_id": 54,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 54,
+    "hex": "0x036",
+    "name": "Clear",
+    "compiler_id": 55,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 55,
+    "hex": "0x037",
+    "name": "ClearPartial",
+    "compiler_id": 56,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 56,
+    "hex": "0x038",
+    "name": "ClearRGB",
+    "compiler_id": 57,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 57,
+    "hex": "0x039",
+    "name": "ClearPartialRGB",
+    "compiler_id": 58,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 58,
+    "hex": "0x03A",
+    "name": "ClearWhite",
+    "compiler_id": 59,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 59,
+    "hex": "0x03B",
+    "name": "ClearBlack",
+    "compiler_id": 60,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 60,
+    "hex": "0x03C",
+    "name": "PutPixel",
+    "compiler_id": 61,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 61,
+    "hex": "0x03D",
+    "name": "PutPixelDev",
+    "compiler_id": 62,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 62,
+    "hex": "0x03E",
+    "name": "PutPixelRGB",
+    "compiler_id": 63,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 63,
+    "hex": "0x03F",
+    "name": "RGBToIndex",
+    "compiler_id": 64,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 64,
+    "hex": "0x040",
+    "name": "RGBToDev",
+    "compiler_id": 65,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 65,
+    "hex": "0x041",
+    "name": "PutDDB",
+    "compiler_id": 66,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      2
+    ]
+  },
+  {
+    "id": 66,
+    "hex": "0x042",
+    "name": "DrawLine",
+    "compiler_id": 67,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 67,
+    "hex": "0x043",
+    "name": "DrawHLine",
+    "compiler_id": 68,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 68,
+    "hex": "0x044",
+    "name": "DrawVLine",
+    "compiler_id": 69,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 69,
+    "hex": "0x045",
+    "name": "DrawRect",
+    "compiler_id": 70,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 70,
+    "hex": "0x046",
+    "name": "FillRect",
+    "compiler_id": 71,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 71,
+    "hex": "0x047",
+    "name": "FillRectEx",
+    "compiler_id": 72,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 72,
+    "hex": "0x048",
+    "name": "DrawRectRound",
+    "compiler_id": 73,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 73,
+    "hex": "0x049",
+    "name": "FillRectRound",
+    "compiler_id": 74,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 74,
+    "hex": "0x04A",
+    "name": "InvertRect",
+    "compiler_id": 75,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 75,
+    "hex": "0x04B",
+    "name": "DrawEllipse",
+    "compiler_id": 76,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 76,
+    "hex": "0x04C",
+    "name": "FillEllipse",
+    "compiler_id": 77,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 77,
+    "hex": "0x04D",
+    "name": "ShadeEllipse",
+    "compiler_id": 78,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 78,
+    "hex": "0x04E",
+    "name": "ShadeRect",
+    "compiler_id": 79,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 79,
+    "hex": "0x04F",
+    "name": "DrawPoly",
+    "compiler_id": 80,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      14,
+      11
+    ]
+  },
+  {
+    "id": 80,
+    "hex": "0x050",
+    "name": "FillPoly",
+    "compiler_id": 81,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      14,
+      11
+    ]
+  },
+  {
+    "id": 81,
+    "hex": "0x051",
+    "name": "SaveLCD",
+    "compiler_id": 82,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 82,
+    "hex": "0x052",
+    "name": "RestoreLCD",
+    "compiler_id": 83,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 83,
+    "hex": "0x053",
+    "name": "CopyLCD",
+    "compiler_id": 84,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 84,
+    "hex": "0x054",
+    "name": "ScrollLCD",
+    "compiler_id": 85,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 85,
+    "hex": "0x055",
+    "name": "DrawStr",
+    "compiler_id": 86,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 86,
+    "hex": "0x056",
+    "name": "DrawStrSolid",
+    "compiler_id": 87,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 87,
+    "hex": "0x057",
+    "name": "DrawText",
+    "compiler_id": 88,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 88,
+    "hex": "0x058",
+    "name": "DrawTextSolid",
+    "compiler_id": 89,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 89,
+    "hex": "0x059",
+    "name": "DrawStr2",
+    "compiler_id": 90,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 90,
+    "hex": "0x05A",
+    "name": "DrawStrSolid2",
+    "compiler_id": 91,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 91,
+    "hex": "0x05B",
+    "name": "DrawStrEx",
+    "compiler_id": 92,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 92,
+    "hex": "0x05C",
+    "name": "InitSIS",
+    "compiler_id": 93,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      6,
+      14
+    ]
+  },
+  {
+    "id": 93,
+    "hex": "0x05D",
+    "name": "GetSISFrame",
+    "compiler_id": 94,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 94,
+    "hex": "0x05E",
+    "name": "DecodeImage",
+    "compiler_id": 95,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      6
+    ]
+  },
+  {
+    "id": 95,
+    "hex": "0x05F",
+    "name": "Flush",
+    "compiler_id": 96,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 96,
+    "hex": "0x060",
+    "name": "FlushPartial",
+    "compiler_id": 97,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 97,
+    "hex": "0x061",
+    "name": "FileGetFreeSpace",
+    "compiler_id": 98,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 98,
+    "hex": "0x062",
+    "name": "FileGetInfo",
+    "compiler_id": 99,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      14
+    ]
+  },
+  {
+    "id": 99,
+    "hex": "0x063",
+    "name": "FileOpen",
+    "compiler_id": 100,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 100,
+    "hex": "0x064",
+    "name": "FileClose",
+    "compiler_id": 101,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 101,
+    "hex": "0x065",
+    "name": "FileDel",
+    "compiler_id": 102,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 102,
+    "hex": "0x066",
+    "name": "FileSeek",
+    "compiler_id": 103,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 103,
+    "hex": "0x067",
+    "name": "FileWriteInt",
+    "compiler_id": 104,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 104,
+    "hex": "0x068",
+    "name": "FileWriteMedia",
+    "compiler_id": 105,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 105,
+    "hex": "0x069",
+    "name": "FileReadInt",
+    "compiler_id": 106,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 106,
+    "hex": "0x06A",
+    "name": "FileReadMedia",
+    "compiler_id": 107,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 107,
+    "hex": "0x06B",
+    "name": "FileTest",
+    "compiler_id": 108,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 108,
+    "hex": "0x06C",
+    "name": "DirTest",
+    "compiler_id": 109,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 109,
+    "hex": "0x06D",
+    "name": "FileMakeDir",
+    "compiler_id": 110,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 110,
+    "hex": "0x06E",
+    "name": "FileRemoveDir",
+    "compiler_id": 111,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 111,
+    "hex": "0x06F",
+    "name": "SockOpen",
+    "compiler_id": 112,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 112,
+    "hex": "0x070",
+    "name": "SockClose",
+    "compiler_id": 113,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 113,
+    "hex": "0x071",
+    "name": "SockClosePPP",
+    "compiler_id": 114,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 114,
+    "hex": "0x072",
+    "name": "SockConnect",
+    "compiler_id": 115,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 115,
+    "hex": "0x073",
+    "name": "SockSendInt",
+    "compiler_id": 116,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 116,
+    "hex": "0x074",
+    "name": "SockSendMedia",
+    "compiler_id": 117,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 117,
+    "hex": "0x075",
+    "name": "SockSendToInt",
+    "compiler_id": 118,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 118,
+    "hex": "0x076",
+    "name": "SockSendToMedia",
+    "compiler_id": 119,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 119,
+    "hex": "0x077",
+    "name": "SockRecvInt",
+    "compiler_id": 120,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 120,
+    "hex": "0x078",
+    "name": "SockRecvMedia",
+    "compiler_id": 121,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 121,
+    "hex": "0x079",
+    "name": "SockRecvFromInt",
+    "compiler_id": 122,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 122,
+    "hex": "0x07A",
+    "name": "SockRecvFromMedia",
+    "compiler_id": 123,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 123,
+    "hex": "0x07B",
+    "name": "ComOpen",
+    "compiler_id": 124,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 124,
+    "hex": "0x07C",
+    "name": "ComClose",
+    "compiler_id": 125,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 125,
+    "hex": "0x07D",
+    "name": "ComConfig",
+    "compiler_id": 126,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 126,
+    "hex": "0x07E",
+    "name": "ComWriteInt",
+    "compiler_id": 127,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      11
+    ]
+  },
+  {
+    "id": 127,
+    "hex": "0x07F",
+    "name": "ComWriteMedia",
+    "compiler_id": 128,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11
+    ]
+  },
+  {
+    "id": 128,
+    "hex": "0x080",
+    "name": "ComReadInt",
+    "compiler_id": 129,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      11
+    ]
+  },
+  {
+    "id": 129,
+    "hex": "0x081",
+    "name": "ComReadMedia",
+    "compiler_id": 130,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11
+    ]
+  },
+  {
+    "id": 130,
+    "hex": "0x082",
+    "name": "PlaySound",
+    "compiler_id": 131,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      3
+    ]
+  },
+  {
+    "id": 131,
+    "hex": "0x083",
+    "name": "StopSound",
+    "compiler_id": 132,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 132,
+    "hex": "0x084",
+    "name": "PauseSound",
+    "compiler_id": 133,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 133,
+    "hex": "0x085",
+    "name": "ResumeSound",
+    "compiler_id": 134,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 134,
+    "hex": "0x086",
+    "name": "PlaySoundEx",
+    "compiler_id": 135,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      3
+    ]
+  },
+  {
+    "id": 135,
+    "hex": "0x087",
+    "name": "StopSoundEx",
+    "compiler_id": 136,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 136,
+    "hex": "0x088",
+    "name": "PauseSoundEx",
+    "compiler_id": 137,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 137,
+    "hex": "0x089",
+    "name": "ResumeSoundEx",
+    "compiler_id": 138,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 138,
+    "hex": "0x08A",
+    "name": "GetVolume",
+    "compiler_id": 139,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 139,
+    "hex": "0x08B",
+    "name": "SetVolume",
+    "compiler_id": 140,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 140,
+    "hex": "0x08C",
+    "name": "PlayVocoder",
+    "compiler_id": 141,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      4
+    ]
+  },
+  {
+    "id": 141,
+    "hex": "0x08D",
+    "name": "StopVocoder",
+    "compiler_id": 142,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 142,
+    "hex": "0x08E",
+    "name": "StartVib",
+    "compiler_id": 143,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 143,
+    "hex": "0x08F",
+    "name": "StopVib",
+    "compiler_id": 144,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 144,
+    "hex": "0x090",
+    "name": "SetKeyTone",
+    "compiler_id": 145,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 145,
+    "hex": "0x091",
+    "name": "SetBackLight",
+    "compiler_id": 146,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 146,
+    "hex": "0x092",
+    "name": "SetBackLightEx",
+    "compiler_id": 147,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 147,
+    "hex": "0x093",
+    "name": "GetUserNV",
+    "compiler_id": 148,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      11
+    ]
+  },
+  {
+    "id": 148,
+    "hex": "0x094",
+    "name": "PutUserNV",
+    "compiler_id": 149,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      11
+    ]
+  },
+  {
+    "id": 149,
+    "hex": "0x095",
+    "name": "SetTimer",
+    "compiler_id": 150,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 150,
+    "hex": "0x096",
+    "name": "SetTimer1",
+    "compiler_id": 151,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 151,
+    "hex": "0x097",
+    "name": "SetTimer2",
+    "compiler_id": 152,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 152,
+    "hex": "0x098",
+    "name": "ResetTimer",
+    "compiler_id": 153,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 153,
+    "hex": "0x099",
+    "name": "ResetTimer1",
+    "compiler_id": 154,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 154,
+    "hex": "0x09A",
+    "name": "ResetTimer2",
+    "compiler_id": 155,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 155,
+    "hex": "0x09B",
+    "name": "GetTick",
+    "compiler_id": 156,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 156,
+    "hex": "0x09C",
+    "name": "ResetTick",
+    "compiler_id": 157,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 157,
+    "hex": "0x09D",
+    "name": "GetMediaSize",
+    "compiler_id": 158,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6
+    ]
+  },
+  {
+    "id": 158,
+    "hex": "0x09E",
+    "name": "SetMediaSize",
+    "compiler_id": 159,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11
+    ]
+  },
+  {
+    "id": 159,
+    "hex": "0x09F",
+    "name": "StrInit",
+    "compiler_id": 160,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 160,
+    "hex": "0x0A0",
+    "name": "StrLen",
+    "compiler_id": 161,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 161,
+    "hex": "0x0A1",
+    "name": "StrCpy",
+    "compiler_id": 162,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": 162,
+    "hex": "0x0A2",
+    "name": "StrSub",
+    "compiler_id": 163,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      1,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 163,
+    "hex": "0x0A3",
+    "name": "StrCat",
+    "compiler_id": 164,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": 164,
+    "hex": "0x0A4",
+    "name": "StrCmp",
+    "compiler_id": 165,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": 165,
+    "hex": "0x0A5",
+    "name": "GetChar",
+    "compiler_id": 166,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 166,
+    "hex": "0x0A6",
+    "name": "PutChar",
+    "compiler_id": 167,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 167,
+    "hex": "0x0A7",
+    "name": "AsciiToInt",
+    "compiler_id": 168,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 168,
+    "hex": "0x0A8",
+    "name": "IntToAscii",
+    "compiler_id": 169,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 169,
+    "hex": "0x0A9",
+    "name": "PutByte",
+    "compiler_id": 170,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 170,
+    "hex": "0x0AA",
+    "name": "GetByte",
+    "compiler_id": 171,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14,
+      11
+    ]
+  },
+  {
+    "id": 171,
+    "hex": "0x0AB",
+    "name": "PutBytes",
+    "compiler_id": 172,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 172,
+    "hex": "0x0AC",
+    "name": "GetBytes",
+    "compiler_id": 173,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 173,
+    "hex": "0x0AD",
+    "name": "MakeStrStr",
+    "compiler_id": 174,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      8,
+      1
+    ]
+  },
+  {
+    "id": 174,
+    "hex": "0x0AE",
+    "name": "MakeStr1",
+    "compiler_id": 175,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      8,
+      11
+    ]
+  },
+  {
+    "id": 175,
+    "hex": "0x0AF",
+    "name": "MakeStr2",
+    "compiler_id": 176,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      8,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 176,
+    "hex": "0x0B0",
+    "name": "MakeStr3",
+    "compiler_id": 177,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      8,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 177,
+    "hex": "0x0B1",
+    "name": "MakeStr4",
+    "compiler_id": 178,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      8,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 178,
+    "hex": "0x0B2",
+    "name": "MakeStr5",
+    "compiler_id": 179,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      8,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 179,
+    "hex": "0x0B3",
+    "name": "StrInput",
+    "compiler_id": 180,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": 180,
+    "hex": "0x0B4",
+    "name": "StrInput2",
+    "compiler_id": 181,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      1,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 181,
+    "hex": "0x0B5",
+    "name": "GetFreeMemory",
+    "compiler_id": 182,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 182,
+    "hex": "0x0B6",
+    "name": "MallocInt",
+    "compiler_id": 183,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 183,
+    "hex": "0x0B7",
+    "name": "FreeInt",
+    "compiler_id": 184,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 184,
+    "hex": "0x0B8",
+    "name": "PutWord",
+    "compiler_id": 185,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 185,
+    "hex": "0x0B9",
+    "name": "GetWord",
+    "compiler_id": 186,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      11
+    ]
+  },
+  {
+    "id": 186,
+    "hex": "0x0BA",
+    "name": "PutWordMedia",
+    "compiler_id": 187,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 187,
+    "hex": "0x0BB",
+    "name": "GetWordMedia",
+    "compiler_id": 188,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11
+    ]
+  },
+  {
+    "id": 188,
+    "hex": "0x0BC",
+    "name": "PutWords",
+    "compiler_id": 189,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 189,
+    "hex": "0x0BD",
+    "name": "GetWords",
+    "compiler_id": 190,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 190,
+    "hex": "0x0BE",
+    "name": "MemCpyInt",
+    "compiler_id": 191,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 191,
+    "hex": "0x0BF",
+    "name": "MemCpyMedia",
+    "compiler_id": 192,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      6,
+      11,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 192,
+    "hex": "0x0C0",
+    "name": "MemCpyIntToMedia",
+    "compiler_id": 193,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      6,
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 193,
+    "hex": "0x0C1",
+    "name": "MemCpyMediaToInt",
+    "compiler_id": 194,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 194,
+    "hex": "0x0C2",
+    "name": "CopyWordMediaToMedia",
+    "compiler_id": 195,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      6,
+      11,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 195,
+    "hex": "0x0C3",
+    "name": "CopyWordIntToMedia",
+    "compiler_id": 196,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      6,
+      11,
+      12,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 196,
+    "hex": "0x0C4",
+    "name": "CopyWordMediaToInt",
+    "compiler_id": 197,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11,
+      6,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 197,
+    "hex": "0x0C5",
+    "name": "MemSetInt",
+    "compiler_id": 198,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 198,
+    "hex": "0x0C6",
+    "name": "MemSetMedia",
+    "compiler_id": 199,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      6,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 199,
+    "hex": "0x0C7",
+    "name": "PutWordIntToLcd",
+    "compiler_id": 200,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 200,
+    "hex": "0x0C8",
+    "name": "RandSeed",
+    "compiler_id": 201,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 201,
+    "hex": "0x0C9",
+    "name": "Rand",
+    "compiler_id": 202,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 202,
+    "hex": "0x0CA",
+    "name": "RandRatio",
+    "compiler_id": 203,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 203,
+    "hex": "0x0CB",
+    "name": "Abs",
+    "compiler_id": 204,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 204,
+    "hex": "0x0CC",
+    "name": "Sgn",
+    "compiler_id": 205,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 205,
+    "hex": "0x0CD",
+    "name": "Sin100",
+    "compiler_id": 206,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 206,
+    "hex": "0x0CE",
+    "name": "Cos100",
+    "compiler_id": 207,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 207,
+    "hex": "0x0CF",
+    "name": "Tan100",
+    "compiler_id": 208,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 208,
+    "hex": "0x0D0",
+    "name": "ArcSin100",
+    "compiler_id": 209,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 209,
+    "hex": "0x0D1",
+    "name": "ArcCos100",
+    "compiler_id": 210,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 210,
+    "hex": "0x0D2",
+    "name": "ArcTan100",
+    "compiler_id": 211,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 211,
+    "hex": "0x0D3",
+    "name": "Sqrt",
+    "compiler_id": 212,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 212,
+    "hex": "0x0D4",
+    "name": "Avr",
+    "compiler_id": 213,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 213,
+    "hex": "0x0D5",
+    "name": "Avr3",
+    "compiler_id": 214,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 214,
+    "hex": "0x0D6",
+    "name": "Max",
+    "compiler_id": 215,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 215,
+    "hex": "0x0D7",
+    "name": "Max3",
+    "compiler_id": 216,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 216,
+    "hex": "0x0D8",
+    "name": "Min",
+    "compiler_id": 217,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 217,
+    "hex": "0x0D9",
+    "name": "Min3",
+    "compiler_id": 218,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 218,
+    "hex": "0x0DA",
+    "name": "FindMax",
+    "compiler_id": 219,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14,
+      11
+    ]
+  },
+  {
+    "id": 219,
+    "hex": "0x0DB",
+    "name": "FindMin",
+    "compiler_id": 220,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14,
+      11
+    ]
+  },
+  {
+    "id": 220,
+    "hex": "0x0DC",
+    "name": "FindNear",
+    "compiler_id": 221,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 221,
+    "hex": "0x0DD",
+    "name": "ArrayToVar",
+    "compiler_id": 222,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 222,
+    "hex": "0x0DE",
+    "name": "ArrayToArray",
+    "compiler_id": 223,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      14,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 223,
+    "hex": "0x0DF",
+    "name": "ArrayToArray2",
+    "compiler_id": 224,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      14,
+      14,
+      14,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 224,
+    "hex": "0x0E0",
+    "name": "HitCheck",
+    "compiler_id": 225,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 225,
+    "hex": "0x0E1",
+    "name": "Exit",
+    "compiler_id": 226,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 226,
+    "hex": "0x0E2",
+    "name": "PBGetCount",
+    "compiler_id": 227,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 227,
+    "hex": "0x0E3",
+    "name": "PBGetData",
+    "compiler_id": 228,
+    "argc": 7,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 228,
+    "hex": "0x0E4",
+    "name": "PBSetData",
+    "compiler_id": 229,
+    "argc": 7,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 229,
+    "hex": "0x0E5",
+    "name": "PBDeleteData",
+    "compiler_id": 230,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 230,
+    "hex": "0x0E6",
+    "name": "PBCheckUsing",
+    "compiler_id": 231,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 231,
+    "hex": "0x0E7",
+    "name": "SMSGetCount",
+    "compiler_id": 232,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 232,
+    "hex": "0x0E8",
+    "name": "SMSReadReceivedData",
+    "compiler_id": 233,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1,
+      1,
+      12
+    ]
+  },
+  {
+    "id": 233,
+    "hex": "0x0E9",
+    "name": "SMSReadSentData",
+    "compiler_id": 234,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 234,
+    "hex": "0x0EA",
+    "name": "SMSDeleteData",
+    "compiler_id": 235,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 235,
+    "hex": "0x0EB",
+    "name": "SMSCheckUsing",
+    "compiler_id": 236,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 236,
+    "hex": "0x0EC",
+    "name": "ImageGetCount",
+    "compiler_id": 237,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 237,
+    "hex": "0x0ED",
+    "name": "ImageGetName",
+    "compiler_id": 238,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 238,
+    "hex": "0x0EE",
+    "name": "ImageGetSize",
+    "compiler_id": 239,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 239,
+    "hex": "0x0EF",
+    "name": "ImageGetFormat",
+    "compiler_id": 240,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 240,
+    "hex": "0x0F0",
+    "name": "ImageGetData",
+    "compiler_id": 241,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6
+    ]
+  },
+  {
+    "id": 241,
+    "hex": "0x0F1",
+    "name": "ImageWriteData",
+    "compiler_id": 242,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11,
+      11,
+      6
+    ]
+  },
+  {
+    "id": 242,
+    "hex": "0x0F2",
+    "name": "ImageDeleteData",
+    "compiler_id": 243,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 243,
+    "hex": "0x0F3",
+    "name": "ImageRegPictureMate",
+    "compiler_id": 244,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 244,
+    "hex": "0x0F4",
+    "name": "ImageGetPictureMate",
+    "compiler_id": 245,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 245,
+    "hex": "0x0F5",
+    "name": "MelodyGetCount",
+    "compiler_id": 246,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 246,
+    "hex": "0x0F6",
+    "name": "MelodyGetName",
+    "compiler_id": 247,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 247,
+    "hex": "0x0F7",
+    "name": "MelodyGetSize",
+    "compiler_id": 248,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 248,
+    "hex": "0x0F8",
+    "name": "MelodyGetFormat",
+    "compiler_id": 249,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 249,
+    "hex": "0x0F9",
+    "name": "MelodyGetData",
+    "compiler_id": 250,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6
+    ]
+  },
+  {
+    "id": 250,
+    "hex": "0x0FA",
+    "name": "MelodyWriteData",
+    "compiler_id": 251,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11,
+      11,
+      6
+    ]
+  },
+  {
+    "id": 251,
+    "hex": "0x0FB",
+    "name": "MelodyDeleteData",
+    "compiler_id": 252,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 252,
+    "hex": "0x0FC",
+    "name": "Mult32",
+    "compiler_id": 253,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 253,
+    "hex": "0x0FD",
+    "name": "Mult64",
+    "compiler_id": 254,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 254,
+    "hex": "0x0FE",
+    "name": "Div32",
+    "compiler_id": 255,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 255,
+    "hex": "0x0FF",
+    "name": "Div64",
+    "compiler_id": 256,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 256,
+    "hex": "0x100",
+    "name": "CopyImageTile",
+    "compiler_id": 257,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      2,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 257,
+    "hex": "0x101",
+    "name": "NetConnect",
+    "compiler_id": 258,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 258,
+    "hex": "0x102",
+    "name": "NetDisconnect",
+    "compiler_id": 259,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 259,
+    "hex": "0x103",
+    "name": "NetReconnect",
+    "compiler_id": 260,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 260,
+    "hex": "0x104",
+    "name": "NetSend",
+    "compiler_id": 261,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11
+    ]
+  },
+  {
+    "id": 261,
+    "hex": "0x105",
+    "name": "NetState",
+    "compiler_id": 262,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 262,
+    "hex": "0x106",
+    "name": "LoadMedia",
+    "compiler_id": 263,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11
+    ]
+  },
+  {
+    "id": 263,
+    "hex": "0x107",
+    "name": "LoadMediaResult",
+    "compiler_id": 264,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6
+    ]
+  },
+  {
+    "id": 264,
+    "hex": "0x108",
+    "name": "SetSoMo",
+    "compiler_id": 265,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 265,
+    "hex": "0x109",
+    "name": "RegAdvAudio",
+    "compiler_id": 266,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": 266,
+    "hex": "0x10A",
+    "name": "PlayAdvAudio",
+    "compiler_id": 267,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      3
+    ]
+  },
+  {
+    "id": 267,
+    "hex": "0x10B",
+    "name": "ManAdvAudio",
+    "compiler_id": 268,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 268,
+    "hex": "0x10C",
+    "name": "RsCom",
+    "compiler_id": 269,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 269,
+    "hex": "0x10D",
+    "name": "RsSend",
+    "compiler_id": 270,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11
+    ]
+  },
+  {
+    "id": 270,
+    "hex": "0x10E",
+    "name": "Download",
+    "compiler_id": 271,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 271,
+    "hex": "0x10F",
+    "name": "Download2",
+    "compiler_id": 272,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      1,
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 272,
+    "hex": "0x110",
+    "name": "GNEX_HttpConnect",
+    "compiler_id": 273,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      5
+    ]
+  },
+  {
+    "id": 273,
+    "hex": "0x111",
+    "name": "GNEX_HttpRequest",
+    "compiler_id": 274,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 274,
+    "hex": "0x112",
+    "name": "GNEX_HttpResponse",
+    "compiler_id": 275,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      5,
+      11
+    ]
+  },
+  {
+    "id": 275,
+    "hex": "0x113",
+    "name": "GNEX_HttpDisconnect",
+    "compiler_id": 276,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 276,
+    "hex": "0x114",
+    "name": "CAMGetSupportResolution",
+    "compiler_id": 277,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 277,
+    "hex": "0x115",
+    "name": "CAMStatus",
+    "compiler_id": 278,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 278,
+    "hex": "0x116",
+    "name": "CAMPowerON",
+    "compiler_id": 279,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 279,
+    "hex": "0x117",
+    "name": "CAMPowerOFF",
+    "compiler_id": 280,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 280,
+    "hex": "0x118",
+    "name": "CAMSnapShot",
+    "compiler_id": 281,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 281,
+    "hex": "0x119",
+    "name": "PhotoGetCount",
+    "compiler_id": 282,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 282,
+    "hex": "0x11A",
+    "name": "PhotoGetName",
+    "compiler_id": 283,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 283,
+    "hex": "0x11B",
+    "name": "PhotoGetSize",
+    "compiler_id": 284,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 284,
+    "hex": "0x11C",
+    "name": "PhotoGetFormat",
+    "compiler_id": 285,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 285,
+    "hex": "0x11D",
+    "name": "PhotoGetData",
+    "compiler_id": 286,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      5
+    ]
+  },
+  {
+    "id": 286,
+    "hex": "0x11E",
+    "name": "PhotoDeleteData",
+    "compiler_id": 287,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 287,
+    "hex": "0x11F",
+    "name": "PhotoRegPictureMate",
+    "compiler_id": 288,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 288,
+    "hex": "0x120",
+    "name": "VODGetInfo",
+    "compiler_id": 289,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      14,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 289,
+    "hex": "0x121",
+    "name": "VODGetCount",
+    "compiler_id": 290,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 290,
+    "hex": "0x122",
+    "name": "VODGetName",
+    "compiler_id": 291,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 291,
+    "hex": "0x123",
+    "name": "VODGetSize",
+    "compiler_id": 292,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 292,
+    "hex": "0x124",
+    "name": "VODGetFormat",
+    "compiler_id": 293,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 293,
+    "hex": "0x125",
+    "name": "VODGetData",
+    "compiler_id": 294,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      5,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 294,
+    "hex": "0x126",
+    "name": "VODWriteData",
+    "compiler_id": 295,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11,
+      11,
+      5,
+      11
+    ]
+  },
+  {
+    "id": 295,
+    "hex": "0x127",
+    "name": "VODDeleteData",
+    "compiler_id": 296,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 296,
+    "hex": "0x128",
+    "name": "VODRegPictureMate",
+    "compiler_id": 297,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 297,
+    "hex": "0x129",
+    "name": "VODPlayFile",
+    "compiler_id": 298,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 298,
+    "hex": "0x12A",
+    "name": "VODGetFreeSpace",
+    "compiler_id": 299,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 299,
+    "hex": "0x12B",
+    "name": "VODPlayURL",
+    "compiler_id": 300,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 300,
+    "hex": "0x12C",
+    "name": "VODPlayBuffer",
+    "compiler_id": 301,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      5,
+      11
+    ]
+  },
+  {
+    "id": 301,
+    "hex": "0x12D",
+    "name": "CAMGetResolutionCount",
+    "compiler_id": 302,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 302,
+    "hex": "0x12E",
+    "name": "VODStop",
+    "compiler_id": 303,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 303,
+    "hex": "0x12F",
+    "name": "VODPause",
+    "compiler_id": 304,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 304,
+    "hex": "0x130",
+    "name": "VODResume",
+    "compiler_id": 305,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 305,
+    "hex": "0x131",
+    "name": "VODSetPosition",
+    "compiler_id": 306,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 306,
+    "hex": "0x132",
+    "name": "VODGetPosition",
+    "compiler_id": 307,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      12,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 307,
+    "hex": "0x133",
+    "name": "VODRecord",
+    "compiler_id": 308,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      5,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 308,
+    "hex": "0x134",
+    "name": "_glClear_",
+    "compiler_id": 309,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 309,
+    "hex": "0x135",
+    "name": "_glClearColor_",
+    "compiler_id": 310,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 310,
+    "hex": "0x136",
+    "name": "_glClearDepth_",
+    "compiler_id": 311,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 311,
+    "hex": "0x137",
+    "name": "_glColor3x_",
+    "compiler_id": 312,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 312,
+    "hex": "0x138",
+    "name": "_glCullFace_",
+    "compiler_id": 313,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 313,
+    "hex": "0x139",
+    "name": "_glDisable_",
+    "compiler_id": 314,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 314,
+    "hex": "0x13A",
+    "name": "_glDisableClientState_",
+    "compiler_id": 315,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 315,
+    "hex": "0x13B",
+    "name": "_glDrawElements_",
+    "compiler_id": 316,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 316,
+    "hex": "0x13C",
+    "name": "_glEnable_",
+    "compiler_id": 317,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 317,
+    "hex": "0x13D",
+    "name": "_glEnableClientState_",
+    "compiler_id": 318,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 318,
+    "hex": "0x13E",
+    "name": "_glFrustum_",
+    "compiler_id": 319,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 319,
+    "hex": "0x13F",
+    "name": "_glGetBooleanv_",
+    "compiler_id": 320,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 320,
+    "hex": "0x140",
+    "name": "_glGetError_",
+    "compiler_id": 321,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 321,
+    "hex": "0x141",
+    "name": "_glGetFixedv_",
+    "compiler_id": 322,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 322,
+    "hex": "0x142",
+    "name": "_glGetIntegerv_",
+    "compiler_id": 323,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 323,
+    "hex": "0x143",
+    "name": "_glGetLightxv_",
+    "compiler_id": 324,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 324,
+    "hex": "0x144",
+    "name": "_glGetTexImage_",
+    "compiler_id": 325,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 325,
+    "hex": "0x145",
+    "name": "_glGetTexLevelParameterxv_",
+    "compiler_id": 326,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 326,
+    "hex": "0x146",
+    "name": "_glIsEnabled_",
+    "compiler_id": 327,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 327,
+    "hex": "0x147",
+    "name": "_glLightxv_",
+    "compiler_id": 328,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 328,
+    "hex": "0x148",
+    "name": "_glLineStipple_",
+    "compiler_id": 329,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 329,
+    "hex": "0x149",
+    "name": "_glLoadIdentity_",
+    "compiler_id": 330,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 330,
+    "hex": "0x14A",
+    "name": "_glLoadMatrixx_",
+    "compiler_id": 331,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 331,
+    "hex": "0x14B",
+    "name": "_glMatrixMode_",
+    "compiler_id": 332,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 332,
+    "hex": "0x14C",
+    "name": "_glMultMatrixx_",
+    "compiler_id": 333,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 333,
+    "hex": "0x14D",
+    "name": "_glNormalPointer_",
+    "compiler_id": 334,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 334,
+    "hex": "0x14E",
+    "name": "_glPolygonMode_",
+    "compiler_id": 335,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 335,
+    "hex": "0x14F",
+    "name": "_glPopMatrix_",
+    "compiler_id": 336,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 336,
+    "hex": "0x150",
+    "name": "_glPushMatrix_",
+    "compiler_id": 337,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 337,
+    "hex": "0x151",
+    "name": "_glRasterPos3x_",
+    "compiler_id": 338,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 338,
+    "hex": "0x152",
+    "name": "_glRotatex_",
+    "compiler_id": 339,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 339,
+    "hex": "0x153",
+    "name": "_glScalex_",
+    "compiler_id": 340,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 340,
+    "hex": "0x154",
+    "name": "_glShadeModel_",
+    "compiler_id": 341,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 341,
+    "hex": "0x155",
+    "name": "_glTexCoordPointer_",
+    "compiler_id": 342,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 342,
+    "hex": "0x156",
+    "name": "_glTexImage2D_",
+    "compiler_id": 343,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 343,
+    "hex": "0x157",
+    "name": "_glTranslatex_",
+    "compiler_id": 344,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 344,
+    "hex": "0x158",
+    "name": "_glexSINd_",
+    "compiler_id": 345,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 345,
+    "hex": "0x159",
+    "name": "_glexCOSd_",
+    "compiler_id": 346,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 346,
+    "hex": "0x15A",
+    "name": "_glexSINr_",
+    "compiler_id": 347,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 347,
+    "hex": "0x15B",
+    "name": "_glexCOSr_",
+    "compiler_id": 348,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 348,
+    "hex": "0x15C",
+    "name": "_glexACOSr_",
+    "compiler_id": 349,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 349,
+    "hex": "0x15D",
+    "name": "_glexRotateX_",
+    "compiler_id": 350,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 350,
+    "hex": "0x15E",
+    "name": "_glexRotateY_",
+    "compiler_id": 351,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 351,
+    "hex": "0x15F",
+    "name": "_glexRotateZ_",
+    "compiler_id": 352,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 352,
+    "hex": "0x160",
+    "name": "_glexQuatToMatrixx_",
+    "compiler_id": 353,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 353,
+    "hex": "0x161",
+    "name": "_glexQuatSlerpx_",
+    "compiler_id": 354,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 354,
+    "hex": "0x162",
+    "name": "_glexMultMatrixx_",
+    "compiler_id": 355,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 355,
+    "hex": "0x163",
+    "name": "_glexComposeMatrixx_",
+    "compiler_id": 356,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12,
+      12,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 356,
+    "hex": "0x164",
+    "name": "_glexVertexPointer_",
+    "compiler_id": 357,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 357,
+    "hex": "0x165",
+    "name": "_glexEnable_",
+    "compiler_id": 358,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 358,
+    "hex": "0x166",
+    "name": "_glexDisable_",
+    "compiler_id": 359,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 359,
+    "hex": "0x167",
+    "name": "_glexSetAlphaCh_",
+    "compiler_id": 360,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 360,
+    "hex": "0x168",
+    "name": "_gluPerspective_",
+    "compiler_id": 361,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 361,
+    "hex": "0x169",
+    "name": "_wglCloseGL_",
+    "compiler_id": 362,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 362,
+    "hex": "0x16A",
+    "name": "_wglOpenGL_",
+    "compiler_id": 363,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 363,
+    "hex": "0x16B",
+    "name": "_wglOpenGLEx_",
+    "compiler_id": 364,
+    "argc": 7,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 364,
+    "hex": "0x16C",
+    "name": "_sglCreateHandle_",
+    "compiler_id": 365,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 365,
+    "hex": "0x16D",
+    "name": "_sglReleaseHandle_",
+    "compiler_id": 366,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 366,
+    "hex": "0x16E",
+    "name": "_sglDrawElements_",
+    "compiler_id": 367,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 367,
+    "hex": "0x16F",
+    "name": "_sglNormalPointer_",
+    "compiler_id": 368,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 368,
+    "hex": "0x170",
+    "name": "_sglTexCoordPointer_",
+    "compiler_id": 369,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 369,
+    "hex": "0x171",
+    "name": "_sglTexImage2D_",
+    "compiler_id": 370,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 370,
+    "hex": "0x172",
+    "name": "_sglVertexPointer_",
+    "compiler_id": 371,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 371,
+    "hex": "0x173",
+    "name": "VODGetPictureMate",
+    "compiler_id": 372,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 372,
+    "hex": "0x174",
+    "name": "CHGetCount",
+    "compiler_id": 373,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 373,
+    "hex": "0x175",
+    "name": "CHGetRecord",
+    "compiler_id": 374,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 374,
+    "hex": "0x176",
+    "name": "CHCheckUsing",
+    "compiler_id": 375,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 375,
+    "hex": "0x177",
+    "name": "SetVolumeEx",
+    "compiler_id": 376,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 376,
+    "hex": "0x178",
+    "name": "GetVolumeEx",
+    "compiler_id": 377,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 377,
+    "hex": "0x179",
+    "name": "CAMWriteImage",
+    "compiler_id": 378,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  },
+  {
+    "id": 378,
+    "hex": "0x17A",
+    "name": "LcdWrite",
+    "compiler_id": 379,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 379,
+    "hex": "0x17B",
+    "name": "LcdRead",
+    "compiler_id": 380,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 380,
+    "hex": "0x17C",
+    "name": "CAMGetPosition",
+    "compiler_id": 381,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      12,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 381,
+    "hex": "0x17D",
+    "name": "CAMSetPosition",
+    "compiler_id": 382,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 382,
+    "hex": "0x17E",
+    "name": "CAMGetFormat",
+    "compiler_id": 383,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 383,
+    "hex": "0x17F",
+    "name": "CAMSetFormat",
+    "compiler_id": 384,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 384,
+    "hex": "0x180",
+    "name": "CAMGetResolution",
+    "compiler_id": 385,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 385,
+    "hex": "0x181",
+    "name": "CAMSetResolution",
+    "compiler_id": 386,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 386,
+    "hex": "0x182",
+    "name": "CAMGetSupportFormat",
+    "compiler_id": 387,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 387,
+    "hex": "0x183",
+    "name": "CAMGetFormatCount",
+    "compiler_id": 388,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 388,
+    "hex": "0x184",
+    "name": "GetVMInfo",
+    "compiler_id": 389,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 389,
+    "hex": "0x185",
+    "name": "VODPlayResource",
+    "compiler_id": 390,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 390,
+    "hex": "0x186",
+    "name": "GetSysMdn",
+    "compiler_id": 391,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 391,
+    "hex": "0x187",
+    "name": "StretchCopyImage",
+    "compiler_id": 392,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2
+    ]
+  },
+  {
+    "id": 392,
+    "hex": "0x188",
+    "name": "StretchCopyImageDir",
+    "compiler_id": 393,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11
+    ]
+  },
+  {
+    "id": 393,
+    "hex": "0x189",
+    "name": "StretchCopyImagePal",
+    "compiler_id": 394,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      12
+    ]
+  },
+  {
+    "id": 394,
+    "hex": "0x18A",
+    "name": "StretchCopyImageDirPal",
+    "compiler_id": 395,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 395,
+    "hex": "0x18B",
+    "name": "StretchCopyImagePalEx",
+    "compiler_id": 396,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 396,
+    "hex": "0x18C",
+    "name": "ES_glGetError",
+    "compiler_id": 397,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 397,
+    "hex": "0x18D",
+    "name": "ES_glNormal3x",
+    "compiler_id": 398,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 398,
+    "hex": "0x18E",
+    "name": "ES_glMultiTexCoord4x",
+    "compiler_id": 399,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 399,
+    "hex": "0x18F",
+    "name": "ES_glColor4x",
+    "compiler_id": 400,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 400,
+    "hex": "0x190",
+    "name": "ES_glVertexPointer",
+    "compiler_id": 401,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 401,
+    "hex": "0x191",
+    "name": "ES_glNormalPointer",
+    "compiler_id": 402,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 402,
+    "hex": "0x192",
+    "name": "ES_glColorPointer",
+    "compiler_id": 403,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 403,
+    "hex": "0x193",
+    "name": "ES_glTexCoordPointer",
+    "compiler_id": 404,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 404,
+    "hex": "0x194",
+    "name": "ES_glDrawArrays",
+    "compiler_id": 405,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 405,
+    "hex": "0x195",
+    "name": "ES_glDrawElements",
+    "compiler_id": 406,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 406,
+    "hex": "0x196",
+    "name": "ES_glClientActiveTexture",
+    "compiler_id": 407,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 407,
+    "hex": "0x197",
+    "name": "ES_glEnableClientState",
+    "compiler_id": 408,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 408,
+    "hex": "0x198",
+    "name": "ES_glDisableClientState",
+    "compiler_id": 409,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 409,
+    "hex": "0x199",
+    "name": "ES_glDepthRangex",
+    "compiler_id": 410,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 410,
+    "hex": "0x19A",
+    "name": "ES_glViewport",
+    "compiler_id": 411,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 411,
+    "hex": "0x19B",
+    "name": "ES_glMatrixMode",
+    "compiler_id": 412,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 412,
+    "hex": "0x19C",
+    "name": "ES_glLoadMatrixx",
+    "compiler_id": 413,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 413,
+    "hex": "0x19D",
+    "name": "ES_glLoadIdentity",
+    "compiler_id": 414,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 414,
+    "hex": "0x19E",
+    "name": "ES_glRotatex",
+    "compiler_id": 415,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 415,
+    "hex": "0x19F",
+    "name": "ES_glScalex",
+    "compiler_id": 416,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 416,
+    "hex": "0x1A0",
+    "name": "ES_glTranslatex",
+    "compiler_id": 417,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 417,
+    "hex": "0x1A1",
+    "name": "ES_glFrustumx",
+    "compiler_id": 418,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 418,
+    "hex": "0x1A2",
+    "name": "ES_glOrthox",
+    "compiler_id": 419,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 419,
+    "hex": "0x1A3",
+    "name": "ES_glActiveTexture",
+    "compiler_id": 420,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 420,
+    "hex": "0x1A4",
+    "name": "ES_glPushMatrix",
+    "compiler_id": 421,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 421,
+    "hex": "0x1A5",
+    "name": "ES_glPopMatrix",
+    "compiler_id": 422,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 422,
+    "hex": "0x1A6",
+    "name": "ES_glFrontFace",
+    "compiler_id": 423,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 423,
+    "hex": "0x1A7",
+    "name": "ES_glMaterialx",
+    "compiler_id": 424,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 424,
+    "hex": "0x1A8",
+    "name": "ES_glMaterialxv",
+    "compiler_id": 425,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 425,
+    "hex": "0x1A9",
+    "name": "ES_glLightx",
+    "compiler_id": 426,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 426,
+    "hex": "0x1AA",
+    "name": "ES_glLightxv",
+    "compiler_id": 427,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 427,
+    "hex": "0x1AB",
+    "name": "ES_glLightModelx",
+    "compiler_id": 428,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 428,
+    "hex": "0x1AC",
+    "name": "ES_glShadeModel",
+    "compiler_id": 429,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 429,
+    "hex": "0x1AD",
+    "name": "ES_glPointSizex",
+    "compiler_id": 430,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 430,
+    "hex": "0x1AE",
+    "name": "ES_glLineWidthx",
+    "compiler_id": 431,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 431,
+    "hex": "0x1AF",
+    "name": "ES_glCullFace",
+    "compiler_id": 432,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 432,
+    "hex": "0x1B0",
+    "name": "ES_glPolygonOffsetx",
+    "compiler_id": 433,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 433,
+    "hex": "0x1B1",
+    "name": "ES_glPixelStorei",
+    "compiler_id": 434,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 434,
+    "hex": "0x1B2",
+    "name": "ES_glTexImage2D",
+    "compiler_id": 435,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 435,
+    "hex": "0x1B3",
+    "name": "ES_glTexSubImage2D",
+    "compiler_id": 436,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 436,
+    "hex": "0x1B4",
+    "name": "ES_glCopyTexImage2D",
+    "compiler_id": 437,
+    "argc": 8,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 437,
+    "hex": "0x1B5",
+    "name": "ES_glCopyTexSubImage2D",
+    "compiler_id": 438,
+    "argc": 8,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 438,
+    "hex": "0x1B6",
+    "name": "ES_glCompressedTexImage2D",
+    "compiler_id": 439,
+    "argc": 8,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 439,
+    "hex": "0x1B7",
+    "name": "ES_glCompressedTexSubImage2D",
+    "compiler_id": 440,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 440,
+    "hex": "0x1B8",
+    "name": "ES_glTexParameterx",
+    "compiler_id": 441,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 441,
+    "hex": "0x1B9",
+    "name": "ES_glBindTexture",
+    "compiler_id": 442,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 442,
+    "hex": "0x1BA",
+    "name": "ES_glDeleteTextures",
+    "compiler_id": 443,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 443,
+    "hex": "0x1BB",
+    "name": "ES_glGenTextures",
+    "compiler_id": 444,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 444,
+    "hex": "0x1BC",
+    "name": "ES_glTexEnvx",
+    "compiler_id": 445,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 445,
+    "hex": "0x1BD",
+    "name": "ES_glTexEnvxv",
+    "compiler_id": 446,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 446,
+    "hex": "0x1BE",
+    "name": "ES_glFogx",
+    "compiler_id": 447,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 447,
+    "hex": "0x1BF",
+    "name": "ES_glFogxv",
+    "compiler_id": 448,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 448,
+    "hex": "0x1C0",
+    "name": "ES_glScissor",
+    "compiler_id": 449,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 449,
+    "hex": "0x1C1",
+    "name": "ES_glSampleCoveragex",
+    "compiler_id": 450,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 450,
+    "hex": "0x1C2",
+    "name": "ES_glAlphaFuncx",
+    "compiler_id": 451,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 451,
+    "hex": "0x1C3",
+    "name": "ES_glStencilFunc",
+    "compiler_id": 452,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 452,
+    "hex": "0x1C4",
+    "name": "ES_glStencilMask",
+    "compiler_id": 453,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 453,
+    "hex": "0x1C5",
+    "name": "ES_glStencilOp",
+    "compiler_id": 454,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 454,
+    "hex": "0x1C6",
+    "name": "ES_glDepthFunc",
+    "compiler_id": 455,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 455,
+    "hex": "0x1C7",
+    "name": "ES_glDepthMask",
+    "compiler_id": 456,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 456,
+    "hex": "0x1C8",
+    "name": "ES_glBlendFunc",
+    "compiler_id": 457,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 457,
+    "hex": "0x1C9",
+    "name": "ES_glLogicOp",
+    "compiler_id": 458,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 458,
+    "hex": "0x1CA",
+    "name": "ES_glColorMask",
+    "compiler_id": 459,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 459,
+    "hex": "0x1CB",
+    "name": "ES_glClear",
+    "compiler_id": 460,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 460,
+    "hex": "0x1CC",
+    "name": "ES_glClearColorx",
+    "compiler_id": 461,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 461,
+    "hex": "0x1CD",
+    "name": "ES_glClearDepthx",
+    "compiler_id": 462,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 462,
+    "hex": "0x1CE",
+    "name": "ES_glClearStencil",
+    "compiler_id": 463,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 463,
+    "hex": "0x1CF",
+    "name": "ES_glReadPixels",
+    "compiler_id": 464,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 464,
+    "hex": "0x1D0",
+    "name": "ES_glFlush",
+    "compiler_id": 465,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 465,
+    "hex": "0x1D1",
+    "name": "ES_glFinish",
+    "compiler_id": 466,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 466,
+    "hex": "0x1D2",
+    "name": "ES_glHint",
+    "compiler_id": 467,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 467,
+    "hex": "0x1D3",
+    "name": "ES_glGetString",
+    "compiler_id": 468,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 468,
+    "hex": "0x1D4",
+    "name": "ES_glGetIntegerv",
+    "compiler_id": 469,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 469,
+    "hex": "0x1D5",
+    "name": "ES_glEnable",
+    "compiler_id": 470,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 470,
+    "hex": "0x1D6",
+    "name": "ES_glDisable",
+    "compiler_id": 471,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 471,
+    "hex": "0x1D7",
+    "name": "ES_eglFlush",
+    "compiler_id": 472,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 472,
+    "hex": "0x1D8",
+    "name": "GetSysInfo",
+    "compiler_id": 473,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": 473,
+    "hex": "0x1D9",
+    "name": "StretchCopyImageHS",
+    "compiler_id": 474,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2
+    ]
+  },
+  {
+    "id": 474,
+    "hex": "0x1DA",
+    "name": "StretchCopyImageHSDir",
+    "compiler_id": 475,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11
+    ]
+  },
+  {
+    "id": 475,
+    "hex": "0x1DB",
+    "name": "StretchCopyImageHSPal",
+    "compiler_id": 476,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      12
+    ]
+  },
+  {
+    "id": 476,
+    "hex": "0x1DC",
+    "name": "StretchCopyImageHSDirPal",
+    "compiler_id": 477,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 477,
+    "hex": "0x1DD",
+    "name": "StretchCopyImageHSPalEx",
+    "compiler_id": 478,
+    "argc": 9,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 478,
+    "hex": "0x1DE",
+    "name": "StretchCopyImageHSEx",
+    "compiler_id": 479,
+    "argc": 8,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 479,
+    "hex": "0x1DF",
+    "name": "StretchCopyImageEx",
+    "compiler_id": 480,
+    "argc": 8,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      2,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 480,
+    "hex": "0x1E0",
+    "name": "GetKeyState",
+    "compiler_id": 481,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 481,
+    "hex": "0x1E1",
+    "name": "MoA_GetProbability",
+    "compiler_id": 482,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": 482,
+    "hex": "0x1E2",
+    "name": "VODSeek",
+    "compiler_id": 483,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 483,
+    "hex": "0x1E3",
+    "name": "SetSystemOperation",
+    "compiler_id": 484,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      14
+    ]
+  },
+  {
+    "id": 484,
+    "hex": "0x1E4",
+    "name": "GetImage",
+    "compiler_id": 485,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      6,
+      14
+    ]
+  },
+  {
+    "id": 485,
+    "hex": "0x1E5",
+    "name": "GetNextImage",
+    "compiler_id": 486,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6
+    ]
+  },
+  {
+    "id": 486,
+    "hex": "0x1E6",
+    "name": "ReleaseImage",
+    "compiler_id": 487,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 487,
+    "hex": "0x1E7",
+    "name": "swv_animationcontroller_create",
+    "compiler_id": 488,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 488,
+    "hex": "0x1E8",
+    "name": "swv_animationcontroller_getActiveIntervalEnd",
+    "compiler_id": 489,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 489,
+    "hex": "0x1E9",
+    "name": "swv_animationcontroller_getActiveIntervalStart",
+    "compiler_id": 490,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 490,
+    "hex": "0x1EA",
+    "name": "swv_animationcontroller_getPosition",
+    "compiler_id": 491,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 491,
+    "hex": "0x1EB",
+    "name": "swv_animationcontroller_getSpeed",
+    "compiler_id": 492,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 492,
+    "hex": "0x1EC",
+    "name": "swv_animationcontroller_getWeight",
+    "compiler_id": 493,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 493,
+    "hex": "0x1ED",
+    "name": "swv_animationcontroller_setActiveInterval",
+    "compiler_id": 494,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 494,
+    "hex": "0x1EE",
+    "name": "swv_animationcontroller_setPosition",
+    "compiler_id": 495,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 495,
+    "hex": "0x1EF",
+    "name": "swv_animationcontroller_setSpeed",
+    "compiler_id": 496,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 496,
+    "hex": "0x1F0",
+    "name": "swv_animationcontroller_setWeight",
+    "compiler_id": 497,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 497,
+    "hex": "0x1F1",
+    "name": "swv_animationtrack_create",
+    "compiler_id": 498,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 498,
+    "hex": "0x1F2",
+    "name": "swv_animationtrack_getController",
+    "compiler_id": 499,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 499,
+    "hex": "0x1F3",
+    "name": "swv_animationtrack_getKeyframeSequence",
+    "compiler_id": 500,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 500,
+    "hex": "0x1F4",
+    "name": "swv_animationtrack_getTargetProperty",
+    "compiler_id": 501,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 501,
+    "hex": "0x1F5",
+    "name": "swv_animationtrack_setController",
+    "compiler_id": 502,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 502,
+    "hex": "0x1F6",
+    "name": "swv_appearance_create",
+    "compiler_id": 503,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 503,
+    "hex": "0x1F7",
+    "name": "swv_appearance_getCompositingMode",
+    "compiler_id": 504,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 504,
+    "hex": "0x1F8",
+    "name": "swv_appearance_getFog",
+    "compiler_id": 505,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 505,
+    "hex": "0x1F9",
+    "name": "swv_appearance_getLayer",
+    "compiler_id": 506,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 506,
+    "hex": "0x1FA",
+    "name": "swv_appearance_getMaterial",
+    "compiler_id": 507,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 507,
+    "hex": "0x1FB",
+    "name": "swv_appearance_getPolygonMode",
+    "compiler_id": 508,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 508,
+    "hex": "0x1FC",
+    "name": "swv_appearance_getTexture",
+    "compiler_id": 509,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 509,
+    "hex": "0x1FD",
+    "name": "swv_appearance_setCompositingMode",
+    "compiler_id": 510,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 510,
+    "hex": "0x1FE",
+    "name": "swv_appearance_setFog",
+    "compiler_id": 511,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 511,
+    "hex": "0x1FF",
+    "name": "swv_appearance_setLayer",
+    "compiler_id": 512,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 512,
+    "hex": "0x200",
+    "name": "swv_appearance_setMaterial",
+    "compiler_id": 513,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 513,
+    "hex": "0x201",
+    "name": "swv_appearance_setPolygonMode",
+    "compiler_id": 514,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 514,
+    "hex": "0x202",
+    "name": "swv_appearance_setTexture",
+    "compiler_id": 515,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 515,
+    "hex": "0x203",
+    "name": "swv_background_create",
+    "compiler_id": 516,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 516,
+    "hex": "0x204",
+    "name": "swv_background_getColor",
+    "compiler_id": 517,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 517,
+    "hex": "0x205",
+    "name": "swv_background_getCropHeight",
+    "compiler_id": 518,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 518,
+    "hex": "0x206",
+    "name": "swv_background_getCropWidth",
+    "compiler_id": 519,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 519,
+    "hex": "0x207",
+    "name": "swv_background_getCropX",
+    "compiler_id": 520,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 520,
+    "hex": "0x208",
+    "name": "swv_background_getCropY",
+    "compiler_id": 521,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 521,
+    "hex": "0x209",
+    "name": "swv_background_getImage",
+    "compiler_id": 522,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 522,
+    "hex": "0x20A",
+    "name": "swv_background_getImageModeX",
+    "compiler_id": 523,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 523,
+    "hex": "0x20B",
+    "name": "swv_background_getImageModeY",
+    "compiler_id": 524,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 524,
+    "hex": "0x20C",
+    "name": "swv_background_isColorClearEnabled",
+    "compiler_id": 525,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 525,
+    "hex": "0x20D",
+    "name": "swv_background_isDepthClearEnabled",
+    "compiler_id": 526,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 526,
+    "hex": "0x20E",
+    "name": "swv_background_setColor",
+    "compiler_id": 527,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 527,
+    "hex": "0x20F",
+    "name": "swv_background_setColorClearEnable",
+    "compiler_id": 528,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 528,
+    "hex": "0x210",
+    "name": "swv_background_setCrop",
+    "compiler_id": 529,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 529,
+    "hex": "0x211",
+    "name": "swv_background_setDepthClearEnable",
+    "compiler_id": 530,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 530,
+    "hex": "0x212",
+    "name": "swv_background_setImage",
+    "compiler_id": 531,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 531,
+    "hex": "0x213",
+    "name": "swv_background_setImageMode",
+    "compiler_id": 532,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 532,
+    "hex": "0x214",
+    "name": "swv_camera_create",
+    "compiler_id": 533,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 533,
+    "hex": "0x215",
+    "name": "swv_camera_getProjectionParams",
+    "compiler_id": 534,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 534,
+    "hex": "0x216",
+    "name": "swv_camera_getProjectionTransform",
+    "compiler_id": 535,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 535,
+    "hex": "0x217",
+    "name": "swv_camera_setGeneric",
+    "compiler_id": 536,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 536,
+    "hex": "0x218",
+    "name": "swv_camera_setParallel",
+    "compiler_id": 537,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 537,
+    "hex": "0x219",
+    "name": "swv_camera_setPerspective",
+    "compiler_id": 538,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 538,
+    "hex": "0x21A",
+    "name": "swv_compositingmode_create",
+    "compiler_id": 539,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 539,
+    "hex": "0x21B",
+    "name": "swv_compositingmode_getAlphaThreshold",
+    "compiler_id": 540,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 540,
+    "hex": "0x21C",
+    "name": "swv_compositingmode_getBlending",
+    "compiler_id": 541,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 541,
+    "hex": "0x21D",
+    "name": "swv_compositingmode_getDepthOffsetFactor",
+    "compiler_id": 542,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 542,
+    "hex": "0x21E",
+    "name": "swv_compositingmode_getDepthOffsetUnits",
+    "compiler_id": 543,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 543,
+    "hex": "0x21F",
+    "name": "swv_compositingmode_isAlphaWriteEnabled",
+    "compiler_id": 544,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 544,
+    "hex": "0x220",
+    "name": "swv_compositingmode_isColorWriteEnabled",
+    "compiler_id": 545,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 545,
+    "hex": "0x221",
+    "name": "swv_compositingmode_isDepthTestEnabled",
+    "compiler_id": 546,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 546,
+    "hex": "0x222",
+    "name": "swv_compositingmode_isDepthWriteEnabled",
+    "compiler_id": 547,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 547,
+    "hex": "0x223",
+    "name": "swv_compositingmode_setAlphaThreshold",
+    "compiler_id": 548,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 548,
+    "hex": "0x224",
+    "name": "swv_compositingmode_setAlphaWriteEnable",
+    "compiler_id": 549,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 549,
+    "hex": "0x225",
+    "name": "swv_compositingmode_setBlending",
+    "compiler_id": 550,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 550,
+    "hex": "0x226",
+    "name": "swv_compositingmode_setColorWriteEnable",
+    "compiler_id": 551,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 551,
+    "hex": "0x227",
+    "name": "swv_compositingmode_setDepthOffset",
+    "compiler_id": 552,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 552,
+    "hex": "0x228",
+    "name": "swv_compositingmode_setDepthTestEnable",
+    "compiler_id": 553,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 553,
+    "hex": "0x229",
+    "name": "swv_compositingmode_setDepthWriteEnable",
+    "compiler_id": 554,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 554,
+    "hex": "0x22A",
+    "name": "swv_decompress_AcceptBytes",
+    "compiler_id": 555,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      5
+    ]
+  },
+  {
+    "id": 555,
+    "hex": "0x22B",
+    "name": "swv_engine_getEdition",
+    "compiler_id": 556,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 556,
+    "hex": "0x22C",
+    "name": "swv_engine_getHandleType",
+    "compiler_id": 557,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 557,
+    "hex": "0x22D",
+    "name": "swv_engine_getLastError",
+    "compiler_id": 558,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 558,
+    "hex": "0x22E",
+    "name": "swv_engine_getRefCount",
+    "compiler_id": 559,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 559,
+    "hex": "0x22F",
+    "name": "swv_engine_getSysInfo",
+    "compiler_id": 560,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 560,
+    "hex": "0x230",
+    "name": "swv_engine_getVersion",
+    "compiler_id": 561,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 561,
+    "hex": "0x231",
+    "name": "swv_engine_initialize",
+    "compiler_id": 562,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 562,
+    "hex": "0x232",
+    "name": "swv_engine_releaseHandle",
+    "compiler_id": 563,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 563,
+    "hex": "0x233",
+    "name": "swv_engine_uninitialize",
+    "compiler_id": 564,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 564,
+    "hex": "0x234",
+    "name": "swv_fog_create",
+    "compiler_id": 565,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 565,
+    "hex": "0x235",
+    "name": "swv_fog_getColor",
+    "compiler_id": 566,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 566,
+    "hex": "0x236",
+    "name": "swv_fog_getDensity",
+    "compiler_id": 567,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 567,
+    "hex": "0x237",
+    "name": "swv_fog_getFarDistance",
+    "compiler_id": 568,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 568,
+    "hex": "0x238",
+    "name": "swv_fog_getMode",
+    "compiler_id": 569,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 569,
+    "hex": "0x239",
+    "name": "swv_fog_getNearDistance",
+    "compiler_id": 570,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 570,
+    "hex": "0x23A",
+    "name": "swv_fog_setColor",
+    "compiler_id": 571,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 571,
+    "hex": "0x23B",
+    "name": "swv_fog_setDensity",
+    "compiler_id": 572,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 572,
+    "hex": "0x23C",
+    "name": "swv_fog_setLinear",
+    "compiler_id": 573,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 573,
+    "hex": "0x23D",
+    "name": "swv_fog_setMode",
+    "compiler_id": 574,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 574,
+    "hex": "0x23E",
+    "name": "swv_graphics3d_addLight",
+    "compiler_id": 575,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 575,
+    "hex": "0x23F",
+    "name": "swv_graphics3d_clear",
+    "compiler_id": 576,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 576,
+    "hex": "0x240",
+    "name": "swv_graphics3d_getHeight",
+    "compiler_id": 577,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 577,
+    "hex": "0x241",
+    "name": "swv_graphics3d_getInstance",
+    "compiler_id": 578,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 578,
+    "hex": "0x242",
+    "name": "swv_graphics3d_getPitch",
+    "compiler_id": 579,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 579,
+    "hex": "0x243",
+    "name": "swv_graphics3d_getPixels",
+    "compiler_id": 580,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      5
+    ]
+  },
+  {
+    "id": 580,
+    "hex": "0x244",
+    "name": "swv_graphics3d_getStatistics",
+    "compiler_id": 581,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      5
+    ]
+  },
+  {
+    "id": 581,
+    "hex": "0x245",
+    "name": "swv_graphics3d_getWidth",
+    "compiler_id": 582,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 582,
+    "hex": "0x246",
+    "name": "swv_graphics3d_renderNode",
+    "compiler_id": 583,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 583,
+    "hex": "0x247",
+    "name": "swv_graphics3d_renderPrimitive",
+    "compiler_id": 584,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 584,
+    "hex": "0x248",
+    "name": "swv_graphics3d_renderWorld",
+    "compiler_id": 585,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 585,
+    "hex": "0x249",
+    "name": "swv_graphics3d_resetLights",
+    "compiler_id": 586,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 586,
+    "hex": "0x24A",
+    "name": "swv_graphics3d_setBackBufferData",
+    "compiler_id": 587,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      5
+    ]
+  },
+  {
+    "id": 587,
+    "hex": "0x24B",
+    "name": "swv_graphics3d_setBackBufferImage2D",
+    "compiler_id": 787,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 588,
+    "hex": "0x24C",
+    "name": "swv_graphics3d_setCamera",
+    "compiler_id": 588,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 589,
+    "hex": "0x24D",
+    "name": "swv_graphics3d_setCroppedBackBufferData",
+    "compiler_id": 589,
+    "argc": 9,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      5,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 590,
+    "hex": "0x24E",
+    "name": "swv_graphics3d_setDepthRange",
+    "compiler_id": 590,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 591,
+    "hex": "0x24F",
+    "name": "swv_graphics3d_setHints",
+    "compiler_id": 788,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 592,
+    "hex": "0x250",
+    "name": "swv_graphics3d_setLight",
+    "compiler_id": 591,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 593,
+    "hex": "0x251",
+    "name": "swv_graphics3d_setViewport",
+    "compiler_id": 592,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 594,
+    "hex": "0x252",
+    "name": "swv_graphics3d_updateBackBufferData",
+    "compiler_id": 593,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 595,
+    "hex": "0x253",
+    "name": "swv_group_addChild",
+    "compiler_id": 594,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 596,
+    "hex": "0x254",
+    "name": "swv_group_create",
+    "compiler_id": 595,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 597,
+    "hex": "0x255",
+    "name": "swv_group_getChild",
+    "compiler_id": 596,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 598,
+    "hex": "0x256",
+    "name": "swv_group_getChildCount",
+    "compiler_id": 597,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 599,
+    "hex": "0x257",
+    "name": "swv_group_pickCamera",
+    "compiler_id": 598,
+    "argc": 7,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 600,
+    "hex": "0x258",
+    "name": "swv_group_pickNode",
+    "compiler_id": 599,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      12,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 601,
+    "hex": "0x259",
+    "name": "swv_group_removeChild",
+    "compiler_id": 600,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 602,
+    "hex": "0x25A",
+    "name": "swv_image2d_create",
+    "compiler_id": 601,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 603,
+    "hex": "0x25B",
+    "name": "swv_image2d_createMutable",
+    "compiler_id": 602,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 604,
+    "hex": "0x25C",
+    "name": "swv_image2d_createPalettized",
+    "compiler_id": 603,
+    "argc": 8,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 605,
+    "hex": "0x25D",
+    "name": "swv_image2d_createUninitialized",
+    "compiler_id": 604,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 606,
+    "hex": "0x25E",
+    "name": "swv_image2d_getAlpha",
+    "compiler_id": 605,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      5
+    ]
+  },
+  {
+    "id": 607,
+    "hex": "0x25F",
+    "name": "swv_image2d_getFormat",
+    "compiler_id": 606,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 608,
+    "hex": "0x260",
+    "name": "swv_image2d_getHeight",
+    "compiler_id": 607,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 609,
+    "hex": "0x261",
+    "name": "swv_image2d_getPalette",
+    "compiler_id": 608,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      5
+    ]
+  },
+  {
+    "id": 610,
+    "hex": "0x262",
+    "name": "swv_image2d_getPixels",
+    "compiler_id": 609,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      5
+    ]
+  },
+  {
+    "id": 611,
+    "hex": "0x263",
+    "name": "swv_image2d_getWidth",
+    "compiler_id": 610,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 612,
+    "hex": "0x264",
+    "name": "swv_image2d_isMutable",
+    "compiler_id": 611,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 613,
+    "hex": "0x265",
+    "name": "swv_image2d_set",
+    "compiler_id": 612,
+    "argc": 7,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 614,
+    "hex": "0x266",
+    "name": "swv_keyframesequence_create",
+    "compiler_id": 613,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 615,
+    "hex": "0x267",
+    "name": "swv_keyframesequence_getDuration",
+    "compiler_id": 614,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 616,
+    "hex": "0x268",
+    "name": "swv_keyframesequence_getRepeatMode",
+    "compiler_id": 615,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 617,
+    "hex": "0x269",
+    "name": "swv_keyframesequence_setDuration",
+    "compiler_id": 616,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 618,
+    "hex": "0x26A",
+    "name": "swv_keyframesequence_setKeyframe",
+    "compiler_id": 617,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 619,
+    "hex": "0x26B",
+    "name": "swv_keyframesequence_setRepeatMode",
+    "compiler_id": 618,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 620,
+    "hex": "0x26C",
+    "name": "swv_keyframesequence_setValidRange",
+    "compiler_id": 619,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 621,
+    "hex": "0x26D",
+    "name": "swv_light_create",
+    "compiler_id": 620,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 622,
+    "hex": "0x26E",
+    "name": "swv_light_getColor",
+    "compiler_id": 621,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 623,
+    "hex": "0x26F",
+    "name": "swv_light_getConstantAttenuation",
+    "compiler_id": 622,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 624,
+    "hex": "0x270",
+    "name": "swv_light_getIntensity",
+    "compiler_id": 623,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 625,
+    "hex": "0x271",
+    "name": "swv_light_getLinearAttenuation",
+    "compiler_id": 624,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 626,
+    "hex": "0x272",
+    "name": "swv_light_getMode",
+    "compiler_id": 625,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 627,
+    "hex": "0x273",
+    "name": "swv_light_getQuadraticAttenuation",
+    "compiler_id": 626,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 628,
+    "hex": "0x274",
+    "name": "swv_light_getSpotAngle",
+    "compiler_id": 627,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 629,
+    "hex": "0x275",
+    "name": "swv_light_getSpotExponent",
+    "compiler_id": 628,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 630,
+    "hex": "0x276",
+    "name": "swv_light_setAttenuation",
+    "compiler_id": 629,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 631,
+    "hex": "0x277",
+    "name": "swv_light_setColor",
+    "compiler_id": 630,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 632,
+    "hex": "0x278",
+    "name": "swv_light_setIntensity",
+    "compiler_id": 631,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 633,
+    "hex": "0x279",
+    "name": "swv_light_setMode",
+    "compiler_id": 632,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 634,
+    "hex": "0x27A",
+    "name": "swv_light_setSpotAngle",
+    "compiler_id": 633,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 635,
+    "hex": "0x27B",
+    "name": "swv_light_setSpotExponent",
+    "compiler_id": 634,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 636,
+    "hex": "0x27C",
+    "name": "swv_material_create",
+    "compiler_id": 635,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 637,
+    "hex": "0x27D",
+    "name": "swv_material_getColor",
+    "compiler_id": 636,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 638,
+    "hex": "0x27E",
+    "name": "swv_material_getShininess",
+    "compiler_id": 637,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 639,
+    "hex": "0x27F",
+    "name": "swv_material_isVertexColorTrackingEnabled",
+    "compiler_id": 638,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 640,
+    "hex": "0x280",
+    "name": "swv_material_setColor",
+    "compiler_id": 639,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 641,
+    "hex": "0x281",
+    "name": "swv_material_setShininess",
+    "compiler_id": 640,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 642,
+    "hex": "0x282",
+    "name": "swv_material_setVertexColorTrackingEnable",
+    "compiler_id": 641,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 643,
+    "hex": "0x283",
+    "name": "swv_mesh_createMultiSubmesh",
+    "compiler_id": 642,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 644,
+    "hex": "0x284",
+    "name": "swv_mesh_createSingleSubmesh",
+    "compiler_id": 643,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 645,
+    "hex": "0x285",
+    "name": "swv_mesh_getAppearance",
+    "compiler_id": 644,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 646,
+    "hex": "0x286",
+    "name": "swv_mesh_getIndexBuffer",
+    "compiler_id": 645,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 647,
+    "hex": "0x287",
+    "name": "swv_mesh_getSubmeshCount",
+    "compiler_id": 646,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 648,
+    "hex": "0x288",
+    "name": "swv_mesh_getVertexBuffer",
+    "compiler_id": 647,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 649,
+    "hex": "0x289",
+    "name": "swv_mesh_setAppearance",
+    "compiler_id": 648,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 650,
+    "hex": "0x28A",
+    "name": "swv_morphingmesh_createMultiSubmesh",
+    "compiler_id": 649,
+    "argc": 8,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      11,
+      12,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 651,
+    "hex": "0x28B",
+    "name": "swv_morphingmesh_createSingleSubmesh",
+    "compiler_id": 650,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 652,
+    "hex": "0x28C",
+    "name": "swv_morphingmesh_getMorphTarget",
+    "compiler_id": 651,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 653,
+    "hex": "0x28D",
+    "name": "swv_morphingmesh_getMorphTargetCount",
+    "compiler_id": 652,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 654,
+    "hex": "0x28E",
+    "name": "swv_morphingmesh_getWeights",
+    "compiler_id": 653,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 655,
+    "hex": "0x28F",
+    "name": "swv_morphingmesh_setWeights",
+    "compiler_id": 654,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 656,
+    "hex": "0x290",
+    "name": "swv_node_align",
+    "compiler_id": 655,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 657,
+    "hex": "0x291",
+    "name": "swv_node_getAlphaFactor",
+    "compiler_id": 656,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 658,
+    "hex": "0x292",
+    "name": "swv_node_getParent",
+    "compiler_id": 657,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 659,
+    "hex": "0x293",
+    "name": "swv_node_getScope",
+    "compiler_id": 658,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 660,
+    "hex": "0x294",
+    "name": "swv_node_getTransformTo",
+    "compiler_id": 659,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 661,
+    "hex": "0x295",
+    "name": "swv_node_isPickingEnabled",
+    "compiler_id": 660,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 662,
+    "hex": "0x296",
+    "name": "swv_node_isRenderingEnabled",
+    "compiler_id": 661,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 663,
+    "hex": "0x297",
+    "name": "swv_node_setAlignment",
+    "compiler_id": 662,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 664,
+    "hex": "0x298",
+    "name": "swv_node_setAlphaFactor",
+    "compiler_id": 663,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 665,
+    "hex": "0x299",
+    "name": "swv_node_setPickingEnable",
+    "compiler_id": 664,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 666,
+    "hex": "0x29A",
+    "name": "swv_node_setRenderingEnable",
+    "compiler_id": 665,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 667,
+    "hex": "0x29B",
+    "name": "swv_node_setScope",
+    "compiler_id": 666,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 668,
+    "hex": "0x29C",
+    "name": "swv_object3d_addAnimationTrack",
+    "compiler_id": 667,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 669,
+    "hex": "0x29D",
+    "name": "swv_object3d_animate",
+    "compiler_id": 668,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 670,
+    "hex": "0x29E",
+    "name": "swv_object3d_find",
+    "compiler_id": 670,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 671,
+    "hex": "0x29F",
+    "name": "swv_object3d_getAnimationTrack",
+    "compiler_id": 671,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 672,
+    "hex": "0x2A0",
+    "name": "swv_object3d_getAnimationTrackCount",
+    "compiler_id": 672,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 673,
+    "hex": "0x2A1",
+    "name": "swv_object3d_getReferences",
+    "compiler_id": 789,
+    "argc": 4,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 674,
+    "hex": "0x2A2",
+    "name": "swv_object3d_getUserID",
+    "compiler_id": 673,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 675,
+    "hex": "0x2A3",
+    "name": "swv_object3d_getUserParameter",
+    "compiler_id": 674,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      5,
+      12
+    ]
+  },
+  {
+    "id": 676,
+    "hex": "0x2A4",
+    "name": "swv_object3d_getUserParameterID",
+    "compiler_id": 790,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 677,
+    "hex": "0x2A5",
+    "name": "swv_object3d_getUserParameterValue",
+    "compiler_id": 791,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      5,
+      12
+    ]
+  },
+  {
+    "id": 678,
+    "hex": "0x2A6",
+    "name": "swv_object3d_removeAnimationTrack",
+    "compiler_id": 675,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 679,
+    "hex": "0x2A7",
+    "name": "swv_object3d_removeUserParameters",
+    "compiler_id": 792,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 680,
+    "hex": "0x2A8",
+    "name": "swv_object3d_setUserID",
+    "compiler_id": 676,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 681,
+    "hex": "0x2A9",
+    "name": "swv_object3d_setUserParameter",
+    "compiler_id": 677,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      5
+    ]
+  },
+  {
+    "id": 682,
+    "hex": "0x2AA",
+    "name": "swv_object3d_duplicate",
+    "compiler_id": 669,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 683,
+    "hex": "0x2AB",
+    "name": "swv_polygonmode_create",
+    "compiler_id": 678,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 684,
+    "hex": "0x2AC",
+    "name": "swv_polygonmode_getCulling",
+    "compiler_id": 679,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 685,
+    "hex": "0x2AD",
+    "name": "swv_polygonmode_getShading",
+    "compiler_id": 680,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 686,
+    "hex": "0x2AE",
+    "name": "swv_polygonmode_getWinding",
+    "compiler_id": 681,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 687,
+    "hex": "0x2AF",
+    "name": "swv_polygonmode_isTwoSidedLightingEnabled",
+    "compiler_id": 682,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 688,
+    "hex": "0x2B0",
+    "name": "swv_polygonmode_setCulling",
+    "compiler_id": 683,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 689,
+    "hex": "0x2B1",
+    "name": "swv_polygonmode_setLocalCameraLightingEnable",
+    "compiler_id": 684,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 690,
+    "hex": "0x2B2",
+    "name": "swv_polygonmode_setPerspectiveCorrectionEnable",
+    "compiler_id": 685,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 691,
+    "hex": "0x2B3",
+    "name": "swv_polygonmode_setShading",
+    "compiler_id": 686,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 692,
+    "hex": "0x2B4",
+    "name": "swv_polygonmode_setTwoSidedLightingEnable",
+    "compiler_id": 687,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 693,
+    "hex": "0x2B5",
+    "name": "swv_polygonmode_setWinding",
+    "compiler_id": 688,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 694,
+    "hex": "0x2B6",
+    "name": "swv_rayintersection_create",
+    "compiler_id": 689,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 695,
+    "hex": "0x2B7",
+    "name": "swv_rayintersection_getDistance",
+    "compiler_id": 690,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 696,
+    "hex": "0x2B8",
+    "name": "swv_rayintersection_getIntersected",
+    "compiler_id": 691,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 697,
+    "hex": "0x2B9",
+    "name": "swv_rayintersection_getNormalX",
+    "compiler_id": 692,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 698,
+    "hex": "0x2BA",
+    "name": "swv_rayintersection_getNormalY",
+    "compiler_id": 693,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 699,
+    "hex": "0x2BB",
+    "name": "swv_rayintersection_getNormalZ",
+    "compiler_id": 694,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 700,
+    "hex": "0x2BC",
+    "name": "swv_rayintersection_getRay",
+    "compiler_id": 695,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 701,
+    "hex": "0x2BD",
+    "name": "swv_rayintersection_getSubmeshIndex",
+    "compiler_id": 696,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 702,
+    "hex": "0x2BE",
+    "name": "swv_rayintersection_getTextureS",
+    "compiler_id": 697,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 703,
+    "hex": "0x2BF",
+    "name": "swv_rayintersection_getTextureT",
+    "compiler_id": 698,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 704,
+    "hex": "0x2C0",
+    "name": "swv_skinnedmesh_addTransform",
+    "compiler_id": 699,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 705,
+    "hex": "0x2C1",
+    "name": "swv_skinnedmesh_createMultiSubmesh",
+    "compiler_id": 700,
+    "argc": 7,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      11,
+      12,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 706,
+    "hex": "0x2C2",
+    "name": "swv_skinnedmesh_createSingleSubmesh",
+    "compiler_id": 701,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 707,
+    "hex": "0x2C3",
+    "name": "swv_skinnedmesh_getSkeleton",
+    "compiler_id": 702,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 708,
+    "hex": "0x2C4",
+    "name": "swv_sprite3d_create",
+    "compiler_id": 703,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 709,
+    "hex": "0x2C5",
+    "name": "swv_sprite3d_getAppearance",
+    "compiler_id": 704,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 710,
+    "hex": "0x2C6",
+    "name": "swv_sprite3d_getCropHeight",
+    "compiler_id": 705,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 711,
+    "hex": "0x2C7",
+    "name": "swv_sprite3d_getCropWidth",
+    "compiler_id": 706,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 712,
+    "hex": "0x2C8",
+    "name": "swv_sprite3d_getCropX",
+    "compiler_id": 707,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 713,
+    "hex": "0x2C9",
+    "name": "swv_sprite3d_getCropY",
+    "compiler_id": 708,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 714,
+    "hex": "0x2CA",
+    "name": "swv_sprite3d_getImage",
+    "compiler_id": 709,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 715,
+    "hex": "0x2CB",
+    "name": "swv_sprite3d_isScaled",
+    "compiler_id": 710,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 716,
+    "hex": "0x2CC",
+    "name": "swv_sprite3d_setAppearance",
+    "compiler_id": 711,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 717,
+    "hex": "0x2CD",
+    "name": "swv_sprite3d_setCrop",
+    "compiler_id": 712,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 718,
+    "hex": "0x2CE",
+    "name": "swv_sprite3d_setImage",
+    "compiler_id": 713,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 719,
+    "hex": "0x2CF",
+    "name": "swv_stageset_create",
+    "compiler_id": 714,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      5,
+      12
+    ]
+  },
+  {
+    "id": 720,
+    "hex": "0x2D0",
+    "name": "swv_stageset_createMutable",
+    "compiler_id": 715,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 721,
+    "hex": "0x2D1",
+    "name": "swv_stageset_getBias",
+    "compiler_id": 716,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 722,
+    "hex": "0x2D2",
+    "name": "swv_stageset_getScale",
+    "compiler_id": 717,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 723,
+    "hex": "0x2D3",
+    "name": "swv_stageset_setBias",
+    "compiler_id": 718,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 724,
+    "hex": "0x2D4",
+    "name": "swv_stageset_setScale",
+    "compiler_id": 719,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 725,
+    "hex": "0x2D5",
+    "name": "swv_texture2d_create",
+    "compiler_id": 720,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 726,
+    "hex": "0x2D6",
+    "name": "swv_texture2d_getBlendColor",
+    "compiler_id": 721,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 727,
+    "hex": "0x2D7",
+    "name": "swv_texture2d_getBlending",
+    "compiler_id": 722,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 728,
+    "hex": "0x2D8",
+    "name": "swv_texture2d_getImage",
+    "compiler_id": 723,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 729,
+    "hex": "0x2D9",
+    "name": "swv_texture2d_getWrappingS",
+    "compiler_id": 724,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 730,
+    "hex": "0x2DA",
+    "name": "swv_texture2d_getWrappingT",
+    "compiler_id": 725,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 731,
+    "hex": "0x2DB",
+    "name": "swv_texture2d_setBlendColor",
+    "compiler_id": 726,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 732,
+    "hex": "0x2DC",
+    "name": "swv_texture2d_setBlending",
+    "compiler_id": 727,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 733,
+    "hex": "0x2DD",
+    "name": "swv_texture2d_setFiltering",
+    "compiler_id": 728,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 734,
+    "hex": "0x2DE",
+    "name": "swv_texture2d_setImage",
+    "compiler_id": 729,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 735,
+    "hex": "0x2DF",
+    "name": "swv_texture2d_setWrapping",
+    "compiler_id": 730,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 736,
+    "hex": "0x2E0",
+    "name": "swv_transform_create",
+    "compiler_id": 731,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 737,
+    "hex": "0x2E1",
+    "name": "swv_transform_createCopy",
+    "compiler_id": 732,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 738,
+    "hex": "0x2E2",
+    "name": "swv_transform_get",
+    "compiler_id": 733,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 739,
+    "hex": "0x2E3",
+    "name": "swv_transform_invert",
+    "compiler_id": 734,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 740,
+    "hex": "0x2E4",
+    "name": "swv_transform_postMultiply",
+    "compiler_id": 735,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 741,
+    "hex": "0x2E5",
+    "name": "swv_transform_postRotate",
+    "compiler_id": 736,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 742,
+    "hex": "0x2E6",
+    "name": "swv_transform_postRotateQuat",
+    "compiler_id": 737,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 743,
+    "hex": "0x2E7",
+    "name": "swv_transform_postScale",
+    "compiler_id": 738,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 744,
+    "hex": "0x2E8",
+    "name": "swv_transform_postTranslate",
+    "compiler_id": 739,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 745,
+    "hex": "0x2E9",
+    "name": "swv_transform_setIdentity",
+    "compiler_id": 740,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 746,
+    "hex": "0x2EA",
+    "name": "swv_transform_setMatrix",
+    "compiler_id": 741,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 747,
+    "hex": "0x2EB",
+    "name": "swv_transform_setTransform",
+    "compiler_id": 742,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 748,
+    "hex": "0x2EC",
+    "name": "swv_transform_transform",
+    "compiler_id": 743,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12,
+      11
+    ]
+  },
+  {
+    "id": 749,
+    "hex": "0x2ED",
+    "name": "swv_transform_transformPoints",
+    "compiler_id": 744,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 750,
+    "hex": "0x2EE",
+    "name": "swv_transform_transpose",
+    "compiler_id": 745,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 751,
+    "hex": "0x2EF",
+    "name": "swv_transformable_getCompositeTransform",
+    "compiler_id": 746,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 752,
+    "hex": "0x2F0",
+    "name": "swv_transformable_getOrientation",
+    "compiler_id": 747,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 753,
+    "hex": "0x2F1",
+    "name": "swv_transformable_getScale",
+    "compiler_id": 748,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 754,
+    "hex": "0x2F2",
+    "name": "swv_transformable_getTransform",
+    "compiler_id": 749,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 755,
+    "hex": "0x2F3",
+    "name": "swv_transformable_getTranslation",
+    "compiler_id": 750,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 756,
+    "hex": "0x2F4",
+    "name": "swv_transformable_postRotate",
+    "compiler_id": 751,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 757,
+    "hex": "0x2F5",
+    "name": "swv_transformable_preRotate",
+    "compiler_id": 752,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 758,
+    "hex": "0x2F6",
+    "name": "swv_transformable_scale",
+    "compiler_id": 753,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 759,
+    "hex": "0x2F7",
+    "name": "swv_transformable_setOrientation",
+    "compiler_id": 754,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 760,
+    "hex": "0x2F8",
+    "name": "swv_transformable_setScale",
+    "compiler_id": 755,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 761,
+    "hex": "0x2F9",
+    "name": "swv_transformable_setTransform",
+    "compiler_id": 756,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 762,
+    "hex": "0x2FA",
+    "name": "swv_transformable_setTranslation",
+    "compiler_id": 757,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 763,
+    "hex": "0x2FB",
+    "name": "swv_transformable_translate",
+    "compiler_id": 758,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 764,
+    "hex": "0x2FC",
+    "name": "swv_trianglestriparray_createExplicit",
+    "compiler_id": 759,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 765,
+    "hex": "0x2FD",
+    "name": "swv_trianglestriparray_createImplicit",
+    "compiler_id": 760,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 766,
+    "hex": "0x2FE",
+    "name": "swv_vertexarray_create",
+    "compiler_id": 761,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 767,
+    "hex": "0x2FF",
+    "name": "swv_vertexarray_set16",
+    "compiler_id": 762,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 768,
+    "hex": "0x300",
+    "name": "swv_vertexarray_set8",
+    "compiler_id": 763,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 769,
+    "hex": "0x301",
+    "name": "swv_vertexbuffer_create",
+    "compiler_id": 764,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 770,
+    "hex": "0x302",
+    "name": "swv_vertexbuffer_getNormals",
+    "compiler_id": 765,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 771,
+    "hex": "0x303",
+    "name": "swv_vertexbuffer_setNormals",
+    "compiler_id": 766,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 772,
+    "hex": "0x304",
+    "name": "swv_vertexbuffer_getColors",
+    "compiler_id": 767,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 773,
+    "hex": "0x305",
+    "name": "swv_vertexbuffer_setColors",
+    "compiler_id": 768,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 774,
+    "hex": "0x306",
+    "name": "swv_vertexbuffer_getDefaultColor",
+    "compiler_id": 769,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 775,
+    "hex": "0x307",
+    "name": "swv_vertexbuffer_setDefaultColor",
+    "compiler_id": 770,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 776,
+    "hex": "0x308",
+    "name": "swv_vertexbuffer_getVertexCount",
+    "compiler_id": 771,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 777,
+    "hex": "0x309",
+    "name": "swv_vertexbuffer_getPositions",
+    "compiler_id": 772,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 778,
+    "hex": "0x30A",
+    "name": "swv_vertexbuffer_setPositions",
+    "compiler_id": 773,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 779,
+    "hex": "0x30B",
+    "name": "swv_vertexbuffer_getTexCoords",
+    "compiler_id": 774,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12,
+      12
+    ]
+  },
+  {
+    "id": 780,
+    "hex": "0x30C",
+    "name": "swv_vertexbuffer_setTexCoords",
+    "compiler_id": 775,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 781,
+    "hex": "0x30D",
+    "name": "swv_world_create",
+    "compiler_id": 776,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 782,
+    "hex": "0x30E",
+    "name": "swv_world_getActiveCamera",
+    "compiler_id": 777,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 783,
+    "hex": "0x30F",
+    "name": "swv_world_getBackground",
+    "compiler_id": 778,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 784,
+    "hex": "0x310",
+    "name": "swv_world_setActiveCamera",
+    "compiler_id": 779,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 785,
+    "hex": "0x311",
+    "name": "swv_world_setBackground",
+    "compiler_id": 780,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 786,
+    "hex": "0x312",
+    "name": "swv_loader_load",
+    "compiler_id": 781,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      12
+    ]
+  },
+  {
+    "id": 787,
+    "hex": "0x313",
+    "name": "swv_loader_create",
+    "compiler_id": 782,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 788,
+    "hex": "0x314",
+    "name": "swv_loader_loadNamed",
+    "compiler_id": 783,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 789,
+    "hex": "0x315",
+    "name": "swv_loader_getRootCount",
+    "compiler_id": 784,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 790,
+    "hex": "0x316",
+    "name": "swv_loader_getRoot",
+    "compiler_id": 785,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 791,
+    "hex": "0x317",
+    "name": "swv_loader_release",
+    "compiler_id": 786,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 792,
+    "hex": "0x318",
+    "name": "MakeFloat",
+    "compiler_id": 793,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 793,
+    "hex": "0x319",
+    "name": "AddFloat",
+    "compiler_id": 794,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 794,
+    "hex": "0x31A",
+    "name": "SubFloat",
+    "compiler_id": 795,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 795,
+    "hex": "0x31B",
+    "name": "MultFloat",
+    "compiler_id": 796,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 796,
+    "hex": "0x31C",
+    "name": "DivFloat",
+    "compiler_id": 797,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 797,
+    "hex": "0x31D",
+    "name": "NegFloat",
+    "compiler_id": 798,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 798,
+    "hex": "0x31E",
+    "name": "FloatAbs",
+    "compiler_id": 799,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 799,
+    "hex": "0x31F",
+    "name": "FloatCos",
+    "compiler_id": 800,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 800,
+    "hex": "0x320",
+    "name": "FloatSin",
+    "compiler_id": 801,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 801,
+    "hex": "0x321",
+    "name": "FloatTan",
+    "compiler_id": 802,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 802,
+    "hex": "0x322",
+    "name": "FloatSqrt",
+    "compiler_id": 803,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 803,
+    "hex": "0x323",
+    "name": "FloatToInt",
+    "compiler_id": 804,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 804,
+    "hex": "0x324",
+    "name": "FloatToFixed",
+    "compiler_id": 805,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 805,
+    "hex": "0x325",
+    "name": "FixedToFloat",
+    "compiler_id": 806,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 806,
+    "hex": "0x326",
+    "name": "CompareFloat",
+    "compiler_id": 807,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 807,
+    "hex": "0x327",
+    "name": "FloatArcSin",
+    "compiler_id": 808,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 808,
+    "hex": "0x328",
+    "name": "FloatArcCos",
+    "compiler_id": 809,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 809,
+    "hex": "0x329",
+    "name": "FloatArcTan",
+    "compiler_id": 810,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 810,
+    "hex": "0x32A",
+    "name": "ShowStrEdit",
+    "compiler_id": 811,
+    "argc": 6,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 811,
+    "hex": "0x32B",
+    "name": "SetStrEditStyle",
+    "compiler_id": 812,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 812,
+    "hex": "0x32C",
+    "name": "SetStrEdit",
+    "compiler_id": 813,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 813,
+    "hex": "0x32D",
+    "name": "GetStrEdit",
+    "compiler_id": 814,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 814,
+    "hex": "0x32E",
+    "name": "EndStrEdit",
+    "compiler_id": 815,
+    "argc": 0,
+    "return_type_code": 0,
+    "argument_type_codes": []
+  },
+  {
+    "id": 815,
+    "hex": "0x32F",
+    "name": "SetKeyMap",
+    "compiler_id": 816,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 816,
+    "hex": "0x330",
+    "name": "VibeCloseDevice",
+    "compiler_id": 817,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 817,
+    "hex": "0x331",
+    "name": "VibeDeleteIVTFile",
+    "compiler_id": 818,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1
+    ]
+  },
+  {
+    "id": 818,
+    "hex": "0x332",
+    "name": "VibeGetDeviceCapabilityBool",
+    "compiler_id": 819,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 819,
+    "hex": "0x333",
+    "name": "VibeGetDeviceCapabilityInt32",
+    "compiler_id": 820,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 820,
+    "hex": "0x334",
+    "name": "VibeGetDeviceCapabilityString",
+    "compiler_id": 821,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 821,
+    "hex": "0x335",
+    "name": "VibeGetDeviceCount",
+    "compiler_id": 822,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 822,
+    "hex": "0x336",
+    "name": "VibeGetDevicePropertyBool",
+    "compiler_id": 823,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 823,
+    "hex": "0x337",
+    "name": "VibeGetDevicePropertyInt32",
+    "compiler_id": 824,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 824,
+    "hex": "0x338",
+    "name": "VibeGetDevicePropertyString",
+    "compiler_id": 825,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 825,
+    "hex": "0x339",
+    "name": "VibeGetDeviceState",
+    "compiler_id": 826,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 826,
+    "hex": "0x33A",
+    "name": "VibeGetIVTEffectCount",
+    "compiler_id": 827,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6
+    ]
+  },
+  {
+    "id": 827,
+    "hex": "0x33B",
+    "name": "VibeGetIVTEffectIndexFromName",
+    "compiler_id": 828,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      1,
+      12
+    ]
+  },
+  {
+    "id": 828,
+    "hex": "0x33C",
+    "name": "VibeGetIVTEffectName",
+    "compiler_id": 829,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 829,
+    "hex": "0x33D",
+    "name": "VibeGetIVTEffectType",
+    "compiler_id": 830,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 830,
+    "hex": "0x33E",
+    "name": "VibeGetIVTMagSweepEffectDefinition",
+    "compiler_id": 831,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11,
+      14
+    ]
+  },
+  {
+    "id": 831,
+    "hex": "0x33F",
+    "name": "VibeInitialize",
+    "compiler_id": 832,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 832,
+    "hex": "0x340",
+    "name": "VibeModifyPlayingMagSweepEffect",
+    "compiler_id": 833,
+    "argc": 9,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 833,
+    "hex": "0x341",
+    "name": "VibeModifyPlayingPeriodicEffect",
+    "compiler_id": 834,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14
+    ]
+  },
+  {
+    "id": 834,
+    "hex": "0x342",
+    "name": "VibeOpenDevice",
+    "compiler_id": 835,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 835,
+    "hex": "0x343",
+    "name": "VibePlayIVTEffect",
+    "compiler_id": 836,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 836,
+    "hex": "0x344",
+    "name": "VibeGetIVTPeriodicEffectDefinition",
+    "compiler_id": 837,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      11,
+      14
+    ]
+  },
+  {
+    "id": 837,
+    "hex": "0x345",
+    "name": "VibePlayIVTEffectRepeat",
+    "compiler_id": 838,
+    "argc": 5,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      12,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 838,
+    "hex": "0x346",
+    "name": "VibePlayMagSweepEffect",
+    "compiler_id": 839,
+    "argc": 9,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 839,
+    "hex": "0x347",
+    "name": "VibePlayPeriodicEffect",
+    "compiler_id": 840,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      14,
+      12
+    ]
+  },
+  {
+    "id": 840,
+    "hex": "0x348",
+    "name": "VibeSaveIVTFile",
+    "compiler_id": 841,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      1
+    ]
+  },
+  {
+    "id": 841,
+    "hex": "0x349",
+    "name": "VibeSetDevicePropertyBool",
+    "compiler_id": 842,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 842,
+    "hex": "0x34A",
+    "name": "VibeSetDevicePropertyInt32",
+    "compiler_id": 843,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 843,
+    "hex": "0x34B",
+    "name": "VibeSetDevicePropertyString",
+    "compiler_id": 844,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 844,
+    "hex": "0x34C",
+    "name": "VibeStopAllPlayingEffects",
+    "compiler_id": 845,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 845,
+    "hex": "0x34D",
+    "name": "VibeStopPlayingEffect",
+    "compiler_id": 846,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 846,
+    "hex": "0x34E",
+    "name": "VibeTerminate",
+    "compiler_id": 847,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 847,
+    "hex": "0x34F",
+    "name": "TLSNew",
+    "compiler_id": 848,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 848,
+    "hex": "0x350",
+    "name": "TLSFree",
+    "compiler_id": 849,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 849,
+    "hex": "0x351",
+    "name": "TLSAddCipherSuite",
+    "compiler_id": 850,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 850,
+    "hex": "0x352",
+    "name": "TLSClearCipherSuite",
+    "compiler_id": 851,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 851,
+    "hex": "0x353",
+    "name": "TLSConnect",
+    "compiler_id": 852,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 852,
+    "hex": "0x354",
+    "name": "TLSInstallCert",
+    "compiler_id": 853,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 853,
+    "hex": "0x355",
+    "name": "TLSRemoveCertAll",
+    "compiler_id": 854,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 854,
+    "hex": "0x356",
+    "name": "TLSContinue",
+    "compiler_id": 855,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 855,
+    "hex": "0x357",
+    "name": "TLSWrite",
+    "compiler_id": 856,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 856,
+    "hex": "0x358",
+    "name": "TLSRead",
+    "compiler_id": 857,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11,
+      0
+    ]
+  },
+  {
+    "id": 857,
+    "hex": "0x359",
+    "name": "TLSShutdown",
+    "compiler_id": 858,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 858,
+    "hex": "0x35A",
+    "name": "TLSSockConnect",
+    "compiler_id": 859,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 859,
+    "hex": "0x35B",
+    "name": "TLSSockClose",
+    "compiler_id": 860,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 860,
+    "hex": "0x35C",
+    "name": "XMLLoad",
+    "compiler_id": 861,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      1
+    ]
+  },
+  {
+    "id": 861,
+    "hex": "0x35D",
+    "name": "XMLDocumentElement",
+    "compiler_id": 862,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 862,
+    "hex": "0x35E",
+    "name": "XMLFirstChild",
+    "compiler_id": 863,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 863,
+    "hex": "0x35F",
+    "name": "XMLLastChild",
+    "compiler_id": 864,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 864,
+    "hex": "0x360",
+    "name": "XMLPreviousSibling",
+    "compiler_id": 865,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 865,
+    "hex": "0x361",
+    "name": "XMLNextSibling",
+    "compiler_id": 866,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 866,
+    "hex": "0x362",
+    "name": "XMLGetAttribute",
+    "compiler_id": 867,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 867,
+    "hex": "0x363",
+    "name": "XMLCreateRoot",
+    "compiler_id": 868,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12
+    ]
+  },
+  {
+    "id": 868,
+    "hex": "0x364",
+    "name": "XMLDeleteRoot",
+    "compiler_id": 869,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 869,
+    "hex": "0x365",
+    "name": "XMLAppendChild",
+    "compiler_id": 870,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12,
+      1
+    ]
+  },
+  {
+    "id": 870,
+    "hex": "0x366",
+    "name": "XMLSetAttribute",
+    "compiler_id": 871,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      12,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 871,
+    "hex": "0x367",
+    "name": "XMLSaveToFile",
+    "compiler_id": 872,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      1,
+      11
+    ]
+  },
+  {
+    "id": 872,
+    "hex": "0x368",
+    "name": "XMLSaveToString",
+    "compiler_id": 873,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      12
+    ]
+  },
+  {
+    "id": 873,
+    "hex": "0x369",
+    "name": "XMLAddAttribute",
+    "compiler_id": 874,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1,
+      1
+    ]
+  },
+  {
+    "id": 874,
+    "hex": "0x36A",
+    "name": "XMLAddText",
+    "compiler_id": 875,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 875,
+    "hex": "0x36B",
+    "name": "XMLGetElement",
+    "compiler_id": 876,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 876,
+    "hex": "0x36C",
+    "name": "XMLGetText",
+    "compiler_id": 877,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 877,
+    "hex": "0x36D",
+    "name": "XMLSetText",
+    "compiler_id": 878,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      1
+    ]
+  },
+  {
+    "id": 878,
+    "hex": "0x36E",
+    "name": "XMLGetData",
+    "compiler_id": 879,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      1,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 879,
+    "hex": "0x36F",
+    "name": "VibeGetIVTEffectDuration",
+    "compiler_id": 880,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      5,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 880,
+    "hex": "0x370",
+    "name": "VibeCreateStreamingEffect",
+    "compiler_id": 881,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      12
+    ]
+  },
+  {
+    "id": 881,
+    "hex": "0x371",
+    "name": "VibeDestroyStreamingEffect",
+    "compiler_id": 882,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 882,
+    "hex": "0x372",
+    "name": "VibePlayStreamingSample",
+    "compiler_id": 883,
+    "argc": 4,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      5,
+      11
+    ]
+  },
+  {
+    "id": 883,
+    "hex": "0x373",
+    "name": "VibePausePlayingEffect",
+    "compiler_id": 884,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 884,
+    "hex": "0x374",
+    "name": "VibeResumePausedEffect",
+    "compiler_id": 885,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 885,
+    "hex": "0x375",
+    "name": "VibeGetEffectState",
+    "compiler_id": 886,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11,
+      12
+    ]
+  },
+  {
+    "id": 886,
+    "hex": "0x376",
+    "name": "cmsIDReg",
+    "compiler_id": 887,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 887,
+    "hex": "0x377",
+    "name": "cmsOpen",
+    "compiler_id": 888,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 888,
+    "hex": "0x378",
+    "name": "cmsClose",
+    "compiler_id": 889,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 889,
+    "hex": "0x379",
+    "name": "cmsWrite",
+    "compiler_id": 890,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 890,
+    "hex": "0x37A",
+    "name": "cmsRead",
+    "compiler_id": 891,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      6,
+      11
+    ]
+  },
+  {
+    "id": 891,
+    "hex": "0x37B",
+    "name": "GetVirtualKeyCode",
+    "compiler_id": 892,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 892,
+    "hex": "0x37C",
+    "name": "GetKeyCode",
+    "compiler_id": 893,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 893,
+    "hex": "0x37D",
+    "name": "GNEX_HttpOpen",
+    "compiler_id": 894,
+    "argc": 0,
+    "return_type_code": 1,
+    "argument_type_codes": []
+  },
+  {
+    "id": 894,
+    "hex": "0x37E",
+    "name": "GNEX_HttpClose",
+    "compiler_id": 895,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 895,
+    "hex": "0x37F",
+    "name": "GNEX_HttpGetBodyDataLen",
+    "compiler_id": 896,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11
+    ]
+  },
+  {
+    "id": 896,
+    "hex": "0x380",
+    "name": "GNEX_HttpGetReadBodyData",
+    "compiler_id": 897,
+    "argc": 3,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      5,
+      11
+    ]
+  },
+  {
+    "id": 897,
+    "hex": "0x381",
+    "name": "GNEX_Vibrator",
+    "compiler_id": 898,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": 898,
+    "hex": "0x382",
+    "name": "GNEX_CopyImage2",
+    "compiler_id": 899,
+    "argc": 3,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      6
+    ]
+  },
+  {
+    "id": 899,
+    "hex": "0x383",
+    "name": "GNEX_LoadImage",
+    "compiler_id": 900,
+    "argc": 2,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6,
+      6
+    ]
+  },
+  {
+    "id": 900,
+    "hex": "0x384",
+    "name": "GNEX_ReleaseImage",
+    "compiler_id": 901,
+    "argc": 1,
+    "return_type_code": 1,
+    "argument_type_codes": [
+      6
+    ]
+  },
+  {
+    "id": 901,
+    "hex": "0x385",
+    "name": "GetPartialImage",
+    "compiler_id": 902,
+    "argc": 6,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      2,
+      6,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 902,
+    "hex": "0x386",
+    "name": "FreePartialImage",
+    "compiler_id": 903,
+    "argc": 1,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      6
+    ]
+  },
+  {
+    "id": 903,
+    "hex": "0x387",
+    "name": "CopyImageEx2",
+    "compiler_id": 904,
+    "argc": 7,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      2,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 904,
+    "hex": "0x388",
+    "name": "CopyImagePalEx2",
+    "compiler_id": 905,
+    "argc": 8,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      11,
+      11,
+      2,
+      14,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 905,
+    "hex": "0x389",
+    "name": "Trace4",
+    "compiler_id": 906,
+    "argc": 5,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11,
+      11,
+      11,
+      11
+    ]
+  },
+  {
+    "id": 906,
+    "hex": "0x38A",
+    "name": "TraceS",
+    "compiler_id": 907,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": 907,
+    "hex": "0x38B",
+    "name": "TraceF",
+    "compiler_id": 908,
+    "argc": 2,
+    "return_type_code": 0,
+    "argument_type_codes": [
+      1,
+      11
+    ]
+  }
+]

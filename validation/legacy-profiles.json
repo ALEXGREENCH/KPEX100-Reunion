@@ -1,0 +1,61 @@
+{
+  "scope": "Original 8-bit GNEX v1/v2 handset environments; no SGS modifications. Synthetic MIN is not a real subscriber number.",
+  "profiles": {
+    "gnex13_mu_-_fairy": {
+      "deviceMin": "01000000000",
+      "deviceUserId": "9AF2F6CA",
+      "width": 128,
+      "height": 160,
+      "evidence": {
+        "source": "Original SGS calculates the identifier from synthetic handset MIN then passes both strings to its original StrCmp opcode80; explicit GetSysUserID environment supplies that identifier without replacing comparisons, branches, or Exit. START + armed timers + OK verified.",
+        "bytecode_pc": "0x227",
+        "resource_indices": [
+          544,
+          545
+        ]
+      }
+    },
+    "gnex33_pocket_pro_baseball3": {
+      "deviceMin": "01000000000",
+      "deviceUserId": "20B2456D",
+      "width": 176,
+      "height": 220,
+      "evidence": {
+        "source": "Original SGS calculates the identifier from synthetic handset MIN then passes both strings to its original StrCmp opcode80; explicit GetSysUserID environment supplies that identifier without replacing comparisons, branches, or Exit. START + armed timers + OK verified.",
+        "bytecode_pc": "0xC88A",
+        "resource_indices": [
+          436,
+          437
+        ]
+      }
+    },
+    "gnex32_traffic": {
+      "deviceMin": "01000000000",
+      "deviceUserId": "EE22B509",
+      "width": 176,
+      "height": 208,
+      "evidence": {
+        "source": "Original SGS calculates the identifier from synthetic handset MIN then passes both strings to its original StrCmp opcode80; explicit GetSysUserID environment supplies that identifier without replacing comparisons, branches, or Exit. START + armed timers + OK verified.",
+        "bytecode_pc": "0x20F",
+        "resource_indices": [
+          639,
+          640
+        ]
+      }
+    },
+    "gnex18_shing_stone": {
+      "width": 128,
+      "height": 160,
+      "evidence": {
+        "source": "Original SGS LCDCLASS and SDK SScript.h class heights: class04=128..175, class08=176..209. Original ROM renderer uses requested handset dimensions through GetLCDInfo HAL."
+      }
+    },
+    "gnex25_ys3_the_oath_in_felghana": {
+      "width": 176,
+      "height": 208,
+      "evidence": {
+        "source": "Original SGS LCDCLASS and SDK SScript.h class heights: class04=128..175, class08=176..209. Original ROM renderer uses requested handset dimensions through GetLCDInfo HAL."
+      }
+    }
+  }
+}

@@ -1,0 +1,8332 @@
+{
+  "scope": "Recorded working scenes and controls, not end-to-end game completion or every API.",
+  "games": [
+    {
+      "id": "godori",
+      "title": "Godori",
+      "format": 4,
+      "compatibility": "verified",
+      "evidence": {
+        "record": "tests/gnex.test.mjs",
+        "note": "Native desktop pixel, event and syscall goldens"
+      }
+    },
+    {
+      "id": "hellfire",
+      "title": "Hell Fire",
+      "format": 4,
+      "compatibility": "verified",
+      "evidence": {
+        "record": "tests/gnex.test.mjs",
+        "note": "Native desktop pixel, event and syscall goldens"
+      }
+    },
+    {
+      "id": "ikaria",
+      "title": "Ikaria ep2",
+      "format": 4,
+      "compatibility": "verified",
+      "evidence": {
+        "record": "tests/gnex.test.mjs",
+        "note": "Native desktop pixel, event and syscall goldens"
+      }
+    },
+    {
+      "id": "kpetris",
+      "title": "KPetris Beta",
+      "format": 4,
+      "compatibility": "verified",
+      "evidence": {
+        "record": "tests/gnex.test.mjs",
+        "note": "Native desktop pixel, event and syscall goldens"
+      }
+    },
+    {
+      "id": "gnex1_1zimae",
+      "title": "1Zimae",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/1zimae-village.png",
+        "status": "idle",
+        "evidence": "Village, player and dialogue",
+        "startHint": "# skips the opening story; OK begins the game and advances dialogue.",
+        "actions": [
+          [
+            "tick",
+            300
+          ],
+          [
+            "hold",
+            12
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            12
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            1
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            1
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            18
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            18
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            19
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            16
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            16
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 160,
+          "deviceMin": "01000000000",
+          "deviceUserId": "183A767C"
+        },
+        "events": 781,
+        "frameEventCount": 781,
+        "frameSHA256": "72bd3631b9e2f4cf8ac5bbe36eb2fa8fbe9bae42737f1802db05b3d5fb6f84d7",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex1_1zimae.json",
+          "status": "idle",
+          "events": 781,
+          "frameLabel": "60-tick25",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "72bd3631b9e2f4cf8ac5bbe36eb2fa8fbe9bae42737f1802db05b3d5fb6f84d7"
+      }
+    },
+    {
+      "id": "gnex2_2007_pro_baseball",
+      "title": "2007 Pro Baseball",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex2_2007_pro_baseball-70-tick3.png",
+        "actions": [
+          [
+            "tick",
+            40
+          ],
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            23
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            23
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            23
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "release",
+            23
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            12
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            60
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            17
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            17
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            60
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            3
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            100
+          ],
+          [
+            "tick",
+            3
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "9E18BB67"
+        },
+        "status": "idle",
+        "evidence": "Матч на стадионе: анимация удара и смена первого битера Kim Byung-kyu на Han Dae-hwa после разыгранных подач.",
+        "controls": "OK — выбор, Left/Right — переход между колонками состава, 5 — удар.",
+        "events": 850,
+        "frameSHA256": "261cc00f194183f9b61c42d0080023c75db04496e2f2161bbe5f0fbc6c7dad49",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex2_2007_pro_baseball.json",
+          "status": "idle",
+          "events": 850,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex2_2007_pro_baseball-gameplay-final.png",
+          "events": 818,
+          "report": "gameplay/desktop-qa/replay/gnex2_2007_pro_baseball.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "261cc00f194183f9b61c42d0080023c75db04496e2f2161bbe5f0fbc6c7dad49"
+      }
+    },
+    {
+      "id": "gnex6_alchemist",
+      "title": "Alchemist",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/alchemist-combat.png",
+        "actions": [
+          [
+            "tick",
+            300
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            2
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ]
+        ],
+        "events": 726,
+        "status": "idle",
+        "evidence": "Playable city fight: armored player, enemies, HP/MP and action HUD",
+        "startHint": "Choose New Game. * skips each story scene; repeat until the combat stage appears.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "0C9EF216"
+        },
+        "frameEventCount": 726,
+        "frameSHA256": "6f3dd78262287c7d30b168e2f90880d8a393d0c07a4b778f2f425efb2664ce33",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex6_alchemist.json",
+          "status": "idle",
+          "events": 726,
+          "frameLabel": "51-tick20",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "6f3dd78262287c7d30b168e2f90880d8a393d0c07a4b778f2f425efb2664ce33"
+      }
+    },
+    {
+      "id": "gnex16_bubble_bubble",
+      "title": "Bubble Bubble",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/bubble-bubble-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            12
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            12
+          ]
+        ],
+        "events": 149,
+        "status": "idle",
+        "evidence": "Level 01, moving player, monsters and bubble/action input",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex16_bubble_bubble",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 149,
+          "seconds": 8.45,
+          "identicalPng": true,
+          "sha256": "e398836722ab85d72a1457adbbba4981dca7c4fae9c89218f55dbaaa362793e8"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "e398836722ab85d72a1457adbbba4981dca7c4fae9c89218f55dbaaa362793e8"
+      }
+    },
+    {
+      "id": "gnex31_com2us_soccer_2006",
+      "title": "Com2Us Soccer 2006",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex31_com2us_soccer_2006-31-tick10.png",
+        "actions": [
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            23
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            23
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            23
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "release",
+            23
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "hold",
+            18
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "release",
+            18
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 240,
+          "height": 320,
+          "deviceMin": "01000000000",
+          "deviceUserId": "82B8F216"
+        },
+        "status": "idle",
+        "evidence": "Матч GER–NED: управляемый игрок перемещается по полю, мяч и остальные игроки обновляются; игровые часы дошли до 02:48.",
+        "controls": "Стрелки — движение, 5 — действие.",
+        "events": 214,
+        "frameSHA256": "8be47254afabf83566bd4c6615670f9e09e03a3c35f23d9bb621a14f9656d883",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex31_com2us_soccer_2006.json",
+          "status": "idle",
+          "events": 214,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex31_com2us_soccer_2006-field1.png",
+          "events": 199,
+          "report": "gameplay/desktop-qa/replay/gnex31_com2us_soccer_2006.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "8be47254afabf83566bd4c6615670f9e09e03a3c35f23d9bb621a14f9656d883"
+      }
+    },
+    {
+      "id": "gnex29_crow2",
+      "title": "Crow2",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/crow2-world.png",
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "hold",
+            6
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "release",
+            6
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "release",
+            5
+          ]
+        ],
+        "events": 477,
+        "status": "idle",
+        "evidence": "Forest tutorial completed; player movement and action inputs in the world",
+        "startHint": "On the initial menu press DOWN once, then OK for New Game. OK advances dialogue; 4/6 move and 5 acts in the tutorial.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "78AE0F2B"
+        },
+        "frameEventCount": 477,
+        "frameSHA256": "a6d58f766510f11a6c861082a0e762cc8ee103bfa907e832535ec6de9dbd488b",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex29_crow2.json",
+          "status": "idle",
+          "events": 477,
+          "frameLabel": "96-release5",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "a6d58f766510f11a6c861082a0e762cc8ee103bfa907e832535ec6de9dbd488b"
+      }
+    },
+    {
+      "id": "gnex36_dungeon_fighter",
+      "title": "Dungeon Fighter",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/dungeon-fighter-world.png",
+        "status": "idle",
+        "evidence": "Village world and active character/NPC dialogue",
+        "startHint": "OK opens the title menu; DOWN selects New Game. Press OK, then # to skip story panels.",
+        "actions": [
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "release",
+            5
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 160
+        },
+        "events": 129,
+        "frameEventCount": 129,
+        "frameSHA256": "0ce16d2e9bd797946a653a1779659771694b16266d04ae7bec4f5af140f173b0",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex36_dungeon_fighter.json",
+          "status": "idle",
+          "events": 129,
+          "frameLabel": "17-release5",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "0ce16d2e9bd797946a653a1779659771694b16266d04ae7bec4f5af140f173b0"
+      }
+    },
+    {
+      "id": "gnex21_eska2",
+      "title": "Eska2",
+      "format": 1,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/eska2-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ]
+        ],
+        "events": 266,
+        "status": "idle",
+        "evidence": "Dungeon scene with player and health HUD",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex21_eska2",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 266,
+          "seconds": 10.01,
+          "identicalPng": true,
+          "sha256": "5c5e845d88e2e5254066d7addfa46f7d4bad31f4963351fa2b0614acce39f10d"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "5c5e845d88e2e5254066d7addfa46f7d4bad31f4963351fa2b0614acce39f10d"
+      }
+    },
+    {
+      "id": "gnex3_fist_of_fury2",
+      "title": "Fist Of Fury2",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/fist-of-fury2-stage.png",
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            21
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            80
+          ]
+        ],
+        "events": 371,
+        "status": "idle",
+        "evidence": "Play mode, character on outdoor stage with jump controls",
+        "startHint": "Select Scenario mode with OK. The first outdoor stage explains movement with 4/6.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "E83E67E3"
+        },
+        "frameEventCount": 371,
+        "frameSHA256": "536207a891aeeef02d15216a56ea54b27a7eb0dbab1155e3d32336c06d5003e3",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex3_fist_of_fury2.json",
+          "status": "idle",
+          "events": 371,
+          "frameLabel": "10-tick80",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "536207a891aeeef02d15216a56ea54b27a7eb0dbab1155e3d32336c06d5003e3"
+      }
+    },
+    {
+      "id": "gnex35_gostop_w_",
+      "title": "Gostop W ",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/gostop-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            15
+          ]
+        ],
+        "events": 104,
+        "status": "idle",
+        "evidence": "Card table and hand after selecting a numbered card",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex35_gostop_w_",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 104,
+          "seconds": 3.59,
+          "identicalPng": true,
+          "sha256": "a0d6dad78e3b9d777a2e5ec5ee914b80a63ac0d9feccc431eff53e917b574eb8"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "a0d6dad78e3b9d777a2e5ec5ee914b80a63ac0d9feccc431eff53e917b574eb8"
+      }
+    },
+    {
+      "id": "gnex37_hero",
+      "title": "Hero",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/hero-world.png",
+        "status": "idle",
+        "evidence": "World, player and dialogue",
+        "startHint": "# skips the opening story; OK selects and begins a new game.",
+        "actions": [
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "AC36D866"
+        },
+        "events": 177,
+        "frameEventCount": 177,
+        "frameSHA256": "3a64cf07453ec10ef7701e13f13c7ca97145a36626cfd6a5719e76eb9f8d1d90",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex37_hero.json",
+          "status": "idle",
+          "events": 177,
+          "frameLabel": "6-tick20",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "3a64cf07453ec10ef7701e13f13c7ca97145a36626cfd6a5719e76eb9f8d1d90"
+      }
+    },
+    {
+      "id": "gnex26_independence_day_3d",
+      "title": "Independence Day 3D",
+      "format": 36,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/gnex26_independence_day_3d.png",
+        "beforeFrame": "gameplay/gnex26_independence_day_3d-before.png",
+        "status": "idle",
+        "actions": [
+          [
+            "manualTick",
+            4,
+            10000
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "manualTick",
+            1,
+            10000
+          ],
+          [
+            "manualTick",
+            5,
+            5000
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "manualTick",
+            3,
+            50
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "manualTick",
+            10,
+            100
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "manualTick",
+            12,
+            50
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "hold",
+            19
+          ],
+          [
+            "manualTick",
+            4,
+            50
+          ],
+          [
+            "release",
+            19
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "manualTick",
+            12,
+            50
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "manualTick",
+            12,
+            50
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "hold",
+            1
+          ],
+          [
+            "manualTick",
+            12,
+            50
+          ],
+          [
+            "release",
+            1
+          ],
+          [
+            "hold",
+            6
+          ],
+          [
+            "manualTick",
+            8,
+            50
+          ],
+          [
+            "release",
+            6
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "manualTick",
+            4,
+            50
+          ],
+          [
+            "release",
+            5
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220
+        },
+        "clockMode": "Explicit manual time steps; each manualTick delivers active timer channels once per step",
+        "replay": "node tools/replay-sgs.mjs gnex26_independence_day_3d validation/independence-actions.json validation/swerve-replay",
+        "evidence": "Original intro -> menu -> New Game -> Continue -> briefing -> active city mission and HUD. Numeric 1 increases thrust, numeric 6 steers, numeric 5 launches a missile. Missile counter visibly changes 4 to 3; thrust display changes 180 to 432 after acceleration and release. Phone release 0xFF is enabled in this replay. No SGS or native Swerve code patched.",
+        "changedPixels": 395,
+        "beforeRgbaSha256": "93ca1c04866dbd2416a5790b161c39996d76966d9464093d9342ae170e47f000",
+        "rgbaSha256": "ffec3954375dee36cd6c5fd9f2d15e66d5ae0121624ea28652674586cbf50e3e",
+        "events": 106,
+        "diagnostics": {
+          "status": "idle",
+          "error": null,
+          "title": "인디펜던스 데이",
+          "engine": "GNEX phone compatibility / original ARM interpreter + Swerve 2.1 ARM",
+          "profile": "phone",
+          "events": 106,
+          "timer_ms": 50,
+          "bytecode_pc": "0x00003f08",
+          "interpreter_pc": "0x21003f08",
+          "syscalls": {
+            "0x00000091": 1,
+            "0x000001e3": 1,
+            "0x00000231": 1,
+            "0x000000b6": 2059,
+            "0x000000c5": 2059,
+            "0x0000009f": 400,
+            "0x00000062": 1,
+            "0x00000063": 3,
+            "0x0000006a": 1,
+            "0x00000064": 3,
+            "0x000000a5": 16751,
+            "0x000000a2": 361,
+            "0x000000a6": 1352,
+            "0x000000a7": 181,
+            "0x000000a1": 389,
+            "0x00000318": 149,
+            "0x000000be": 29,
+            "0x00000241": 1,
+            "0x000002e0": 3,
+            "0x0000009b": 389,
+            "0x0000024a": 2,
+            "0x00000251": 44,
+            "0x00000203": 2,
+            "0x0000020f": 2,
+            "0x0000020e": 2,
+            "0x0000009c": 1,
+            "0x00000095": 1,
+            "0x00000312": 2,
+            "0x0000029d": 105,
+            "0x00000248": 41,
+            "0x0000005f": 87,
+            "0x00000027": 297,
+            "0x00000045": 75,
+            "0x00000046": 198,
+            "0x000000a8": 180,
+            "0x000000a3": 41,
+            "0x0000001f": 22,
+            "0x0000003f": 669,
+            "0x0000005b": 669,
+            "0x00000069": 2,
+            "0x000000b7": 237,
+            "0x0000029e": 325,
+            "0x0000029a": 1142,
+            "0x00000299": 1143,
+            "0x000001f0": 147,
+            "0x000001e9": 24,
+            "0x000001e8": 24,
+            "0x000001ed": 24,
+            "0x00000325": 2901,
+            "0x000002fa": 396,
+            "0x000002a2": 1168,
+            "0x00000232": 214,
+            "0x00000215": 44,
+            "0x00000219": 44,
+            "0x000000ff": 228,
+            "0x000000fd": 1391,
+            "0x000002f7": 346,
+            "0x000000c0": 23,
+            "0x000002a9": 21,
+            "0x00000292": 89,
+            "0x00000294": 232,
+            "0x000002ed": 368,
+            "0x00000324": 1340,
+            "0x000002f3": 139,
+            "0x000002f5": 31,
+            "0x000002f8": 163,
+            "0x00000256": 61,
+            "0x00000255": 628,
+            "0x000001ea": 69,
+            "0x000001ee": 63,
+            "0x0000031b": 32,
+            "0x000001ec": 32,
+            "0x00000326": 32,
+            "0x00000087": 3,
+            "0x000002f0": 69,
+            "0x0000022c": 64,
+            "0x000001fa": 6,
+            "0x00000288": 2,
+            "0x00000307": 2,
+            "0x00000038": 46,
+            "0x00000086": 7,
+            "0x000000a0": 58,
+            "0x0000001e": 17,
+            "0x0000031c": 116,
+            "0x00000187": 42,
+            "0x00000020": 434,
+            "0x00000042": 24,
+            "0x000000ad": 1,
+            "0x000000c1": 12,
+            "0x00000310": 1,
+            "0x0000030e": 36,
+            "0x00000216": 1,
+            "0x00000289": 4,
+            "0x000002ef": 26,
+            "0x000002e3": 41,
+            "0x000002b6": 11,
+            "0x00000258": 11,
+            "0x000002b7": 11
+          },
+          "trace": [
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x00000027 @ SGS 0x0000f44a",
+            "calls 0x00000045 @ SGS 0x0000f462",
+            "calls 0x000000ff @ SGS 0x0000ac14",
+            "calls 0x00000027 @ SGS 0x0000f644",
+            "calls 0x00000046 @ SGS 0x0000f65c",
+            "calls 0x00000027 @ SGS 0x0000f44a",
+            "calls 0x00000045 @ SGS 0x0000f462",
+            "calls 0x000000ff @ SGS 0x0000ac14",
+            "calls 0x00000027 @ SGS 0x0000f644",
+            "calls 0x00000046 @ SGS 0x0000f65c",
+            "calls 0x000000a6 @ SGS 0x0001c976",
+            "calls 0x000000a1 @ SGS 0x0001ccae",
+            "calls 0x000000a3 @ SGS 0x0001ccc0",
+            "calls 0x000000a1 @ SGS 0x0000908a",
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x000000a8 @ SGS 0x00009024",
+            "calls 0x000000a1 @ SGS 0x0000908a",
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x0000009b @ SGS 0x0000fa72",
+            "calls 0x0000030e @ SGS 0x0002b4b0",
+            "calls 0x000000b6 @ SGS 0x0002cf20",
+            "calls 0x000000c5 @ SGS 0x0002cf30",
+            "calls 0x00000325 @ SGS 0x0002a928",
+            "calls 0x00000325 @ SGS 0x0002a93c",
+            "calls 0x00000325 @ SGS 0x0002a954",
+            "calls 0x000002a2 @ SGS 0x0002a976",
+            "calls 0x00000294 @ SGS 0x0002aa54",
+            "calls 0x000002e3 @ SGS 0x0002aa8e",
+            "calls 0x000002ed @ SGS 0x0002aaaa",
+            "calls 0x00000324 @ SGS 0x0002aabc",
+            "calls 0x00000324 @ SGS 0x0002aace",
+            "calls 0x00000324 @ SGS 0x0002aae4",
+            "calls 0x00000232 @ SGS 0x0002d03a",
+            "calls 0x000000b7 @ SGS 0x0002cf48",
+            "calls 0x000000fd @ SGS 0x0002b07c",
+            "calls 0x000000fd @ SGS 0x0002b090",
+            "calls 0x000000fd @ SGS 0x0002b0ae",
+            "calls 0x000000a1 @ SGS 0x0001c7b6",
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x000000a8 @ SGS 0x00009024",
+            "calls 0x000000a1 @ SGS 0x0000908a",
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x000000a8 @ SGS 0x00009024",
+            "calls 0x000000a1 @ SGS 0x0000908a",
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x000000a6 @ SGS 0x000091cc",
+            "calls 0x00000027 @ SGS 0x0000f644",
+            "calls 0x00000046 @ SGS 0x0000f65c",
+            "calls 0x0000003f @ SGS 0x0000f5c6",
+            "calls 0x0000005b @ SGS 0x0000f5fc",
+            "calls 0x0000005f @ SGS 0x0000f812"
+          ],
+          "audio": {
+            "requests": 7,
+            "ignoredNativeSubtypes": [],
+            "lastError": null,
+            "lastFormat": "SMAF"
+          },
+          "filesystem": {
+            "files": [
+              "gnex.m3g",
+              "kor.lng",
+              "scene.m3g"
+            ],
+            "openHandles": 0,
+            "readonlyFiles": 3,
+            "operations": 10,
+            "persistence": "reunion.saves.9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+            "persistenceError": null
+          },
+          "timers": [
+            {
+              "channel": 0,
+              "delay": 50,
+              "repeat": true,
+              "revision": 1
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ],
+          "externalRequest": null,
+          "environment": {
+            "phoneMIN": "Synthetic virtual handset identifier",
+            "tickResolutionMs": 20,
+            "phoneClock": "Host monotonic plus 10 MHz virtual ARM block clock"
+          },
+          "graphics": [
+            "Original ROM RGB565 renderer, palette, ASCII and Korean fonts",
+            "Original Swerve 2.1 ARM software 3D renderer"
+          ],
+          "swerve": {
+            "backend": "Original Swerve 2.1 ARM",
+            "recentCalls": [
+              {
+                "id": "2a2",
+                "name": "swv_object3d_getUserID",
+                "args": [
+                  100676912,
+                  6639
+                ],
+                "result": 599040450
+              },
+              {
+                "id": "2f5",
+                "name": "swv_transformable_preRotate",
+                "args": [
+                  100676928,
+                  6523
+                ],
+                "result": 0
+              },
+              {
+                "id": "2a2",
+                "name": "swv_object3d_getUserID",
+                "args": [
+                  100676928,
+                  6639
+                ],
+                "result": 243740017
+              },
+              {
+                "id": "29d",
+                "name": "swv_object3d_animate",
+                "args": [
+                  100834080,
+                  114340,
+                  5258
+                ],
+                "result": 0
+              },
+              {
+                "id": "1ea",
+                "name": "swv_animationcontroller_getPosition",
+                "args": [
+                  100672144,
+                  114340,
+                  -1907359742
+                ],
+                "result": 1166147584
+              },
+              {
+                "id": "248",
+                "name": "swv_graphics3d_renderWorld",
+                "args": [
+                  100669968,
+                  100834080
+                ],
+                "result": 0
+              },
+              {
+                "id": "30e",
+                "name": "swv_world_getActiveCamera",
+                "args": [
+                  100834080,
+                  6784
+                ],
+                "result": 0
+              },
+              {
+                "id": "2a2",
+                "name": "swv_object3d_getUserID",
+                "args": [
+                  100687360,
+                  6492
+                ],
+                "result": 350517587
+              },
+              {
+                "id": "294",
+                "name": "swv_node_getTransformTo",
+                "args": [
+                  100687360,
+                  100834080,
+                  100670144,
+                  6491
+                ],
+                "result": 0
+              },
+              {
+                "id": "2e3",
+                "name": "swv_transform_invert",
+                "args": [
+                  100670144
+                ],
+                "result": 0
+              },
+              {
+                "id": "2ed",
+                "name": "swv_transform_transformPoints",
+                "args": [
+                  100670144,
+                  4,
+                  6493
+                ],
+                "result": 0
+              },
+              {
+                "id": "232",
+                "name": "swv_engine_releaseHandle",
+                "args": [
+                  100687360
+                ],
+                "result": 0
+              }
+            ]
+          }
+        },
+        "trace": [
+          {
+            "label": "start",
+            "filename": "gnex26_independence_day_3d-start.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 0,
+            "events": 1,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "0-manualTick4",
+            "filename": "gnex26_independence_day_3d-0-manualTick4.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 40000,
+            "events": 5,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "1-key20",
+            "filename": "gnex26_independence_day_3d-1-key20.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 40000,
+            "events": 7,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "2-manualTick1",
+            "filename": "gnex26_independence_day_3d-2-manualTick1.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 50000,
+            "events": 8,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "3-manualTick5",
+            "filename": "gnex26_independence_day_3d-3-manualTick5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 75000,
+            "events": 13,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "4-hold20",
+            "filename": "gnex26_independence_day_3d-4-hold20.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 75000,
+            "events": 14,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "5-manualTick3",
+            "filename": "gnex26_independence_day_3d-5-manualTick3.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 75150,
+            "events": 17,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "6-release20",
+            "filename": "gnex26_independence_day_3d-6-release20.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 75150,
+            "events": 18,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "7-manualTick10",
+            "filename": "gnex26_independence_day_3d-7-manualTick10.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76150,
+            "events": 28,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "8-hold5",
+            "filename": "gnex26_independence_day_3d-8-hold5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76150,
+            "events": 29,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "9-manualTick12",
+            "filename": "gnex26_independence_day_3d-9-manualTick12.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76750,
+            "events": 41,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "10-release5",
+            "filename": "gnex26_independence_day_3d-10-release5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76750,
+            "events": 42,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "11-hold19",
+            "filename": "gnex26_independence_day_3d-11-hold19.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76750,
+            "events": 43,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "12-manualTick4",
+            "filename": "gnex26_independence_day_3d-12-manualTick4.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76950,
+            "events": 47,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "13-release19",
+            "filename": "gnex26_independence_day_3d-13-release19.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76950,
+            "events": 48,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "14-hold5",
+            "filename": "gnex26_independence_day_3d-14-hold5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 76950,
+            "events": 49,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "15-manualTick12",
+            "filename": "gnex26_independence_day_3d-15-manualTick12.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 77550,
+            "events": 61,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "16-release5",
+            "filename": "gnex26_independence_day_3d-16-release5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 77550,
+            "events": 62,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "17-hold5",
+            "filename": "gnex26_independence_day_3d-17-hold5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 77550,
+            "events": 63,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "18-manualTick12",
+            "filename": "gnex26_independence_day_3d-18-manualTick12.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 78150,
+            "events": 75,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "19-release5",
+            "filename": "gnex26_independence_day_3d-19-release5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 78150,
+            "events": 76,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "20-hold1",
+            "filename": "gnex26_independence_day_3d-20-hold1.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 78150,
+            "events": 77,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "21-manualTick12",
+            "filename": "gnex26_independence_day_3d-21-manualTick12.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 78750,
+            "events": 89,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "22-release1",
+            "filename": "gnex26_independence_day_3d-22-release1.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 78750,
+            "events": 90,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "23-hold6",
+            "filename": "gnex26_independence_day_3d-23-hold6.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 78750,
+            "events": 91,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "24-manualTick8",
+            "filename": "gnex26_independence_day_3d-24-manualTick8.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 79150,
+            "events": 99,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "25-release6",
+            "filename": "gnex26_independence_day_3d-25-release6.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 79150,
+            "events": 100,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "26-hold5",
+            "filename": "gnex26_independence_day_3d-26-hold5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 79150,
+            "events": 101,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "27-manualTick4",
+            "filename": "gnex26_independence_day_3d-27-manualTick4.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 79350,
+            "events": 105,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          },
+          {
+            "label": "28-release5",
+            "filename": "gnex26_independence_day_3d-28-release5.png",
+            "status": "idle",
+            "error": null,
+            "timeMs": 79350,
+            "events": 106,
+            "timers": [
+              {
+                "channel": 0,
+                "delay": 50,
+                "repeat": true,
+                "revision": 1
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ]
+          }
+        ],
+        "record": "swerve-gameplay.json",
+        "frameSha256": "1c94c518d6c1c3ab3841f62c9fa50dda1732ea36e5d55e5cf845204aae39da76"
+      }
+    },
+    {
+      "id": "gnex34_major2007",
+      "title": "Major2007",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/major-release-dwell/gnex34_major2007-101-tick25.png",
+        "actions": [
+          [
+            "tick",
+            40
+          ],
+          [
+            "tick",
+            80
+          ],
+          [
+            "hold",
+            23
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            23
+          ],
+          [
+            "tick",
+            19
+          ],
+          [
+            "hold",
+            23
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            23
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "hold",
+            23
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "release",
+            23
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            7
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            12
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            12
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            12
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            12
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "hold",
+            12
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            12
+          ],
+          [
+            "tick",
+            7
+          ],
+          [
+            "hold",
+            12
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            12
+          ],
+          [
+            "tick",
+            7
+          ],
+          [
+            "hold",
+            12
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            12
+          ],
+          [
+            "tick",
+            29
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            24
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            24
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            9
+          ],
+          [
+            "hold",
+            10
+          ],
+          [
+            "tick",
+            12
+          ],
+          [
+            "release",
+            10
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            7
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            7
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            7
+          ],
+          [
+            "hold",
+            10
+          ],
+          [
+            "hold",
+            2
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            2
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "release",
+            10
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "hold",
+            13
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            13
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            19
+          ],
+          [
+            "tick",
+            25
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "3EF80D21"
+        },
+        "status": "idle",
+        "evidence": "Завершено контекстное обучение подаче: питчер бросает мяч, видны мяч, движение руки и шкала силы.",
+        "controls": "# — следующий экран состава; OK/5 — выбор и фиксация шкалы подачи; 0 — контекстная подсказка; 2 — тип подачи.",
+        "events": 494,
+        "frameSHA256": "7730eaab7e221eada29f7984b051d2faeb2b61a6c78540e95647d354b2cdfede",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/major-release-dwell/gnex34_major2007.json",
+          "status": "idle",
+          "events": 494,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true,
+          "tapTiming": "One existing timer deadline before each tap release; same keys and total deadlines. Required because this game polls pending keys in TIMEOUT."
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex34_major2007-gameplay.png",
+          "events": 469,
+          "report": "gameplay/desktop-qa/replay/gnex34_major2007.json"
+        },
+        "zeroDurationTapReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex34_major2007.json",
+          "frame": "gameplay/desktop-qa/release-replay/gnex34_major2007-57-tick25.png",
+          "status": "idle",
+          "gameplay": false,
+          "reason": "Instantaneous press/release was cleared before TIMEOUT; replaced by a physical-duration tap plan."
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "7730eaab7e221eada29f7984b051d2faeb2b61a6c78540e95647d354b2cdfede"
+      }
+    },
+    {
+      "id": "gnex10_marineblues",
+      "title": "Marineblues",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/marineblues-stage1.png",
+        "actions": [
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            18
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            18
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            18
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 208
+        },
+        "status": "idle",
+        "evidence": "Stage1 arcade gameplay: player at bottom, multiple bouncing enemies on platforms, lives and running timer. CLR opens pause; OK resumes.",
+        "controls": "OK advances NEXT on world map; arrows or4/6 move, CLR opens pause menu.",
+        "events": 454,
+        "frameSHA256": "9c463f7252ca6381c86f413bd001a956a02888b9367d31d83dda8b95343c4dd1",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex10_marineblues.json",
+          "status": "idle",
+          "events": 454,
+          "frameLabel": "38-tick30",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "frameEventCount": 454,
+        "record": "desktop-gameplay.json",
+        "frameSha256": "9c463f7252ca6381c86f413bd001a956a02888b9367d31d83dda8b95343c4dd1"
+      }
+    },
+    {
+      "id": "gnex14_mini_game2-_qvga_",
+      "title": "Mini Game2- Qvga ",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex14_mini_game2-_qvga_-27-tick10.png",
+        "actions": [
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "tick",
+            300
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 240,
+          "height": 320,
+          "deviceMin": "01000000000",
+          "deviceUserId": "1C007B87"
+        },
+        "status": "idle",
+        "evidence": "Штатно потрачены 500 из стартовых 1500 звёзд, открыта миниигра 돌아돌아; персонаж на верёвке, очки и рекорд выросли до 30.",
+        "controls": "5 — отпустить/схватить верёвку; OK — выбор, 1 — подтверждение покупки за игровые звёзды.",
+        "events": 642,
+        "frameSHA256": "a1f48da88f31b6c17292bcb01750fc8c14b4a253e1fab327b07708afb10b435d",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex14_mini_game2-_qvga_.json",
+          "status": "idle",
+          "events": 642,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex14_mini_game2-_qvga_-gameplay.png",
+          "events": 629,
+          "report": "gameplay/desktop-qa/replay/gnex14_mini_game2-_qvga_.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "a1f48da88f31b6c17292bcb01750fc8c14b4a253e1fab327b07708afb10b435d"
+      }
+    },
+    {
+      "id": "gnex12_mosquito",
+      "title": "Mosquito",
+      "format": 2,
+      "compatibility": "utility",
+      "evidence": {
+        "frame": "gameplay/mosquito-active.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            17
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            2
+          ],
+          [
+            "key",
+            2
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            50
+          ]
+        ],
+        "events": 164,
+        "status": "idle",
+        "evidence": "Utility running: city animation, remaining-time counter and SMAF request",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex12_mosquito",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 164,
+          "seconds": 13.05,
+          "identicalPng": true,
+          "sha256": "d0f0e3ba28c64b82a0946a2423fc304369a5ae0bf2df29c82027c7e4e4792faa"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "d0f0e3ba28c64b82a0946a2423fc304369a5ae0bf2df29c82027c7e4e4792faa"
+      }
+    },
+    {
+      "id": "gnex13_mu_-_fairy",
+      "title": "Mu - Fairy",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/mu-fairy-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ]
+        ],
+        "events": 258,
+        "status": "idle",
+        "evidence": "Forest combat with hero, enemy and HP/MP bars",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex13_mu_-_fairy",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 258,
+          "seconds": 16.81,
+          "identicalPng": true,
+          "sha256": "3b27c850396440883e77a557efb9354a6ffdc4cbc15c8d9791cbe8df1caac5a6"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "3b27c850396440883e77a557efb9354a6ffdc4cbc15c8d9791cbe8df1caac5a6"
+      }
+    },
+    {
+      "id": "gnex8_nom",
+      "title": "Nom",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/nom-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            35
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ]
+        ],
+        "events": 144,
+        "status": "idle",
+        "evidence": "Stage 1 running and jumping with score meter",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex8_nom",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 144,
+          "seconds": 1.7,
+          "identicalPng": true,
+          "sha256": "474b57038d3933ae1ef9f9fbd0200aabd90b61ca53c708a4c1012896f202c8dd"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "474b57038d3933ae1ef9f9fbd0200aabd90b61ca53c708a4c1012896f202c8dd"
+      }
+    },
+    {
+      "id": "gnex9_nom2",
+      "title": "Nom2",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/nom2-level1.png",
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            60
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ]
+        ],
+        "events": 333,
+        "status": "idle",
+        "evidence": "Level1: character, jump obstacles and energy meter",
+        "startHint": "Press OK to open the menu, then 1 for New Game. # skips the opening story; 5 jumps. Choose 2/No on optional ranking upload prompts.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "90468AE0"
+        },
+        "frameEventCount": 333,
+        "frameSHA256": "2c0e39da9ac7616fdc75ae096facd2e7d9fb84a7d3051e61d13fcf64d14ec150",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex9_nom2.json",
+          "status": "idle",
+          "events": 333,
+          "frameLabel": "13-tick40",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "2c0e39da9ac7616fdc75ae096facd2e7d9fb84a7d3051e61d13fcf64d14ec150"
+      }
+    },
+    {
+      "id": "gnex33_pocket_pro_baseball3",
+      "title": "Pocket Pro Baseball3",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/pocket-baseball3-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ]
+        ],
+        "events": 172,
+        "status": "idle",
+        "evidence": "Baseball at-bat view with batter, pitcher and live ball",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex33_pocket_pro_baseball3",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 172,
+          "seconds": 6.24,
+          "identicalPng": true,
+          "sha256": "2178be448dcb8725dd54ecc8f7592077fe8b17f8815a04e71c8a218c3cef433e"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "2178be448dcb8725dd54ecc8f7592077fe8b17f8815a04e71c8a218c3cef433e"
+      }
+    },
+    {
+      "id": "gnex17_samgugji_hero5",
+      "title": "Samgugji Hero5",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/samgugji-hero5-battle.png",
+        "actions": [
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ]
+        ],
+        "events": 879,
+        "status": "idle",
+        "evidence": "Playable battle with moving soldiers, enemy count and HP/SP HUD",
+        "startHint": "Choose New Game and advance the long introduction with OK; wait for the spoken text before pressing again.",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 160
+        },
+        "frameEventCount": 835,
+        "frameSHA256": "3e23f411213834c607488a40db8f67318b7a99f49bfb71c9370ed4d1b113526d",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex17_samgugji_hero5.json",
+          "status": "idle",
+          "events": 879,
+          "frameLabel": "175-tick5",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "3e23f411213834c607488a40db8f67318b7a99f49bfb71c9370ed4d1b113526d"
+      }
+    },
+    {
+      "id": "gnex18_shing_stone",
+      "title": "Shing Stone",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/shing-stone-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            2
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            3
+          ],
+          [
+            "hold",
+            6
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "release",
+            6
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ]
+        ],
+        "events": 213,
+        "status": "idle",
+        "evidence": "Combat stage with moving hero, projectile and HP/MP bars",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex18_shing_stone",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 213,
+          "seconds": 7.95,
+          "identicalPng": true,
+          "sha256": "9044a85f84bac61cd6634f8437752aeb68271875a98ae1e37ad4b0ad632b1781"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "9044a85f84bac61cd6634f8437752aeb68271875a98ae1e37ad4b0ad632b1781"
+      }
+    },
+    {
+      "id": "gnex28_sketcher",
+      "title": "Sketcher",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex28_sketcher-30-tick8.png",
+        "actions": [
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            6
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            6
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            8
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 240,
+          "height": 320
+        },
+        "status": "idle",
+        "evidence": "Stage 1: персонаж бежит и прыгает, скорость выросла до 45 km/h, изменяются трасса и положение.",
+        "controls": "6 — бег/ускорение, 5 — прыжок; OK — диалоги, # — пропуск вступления.",
+        "events": 297,
+        "frameSHA256": "aeff750a1365002f648e331b8faf6df82cc0128fda6ce54d2267c57707456e90",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex28_sketcher.json",
+          "status": "idle",
+          "events": 297,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex28_sketcher-gameplay.png",
+          "events": 283,
+          "report": "gameplay/desktop-qa/replay/gnex28_sketcher.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "aeff750a1365002f648e331b8faf6df82cc0128fda6ce54d2267c57707456e90"
+      }
+    },
+    {
+      "id": "gnex27_sketcher_.2inch",
+      "title": "Sketcher .2Inch",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex27_sketcher_.2inch-28-tick8.png",
+        "actions": [
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "hold",
+            6
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            6
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            8
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220
+        },
+        "status": "idle",
+        "evidence": "Stage 1 в версии 176×220: бег/прыжок, скорость 46 km/h, изменяются трасса и положение.",
+        "controls": "6 — бег/ускорение, 5 — прыжок; OK — диалоги, # — пропуск вступления.",
+        "events": 275,
+        "frameSHA256": "0466cca27a7bf12c55910399e44c47b174e0985a0481def4b312948b11233058",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex27_sketcher_.2inch.json",
+          "status": "idle",
+          "events": 275,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex27_sketcher_.2inch-gameplay.png",
+          "events": 262,
+          "report": "gameplay/desktop-qa/replay/gnex27_sketcher_.2inch.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "0466cca27a7bf12c55910399e44c47b174e0985a0481def4b312948b11233058"
+      }
+    },
+    {
+      "id": "gnex7_squash",
+      "title": "Squash",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex7_squash-33-tick20.png",
+        "actions": [
+          [
+            "tick",
+            220
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            60
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "hold",
+            16
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "release",
+            16
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 240,
+          "height": 320
+        },
+        "status": "idle",
+        "evidence": "Турнир 128 участников: на корте два игрока, мяч в полёте; после управления изменились позиции и счёт SCORE с 0 на 6.",
+        "controls": "Стрелки — движение, 5 — удар/подача, OK — диалоги и выбор.",
+        "events": 708,
+        "frameSHA256": "e754fbbf03f5963f6150fc250c55f76d94a4b35d32c5579947880430f04d05d6",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex7_squash.json",
+          "status": "idle",
+          "events": 708,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex7_squash-gameplay-final.png",
+          "events": 692,
+          "report": "gameplay/desktop-qa/replay/gnex7_squash.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "e754fbbf03f5963f6150fc250c55f76d94a4b35d32c5579947880430f04d05d6"
+      }
+    },
+    {
+      "id": "gnex19_super_action_hero",
+      "title": "Super Action Hero",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/super-action-hero-combat.png",
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            180
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            180
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            60
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            5
+          ]
+        ],
+        "events": 729,
+        "status": "idle",
+        "evidence": "Playable combat stage with health meter, stick-figure hero and enemy",
+        "startHint": "OK opens the menu and selects Game Start; OK chooses the first unlocked stage. Advance the tutorial with OK, allowing the text and loading screens to finish.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "92E8F216"
+        },
+        "frameEventCount": 729,
+        "frameSHA256": "79d323458af8ac82aa2783d47c47d165a791b39790b95eadacbc60179fc5e7ea",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex19_super_action_hero.json",
+          "status": "idle",
+          "events": 729,
+          "frameLabel": "20-release5",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "79d323458af8ac82aa2783d47c47d165a791b39790b95eadacbc60179fc5e7ea"
+      }
+    },
+    {
+      "id": "gnex30_susi_man3",
+      "title": "Susi Man3",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/susi-man3-fishing.png",
+        "status": "idle",
+        "evidence": "Fishing gameplay with player and points",
+        "actions": [
+          [
+            "tick",
+            300
+          ],
+          [
+            "hold",
+            12
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            12
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            1
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            1
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            18
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            18
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            19
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            19
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            16
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            16
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "tick",
+            25
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220
+        },
+        "events": 781,
+        "frameEventCount": 781,
+        "frameSHA256": "f5004f6b742220892ed7ffc9b2827680a2cae1eae75ee7cd58bb975cf6177f30",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex30_susi_man3.json",
+          "status": "idle",
+          "events": 781,
+          "frameLabel": "60-tick25",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "f5004f6b742220892ed7ffc9b2827680a2cae1eae75ee7cd58bb975cf6177f30"
+      }
+    },
+    {
+      "id": "gnex32_traffic",
+      "title": "Traffic",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/traffic-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            180
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            80
+          ],
+          [
+            "tick",
+            600
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "tick",
+            90
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "key",
+            18
+          ],
+          [
+            "tick",
+            12
+          ],
+          [
+            "key",
+            17
+          ],
+          [
+            "tick",
+            12
+          ]
+        ],
+        "events": 1696,
+        "status": "idle",
+        "evidence": "Mission 1 at a road junction with moving cars and directional input",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex32_traffic",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 1696,
+          "seconds": 65.88,
+          "identicalPng": true,
+          "sha256": "09fdbec52b88509ab6507cc80dda845485ee0f1c7dc81930518b067e5bb78387"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "09fdbec52b88509ab6507cc80dda845485ee0f1c7dc81930518b067e5bb78387"
+      }
+    },
+    {
+      "id": "gnex15_virus",
+      "title": "Virus",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex15_virus-69-tick10.png",
+        "actions": [
+          [
+            "tick",
+            100
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "tick",
+            300
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            11
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            200
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            5
+          ],
+          [
+            "tick",
+            200
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            10
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "02D0D63C"
+        },
+        "status": "idle",
+        "evidence": "После сюжетного вступления — управляемый вооружённый персонаж в комнате; Right меняет положение и прокрутку, 5 вызывает действие.",
+        "controls": "5 — диалоги/действие, стрелки — движение.",
+        "events": 1157,
+        "frameSHA256": "b26739acd02067aa0e2f8b4a32198e73495a655a7102d2e7bb5a8876b1b8d261",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex15_virus.json",
+          "status": "idle",
+          "events": 1157,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": false,
+          "visualReview": "Real room gameplay remains visible; character/HUD differences were visually inspected after the new release events."
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex15_virus-gameplay.png",
+          "events": 1124,
+          "report": "gameplay/desktop-qa/replay/gnex15_virus.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "b26739acd02067aa0e2f8b4a32198e73495a655a7102d2e7bb5a8876b1b8d261"
+      }
+    },
+    {
+      "id": "gnex5_viva_soccer2006",
+      "title": "Viva Soccer2006",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/desktop-qa/release-replay/gnex5_viva_soccer2006-41-tick20.png",
+        "actions": [
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            23
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            23
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "hold",
+            23
+          ],
+          [
+            "tick",
+            2
+          ],
+          [
+            "release",
+            23
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "hold",
+            20
+          ],
+          [
+            "tick",
+            4
+          ],
+          [
+            "release",
+            20
+          ],
+          [
+            "tick",
+            6
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            8
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "hold",
+            18
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "release",
+            18
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "hold",
+            18
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            18
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ]
+        ],
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220,
+          "deviceMin": "01000000000",
+          "deviceUserId": "4A60C1E1"
+        },
+        "status": "idle",
+        "evidence": "Матч Saudi–Portugal: движение игрока и мяча, смена активного футболиста, игровые часы 02:50.",
+        "controls": "Стрелки — движение, 5 — действие.",
+        "events": 342,
+        "frameSHA256": "6e9d650ac090f5b2803f0ea506a17eed203c31d2cbb5bcbddaf9c9fc720cd602",
+        "freshReplay": {
+          "report": "gameplay/desktop-qa/release-replay/gnex5_viva_soccer2006.json",
+          "status": "idle",
+          "events": 342,
+          "keyReleaseEvent": 255,
+          "samePixelsAsPreRelease": true
+        },
+        "preRelease": {
+          "frame": "gameplay/desktop-qa/gnex5_viva_soccer2006-gameplay.png",
+          "events": 324,
+          "report": "gameplay/desktop-qa/replay/gnex5_viva_soccer2006.json"
+        },
+        "record": "desktop-gameplay.json",
+        "frameSha256": "6e9d650ac090f5b2803f0ea506a17eed203c31d2cbb5bcbddaf9c9fc720cd602"
+      }
+    },
+    {
+      "id": "gnex25_ys3_the_oath_in_felghana",
+      "title": "Ys3 The Oath In Felghana",
+      "format": 2,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/ys3-gameplay.png",
+        "actions": [
+          [
+            "tick",
+            80
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            19
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            1
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ]
+        ],
+        "events": 201,
+        "status": "idle",
+        "evidence": "Playable village scene after original introduction; movement and action input",
+        "keyRelease": "SDK filters KEYPRESS 0xff for legacy versions 1/2; held-key mask still changes.",
+        "freshReplay": {
+          "id": "gnex25_ys3_the_oath_in_felghana",
+          "returncode": 0,
+          "status": "idle",
+          "error": null,
+          "events": 201,
+          "seconds": 6.5,
+          "identicalPng": true,
+          "sha256": "36d1aa959f301c19969ed39fb902f2fdcca650d0cee14b421f90a606dd1a7a54"
+        },
+        "record": "legacy-gameplay.json",
+        "frameSha256": "36d1aa959f301c19969ed39fb902f2fdcca650d0cee14b421f90a606dd1a7a54"
+      }
+    },
+    {
+      "id": "gnex22_yulgang2_-_1",
+      "title": "Yulgang2 - 1",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/yulgang2-part1-world.png",
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            21
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            30
+          ]
+        ],
+        "events": 393,
+        "status": "idle",
+        "evidence": "Courtyard world with player, NPC and HP/MP HUD",
+        "startHint": "Select the first menu item with OK to start a new game. The courtyard has a player, NPC and HP/MP meters.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220
+        },
+        "frameEventCount": 361,
+        "frameSHA256": "0635e1adbc30b2448eae041de3376ca2d3f589dfd25e1a4da2bb1d96e7a8e414",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex22_yulgang2_-_1.json",
+          "status": "idle",
+          "events": 393,
+          "frameLabel": "10-tick50",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "0635e1adbc30b2448eae041de3376ca2d3f589dfd25e1a4da2bb1d96e7a8e414"
+      }
+    },
+    {
+      "id": "gnex23_yulgang2_-_2",
+      "title": "Yulgang2 - 2",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/yulgang2-part2-world.png",
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            30
+          ]
+        ],
+        "events": 349,
+        "status": "idle",
+        "evidence": "Courtyard world with player, NPC and HP/MP HUD",
+        "startHint": "Select the first menu item with OK to start a new game. The courtyard has a player, NPC and HP/MP meters.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220
+        },
+        "frameEventCount": 317,
+        "frameSHA256": "53b09d6ac1cd2db3cd6852de78541a38f874a36aa29a3df377956551f5bf2ad3",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex23_yulgang2_-_2.json",
+          "status": "idle",
+          "events": 349,
+          "frameLabel": "6-tick50",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "53b09d6ac1cd2db3cd6852de78541a38f874a36aa29a3df377956551f5bf2ad3"
+      }
+    },
+    {
+      "id": "gnex24_yulgang2_-_3",
+      "title": "Yulgang2 - 3",
+      "format": 4,
+      "compatibility": "playable",
+      "evidence": {
+        "frame": "gameplay/yulgang2-part3-world.png",
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            30
+          ]
+        ],
+        "events": 349,
+        "status": "idle",
+        "evidence": "Courtyard world with player, NPC and HP/MP HUD",
+        "startHint": "Select the first menu item with OK to start a new game. The courtyard has a player, NPC and HP/MP meters.",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220
+        },
+        "frameEventCount": 317,
+        "frameSHA256": "91293f78edb431b8d3275d48cd2f34dddeef9958fbb07d608d12f9451ce76e75",
+        "freshReplay": {
+          "report": "gameplay/release-qa/gnex24_yulgang2_-_3.json",
+          "status": "idle",
+          "events": 349,
+          "frameLabel": "6-tick50",
+          "releaseSemantics": "SDK modern v4/v36 KEYPRESS FF on each held button release"
+        },
+        "record": "modern-gameplay.json",
+        "frameSha256": "91293f78edb431b8d3275d48cd2f34dddeef9958fbb07d608d12f9451ce76e75"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "component": "Unicorn.js ARM",
+  "version": "1.0.3",
+  "license": "GPL-2.0",
+  "upstream": "https://github.com/AlexAltea/unicorn.js",
+  "release": "https://github.com/AlexAltea/unicorn.js/releases/tag/v1.0.3",
+  "archive": "https://github.com/AlexAltea/unicorn.js/releases/download/v1.0.3/unicorn_arm_1.0.3.zip",
+  "modifications": [
+    "Renamed unicorn_arm.js to unicorn_arm_legacy.js; appended globalThis.MUnicornLegacy = MUnicorn for module-worker loading. WASM is unmodified."
+  ],
+  "files": [
+    {
+      "path": "unicorn_arm_legacy.js",
+      "bytes": 34903,
+      "sha256": "359685259e53ad025781c7b6422bc766d27116f78a0e7f564cdd0570b1ee5336"
+    },
+    {
+      "path": "unicorn_arm.wasm",
+      "bytes": 1070569,
+      "sha256": "ce1cbe28d72403d4981f994992d432a70a25aa6c90f01b70079fc09f0e05d958"
+    }
+  ],
+  "upstreamJavascriptSha256": "2807daf6b7d28e7ee468f234b2d068761e2efa35194164f0b963db0b0d943be3",
+  "correspondingSources": [
+    {
+      "path": "vendor/unicorn-sources/unicorn-js-3a2eb47a0238c0149c5c3e067774c9350b75e5bf.tar.gz",
+      "url": "https://codeload.github.com/AlexAltea/unicorn.js/tar.gz/3a2eb47a0238c0149c5c3e067774c9350b75e5bf",
+      "bytes": 1630997,
+      "sha256": "adc017a69a11c41f8b828c8377043a60d1b76a297681d539e4a93015da82fd34"
+    },
+    {
+      "path": "vendor/unicorn-sources/unicorn-engine-52f90cda023abaca510d59f021c88629270ad6c0.tar.gz",
+      "url": "https://codeload.github.com/unicorn-engine/unicorn/tar.gz/52f90cda023abaca510d59f021c88629270ad6c0",
+      "bytes": 3761228,
+      "sha256": "32e5ad7d37d79cb96a216443fe1bcd90f63e0525a919e545c73e3762e5f41a3e"
+    }
+  ]
+}

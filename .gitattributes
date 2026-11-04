@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.wasm binary
+*.tar.gz binary
+*.png binary
+*.ico binary
+*.ps1 text eol=crlf
+# Preserve vendored sources, runtime hashes, and notices byte for byte.
+vendor/** -text
+web/engine/vendor/** -text
+web/vendor/** -text
+desktop/licenses/** -text

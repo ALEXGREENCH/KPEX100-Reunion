@@ -1,0 +1,832 @@
+{
+  "version": 1,
+  "title": "K-PEX 100 — Reunion Web",
+  "firmwares": [
+    {
+      "id": "cenix-1.00",
+      "title": "Cenix 1.00",
+      "url": "data/firmware/Cenix-1.00.rom",
+      "sha256": "6f4cfa569d070e9d4167a7e8ab2aae9d65f31f5407ce761e32f3199e7013f0c8",
+      "bytes": 6884864,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "cenix-1.02",
+      "title": "Cenix 1.02",
+      "url": "data/firmware/Cenix-1.02.rom",
+      "sha256": "72ba8bfd80fbc669b678a5cdfaf9c5dc43722e4c2f01f0bfaf90e793dfef78f8",
+      "bytes": 6884864,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "cenix-2.00",
+      "title": "Cenix 2.00",
+      "url": "data/firmware/Cenix-2.00.rom",
+      "sha256": "e4ca76f5909bb20ca0d0ae8b680698ee912b143eeb7a5c8a262d577a7b734cdc",
+      "bytes": 7215616,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "cenix-2.01",
+      "title": "Cenix 2.01",
+      "url": "data/firmware/Cenix-2.01.rom",
+      "sha256": "efe2e8215dc123f1e0a9c1257461d7d30f376184711ddf9fde17ba6929370643",
+      "bytes": 7215616,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "cenix-2.10",
+      "title": "Cenix 2.10",
+      "url": "data/firmware/Cenix-2.10.rom",
+      "sha256": "15f49a0aa6d15ae07d39b9cf32aca0f41e8bdd598fb09726026640654465a282",
+      "bytes": 7916032,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "cenix-2.20",
+      "title": "Cenix 2.20",
+      "url": "data/firmware/Cenix-2.20.rom",
+      "sha256": "8ba987031c28ebc51c202c3c809bd607c746c6529472e067382ef940aa1c1407",
+      "bytes": 7293440,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "cenix-2.21",
+      "title": "Cenix 2.21",
+      "url": "data/firmware/Cenix-2.21.rom",
+      "sha256": "4c3a8b1ca0282e23ae7696857a919842732e71d0bbccb093c41a0746435b40c2",
+      "bytes": 7293440,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "kingston-2.09",
+      "title": "Kingston 2.09",
+      "url": "data/firmware/Kingston-2.09.rom",
+      "sha256": "4c66faa7dd686fc4df20e9e6249953c97a975b2df3a3455764c99dc0afe21b40",
+      "bytes": 6149632,
+      "compatibility": "experimental"
+    },
+    {
+      "id": "kingston-2.12",
+      "title": "Kingston 2.12",
+      "url": "data/firmware/Kingston-2.12.rom",
+      "sha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+      "bytes": 6149632,
+      "compatibility": "verified"
+    }
+  ],
+  "games": [
+    {
+      "id": "godori",
+      "title": "Godori",
+      "url": "data/games/godori.sgs",
+      "sha256": "0f9b70d38c86ccb32fbd2b24d6e28eaf9328a1eacbf578a3c19baace36b90e93",
+      "bytes": 1475130,
+      "format": 4,
+      "compatibility": "verified",
+      "sourceName": "Godori.sgs",
+      "nativeTitle": "깜찍맞고2",
+      "resources": 2474,
+      "platform": "kpex",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "startHint": "Выбор — Z / A. Движение — стрелки."
+    },
+    {
+      "id": "hellfire",
+      "title": "Hell Fire",
+      "url": "data/games/hellfire.sgs",
+      "sha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+      "bytes": 29916,
+      "format": 4,
+      "compatibility": "verified",
+      "sourceName": "hell_fire.sgs",
+      "nativeTitle": "Hellfire_GNEX",
+      "resources": 50,
+      "platform": "kpex",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "startHint": "Начать игру — Enter / PLAY. Движение — стрелки."
+    },
+    {
+      "id": "ikaria",
+      "title": "Ikaria ep2",
+      "url": "data/games/ikaria.sgs",
+      "sha256": "c04204a6eec21188c4e499a8e2baa0ebb2d8d2007802e579085288edfdf5a5de",
+      "bytes": 822550,
+      "format": 4,
+      "compatibility": "verified",
+      "sourceName": "ikaria.sgs",
+      "nativeTitle": "이카리아 ep2",
+      "resources": 5239,
+      "platform": "kpex",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "startHint": "Выбор — Z / A. Движение — стрелки."
+    },
+    {
+      "id": "kpetris",
+      "title": "KPetris Beta",
+      "url": "data/games/kpetris.sgs",
+      "sha256": "f4584767eac0ba15c568fc89687f9aed38b484811e3b2658ef45dec0fc392792",
+      "bytes": 116192,
+      "format": 4,
+      "compatibility": "verified",
+      "sourceName": "kpetris_beta.sgs",
+      "nativeTitle": "KPETRIS Beta",
+      "resources": 45,
+      "platform": "kpex",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "startHint": "Выбор — Z / A. Движение — стрелки."
+    },
+    {
+      "id": "gnex1_1zimae",
+      "title": "1Zimae",
+      "url": "data/games/gnex1_1zimae.sgs",
+      "sha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+      "bytes": 1266206,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0055730580.sgs",
+      "nativeTitle": "일지매영웅전기S",
+      "resources": 5993,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 160,
+        "deviceMin": "01000000000",
+        "deviceUserId": "183A767C"
+      },
+      "startHint": "Выбор — Z / OK. В начале есть длинное сюжетное вступление; диалоги продолжаются через OK."
+    },
+    {
+      "id": "gnex2_2007_pro_baseball",
+      "title": "2007 Pro Baseball",
+      "url": "data/games/gnex2_2007_pro_baseball.sgs",
+      "sha256": "8ea81140fc5586667cee4376c4dcc1a3e98e63b3477eabebe734fd50d0cec296",
+      "bytes": 804626,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0056004623.SGS",
+      "nativeTitle": "2007프로야구",
+      "resources": 4431,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "9E18BB67"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex6_alchemist",
+      "title": "Alchemist",
+      "url": "data/games/gnex6_alchemist.sgs",
+      "sha256": "863e4f02bc166acaeb935701c7456f76e9eb4a5174200b6c6c219ad627bbd72a",
+      "bytes": 699135,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0051728403.SGS",
+      "nativeTitle": "강철의연금술사",
+      "resources": 3192,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "0C9EF216"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex16_bubble_bubble",
+      "title": "Bubble Bubble",
+      "url": "data/games/gnex16_bubble_bubble.sgs",
+      "sha256": "0c2d18a5d5260fb784d0ad1169f683e290a3d5ddc02b46647eb7c8d6eee3ae45",
+      "bytes": 87200,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "0050073106.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "OK открывает меню; 1 начинает игру. Движение — стрелки, действие — 5."
+    },
+    {
+      "id": "gnex31_com2us_soccer_2006",
+      "title": "Com2Us Soccer 2006",
+      "url": "data/games/gnex31_com2us_soccer_2006.sgs",
+      "sha256": "0e39f2dabc95ff71f7999b1495644f48f1c3bbb8cb890c89309f8a6aaa483e71",
+      "bytes": 664590,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0051446666.sgs",
+      "nativeTitle": "컴투스사커2006",
+      "resources": 1634,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 240,
+        "height": 320,
+        "deviceMin": "01000000000",
+        "deviceUserId": "82B8F216"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex29_crow2",
+      "title": "Crow2",
+      "url": "data/games/gnex29_crow2.sgs",
+      "sha256": "c64d9fb3e08c81448c727ee47f2733c8e46a46fed8dc2ab409b34e7b9eccb952",
+      "bytes": 679354,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0048670524.sgs",
+      "nativeTitle": "창세기전크로우2",
+      "resources": 1459,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "78AE0F2B"
+      },
+      "startHint": "В начальном меню нажмите вниз один раз, затем OK для новой игры. OK продолжает диалоги; 4/6 — движение, 5 — действие."
+    },
+    {
+      "id": "gnex36_dungeon_fighter",
+      "title": "Dungeon Fighter",
+      "url": "data/games/gnex36_dungeon_fighter.sgs",
+      "sha256": "883c4c6fb9398ec1ceb6dfe8b102c12ac7c79aa5cfb6ed021316d7aacb17c3dd",
+      "bytes": 1223340,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0055829671.sgs",
+      "nativeTitle": "던전앤파이터",
+      "resources": 2626,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 160
+      },
+      "startHint": "В меню выберите новую игру стрелкой вниз и OK. Пропуск вступления — #."
+    },
+    {
+      "id": "gnex21_eska2",
+      "title": "Eska2",
+      "url": "data/games/gnex21_eska2.sgs",
+      "sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+      "bytes": 130164,
+      "format": 1,
+      "compatibility": "playable",
+      "sourceName": "5.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Выбор — Z / OK. Вступление пропускается клавишами # и *."
+    },
+    {
+      "id": "gnex3_fist_of_fury2",
+      "title": "Fist Of Fury2",
+      "url": "data/games/gnex3_fist_of_fury2.sgs",
+      "sha256": "9012fa4fc75063f1cf3fdb009506a08d83bbd42c84dd10e9d9f47b94ff094e13",
+      "bytes": 232650,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0050129651.sgs",
+      "nativeTitle": "정무문II",
+      "resources": 575,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "E83E67E3"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex35_gostop_w_",
+      "title": "Gostop W ",
+      "url": "data/games/gnex35_gostop_w_.sgs",
+      "sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+      "bytes": 126914,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "3409150040.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "OK начинает партию и продолжает диалог. Карта выбирается соответствующей цифрой."
+    },
+    {
+      "id": "gnex37_hero",
+      "title": "Hero",
+      "url": "data/games/gnex37_hero.sgs",
+      "sha256": "ecb024bdef451d0b7bd60f08cf54862682b6a4c7e7dc7d3843d786ed8ea338a2",
+      "bytes": 1292936,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0055732589.sgs",
+      "nativeTitle": "일지매영웅전기",
+      "resources": 5981,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "AC36D866"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex26_independence_day_3d",
+      "title": "Independence Day 3D",
+      "url": "data/games/gnex26_independence_day_3d.sgs",
+      "sha256": "9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+      "bytes": 479553,
+      "format": 36,
+      "compatibility": "playable",
+      "sourceName": "0048282528.sgs",
+      "nativeTitle": "인디펜던스 데이",
+      "resources": 541,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Выбор — 5, перемещение по меню — стрелки. Для новой игры: 5 → вниз → 5. Первичная загрузка 3D занимает время."
+    },
+    {
+      "id": "gnex34_major2007",
+      "title": "Major2007",
+      "url": "data/games/gnex34_major2007.sgs",
+      "sha256": "4aad29e41dbfc435bdb89306b44f03bd60e70b6e7205e77c443dc9b622f93af5",
+      "bytes": 1006758,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0056463873.SGS",
+      "nativeTitle": "메이저2007",
+      "resources": 2460,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "3EF80D21"
+      },
+      "startHint": "Подтверждение — OK, переход NEXT — #. Перед матчем пройдите встроенные подсказки."
+    },
+    {
+      "id": "gnex10_marineblues",
+      "title": "Marineblues",
+      "url": "data/games/gnex10_marineblues.sgs",
+      "sha256": "fd0453b481c960d3b1b45c26a98e64f04f018c65962fcf532717a4b672174637",
+      "bytes": 764660,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0056806663.sgs",
+      "nativeTitle": "마린블루스",
+      "resources": 570,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 208
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex14_mini_game2-_qvga_",
+      "title": "Mini Game2- Qvga ",
+      "url": "data/games/gnex14_mini_game2-_qvga_.sgs",
+      "sha256": "c6f99479dd49a139f67d2ee68386a7bb578fe361a28d51ab42d25bd540a9e5a9",
+      "bytes": 326022,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0055655009.sgs",
+      "nativeTitle": "미니게임천국2",
+      "resources": 829,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 240,
+        "height": 320,
+        "deviceMin": "01000000000",
+        "deviceUserId": "1C007B87"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex12_mosquito",
+      "title": "Mosquito",
+      "url": "data/games/gnex12_mosquito.sgs",
+      "sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+      "bytes": 74562,
+      "format": 2,
+      "compatibility": "utility",
+      "sourceName": "8.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Историческая звуковая утилита: 2 открывает выбор режима; 1 — городской режим с таймером."
+    },
+    {
+      "id": "gnex13_mu_-_fairy",
+      "title": "Mu - Fairy",
+      "url": "data/games/gnex13_mu_-_fairy.sgs",
+      "sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+      "bytes": 130942,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "5.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 160,
+        "deviceMin": "01000000000",
+        "deviceUserId": "9AF2F6CA"
+      },
+      "startHint": "Выбор — Z / OK. Цифра 1 выбирает пункт меню, 5 открывает действие/выбор героя."
+    },
+    {
+      "id": "gnex8_nom",
+      "title": "Nom",
+      "url": "data/games/gnex8_nom.sgs",
+      "sha256": "c3697ab331f0906ddf9bf4a81c1163c0e01e99adacfc1595a90fa97a58508fc3",
+      "bytes": 131024,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "3404310253.SGS",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "OK открывает меню и начинает Stage 1. Прыжок — 5."
+    },
+    {
+      "id": "gnex9_nom2",
+      "title": "Nom2",
+      "url": "data/games/gnex9_nom2.sgs",
+      "sha256": "386525ab6e1c8aa89c5c89aa3605fdf20a19e1d9ce0973780c920f7d73918769",
+      "bytes": 298778,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0048492344.sgs",
+      "nativeTitle": "놈투(GS)",
+      "resources": 1012,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "90468AE0"
+      },
+      "startHint": "Выбор — Z / OK. Для прыжка используйте цифровую клавиатуру, как указано в игре."
+    },
+    {
+      "id": "gnex33_pocket_pro_baseball3",
+      "title": "Pocket Pro Baseball3",
+      "url": "data/games/gnex33_pocket_pro_baseball3.sgs",
+      "sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+      "bytes": 131034,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "6.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "20B2456D"
+      },
+      "startHint": "OK подтверждает настройки и команды. Действие на поле — 5."
+    },
+    {
+      "id": "gnex17_samgugji_hero5",
+      "title": "Samgugji Hero5",
+      "url": "data/games/gnex17_samgugji_hero5.sgs",
+      "sha256": "85fb4fd27aefba5d7bd7bceb4f86ef7812aba2999bce55237ecc1acc7ae5e6fa",
+      "bytes": 755854,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0053794639.SGS",
+      "nativeTitle": "삼국지영웅전5",
+      "resources": 3165,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 160
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex18_shing_stone",
+      "title": "Shing Stone",
+      "url": "data/games/gnex18_shing_stone.sgs",
+      "sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+      "bytes": 130940,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "1.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 160
+      },
+      "startHint": "В меню 2 — новая игра; затем 1 — обычная сложность. Вступление продолжается через OK."
+    },
+    {
+      "id": "gnex28_sketcher",
+      "title": "Sketcher",
+      "url": "data/games/gnex28_sketcher.sgs",
+      "sha256": "4dfd9f37daeb872a388ea5901c84e6e82a25659094c227ed693bd4ef3c811dee",
+      "bytes": 593340,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0000000028.SGS",
+      "nativeTitle": "질주쾌감 스케쳐",
+      "resources": 1339,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 240,
+        "height": 320
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex27_sketcher_.2inch",
+      "title": "Sketcher .2Inch",
+      "url": "data/games/gnex27_sketcher_.2inch.sgs",
+      "sha256": "4fe8a18069eb1b17d4a762b6430d609b020c47b789fd27a764a9eb928d12ba98",
+      "bytes": 508442,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0055143450.sgs",
+      "nativeTitle": "질주쾌감 스케쳐",
+      "resources": 1411,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex7_squash",
+      "title": "Squash",
+      "url": "data/games/gnex7_squash.sgs",
+      "sha256": "84ac7797e6cac8fac693f0fe6479d6a83a9880b681fb5dbbca8bfcbeb00c9d58",
+      "bytes": 979892,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0049170526.sgs",
+      "nativeTitle": "스쿼시",
+      "resources": 1038,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 240,
+        "height": 320
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex19_super_action_hero",
+      "title": "Super Action Hero",
+      "url": "data/games/gnex19_super_action_hero.sgs",
+      "sha256": "d285b30564daf4d28e5d704919ac9e952d7e3066fbc934b7b52f6aa4a001fde4",
+      "bytes": 227462,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0054014850.SGS",
+      "nativeTitle": "슈퍼액션히어로",
+      "resources": 1032,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "92E8F216"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex30_susi_man3",
+      "title": "Susi Man3",
+      "url": "data/games/gnex30_susi_man3.sgs",
+      "sha256": "0016eb7d2c7ea888f4792d9f18a20161fadda922be236960cddb100d552c2db3",
+      "bytes": 620586,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0055449265.sgs",
+      "nativeTitle": "초밥의 달인3",
+      "resources": 1469,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex32_traffic",
+      "title": "Traffic",
+      "url": "data/games/gnex32_traffic.sgs",
+      "sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+      "bytes": 129790,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "8.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 208,
+        "deviceMin": "01000000000",
+        "deviceUserId": "EE22B509"
+      },
+      "startHint": "Первый запуск измеряет скорость. Продолжайте через OK; перед первой миссией есть длинные диалоги."
+    },
+    {
+      "id": "gnex15_virus",
+      "title": "Virus",
+      "url": "data/games/gnex15_virus.sgs",
+      "sha256": "53cdbe01aa0cd6a203f687ce78a0fcdd6b9e1eca80696d77486a2c65953dd68a",
+      "bytes": 420844,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0000000004.SGS",
+      "nativeTitle": "바이러스무삭제�",
+      "resources": 2233,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "02D0D63C"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex5_viva_soccer2006",
+      "title": "Viva Soccer2006",
+      "url": "data/games/gnex5_viva_soccer2006.sgs",
+      "sha256": "a9c672d2f9ec3bec98370795c1f3983cab2a966e97a88e3b6abe99bc470a7ee8",
+      "bytes": 792713,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "0053594564.SGS",
+      "nativeTitle": "VIVA축구2006",
+      "resources": 2211,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220,
+        "deviceMin": "01000000000",
+        "deviceUserId": "4A60C1E1"
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex25_ys3_the_oath_in_felghana",
+      "title": "Ys3 The Oath In Felghana",
+      "url": "data/games/gnex25_ys3_the_oath_in_felghana.sgs",
+      "sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+      "bytes": 130434,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "3.sgs",
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 208
+      },
+      "startHint": "Сначала CLR / X закрывает настройки скорости. В меню новая игра — второй пункт. Диалоги — OK."
+    },
+    {
+      "id": "gnex22_yulgang2_-_1",
+      "title": "Yulgang2 - 1",
+      "url": "data/games/gnex22_yulgang2_-_1.sgs",
+      "sha256": "0a88d3ffc132df9735762ab8e63a16e7a4e486ff1c4ddddbd667b2b9f4a108d3",
+      "bytes": 196953,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "4.sgs",
+      "nativeTitle": "열강-소향편",
+      "resources": 1148,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex23_yulgang2_-_2",
+      "title": "Yulgang2 - 2",
+      "url": "data/games/gnex23_yulgang2_-_2.sgs",
+      "sha256": "e8e4a83f65db80b5f1fd7f21156cd3aa085dd59ae09b011c2d15f8d28e07f2ed",
+      "bytes": 195849,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "7.sgs",
+      "nativeTitle": "열강-천운악편",
+      "resources": 1118,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    },
+    {
+      "id": "gnex24_yulgang2_-_3",
+      "title": "Yulgang2 - 3",
+      "url": "data/games/gnex24_yulgang2_-_3.sgs",
+      "sha256": "3ff584e6d5686e7d975d67d63006c4a695a2eba6a2b99f858599e9da0e837ffa",
+      "bytes": 197055,
+      "format": 4,
+      "compatibility": "playable",
+      "sourceName": "5.sgs",
+      "nativeTitle": "열강-한비광편",
+      "resources": 1139,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 220
+      },
+      "startHint": "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
+    }
+  ],
+  "states": [
+    {
+      "id": "hellfire-battle",
+      "title": "Hell Fire · бой",
+      "url": "data/states/Kingston-2.12-HellFire-gameplay.reunion-state",
+      "romId": "kingston-2.12",
+      "sha256": "29dc80cb5ca38b491f3196f14510aa15fb144ebae4716d745687c8e26591851d",
+      "bytes": 6012939
+    },
+    {
+      "id": "hellfire-title",
+      "title": "Hell Fire · заставка",
+      "url": "data/states/Kingston-2.12-HellFire.reunion-state",
+      "romId": "kingston-2.12",
+      "sha256": "4b749439176d115ec8d35b066becc195ea3f2a57a2ac03e536a7dae3c9f63881",
+      "bytes": 6018746
+    },
+    {
+      "id": "menu",
+      "title": "Главное меню",
+      "url": "data/states/Kingston-2.12-menu.reunion-state",
+      "romId": "kingston-2.12",
+      "sha256": "298d086005b95729724d07dbaf279d921f7c469784e75723bb09275ab4b8d82c",
+      "bytes": 6158513
+    }
+  ]
+}

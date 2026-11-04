@@ -1,0 +1,123 @@
+--- a/src/smaf_file.h
++++ b/src/smaf_file.h
+@@ -47,6 +47,7 @@
+     int      bitsPerSample = 4;     // 4 = yamaha adpcm, 8/16 = pcm
+     int      channels     = 1;
+     bool     adpcm        = true;
++    bool     streamPcm    = false; // validated mono 4-bit Mwa stream
+     std::vector<uint8_t> data;      // raw codec bytes, NOT decoded here
+ };
+ 
+--- a/src/smaf_file.cpp
++++ b/src/smaf_file.cpp
+@@ -156,6 +156,19 @@
+         if (body + sz > n) sz = uint32_t(n - body);
+         WaveData w;
+         w.number = c[3];                 // 4th id byte = wave number
++        if (isMwa && sz >= 3 && p[body] == 0x20) {
++            // Mwa has a THREE-byte format header: mono, Yamaha ADPCM,
++            // 4 bits; then a big-endian sample rate. Awa is a separate format.
++            w.formatByte = p[body];
++            w.samplingRate = (uint32_t(p[body + 1]) << 8) | p[body + 2];
++            if (w.samplingRate >= 4000 && w.samplingRate <= 48000) {
++                w.streamPcm = true;
++                w.data.assign(p + body + 3, p + body + sz);
++                t.waves.push_back(std::move(w));
++            }
++            pos = body + sz;
++            continue;
++        }
+         if (sz >= 2) {
+             // wave-type: [formatByte][more]. the format byte packs base-fmt +
+             // channels; the sampling rate follows in the next byte(s) in the
+--- a/src/ma_player.h
++++ b/src/ma_player.h
+@@ -82,7 +82,7 @@
+     // ── pcm (sampled) voice pool + the decoded wave bank ──────────────────────
+     // drum kits and sampled instruments play these instead of fm. the bank holds
+     // each Mwa/Awa wave decoded once (yamaha adpcm) keyed by its wave number.
+-    struct PcmSample { std::vector<int16_t> pcm; int fs = 8000; };
++    struct PcmSample { std::vector<int16_t> pcm; int fs = 8000; bool streamPcm = false; };
+     struct PcmVoice {
+         const int16_t* pcm = nullptr; size_t len = 0;
+         double pos = 0.0, rate = 1.0;
+@@ -99,6 +99,7 @@
+     void buildWaveBank_(const SmafFile& file);
+     const ParsedVoice* resolveVoice_(int ch, int note) const;
+     void startPcm_(int ch, int rawNote, int soundingNote, const ParsedVoice& v, const Chan& c);
++    void startWave_(int ch, int waveId, int keyNote = -1, int velocity = 127);
+ 
+     // ── clock ────────────────────────────────────────────────────────────────
+     uint32_t rate_ = 48000;
+--- a/src/ma_player.cpp
++++ b/src/ma_player.cpp
+@@ -209,6 +209,7 @@
+             if (size_t(w.number) >= waveBank_.size()) waveBank_.resize(w.number + 1);
+             PcmSample& ps = waveBank_[w.number];
+             ps.fs = w.samplingRate ? int(w.samplingRate) : 8000;
++            ps.streamPcm = w.streamPcm;
+             if (w.adpcm) {
+                 YamahaAdpcm dec;
+                 ps.pcm = dec.decodeAll(w.data.data(), w.data.size(), /*highNibbleFirst=*/false);
+@@ -585,6 +586,29 @@
+     return n;
+ }
+ 
++void MaPlayer::startWave_(int ch, int wid, int keyNote, int velocity) {
++    if (wid < 0 || size_t(wid) >= waveBank_.size() || waveBank_[wid].pcm.empty()) return;
++    const PcmSample& ws = waveBank_[wid];
++    int slot = -1;
++    for (int i = 0; i < kPcmPool; ++i) if (!pcmPool_[i].active) { slot = i; break; }
++    if (slot < 0) { static thread_local int rr = 0; slot = (rr++) % kPcmPool; }
++    PcmVoice& pv = pcmPool_[slot];
++    pv.pcm = ws.pcm.data(); pv.len = ws.pcm.size();
++    pv.rate = double(ws.fs) / double(rate_);
++    pv.pos = 0.0; pv.loopStart = 0; pv.loopEnd = pv.len; pv.loop = false;
++    FmOpPatch flat{};
++    flat.ar = 15; flat.sl = 0; flat.sr = 0; flat.egType = true;
++    pv.env.configure(flat, double(rate_)); pv.env.keyOn();
++    pv.gain = 1.0f; pv.vel = 1.0f; pv.pan = 0.0f;
++    if (keyNote >= 0) {
++        const Chan& c = chans_[ch & 127];
++        const float vel = std::clamp(velocity, 0, 127) / 127.0f;
++        pv.vel = c.volume * c.expression * vel * vel;
++        pv.pan = c.pan;
++    }
++    pv.channel = ch; pv.keyNote = keyNote; pv.active = true;
++}
++
+ void MaPlayer::fireEvent_(const Ev& e) {
+     Chan& c = chans_[e.ch & 127];
+     switch (e.type) {
+@@ -632,23 +656,16 @@
+         case Ev::WaveOn: {
+             // ATR wave trigger: play wave e.a one-shot at its native rate, no
+             // envelope shaping (the sample IS the sound, it ends on its own).
+-            int wid = e.a;
+-            if (wid < 0 || size_t(wid) >= waveBank_.size() || waveBank_[wid].pcm.empty()) break;
+-            const PcmSample& ws = waveBank_[wid];
+-            int slot = -1;
+-            for (int i = 0; i < kPcmPool; ++i) if (!pcmPool_[i].active) { slot = i; break; }
+-            if (slot < 0) { static thread_local int rr = 0; slot = (rr++) % kPcmPool; }
+-            PcmVoice& pv = pcmPool_[slot];
+-            pv.pcm = ws.pcm.data(); pv.len = ws.pcm.size();
+-            pv.rate = double(ws.fs) / double(rate_);
+-            pv.pos = 0.0; pv.loopStart = 0; pv.loopEnd = pv.len; pv.loop = false;
+-            FmOpPatch flat{};                      // full-open sustaining envelope
+-            flat.ar = 15; flat.sl = 0; flat.sr = 0; flat.egType = true;
+-            pv.env.configure(flat, double(rate_)); pv.env.keyOn();
+-            pv.gain = 1.0f; pv.vel = 1.0f; pv.pan = 0.0f;
+-            pv.channel = int(e.ch); pv.keyNote = -1; pv.active = true;
++            startWave_(int(e.ch), e.a);
+         } break;
+         case Ev::NoteOn: {
++            // MA-5 Authoring Tool manual 4.5.1: bank MSB 125 reserves keys
++            // 0..12 and 92..110 for stream WaveID 1..32. Other keys are drums.
++            const int wid = e.a <= 12 ? e.a + 1 : (e.a >= 92 && e.a <= 110 ? e.a - 78 : -1);
++            if (c.bankMsb == 125 && wid > 0 && size_t(wid) < waveBank_.size() && waveBank_[wid].streamPcm) {
++                startWave_(int(e.ch), wid, e.a, e.b);
++                break;
++            }
+             int soundingNote = e.a + c.octShift;
+             const ParsedVoice* rv = resolveVoice_(e.ch, e.a);
+             if (rv && rv->isPcm) {                      // sampled (drum / pcm) voice
