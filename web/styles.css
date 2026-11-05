@@ -240,9 +240,10 @@ h2 {
   padding: 3px 7px;
 }
 .library-tabs {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-bottom: 1px solid var(--line);
-  gap: 18px;
+  gap: 8px;
   margin: 0 4px 16px;
 }
 .library-tabs button {
@@ -259,7 +260,8 @@ h2 {
   border-bottom-color: var(--mint);
 }
 .library-tabs button span {
-  margin-left: 5px;
+  display: block;
+  margin: 3px 0 0;
   font-size: 10px;
   opacity: 0.75;
 }
@@ -1028,11 +1030,15 @@ summary::marker {
   padding: 20px 38px 27px;
   border-top: 1px solid #1d2b3d;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   color: #50677e;
   font-size: 9px;
+}
+.page-footer a {
+  color: var(--mint);
 }
 .page-footer > span:first-child {
   letter-spacing: 1.5px;
@@ -1330,7 +1336,7 @@ summary::marker {
     font-size: 9px;
   }
   .library-tabs {
-    gap: 25px;
+    gap: 8px;
   }
   .library-tabs button {
     font-size: 12px;

@@ -1,0 +1,174 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "title": "GNEX book and developer source follow-up",
+  "result": {
+    "newGameSgsFiles": 0,
+    "preservedOriginalSourceZip": 1,
+    "preservedStandaloneSource": 1,
+    "sourceMembersInOriginalZip": 2
+  },
+  "preservationArchive": {
+    "path": "research/archives/Korean-GNEX-Developer-Sources-Round2.zip",
+    "bytes": 68180,
+    "sha256": "6cc9c7fe4debf28e2c21526cc50ce20b31c1c4ccb4fc68d7777dac6aaf7de794",
+    "zipMembers": 8
+  },
+  "verification": {
+    "outerZipCrcPass": true,
+    "nestedOriginalZipCrcPass": true,
+    "cleanExtractManifestFilesVerified": 7,
+    "originalPayloadExpectedHashesVerified": 4,
+    "extractedSourceCopiesMatchNestedZip": true,
+    "whitelistPass": true,
+    "publicMetadataNoTemporaryDownloadUrls": true,
+    "sgsFiles": 0
+  },
+  "preservedFiles": [
+    {
+      "path": "originals/3dTest-tack0829.zip",
+      "bytes": 31426,
+      "sha256": "b54d7fff03790c986f8192574230877f6d9f697c5027d6b30a1f67e3fedec39c",
+      "crc32": "f866e6cb",
+      "sourcePage": "https://blog.naver.com/tack0829/100026419558",
+      "originalBytes": true
+    },
+    {
+      "path": "originals/test-1335-tack0829.mc",
+      "bytes": 913,
+      "sha256": "0714e1ed3add4ed73e5d1218252aad4d564f8cbc39756f46cf6731209beb8295",
+      "crc32": "14495509",
+      "sourcePage": "https://blog.naver.com/tack0829/100025603784",
+      "originalBytes": true
+    },
+    {
+      "path": "sources/3dTest.mc",
+      "bytes": 2960,
+      "sha256": "cf0f2ba19787e750a4377a45df85a0459af69dd374df201a1fc2454083afa250",
+      "crc32": "4edb3b35",
+      "sourcePage": "https://blog.naver.com/tack0829/100026419558",
+      "originalBytes": true
+    },
+    {
+      "path": "sources/airplane.H",
+      "bytes": 118024,
+      "sha256": "201fa9ecf707a70bfafd076d9ced225af89a48f96ae7087a591b228e08addb10",
+      "crc32": "89b6c4ef",
+      "sourcePage": "https://blog.naver.com/tack0829/100026419558",
+      "originalBytes": true
+    }
+  ],
+  "sourceContext": {
+    "aircraftSource": {
+      "sourcePage": "https://blog.naver.com/tack0829/100026419558",
+      "postDate": "2006-07-18",
+      "declaredPlayerVersion": 4,
+      "missingDependencies": ["SScript.h", "GNEX3D.h", "GNEX3D.SSL"],
+      "sdkModelOrigin": "Author states airplane.H came from an SDK sample; not independently hash-matched."
+    },
+    "getSysMinSource": {
+      "sourcePage": "https://blog.naver.com/tack0829/100025603784",
+      "postDate": "2006-06-26",
+      "declaredScriptVersion": 1,
+      "sourceComment": "GVM 1X",
+      "containsCapturedPhoneData": false
+    }
+  },
+  "bookLeads": [
+    {
+      "title": "WIPI GNEX를 이용한 모바일 프로그래밍",
+      "isbn13": "9788970504445",
+      "isbn10": "8970504443",
+      "authors": ["강진영", "정찬성"],
+      "publisher": "생능출판사",
+      "catalogUrl": "https://www.yes24.com/product/goods/1950963",
+      "chapterExamples": ["Star Wars", "Aiolos"],
+      "recoveryStatus": "Book project bytes not recovered. Saved GNEX Club download capture is a login form; publisher archive-index request timed out."
+    },
+    {
+      "title": "모바일 게임 제작 프로그래밍",
+      "isbn13": "9788955023763",
+      "isbn10": "8955023766",
+      "authors": ["김진호"],
+      "publisher": "글로벌",
+      "catalogUrl": "https://www.yes24.com/product/goods/2497291",
+      "dateFromCatalog": "2007-03-12",
+      "chapterExamples": ["치약맨", "Catch & Road", "뛰맨뛰맨", "점프점프", "몸짱 만들기"],
+      "recoveryStatus": "Book project bytes not recovered. Four public publisher download-list pages (36 entry titles) did not name GNEX or this book. Attachment contents were not checked.",
+      "publisherDownloadListing": "http://www.gbbook.com/file/01.php",
+      "archiveIndexPayloadLeads": [
+        {
+          "originalUrl": "http://www.gbbook.com:80/build/board/upload/1-%bc%d2%bd%ba.zip",
+          "captureTimestamp": "20010507205307",
+          "historicalHttpStatus": 200,
+          "replayHttpStatus": 429,
+          "liveOriginHttpStatus": 404,
+          "contentVerified": false,
+          "crcVerified": false
+        },
+        {
+          "originalUrl": "http://www.gbbook.com:80/build/board/upload/vb-source.zip",
+          "captureTimestamp": "20010507204730",
+          "historicalHttpStatus": 200,
+          "replayHttpStatus": 429,
+          "liveOriginHttpStatus": 404,
+          "contentVerified": false,
+          "crcVerified": false
+        },
+        {
+          "originalUrl": "http://www.gbbook.com:80/build/board/upload/vb.zip",
+          "captureTimestamp": "20010702050436",
+          "historicalHttpStatus": 200,
+          "replayHttpStatus": 429,
+          "liveOriginHttpStatus": 404,
+          "contentVerified": false,
+          "crcVerified": false
+        }
+      ],
+      "archiveSearch": "Internet Archive title/ISBN metadata search returned zero results; not an exhaustive disc-content search."
+    },
+    {
+      "title": "(C언어로 구현하는) 모바일 게임 프로그래밍",
+      "isbn13": "9788994393032",
+      "isbn10": "899439303X",
+      "authors": ["김진호", "최명복"],
+      "publisher": "북스홀릭",
+      "catalogUrl": "https://www.yes24.com/product/goods/5209938",
+      "libraryUrl": "https://dl.nanet.go.kr/detail/MONO1201121771",
+      "dateDiscrepancy": {
+        "yes24": "2011-06-25",
+        "nationalAssemblyLibrary": "2010"
+      },
+      "chapterExample": "테트리스",
+      "appendixPlans": ["다림질의 달인", "이대리의 10억 만들기", "화투 캡처 고도리"],
+      "recoveryStatus": "Book project bytes not recovered. Publisher HTTP returned 400; HTTPS failed certificate hostname validation; one archive-index request timed out. TLS validation was not disabled.",
+      "publisherUrl": "http://www.booksholic.co.kr/"
+    }
+  ],
+  "methods": {
+    "downloadedProgramsExecuted": false,
+    "sourcesCompiledOrExecuted": false,
+    "modernWindowsUsabilityTested": false,
+    "reunionExecutionTested": false,
+    "loginBypass": false,
+    "tlsVerificationDisabled": false,
+    "bruteForce": false
+  },
+  "publicBundleWhitelist": [
+    "README.ru.md",
+    "README.en.md",
+    "book-leads.json",
+    "manifest.json",
+    "originals/3dTest-tack0829.zip",
+    "originals/test-1335-tack0829.mc",
+    "sources/3dTest.mc",
+    "sources/airplane.H"
+  ],
+  "limitations": [
+    "No book project bytes were recovered.",
+    "GBBook review covered 36 entry titles, not their payload contents.",
+    "Three exact GBBook ZIP replays returned 429 and live origins returned 404; ZIP contents/CRC remain unverified.",
+    "Source header declarations are not compiled-SGS validation.",
+    "Listing absence, search absence and failed downloads do not establish that an archive contains no games or that a project disc is lost."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "repository": "ALEXGREENCH/KPEX100-Reunion",
+  "revision": "main",
+  "artifacts": [
+    {
+      "id": "korean-developer-samples-round2",
+      "sha256": "c4fbacd628977e23c35a437b2fb6fb029e5f1ec79d14e0d2d67e0b2da0200e4a",
+      "category": "Учебные SGS, исходники и проверки",
+      "title": "Три примера GVM/GNEX",
+      "description": "RANKING для GVM1X и два упражнения с персонажем. Внутри оригинальные вложения, Mobile C, сценарии и результаты. Эти три SGS запускаются во вкладке «Примеры».",
+      "sources": [
+        {
+          "label": "Milkclub: RANKING",
+          "url": "https://blog.naver.com/milkclub/60004692030"
+        },
+        {
+          "label": "Novakjh: задания с графикой",
+          "url": "https://blog.naver.com/novakjh/30030168332"
+        },
+        {
+          "label": "Novakjh: исходники движения",
+          "url": "https://blog.naver.com/novakjh/30030318941"
+        }
+      ],
+      "repositoryPath": "research/archives/Korean-GVM-GNEX-Developer-Samples-Round2.zip",
+      "bytes": 235732
+    },
+    {
+      "id": "korean-gnex-developer-sources-round2",
+      "sha256": "6cc9c7fe4debf28e2c21526cc50ce20b31c1c4ccb4fc68d7777dac6aaf7de794",
+      "category": "Исторические исходники",
+      "title": "Самолёт GNEX3D и пример Mobile C",
+      "description": "Оригинальный 3D-проект и пример GetSysMin с происхождением и хешами. Готовых SGS в этих вложениях нет; сборка исходников не проверялась.",
+      "sources": [
+        {
+          "label": "Tack0829: 3D-самолёт",
+          "url": "https://blog.naver.com/tack0829/100026419558"
+        },
+        {
+          "label": "Tack0829: пример GetSysMin",
+          "url": "https://blog.naver.com/tack0829/100025603784"
+        }
+      ],
+      "repositoryPath": "research/archives/Korean-GNEX-Developer-Sources-Round2.zip",
+      "bytes": 68180
+    },
+    {
+      "id": "lg-sb260-sv730-native-games",
+      "bytes": 12299171,
+      "sha256": "181155e6ecae9010e24ed41dd74ab10823727a1da2c4cf8d7947f699d20013df",
+      "category": "Игры из прошивок LG: исследование форматов",
+      "title": "LG SB260 / SV730: PXO и FreeKick Flash",
+      "description": "14 модулей, меню и заглушек PXO в исходном и декодированном виде; FreeKick SWF и 11 звуков SMAF с историческим расширением .wav. Включены исходники декодера, проверки и происхождение. Исполнение native PXO и Flash не проверено; это не SGS и не игры для запуска в Reunion.",
+      "sources": [
+        {
+          "label": "Прошивка LG SB260004",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SB260/SB260004.7z"
+        },
+        {
+          "label": "Прошивка LG SV730906_00",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SV730/SV730906_00.7z"
+        }
+      ],
+      "repositoryPath": "research/archives/LG-SB260-SV730-Native-Games-Recovered.zip"
+    },
+    {
+      "id": "ahyane-historical-builds",
+      "bytes": 10715407,
+      "sha256": "bc3688c79abfb81c1921c36e55bc5562f865d1771e01f736c49bff1b78167b91",
+      "category": "Авторский прототип: история версий",
+      "title": "AHYANE / Integral: 13 исторических SGS",
+      "description": "13 оригинальных версий одного авторского прототипа и Git bundle публичных исходников. Семь SGS проходят разбор, шесть сжатых сборок требуют исследования формата. Проверено только титульное меню одной старой версии; полноценная игра не подтверждена.",
+      "sources": [
+        {
+          "label": "Оригинальный авторский репозиторий",
+          "url": "https://github.com/kosooyoul/gnex-dating-simulation-game"
+        }
+      ],
+      "repositoryPath": "research/archives/AHYANE-GNEX-Historical-Builds.zip"
+    }
+  ]
+}

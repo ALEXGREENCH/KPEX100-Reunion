@@ -49,6 +49,47 @@ def test_fat16_directory_and_multi_cluster_file_roundtrip():
     )
 
 
+@pytest.mark.parametrize("count", [62, 63, 126, 127])
+def test_game_directory_crosses_cluster_boundaries(count):
+    files = {f"R{i:07d}.SGS": bytes([i]) * (2100 + i) for i in range(count)}
+    image = create_fat16(files)
+    start = struct.unpack_from("<I", image, 454)[0]
+    bpb = start * 512
+    spc = image[bpb + 13]
+    fat_secs = struct.unpack_from("<H", image, bpb + 22)[0]
+    fat = (start + 1) * 512
+    root = (start + 1 + 2 * fat_secs) * 512
+    data = root + 512 * 32
+
+    def chain(cluster):
+        parts, seen = [], set()
+        while 2 <= cluster < 0xFFF8:
+            assert cluster not in seen
+            seen.add(cluster)
+            off = data + (cluster - 2) * spc * 512
+            parts.append(image[off : off + spc * 512])
+            cluster = struct.unpack_from("<H", image, fat + cluster * 2)[0]
+        assert cluster == 0xFFFF
+        return b"".join(parts)
+
+    directory = chain(struct.unpack_from("<H", image, root + 32 + 26)[0])
+    assert len(directory) == ((count + 2) * 32 + 2047) // 2048 * 2048
+    for i, (name, payload) in enumerate(sorted(files.items()), 2):
+        ent = i * 32
+        assert directory[ent : ent + 11] == name.replace(".", "").encode("ascii")
+        size = struct.unpack_from("<I", directory, ent + 28)[0]
+        assert size == len(payload)
+        assert chain(struct.unpack_from("<H", directory, ent + 26)[0])[:size] == payload
+    # The following directory remains independent from GAME's extended chain.
+    music = chain(struct.unpack_from("<H", image, root + 64 + 26)[0])
+    assert music[:11] == b".          "
+    assert music[64:] == bytes(len(music) - 64)
+    assert (
+        image[fat : fat + fat_secs * 512]
+        == image[fat + fat_secs * 512 : fat + fat_secs * 1024]
+    )
+
+
 def test_sector_device_rejects_out_of_range_and_preserves_neighbors():
     disk = SectorDisk(bytes(1536))
     disk.write(1, b"A" * 512)

@@ -1,5 +1,6 @@
 import { SmafDecoder } from './smaf-decoder.js';
 import { SWERVE, MAX_ASSET_BYTES, assetCatalog, identifyAsset, sha256 } from './local-assets.js';
+import { libraryEntries, libraryCounts } from './library.js';
 
 const $ = (id) => document.getElementById(id);
 const ui = Object.fromEntries(
@@ -120,9 +121,10 @@ function post(message) {
 
 function sourceText(details) {
   return details.kind === 'game'
-    ? (details.platform === 'mobile'
-        ? 'GNEX · телефонный профиль'
-        : 'Оригинальный GNEX · Kingston 2.12') +
+    ? (details.applicationType === 'sample' ? 'Учебный пример · ' : '') +
+        (details.platform === 'mobile'
+          ? 'GNEX · телефонный профиль'
+          : 'Оригинальный GNEX · Kingston 2.12') +
         (details.research ? ' · совместимость исследуется' : '')
     : details.checkpoint
       ? `${details.rom.title} · сохранённый запуск устройства`
@@ -146,7 +148,12 @@ function beginSession(details, command) {
   context.fillRect(0, 0, canvas.width, canvas.height);
   $('screenshot').disabled = true;
   $('nowPlaying').textContent = details.title;
-  $('modeLabel').textContent = details.kind === 'game' ? 'ИГРА SGS' : 'РОДНАЯ ПРОШИВКА';
+  $('modeLabel').textContent =
+    details.kind === 'game'
+      ? details.applicationType === 'sample'
+        ? 'ПРИМЕР SGS'
+        : 'ИГРА SGS'
+      : 'РОДНАЯ ПРОШИВКА';
   $('phoneKeys').hidden = details.platform !== 'mobile';
   $('sourceLabel').textContent = sourceText(details);
   $('gameHint').textContent = details.startHint || '';
@@ -201,7 +208,10 @@ async function loadGame(game) {
       title: game.title,
       rom,
       platform: game.platform,
-      research: !['verified', 'playable', 'utility'].includes(game.compatibility),
+      applicationType: game.applicationType,
+      research:
+        game.applicationType !== 'sample' &&
+        !['verified', 'playable', 'utility'].includes(game.compatibility),
       startHint: game.startHint,
     },
     {
@@ -266,12 +276,14 @@ function chooseRom(rom) {
 }
 
 function updateLibraryHint() {
-  const entries = catalog[libraryTab];
+  const entries = libraryEntries(catalog, libraryTab);
   const available = entries.filter((entry) => entry.available).length;
   $('libraryHint').textContent =
-    libraryTab === 'games'
+    libraryTab !== 'firmwares'
       ? available === entries.length && available > 0
-        ? 'Оригинальные SGS · GNEX'
+        ? libraryTab === 'samples'
+          ? 'Учебные примеры · Mobile C / GNEX'
+          : 'Оригинальные SGS · GNEX'
         : `Доступно ${available} из ${entries.length} · добавьте свои файлы`
       : available > 0
         ? 'Выберите ROM для холодного старта'
@@ -281,21 +293,21 @@ function updateLibraryHint() {
 function renderLibrary() {
   updateLibraryHint();
   const query = $('librarySearch').value.trim().toLocaleLowerCase();
-  const entries = catalog[libraryTab].filter((item) =>
+  const appTab = libraryTab !== 'firmwares';
+  const entries = libraryEntries(catalog, libraryTab).filter((item) =>
     `${item.title} ${item.id}`.toLocaleLowerCase().includes(query),
   );
   const fragment = document.createDocumentFragment();
   for (const entry of entries) {
     const button = document.createElement('button');
-    const active =
-      libraryTab === 'games'
-        ? current?.kind === 'game' && current.id === entry.id
-        : selectedRom?.id === entry.id;
+    const active = appTab
+      ? current?.kind === 'game' && current.id === entry.id
+      : selectedRom?.id === entry.id;
     button.className = `library-item${active ? ' active' : ''}${entry.available ? '' : ' unavailable'}`;
     button.setAttribute('aria-pressed', String(active));
     button.title = !entry.available
       ? `Добавить свой файл ${entry.title}`
-      : libraryTab === 'games'
+      : appTab
         ? `Запустить ${entry.title}`
         : `Выбрать ${entry.title}`;
     const art = document.createElement('span');
@@ -316,22 +328,25 @@ function renderLibrary() {
     const subtitle = document.createElement('span');
     subtitle.className = 'item-subtitle';
     const badge = document.createElement('span');
-    if (libraryTab === 'games') {
+    const sample = entry.applicationType === 'sample';
+    if (appTab) {
       const labels = { verified: '● Проверено', playable: '● Играет', utility: '● Приложение' };
-      badge.className = labels[entry.compatibility] ? 'verified-mark' : 'research-mark';
-      badge.textContent = labels[entry.compatibility] || '○ Исследование';
+      const label = sample ? '● Пример' : labels[entry.compatibility];
+      badge.className = label ? 'verified-mark' : 'research-mark';
+      badge.textContent = label || '○ Исследование';
       subtitle.append(badge, document.createTextNode(` · ${entry.format || 'SGS'}`));
     } else subtitle.textContent = entry.local ? 'Локальный файл' : 'Оригинальная прошивка';
-    if (!entry.available) subtitle.textContent = 'Добавьте свой файл';
+    if (!entry.available) {
+      if (sample) subtitle.replaceChildren(badge, document.createTextNode(' · Добавьте свой файл'));
+      else subtitle.textContent = 'Добавьте свой файл';
+    }
     const arrow = document.createElement('span');
     arrow.className = 'item-arrow';
-    arrow.textContent = !entry.available ? '+' : libraryTab === 'games' ? '▷' : active ? '✓' : '→';
+    arrow.textContent = !entry.available ? '+' : appTab ? '▷' : active ? '✓' : '→';
     arrow.setAttribute('aria-hidden', 'true');
     copy.append(title, subtitle);
     button.append(art, copy, arrow);
-    button.addEventListener('click', () =>
-      libraryTab === 'games' ? loadGame(entry) : chooseRom(entry),
-    );
+    button.addEventListener('click', () => (appTab ? loadGame(entry) : chooseRom(entry)));
     fragment.append(button);
   }
   if (!entries.length) {
@@ -346,30 +361,33 @@ function renderLibrary() {
 }
 
 function populateCatalog() {
-  const games = catalog.games.filter((entry) => entry.available);
+  const sgs = catalog.games.filter((entry) => entry.available);
   const roms = catalog.firmwares.filter((entry) => entry.available);
   const gnexReady = roms.some((entry) => entry.id === 'kingston-2.12');
-  $('gamesCount').textContent =
-    games.length === catalog.games.length
-      ? String(games.length)
-      : `${games.length} / ${catalog.games.length}`;
-  $('romsCount').textContent =
-    roms.length === catalog.firmwares.length
-      ? String(roms.length)
-      : `${roms.length} / ${catalog.firmwares.length}`;
-  $('collectionCount').textContent = String(games.length + roms.length);
-  $('setupHint').hidden = gnexReady && games.length > 0;
+  const counts = libraryCounts(catalog);
+  for (const [tab, id] of Object.entries({
+    games: 'gamesCount',
+    samples: 'samplesCount',
+    firmwares: 'romsCount',
+  })) {
+    const { available, total } = counts[tab];
+    $(id).textContent = available === total ? String(total) : `${available} / ${total}`;
+  }
+  $('collectionCount').textContent = String(sgs.length + roms.length);
+  $('setupHint').hidden = gnexReady && sgs.length > 0;
   $('assetStatus').textContent =
-    `${games.length} SGS · ${roms.length} ROM${swerve.available ? ' · Swerve 2.1' : ''}`;
+    `${sgs.length} SGS · ${roms.length} ROM${swerve.available ? ' · Swerve 2.1' : ''}`;
   if (!current) {
     $('emptyTitle').textContent =
-      gnexReady && games.length ? 'Готов к возвращению' : 'Добавьте ROM и игры';
+      gnexReady && sgs.length ? 'Готов к возвращению' : 'Добавьте ROM и игры';
     $('emptyHint').textContent =
-      gnexReady && games.length ? 'Откройте игру из библиотеки' : 'Kingston 2.12 + ваши SGS';
+      gnexReady && sgs.length
+        ? 'Откройте игру или пример из библиотеки'
+        : 'Kingston 2.12 + ваши SGS';
     $('nowPlaying').textContent =
-      gnexReady && games.length ? 'Выберите игру' : 'Ваша коллекция — на вашем устройстве';
+      gnexReady && sgs.length ? 'Выберите игру или пример' : 'Ваша коллекция — на вашем устройстве';
     $('sourceLabel').textContent =
-      gnexReady && games.length
+      gnexReady && sgs.length
         ? 'Оригинальный код. Маленький экран. Большое возвращение.'
         : 'Добавьте свою коллекцию и запустите оригинальный код устройства.';
   }
@@ -964,7 +982,11 @@ document.querySelectorAll('[data-tab]').forEach((button) =>
     });
     $('libraryList').setAttribute('aria-labelledby', button.id);
     $('librarySearch').value = '';
-    $('librarySearch').placeholder = libraryTab === 'games' ? 'Найти игру…' : 'Найти прошивку…';
+    $('librarySearch').placeholder = {
+      games: 'Найти игру…',
+      samples: 'Найти пример…',
+      firmwares: 'Найти прошивку…',
+    }[libraryTab];
     renderLibrary();
   }),
 );

@@ -67,6 +67,7 @@ def main():
         "community-gameplay.json",
         "mobaill-gameplay.json",
         "s60-catalog-gameplay.json",
+        "developer-sample-gameplay.json",
     ):
         path = VALIDATION / name
         if not path.exists():
@@ -112,7 +113,9 @@ def main():
             game["compatibility"] = "verified"
         elif proof:
             game["compatibility"] = (
-                "utility" if game["id"] == "gnex12_mosquito" else "playable"
+                "sample"
+                if game.get("applicationType") == "sample"
+                else "utility" if game["id"] == "gnex12_mosquito" else "playable"
             )
             game.pop("note", None)
         else:
@@ -164,7 +167,7 @@ def main():
     )
     counts = {
         label: sum(game["compatibility"] == label for game in catalog["games"])
-        for label in ("verified", "playable", "utility", "research")
+        for label in ("verified", "playable", "utility", "sample", "research")
     }
     print(json.dumps(counts))
 

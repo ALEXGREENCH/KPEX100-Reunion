@@ -110,7 +110,14 @@ def create_fat16(
 
     directories = {}
     for name in ("GAME", "MUSIC", "PHOTO", "VIDEO", "TEXT"):
-        cluster = allocate(bytes(cluster_bytes))
+        # Directory entries span a FAT chain when GAME grows beyond 62 files.
+        # Keep the original one-cluster layout for smaller collections.
+        directory_bytes = (
+            ((len(files) + 2) * 32 + cluster_bytes - 1) // cluster_bytes * cluster_bytes
+            if name == "GAME"
+            else cluster_bytes
+        )
+        cluster = allocate(bytes(directory_bytes))
         directories[name] = cluster
         off = (data_lba + (cluster - 2) * spc) * 512
         disk[off : off + 32] = entry(b".          ", 0x10, cluster)
@@ -124,8 +131,6 @@ def create_fat16(
     disk[root_lba * 512 : (root_lba + root_secs) * 512] = root
     used_names = set()
     game_off = (data_lba + (directories["GAME"] - 2) * spc) * 512
-    if len(files) > cluster_bytes // 32 - 2:
-        raise ValueError("Too many files for the GAME directory")
     for i, (name, payload) in enumerate(sorted(files.items()), 2):
         parts = name.upper().split(".")
         if (

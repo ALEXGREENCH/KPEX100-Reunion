@@ -1,7 +1,6 @@
 // Reproducible FAT16 media with the ROM's raw resource area at LBA 4096.
 const encoder = new TextEncoder();
 export function createDisk(files, rom) {
-  if (files.length > 62) throw new Error('Слишком много файлов в каталоге GAME');
   const total = 131072,
     start = 32768,
     reserved = 1,
@@ -79,7 +78,11 @@ export function createDisk(files, rom) {
   entry(rootLba * 512, 'KPEX REUNIO', 8);
   const directories = {};
   ['GAME', 'MUSIC', 'PHOTO', 'VIDEO', 'TEXT'].forEach((name, i) => {
-    const cluster = allocate(new Uint8Array(2048));
+    // Reserve the whole contiguous directory chain before allocating file data.
+    // Small collections retain their original one-cluster layout.
+    const directoryBytes =
+      name === 'GAME' ? Math.ceil(((files.length + 2) * 32) / 2048) * 2048 : 2048;
+    const cluster = allocate(new Uint8Array(directoryBytes));
     directories[name] = cluster;
     const at = (dataLba + (cluster - 2) * spc) * 512;
     entry(at, '.          ', 0x10, cluster);

@@ -11723,6 +11723,369 @@
         "limitations": "Short single-player/input replay only. Storm is a demo; Waterski SIS is version1.00, not evidence of1.03. Full playthrough, persistence, Symbian wrapper execution and external WAV/MIDI playback are not verified. Original SGS and ROM bytes unchanged; no forced timer or game-state patches.",
         "record": "s60-catalog-gameplay.json"
       }
+    },
+    {
+      "id": "sample-gvm-ranking",
+      "title": "RANKING · пример GVM1X",
+      "format": 1,
+      "compatibility": "sample",
+      "evidence": {
+        "id": "sample-gvm-ranking",
+        "classification": "Developer sample, not a game",
+        "sourceUrl": "https://blog.naver.com/milkclub/60004692030",
+        "sourceSgsSha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+        "runtime": {
+          "profile": "phone",
+          "width": 120,
+          "height": 100
+        },
+        "status": "idle",
+        "error": null,
+        "events": 3,
+        "replay": "developer-sample-replays/sample-gvm-ranking.json",
+        "controlReplay": "developer-sample-replays/sample-gvm-ranking-control.json",
+        "frame": "gameplay/sample-gvm-ranking/input/sample-gvm-ranking-4-advance500.png",
+        "frameSha256": "dde313bff4c1faae2e86d42ba51b4925671cbc99f4dad811e10459e076518f8f",
+        "evidence": "Original GVM1X local ranking menus, keys3/4; server not run and no external request.",
+        "controlProof": [
+          {
+            "timeMs": 0,
+            "differingPixels": 0,
+            "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+          },
+          {
+            "timeMs": 500,
+            "differingPixels": 0,
+            "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+          },
+          {
+            "timeMs": 500,
+            "differingPixels": 1040,
+            "inputRgbaSha256": "2b9a0f5347e1cf83061fba1ccca96eafe9d4a39c885a647d772b96d22ff5b827",
+            "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+          },
+          {
+            "timeMs": 1000,
+            "differingPixels": 1040,
+            "inputRgbaSha256": "2b9a0f5347e1cf83061fba1ccca96eafe9d4a39c885a647d772b96d22ff5b827",
+            "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+          },
+          {
+            "timeMs": 1000,
+            "differingPixels": 0,
+            "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+          },
+          {
+            "timeMs": 1500,
+            "differingPixels": 0,
+            "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+          }
+        ],
+        "externalRequest": null,
+        "record": "developer-sample-gameplay.json"
+      }
+    },
+    {
+      "id": "sample-character-scroll",
+      "title": "Прокрутка персонажа · пример GNEX",
+      "format": 4,
+      "compatibility": "sample",
+      "evidence": {
+        "id": "sample-character-scroll",
+        "classification": "Developer sample, not a game",
+        "sourceUrl": "https://blog.naver.com/novakjh/30030168332",
+        "sourceSgsSha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 144
+        },
+        "status": "idle",
+        "error": null,
+        "events": 33,
+        "replay": "developer-sample-replays/sample-character-scroll.json",
+        "controlReplay": "developer-sample-replays/sample-character-scroll-control.json",
+        "frame": "gameplay/sample-character-scroll/input/sample-character-scroll-18-advance100.png",
+        "frameSha256": "e5e5bc562b31c5f8672862b6e7399c6c8185e6184423039f9ee19b0cc995b88e",
+        "evidence": "Original developer exercise; number keys move the sprite/background at matched virtual times. No game objectives established.",
+        "controlProof": [
+          {
+            "timeMs": 0,
+            "differingPixels": 0,
+            "inputRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5",
+            "controlRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5"
+          },
+          {
+            "timeMs": 500,
+            "differingPixels": 0,
+            "inputRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3",
+            "controlRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3"
+          },
+          {
+            "timeMs": 500,
+            "differingPixels": 0,
+            "inputRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3",
+            "controlRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3"
+          },
+          {
+            "timeMs": 600,
+            "differingPixels": 357,
+            "inputRgbaSha256": "cafe2aaaebee60b1783e80241e2ea78b25f2e766505c0b37e60733d157ae3caf",
+            "controlRgbaSha256": "aeae5c87c78c555dfc7dd17ede58c8aa2313d7b2a49b3eaae1516dbb89382b4b"
+          },
+          {
+            "timeMs": 600,
+            "differingPixels": 357,
+            "inputRgbaSha256": "cafe2aaaebee60b1783e80241e2ea78b25f2e766505c0b37e60733d157ae3caf",
+            "controlRgbaSha256": "aeae5c87c78c555dfc7dd17ede58c8aa2313d7b2a49b3eaae1516dbb89382b4b"
+          },
+          {
+            "timeMs": 700,
+            "differingPixels": 448,
+            "inputRgbaSha256": "93e75c9dc3c801ac20fa80151fb9d82b9d8b02b8fa4d5a16836c0da5e905a987",
+            "controlRgbaSha256": "3a1e5ea51cde2fb320b8e74dd92f7dd39331f56bac6e3da1af14d2761940239e"
+          },
+          {
+            "timeMs": 700,
+            "differingPixels": 448,
+            "inputRgbaSha256": "93e75c9dc3c801ac20fa80151fb9d82b9d8b02b8fa4d5a16836c0da5e905a987",
+            "controlRgbaSha256": "3a1e5ea51cde2fb320b8e74dd92f7dd39331f56bac6e3da1af14d2761940239e"
+          },
+          {
+            "timeMs": 800,
+            "differingPixels": 509,
+            "inputRgbaSha256": "93af37641740beceb6efd9c131c28553742ae77182497e96bd4a312752d9a929",
+            "controlRgbaSha256": "229eeec020121ab10cf7943fce32b89a51addc93c9d7219e96ea3fad1c2f5a4e"
+          },
+          {
+            "timeMs": 800,
+            "differingPixels": 509,
+            "inputRgbaSha256": "93af37641740beceb6efd9c131c28553742ae77182497e96bd4a312752d9a929",
+            "controlRgbaSha256": "229eeec020121ab10cf7943fce32b89a51addc93c9d7219e96ea3fad1c2f5a4e"
+          },
+          {
+            "timeMs": 900,
+            "differingPixels": 557,
+            "inputRgbaSha256": "7e30ca1ec2fc5036f6154066d0bfabcfc9120d5d6e582e5ee4c6893d51a6fb21",
+            "controlRgbaSha256": "d19ed7878b82c7cb5d779da1694a0a2c82bfc45ad74f6ff7ba73155db0e23d08"
+          },
+          {
+            "timeMs": 900,
+            "differingPixels": 557,
+            "inputRgbaSha256": "7e30ca1ec2fc5036f6154066d0bfabcfc9120d5d6e582e5ee4c6893d51a6fb21",
+            "controlRgbaSha256": "d19ed7878b82c7cb5d779da1694a0a2c82bfc45ad74f6ff7ba73155db0e23d08"
+          },
+          {
+            "timeMs": 1000,
+            "differingPixels": 477,
+            "inputRgbaSha256": "1082a9852e7f74d38d513f2ec2104ecf1dc267172e5ae4b6c7e0df1bcfe2a7ae",
+            "controlRgbaSha256": "5ccc5d2306729ad80cc443a7648f374c73b4e500060d3690fe71bcbaf7c91cd2"
+          },
+          {
+            "timeMs": 1000,
+            "differingPixels": 477,
+            "inputRgbaSha256": "1082a9852e7f74d38d513f2ec2104ecf1dc267172e5ae4b6c7e0df1bcfe2a7ae",
+            "controlRgbaSha256": "5ccc5d2306729ad80cc443a7648f374c73b4e500060d3690fe71bcbaf7c91cd2"
+          },
+          {
+            "timeMs": 1100,
+            "differingPixels": 361,
+            "inputRgbaSha256": "efdb952daf01f3713a196ab8f24aaa345a9feda6ab0c8301b4027f3e1ff3ce40",
+            "controlRgbaSha256": "f7e7a808f88aacb112ddb4bb8aae9a7f159d0686714b07835dc427d2701edf88"
+          },
+          {
+            "timeMs": 1100,
+            "differingPixels": 361,
+            "inputRgbaSha256": "efdb952daf01f3713a196ab8f24aaa345a9feda6ab0c8301b4027f3e1ff3ce40",
+            "controlRgbaSha256": "f7e7a808f88aacb112ddb4bb8aae9a7f159d0686714b07835dc427d2701edf88"
+          },
+          {
+            "timeMs": 1200,
+            "differingPixels": 361,
+            "inputRgbaSha256": "cb3c31469c8697fc15aac3527018893310847d8b21c0395a07b2cb1c5a0addcb",
+            "controlRgbaSha256": "03608f51a661d3ec558042dcc04fd59a917e462fa287370cf5370ff6a430042b"
+          },
+          {
+            "timeMs": 1200,
+            "differingPixels": 361,
+            "inputRgbaSha256": "cb3c31469c8697fc15aac3527018893310847d8b21c0395a07b2cb1c5a0addcb",
+            "controlRgbaSha256": "03608f51a661d3ec558042dcc04fd59a917e462fa287370cf5370ff6a430042b"
+          },
+          {
+            "timeMs": 1300,
+            "differingPixels": 361,
+            "inputRgbaSha256": "e189b0009f64cc23f70c04a123598992c2c7ab397756ef268c84fa9196e2716f",
+            "controlRgbaSha256": "0b98645f0bf5af9d9d8e4946546a6993009803c8bfa59ca98c9e057dc71b4212"
+          },
+          {
+            "timeMs": 1300,
+            "differingPixels": 361,
+            "inputRgbaSha256": "e189b0009f64cc23f70c04a123598992c2c7ab397756ef268c84fa9196e2716f",
+            "controlRgbaSha256": "0b98645f0bf5af9d9d8e4946546a6993009803c8bfa59ca98c9e057dc71b4212"
+          },
+          {
+            "timeMs": 1400,
+            "differingPixels": 361,
+            "inputRgbaSha256": "ff2033daa54a8dc4cbbfdc26d4dfac3c865e9c8264e5bf471c6965c6eca84a58",
+            "controlRgbaSha256": "8a88fbe9b658f5882496d8c86d97c3191996e7db56876aa2a1f2c23fbd12fa07"
+          }
+        ],
+        "externalRequest": null,
+        "record": "developer-sample-gameplay.json"
+      }
+    },
+    {
+      "id": "sample-character-movement",
+      "title": "Движение спрайта · пример GNEX",
+      "format": 4,
+      "compatibility": "sample",
+      "evidence": {
+        "id": "sample-character-movement",
+        "classification": "Developer sample, not a game",
+        "sourceUrl": "https://blog.naver.com/novakjh/30030318941",
+        "sourceSgsSha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 144
+        },
+        "status": "idle",
+        "error": null,
+        "events": 33,
+        "replay": "developer-sample-replays/sample-character-movement.json",
+        "controlReplay": "developer-sample-replays/sample-character-movement-control.json",
+        "frame": "gameplay/sample-character-movement/input/sample-character-movement-18-advance100.png",
+        "frameSha256": "befffe144cb4b4ce34600667a1313f58492eb010e60955490de6393c373540a0",
+        "evidence": "Original developer exercise; number keys move the sprite/background at matched virtual times. No game objectives established.",
+        "controlProof": [
+          {
+            "timeMs": 0,
+            "differingPixels": 0,
+            "inputRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5",
+            "controlRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5"
+          },
+          {
+            "timeMs": 500,
+            "differingPixels": 0,
+            "inputRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 500,
+            "differingPixels": 0,
+            "inputRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 600,
+            "differingPixels": 396,
+            "inputRgbaSha256": "c994489040fac4647609a9b0709158f832bc380d8b67fbd7b22d4697a17ce145",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 600,
+            "differingPixels": 396,
+            "inputRgbaSha256": "c994489040fac4647609a9b0709158f832bc380d8b67fbd7b22d4697a17ce145",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 700,
+            "differingPixels": 481,
+            "inputRgbaSha256": "ec8d41f3c7ac09788347bcf3ef6dcce5d7981c3b9e8b60821093b3ab50497508",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 700,
+            "differingPixels": 481,
+            "inputRgbaSha256": "ec8d41f3c7ac09788347bcf3ef6dcce5d7981c3b9e8b60821093b3ab50497508",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 800,
+            "differingPixels": 581,
+            "inputRgbaSha256": "806f3d9c9630ed1725b78cf25fe0241699340a9433254404f16305cd14b733c0",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 800,
+            "differingPixels": 581,
+            "inputRgbaSha256": "806f3d9c9630ed1725b78cf25fe0241699340a9433254404f16305cd14b733c0",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 900,
+            "differingPixels": 605,
+            "inputRgbaSha256": "7de5e9c83c89efd3bd026b3e94a20e746be2e0b022084ce09283dc2f687c8d48",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 900,
+            "differingPixels": 605,
+            "inputRgbaSha256": "7de5e9c83c89efd3bd026b3e94a20e746be2e0b022084ce09283dc2f687c8d48",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1000,
+            "differingPixels": 529,
+            "inputRgbaSha256": "31e5ff2dd8bb93ef7ab80b99964abb991305cc889fa9b1eacf4aa346d85e94ff",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1000,
+            "differingPixels": 529,
+            "inputRgbaSha256": "31e5ff2dd8bb93ef7ab80b99964abb991305cc889fa9b1eacf4aa346d85e94ff",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1100,
+            "differingPixels": 443,
+            "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1100,
+            "differingPixels": 443,
+            "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1200,
+            "differingPixels": 443,
+            "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1200,
+            "differingPixels": 443,
+            "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1300,
+            "differingPixels": 443,
+            "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1300,
+            "differingPixels": 443,
+            "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          },
+          {
+            "timeMs": 1400,
+            "differingPixels": 443,
+            "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+            "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+          }
+        ],
+        "externalRequest": null,
+        "record": "developer-sample-gameplay.json"
+      }
     }
   ]
 }

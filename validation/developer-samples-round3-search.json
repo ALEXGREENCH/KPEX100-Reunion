@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "researchDate": "2026-11-05",
+  "scope": "Third bounded public Korean cafe hunt using Nate Magic, phone-game download and SGS-pack terminology, followed by actual new cafe roots/menu lists and open game articles. Not a claim that all Naver/Daum archives are exhausted.",
+  "counts": {
+    "newPageApiResponses": 29,
+    "http200": 29,
+    "globalSearchPages": 14,
+    "cafeRoots": 3,
+    "perCafeSearchPages": 4,
+    "actualMenuListPages": 4,
+    "openGameArticlesRead": 4,
+    "listedMenuRows": 153,
+    "openReadArticleImageAttachments": 14,
+    "softwareDownloads": 0,
+    "newSgs": 0,
+    "newGames": 0
+  },
+  "cafeRoots": [
+    {
+      "url": "https://cafe.naver.com/sonewmobile",
+      "status": 200,
+      "bytes": 216325,
+      "sha256": "4c4acd722c0150deebee15ba9baa7b32b4020cb125e2bab07f84b731bfc694fa",
+      "cafeIds": ["11161289"],
+      "menusParsed": 69
+    },
+    {
+      "url": "https://cafe.naver.com/olddos",
+      "status": 200,
+      "bytes": 215000,
+      "sha256": "78248175b16215ec2db29771ea2702a2527148574c02d1443721f118702ef428",
+      "cafeIds": ["28655511"],
+      "menusParsed": 91
+    },
+    {
+      "url": "https://cafe.naver.com/qkrcjsrkd",
+      "status": 200,
+      "bytes": 121604,
+      "sha256": "a6c0ebf98a9c156fe667c89b323d61e430c93bde52ea2673a86e9fa1582a226f",
+      "cafeIds": ["10025695"],
+      "menusParsed": 9
+    }
+  ],
+  "actualMenus": [
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/28655511/menus/104/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 67101,
+      "sha256": "270561927ae2023bc85ab55794cf0662d609221a0b7e693efa3ba4c65203c24e",
+      "rows": 50,
+      "openRows": 0,
+      "openFileRows": 0,
+      "pagination": {
+        "lastNavigationPageNumber": 10,
+        "visibleNextButton": true
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/28655511/menus/177/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 68302,
+      "sha256": "9f55461098dec3861c73123f2e883e18aaa9abd2be175ce1f876c9765adb52f7",
+      "rows": 50,
+      "openRows": 8,
+      "openFileRows": 3,
+      "pagination": {
+        "lastNavigationPageNumber": 2,
+        "visibleNextButton": false
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/11161289/menus/15/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 54702,
+      "sha256": "64183b3d2774c550876e32465a28fcd20d55f0ba2018f5d9ebd3a485dfa5097b",
+      "rows": 50,
+      "openRows": 41,
+      "openFileRows": 0,
+      "pagination": {
+        "lastNavigationPageNumber": 2,
+        "visibleNextButton": false
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/11161289/menus/15/articles?page=2&pageSize=50",
+      "status": 200,
+      "bytes": 2864,
+      "sha256": "31dee76753bb27b99503f8904588625bfb8f9775179aef6d9b6393677ae4e716",
+      "rows": 3,
+      "openRows": 0,
+      "openFileRows": 0,
+      "pagination": {
+        "lastNavigationPageNumber": 2,
+        "visibleNextButton": false
+      }
+    }
+  ],
+  "publicPerCafeTitleSearch": [
+    {
+      "url": "https://apis.cafe.naver.com/search/v2/cafes/28655511/search/articles?query=SGS&perPage=50&page=1&menuId=0&searchBy=1&views=MEMBER_LEVEL%2CCOUNT%2CSALE_INFO%2CCAFE_MENU&ad=false",
+      "status": 200,
+      "bytes": 144,
+      "sha256": "88dca57d1009ff870fc9b19024c3c4e0cd3daaaf5895604075ee095eb19da14b",
+      "totalTitleMatches": 0,
+      "queryScope": "Public per-cafe title search; not all body text or all cafe contents."
+    },
+    {
+      "url": "https://apis.cafe.naver.com/search/v2/cafes/28655511/search/articles?query=GVM&perPage=50&page=1&menuId=0&searchBy=1&views=MEMBER_LEVEL%2CCOUNT%2CSALE_INFO%2CCAFE_MENU&ad=false",
+      "status": 200,
+      "bytes": 144,
+      "sha256": "88dca57d1009ff870fc9b19024c3c4e0cd3daaaf5895604075ee095eb19da14b",
+      "totalTitleMatches": 0,
+      "queryScope": "Public per-cafe title search; not all body text or all cafe contents."
+    },
+    {
+      "url": "https://apis.cafe.naver.com/search/v2/cafes/11161289/search/articles?query=SGS&perPage=50&page=1&menuId=0&searchBy=1&views=MEMBER_LEVEL%2CCOUNT%2CSALE_INFO%2CCAFE_MENU&ad=false",
+      "status": 200,
+      "bytes": 144,
+      "sha256": "88dca57d1009ff870fc9b19024c3c4e0cd3daaaf5895604075ee095eb19da14b",
+      "totalTitleMatches": 0,
+      "queryScope": "Public per-cafe title search; not all body text or all cafe contents."
+    },
+    {
+      "url": "https://apis.cafe.naver.com/search/v2/cafes/11161289/search/articles?query=GVM&perPage=50&page=1&menuId=0&searchBy=1&views=MEMBER_LEVEL%2CCOUNT%2CSALE_INFO%2CCAFE_MENU&ad=false",
+      "status": 200,
+      "bytes": 144,
+      "sha256": "88dca57d1009ff870fc9b19024c3c4e0cd3daaaf5895604075ee095eb19da14b",
+      "totalTitleMatches": 0,
+      "queryScope": "Public per-cafe title search; not all body text or all cafe contents."
+    }
+  ],
+  "imageOnlyOpenGameArticles": [
+    {
+      "url": "https://cafe.naver.com/sonewmobile/353",
+      "status": 200,
+      "bytes": 23549,
+      "responseSha256": "2e7a015be0893e58c79ee97cff108d949395e027aa274ec324a874d72e4f2e8a",
+      "subject": "[최초공개!!!] 생과일타이쿤 일본판!!!",
+      "isReadable": true,
+      "isOpen": true,
+      "attachmentDownloadAllowed": true,
+      "isLogin": false,
+      "imageAttachmentCount": 6,
+      "softwareAttachmentCount": 0,
+      "outgoingBodyLinks": 0,
+      "downloadedAttachments": false
+    },
+    {
+      "url": "https://cafe.naver.com/sonewmobile/2415",
+      "status": 200,
+      "bytes": 22010,
+      "responseSha256": "ebf64f442fffd6c8323356f7eab0b9176176ddf419614e912703127d51b67145",
+      "subject": "[최초공개!!!] 생과일타이쿤 미국판!!!",
+      "isReadable": true,
+      "isOpen": true,
+      "attachmentDownloadAllowed": true,
+      "isLogin": false,
+      "imageAttachmentCount": 4,
+      "softwareAttachmentCount": 0,
+      "outgoingBodyLinks": 0,
+      "downloadedAttachments": false
+    },
+    {
+      "url": "https://cafe.naver.com/sonewmobile/163",
+      "status": 200,
+      "bytes": 15734,
+      "responseSha256": "ef37f0ab8726b2c6e442c9e149b556692d81086d3d3c753a9c43151a0a97468d",
+      "subject": "최고의 중독성 게임 - 미라클요요",
+      "isReadable": true,
+      "isOpen": true,
+      "attachmentDownloadAllowed": true,
+      "isLogin": false,
+      "imageAttachmentCount": 1,
+      "softwareAttachmentCount": 0,
+      "outgoingBodyLinks": 0,
+      "downloadedAttachments": false
+    },
+    {
+      "url": "https://cafe.naver.com/sonewmobile/51",
+      "status": 200,
+      "bytes": 14329,
+      "responseSha256": "8884b3d661f6e93feb5f74a6052e1e3da003972481931e90860415612536fc2e",
+      "subject": "최강러브액션 - 열혈러브서유기",
+      "isReadable": true,
+      "isOpen": true,
+      "attachmentDownloadAllowed": true,
+      "isLogin": false,
+      "imageAttachmentCount": 3,
+      "softwareAttachmentCount": 0,
+      "outgoingBodyLinks": 0,
+      "downloadedAttachments": false
+    }
+  ],
+  "targetedQueries": [
+    "네이트 마법사 게임모음",
+    "휴대폰 게임 자료실 SGS",
+    "네이트 마법사 SGS",
+    "GVM 게임 모음 다운",
+    "네이트 마법사 게임모음",
+    "휴대폰 게임 자료실 SGS",
+    "GVM 게임 모음 다운",
+    "GVM 게임 소스 테트리스",
+    "\"네이트마법사\"",
+    "\"SGS\" \"게임모음\"",
+    "\"휴대폰게임\" \"SGS\"",
+    "\"네이트마법사\"",
+    "\"SGS\" \"게임모음\"",
+    "\"GVM\" \"게임자료\""
+  ],
+  "findings": [
+    "Sonewmobile game-introduction menu15 has53rows across both pages,41open. Four selected2005/2006 open articles contain14image attachments but no software attachments or outgoing body download links.",
+    "The four posts document MiracleYoyo, StrongLoveJourney and Japanese/US FruitTycoon versions. Screenshots/previews are not recovered executable games, and were not downloaded merely to inflate the result.",
+    "OldDOS public-download menu104 first50rows all closed; contents/attachments not requested. Restoration menu177 first50rows has8open, with3file-bearing rows about1992/1994PCgame book disks and a non-phone title; unrelated files were not downloaded.",
+    "OldDOS and Sonewmobile per-cafe SGS/GVM title searches returned0matches in each of4queries. This is a title-search negative, not absence of those formats in all bodies/private uploads.",
+    "qkrcjsrkd root yielded no parsed download menus. Its MasterOfSword review search hit is not an executable payload.",
+    "Previous Mobaill, JZSDN, Herolore5, Mogf, KBplan and Bjphone restricted/download routes were not fetched again."
+  ],
+  "brandingCaveat": {
+    "term": "Nate Magic / 네이트 마법사",
+    "source": "https://www.inews24.com/view/wrlted/92907",
+    "sourceDate": "2003-06-18, modified2003-07-25",
+    "sourceType": "Contemporary interview with XCE business-development representative.",
+    "paraphrase": "The interview explicitly associates NateMagic branding with XCE SK-VM/J2ME. Therefore the service label alone is not evidence of GVM/SGS; received files must still be parsed.",
+    "usedAsGameFormatProof": false
+  },
+  "limits": [
+    "No authentication, private-cafe content, CAPTCHA bypass or membership workaround.",
+    "No raw screenshots counted as software, no developer demos recounted, no catalogue/repository/git changes.",
+    "Canonical public article/source URLs and safe counts/hashes only. Search-result member records, ephemeral tokens and private row contents are excluded.",
+    "No new verified public SGS download route emerged in this batch. Other pages and sites may still contain preserved files."
+  ]
+}

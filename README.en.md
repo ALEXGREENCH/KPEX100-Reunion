@@ -7,10 +7,17 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-**The collection is included:** 9 firmware images, 62 SGS applications,
+**The collection is included:** 9 firmware images, 65 SGS applications,
 3 quick-start snapshots and the original Swerve 2.1 module. Both the repository
 and the default GitHub Pages build are ready to launch games. Original bytes
 are unchanged; the catalogue records SHA-256 hashes and tested runtime profiles.
+
+The Games tab contains 61 game builds and the Mosquito utility. The Examples tab
+contains three separately tested developer SGS samples. Preserved attachments,
+source projects and research downloads are available on the
+[archive page](https://alexgreench.github.io/KPEX100-Reunion/research/), with
+provenance, sizes and SHA-256 hashes. Native PXO and Flash finds are preserved
+research inputs; Reunion does not claim to run them.
 
 ## Run locally
 
@@ -32,7 +39,7 @@ Direct SGS execution uses the included original Kingston 2.12 ROM:
 743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a
 ```
 
-Python 3.11+ can verify all 75 included files or restore missing files from
+Python 3.11+ can verify all 78 included files or restore missing files from
 another unpacked collection:
 
 ```sh

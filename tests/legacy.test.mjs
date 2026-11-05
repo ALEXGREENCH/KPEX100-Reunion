@@ -17,9 +17,9 @@ const create = (id) =>
     ...(profiles[id] || catalog.games.find((item) => item.id === id)?.runtime),
   });
 
-test('all twenty-three original legacy containers have consistent native 16-bit layouts', () => {
+test('all twenty-four original legacy containers have consistent native 16-bit layouts', () => {
   const games = catalog.games.filter((g) => [1, 2].includes(g.format));
-  assert.equal(games.length, 23);
+  assert.equal(games.length, 24);
   for (const g of games) {
     const raw = game(g.id),
       s = parseLegacy(raw);

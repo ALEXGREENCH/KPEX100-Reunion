@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reunion — материалы исследования</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .archive-page {
+        width: min(60rem, 100%);
+        margin: 2rem auto;
+        padding: 1rem;
+      }
+      .archive-page a {
+        color: var(--mint);
+      }
+      .archive-page h1 {
+        margin: 1.5rem 0 1rem;
+      }
+      .archive-page p {
+        line-height: 1.65;
+        margin: 0.8rem 0;
+      }
+      .archive-card {
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #111c2a;
+      }
+      .archive-card h2 {
+        font-size: 1.2rem;
+      }
+      .archive-card details {
+        margin-top: 1rem;
+        color: var(--muted);
+      }
+      .archive-card code {
+        display: block;
+        overflow-wrap: anywhere;
+        font-size: 0.8rem;
+        margin: 0.6rem 0;
+      }
+      .archive-kind {
+        color: var(--mint);
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="archive-page">
+      <a href="../">← Вернуться в эмулятор</a>
+      <h1>Материалы исследования</h1>
+      <p>
+        Оригинальные файлы, исходники и результаты извлечения. У каждого комплекта указаны формат и
+        проверенное покрытие. Три учебных SGS запускаются во вкладке «Примеры».
+      </p>
+      <div id="archives" aria-live="polite">Загрузка списка архивов…</div>
+      <p>
+        Архивы скачиваются из репозитория GitHub. Собственные инструменты Reunion и исторические
+        сторонние материалы имеют разные условия распространения; сведения сохранены внутри
+        комплектов.
+      </p>
+    </main>
+    <script type="module" src="./research.js"></script>
+  </body>
+</html>

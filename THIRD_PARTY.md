@@ -11,6 +11,15 @@ C reference, COPYING and provenance. It is documented in
 Reunion runtime component. Its licence does not grant rights to LG's original
 game payloads.
 
+Additional preservation ZIPs are explicitly listed in
+[the research catalogue](web/research/catalog.json). They include historical
+developer attachments, AHYANE author history and LG SB260/SV730 PXO/Flash assets.
+They are byte-verified research downloads, separate from the runnable collection.
+Original vendor and author materials retain their existing rights; Reunion's
+MIT licence does not relicense them. The LG archive carries the LGUI-derived
+decoder, corresponding source, GPL-3.0-or-later notices and provenance alongside
+the historical payloads. Read each archive's manifest and licence files.
+
 ## Unicorn.js / Unicorn Engine for the browser
 
 - Upstream: [Unicorn.js ARM v1.0.3](https://github.com/AlexAltea/unicorn.js/releases/tag/v1.0.3).
@@ -89,9 +98,9 @@ The Swerve binary itself is not part of either project's source licence.
 
 ## Historical binary inputs
 
-The repository and default Pages build include 9 firmware images, 62 SGS
+The repository and default Pages build include 9 firmware images, 65 SGS
 applications, 3 native quick-start snapshots and the original Swerve 2.1 module.
-These 75 historical files are preserved byte-for-byte. `web/data/catalog.json`
+These 78 historical files are preserved byte-for-byte. `web/data/catalog.json`
 records catalogue sizes, SHA-256 hashes and runtime profiles; the Swerve module
 has separate [archive provenance](doc/swerve-provenance.json). Snapshot RAM
 contains original firmware/game data. These materials retain their own

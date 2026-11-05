@@ -1,0 +1,708 @@
+{
+  "schema": 1,
+  "researchDate": "2026-11-05",
+  "scope": "Bounded second public Korean cafe/blog pass: original game-related developer samples, not new playable game claims. No repository/catalogue changes.",
+  "counts": {
+    "pageAndApiResponses": 36,
+    "http200Responses": 34,
+    "http401Responses": 2,
+    "successfulAttachmentDownloads": 3,
+    "totalPageApiAndAttachmentResponses": 39,
+    "newUniqueSgsExamples": 3,
+    "newSgsV1": 1,
+    "newSgsV4": 2,
+    "newGames": 0,
+    "catalogueBaselineCompared": 62
+  },
+  "sources": [
+    {
+      "url": "https://blog.naver.com/milkclub/60004692030",
+      "postedLocal": "2004-08-05 17:32",
+      "topic": "GVM game ranking processing example",
+      "attachment": "ranking.zip",
+      "bytes": 13018,
+      "sha256": "3207a17fcad2926f948e79200c25c928d35222211446954027750b5b49b1228f",
+      "publicHtml": true,
+      "downloadStatus": 200,
+      "zipCrc": "passed",
+      "zipFiles": 8
+    },
+    {
+      "url": "https://blog.naver.com/novakjh/30030168332",
+      "postedLocal": "2008-04-17 15:22",
+      "topic": "Mobile-game programming image-display assignment",
+      "attachment": "middle_exam-novakjh.sgs",
+      "bytes": 12154,
+      "sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+      "publicHtml": true,
+      "downloadStatus": 200
+    },
+    {
+      "url": "https://blog.naver.com/novakjh/30030318941",
+      "postedLocal": "2008-04-21 11:21",
+      "topic": "Game-programming assignment; character test archive",
+      "attachment": "캐릭터_test-novakjh.zip",
+      "bytes": 11912,
+      "sha256": "902baaa400334f33c5aa97d852c03b7faa196557b465f8ecabcbb5b5e060f7d0",
+      "publicHtml": true,
+      "downloadStatus": 200,
+      "zipCrc": "passed",
+      "zipFiles": 11
+    }
+  ],
+  "sourcePreservation": {
+    "rankingArchive": [
+      {
+        "name": "makefile",
+        "bytes": 163,
+        "crc32": "560d754c",
+        "sha256": "75daa2e7e5fc68dc722d053d7881c4a06af857d17e627e474b8411b473aa8cf0"
+      },
+      {
+        "name": "manual.txt",
+        "bytes": 1833,
+        "crc32": "de0bfb95",
+        "sha256": "dbbb4905fa8cf276834a5c0c85a7bbe2e107cca98d50fd786c597e79d386e02b"
+      },
+      {
+        "name": "rankdb.h",
+        "bytes": 1686,
+        "crc32": "4c4e226d",
+        "sha256": "23e276e09d1179b5e0f838f088b2631d3dd8836a67775a8886be90e7153be2b2"
+      },
+      {
+        "name": "rankdb.o",
+        "bytes": 3188,
+        "crc32": "8214b886",
+        "sha256": "91df72f0dc7828b68dff42be25ef8e99619e2e7fa3b66d5d76898c7e48219793"
+      },
+      {
+        "name": "rankserv.c",
+        "bytes": 4646,
+        "crc32": "1b93d8d3",
+        "sha256": "82d6c80f2e10727cb83e7102274fa00a0c5e82b49d3aa566e1ea5deb08cefb72"
+      },
+      {
+        "name": "GVM/ranking.c",
+        "bytes": 7341,
+        "crc32": "f2a1207d",
+        "sha256": "5fe3cf8c525d2cdf0b5ba9daf88e463b40d8a2cddb43faedec909c7e77735861"
+      },
+      {
+        "name": "GVM/ranking.sgs",
+        "bytes": 1338,
+        "crc32": "26358254",
+        "sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012"
+      },
+      {
+        "name": "GVM/SScript.h",
+        "bytes": 15900,
+        "crc32": "77c896f0",
+        "sha256": "80bba9e32a984b24b60768f65580579ad863caa91238bdb37c4471a2e919f10e"
+      }
+    ],
+    "characterArchive": [
+      {
+        "filename": "middle_test.gnx",
+        "bytes": 267,
+        "sha256": "01583eaba35c47b2f7b56d531e708513792a73c6536709f3aef29441dddae1eb",
+        "crc32": "b5fdeb31"
+      },
+      {
+        "filename": "image.bmp",
+        "bytes": 589878,
+        "sha256": "e0ac7823348b62c471bacc0c5b7abb57133882a13c56b4dea5b0884eeba85b1f",
+        "crc32": "f91be5a3"
+      },
+      {
+        "filename": "middle_test.bld",
+        "bytes": 398,
+        "sha256": "184ca862b339a6603671ad22715c5765703295b4376c6b1aaf316d7389a20600",
+        "crc32": "ee93eb14"
+      },
+      {
+        "filename": "middle_test.sgs",
+        "bytes": 4142,
+        "sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+        "crc32": "5d274b15"
+      },
+      {
+        "filename": "image.bak",
+        "bytes": 1293,
+        "sha256": "d0307b96eb7b74a8588fe247e768bdc44064bf3fef4bc11135ee03b19a3e90f2",
+        "crc32": "8a5047a7"
+      },
+      {
+        "filename": "image.bac",
+        "bytes": 8698,
+        "sha256": "7d47f99a67dbc59db0b4152eac1e5b4c93f929876508bf1892e3610d0c70fdf1",
+        "crc32": "787f90d8"
+      },
+      {
+        "filename": "image.idf",
+        "bytes": 1293,
+        "sha256": "f25ccea75c0e835fb3ce498ceb70dd8847803c7851ec323a63649fdb14b1b0ed",
+        "crc32": "aaf36bef"
+      },
+      {
+        "filename": "image.sbm",
+        "bytes": 8698,
+        "sha256": "1efd861e36dc41f58ea40a1ef8172502629a317c6c5c438cfb38d8bf56182c4b",
+        "crc32": "b366289a"
+      },
+      {
+        "filename": "game.mc",
+        "bytes": 2479,
+        "sha256": "7a141a64080b5dacd46bdeb61ffae68412f422cc8d4f7609b5aa003ec322b447",
+        "crc32": "3edfa7a2"
+      },
+      {
+        "filename": "game.rsx",
+        "bytes": 1586,
+        "sha256": "65fdf5cf21759649eb6fc466d84daed649e67c97ba4f8844448c6ccb1f1846d2",
+        "crc32": "50fbc6e7"
+      },
+      {
+        "filename": "game.sal",
+        "bytes": 4321,
+        "sha256": "2deaab4c11f6286b4bcd13f7b955ea6e88e63befe6f8316b66fb26b61e292cfc",
+        "crc32": "48545db5"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "filename": "ranking-files/6-ranking.sgs",
+      "bytes": 1338,
+      "sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+      "rawMatches": [],
+      "version": 1,
+      "bodyHash": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+      "bodyMatches": [],
+      "title": "RANKING",
+      "variables": 28,
+      "resources": 21,
+      "entries": {
+        "START": 52,
+        "END": 0,
+        "TIMEOUT": 0,
+        "KEYPRESS": 158,
+        "RSEVENT": 0,
+        "RSRECEIVE": 0,
+        "RESULT": 398,
+        "RECEIVE": 427,
+        "NETWORK": 0,
+        "SMSRECEIVE": 0,
+        "GENERAL": 0
+      },
+      "wrapperBytes": 0,
+      "xorMask": 0
+    },
+    {
+      "filename": "middle_exam-novakjh.sgs",
+      "bytes": 12154,
+      "sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+      "rawMatches": [],
+      "version": 4,
+      "bodyHash": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+      "bodyMatches": [],
+      "title": "middle_exam GNE",
+      "variables": 44,
+      "resources": 16,
+      "entries": {
+        "START": 814,
+        "END": 0,
+        "TIMEOUT": 288,
+        "KEYPRESS": 130,
+        "RSEVENT": 0,
+        "RSRECEIVE": 0,
+        "RESULT": 0,
+        "RECEIVE": 0,
+        "NETWORK": 0,
+        "SMSRECEIVE": 0,
+        "GENERAL": 0
+      },
+      "wrapperBytes": 0,
+      "xorMask": 0
+    },
+    {
+      "filename": "character-files/3-middle_test.sgs",
+      "bytes": 4142,
+      "sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+      "rawMatches": [],
+      "version": 4,
+      "bodyHash": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+      "bodyMatches": [],
+      "title": "middle_test GNE",
+      "variables": 27,
+      "resources": 7,
+      "entries": {
+        "START": 420,
+        "END": 0,
+        "TIMEOUT": 286,
+        "KEYPRESS": 130,
+        "RSEVENT": 0,
+        "RSRECEIVE": 0,
+        "RESULT": 0,
+        "RECEIVE": 0,
+        "NETWORK": 0,
+        "SMSRECEIVE": 0,
+        "GENERAL": 0
+      },
+      "wrapperBytes": 0,
+      "xorMask": 0
+    }
+  ],
+  "sourceInterpretation": [
+    {
+      "sample": "RANKING",
+      "originalSource": "GVM/ranking.c inside ranking.zip",
+      "scriptVersion": 1,
+      "scriptType": 3,
+      "sourceComment": "SCRIPTVER1=GVM1X, SCRIPTVER2=GVM2X",
+      "classification": "Legacy GVM1X network-ranking client sample, not a game. Original client, server C, object/header, makefile and manual preserved. Only local menu navigation tested; no historical server run or network ranking query."
+    },
+    {
+      "sample": "middle_exam",
+      "classification": "Educational image/character movement example. Public assignment asks students to reproduce the supplied SGS image behavior. A moving character and scrolling background were rendered; score, game goal and loss condition were not established. Not promoted as a game."
+    },
+    {
+      "sample": "middle_test",
+      "originalSource": "game.mc inside character-test.zip",
+      "compiledSgsVersion": 4,
+      "sourceOnlyAlternative": "_GVM conditional branch declares SCRIPTVER2, but no GVM2 binary was recovered in this archive.",
+      "classification": "Character sprite movement demo: source key4/key6 changes position/frame and timer draws the character. No score, enemy, win/loss condition in this short source."
+    }
+  ],
+  "replayVerification": [
+    {
+      "id": "ranking",
+      "classification": "GVM1X ranking client sample, not a game; only local menu3 and menu4, no ranking request or server run.",
+      "sourceFile": "ranking-files/6-ranking.sgs",
+      "runtime": {
+        "profile": "phone",
+        "width": 120,
+        "height": 100
+      },
+      "inputPlan": "ranking-actions.json",
+      "controlPlan": "ranking-control-actions.json",
+      "inputEvents": 3,
+      "controlEvents": 1,
+      "allStepsIdle": true,
+      "allErrorsNull": true,
+      "comparisons": [
+        {
+          "timeMs": 0,
+          "differingPixels": 0,
+          "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+          "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+        },
+        {
+          "timeMs": 500,
+          "differingPixels": 0,
+          "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+          "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+        },
+        {
+          "timeMs": 500,
+          "differingPixels": 1040,
+          "inputRgbaSha256": "2b9a0f5347e1cf83061fba1ccca96eafe9d4a39c885a647d772b96d22ff5b827",
+          "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+        },
+        {
+          "timeMs": 1000,
+          "differingPixels": 1040,
+          "inputRgbaSha256": "2b9a0f5347e1cf83061fba1ccca96eafe9d4a39c885a647d772b96d22ff5b827",
+          "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+        },
+        {
+          "timeMs": 1000,
+          "differingPixels": 0,
+          "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+          "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+        },
+        {
+          "timeMs": 1500,
+          "differingPixels": 0,
+          "inputRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+          "controlRgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9"
+        }
+      ],
+      "finalTimeMs": 1500
+    },
+    {
+      "id": "middle-exam",
+      "classification": "Educational image/character movement assignment; no score, goal or loss condition established.",
+      "sourceFile": "middle_exam-novakjh.sgs",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 144
+      },
+      "inputPlan": "sample-actions.json",
+      "controlPlan": "middle-exam-control-actions.json",
+      "inputEvents": 33,
+      "controlEvents": 15,
+      "allStepsIdle": true,
+      "allErrorsNull": true,
+      "comparisons": [
+        {
+          "timeMs": 0,
+          "differingPixels": 0,
+          "inputRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5",
+          "controlRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5"
+        },
+        {
+          "timeMs": 500,
+          "differingPixels": 0,
+          "inputRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3",
+          "controlRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3"
+        },
+        {
+          "timeMs": 500,
+          "differingPixels": 0,
+          "inputRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3",
+          "controlRgbaSha256": "b6de1d713a71d971aa4f16456284b2f386bb97a7078bda428f569e9bc4b3c2c3"
+        },
+        {
+          "timeMs": 600,
+          "differingPixels": 357,
+          "inputRgbaSha256": "cafe2aaaebee60b1783e80241e2ea78b25f2e766505c0b37e60733d157ae3caf",
+          "controlRgbaSha256": "aeae5c87c78c555dfc7dd17ede58c8aa2313d7b2a49b3eaae1516dbb89382b4b"
+        },
+        {
+          "timeMs": 600,
+          "differingPixels": 357,
+          "inputRgbaSha256": "cafe2aaaebee60b1783e80241e2ea78b25f2e766505c0b37e60733d157ae3caf",
+          "controlRgbaSha256": "aeae5c87c78c555dfc7dd17ede58c8aa2313d7b2a49b3eaae1516dbb89382b4b"
+        },
+        {
+          "timeMs": 700,
+          "differingPixels": 448,
+          "inputRgbaSha256": "93e75c9dc3c801ac20fa80151fb9d82b9d8b02b8fa4d5a16836c0da5e905a987",
+          "controlRgbaSha256": "3a1e5ea51cde2fb320b8e74dd92f7dd39331f56bac6e3da1af14d2761940239e"
+        },
+        {
+          "timeMs": 700,
+          "differingPixels": 448,
+          "inputRgbaSha256": "93e75c9dc3c801ac20fa80151fb9d82b9d8b02b8fa4d5a16836c0da5e905a987",
+          "controlRgbaSha256": "3a1e5ea51cde2fb320b8e74dd92f7dd39331f56bac6e3da1af14d2761940239e"
+        },
+        {
+          "timeMs": 800,
+          "differingPixels": 509,
+          "inputRgbaSha256": "93af37641740beceb6efd9c131c28553742ae77182497e96bd4a312752d9a929",
+          "controlRgbaSha256": "229eeec020121ab10cf7943fce32b89a51addc93c9d7219e96ea3fad1c2f5a4e"
+        },
+        {
+          "timeMs": 800,
+          "differingPixels": 509,
+          "inputRgbaSha256": "93af37641740beceb6efd9c131c28553742ae77182497e96bd4a312752d9a929",
+          "controlRgbaSha256": "229eeec020121ab10cf7943fce32b89a51addc93c9d7219e96ea3fad1c2f5a4e"
+        },
+        {
+          "timeMs": 900,
+          "differingPixels": 557,
+          "inputRgbaSha256": "7e30ca1ec2fc5036f6154066d0bfabcfc9120d5d6e582e5ee4c6893d51a6fb21",
+          "controlRgbaSha256": "d19ed7878b82c7cb5d779da1694a0a2c82bfc45ad74f6ff7ba73155db0e23d08"
+        },
+        {
+          "timeMs": 900,
+          "differingPixels": 557,
+          "inputRgbaSha256": "7e30ca1ec2fc5036f6154066d0bfabcfc9120d5d6e582e5ee4c6893d51a6fb21",
+          "controlRgbaSha256": "d19ed7878b82c7cb5d779da1694a0a2c82bfc45ad74f6ff7ba73155db0e23d08"
+        },
+        {
+          "timeMs": 1000,
+          "differingPixels": 477,
+          "inputRgbaSha256": "1082a9852e7f74d38d513f2ec2104ecf1dc267172e5ae4b6c7e0df1bcfe2a7ae",
+          "controlRgbaSha256": "5ccc5d2306729ad80cc443a7648f374c73b4e500060d3690fe71bcbaf7c91cd2"
+        },
+        {
+          "timeMs": 1000,
+          "differingPixels": 477,
+          "inputRgbaSha256": "1082a9852e7f74d38d513f2ec2104ecf1dc267172e5ae4b6c7e0df1bcfe2a7ae",
+          "controlRgbaSha256": "5ccc5d2306729ad80cc443a7648f374c73b4e500060d3690fe71bcbaf7c91cd2"
+        },
+        {
+          "timeMs": 1100,
+          "differingPixels": 361,
+          "inputRgbaSha256": "efdb952daf01f3713a196ab8f24aaa345a9feda6ab0c8301b4027f3e1ff3ce40",
+          "controlRgbaSha256": "f7e7a808f88aacb112ddb4bb8aae9a7f159d0686714b07835dc427d2701edf88"
+        },
+        {
+          "timeMs": 1100,
+          "differingPixels": 361,
+          "inputRgbaSha256": "efdb952daf01f3713a196ab8f24aaa345a9feda6ab0c8301b4027f3e1ff3ce40",
+          "controlRgbaSha256": "f7e7a808f88aacb112ddb4bb8aae9a7f159d0686714b07835dc427d2701edf88"
+        },
+        {
+          "timeMs": 1200,
+          "differingPixels": 361,
+          "inputRgbaSha256": "cb3c31469c8697fc15aac3527018893310847d8b21c0395a07b2cb1c5a0addcb",
+          "controlRgbaSha256": "03608f51a661d3ec558042dcc04fd59a917e462fa287370cf5370ff6a430042b"
+        },
+        {
+          "timeMs": 1200,
+          "differingPixels": 361,
+          "inputRgbaSha256": "cb3c31469c8697fc15aac3527018893310847d8b21c0395a07b2cb1c5a0addcb",
+          "controlRgbaSha256": "03608f51a661d3ec558042dcc04fd59a917e462fa287370cf5370ff6a430042b"
+        },
+        {
+          "timeMs": 1300,
+          "differingPixels": 361,
+          "inputRgbaSha256": "e189b0009f64cc23f70c04a123598992c2c7ab397756ef268c84fa9196e2716f",
+          "controlRgbaSha256": "0b98645f0bf5af9d9d8e4946546a6993009803c8bfa59ca98c9e057dc71b4212"
+        },
+        {
+          "timeMs": 1300,
+          "differingPixels": 361,
+          "inputRgbaSha256": "e189b0009f64cc23f70c04a123598992c2c7ab397756ef268c84fa9196e2716f",
+          "controlRgbaSha256": "0b98645f0bf5af9d9d8e4946546a6993009803c8bfa59ca98c9e057dc71b4212"
+        },
+        {
+          "timeMs": 1400,
+          "differingPixels": 361,
+          "inputRgbaSha256": "ff2033daa54a8dc4cbbfdc26d4dfac3c865e9c8264e5bf471c6965c6eca84a58",
+          "controlRgbaSha256": "8a88fbe9b658f5882496d8c86d97c3191996e7db56876aa2a1f2c23fbd12fa07"
+        }
+      ],
+      "finalTimeMs": 1400
+    },
+    {
+      "id": "character",
+      "classification": "Character sprite movement example with original MobileC source; compiled binaryGNEX4, GVM2 branch in source only.",
+      "sourceFile": "character-files/3-middle_test.sgs",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 144
+      },
+      "inputPlan": "sample-actions.json",
+      "controlPlan": "character-control-actions.json",
+      "inputEvents": 33,
+      "controlEvents": 15,
+      "allStepsIdle": true,
+      "allErrorsNull": true,
+      "comparisons": [
+        {
+          "timeMs": 0,
+          "differingPixels": 0,
+          "inputRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5",
+          "controlRgbaSha256": "a85ba3415e97123a27a8425a81a0356d5ae12bd302e5ab1dfa419d13b5d208e5"
+        },
+        {
+          "timeMs": 500,
+          "differingPixels": 0,
+          "inputRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 500,
+          "differingPixels": 0,
+          "inputRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 600,
+          "differingPixels": 396,
+          "inputRgbaSha256": "c994489040fac4647609a9b0709158f832bc380d8b67fbd7b22d4697a17ce145",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 600,
+          "differingPixels": 396,
+          "inputRgbaSha256": "c994489040fac4647609a9b0709158f832bc380d8b67fbd7b22d4697a17ce145",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 700,
+          "differingPixels": 481,
+          "inputRgbaSha256": "ec8d41f3c7ac09788347bcf3ef6dcce5d7981c3b9e8b60821093b3ab50497508",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 700,
+          "differingPixels": 481,
+          "inputRgbaSha256": "ec8d41f3c7ac09788347bcf3ef6dcce5d7981c3b9e8b60821093b3ab50497508",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 800,
+          "differingPixels": 581,
+          "inputRgbaSha256": "806f3d9c9630ed1725b78cf25fe0241699340a9433254404f16305cd14b733c0",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 800,
+          "differingPixels": 581,
+          "inputRgbaSha256": "806f3d9c9630ed1725b78cf25fe0241699340a9433254404f16305cd14b733c0",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 900,
+          "differingPixels": 605,
+          "inputRgbaSha256": "7de5e9c83c89efd3bd026b3e94a20e746be2e0b022084ce09283dc2f687c8d48",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 900,
+          "differingPixels": 605,
+          "inputRgbaSha256": "7de5e9c83c89efd3bd026b3e94a20e746be2e0b022084ce09283dc2f687c8d48",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1000,
+          "differingPixels": 529,
+          "inputRgbaSha256": "31e5ff2dd8bb93ef7ab80b99964abb991305cc889fa9b1eacf4aa346d85e94ff",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1000,
+          "differingPixels": 529,
+          "inputRgbaSha256": "31e5ff2dd8bb93ef7ab80b99964abb991305cc889fa9b1eacf4aa346d85e94ff",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1100,
+          "differingPixels": 443,
+          "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1100,
+          "differingPixels": 443,
+          "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1200,
+          "differingPixels": 443,
+          "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1200,
+          "differingPixels": 443,
+          "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1300,
+          "differingPixels": 443,
+          "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1300,
+          "differingPixels": 443,
+          "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        },
+        {
+          "timeMs": 1400,
+          "differingPixels": 443,
+          "inputRgbaSha256": "bf53aa61a6e83c1a8f3b14d69179fa36f27926c9fa019ade8c738ee00c51fcfa",
+          "controlRgbaSha256": "64c91db3956cf4e2442f977aa8564a53e2ccae3c12257d0f14fee7f241831168"
+        }
+      ],
+      "finalTimeMs": 1400
+    }
+  ],
+  "newPublicMenuChecks": [
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/14359460/menus/37/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 22025,
+      "sha256": "020ae00d959165a3ade1cbc990b9696d40ec492294135e70517592442218c3fa",
+      "listedRows": 25,
+      "openRows": 0,
+      "openRowsWithFiles": 0,
+      "pageInfo": {
+        "lastNavigationPageNumber": 1,
+        "visibleNextButton": false
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/14359460/menus/20/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 11745,
+      "sha256": "d37d4f950a6d1e8b87aa0e286d38c5aa6b815f4fa1a30a11531be59889da67f0",
+      "listedRows": 15,
+      "openRows": 0,
+      "openRowsWithFiles": 0,
+      "pageInfo": {
+        "lastNavigationPageNumber": 1,
+        "visibleNextButton": false
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/13394621/menus/9/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 13077,
+      "sha256": "decf8d17b463f4496c5e21c07efb796a2a856fc62eec49e6bc1a8260a3669da5",
+      "listedRows": 18,
+      "openRows": 0,
+      "openRowsWithFiles": 0,
+      "pageInfo": {
+        "lastNavigationPageNumber": 1,
+        "visibleNextButton": false
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/13904619/menus/74/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 43765,
+      "sha256": "134043f435f918eafea5a3960f30067c6452c3093ad344e6eb53294b6bbb3692",
+      "listedRows": 50,
+      "openRows": 13,
+      "openRowsWithFiles": 1,
+      "pageInfo": {
+        "lastNavigationPageNumber": 2,
+        "visibleNextButton": false
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/13394621/menus/10/articles?page=1&pageSize=50",
+      "status": 200,
+      "bytes": 37789,
+      "sha256": "57fb5c21f399f1c9578ef7c6d4e3d6f741f447e662481f53c767adf439fd6313",
+      "listedRows": 50,
+      "openRows": 4,
+      "openRowsWithFiles": 0,
+      "pageInfo": {
+        "lastNavigationPageNumber": 4,
+        "visibleNextButton": false
+      }
+    },
+    {
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/13904619/menus/74/articles?page=2&pageSize=50",
+      "status": 200,
+      "bytes": 7991,
+      "sha256": "8ebd5ba0cfe118cab676bd771b8ae475b982199f59b223874c002a809a10660b",
+      "listedRows": 11,
+      "openRows": 0,
+      "openRowsWithFiles": 0,
+      "pageInfo": {
+        "lastNavigationPageNumber": 2,
+        "visibleNextButton": false
+      }
+    }
+  ],
+  "boundedNegatives": [
+    "Mogf menu37:25rows and menu20:15rows, all openArticle=false; contents/attachments not requested.",
+    "KBplan menu9:18rows, including GVM practice game sample/executable labels, all openArticle=false; contents/attachments not requested. Menu10 first50rows had4open but none with files; remaining course pages not claimed exhausted.",
+    "Freshphonegamemusic utilities menu74 both pages:50+11rows. Only one open file-bearing row concerned a Cyworld-today counter tool; not downloaded as unrelated. No new game payload found.",
+    "Two directly discovered Bjphone game-pack article endpoints returnedHTTP401; no retries or bypass.",
+    "Fktkaus/Heavenmobile roots returned no parsed game menus; not treated as proof that their archives are empty.",
+    "Ilovetvscandal root now exposes fund/insurance navigation; no legacy game article contents requested.",
+    "Mobaill, JZSDN and Herolore5 previous exhausted/restricted routes were not repeated."
+  ],
+  "limits": [
+    "These three recovered SGS are developer examples, not three new games or a claim of released commercial content.",
+    "Exact phone model and original compiler/runtime target are unknown apart from explicit GVM1X source declaration for RANKING; chosen viewport dimensions are test settings.",
+    "No vendor/native/server executables, rankdb.o, compiler or original network service was run.",
+    "No authenticated access, CAPTCHA bypass, direct restricted attachment discovery or membership workaround performed.",
+    "Canonical blog URLs, safe software metadata and hashes only; ephemeral download tokens, member records and raw unrelated search/post content excluded."
+  ]
+}

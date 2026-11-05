@@ -1,0 +1,2625 @@
+{
+  "schemaVersion": 1,
+  "title": "LG SB260 / SV730 PXO plus linked FreeKick Flash preservation",
+  "classification": "Native LG PXO modules plus exactly linked FreeKick Flash payload; not an SGS library and not a runnable phone emulator",
+  "catalogueAddition": false,
+  "counts": {
+    "modules": 14,
+    "pxoDataFiles": 28,
+    "flashResourceFiles": 12,
+    "allPayloadFiles": 40,
+    "decodedPxo4": 11,
+    "uncompressedPxo1": 3,
+    "lglzBlocks": 649,
+    "decodedPxoBytes": 14787642,
+    "validatedSgs": 0,
+    "verifiedPlayableNativeGames": 0
+  },
+  "artifact": {
+    "file": "LG-SB260-SV730-Native-Games-Recovered.zip",
+    "bytes": 12299171,
+    "sha256": "181155e6ecae9010e24ed41dd74ab10823727a1da2c4cf8d7947f699d20013df",
+    "crc32": "a70ba618"
+  },
+  "verification": {
+    "verifiedUtc": "2026-11-05T12:26:08.232815+00:00",
+    "archive": {
+      "file": "LG-SB260-SV730-Native-Games-Recovered.zip",
+      "bytes": 12299171,
+      "sha256": "181155e6ecae9010e24ed41dd74ab10823727a1da2c4cf8d7947f699d20013df",
+      "crc32": "a70ba618"
+    },
+    "zipMembers": 54,
+    "zipCrcTestPassed": true,
+    "independentSevenZipTestPassed": true,
+    "cleanExtractionAllFilesByteIdentical": true,
+    "manifest": {
+      "bytes": 250602,
+      "sha256": "076fe6704742cf1ca45d6dd39e4752dd1e46f7952e8d5cdd1bf7f9bf4ae3493b",
+      "crc32": "9b5d0d60"
+    },
+    "cleanVerifier": {
+      "passed": true,
+      "manifestedFiles": 53,
+      "nativeModules": 14,
+      "pxoDataFiles": 28,
+      "flashResourceFiles": 12,
+      "decodedPxo4": 11,
+      "uncompressedPxo1": 3,
+      "lglzBlocksReplayed": 649,
+      "pxoBoundsVerified": 14,
+      "swfRecursiveTagBoundsReplayed": 3856,
+      "soundStemReferencesVerified": 11,
+      "phoneCodeExecuted": false
+    },
+    "phoneCodeExecuted": false,
+    "excluded": [
+      "whole firmware BIN/WDB/KDZ/CAB",
+      "vendor DLL and service executables",
+      "private EFS/user storage",
+      "compiled LGLZ decoder"
+    ]
+  },
+  "sources": [
+    {
+      "model": "SB260",
+      "build": "SB260004_00",
+      "canonicalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SB260/SB260004.7z",
+      "sourceArchive": {
+        "file": "SB260004.7z",
+        "bytes": 103940192,
+        "sha256": "06add3c5943fee754c77cf414b82c96989cdf2af5d953006aa101786b7c2b966",
+        "crc32": "d6182796"
+      },
+      "kdz": {
+        "file": "SB260004_00.kdz",
+        "bytes": 103933618,
+        "sha256": "72e8aec0104ca273dabc0f94e5c14359ed615dd46d6c8d0ba9da6d464cf6de35",
+        "crc32": "2f907176"
+      },
+      "cab": {
+        "file": "SB260004_00.cab",
+        "bytes": 103933618,
+        "sha256": "954dc93420969005ef8be775eac455334fc65138322bc514ba779585ee33d3d8",
+        "crc32": "2f838751"
+      },
+      "wdb": {
+        "file": "SB260004.wdb",
+        "bytes": 104110145,
+        "sha256": "f17f3b32ee32e5dea256f08e2ef8d8e29f314618f157db1d87cb95f85a568c2a",
+        "crc32": "f436c208"
+      },
+      "companionDllReadOnlyNotBundled": {
+        "file": "SB260(0.0.1.3).dll",
+        "bytes": 438272,
+        "sha256": "37feb1051235bcd5248b466fbc46361becc7e3bd6bbb03b94197babbcc8154dc",
+        "crc32": "4e548666"
+      },
+      "wdbRecordsValidated": 2589,
+      "sevenZipAndCabTestsPassed": true,
+      "crcNote": "Calculated CRC32 values. Original 7z member CRC was checked; CAB did not expose a per-file declared CRC. WDB zlib integrity and exact EOF were checked independently."
+    },
+    {
+      "model": "SV730",
+      "build": "SV730906_00",
+      "canonicalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SV730/SV730906_00.7z",
+      "sourceArchive": {
+        "file": "SV730906_00.7z",
+        "bytes": 49729762,
+        "sha256": "c9aa156ebe4e39b311327d6d2f698fd6525631c552225b6523f7d066a8fb9a1a",
+        "crc32": "f4395cb9"
+      },
+      "kdz": {
+        "file": "SV730906_00.kdz",
+        "bytes": 49726545,
+        "sha256": "17ff4ab95d151ff858b9e362c1749e0a38760b1e3c12b37ff8797946a3ca01dd",
+        "crc32": "02877b0d"
+      },
+      "cab": {
+        "file": "SV730906_00.cab",
+        "bytes": 49726545,
+        "sha256": "26ccc1075686a96b23269e16233dc75dc2213ff2fec3755db550ba2fb7b0fa80",
+        "crc32": "0889487f"
+      },
+      "wdb": {
+        "file": "SV730906.wdb",
+        "bytes": 49650645,
+        "sha256": "e1e50531f5b44ba2fc67c3ec0e07d3163b1aa9687719cd56f962978ac8287c17",
+        "crc32": "3bda0a18"
+      },
+      "companionDllReadOnlyNotBundled": {
+        "file": "SV730.dll",
+        "bytes": 413696,
+        "sha256": "9fa0bcfa34ea715d952f93228ab9dcf38468c936a7727d5fa4c6558e861cbc80",
+        "crc32": "1ec80d8e"
+      },
+      "wdbRecordsValidated": 1240,
+      "sevenZipAndCabTestsPassed": true,
+      "crcNote": "Calculated CRC32 values. Original 7z member CRC was checked; CAB did not expose a per-file declared CRC. WDB zlib integrity and exact EOF were checked independently."
+    }
+  ],
+  "modules": [
+    {
+      "model": "SB260",
+      "module": "Game.pxo",
+      "classification": "game menu/interface module; not counted as a game",
+      "originalFile": "original/sb260/Game.pxo",
+      "decodedFile": "decoded/sb260/Game.pxo",
+      "original": {
+        "bytes": 2120,
+        "sha256": "57340099ab04c35386ffffbff23fcc4eda509de718f2f3aea97561e748796d0a",
+        "crc32": "fabe8573"
+      },
+      "decoded": {
+        "bytes": 3569,
+        "sha256": "9a2335dbaccbe8d2ee9eb6d51bd7ad0480de6397f719e95f21cf6c302bfbf2ec",
+        "crc32": "18229361"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game.pxo",
+        "compressedEncryptedRange": {
+          "start": 36340929,
+          "endExclusive": 36343005,
+          "bytes": 2076
+        },
+        "compressedEncryptedCrc32": "83c6aea9",
+        "compressedEncryptedSha256": "afdedd075972f1f99e8be0aa4549415463538ec0bd4c3a7d0d326938d9d45d4e",
+        "declaredOutputBytes": 2120,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 3569,
+        "actualFileBytes": 3569,
+        "headerWords": [877615184, 268435456, 3569, 92, 36, 4294967295, 0, 0, 0, 1, 655360, 3488],
+        "descriptorOffset": 92,
+        "descriptorWords": [553721856, 3340, 16781328, 16781384, 16781384, 16781412, 3177, 2645],
+        "descriptorRange": {
+          "start": 92,
+          "endExclusive": 124,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 92,
+          "endExclusive": 3432,
+          "bytes": 3340
+        },
+        "initializedSegment2": {
+          "start": 3432,
+          "endExclusive": 3488,
+          "bytes": 56
+        },
+        "zeroFillDeclaration": {
+          "base": 16781384,
+          "endExclusive": 16781412,
+          "bytes": 28
+        },
+        "remainingTailRange": {
+          "start": 3488,
+          "endExclusive": 3569,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 3177,
+            "thumbBit": true,
+            "candidateFileOffset": 3268,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2645,
+            "thumbBit": true,
+            "candidateFileOffset": 2736,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 3488,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 181,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 1,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_BrainTeaser.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sb260/Game_BrainTeaser.pxo",
+      "decodedFile": "decoded/sb260/Game_BrainTeaser.pxo",
+      "original": {
+        "bytes": 611162,
+        "sha256": "b78a2bbfdff401e896af0bb5129d1e68dfc3b497da0f24c0e0f8ca7d2573fa64",
+        "crc32": "71ef3c08"
+      },
+      "decoded": {
+        "bytes": 1291133,
+        "sha256": "a8ebfe378f22ace36b1fd86919d1338c51643e5a1ac136c84e20c31a448d33b3",
+        "crc32": "f7a60d28"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_BrainTeaser.pxo",
+        "compressedEncryptedRange": {
+          "start": 36343087,
+          "endExclusive": 36913661,
+          "bytes": 570574
+        },
+        "compressedEncryptedCrc32": "bec220cf",
+        "compressedEncryptedSha256": "5baad24256e8a4ac5b2f58512d12c90df79cb3f73e9cbd232f1a0315234b50a9",
+        "declaredOutputBytes": 611162,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 1291133,
+        "actualFileBytes": 1291133,
+        "headerWords": [
+          877615184, 268435456, 1291133, 3776, 3283, 4294967295, 0, 0, 0, 1, 655360, 1291052
+        ],
+        "descriptorOffset": 3776,
+        "descriptorWords": [
+          553721856, 1286352, 16781328, 16782252, 16782252, 17572516, 398789, 2249
+        ],
+        "descriptorRange": {
+          "start": 3776,
+          "endExclusive": 3808,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 3776,
+          "endExclusive": 1290128,
+          "bytes": 1286352
+        },
+        "initializedSegment2": {
+          "start": 1290128,
+          "endExclusive": 1291052,
+          "bytes": 924
+        },
+        "zeroFillDeclaration": {
+          "base": 16782252,
+          "endExclusive": 17572516,
+          "bytes": 790264
+        },
+        "remainingTailRange": {
+          "start": 1291052,
+          "endExclusive": 1291133,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 398789,
+            "thumbBit": true,
+            "candidateFileOffset": 402564,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2249,
+            "thumbBit": true,
+            "candidateFileOffset": 6024,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 1291052,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 89268,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 75,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_Dart.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sb260/Game_Dart.pxo",
+      "decodedFile": "decoded/sb260/Game_Dart.pxo",
+      "original": {
+        "bytes": 468842,
+        "sha256": "5dc057c6985aa03f24e6166a9096a49e989c401ce626e72001c7974508d15894",
+        "crc32": "d673dc06"
+      },
+      "decoded": {
+        "bytes": 1106289,
+        "sha256": "d24ee55b019fdf26b111b35de5e5d30e13eda7dd224a3e0c3f74cb58eb0ad8c2",
+        "crc32": "9e4f00a0"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_Dart.pxo",
+        "compressedEncryptedRange": {
+          "start": 36913729,
+          "endExclusive": 37344776,
+          "bytes": 431047
+        },
+        "compressedEncryptedCrc32": "881b2621",
+        "compressedEncryptedSha256": "808283cd84c226a8949951883415e4dc23e033af43a642274a036bc5a3ba9d28",
+        "declaredOutputBytes": 468842,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 1106289,
+        "actualFileBytes": 1106289,
+        "headerWords": [
+          877615184, 268435456, 1106289, 460, 360, 4294967295, 0, 0, 0, 1, 655360, 1106208
+        ],
+        "descriptorOffset": 460,
+        "descriptorWords": [
+          553721856, 1105636, 16781328, 16781440, 16781440, 17550720, 24733, 2665
+        ],
+        "descriptorRange": {
+          "start": 460,
+          "endExclusive": 492,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 460,
+          "endExclusive": 1106096,
+          "bytes": 1105636
+        },
+        "initializedSegment2": {
+          "start": 1106096,
+          "endExclusive": 1106208,
+          "bytes": 112
+        },
+        "zeroFillDeclaration": {
+          "base": 16781440,
+          "endExclusive": 17550720,
+          "bytes": 769280
+        },
+        "remainingTailRange": {
+          "start": 1106208,
+          "endExclusive": 1106289,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 24733,
+            "thumbBit": true,
+            "candidateFileOffset": 25192,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2665,
+            "thumbBit": true,
+            "candidateFileOffset": 3124,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 1106208,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 117494,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 58,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_Fishing.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sb260/Game_Fishing.pxo",
+      "decodedFile": "decoded/sb260/Game_Fishing.pxo",
+      "original": {
+        "bytes": 709891,
+        "sha256": "a154abc9e92dce39690e5ecca83b0afb2aeea589751c0596c7b829ec23a8126b",
+        "crc32": "5441a004"
+      },
+      "decoded": {
+        "bytes": 1829009,
+        "sha256": "c2cb21b8eff33f1bf1a2da8190a2e5822d5f4f37203d791d7b6af059d3569823",
+        "crc32": "65a56d70"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_Fishing.pxo",
+        "compressedEncryptedRange": {
+          "start": 37344850,
+          "endExclusive": 37995956,
+          "bytes": 651106
+        },
+        "compressedEncryptedCrc32": "1c72ec44",
+        "compressedEncryptedSha256": "4517358de3713acf7887538da8c484e31f2bbe02101fbe63385365b342dab3d1",
+        "declaredOutputBytes": 709891,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 1829009,
+        "actualFileBytes": 1829009,
+        "headerWords": [
+          877615184, 268435456, 1829009, 620, 520, 4294967295, 0, 0, 0, 1, 655360, 1828928
+        ],
+        "descriptorOffset": 620,
+        "descriptorWords": [
+          553721856, 1828156, 16781328, 16781480, 16781480, 17553356, 27789, 2665
+        ],
+        "descriptorRange": {
+          "start": 620,
+          "endExclusive": 652,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 620,
+          "endExclusive": 1828776,
+          "bytes": 1828156
+        },
+        "initializedSegment2": {
+          "start": 1828776,
+          "endExclusive": 1828928,
+          "bytes": 152
+        },
+        "zeroFillDeclaration": {
+          "base": 16781480,
+          "endExclusive": 17553356,
+          "bytes": 771876
+        },
+        "remainingTailRange": {
+          "start": 1828928,
+          "endExclusive": 1829009,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 27789,
+            "thumbBit": true,
+            "candidateFileOffset": 28408,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2665,
+            "thumbBit": true,
+            "candidateFileOffset": 3284,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 1828928,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 140202,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 87,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_FreeKick.pxo",
+      "classification": "native launcher with exact FreeKick.swf path literal; separate Flash payload, native/Flash execution unverified",
+      "originalFile": "original/sb260/Game_FreeKick.pxo",
+      "decodedFile": "decoded/sb260/Game_FreeKick.pxo",
+      "original": {
+        "bytes": 3594,
+        "sha256": "3b516d94321df4cea103629f6960b2c6b4b4db927f6719974d26ba57eac3de79",
+        "crc32": "74cde670"
+      },
+      "decoded": {
+        "bytes": 5109,
+        "sha256": "649bedc72254783a3b7830e9062c41ca8dad0bb6b682661a5fd28a23382a4903",
+        "crc32": "06559318"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_FreeKick.pxo",
+        "compressedEncryptedRange": {
+          "start": 37996032,
+          "endExclusive": 37999532,
+          "bytes": 3500
+        },
+        "compressedEncryptedCrc32": "1295574c",
+        "compressedEncryptedSha256": "48cd3a2b23ff913f1c00a34b01db72adad02f74ac818acca8a4f2e5bfb8a9c09",
+        "declaredOutputBytes": 3594,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 5109,
+        "actualFileBytes": 5109,
+        "headerWords": [877615184, 268435456, 5109, 108, 49, 4294967295, 0, 0, 0, 1, 655360, 5028],
+        "descriptorOffset": 108,
+        "descriptorWords": [553721856, 4828, 16781328, 16781420, 16781420, 16781584, 4385, 3649],
+        "descriptorRange": {
+          "start": 108,
+          "endExclusive": 140,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 108,
+          "endExclusive": 4936,
+          "bytes": 4828
+        },
+        "initializedSegment2": {
+          "start": 4936,
+          "endExclusive": 5028,
+          "bytes": 92
+        },
+        "zeroFillDeclaration": {
+          "base": 16781420,
+          "endExclusive": 16781584,
+          "bytes": 164
+        },
+        "remainingTailRange": {
+          "start": 5028,
+          "endExclusive": 5109,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 4385,
+            "thumbBit": true,
+            "candidateFileOffset": 4492,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 3649,
+            "thumbBit": true,
+            "candidateFileOffset": 3756,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 5028,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 297,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 1,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_HomerunDerby.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sb260/Game_HomerunDerby.pxo",
+      "decodedFile": "decoded/sb260/Game_HomerunDerby.pxo",
+      "original": {
+        "bytes": 630826,
+        "sha256": "c9d12a370b3b698791d6ee506ccc33eb0fcefa0c462698855b148df5da31e7c4",
+        "crc32": "450e78a1"
+      },
+      "decoded": {
+        "bytes": 1887153,
+        "sha256": "3b1834c9b00f02591bfcc29151e847c7bf21eaa9a5964d690913c0f0c04ca0db",
+        "crc32": "54508e20"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_HomerunDerby.pxo",
+        "compressedEncryptedRange": {
+          "start": 37999616,
+          "endExclusive": 38573122,
+          "bytes": 573506
+        },
+        "compressedEncryptedCrc32": "ad572715",
+        "compressedEncryptedSha256": "a244253ea26885cf234e8028db69546d4dbe22e4aea31cdd9fb83ad5e0b9d8b5",
+        "declaredOutputBytes": 630826,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 1887153,
+        "actualFileBytes": 1887153,
+        "headerWords": [
+          877615184, 268435456, 1887153, 512, 411, 4294967295, 0, 0, 0, 1, 655360, 1887072
+        ],
+        "descriptorOffset": 512,
+        "descriptorWords": [
+          553721856, 1886436, 16781328, 16781452, 16781452, 17550796, 27033, 2665
+        ],
+        "descriptorRange": {
+          "start": 512,
+          "endExclusive": 544,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 512,
+          "endExclusive": 1886948,
+          "bytes": 1886436
+        },
+        "initializedSegment2": {
+          "start": 1886948,
+          "endExclusive": 1887072,
+          "bytes": 124
+        },
+        "zeroFillDeclaration": {
+          "base": 16781452,
+          "endExclusive": 17550796,
+          "bytes": 769344
+        },
+        "remainingTailRange": {
+          "start": 1887072,
+          "endExclusive": 1887153,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 27033,
+            "thumbBit": true,
+            "candidateFileOffset": 27544,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2665,
+            "thumbBit": true,
+            "candidateFileOffset": 3176,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 1887072,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 161015,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 78,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_SudokuCafe.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sb260/Game_SudokuCafe.pxo",
+      "decodedFile": "decoded/sb260/Game_SudokuCafe.pxo",
+      "original": {
+        "bytes": 481151,
+        "sha256": "0b14667f2f9188fff709233e6d58735cd478257a7f9061cda45408f6fcfe63a9",
+        "crc32": "8779b761"
+      },
+      "decoded": {
+        "bytes": 871581,
+        "sha256": "242acd94aa8ac28b6e9e178249ef76c0e157894c70a6bba0b5be4821c50060ae",
+        "crc32": "bccac72e"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_SudokuCafe.pxo",
+        "compressedEncryptedRange": {
+          "start": 38573202,
+          "endExclusive": 39026642,
+          "bytes": 453440
+        },
+        "compressedEncryptedCrc32": "4dd3352b",
+        "compressedEncryptedSha256": "4712510f444fd4b5c5c693a1d91d3712d5a2e08be5103cc191dee2953302524f",
+        "declaredOutputBytes": 481151,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 871581,
+        "actualFileBytes": 871581,
+        "headerWords": [
+          877615184, 268435456, 871581, 1372, 1213, 4294967295, 0, 0, 0, 1, 655360, 871500
+        ],
+        "descriptorOffset": 1372,
+        "descriptorWords": [553721856, 838696, 16781328, 16812760, 16812760, 17588504, 96557, 2233],
+        "descriptorRange": {
+          "start": 1372,
+          "endExclusive": 1404,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 1372,
+          "endExclusive": 840068,
+          "bytes": 838696
+        },
+        "initializedSegment2": {
+          "start": 840068,
+          "endExclusive": 871500,
+          "bytes": 31432
+        },
+        "zeroFillDeclaration": {
+          "base": 16812760,
+          "endExclusive": 17588504,
+          "bytes": 775744
+        },
+        "remainingTailRange": {
+          "start": 871500,
+          "endExclusive": 871581,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 96557,
+            "thumbBit": true,
+            "candidateFileOffset": 97928,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2233,
+            "thumbBit": true,
+            "candidateFileOffset": 3604,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 871500,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 57806,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 59,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_VSticks.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sb260/Game_VSticks.pxo",
+      "decodedFile": "decoded/sb260/Game_VSticks.pxo",
+      "original": {
+        "bytes": 1151522,
+        "sha256": "0e54027e99223a716ed49f70ba121fe379a988c684598b8297209e742d642bfe",
+        "crc32": "e9d7c8ac"
+      },
+      "decoded": {
+        "bytes": 2946805,
+        "sha256": "5e914700ea8611e72dab9d0131c5c32ca4e459527a08f4cab5a22ff9689727fe",
+        "crc32": "81f7184d"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_VSticks.pxo",
+        "compressedEncryptedRange": {
+          "start": 39026716,
+          "endExclusive": 40110160,
+          "bytes": 1083444
+        },
+        "compressedEncryptedCrc32": "01ab7d45",
+        "compressedEncryptedSha256": "ff89619b9f521890c3c0ae9227fefa4e0b0635b2779db6ab06dc09b18ea2984b",
+        "declaredOutputBytes": 1151522,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 2946805,
+        "actualFileBytes": 2946805,
+        "headerWords": [
+          877615184, 268435456, 2946805, 2632, 2460, 4294967295, 0, 0, 0, 1, 655360, 2946724
+        ],
+        "descriptorOffset": 2632,
+        "descriptorWords": [
+          553721856, 2940064, 16781328, 16785356, 16785356, 17592376, 83489, 2269
+        ],
+        "descriptorRange": {
+          "start": 2632,
+          "endExclusive": 2664,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 2632,
+          "endExclusive": 2942696,
+          "bytes": 2940064
+        },
+        "initializedSegment2": {
+          "start": 2942696,
+          "endExclusive": 2946724,
+          "bytes": 4028
+        },
+        "zeroFillDeclaration": {
+          "base": 16785356,
+          "endExclusive": 17592376,
+          "bytes": 807020
+        },
+        "remainingTailRange": {
+          "start": 2946724,
+          "endExclusive": 2946805,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 83489,
+            "thumbBit": true,
+            "candidateFileOffset": 86120,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2269,
+            "thumbBit": true,
+            "candidateFileOffset": 4900,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 2946724,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 121213,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 141,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "Game_ZooZooClub2.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sb260/Game_ZooZooClub2.pxo",
+      "decodedFile": "decoded/sb260/Game_ZooZooClub2.pxo",
+      "original": {
+        "bytes": 1198931,
+        "sha256": "27ca21f51e3f1fdb0d1df46c4126a8bbe2e9574c8eceefc3fe2c917bec7f4b30",
+        "crc32": "2ed032d9"
+      },
+      "decoded": {
+        "bytes": 2720485,
+        "sha256": "4cdafa56b416233be95c6bf164ee958b718d3b32d1a6a1f71bfd06612b302636",
+        "crc32": "e3c5f48a"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/Game_ZooZooClub2.pxo",
+        "compressedEncryptedRange": {
+          "start": 40110242,
+          "endExclusive": 41230306,
+          "bytes": 1120064
+        },
+        "compressedEncryptedCrc32": "f180dee7",
+        "compressedEncryptedSha256": "669f3d91a13d3d69f305d948af674377ec8ff26a05de315ca7cb719fe2abb1c8",
+        "declaredOutputBytes": 1198931,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 2720485,
+        "actualFileBytes": 2720485,
+        "headerWords": [
+          877615184, 268435456, 2720485, 2028, 1903, 4294967295, 0, 0, 0, 1, 655360, 2720404
+        ],
+        "descriptorOffset": 2028,
+        "descriptorWords": [
+          553721856, 2718280, 16781328, 16781424, 16781424, 17551312, 56289, 2233
+        ],
+        "descriptorRange": {
+          "start": 2028,
+          "endExclusive": 2060,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 2028,
+          "endExclusive": 2720308,
+          "bytes": 2718280
+        },
+        "initializedSegment2": {
+          "start": 2720308,
+          "endExclusive": 2720404,
+          "bytes": 96
+        },
+        "zeroFillDeclaration": {
+          "base": 16781424,
+          "endExclusive": 17551312,
+          "bytes": 769888
+        },
+        "remainingTailRange": {
+          "start": 2720404,
+          "endExclusive": 2720485,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 56289,
+            "thumbBit": true,
+            "candidateFileOffset": 58316,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 2233,
+            "thumbBit": true,
+            "candidateFileOffset": 4260,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 2720404,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 192787,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 147,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "WIPISKT.pxo",
+      "classification": "WIPI platform-associated module/stub; not counted as a game",
+      "originalFile": "original/sb260/WIPISKT.pxo",
+      "decodedFile": "decoded/sb260/WIPISKT.pxo",
+      "original": {
+        "bytes": 3499,
+        "sha256": "3df83e042dc60f2c0afe5cf30f6146e242629603325d660e77a1ce693eac3f2d",
+        "crc32": "fe25553b"
+      },
+      "decoded": {
+        "bytes": 5173,
+        "sha256": "12a996de6b922d393189f0cfcbc8e8f65b4eed756c74904471e1ed773ef73582",
+        "crc32": "a4999908"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/WIPISKT.pxo",
+        "compressedEncryptedRange": {
+          "start": 43823209,
+          "endExclusive": 43826602,
+          "bytes": 3393
+        },
+        "compressedEncryptedCrc32": "f3074eb6",
+        "compressedEncryptedSha256": "e125c74239c5fba27173516347696f6d327a651f063b8a6c82405740c2520545",
+        "declaredOutputBytes": 3499,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 5173,
+        "actualFileBytes": 5173,
+        "headerWords": [877615184, 268435456, 5173, 76, 23, 4294967295, 0, 0, 0, 1, 655360, 5092],
+        "descriptorOffset": 76,
+        "descriptorWords": [553721856, 5008, 16781328, 16781336, 16781336, 16781376, 4713, 617],
+        "descriptorRange": {
+          "start": 76,
+          "endExclusive": 108,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 76,
+          "endExclusive": 5084,
+          "bytes": 5008
+        },
+        "initializedSegment2": {
+          "start": 5084,
+          "endExclusive": 5092,
+          "bytes": 8
+        },
+        "zeroFillDeclaration": {
+          "base": 16781336,
+          "endExclusive": 16781376,
+          "bytes": 40
+        },
+        "remainingTailRange": {
+          "start": 5092,
+          "endExclusive": 5173,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 4713,
+            "thumbBit": true,
+            "candidateFileOffset": 4788,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 617,
+            "thumbBit": true,
+            "candidateFileOffset": 692,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 5092,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 389,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 1,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SB260",
+      "module": "WIPISKTSub.pxo",
+      "classification": "WIPI platform-associated module/stub; not counted as a game",
+      "originalFile": "original/sb260/WIPISKTSub.pxo",
+      "decodedFile": "decoded/sb260/WIPISKTSub.pxo",
+      "original": {
+        "bytes": 2134,
+        "sha256": "dec9009c3083b03459ce77b6397b3ec89256d716765d2529b6dd00a50cd0cc0d",
+        "crc32": "dc498ceb"
+      },
+      "decoded": {
+        "bytes": 3089,
+        "sha256": "67d15136bfb1e5871927f15e6fdf22e19ad2cf12ba405f7a4c9e354de94ddfc7",
+        "crc32": "fa826d88"
+      },
+      "containerFormat": "LGLZ-framed PXO4",
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/C/WIPISKTSub.pxo",
+        "compressedEncryptedRange": {
+          "start": 43826672,
+          "endExclusive": 43828746,
+          "bytes": 2074
+        },
+        "compressedEncryptedCrc32": "d3ead45a",
+        "compressedEncryptedSha256": "506746fb6ab4d09d0ed7842dfbd3d83af299191cb9fb77e3b4262ee24d34faa0",
+        "declaredOutputBytes": 2134,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO4",
+        "declaredFileBytes": 3089,
+        "actualFileBytes": 3089,
+        "headerWords": [877615184, 268435456, 3089, 84, 27, 4294967295, 0, 0, 0, 1, 655360, 3008],
+        "descriptorOffset": 84,
+        "descriptorWords": [553721856, 2916, 16781328, 16781336, 16781336, 17165356, 2753, 221],
+        "descriptorRange": {
+          "start": 84,
+          "endExclusive": 116,
+          "bytes": 32
+        },
+        "initializedSegment1": {
+          "start": 84,
+          "endExclusive": 3000,
+          "bytes": 2916
+        },
+        "initializedSegment2": {
+          "start": 3000,
+          "endExclusive": 3008,
+          "bytes": 8
+        },
+        "zeroFillDeclaration": {
+          "base": 16781336,
+          "endExclusive": 17165356,
+          "bytes": 384020
+        },
+        "remainingTailRange": {
+          "start": 3008,
+          "endExclusive": 3089,
+          "bytes": 81
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 6,
+            "value": 2753,
+            "thumbBit": true,
+            "candidateFileOffset": 2836,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 7,
+            "value": 221,
+            "thumbBit": true,
+            "candidateFileOffset": 304,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": {
+          "headerWord": 11,
+          "value": 3008,
+          "matchesInitializedEnd": true
+        },
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 204,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 1,
+      "allLglzBlocksEndMarkerAndPaddingVerified": true
+    },
+    {
+      "model": "SV730",
+      "module": "Game.pxo",
+      "classification": "game menu/interface module; not counted as a game",
+      "originalFile": "original/sv730/Game.pxo",
+      "decodedFile": "decoded/sv730/Game.pxo",
+      "original": {
+        "bytes": 14541,
+        "sha256": "bb5e0beae0c0fa30050a8e708c2ecbe9218be7dedd95a6704305189fcb63f3a2",
+        "crc32": "debf13cb"
+      },
+      "decoded": {
+        "bytes": 14541,
+        "sha256": "bb5e0beae0c0fa30050a8e708c2ecbe9218be7dedd95a6704305189fcb63f3a2",
+        "crc32": "debf13cb"
+      },
+      "containerFormat": "uncompressed PXO1",
+      "sourceRecord": {
+        "wdbFile": "SV730906.wdb",
+        "relativeName": "MODULE/C/Game.pxo",
+        "compressedEncryptedRange": {
+          "start": 17212752,
+          "endExclusive": 17219535,
+          "bytes": 6783
+        },
+        "compressedEncryptedCrc32": "ff98bdfd",
+        "compressedEncryptedSha256": "307e7e7011885e5721b2da1da30b00f56fd216acb79c47a01bf9959b1bbd1b05",
+        "declaredOutputBytes": 14541,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO1",
+        "declaredFileBytes": 14541,
+        "actualFileBytes": 14541,
+        "headerWords": [
+          827283536, 0, 14541, 108, 27, 4294967295, 0, 0, 4294967295, 32, 0, 4294967295
+        ],
+        "descriptorOffset": 108,
+        "descriptorWords": [14412, 12, 14424, 1232, 14412, 8089, 14364],
+        "descriptorRange": {
+          "start": 108,
+          "endExclusive": 136,
+          "bytes": 28
+        },
+        "initializedSegment1": {
+          "start": 108,
+          "endExclusive": 14520,
+          "bytes": 14412
+        },
+        "initializedSegment2": {
+          "start": 14520,
+          "endExclusive": 14532,
+          "bytes": 12
+        },
+        "zeroFillDeclaration": {
+          "relativeBase": 14424,
+          "bytes": 1232
+        },
+        "remainingTailRange": {
+          "start": 14532,
+          "endExclusive": 14541,
+          "bytes": 9
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 5,
+            "value": 8089,
+            "thumbBit": true,
+            "candidateFileOffset": 8196,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 6,
+            "value": 14364,
+            "thumbBit": false,
+            "candidateFileOffset": 14472,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": null,
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 605,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 0,
+      "allLglzBlocksEndMarkerAndPaddingVerified": null
+    },
+    {
+      "model": "SV730",
+      "module": "Game_MingleMangle.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sv730/Game_MingleMangle.pxo",
+      "decodedFile": "decoded/sv730/Game_MingleMangle.pxo",
+      "original": {
+        "bytes": 1255013,
+        "sha256": "8bdfc332d7b4e589306c8ea9a01ae57e6951ba0bb925a1e4df1607c0797a6f55",
+        "crc32": "e260e15e"
+      },
+      "decoded": {
+        "bytes": 1255013,
+        "sha256": "8bdfc332d7b4e589306c8ea9a01ae57e6951ba0bb925a1e4df1607c0797a6f55",
+        "crc32": "e260e15e"
+      },
+      "containerFormat": "uncompressed PXO1",
+      "sourceRecord": {
+        "wdbFile": "SV730906.wdb",
+        "relativeName": "MODULE/C/Game_MingleMangle.pxo",
+        "compressedEncryptedRange": {
+          "start": 17219619,
+          "endExclusive": 17540030,
+          "bytes": 320411
+        },
+        "compressedEncryptedCrc32": "3742c655",
+        "compressedEncryptedSha256": "49b46e39a454ac503f9f388b932896d3cb01657198c6d331160a50814647074a",
+        "declaredOutputBytes": 1255013,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO1",
+        "declaredFileBytes": 1255013,
+        "actualFileBytes": 1255013,
+        "headerWords": [
+          827283536, 0, 1255013, 1140, 898, 4294967295, 0, 0, 4294967295, 32, 0, 4294967295
+        ],
+        "descriptorOffset": 1140,
+        "descriptorWords": [1253440, 424, 1253864, 3768, 1253440, 2385, 1253392],
+        "descriptorRange": {
+          "start": 1140,
+          "endExclusive": 1168,
+          "bytes": 28
+        },
+        "initializedSegment1": {
+          "start": 1140,
+          "endExclusive": 1254580,
+          "bytes": 1253440
+        },
+        "initializedSegment2": {
+          "start": 1254580,
+          "endExclusive": 1255004,
+          "bytes": 424
+        },
+        "zeroFillDeclaration": {
+          "relativeBase": 1253864,
+          "bytes": 3768
+        },
+        "remainingTailRange": {
+          "start": 1255004,
+          "endExclusive": 1255013,
+          "bytes": 9
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 5,
+            "value": 2385,
+            "thumbBit": true,
+            "candidateFileOffset": 3524,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 6,
+            "value": 1253392,
+            "thumbBit": false,
+            "candidateFileOffset": 1254532,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": null,
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 225726,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 0,
+      "allLglzBlocksEndMarkerAndPaddingVerified": null
+    },
+    {
+      "model": "SV730",
+      "module": "Game_SudokuCafe.pxo",
+      "classification": "game-named native module; completeness and playability unverified",
+      "originalFile": "original/sv730/Game_SudokuCafe.pxo",
+      "decodedFile": "decoded/sv730/Game_SudokuCafe.pxo",
+      "original": {
+        "bytes": 848693,
+        "sha256": "056fbef3e6c7dd50eda77438ee4a39f8be02fb3120f423dbf1c07a19771e6801",
+        "crc32": "fe40fe20"
+      },
+      "decoded": {
+        "bytes": 848693,
+        "sha256": "056fbef3e6c7dd50eda77438ee4a39f8be02fb3120f423dbf1c07a19771e6801",
+        "crc32": "fe40fe20"
+      },
+      "containerFormat": "uncompressed PXO1",
+      "sourceRecord": {
+        "wdbFile": "SV730906.wdb",
+        "relativeName": "MODULE/C/Game_SudokuCafe.pxo",
+        "compressedEncryptedRange": {
+          "start": 17540110,
+          "endExclusive": 17967438,
+          "bytes": 427328
+        },
+        "compressedEncryptedCrc32": "7ae75351",
+        "compressedEncryptedSha256": "6650bf5a44c4af463fc6dfb1b2bbcff69d7af90085f7206c02545200d25ab919",
+        "declaredOutputBytes": 848693,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "pxoBounds": {
+        "format": "PXO1",
+        "declaredFileBytes": 848693,
+        "actualFileBytes": 848693,
+        "headerWords": [
+          827283536, 0, 848693, 1516, 1178, 4294967295, 0, 0, 4294967295, 32, 0, 4294967295
+        ],
+        "descriptorOffset": 1516,
+        "descriptorWords": [815772, 31396, 847168, 7824, 815772, 2389, 815724],
+        "descriptorRange": {
+          "start": 1516,
+          "endExclusive": 1544,
+          "bytes": 28
+        },
+        "initializedSegment1": {
+          "start": 1516,
+          "endExclusive": 817288,
+          "bytes": 815772
+        },
+        "initializedSegment2": {
+          "start": 817288,
+          "endExclusive": 848684,
+          "bytes": 31396
+        },
+        "zeroFillDeclaration": {
+          "relativeBase": 847168,
+          "bytes": 7824
+        },
+        "remainingTailRange": {
+          "start": 848684,
+          "endExclusive": 848693,
+          "bytes": 9
+        },
+        "candidateNativeEntries": [
+          {
+            "descriptorWord": 5,
+            "value": 2389,
+            "thumbBit": true,
+            "candidateFileOffset": 3904,
+            "insideInitializedSegment1": true
+          },
+          {
+            "descriptorWord": 6,
+            "value": 815724,
+            "thumbBit": false,
+            "candidateFileOffset": 817240,
+            "insideInitializedSegment1": true
+          }
+        ],
+        "boundsVerified": true,
+        "headerInitializedEndCrossCheck": null,
+        "limits": "Numeric initialized ranges and zero-fill declarations follow the observed PXO1/PXO4 layout. They are commonly RO/RW/BSS-like, but full loader semantics and runtime mappings are not established. The descriptor itself is inside initialized segment1. Tail bytes are preserved uninterpreted; no native execution is claimed."
+      },
+      "sgsScan": {
+        "candidateOffsetsTested": 54840,
+        "validatedContainers": 0,
+        "method": "Bounded repository structural scanner, plain/XOR-A5 v1/v2/v4/v36; zero is scoped to this scanner."
+      },
+      "runtimeVerified": false,
+      "lglzBlockCount": 0,
+      "allLglzBlocksEndMarkerAndPaddingVerified": null
+    }
+  ],
+  "flashResources": [
+    {
+      "model": "SB260",
+      "sourceName": "FreeKick.swf",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/FreeKick.swf",
+      "bytes": 1057008,
+      "sha256": "9680484961dd9a053fcb4916e3ddb8426e2bb3acf930d4569a7df11a32d443a7",
+      "crc32": "d3701141",
+      "classification": "FreeKick Flash payload",
+      "format": {
+        "signature": "43575307",
+        "container": "zlib-compressed SWF",
+        "version": 7,
+        "declaredUncompressedBytes": 1206893
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/FreeKick.swf",
+        "compressedEncryptedRange": {
+          "start": 48715463,
+          "endExclusive": 49772780,
+          "bytes": 1057317
+        },
+        "compressedEncryptedCrc32": "0ce8cec8",
+        "compressedEncryptedSha256": "5b2a0527b04fb9fa8df93d6cc1f258b9da48b4f95f454be276151c8109abccc4",
+        "declaredOutputBytes": 1057008,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndEnd.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndEnd.wav",
+      "bytes": 57131,
+      "sha256": "c467918271fcadc787a8f5ea2e3e1abdfb3a555fe97729cd2915d99489a83cc7",
+      "crc32": "fb66cc57",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 57131,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 57039,
+            "endExclusive": 57129
+          }
+        ],
+        "twoByteTailHex": "631f",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndEnd.wav",
+        "compressedEncryptedRange": {
+          "start": 49779101,
+          "endExclusive": 49828929,
+          "bytes": 49828
+        },
+        "compressedEncryptedCrc32": "56898613",
+        "compressedEncryptedSha256": "7614c00c1a82ca21f003f0b3e5f07103bab1e395ab2e3c41fe193191d45597c5",
+        "declaredOutputBytes": 57131,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndGoal.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndGoal.wav",
+      "bytes": 16671,
+      "sha256": "935a2237379b9f742b25567d4b578124787955730c4861242b8d1ab855a7103c",
+      "crc32": "8811b103",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 16671,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 16579,
+            "endExclusive": 16669
+          }
+        ],
+        "twoByteTailHex": "c350",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndGoal.wav",
+        "compressedEncryptedRange": {
+          "start": 49829045,
+          "endExclusive": 49843601,
+          "bytes": 14556
+        },
+        "compressedEncryptedCrc32": "4fe68943",
+        "compressedEncryptedSha256": "b1c6dfe053914961fa495a4ea66c863f8522f89189237e8508ad62cb95fff3e0",
+        "declaredOutputBytes": 16671,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndHoot.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndHoot.wav",
+      "bytes": 28043,
+      "sha256": "2e6debbcc449d270cf03010f433f232611d70ecea37f5f005725210fe5a6412a",
+      "crc32": "9abe06a7",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 28043,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 27951,
+            "endExclusive": 28041
+          }
+        ],
+        "twoByteTailHex": "0ace",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndHoot.wav",
+        "compressedEncryptedRange": {
+          "start": 49843717,
+          "endExclusive": 49867421,
+          "bytes": 23704
+        },
+        "compressedEncryptedCrc32": "3ec9eb74",
+        "compressedEncryptedSha256": "18f69639ed402ebfc08d3fae7e66553519113c074d5984c0d5288f202ef80503",
+        "declaredOutputBytes": 28043,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndIntro.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndIntro.wav",
+      "bytes": 37996,
+      "sha256": "9c14688a96335887f7bb64c1ef2a117299390abd9e68286cc7023e2a01b972ef",
+      "crc32": "facf1346",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 37996,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 37904,
+            "endExclusive": 37994
+          }
+        ],
+        "twoByteTailHex": "1cc3",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndIntro.wav",
+        "compressedEncryptedRange": {
+          "start": 49867539,
+          "endExclusive": 49901809,
+          "bytes": 34270
+        },
+        "compressedEncryptedCrc32": "a82921d8",
+        "compressedEncryptedSha256": "b82eda27e71b15052e5a59633ad3cc26fb503dabb424bfd917c74dfb858d9a88",
+        "declaredOutputBytes": 37996,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndMenu.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndMenu.wav",
+      "bytes": 7209,
+      "sha256": "8586a38b3c4d483b152694dddcb54553cbd6cd732b22ec57ab5fc9566289dc76",
+      "crc32": "dfa308c8",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 7209,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 7117,
+            "endExclusive": 7207
+          }
+        ],
+        "twoByteTailHex": "3aee",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndMenu.wav",
+        "compressedEncryptedRange": {
+          "start": 49901925,
+          "endExclusive": 49908406,
+          "bytes": 6481
+        },
+        "compressedEncryptedCrc32": "0e76617a",
+        "compressedEncryptedSha256": "51e43d9cf7d20516324d4e6bc4e87ed9d5934cdc6c02886fd23ee2aa4b25de27",
+        "declaredOutputBytes": 7209,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndOver.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndOver.wav",
+      "bytes": 37997,
+      "sha256": "ed05f5130830c4d1e2013cb65cc4b75c6b212f290831d0ec88516da785794b93",
+      "crc32": "d096eae2",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 37997,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 37905,
+            "endExclusive": 37995
+          }
+        ],
+        "twoByteTailHex": "07b6",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndOver.wav",
+        "compressedEncryptedRange": {
+          "start": 49908522,
+          "endExclusive": 49942538,
+          "bytes": 34016
+        },
+        "compressedEncryptedCrc32": "e20aef02",
+        "compressedEncryptedSha256": "96a592eebac4a90d09c69f77d8485892fb81466dec81073f1cf2c6ce451e70ab",
+        "declaredOutputBytes": 37997,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndPlay.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndPlay.wav",
+      "bytes": 72582,
+      "sha256": "060c160c58ca29d1235e1f071271ca8eb61e49780b03a7a24323d1e334afecbd",
+      "crc32": "69c8c0b2",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 72582,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 72490,
+            "endExclusive": 72580
+          }
+        ],
+        "twoByteTailHex": "cf34",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndPlay.wav",
+        "compressedEncryptedRange": {
+          "start": 49942654,
+          "endExclusive": 50004424,
+          "bytes": 61770
+        },
+        "compressedEncryptedCrc32": "4fd7d8b7",
+        "compressedEncryptedSha256": "dedf136e4d8802959190ce1c6bb2100f7332c974c7da5e58d43e8fceb0e8fc63",
+        "declaredOutputBytes": 72582,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndShot0.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndShot0.wav",
+      "bytes": 2964,
+      "sha256": "aa36ef8d6d1e6739d944c379ce228273b9d7e2e33cc65f9e3d26ccc5674779ab",
+      "crc32": "584f2fc0",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 2964,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 2872,
+            "endExclusive": 2962
+          }
+        ],
+        "twoByteTailHex": "b9c9",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndShot0.wav",
+        "compressedEncryptedRange": {
+          "start": 50004542,
+          "endExclusive": 50006879,
+          "bytes": 2337
+        },
+        "compressedEncryptedCrc32": "6a29e95d",
+        "compressedEncryptedSha256": "956d15f9110bd6a06f3c21b0e56a5a9409f6ea20438b0d83f61ece069ba33d0d",
+        "declaredOutputBytes": 2964,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndShot1.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndShot1.wav",
+      "bytes": 5716,
+      "sha256": "5e5d4816103cc104c141bf63939942515963bbfda5d5450d0e456876af302d0e",
+      "crc32": "c8c68b92",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 5716,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 5624,
+            "endExclusive": 5714
+          }
+        ],
+        "twoByteTailHex": "97f7",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndShot1.wav",
+        "compressedEncryptedRange": {
+          "start": 50006997,
+          "endExclusive": 50011199,
+          "bytes": 4202
+        },
+        "compressedEncryptedCrc32": "285e0db6",
+        "compressedEncryptedSha256": "0c99e45283a4ad519bd60eaacc721af05c3b98c530cc1ab3f66dca0116bc39bc",
+        "declaredOutputBytes": 5716,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndShot2.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndShot2.wav",
+      "bytes": 5716,
+      "sha256": "c1bcad3589f7cc503d82ef330692e160749916cc40cb58e853606ff2542d7987",
+      "crc32": "d6ed3b5b",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 5716,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 5624,
+            "endExclusive": 5714
+          }
+        ],
+        "twoByteTailHex": "858f",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndShot2.wav",
+        "compressedEncryptedRange": {
+          "start": 50011317,
+          "endExclusive": 50016397,
+          "bytes": 5080
+        },
+        "compressedEncryptedCrc32": "c9a34fb3",
+        "compressedEncryptedSha256": "87a4362375a83f076be574f2a2620a9dbdda79be51e08ac3b86a58d66b9ecd04",
+        "declaredOutputBytes": 5716,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    },
+    {
+      "model": "SB260",
+      "sourceName": "sndStart.wav",
+      "file": "flash-payload/sb260/BUILTIN/Flash/ui/Game/sound/sndStart.wav",
+      "bytes": 7389,
+      "sha256": "056b14d9874a8a2127785008c980073d67dd006ce61ceaecf9c350a4283871f7",
+      "crc32": "623857ee",
+      "classification": "FreeKick game-only external SMAF sound with original .wav filename",
+      "format": {
+        "signature": "4d4d4d44",
+        "container": "SMAF/MMMD despite .wav filename; not RIFF/WAVE",
+        "declaredFileBytes": 7389,
+        "topLevelChunks": [
+          {
+            "idHex": "434e5449",
+            "start": 8,
+            "bodyBytes": 5,
+            "endExclusive": 21
+          },
+          {
+            "idHex": "4f504441",
+            "start": 21,
+            "bodyBytes": 53,
+            "endExclusive": 82
+          },
+          {
+            "idHex": "4d545206",
+            "start": 82,
+            "bodyBytes": 7297,
+            "endExclusive": 7387
+          }
+        ],
+        "twoByteTailHex": "8820",
+        "internalTailChecksumVerified": false,
+        "audioDecodedOrPlayed": false
+      },
+      "sourceRecord": {
+        "wdbFile": "SB260004.wdb",
+        "relativeName": "MODULE/BUILTIN/Flash/ui/Game/sound/sndStart.wav",
+        "compressedEncryptedRange": {
+          "start": 50016515,
+          "endExclusive": 50022449,
+          "bytes": 5934
+        },
+        "compressedEncryptedCrc32": "abc4261a",
+        "compressedEncryptedSha256": "eec6efcd1d159c5fa6221e61e62e79966ed023270903174989d9b08910a7b686",
+        "declaredOutputBytes": 7389,
+        "staticReextractionMatchesOriginal": true,
+        "zlibExactLengthEofNoTrailingInput": true
+      },
+      "attribution": "Game_FreeKick.pxo decoded offset 0x8d0 contains BUILTIN/Flash/ui/Game/FreeKick.swf; all 11 sound stems occur in the SWF, whose __Packages.MMI AVM1 adapter builds soundName+'.wav' and requests SetVars/startSound. Host directory resolution and runtime file opening are unverified.",
+      "runtimeVerified": false
+    }
+  ],
+  "flashStructure": {
+    "scope": "Read-only bounded native PXO->FreeKick SWF static structure/resource review; no Flash/native code execution.",
+    "source": {
+      "path": "MODULE/BUILTIN/Flash/ui/Game/FreeKick.swf",
+      "bytes": 1057008,
+      "sha256": "9680484961dd9a053fcb4916e3ddb8426e2bb3acf930d4569a7df11a32d443a7",
+      "signature": "CWS",
+      "swfVersion": 7
+    },
+    "zlib": {
+      "eof": true,
+      "unusedTrailingBytes": 0,
+      "unconsumedBytes": 0,
+      "compressedBytes": 1057000,
+      "decodedBodyBytes": 1206885,
+      "headerFileLength": 1206893,
+      "actualUncompressedFileBytes": 1206893,
+      "lengthExact": true
+    },
+    "movieHeader": {
+      "rectNbits": 14,
+      "rectTwips": {
+        "xmin": 0,
+        "xmax": 4800,
+        "ymin": 0,
+        "ymax": 8000
+      },
+      "widthPixels": 240.0,
+      "heightPixels": 400.0,
+      "frameRateFixed8Raw": 3840,
+      "frameRate": 15.0,
+      "frameCount": 8,
+      "tagStartOffset": 20
+    },
+    "structure": {
+      "allTagBoundsValid": true,
+      "topLevelEndAtFileEof": true,
+      "topLevelTrailingBytes": 0,
+      "topLevelTagCount": 789,
+      "recursiveTagCount": 3856,
+      "defineSpriteCount": 186,
+      "spriteEndTagsExact": true,
+      "allDeclaredFrameCountsMatchShowFrameTags": true,
+      "tagTypes": [
+        {
+          "code": 0,
+          "name": "End",
+          "count": 187
+        },
+        {
+          "code": 1,
+          "name": "ShowFrame",
+          "count": 966
+        },
+        {
+          "code": 2,
+          "name": "DefineShape",
+          "count": 203
+        },
+        {
+          "code": 6,
+          "name": "DefineBits",
+          "count": 2
+        },
+        {
+          "code": 8,
+          "name": "JPEGTables",
+          "count": 1
+        },
+        {
+          "code": 9,
+          "name": "SetBackgroundColor",
+          "count": 1
+        },
+        {
+          "code": 11,
+          "name": "DefineText",
+          "count": 4
+        },
+        {
+          "code": 12,
+          "name": "DoAction",
+          "count": 155
+        },
+        {
+          "code": 14,
+          "name": "DefineSound",
+          "count": 11
+        },
+        {
+          "code": 20,
+          "name": "DefineBitsLossless",
+          "count": 2
+        },
+        {
+          "code": 21,
+          "name": "DefineBitsJPEG2",
+          "count": 8
+        },
+        {
+          "code": 22,
+          "name": "DefineShape2",
+          "count": 3
+        },
+        {
+          "code": 26,
+          "name": "PlaceObject2",
+          "count": 1539
+        },
+        {
+          "code": 28,
+          "name": "RemoveObject2",
+          "count": 162
+        },
+        {
+          "code": 32,
+          "name": "DefineShape3",
+          "count": 7
+        },
+        {
+          "code": 35,
+          "name": "DefineBitsJPEG3",
+          "count": 76
+        },
+        {
+          "code": 36,
+          "name": "DefineBitsLossless2",
+          "count": 65
+        },
+        {
+          "code": 37,
+          "name": "DefineEditText",
+          "count": 28
+        },
+        {
+          "code": 39,
+          "name": "DefineSprite",
+          "count": 186
+        },
+        {
+          "code": 43,
+          "name": "FrameLabel",
+          "count": 40
+        },
+        {
+          "code": 45,
+          "name": "SoundStreamHead2",
+          "count": 183
+        },
+        {
+          "code": 48,
+          "name": "DefineFont2",
+          "count": 5
+        },
+        {
+          "code": 56,
+          "name": "ExportAssets",
+          "count": 16
+        },
+        {
+          "code": 59,
+          "name": "DoInitAction",
+          "count": 4
+        },
+        {
+          "code": 88,
+          "name": "Unknown",
+          "count": 2
+        }
+      ],
+      "validationMethod": "Strict bounded recursive tag walk, including every DefineSprite payload: each tag header/payload stays inside its containing range, End has zero length and ends exactly at the enclosing range boundary, and every declared frame count equals direct ShowFrame tags.",
+      "originalScratchParserSha256": "72ee6da26ef33dcf9f58052897664d7157d0d04d79d1d60311ab3f4249af15d0",
+      "reproducedBy": {
+        "path": "gpl-tools/check-swf-static.py",
+        "sha256": "21b3fff74754474b1402b7c8f6d634b2432cd5f999ce6b8ad8f79bd338cfb58d",
+        "license": "GPL-3.0-or-later",
+        "input": "FreeKick.swf",
+        "command": "python gpl-tools/check-swf-static.py INPUT.swf OUTPUT.json",
+        "matchedFields": [
+          "SWF SHA256",
+          "CWS exact EOF/FileLength",
+          "RECT dimensions/frame rate/frame count",
+          "all tag counts/bounds/End/sprite frames",
+          "MMI export/function offsets/parameters/Add2",
+          "11 sound hashes/stem offsets/MMMD exact lengths"
+        ]
+      }
+    },
+    "languageEvidence": {
+      "swfContainerVersion": 7,
+      "avm1DoActionTags": 155,
+      "avm1DoInitActionTags": 4,
+      "avm2DoABCTags": 0,
+      "avm2DeprecatedDoABCTags": 0,
+      "provenEncoding": "AVM1 action tags. Source-level ActionScript1 versus2 is not distinguishable from these shared bytecode tags alone.",
+      "flashLiteVersion": "Not established by SWF7 header or static structure."
+    },
+    "pxoLiteralReference": {
+      "source": "MODULE/C/Game_FreeKick.pxo",
+      "decodedSha256": "649bedc72254783a3b7830e9062c41ca8dad0bb6b682661a5fd28a23382a4903",
+      "offset": "0x8d0",
+      "literal": "BUILTIN/Flash/ui/Game/FreeKick.swf"
+    },
+    "mmiActionSections": [
+      {
+        "tagOffset": 247361,
+        "tagCode": 59,
+        "actionStart": 247369,
+        "actionBytes": 3280
+      }
+    ],
+    "resources": [
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/FreeKick.swf",
+        "bytes": 1057008,
+        "sha256": "9680484961dd9a053fcb4916e3ddb8426e2bb3acf930d4569a7df11a32d443a7"
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndEnd.wav",
+        "bytes": 57131,
+        "sha256": "c467918271fcadc787a8f5ea2e3e1abdfb3a555fe97729cd2915d99489a83cc7",
+        "stemOffsetsInUncompressedSwf": [43686, 176944],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 57123,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndGoal.wav",
+        "bytes": 16671,
+        "sha256": "935a2237379b9f742b25567d4b578124787955730c4861242b8d1ab855a7103c",
+        "stemOffsetsInUncompressedSwf": [12043, 177884],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 16663,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndHoot.wav",
+        "bytes": 28043,
+        "sha256": "2e6debbcc449d270cf03010f433f232611d70ecea37f5f005725210fe5a6412a",
+        "stemOffsetsInUncompressedSwf": [5562, 177876],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 28035,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndIntro.wav",
+        "bytes": 37996,
+        "sha256": "9c14688a96335887f7bb64c1ef2a117299390abd9e68286cc7023e2a01b972ef",
+        "stemOffsetsInUncompressedSwf": [58311, 176058],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 37988,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndMenu.wav",
+        "bytes": 7209,
+        "sha256": "8586a38b3c4d483b152694dddcb54553cbd6cd732b22ec57ab5fc9566289dc76",
+        "stemOffsetsInUncompressedSwf": [33045, 177279],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 7201,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndOver.wav",
+        "bytes": 37997,
+        "sha256": "ed05f5130830c4d1e2013cb65cc4b75c6b212f290831d0ec88516da785794b93",
+        "stemOffsetsInUncompressedSwf": [50998, 177896],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 37989,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndPlay.wav",
+        "bytes": 72582,
+        "sha256": "060c160c58ca29d1235e1f071271ca8eb61e49780b03a7a24323d1e334afecbd",
+        "stemOffsetsInUncompressedSwf": [31244, 177659],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 72574,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndShot0.wav",
+        "bytes": 2964,
+        "sha256": "aa36ef8d6d1e6739d944c379ce228273b9d7e2e33cc65f9e3d26ccc5674779ab",
+        "stemOffsetsInUncompressedSwf": [12908, 176881],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 2956,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndShot1.wav",
+        "bytes": 5716,
+        "sha256": "5e5d4816103cc104c141bf63939942515963bbfda5d5450d0e456876af302d0e",
+        "stemOffsetsInUncompressedSwf": [15888, 176892],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 5708,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndShot2.wav",
+        "bytes": 5716,
+        "sha256": "c1bcad3589f7cc503d82ef330692e160749916cc40cb58e853606ff2542d7987",
+        "stemOffsetsInUncompressedSwf": [14398, 176901],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 5708,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      },
+      {
+        "path": "MODULE/BUILTIN/Flash/ui/Game/sound/sndStart.wav",
+        "bytes": 7389,
+        "sha256": "056b14d9874a8a2127785008c980073d67dd006ce61ceaecf9c350a4283871f7",
+        "stemOffsetsInUncompressedSwf": [17690, 177667],
+        "extension": ".wav",
+        "containerSignature": "MMMD",
+        "firstChunkSignature": "CNTI",
+        "formatEvidence": "SMAF/MMMD container signature; .wav is the historical filename extension, not a RIFF/WAVE claim.",
+        "containerLengthBe32": 7381,
+        "containerLengthExact": true,
+        "isRiffWave": false
+      }
+    ],
+    "limits": [
+      "Read-only bounded review: no PXO, ActionScript, native callback, audio or game code was executed.",
+      "Tag framing, lengths, End tags and frame counts were statically validated; this is not complete semantic validation of every shape, font or action instruction.",
+      "SWF version 7 and AVM1 action tags are proven. Exact Flash Lite runtime version and source-level ActionScript 1 versus 2 are not established by this shared bytecode format.",
+      "No standalone game playability, audio decoding/audibility, complete OEM callback support or runtime asset completeness is claimed.",
+      "The eleven .wav names carry MMMD/CNTI bytes with exact top-level container lengths; no sound conversion or complete SMAF semantic validation was performed.",
+      "Other nine target game modules yielded no exact external-resource filename/path attribution in the bounded decoded ASCII/UTF16 scan. Generic UI/font/private EFS paths were not assigned to games."
+    ],
+    "schemaVersion": 1,
+    "reviewDate": "2026-11-05",
+    "offsetConvention": "All SWF offsets refer to reconstructed uncompressed FWS bytes, including its 8-byte header; PXO offset refers to independently hash-checked decoded native payload.",
+    "mmiAdapterEvidence": {
+      "classExport": {
+        "tagCode": 56,
+        "tagOffset": 247336,
+        "characterId": 600,
+        "nameOffset": 247346,
+        "name": "__Packages.MMI"
+      },
+      "classInit": {
+        "tagCode": 59,
+        "tagOffset": 247361,
+        "characterId": 600,
+        "actionStart": 247369
+      },
+      "startSound": {
+        "memberNamePushOffset": 249370,
+        "defineFunction2Offset": 249377,
+        "parameterRegisters": {
+          "soundName": 3,
+          "soundLoop": 2
+        },
+        "bodyOffset": 249410,
+        "bodyBytes": 86,
+        "expression": "soundName + \".wav\"",
+        "expressionPushOffset": 249464,
+        "add2Offset": 249473,
+        "followingPushOffset": 249474,
+        "followingNames": ["startSound", "gameCode"],
+        "bridgePushOffset": 249484,
+        "bridgeName": "SetVars",
+        "bridgeOpcodeOffset": 249494,
+        "bridgeOpcodeHex": "0x2d"
+      },
+      "startVolSound": {
+        "memberNamePushOffset": 249497,
+        "defineFunction2Offset": 249504,
+        "parameterRegisters": {
+          "soundName": 3,
+          "soundLoop": 2,
+          "soundVol": 4
+        },
+        "bodyOffset": 249547,
+        "bodyBytes": 88,
+        "expression": "soundName + \".wav\"",
+        "expressionPushOffset": 249601,
+        "add2Offset": 249612,
+        "followingPushOffset": 249613,
+        "followingNames": ["startSound", "gameCode"],
+        "bridgePushOffset": 249623,
+        "bridgeName": "SetVars",
+        "bridgeOpcodeOffset": 249633,
+        "bridgeOpcodeHex": "0x2d"
+      },
+      "interpretation": "Static AVM1 operands establish the dynamic .wav filename expression and OEM-style SetVars/startSound bridge request. They do not establish a standard SWF filesystem API or a working host callback.",
+      "soundDirectoryPath": "Not present as a literal in this SWF. Association is to the eleven same-game sound files by exact unique stems plus the dynamic .wav suffix; the host-side directory resolution was not executed."
+    }
+  },
+  "boundedSgsScan": {
+    "softwareScan": {
+      "files": 3829,
+      "uniqueContents": 3526,
+      "allFileBytes": 208685822,
+      "uniqueScannedBytes": 204910644,
+      "candidateOffsetsTested": 11715530,
+      "validatedSgs": 0,
+      "newBodies": 0
+    },
+    "selectedDecodedPxoScan": {
+      "files": 14,
+      "bytes": 14787642,
+      "candidateOffsetsTested": 1162027,
+      "validatedSgs": 0,
+      "limit": "Bounded scanner result, not absence of every unknown encoding or fragmented payload."
+    },
+    "scannerPositiveControlsAtResearchTime": {
+      "files": 62,
+      "passed": 62,
+      "catalogueSnapshotSha256": "cae4cbf6e9a4dbf11d8fa0fc5274a1b60e2df72e2881e260ecb3aae308180ffc"
+    }
+  },
+  "tooling": {
+    "legacyKdz": {
+      "decoder": "https://github.com/michaelwright235/kdz_decrypt_encrypt/tree/9dbbf74f01ab515b8e4161e710ae193ca1a16c49",
+      "localDecoderSha256": "35e7b8e4c5009948791ebc97880a7cba5b3ed801bb6175adb3d4b7f9c1ac2b4f",
+      "method": "Published deterministic file-size-derived key, RC4 to CAB. No vendor binary executed; no key search.",
+      "records": [
+        {
+          "source": "extracted/SB260004/SB260004_00.kdz",
+          "sourceSha256": "72e8aec0104ca273dabc0f94e5c14359ed615dd46d6c8d0ba9da6d464cf6de35",
+          "output": "decoded-kdz/SB260004_00.cab",
+          "bytes": 103933618,
+          "sha256": "954dc93420969005ef8be775eac455334fc65138322bc514ba779585ee33d3d8"
+        },
+        {
+          "source": "extracted/SV730906_00/SV730906_00.kdz",
+          "sourceSha256": "17ff4ab95d151ff858b9e362c1749e0a38760b1e3c12b37ff8797946a3ca01dd",
+          "output": "decoded-kdz/SV730906_00.cab",
+          "bytes": 49726545,
+          "sha256": "26ccc1075686a96b23269e16233dc75dc2213ff2fec3755db550ba2fb7b0fa80"
+        }
+      ]
+    },
+    "wdbExtractor": {
+      "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/7fe8f3f56432588bef6a2b649a0cb0c1d286673e/tools/unpack-lg-wdb.py",
+      "file": "unpack-lg-wdb.py",
+      "bytes": 5934,
+      "sha256": "544cf07e183c5b2cb265a4510308db6d464c9ec02a76587488819fa70f95308f",
+      "crc32": "39c049ef"
+    },
+    "sgsScanner": {
+      "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/7fe8f3f56432588bef6a2b649a0cb0c1d286673e/tools/scan-firmware-games.py",
+      "file": "scan-firmware-games.py",
+      "bytes": 11506,
+      "sha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e",
+      "crc32": "41b13678"
+    },
+    "nativeVendorCodeExecuted": false
+  },
+  "licensing": {
+    "gpl-tools": "GPL-3.0-or-later; full COPYING and corresponding sources included",
+    "nativePayloads": "Original data, separate rights; no licence granted by decoder GPL or Reunion MIT",
+    "vendorCompiledCodeExecuted": false
+  },
+  "limits": [
+    "No new SGS was recovered; native PXO is not SGS.",
+    "Fourteen modules are not fourteen proven games. Menus, WIPI modules and possible stubs are labelled separately.",
+    "Service packages are not full phone flash or user-installed download storage.",
+    "Zero scan hits are only a bounded scanner result, not proof that every encoding or fragment is absent.",
+    "Native phone application execution, full loader ABI and external-resource completeness are unverified.",
+    "No Sinjisoft authorship is inferred from native game filenames or GNEX MIME strings.",
+    "Original firmware containers, BIN, vendor DLL, service payloads and private EFS are not bundled.",
+    "GPL tools and original data have separate licensing; no rights to LG payloads are granted by GPL or the Reunion MIT licence."
+  ]
+}

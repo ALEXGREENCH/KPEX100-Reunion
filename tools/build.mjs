@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { isPublicWebFile, walkFiles } from './public-files.mjs';
 import { historicalAssets, verifyAsset } from './catalog-assets.mjs';
+import { verifyResearchAssets } from './research-assets.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = path.join(root, 'web');
@@ -15,6 +16,7 @@ if (process.argv.slice(2).some((arg) => arg !== '--source-only'))
 const includeOriginals = !process.argv.includes('--source-only');
 const assets = includeOriginals ? historicalAssets(source) : [];
 for (const entry of assets) verifyAsset(source, entry);
+if (includeOriginals) verifyResearchAssets(root);
 // Only this generated directory can be removed. Do not follow a junction/symlink.
 if (path.dirname(target) !== path.resolve(root) || path.basename(target) !== 'site')
   throw Error('Invalid build target');

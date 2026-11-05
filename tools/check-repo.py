@@ -26,7 +26,21 @@ def original_files():
     for entry in entries:
         if not (ROOT / "web" / entry["url"]).resolve().is_relative_to(ROOT / "web"):
             raise ValueError("Catalogue asset escapes web directory")
-    return {"web/" + entry["url"]: entry for entry in entries}
+    result = {"web/" + entry["url"]: entry for entry in entries}
+    research = json.loads(
+        (ROOT / "web/research/catalog.json").read_text(encoding="utf-8")
+    )["artifacts"]
+    for entry in research:
+        name = entry["repositoryPath"]
+        path = (ROOT / name).resolve()
+        if (
+            not path.is_relative_to(ROOT / "research/archives")
+            or path.suffix != ".zip"
+            or name in result
+        ):
+            raise ValueError("Invalid research archive path")
+        result[name] = entry
+    return result
 
 
 def tracked_files():
@@ -40,6 +54,8 @@ def forbidden(name):
     if name in original_files():
         return False
     path = Path(name)
+    if name.startswith("research/"):
+        return True
     if any(
         part
         in {
