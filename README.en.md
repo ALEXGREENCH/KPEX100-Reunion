@@ -7,7 +7,7 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-**The collection is included:** 9 firmware images, 38 SGS applications,
+**The collection is included:** 9 firmware images, 55 SGS applications,
 3 quick-start snapshots and the original Swerve 2.1 module. Both the repository
 and the default GitHub Pages build are ready to launch games. Original bytes
 are unchanged; the catalogue records SHA-256 hashes and tested runtime profiles.
@@ -32,7 +32,7 @@ Direct SGS execution uses the included original Kingston 2.12 ROM:
 743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a
 ```
 
-Python 3.11+ can verify all 51 included files or restore missing files from
+Python 3.11+ can verify all 68 included files or restore missing files from
 another unpacked collection:
 
 ```sh
@@ -61,7 +61,7 @@ See the [Pages guide](doc/github-pages.md).
 
 ## Scope
 
-The web engine has recorded gameplay and input scenarios for **37 games and
+The web engine has recorded gameplay and input scenarios for **54 games and
 one utility**, covering SGS v1/v2/v4/v36. These checks do not establish complete
 playthroughs. Independence Day 3D uses the included original Swerve ARM module;
 complex scenes remain slow. Full-firmware boot is verified through the

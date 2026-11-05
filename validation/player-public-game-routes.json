@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "scope": "Samsung YP-T8 XOV games and exact public MPIO player-game routes",
+  "recoveredGamePayloads": [],
+  "waybackRequests": 0,
+  "sources": [
+    {
+      "file": "yepp3-main.html",
+      "url": "https://cafe.naver.com/yepp3",
+      "bytes": 121129,
+      "sha256": "9e7ad722a8a1f8aaf0e097c6e5e9297fc369878edbc9abc751686a7f7ba1f9a7"
+    },
+    {
+      "file": "21multimedia-main.html",
+      "url": "https://cafe.naver.com/21multimedia",
+      "bytes": 145389,
+      "sha256": "188571cd219bef487a66cc5ce09fdb97835d27178febb219f5dca1e69358cb9a"
+    },
+    {
+      "file": "yepp3-31.json",
+      "url": "https://article.cafe.naver.com/gw/v4/cafes/11320828/articles/31?useCafeId=true&requestFrom=A",
+      "bytes": 13855,
+      "sha256": "ec556508ca98bce40903c61bdd14955177fa11de4f8be89eadb1632af9f8caaf"
+    },
+    {
+      "file": "list-11320828-8.json",
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/11320828/menus/8/articles?page=1&pageSize=50",
+      "bytes": 17539,
+      "sha256": "6fab3b422c1ffa237f677ada1f797802cfcb6a10836fee2ad636b58307198793"
+    },
+    {
+      "file": "list-22011420-31.json",
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/22011420/menus/31/articles?page=1&pageSize=50",
+      "bytes": 17892,
+      "sha256": "a59d75f3d748df4bf1c8e22c6f2ddc3c52e137e6d267336d78d50218aca916d9"
+    },
+    {
+      "file": "list-22011420-35.json",
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/22011420/menus/35/articles?page=1&pageSize=50",
+      "bytes": 1579,
+      "sha256": "f1a4339fdd35cb41fdb628aac7b11b55c30aee47f080fc6c24513b3b223bd864"
+    }
+  ],
+  "publicLists": [
+    {
+      "cafeId": 11320828,
+      "menuId": 8,
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/11320828/menus/8/articles?page=1&pageSize=50",
+      "articleCount": 22,
+      "withFileCount": 1,
+      "openArticleCount": 5,
+      "closedArticleContentsRequested": false,
+      "sanitizedMetadataFile": "player-public-cafe-catalog.json"
+    },
+    {
+      "cafeId": 22011420,
+      "menuId": 31,
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/22011420/menus/31/articles?page=1&pageSize=50",
+      "articleCount": 24,
+      "withFileCount": 24,
+      "openArticleCount": 0,
+      "closedArticleContentsRequested": false,
+      "sanitizedMetadataFile": "player-public-cafe-catalog.json"
+    },
+    {
+      "cafeId": 22011420,
+      "menuId": 35,
+      "url": "https://apis.naver.com/cafe-web/cafe-boardlist-api/v1/cafes/22011420/menus/35/articles?page=1&pageSize=50",
+      "articleCount": 2,
+      "withFileCount": 0,
+      "openArticleCount": 0,
+      "closedArticleContentsRequested": false,
+      "sanitizedMetadataFile": "player-public-cafe-catalog.json"
+    }
+  ],
+  "publicReview": {
+    "url": "https://cafe.naver.com/yepp3/31",
+    "subject": "'YP-T8'리뷰인데 혹시 도움이 될까해서 올려봅니다. 앞부분은 참고할만 할듯..",
+    "postedUtc": "2005-08-04T05:32:09.603000+00:00",
+    "isReadable": true,
+    "isOpen": true,
+    "isEnableAttachFileDownload": true,
+    "gamePayloadFound": false,
+    "outcome": "Contemporary review and pictures; no file attachment or game download URL."
+  },
+  "mpioProbe": {
+    "url": "https://www.mympio.com/mpio/firmware/FG200%20Firmware%20ver%201.17.zip",
+    "status": 404,
+    "finalUrl": "https://www.mympio.com/mpio/firmware/FG200%20Firmware%20ver%201.17.zip",
+    "contentType": "text/html",
+    "bytes": 6960,
+    "sha256": "39983092ddab8a4daadda9ebe55f9272e55a05b3ce490f1b79b24b779c7fe48a",
+    "first32Bytes": "3c21444f43545950452068746d6c3e0a3c68746d6c206c616e673d22656e2220"
+  },
+  "mpioProbeClassification": "HTTP 404 HTML response, not firmware or archive",
+  "daum": {
+    "outcome": "Public cafe endpoint redirects to general search, then CAPTCHA; stopped without accessing challenge or content.",
+    "queryCount": 4
+  },
+  "formatCaveat": "Unretrieved T9/P3 attachments have no verified format and are not evidence of T8/XEOVIA game bytes.",
+  "sourcePassRepositoryEdits": false
+}

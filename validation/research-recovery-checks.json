@@ -1,0 +1,53 @@
+{
+  "checked": "2026-11-05",
+  "web": {
+    "unitPassed": 30,
+    "integrationPassed": 59,
+    "failed": 0,
+    "skipped": 0
+  },
+  "pythonResearchTools": {
+    "passed": 44,
+    "failed": 0
+  },
+  "desktopWithOriginals": {
+    "passed": 138,
+    "failed": 0,
+    "skipped": 2
+  },
+  "format": {
+    "black": "55 files unchanged",
+    "prettier": "all matched files pass"
+  },
+  "documentationLinks": "all resolve",
+  "pagesBuild": {
+    "staticFiles": 126,
+    "verifiedOriginalAssets": 63,
+    "relativeUrls": "pass"
+  },
+  "prospectiveRepositoryCheck": {
+    "files": 372,
+    "originalHashes": 63,
+    "method": "Temporary Git index, original index hash unchanged; no commit/push"
+  },
+  "deliveredArchives": [
+    {
+      "file": "Sinjisoft-S60-Recovered.zip",
+      "bytes": 1213144,
+      "sha256": "29a50a3171472949302ec0bc420240e70d1d1fe1713b812ae2d772a8ec3aebf9",
+      "members": 24
+    },
+    {
+      "file": "SKY-Additional-Games-Recovered.zip",
+      "bytes": 6568592,
+      "sha256": "7eb56f958cbc0c3a43517e31bbe2f1c714086e9baa533d51e75e292acc97d6ac",
+      "members": 19
+    }
+  ],
+  "newS60CliCommands": "Both commands from delivered ZIP README reproduce independent control framebuffer SHA256 values",
+  "limits": [
+    "S60 full playthrough/saves/external WAV/MIDI integration not verified.",
+    "New SKY resource package has native WIPI applications and a JumpingPop-associated module; no runtime claim.",
+    "Research remains in the working tree; no remote publication performed in this pass."
+  ]
+}

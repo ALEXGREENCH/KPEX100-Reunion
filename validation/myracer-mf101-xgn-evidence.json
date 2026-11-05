@@ -1,0 +1,264 @@
+{
+  "device": "MyRacer MF101",
+  "source": "https://archive.org/details/MyRacerMF101",
+  "scope": "Original disc provenance and initial scans of encoded files. The resource-table candidates and undecoded status precede the firmware-based extraction.",
+  "superseded_format_analysis": "myracer-mf101-xgn-decoded.json",
+  "archives": [
+    {
+      "file": "DriverforMYRACER.iso",
+      "url": "https://archive.org/download/MyRacerMF101/DriverforMYRACER.iso",
+      "size": 27195392,
+      "sha256": "a2df4e7193f1db21407151b4f2f782c11ddbcf1513dffce6f9f4726ba18d70ac",
+      "sha1": "052efcbcbd8afe8a9f89d07b3426fe52eb24c9f0",
+      "iaChecksumMatched": true
+    },
+    {
+      "file": "MYRACER GAME.ISO",
+      "url": "https://archive.org/download/MyRacerMF101/MYRACER%20GAME.ISO",
+      "size": 7280640,
+      "sha256": "b2f455a75ef7f45e43b8f381768d43ea2e070e5385c8d097ca95f0b7046c687e",
+      "sha1": "89edfde48a4d6b889585832da00466d5b20a7931",
+      "iaChecksumMatched": true
+    }
+  ],
+  "format_observations": [
+    "The first 0x100 bytes are opaque, with identical aligned 8-byte blocks in several positions.",
+    "From offset 0x100, repeated 16-bit instruction patterns and exact resource runs shared with known GNEX SGS are visible.",
+    "The last 16 bytes are identical across the five files.",
+    "No standard SGS header was validated by the raw / XOR-A5 scanner. No decrypted game was produced.",
+    "For all five games, a unique GNEX-like 12-byte resource table covers the file exactly up to the common 16-byte footer. In three packages, variable descriptors also account exactly for the initialized array preceding resources."
+  ],
+  "sdk_profile": {
+    "source": "https://archive.org/details/gnex_sdk_v2.12",
+    "file": "Myracer.ini",
+    "sha256": "96d190a656bf2474e1f8ab199d74abb2cc36c8f3e11e045beafe3a5ae8a0ed40",
+    "width": 320,
+    "height": 240,
+    "lcd_color": 8,
+    "audio_type": 36,
+    "free_mem_size": 983040
+  },
+  "driver_disc": {
+    "installer": "MYRACER BVM V-1.0..exe",
+    "format": "Inno Setup 5.1.7",
+    "installed_files": 97,
+    "app": "BlazeVideoMagicForMyRacer video converter",
+    "xgn_reader_found": false
+  },
+  "games": [
+    {
+      "file": "미니게임천국.xgn",
+      "bytes": 896116,
+      "sha256": "5bd13e9c0d2a82c7bcd6e7d528008f5402c8f4a969d0433986962fd150182fdc",
+      "raw_sgs_candidates_tested": 29698,
+      "raw_sgs_hits": 0,
+      "first_16_bytes_hex": "b10f79557271d642418f00da3cb46d22",
+      "last_16_bytes_hex": "35fdd79a47241b08535a645282d87c37",
+      "header_repeated_block_offsets": [
+        64,
+        104,
+        112
+      ],
+      "resource_layout": {
+        "table_offset": 85440,
+        "payload_offset": 95880,
+        "payload_end": 896100,
+        "descriptors": 870,
+        "descriptor_bytes": 12,
+        "types": {
+          "0": 205,
+          "256": 637,
+          "512": 25,
+          "1": 3
+        }
+      },
+      "exact_resource_matches_min_64_bytes": []
+    },
+    {
+      "file": "뿌뉴뿌뉴퐁Remix.xgn",
+      "bytes": 490366,
+      "sha256": "3b548868f754247143cf89e8110b7932ea5af38e4f68c46f3d15939f1887b335",
+      "raw_sgs_candidates_tested": 44164,
+      "raw_sgs_hits": 0,
+      "first_16_bytes_hex": "6fa88f288d39e910e89e999bec3dec87",
+      "last_16_bytes_hex": "35fdd79a47241b08535a645282d87c37",
+      "header_repeated_block_offsets": [
+        48,
+        56,
+        64,
+        104,
+        112
+      ],
+      "resource_layout": {
+        "table_offset": 70500,
+        "payload_offset": 77988,
+        "payload_end": 490350,
+        "descriptors": 624,
+        "descriptor_bytes": 12,
+        "types": {
+          "0": 94,
+          "1": 6,
+          "256": 509,
+          "512": 15
+        }
+      },
+      "variable_layout": {
+        "table_offset": 52024,
+        "init_offset": 53896,
+        "init_end": 70500,
+        "descriptors": 234
+      },
+      "exact_resource_matches_min_64_bytes": []
+    },
+    {
+      "file": "슈퍼액션히어로.xgn",
+      "bytes": 954334,
+      "sha256": "f24b176c82020ff1a951fd9596d73488298d326bf7ffb749378cf4b47128156f",
+      "raw_sgs_candidates_tested": 35828,
+      "raw_sgs_hits": 0,
+      "first_16_bytes_hex": "73e64512d454526335ee09a76276d598",
+      "last_16_bytes_hex": "35fdd79a47241b08535a645282d87c37",
+      "header_repeated_block_offsets": [
+        64,
+        104,
+        112
+      ],
+      "resource_layout": {
+        "table_offset": 129704,
+        "payload_offset": 141968,
+        "payload_end": 954318,
+        "descriptors": 1022,
+        "descriptor_bytes": 12,
+        "types": {
+          "0": 220,
+          "256": 714,
+          "512": 21,
+          "1": 67
+        }
+      },
+      "exact_resource_matches_min_64_bytes": [
+        {
+          "catalog_id": "gnex19_super_action_hero",
+          "matching_distinct_resources": 31
+        },
+        {
+          "catalog_id": "gnex31_com2us_soccer_2006",
+          "matching_distinct_resources": 3
+        }
+      ]
+    },
+    {
+      "file": "컴투스사커.xgn",
+      "bytes": 1905240,
+      "sha256": "706013570c84e37c6e5a9a3c7e1cf95360d72f041ecc999607bcac15a48567a1",
+      "raw_sgs_candidates_tested": 84437,
+      "raw_sgs_hits": 0,
+      "first_16_bytes_hex": "be7359883737b6cd56fa4387f1cb48f3",
+      "last_16_bytes_hex": "35fdd79a47241b08535a645282d87c37",
+      "header_repeated_block_offsets": [
+        56,
+        64,
+        104,
+        112
+      ],
+      "resource_layout": {
+        "table_offset": 251980,
+        "payload_offset": 269836,
+        "payload_end": 1905224,
+        "descriptors": 1488,
+        "descriptor_bytes": 12,
+        "types": {
+          "0": 97,
+          "1": 336,
+          "256": 727,
+          "512": 22,
+          "257": 306
+        }
+      },
+      "variable_layout": {
+        "table_offset": 209436,
+        "init_offset": 220140,
+        "init_end": 251980,
+        "descriptors": 1338
+      },
+      "exact_resource_matches_min_64_bytes": [
+        {
+          "catalog_id": "gnex31_com2us_soccer_2006",
+          "matching_distinct_resources": 580
+        }
+      ]
+    },
+    {
+      "file": "페노아전기2.xgn",
+      "bytes": 2659312,
+      "sha256": "b22121d6be3c66eb859e1a605d6f5da6dd69ab1418c02b78bd36e44a85b75c72",
+      "raw_sgs_candidates_tested": 105072,
+      "raw_sgs_hits": 0,
+      "first_16_bytes_hex": "2016eac6faf8daffba2a1597d0ddc4e0",
+      "last_16_bytes_hex": "35fdd79a47241b08535a645282d87c37",
+      "header_repeated_block_offsets": [
+        64,
+        104,
+        112
+      ],
+      "resource_layout": {
+        "table_offset": 183560,
+        "payload_offset": 204548,
+        "payload_end": 2659296,
+        "descriptors": 1749,
+        "descriptor_bytes": 12,
+        "types": {
+          "0": 781,
+          "512": 24,
+          "256": 872,
+          "1": 71,
+          "257": 1
+        }
+      },
+      "variable_layout": {
+        "table_offset": 125864,
+        "init_offset": 130096,
+        "init_end": 183560,
+        "descriptors": 529
+      },
+      "exact_resource_matches_min_64_bytes": []
+    }
+  ],
+  "academic_source": {
+    "url": "https://dcollection.korea.ac.kr/srch/srchDetail/000000021966",
+    "printed_page": 11,
+    "pdf_sha256": "7b194468f12386e30ef60894a07294fc31388d759e7449497d3b087c882a99cc"
+  },
+  "mg22_related_device": {
+    "source": "https://pyra-handheld.com/boards/threads/myracer-mf-101.89993/",
+    "post": 17,
+    "observation": "Published manufacturer reply describes the MG22 2 GB as the same model except storage capacity.",
+    "distinct_firmware_examined": false
+  },
+  "official_firmware_index": {
+    "url": "https://web.archive.org/web/20091012094242id_/http://www.myracer.co.kr/board/bbs.php?table=support_download_my",
+    "attachments_retrieved": false,
+    "listed_attachments": [
+      {
+        "post_id": 15,
+        "file": "1차 firmware_1.1V.zip",
+        "bytes_listed": 7821589
+      },
+      {
+        "post_id": 16,
+        "file": "_update_.zip",
+        "bytes_listed": 1398626
+      },
+      {
+        "post_id": 18,
+        "file": "통합버젼 firmware_1.1V.zip",
+        "bytes_listed": 7823733
+      },
+      {
+        "post_id": 20,
+        "file": "13000번이상 firmware.zip",
+        "bytes_listed": 17552643
+      }
+    ]
+  }
+}

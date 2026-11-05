@@ -1,0 +1,1078 @@
+[
+  {
+    "model": "IM-S480S_S0183142",
+    "input": "IM-S480S_S0183142.PDL",
+    "input_sha256": "05a9298d4d5e1fcf469f85ab249abdff0c55271cc6842c7d8e1007fdabba6a67",
+    "rsc_offset": 44826624,
+    "rsc_bytes": 136314880,
+    "payload_header_offset": 44826624,
+    "source": {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-S480S/IM-S480S_S0183142.7z",
+      "archiveBytes": 152378959,
+      "archiveSha256": "d85dd9f42f499d6002b9eb87debd24dc87b82d54792333be49a356aed0848b24"
+    },
+    "table_offset": 170606592,
+    "table_header_words": [
+      125814384,
+      35720,
+      0,
+      2214
+    ],
+    "record_count": 2214,
+    "table_bytes": 35440,
+    "table_sha256": "04bdfb4973d86396b97c24dfc8401b08c14494e88005d195d790d84f5e27e892",
+    "validated_all_record_ids_types_bounds": true,
+    "games": [
+      {
+        "content_id": "0029738167",
+        "mime": "application/x-wipi-app",
+        "title": "리듬 스테이션",
+        "vendor": "픽토소프트",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 129,
+        "parsed_prefix_sha256": "b459816ca53aa73c7403cbc1ada11e09c2273d9e67169b8013d3f77e818d639c",
+        "source_offset": 161464088,
+        "rsc_offset": 116637464,
+        "descriptor_index": 2194,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2193,
+            "id": 2193,
+            "type": 7,
+            "table_record_offset": 170641696,
+            "payload_relative_offset": 115253248,
+            "source_offset": 160079872,
+            "bytes": 1384216,
+            "sha256": "f10ef08c21a02be5340869441f9896628c03d3f37b1cdf45a7835e1de06ee9c6",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000060640520000000050000000110101010a000000000000000000000008eb0300141000006447000060080000000000002c1b110000000000cd0400005f0500005b0500005d0500009f05000001000000f0b5051ce9480c1c0078c1b0e84e0028",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S480S_S0183142/0029738167/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2194,
+            "id": 2194,
+            "type": 7,
+            "table_record_offset": 170641712,
+            "payload_relative_offset": 116637464,
+            "source_offset": 161464088,
+            "bytes": 375,
+            "sha256": "f5dd6dfd7da9b076b3b9ff147466a59ec136874fba6a1f9f53038d8c3d800fb1",
+            "archiveFile": "IM-S480S_S0183142/0029738167/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2195,
+            "id": 2195,
+            "type": 7,
+            "table_record_offset": 170641728,
+            "payload_relative_offset": 116637840,
+            "source_offset": 161464464,
+            "bytes": 9556,
+            "sha256": "d5c71728cb5eea3218a5a1f7511b1d20d57631ed6eb745cc56a5b6a6be5e11cb",
+            "archiveFile": "IM-S480S_S0183142/0029738167/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0077748372",
+        "mime": "application/x-wipi-app",
+        "title": "월드장기체스2",
+        "vendor": "ManaStone,Inc.",
+        "version": "001.000.001",
+        "parsed_prefix_bytes": 133,
+        "parsed_prefix_sha256": "577890a32937e06efa1f15107b1d3d38cc5555424852110b732345783531c546",
+        "source_offset": 163003484,
+        "rsc_offset": 118176860,
+        "descriptor_index": 2197,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2196,
+            "id": 2196,
+            "type": 7,
+            "table_record_offset": 170641744,
+            "payload_relative_offset": 116647396,
+            "source_offset": 161474020,
+            "bytes": 1529464,
+            "sha256": "708d3690910756da2be9e6d15270cb62a974faa43270332deb1614f7ff8b8bea",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000677f5f4d0000000050000000110102010000000000000000000000003c9a02009403000024040000a80300000000000090b41400000000005d46010023460100f74501000d46010039460100d9450100feb5071c01200c1c002138610291381c",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S480S_S0183142/0077748372/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2197,
+            "id": 2197,
+            "type": 7,
+            "table_record_offset": 170641760,
+            "payload_relative_offset": 118176860,
+            "source_offset": 163003484,
+            "bytes": 397,
+            "sha256": "48cb5aa8163020076538167ecf62be06b968544dcd6e3f9d14bf4d60b42e1e3b",
+            "archiveFile": "IM-S480S_S0183142/0077748372/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2198,
+            "id": 2198,
+            "type": 7,
+            "table_record_offset": 170641776,
+            "payload_relative_offset": 118177260,
+            "source_offset": 163003884,
+            "bytes": 13452,
+            "sha256": "176d961d104f31ecb3392f538b11257f6354a281074af974ae2891693700e3cb",
+            "archiveFile": "IM-S480S_S0183142/0077748372/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0029742675",
+        "mime": "application/x-wipi-app",
+        "title": "SBS포트리스3",
+        "vendor": "소리나무엔터테인먼트(주)",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 142,
+        "parsed_prefix_sha256": "33411808e67b04765e32932a6e48f385e42f0d25ed24c4280e156e478afa898e",
+        "source_offset": 164897080,
+        "rsc_offset": 120070456,
+        "descriptor_index": 2200,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2199,
+            "id": 2199,
+            "type": 7,
+            "table_record_offset": 170641792,
+            "payload_relative_offset": 118190712,
+            "source_offset": 163017336,
+            "bytes": 1879744,
+            "sha256": "c1057fa5f2e2db9749736350d6532adad62b9e63cd00226c48d5795b8a7e6cd9",
+            "first_128_bytes_hex": "000000000000000000000000000000000000000000000000000000000000000067785046000000005000000011020201080000000001000000000000c07502009c640000445400009c1400000000000058bf1900f0ffffff01000000c9060000e1050000510600000507000081030000f0b5374e374f00233b703368364c9b6b",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S480S_S0183142/0029742675/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2200,
+            "id": 2200,
+            "type": 7,
+            "table_record_offset": 170641808,
+            "payload_relative_offset": 120070456,
+            "source_offset": 164897080,
+            "bytes": 388,
+            "sha256": "8c28e9020a6b3cc903c16fb963d2ac4581cf134fc7531265a793184efef57058",
+            "archiveFile": "IM-S480S_S0183142/0029742675/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2201,
+            "id": 2201,
+            "type": 7,
+            "table_record_offset": 170641824,
+            "payload_relative_offset": 120070844,
+            "source_offset": 164897468,
+            "bytes": 9556,
+            "sha256": "d18968449da81abb43e7441329a5185b4cfa2bf767c07d55984c23b930033232",
+            "archiveFile": "IM-S480S_S0183142/0029742675/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0074259271",
+        "mime": "application/x-wipi-app",
+        "title": "대전퍼즐버블",
+        "vendor": "파머즈마인드",
+        "version": "001.002.001",
+        "parsed_prefix_bytes": 130,
+        "parsed_prefix_sha256": "aa27e590fdd1cb3fdd3d5b13d788bd671d6f9fcb1c8723c94b8177b6a2a92b51",
+        "source_offset": 166385716,
+        "rsc_offset": 121559092,
+        "descriptor_index": 2203,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2202,
+            "id": 2202,
+            "type": 7,
+            "table_record_offset": 170641840,
+            "payload_relative_offset": 120080400,
+            "source_offset": 164907024,
+            "bytes": 1478692,
+            "sha256": "ea6c7ddc6f6ec146e75afd93e573a4fc3994ae46cc4849be5f130d812aa05ff4",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000627d5e4f0000000050000000110101010b0000000001000000000000b0f30300fc3800008c4d04008006000000000000885c120000000000c9350200db180300d9180300511903005319030055190300f8b50e1cef49041c10780968151c0028",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S480S_S0183142/0074259271/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2203,
+            "id": 2203,
+            "type": 7,
+            "table_record_offset": 170641856,
+            "payload_relative_offset": 121559092,
+            "source_offset": 166385716,
+            "bytes": 376,
+            "sha256": "adfd90eb7290db7ec6df873b48fd4375a0ef7e4297568664952610e904f4da46",
+            "archiveFile": "IM-S480S_S0183142/0074259271/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2204,
+            "id": 2204,
+            "type": 7,
+            "table_record_offset": 170641872,
+            "payload_relative_offset": 121559468,
+            "source_offset": 166386092,
+            "bytes": 13452,
+            "sha256": "c18e76b9d363c3300318ae12b3569636633beeb4acac6aaa31022e21597c5e7c",
+            "archiveFile": "IM-S480S_S0183142/0074259271/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "9000495107",
+        "mime": "application/x-wipi-app",
+        "title": "Hybrid",
+        "vendor": "INNOACE Co.,Ltd",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 127,
+        "parsed_prefix_sha256": "5b475ea1440c8cae07c61d205062ed802948915c6089fe60abcf96381cbde103",
+        "source_offset": 168355692,
+        "rsc_offset": 123529068,
+        "descriptor_index": 2206,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2205,
+            "id": 2205,
+            "type": 7,
+            "table_record_offset": 170641888,
+            "payload_relative_offset": 121572920,
+            "source_offset": 166399544,
+            "bytes": 1956148,
+            "sha256": "380a6253e67b792afd463d06d7de59bc5d9ea45ceb7cb6a462c7bbfe291676d1",
+            "first_128_bytes_hex": "00000000000000000000000000000000000000000000000000000000000000006a77554800000000500000001101010100000000000100000000000044230800388e0000247c1100040e000000000000441915000000000063c70500adc7050087c7050099c70500d1c705001dc70500f7b5344d161c29680122c96800240b68",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S480S_S0183142/9000495107/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2206,
+            "id": 2206,
+            "type": 7,
+            "table_record_offset": 170641904,
+            "payload_relative_offset": 123529068,
+            "source_offset": 168355692,
+            "bytes": 373,
+            "sha256": "423fff5f983565390413c3ed3b88e246547820b3462bfc3e0cc1cf288ec2d034",
+            "archiveFile": "IM-S480S_S0183142/9000495107/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2207,
+            "id": 2207,
+            "type": 7,
+            "table_record_offset": 170641920,
+            "payload_relative_offset": 123529444,
+            "source_offset": 168356068,
+            "bytes": 20260,
+            "sha256": "689a45040a95fb9bcf3a109186885d00e8a1cf37192a17a5288a63997cc4440d",
+            "archiveFile": "IM-S480S_S0183142/9000495107/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0029468502",
+        "mime": "application/x-wipi-jar",
+        "title": "서든어택포켓",
+        "vendor": "엠엔엠게임즈",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 130,
+        "parsed_prefix_sha256": "817af0c4f47a081f80687a7115b3ef7d02d08651c3f55066cc29b883f1ec462b",
+        "source_offset": 169606908,
+        "rsc_offset": 124780284,
+        "descriptor_index": 2209,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2208,
+            "id": 2208,
+            "type": 7,
+            "table_record_offset": 170641936,
+            "payload_relative_offset": 123549704,
+            "source_offset": 168376328,
+            "bytes": 1230580,
+            "sha256": "74eb9e5f8903c4ce6a09e33dd486747cd223888f6199d8e944dc619495eefbf0",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000504b0304140008000800d658823a000000000000000000000000090004004d4554412d494e462ffeca00000300504b0708000000000200000000000000504b0304140008000800d658823a000000000000000000000000140000004d4554412d",
+            "format": "ZIP/JAR with 32-byte resource wrapper",
+            "zip_member_count": 710,
+            "zip_bad_crc_member": null,
+            "zip_class_count": 21,
+            "zip_classes_have_java_magic": true,
+            "zip_uncompressed_bytes": 1659941,
+            "zip_manifest": "Manifest-Version: 1.0\r\nCreated-By: 1.3.1 (Sun Microsystems Inc.)\r\n\r\n",
+            "zip_game_format_members": [],
+            "archiveFile": "IM-S480S_S0183142/0029468502/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2209,
+            "id": 2209,
+            "type": 7,
+            "table_record_offset": 170641952,
+            "payload_relative_offset": 124780284,
+            "source_offset": 169606908,
+            "bytes": 443,
+            "sha256": "e1e63639bbc91a2ac0ebdba1aa7ec279a50d532a6c343784a22c44f61f533ab5",
+            "archiveFile": "IM-S480S_S0183142/0029468502/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2210,
+            "id": 2210,
+            "type": 7,
+            "table_record_offset": 170641968,
+            "payload_relative_offset": 124780728,
+            "source_offset": 169607352,
+            "bytes": 13452,
+            "sha256": "dd7213894b5f4e25438c5fff7f5d0eb3292ac3f735068dc7207e0d18d7a2f67b",
+            "archiveFile": "IM-S480S_S0183142/0029468502/icon-resource.bin"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "IM-S550S_S0188161",
+    "input": "IM-S550S_S0188161.PDL",
+    "input_sha256": "a9b53ec945dd6e660adcd056aca13c6bab107a3bfd57a681495c4a2230047d2b",
+    "rsc_offset": 44302336,
+    "rsc_bytes": 140771328,
+    "payload_header_offset": 44339200,
+    "source": {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-S550S/IM-S550S_S0188161.7z",
+      "archiveBytes": 236760183,
+      "archiveSha256": "8f90b51fd9dbd83d40777000399a9a521b27031a22aa95089f2b8833a6db1f95"
+    },
+    "table_offset": 184971264,
+    "table_header_words": [
+      140665132,
+      8044,
+      0,
+      2168
+    ],
+    "record_count": 2168,
+    "table_bytes": 34704,
+    "table_sha256": "acca0b3c8dba1d63212ea41223de739f07b51ce9ceac150abb9726850833f74f",
+    "validated_all_record_ids_types_bounds": true,
+    "games": [
+      {
+        "content_id": "9000509502",
+        "mime": "application/x-wipi-app",
+        "title": "문질러터치",
+        "vendor": "Gamevil Co.,Ltd",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 131,
+        "parsed_prefix_sha256": "ed40880902c135a5d86bc69d2f314fde1961d26ec8a9334207fbb33ab410a2a5",
+        "source_offset": 178545800,
+        "rsc_offset": 134243464,
+        "descriptor_index": 2139,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2138,
+            "id": 2138,
+            "type": 7,
+            "table_record_offset": 185005488,
+            "payload_relative_offset": 133271112,
+            "source_offset": 177610312,
+            "bytes": 935488,
+            "sha256": "daa4236554df969f0d14eaa60f3b157a2fb09a8a53873ec94a0aa3eaf43d2519",
+            "first_128_bytes_hex": "00000000000000000000000000000000000000000000000000000000000000006b7b594c000000005000000011010101000000000001000000000000d8b705008403000060c90500a008000000000000d48108000000000057de0300a1de03007bde03008dde0300c5de030011de030010b5e0203df004fe041c04d0201c12f0",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S550S_S0188161/9000509502/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2139,
+            "id": 2139,
+            "type": 7,
+            "table_record_offset": 185005504,
+            "payload_relative_offset": 134206600,
+            "source_offset": 178545800,
+            "bytes": 377,
+            "sha256": "d583a23b9c03f94c38f90fdbe7d9d2e5fe9e5fcded745ba060e47ff54a00627b",
+            "archiveFile": "IM-S550S_S0188161/9000509502/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2140,
+            "id": 2140,
+            "type": 7,
+            "table_record_offset": 185005520,
+            "payload_relative_offset": 134206980,
+            "source_offset": 178546180,
+            "bytes": 20500,
+            "sha256": "28dd700f5b0a167f605c5250b351eb023893de4df0de1e00191cf4d3e5d79ebe",
+            "archiveFile": "IM-S550S_S0188161/9000509502/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "OP00115712",
+        "mime": "application/x-wipi-app",
+        "title": "파워풀프로야구KBO'09",
+        "vendor": "INNOACE Co.,Ltd",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 141,
+        "parsed_prefix_sha256": "e3013623d558941a81b859b3b9a650e38b6d07687000e6119fe43a40a5207527",
+        "source_offset": 180632432,
+        "rsc_offset": 136330096,
+        "descriptor_index": 2142,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2141,
+            "id": 2141,
+            "type": 7,
+            "table_record_offset": 185005536,
+            "payload_relative_offset": 134227480,
+            "source_offset": 178566680,
+            "bytes": 2065752,
+            "sha256": "068562e607a5a9fdf7e3f4671310643724e1a7c44365ef4ed379d013b48060f0",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000181a554e0000000050000000110102010900000000000000000000005c5408002c2100009c1e1600d4250000000000008ce9160000000000ebc8020075c9020073c902009bc902009dc90200afcb020070b5854e8720800130180068002804d1",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S550S_S0188161/OP00115712/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2142,
+            "id": 2142,
+            "type": 7,
+            "table_record_offset": 185005552,
+            "payload_relative_offset": 136293232,
+            "source_offset": 180632432,
+            "bytes": 383,
+            "sha256": "077ce08aa21960209fc11d97241ac247f297f568552adf5f62a7d845b07cad06",
+            "archiveFile": "IM-S550S_S0188161/OP00115712/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2143,
+            "id": 2143,
+            "type": 7,
+            "table_record_offset": 185005568,
+            "payload_relative_offset": 136293616,
+            "source_offset": 180632816,
+            "bytes": 7924,
+            "sha256": "3b2ae9c70a6cfcf24eb7eae26a6fdaecc5542f52321265dcac0f13b1263ced82",
+            "archiveFile": "IM-S550S_S0188161/OP00115712/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0047782199",
+        "mime": "application/x-wipi-app",
+        "title": "I-Musician",
+        "vendor": "Com2uS",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 122,
+        "parsed_prefix_sha256": "392c7a5b77bb78503ad918514687cf700e01bf6efe937684fb4af545968c7ff6",
+        "source_offset": 182530148,
+        "rsc_offset": 138227812,
+        "descriptor_index": 2145,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2144,
+            "id": 2144,
+            "type": 7,
+            "table_record_offset": 185005584,
+            "payload_relative_offset": 136301540,
+            "source_offset": 180640740,
+            "bytes": 1889408,
+            "sha256": "f3144e95612017ebcdcfa5f206011337ca800196e4ddbdf1f9b52b206f5659d5",
+            "first_128_bytes_hex": "00000000000000000000000000000000000000000000000000000000000000006978564f00000000500000001102020108000000000000000000000000f005005c410000742c0100682e0000000000004c741600f0ffffffc1170000d11a0000d51a0000e11a0000ed1a0000011d000000b583b002aa01ab4df0ccf800060028",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S550S_S0188161/0047782199/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2145,
+            "id": 2145,
+            "type": 7,
+            "table_record_offset": 185005600,
+            "payload_relative_offset": 138190948,
+            "source_offset": 182530148,
+            "bytes": 382,
+            "sha256": "f11aed3cf7da51d71d272b2f29fdf47de803e773d883ff49588bcc790922befc",
+            "archiveFile": "IM-S550S_S0188161/0047782199/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2146,
+            "id": 2146,
+            "type": 7,
+            "table_record_offset": 185005616,
+            "payload_relative_offset": 138191332,
+            "source_offset": 182530532,
+            "bytes": 17264,
+            "sha256": "cb3be44bec07afb6ad40f17979c85eb3ded444a8796cb7b03a5b8a16428601b3",
+            "archiveFile": "IM-S550S_S0188161/0047782199/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0030161421",
+        "mime": "application/x-wipi-jar",
+        "title": "빅뱅-틀린그림찾기",
+        "vendor": "(주)피엔제이",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 135,
+        "parsed_prefix_sha256": "6bdcf290bf180140927138bb4bfdc14fa36805172f034a07bdade6729a94ef83",
+        "source_offset": 183670452,
+        "rsc_offset": 139368116,
+        "descriptor_index": 2148,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2147,
+            "id": 2147,
+            "type": 7,
+            "table_record_offset": 185005632,
+            "payload_relative_offset": 138208596,
+            "source_offset": 182547796,
+            "bytes": 1122653,
+            "sha256": "fa3b315b78925705a98bb441b1e0c6e752c8d9fe9dffa6dd10ac3d53a654f746",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000504b030414000800080055843c3b000000000000000000000000090004004d4554412d494e462ffeca00000300504b0708000000000200000000000000504b030414000800080055843c3b000000000000000000000000140000004d4554412d",
+            "format": "ZIP/JAR with 32-byte resource wrapper",
+            "zip_member_count": 866,
+            "zip_bad_crc_member": null,
+            "zip_class_count": 40,
+            "zip_classes_have_java_magic": true,
+            "zip_uncompressed_bytes": 1183204,
+            "zip_manifest": "Manifest-Version: 1.0\r\nCreated-By: 1.3.1_15 (Sun Microsystems Inc.)\r\n\r\n",
+            "zip_game_format_members": [],
+            "archiveFile": "IM-S550S_S0188161/0030161421/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2148,
+            "id": 2148,
+            "type": 7,
+            "table_record_offset": 185005648,
+            "payload_relative_offset": 139331252,
+            "source_offset": 183670452,
+            "bytes": 452,
+            "sha256": "031202c23d49df85ac7ee18636249a07666944a95cd424c47d7b4bcbe02e6fed",
+            "archiveFile": "IM-S550S_S0188161/0030161421/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2149,
+            "id": 2149,
+            "type": 7,
+            "table_record_offset": 185005664,
+            "payload_relative_offset": 139331704,
+            "source_offset": 183670904,
+            "bytes": 17348,
+            "sha256": "80e98f17da11f1f7e6352c52ff43933301449ae4c3808a57078281e4a55453de",
+            "archiveFile": "IM-S550S_S0188161/0030161421/icon-resource.bin"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "IM-S640S_S0202126a",
+    "input": "IM-S640S_S0202126a.PDL",
+    "input_sha256": "8f1c734b748bf3f5efa5cc81264a0a4a30a9d5fa348de1fc4a7afedca870dc03",
+    "rsc_offset": 51118080,
+    "rsc_bytes": 146800640,
+    "payload_header_offset": 51118080,
+    "source": {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-S640S/IM-S640S_S0202126a.7z",
+      "archiveBytes": 222365554,
+      "archiveSha256": "2bb878b96403e92a573d03dd8c3015137b75e278f51115e8a613dc70c391f518"
+    },
+    "table_offset": 185812992,
+    "table_header_words": [
+      134736796,
+      48100,
+      0,
+      2692
+    ],
+    "record_count": 2692,
+    "table_bytes": 43088,
+    "table_sha256": "d0856d408b0397bfa6ce7e7ee27d6d0801e765d4a2421684ec8225ea4f13e115",
+    "validated_all_record_ids_types_bounds": true,
+    "games": [
+      {
+        "content_id": "9000516873",
+        "mime": "application/x-wipi-app",
+        "title": "리듬스타2",
+        "vendor": "ANBGAMES",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 123,
+        "parsed_prefix_sha256": "8e26c9f3cab48372287b7815be6d5fb75f8c391bba160f1c6eb8c005da4a2c80",
+        "source_offset": 173775416,
+        "rsc_offset": 122657336,
+        "descriptor_index": 2640,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2639,
+            "id": 2639,
+            "type": 7,
+            "table_record_offset": 185855232,
+            "payload_relative_offset": 120762264,
+            "source_offset": 171880344,
+            "bytes": 1895072,
+            "sha256": "3087176e23ad3aba8662e77f79a1aff7765765769a2089b54d8a1c2054722437",
+            "first_128_bytes_hex": "00000000000000000000000000000000000000000000000000000000000000006c7b56410000000050000000110101010b0000000001000000000000d4dd080000ae0000404800002c0e0000000000003050130000000000e01108007c080800481108005811080044110800340f0800f0b50f1c3849141c059a1e1c031c4860",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S640S_S0202126a/9000516873/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2640,
+            "id": 2640,
+            "type": 7,
+            "table_record_offset": 185855248,
+            "payload_relative_offset": 122657336,
+            "source_offset": 173775416,
+            "bytes": 369,
+            "sha256": "a326c4c20b42df97503ac59ef067d862591f1f2026ee16e555fc6d9237645345",
+            "archiveFile": "IM-S640S_S0202126a/9000516873/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2641,
+            "id": 2641,
+            "type": 7,
+            "table_record_offset": 185855264,
+            "payload_relative_offset": 122657708,
+            "source_offset": 173775788,
+            "bytes": 13452,
+            "sha256": "edb374c9a4da2335b58167a3cdefd9dcc4f1ef0ec28e8946cc7d7b37182901e5",
+            "archiveFile": "IM-S640S_S0202126a/9000516873/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "9000516913",
+        "mime": "application/x-wipi-app",
+        "title": "EA프로야구2010(KBO)",
+        "vendor": "EAMK",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 129,
+        "parsed_prefix_sha256": "b82ed67263a63fce1ccbcc53d94e1fca8b10e4df03b816b7dd045281b01b8e09",
+        "source_offset": 176344416,
+        "rsc_offset": 125226336,
+        "descriptor_index": 2643,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2642,
+            "id": 2642,
+            "type": 7,
+            "table_record_offset": 185855280,
+            "payload_relative_offset": 122671160,
+            "source_offset": 173789240,
+            "bytes": 2555176,
+            "sha256": "28383594ccd62a5f01123ee52c92498c0dd62230e64e600a64335fd9a1558943",
+            "first_128_bytes_hex": "00000000000000000000000000000000000000000000000000000000000000006a7b564000000000500000001101020114000000000000000000000078e91100ac050000889d0200740e00000000000020ff14000000000084c30b0044c40b0020c50b0024c50b001cc50b0064c40b000e402de908108de238008fe278f603eb",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S640S_S0202126a/9000516913/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2643,
+            "id": 2643,
+            "type": 7,
+            "table_record_offset": 185855296,
+            "payload_relative_offset": 125226336,
+            "source_offset": 176344416,
+            "bytes": 371,
+            "sha256": "85e71633ba8055a147bd6f1a435e4b0573fdb7aaebf48d03670b5931a5ddcdfe",
+            "archiveFile": "IM-S640S_S0202126a/9000516913/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2644,
+            "id": 2644,
+            "type": 7,
+            "table_record_offset": 185855312,
+            "payload_relative_offset": 125226708,
+            "source_offset": 176344788,
+            "bytes": 40724,
+            "sha256": "1f0d15835cba9c65c3b755aa67a59235f205aabf9caf6bf7d468a56843819d36",
+            "archiveFile": "IM-S640S_S0202126a/9000516913/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "9000516933",
+        "mime": "application/x-wipi-app",
+        "title": "초코초코타이쿤2",
+        "vendor": "Com2uS",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 127,
+        "parsed_prefix_sha256": "44b10227adbfc4a421196d3c822ead293388bf8bfab721ea5ce0bbb17dc70396",
+        "source_offset": 178328556,
+        "rsc_offset": 127210476,
+        "descriptor_index": 2646,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2645,
+            "id": 2645,
+            "type": 7,
+            "table_record_offset": 185855328,
+            "payload_relative_offset": 125267432,
+            "source_offset": 176385512,
+            "bytes": 1943044,
+            "sha256": "847d64bd4a9d3650cda86bf19fb61298bb43694f49da425ff7996ca02e66fdd1",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000687b564000000000500000001102020108000000000000000000000008a508005c3b0000c0d70500a4270000000000008c9d1400f0ffffffd13b0000b13b0000e53c0000c53c0000ad3b0000853c000000b50448031cfc339b6d00f031fb01bc",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S640S_S0202126a/9000516933/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2646,
+            "id": 2646,
+            "type": 7,
+            "table_record_offset": 185855344,
+            "payload_relative_offset": 127210476,
+            "source_offset": 178328556,
+            "bytes": 387,
+            "sha256": "53b57f5186240f3f6a6818a32623199052e74aef08ba21d7b11464ec6d738e7d",
+            "archiveFile": "IM-S640S_S0202126a/9000516933/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2647,
+            "id": 2647,
+            "type": 7,
+            "table_record_offset": 185855360,
+            "payload_relative_offset": 127210864,
+            "source_offset": 178328944,
+            "bytes": 17348,
+            "sha256": "ae1dc5d23db9474f351a2b7327e02b87d1f38c84ce572e7658ab5be7448c7bf8",
+            "archiveFile": "IM-S640S_S0202126a/9000516933/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0087068538",
+        "mime": "application/x-wipi-app",
+        "title": "렙업만이 살길2",
+        "vendor": "M&MGames",
+        "version": "001.000.002",
+        "parsed_prefix_bytes": 128,
+        "parsed_prefix_sha256": "ca77722cd0accb6fcf7c41416988f7b54783961f8aa3fb7d71b6594bf713b021",
+        "source_offset": 180344528,
+        "rsc_offset": 129226448,
+        "descriptor_index": 2649,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2648,
+            "id": 2648,
+            "type": 7,
+            "table_record_offset": 185855376,
+            "payload_relative_offset": 127228212,
+            "source_offset": 178346292,
+            "bytes": 1998236,
+            "sha256": "120ceb645eb6ce5dffb70b2f1a27aa6932be6db9f566a975a61fce288db2f630",
+            "first_128_bytes_hex": "00000000000000000000000000000000000000000000000000000000000000006477504b0000000050000000110102010e000000000100000000000034ce0500c0410000e8510100a8080000000000009064180000000000e8aa0100c4ae010064ab0100dcab0100c8ae01000cb10100e8009fe50020a0e3002080e5e0109fe5",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-S640S_S0202126a/0087068538/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2649,
+            "id": 2649,
+            "type": 7,
+            "table_record_offset": 185855392,
+            "payload_relative_offset": 129226448,
+            "source_offset": 180344528,
+            "bytes": 374,
+            "sha256": "4c3cdd0d734e399a5297222e30cb874916ebc208557ee09dfdd8bd4998555f17",
+            "archiveFile": "IM-S640S_S0202126a/0087068538/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2650,
+            "id": 2650,
+            "type": 7,
+            "table_record_offset": 185855408,
+            "payload_relative_offset": 129226824,
+            "source_offset": 180344904,
+            "bytes": 8568,
+            "sha256": "5f56ae7b6d993bd01bc54e8708b160db388a54c5e9c87d5b00fbf4ba51a4260f",
+            "archiveFile": "IM-S640S_S0202126a/0087068538/icon-resource.bin"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "model": "IM-U490S_S0184128",
+    "input": "IM-U490S_S0184128.PDL",
+    "input_sha256": "407c9698130c64a5ccb9e3ee7eee77a3648ba863a650a54a51eb6a410849d251",
+    "rsc_offset": 41025536,
+    "rsc_bytes": 135004160,
+    "payload_header_offset": 41060352,
+    "source": {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-U490S/IM-U490S_S0184128.7z",
+      "archiveBytes": 227877301,
+      "archiveSha256": "6ee470549fd0f3a272f11ff1c5fc8bcea21f52b6f9657345288a388a47d438e4"
+    },
+    "table_offset": 175904768,
+    "table_header_words": [
+      134883540,
+      9283,
+      0,
+      2466
+    ],
+    "record_count": 2466,
+    "table_bytes": 39472,
+    "table_sha256": "260aced4340e53a1a1268823b4b6c455d3f3ff6ebd27c7287528a474668bbe65",
+    "validated_all_record_ids_types_bounds": true,
+    "games": [
+      {
+        "content_id": "0029738167",
+        "mime": "application/x-wipi-app",
+        "title": "리듬 스테이션",
+        "vendor": "픽토소프트",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 129,
+        "parsed_prefix_sha256": "b459816ca53aa73c7403cbc1ada11e09c2273d9e67169b8013d3f77e818d639c",
+        "source_offset": 171098276,
+        "rsc_offset": 130072740,
+        "descriptor_index": 2441,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2440,
+            "id": 2440,
+            "type": 7,
+            "table_record_offset": 175943824,
+            "payload_relative_offset": 128655156,
+            "source_offset": 169715508,
+            "bytes": 1382768,
+            "sha256": "4920b7d74d7073b6df85ffbc92594d34f0bbb8d2152362cb229ccd7ec55197de",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000667d5a4100000000500000001101010108000000000000000000000014e6030014100000384700006408000000000000741a11000000000017040000a5040000a1040000a3040000e104000001000000f0b5051cf84801260078f6040c1c0028",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-U490S_S0184128/0029738167/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2441,
+            "id": 2441,
+            "type": 7,
+            "table_record_offset": 175943840,
+            "payload_relative_offset": 130037924,
+            "source_offset": 171098276,
+            "bytes": 375,
+            "sha256": "f5dd6dfd7da9b076b3b9ff147466a59ec136874fba6a1f9f53038d8c3d800fb1",
+            "archiveFile": "IM-U490S_S0184128/0029738167/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2442,
+            "id": 2442,
+            "type": 7,
+            "table_record_offset": 175943856,
+            "payload_relative_offset": 130038300,
+            "source_offset": 171098652,
+            "bytes": 9556,
+            "sha256": "d5c71728cb5eea3218a5a1f7511b1d20d57631ed6eb745cc56a5b6a6be5e11cb",
+            "archiveFile": "IM-U490S_S0184128/0029738167/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0077748372",
+        "mime": "application/x-wipi-app",
+        "title": "월드장기체스2",
+        "vendor": "ManaStone,Inc.",
+        "version": "001.000.004",
+        "parsed_prefix_bytes": 133,
+        "parsed_prefix_sha256": "18e194fc65d7d21f9cbe5405a50c599f7c477824eb8789cbf876832bcd73b455",
+        "source_offset": 172638424,
+        "rsc_offset": 131612888,
+        "descriptor_index": 2444,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2443,
+            "id": 2443,
+            "type": 7,
+            "table_record_offset": 175943872,
+            "payload_relative_offset": 130047856,
+            "source_offset": 171108208,
+            "bytes": 1530216,
+            "sha256": "89333c3f01dd60986ee291b3788f11038f16e5fe52e139acc7d65f6764cea468",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000677f5f4d000000005000000011010201000000000000000000000000249d02009403000028040000b00300000000000090b4140000000000d54701009b4701006f47010085470100b147010051470100feb5071c01200c1c002138610291381c",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-U490S_S0184128/0077748372/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2444,
+            "id": 2444,
+            "type": 7,
+            "table_record_offset": 175943888,
+            "payload_relative_offset": 131578072,
+            "source_offset": 172638424,
+            "bytes": 397,
+            "sha256": "b9e4f696ab97aaeb676eb9564957f2f80fb1f7ba5c315440dd8833e427f58612",
+            "archiveFile": "IM-U490S_S0184128/0077748372/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2445,
+            "id": 2445,
+            "type": 7,
+            "table_record_offset": 175943904,
+            "payload_relative_offset": 131578472,
+            "source_offset": 172638824,
+            "bytes": 13452,
+            "sha256": "176d961d104f31ecb3392f538b11257f6354a281074af974ae2891693700e3cb",
+            "archiveFile": "IM-U490S_S0184128/0077748372/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0029742675",
+        "mime": "application/x-wipi-app",
+        "title": "SBS포트리스3",
+        "vendor": "소리나무엔터테인먼트(주)",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 142,
+        "parsed_prefix_sha256": "33411808e67b04765e32932a6e48f385e42f0d25ed24c4280e156e478afa898e",
+        "source_offset": 174532020,
+        "rsc_offset": 133506484,
+        "descriptor_index": 2447,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2446,
+            "id": 2446,
+            "type": 7,
+            "table_record_offset": 175943920,
+            "payload_relative_offset": 131591924,
+            "source_offset": 172652276,
+            "bytes": 1879744,
+            "sha256": "c1057fa5f2e2db9749736350d6532adad62b9e63cd00226c48d5795b8a7e6cd9",
+            "first_128_bytes_hex": "000000000000000000000000000000000000000000000000000000000000000067785046000000005000000011020201080000000001000000000000c07502009c640000445400009c1400000000000058bf1900f0ffffff01000000c9060000e1050000510600000507000081030000f0b5374e374f00233b703368364c9b6b",
+            "format": "descriptor-identified WIPI DAF, 80-byte header, 32-byte resource wrapper",
+            "native_code_evidence": "ARM or Thumb instructions at payload offset 112; statically inspected, never executed",
+            "archiveFile": "IM-U490S_S0184128/0029742675/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2447,
+            "id": 2447,
+            "type": 7,
+            "table_record_offset": 175943936,
+            "payload_relative_offset": 133471668,
+            "source_offset": 174532020,
+            "bytes": 388,
+            "sha256": "8c28e9020a6b3cc903c16fb963d2ac4581cf134fc7531265a793184efef57058",
+            "archiveFile": "IM-U490S_S0184128/0029742675/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2448,
+            "id": 2448,
+            "type": 7,
+            "table_record_offset": 175943952,
+            "payload_relative_offset": 133472056,
+            "source_offset": 174532408,
+            "bytes": 9556,
+            "sha256": "d18968449da81abb43e7441329a5185b4cfa2bf767c07d55984c23b930033232",
+            "archiveFile": "IM-U490S_S0184128/0029742675/icon-resource.bin"
+          }
+        ]
+      },
+      {
+        "content_id": "0029468502",
+        "mime": "application/x-wipi-jar",
+        "title": "서든어택포켓",
+        "vendor": "엠엔엠게임즈",
+        "version": "001.000.000",
+        "parsed_prefix_bytes": 130,
+        "parsed_prefix_sha256": "817af0c4f47a081f80687a7115b3ef7d02d08651c3f55066cc29b883f1ec462b",
+        "source_offset": 175772544,
+        "rsc_offset": 134747008,
+        "descriptor_index": 2450,
+        "resources": [
+          {
+            "role": "application",
+            "index": 2449,
+            "id": 2449,
+            "type": 7,
+            "table_record_offset": 175943968,
+            "payload_relative_offset": 133481612,
+            "source_offset": 174541964,
+            "bytes": 1230580,
+            "sha256": "74eb9e5f8903c4ce6a09e33dd486747cd223888f6199d8e944dc619495eefbf0",
+            "first_128_bytes_hex": "0000000000000000000000000000000000000000000000000000000000000000504b0304140008000800d658823a000000000000000000000000090004004d4554412d494e462ffeca00000300504b0708000000000200000000000000504b0304140008000800d658823a000000000000000000000000140000004d4554412d",
+            "format": "ZIP/JAR with 32-byte resource wrapper",
+            "zip_member_count": 710,
+            "zip_bad_crc_member": null,
+            "zip_class_count": 21,
+            "zip_classes_have_java_magic": true,
+            "zip_uncompressed_bytes": 1659941,
+            "zip_manifest": "Manifest-Version: 1.0\r\nCreated-By: 1.3.1 (Sun Microsystems Inc.)\r\n\r\n",
+            "zip_game_format_members": [],
+            "archiveFile": "IM-U490S_S0184128/0029468502/original.payload.bin"
+          },
+          {
+            "role": "descriptor",
+            "index": 2450,
+            "id": 2450,
+            "type": 7,
+            "table_record_offset": 175943984,
+            "payload_relative_offset": 134712192,
+            "source_offset": 175772544,
+            "bytes": 443,
+            "sha256": "e1e63639bbc91a2ac0ebdba1aa7ec279a50d532a6c343784a22c44f61f533ab5",
+            "archiveFile": "IM-U490S_S0184128/0029468502/descriptor.bin"
+          },
+          {
+            "role": "icon",
+            "index": 2451,
+            "id": 2451,
+            "type": 7,
+            "table_record_offset": 175944000,
+            "payload_relative_offset": 134712636,
+            "source_offset": 175772988,
+            "bytes": 13452,
+            "sha256": "dd7213894b5f4e25438c5fff7f5d0eb3292ac3f735068dc7207e0d18d7a2f67b",
+            "archiveFile": "IM-U490S_S0184128/0029468502/icon-resource.bin"
+          }
+        ]
+      }
+    ]
+  }
+]

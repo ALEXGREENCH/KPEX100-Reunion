@@ -11,11 +11,15 @@ const catalog = JSON.parse(fs.readFileSync(new URL('data/catalog.json', root))),
   ).profiles;
 const game = (id) => fs.readFileSync(new URL('data/games/' + id + '.sgs', root));
 const create = (id) =>
-  LegacyRuntime.create(rom, game(id), { width: 176, height: 220, ...profiles[id] });
+  LegacyRuntime.create(rom, game(id), {
+    width: 176,
+    height: 220,
+    ...(profiles[id] || catalog.games.find((item) => item.id === id)?.runtime),
+  });
 
-test('all ten original legacy containers have consistent native 16-bit layouts', () => {
+test('all eighteen original legacy containers have consistent native 16-bit layouts', () => {
   const games = catalog.games.filter((g) => [1, 2].includes(g.format));
-  assert.equal(games.length, 10);
+  assert.equal(games.length, 18);
   for (const g of games) {
     const raw = game(g.id),
       s = parseLegacy(raw);
@@ -86,6 +90,50 @@ test('all legacy original START handlers and armed timer channels execute withou
         for (const t of g.timerStates) if (t.delay !== null) g.event('TIMEOUT', t.channel);
       assert.equal(g.status, 'idle', item.id + ': ' + g.error);
       assert.equal(g.framebufferRGBA.length, g.width * g.height * 4);
+    } finally {
+      g.close();
+    }
+  }
+});
+
+test('v1 and v2 native physical flushes publish actual pixels in the phone display', async () => {
+  for (const id of ['gnex21_eska2', 'gnex16_bubble_bubble']) {
+    const g = await create(id);
+    let expected,
+      presentations = 0;
+    const present = g._presentLCD.bind(g);
+    g._presentLCD = (...args) => {
+      const source = g.cpu.read32(0x20b41260);
+      expected = g.cpu.read(source, g.width * g.height * 2).slice();
+      presentations++;
+      present(...args);
+    };
+    try {
+      g.event('START');
+      for (let i = 0; i < 3; i++) {
+        for (const timer of g.timerStates) {
+          if (timer.delay !== null) g.event('TIMEOUT', timer.channel);
+        }
+      }
+      assert.equal(g.status, 'idle', id + ': ' + g.error);
+      assert.ok(presentations > 0, id + ' must reach the native physical screen callback');
+      const rgba = new Uint8ClampedArray(g.width * g.height * 4);
+      for (let i = 0, j = 0; i < expected.length; i += 2, j += 4) {
+        const color = expected[i] | (expected[i + 1] << 8);
+        rgba[j] = Math.floor(((color >>> 11) * 255) / 31);
+        rgba[j + 1] = Math.floor((((color >>> 5) & 63) * 255) / 63);
+        rgba[j + 2] = Math.floor(((color & 31) * 255) / 31);
+        rgba[j + 3] = 255;
+      }
+      assert.ok(
+        rgba.some((value, i) => i % 4 !== 3 && value !== 0),
+        id + ' contains visible graphics',
+      );
+      assert.deepEqual(
+        g.framebufferRGBA,
+        rgba,
+        id + ' displays the last submitted native RGB565 image',
+      );
     } finally {
       g.close();
     }

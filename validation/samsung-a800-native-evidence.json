@@ -1,0 +1,132 @@
+{
+  "t100": {
+    "sha256": "afe4a9e93d6d68eae08d67285da5315153bf139fc804992a824cc66db41ba167",
+    "bytes": 6104452,
+    "file": "T10AXVH1.AXF",
+    "lcd": [
+      128,
+      160
+    ]
+  },
+  "a800": {
+    "sha256": "22abb85d7a2599eba0d3a01f7b0ec0ef4c97bf1dbfbd16d1dde044bdb909e4a6",
+    "bytes": 4034944,
+    "file": "A80XDWBD.AXF",
+    "archive": "https://archive.org/download/gt-b-7722_20250528/SGH-A800.zip",
+    "member": "SGH-A800/A800XDWBD.7z",
+    "lcd": [
+      128,
+      128
+    ],
+    "nativeThumbEntrypoints": {
+      "Fortress": "0x150f90",
+      "Space War": "0x1529ec",
+      "X-Flighter": "0x158528"
+    }
+  },
+  "code_comparison": [
+    {
+      "object": "airshooting",
+      "t100_range": [
+        966252,
+        989516
+      ],
+      "a800_range": [
+        1387600,
+        1410748
+      ],
+      "minimum_seed": 32,
+      "matching_runs": 167,
+      "t100_distinct_bytes_matched": 9097,
+      "matches": [
+        {
+          "t100_offset": 978392,
+          "a800_offset": 1399768,
+          "bytes": 620,
+          "sha256": "361be26e2467f9554120111cd8047e39589b31307a690f8b43f065658121918e",
+          "t100_function": "setEarthUnit+0xc"
+        },
+        {
+          "t100_offset": 970174,
+          "a800_offset": 1391554,
+          "bytes": 194,
+          "sha256": "e1aed0164c1997f64512fe20602758f5cfe2d23a179b1c68ee4b7aef801cf659",
+          "t100_function": "shotBullet+0xa2"
+        },
+        {
+          "t100_offset": 972923,
+          "a800_offset": 1394295,
+          "bytes": 179,
+          "sha256": "b06026d87aba8d85d4e1f53869d10c29c23e0506120a11c51c2e90aafa438a7f",
+          "t100_function": "MoveEnermy10+0x3f"
+        },
+        {
+          "t100_offset": 971651,
+          "a800_offset": 1393023,
+          "bytes": 163,
+          "sha256": "540513b24b8ca21129fe877b9ec9e6c1ba2e2b6947162e84d43812155a5c0f71",
+          "t100_function": "MoveEnermy2+0x6b"
+        },
+        {
+          "t100_offset": 979649,
+          "a800_offset": 1400837,
+          "bytes": 145,
+          "sha256": "d8226d9347fcd451db0a065ef493301fb1192cb77889339973a4009ec3145d5e",
+          "t100_function": "checkCrashEnermyEarthMissile+0x9"
+        }
+      ]
+    },
+    {
+      "object": "spacewar",
+      "t100_range": [
+        989516,
+        996372
+      ],
+      "a800_range": [
+        1380836,
+        1387600
+      ],
+      "minimum_seed": 32,
+      "matching_runs": 7,
+      "t100_distinct_bytes_matched": 337,
+      "matches": [
+        {
+          "t100_offset": 990218,
+          "a800_offset": 1381502,
+          "bytes": 81,
+          "sha256": "8f6edf5bcf47a0acac56755137882c4b12654fdaaeed2d0f623a6f698bc7059c",
+          "t100_function": "InitEnemyDirection+0x1a"
+        },
+        {
+          "t100_offset": 989902,
+          "a800_offset": 1381186,
+          "bytes": 66,
+          "sha256": "127a5653240a7509ae4903a98087f1a3c1c51d95062840dd0feb0ff1dc3787b3",
+          "t100_function": "InitEnemyLocation+0x5e"
+        },
+        {
+          "t100_offset": 989969,
+          "a800_offset": 1381253,
+          "bytes": 48,
+          "sha256": "385f255efcb86cad2dab9682bb49f2f181d8d3b5defbf6ed55f70d6f3cfad647",
+          "t100_function": "InitEnemyLocation+0xa1"
+        },
+        {
+          "t100_offset": 989837,
+          "a800_offset": 1381121,
+          "bytes": 39,
+          "sha256": "312ee1a3c02c25aea32e0f3a474290cc41e3ab70b2781cdcba29464ed60dfda7",
+          "t100_function": "InitEnemyLocation+0x1d"
+        },
+        {
+          "t100_offset": 992516,
+          "a800_offset": 1383372,
+          "bytes": 37,
+          "sha256": "146b8da7763b69c0c66c685a74b94d6739bf3b80b4a95b1893fd44c4f1754014",
+          "t100_function": "RelocateEnemy+0x38"
+        }
+      ]
+    }
+  ],
+  "status": "static proof of shared native code; A800 execution untested"
+}

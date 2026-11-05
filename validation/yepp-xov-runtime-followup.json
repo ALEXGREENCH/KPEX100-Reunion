@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "device": "Samsung Yepp YP-T8",
+  "firmware": "1.38FR",
+  "status": "Original ARM XOV interpreter and external loader identified; no new original game file or gameplay proof.",
+  "source": {
+    "url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_FR&OriginYN=N&ModelType=N&ModelName=YP-T8Q%2FELS&CttFileID=1072613&CDCttType=FM&VPath=FM%2F200611%2F20061114161749984_YP_T8_ROM_20060609_138FR.zip",
+    "archive": "20061114161749984_YP_T8_ROM_20060609_138FR.zip",
+    "bytes": 2199490,
+    "sha256": "1806caaf2fede1f3871978e9ae0bb51ea34fb422b0ec1372d2047efe6d8aec34",
+    "member": "YP_T8.rom",
+    "memberBytes": 944020,
+    "memberSha256": "36dd184a8d3a71f78e1348ac46387c4854092475f0d57ce89e4f09c1823b597d"
+  },
+  "mapping": {
+    "bootstrapSourceLiteral": {
+      "fileOffset": "0x63c",
+      "value": "0x7000089c"
+    },
+    "destinationLiteral": {
+      "fileOffset": "0x640",
+      "value": "0x20010000"
+    },
+    "lengthLiteral": {
+      "fileOffset": "0x644",
+      "value": "0xd3850"
+    },
+    "codeMapping": "ARM address = file offset +0x2000f764 for copied code region; excludes first 0x89c bootstrap bytes"
+  },
+  "functions": [
+    {
+      "name": "eventExecutor",
+      "fileOffset": 300136,
+      "fileOffsetHex": "0x49468",
+      "armAddress": "0x20058bcc",
+      "first32Bytes": "000050e30ef0a00138402de9044b1fe50010e0e3041084e50c1084e5081084e5",
+      "behavior": "Fetches 16-bit opcodes, table-dispatch below 0xf5; recognizes 0xff00 or native sentinel as event end."
+    },
+    {
+      "name": "applicationInit",
+      "fileOffset": 300504,
+      "fileOffsetHex": "0x495d8",
+      "armAddress": "0x20058d3c",
+      "first32Bytes": "f0472de96cac1fe518009ae5b0008ae5581090e5005081e05c1090e5007081e0",
+      "behavior": "Reads sections at header+0x58,0x5c,0x60,0x64. Variable/media descriptors 8/12 bytes."
+    },
+    {
+      "name": "start",
+      "fileOffset": 301324,
+      "fileOffsetHex": "0x4990c",
+      "armAddress": "0x20059070",
+      "first32Bytes": "10402de9a04f1fe50000a0e3200084e52dffffeb000050e30c00a0031040bd08",
+      "behavior": "Initialize then execute header+0x44."
+    },
+    {
+      "name": "end",
+      "fileOffset": 301396,
+      "fileOffsetHex": "0x49954",
+      "armAddress": "0x200590b8",
+      "first32Bytes": "e42f1fe508402de9881092e5000081e5b00092e5480090e5bdfeffebcbf4ffeb",
+      "behavior": "Execute header+0x48 then cleanup."
+    },
+    {
+      "name": "timer",
+      "fileOffset": 300252,
+      "fileOffsetHex": "0x494dc",
+      "armAddress": "0x20058c40",
+      "first32Bytes": "08149fe570402de9001191e7786b1fe5000051e3802b1f050010c207881096e5",
+      "behavior": "Execute header+0x4c."
+    },
+    {
+      "name": "key",
+      "fileOffset": 300408,
+      "fileOffsetHex": "0x49578",
+      "armAddress": "0x20058cdc",
+      "first32Bytes": "083c1fe5800410e3202093e5ff14c0e3021081110200001a800510e30100000a",
+      "behavior": "Update key state then execute header+0x50."
+    },
+    {
+      "name": "auxiliaryEvent",
+      "fileOffset": 300480,
+      "fileOffsetHex": "0x495c0",
+      "armAddress": "0x20058d24",
+      "first32Bytes": "502c1fe5881092e5000081e5b00092e5540090e5a3ffffeaf0472de96cac1fe5",
+      "behavior": "Execute header+0x54; exact public API name unestablished."
+    },
+    {
+      "name": "readAppMetadata",
+      "fileOffset": 357248,
+      "fileOffsetHex": "0x57380",
+      "armAddress": "0x20066ae4",
+      "first32Bytes": "70402de90160a0e10050a0e10100a0e344101fe50140a0e30120a0e3f64f00eb",
+      "behavior": "Read 456-byte AppInfo.sys record."
+    },
+    {
+      "name": "enumerateAppMetadata",
+      "fileOffset": 357432,
+      "fileOffsetHex": "0x57438",
+      "armAddress": "0x20066b9c",
+      "first32Bytes": "f0432de973df4de278909fe570809fe519608de20070a0e10050a0e30040a0e3",
+      "behavior": "Enumerate 50 records; valid flag+0x1c6, name+0x15."
+    },
+    {
+      "name": "filePathBuilder",
+      "fileOffset": 357764,
+      "fileOffsetHex": "0x57584",
+      "armAddress": "0x20066ce8",
+      "first32Bytes": "30402de90050a0e10000a0e343df4de208008de504008de58c008de20520a0e1",
+      "behavior": "Uses GAME/SYS paths and %s.xov/%s.sys templates."
+    },
+    {
+      "name": "externalContentLoader",
+      "fileOffset": 361584,
+      "fileOffsetHex": "0x58470",
+      "armAddress": "0x20067bd4",
+      "first32Bytes": "7c402de914431fe5000050e33000000a18511fe5010050e35300000a020050e3",
+      "behavior": "Filesystem chunked content loading, maximum 16000 bytes per read."
+    },
+    {
+      "name": "eventDispatcher",
+      "fileOffset": 365384,
+      "fileOffsetHex": "0x59348",
+      "armAddress": "0x20068aac",
+      "first32Bytes": "10402de90040a0e1000090e5060050e300f18f901080bde81080bde8040000ea",
+      "behavior": "Dispatches START, timer, key and END to interpreter."
+    },
+    {
+      "name": "framebufferWrite",
+      "fileOffset": 356560,
+      "fileOffsetHex": "0x570d0",
+      "armAddress": "0x20066834",
+      "first32Bytes": "043f1fe50c0f1fe5001093e524c19fe5012190e7011180e0041011e500c09ce5",
+      "behavior": "Write 16-bit pixel through global 0x208dbdb4, followed by an index bounds check."
+    },
+    {
+      "name": "framebufferRead",
+      "fileOffset": 356652,
+      "fileOffsetHex": "0x5712c",
+      "armAddress": "0x20066890",
+      "first32Bytes": "600f1fe5683f1fe5cc209fe5000090e5002092e5001193e7811082e0b010d1e1",
+      "behavior": "Read 16-bit pixel through same framebuffer pointer."
+    }
+  ],
+  "xovLayout": {
+    "eventEntryOffsets": [68, 72, 76, 80, 84],
+    "sectionOffsets": [88, 92, 96, 100],
+    "variableDescriptorBytes": 8,
+    "mediaDescriptorBytes": 12,
+    "variableElementBytes": 4,
+    "nameOffsetInAppMetadata": 21,
+    "nameBytesInAppMetadata": 33,
+    "appMetadataRecordBytes": 456,
+    "appMetadataCapacity": 50,
+    "codeArchitecture": "ARM firmware implements 16-bit stack bytecode; XOV itself is not established as native ARM executable.",
+    "sgsCompatibility": "Not established. XOV header differs from SGS4 and no original XOV game has been executed."
+  },
+  "partialOriginalCodeSlice": {
+    "fileOffset": 289956,
+    "endExclusive": 356888,
+    "bytes": 66932,
+    "sha256": "7e5a77c8756962b4c71ab39aa30110ac1c571a4975957077d4d1f547b4128d0a",
+    "scope": "Exact original native implementation slice only, dependent on functions/globals outside slice; retained as scratch research, not a new game or self-contained library."
+  },
+  "structuralScan": {
+    "version": "Byte-aligned XOV-layout scan derived from original initializer",
+    "criteria": [
+      "Every byte offset; no guessed magic/version required",
+      "0x68 <= a, a even; a+18*8 <= b <= c < d <= available bytes",
+      "(b-a)%8==0 and (d-c)%12==0",
+      "Nonzero START entry; all nonzero five entries even and within [0x68,a)",
+      "Sum of u16 variable descriptor counts*4 equals c-b",
+      "Concatenated media lengths stay within file"
+    ],
+    "results": [
+      {
+        "file": "YP_T8.rom",
+        "size": 944020,
+        "sha256": "36dd184a8d3a71f78e1348ac46387c4854092475f0d57ce89e4f09c1823b597d",
+        "sectionCandidates": 17,
+        "validObjects": []
+      },
+      {
+        "file": "YP_T8.img",
+        "size": 2738020,
+        "sha256": "fe2bf7531a8e05a8a4107e359d295abfca5cfcb52222fc7e5ba1838442625e90",
+        "sectionCandidates": 0,
+        "validObjects": []
+      },
+      {
+        "file": "YP_T8D1.FNT",
+        "size": 1486488,
+        "sha256": "6048be2f5fbe1e6a7022da212adbf7991771b7354068efdedabd1258ebd3c1fb",
+        "sectionCandidates": 0,
+        "validObjects": []
+      }
+    ],
+    "limitation": "No object matching these uncompressed structural constraints. Does not rule out differently packed formats, other firmware versions or user-storage game files."
+  },
+  "newGamesRecovered": 0,
+  "gameplayConfirmed": false
+}

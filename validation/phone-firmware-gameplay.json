@@ -1,0 +1,47 @@
+{
+  "scope": "Original SGS recovered from LG handset storage and replayed on the original Kingston interpreter.",
+  "games": {
+    "galaga-lg-sd1000": {
+      "id": "galaga-lg-sd1000",
+      "runtime": {
+        "width": 128,
+        "height": 128,
+        "profile": "phone"
+      },
+      "replay": "galaga-sd1000-replay.json",
+      "status": "idle",
+      "events": 287,
+      "evidence": "Stage 1, movement and firing, score 400",
+      "frame": "gameplay/galaga-lg-sd1000-28-tick45.png",
+      "frameSha256": "5add956655cb79a2da03976d8102102f6578d49f3283c4a43f3f2ea016182bd5"
+    },
+    "vocabulary-quiz-lg-sv130": {
+      "id": "vocabulary-quiz-lg-sv130",
+      "runtime": {
+        "profile": "phone",
+        "width": 176,
+        "height": 204
+      },
+      "replay": "lg-sv130-vocabulary-quiz-replay.json",
+      "status": "idle",
+      "events": 61,
+      "evidence": "Two accepted answers and the third question",
+      "frame": "gameplay/vocabulary-quiz-lg-sv130-6-tick8.png",
+      "frameSha256": "396f453f0c69677946505fc5fcf82eeb08dfdc7101aebc31934aae836a393476"
+    },
+    "bubble-bobble-lg-sd1020": {
+      "id": "bubble-bobble-lg-sd1020",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 128
+      },
+      "replay": "lg-sd1020-bubble-bobble-replay.json",
+      "status": "idle",
+      "events": 90,
+      "evidence": "Stage 1, movement, jump and bubble",
+      "frame": "gameplay/bubble-bobble-lg-sd1020-12-tick8.png",
+      "frameSha256": "213cb2940bd7d98fcc39493553c6ffaf07144ec3013ee64f07b5688da7521604"
+    }
+  }
+}

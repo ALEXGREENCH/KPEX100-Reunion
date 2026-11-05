@@ -13,8 +13,8 @@ const source = JSON.parse(fs.readFileSync(new URL('../../web/data/catalog.json',
 // These tests use synthetic payloads and catalogue identities; no historical binaries.
 test('an empty public build exposes metadata without claiming originals are present', () => {
   const catalog = assetCatalog(source);
-  assert.equal(catalog.games.length, 38);
-  assert.equal(catalog.firmwares.length, 9);
+  assert.equal(catalog.games.length, source.games.length);
+  assert.equal(catalog.firmwares.length, source.firmwares.length);
   assert.ok(
     Object.values(catalog)
       .flat()

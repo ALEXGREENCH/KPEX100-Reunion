@@ -1,0 +1,1303 @@
+{
+  "schemaVersion": 1,
+  "model": "Curitel C-500",
+  "scope": "Recovered manufacturer manual and original PCSync distribution from a public preservation mirror. No handset firmware or standalone C-500 game payload recovered.",
+  "sources": [
+    {
+      "url": "https://pfile.imholic.com:2822/Pantech/%ED%94%BC%EC%B2%98%ED%8F%B0_%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%99%80_%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%A4%EB%8B%88%EC%A0%80/C-500/C500_Manual.pdf",
+      "filename": "C500_Manual.pdf",
+      "status": 200,
+      "bytes": 3628038,
+      "sha256": "91042ae7f2e137c5c499e2d046f45d6566465498e41fd2fd9fbccb32c0293a44",
+      "first16": "255044462d312e330d25e2e3cfd30d0a",
+      "id": "curitel-c500-manual",
+      "provenance": "Public Pantech/Curitel manufacturer-file preservation mirror; file acquired by HTTP 200 and hashed locally, not authenticated by an OEM signature."
+    },
+    {
+      "url": "https://pfile.imholic.com:2822/Pantech/%ED%94%BC%EC%B2%98%ED%8F%B0_%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%99%80_%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%A4%EB%8B%88%EC%A0%80/C-500/PCSync_C500_Setup_V251.zip",
+      "filename": "PCSync_C500_Setup_V251.zip",
+      "status": 200,
+      "bytes": 9141050,
+      "sha256": "894f280457c9b88c74502452aa7aaf150cf308a5b44323a77c0c61a8d3b1177c",
+      "first16": "504b0304140000000800887bb8402f83",
+      "id": "curitel-c500-pcsync",
+      "provenance": "Public Pantech/Curitel manufacturer-file preservation mirror; file acquired by HTTP 200 and hashed locally, not authenticated by an OEM signature."
+    }
+  ],
+  "sourceDirectory": {
+    "url": "https://pfile.imholic.com:2822/Pantech/%ED%94%BC%EC%B2%98%ED%8F%B0_%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%99%80_%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%A4%EB%8B%88%EC%A0%80/C-500/",
+    "status": 200,
+    "bytes": 2991,
+    "sha256": "78cdf1cde13c949806f390e9e33e1952e490f2f727c99f2ba28cf001b86ac772"
+  },
+  "historicalSources": [
+    {
+      "url": "https://web.archive.org/web/20030914195710id_/http://gvmclub.com:80/20021130_%b4%dc%b8%bb%b1%e2%ba%b0_%b0%b3%b9%df%b0%a1%c0%cc%b5%e5.pdf",
+      "expectedSha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 1285394,
+      "sha256": "ee3210a1bb535bccd2c138641fd0478486ab1cd063cce05619ab6c316d3487de",
+      "sha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee",
+      "id": "gvm-handset-guide-2002",
+      "title": "GVM 단말기별 개발가이드",
+      "coverDate": "2002-11-30",
+      "pdfCreationDate": "2002-12-12",
+      "issuer": "Sinjisoft Corporation",
+      "pages": 101,
+      "cdxSha1MatchesPayload": true,
+      "originalUrl": "http://gvmclub.com:80/20021130_%b4%dc%b8%bb%b1%e2%ba%b0_%b0%b3%b9%df%b0%a1%c0%cc%b5%e5.pdf",
+      "cdxSha1Base32": "AYTF5UR27G5LMFYPRZT7OWHJ57KX4LHO",
+      "captureTimestamp": "20030914195710",
+      "cdxMime": "application/pdf",
+      "warcCompressedRecordLength": 348857
+    },
+    {
+      "filename": "20031014-SKT-STI-handsets.xls",
+      "url": "https://web.archive.org/web/20040623225914id_/http://gvmclub.com:80/board/free/include/tbl_board_free/files/phpxLSKoF/%b4%dc%b8%bb%b1%e2_%c1%a4%ba%b8_skt,sti_031014.xls",
+      "expectedSha1": "d5fd873d7e90f31dadbe911459c93a792012c8ab",
+      "status": 200,
+      "mime": "application/vnd.ms-excel",
+      "bytes": 337920,
+      "sha256": "1449e3820c0ea0c194f6f494b47186b2f0e45b59f214828e16272f443310c672",
+      "sha1": "d5fd873d7e90f31dadbe911459c93a792012c8ab",
+      "sha1MatchesCdx": true,
+      "id": "skt-sti-roster-2003",
+      "title": "단말기_정보_skt,sti_031014.xls",
+      "dateInFilename": "2003-10-14",
+      "provenance": "Original workbook attached on the public GVM Club forum. An official operator issuer or named author has not been authenticated. Column labels and cells are transcribed as stored.",
+      "cdxSha1Base32": "2X6YOPL6SDZR3LN6SEKFTSJ2PEQBFSFL",
+      "captureTimestamp": "20040623225914",
+      "originalUrl": "http://gvmclub.com:80/board/free/include/tbl_board_free/files/phpxLSKoF/%b4%dc%b8%bb%b1%e2_%c1%a4%ba%b8_skt,sti_031014.xls",
+      "cdxMime": "application/vnd",
+      "warcCompressedRecordLength": 76861
+    }
+  ],
+  "manual": {
+    "sourceId": "curitel-c500-manual",
+    "pdfPages": 70,
+    "builtinGames": [
+      {
+        "title": "매직볼",
+        "english": "Magic Ball",
+        "pdfPage": 33,
+        "printedPages": [62, 63],
+        "menuSummaryPdfPage": 57,
+        "menuSummaryPrintedPages": [110, 111],
+        "genreFromManual": "Falling-block puzzle; rotate blocks, clear horizontal lines and obstacles to progress toward the castle.",
+        "format": "unestablished",
+        "sgsRecovered": false
+      }
+    ],
+    "downloadFeature": {
+      "pdfPage": 44,
+      "printedPages": [84, 85],
+      "proof": "NATE download/retained-program instructions and incoming-call handling for single-player, two-player and network games. No explicit SGS filename or GVM version in this manual."
+    },
+    "shortVerbatimAnchors": ["매직볼", "마법사보관함", "Start", "Easy", "Rank", "Help"],
+    "visualReview": {
+      "researchBundleArtifact": "c500-game-p33.png",
+      "bytes": 105273,
+      "sha256": "df6aaaf8fcc898eb530032194908920f2a895cff31924fa26282e8e399668932",
+      "pdfPage": 33,
+      "printedPages": [62, 63],
+      "method": "pdftoppm -f 33 -singlefile -scale-to 1400 -png C500_Manual.pdf c500-game-p33",
+      "note": "Original screenshot images and English Start/Easy/Rank/Help are visible. Poppler could not substitute original Korean fonts; Korean words were verified in original PDF text extraction, not reconstructed in the image."
+    },
+    "formatInference": "The manual proves the built-in title and behavior only. It does not name SGS, Sinjisoft or a runtime version for Magic Ball."
+  },
+  "independentHistoricalGvmProfiles": {
+    "guideProfiles": [
+      {
+        "page": 98,
+        "manufacturer": "Pantech/Curitel",
+        "modelLabelVerbatim": "C-500",
+        "releaseDateVerbatim": "2002. 10.",
+        "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+        "vm": "GVM2X",
+        "scriptVersion": 2,
+        "downloadProtocol": "Sliding",
+        "userAgentVerbatim": "DDEEGG: HD0711",
+        "physicalLcdVerbatim": "128*143 :::::::::::::::: 문자 : 21*07",
+        "physicalLcd": [128, 143],
+        "gvmAreaVerbatim": "128*? :::::::::::::::: LCDCLASS : 4",
+        "gvmArea": [128, null],
+        "lcdClass": 4,
+        "imageTypeVerbatim": "64K Color :::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+        "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+        "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+        "sourceId": "gvm-handset-guide-2002"
+      }
+    ],
+    "workbookProfiles": [
+      {
+        "sheet": "SKT",
+        "row": 217,
+        "manufacturer": "현대 큐리텔",
+        "model": {
+          "cell": "B217",
+          "value": "C-500"
+        },
+        "carrier": {
+          "cell": "C217",
+          "value": "SKT/STI"
+        },
+        "gvmSupported": {
+          "cell": "R217",
+          "value": "O"
+        },
+        "gvmVersion": {
+          "cell": "S217",
+          "value": "2"
+        },
+        "skvmSupported": {
+          "cell": "T217",
+          "value": "O"
+        },
+        "skvmVersion": {
+          "cell": "U217",
+          "value": "1"
+        },
+        "physicalWidth": {
+          "cell": "AT217",
+          "value": "128"
+        },
+        "physicalHeight": {
+          "cell": "AU217",
+          "value": "143"
+        },
+        "applicationWidth": {
+          "cell": "AV217",
+          "value": "128"
+        },
+        "applicationHeight": {
+          "cell": "AW217",
+          "value": "128"
+        }
+      }
+    ]
+  },
+  "profileInterpretation": "The Sinjisoft guide explicitly says GVM2X/SCRIPTVER 2, Sliding, physical 128x143, GVM area 128x?. The later forum workbook says GVM 2, physical 128x143 and general application area 128x128. The latter does not retroactively fill the unknown guide height, identify the Magic Ball format, or prove Reunion runtime compatibility.",
+  "pcsync": {
+    "sourceId": "curitel-c500-pcsync",
+    "zipCrcVerified": true,
+    "zipEntries": [
+      {
+        "nameRawDecoded": "PCSync_C500_Setup_V251.exe",
+        "bytes": 9241940,
+        "compressedBytes": 9140690,
+        "crc32": "e87b832f",
+        "sha256": "9e708fb7b75c1e0b03a964b4448ef20a30d450991eb345c7b13f01542fc76876"
+      },
+      {
+        "nameRawDecoded": "╗⌡ ╞·┤⌡.zip",
+        "bytes": 112,
+        "compressedBytes": 112,
+        "crc32": "11e40edc",
+        "sha256": "aa9aac9c35165d93d14c851ac6e8d3bf3f094f8c687d738a34587cc725b9a1f1"
+      }
+    ],
+    "nestedZipEntries": [
+      {
+        "nameRawDecoded": "╗⌡ ╞·┤⌡",
+        "bytes": 0,
+        "crc32": "00000000"
+      }
+    ],
+    "nestedZipCrcVerified": true,
+    "installerExecuted": false,
+    "steps": [
+      {
+        "tool": "7-Zip",
+        "input": "PCSync_C500_Setup_V251.exe",
+        "container": "MSZip CAB in PE",
+        "offset": 167838,
+        "cabinetPhysicalBytes": 9074102,
+        "files": 9
+      },
+      {
+        "tool": "locally built open-source unshield",
+        "input": "Disk1/data1.cab with data1.hdr and data2.cab",
+        "container": "InstallShield",
+        "files": 50,
+        "bytes": 23861381
+      },
+      {
+        "tool": "7-Zip",
+        "input": "Help_Files/PCSync.chm",
+        "container": "CHM",
+        "files": 113,
+        "bytes": 4356859
+      }
+    ],
+    "scan": {
+      "tool": "tools/scan-firmware-games.py",
+      "toolSha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e",
+      "formats": [1, 2, 4, 36],
+      "xorMasks": [0, 165],
+      "artifacts": 163,
+      "aggregateBytes": 28218240,
+      "aggregateBytesNote": "Includes both the original compressed CHM and its expanded members; not a unique payload size.",
+      "candidateOffsetsTested": 847188,
+      "validatedSgsContainers": 0,
+      "maxArtifactBytes": 8155136
+    },
+    "manifest": [
+      {
+        "path": "pcsync-files/_Engine_Engine_Files/corecomp.ini",
+        "bytes": 28529,
+        "sha256": "5214789c08ee573e904990dcd29e9e03aaf5cf12e86fae368005fd8f4e371bd5",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-files/_Engine_Kernel_Placeholder/iKernel.exe",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-files/_Engine_ScriptEngine/iscript.dll",
+        "bytes": 225280,
+        "sha256": "4f77a9018b6b0d41151366e9acab3397416d114fc895703deb82b20f40116ad1",
+        "candidateOffsetsTested": 13771
+      },
+      {
+        "path": "pcsync-files/_Engine_SelfRegistering/ctor.dll",
+        "bytes": 77824,
+        "sha256": "590be865ddf8c8d0431d8f92aa3948cc3c1685fd0649d607776b81cd1e267d0a",
+        "candidateOffsetsTested": 3249
+      },
+      {
+        "path": "pcsync-files/_Engine_SelfRegistering/iuser.dll",
+        "bytes": 176128,
+        "sha256": "8efcbd8752d8bbfd7ee559502d1aa28134c9bf391bf7fc5ce6fdfd4473599afb",
+        "candidateOffsetsTested": 10700
+      },
+      {
+        "path": "pcsync-files/_Engine_SelfRegistering/objectps.dll",
+        "bytes": 32768,
+        "sha256": "32c6ad91dc66bc12e1273b1e13eb7a15d6e8f63b93447909ca2163dd21b22998",
+        "candidateOffsetsTested": 288
+      },
+      {
+        "path": "pcsync-files/_Support_Korean_Files/_IsRes.dll",
+        "bytes": 180224,
+        "sha256": "1713decd437721261a58c61a11b37493ed30b6816ef5fa514f578607f50b6db9",
+        "candidateOffsetsTested": 21524
+      },
+      {
+        "path": "pcsync-files/_Support_Korean_String_Tables/value.shl",
+        "bytes": 270,
+        "sha256": "f8929550816cdc7cffcdf4e0f0e3611fb4a2b124fe99e731a88ed01c87f5a2d5",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-files/_Support_Language_Independent_OS_Independent_Files/license.txt",
+        "bytes": 284,
+        "sha256": "f9e00debc46d7047d64bf1628279db817f6d89855c067e1117c8843fcbc4b56a",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-files/_Support_Non-SelfRegistering/default.pal",
+        "bytes": 1168,
+        "sha256": "8075162db275eb52f5d691b15fc0d970cb007f5bece33ce5db509edf51c1f020",
+        "candidateOffsetsTested": 6
+      },
+      {
+        "path": "pcsync-files/_Support_Non-SelfRegistering/isrt.dll",
+        "bytes": 323584,
+        "sha256": "589ff69d2aecfdd83bdd5a420bed5d3c6c4a51b970a9462b5819fa7edffcf547",
+        "candidateOffsetsTested": 17089
+      },
+      {
+        "path": "pcsync-files/Help_Files/PCSync.chm",
+        "bytes": 3346586,
+        "sha256": "06b1cdca992873f76c954274dada81f5ca037140de74e6b8380d7a988eacbad3",
+        "candidateOffsetsTested": 97983
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ComnCtrl.dll",
+        "bytes": 446464,
+        "sha256": "7495a02c42848dad09a66637425a6e9396e07eaba300ec0eb62611862a1a2a4b",
+        "candidateOffsetsTested": 37757
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ConnControl.dll",
+        "bytes": 143360,
+        "sha256": "70be531e185913109527871b1dab33fb40b4dbe77e73905b80467850e84d1e0c",
+        "candidateOffsetsTested": 11169
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ConnManager.dll",
+        "bytes": 32768,
+        "sha256": "a1d088780fc61b4ebf3123e6706a70028aa6598c2a1524a7f2da9dea21000368",
+        "candidateOffsetsTested": 567
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ConvLunar.dll",
+        "bytes": 36864,
+        "sha256": "db068657b3ea670ce51b6a08783974da79bbc7915906e2178055a5ca7e5b4677",
+        "candidateOffsetsTested": 904
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/efsview10.dll",
+        "bytes": 98304,
+        "sha256": "6c278557be09d2fc6635d1b855e8046f3acad8f56b15f6f282e43767add6e5c4",
+        "candidateOffsetsTested": 6076
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ImageManager.dll",
+        "bytes": 827392,
+        "sha256": "ba510b4febb43b6d5a88b21111ec539a238bfe0d2257fcd39ff45aa9eef8e67e",
+        "candidateOffsetsTested": 66776
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/M5_EmuHw.dll",
+        "bytes": 1036288,
+        "sha256": "9abbcd63bba72c0f208d57c9857943463b2723de443c46881b81b8eed0e5f578",
+        "candidateOffsetsTested": 37854
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/M5_EmuSmw5.dll",
+        "bytes": 1437696,
+        "sha256": "c6e9215955d761b9c6b69450d031e87b5b3bb435a651002072f2e44f1c16711e",
+        "candidateOffsetsTested": 84887
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ma3smwemu.dll",
+        "bytes": 892928,
+        "sha256": "bef109f29bcc8aa0c659b67e940b6272f7209bf8fee19ccd79a97aaef68c915f",
+        "candidateOffsetsTested": 45972
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ms10.dll",
+        "bytes": 151552,
+        "sha256": "1262a88cc4d284fc642948a86a1b4cec6cc147225074292b8fb3a8adadfd63d1",
+        "candidateOffsetsTested": 5843
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/PstBaseControl.dll",
+        "bytes": 32768,
+        "sha256": "68b46de77a04676ed355bbff02836e6f97fa040d787a33831ecf5dfc80390c46",
+        "candidateOffsetsTested": 479
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/PstCKS200.dll",
+        "bytes": 94208,
+        "sha256": "fb8df6816f15908f66275a27621c33475bebafefbcb3a997ca29bd76bc20a60e",
+        "candidateOffsetsTested": 4400
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/ShellTreeCtrl.dll",
+        "bytes": 188416,
+        "sha256": "36b05dcd8c6d071903ce1c376e23b4cc84987f88808463e362c27afc1c702dc1",
+        "candidateOffsetsTested": 17519
+      },
+      {
+        "path": "pcsync-files/Program_DLLs/XT1931Lib.dll",
+        "bytes": 917504,
+        "sha256": "54f5e74bfaacc8d528d6c7105d8b3738f38d26f6d3af8c5582b57c6d21738333",
+        "candidateOffsetsTested": 55228
+      },
+      {
+        "path": "pcsync-files/Program_Executable_Files/PCSync.exe",
+        "bytes": 8155136,
+        "sha256": "0eb70e72aac3e695359654cd16a5c797130af0964f83518516a8de8574a9698c",
+        "candidateOffsetsTested": 145556
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_bus.inf",
+        "bytes": 7255,
+        "sha256": "f633646cb1dd715afff82ed0c947cd1e0fc06330b8ed9bfc175c5e56f24a80fe",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_bus.sys",
+        "bytes": 43248,
+        "sha256": "9c43b3cf0ef2fcf8fd40bcc1e5754f98c98c571d187e6ec331946f5335693a3a",
+        "candidateOffsetsTested": 2489
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_cm95.sys",
+        "bytes": 10672,
+        "sha256": "6cab738c91bd7a9552f992589693ee7916bcc57ded423fe6e49d82ce065e435a",
+        "candidateOffsetsTested": 537
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_cmnt.sys",
+        "bytes": 6144,
+        "sha256": "af9acfb3fc96364807ff67aa0af20ec74c53b0c1fe7df89516468d864507ae8c",
+        "candidateOffsetsTested": 258
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_comm.vxd",
+        "bytes": 23897,
+        "sha256": "243a71cc3dd456043394bab35564af718a73d7fbc1aa3f65e2bf53444ae05e29",
+        "candidateOffsetsTested": 1430
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_cr.sys",
+        "bytes": 4016,
+        "sha256": "bd0673ab9b5483091f3d6aa6087e98e7babd78c78080785e8d72e1cbd064e8aa",
+        "candidateOffsetsTested": 166
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_mdfl.sys",
+        "bytes": 6064,
+        "sha256": "c793543f410a6ece06131bb45bc40b0e40419940ee5cf1549d27133a85347e9b",
+        "candidateOffsetsTested": 275
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_mdm.sys",
+        "bytes": 78176,
+        "sha256": "e54bf2fbf4be30eab5cfeb2283e7470ca9c19df2cb3916b8e64c6b064fecc8d7",
+        "candidateOffsetsTested": 5754
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_mdm2.inf",
+        "bytes": 47579,
+        "sha256": "bb4793914d0b7071e365f1b5f5834cacbc128b1af5b001a780a91aa5c462c2c2",
+        "candidateOffsetsTested": 2
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_mdmv.inf",
+        "bytes": 53243,
+        "sha256": "b870061fbec3533114877e0bfc1879b4ec79ca76889c231eb65ad8d4657864f5",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_mdmw.inf",
+        "bytes": 4728,
+        "sha256": "b5ffe76e80be4df3c423de74130cfaef3ff9baf02ce468ab075d8d948f75420f",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_sdm2.inf",
+        "bytes": 4744,
+        "sha256": "343e2cbec1f74e6fa7ad4abe0af2c3756b3b18a2c2d9dc3849ec7870099962f3",
+        "candidateOffsetsTested": 2
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_sdmv.inf",
+        "bytes": 11053,
+        "sha256": "c8954606425f77d06610abbddd7b4543210661145ed6575690d5951cd5e076e0",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_sdmw.inf",
+        "bytes": 4798,
+        "sha256": "e8a367cfb6d9e851f519c9d9854a2d9fe7325f334ae19c6bd6143fb47fb1ea99",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_serd.sys",
+        "bytes": 61200,
+        "sha256": "08a239f9c4ad11cf4db21f664cf1dd6a4b79615f02e534273badbe5a20f5eb25",
+        "candidateOffsetsTested": 4236
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/CUR_Uninstall.exe",
+        "bytes": 40960,
+        "sha256": "b840c47768141556b5cab09113cf4c520873398f872237de8f87de19b92d1338",
+        "candidateOffsetsTested": 1648
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_vcd.vxd",
+        "bytes": 13250,
+        "sha256": "84cf48fb145b5acb6eef23b208f5ec7535a447f2feaf0d349a15756e0618ce0c",
+        "candidateOffsetsTested": 680
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_vcr.vxd",
+        "bytes": 30092,
+        "sha256": "d58974509daa163d79d7a31774aa0556c005d0b59a392a70ffabb1f5a9bf9b53",
+        "candidateOffsetsTested": 1693
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_wh95.sys",
+        "bytes": 6704,
+        "sha256": "469800684475437443db369aab4ef568a01e4f5b71dfcc8bb6c51ee2cfb8bfef",
+        "candidateOffsetsTested": 321
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/cur_whnt.sys",
+        "bytes": 5776,
+        "sha256": "cb76c181e33cf0938b4cd7189351b4ddf56b691ad8df057e6253667058818236",
+        "candidateOffsetsTested": 271
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/readme.txt",
+        "bytes": 465,
+        "sha256": "07f5206d804b7d37f77d382dfb6e690c6b02cd91e1f434761cc405bfd2ea44e9",
+        "candidateOffsetsTested": 10
+      },
+      {
+        "path": "pcsync-files/USBDriver/USB/Setup.exe",
+        "bytes": 36864,
+        "sha256": "ea775c9296864d62d46229fec4b13b1abedcf40f57d78967b7731519e14c3966",
+        "candidateOffsetsTested": 1632
+      },
+      {
+        "path": "pcsync-files/zipcode_data/zipcode.dat",
+        "bytes": 4476160,
+        "sha256": "6f3a8903df2a4c74715ba2e267a17fca33a83403800a8df237927f058874440a",
+        "candidateOffsetsTested": 30528
+      },
+      {
+        "path": "pcsync-help/#IDXHDR",
+        "bytes": 4096,
+        "sha256": "8067618a36b7a9be96fef1e5610d2e788924c2f2b844e5d00be57ff7adb8d637",
+        "candidateOffsetsTested": 3
+      },
+      {
+        "path": "pcsync-help/#ITBITS",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-help/#STRINGS",
+        "bytes": 1009,
+        "sha256": "9715567ddc96d56b829ce177a2610472ba2a7f1de094e120ce3b1aafbf357413",
+        "candidateOffsetsTested": 17
+      },
+      {
+        "path": "pcsync-help/#SYSTEM",
+        "bytes": 4276,
+        "sha256": "26ece1850bf03e0fdac2890d2a634e2bc63433fae6b5a841ee6808a5d6a5bbf9",
+        "candidateOffsetsTested": 12
+      },
+      {
+        "path": "pcsync-help/#TOPICS",
+        "bytes": 784,
+        "sha256": "3325a16f288d57808c133a4216a6b774dc58af018ab60279195fdb7b9e70fb39",
+        "candidateOffsetsTested": 64
+      },
+      {
+        "path": "pcsync-help/#URLSTR",
+        "bytes": 1345,
+        "sha256": "940da6b7a0f3ba7954e6a29c0eaa2db3676427b3f26313c267807d0c4e873179",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-help/#URLTBL",
+        "bytes": 588,
+        "sha256": "7a536dcc67a1a57f63b1671c8a2aa6debd45b4eaa925c9d737c4285b105e3591",
+        "candidateOffsetsTested": 39
+      },
+      {
+        "path": "pcsync-help/#WINDOWS",
+        "bytes": 204,
+        "sha256": "1af270d1954a96414cb5f426264a46b2fd723fdadbde339aaaf8c9e42725f569",
+        "candidateOffsetsTested": 2
+      },
+      {
+        "path": "pcsync-help/$FIftiMain",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-help/$OBJINST",
+        "bytes": 2700,
+        "sha256": "0ac696b010b5cf781f6c6283df1ecc56f77d4950425f1618b4e506ec56f704cf",
+        "candidateOffsetsTested": 116
+      },
+      {
+        "path": "pcsync-help/$WWAssociativeLinks/Property",
+        "bytes": 4,
+        "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-help/$WWKeywordLinks/Property",
+        "bytes": 4,
+        "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+        "candidateOffsetsTested": 0
+      },
+      {
+        "path": "pcsync-help/000_About.htm",
+        "bytes": 2076,
+        "sha256": "3e816887f9eb7c00684e1916ce1d4c3571de789bb6c9642eb20ec0a290591a6a",
+        "candidateOffsetsTested": 11
+      },
+      {
+        "path": "pcsync-help/001_Install uninstall.htm",
+        "bytes": 3316,
+        "sha256": "60c2012338f424ffc35c61e8b22533f59cab41d098c139652ba89c2c69a1ce13",
+        "candidateOffsetsTested": 62
+      },
+      {
+        "path": "pcsync-help/002_Program component.htm",
+        "bytes": 2326,
+        "sha256": "5a5ec7bd0ae6cd95df0d6e5117e5930f23f7ec52c8cad8315b69d3c1e013dc8b",
+        "candidateOffsetsTested": 16
+      },
+      {
+        "path": "pcsync-help/003_Login.htm",
+        "bytes": 1640,
+        "sha256": "21c85e524036f54441f3aa43b27139562b048e550828d4d03e1c919e4e1904ea",
+        "candidateOffsetsTested": 18
+      },
+      {
+        "path": "pcsync-help/004_USBconnect.htm",
+        "bytes": 2121,
+        "sha256": "760f3f21b3edf351599f6bbbe3372d110ef0796866a78bdb769de6837132f45f",
+        "candidateOffsetsTested": 22
+      },
+      {
+        "path": "pcsync-help/005_PCSyncOption.htm",
+        "bytes": 1553,
+        "sha256": "c35dc3c38c878ad73a31798a24e230a7d1aa9be8e777b9cb127575dd22c3895b",
+        "candidateOffsetsTested": 17
+      },
+      {
+        "path": "pcsync-help/006_OutlookSync.htm",
+        "bytes": 1738,
+        "sha256": "d3cc9f839f171cf200e5cfcd31bf0708933d64d4f29ceafdb2e2c93f1c0cc559",
+        "candidateOffsetsTested": 22
+      },
+      {
+        "path": "pcsync-help/009_PhoneSync.htm",
+        "bytes": 3049,
+        "sha256": "2cf8f4b14628a9a0b86787499fcf552d98ef9cd0bd8760bd84453e90ae1c92b6",
+        "candidateOffsetsTested": 39
+      },
+      {
+        "path": "pcsync-help/100_PhoneBook.htm",
+        "bytes": 3023,
+        "sha256": "1d48e0587bed2aa7563c1cf412e8588185ffee0818ecaec1b65cbbec3589efca",
+        "candidateOffsetsTested": 38
+      },
+      {
+        "path": "pcsync-help/101_AddressAdd.htm",
+        "bytes": 1257,
+        "sha256": "81f8f8d7cad8491fce296b68d27286dd9af1d4bc4f384e8d585ed79a58a6793b",
+        "candidateOffsetsTested": 22
+      },
+      {
+        "path": "pcsync-help/102_AddressEdit.htm",
+        "bytes": 656,
+        "sha256": "4e02bb64540803c9c0c83f3611f9449137b4bfa303ae1544a91c7ffa66f1dcb8",
+        "candidateOffsetsTested": 11
+      },
+      {
+        "path": "pcsync-help/103_AddressDelete.htm",
+        "bytes": 522,
+        "sha256": "147a8b3086eb7484e03820ac8c6111387eea8d7cc537797c4dfc317762111038",
+        "candidateOffsetsTested": 7
+      },
+      {
+        "path": "pcsync-help/104_PhonebookPhoneSync.htm",
+        "bytes": 1350,
+        "sha256": "63be9c75f522b2357de391fda7c6cfae3d28202a1dc364fa762cab93e18f876c",
+        "candidateOffsetsTested": 18
+      },
+      {
+        "path": "pcsync-help/105_PhonebookPreview.htm",
+        "bytes": 661,
+        "sha256": "1cad0ee0db58f55d41c7feb5c3a4007f2d628a481db16211f9defdf7340df635",
+        "candidateOffsetsTested": 17
+      },
+      {
+        "path": "pcsync-help/106_GroupMgr.htm",
+        "bytes": 1951,
+        "sha256": "052ca23e7140ac87d2034c3c16660a96a5c0f3a14a9bd9455b5b0abe3c814692",
+        "candidateOffsetsTested": 39
+      },
+      {
+        "path": "pcsync-help/107_Print.htm",
+        "bytes": 500,
+        "sha256": "89d2ab8f74d0d92adcb7d1e80264a80316fca246c79e2eb0a86799f38e74fa8c",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-help/10_1_ImportXML.htm",
+        "bytes": 856,
+        "sha256": "9b0d84761107b215820a10da9f5c5dfaf7ed9d755059a803dd738c53a795e417",
+        "candidateOffsetsTested": 19
+      },
+      {
+        "path": "pcsync-help/10_2_Importoutlookcontact.htm",
+        "bytes": 816,
+        "sha256": "1c961198ac60b75d27c369917ce6b1e8258cf42d8dfc9ebf38a47beba888ee34",
+        "candidateOffsetsTested": 20
+      },
+      {
+        "path": "pcsync-help/10_import.htm",
+        "bytes": 740,
+        "sha256": "4629971eb642b85d543409d0a28f47c8eff4f8fb606eef485b1fd627b82bdbdd",
+        "candidateOffsetsTested": 13
+      },
+      {
+        "path": "pcsync-help/11_1_ExportXML.htm",
+        "bytes": 731,
+        "sha256": "1db9c34fe35ae35f656d615f490b11a11c558963b38e285296c47b2e8556d5da",
+        "candidateOffsetsTested": 6
+      },
+      {
+        "path": "pcsync-help/11_2_Exportoutlookcontact.htm",
+        "bytes": 666,
+        "sha256": "423ccb2fd4bfdad87ff85687f04b962c4fd78f0a5a75cd47e8adefe80dbf59b3",
+        "candidateOffsetsTested": 6
+      },
+      {
+        "path": "pcsync-help/11_Export.htm",
+        "bytes": 789,
+        "sha256": "1bbc3f9d5458958fe409e1a469e57fac63b62d5929ae2a6f4656bdb0e5ac3fb9",
+        "candidateOffsetsTested": 8
+      },
+      {
+        "path": "pcsync-help/12_CSV Open Save.htm",
+        "bytes": 1584,
+        "sha256": "6457efbcc5ef0fcf5694733fcec833854ed4709650c6e70e3b277dfb48e16fd6",
+        "candidateOffsetsTested": 8
+      },
+      {
+        "path": "pcsync-help/13_Pagesetup print.htm",
+        "bytes": 924,
+        "sha256": "3af3b873cb9ea192889353ce91785c03ce672e2bd118ecbf1d04781b0bbc1574",
+        "candidateOffsetsTested": 15
+      },
+      {
+        "path": "pcsync-help/14_etc.htm",
+        "bytes": 1034,
+        "sha256": "17398a4ec9d88a0b3f5b891d25a2c2b060013a45173fcfa48639f859488ead58",
+        "candidateOffsetsTested": 17
+      },
+      {
+        "path": "pcsync-help/200_Schedule.htm",
+        "bytes": 2234,
+        "sha256": "4e3107b92ce7cc24eff85e0f7c49c96ae8e0a41d582931898138e81ddba8d772",
+        "candidateOffsetsTested": 22
+      },
+      {
+        "path": "pcsync-help/201_ScheduleAdd.htm",
+        "bytes": 677,
+        "sha256": "07cdadc880b603042b2e355afa450ce1c672ba5e073630eef020b6e2944dfd72",
+        "candidateOffsetsTested": 16
+      },
+      {
+        "path": "pcsync-help/202_ScheduleEdit.htm",
+        "bytes": 753,
+        "sha256": "bd80bfb1bbb982d0383578d6f7c854ec0c78393920a12f9ef4839340cfbb913a",
+        "candidateOffsetsTested": 12
+      },
+      {
+        "path": "pcsync-help/203_ScheduleDelete.htm",
+        "bytes": 506,
+        "sha256": "716ba659bfda96b29ea2dc817e9fd68952779a1148ef26a2ff0ac3015badf612",
+        "candidateOffsetsTested": 6
+      },
+      {
+        "path": "pcsync-help/204_SchedulePhoneSync.htm",
+        "bytes": 897,
+        "sha256": "c2eca2e295240c05939f29bb140cd7c7750ac5c6ac3318c939c55c98105c139b",
+        "candidateOffsetsTested": 16
+      },
+      {
+        "path": "pcsync-help/205_SchedulePreview.htm",
+        "bytes": 772,
+        "sha256": "f1d5f9bd56ab8d030f7126f8916734ef0134a2c436c105b3ca205fa2bb0c3101",
+        "candidateOffsetsTested": 23
+      },
+      {
+        "path": "pcsync-help/300_SMS.htm",
+        "bytes": 1279,
+        "sha256": "f22759c9972a732ba4332124b106cea8cdbbe78b58e8f49f13cd725708849fe2",
+        "candidateOffsetsTested": 8
+      },
+      {
+        "path": "pcsync-help/301_SMSInbox.htm",
+        "bytes": 521,
+        "sha256": "44aa8e51cdbaf54473304f36c9f98a9ba3eb5e01ec8335e7f7765f753f579228",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-help/302_SMSOutbox.htm",
+        "bytes": 534,
+        "sha256": "775426a4581acdc85aa58e7d1b9e5a582b25581277947dc0d0cf9904252b244d",
+        "candidateOffsetsTested": 4
+      },
+      {
+        "path": "pcsync-help/303_SMSPhoneSync.htm",
+        "bytes": 861,
+        "sha256": "4f305031887842625ff08d4f9740f5d1584ddd3a13142b7114dd37df5d3739e1",
+        "candidateOffsetsTested": 12
+      },
+      {
+        "path": "pcsync-help/400_Melody.htm",
+        "bytes": 1810,
+        "sha256": "8632d88c1fc989352e5889e3cad9459956275aaceca1b978c52269d0be4e92ee",
+        "candidateOffsetsTested": 40
+      },
+      {
+        "path": "pcsync-help/401_MelodyPlay.htm",
+        "bytes": 730,
+        "sha256": "381fd4f9cca7b508606fea91b5c8690ed1497b871f14fd0f29e1228afce2c173",
+        "candidateOffsetsTested": 11
+      },
+      {
+        "path": "pcsync-help/402_MelodyUpload.htm",
+        "bytes": 789,
+        "sha256": "a0e72bc6184b5c6ecfcb0a4fae84fc51cb0beb60e018521c2f32c4005af83932",
+        "candidateOffsetsTested": 12
+      },
+      {
+        "path": "pcsync-help/403_MelodyDownload.htm",
+        "bytes": 663,
+        "sha256": "e8597ed7935dbdde7c55b6ac070cd03258034689352922483e14b1bd6ed76daf",
+        "candidateOffsetsTested": 10
+      },
+      {
+        "path": "pcsync-help/404_MelodySetup.htm",
+        "bytes": 597,
+        "sha256": "5361941d73b33a1e10db0bd48dbea92f946c49faeebe6d78e4728f2d1cde5189",
+        "candidateOffsetsTested": 23
+      },
+      {
+        "path": "pcsync-help/500_Image.htm",
+        "bytes": 1931,
+        "sha256": "0c82788232adf7957b06cd28adcf1547d601216da56df1e44116f1353eb8cf3b",
+        "candidateOffsetsTested": 24
+      },
+      {
+        "path": "pcsync-help/501_ImagePlay.htm",
+        "bytes": 432,
+        "sha256": "f60708e2b9baae651b7189feb4fe68d66456cac7fe4eb530d48dafd7d55f135d",
+        "candidateOffsetsTested": 3
+      },
+      {
+        "path": "pcsync-help/502_ImageUpload.htm",
+        "bytes": 866,
+        "sha256": "39e64d28ad2f40c87bc197c5ce8f8b210c388981d336b877cfabe636dc5d9274",
+        "candidateOffsetsTested": 12
+      },
+      {
+        "path": "pcsync-help/503_ImageDownload.htm",
+        "bytes": 681,
+        "sha256": "2389adb75cee2e51cfd621b67fd745c62946a025404e676066d9f8bed076b120",
+        "candidateOffsetsTested": 7
+      },
+      {
+        "path": "pcsync-help/504_ImageSetup.htm",
+        "bytes": 632,
+        "sha256": "df63795fbd5bc7f6bc380e46abe747a89271c1f75ff0b75896da31038b7c951f",
+        "candidateOffsetsTested": 16
+      },
+      {
+        "path": "pcsync-help/700_extra.htm",
+        "bytes": 1094,
+        "sha256": "370dc33a68b1dc09185baaf417c37eb032948b871b3d5729a60a4f8f773e2a04",
+        "candidateOffsetsTested": 16
+      },
+      {
+        "path": "pcsync-help/800_error list.htm",
+        "bytes": 5681,
+        "sha256": "81731ae5c7d752e63789e623d266ed6afdaaf30f8bd08fd796ead466d36ed4c6",
+        "candidateOffsetsTested": 45
+      },
+      {
+        "path": "pcsync-help/Curitel Help.hhc",
+        "bytes": 8691,
+        "sha256": "d4009029955d277a259a1ccbb90cd25836041ed21dab6b582eb5afa8e4e0cde7",
+        "candidateOffsetsTested": 18
+      },
+      {
+        "path": "pcsync-help/Image/addressAdd1.jpg",
+        "bytes": 57114,
+        "sha256": "e3f92140a8d1782e54ee8e9c080e05ca48d15d09a563eb517e02a3482955c92a",
+        "candidateOffsetsTested": 1784
+      },
+      {
+        "path": "pcsync-help/Image/addressAdd2.jpg",
+        "bytes": 51589,
+        "sha256": "e34ca326f2082c55aa0b8e3038aacb99db06726deb513c2e1c1b400df3547e19",
+        "candidateOffsetsTested": 1620
+      },
+      {
+        "path": "pcsync-help/Image/connect1.jpg",
+        "bytes": 16201,
+        "sha256": "e4de95453b1f5c97b3c7456cac1ab8f8ea4448459132ce085aae246840eb29b0",
+        "candidateOffsetsTested": 496
+      },
+      {
+        "path": "pcsync-help/Image/connect2.jpg",
+        "bytes": 15619,
+        "sha256": "97fd417772e8d80060f75c7a341caf9ccef2a2fe70e25f219a7079974974b0a2",
+        "candidateOffsetsTested": 457
+      },
+      {
+        "path": "pcsync-help/Image/connect4.jpg",
+        "bytes": 129731,
+        "sha256": "efcf31ea695c8647e23161d956b11a7ef763c595e1f1d4b0771b33f5cbfa9143",
+        "candidateOffsetsTested": 3479
+      },
+      {
+        "path": "pcsync-help/Image/CSV Backup.jpg",
+        "bytes": 33475,
+        "sha256": "9cd52c54fedd6f4978a2152ad27aea348acc48f0f516879cd9e3b8eac3fa83ca",
+        "candidateOffsetsTested": 928
+      },
+      {
+        "path": "pcsync-help/Image/CSV Backup1.jpg",
+        "bytes": 44327,
+        "sha256": "109f35d0c9af29a3befdb783aa8c7e9d4ca8e1115c01ed23a203df9b5817e20b",
+        "candidateOffsetsTested": 1213
+      },
+      {
+        "path": "pcsync-help/Image/CSV Open.jpg",
+        "bytes": 45494,
+        "sha256": "b1f8bfa45911b4e4a5333c995e993f65a0052d0b09dc0a7505ef855f725d562f",
+        "candidateOffsetsTested": 1258
+      },
+      {
+        "path": "pcsync-help/Image/CSV Open1.jpg",
+        "bytes": 33032,
+        "sha256": "50828b810d8378ea506dd09bbedbada883e5a6b588c147c30f9034786d6e539d",
+        "candidateOffsetsTested": 976
+      },
+      {
+        "path": "pcsync-help/Image/export_outlook1.jpg",
+        "bytes": 63079,
+        "sha256": "aaca8b7c44721e42ec6fb68bc41575db2dce2029fc706397e0731e166c737505",
+        "candidateOffsetsTested": 1594
+      },
+      {
+        "path": "pcsync-help/Image/export_outlook2.jpg",
+        "bytes": 63718,
+        "sha256": "aae0c14c085a25373cf6e1fe8196ab62927a7f5382818963a9b15c9524628a61",
+        "candidateOffsetsTested": 1613
+      },
+      {
+        "path": "pcsync-help/Image/export_xml1.jpg",
+        "bytes": 57664,
+        "sha256": "b9ffead3bc5182137de2c57c63eb565edc850b68bca219ac47247574b81466bd",
+        "candidateOffsetsTested": 1521
+      },
+      {
+        "path": "pcsync-help/Image/export_xml2.jpg",
+        "bytes": 42724,
+        "sha256": "d8a7807af3d59ace8e010b39fa4843411663b9b16bf7d9c06552046964fa40a9",
+        "candidateOffsetsTested": 1284
+      },
+      {
+        "path": "pcsync-help/Image/group.jpg",
+        "bytes": 60912,
+        "sha256": "240014f2ab3a331ae4139e860a5695996b421117224a6f581685104807ea1b1c",
+        "candidateOffsetsTested": 1643
+      },
+      {
+        "path": "pcsync-help/Image/group1.jpg",
+        "bytes": 24059,
+        "sha256": "9af3b2ab663bfde20e4786855d3c2903ecbef26bee94427efd3a236244373e82",
+        "candidateOffsetsTested": 827
+      },
+      {
+        "path": "pcsync-help/Image/group2.jpg",
+        "bytes": 20342,
+        "sha256": "1c3b3ddf3dc134733503eb5143f07a2a5eeefc2a433e621d55c87bc370d4c660",
+        "candidateOffsetsTested": 620
+      },
+      {
+        "path": "pcsync-help/Image/group3.jpg",
+        "bytes": 34280,
+        "sha256": "f66219afda5011ee788b19c8718c808d84305abfe79b08b8828ffabea9901d57",
+        "candidateOffsetsTested": 891
+      },
+      {
+        "path": "pcsync-help/Image/image.jpg",
+        "bytes": 243097,
+        "sha256": "39df511e83d929adcb5c4b938d3b48172472bee6bf3c0670e441c51f024b8b21",
+        "candidateOffsetsTested": 6086
+      },
+      {
+        "path": "pcsync-help/Image/import_outlook1.jpg",
+        "bytes": 63431,
+        "sha256": "41c440de402ef6475a55321140e3ae672e89fc55cf10d3e92601bee90bc7bde2",
+        "candidateOffsetsTested": 1654
+      },
+      {
+        "path": "pcsync-help/Image/import_outlook2.jpg",
+        "bytes": 63889,
+        "sha256": "63053d7476b5f72c5c76ada467e19f6e92ae0c87127d7a26d28de1c1ba201a3f",
+        "candidateOffsetsTested": 1656
+      },
+      {
+        "path": "pcsync-help/Image/import_xml1.jpg",
+        "bytes": 58013,
+        "sha256": "a37e6ee18fde3e410a46534c8ce113421bc4c1c95b858972d4d8f823eca2739b",
+        "candidateOffsetsTested": 1546
+      },
+      {
+        "path": "pcsync-help/Image/import_xml3.jpg",
+        "bytes": 53041,
+        "sha256": "fc7c3669e2a0ed500b0e4a90ee33dca879fe74a6a1235c6ac1df2ff4ebb830f2",
+        "candidateOffsetsTested": 1486
+      },
+      {
+        "path": "pcsync-help/Image/inbox.jpg",
+        "bytes": 217747,
+        "sha256": "4f4eded447bfa58781f45840a46e6c432c8ee3b091890d426fb4b3d8cc4e2fda",
+        "candidateOffsetsTested": 4673
+      },
+      {
+        "path": "pcsync-help/Image/install1.jpg",
+        "bytes": 102190,
+        "sha256": "07e93012300ee07caac846163645e3663b915e7c79b2a0862df8b0137e5e022f",
+        "candidateOffsetsTested": 2408
+      },
+      {
+        "path": "pcsync-help/Image/install2.jpg",
+        "bytes": 26600,
+        "sha256": "46039649652992fd2cfb7a8bc01aa62718508461adf7b1a0ca7f52b7b8e34925",
+        "candidateOffsetsTested": 1250
+      },
+      {
+        "path": "pcsync-help/Image/install3.jpg",
+        "bytes": 90512,
+        "sha256": "3025b65ba5529a88293cec26a4c5e033570a01a8819c0168491b6906fde629e3",
+        "candidateOffsetsTested": 2334
+      },
+      {
+        "path": "pcsync-help/Image/install4.jpg",
+        "bytes": 43972,
+        "sha256": "c13bee9038ad5a6b2e0c999e28d0e0739380bd6676b9cc545289b2bc20fce9c9",
+        "candidateOffsetsTested": 1081
+      },
+      {
+        "path": "pcsync-help/Image/install5.jpg",
+        "bytes": 27318,
+        "sha256": "b2e0ac7447ae3d8ba28682bc91aae4bbb186b6ad42ed2ffd3174f0e305ed2c17",
+        "candidateOffsetsTested": 710
+      },
+      {
+        "path": "pcsync-help/Image/Intro.jpg",
+        "bytes": 25090,
+        "sha256": "c28f82bb21ea4c5378d8e3031b23631b5665b9195e2068e75064e7444520690c",
+        "candidateOffsetsTested": 1073
+      },
+      {
+        "path": "pcsync-help/Image/login1.jpg",
+        "bytes": 110148,
+        "sha256": "9b066fd669b332de7e1620cdce5c34167a917da402cad2c4511ad8677904a2e3",
+        "candidateOffsetsTested": 2960
+      },
+      {
+        "path": "pcsync-help/Image/login2.jpg",
+        "bytes": 70745,
+        "sha256": "204eafb85f945e3dcb639823a8e193dcf73e4c72109772f7970444a6f6c60601",
+        "candidateOffsetsTested": 2043
+      },
+      {
+        "path": "pcsync-help/Image/melody.jpg",
+        "bytes": 255128,
+        "sha256": "3f27630750f207340a9657baba7f3f5b5f989daaddf37f8f2a2dc23ee7d10c84",
+        "candidateOffsetsTested": 6292
+      },
+      {
+        "path": "pcsync-help/Image/outbox.jpg",
+        "bytes": 212681,
+        "sha256": "e4f3d872b9a9a2a3dbf2f9f22f6623f7880bb30ffd485a0dfccd6c1ff8a6c86f",
+        "candidateOffsetsTested": 4480
+      },
+      {
+        "path": "pcsync-help/Image/outlooksync1.jpg",
+        "bytes": 77698,
+        "sha256": "c13a7703765ce17084a50cd693485ef5fe29e21a4f6df04f5f2cb4252c2b1d65",
+        "candidateOffsetsTested": 1852
+      },
+      {
+        "path": "pcsync-help/Image/outlooksync2.jpg",
+        "bytes": 57921,
+        "sha256": "435059260558f50ec115d3c33c174970329768499a6fd89b107f71421f9c3d61",
+        "candidateOffsetsTested": 1626
+      },
+      {
+        "path": "pcsync-help/Image/outlooksync3.jpg",
+        "bytes": 39288,
+        "sha256": "3fe81d442d91daf249185cca9d01d8f9f0fd3d99815a6e8669c746a3a951b521",
+        "candidateOffsetsTested": 1059
+      },
+      {
+        "path": "pcsync-help/Image/pagesetup.jpg",
+        "bytes": 56300,
+        "sha256": "bb21db126d4c6bfdf1d5e07e5365bd97fd52dbcf2e35f7834ad68d62e5992856",
+        "candidateOffsetsTested": 1512
+      },
+      {
+        "path": "pcsync-help/Image/pctophone.jpg",
+        "bytes": 18943,
+        "sha256": "f3930df4e2b280842236e52b5a1585b8af9ce69961718177ccbb25842fbb3132",
+        "candidateOffsetsTested": 572
+      },
+      {
+        "path": "pcsync-help/Image/pctophone1.jpg",
+        "bytes": 36272,
+        "sha256": "15812ae555fe6e3f63d418fa327fe5afcbccc2d5227fba7860d5641715a28b8b",
+        "candidateOffsetsTested": 963
+      },
+      {
+        "path": "pcsync-help/Image/pctophone2.jpg",
+        "bytes": 23106,
+        "sha256": "1ae44c3163f661e6414b5fea1624da7f8dfcdc62eded0641023b6c496159b093",
+        "candidateOffsetsTested": 663
+      },
+      {
+        "path": "pcsync-help/Image/phonebook.jpg",
+        "bytes": 291053,
+        "sha256": "229b39c4b35dcaaaddcf3135fd5221a7ea5ceb06e88ae8afcf1530cc45d2ccc2",
+        "candidateOffsetsTested": 6827
+      },
+      {
+        "path": "pcsync-help/Image/phonetopc.jpg",
+        "bytes": 26685,
+        "sha256": "7b5f24a7464c1ceaf4ac857417dc33b6b6ffeea83491ea3637f1c2c10d271a38",
+        "candidateOffsetsTested": 793
+      },
+      {
+        "path": "pcsync-help/Image/phonetopc1.jpg",
+        "bytes": 37941,
+        "sha256": "71baad416b1740e0dcee82ce338bca52a8f6a659d081d7d019f12f967002fdc9",
+        "candidateOffsetsTested": 1054
+      },
+      {
+        "path": "pcsync-help/Image/previewdefault.jpg",
+        "bytes": 57016,
+        "sha256": "c8eb7b5f5a3841334b965f49aea5419ac4e9860251922d7d672f323b9ce9986d",
+        "candidateOffsetsTested": 1374
+      },
+      {
+        "path": "pcsync-help/Image/previewdefault2.jpg",
+        "bytes": 58192,
+        "sha256": "363f4a31fdb8804061f6892f65e7f01affbfeb1ee076c832710c11d3b69fdcb3",
+        "candidateOffsetsTested": 1356
+      },
+      {
+        "path": "pcsync-help/Image/program component.jpg",
+        "bytes": 306627,
+        "sha256": "8db810d4db9ed8acf6d52190019e0315c9ccd1636cd3aa03804db6cb532dc03c",
+        "candidateOffsetsTested": 6760
+      },
+      {
+        "path": "pcsync-help/Image/schedule.jpg",
+        "bytes": 271227,
+        "sha256": "35455b1ec324b306285cf095628eed679262196ac1a9605b55e9d201b65b8dbc",
+        "candidateOffsetsTested": 6417
+      },
+      {
+        "path": "pcsync-help/Image/scheduleAdd.jpg",
+        "bytes": 40756,
+        "sha256": "dac2b4ab0bf6f11ed6e7350090e4e6bcea684a60b41be5f1008dffeaafe5e1b7",
+        "candidateOffsetsTested": 1271
+      },
+      {
+        "path": "pcsync-help/Image/sms.jpg",
+        "bytes": 201948,
+        "sha256": "013309bba2bbc72f9220ad482914407267a4689af72e7178617585fc6693a9e2",
+        "candidateOffsetsTested": 4605
+      },
+      {
+        "path": "pcsync-help/Image/SyncOption.jpg",
+        "bytes": 41591,
+        "sha256": "9c702c02d51db4729d45b9621d94104753b1481032080356f2055580de0a6b4e",
+        "candidateOffsetsTested": 1364
+      },
+      {
+        "path": "pcsync-help/Image/uninstall1.jpg",
+        "bytes": 85356,
+        "sha256": "96f0c87eecc2796c20434f51a67e0f274a5eb71b867877c9f27dedeb95a584ed",
+        "candidateOffsetsTested": 2293
+      },
+      {
+        "path": "pcsync-help/Image/uninstall2.jpg",
+        "bytes": 87308,
+        "sha256": "600a9f00a6541360e23e007bc3b840ab56e2978d28e160fccbbf198b83d8fb6f",
+        "candidateOffsetsTested": 2254
+      },
+      {
+        "path": "pcsync-help/Starts.htm",
+        "bytes": 149,
+        "sha256": "5bca2b5244f5dce0e8302f4ffea355ca98256fb1ef31f473543a4cdcb021d127",
+        "candidateOffsetsTested": 0
+      }
+    ],
+    "limitations": "PCSync distribution is not a phone memory dump. Zero validated contiguous SGS in extracted distribution does not exclude games in phone firmware or packed data."
+  },
+  "boundedCatalogChecks": [
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Hanhwa/",
+      "status": 200,
+      "bytes": 2090,
+      "sha256": "d39c6a4d9bc638139b3418a8e920240428ece124e44c20ac67f8aec8e8a95ffa",
+      "listedDevicePaths": ["/Firmwares/Hanhwa/NaTruca/"],
+      "scope": "Only immediate public directory entries checked; absence here is not a global firmware-availability claim."
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Dowtel/",
+      "status": 200,
+      "bytes": 2323,
+      "sha256": "4c1eabd3cd5e61f81acbb6ecfd76087f5b7c2c0a9d4a5aa79110466def55875d",
+      "listedDevicePaths": ["/Firmwares/Dowtel/WS-4000/", "/Firmwares/Dowtel/WS-4100/"],
+      "scope": "Only immediate public directory entries checked; absence here is not a global firmware-availability claim."
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Sejin/",
+      "status": 200,
+      "bytes": 2087,
+      "sha256": "13ccbc9b71882e36bbedd1b6e471d01023beef2722eb90efd035124977da09e3",
+      "listedDevicePaths": ["/Firmwares/Sejin/NS1000/"],
+      "scope": "Only immediate public directory entries checked; absence here is not a global firmware-availability claim."
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Synertek/",
+      "status": 200,
+      "bytes": 2087,
+      "sha256": "1e4b02c2d381b20c74041a919551f2aa4ffa49bba7249a1ad811ad43102f47de",
+      "listedDevicePaths": ["/Firmwares/Synertek/S500/"],
+      "scope": "Only immediate public directory entries checked; absence here is not a global firmware-availability claim."
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Hyundai/",
+      "status": 200,
+      "bytes": 2327,
+      "sha256": "adf3968ee24df4ea3ebc9087be13954acd373455bd618cd5b990f5bb6a33f80d",
+      "listedDevicePaths": ["/Firmwares/Hyundai/HGC-600E/", "/Firmwares/Hyundai/TX-60B/"],
+      "scope": "Only immediate public directory entries checked; absence here is not a global firmware-availability claim."
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Curitel/",
+      "status": 200,
+      "bytes": 2792,
+      "sha256": "c03d2b321b361922e3f86f5a3d1b52d8c7f70f113b22d0e3c3ca18f6e88e4cfd",
+      "listedDevicePaths": [
+        "/Firmwares/Curitel/CX-800V/",
+        "/Firmwares/Curitel/PG-S5500/",
+        "/Firmwares/Curitel/PT-K1000/",
+        "/Firmwares/Curitel/S2/"
+      ],
+      "scope": "Only immediate public directory entries checked; absence here is not a global firmware-availability claim."
+    }
+  ],
+  "ringtoneLead": {
+    "url": "https://3.onj.me/phonetones/unzipped/Hanwha/CS-M330/",
+    "status": 200,
+    "bytes": 7502,
+    "sha256": "ccb8883a314bec90d84d1527e7be2bb1a093c9bea76fbcceb82d4a83a80a11ba",
+    "modelLabel": "Hanwha CS-M330",
+    "mmfLinks": 33,
+    "payloadDownloaded": false,
+    "limitation": "Ringtone index only. No ROM or SGS file and no link to a source memory dump established."
+  },
+  "validation": {
+    "sourcePayloadSizesAndSha256Rechecked": true,
+    "topLevelAndNestedZipCrcPassed": true,
+    "all163StaticArtifactsHashRechecked": true,
+    "installedFiles": 50,
+    "expandedHelpFiles": 113,
+    "validatedSgsContainers": 0,
+    "waybackRequestsInThisPass": 0,
+    "newNetworkDuringIntegration": 0,
+    "repositoryCatalogChanged": false
+  }
+}

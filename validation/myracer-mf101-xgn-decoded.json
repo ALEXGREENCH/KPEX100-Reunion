@@ -1,0 +1,180 @@
+{
+  "device": "MyRacer MF101 family",
+  "update": {
+    "post": "https://cafe.naver.com/myracer/4921",
+    "name": "_update_.zip",
+    "bytes": 1398626,
+    "sha256": "03ef5a844d0953ffbdb4468d12f0064835f4a5f71cebe0a82e56c44c055a0fa9",
+    "source_kind": "2008 forum mirror attributed to manufacturer by post",
+    "attachment": "https://download.blog.naver.com/29bc358691c5cd113cd2b983b3542255f3a15fbd4c/data31/2008/5/27/167/_update_.zip",
+    "members": [
+      {
+        "name": "ROM_EXEC",
+        "size": 3030408,
+        "crc32": "695b322f"
+      },
+      {
+        "name": "POPUPEN/QGAMENO.rgb",
+        "size": 67392,
+        "crc32": "ee895459"
+      },
+      {
+        "name": "POPUPEN/QGAMEYES.rgb",
+        "size": 67392,
+        "crc32": "a09a0b6c"
+      },
+      {
+        "name": "POPUPKR/QGAMENO.rgb",
+        "size": 67392,
+        "crc32": "1418618b"
+      },
+      {
+        "name": "POPUPKR/QGAMEYES.rgb",
+        "size": 67392,
+        "crc32": "a4adfe3f"
+      }
+    ]
+  },
+  "rom": {
+    "name": "ROM_EXEC",
+    "bytes": 3030408,
+    "sha256": "1e83c0ebf7afc01f9b483384b63c0e819ec1a972d476679086e59c63ad6d4a9a",
+    "arm_base": "0x08000000",
+    "xgn_file_wrapper": "0x080597b8",
+    "xgn_decoder": "0x0809c0c4",
+    "gnex_exception_string_offset": "0x71ac4",
+    "xgn_extension_string_offset": "0x266644",
+    "sgs_extension_string_offset": "0x26663a"
+  },
+  "format": {
+    "cipher": "DES ECB",
+    "regions": "First 256 bytes and last 256 payload bytes before the 16-byte footer. Interior unchanged.",
+    "footer_check": "First 11 decoded footer bytes are TPSP$RA$sgs.",
+    "native_decoder_return": 2,
+    "comparison": "Every portable extraction matched the original ARM output byte for byte."
+  },
+  "games": [
+    {
+      "title": "미니게임천국",
+      "label": "Mini Game Paradise",
+      "source_name": "미니게임천국.xgn",
+      "source_bytes": 896116,
+      "source_sha256": "5bd13e9c0d2a82c7bcd6e7d528008f5402c8f4a969d0433986962fd150182fdc",
+      "sgs_bytes": 896100,
+      "sgs_sha256": "7d4c28a7be89f4ced9f583295fd341c8cbe14ed195104211cfbb257e5dc1fabc",
+      "resources": 747,
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "replay": {
+        "file": "replays/minigame-gameplay.json",
+        "status": "idle",
+        "error": null,
+        "events": 254,
+        "last_rgba_sha256": "4e087a57e7d8407755f2a86c18a531a92121d8c0a995eb68f9f0ba95a2f38c1c",
+        "observation": "First minigame accepts input and score increases"
+      }
+    },
+    {
+      "title": "뿌뉴뿌뉴퐁Remix",
+      "label": "Ppunyu Ppunyu Pong Remix",
+      "source_name": "뿌뉴뿌뉴퐁Remix.xgn",
+      "source_bytes": 490366,
+      "source_sha256": "3b548868f754247143cf89e8110b7932ea5af38e4f68c46f3d15939f1887b335",
+      "sgs_bytes": 490350,
+      "sgs_sha256": "e1b11840c57b7c2ac54c79f909493b324b8fab670529246761515f93412d6eae",
+      "resources": 598,
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "replay": {
+        "file": "replays/ppony-gameplay.json",
+        "status": "idle",
+        "error": null,
+        "events": 212,
+        "last_rgba_sha256": "e77611a2aa0c0abc8895248fadf6f7a9116b6590d403a745e5d14517ec92e0a6",
+        "observation": "Playable puzzle grid and cursor movement"
+      }
+    },
+    {
+      "title": "슈퍼액션히어로",
+      "label": "Super Action Hero",
+      "source_name": "슈퍼액션히어로.xgn",
+      "source_bytes": 954334,
+      "source_sha256": "f24b176c82020ff1a951fd9596d73488298d326bf7ffb749378cf4b47128156f",
+      "sgs_bytes": 954318,
+      "sgs_sha256": "32ea3045c394f66559ce87637a1dd7f143a10f937bf34dba66a47bd20960c3c9",
+      "resources": 999,
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "replay": {
+        "file": "replays/hero-gameplay.json",
+        "status": "idle",
+        "error": null,
+        "events": 729,
+        "last_rgba_sha256": "79ab653cdd68c60e19f99fd097a9927ae38a38b45c8dc6e4112f7a15fdf01fc7",
+        "observation": "Reached tutorial dialogue; combat not verified"
+      }
+    },
+    {
+      "title": "컴투스사커",
+      "label": "Com2uS Soccer",
+      "source_name": "컴투스사커.xgn",
+      "source_bytes": 1905240,
+      "source_sha256": "706013570c84e37c6e5a9a3c7e1cf95360d72f041ecc999607bcac15a48567a1",
+      "sgs_bytes": 1905224,
+      "sgs_sha256": "cc04e435541c0a412ed036af0b1fe38683f35ded1362178ae2cc87685816307e",
+      "resources": 1470,
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "replay": {
+        "file": "replays/soccer-gameplay.json",
+        "status": "error",
+        "error": "Event TIMEOUT exceeded 20000000 ARM block work units",
+        "events": 290,
+        "last_rgba_sha256": "f431481958910ec9f7bcc0dd183de8a99f305c368f2957dc963a49fcfe13d06e",
+        "observation": "Reached team selection and setup; match loading hit the work limit"
+      }
+    },
+    {
+      "title": "페노아전기2",
+      "label": "Penoa Chronicles 2",
+      "source_name": "페노아전기2.xgn",
+      "source_bytes": 2659312,
+      "source_sha256": "b22121d6be3c66eb859e1a605d6f5da6dd69ab1418c02b78bd36e44a85b75c72",
+      "sgs_bytes": 2659296,
+      "sgs_sha256": "1edf9320a6c0b51c0ca1c4242b7dbd5f3d29178918a7b4603af13fcc90e7af0c",
+      "resources": 1749,
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "replay": {
+        "file": "replays/penoa-gameplay.json",
+        "status": "idle",
+        "error": null,
+        "events": 427,
+        "last_rgba_sha256": "5bbbb2870d133f04ff8fa040a779f3fb3609c6d7a1d02398e0c4ee0532025df2",
+        "observation": "Title and menus accept input with visibly incomplete rendering"
+      }
+    }
+  ],
+  "vgn_followup": {
+    "article": "https://cafe.naver.com/halfstudy/1949",
+    "url": "https://cafeattach.naver.net/0a9f16a5bfe7ee321ff19aa090760d70d0827c9e63/20110316_250_cafefile/16804284_1300260479350_FeKaRs_vgn/clubzio_sketcher.vgn",
+    "size": 939698,
+    "sha256": "ced8ba4961e2c57b9af644a06577adfedf3918852f1a3d446514f85812bd0318",
+    "status": "Separate VGN path at 0x0805984c obtains additional key bytes from firmware configuration; the XGN key fails the footer check. No decoded SGS produced."
+  }
+}

@@ -1,0 +1,727 @@
+{
+  "checked": "2026-11-05",
+  "legacy_kdz_decoder": "https://github.com/michaelwright235/kdz_decrypt_encrypt/tree/9dbbf74f01ab515b8e4161e710ae193ca1a16c49",
+  "legacy_wdb_reference": "https://github.com/michaelwright235/wdb_extract",
+  "pxo_decompression": {
+    "decoder": "https://www.oberhumer.com/opensource/lzo/",
+    "algorithm": "LZO1F",
+    "physical_block_bytes": 8192,
+    "decoded_modules": 16,
+    "kh1300_game_sr_thumb": {
+      "descriptor_offset": 6868,
+      "init_file_offset": 13224,
+      "event_entry_file_offset": 12858
+    }
+  },
+  "firmwares": [
+    {
+      "model": "KH1300",
+      "build": "KW130713_00",
+      "source_url": "https://archive.sunderland93.ru/Firmwares/LG/KH1300/KW130713_00.7z",
+      "source_archive": {
+        "file": "KH1300-mirror.7z",
+        "bytes": 68287032,
+        "sha256": "f7db8d966ecb385211e32a19d6eebbcab700f650747f095ddd205733ce5ef721"
+      },
+      "kdz": {
+        "file": "KW130713_00.kdz",
+        "bytes": 68282663,
+        "sha256": "3856ba16617ad87ffb92b00c652bb09251215c01ceb6ea0ecef857bc6e349167"
+      },
+      "cab": {
+        "file": "KW130713_00.cab",
+        "bytes": 68282663,
+        "sha256": "5f31516451f62df52d329405cb42fcf011d6b3dc47406f4a324c2e42e11ba746"
+      },
+      "wdb": {
+        "file": "KW130713.wdb",
+        "bytes": 68210169,
+        "sha256": "bc3875337f675de6f02bc58f243ed3363c6f1f76202efd233a80ec9efd4ea4d6"
+      },
+      "companion_dll": {
+        "file": "KW130713_MASS.dll",
+        "bytes": 585728,
+        "sha256": "67b7dbd0f53b29b0ba6c30fd6087fb1eafa94d1eb6ea82e973f08ec000e6c121"
+      },
+      "wdb_records_validated": 1426,
+      "wdb_extracted_bytes": 76781690,
+      "sgs_scan": {
+        "files_scanned": 1426,
+        "candidates": {}
+      },
+      "game_files": [
+        {
+          "original_path": "MODULE/C/Game.pxo",
+          "wdb_record_offset": 14479039,
+          "kind": "game menu module",
+          "title": null,
+          "file": "Game.pxo",
+          "bytes": 1693,
+          "sha256": "a7001240a9411047171c3c67daaff85666a34d1e181daabeeb0f13a9cd36b511",
+          "decoded_pxo4": {
+            "bytes": 2225,
+            "sha256": "888d86a2efcb365416454a946fb6fe74e5e45e924aac4d27a19bd110031ef9e1",
+            "candidates": [],
+            "head_hex": "50584f3400000010b10800005c00000022000000ffffffff0000000000000000",
+            "markers": {
+              "Space Commando": {
+                "ascii": 2005,
+                "utf-16le": -1
+              },
+              "Space Commando Platoon": {
+                "ascii": 2005,
+                "utf-16le": -1
+              },
+              "Game_SR.pxo": {
+                "ascii": 1158,
+                "utf-16le": -1
+              }
+            }
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_Cooking.pxo",
+          "wdb_record_offset": 14480689,
+          "kind": "game executable",
+          "title": "Rhythm Cooking",
+          "file": "Game_Cooking.pxo",
+          "bytes": 1234994,
+          "sha256": "cc4ac4097cbca3828d4f7be8139aa19e31b7f9d66ac78dcce5e00eeabca78e85",
+          "decoded_pxo4": {
+            "bytes": 2573385,
+            "sha256": "0d8a3408e63caffed4f33c3a6c2cd08b6af624e443c8c0da127872192be00322",
+            "candidates": [],
+            "head_hex": "50584f340000001049442700c003000059030000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_GrandGolf.pxo",
+          "wdb_record_offset": 15615494,
+          "kind": "game executable",
+          "title": "Grand Golf",
+          "file": "Game_GrandGolf.pxo",
+          "bytes": 257112,
+          "sha256": "8c35025709940cfd56c885ecae78d347e400274dddbc2367d21e23c016d8d41d",
+          "decoded_pxo4": {
+            "bytes": 475997,
+            "sha256": "a6d55464489fece70816134be462fc3b99fe229364737ce4f8db6f553b7ddb7e",
+            "candidates": [],
+            "head_hex": "50584f34000000105d4307006c040000e0030000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_PumpItUp.pxo",
+          "wdb_record_offset": 15855092,
+          "kind": "game executable",
+          "title": "Pump It Up",
+          "file": "Game_PumpItUp.pxo",
+          "bytes": 762150,
+          "sha256": "3a27621dc0d6a9af6159fa34103f097cac06d33eb9b646ec0bcdca5f48002c77",
+          "decoded_pxo4": {
+            "bytes": 1822757,
+            "sha256": "baa9b323a47b725367114195173466e27e58832dd5a804fcec78df3ff85dac0b",
+            "candidates": [],
+            "head_hex": "50584f340000001025d01b000c020000ac010000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_SR.pxo",
+          "wdb_record_offset": 16551147,
+          "kind": "game executable",
+          "title": "Space Commando",
+          "file": "Game_SR.pxo",
+          "bytes": 572926,
+          "sha256": "9aa94610582b4743991b08df4d6c4f4542462057baf9204e604564d001f85508",
+          "decoded_pxo4": {
+            "bytes": 1276501,
+            "sha256": "068b86fb95d6e67244729e6f466ddd9151a506b9b7bb93c67c66e62ed6cedfc4",
+            "candidates": [],
+            "head_hex": "50584f3400000010557a1300d41a000070130000ffffffff0000000000000000",
+            "markers": {
+              "data.lkz": {
+                "ascii": 19653,
+                "utf-16le": -1
+              }
+            }
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_Sudoku.pxo",
+          "wdb_record_offset": 17062839,
+          "kind": "game executable",
+          "title": "Sudoku Puzzle",
+          "file": "Game_Sudoku.pxo",
+          "bytes": 97250,
+          "sha256": "531cd1350363e8039003879dd8103ae68f39009c3e44c65a2daba4215827f17f",
+          "decoded_pxo4": {
+            "bytes": 388833,
+            "sha256": "4ce82b677d615b8a7e15197580e1565abcd33bc97f525f29dc1aed1c7de61a56",
+            "candidates": [],
+            "head_hex": "50584f3400000010e1ee0500c80100006b010000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/campaign.lks",
+          "wdb_record_offset": 27031905,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "campaign.lks",
+          "bytes": 997,
+          "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/data.lkz",
+          "wdb_record_offset": 27032232,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "data.lkz",
+          "bytes": 4041188,
+          "sha256": "51842831fa63516818cc30773833427114ea0ebc66453a846527944dce51fa8e",
+          "resource_zip_entries": 451,
+          "title_records": [
+            "data/240_320/Menu/HelpContent.lks",
+            "data/240_320/Menu/english.lks"
+          ]
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/options.lks",
+          "wdb_record_offset": 30981153,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "options.lks",
+          "bytes": 1076,
+          "sha256": "763291e38c90ef21e22504edef7293da98fcb5ff458e65f22bdad3f8401206a7"
+        }
+      ],
+      "main_bin": {
+        "file": "M6280_KH130.bin",
+        "bytes": 14284296,
+        "sha256": "495d17b4d2f50b2848b6164c7eed722544fe651247f99582d581af8dbd4b0f62"
+      }
+    },
+    {
+      "model": "SH130",
+      "build": "SW130718_00",
+      "source_url": "https://archive.sunderland93.ru/Firmwares/LG/SH130/SW130718_00.7z",
+      "source_archive": {
+        "file": "SH130-mirror.7z",
+        "bytes": 82062712,
+        "sha256": "7df5241d4636d5a4fdaa6aff595964962cf80b6b77ff70e5cc1f631fb409d6f5"
+      },
+      "kdz": {
+        "file": "SW130718_00.kdz",
+        "bytes": 82057491,
+        "sha256": "8fcf13e13148473b6f9ee50220aaf0f67874c6ff6d91ba91aa5b8fc0b8cdadd5"
+      },
+      "cab": {
+        "file": "SW130718_00.cab",
+        "bytes": 82057491,
+        "sha256": "bbf9cad0f9a701416f2043c61e5c87bd85556b5db5423ea88df256e96331cf9b"
+      },
+      "wdb": {
+        "file": "SW130718.wdb",
+        "bytes": 79290369,
+        "sha256": "82b4cda85e2593bdf7918735a39b1071c59de552f15eba062d1fb5714372c617"
+      },
+      "companion_dll": {
+        "file": "SH130.dll",
+        "bytes": 4403200,
+        "sha256": "76ffa9788f21df014742ff16e6b0d4b8f0aaa28a0c355273b06f42f62cf7ce37"
+      },
+      "wdb_records_validated": 1350,
+      "wdb_extracted_bytes": 87607040,
+      "sgs_scan": {
+        "files_scanned": 1350,
+        "candidates": {}
+      },
+      "game_files": [
+        {
+          "original_path": "MODULE/C/Game.pxo",
+          "wdb_record_offset": 24103729,
+          "kind": "game menu module",
+          "title": null,
+          "file": "Game.pxo",
+          "bytes": 1737,
+          "sha256": "82f010aac1b2ef95c1258fcc80d544aa5f995555e725d6305d6e4cc84eda345d",
+          "decoded_pxo4": {
+            "bytes": 2273,
+            "sha256": "566263a3d87abde44e29a4297b157e39e0cd9e4751535cb9217f09d068c0f99b",
+            "candidates": [],
+            "head_hex": "50584f3400000010e10800005c00000024000000ffffffff0000000000000000",
+            "markers": {
+              "Space Commando": {
+                "ascii": 2035,
+                "utf-16le": -1
+              },
+              "Space Commando Platoon": {
+                "ascii": 2035,
+                "utf-16le": -1
+              },
+              "Game_SR.pxo": {
+                "ascii": 1170,
+                "utf-16le": -1
+              }
+            }
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_Cooking.pxo",
+          "wdb_record_offset": 24105426,
+          "kind": "game executable",
+          "title": "Rhythm Cooking",
+          "file": "Game_Cooking.pxo",
+          "bytes": 1234994,
+          "sha256": "79db0c32d37dbbfd2bfb419201f7a144bd4310d98e1013ed37f7598cfd2afb6c",
+          "decoded_pxo4": {
+            "bytes": 2573385,
+            "sha256": "8184d8f5b3fb03622330b4044f0a83ec902e6f41fc601930296fb3a735c96d37",
+            "candidates": [],
+            "head_hex": "50584f340000001049442700c003000059030000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_GrandGolf.pxo",
+          "wdb_record_offset": 25240265,
+          "kind": "game executable",
+          "title": "Grand Golf",
+          "file": "Game_GrandGolf.pxo",
+          "bytes": 257075,
+          "sha256": "5acfabd0c67989dd93dece2c04569e379a5c09cd55a49c3e7185b1836ed63311",
+          "decoded_pxo4": {
+            "bytes": 476069,
+            "sha256": "1b3afea2d51dda05aba8496c0d7abe82dca640d9b853deff79ebca78394a3ba3",
+            "candidates": [],
+            "head_hex": "50584f3400000010a54307006c040000e0030000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_PumpItUp.pxo",
+          "wdb_record_offset": 25479813,
+          "kind": "game executable",
+          "title": "Pump It Up",
+          "file": "Game_PumpItUp.pxo",
+          "bytes": 762150,
+          "sha256": "614109202520665daec231f8965f7690d0235a81ce7bfd8d0cdfb5d9c7837853",
+          "decoded_pxo4": {
+            "bytes": 1822757,
+            "sha256": "b67a3b7306255b39b373122a159a411ce96545ec2edc0d86de84ec712ae8e8a4",
+            "candidates": [],
+            "head_hex": "50584f340000001025d01b000c020000ac010000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_SR.pxo",
+          "wdb_record_offset": 26175879,
+          "kind": "game executable",
+          "title": "Space Commando",
+          "file": "Game_SR.pxo",
+          "bytes": 572929,
+          "sha256": "6bd1037101a4dab77ee32dfcb7141936d75f25c629fb38b8503949753ff94aa8",
+          "decoded_pxo4": {
+            "bytes": 1276485,
+            "sha256": "87582af33e57c70ab2c6971d3e2f3f8e5a6d582f7793728d2d6ba3cf93eeae86",
+            "candidates": [],
+            "head_hex": "50584f3400000010457a1300d41a000071130000ffffffff0000000000000000",
+            "markers": {
+              "data.lkz": {
+                "ascii": 19653,
+                "utf-16le": -1
+              }
+            }
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_Sudoku.pxo",
+          "wdb_record_offset": 26687568,
+          "kind": "game executable",
+          "title": "Sudoku Puzzle",
+          "file": "Game_Sudoku.pxo",
+          "bytes": 98250,
+          "sha256": "7626a522087fb8e498a8be3fa1ff9d787d55fa4c5c07fb4e828626ba6ed69d0a",
+          "decoded_pxo4": {
+            "bytes": 398229,
+            "sha256": "0034ad4094c66f1f653e94a9b6ba2b52eb4069fd928cb910fb3e82350a461cca",
+            "candidates": [],
+            "head_hex": "50584f340000001095130600c001000063010000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/campaign.lks",
+          "wdb_record_offset": 34308060,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "campaign.lks",
+          "bytes": 997,
+          "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/data.lkz",
+          "wdb_record_offset": 34308387,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "data.lkz",
+          "bytes": 4041188,
+          "sha256": "51842831fa63516818cc30773833427114ea0ebc66453a846527944dce51fa8e",
+          "resource_zip_entries": 451,
+          "title_records": [
+            "data/240_320/Menu/HelpContent.lks",
+            "data/240_320/Menu/english.lks"
+          ]
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/options.lks",
+          "wdb_record_offset": 38257308,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "options.lks",
+          "bytes": 1076,
+          "sha256": "763291e38c90ef21e22504edef7293da98fcb5ff458e65f22bdad3f8401206a7"
+        }
+      ],
+      "main_bin": {
+        "file": "M6280_SH130.bin",
+        "bytes": 24991698,
+        "sha256": "5194758fbc39d731f3169e23e5df262a0c3af17dd4882aba99f24f39a93e76ae"
+      }
+    },
+    {
+      "model": "KH1400",
+      "build": "KW140714_00",
+      "source_url": "https://archive.sunderland93.ru/Firmwares/LG/KH1400/KW140714.7z",
+      "source_archive": {
+        "file": "KH1400-mirror.7z",
+        "bytes": 84243770,
+        "sha256": "f083a4eaecc7a3dbe5a99c7d642b2d6a0eb30080446823c49da26a15e32cad6d"
+      },
+      "kdz": {
+        "file": "KW140714_00.kdz",
+        "bytes": 84238414,
+        "sha256": "6f3a07c67c15629b1c1bee4adc431124f39116ee12ffe7d92824d08676098fef"
+      },
+      "cab": {
+        "file": "KW140714_00.cab",
+        "bytes": 84238414,
+        "sha256": "96e87c1f6c2cd96b38257cb21995b9958b7efc97c269c17be8b0b07647f475ab"
+      },
+      "wdb": {
+        "file": "KW140714.wdb",
+        "bytes": 84176632,
+        "sha256": "633b730f744d5b869df549adb8b1a7e6fc2fcc9bc52ac20cf515024b8b56b18d"
+      },
+      "companion_dll": {
+        "file": "KW140714_00.dll",
+        "bytes": 425984,
+        "sha256": "365120a2497941984ebbb14d5c9d019a22f727f887aa13c9e195b2ae1daae07e"
+      },
+      "wdb_records_validated": 1729,
+      "wdb_extracted_bytes": 93548517,
+      "sgs_scan": {
+        "files_scanned": 1729,
+        "candidates": {}
+      },
+      "game_files": [
+        {
+          "original_path": "MODULE/C/Game.pxo",
+          "wdb_record_offset": 17668977,
+          "kind": "game menu module",
+          "title": null,
+          "file": "Game.pxo",
+          "bytes": 4162,
+          "sha256": "a414db91fdaed24afed7e546bd6c9fe65ed5d941130af42fb1ab61fa42cdcfb3",
+          "decoded_pxo4": {
+            "bytes": 5161,
+            "sha256": "273f89e80613637cfd23d4f431cd6693d64d2c406a831fb16cba707c21032ab6",
+            "candidates": [],
+            "head_hex": "50584f3400000010291400005c00000024000000ffffffff0000000000000000",
+            "markers": {
+              "Space Commando": {
+                "ascii": 4923,
+                "utf-16le": -1
+              },
+              "Space Commando Platoon": {
+                "ascii": 4923,
+                "utf-16le": -1
+              },
+              "Game_SR.pxo": {
+                "ascii": 1110,
+                "utf-16le": -1
+              }
+            }
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_PumpItUpH.pxo",
+          "wdb_record_offset": 17672870,
+          "kind": "game executable",
+          "title": "Pump It Up",
+          "file": "Game_PumpItUpH.pxo",
+          "bytes": 761820,
+          "sha256": "43710e6083c3999230eb11a81c70be079c87fc368d16fce113754371bae216b4",
+          "decoded_pxo4": {
+            "bytes": 1827341,
+            "sha256": "456bc41ee790cd816e9a6a34e7b5adbbbb8f9db41c473e4f973ab990901759e5",
+            "candidates": [],
+            "head_hex": "50584f34000000100de21b0018020000b6010000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_SR.pxo",
+          "wdb_record_offset": 18369515,
+          "kind": "game executable",
+          "title": "Space Commando",
+          "file": "Game_SR.pxo",
+          "bytes": 572923,
+          "sha256": "62de149dbd9fdb93c8f390ae36078acad3347bbdad23e191085be2ceb0b22d99",
+          "decoded_pxo4": {
+            "bytes": 1276765,
+            "sha256": "d8e6bb4fe37349e43cb6336e2e6e0f9b37bcbe23bd9a9fa4931c4ad42551a94a",
+            "candidates": [],
+            "head_hex": "50584f34000000105d7b1300d41a000072130000ffffffff0000000000000000",
+            "markers": {
+              "data.lkz": {
+                "ascii": 19933,
+                "utf-16le": -1
+              }
+            }
+          }
+        },
+        {
+          "original_path": "MODULE/C/Game_SudokuH.pxo",
+          "wdb_record_offset": 18881260,
+          "kind": "game executable",
+          "title": "Sudoku Puzzle",
+          "file": "Game_SudokuH.pxo",
+          "bytes": 110657,
+          "sha256": "2f645943103549704f2ce220235b7b63074db03bf36926d25b61986e5e2f721d",
+          "decoded_pxo4": {
+            "bytes": 426329,
+            "sha256": "28c85629df3aae8ff7ba5ae669c841ede9fa572755dc00f547d396b85cac0033",
+            "candidates": [],
+            "head_hex": "50584f340000001059810600d401000074010000ffffffff0000000000000000"
+          }
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/campaign.lks",
+          "wdb_record_offset": 30708932,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "campaign.lks",
+          "bytes": 997,
+          "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/data.lkz",
+          "wdb_record_offset": 30709259,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "data.lkz",
+          "bytes": 4070087,
+          "sha256": "4f514fab981dde780138892a6caa72729ff389721bcc924f1fa527d08b948222",
+          "resource_zip_entries": 439,
+          "title_records": [
+            "data/320_240/Menu/english.lks",
+            "data/320_240/Menu/HelpContent.lks"
+          ]
+        },
+        {
+          "original_path": "MODULE/BUILTIN/GAME/options.lks",
+          "wdb_record_offset": 34714470,
+          "kind": "game resources",
+          "title": "Space Commando",
+          "file": "options.lks",
+          "bytes": 1076,
+          "sha256": "763291e38c90ef21e22504edef7293da98fcb5ff458e65f22bdad3f8401206a7"
+        }
+      ],
+      "main_bin": {
+        "file": "M6280_KH140.bin",
+        "bytes": 17668717,
+        "sha256": "e6cfebdba5f9cbd57c31d9df7096bba59cb456a31d4d0eb77f239b74e43ac13c"
+      },
+      "unmatched_racingtime_resource_files": 39
+    }
+  ],
+  "sv130": {
+    "bytes": 33554432,
+    "sha256": "dac0ef7c2a053721146768c5c4fd9818dbde48aa96894202528b9bca36804a1b",
+    "candidate_offsets_tested": 1238853,
+    "containers": [],
+    "file": "LG-SV130.bin",
+    "markers": {
+      "GNEX EXCEPTION": [
+        4916836
+      ],
+      "/fs/GNEX/": [
+        4917412,
+        4917424,
+        4917444
+      ],
+      "GNEXInitFail": [],
+      "application/x-gnex-sgs": [],
+      "application/x-gvm-sgs": [
+        13706932
+      ],
+      "/skp/c/GVM/": [
+        2003356,
+        2011840,
+        2096940
+      ],
+      "SV130": [
+        464228,
+        1254684,
+        1568188,
+        1575620,
+        1666944,
+        1668240,
+        1992712,
+        1994276,
+        2244024,
+        2276628,
+        2682658,
+        3335109,
+        10240400,
+        10240468,
+        10240536,
+        10240604,
+        10240672,
+        10240740,
+        10240808,
+        10240876,
+        10240944,
+        10241012,
+        10241080,
+        10241148,
+        10241216,
+        10241284,
+        10241352,
+        10241420,
+        10241488,
+        10241556,
+        10241624,
+        10241692
+      ],
+      "SV360521": [],
+      "EFSSuper": [],
+      "WIPI": [
+        3853514
+      ],
+      "World of Dragon": [],
+      "Bubble Soccer": [],
+      "Pangya": [],
+      "Space Commando": [],
+      "GVM %s": [
+        2088372
+      ]
+    },
+    "source_url": "https://archive.sunderland93.ru/Firmwares/LG/SV130/LG-SV130.7z",
+    "source_archive": {
+      "file": "SV130-mirror.7z",
+      "bytes": 7772591,
+      "sha256": "452093b536802b17bfa1c77f6805740d61accb3fc63102bb33bc5decec08aabb"
+    },
+    "validated_system_zip": {
+      "offset": 6346932,
+      "bytes": 24525,
+      "entries": 42
+    }
+  },
+  "sv360": {
+    "bytes": 138412032,
+    "sha256": "02649770de8d0158775214f0514b6a1ac883bfb4160e4b3acac3daf802253a71",
+    "candidate_offsets_tested": 7128469,
+    "containers": [],
+    "file": "SV360521_JTAG.bin",
+    "markers": {
+      "GNEX EXCEPTION": [],
+      "/fs/GNEX/": [],
+      "GNEXInitFail": [],
+      "application/x-gnex-sgs": [
+        9638280,
+        11209920,
+        12664800,
+        18077308,
+        19917072,
+        22231410
+      ],
+      "application/x-gvm-sgs": [],
+      "/skp/c/GVM/": [],
+      "SV130": [],
+      "SV360521": [
+        2533290
+      ],
+      "EFSSuper": [
+        18020992,
+        134086664,
+        134103048,
+        134119432,
+        134135816,
+        134152200,
+        134168584,
+        134184968,
+        134201352
+      ],
+      "WIPI": [
+        904368,
+        905644,
+        1027864,
+        2131936,
+        2131958,
+        2131984,
+        2132017,
+        2132052,
+        2132089,
+        2132112,
+        2132142,
+        2132174,
+        4084910,
+        4088650,
+        4091792,
+        4248420,
+        4248440,
+        4424733,
+        4454088,
+        4474748,
+        5612286,
+        5617430,
+        5617439,
+        5617597,
+        5617610,
+        7845720,
+        9463336,
+        9619628,
+        9796957,
+        11224957,
+        11224993,
+        11225017
+      ],
+      "World of Dragon": [],
+      "Bubble Soccer": [],
+      "Pangya": [],
+      "Space Commando": [],
+      "GVM %s": []
+    },
+    "provenance_url": "https://lpcwiki.miraheze.org/wiki/LG_SV360#Firmware",
+    "source_archive": {
+      "file": "SV360521-sunderland.7z",
+      "bytes": 51231223,
+      "sha256": "1689cfb76181701ff92324e9056b9282cf2f9b3f62f5b83a5c7331418536552e"
+    },
+    "efs2": {
+      "parser": "https://github.com/Crawlerop/dumpefs2/tree/86d2c9970894ec6ede2e72b6c126a3e2ac640d75",
+      "data_start": 24117248,
+      "data_end_exclusive": 134217728,
+      "tail_oob_bytes": 4194304,
+      "page_bytes": 512,
+      "pages_per_block": 32,
+      "wipi_app_dirs": 14,
+      "wipi_app_files": {
+        "PIS": 20,
+        "DAT": 1
+      },
+      "wipi_empty_dirs": [
+        "/wipi/ctn",
+        "/wipi/lib"
+      ]
+    }
+  }
+}

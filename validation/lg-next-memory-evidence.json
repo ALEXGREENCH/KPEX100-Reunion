@@ -1,0 +1,680 @@
+{
+  "schema": 1,
+  "checked": "2026-11-05",
+  "source_catalog": {
+    "model": "LG",
+    "url": "https://archive.sunderland93.ru/Firmwares/LG/",
+    "status": 200,
+    "final_url": "https://archive.sunderland93.ru/Firmwares/LG/",
+    "bytes": 235747,
+    "sha256": "063b8b445eb0d111e5686ee56e5e79ed4c83d643ebbba4b55beccb1f3f09930e",
+    "directory_entries": 1008
+  },
+  "requested_models_not_in_catalog": ["SD870", "SV300", "SV320", "SV540", "SD720"],
+  "repeat_avoided": {
+    "model": "SD820",
+    "archive": "SX820312.7z",
+    "prior_evidence": "work/lg-early-additional/findings.md",
+    "note": "Previously inspected 3,670,000-byte Korean image fragment; not downloaded or scanned again."
+  },
+  "files": [
+    {
+      "bytes": 7340036,
+      "sha256": "fcbff9c6b8e40c8c1b4579beaa65ef5c2c469f8bbdfcffcc1c4051cdcd261f65",
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": [],
+        "WIPI": [],
+        "Brew": ["0x539b44", "0x539da8", "0x5471dc"],
+        "BREW": [
+          "0xdebe6",
+          "0x1190f6",
+          "0x119116",
+          "0x188c32",
+          "0x189b06",
+          "0x1942fe",
+          "0x1a89e4",
+          "0x547da7",
+          "0x547df9",
+          "0x605e73",
+          "0x614ad2",
+          "0x6fd2d4",
+          "0x6fd2e4",
+          "0x6fd2f4"
+        ]
+      },
+      "raw_game_path_matches": 0,
+      "gvm_metadata": [],
+      "model_build_labels": [],
+      "source_archive": {
+        "file": "KP2100.7z",
+        "model": "KP2100",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/KP2100/KX500322_memory.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/KP2100/KX500322_memory.7z",
+        "bytes": 2976835,
+        "sha256": "2f13ebc0abeac5a2963b4f879505ee67d38485a182f59a41c8b0b5d959a8bfe9",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "BREW markers; no tested GVM/GNEX markers or game-path metadata.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 365937,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "kp2100_memory.bin",
+      "archive_member_crc32": "77A9D44F",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    },
+    {
+      "bytes": 8388592,
+      "sha256": "dffd0a03a13c86dc51fc448344e7cb0aa2888c498a2b918492ef2b39682d4f61",
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": [],
+        "WIPI": [],
+        "Brew": [],
+        "BREW": []
+      },
+      "raw_game_path_matches": 0,
+      "gvm_metadata": [],
+      "model_build_labels": [],
+      "source_archive": {
+        "file": "LP1900.7z",
+        "model": "LP1900",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/LP1900/LT190I19_memorydump.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/LP1900/LT190I19_memorydump.7z",
+        "bytes": 2567208,
+        "sha256": "047a3ae9144a73e7456a51c13bec3dc7c974081368e2693dab52491b6a862c81",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "No tested GVM/GNEX markers or game-path metadata; platform not assigned.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 423551,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "LT190I19.bin",
+      "archive_member_crc32": "EE026A65",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    },
+    {
+      "bytes": 7340296,
+      "sha256": "e14d57d4692714bb23f8df7130fa3d9adcfab09bd6d811629fce14f12c38e887",
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": [],
+        "WIPI": [],
+        "Brew": [],
+        "BREW": []
+      },
+      "raw_game_path_matches": 0,
+      "gvm_metadata": [],
+      "model_build_labels": [],
+      "source_archive": {
+        "file": "LP2100.7z",
+        "model": "LP2100",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/LP2100/lp2100.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/LP2100/lp2100.7z",
+        "bytes": 2961933,
+        "sha256": "bc72b988ac02cbc4e6179b03f7653ab501209c980c0900b16e5a0556827326fd",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "No tested GVM/GNEX markers or game-path metadata; platform not assigned.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 370278,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "lp2100.bin",
+      "archive_member_crc32": "FE50F55D",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    },
+    {
+      "bytes": 36915232,
+      "sha256": "79af4d7ab48d245dcfea49faae30af530c23c2e8ca46cfe8ae2c6388152f1325",
+      "zero_bytes": 35432384,
+      "ff_bytes": 37726,
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": [],
+        "WIPI": ["0x17587e8"],
+        "Brew": [],
+        "BREW": []
+      },
+      "raw_game_path_matches": 0,
+      "gvm_metadata": [],
+      "model_build_labels": [
+        {
+          "offset": "0x7edfa0",
+          "label": "LG-SB190"
+        },
+        {
+          "offset": "0x7ee540",
+          "label": "LG-SB190"
+        },
+        {
+          "offset": "0x196a020",
+          "label": "LG-SB190"
+        },
+        {
+          "offset": "0x196a620",
+          "label": "LG-SB190"
+        }
+      ],
+      "source_archive": {
+        "file": "SB190.7z",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SB190/SB190_memory.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/SB190/SB190_memory.7z",
+        "bytes": 186932,
+        "sha256": "b968ec6e943f0d2399cdf639fafd9d648dc473df549e492a2b7db1336dac2a49",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "Sparse source: 35,432,384 of 36,915,232 bytes are zero. Internal LG-SB190 label and WIPI marker; no tested GVM/GNEX markers.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 45917,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "SB190_memory.bin",
+      "archive_member_crc32": "BA0C874A",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    },
+    {
+      "bytes": 5998192,
+      "sha256": "0d04b1cf06b58a6ca33419433ee678189829c8318d15e00fdcbb12d514d67bcd",
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [
+          "0x8cc20",
+          "0x8dab4",
+          "0x8daba",
+          "0x8dac8",
+          "0x8dace",
+          "0x8dadc",
+          "0x8dae2",
+          "0x8daf0",
+          "0x8daf6",
+          "0x8db00",
+          "0x8db06",
+          "0x8db10",
+          "0x8db16",
+          "0x8db20",
+          "0x8db26",
+          "0x8db30",
+          "0x8db36",
+          "0x8db40",
+          "0x8db46",
+          "0x8db50",
+          "0x8db56",
+          "0x8db60",
+          "0x8db66",
+          "0x8db70",
+          "0x8db76",
+          "0x8db80",
+          "0x8db86",
+          "0x8db90",
+          "0x8db96",
+          "0x8dba0",
+          "0x8dba6",
+          "0x8dbb0",
+          "0x8dbb6",
+          "0x8dbc0",
+          "0x8dbc6",
+          "0x8dbd0",
+          "0x8dbd6",
+          "0x8dbe0",
+          "0x8dbe6",
+          "0x8dbf0",
+          "0x8dbf6",
+          "0x8dc00",
+          "0x8dc06",
+          "0x8dc10",
+          "0x8dc16",
+          "0x8dc20",
+          "0x8dc26",
+          "0x8dc30",
+          "0x8dc36",
+          "0x8dc40",
+          "0x8dc46",
+          "0x8dc50",
+          "0x8dc56",
+          "0x8dc60",
+          "0x8dc66",
+          "0x8dc70",
+          "0x8dc76",
+          "0x8dc80",
+          "0x8dc86",
+          "0x8dc90",
+          "0x8dc96",
+          "0x8dca0",
+          "0x8dca6",
+          "0x8dcb0",
+          "0x8dcb6",
+          "0x8dcc0",
+          "0x8dcc6",
+          "0x8dcd0",
+          "0x8dcd6",
+          "0x8dce0",
+          "0x8dce6",
+          "0x8dcf0",
+          "0x8dcf6",
+          "0x8dd00",
+          "0x8dd06",
+          "0x8dd10",
+          "0x8dd16",
+          "0x8dd20",
+          "0x8dd26",
+          "0x8dd30",
+          "0x8dd36",
+          "0x8dd40",
+          "0x8dd46",
+          "0x8dd50",
+          "0x8dd56",
+          "0x8dd60",
+          "0x8dd66",
+          "0x8dd70",
+          "0x8dd76",
+          "0x8dd80",
+          "0x8dd86",
+          "0x8dd90",
+          "0x8dd96",
+          "0x8dda0",
+          "0x8dda6",
+          "0x8ddb0",
+          "0x8ddb6",
+          "0x8ddc0",
+          "0x8ddc6",
+          "0x8ddd0"
+        ],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": ["0x3b4cdf"],
+        "WIPI": [],
+        "Brew": [],
+        "BREW": []
+      },
+      "raw_game_path_matches": 67,
+      "gvm_metadata": [],
+      "model_build_labels": [
+        {
+          "offset": "0x1c6a1e",
+          "label": "LG-SD100"
+        },
+        {
+          "offset": "0x1cef2e",
+          "label": "SD415i16"
+        }
+      ],
+      "source_archive": {
+        "file": "SD100.7z",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD100/SD415i16%20%5BMemory%20Dump%5D.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/SD100/SD415i16%20%5BMemory%20Dump%5D.7z",
+        "bytes": 1890534,
+        "sha256": "d6d4fa7015cca38665cb77d9c0a8a08148aa9ee5c47b733da09c6ea0d015c6f5",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "Native gvm2x paths in exact model/build; independently corroborated by original Sinjisoft SD-100 GVM2X/SCRIPTVER2 profile. Java GVMChatForm is a separate feature, not this proof.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 373801,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "SD415i16_memory.bin",
+      "archive_member_crc32": "408F8784",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    },
+    {
+      "bytes": 6356992,
+      "sha256": "f8c908086315b0bbc9102a9717535379dc4c98c54ccbe2c2eb04f5232a667f5b",
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": [],
+        "WIPI": [],
+        "Brew": ["0x57e884"],
+        "BREW": ["0x12af70", "0x581477"]
+      },
+      "raw_game_path_matches": 0,
+      "gvm_metadata": [],
+      "model_build_labels": [
+        {
+          "offset": "0x1988c9",
+          "label": "SD12SE05"
+        }
+      ],
+      "source_archive": {
+        "file": "SD126.7z",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD126/SD12SE05.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/SD126/SD12SE05.7z",
+        "bytes": 1860032,
+        "sha256": "25f23dd629ef7846d041d20b08b430f64fcd3f6b5392a76167d5dc3b7e0e0e01",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "BREW markers; no tested GVM/GNEX markers or game-path metadata.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 242683,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "SD12SE05_03.bin",
+      "archive_member_crc32": "CC2131E8",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    },
+    {
+      "bytes": 10368492,
+      "sha256": "7bd31cce458f1ed531c7a59c621f1ad55dde4e8d5523041a54358abe1d639176",
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [
+          "0x8e340",
+          "0x1e6ae1",
+          "0x1e6b38",
+          "0x1e7394",
+          "0x1e78ac",
+          "0x1e7a5c",
+          "0x1e7de5",
+          "0x257d5f",
+          "0x2581e9",
+          "0x2581ef",
+          "0x2581fb",
+          "0x258201",
+          "0x25820d",
+          "0x258213",
+          "0x9d38c4"
+        ],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": [],
+        "WIPI": [],
+        "Brew": [],
+        "BREW": []
+      },
+      "raw_game_path_matches": 3,
+      "gvm_metadata": [],
+      "model_build_labels": [
+        {
+          "offset": "0x246dd8",
+          "label": "LG-SD7130"
+        },
+        {
+          "offset": "0x2575b1",
+          "label": "D71VSV14"
+        }
+      ],
+      "source_archive": {
+        "file": "SD7130.7z",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD7130/D71VSV14.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/SD7130/D71VSV14.7z",
+        "bytes": 4032559,
+        "sha256": "ee2408eae26ecd29769b2c9c27f78dd9c4d54a376b2c55e3672b4db56facd229",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "Native gvm2x processing diagnostics and GVMINFO table in exact model/build. Original LG manual is explicitly Vietnamese and describes S-WAP; operator game file format is not established.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 504450,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "D71VSV14_00.bin",
+      "archive_member_crc32": "81570646",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    },
+    {
+      "bytes": 20971520,
+      "sha256": "d42da31abb9ead8ef84cbb5395e71ccd99afd19e65d02405523495a8c6087f36",
+      "markers": {
+        "GVM1X": [],
+        "GVM2X": [],
+        "/skp/c/GVM/": [],
+        "gvm2x": [],
+        "GNEX EXCEPTION": [],
+        "/fs/GNEX/": [],
+        "application/x-gvm-sgs": [],
+        "application/x-gnex-sgs": [],
+        "Sinjisoft": [],
+        "SKVM": ["0x2e7037"],
+        "WIPI": [],
+        "Brew": [
+          "0x187460",
+          "0x187478",
+          "0x2e7f08",
+          "0x4bdf6f",
+          "0x4db4e9",
+          "0x4e3638",
+          "0x9a500c"
+        ],
+        "BREW": [
+          "0x185660",
+          "0x185d52",
+          "0x1aed20",
+          "0x1d1ec2",
+          "0x1d9e34",
+          "0x1d9e44",
+          "0x1d9e54",
+          "0x1da370",
+          "0x2e45ea",
+          "0x35bf82",
+          "0x35bfa2",
+          "0x4bde1d",
+          "0x501c3b",
+          "0x501c8d",
+          "0x5059a4",
+          "0x9a8285"
+        ]
+      },
+      "raw_game_path_matches": 0,
+      "gvm_metadata": [],
+      "model_build_labels": [],
+      "source_archive": {
+        "file": "SD820-SFone.7z",
+        "model": "SD820 (SFone variant)",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD820%20%28SFone%20variant%29/SD82SE06.7z",
+        "status": 200,
+        "final_url": "https://archive.sunderland93.ru/Firmwares/LG/SD820%20%28SFone%20variant%29/SD82SE06.7z",
+        "bytes": 5841025,
+        "sha256": "38a2e45a2485eaaa7fb84d9c6ef402a46d868a3269cb25e371410deae4a2ce74",
+        "archive_integrity": {
+          "tool": "7-Zip 26.02 t",
+          "exit_code": 0
+        }
+      },
+      "result": "Separate SFone firmware with BREW markers; no tested GVM/GNEX markers or game-path metadata. Do not inherit Korean SD820 compatibility.",
+      "sgs_scan": {
+        "candidate_offsets_tested": 543662,
+        "containers": []
+      },
+      "marker_offset_list_limit": 100,
+      "source_file": "SD82SE06_02.bin",
+      "archive_member_crc32": "145FAB86",
+      "coverage": "Exact complete archive member; full device flash coverage is not established."
+    }
+  ],
+  "summary": {
+    "archives_downloaded": 8,
+    "images_scanned": 8,
+    "bytes_scanned": 103679352,
+    "candidate_offsets_tested": 2870279,
+    "complete_sgs": 0,
+    "named_gvm_metadata": 0
+  },
+  "limits": [
+    "All eight archives were actually downloaded and verified by 7-Zip CRC; directory-only candidates SC8000, SB260, KH1000, KH1200 and LP2000 are not treated as inspected firmware.",
+    "SGS scan covers every byte offset for v1/v2/v4/v36, plain and XOR A5, with complete section validation. Unknown packing/native games and unsupported formats are not excluded.",
+    "Filename scan tests DB/5B metadata, 12-byte common header, index0, filename length+28, name+29 and game-path matches. No valid matching metadata was found; source coverage can be partial even when archive integrity passes.",
+    "No arbitrary user files, saved games or personal records were extracted or exported; only original firmware/service data remains in scratch.",
+    "Presence of gvm2x runtime code does not independently prove that a particular operator enabled all download features or supported the same catalog as a Korean handset."
+  ],
+  "manual": {
+    "url": "https://www.cellphonesguide.net/manuals/1628303819SD7130_eng(1.1).pdf",
+    "bytes": 3219110,
+    "sha256": "e5583c83e4d012c5365b70703095d7620056237a670209dd238cce48879f6f7f",
+    "pages": 52,
+    "pdf_header": "%PDF-1.3",
+    "document_id": "MMBB0087601 (1.1)",
+    "provenance": "LG-authored user manual obtained from a third-party mirror, not an official LG download endpoint.",
+    "pdf_creation_date": "D:20030627165704",
+    "visual_checks": [
+      {
+        "pdf_page": 1,
+        "observed": "LG/SD7130 and S Fone branding, Vietnamese rear-cover label, document code MMBB0087601 (1.1)"
+      },
+      {
+        "pdf_page": 22,
+        "printed_page": 41,
+        "observed": "X-Ship under Entertain > Game"
+      },
+      {
+        "pdf_page": 23,
+        "printed_page": 42,
+        "observed": "Poshong under Entertain > Game"
+      }
+    ]
+  },
+  "sd7130_manual_facts": {
+    "document_id": "MMBB0087601 (1.1)",
+    "market_text": "Vietnamese; S wap",
+    "printed_pages": {
+      "41": "X-Ship",
+      "42": "Poshong",
+      "67": "S wap operator data services including games",
+      "68": "Magic Box"
+    },
+    "game_format": "The manual does not identify the executable format of X-Ship or Poshong."
+  },
+  "sfone_2004_followup": {
+    "url": "https://tuoitre.vn/luot-wap-tren-dien-thoai-cdma-31087.htm",
+    "date": "2004-05-01",
+    "reported_download_titles": ["Fighting", "PhoneGolf", "Pocket Tennis"],
+    "scope": "Contemporary PCW/S-WAP service report, with SD7130 connection test. It does not establish that these three games are SGS or identify preserved binaries."
+  },
+  "scope": "Eight newly downloaded archive samples, one BIN each, including the separately named SD820 SFone variant; not eight proven GVM devices. No source images or user data are redistributed by this evidence file.",
+  "sd7130_native_markers": {
+    "/gvm2x_%03d": "0x1e6ae0",
+    "need_gvm2x_process_data again": "0x1e7de0",
+    "GVMINFO": "0x744908",
+    "X-Ship": ["0x2c6388", "0x2c63a9"],
+    "Poshong": ["0x2c63d4", "0x2c63f5", "0x764293", "0x76429c"]
+  },
+  "sd100_java_distinction": {
+    "java_class": "com/xce/jam/GVMChatForm",
+    "GVMChatForm_substring_offset": "0x3b75e9",
+    "note": "Separate Java chat feature, not evidence of Sinjisoft Mobile C/SGS. Native gvm2x paths and the original handset guide support the GVM2X identification."
+  },
+  "sd100_primary_guide": {
+    "title": "GVM 단말기별 개발가이드",
+    "issuer": "Sinjisoft Corporation",
+    "cover_date": "2002-11-30",
+    "source": {
+      "url": "https://web.archive.org/web/20030914195710id_/http://gvmclub.com:80/20021130_%b4%dc%b8%bb%b1%e2%ba%b0_%b0%b3%b9%df%b0%a1%c0%cc%b5%e5.pdf",
+      "expectedSha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 1285394,
+      "sha256": "ee3210a1bb535bccd2c138641fd0478486ab1cd063cce05619ab6c316d3487de",
+      "sha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee"
+    },
+    "profile": {
+      "page": 58,
+      "manufacturer": "LG",
+      "modelLabelVerbatim": "LG SD-100(S415)",
+      "releaseDateVerbatim": "2002",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: LG2111",
+      "physicalLcdVerbatim": "128*128 :::::::::::::::: 문자 : 20*08",
+      "physicalLcd": [128, 128],
+      "gvmAreaVerbatim": "128*128 :::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [128, 128],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1"
+    },
+    "cross_source_limit": {
+      "evidence": "gvm-historical-handset-guides.json",
+      "other_source": "Original GVM Club forum attachment, 2003-10-14 workbook; operator authorship not authenticated",
+      "sheet_range": "SKT!AV166:AW166",
+      "general_application_area": [128, 112],
+      "note": "The 2002 Sinjisoft guide names a GVM area of128x128; preserve both source-specific fields. No emulator profile changed."
+    }
+  }
+}

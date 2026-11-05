@@ -1,0 +1,335 @@
+{
+  "date": "2026-11-05",
+  "scope": "Fresh publicly accessible Korean developer cafe menu traversal. No Wayback/CDX, login, vendor executable execution or repo edits.",
+  "newSoftwareArchives": 1,
+  "newCompiledSgs": 1,
+  "newRetailGames": 0,
+  "newConfirmedDeviceModels": 0,
+  "sources": [
+    {
+      "name": "article-jzsdn-8970",
+      "url": "https://article.cafe.naver.com/gw/v4/cafes/10256809/articles/8970?useCafeId=true&requestFrom=A",
+      "status": 200,
+      "finalUrl": "https://article.cafe.naver.com/gw/v4/cafes/10256809/articles/8970?useCafeId=true&requestFrom=A",
+      "bytes": 14985,
+      "sha256": "e15e518b019728efe67a48ebe5fa51f65eddb9d9ba1097f75f0e58bab8929910",
+      "file": "article-jzsdn-8970.bin",
+      "sourceUrl": "https://cafe.naver.com/jzsdn/8970",
+      "readable": true,
+      "open": true,
+      "permission": true,
+      "isLogin": false,
+      "title": "캐릭터 움직이기",
+      "attachments": [
+        {
+          "type": "F",
+          "url": "https://download.blog.naver.com/2ebb328196c9ca163bd5be84b6552456f4a658ba5e/data23/2006/10/10/234/lala.zip",
+          "extension": "zip",
+          "name": "lala.zip",
+          "size": 1224627,
+          "fullName": "lala.zip",
+          "suspendLayerName": "block_common",
+          "isBlind": false,
+          "hasLicenseIssue": false,
+          "hasCopyrightIssue": false,
+          "isInfected": false,
+          "xcamMonitorType": "NONE"
+        },
+        {
+          "type": "I",
+          "url": "https://download.blog.naver.com/28bd348790c5cc103dd3b882b0532250f2a05ebc3c/data22/2006/10/10/258/sss.jpg",
+          "extension": "jpg",
+          "name": "sss.jpg",
+          "size": 30373,
+          "fullName": "sss.jpg",
+          "suspendLayerName": "block_common",
+          "isBlind": false,
+          "hasLicenseIssue": false,
+          "hasCopyrightIssue": false,
+          "isInfected": false,
+          "xcamMonitorType": "NONE"
+        }
+      ],
+      "bodyText": " [[[CONTENT-ELEMENT-0]]]    //   배경,   캐릭터   투명배경,   방향키   +5씩   증가  #include   <SScript.h>  #include   \"lala.sbm\"  int   lala_x,   lala_y;  void   init() {             ClearWhite();              lala_x   =   swWidth/2-20;           lala_y=   swHeight/2-20;           CopyImage(0,   0,   background[0]);               //       이미지       출력           SaveLCD();  } void   EVENT_KEYPRESS() {       switch(swData)       {             case   SWAP_KEY_UP   :                            lala_y   -=5;                            break;              case   SWAP_KEY_DOWN   :                            lala_y   +=5;                            break;             case   SWAP_KEY_RIGHT   :                            lala_x   +=5;                            break;                 case   SWAP_KEY_LEFT   :                            lala_x   -=5;                            break;       }  }  void   EVENT_TIMEOUT() {       RestoreLCD();       CopyImage(lala_x,   lala_y,   lala[0]);               //       이미지       출력       Flush(); }  void   main() {       init();       SetTimer(100,   S_TM_REPEAT);               }  ",
+      "links": []
+    },
+    {
+      "name": "jzsdn-8970-lala",
+      "url": "https://download.blog.naver.com/2ebb328196c9ca163bd5be84b6552456f4a658ba5e/data23/2006/10/10/234/lala.zip",
+      "status": 200,
+      "finalUrl": "https://download.blog.naver.com/2ebb328196c9ca163bd5be84b6552456f4a658ba5e/data23/2006/10/10/234/lala.zip",
+      "bytes": 1224627,
+      "sha256": "2439ed27f789f4e651694412a46df1dada73d420e122c5ee19c767477223c6ae",
+      "file": "jzsdn-8970-lala.bin"
+    }
+  ],
+  "classification": "GNEX 4 character-movement educational example with original project source and compiled bytecode. Not a complete retail game.",
+  "archiveValidation": {
+    "memberCount": 386,
+    "uncompressedBytes": 2206332,
+    "allCrcPass": true,
+    "fullMemberManifest": "lala-extraction.json",
+    "extractionNote": "Original complete ZIP retained scratch. Only root project/graphics and nested lala project extracted; pixel collection and Explorer Thumbs.db not exported."
+  },
+  "sgs": {
+    "archiveName": "lala.sgs",
+    "decodedName": "lala.sgs",
+    "size": 65210,
+    "crc32": "3a2ef6e7",
+    "sha256": "0e5a8709be44788ae24b2557c75cbdb44749725110867b468a9a7d2a32acd747",
+    "extracted": "extracted/lala/lala.sgs",
+    "first128Hex": "04ffffff010160ea01006c616c6120474e45582041707000000000008201000000000000ee0000008200000000000000000000000000000000000000000000000000000000000000a00100006802000088090000ac09000000000000ffff0000000001000000000000000000000000000000000000000000bafe000000000000"
+  },
+  "layout": {
+    "version": 4,
+    "title": "lala GNEX App",
+    "declaredBytes": 65210,
+    "bodyBytes": 65210,
+    "wrapperBytes": 0,
+    "xorMask": 0,
+    "events": {
+      "START": 386,
+      "END": 0,
+      "TIMEOUT": 238,
+      "KEYPRESS": 130,
+      "RSEVENT": 0,
+      "RSRECEIVE": 0,
+      "RESULT": 0,
+      "RECEIVE": 0,
+      "NETWORK": 0,
+      "SMSRECEIVE": 0,
+      "GENERAL": 0
+    },
+    "sections": {
+      "codeEnd": 416,
+      "variablesEnd": 616,
+      "variableDataEnd": 2440,
+      "resourceTableEnd": 2476
+    },
+    "variableCount": 25,
+    "resources": [
+      {
+        "type": 256,
+        "offset": 2476,
+        "length": 958,
+        "head": {
+          "type": "Buffer",
+          "data": [
+            12,
+            24,
+            37,
+            0,
+            0,
+            1,
+            21,
+            255,
+            255,
+            255,
+            51,
+            51
+          ]
+        }
+      },
+      {
+        "type": 256,
+        "offset": 3434,
+        "length": 59426,
+        "head": {
+          "type": "Buffer",
+          "data": [
+            12,
+            255,
+            230,
+            0,
+            0,
+            0,
+            0,
+            160,
+            176,
+            105,
+            199,
+            235
+          ]
+        }
+      },
+      {
+        "type": 256,
+        "offset": 62860,
+        "length": 2350,
+        "head": {
+          "type": "Buffer",
+          "data": [
+            11,
+            62,
+            74,
+            0,
+            0,
+            1,
+            16,
+            255,
+            255,
+            255,
+            102,
+            51
+          ]
+        }
+      }
+    ]
+  },
+  "runtime": {
+    "profile": {
+      "profile": "phone",
+      "width": 128,
+      "height": 146
+    },
+    "profileLimit": "Explicit test viewport; LCDCLASS255 and source/project do not bind to any phone.",
+    "proof": {
+      "inputPlan": "lala-arrows.json",
+      "idlePlan": "lala-idle.json",
+      "timeInput": 300,
+      "timeIdle": 300,
+      "allIdle": true,
+      "equalStart": true,
+      "differentPixels": 817,
+      "uniqueInputFrames": 4,
+      "keyCodes": {
+        "right": 17,
+        "down": 19
+      },
+      "source": "SScript.h SDK 2.12 lines544-547, lala.mc SWAP_KEY_RIGHT/DOWN +=5"
+    },
+    "frames": [
+      {
+        "path": "runtime/lala-arrows/local-lala-start.png",
+        "bytes": 326,
+        "sha256": "aea29a70a0cb73dece60041f33b50aeb6ccc3997528dbb5e6137b3d9744ee726",
+        "timeMs": 0,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-arrows/local-lala-0-tick1.png",
+        "bytes": 16150,
+        "sha256": "9bbf80d6ee15e46964d63ab7b1cf345ac678881801ba044253836e42e8def555",
+        "timeMs": 100,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-arrows/local-lala-1-key17.png",
+        "bytes": 16150,
+        "sha256": "9bbf80d6ee15e46964d63ab7b1cf345ac678881801ba044253836e42e8def555",
+        "timeMs": 100,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-arrows/local-lala-2-tick1.png",
+        "bytes": 16136,
+        "sha256": "8dff738c8217a920261d9e88c48616cf27bbadca30e79b5b279fbae820fae5ed",
+        "timeMs": 200,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-arrows/local-lala-3-key19.png",
+        "bytes": 16136,
+        "sha256": "8dff738c8217a920261d9e88c48616cf27bbadca30e79b5b279fbae820fae5ed",
+        "timeMs": 200,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-arrows/local-lala-4-tick1.png",
+        "bytes": 16167,
+        "sha256": "177675aaadfe55135bc28b5492dd71f567fdef6dff4d031664149878562688eb",
+        "timeMs": 300,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-idle/local-lala-start.png",
+        "bytes": 326,
+        "sha256": "aea29a70a0cb73dece60041f33b50aeb6ccc3997528dbb5e6137b3d9744ee726",
+        "timeMs": 0,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-idle/local-lala-0-tick1.png",
+        "bytes": 16150,
+        "sha256": "9bbf80d6ee15e46964d63ab7b1cf345ac678881801ba044253836e42e8def555",
+        "timeMs": 100,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-idle/local-lala-1-tick1.png",
+        "bytes": 16150,
+        "sha256": "9bbf80d6ee15e46964d63ab7b1cf345ac678881801ba044253836e42e8def555",
+        "timeMs": 200,
+        "status": "idle",
+        "error": null
+      },
+      {
+        "path": "runtime/lala-idle/local-lala-2-tick1.png",
+        "bytes": 16150,
+        "sha256": "9bbf80d6ee15e46964d63ab7b1cf345ac678881801ba044253836e42e8def555",
+        "timeMs": 300,
+        "status": "idle",
+        "error": null
+      }
+    ],
+    "initialNonDirectionalTrial": "Keys7/3 are numeric keys, not SWAP arrows; idle and input matched. Original source + SDK SScript.h define arrow codes16..19. Corrected test changes only replay actions, no source bytes.",
+    "originalBuildLog": "lala.bld reports65210B,25symbols,3image resources,0errors/0warnings; not rerun here."
+  },
+  "secondaryPages": [
+    {
+      "url": "https://cafe.naver.com/webmas/990",
+      "bytes": 5591,
+      "sha256": "8da4db04773f0d56584a47a4dcc65f58e95f7e831111b64ccf3852ca4bbd4f85",
+      "title": "모바일 지원 싸이트",
+      "file": "article-webmas-990.bin"
+    },
+    {
+      "url": "https://cafe.naver.com/jzsdn/3354",
+      "bytes": 16410,
+      "sha256": "d9387e5c78c01e1ed2eb49215dbfe59e74319062b02f74acf642bc2c8da7231e",
+      "title": "SKT에서 게임정보료가 많은 단말기종 리스트입니다.",
+      "file": "article-jzsdn-3354.bin"
+    },
+    {
+      "url": "https://cafe.naver.com/jzsdn/2794",
+      "bytes": 7069,
+      "sha256": "05c5f584362b4179d7cd7769c1302fc56fa5ea6158e454cfe1e3e8e32ba9ff8c",
+      "title": "[펌] GVM 타이머이벤트와 키이벤트의 우선순위",
+      "file": "article-jzsdn-2794.bin"
+    },
+    {
+      "url": "https://cafe.naver.com/jzsdn/10078",
+      "bytes": 107958,
+      "sha256": "e1da26c5f0cab87e57d49c8519241062fbe0b281ad1fe4fec8656cc7b8d856ab",
+      "title": "...",
+      "file": "article-jzsdn-10078.bin"
+    }
+  ],
+  "limits": [
+    "JZSDN3354 is a contemporary41model game-billing list, without VM/runtime/firmware attribution; no model support inferred.",
+    "JZSDN2794 is a repost explaining equal-priority queued key/timer events; useful historical note, no original author attribution proven.",
+    "JZSDN10078 embeds a Block Break source with compiler errors, no downloadable archive or original compiled SGS.",
+    "icedesign1 GNEX program board31:7posts with attachment flags but all openArticle=false; contents and attachments not requested.",
+    "cdirect8 and cdirect10 entries closed; skipped.",
+    "ealab91 and webzero02034 returnedHTTP401; no retries/bypass.",
+    "mobilecity1 addressbook XLS not fetched: no software identity and potentially personal contacts.",
+    "Paladin exacttitle+filename search returned no matching public cafe payload.",
+    "No assertion all boards/websites exhausted."
+  ],
+  "traversal": {
+    "rootPages": 6,
+    "listPages": 9,
+    "searchPages": 12,
+    "articleAttempts": 8,
+    "allResponsesWithFilesHashVerified": 34
+  },
+  "allReceipts": "receipts.json"
+}

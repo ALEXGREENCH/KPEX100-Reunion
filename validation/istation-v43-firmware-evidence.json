@@ -1,0 +1,269 @@
+{
+  "checked": "2026-11-05",
+  "model": "DigitalCube i-Station V43",
+  "firmware_updates": [
+    {
+      "version": "2.2.9",
+      "source": "https://best-bk.tistory.com/42",
+      "volumes": [
+        {
+          "file": "firmware_2.2.9.z01",
+          "bytes": 10485760,
+          "sha256": "7ff89dbdbfbf03943320f8a6193bc045aa6943485a3258216ce413a42ce62fb7"
+        },
+        {
+          "file": "firmware_2.2.9.z02",
+          "bytes": 10485760,
+          "sha256": "42d9236f5ee144a5ba6a677cee42e2eefa69d89e3127f871d578dde220a3d4d7"
+        },
+        {
+          "file": "firmware_2.2.9.z03",
+          "bytes": 10485760,
+          "sha256": "d5b8a7aa6cdb200801ea817e1d8baa1c319cda1c385c1b0acfdd6625259762eb"
+        },
+        {
+          "file": "firmware_2.2.9.zip",
+          "bytes": 630145,
+          "sha256": "492726166b26c61529a47c16eb2a4874bdcf8a74a44fc91bb63fb843dbb0e2a6"
+        }
+      ],
+      "updater": {
+        "file": "firmware_2.2.9.exe",
+        "bytes": 32082179,
+        "sha256": "7a9396f17cb724b74550a49d7780d5841fe04851009802364530dbe94be2a114"
+      },
+      "filesystems": [
+        {
+          "file": "V43-files/root/app.v43.tgz",
+          "bytes": 13338309,
+          "sha256": "73c16e64e0ebd5f0f34dd4a3442b0d8b668ba64e3f534ff5ef16805b199d1439",
+          "regular_members": 306,
+          "regular_member_bytes": 51901565,
+          "scan_candidate_offsets": 1828856,
+          "sgs_candidates": [],
+          "runtime_markers": [],
+          "game_paths": [],
+          "qtopia_games": []
+        },
+        {
+          "file": "V43-files/root/rootfs.v43.tgz",
+          "bytes": 18687817,
+          "sha256": "449d750421c0784140fd18b9f08d4334bb41291b6f70cd5bd0dd2b7666728bd5",
+          "regular_members": 1215,
+          "regular_member_bytes": 49751021,
+          "scan_candidate_offsets": 2979042,
+          "sgs_candidates": [],
+          "runtime_markers": [],
+          "game_paths": [
+            "usr/games"
+          ],
+          "qtopia_games": []
+        }
+      ]
+    },
+    {
+      "version": "1.7.3",
+      "source": "https://best-bk.tistory.com/63",
+      "zip": {
+        "file": "firmware_1.7.3.zip",
+        "bytes": 31043679,
+        "sha256": "e525389616057cdbbf608ca5141e547afb4f4063e0800ea4cd7c5f890b9c0753"
+      },
+      "updater": {
+        "file": "V43_FW_1.7.3.exe",
+        "bytes": 31040093,
+        "sha256": "b391aaa0429e667ff1ea36c33f9cfa78d5a9e49c77610ba7057c6d60da5baef1"
+      },
+      "filesystems": [
+        {
+          "file": "V43-files-173/root/app.v43.tgz",
+          "bytes": 17326425,
+          "sha256": "a0f000b65ee1f161a611e8f11f0c56e7fd3d3e740067aad65489fb1919e79b7c",
+          "regular_members": 798,
+          "regular_member_bytes": 63900301,
+          "scan_candidate_offsets": 2078136,
+          "sgs_candidates": [],
+          "runtime_markers": [],
+          "game_paths": [],
+          "qtopia_games": []
+        },
+        {
+          "file": "V43-files-173/root/rootfs.v43.tgz",
+          "bytes": 13639834,
+          "sha256": "4d46d68a6f0aa2dd0a79cfb38814bfd83e0da1e2bfe7da65b71388e2a5bc7d74",
+          "regular_members": 1063,
+          "regular_member_bytes": 35662106,
+          "scan_candidate_offsets": 2259733,
+          "sgs_candidates": [],
+          "runtime_markers": [],
+          "game_paths": [
+            "./usr/games"
+          ],
+          "qtopia_games": []
+        }
+      ]
+    }
+  ],
+  "recovery_bios": {
+    "version": "1.1.6",
+    "source": "https://best-bk.tistory.com/42",
+    "updater": {
+      "file": "20060323_V43_Bios_1.1.6.exe",
+      "bytes": 3891914,
+      "sha256": "1e0b5496e40aef6c44383755cc3745d5e2a9271749940e72b89bd71c29dc2594"
+    },
+    "components": [
+      {
+        "file": "booterup.bin",
+        "bytes": 330920,
+        "sha256": "c68b3126f89dbfe195384984e729e6086f360c65ed54d5b717cf2f2227a75d0b",
+        "sgs_candidates": [],
+        "scan_candidate_offsets": 11368
+      },
+      {
+        "file": "kernelup.bin",
+        "bytes": 2724013,
+        "sha256": "e4cbc7fdc416baa0f109e2520cae8e4941c816b7c3eaa7f7a7cd7eb3b4e9ac44",
+        "sgs_candidates": [],
+        "scan_candidate_offsets": 219449
+      },
+      {
+        "file": "rootfsup.bin",
+        "bytes": 2401863,
+        "sha256": "765bf31d120e7bf08985ec7b569b6d6bccbc9f953b5e727d89a3c9fdcfb1bbd5",
+        "sgs_candidates": [],
+        "scan_candidate_offsets": 60519
+      },
+      {
+        "file": "initrd.img",
+        "bytes": 12288000,
+        "sha256": "69fcd180cd1936e4f0c64467e7b8ce791661289d7c8da2d2535b2655575914fd",
+        "sgs_candidates": [],
+        "scan_candidate_offsets": 348227
+      }
+    ]
+  },
+  "community_qtopia": {
+    "source": "https://best-bk.tistory.com/63",
+    "zip": {
+      "file": "qtopia.zip",
+      "bytes": 25695595,
+      "sha256": "593ebfe7305c58e433a76105ff66285cc404302561f779f47a96875b6a8ed337"
+    },
+    "filesystem": {
+      "file": "Qtopia.tgz",
+      "bytes": 25741646,
+      "sha256": "e21d4b63e29c0eb5b1221aab01ea3885d838bf1c371a530351f8b2b364039dc3",
+      "regular_members": 1767,
+      "regular_member_bytes": 98090589,
+      "scan_candidate_offsets": 4125837,
+      "sgs_candidates": [],
+      "runtime_markers": [],
+      "game_paths": [
+        "Qtopia/apps/Games",
+        "Qtopia/apps/Games/.directory",
+        "Qtopia/apps/Games/fifteen.desktop",
+        "Qtopia/apps/Games/minesweep.desktop",
+        "Qtopia/apps/Games/parashoot.desktop",
+        "Qtopia/apps/Games/qasteroids.desktop",
+        "Qtopia/apps/Games/snake.desktop",
+        "Qtopia/apps/Games/solitaire.desktop",
+        "Qtopia/apps/Games/mindbreaker.desktop",
+        "Qtopia/apps/Games/same.desktop",
+        "Qtopia/apps/Games/tetrix.desktop"
+      ],
+      "qtopia_games": [
+        {
+          "title": "Fifteen Pieces",
+          "launcher": "Qtopia/apps/Games/fifteen.desktop",
+          "executable": "Qtopia/bin/fifteen",
+          "elf_machine": 8,
+          "bytes": 143040,
+          "sha256": "618bdd71b10ad738301e5835edb7e3c9512c4497f551f60f4a43fcc6fd28d000"
+        },
+        {
+          "title": "Mine Hunt",
+          "launcher": "Qtopia/apps/Games/minesweep.desktop",
+          "executable": "Qtopia/bin/minesweep",
+          "elf_machine": 8,
+          "bytes": 146312,
+          "sha256": "4e188d83b51ef892a2457a6ed9fd7fc5ec4e4fe3cd7c388e7ef230d50c0ffb1e"
+        },
+        {
+          "title": "ParaShoot",
+          "launcher": "Qtopia/apps/Games/parashoot.desktop",
+          "executable": "Qtopia/bin/parashoot",
+          "elf_machine": 8,
+          "bytes": 146760,
+          "sha256": "2c1df4d6428eb9f111867114b0d70fae0fac57f8e02e852a8f37694b485d6f92"
+        },
+        {
+          "title": "Asteroids",
+          "launcher": "Qtopia/apps/Games/qasteroids.desktop",
+          "executable": "Qtopia/bin/qasteroids",
+          "elf_machine": 8,
+          "bytes": 217976,
+          "sha256": "d6792d21252198a5e3a1cb2d8ae766dc3726936a5f0af4004ed392b3c760dd0f"
+        },
+        {
+          "title": "Snake",
+          "launcher": "Qtopia/apps/Games/snake.desktop",
+          "executable": "Qtopia/bin/snake",
+          "elf_machine": 8,
+          "bytes": 146824,
+          "sha256": "b37cd3ca1d06cb150b87b64e944492ec3e6e62d74e77950983ab9b995ec95469"
+        },
+        {
+          "title": "Patience",
+          "launcher": "Qtopia/apps/Games/solitaire.desktop",
+          "executable": "Qtopia/bin/solitaire",
+          "elf_machine": 8,
+          "bytes": 304988,
+          "sha256": "80b577a7e97970130fdd1e1acd01ee6761c6aedd1f55500b7875415031a44fe8"
+        },
+        {
+          "title": "Mindbreaker",
+          "launcher": "Qtopia/apps/Games/mindbreaker.desktop",
+          "executable": "Qtopia/bin/mindbreaker",
+          "elf_machine": 8,
+          "bytes": 143572,
+          "sha256": "9a86f1b7b50bd2df796417cbae5417fe6ee1f0b463573fe573a1122f6d84a461"
+        },
+        {
+          "title": "Same",
+          "launcher": "Qtopia/apps/Games/same.desktop",
+          "executable": "Qtopia/bin/same",
+          "elf_machine": 8,
+          "bytes": 639423,
+          "sha256": "37335780bfaf4788aa213cd29675e4d9169a250301e0eb83d812b480207b5533"
+        },
+        {
+          "title": "Tetrix",
+          "launcher": "Qtopia/apps/Games/tetrix.desktop",
+          "executable": "Qtopia/bin/tetrix",
+          "elf_machine": 8,
+          "bytes": 144752,
+          "sha256": "aea140baebda3784c1ff9e7a79133aed1c211b62d221470c8d80b1cfd8fb711d"
+        }
+      ]
+    }
+  },
+  "documented_targets": {
+    "pmp1000": {
+      "product_page": "https://web.archive.org/web/20051222112816id_/http://digital-cube.co.kr:80/eng/bbs/product_pmp1000.php",
+      "embedded_games_report": "https://kocca.kr/knowledge/research/__icsFiles/afieldfile/2010/05/01/x0CGIygutxln.pdf#page=55",
+      "firmware_recovered": false
+    },
+    "t43": {
+      "recovery_listing": "https://nurakun.tistory.com/47",
+      "recovery_version": "1.6.1",
+      "firmware_recovered": false
+    },
+    "iriver_pmp_120_140": {
+      "european_2_03": "https://www.touslesdrivers.com/index.php?v_code=7168&v_page=23",
+      "european_2_04": "https://www.touslesdrivers.com/index.php?v_code=7613&v_page=23",
+      "korean_2_04": "https://www.shamrockman.net/tutorials/firmwareguide.php",
+      "firmware_recovered": false
+    }
+  }
+}

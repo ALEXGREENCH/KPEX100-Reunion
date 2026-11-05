@@ -1,0 +1,114 @@
+{
+  "scope": "Original SGS v4 in the Kingston 2.12 interpreter, active game scenes and input.",
+  "games": {
+    "battle-armor": {
+      "id": "battle-armor",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/battle-armor.json",
+      "status": "idle",
+      "events": 575,
+      "evidence": "Stage 1, movement inside the base and Garage menu",
+      "frame": "gameplay/battle-armor-52-tick5.png",
+      "frameSha256": "01b0d2f89b97e3a1e7ed2a5fab8eb38deedaed0226521c4b1e80be49984a2a0e"
+    },
+    "soul-sword": {
+      "id": "soul-sword",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/soul-sword.json",
+      "status": "idle",
+      "events": 305,
+      "evidence": "Playable training arena and character movement",
+      "frame": "gameplay/soul-sword-37-tick5.png",
+      "frameSha256": "b9902fb7b93318c5a6b98e34b5476fb4cae611f69d8642118f2f04b648a37e25"
+    },
+    "treasure-hunter": {
+      "id": "treasure-hunter",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/treasure-hunter.json",
+      "status": "idle",
+      "events": 897,
+      "evidence": "Stage 1 and controlled ship movement",
+      "frame": "gameplay/treasure-hunter-50-tick10.png",
+      "frameSha256": "586e01fa42ca68707f4cac2139af85205f28d02bc6320a141a73a09bd3a90cfb"
+    },
+    "the-man-jong": {
+      "id": "the-man-jong",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/the-man-jong.json",
+      "status": "idle",
+      "events": 405,
+      "evidence": "Active hand and tile discards",
+      "frame": "gameplay/the-man-jong-8-tick60.png",
+      "frameSha256": "f59eb8cd9d1dff78ce8fa35598a6523e814ab6de1e8a3365f623f1ac57d163ec"
+    },
+    "star-fighter": {
+      "id": "star-fighter",
+      "runtime": {
+        "profile": "kpex",
+        "keyReleaseEvent": true
+      },
+      "replay": "kingston-naver-replays/star-fighter.json",
+      "status": "idle",
+      "events": 326,
+      "evidence": "Stage 1, ship movement, projectiles and score increases",
+      "frame": "gameplay/star-fighter-13-tick15.png",
+      "frameSha256": "c5d20553986aa715a67e3bc7488fdace1b21c873dbd2235180baf342979ef5bc"
+    },
+    "aiolos-kpex": {
+      "id": "aiolos-kpex",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/aiolos-kpex.json",
+      "status": "idle",
+      "events": 587,
+      "evidence": "Stage 1 and gunfire, score increases",
+      "frame": "gameplay/aiolos-kpex-12-tick60.png",
+      "frameSha256": "1d402e83710bc37f01771066089997f9bff43ec5e27bada77f7e7cc2b62e1d41"
+    },
+    "blocks": {
+      "id": "blocks",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/blocks.json",
+      "status": "idle",
+      "events": 618,
+      "evidence": "Playable Auto Mode, one deleted block and 59 points",
+      "frame": "gameplay/blocks-14-tick30.png",
+      "frameSha256": "6ed55e2817a0ac110c27196bb0fd1261071067ea1a8cf209dce364ce785f7c8f"
+    },
+    "exciting-drop": {
+      "id": "exciting-drop",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/exciting-drop.json",
+      "status": "idle",
+      "events": 587,
+      "evidence": "Stage 1 and movement among platforms",
+      "frame": "gameplay/exciting-drop-12-tick60.png",
+      "frameSha256": "f5d7e4ff0e6bb2ab6ededfd4ee7b360b9c5e8816f0eed0c2b6d912c391abe0d2"
+    },
+    "blue-swallow": {
+      "id": "blue-swallow",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "replay": "kingston-naver-replays/blue-swallow.json",
+      "status": "idle",
+      "events": 848,
+      "evidence": "First flight training and input changing engine RPM",
+      "frame": "gameplay/blue-swallow-40-tick7.png",
+      "frameSha256": "6d2ae10804203774dc9af5399041089c6ec8807af51f8adaf2b331479e7077c5"
+    }
+  }
+}

@@ -1,0 +1,651 @@
+{
+  "scope": "Six newly inspected firmware archives. Marker offsets and structural SGS scan. Recovered native puzzle tables are recorded separately.",
+  "archives": [
+    {
+      "model": "SCH-X250",
+      "url": "https://archive.org/download/gt-b-7722_20250528/SCH-X250.zip",
+      "bytes": 1822433,
+      "sha256": "dd5a0ffc91602c8f2cb73ecf9ae4b48d9624d2a1f1997e7d8a019f520664fe7e",
+      "members": [
+        "X250rus.7z"
+      ]
+    },
+    {
+      "model": "SCH-A310",
+      "url": "https://archive.org/download/gt-b-7722_20250528/SCH-A310.zip",
+      "bytes": 4528426,
+      "sha256": "66ba85324a8c8d880c89d1fca5b63e0ded7ca90c81b4f42ecf9acfde1cf86cf7",
+      "members": [
+        "a310_vl17.7z",
+        "SCH-A310_VG18.7z",
+        "SCH-A310_WJ23_JTAG.7z"
+      ]
+    },
+    {
+      "model": "SCH-E150",
+      "url": "https://archive.org/download/gt-b-7722_20250528/SCH-E150.zip",
+      "bytes": 3658184,
+      "sha256": "ff3da9728ecb3f8baf992981b56d296b7b5f58a8d286c40fa6ba00678141291a",
+      "members": [
+        "e150en.7z"
+      ]
+    },
+    {
+      "model": "SCH-E135",
+      "url": "https://archive.org/download/gt-b-7722_20250528/SCH-E135.zip",
+      "bytes": 6337665,
+      "sha256": "ad41c601a78a07f9e042cda6513499d55fe354091876bb23d75e7dbf875ea649",
+      "members": [
+        "e135eng.7z",
+        "SCH-E135_Prototype.7z"
+      ]
+    },
+    {
+      "model": "SCH-V310",
+      "url": "https://archive.org/download/gt-b-7722_20250528/SCH-V310.zip",
+      "bytes": 2484103,
+      "sha256": "f112979f45effa980f77ebf79ea4f0199fc156ec13cf3fea16ed5a43d4160152",
+      "members": [
+        "SCH-V310_memory.7z"
+      ]
+    },
+    {
+      "model": "SCH-S130",
+      "url": "https://archive.org/download/gt-b-7722_20250528/SCH-S130.zip",
+      "bytes": 1070031,
+      "sha256": "15c60db1335e24b62bd34975eac0f726c1ee14c439b0608dc4348690ef530226",
+      "members": [
+        "sch_s130.7z"
+      ]
+    }
+  ],
+  "images": [
+    {
+      "source_file": "a310_vl17.bin",
+      "model": "SCH-A310",
+      "bytes": 3145728,
+      "sha256": "241dca71c949124f5ad3b280cf1243c12de019e4098f1adad94458596992115b",
+      "markers": [
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 2511632
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 2511644
+        },
+        {
+          "term": "Fly Ribbon",
+          "codec": "cp949",
+          "offset": 2511656
+        },
+        {
+          "term": "Fly Ribbon",
+          "codec": "cp949",
+          "offset": 2511669
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 3145728,
+        "sha256": "241dca71c949124f5ad3b280cf1243c12de019e4098f1adad94458596992115b",
+        "candidate_offsets_tested": 201285,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "SCH-A310_VG18.bin",
+      "model": "SCH-A310",
+      "bytes": 4194304,
+      "sha256": "a78754ed3a96c38014eafaba5c5f4708cb572eff7fd61323a7d4057356016d3c",
+      "markers": [
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 2509488
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 2509500
+        },
+        {
+          "term": "Fly Ribbon",
+          "codec": "cp949",
+          "offset": 2509512
+        },
+        {
+          "term": "Fly Ribbon",
+          "codec": "cp949",
+          "offset": 2509525
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 4194304,
+        "sha256": "a78754ed3a96c38014eafaba5c5f4708cb572eff7fd61323a7d4057356016d3c",
+        "candidate_offsets_tested": 203246,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "SCH-A310_WJ23_JTAG.bin",
+      "model": "SCH-A310",
+      "bytes": 4194304,
+      "sha256": "ae847ed1af3c46b254d143b3683c337cf38898e62977495d518d9751e86dc967",
+      "markers": [
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 2513309
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 2513321
+        },
+        {
+          "term": "Fly Ribbon",
+          "codec": "cp949",
+          "offset": 2513333
+        },
+        {
+          "term": "Fly Ribbon",
+          "codec": "cp949",
+          "offset": 2513346
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 4194304,
+        "sha256": "ae847ed1af3c46b254d143b3683c337cf38898e62977495d518d9751e86dc967",
+        "candidate_offsets_tested": 204579,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "e135eng.bin",
+      "model": "SCH-E135",
+      "bytes": 8388608,
+      "sha256": "d90e9bc2367afca629369d032506be2a9244d10895242e333c70d12aaa7e00f3",
+      "markers": [
+        {
+          "term": "Push-Push",
+          "codec": "cp949",
+          "offset": 4555432
+        },
+        {
+          "term": "Push-Push",
+          "codec": "cp949",
+          "offset": 4555446
+        },
+        {
+          "term": "Push-Push",
+          "codec": "cp949",
+          "offset": 4821657
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 4548042
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 4548054
+        },
+        {
+          "term": "GVM1X",
+          "codec": "cp949",
+          "offset": 2013192
+        },
+        {
+          "term": "GVM1X",
+          "codec": "cp949",
+          "offset": 2014464
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 764712
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444320
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444337
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444354
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444371
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444388
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444405
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444422
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444439
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444456
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444473
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444490
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444507
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 4444524
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 8388608,
+        "sha256": "d90e9bc2367afca629369d032506be2a9244d10895242e333c70d12aaa7e00f3",
+        "candidate_offsets_tested": 443830,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "SCH-E135_Prototype.bin",
+      "model": "SCH-E135",
+      "bytes": 8388592,
+      "sha256": "87cfea4139b7301a54fa3bad6b93a27bcfec75b4e4cd591284b29c5d21537389",
+      "markers": [
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 3975346
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 3975358
+        },
+        {
+          "term": "Penguin ball",
+          "codec": "cp949",
+          "offset": 3975370
+        },
+        {
+          "term": "Penguin ball",
+          "codec": "cp949",
+          "offset": 3975385
+        },
+        {
+          "term": "GVM1X",
+          "codec": "cp949",
+          "offset": 1824088
+        },
+        {
+          "term": "GVM1X",
+          "codec": "cp949",
+          "offset": 1825332
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 709984
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890084
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890101
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890118
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890135
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890152
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890169
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890186
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890203
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890220
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890237
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890254
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890271
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3890288
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 8388592,
+        "sha256": "87cfea4139b7301a54fa3bad6b93a27bcfec75b4e4cd591284b29c5d21537389",
+        "candidate_offsets_tested": 358731,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "e150en.bin",
+      "model": "SCH-E150",
+      "bytes": 8388608,
+      "sha256": "ef142a221a33d058582c3d4d36392934cdfd92ebc7c2e5232ed32f941ca1b2e0",
+      "markers": [
+        {
+          "term": "Push-Push",
+          "codec": "cp949",
+          "offset": 4418937
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 4147802
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 4147814
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 4153238
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 4153252
+        },
+        {
+          "term": "Penguin ball",
+          "codec": "cp949",
+          "offset": 4147826
+        },
+        {
+          "term": "Penguin ball",
+          "codec": "cp949",
+          "offset": 4147841
+        },
+        {
+          "term": "GVM1X",
+          "codec": "cp949",
+          "offset": 3220556
+        },
+        {
+          "term": "/skp/c/GVM",
+          "codec": "cp949",
+          "offset": 2495416
+        },
+        {
+          "term": "/skp/c/GVM",
+          "codec": "cp949",
+          "offset": 2508956
+        },
+        {
+          "term": "/skp/c/GVM",
+          "codec": "cp949",
+          "offset": 2599932
+        },
+        {
+          "term": "application/x-gvm-sgs",
+          "codec": "cp949",
+          "offset": 4680884
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 8388608,
+        "sha256": "ef142a221a33d058582c3d4d36392934cdfd92ebc7c2e5232ed32f941ca1b2e0",
+        "candidate_offsets_tested": 536888,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "SCH-S130-Fb-pt1.bin",
+      "model": "SCH-S130",
+      "bytes": 699424,
+      "sha256": "c9926341429c7717cf4989b89d3077b9571459eea9d6b40e296cd1ff8abb0b16",
+      "markers": [],
+      "sgs_scan": {
+        "bytes": 699424,
+        "sha256": "c9926341429c7717cf4989b89d3077b9571459eea9d6b40e296cd1ff8abb0b16",
+        "candidate_offsets_tested": 32982,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "SCH-S130-Fb-pt2.bin",
+      "model": "SCH-S130",
+      "bytes": 12337664,
+      "sha256": "7a62ba72bfa9d0b35a45eabee6b091159cff9bfdf3bb454b0bc9fb35297c54e4",
+      "markers": [],
+      "sgs_scan": {
+        "bytes": 12337664,
+        "sha256": "7a62ba72bfa9d0b35a45eabee6b091159cff9bfdf3bb454b0bc9fb35297c54e4",
+        "candidate_offsets_tested": 89320,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "SCH-S130-Fb-pt3.bin",
+      "model": "SCH-S130",
+      "bytes": 6301136,
+      "sha256": "ca3207d9d4621a87624fea9d811a875a7d3c339301aaba291065ccfa81c8e4da",
+      "markers": [],
+      "sgs_scan": {
+        "bytes": 6301136,
+        "sha256": "ca3207d9d4621a87624fea9d811a875a7d3c339301aaba291065ccfa81c8e4da",
+        "candidate_offsets_tested": 41481,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "SCH-V310.bin",
+      "model": "SCH-V310",
+      "bytes": 8388592,
+      "sha256": "6a58fa7c8c824ecd88934c782119bac5439eabcc53a842fb5550bc27b9e79cfc",
+      "markers": [
+        {
+          "term": "Push-Push",
+          "codec": "cp949",
+          "offset": 4536410
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 3280215
+        },
+        {
+          "term": "Push push",
+          "codec": "cp949",
+          "offset": 3280237
+        },
+        {
+          "term": "GvmMain.c",
+          "codec": "cp949",
+          "offset": 4767472
+        },
+        {
+          "term": "GvmMain.c",
+          "codec": "cp949",
+          "offset": 4767482
+        },
+        {
+          "term": "GVM1X",
+          "codec": "cp949",
+          "offset": 2346676
+        },
+        {
+          "term": "GVM1X",
+          "codec": "cp949",
+          "offset": 2347924
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 729392
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188094
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188111
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188128
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188145
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188162
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188179
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188196
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188213
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188230
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188247
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188264
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188281
+        },
+        {
+          "term": "nvm/gvm",
+          "codec": "cp949",
+          "offset": 3188298
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 8388592,
+        "sha256": "6a58fa7c8c824ecd88934c782119bac5439eabcc53a842fb5550bc27b9e79cfc",
+        "candidate_offsets_tested": 343460,
+        "containers": []
+      }
+    },
+    {
+      "source_file": "X250rus.bin",
+      "model": "SCH-X250",
+      "bytes": 8388608,
+      "sha256": "46bd8d555ab09f7c4db19d22e50c9049ba837217e8e3c877f6d2cf0275361ef8",
+      "markers": [
+        {
+          "term": "GvmMain.c",
+          "codec": "cp949",
+          "offset": 3540296
+        }
+      ],
+      "sgs_scan": {
+        "bytes": 8388608,
+        "sha256": "46bd8d555ab09f7c4db19d22e50c9049ba837217e8e3c877f6d2cf0275361ef8",
+        "candidate_offsets_tested": 329424,
+        "containers": []
+      }
+    }
+  ],
+  "push_push_level_evidence": "samsung-push-push-levels.json"
+}

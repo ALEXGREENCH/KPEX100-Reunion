@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "status": "One new original player driver/firmware CD recovered and statically inspected; it is for Grundig MPixx2001/2002, not VP1000 or a newly confirmed GNEX device. No new game binary recovered.",
+  "waybackRequests": 0,
+  "repositoryEdits": false,
+  "recoveredPlayableGames": [],
+  "grundigVp1000": {
+    "status": "New precise hardware/documentation and CD-part lead, GNEX unconfirmed; no firmware/CD recovered for VP1000.",
+    "source": {
+      "file": "grundig-vp1000-service.pdf",
+      "url": "https://audiocircuit.dk/downloads/grundig/Grundig-MPIXXVP1000-mp3-sm.pdf",
+      "status": 200,
+      "finalUrl": "https://audiocircuit.dk/downloads/grundig/Grundig-MPIXXVP1000-mp3-sm.pdf",
+      "contentType": "application/pdf",
+      "bytes": 6286648,
+      "sha256": "deb731d2781c34214d213220f970dbaeff00e4f3bfdb5f996a713831a5c23240"
+    },
+    "pages": 18,
+    "serviceManualPartNumber": "720107741000",
+    "orderNumber": "GDR8700",
+    "installationCdPartNumber": "759540666100",
+    "installationCdPartPage": 18,
+    "visuallyVerified": [
+      {
+        "pdfPage": 13,
+        "printedPage": "2-3",
+        "fact": "Main-board U101 is explicitly labelled TCC-767; U103 SDRAM128Mbit. This supersedes the uncorroborated TCC721Y claim from the Polish forum for this model."
+      },
+      {
+        "pdfPage": 11,
+        "printedPage": "2-1",
+        "fact": "Block diagram says32bit Arm940TDMI RISC MCU Core and128Mb Mobile SDRAM; OLED label120*160."
+      },
+      {
+        "pdfPage": 14,
+        "printedPage": "2-4",
+        "fact": "Main-board OLED label1.3inch128*160; preserve the source resolution discrepancy with block diagram, no model-profile override."
+      },
+      {
+        "pdfPage": 18,
+        "printedPage": "3-1",
+        "fact": "InstallationCD759540666100; modelMPixxVP1000/1GB; spare-parts sheet2/2006."
+      }
+    ],
+    "limits": "No direct vendor statement linking this exact model to OracomUB880, no GNEX token or game payload from VP1000. Forum rebrand/chip claims are leads only. PDF metadata datesMay2006, not firmware release dates.",
+    "renders": [
+      {
+        "file": "grundig-service-page-1.png",
+        "bytes": 318956,
+        "sha256": "24090c773024389d0efe875f814430bd6bbd7a23d99c2aade59564df28a51949"
+      },
+      {
+        "file": "grundig-service-page-11.png",
+        "bytes": 149292,
+        "sha256": "a8090b2512d6e2042fc702e633bf0839eb064fe0182478e420aba572e6ef8996"
+      },
+      {
+        "file": "grundig-service-page-13.png",
+        "bytes": 188811,
+        "sha256": "3883d192e0f2d1b0960c3d96af276899ab59fabb1fda0a9996ac33a5bd687f81"
+      },
+      {
+        "file": "grundig-service-page-14.png",
+        "bytes": 195396,
+        "sha256": "007efa2457f3ec9fa2064f5e092f78ebac37f3ecf2a399734ec97ec1c0c41b66"
+      },
+      {
+        "file": "grundig-service-page-15.png",
+        "bytes": 546475,
+        "sha256": "65afa1228f524814a625b633de4714f9cf0d7ce4ad01cbff967f95a5c347d8c6"
+      },
+      {
+        "file": "grundig-service-page-18.png",
+        "bytes": 154610,
+        "sha256": "180fdefc1b9083923ab91fb3d35ad34d892d6f969c3338720e6c0c6f23b6afe4"
+      },
+      {
+        "file": "grundig-service-page-3.png",
+        "bytes": 238493,
+        "sha256": "5b12082053d324e5e3c72578bb45a51e36b16ab0af1771a2bddf478d2c043bcf"
+      }
+    ]
+  },
+  "recoveredGrundigCd": {
+    "download": {
+      "url": "https://archive.org/download/mp-2000-cd-driver/MP2000%20CD%20Driver.iso",
+      "status": 200,
+      "contentType": "application/x-iso9660-image",
+      "finalUrl": "https://ia903109.us.archive.org/0/items/mp-2000-cd-driver/MP2000%20CD%20Driver.iso",
+      "file": "MP2000-CD-Driver.iso",
+      "bytes": 107446272,
+      "md5": "755c8b9827ed4d66de1ca923fb6bc004",
+      "sha1": "aab6abe7e6ba4ab563b9c607731c6ce0f4549152",
+      "sha256": "a34f9b0ba05f65f0a7ed286e755adb4f4d4e0a7b94551680a7604c4e567675c9",
+      "expectedIA": {
+        "size": 107446272,
+        "md5": "755c8b9827ed4d66de1ca923fb6bc004",
+        "sha1": "aab6abe7e6ba4ab563b9c607731c6ce0f4549152"
+      }
+    },
+    "sourceMetadata": {
+      "url": "https://archive.org/metadata/mp-2000-cd-driver",
+      "bytes": 2906,
+      "sha256": "655e05c082aa8567f7d56f91cf22f782cc99656b6a871b6de392c7ae81c9c7e8",
+      "metadata": {
+        "identifier": "mp-2000-cd-driver",
+        "mediatype": "software",
+        "collection": "cdrom_contributions",
+        "creator": "Grundig",
+        "date": "2007",
+        "description": "Grundig Installation CD Driver &amp; Utilites Manual Portable Media Player",
+        "language": "eng",
+        "scanner": "Internet Archive HTML5 Uploader 1.7.0",
+        "subject": "drivers",
+        "title": "Grundig Installation CD Driver & Utilites Manual Portable Media Player",
+        "uploader": "karol09@vp.pl",
+        "publicdate": "2026-03-30 20:42:50",
+        "addeddate": "2026-03-30 20:42:50",
+        "curation": "[curator]validator@archive.org[/curator][date]20260330204416[/date][comment]checked for malware[/comment]"
+      },
+      "files": [
+        {
+          "name": "MP2000 CD Driver.iso",
+          "source": "original",
+          "mtime": "1774903406",
+          "size": "107446272",
+          "md5": "755c8b9827ed4d66de1ca923fb6bc004",
+          "crc32": "405042b7",
+          "sha1": "aab6abe7e6ba4ab563b9c607731c6ce0f4549152",
+          "format": "ISO Image",
+          "filecount": "305"
+        },
+        {
+          "name": "__ia_thumb.jpg",
+          "source": "original",
+          "mtime": "1774903445",
+          "size": "9871",
+          "md5": "d4a1b2530dcdc3cb1b9940cd69b62d88",
+          "crc32": "0bf23295",
+          "sha1": "8d5291e11243c0515e2c0585cb075db4d549b526",
+          "format": "Item Tile"
+        },
+        {
+          "name": "grundig.jpg",
+          "source": "original",
+          "mtime": "1774903353",
+          "size": "78540",
+          "md5": "0eab62358a26de7d7c3d62d7abd5af26",
+          "crc32": "efdf621b",
+          "sha1": "c9a3f7d8c7af32c71f8fb9a9ead737fbac090f70",
+          "format": "JPEG"
+        },
+        {
+          "name": "mp-2000-cd-driver_files.xml",
+          "source": "original",
+          "format": "Metadata",
+          "md5": "6ccb5e9d36cf0ef4703eae05dbfb41ed",
+          "summation": "md5"
+        },
+        {
+          "name": "mp-2000-cd-driver_meta.sqlite",
+          "source": "original",
+          "mtime": "1774903410",
+          "size": "20480",
+          "md5": "292328bf087fabbf7b8af5612de76f3d",
+          "crc32": "59296f61",
+          "sha1": "da77d8cd6d6d13e34cf59f1483001b21da19105d",
+          "format": "Metadata"
+        },
+        {
+          "name": "mp-2000-cd-driver_meta.xml",
+          "source": "original",
+          "mtime": "1788329027",
+          "size": "810",
+          "md5": "cde665778edefd4ef4596437f2871389",
+          "crc32": "e0b59f76",
+          "sha1": "d9b61a19f25fc721731e283cc6a7e0a88a98e31d",
+          "format": "Metadata"
+        }
+      ]
+    },
+    "exactIdentity": "Grundig MPixx2000 Series Host V2.99.6 0212, manualsMPixx2001/2002; SigmaTel support files. Distinct from MPixxVP1000.",
+    "isoTest": {
+      "tool": "7-Zip26.02",
+      "exitCode": 0,
+      "files": 305,
+      "folders": 11,
+      "extractedBytes": 106657789,
+      "physicalIsoBytes": 107433984,
+      "tailBytes": 12288,
+      "warning": "There are data after the end of archive. 12,288-byte tail retained; whole downloaded ISO matched archivalMD5/SHA1."
+    },
+    "installShieldCabTest": {
+      "tool": "unshield1.6.2 (existing locally built open-source extractor)",
+      "toolSha256": "75099304d3ab745e8101068848d1d342d628080068b072976decc89fc5aebb7b",
+      "testExitCode": 0,
+      "extractionExitCode": 0,
+      "testedMemberCount": 44,
+      "cabMemberManifest": "grundig-cab-members.json",
+      "vendorExecutablesRun": false
+    },
+    "isoMemberManifest": "grundig-cd-members.json",
+    "firmwareCoreMembers": [
+      {
+        "path": "Driver for Win 98 SE/Grundig MPixx2000 Series Host V2.99.6 0212/Binary/bootmanager.sb",
+        "bytes": 13536,
+        "sha256": "71b34dd9a5ee154c1813eb71abd9be297dd8b2b3b80e5c884c5e038b08c9fd3d"
+      },
+      {
+        "path": "Driver for Win 98 SE/Grundig MPixx2000 Series Host V2.99.6 0212/Binary/hostlink.sb",
+        "bytes": 316366,
+        "sha256": "6c307d84aaa91bf2669af8a0f29cc6cb112fbc9f0edd1d0ef2632383f1716514"
+      },
+      {
+        "path": "Driver for Win 98 SE/Grundig MPixx2000 Series Host V2.99.6 0212/Binary/hostrsc.bin",
+        "bytes": 52911,
+        "sha256": "6ea67e9d6deffb5f3ae239d2d2e659248bc37f7f6c3c46b9232b8d5ba9a4a401"
+      },
+      {
+        "path": "Driver for Win 98 SE/Grundig MPixx2000 Series Host V2.99.6 0212/Binary/resource.bin",
+        "bytes": 6424347,
+        "sha256": "6174fb54c26d43fb075abb9eef4dbfdba971f91384c2e0c6d61ce67348961847"
+      },
+      {
+        "path": "Driver for Win 98 SE/Grundig MPixx2000 Series Host V2.99.6 0212/Binary/stmpsys.sb",
+        "bytes": 127543,
+        "sha256": "3f611d9e8d229bfdd1cd7a28b6c13d070879229140a06fef3b1d5051f78c8ab0"
+      },
+      {
+        "path": "Driver for Win 98 SE/Grundig MPixx2000 Series Host V2.99.6 0212/Binary/updater.sb",
+        "bytes": 316366,
+        "sha256": "cbb7f7531529c99aef49deea978fa2f327c7886b6a8219175bbf5ce85a97aa61"
+      }
+    ],
+    "scanSummary": {
+      "files": 86,
+      "bytes": 19893499,
+      "candidateOffsetsTested": 864091,
+      "validSgsOccurrences": 0,
+      "longMarkerMatches": 0
+    },
+    "scanEvidence": "grundig-cd-scan.json",
+    "limits": "No validatedSGS or longGNEX/XEOVIA/SINJISOFT/MPIO/FG200/HD400/VP1000/UB880 markers in86 scannedselected files. PDFs/photos/icons/skin excluded; no general proprietarypacking/nativegame decoder. No bootorinstallationtest."
+  },
+  "newIaCatalogs": [
+    {
+      "file": "ia-query-0.json",
+      "url": "https://archive.org/advancedsearch.php?q=%28title%3A%28Grundig+OR+Oracom%29+OR+description%3A%28%22MPixx+VP1000%22+OR+%22UB-880%22+OR+%22UB-890%22%29%29+AND+mediatype%3Asoftware&output=json&rows=100&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=mediatype",
+      "status": 200,
+      "finalUrl": "https://archive.org/advancedsearch.php?q=%28title%3A%28Grundig+OR+Oracom%29+OR+description%3A%28%22MPixx+VP1000%22+OR+%22UB-880%22+OR+%22UB-890%22%29%29+AND+mediatype%3Asoftware&output=json&rows=100&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=mediatype",
+      "contentType": "application/json",
+      "bytes": 2029,
+      "sha256": "5d200a78638399e57d6dad390684e1eb5f9bd1c271e31f9eb970ace8973e622c",
+      "numFound": 12
+    },
+    {
+      "file": "ia-query-1.json",
+      "url": "https://archive.org/advancedsearch.php?q=%28%22MPIO+ONE%22+OR+%22MPIO+SOLID%22+OR+%22firmware_fg200%22+OR+%22games_hd400%22%29&output=json&rows=100&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=mediatype",
+      "status": 200,
+      "finalUrl": "https://archive.org/advancedsearch.php?q=%28%22MPIO+ONE%22+OR+%22MPIO+SOLID%22+OR+%22firmware_fg200%22+OR+%22games_hd400%22%29&output=json&rows=100&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=mediatype",
+      "contentType": "application/json",
+      "bytes": 644,
+      "sha256": "9315974755c3d259fd7d6485f60545b038e5cd56f078ddd55fa2b653ac4c46da",
+      "numFound": 0
+    },
+    {
+      "file": "ia-query-2.json",
+      "url": "https://archive.org/advancedsearch.php?q=%28%22MyRacer+MG22%22+OR+%22MYRACER+GAME%22+OR+%22Play4U%22%29+AND+mediatype%3Asoftware&output=json&rows=100&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=mediatype",
+      "status": 200,
+      "finalUrl": "https://archive.org/advancedsearch.php?q=%28%22MyRacer+MG22%22+OR+%22MYRACER+GAME%22+OR+%22Play4U%22%29+AND+mediatype%3Asoftware&output=json&rows=100&fl%5B%5D=identifier&fl%5B%5D=title&fl%5B%5D=mediatype",
+      "contentType": "application/json",
+      "bytes": 678,
+      "sha256": "624721ab49158079a85843e8776d7541cdfb9e1abec941ce73e98bb03ca022b2",
+      "numFound": 1
+    }
+  ],
+  "otherOutcomes": [
+    {
+      "route": "ExactMPIOONE/SOLID/firmware_fg200/games_hd400 InternetArchivecatalog query",
+      "outcome": "0metadataitems; boundedqueryonly, no globalabsenceclaim."
+    },
+    {
+      "route": "MyRacerMG22/MYRACERGAME/Play4Usoftware InternetArchivecatalogquery",
+      "outcome": "OnlyalreadyrecoveredMyRacerMF101item."
+    },
+    {
+      "url": "https://xiazai.zol.com.cn/detail/60/595956.shtml",
+      "outcome": "Single normalwebopen timedout. Prior MyDriversaccount/coin andDriverGuideCAPTCHA routes not repeated/bypassed."
+    },
+    {
+      "route": "Oracomremaininghistoricfirmware",
+      "outcome": "Prior15additionalpackages locallychecked, notredownloaded; nofreshgamebyteleadfromnewpublicsearch."
+    }
+  ]
+}

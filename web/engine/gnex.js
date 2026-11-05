@@ -101,6 +101,7 @@ export class GnexRuntime {
       width = 220,
       height = 176,
       profile = null,
+      keyReleaseEvent = false,
       audio = null,
       saveKey = null,
       storage = null,
@@ -127,6 +128,7 @@ export class GnexRuntime {
     this.sgs = new SgsFile(sgs);
     this.title = this.sgs.title;
     this.profile = profile || (this.sgs.xorMask === 165 ? 'kpex' : 'phone');
+    this.keyReleaseEvent = this.profile === 'phone' || keyReleaseEvent === true;
     if (this.sgs.body.length > 0xc00000)
       throw new GnexError('SGS exceeds 12 MiB guest content region');
     if (!/^\d{1,32}$/.test(deviceMin))
@@ -253,6 +255,7 @@ export class GnexRuntime {
       });
     }
     this._refreshLCD();
+    if (this.profile === 'phone') this.presentedLCD = this.lcdPixels.slice();
   }
   get timerMs() {
     return this.timers[0].delay;
@@ -392,10 +395,38 @@ export class GnexRuntime {
     this._write(d + 4, data.length);
     this._write(d + 8, p);
   }
+  _presentLCD(bounds = null) {
+    const p = this._read(0x20b41260),
+      src = this.cpu.read(p, this.width * this.height * 2);
+    if (!bounds) {
+      this.presentedLCD = src.slice();
+      return;
+    }
+    // FlushPartial takes inclusive endpoints. The native adapter swaps reversed
+    // coordinates, then clips to the LCD (Kingston handler 0x2005dc38).
+    let [x1, y1, x2, y2] = bounds;
+    if (x1 > x2) [x1, x2] = [x2, x1];
+    if (y1 > y2) [y1, y2] = [y2, y1];
+    x1 = Math.max(0, x1);
+    y1 = Math.max(0, y1);
+    x2 = Math.min(this.width - 1, x2);
+    y2 = Math.min(this.height - 1, y2);
+    this.presentedLCD ??= this.lcdPixels.slice();
+    for (let y = y1; y <= y2 && x1 <= x2; y++) {
+      const first = (y * this.width + x1) * 2,
+        end = (y * this.width + x2 + 1) * 2;
+      this.presentedLCD.set(src.subarray(first, end), first);
+    }
+  }
   _refreshLCD() {
     const p = this._read(0x20b41260),
-      src = this.cpu.read(p, this.width * this.height * 2),
+      // Flush copies drawing memory to the physical screen. A subsequent
+      // RestoreLCD prepares the next frame and must not erase that screen.
+      // K-PEX retains its startup preview until the first explicit flush; phone
+      // profiles initialize the physical display during construction.
+      src = this.presentedLCD || this.cpu.read(p, this.width * this.height * 2),
       rgba = new Uint8ClampedArray(this.width * this.height * 4);
+    this.lcdPixels = src;
     for (let i = 0, j = 0; i < src.length; i += 2, j += 4) {
       const c = src[i] | (src[i + 1] << 8);
       rgba[j] = Math.floor(((c >>> 11) * 255) / 31);
@@ -616,7 +647,8 @@ export class GnexRuntime {
     if (n === 1 || n === 0x186)
       this.setResourceBytes(this._args(1)[0], new TextEncoder().encode(this.deviceMin + '\0'));
     else if (n === 0x5f) {
-    } else if (n === 0x60) this._args(4);
+      this._presentLCD();
+    } else if (n === 0x60) this._presentLCD(this._args(4));
     else if (n === 0x82) {
       const resource = this._args(1)[0];
       this.sgs.resource(resource);
@@ -742,9 +774,10 @@ export class GnexRuntime {
     // 0x40BE10 -> 0x409DC9 -> 0x44BF90, table 0x50F254[0x2f]).
     // The following VM dispatcher explicitly filters it for pre-v4/16-bit
     // scripts at 0x443BCC; only the modern 32-bit path receives the event.
+    // Star Fighter's K-PEX script also advances its title on KEYPRESS 0xff.
     if (
       released &&
-      this.profile === 'phone' &&
+      this.keyReleaseEvent &&
       this.sgs.version >= 4 &&
       !['closed', 'exited', 'error'].includes(this.status)
     ) {

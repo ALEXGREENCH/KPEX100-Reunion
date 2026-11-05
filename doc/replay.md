@@ -6,6 +6,19 @@
 node tools/replay-sgs.mjs gnex16_bubble_bubble actions.json validation/bubble
 ```
 
+Для SGS, которого нет в каталоге, укажите файл и каталог результатов явно:
+
+```sh
+node tools/replay-sgs.mjs --file /path/game.sgs actions.json validation/imported-game
+```
+
+Принимаются обычные файлы SGS v1/v2/v4/v36 размером до 12 МиБ + 32 байта;
+обёртка и XOR распознаются существующим парсером. Профиль телефона не угадывается:
+задайте `runtime` в сценарии, иначе действуют стандартные параметры интерпретатора.
+Используется тот же оригинальный Kingston 2.12 ROM; для v36 также нужен Swerve.
+Имена PNG и JSON начинаются с `local-` и очищенного имени файла без `.sgs`.
+В отчёт добавляются версия, размер и SHA-256 исходного SGS. Файл игры не изменяется.
+
 Пример `actions.json`:
 
 ```json

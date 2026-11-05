@@ -1,0 +1,980 @@
+{
+  "scope": "Four early OEM archives plus LG LP2400. Separate SV400 vendor update is recorded in lg-sv400-game-evidence.json.",
+  "directories": [
+    {
+      "vendor": "Dowtel",
+      "model": "WS-4000",
+      "url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4000/",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4000/",
+      "bytes": 2117,
+      "sha256": "5902f4ae691834ebdbb8c831e489d1f57144be21005d0aafb658cbd85de5dba1",
+      "file": "Dowtel-WS-4000-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4000/WS-4000_p_040216.7z"
+      ]
+    },
+    {
+      "vendor": "Dowtel",
+      "model": "WS-4100",
+      "url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4100/",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4100/",
+      "bytes": 2117,
+      "sha256": "db1bf26a1480049173cd69741489c1cc9c4c8dd82c81be674f3b7ed515e816f2",
+      "file": "Dowtel-WS-4100-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4100/WS-4100_t_040216.7z"
+      ]
+    },
+    {
+      "vendor": "Sejin",
+      "model": "NS1000",
+      "url": "https://archive.sunderland93.ru/Firmwares/Sejin/NS1000/",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Sejin/NS1000/",
+      "bytes": 2105,
+      "sha256": "35822de2d1d7668490f82dd18102e4e09fb78c86fecb071acf2fcb740c2dfa33",
+      "file": "Sejin-NS1000-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Sejin/NS1000/NS1000_JTAG.7z"
+      ]
+    },
+    {
+      "vendor": "Synertek",
+      "model": "S500",
+      "url": "https://archive.sunderland93.ru/Firmwares/Synertek/S500/",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Synertek/S500/",
+      "bytes": 2101,
+      "sha256": "f4228ff28cba8b0aaeb938d8f85a2258d8373f60bb676eaad51a56e10861be66",
+      "file": "Synertek-S500-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Synertek/S500/S500eM06.7z"
+      ]
+    }
+  ],
+  "oem_archives": [
+    {
+      "vendor": "Dowtel",
+      "model": "WS-4000",
+      "url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4000/WS-4000_p_040216.7z",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4000/WS-4000_p_040216.7z",
+      "bytes": 628595,
+      "sha256": "4fe72214dacc21e393d908b3744712d9a6d3c5e62f58ed932f898a35a8d1e76b",
+      "file": "WS-4000_p_040216.7z",
+      "sevenzip_crc_passed": true,
+      "archive_entries": [
+        {
+          "Path": "WS-4000_p_040216.BIN",
+          "Size": "1317588",
+          "Packed Size": "628449",
+          "Modified": "2004-02-17 02:02:48.0000000",
+          "Attributes": "A",
+          "CRC": "74215780",
+          "Encrypted": "-",
+          "Method": "LZMA2:1536k",
+          "Block": "0"
+        }
+      ],
+      "images": [
+        {
+          "file": "images/WS-4000/WS-4000_p_040216.BIN",
+          "bytes": 1317588,
+          "sha256": "89e40931efc32e49ffef79e41501ccc23a3b49e7ea01e7ef4b60e70774bfa9e2",
+          "crc32": "74215780",
+          "archive_crc_matched": true
+        }
+      ]
+    },
+    {
+      "vendor": "Dowtel",
+      "model": "WS-4100",
+      "url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4100/WS-4100_t_040216.7z",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Dowtel/WS-4100/WS-4100_t_040216.7z",
+      "bytes": 612588,
+      "sha256": "559bd877d419bcf78d8bb622323fddf4afe5a5c37a64da4c42080dfd7850698c",
+      "file": "WS-4100_t_040216.7z",
+      "sevenzip_crc_passed": true,
+      "archive_entries": [
+        {
+          "Path": "WS-4100_t_040216.BIN",
+          "Size": "1308496",
+          "Packed Size": "612442",
+          "Modified": "2004-02-17 02:02:44.0000000",
+          "Attributes": "A",
+          "CRC": "CF8135E9",
+          "Encrypted": "-",
+          "Method": "LZMA2:1536k",
+          "Block": "0"
+        }
+      ],
+      "images": [
+        {
+          "file": "images/WS-4100/WS-4100_t_040216.BIN",
+          "bytes": 1308496,
+          "sha256": "9d22725ca1ca2d81566a1ca417d0105d6ce02beb8d55285a1d777c11c7840ec8",
+          "crc32": "CF8135E9",
+          "archive_crc_matched": true
+        }
+      ]
+    },
+    {
+      "vendor": "Sejin",
+      "model": "NS1000",
+      "url": "https://archive.sunderland93.ru/Firmwares/Sejin/NS1000/NS1000_JTAG.7z",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Sejin/NS1000/NS1000_JTAG.7z",
+      "bytes": 484736,
+      "sha256": "38fb5313d80df2fd83738f37bdbcb845a6306ee2520f80bbf0d19bdc06f380eb",
+      "file": "NS1000_JTAG.7z",
+      "sevenzip_crc_passed": true,
+      "archive_entries": [
+        {
+          "Path": "NS1000_JTAG.bin",
+          "Size": "16777216",
+          "Packed Size": "484598",
+          "Modified": "2023-12-31 06:25:38.7162984",
+          "Attributes": "A",
+          "CRC": "E81EF5BC",
+          "Encrypted": "-",
+          "Method": "LZMA2:24",
+          "Block": "0"
+        }
+      ],
+      "images": [
+        {
+          "file": "images/NS1000/NS1000_JTAG.bin",
+          "bytes": 16777216,
+          "sha256": "d45d5aa75d4af7c4cc7cc044d0a72fa46abe37a35d81d98e57021f0e06ee2876",
+          "crc32": "E81EF5BC",
+          "archive_crc_matched": true
+        }
+      ]
+    },
+    {
+      "vendor": "Synertek",
+      "model": "S500",
+      "url": "https://archive.sunderland93.ru/Firmwares/Synertek/S500/S500eM06.7z",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/Synertek/S500/S500eM06.7z",
+      "bytes": 1050630,
+      "sha256": "a9e06cbf7b8aa1f444192c3bb106e961d6663a9c104f4763e1d802943542055b",
+      "file": "S500eM06.7z",
+      "sevenzip_crc_passed": true,
+      "archive_entries": [
+        {
+          "Path": "S500eM06.bin",
+          "Size": "2993464",
+          "Packed Size": "1050500",
+          "Modified": "2023-11-20 06:45:01.7277301",
+          "Attributes": "A",
+          "CRC": "6E21E731",
+          "Encrypted": "-",
+          "Method": "LZMA2:3m",
+          "Block": "0"
+        }
+      ],
+      "images": [
+        {
+          "file": "images/S500/S500eM06.bin",
+          "bytes": 2993464,
+          "sha256": "5e9a1cdaa2457db0c74e1111e90ca3cfadfadad4c9cad41c108eaf43d96f9f0c",
+          "crc32": "6E21E731",
+          "archive_crc_matched": true
+        }
+      ]
+    }
+  ],
+  "roster_check": {
+    "targets": [
+      [
+        "Dowtel",
+        "WS-4000"
+      ],
+      [
+        "Dowtel",
+        "WS-4100"
+      ],
+      [
+        "Sejin",
+        "NS1000"
+      ],
+      [
+        "Synertek",
+        "S500"
+      ]
+    ],
+    "exact_matches": [],
+    "caveat": "No exact model match is not proof of no GVM. LG SD210(S500) and PG-S5000 are different models."
+  },
+  "additional_lg_directories": [
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SV400%20%28Hotline%29/",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/LG/SV400%20%28Hotline%29/",
+      "bytes": 2119,
+      "sha256": "420bf2ad41b5f96c81a560f3a4060d5ef69b6be0f06cc1d1ef88166fd208c098",
+      "file": "SV400%20%28Hotline%29-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/LG/SV400%20%28Hotline%29/SV400005_03.7z"
+      ],
+      "index_text": "      index - powered by h5ai v0.30.0 (https://larsjung.de/h5ai/)          #root,input,select{font-family:\"Ubuntu\",\"Roboto\",\"Helvetica\",\"Arial\",\"sans-serif\"!important}pre,code{font-family:\"Ubuntu Mono\",\"Monaco\",\"Lucida Sans Typewriter\",\"monospace\"!important}     Works best with JavaScript enabled!  Works best in  modern browsers !   powered by h5ai          Name    Last modified    Size         Parent Directory             SV400005_03.7z   2025-02-27 23:13  39787 KB       "
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SV730/",
+      "error": "<urlopen error [WinError 10060] \u041f\u043e\u043f\u044b\u0442\u043a\u0430 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0441\u043e\u0435\u0434\u0438\u043d\u0435\u043d\u0438\u0435 \u0431\u044b\u043b\u0430 \u0431\u0435\u0437\u0443\u0441\u043f\u0435\u0448\u043d\u043e\u0439, \u0442.\u043a. \u043e\u0442 \u0434\u0440\u0443\u0433\u043e\u0433\u043e \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u0430 \u0437\u0430 \u0442\u0440\u0435\u0431\u0443\u0435\u043c\u043e\u0435 \u0432\u0440\u0435\u043c\u044f \u043d\u0435 \u043f\u043e\u043b\u0443\u0447\u0435\u043d \u043d\u0443\u0436\u043d\u044b\u0439 \u043e\u0442\u043a\u043b\u0438\u043a, \u0438\u043b\u0438 \u0431\u044b\u043b\u043e \u0440\u0430\u0437\u043e\u0440\u0432\u0430\u043d\u043e \u0443\u0436\u0435 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d\u043d\u043e\u0435 \u0441\u043e\u0435\u0434\u0438\u043d\u0435\u043d\u0438\u0435 \u0438\u0437-\u0437\u0430 \u043d\u0435\u0432\u0435\u0440\u043d\u043e\u0433\u043e \u043e\u0442\u043a\u043b\u0438\u043a\u0430 \u0443\u0436\u0435 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u043e\u0433\u043e \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u0430>"
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/LP2400/",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/LG/LP2400/",
+      "bytes": 2097,
+      "sha256": "adfb61c14f57e6545f69a91651d495ff6fa3da05f5efd8ad52cc984a187c0023",
+      "file": "LP2400-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/LG/LP2400/LX750321.7z"
+      ],
+      "index_text": "      index - powered by h5ai v0.30.0 (https://larsjung.de/h5ai/)          #root,input,select{font-family:\"Ubuntu\",\"Roboto\",\"Helvetica\",\"Arial\",\"sans-serif\"!important}pre,code{font-family:\"Ubuntu Mono\",\"Monaco\",\"Lucida Sans Typewriter\",\"monospace\"!important}     Works best with JavaScript enabled!  Works best in  modern browsers !   powered by h5ai          Name    Last modified    Size         Parent Directory             LX750321.7z   2025-02-27 23:07  3481 KB       "
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SB260/",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/LG/SB260/",
+      "bytes": 2098,
+      "sha256": "0409d36973edac45c9a30b1a1e5a6a7a1fb249a7ba5b3641576263d8e0b0669d",
+      "file": "SB260-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/LG/SB260/SB260004.7z"
+      ],
+      "index_text": "      index - powered by h5ai v0.30.0 (https://larsjung.de/h5ai/)          #root,input,select{font-family:\"Ubuntu\",\"Roboto\",\"Helvetica\",\"Arial\",\"sans-serif\"!important}pre,code{font-family:\"Ubuntu Mono\",\"Monaco\",\"Lucida Sans Typewriter\",\"monospace\"!important}     Works best with JavaScript enabled!  Works best in  modern browsers !   powered by h5ai          Name    Last modified    Size         Parent Directory             SB260004.7z   2025-02-27 23:13  103940 KB       "
+    }
+  ],
+  "lg_archives": [
+    {
+      "vendor": "LG",
+      "model": "LP2400",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/LP2400/LX750321.7z",
+      "status": 200,
+      "final_url": "https://archive.sunderland93.ru/Firmwares/LG/LP2400/LX750321.7z",
+      "bytes": 3481683,
+      "sha256": "52c849f3780b54b56b27bdf57f870603323de6e156284bba7a9964b4c63c05ee",
+      "file": "LX750321.7z",
+      "sevenzip_crc_passed": true,
+      "archive_entries": [
+        {
+          "Path": "LP2400.bin",
+          "Size": "8388822",
+          "Packed Size": "3481553",
+          "Modified": "2021-04-27 01:41:35.2712384",
+          "Attributes": "A",
+          "CRC": "08A25209",
+          "Encrypted": "-",
+          "Method": "LZMA2:12m",
+          "Block": "0"
+        }
+      ],
+      "images": [
+        {
+          "file": "images/LP2400/LP2400.bin",
+          "bytes": 8388822,
+          "sha256": "847d7ed5b854a5a153509d08a0532eafea1f0775809b7348b16f2f65b27ee107",
+          "crc32": "08A25209",
+          "archive_crc_matched": true
+        }
+      ]
+    }
+  ],
+  "binary_evidence": [
+    {
+      "file": "images/LP2400/LP2400.bin",
+      "bytes": 8388822,
+      "sha256": "847d7ed5b854a5a153509d08a0532eafea1f0775809b7348b16f2f65b27ee107",
+      "crc32": "08A25209",
+      "header_hex": "9e0c00eae40c00ebe30c00ebe20c00eb7a0c00eae00c00ebf8ff5feaf8ff5fea51434f4d4c004c00010001004c00ffffffffffffffffffffffffffffffffffff",
+      "markers": {
+        "GVM": {
+          "count": 1,
+          "offsets": [
+            "0x1335fc"
+          ]
+        },
+        ".jad": {
+          "count": 10,
+          "offsets": [
+            "0x1104a4",
+            "0x148f34",
+            "0x149150",
+            "0x149634",
+            "0x17a094",
+            "0x17b288",
+            "0x17b774",
+            "0x17c130",
+            "0x17c1cc",
+            "0x17c520"
+          ]
+        },
+        ".jar": {
+          "count": 3,
+          "offsets": [
+            "0x17adfe",
+            "0x17b746",
+            "0x17c53e"
+          ]
+        },
+        "EADS": {
+          "count": 4,
+          "offsets": [
+            "0x1a2ffc",
+            "0x216415",
+            "0x6dec8d",
+            "0x6e040e"
+          ]
+        },
+        "Java": {
+          "count": 65,
+          "offsets": [
+            "0x10f557",
+            "0x139cde",
+            "0x139e5b",
+            "0x13ee9b",
+            "0x140148",
+            "0x148d58",
+            "0x149a7d",
+            "0x14b027",
+            "0x14b228",
+            "0x16cb11",
+            "0x16cca9",
+            "0x16d8c8",
+            "0x17100d",
+            "0x171204",
+            "0x1712b0",
+            "0x173dc0",
+            "0x175f1c",
+            "0x176455",
+            "0x17646e",
+            "0x17a27c",
+            "0x19e998",
+            "0x19ea88",
+            "0x1a2bdc",
+            "0x1a2cc0",
+            "0x1a2d90",
+            "0x1a2db8",
+            "0x1a2fe8",
+            "0x1a3254",
+            "0x1a3274",
+            "0x1a3388",
+            "0x1a3e3c",
+            "0x1a3e5c",
+            "0x1a4178",
+            "0x1a4198",
+            "0x1a4298",
+            "0x1ca63c",
+            "0x1ca670",
+            "0x1caa75",
+            "0x1cabf4",
+            "0x1cadb4",
+            "0x6146a6",
+            "0x6146b2",
+            "0x6b8114",
+            "0x6d0154",
+            "0x6d016c",
+            "0x6d018b",
+            "0x6d01af",
+            "0x6d01d8",
+            "0x6d01f6",
+            "0x6d0214",
+            "0x6d0231",
+            "0x6d0256",
+            "0x6e0384",
+            "0x6e0650",
+            "0x6e14e4",
+            "0x6e15cc",
+            "0x6e1e64",
+            "0x6e2270",
+            "0x6e29d4",
+            "0x6e2b00",
+            "0x6e54a0",
+            "0x6e81e8",
+            "0x6ea290",
+            "0x6f0560",
+            "0x7409c4"
+          ]
+        },
+        "Qualcomm": {
+          "count": 2,
+          "offsets": [
+            "0x204b65",
+            "0x75d599"
+          ]
+        },
+        "2000": {
+          "count": 3,
+          "offsets": [
+            "0xeec27",
+            "0x122df8",
+            "0x6ee357"
+          ]
+        },
+        "2001": {
+          "count": 6,
+          "offsets": [
+            "0x1c9a28",
+            "0x204b22",
+            "0x75b45d",
+            "0x75b478",
+            "0x75b525",
+            "0x75b540"
+          ]
+        },
+        "2002": {
+          "count": 1,
+          "offsets": [
+            "0x6ee3bb"
+          ]
+        },
+        "2003": {
+          "count": 2,
+          "offsets": [
+            "0x10f5fb",
+            "0x19e7f7"
+          ]
+        },
+        "2004": {
+          "count": 3,
+          "offsets": [
+            "0x204aff",
+            "0x5ca698",
+            "0x5ca6a7"
+          ]
+        },
+        "Game": {
+          "count": 9,
+          "offsets": [
+            "0x20809b",
+            "0x20858b",
+            "0x6146ab",
+            "0x6e0698",
+            "0x6e06b8",
+            "0x6e0738",
+            "0x6e076c",
+            "0x6e23f7",
+            "0x6e52d3"
+          ]
+        }
+      },
+      "sgs_scan": {
+        "bytes": 8388822,
+        "sha256": "847d7ed5b854a5a153509d08a0532eafea1f0775809b7348b16f2f65b27ee107",
+        "candidate_offsets_tested": 434834,
+        "containers": []
+      },
+      "gvm_path_strings": 0,
+      "target_gvm_metadata": []
+    },
+    {
+      "file": "images/NS1000/NS1000_JTAG.bin",
+      "bytes": 16777216,
+      "sha256": "d45d5aa75d4af7c4cc7cc044d0a72fa46abe37a35d81d98e57021f0e06ee2876",
+      "crc32": "E81EF5BC",
+      "header_hex": "8877665533202211861400ea881400ea8a1400ea8c1400ea010000ea2c0100eac41f00024433332004304ee22d1300eb00000fe1800080e300f02fe1d4049fe5",
+      "markers": {
+        "NS1000": {
+          "count": 8,
+          "offsets": [
+            "0x1b1235",
+            "0x3b1235",
+            "0x5b1235",
+            "0x7b1235",
+            "0x9b1235",
+            "0xbb1235",
+            "0xdb1235",
+            "0xfb1235"
+          ]
+        },
+        "2000": {
+          "count": 72,
+          "offsets": [
+            "0x1b1251",
+            "0x1b127c",
+            "0x1b1282",
+            "0x1b12c4",
+            "0x1b12ca",
+            "0x1b12d0",
+            "0x1b12d6",
+            "0x1b12dc",
+            "0x1b12e2",
+            "0x3b1251",
+            "0x3b127c",
+            "0x3b1282",
+            "0x3b12c4",
+            "0x3b12ca",
+            "0x3b12d0",
+            "0x3b12d6",
+            "0x3b12dc",
+            "0x3b12e2",
+            "0x5b1251",
+            "0x5b127c",
+            "0x5b1282",
+            "0x5b12c4",
+            "0x5b12ca",
+            "0x5b12d0",
+            "0x5b12d6",
+            "0x5b12dc",
+            "0x5b12e2",
+            "0x7b1251",
+            "0x7b127c",
+            "0x7b1282",
+            "0x7b12c4",
+            "0x7b12ca",
+            "0x7b12d0",
+            "0x7b12d6",
+            "0x7b12dc",
+            "0x7b12e2",
+            "0x9b1251",
+            "0x9b127c",
+            "0x9b1282",
+            "0x9b12c4",
+            "0x9b12ca",
+            "0x9b12d0",
+            "0x9b12d6",
+            "0x9b12dc",
+            "0x9b12e2",
+            "0xbb1251",
+            "0xbb127c",
+            "0xbb1282",
+            "0xbb12c4",
+            "0xbb12ca",
+            "0xbb12d0",
+            "0xbb12d6",
+            "0xbb12dc",
+            "0xbb12e2",
+            "0xdb1251",
+            "0xdb127c",
+            "0xdb1282",
+            "0xdb12c4",
+            "0xdb12ca",
+            "0xdb12d0",
+            "0xdb12d6",
+            "0xdb12dc",
+            "0xdb12e2",
+            "0xfb1251",
+            "0xfb127c",
+            "0xfb1282",
+            "0xfb12c4",
+            "0xfb12ca",
+            "0xfb12d0",
+            "0xfb12d6",
+            "0xfb12dc",
+            "0xfb12e2"
+          ]
+        },
+        "2001": {
+          "count": 8,
+          "offsets": [
+            "0x1cd707",
+            "0x3cd707",
+            "0x5cd707",
+            "0x7cd707",
+            "0x9cd707",
+            "0xbcd707",
+            "0xdcd707",
+            "0xfcd707"
+          ]
+        },
+        "2002": {
+          "count": 16,
+          "offsets": [
+            "0x1b124e",
+            "0x1b128e",
+            "0x3b124e",
+            "0x3b128e",
+            "0x5b124e",
+            "0x5b128e",
+            "0x7b124e",
+            "0x7b128e",
+            "0x9b124e",
+            "0x9b128e",
+            "0xbb124e",
+            "0xbb128e",
+            "0xdb124e",
+            "0xdb128e",
+            "0xfb124e",
+            "0xfb128e"
+          ]
+        },
+        "2003": {
+          "count": 8,
+          "offsets": [
+            "0x196f09",
+            "0x396f09",
+            "0x596f09",
+            "0x796f09",
+            "0x996f09",
+            "0xb96f09",
+            "0xd96f09",
+            "0xf96f09"
+          ]
+        },
+        "2004": {
+          "count": 23,
+          "offsets": [
+            "0xa089",
+            "0x190cd5",
+            "0x20221d",
+            "0x20a089",
+            "0x390cd5",
+            "0x40221d",
+            "0x40a089",
+            "0x590cd5",
+            "0x60221d",
+            "0x60a089",
+            "0x790cd5",
+            "0x80221d",
+            "0x80a089",
+            "0x990cd5",
+            "0xa0221d",
+            "0xa0a089",
+            "0xb90cd5",
+            "0xc0221d",
+            "0xc0a089",
+            "0xd90cd5",
+            "0xe0221d",
+            "0xe0a089",
+            "0xf90cd5"
+          ]
+        }
+      },
+      "sgs_scan": {
+        "bytes": 16777216,
+        "sha256": "d45d5aa75d4af7c4cc7cc044d0a72fa46abe37a35d81d98e57021f0e06ee2876",
+        "candidate_offsets_tested": 673712,
+        "containers": []
+      },
+      "gvm_path_strings": 0,
+      "target_gvm_metadata": []
+    },
+    {
+      "file": "images/S500/S500eM06.bin",
+      "bytes": 2993464,
+      "sha256": "5e9a1cdaa2457db0c74e1111e90ca3cfadfadad4c9cad41c108eaf43d96f9f0c",
+      "crc32": "6E21E731",
+      "header_hex": "780500eacd0500ebcc0500ebcb0500eb540500eac90500ebf8ff3feaf8ff3fea51434f4d58005800010001005800ffffffffffffffffffffffffffffffffffff",
+      "markers": {
+        "EADS": {
+          "count": 7,
+          "offsets": [
+            "0x175a65",
+            "0x175a86",
+            "0x175aa7",
+            "0x17a729",
+            "0x17a76b",
+            "0x198064",
+            "0x1988e4"
+          ]
+        },
+        "Qualcomm": {
+          "count": 3,
+          "offsets": [
+            "0x159818",
+            "0x167ff1",
+            "0x2cf591"
+          ]
+        },
+        "S500": {
+          "count": 3,
+          "offsets": [
+            "0x15982f",
+            "0x167f37",
+            "0x167f99"
+          ]
+        },
+        "2000": {
+          "count": 3,
+          "offsets": [
+            "0x1563a8",
+            "0x156408",
+            "0x156490"
+          ]
+        },
+        "2004": {
+          "count": 2,
+          "offsets": [
+            "0x167f8b",
+            "0x167fae"
+          ]
+        },
+        "Game": {
+          "count": 3,
+          "offsets": [
+            "0x16d8dd",
+            "0x17048e",
+            "0x19a8a3"
+          ]
+        }
+      },
+      "sgs_scan": {
+        "bytes": 2993464,
+        "sha256": "5e9a1cdaa2457db0c74e1111e90ca3cfadfadad4c9cad41c108eaf43d96f9f0c",
+        "candidate_offsets_tested": 166653,
+        "containers": []
+      },
+      "gvm_path_strings": 0,
+      "target_gvm_metadata": []
+    },
+    {
+      "file": "images/WS-4000/WS-4000_p_040216.BIN",
+      "bytes": 1317588,
+      "sha256": "89e40931efc32e49ffef79e41501ccc23a3b49e7ea01e7ef4b60e70774bfa9e2",
+      "crc32": "74215780",
+      "header_hex": "330000ea7e0000eb7d0000eb7c0000eb0d0000ea7a0000ebf8ff3feaf8ff3fea51434f4d31003100010001003100ffffffffffffffffffffffffffffffffffff",
+      "markers": {
+        "Qualcomm": {
+          "count": 2,
+          "offsets": [
+            "0x110a95",
+            "0x128d9c"
+          ]
+        },
+        "Dowtel": {
+          "count": 2,
+          "offsets": [
+            "0x101565",
+            "0x128de2"
+          ]
+        },
+        "WS-4000": {
+          "count": 1,
+          "offsets": [
+            "0x128d49"
+          ]
+        },
+        "2000": {
+          "count": 1,
+          "offsets": [
+            "0xf3e7e"
+          ]
+        },
+        "2001": {
+          "count": 1,
+          "offsets": [
+            "0x128d59"
+          ]
+        },
+        "2004": {
+          "count": 1,
+          "offsets": [
+            "0x128d3b"
+          ]
+        }
+      },
+      "sgs_scan": {
+        "bytes": 1317588,
+        "sha256": "89e40931efc32e49ffef79e41501ccc23a3b49e7ea01e7ef4b60e70774bfa9e2",
+        "candidate_offsets_tested": 87848,
+        "containers": []
+      },
+      "gvm_path_strings": 0,
+      "target_gvm_metadata": []
+    },
+    {
+      "file": "images/WS-4100/WS-4100_t_040216.BIN",
+      "bytes": 1308496,
+      "sha256": "9d22725ca1ca2d81566a1ca417d0105d6ce02beb8d55285a1d777c11c7840ec8",
+      "crc32": "CF8135E9",
+      "header_hex": "330000ea7e0000eb7d0000eb7c0000eb0d0000ea7a0000ebf8ff3feaf8ff3fea51434f4d31003100010001003100ffffffffffffffffffffffffffffffffffff",
+      "markers": {
+        "Qualcomm": {
+          "count": 2,
+          "offsets": [
+            "0x10c899",
+            "0x1250e8"
+          ]
+        },
+        "Dowtel": {
+          "count": 2,
+          "offsets": [
+            "0xfb949",
+            "0x12512e"
+          ]
+        },
+        "WS-4100": {
+          "count": 1,
+          "offsets": [
+            "0x125095"
+          ]
+        },
+        "2000": {
+          "count": 1,
+          "offsets": [
+            "0xf345a"
+          ]
+        },
+        "2001": {
+          "count": 1,
+          "offsets": [
+            "0x1250a5"
+          ]
+        },
+        "2004": {
+          "count": 1,
+          "offsets": [
+            "0x125087"
+          ]
+        }
+      },
+      "sgs_scan": {
+        "bytes": 1308496,
+        "sha256": "9d22725ca1ca2d81566a1ca417d0105d6ce02beb8d55285a1d777c11c7840ec8",
+        "candidate_offsets_tested": 87743,
+        "containers": []
+      },
+      "gvm_path_strings": 0,
+      "target_gvm_metadata": []
+    }
+  ],
+  "build_literals": [
+    {
+      "file": "images/WS-4000/WS-4000_p_040216.BIN",
+      "literals": [
+        {
+          "text": "WS-4000 ",
+          "offset": "0x128d49"
+        },
+        {
+          "text": "Feb 16 2004",
+          "offset": "0x128d34"
+        },
+        {
+          "text": "11:20:33",
+          "offset": "0x128d40"
+        }
+      ]
+    },
+    {
+      "file": "images/WS-4100/WS-4100_t_040216.BIN",
+      "literals": [
+        {
+          "text": "WS-4100 ",
+          "offset": "0x125095"
+        },
+        {
+          "text": "Feb 16 2004",
+          "offset": "0x125080"
+        },
+        {
+          "text": "13:28:43",
+          "offset": "0x12508c"
+        }
+      ]
+    },
+    {
+      "file": "images/S500/S500eM06.bin",
+      "literals": [
+        {
+          "text": "S500eM06",
+          "offset": "0x167f99"
+        },
+        {
+          "text": "Oct 23 2004",
+          "offset": "0x167f84"
+        },
+        {
+          "text": "02:28:42",
+          "offset": "0x167f90"
+        },
+        {
+          "text": "uisgame.c",
+          "offset": "0x19a8a0"
+        }
+      ]
+    },
+    {
+      "file": "images/LP2400/LP2400.bin",
+      "literals": [
+        {
+          "text": "LX750321",
+          "offset": "0x204b0d"
+        },
+        {
+          "text": "Jan 23 2004",
+          "offset": "0x204af8"
+        },
+        {
+          "text": "19:04:01",
+          "offset": "0x204b04"
+        },
+        {
+          "text": "gvm",
+          "offset": "0x1335fc"
+        },
+        {
+          "text": "C_JAVA_GAME",
+          "offset": "0x6146a4"
+        }
+      ]
+    }
+  ],
+  "ns1000_bank_evidence": {
+    "bank_bytes": 2097152,
+    "banks": [
+      {
+        "offset": "0x0",
+        "sha256": "5856d129a61ce7bb7998c6bfa9dca99f94e356fe3aa53f186eee991b4891a33b",
+        "identical_to_bank1": false
+      },
+      {
+        "offset": "0x200000",
+        "sha256": "75823971d11287264cbdac0c25135eea3f61dad9746b7b5af11670832f41ab5a",
+        "identical_to_bank1": true
+      },
+      {
+        "offset": "0x400000",
+        "sha256": "75823971d11287264cbdac0c25135eea3f61dad9746b7b5af11670832f41ab5a",
+        "identical_to_bank1": true
+      },
+      {
+        "offset": "0x600000",
+        "sha256": "75823971d11287264cbdac0c25135eea3f61dad9746b7b5af11670832f41ab5a",
+        "identical_to_bank1": true
+      },
+      {
+        "offset": "0x800000",
+        "sha256": "75823971d11287264cbdac0c25135eea3f61dad9746b7b5af11670832f41ab5a",
+        "identical_to_bank1": true
+      },
+      {
+        "offset": "0xa00000",
+        "sha256": "75823971d11287264cbdac0c25135eea3f61dad9746b7b5af11670832f41ab5a",
+        "identical_to_bank1": true
+      },
+      {
+        "offset": "0xc00000",
+        "sha256": "75823971d11287264cbdac0c25135eea3f61dad9746b7b5af11670832f41ab5a",
+        "identical_to_bank1": true
+      },
+      {
+        "offset": "0xe00000",
+        "sha256": "75823971d11287264cbdac0c25135eea3f61dad9746b7b5af11670832f41ab5a",
+        "identical_to_bank1": true
+      }
+    ],
+    "interpretation": "Banks1..7 are byte-identical. Bank0 differs at31982 bytes. Acquisition aliasing is plausible but not established; 16MiB is not treated as16MiB of distinct user memory."
+  },
+  "limitations": [
+    "No exact Dowtel WS4000/4100, Sejin NS1000, Synertek S500 row in78-table PDF or238-row workbook; LG SD210(S500) is not Synertek.",
+    "Early OEM negatives do not establish that these devices predate GVM: actual Dowtel and Synertek build literals date2004.",
+    "All Synertek EADS substrings are Headset. Games and uisgame.c are native software evidence only, without an independently extracted game.",
+    "LP2400 contains Java and a lone gvm string in native code; insufficient attribution to Sinjisoft/GNEX.",
+    "Raw SGS scans cover structural v1/2/4/36 plain/XOR-A5 only. No arbitrary packing or complete filesystem reconstruction is implied.",
+    "SV400 source BIN offsets refer to the vendor container bytes, not physical device addresses. Its internal packing has not been fully decoded.",
+    "SB260103940KB archive was listed but not downloaded; SV730 directory request timed out; do not count them as inspected firmware."
+  ],
+  "primary_document_lead": {
+    "url": "https://fccid.io/PV4WS-4000/User-Manual/Users-Manual-385521",
+    "kind": "Original Westech manufacturer manual mirrored from FCC; web-indexed metadata/text inspected, PDF not downloaded in this pass",
+    "finding": "WS-4000 is labelled Fixed WLL Telephone (PCS CDMA), not a proven GNEX handset."
+  }
+}

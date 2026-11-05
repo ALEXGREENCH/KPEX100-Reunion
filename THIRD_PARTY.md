@@ -4,6 +4,13 @@ The [MIT licence](LICENSE) covers original Reunion code. It does not relicense
 bundled dependencies, historical firmware, games, GNEX SDKs, manuals or Swerve.
 Keep each component's copyright and licence notices when redistributing it.
 
+The separate LG SV400 research recovery archive includes an LGLZ decoder
+translated from LGUI under GPL-3.0-or-later, its original source, a modified
+C reference, COPYING and provenance. It is documented in
+[the SV400 recovery report](doc/lg-sv400-games.md) and is not installed as a
+Reunion runtime component. Its licence does not grant rights to LG's original
+game payloads.
+
 ## Unicorn.js / Unicorn Engine for the browser
 
 - Upstream: [Unicorn.js ARM v1.0.3](https://github.com/AlexAltea/unicorn.js/releases/tag/v1.0.3).
@@ -82,13 +89,30 @@ The Swerve binary itself is not part of either project's source licence.
 
 ## Historical binary inputs
 
-The repository and default Pages build include 9 firmware images, 38 SGS
+The repository and default Pages build include 9 firmware images, 50 SGS
 applications, 3 native quick-start snapshots and the original Swerve 2.1 module.
-These 51 historical files are preserved byte-for-byte. `web/data/catalog.json`
+These 63 historical files are preserved byte-for-byte. `web/data/catalog.json`
 records catalogue sizes, SHA-256 hashes and runtime profiles; the Swerve module
 has separate [archive provenance](doc/swerve-provenance.json). Snapshot RAM
 contains original firmware/game data. These materials retain their own
 provenance and are not relicensed under Reunion's MIT licence.
+
+Galaga for LG SD1000 preserves the original SGS body recovered from the
+phone's GVM2X storage. The title screen credits Namco and MDream.
+[Source image, extraction and gameplay evidence](doc/phone-firmware-games.md#lg-sd1000-galaga-из-памяти-телефона).
+
+English Vocabulary Quiz King v1.0.8 preserves the original SGS from the
+GVM storage of an LG SV130. The title screen credits GameTooth.com.
+[Source image, extraction and gameplay evidence](doc/phone-firmware-games.md#дампы-lg-sv130-и-sv360).
+
+Bubble Bobble for LG SD1020 preserves the original SGS body from GVM2X storage.
+The title screen credits Taito and MDream.
+[Source image, extraction and gameplay evidence](doc/phone-firmware-games.md#lg-sd1020-и-sd1250-bubble-bobble-и-ladder).
+
+Battle Armor, Soul Sword, Treasure Hunter, The Man-Jong, Star Fighter,
+Aiolos, Blocks, Exciting Drop and Blue Swallow come from public attachments
+posted in the Korean KPEX100 forum in 2009.
+[Original posts, names and hashes](validation/kingston-naver-game-recovery.json).
 
 `python tools/assets.py verify` checks the collection. The browser importer and
 `python tools/assets.py import /local/path` can supply or restore local files.
@@ -98,3 +122,15 @@ No additional historical binaries are downloaded automatically. The optional
 
 Original SDK installers, extracted SDK programs and manual PDFs are not bundled.
 Research documents retain their URLs, hashes and derived findings.
+
+Additional GVM Club / Naver forum recoveries are documented in
+[the forum attachment report](doc/gvm-forum-attachments.md). Their research bundle
+preserves third-party Mobile C examples, resources, historical documents and
+an original SGS separately from the ordinary application catalogue. The
+Reunion source licence does not relicense those historical files.
+
+The separate LG MAIN research tools use the official LZO 2.10 safe decoder
+(GPL-2.0-or-later). Its source archive, licence, tested build command and
+library hash accompany that research bundle. The new unpacker is
+GPL-3.0-or-later; neither it nor the decoder is placed in the MIT runtime.
+[Recovery method and exact sources](doc/lg-main-images.md).

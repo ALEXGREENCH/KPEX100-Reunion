@@ -1,0 +1,77 @@
+{
+  "checked": "2026-11-05",
+  "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+  "scope": "Direct SGS runtime; firmware LCD controller unchanged",
+  "primaryManual": {
+    "source": "http://cfile209.uf.daum.net/attach/165521104A3E87994E43CC",
+    "pdfSha256": "f3fe78dba53055774e83b94668e4f3cae2862662a66653877577edda0da54e0e",
+    "printedPages311": {
+      "RestoreLCD": 171,
+      "Flush": 217,
+      "FlushPartial": 218
+    }
+  },
+  "waterskiOriginalSequence": {
+    "framebuffer": "0x23200000",
+    "bytes": 73216,
+    "FlushSgsPc": "0x5066",
+    "RestoreLcdSgsPc": "0x506a",
+    "copyRoutine": "0x200968c0",
+    "observation": "36 successful native CopyImage calls, Flush submits correct menu, RestoreLCD then restores ocean background in drawing memory"
+  },
+  "partialFlushNative": {
+    "chain": [
+      "0x2005dc38",
+      "0x20053a34",
+      "0x200557a0",
+      "0x200506e4",
+      "0x2004c4ac"
+    ],
+    "normalize": "Swap reversed signed endpoints; clip starts to0 and ends towidth-1,height-1",
+    "inclusiveExtentInstructions": [
+      "0x20050714",
+      "0x20050718"
+    ]
+  },
+  "webRegression": {
+    "test": "tests/gnex-presentation.test.mjs",
+    "originalFailingCases": 2,
+    "currentCases": 4,
+    "method": "Authored SGS executed by original ARM; inspect restored drawing bytes separately from presented RGBA"
+  },
+  "desktop": {
+    "changed_files": [
+      "desktop/kpex/gnex.py",
+      "desktop/tests/test_gnex_presentation.py"
+    ],
+    "checks": {
+      "black": "passed",
+      "native_runtime_and_graphics": "29 passed in 1.92s",
+      "new_authored_SGS_cases": 8,
+      "regression_control": "Disabling _present_lcd in memory makes the full Flush/Restore native test fail: raw buffer white, visible frame wrongly white. No file rollback used."
+    },
+    "desktop_geometry_regression": {
+      "GetDisplayInfo_hook": "ROM file0x3cc30",
+      "without_hook": "Native SaveLCD copied77440 bytes (220*176*2) between two allocated8192-byte buffers at23200000/23202000 when requested64x64. Overlap invalidates the test and custom-size restores.",
+      "fix": "Return configured width/height and zero reserved fields, matching existing web implementation. Native copy test now restores all8192 bytes to white."
+    },
+    "compatibility": "Implicit event-end refresh remains only until first explicit Flush or FlushPartial. Existing syscall/profile handling is otherwise unchanged."
+  },
+  "gameplayEvidence": "sinjisoft-s60-gameplay.json",
+  "limits": [
+    "K-PEX profile retains initial buffer preview until its first explicit presentation; phone profile requires explicit presentation from construction.",
+    "S60 scenarios verify gameplay and input, not full completion, audio or saves."
+  ],
+  "legacyPhysicalFlush": {
+    "romOffset": "0x4412c",
+    "ramAddress": "0x20053a08",
+    "behavior": "Old v1/v2 interpreter bypasses modern syscall dispatch; preserve submitted native buffer at this full-presentation adapter.",
+    "test": "tests/legacy.test.mjs",
+    "originalPixelCases": [
+      "Eska2 v1",
+      "Bubble Bubble v2"
+    ],
+    "redControl": "Before fix, native presentation observer was never called and strict phone display remained black.",
+    "afterFix": "Both cases display exact RGB565 from the last actual native presentation, converted toRGBA."
+  }
+}

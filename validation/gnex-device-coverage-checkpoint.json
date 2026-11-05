@@ -1,0 +1,6574 @@
+{
+  "scope": "Bounded reconciliation of already recovered original rosters versus exact-model firmware coverage. Target groups are NOT distinct SKU counts. This pass did not request Wayback/CDX.",
+  "originalSources": [
+    {
+      "url": "https://web.archive.org/web/20030914195710id_/http://gvmclub.com:80/20021130_%b4%dc%b8%bb%b1%e2%ba%b0_%b0%b3%b9%df%b0%a1%c0%cc%b5%e5.pdf",
+      "expectedSha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 1285394,
+      "sha256": "ee3210a1bb535bccd2c138641fd0478486ab1cd063cce05619ab6c316d3487de",
+      "sha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee",
+      "id": "gvm-handset-guide-2002",
+      "title": "GVM 단말기별 개발가이드",
+      "coverDate": "2002-11-30",
+      "pdfCreationDate": "2002-12-12",
+      "issuer": "Sinjisoft Corporation",
+      "pages": 101,
+      "cdxSha1MatchesPayload": true,
+      "originalUrl": "http://gvmclub.com:80/20021130_%b4%dc%b8%bb%b1%e2%ba%b0_%b0%b3%b9%df%b0%a1%c0%cc%b5%e5.pdf",
+      "cdxSha1Base32": "AYTF5UR27G5LMFYPRZT7OWHJ57KX4LHO",
+      "captureTimestamp": "20030914195710",
+      "cdxMime": "application/pdf",
+      "warcCompressedRecordLength": 348857
+    },
+    {
+      "filename": "20031014-SKT-STI-handsets.xls",
+      "url": "https://web.archive.org/web/20040623225914id_/http://gvmclub.com:80/board/free/include/tbl_board_free/files/phpxLSKoF/%b4%dc%b8%bb%b1%e2_%c1%a4%ba%b8_skt,sti_031014.xls",
+      "expectedSha1": "d5fd873d7e90f31dadbe911459c93a792012c8ab",
+      "status": 200,
+      "mime": "application/vnd.ms-excel",
+      "bytes": 337920,
+      "sha256": "1449e3820c0ea0c194f6f494b47186b2f0e45b59f214828e16272f443310c672",
+      "sha1": "d5fd873d7e90f31dadbe911459c93a792012c8ab",
+      "sha1MatchesCdx": true,
+      "id": "skt-sti-roster-2003",
+      "title": "단말기_정보_skt,sti_031014.xls",
+      "dateInFilename": "2003-10-14",
+      "provenance": "Original workbook attached on the public GVM Club forum. An official operator issuer or named author has not been authenticated. Column labels and cells are transcribed as stored.",
+      "cdxSha1Base32": "2X6YOPL6SDZR3LN6SEKFTSJ2PEQBFSFL",
+      "captureTimestamp": "20040623225914",
+      "originalUrl": "http://gvmclub.com:80/board/free/include/tbl_board_free/files/phpxLSKoF/%b4%dc%b8%bb%b1%e2_%c1%a4%ba%b8_skt,sti_031014.xls",
+      "cdxMime": "application/vnd",
+      "warcCompressedRecordLength": 76861
+    },
+    {
+      "filename": "20021220-GVM-Technical-Bulletins.pdf",
+      "url": "https://web.archive.org/web/20030806180656id_/http://gvmclub.com:80/021220_GVM_Technical_Bulletins.pdf",
+      "expectedSha1": "42440b28ba0487c06d07016d2b7de7d2c20f2803",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 729459,
+      "sha256": "b54abc46ac9dd214fee70b3f88f0bec6f84bb9e43232c5887b6a393d112a484c",
+      "sha1": "42440b28ba0487c06d07016d2b7de7d2c20f2803",
+      "sha1MatchesCdx": true,
+      "id": "gvm-technical-bulletins-2002",
+      "title": "GVM Technical Bulletins",
+      "coverDate": "2002-12-20",
+      "issuer": "Sinjisoft Corporation",
+      "pages": 55,
+      "cdxSha1Base32": "IJCAWKF2ASD4A3IHAFWSW7PH2LBA6KAD",
+      "captureTimestamp": "20030806180656",
+      "originalUrl": "http://gvmclub.com:80/021220_GVM_Technical_Bulletins.pdf",
+      "cdxMime": "application/pdf",
+      "warcCompressedRecordLength": 303302
+    }
+  ],
+  "december2002Original": {
+    "leadIndex": 34,
+    "originalUrl": "http://www.gvmclub.com:80/GVM_phone.xls",
+    "url": "https://web.archive.org/web/20030403022835id_/http://www.gvmclub.com:80/GVM_phone.xls",
+    "captureTimestamp": "20030403022835",
+    "expectedSha1": "5c894f3f289de87fce998b4a9ba5f3881fc3787b",
+    "retrievedUtc": "2026-11-05T09:05:08Z",
+    "status": 200,
+    "finalUrl": "https://web.archive.org/web/20030403022835id_/http://www.gvmclub.com:80/GVM_phone.xls",
+    "mime": "application/vnd.ms-excel",
+    "contentDisposition": null,
+    "file": "34-GVM_phone.xls",
+    "bytes": 41984,
+    "sha1": "5c894f3f289de87fce998b4a9ba5f3881fc3787b",
+    "sha256": "a8c982673d616e8a7314db0a68ecd171719d5fe54142666679eeccf54cbf9614",
+    "first32": "d0cf11e0a1b11ae1000000000000000000000000000000003e000300feff0900",
+    "recovered": true
+  },
+  "localInputs": [
+    {
+      "path": "outputs/KPEX100-Reunion/validation/gvm-historical-handset-guides.json",
+      "bytes": 287242,
+      "sha256": "722fa6f9c709392b7d972b5b476bc958543f616aa10e593e52327f4321515d2a"
+    },
+    {
+      "path": "work/korean-forum-native-newpass/new-rosters-raw.json",
+      "bytes": 66152,
+      "sha256": "708bb73d93c4e04a85c778f43ba608c0bd4c2114e069fe93d9baa97ae2dfda45"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/gnex-zone-handsets.json",
+      "bytes": 20096,
+      "sha256": "3170fcd013430310b353bd9bbbff86f71e055d8695d801b9d5ef977d28d60a7f"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/gnex-other-oem-evidence.json",
+      "bytes": 9371,
+      "sha256": "dbfaf585bd7fb6807e15f218da56be3ea0c130af121e2eaef1232047c1c6b4b9"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/gnex-oem-card-evidence.json",
+      "bytes": 4159,
+      "sha256": "f54e4c204c01e9d11859992506b701547436127829b8977703a7b3270c0d6aa4"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/curitel-c500-evidence.json",
+      "bytes": 49148,
+      "sha256": "c2d562a1b9fa46f53958264a7d1ea49ef292be1fd491b373780dcddb893371bf"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/sanyo-nokia-korean-evidence.json",
+      "bytes": 32738,
+      "sha256": "06602928ea64587eac0ed6c6082adc21ef3b59a88c4e7b47d4e4c996beda9fe4"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/gvm-forum-attachment-evidence.json",
+      "bytes": 195481,
+      "sha256": "57594cf741754325dbdfc8aa9e970531482b113f5b319d3e870cdaeb1553b99b"
+    },
+    {
+      "path": "work/gnex-oem-inventory-pass/evidence.json",
+      "bytes": 17568,
+      "sha256": "b1590c96518c65a012e5db8fcbb22b2a85ec17a38f063e10a7b376aeefd07230"
+    },
+    {
+      "path": "work/rare-gvm-oem-next-pass/extra-index-receipts.json",
+      "bytes": 6576,
+      "sha256": "ad53002092db123236d533175819572c32f31c1f98b962efc94cc96ff7c1951d"
+    }
+  ],
+  "selectedSourceCounts": {
+    "guideTables": 16,
+    "october2003Rows": 53,
+    "december2002Rows": 23,
+    "labCardPaths": 17
+  },
+  "allSelectedGuideTables": [
+    {
+      "page": 81,
+      "manufacturer": "Nokia",
+      "modelLabelVerbatim": "TDC-8887",
+      "releaseDateVerbatim": "2002.02",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Magic",
+      "userAgentVerbatim": "DDEEGG: NO0111, NO0211, NOA211",
+      "physicalLcdVerbatim": "128*128",
+      "physicalLcd": [
+        128,
+        128
+      ],
+      "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+      "gvmArea": [
+        128,
+        112
+      ],
+      "lcdClass": 2,
+      "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "MIDI :::::::::::::::::::::: AUDIOTYPE: 16",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 82,
+      "manufacturer": "Nokia",
+      "modelLabelVerbatim": "TDC-8587",
+      "releaseDateVerbatim": "2002.",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Magic",
+      "userAgentVerbatim": "DDEEGG: NO0311",
+      "physicalLcdVerbatim": "128*160 :::::::::::::::: 문자 : 20*10",
+      "physicalLcd": [
+        128,
+        160
+      ],
+      "gvmAreaVerbatim": "128*132 :::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        128,
+        132
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "64KColor ::::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+      "audioTypeVerbatim": "MIDI :::::::::::::::::::::: AUDIOTYPE: 16",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 84,
+      "manufacturer": "Motorola",
+      "modelLabelVerbatim": "V730(Aone)",
+      "releaseDateVerbatim": "2002.01",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: MT0711",
+      "physicalLcdVerbatim": "128*160 ::::::::::::::: 문자 : 20*09",
+      "physicalLcd": [
+        128,
+        160
+      ],
+      "gvmAreaVerbatim": "128*145 ::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        128,
+        145
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "64KColor ::::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+      "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 85,
+      "manufacturer": "Motorola",
+      "modelLabelVerbatim": "V710(Apex)",
+      "releaseDateVerbatim": "2002.03",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: MT0611",
+      "physicalLcdVerbatim": "128*160",
+      "physicalLcd": [
+        128,
+        160
+      ],
+      "gvmAreaVerbatim": "128*145 ::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        128,
+        145
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "64KColor ::::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+      "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 86,
+      "manufacturer": "Motorola",
+      "modelLabelVerbatim": "V. 62 (아폴로2)",
+      "releaseDateVerbatim": "2001.09",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: MT0511",
+      "physicalLcdVerbatim": "128*128",
+      "physicalLcd": [
+        128,
+        128
+      ],
+      "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+      "gvmArea": [
+        128,
+        112
+      ],
+      "lcdClass": 2,
+      "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 87,
+      "manufacturer": "Motorola",
+      "modelLabelVerbatim": "V. 67 (암스트롱)",
+      "releaseDateVerbatim": "2001.05",
+      "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1, Download Protocol : Trivial",
+      "vm": "GVM1X",
+      "scriptVersion": 1,
+      "downloadProtocol": "Trivial",
+      "userAgentVerbatim": "DDEEGG: MT0311, MTA111",
+      "physicalLcdVerbatim": "128*128",
+      "physicalLcd": [
+        128,
+        128
+      ],
+      "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+      "gvmArea": [
+        128,
+        112
+      ],
+      "lcdClass": 2,
+      "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "MA1 :::::::::::::::::::::: AUDIOTYPE: 2",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 88,
+      "manufacturer": "Motorola",
+      "modelLabelVerbatim": "Prime800(TP226)",
+      "releaseDateVerbatim": "2001.08",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Magic",
+      "userAgentVerbatim": "DDEEGG: MT0411",
+      "physicalLcdVerbatim": "120*160",
+      "physicalLcd": [
+        120,
+        160
+      ],
+      "gvmAreaVerbatim": "120*144 :::::::::::::::: LCDCLASS : 1 (LCDCLASS 예전 기준 적용됨)",
+      "gvmArea": [
+        120,
+        144
+      ],
+      "lcdClass": 1,
+      "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 90,
+      "manufacturer": "Hanwha",
+      "modelLabelVerbatim": "CS-M330",
+      "releaseDateVerbatim": "2002.",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: HH0511",
+      "physicalLcdVerbatim": "128*143 :::::::::::::::: 문자 : 16*07",
+      "physicalLcd": [
+        128,
+        143
+      ],
+      "gvmAreaVerbatim": "128*143 :::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        128,
+        143
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "4K Color ::::::::::::::: IMAGETYPE: 12 (압축기능 이용시 8)",
+      "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 91,
+      "manufacturer": "Hanwha",
+      "modelLabelVerbatim": "M210",
+      "releaseDateVerbatim": "2002.",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: HH0411",
+      "physicalLcdVerbatim": "120*160",
+      "physicalLcd": [
+        120,
+        160
+      ],
+      "gvmAreaVerbatim": "120*144 :::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        120,
+        144
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "256 Color ::::::::::::::: IMAGETYPE: 12 (압축기능 이용시 4)",
+      "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 92,
+      "manufacturer": "Hanwha",
+      "modelLabelVerbatim": "S-701, S702",
+      "releaseDateVerbatim": "2001.08",
+      "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1, Download Protocol : Magic",
+      "vm": "GVM1X",
+      "scriptVersion": 1,
+      "downloadProtocol": "Magic",
+      "userAgentVerbatim": "DDEEGG: HH0311(701), HHA111(702)",
+      "physicalLcdVerbatim": "128*128",
+      "physicalLcd": [
+        128,
+        128
+      ],
+      "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+      "gvmArea": [
+        128,
+        112
+      ],
+      "lcdClass": 2,
+      "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "Buzzer ::::::::::::::::::: AUDIOTYPE: 1",
+      "vocTypeVerbatim": "S-701 : 1 (SKT) :::::::::::::::::: S-702 : 2 (STI)",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 93,
+      "manufacturer": "Hanwha",
+      "modelLabelVerbatim": "S-250",
+      "releaseDateVerbatim": "2001.05",
+      "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1, Download Protocol : Trivial",
+      "vm": "GVM1X",
+      "scriptVersion": 1,
+      "downloadProtocol": "Trivial",
+      "userAgentVerbatim": "DDEEGG: HH0212, HHA212",
+      "physicalLcdVerbatim": "127*96",
+      "physicalLcd": [
+        127,
+        96
+      ],
+      "gvmAreaVerbatim": "127*80 :::::::::::::::::: LCDCLASS : 2",
+      "gvmArea": [
+        127,
+        80
+      ],
+      "lcdClass": 2,
+      "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "MA1 :::::::::::::::::::::: AUDIOTYPE: 2",
+      "vocTypeVerbatim": "HH0212 : 1 (SKT) :::::::::::::::::: HHA212 : 2 (STI)",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 95,
+      "manufacturer": "Pantech/Curitel",
+      "modelLabelVerbatim": "DD-600",
+      "releaseDateVerbatim": "2002. 10.",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: HD0611",
+      "physicalLcdVerbatim": "128*160 :::::::::::::::: 문자 : 20*10",
+      "physicalLcd": [
+        128,
+        160
+      ],
+      "gvmAreaVerbatim": "128*? :::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        128,
+        null
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "64K Color :::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+      "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 96,
+      "manufacturer": "Pantech/Curitel",
+      "modelLabelVerbatim": "DD-500",
+      "releaseDateVerbatim": "2002. 10.",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: HD0511",
+      "physicalLcdVerbatim": "128*160 :::::::::::::::: 문자 : 20*10",
+      "physicalLcd": [
+        128,
+        160
+      ],
+      "gvmAreaVerbatim": "128*? :::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        128,
+        null
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "64K Color :::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+      "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 97,
+      "manufacturer": "Pantech/Curitel",
+      "modelLabelVerbatim": "DD-100",
+      "releaseDateVerbatim": "2001.12",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Magic",
+      "userAgentVerbatim": "DDEEGG: HD0411, HDA111",
+      "physicalLcdVerbatim": "120*104",
+      "physicalLcd": [
+        120,
+        104
+      ],
+      "gvmAreaVerbatim": "120*90 :::::::::::::::::: LCDCLASS : 2",
+      "gvmArea": [
+        120,
+        90
+      ],
+      "lcdClass": 2,
+      "imageTypeVerbatim": "4-Gray ::::::::::::::::::: IMAGETYPE: 2",
+      "audioTypeVerbatim": "MA2 ::::::::::::::::::::::: AUDIOTYPE: 4",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 98,
+      "manufacturer": "Pantech/Curitel",
+      "modelLabelVerbatim": "C-500",
+      "releaseDateVerbatim": "2002. 10.",
+      "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+      "vm": "GVM2X",
+      "scriptVersion": 2,
+      "downloadProtocol": "Sliding",
+      "userAgentVerbatim": "DDEEGG: HD0711",
+      "physicalLcdVerbatim": "128*143 :::::::::::::::: 문자 : 21*07",
+      "physicalLcd": [
+        128,
+        143
+      ],
+      "gvmAreaVerbatim": "128*? :::::::::::::::: LCDCLASS : 4",
+      "gvmArea": [
+        128,
+        null
+      ],
+      "lcdClass": 4,
+      "imageTypeVerbatim": "64K Color :::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+      "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    },
+    {
+      "page": 99,
+      "manufacturer": "Pantech/Curitel",
+      "modelLabelVerbatim": "HBC-R402",
+      "releaseDateVerbatim": "2001.06",
+      "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1 , Download Protocol : Trivial",
+      "vm": "GVM1X",
+      "scriptVersion": 1,
+      "downloadProtocol": "Trivial",
+      "userAgentVerbatim": "DDEEGG: HD0211",
+      "physicalLcdVerbatim": "128*96",
+      "physicalLcd": [
+        128,
+        96
+      ],
+      "gvmAreaVerbatim": "128*80 :::::::::::::::::: LCDCLASS : 2",
+      "gvmArea": [
+        128,
+        80
+      ],
+      "lcdClass": 2,
+      "imageTypeVerbatim": "BW ::::::::::::::::::::::: IMAGETYPE: 1",
+      "audioTypeVerbatim": "Buzzer ::::::::::::::::::: AUDIOTYPE: 1",
+      "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+      "sourceId": "gvm-handset-guide-2002"
+    }
+  ],
+  "allSelectedOctoberRows": [
+    {
+      "sheet": "SKT",
+      "row": 79,
+      "manufacturer": "NOKIA",
+      "model": {
+        "cell": "B79",
+        "value": 8887.0
+      },
+      "carrier": {
+        "cell": "C79",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R79",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S79",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T79",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U79",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT79",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU79",
+        "value": "112"
+      },
+      "applicationWidth": {
+        "cell": "AV79",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW79",
+        "value": "096"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 80,
+      "manufacturer": "NOKIA",
+      "model": {
+        "cell": "B80",
+        "value": "8587"
+      },
+      "carrier": {
+        "cell": "C80",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R80",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S80",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T80",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U80",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT80",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU80",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV80",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW80",
+        "value": "131"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 81,
+      "manufacturer": "NOKIA",
+      "model": {
+        "cell": "B81",
+        "value": "8587 WI-PI"
+      },
+      "carrier": {
+        "cell": "C81",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R81",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S81",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T81",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U81",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT81",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU81",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV81",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW81",
+        "value": "131"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 118,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B118",
+        "value": "V8260"
+      },
+      "carrier": {
+        "cell": "C118",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R118",
+        "value": "X"
+      },
+      "gvmVersion": {
+        "cell": "S118",
+        "value": "X"
+      },
+      "skvmSupported": {
+        "cell": "T118",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U118",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT118",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AU118",
+        "value": "104"
+      },
+      "applicationWidth": {
+        "cell": "AV118",
+        "value": "000"
+      },
+      "applicationHeight": {
+        "cell": "AW118",
+        "value": "000"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 119,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B119",
+        "value": "V8260C"
+      },
+      "carrier": {
+        "cell": "C119",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R119",
+        "value": "X"
+      },
+      "gvmVersion": {
+        "cell": "S119",
+        "value": "X"
+      },
+      "skvmSupported": {
+        "cell": "T119",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U119",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT119",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AU119",
+        "value": "104"
+      },
+      "applicationWidth": {
+        "cell": "AV119",
+        "value": "000"
+      },
+      "applicationHeight": {
+        "cell": "AW119",
+        "value": "000"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 120,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B120",
+        "value": "P6060"
+      },
+      "carrier": {
+        "cell": "C120",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R120",
+        "value": "X"
+      },
+      "gvmVersion": {
+        "cell": "S120",
+        "value": "X"
+      },
+      "skvmSupported": {
+        "cell": "T120",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U120",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT120",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU120",
+        "value": "096"
+      },
+      "applicationWidth": {
+        "cell": "AV120",
+        "value": "000"
+      },
+      "applicationHeight": {
+        "cell": "AW120",
+        "value": "000"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 121,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B121",
+        "value": "P6060T"
+      },
+      "carrier": {
+        "cell": "C121",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R121",
+        "value": "X"
+      },
+      "gvmVersion": {
+        "cell": "S121",
+        "value": "X"
+      },
+      "skvmSupported": {
+        "cell": "T121",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U121",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT121",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU121",
+        "value": "096"
+      },
+      "applicationWidth": {
+        "cell": "AV121",
+        "value": "000"
+      },
+      "applicationHeight": {
+        "cell": "AW121",
+        "value": "000"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 122,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B122",
+        "value": "V.67"
+      },
+      "carrier": {
+        "cell": "C122",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R122",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S122",
+        "value": "1"
+      },
+      "skvmSupported": {
+        "cell": "T122",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U122",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT122",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU122",
+        "value": "128"
+      },
+      "applicationWidth": {
+        "cell": "AV122",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW122",
+        "value": "096"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 123,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B123",
+        "value": "PRIME800      (TP226)  "
+      },
+      "carrier": {
+        "cell": "C123",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R123",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S123",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T123",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U123",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT123",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AU123",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV123",
+        "value": "120"
+      },
+      "applicationHeight": {
+        "cell": "AW123",
+        "value": "128"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 124,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B124",
+        "value": "V.62      (APOLLO 2)"
+      },
+      "carrier": {
+        "cell": "C124",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R124",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S124",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T124",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U124",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT124",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU124",
+        "value": "128"
+      },
+      "applicationWidth": {
+        "cell": "AV124",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW124",
+        "value": "096"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 126,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B126",
+        "value": "Apex (V710)"
+      },
+      "carrier": {
+        "cell": "C126",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R126",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S126",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T126",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U126",
+        "value": "1.1"
+      },
+      "physicalWidth": {
+        "cell": "AT126",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU126",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV126",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW126",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 127,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B127",
+        "value": "Aone (V730)"
+      },
+      "carrier": {
+        "cell": "C127",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R127",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S127",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T127",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U127",
+        "value": "1.1"
+      },
+      "physicalWidth": {
+        "cell": "AT127",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU127",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV127",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW127",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 128,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B128",
+        "value": "Aone (V730)\nWI-TOP"
+      },
+      "carrier": {
+        "cell": "C128",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R128",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S128",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T128",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U128",
+        "value": "1.1"
+      },
+      "physicalWidth": {
+        "cell": "AT128",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU128",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV128",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW128",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 129,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B129",
+        "value": "Apex (V710)\nUpgrade"
+      },
+      "carrier": {
+        "cell": "C129",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R129",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S129",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T129",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U129",
+        "value": "1.1"
+      },
+      "physicalWidth": {
+        "cell": "AT129",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU129",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV129",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW129",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 130,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B130",
+        "value": "V733"
+      },
+      "carrier": {
+        "cell": "C130",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R130",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S130",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T130",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U130",
+        "value": "1.1"
+      },
+      "physicalWidth": {
+        "cell": "AT130",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU130",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV130",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW130",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 131,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B131",
+        "value": "V740 \n(T.T)"
+      },
+      "carrier": {
+        "cell": "C131",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R131",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S131",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T131",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U131",
+        "value": "1.1"
+      },
+      "physicalWidth": {
+        "cell": "AT131",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU131",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV131",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW131",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 132,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B132",
+        "value": "T750\n(Race Track)"
+      },
+      "carrier": {
+        "cell": "C132",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R132",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S132",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T132",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U132",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT132",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU132",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV132",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW132",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 133,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B133",
+        "value": "MS100\n(V740 camera)"
+      },
+      "carrier": {
+        "cell": "C133",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R133",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S133",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T133",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U133",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT133",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU133",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV133",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW133",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 134,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B134",
+        "value": "MS150\n(Aria)"
+      },
+      "carrier": {
+        "cell": "C134",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R134",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S134",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T134",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U134",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT134",
+        "value": "160"
+      },
+      "physicalHeight": {
+        "cell": "AU134",
+        "value": "128"
+      },
+      "applicationWidth": {
+        "cell": "AV134",
+        "value": "160"
+      },
+      "applicationHeight": {
+        "cell": "AW134",
+        "value": "128"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 135,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B135",
+        "value": "MMS TEST용"
+      },
+      "carrier": {
+        "cell": "C135",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R135",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S135",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T135",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U135",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT135",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU135",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV135",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW135",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 136,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B136",
+        "value": "MS300(Aurora)\n→ MS280\n(Photo Mail)"
+      },
+      "carrier": {
+        "cell": "C136",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R136",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S136",
+        "value": "3.0"
+      },
+      "skvmSupported": {
+        "cell": "T136",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U136",
+        "value": 1.3
+      },
+      "physicalWidth": {
+        "cell": "AT136",
+        "value": 176.0
+      },
+      "physicalHeight": {
+        "cell": "AU136",
+        "value": "220"
+      },
+      "applicationWidth": {
+        "cell": "AV136",
+        "value": 176.0
+      },
+      "applicationHeight": {
+        "cell": "AW136",
+        "value": 202.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 137,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B137",
+        "value": "MS170(Small Aria) → MS200 "
+      },
+      "carrier": {
+        "cell": "C137",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R137",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S137",
+        "value": "3.0"
+      },
+      "skvmSupported": {
+        "cell": "T137",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U137",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT137",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU137",
+        "value": 144.0
+      },
+      "applicationWidth": {
+        "cell": "AV137",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW137",
+        "value": "129"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 138,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B138",
+        "value": "MS280a\n(MMS)"
+      },
+      "carrier": {
+        "cell": "C138",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R138",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S138",
+        "value": "3.0"
+      },
+      "skvmSupported": {
+        "cell": "T138",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U138",
+        "value": 1.3
+      },
+      "physicalWidth": {
+        "cell": "AT138",
+        "value": 176.0
+      },
+      "physicalHeight": {
+        "cell": "AU138",
+        "value": 220.0
+      },
+      "applicationWidth": {
+        "cell": "AV138",
+        "value": 176.0
+      },
+      "applicationHeight": {
+        "cell": "AW138",
+        "value": 202.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 139,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B139",
+        "value": "MS250 (RaceTrackⅡ)"
+      },
+      "carrier": {
+        "cell": "C139",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R139",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S139",
+        "value": "3.0"
+      },
+      "skvmSupported": {
+        "cell": "T139",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U139",
+        "value": "1.3"
+      },
+      "physicalWidth": {
+        "cell": "AT139",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU139",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV139",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW139",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 140,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "B140",
+        "value": "MS230 (RaceTrackⅡ)"
+      },
+      "carrier": {
+        "cell": "C140",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R140",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S140",
+        "value": "1.0"
+      },
+      "skvmSupported": {
+        "cell": "T140",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U140",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT140",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU140",
+        "value": "144"
+      },
+      "applicationWidth": {
+        "cell": "AV140",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW140",
+        "value": "129"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 207,
+      "manufacturer": "한화정보통신",
+      "model": {
+        "cell": "B207",
+        "value": "S-250"
+      },
+      "carrier": {
+        "cell": "C207",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R207",
+        "value": "X (O) (O)"
+      },
+      "gvmVersion": {
+        "cell": "S207",
+        "value": "X (1) (1)"
+      },
+      "skvmSupported": {
+        "cell": "T207",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U207",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT207",
+        "value": "127"
+      },
+      "physicalHeight": {
+        "cell": "AU207",
+        "value": "096"
+      },
+      "applicationWidth": {
+        "cell": "AV207",
+        "value": "000 (127)"
+      },
+      "applicationHeight": {
+        "cell": "AW207",
+        "value": "000 (064)"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 208,
+      "manufacturer": "한화정보통신",
+      "model": {
+        "cell": "B208",
+        "value": "S-701"
+      },
+      "carrier": {
+        "cell": "C208",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R208",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S208",
+        "value": "1"
+      },
+      "skvmSupported": {
+        "cell": "T208",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U208",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT208",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU208",
+        "value": "128"
+      },
+      "applicationWidth": {
+        "cell": "AV208",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW208",
+        "value": "112"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 209,
+      "manufacturer": "한화정보통신",
+      "model": {
+        "cell": "B209",
+        "value": "CS-M210"
+      },
+      "carrier": {
+        "cell": "C209",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R209",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S209",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T209",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U209",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT209",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AU209",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV209",
+        "value": "120"
+      },
+      "applicationHeight": {
+        "cell": "AW209",
+        "value": "144"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 210,
+      "manufacturer": "한화정보통신",
+      "model": {
+        "cell": "B210",
+        "value": "CS-M330"
+      },
+      "carrier": {
+        "cell": "C210",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R210",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S210",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T210",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U210",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT210",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU210",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV210",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW210",
+        "value": "143"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 212,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B212",
+        "value": "HGC-R202"
+      },
+      "carrier": {
+        "cell": "C212",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R212",
+        "value": "X"
+      },
+      "gvmVersion": {
+        "cell": "S212",
+        "value": "X"
+      },
+      "skvmSupported": {
+        "cell": "T212",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U212",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT212",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU212",
+        "value": "064"
+      },
+      "applicationWidth": {
+        "cell": "AV212",
+        "value": "000"
+      },
+      "applicationHeight": {
+        "cell": "AW212",
+        "value": "000"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 213,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B213",
+        "value": "HGC-R402"
+      },
+      "carrier": {
+        "cell": "C213",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R213",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S213",
+        "value": "1"
+      },
+      "skvmSupported": {
+        "cell": "T213",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U213",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT213",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU213",
+        "value": "096"
+      },
+      "applicationWidth": {
+        "cell": "AV213",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW213",
+        "value": "064"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 214,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B214",
+        "value": "DD-101"
+      },
+      "carrier": {
+        "cell": "C214",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R214",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S214",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T214",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "U214",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AT214",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AU214",
+        "value": "104"
+      },
+      "applicationWidth": {
+        "cell": "AV214",
+        "value": "120"
+      },
+      "applicationHeight": {
+        "cell": "AW214",
+        "value": "096"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 215,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B215",
+        "value": "DD-500"
+      },
+      "carrier": {
+        "cell": "C215",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R215",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S215",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T215",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U215",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT215",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU215",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV215",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW215",
+        "value": "144"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 216,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B216",
+        "value": "DD-600"
+      },
+      "carrier": {
+        "cell": "C216",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R216",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S216",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T216",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U216",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT216",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU216",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV216",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW216",
+        "value": "144"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 217,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B217",
+        "value": "C-500"
+      },
+      "carrier": {
+        "cell": "C217",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R217",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S217",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T217",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U217",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT217",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU217",
+        "value": "143"
+      },
+      "applicationWidth": {
+        "cell": "AV217",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW217",
+        "value": "128"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 218,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B218",
+        "value": "DD-630"
+      },
+      "carrier": {
+        "cell": "C218",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R218",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S218",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T218",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U218",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT218",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU218",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV218",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW218",
+        "value": "144"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 219,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B219",
+        "value": "DD-1100\n(PS-E100)"
+      },
+      "carrier": {
+        "cell": "C219",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R219",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S219",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T219",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U219",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT219",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU219",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV219",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW219",
+        "value": "144"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 220,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B220",
+        "value": "PS-E200"
+      },
+      "carrier": {
+        "cell": "C220",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R220",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S220",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T220",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U220",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT220",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AU220",
+        "value": "160"
+      },
+      "applicationWidth": {
+        "cell": "AV220",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AW220",
+        "value": "145"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 221,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B221",
+        "value": "S1(DD-700)"
+      },
+      "carrier": {
+        "cell": "C221",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R221",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S221",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T221",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U221",
+        "value": "1.2"
+      },
+      "physicalWidth": {
+        "cell": "AT221",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU221",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV221",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW221",
+        "value": 145.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 222,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B222",
+        "value": "PG-S3000C"
+      },
+      "carrier": {
+        "cell": "C222",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R222",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S222",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T222",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U222",
+        "value": 1.0
+      },
+      "physicalWidth": {
+        "cell": "AT222",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU222",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV222",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW222",
+        "value": 145.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 223,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B223",
+        "value": "PG-S1200"
+      },
+      "carrier": {
+        "cell": "C223",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R223",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S223",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T223",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U223",
+        "value": 1.0
+      },
+      "physicalWidth": {
+        "cell": "AT223",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU223",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV223",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW223",
+        "value": 147.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 224,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B224",
+        "value": "PG-S4100"
+      },
+      "carrier": {
+        "cell": "C224",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R224",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S224",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T224",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U224",
+        "value": 1.0
+      },
+      "physicalWidth": {
+        "cell": "AT224",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU224",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV224",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW224",
+        "value": 146.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 225,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B225",
+        "value": "PG-S4600"
+      },
+      "carrier": {
+        "cell": "C225",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R225",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S225",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T225",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U225",
+        "value": 1.0
+      },
+      "physicalWidth": {
+        "cell": "AT225",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU225",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV225",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW225",
+        "value": 146.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 226,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B226",
+        "value": "PG-S3500C\n→ S2"
+      },
+      "carrier": {
+        "cell": "C226",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R226",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S226",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T226",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U226",
+        "value": 1.0
+      },
+      "physicalWidth": {
+        "cell": "AT226",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU226",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV226",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW226",
+        "value": 145.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 227,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B227",
+        "value": "PG-S5500C"
+      },
+      "carrier": {
+        "cell": "C227",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R227",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S227",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T227",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U227",
+        "value": 1.0
+      },
+      "physicalWidth": {
+        "cell": "AT227",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU227",
+        "value": 143.0
+      },
+      "applicationWidth": {
+        "cell": "AV227",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW227",
+        "value": 128.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 228,
+      "manufacturer": "현대 큐리텔",
+      "model": {
+        "cell": "B228",
+        "value": "PG-S5000"
+      },
+      "carrier": {
+        "cell": "C228",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R228",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S228",
+        "value": 2.0
+      },
+      "skvmSupported": {
+        "cell": "T228",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U228",
+        "value": 1.0
+      },
+      "physicalWidth": {
+        "cell": "AT228",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU228",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV228",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW228",
+        "value": 146.0
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 230,
+      "manufacturer": "SANYO",
+      "model": {
+        "cell": "B230",
+        "value": "SCP-A011"
+      },
+      "carrier": {
+        "cell": "C230",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R230",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S230",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T230",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U230",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT230",
+        "value": "132"
+      },
+      "physicalHeight": {
+        "cell": "AU230",
+        "value": "176"
+      },
+      "applicationWidth": {
+        "cell": "AV230",
+        "value": "132"
+      },
+      "applicationHeight": {
+        "cell": "AW230",
+        "value": "160"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 232,
+      "manufacturer": "텔슨",
+      "model": {
+        "cell": "B232",
+        "value": "TWC1030"
+      },
+      "carrier": {
+        "cell": "C232",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R232",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S232",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T232",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U232",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT232",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AU232",
+        "value": "096"
+      },
+      "applicationWidth": {
+        "cell": "AV232",
+        "value": "120"
+      },
+      "applicationHeight": {
+        "cell": "AW232",
+        "value": "064"
+      }
+    },
+    {
+      "sheet": "SKT",
+      "row": 234,
+      "manufacturer": "VK",
+      "model": {
+        "cell": "B234",
+        "value": "VK-100"
+      },
+      "carrier": {
+        "cell": "C234",
+        "value": "SKT"
+      },
+      "gvmSupported": {
+        "cell": "R234",
+        "value": 0.0
+      },
+      "gvmVersion": {
+        "cell": "S234",
+        "value": "2.05.02"
+      },
+      "skvmSupported": {
+        "cell": "T234",
+        "value": 0.0
+      },
+      "skvmVersion": {
+        "cell": "U234",
+        "value": 1.1
+      },
+      "physicalWidth": {
+        "cell": "AT234",
+        "value": 128.0
+      },
+      "physicalHeight": {
+        "cell": "AU234",
+        "value": 160.0
+      },
+      "applicationWidth": {
+        "cell": "AV234",
+        "value": 128.0
+      },
+      "applicationHeight": {
+        "cell": "AW234",
+        "value": 146.0
+      }
+    },
+    {
+      "sheet": "STI",
+      "row": 42,
+      "manufacturer": "현대",
+      "model": {
+        "cell": "C42",
+        "value": "DD X-10"
+      },
+      "carrier": {
+        "cell": "D42",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "T42",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U42",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "V42",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "W42",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AV42",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AW42",
+        "value": "104"
+      },
+      "applicationWidth": {
+        "cell": "AX42",
+        "value": "120"
+      },
+      "applicationHeight": {
+        "cell": "AY42",
+        "value": "096"
+      }
+    },
+    {
+      "sheet": "STI",
+      "row": 46,
+      "manufacturer": "한화",
+      "model": {
+        "cell": "C46",
+        "value": "S-702"
+      },
+      "carrier": {
+        "cell": "D46",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "T46",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U46",
+        "value": "1"
+      },
+      "skvmSupported": {
+        "cell": "V46",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "W46",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AV46",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AW46",
+        "value": "128"
+      },
+      "applicationWidth": {
+        "cell": "AX46",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AY46",
+        "value": "112"
+      }
+    },
+    {
+      "sheet": "STI",
+      "row": 50,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "C50",
+        "value": "V.67 (STI)"
+      },
+      "carrier": {
+        "cell": "D50",
+        "value": "STI"
+      },
+      "gvmSupported": {
+        "cell": "T50",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U50",
+        "value": "1"
+      },
+      "skvmSupported": {
+        "cell": "V50",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "W50",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AV50",
+        "value": "128"
+      },
+      "physicalHeight": {
+        "cell": "AW50",
+        "value": "128"
+      },
+      "applicationWidth": {
+        "cell": "AX50",
+        "value": "128"
+      },
+      "applicationHeight": {
+        "cell": "AY50",
+        "value": "96"
+      }
+    },
+    {
+      "sheet": "STI",
+      "row": 52,
+      "manufacturer": "모토로라",
+      "model": {
+        "cell": "C52",
+        "value": "V.6060 (STI)"
+      },
+      "carrier": {
+        "cell": "D52",
+        "value": "STI"
+      },
+      "gvmSupported": {
+        "cell": "T52",
+        "value": "X"
+      },
+      "gvmVersion": {
+        "cell": "U52",
+        "value": "X"
+      },
+      "skvmSupported": {
+        "cell": "V52",
+        "value": "X"
+      },
+      "skvmVersion": {
+        "cell": "W52",
+        "value": "X"
+      },
+      "physicalWidth": {
+        "cell": "AV52",
+        "value": "X"
+      },
+      "physicalHeight": {
+        "cell": "AW52",
+        "value": "X"
+      },
+      "applicationWidth": {
+        "cell": "AX52",
+        "value": "지원안함"
+      },
+      "applicationHeight": {
+        "cell": "AY52",
+        "value": "지원안함"
+      }
+    }
+  ],
+  "allSelectedDecemberRows": [
+    {
+      "row": 4,
+      "cells": [
+        "BW",
+        "Buzzer",
+        "HBC-R402",
+        "현대큐리텔",
+        "128*96",
+        "128*80",
+        "HD0211",
+        "1X",
+        "출시",
+        2001.06
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        "",
+        "",
+        "S-700",
+        "한화",
+        "128*128",
+        "128*112",
+        "HH0311, HHA111",
+        "1X",
+        "출시",
+        2001.08
+      ]
+    },
+    {
+      "row": 25,
+      "cells": [
+        "",
+        "",
+        "S-250",
+        "한화",
+        "127*96",
+        "127*80",
+        "HH0212, HHA212",
+        "1X",
+        "출시",
+        2001.05
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        "",
+        "",
+        "V.67(암스트롱)",
+        "모토로라",
+        "128*128",
+        "128*128",
+        "MT0311, MTA111",
+        "1X",
+        "출시",
+        2001.05
+      ]
+    },
+    {
+      "row": 29,
+      "cells": [
+        "",
+        "",
+        "Prime800(TP226)",
+        "모토로라",
+        "120*160",
+        "120*144",
+        "MT0411",
+        "2X",
+        "출시",
+        2001.08
+      ]
+    },
+    {
+      "row": 30,
+      "cells": [
+        "",
+        "",
+        "V.62(아폴로2)",
+        "모토로라",
+        "128*128",
+        "128*112",
+        "MT0511",
+        "2X",
+        "출시",
+        2001.09
+      ]
+    },
+    {
+      "row": 33,
+      "cells": [
+        "",
+        "",
+        "DD-100",
+        "현대큐리텔",
+        "120*104",
+        "120*90",
+        "HD0411, HDA111",
+        "2X",
+        "출시",
+        2001.12
+      ]
+    },
+    {
+      "row": 38,
+      "cells": [
+        "",
+        "General Midi",
+        "TDC-8887",
+        "노키아",
+        "128*128",
+        "128*112",
+        "NO0111, NO0211, NOA111, NOA211",
+        "2X",
+        "출시",
+        2002.02
+      ]
+    },
+    {
+      "row": 46,
+      "cells": [
+        "",
+        "",
+        "M210",
+        "한화",
+        "120*160",
+        "120*144",
+        "HH0411",
+        "2X",
+        "출시",
+        ""
+      ]
+    },
+    {
+      "row": 51,
+      "cells": [
+        "",
+        "General Midi",
+        "TWC1030",
+        "텔슨",
+        "120*96",
+        "",
+        "TS0111",
+        "2X",
+        "출시예정",
+        ""
+      ]
+    },
+    {
+      "row": 52,
+      "cells": [
+        "64KC",
+        "MA2",
+        "Apex(V710)",
+        "모토로라",
+        "128*160",
+        "128*145",
+        "MT0611",
+        "2X",
+        "출시",
+        2002.03
+      ]
+    },
+    {
+      "row": 59,
+      "cells": [
+        "",
+        "",
+        "Aone(V730)",
+        "모토로라",
+        "128*160",
+        "128*145",
+        "MT0711",
+        "2X",
+        "출시",
+        2002.01
+      ]
+    },
+    {
+      "row": 60,
+      "cells": [
+        "",
+        "General Midi",
+        "TDC-8587",
+        "노키아",
+        "128*160",
+        "128*131",
+        "NO0311",
+        "2X",
+        "출시",
+        2002.11
+      ]
+    },
+    {
+      "row": 98,
+      "cells": [
+        "",
+        "",
+        "CS-M330",
+        "한화",
+        "128*160",
+        "128*143",
+        "HH0511",
+        "2X",
+        "출시예정",
+        ""
+      ]
+    },
+    {
+      "row": 99,
+      "cells": [
+        "",
+        "",
+        "V733",
+        "모토로라",
+        "128*160",
+        "",
+        "MT1011",
+        "2X",
+        "출시예정",
+        ""
+      ]
+    },
+    {
+      "row": 100,
+      "cells": [
+        "",
+        "",
+        "V740(T.T)",
+        "모토로라",
+        "128*160",
+        "128*145",
+        "MT1111",
+        "2X",
+        "출시예정",
+        ""
+      ]
+    },
+    {
+      "row": 101,
+      "cells": [
+        "",
+        "",
+        "T750(Race Track)",
+        "모토로라",
+        "128*160",
+        "",
+        "MT1211",
+        "2X",
+        "출시예정",
+        ""
+      ]
+    },
+    {
+      "row": 102,
+      "cells": [
+        "",
+        "",
+        "DD-500",
+        "팬택큐리텔",
+        "128*160",
+        "",
+        "HD0511",
+        "2X",
+        "출시",
+        "2002.10"
+      ]
+    },
+    {
+      "row": 103,
+      "cells": [
+        "",
+        "",
+        "DD-600",
+        "팬택큐리텔",
+        "128*160",
+        "128*144",
+        "HD0611",
+        "2X",
+        "출시",
+        "2002.10"
+      ]
+    },
+    {
+      "row": 104,
+      "cells": [
+        "",
+        "",
+        "C-500",
+        "팬택큐리텔",
+        "128*143",
+        "128*128",
+        "HD0711",
+        "2X",
+        "출시",
+        "2002.10"
+      ]
+    },
+    {
+      "row": 105,
+      "cells": [
+        "",
+        "",
+        "DD-630",
+        "팬택큐리텔",
+        "128*160",
+        "128*144",
+        "HD0811",
+        "2X",
+        "출시",
+        2002.12
+      ]
+    },
+    {
+      "row": 106,
+      "cells": [
+        "",
+        "",
+        "DD-1100",
+        "팬택큐리텔",
+        "128*160",
+        "128*144",
+        "HD0911",
+        "2X",
+        "출시",
+        2002.12
+      ]
+    },
+    {
+      "row": 107,
+      "cells": [
+        "260K",
+        "MA3",
+        "SCP-A011(Wi-Top)",
+        "산 요",
+        "132*176",
+        "132*160",
+        "SY0111",
+        "2X",
+        "출시",
+        2002.12
+      ]
+    }
+  ],
+  "allSelectedLabCards": [
+    {
+      "category": "hw_p",
+      "slug": "cs-m210",
+      "capture": "https://web.archive.org/web/20040811210257/http://www.gnexclub.com/zone/htm/hw_p/cs-m210.htm",
+      "cdx_sha1_base32": "EYHSRZG7XD62PE3CKIY3JA3LWOJ6NJ6D",
+      "vm": "GVM2X",
+      "lcd": [
+        120,
+        160
+      ],
+      "vm_lcd_area": [
+        120,
+        144
+      ],
+      "lcd_class": 4,
+      "audio": "MA2",
+      "audio_type": 4,
+      "platform": "GVM",
+      "image_type": 12,
+      "compressed_image_type": 4,
+      "script_version": 2,
+      "download_protocol": "Sliding",
+      "verified_capture_url": "https://web.archive.org/web/20040811210257id_/http://www.gnexclub.com/zone/htm/hw_p/cs-m210.htm",
+      "read_capture_sha256": "187de67d12b2590134c4fa4989dc60dfa2cf1dace927c7aa12b0dd7b877ee1c6"
+    },
+    {
+      "category": "moto_p",
+      "slug": "ms100",
+      "capture": "https://web.archive.org/web/20040811213417/http://www.gnexclub.com/zone/htm/moto_p/ms100.htm",
+      "cdx_sha1_base32": "AVRF5YSJB63RHTSRJG6E3ALCOJREOOXR",
+      "vm": "GVM2X",
+      "lcd": [
+        128,
+        160
+      ],
+      "vm_lcd_area": [
+        128,
+        145
+      ],
+      "lcd_class": 4,
+      "audio": "MA3",
+      "platform": "WITOP",
+      "script_version": 2,
+      "download_protocol": "Sliding",
+      "get_hw_config": 36,
+      "verified_capture_url": "https://web.archive.org/web/20040811213417id_/http://www.gnexclub.com/zone/htm/moto_p/ms100.htm",
+      "read_capture_sha256": "955837cb9137060a95f0ed8d937aa38ffe32ec24f54ff8c624cf7550f08a3299"
+    },
+    {
+      "category": "moto_p",
+      "slug": "ms280",
+      "capture": "https://web.archive.org/web/20040811205526/http://www.gnexclub.com/zone/htm/moto_p/ms280.htm",
+      "cdx_sha1_base32": "GQIKSU7VEK7KWNZO7EMYF5LNPBLBDBYI"
+    },
+    {
+      "category": "moto_p",
+      "slug": "ms300",
+      "capture": "https://web.archive.org/web/20041214204829/http://www.gnexclub.com/zone/htm/moto_p/ms300.htm",
+      "cdx_sha1_base32": "DXIXUZ7KX7BJBFGY7SHYOHQKZX5T2NEE",
+      "vm": "GNEX",
+      "lcd": [
+        128,
+        160
+      ],
+      "vm_lcd_area": [
+        128,
+        145
+      ],
+      "lcd_class": 4,
+      "image_type": 5,
+      "compressed_image_type": 4,
+      "display_color_label": "260K Color",
+      "audio": "MA5",
+      "audio_backwards_compatibility": [
+        "MA3",
+        "MA2"
+      ],
+      "audio_type": 64,
+      "platform": "WIPI",
+      "verified_capture_url": "https://web.archive.org/web/20041214204829id_/http://www.gnexclub.com/zone/htm/moto_p/ms300.htm",
+      "read_capture_sha256": "cd3a920c6d6db875d878a6054b7cae2cb2aa8241c1936db99d72b3e91cdb2b7e"
+    },
+    {
+      "category": "moto_p",
+      "slug": "ms400",
+      "capture": "https://web.archive.org/web/20050214012411/http://www.gnexclub.com/zone/htm/moto_p/ms400.htm",
+      "cdx_sha1_base32": "FKMSDMLWSWMGVDRKVTDQJR5V35PILGZQ",
+      "vm": "GNEX GIGA",
+      "lcd": [
+        128,
+        160
+      ],
+      "vm_lcd_area": [
+        128,
+        145
+      ],
+      "lcd_class": 2,
+      "audio": "MA5",
+      "audio_type": 64,
+      "platform": "WIPI 1.2",
+      "image_type": 12,
+      "compressed_image_type": 8,
+      "verified_capture_url": "https://web.archive.org/web/20050214012411id_/http://www.gnexclub.com/zone/htm/moto_p/ms400.htm",
+      "read_capture_sha256": "45421ced08f485020cff07b280e85f3397b333983911af11d2ae4af2d53f6f66"
+    },
+    {
+      "category": "moto_p",
+      "slug": "startac2004",
+      "capture": "https://web.archive.org/web/20040811210129/http://www.gnexclub.com/zone/htm/moto_p/startac2004.htm",
+      "cdx_sha1_base32": "CBHO4XP6XMGCWRPXU3M6K6YOA7A4Q3MI"
+    },
+    {
+      "category": "pq_p",
+      "slug": "dd-600",
+      "capture": "https://web.archive.org/web/20040811210553/http://www.gnexclub.com/zone/htm/pq_p/dd-600.htm",
+      "cdx_sha1_base32": "DT73OAVHPWS4Z5TTHJ67ODPL65HW4G3P"
+    },
+    {
+      "category": "pq_p",
+      "slug": "dd-630",
+      "capture": "https://web.archive.org/web/20040811211000/http://www.gnexclub.com/zone/htm/pq_p/dd-630.htm",
+      "cdx_sha1_base32": "W3CV7JWICTNJ4GYATGEQTLWP6NHGZHP7"
+    },
+    {
+      "category": "pq_p",
+      "slug": "p1",
+      "capture": "https://web.archive.org/web/20041015175320/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+      "cdx_sha1_base32": "VHK5DRQUJXTVRRLGMCSPRXNPFTB6A2TW",
+      "vm": "GNEX",
+      "lcd": [
+        220,
+        176
+      ],
+      "vm_lcd_area": [
+        220,
+        160
+      ],
+      "lcd_class": 4,
+      "image_type": 12,
+      "compressed_image_type": 8,
+      "display_color_label": "65K Color",
+      "audio": "MA5",
+      "audio_backwards_compatibility": [
+        "MA3",
+        "MA2"
+      ],
+      "audio_type": 64,
+      "platform": "WIPI 1.2",
+      "verified_capture_url": "https://web.archive.org/web/20041015175320id_/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+      "read_capture_sha256": "d9f8d79028d27d340f91aaf58c7ff01ab0a7bf88c626b1e6946180b3d43158db"
+    },
+    {
+      "category": "pq_p",
+      "slug": "pg-s5000",
+      "capture": "https://web.archive.org/web/20040811211412/http://www.gnexclub.com/zone/htm/pq_p/pg-s5000.htm",
+      "cdx_sha1_base32": "O2IUQW4HM6ISXYVAIKII4RQZQM2EXVBH"
+    },
+    {
+      "category": "pq_p",
+      "slug": "ph-s3000v",
+      "capture": "https://web.archive.org/web/20050214012826/http://www.gnexclub.com/zone/htm/pq_p/ph-s3000v.htm",
+      "cdx_sha1_base32": "ZO6XWFMDSJAO7MTR63UPNGEQV3K56XS6"
+    },
+    {
+      "category": "pq_p",
+      "slug": "ph-s3500",
+      "capture": "https://web.archive.org/web/20041020004756/http://www.gnexclub.com/zone/htm/pq_p/ph-s3500.htm",
+      "cdx_sha1_base32": "52KXD3MPYDFJLOJSRSOYFTHIPRRY3HKV"
+    },
+    {
+      "category": "pq_p",
+      "slug": "ph-s5700",
+      "capture": "https://web.archive.org/web/20050214012047/http://www.gnexclub.com/zone/htm/pq_p/ph-s5700.htm",
+      "cdx_sha1_base32": "SX6L7GULOVRDZ47VDUQW7VIHNDNNXP2T"
+    },
+    {
+      "category": "pq_p",
+      "slug": "s2",
+      "capture": "https://web.archive.org/web/20040811211503/http://www.gnexclub.com/zone/htm/pq_p/s2.htm",
+      "cdx_sha1_base32": "ILLXVKKE5LXPJ2KRR6R65LFFOKOIB7SQ"
+    },
+    {
+      "category": "pq_p",
+      "slug": "s4",
+      "capture": "https://web.archive.org/web/20041015180810/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+      "cdx_sha1_base32": "XXKE5WZMW434FDH2BKXCDVV6FQWMCWUB",
+      "vm": "GVM4X",
+      "script_version": 2,
+      "download_protocol": "Sliding",
+      "lcd": [
+        240,
+        320
+      ],
+      "vm_lcd_area": [
+        240,
+        294
+      ],
+      "lcd_class": 8,
+      "image_type": 12,
+      "compressed_image_type": 8,
+      "display_color_label": "65K Color",
+      "audio": "MA5",
+      "audio_backwards_compatibility": [
+        "MA2",
+        "MA3"
+      ],
+      "audio_type": 64,
+      "platform": "WIPI 1.2",
+      "verified_capture_url": "https://web.archive.org/web/20041015180810id_/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+      "read_capture_sha256": "23713b727c4cbb464d1e1b2f62fe8f04e5600686f66fdd9ca03d5df846cfa35b"
+    },
+    {
+      "category": "vk_p",
+      "slug": "vk-100m",
+      "capture": "https://web.archive.org/web/20040811205953/http://www.gnexclub.com/zone/htm/vk_p/vk-100m.htm",
+      "cdx_sha1_base32": "7KZUYZX6CXPI3DS5GKX4Q7TRAFMGNMGP"
+    },
+    {
+      "category": "vk_p",
+      "slug": "vk-200c",
+      "capture": "https://web.archive.org/web/20040811210507/http://www.gnexclub.com/zone/htm/vk_p/vk-200c.htm",
+      "cdx_sha1_base32": "QVKZ6AHQRSM2GUFQRVDZRN7GXYSAZBWX",
+      "vm": "GNEX",
+      "vm_raw": "GN EX",
+      "lcd": [
+        176,
+        220
+      ],
+      "vm_lcd_area": [
+        176,
+        205
+      ],
+      "lcd_class": 8,
+      "audio": "MA5",
+      "audio_type": 64,
+      "platform": "WITOP",
+      "image_type": 12,
+      "compressed_image_type": 8,
+      "verified_capture_url": "https://web.archive.org/web/20040811210507id_/http://www.gnexclub.com/zone/htm/vk_p/vk-200c.htm",
+      "read_capture_sha256": "f4fea1e0c138c64ccd7da36f4cff1b48f6fd7c42a0b84a78f00bfb9e7764e7b8"
+    }
+  ],
+  "targetGroups": [
+    {
+      "targetGroup": "Hanwha CS-M210",
+      "guideProfiles": [
+        {
+          "page": 91,
+          "manufacturer": "Hanwha",
+          "modelLabelVerbatim": "M210",
+          "releaseDateVerbatim": "2002.",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: HH0411",
+          "physicalLcdVerbatim": "120*160",
+          "physicalLcd": [
+            120,
+            160
+          ],
+          "gvmAreaVerbatim": "120*144 :::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            120,
+            144
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "256 Color ::::::::::::::: IMAGETYPE: 12 (압축기능 이용시 4)",
+          "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 209,
+          "manufacturer": "한화정보통신",
+          "model": {
+            "cell": "B209",
+            "value": "CS-M210"
+          },
+          "carrier": {
+            "cell": "C209",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R209",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S209",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T209",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U209",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT209",
+            "value": "120"
+          },
+          "physicalHeight": {
+            "cell": "AU209",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV209",
+            "value": "120"
+          },
+          "applicationHeight": {
+            "cell": "AW209",
+            "value": "144"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 46,
+          "cells": [
+            "",
+            "",
+            "M210",
+            "한화",
+            "120*160",
+            "120*144",
+            "HH0411",
+            "2X",
+            "출시",
+            ""
+          ]
+        }
+      ],
+      "labCards": [
+        {
+          "category": "hw_p",
+          "slug": "cs-m210",
+          "capture": "https://web.archive.org/web/20040811210257/http://www.gnexclub.com/zone/htm/hw_p/cs-m210.htm",
+          "cdx_sha1_base32": "EYHSRZG7XD62PE3CKIY3JA3LWOJ6NJ6D",
+          "vm": "GVM2X",
+          "lcd": [
+            120,
+            160
+          ],
+          "vm_lcd_area": [
+            120,
+            144
+          ],
+          "lcd_class": 4,
+          "audio": "MA2",
+          "audio_type": 4,
+          "platform": "GVM",
+          "image_type": 12,
+          "compressed_image_type": 4,
+          "script_version": 2,
+          "download_protocol": "Sliding",
+          "verified_capture_url": "https://web.archive.org/web/20040811210257id_/http://www.gnexclub.com/zone/htm/hw_p/cs-m210.htm",
+          "read_capture_sha256": "187de67d12b2590134c4fa4989dc60dfa2cf1dace927c7aa12b0dd7b877ee1c6"
+        }
+      ],
+      "profileAssessment": "GVM2X/SCRIPTVER2, 120x144 independently in Sinjisoft guide and read lab card.",
+      "firmwareCoverage": "No exact-model firmware in inspected Hanhwa directory. NaTruca dump has unknown model and cannot substitute.",
+      "priorEvidenceFiles": [
+        "gnex-oem-card-evidence.json",
+        "gnex-other-oem-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Hanwha CS-M330",
+      "guideProfiles": [
+        {
+          "page": 90,
+          "manufacturer": "Hanwha",
+          "modelLabelVerbatim": "CS-M330",
+          "releaseDateVerbatim": "2002.",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: HH0511",
+          "physicalLcdVerbatim": "128*143 :::::::::::::::: 문자 : 16*07",
+          "physicalLcd": [
+            128,
+            143
+          ],
+          "gvmAreaVerbatim": "128*143 :::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            128,
+            143
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "4K Color ::::::::::::::: IMAGETYPE: 12 (압축기능 이용시 8)",
+          "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 210,
+          "manufacturer": "한화정보통신",
+          "model": {
+            "cell": "B210",
+            "value": "CS-M330"
+          },
+          "carrier": {
+            "cell": "C210",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R210",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S210",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T210",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U210",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT210",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU210",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV210",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW210",
+            "value": "143"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 98,
+          "cells": [
+            "",
+            "",
+            "CS-M330",
+            "한화",
+            "128*160",
+            "128*143",
+            "HH0511",
+            "2X",
+            "출시예정",
+            ""
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "GVM2X/SCRIPTVER2, 128x143. December roster still says planned (출시예정); do not infer release date.",
+      "firmwareCoverage": "No exact firmware; CS-M330 tone collection is audio, not ROM.",
+      "priorEvidenceFiles": [
+        "curitel-c500-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Hanwha S-701 / S702 / S-250 / December S-700",
+      "guideProfiles": [
+        {
+          "page": 92,
+          "manufacturer": "Hanwha",
+          "modelLabelVerbatim": "S-701, S702",
+          "releaseDateVerbatim": "2001.08",
+          "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1, Download Protocol : Magic",
+          "vm": "GVM1X",
+          "scriptVersion": 1,
+          "downloadProtocol": "Magic",
+          "userAgentVerbatim": "DDEEGG: HH0311(701), HHA111(702)",
+          "physicalLcdVerbatim": "128*128",
+          "physicalLcd": [
+            128,
+            128
+          ],
+          "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+          "gvmArea": [
+            128,
+            112
+          ],
+          "lcdClass": 2,
+          "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+          "audioTypeVerbatim": "Buzzer ::::::::::::::::::: AUDIOTYPE: 1",
+          "vocTypeVerbatim": "S-701 : 1 (SKT) :::::::::::::::::: S-702 : 2 (STI)",
+          "sourceId": "gvm-handset-guide-2002"
+        },
+        {
+          "page": 93,
+          "manufacturer": "Hanwha",
+          "modelLabelVerbatim": "S-250",
+          "releaseDateVerbatim": "2001.05",
+          "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1, Download Protocol : Trivial",
+          "vm": "GVM1X",
+          "scriptVersion": 1,
+          "downloadProtocol": "Trivial",
+          "userAgentVerbatim": "DDEEGG: HH0212, HHA212",
+          "physicalLcdVerbatim": "127*96",
+          "physicalLcd": [
+            127,
+            96
+          ],
+          "gvmAreaVerbatim": "127*80 :::::::::::::::::: LCDCLASS : 2",
+          "gvmArea": [
+            127,
+            80
+          ],
+          "lcdClass": 2,
+          "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+          "audioTypeVerbatim": "MA1 :::::::::::::::::::::: AUDIOTYPE: 2",
+          "vocTypeVerbatim": "HH0212 : 1 (SKT) :::::::::::::::::: HHA212 : 2 (STI)",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 207,
+          "manufacturer": "한화정보통신",
+          "model": {
+            "cell": "B207",
+            "value": "S-250"
+          },
+          "carrier": {
+            "cell": "C207",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R207",
+            "value": "X (O) (O)"
+          },
+          "gvmVersion": {
+            "cell": "S207",
+            "value": "X (1) (1)"
+          },
+          "skvmSupported": {
+            "cell": "T207",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U207",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT207",
+            "value": "127"
+          },
+          "physicalHeight": {
+            "cell": "AU207",
+            "value": "096"
+          },
+          "applicationWidth": {
+            "cell": "AV207",
+            "value": "000 (127)"
+          },
+          "applicationHeight": {
+            "cell": "AW207",
+            "value": "000 (064)"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 208,
+          "manufacturer": "한화정보통신",
+          "model": {
+            "cell": "B208",
+            "value": "S-701"
+          },
+          "carrier": {
+            "cell": "C208",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R208",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S208",
+            "value": "1"
+          },
+          "skvmSupported": {
+            "cell": "T208",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U208",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT208",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU208",
+            "value": "128"
+          },
+          "applicationWidth": {
+            "cell": "AV208",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW208",
+            "value": "112"
+          }
+        },
+        {
+          "sheet": "STI",
+          "row": 46,
+          "manufacturer": "한화",
+          "model": {
+            "cell": "C46",
+            "value": "S-702"
+          },
+          "carrier": {
+            "cell": "D46",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "T46",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "U46",
+            "value": "1"
+          },
+          "skvmSupported": {
+            "cell": "V46",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "W46",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AV46",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AW46",
+            "value": "128"
+          },
+          "applicationWidth": {
+            "cell": "AX46",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AY46",
+            "value": "112"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 18,
+          "cells": [
+            "",
+            "",
+            "S-700",
+            "한화",
+            "128*128",
+            "128*112",
+            "HH0311, HHA111",
+            "1X",
+            "출시",
+            2001.08
+          ]
+        },
+        {
+          "row": 25,
+          "cells": [
+            "",
+            "",
+            "S-250",
+            "한화",
+            "127*96",
+            "127*80",
+            "HH0212, HHA212",
+            "1X",
+            "출시",
+            2001.05
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "Guide has S-701,S702 and S-250; December writes S-700. Retain spellings, no assumed alias. S-250 workbook cell is mixed X (O) (O).",
+      "firmwareCoverage": "No exact-model firmware in the bounded Hanhwa listing.",
+      "priorEvidenceFiles": [
+        "curitel-c500-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Nokia TDC-8887 / TDC-8587 / 8587 WI-PI variant",
+      "guideProfiles": [
+        {
+          "page": 81,
+          "manufacturer": "Nokia",
+          "modelLabelVerbatim": "TDC-8887",
+          "releaseDateVerbatim": "2002.02",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Magic",
+          "userAgentVerbatim": "DDEEGG: NO0111, NO0211, NOA211",
+          "physicalLcdVerbatim": "128*128",
+          "physicalLcd": [
+            128,
+            128
+          ],
+          "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+          "gvmArea": [
+            128,
+            112
+          ],
+          "lcdClass": 2,
+          "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+          "audioTypeVerbatim": "MIDI :::::::::::::::::::::: AUDIOTYPE: 16",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        },
+        {
+          "page": 82,
+          "manufacturer": "Nokia",
+          "modelLabelVerbatim": "TDC-8587",
+          "releaseDateVerbatim": "2002.",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Magic",
+          "userAgentVerbatim": "DDEEGG: NO0311",
+          "physicalLcdVerbatim": "128*160 :::::::::::::::: 문자 : 20*10",
+          "physicalLcd": [
+            128,
+            160
+          ],
+          "gvmAreaVerbatim": "128*132 :::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            128,
+            132
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "64KColor ::::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+          "audioTypeVerbatim": "MIDI :::::::::::::::::::::: AUDIOTYPE: 16",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 79,
+          "manufacturer": "NOKIA",
+          "model": {
+            "cell": "B79",
+            "value": 8887.0
+          },
+          "carrier": {
+            "cell": "C79",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R79",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S79",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T79",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U79",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT79",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU79",
+            "value": "112"
+          },
+          "applicationWidth": {
+            "cell": "AV79",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW79",
+            "value": "096"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 80,
+          "manufacturer": "NOKIA",
+          "model": {
+            "cell": "B80",
+            "value": "8587"
+          },
+          "carrier": {
+            "cell": "C80",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R80",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S80",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T80",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U80",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT80",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU80",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV80",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW80",
+            "value": "131"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 81,
+          "manufacturer": "NOKIA",
+          "model": {
+            "cell": "B81",
+            "value": "8587 WI-PI"
+          },
+          "carrier": {
+            "cell": "C81",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R81",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S81",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T81",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U81",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT81",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU81",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV81",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW81",
+            "value": "131"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 38,
+          "cells": [
+            "",
+            "General Midi",
+            "TDC-8887",
+            "노키아",
+            "128*128",
+            "128*112",
+            "NO0111, NO0211, NOA111, NOA211",
+            "2X",
+            "출시",
+            2002.02
+          ]
+        },
+        {
+          "row": 60,
+          "cells": [
+            "",
+            "General Midi",
+            "TDC-8587",
+            "노키아",
+            "128*160",
+            "128*131",
+            "NO0311",
+            "2X",
+            "출시",
+            2002.11
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "Guide GVM2X: 8887 128x112; 8587 128x132. December gives 8587 128x131: unresolved one-pixel conflict.",
+      "firmwareCoverage": "8887 manual recovered with Snake II and separate n.TOP download menu. No exact 8587/8887 memory image in bounded Nokia/Telson lists; Telson PS3000 is not evidence of Nokia OEM identity.",
+      "priorEvidenceFiles": [
+        "sanyo-nokia-korean-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Motorola V.67 / V.62 / Prime800(TP226) / V710 / V730",
+      "guideProfiles": [
+        {
+          "page": 84,
+          "manufacturer": "Motorola",
+          "modelLabelVerbatim": "V730(Aone)",
+          "releaseDateVerbatim": "2002.01",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: MT0711",
+          "physicalLcdVerbatim": "128*160 ::::::::::::::: 문자 : 20*09",
+          "physicalLcd": [
+            128,
+            160
+          ],
+          "gvmAreaVerbatim": "128*145 ::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            128,
+            145
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "64KColor ::::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+          "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        },
+        {
+          "page": 85,
+          "manufacturer": "Motorola",
+          "modelLabelVerbatim": "V710(Apex)",
+          "releaseDateVerbatim": "2002.03",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: MT0611",
+          "physicalLcdVerbatim": "128*160",
+          "physicalLcd": [
+            128,
+            160
+          ],
+          "gvmAreaVerbatim": "128*145 ::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            128,
+            145
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "64KColor ::::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+          "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        },
+        {
+          "page": 86,
+          "manufacturer": "Motorola",
+          "modelLabelVerbatim": "V. 62 (아폴로2)",
+          "releaseDateVerbatim": "2001.09",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: MT0511",
+          "physicalLcdVerbatim": "128*128",
+          "physicalLcd": [
+            128,
+            128
+          ],
+          "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+          "gvmArea": [
+            128,
+            112
+          ],
+          "lcdClass": 2,
+          "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+          "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        },
+        {
+          "page": 87,
+          "manufacturer": "Motorola",
+          "modelLabelVerbatim": "V. 67 (암스트롱)",
+          "releaseDateVerbatim": "2001.05",
+          "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1, Download Protocol : Trivial",
+          "vm": "GVM1X",
+          "scriptVersion": 1,
+          "downloadProtocol": "Trivial",
+          "userAgentVerbatim": "DDEEGG: MT0311, MTA111",
+          "physicalLcdVerbatim": "128*128",
+          "physicalLcd": [
+            128,
+            128
+          ],
+          "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+          "gvmArea": [
+            128,
+            112
+          ],
+          "lcdClass": 2,
+          "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+          "audioTypeVerbatim": "MA1 :::::::::::::::::::::: AUDIOTYPE: 2",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        },
+        {
+          "page": 88,
+          "manufacturer": "Motorola",
+          "modelLabelVerbatim": "Prime800(TP226)",
+          "releaseDateVerbatim": "2001.08",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Magic",
+          "userAgentVerbatim": "DDEEGG: MT0411",
+          "physicalLcdVerbatim": "120*160",
+          "physicalLcd": [
+            120,
+            160
+          ],
+          "gvmAreaVerbatim": "120*144 :::::::::::::::: LCDCLASS : 1 (LCDCLASS 예전 기준 적용됨)",
+          "gvmArea": [
+            120,
+            144
+          ],
+          "lcdClass": 1,
+          "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+          "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 122,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B122",
+            "value": "V.67"
+          },
+          "carrier": {
+            "cell": "C122",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R122",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S122",
+            "value": "1"
+          },
+          "skvmSupported": {
+            "cell": "T122",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U122",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT122",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU122",
+            "value": "128"
+          },
+          "applicationWidth": {
+            "cell": "AV122",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW122",
+            "value": "096"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 123,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B123",
+            "value": "PRIME800      (TP226)  "
+          },
+          "carrier": {
+            "cell": "C123",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R123",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S123",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T123",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U123",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT123",
+            "value": "120"
+          },
+          "physicalHeight": {
+            "cell": "AU123",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV123",
+            "value": "120"
+          },
+          "applicationHeight": {
+            "cell": "AW123",
+            "value": "128"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 124,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B124",
+            "value": "V.62      (APOLLO 2)"
+          },
+          "carrier": {
+            "cell": "C124",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R124",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S124",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T124",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U124",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT124",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU124",
+            "value": "128"
+          },
+          "applicationWidth": {
+            "cell": "AV124",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW124",
+            "value": "096"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 126,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B126",
+            "value": "Apex (V710)"
+          },
+          "carrier": {
+            "cell": "C126",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R126",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S126",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T126",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U126",
+            "value": "1.1"
+          },
+          "physicalWidth": {
+            "cell": "AT126",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU126",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV126",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW126",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 127,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B127",
+            "value": "Aone (V730)"
+          },
+          "carrier": {
+            "cell": "C127",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R127",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S127",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T127",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U127",
+            "value": "1.1"
+          },
+          "physicalWidth": {
+            "cell": "AT127",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU127",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV127",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW127",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 128,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B128",
+            "value": "Aone (V730)\nWI-TOP"
+          },
+          "carrier": {
+            "cell": "C128",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R128",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S128",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T128",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U128",
+            "value": "1.1"
+          },
+          "physicalWidth": {
+            "cell": "AT128",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU128",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV128",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW128",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 129,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B129",
+            "value": "Apex (V710)\nUpgrade"
+          },
+          "carrier": {
+            "cell": "C129",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R129",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S129",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T129",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U129",
+            "value": "1.1"
+          },
+          "physicalWidth": {
+            "cell": "AT129",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU129",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV129",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW129",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "STI",
+          "row": 50,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "C50",
+            "value": "V.67 (STI)"
+          },
+          "carrier": {
+            "cell": "D50",
+            "value": "STI"
+          },
+          "gvmSupported": {
+            "cell": "T50",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "U50",
+            "value": "1"
+          },
+          "skvmSupported": {
+            "cell": "V50",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "W50",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AV50",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AW50",
+            "value": "128"
+          },
+          "applicationWidth": {
+            "cell": "AX50",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AY50",
+            "value": "96"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 26,
+          "cells": [
+            "",
+            "",
+            "V.67(암스트롱)",
+            "모토로라",
+            "128*128",
+            "128*128",
+            "MT0311, MTA111",
+            "1X",
+            "출시",
+            2001.05
+          ]
+        },
+        {
+          "row": 29,
+          "cells": [
+            "",
+            "",
+            "Prime800(TP226)",
+            "모토로라",
+            "120*160",
+            "120*144",
+            "MT0411",
+            "2X",
+            "출시",
+            2001.08
+          ]
+        },
+        {
+          "row": 30,
+          "cells": [
+            "",
+            "",
+            "V.62(아폴로2)",
+            "모토로라",
+            "128*128",
+            "128*112",
+            "MT0511",
+            "2X",
+            "출시",
+            2001.09
+          ]
+        },
+        {
+          "row": 52,
+          "cells": [
+            "64KC",
+            "MA2",
+            "Apex(V710)",
+            "모토로라",
+            "128*160",
+            "128*145",
+            "MT0611",
+            "2X",
+            "출시",
+            2002.03
+          ]
+        },
+        {
+          "row": 59,
+          "cells": [
+            "",
+            "",
+            "Aone(V730)",
+            "모토로라",
+            "128*160",
+            "128*145",
+            "MT0711",
+            "2X",
+            "출시",
+            2002.01
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "Original guide supports named GVM1X/2X configurations; keep V710 Upgrade and V730 WI-TOP rows distinct. December V.67 area differs from guide.",
+      "firmwareCoverage": "No exact-model firmware among preserved Motorola inventory; MS500W image cannot establish these older builds.",
+      "priorEvidenceFiles": [
+        "gnex-device-firmware-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Motorola V733 / V740 / T750 / MS100 / MS150",
+      "guideProfiles": [],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 130,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B130",
+            "value": "V733"
+          },
+          "carrier": {
+            "cell": "C130",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R130",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S130",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T130",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U130",
+            "value": "1.1"
+          },
+          "physicalWidth": {
+            "cell": "AT130",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU130",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV130",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW130",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 131,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B131",
+            "value": "V740 \n(T.T)"
+          },
+          "carrier": {
+            "cell": "C131",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R131",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S131",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T131",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U131",
+            "value": "1.1"
+          },
+          "physicalWidth": {
+            "cell": "AT131",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU131",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV131",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW131",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 132,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B132",
+            "value": "T750\n(Race Track)"
+          },
+          "carrier": {
+            "cell": "C132",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R132",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S132",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T132",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U132",
+            "value": "1.2"
+          },
+          "physicalWidth": {
+            "cell": "AT132",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU132",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV132",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW132",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 133,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B133",
+            "value": "MS100\n(V740 camera)"
+          },
+          "carrier": {
+            "cell": "C133",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R133",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S133",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T133",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U133",
+            "value": "1.2"
+          },
+          "physicalWidth": {
+            "cell": "AT133",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU133",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV133",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW133",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 134,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B134",
+            "value": "MS150\n(Aria)"
+          },
+          "carrier": {
+            "cell": "C134",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R134",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S134",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T134",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U134",
+            "value": "1.2"
+          },
+          "physicalWidth": {
+            "cell": "AT134",
+            "value": "160"
+          },
+          "physicalHeight": {
+            "cell": "AU134",
+            "value": "128"
+          },
+          "applicationWidth": {
+            "cell": "AV134",
+            "value": "160"
+          },
+          "applicationHeight": {
+            "cell": "AW134",
+            "value": "128"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 99,
+          "cells": [
+            "",
+            "",
+            "V733",
+            "모토로라",
+            "128*160",
+            "",
+            "MT1011",
+            "2X",
+            "출시예정",
+            ""
+          ]
+        },
+        {
+          "row": 100,
+          "cells": [
+            "",
+            "",
+            "V740(T.T)",
+            "모토로라",
+            "128*160",
+            "128*145",
+            "MT1111",
+            "2X",
+            "출시예정",
+            ""
+          ]
+        },
+        {
+          "row": 101,
+          "cells": [
+            "",
+            "",
+            "T750(Race Track)",
+            "모토로라",
+            "128*160",
+            "",
+            "MT1211",
+            "2X",
+            "출시예정",
+            ""
+          ]
+        }
+      ],
+      "labCards": [
+        {
+          "category": "moto_p",
+          "slug": "ms100",
+          "capture": "https://web.archive.org/web/20040811213417/http://www.gnexclub.com/zone/htm/moto_p/ms100.htm",
+          "cdx_sha1_base32": "AVRF5YSJB63RHTSRJG6E3ALCOJREOOXR",
+          "vm": "GVM2X",
+          "lcd": [
+            128,
+            160
+          ],
+          "vm_lcd_area": [
+            128,
+            145
+          ],
+          "lcd_class": 4,
+          "audio": "MA3",
+          "platform": "WITOP",
+          "script_version": 2,
+          "download_protocol": "Sliding",
+          "get_hw_config": 36,
+          "verified_capture_url": "https://web.archive.org/web/20040811213417id_/http://www.gnexclub.com/zone/htm/moto_p/ms100.htm",
+          "read_capture_sha256": "955837cb9137060a95f0ed8d937aa38ffe32ec24f54ff8c624cf7550f08a3299"
+        }
+      ],
+      "profileAssessment": "2003 XLS GVM2 rows; original MS100 card GVM2X/SCRIPTVER2, 128x145. December V733/V740/T750 marked planned.",
+      "firmwareCoverage": "No exact memory binaries in the bounded Motorola inventory.",
+      "priorEvidenceFiles": [
+        "gnex-oem-card-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Motorola Aurora/MS280, MS170/MS200, MS280a, MS250, MS230",
+      "guideProfiles": [],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 136,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B136",
+            "value": "MS300(Aurora)\n→ MS280\n(Photo Mail)"
+          },
+          "carrier": {
+            "cell": "C136",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R136",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S136",
+            "value": "3.0"
+          },
+          "skvmSupported": {
+            "cell": "T136",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U136",
+            "value": 1.3
+          },
+          "physicalWidth": {
+            "cell": "AT136",
+            "value": 176.0
+          },
+          "physicalHeight": {
+            "cell": "AU136",
+            "value": "220"
+          },
+          "applicationWidth": {
+            "cell": "AV136",
+            "value": 176.0
+          },
+          "applicationHeight": {
+            "cell": "AW136",
+            "value": 202.0
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 137,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B137",
+            "value": "MS170(Small Aria) → MS200 "
+          },
+          "carrier": {
+            "cell": "C137",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R137",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S137",
+            "value": "3.0"
+          },
+          "skvmSupported": {
+            "cell": "T137",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U137",
+            "value": "1.2"
+          },
+          "physicalWidth": {
+            "cell": "AT137",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU137",
+            "value": 144.0
+          },
+          "applicationWidth": {
+            "cell": "AV137",
+            "value": 128.0
+          },
+          "applicationHeight": {
+            "cell": "AW137",
+            "value": "129"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 138,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B138",
+            "value": "MS280a\n(MMS)"
+          },
+          "carrier": {
+            "cell": "C138",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R138",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S138",
+            "value": "3.0"
+          },
+          "skvmSupported": {
+            "cell": "T138",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U138",
+            "value": 1.3
+          },
+          "physicalWidth": {
+            "cell": "AT138",
+            "value": 176.0
+          },
+          "physicalHeight": {
+            "cell": "AU138",
+            "value": 220.0
+          },
+          "applicationWidth": {
+            "cell": "AV138",
+            "value": 176.0
+          },
+          "applicationHeight": {
+            "cell": "AW138",
+            "value": 202.0
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 139,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B139",
+            "value": "MS250 (RaceTrackⅡ)"
+          },
+          "carrier": {
+            "cell": "C139",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R139",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S139",
+            "value": "3.0"
+          },
+          "skvmSupported": {
+            "cell": "T139",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U139",
+            "value": "1.3"
+          },
+          "physicalWidth": {
+            "cell": "AT139",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU139",
+            "value": 160.0
+          },
+          "applicationWidth": {
+            "cell": "AV139",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW139",
+            "value": "145"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 140,
+          "manufacturer": "모토로라",
+          "model": {
+            "cell": "B140",
+            "value": "MS230 (RaceTrackⅡ)"
+          },
+          "carrier": {
+            "cell": "C140",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R140",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S140",
+            "value": "1.0"
+          },
+          "skvmSupported": {
+            "cell": "T140",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U140",
+            "value": "1.2"
+          },
+          "physicalWidth": {
+            "cell": "AT140",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU140",
+            "value": "144"
+          },
+          "applicationWidth": {
+            "cell": "AV140",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW140",
+            "value": "129"
+          }
+        }
+      ],
+      "december2002Rows": [],
+      "labCards": [
+        {
+          "category": "moto_p",
+          "slug": "ms280",
+          "capture": "https://web.archive.org/web/20040811205526/http://www.gnexclub.com/zone/htm/moto_p/ms280.htm",
+          "cdx_sha1_base32": "GQIKSU7VEK7KWNZO7EMYF5LNPBLBDBYI"
+        }
+      ],
+      "profileAssessment": "2003 worksheet explicitly stores provisional-name arrows: Aurora MS300 -> MS280, Small Aria MS170 -> MS200. Do not merge this MS300 label with the later read MS300 GNEX card. MS230 stores 1.0, other selected rows 3.0.",
+      "firmwareCoverage": "No exact memory binary. ms280 lab-card path exists but payload profile remains unread.",
+      "priorEvidenceFiles": [
+        "gnex-oem-card-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Motorola later MS300 / MS400 / MS500W",
+      "guideProfiles": [],
+      "october2003Rows": [],
+      "december2002Rows": [],
+      "labCards": [
+        {
+          "category": "moto_p",
+          "slug": "ms300",
+          "capture": "https://web.archive.org/web/20041214204829/http://www.gnexclub.com/zone/htm/moto_p/ms300.htm",
+          "cdx_sha1_base32": "DXIXUZ7KX7BJBFGY7SHYOHQKZX5T2NEE",
+          "vm": "GNEX",
+          "lcd": [
+            128,
+            160
+          ],
+          "vm_lcd_area": [
+            128,
+            145
+          ],
+          "lcd_class": 4,
+          "image_type": 5,
+          "compressed_image_type": 4,
+          "display_color_label": "260K Color",
+          "audio": "MA5",
+          "audio_backwards_compatibility": [
+            "MA3",
+            "MA2"
+          ],
+          "audio_type": 64,
+          "platform": "WIPI",
+          "verified_capture_url": "https://web.archive.org/web/20041214204829id_/http://www.gnexclub.com/zone/htm/moto_p/ms300.htm",
+          "read_capture_sha256": "cd3a920c6d6db875d878a6054b7cae2cb2aa8241c1936db99d72b3e91cdb2b7e"
+        },
+        {
+          "category": "moto_p",
+          "slug": "ms400",
+          "capture": "https://web.archive.org/web/20050214012411/http://www.gnexclub.com/zone/htm/moto_p/ms400.htm",
+          "cdx_sha1_base32": "FKMSDMLWSWMGVDRKVTDQJR5V35PILGZQ",
+          "vm": "GNEX GIGA",
+          "lcd": [
+            128,
+            160
+          ],
+          "vm_lcd_area": [
+            128,
+            145
+          ],
+          "lcd_class": 2,
+          "audio": "MA5",
+          "audio_type": 64,
+          "platform": "WIPI 1.2",
+          "image_type": 12,
+          "compressed_image_type": 8,
+          "verified_capture_url": "https://web.archive.org/web/20050214012411id_/http://www.gnexclub.com/zone/htm/moto_p/ms400.htm",
+          "read_capture_sha256": "45421ced08f485020cff07b280e85f3397b333983911af11d2ae4af2d53f6f66"
+        }
+      ],
+      "profileAssessment": "Read MS300 GNEX and MS400 GNEX GIGA cards; independent original firmware evidence exists only for MS500W in this set.",
+      "firmwareCoverage": "MS500W inspected, GNEX MIME present but no valid SGS recovered. MS300/MS400 native game photographs do not prove SGS format.",
+      "priorEvidenceFiles": [
+        "gnex-oem-card-evidence.json",
+        "gnex-device-firmware-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Curitel DD-100 / DD-101",
+      "guideProfiles": [
+        {
+          "page": 97,
+          "manufacturer": "Pantech/Curitel",
+          "modelLabelVerbatim": "DD-100",
+          "releaseDateVerbatim": "2001.12",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Magic",
+          "userAgentVerbatim": "DDEEGG: HD0411, HDA111",
+          "physicalLcdVerbatim": "120*104",
+          "physicalLcd": [
+            120,
+            104
+          ],
+          "gvmAreaVerbatim": "120*90 :::::::::::::::::: LCDCLASS : 2",
+          "gvmArea": [
+            120,
+            90
+          ],
+          "lcdClass": 2,
+          "imageTypeVerbatim": "4-Gray ::::::::::::::::::: IMAGETYPE: 2",
+          "audioTypeVerbatim": "MA2 ::::::::::::::::::::::: AUDIOTYPE: 4",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 214,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B214",
+            "value": "DD-101"
+          },
+          "carrier": {
+            "cell": "C214",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R214",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S214",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T214",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U214",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT214",
+            "value": "120"
+          },
+          "physicalHeight": {
+            "cell": "AU214",
+            "value": "104"
+          },
+          "applicationWidth": {
+            "cell": "AV214",
+            "value": "120"
+          },
+          "applicationHeight": {
+            "cell": "AW214",
+            "value": "096"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 33,
+          "cells": [
+            "",
+            "",
+            "DD-100",
+            "현대큐리텔",
+            "120*104",
+            "120*90",
+            "HD0411, HDA111",
+            "2X",
+            "출시",
+            2001.12
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "Guide DD-100 GVM2X120x90; workbook DD-101 GVM2. Labels remain separate without independent alias proof.",
+      "firmwareCoverage": "No exact firmware in bounded Curitel listings.",
+      "priorEvidenceFiles": [
+        "curitel-c500-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Curitel HBC-R402 / HGC-R402",
+      "guideProfiles": [
+        {
+          "page": 99,
+          "manufacturer": "Pantech/Curitel",
+          "modelLabelVerbatim": "HBC-R402",
+          "releaseDateVerbatim": "2001.06",
+          "vmVersionVerbatim": "GVM1X :::::::::::::::::: SCRIPTVER : 1 , Download Protocol : Trivial",
+          "vm": "GVM1X",
+          "scriptVersion": 1,
+          "downloadProtocol": "Trivial",
+          "userAgentVerbatim": "DDEEGG: HD0211",
+          "physicalLcdVerbatim": "128*96",
+          "physicalLcd": [
+            128,
+            96
+          ],
+          "gvmAreaVerbatim": "128*80 :::::::::::::::::: LCDCLASS : 2",
+          "gvmArea": [
+            128,
+            80
+          ],
+          "lcdClass": 2,
+          "imageTypeVerbatim": "BW ::::::::::::::::::::::: IMAGETYPE: 1",
+          "audioTypeVerbatim": "Buzzer ::::::::::::::::::: AUDIOTYPE: 1",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 213,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B213",
+            "value": "HGC-R402"
+          },
+          "carrier": {
+            "cell": "C213",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R213",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S213",
+            "value": "1"
+          },
+          "skvmSupported": {
+            "cell": "T213",
+            "value": "X"
+          },
+          "skvmVersion": {
+            "cell": "U213",
+            "value": "X"
+          },
+          "physicalWidth": {
+            "cell": "AT213",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU213",
+            "value": "096"
+          },
+          "applicationWidth": {
+            "cell": "AV213",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW213",
+            "value": "064"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 4,
+          "cells": [
+            "BW",
+            "Buzzer",
+            "HBC-R402",
+            "현대큐리텔",
+            "128*96",
+            "128*80",
+            "HD0211",
+            "1X",
+            "출시",
+            2001.06
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "Guide and December HBC-R402; October workbook HGC-R402. Do not silently normalize the spelling.",
+      "firmwareCoverage": "No exact firmware in bounded Curitel/Hyundai listings.",
+      "priorEvidenceFiles": [
+        "curitel-c500-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Curitel DD-500 / DD-600 / DD-630 / DD-1100",
+      "guideProfiles": [
+        {
+          "page": 95,
+          "manufacturer": "Pantech/Curitel",
+          "modelLabelVerbatim": "DD-600",
+          "releaseDateVerbatim": "2002. 10.",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: HD0611",
+          "physicalLcdVerbatim": "128*160 :::::::::::::::: 문자 : 20*10",
+          "physicalLcd": [
+            128,
+            160
+          ],
+          "gvmAreaVerbatim": "128*? :::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            128,
+            null
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "64K Color :::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+          "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        },
+        {
+          "page": 96,
+          "manufacturer": "Pantech/Curitel",
+          "modelLabelVerbatim": "DD-500",
+          "releaseDateVerbatim": "2002. 10.",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: HD0511",
+          "physicalLcdVerbatim": "128*160 :::::::::::::::: 문자 : 20*10",
+          "physicalLcd": [
+            128,
+            160
+          ],
+          "gvmAreaVerbatim": "128*? :::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            128,
+            null
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "64K Color :::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+          "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 215,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B215",
+            "value": "DD-500"
+          },
+          "carrier": {
+            "cell": "C215",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R215",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S215",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T215",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U215",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT215",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU215",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV215",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW215",
+            "value": "144"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 216,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B216",
+            "value": "DD-600"
+          },
+          "carrier": {
+            "cell": "C216",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R216",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S216",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T216",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U216",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT216",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU216",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV216",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW216",
+            "value": "144"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 218,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B218",
+            "value": "DD-630"
+          },
+          "carrier": {
+            "cell": "C218",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R218",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S218",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T218",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U218",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT218",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU218",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV218",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW218",
+            "value": "144"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 219,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B219",
+            "value": "DD-1100\n(PS-E100)"
+          },
+          "carrier": {
+            "cell": "C219",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R219",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S219",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T219",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U219",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT219",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU219",
+            "value": "160"
+          },
+          "applicationWidth": {
+            "cell": "AV219",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW219",
+            "value": "144"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 102,
+          "cells": [
+            "",
+            "",
+            "DD-500",
+            "팬택큐리텔",
+            "128*160",
+            "",
+            "HD0511",
+            "2X",
+            "출시",
+            "2002.10"
+          ]
+        },
+        {
+          "row": 103,
+          "cells": [
+            "",
+            "",
+            "DD-600",
+            "팬택큐리텔",
+            "128*160",
+            "128*144",
+            "HD0611",
+            "2X",
+            "출시",
+            "2002.10"
+          ]
+        },
+        {
+          "row": 105,
+          "cells": [
+            "",
+            "",
+            "DD-630",
+            "팬택큐리텔",
+            "128*160",
+            "128*144",
+            "HD0811",
+            "2X",
+            "출시",
+            2002.12
+          ]
+        },
+        {
+          "row": 106,
+          "cells": [
+            "",
+            "",
+            "DD-1100",
+            "팬택큐리텔",
+            "128*160",
+            "128*144",
+            "HD0911",
+            "2X",
+            "출시",
+            2002.12
+          ]
+        }
+      ],
+      "labCards": [
+        {
+          "category": "pq_p",
+          "slug": "dd-600",
+          "capture": "https://web.archive.org/web/20040811210553/http://www.gnexclub.com/zone/htm/pq_p/dd-600.htm",
+          "cdx_sha1_base32": "DT73OAVHPWS4Z5TTHJ67ODPL65HW4G3P"
+        },
+        {
+          "category": "pq_p",
+          "slug": "dd-630",
+          "capture": "https://web.archive.org/web/20040811211000/http://www.gnexclub.com/zone/htm/pq_p/dd-630.htm",
+          "cdx_sha1_base32": "W3CV7JWICTNJ4GYATGEQTLWP6NHGZHP7"
+        }
+      ],
+      "profileAssessment": "Guide DD500/600 missing numeric viewport height; December supplies DD600/DD630128x144. XLS names DD-1100(PS-E100), kept verbatim.",
+      "firmwareCoverage": "Original DD600/DD630 manuals already saved; no exact firmware. Lab card paths archived but profiles unread.",
+      "priorEvidenceFiles": [
+        "curitel-c500-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Curitel C-500",
+      "guideProfiles": [
+        {
+          "page": 98,
+          "manufacturer": "Pantech/Curitel",
+          "modelLabelVerbatim": "C-500",
+          "releaseDateVerbatim": "2002. 10.",
+          "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Sliding",
+          "vm": "GVM2X",
+          "scriptVersion": 2,
+          "downloadProtocol": "Sliding",
+          "userAgentVerbatim": "DDEEGG: HD0711",
+          "physicalLcdVerbatim": "128*143 :::::::::::::::: 문자 : 21*07",
+          "physicalLcd": [
+            128,
+            143
+          ],
+          "gvmAreaVerbatim": "128*? :::::::::::::::: LCDCLASS : 4",
+          "gvmArea": [
+            128,
+            null
+          ],
+          "lcdClass": 4,
+          "imageTypeVerbatim": "64K Color :::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+          "audioTypeVerbatim": "MA3 (MA2하위호환) : AUDIOTYPE: 32 (단말기 GetHwConfig() = 36)",
+          "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+          "sourceId": "gvm-handset-guide-2002"
+        }
+      ],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 217,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B217",
+            "value": "C-500"
+          },
+          "carrier": {
+            "cell": "C217",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R217",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S217",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T217",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U217",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT217",
+            "value": "128"
+          },
+          "physicalHeight": {
+            "cell": "AU217",
+            "value": "143"
+          },
+          "applicationWidth": {
+            "cell": "AV217",
+            "value": "128"
+          },
+          "applicationHeight": {
+            "cell": "AW217",
+            "value": "128"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 104,
+          "cells": [
+            "",
+            "",
+            "C-500",
+            "팬택큐리텔",
+            "128*143",
+            "128*128",
+            "HD0711",
+            "2X",
+            "출시",
+            "2002.10"
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "GVM2X; guide GVM-height unknown; December128x128. Manufacturer manual names Magic Ball but does not identify its format.",
+      "firmwareCoverage": "Manual and PCSync inspected already; PCSync is desktop sync software, not handset ROM. No extracted game.",
+      "priorEvidenceFiles": [
+        "curitel-c500-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Curitel S1 / S2 / PG-S3500C / PG-S5500C and PG-S5000",
+      "guideProfiles": [],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 221,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B221",
+            "value": "S1(DD-700)"
+          },
+          "carrier": {
+            "cell": "C221",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R221",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S221",
+            "value": 2.0
+          },
+          "skvmSupported": {
+            "cell": "T221",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U221",
+            "value": "1.2"
+          },
+          "physicalWidth": {
+            "cell": "AT221",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU221",
+            "value": 160.0
+          },
+          "applicationWidth": {
+            "cell": "AV221",
+            "value": 128.0
+          },
+          "applicationHeight": {
+            "cell": "AW221",
+            "value": 145.0
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 226,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B226",
+            "value": "PG-S3500C\n→ S2"
+          },
+          "carrier": {
+            "cell": "C226",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R226",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S226",
+            "value": 2.0
+          },
+          "skvmSupported": {
+            "cell": "T226",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U226",
+            "value": 1.0
+          },
+          "physicalWidth": {
+            "cell": "AT226",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU226",
+            "value": 160.0
+          },
+          "applicationWidth": {
+            "cell": "AV226",
+            "value": 128.0
+          },
+          "applicationHeight": {
+            "cell": "AW226",
+            "value": 145.0
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 227,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B227",
+            "value": "PG-S5500C"
+          },
+          "carrier": {
+            "cell": "C227",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R227",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S227",
+            "value": 2.0
+          },
+          "skvmSupported": {
+            "cell": "T227",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U227",
+            "value": 1.0
+          },
+          "physicalWidth": {
+            "cell": "AT227",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU227",
+            "value": 143.0
+          },
+          "applicationWidth": {
+            "cell": "AV227",
+            "value": 128.0
+          },
+          "applicationHeight": {
+            "cell": "AW227",
+            "value": 128.0
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 228,
+          "manufacturer": "현대 큐리텔",
+          "model": {
+            "cell": "B228",
+            "value": "PG-S5000"
+          },
+          "carrier": {
+            "cell": "C228",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R228",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S228",
+            "value": 2.0
+          },
+          "skvmSupported": {
+            "cell": "T228",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U228",
+            "value": 1.0
+          },
+          "physicalWidth": {
+            "cell": "AT228",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU228",
+            "value": 160.0
+          },
+          "applicationWidth": {
+            "cell": "AV228",
+            "value": 128.0
+          },
+          "applicationHeight": {
+            "cell": "AW228",
+            "value": 146.0
+          }
+        }
+      ],
+      "december2002Rows": [],
+      "labCards": [
+        {
+          "category": "pq_p",
+          "slug": "pg-s5000",
+          "capture": "https://web.archive.org/web/20040811211412/http://www.gnexclub.com/zone/htm/pq_p/pg-s5000.htm",
+          "cdx_sha1_base32": "O2IUQW4HM6ISXYVAIKII4RQZQM2EXVBH"
+        },
+        {
+          "category": "pq_p",
+          "slug": "s2",
+          "capture": "https://web.archive.org/web/20040811211503/http://www.gnexclub.com/zone/htm/pq_p/s2.htm",
+          "cdx_sha1_base32": "ILLXVKKE5LXPJ2KRR6R65LFFOKOIB7SQ"
+        }
+      ],
+      "profileAssessment": "Workbook explicitly PG-S3500C -> S2. No inference from arbitrary PG/PH or carrier suffixes.",
+      "firmwareCoverage": "S2 and PG-S5500C original memory pieces already inspected: GVM native evidence, zero recovered SGS. Other rows still need exact firmware.",
+      "priorEvidenceFiles": [
+        "gnex-other-oem-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Curitel P1 / S4 / PH-S5700 / PH-S3500",
+      "guideProfiles": [],
+      "october2003Rows": [],
+      "december2002Rows": [],
+      "labCards": [
+        {
+          "category": "pq_p",
+          "slug": "p1",
+          "capture": "https://web.archive.org/web/20041015175320/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+          "cdx_sha1_base32": "VHK5DRQUJXTVRRLGMCSPRXNPFTB6A2TW",
+          "vm": "GNEX",
+          "lcd": [
+            220,
+            176
+          ],
+          "vm_lcd_area": [
+            220,
+            160
+          ],
+          "lcd_class": 4,
+          "image_type": 12,
+          "compressed_image_type": 8,
+          "display_color_label": "65K Color",
+          "audio": "MA5",
+          "audio_backwards_compatibility": [
+            "MA3",
+            "MA2"
+          ],
+          "audio_type": 64,
+          "platform": "WIPI 1.2",
+          "verified_capture_url": "https://web.archive.org/web/20041015175320id_/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+          "read_capture_sha256": "d9f8d79028d27d340f91aaf58c7ff01ab0a7bf88c626b1e6946180b3d43158db"
+        },
+        {
+          "category": "pq_p",
+          "slug": "ph-s3500",
+          "capture": "https://web.archive.org/web/20041020004756/http://www.gnexclub.com/zone/htm/pq_p/ph-s3500.htm",
+          "cdx_sha1_base32": "52KXD3MPYDFJLOJSRSOYFTHIPRRY3HKV"
+        },
+        {
+          "category": "pq_p",
+          "slug": "ph-s5700",
+          "capture": "https://web.archive.org/web/20050214012047/http://www.gnexclub.com/zone/htm/pq_p/ph-s5700.htm",
+          "cdx_sha1_base32": "SX6L7GULOVRDZ47VDUQW7VIHNDNNXP2T"
+        },
+        {
+          "category": "pq_p",
+          "slug": "s4",
+          "capture": "https://web.archive.org/web/20041015180810/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+          "cdx_sha1_base32": "XXKE5WZMW434FDH2BKXCDVV6FQWMCWUB",
+          "vm": "GVM4X",
+          "script_version": 2,
+          "download_protocol": "Sliding",
+          "lcd": [
+            240,
+            320
+          ],
+          "vm_lcd_area": [
+            240,
+            294
+          ],
+          "lcd_class": 8,
+          "image_type": 12,
+          "compressed_image_type": 8,
+          "display_color_label": "65K Color",
+          "audio": "MA5",
+          "audio_backwards_compatibility": [
+            "MA2",
+            "MA3"
+          ],
+          "audio_type": 64,
+          "platform": "WIPI 1.2",
+          "verified_capture_url": "https://web.archive.org/web/20041015180810id_/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+          "read_capture_sha256": "23713b727c4cbb464d1e1b2f62fe8f04e5600686f66fdd9ca03d5df846cfa35b"
+        }
+      ],
+      "profileAssessment": "P1 card GNEX220x160; S4 card literally GVM4X with SCRIPTVER2 and240x294. PH-S5700 manual separately names GVM/SKVM content storage. Do not convert GVM4X label to SGS4.",
+      "firmwareCoverage": "No exact handset firmware. S4 PCSync/CuritelPlayer zip links are desktop software leads, not downloaded firmware evidence.",
+      "priorEvidenceFiles": [
+        "gnex-oem-card-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "VK-100 / VK-100M / VK-200C / VK-200 GSM / VK5xx",
+      "guideProfiles": [],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 234,
+          "manufacturer": "VK",
+          "model": {
+            "cell": "B234",
+            "value": "VK-100"
+          },
+          "carrier": {
+            "cell": "C234",
+            "value": "SKT"
+          },
+          "gvmSupported": {
+            "cell": "R234",
+            "value": 0.0
+          },
+          "gvmVersion": {
+            "cell": "S234",
+            "value": "2.05.02"
+          },
+          "skvmSupported": {
+            "cell": "T234",
+            "value": 0.0
+          },
+          "skvmVersion": {
+            "cell": "U234",
+            "value": 1.1
+          },
+          "physicalWidth": {
+            "cell": "AT234",
+            "value": 128.0
+          },
+          "physicalHeight": {
+            "cell": "AU234",
+            "value": 160.0
+          },
+          "applicationWidth": {
+            "cell": "AV234",
+            "value": 128.0
+          },
+          "applicationHeight": {
+            "cell": "AW234",
+            "value": 146.0
+          }
+        }
+      ],
+      "december2002Rows": [],
+      "labCards": [
+        {
+          "category": "vk_p",
+          "slug": "vk-100m",
+          "capture": "https://web.archive.org/web/20040811205953/http://www.gnexclub.com/zone/htm/vk_p/vk-100m.htm",
+          "cdx_sha1_base32": "7KZUYZX6CXPI3DS5GKX4Q7TRAFMGNMGP"
+        },
+        {
+          "category": "vk_p",
+          "slug": "vk-200c",
+          "capture": "https://web.archive.org/web/20040811210507/http://www.gnexclub.com/zone/htm/vk_p/vk-200c.htm",
+          "cdx_sha1_base32": "QVKZ6AHQRSM2GUFQRVDZRN7GXYSAZBWX",
+          "vm": "GNEX",
+          "vm_raw": "GN EX",
+          "lcd": [
+            176,
+            220
+          ],
+          "vm_lcd_area": [
+            176,
+            205
+          ],
+          "lcd_class": 8,
+          "audio": "MA5",
+          "audio_type": 64,
+          "platform": "WITOP",
+          "image_type": 12,
+          "compressed_image_type": 8,
+          "verified_capture_url": "https://web.archive.org/web/20040811210507id_/http://www.gnexclub.com/zone/htm/vk_p/vk-200c.htm",
+          "read_capture_sha256": "f4fea1e0c138c64ccd7da36f4cff1b48f6fd7c42a0b84a78f00bfb9e7764e7b8"
+        }
+      ],
+      "profileAssessment": "VK200C lab card GNEX176x205. VK100 workbook stored numeric0 in supported cell and2.05.02 in version; preserve exact. VK100M card unread. No verified VK5xx runtime profile in reconciled sources.",
+      "firmwareCoverage": "VK100 BIN already has GVM MIME. VK200 archive is WaveCom GSM2006 and must not count as VK200C. No exact VK200C/VK5xx firmware found in bounded VK inventory.",
+      "priorEvidenceFiles": [
+        "gnex-other-oem-evidence.json",
+        "gnex-oem-card-evidence.json"
+      ]
+    },
+    {
+      "targetGroup": "Sanyo SCP-A011 / Telson TWC1030",
+      "guideProfiles": [],
+      "october2003Rows": [
+        {
+          "sheet": "SKT",
+          "row": 230,
+          "manufacturer": "SANYO",
+          "model": {
+            "cell": "B230",
+            "value": "SCP-A011"
+          },
+          "carrier": {
+            "cell": "C230",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R230",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S230",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T230",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U230",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT230",
+            "value": "132"
+          },
+          "physicalHeight": {
+            "cell": "AU230",
+            "value": "176"
+          },
+          "applicationWidth": {
+            "cell": "AV230",
+            "value": "132"
+          },
+          "applicationHeight": {
+            "cell": "AW230",
+            "value": "160"
+          }
+        },
+        {
+          "sheet": "SKT",
+          "row": 232,
+          "manufacturer": "텔슨",
+          "model": {
+            "cell": "B232",
+            "value": "TWC1030"
+          },
+          "carrier": {
+            "cell": "C232",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R232",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S232",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T232",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U232",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT232",
+            "value": "120"
+          },
+          "physicalHeight": {
+            "cell": "AU232",
+            "value": "096"
+          },
+          "applicationWidth": {
+            "cell": "AV232",
+            "value": "120"
+          },
+          "applicationHeight": {
+            "cell": "AW232",
+            "value": "064"
+          }
+        }
+      ],
+      "december2002Rows": [
+        {
+          "row": 51,
+          "cells": [
+            "",
+            "General Midi",
+            "TWC1030",
+            "텔슨",
+            "120*96",
+            "",
+            "TS0111",
+            "2X",
+            "출시예정",
+            ""
+          ]
+        },
+        {
+          "row": 107,
+          "cells": [
+            "260K",
+            "MA3",
+            "SCP-A011(Wi-Top)",
+            "산 요",
+            "132*176",
+            "132*160",
+            "SY0111",
+            "2X",
+            "출시",
+            2002.12
+          ]
+        }
+      ],
+      "labCards": [],
+      "profileAssessment": "Previously recorded GVM support, included as controls for coverage rather than newly counted handsets. December TWC1030 is marked planned (출시예정).",
+      "firmwareCoverage": "A011 original native image already inspected and interpreter established. Telson PS3000 cannot substitute for TWC1030.",
+      "priorEvidenceFiles": [
+        "sanyo-nokia-korean-evidence.json",
+        "sanyo-a011-vm-evidence.json"
+      ]
+    }
+  ],
+  "limitations": [
+    "Negative directory coverage applies only to saved public indexes, not the whole Internet or all private collections.",
+    "Workbook rows are historical document claims; official operator authorship of the GVM Club XLS is not authenticated.",
+    "GVM/SGS support does not establish that the built-in game is SGS or that an acquired memory dump contains user-downloaded games.",
+    "No new GNEX handset or new playable SGS was confirmed by this pass. CX-800V is an independent BREW recovery."
+  ]
+}

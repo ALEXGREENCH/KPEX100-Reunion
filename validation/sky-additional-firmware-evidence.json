@@ -1,0 +1,1317 @@
+{
+  "date": "2026-11-05",
+  "scope": "Five additional SKT SKY models, checked against original firmware bytes",
+  "decode_tool": "outputs/KPEX100-Reunion/tools/unpack-sky-binx.py",
+  "decode_crc_verified_chunks": 4500,
+  "archive_bytes": 918161257,
+  "pdl_bytes": 1328992448,
+  "models": [
+    {
+      "model_catalog": "IM-S390 (Cupid)",
+      "source": "https://archive.sunderland93.ru/Firmwares/SKY/IM-S390%20%28Cupid%29/IM-S390_S0177154.7z",
+      "archive": "IM-S390_S0177154.7z",
+      "headers": {
+        "Content-Length": "78779260",
+        "Last-Modified": "Thu, 27 Feb 2025 22:51:58 GMT",
+        "ETag": "\"67c0ec8e-4b2137c\""
+      },
+      "archive_bytes": 78779260,
+      "archive_sha256": "2dde450bd8cddc766cd72384a0d58147215840935373577112ff982a58ed5bc4",
+      "model": "IM-S390",
+      "build": "S0177154",
+      "original_payload_format": "plain PDL",
+      "pdl": "IM-S390_S0177154.pdl",
+      "pdl_bytes": 150127392,
+      "pdl_sha256": "17c728cddf645a86135f8a4fa16a6214ac75b25be18a7f31984f566217c7c5dd",
+      "runtime_markers": [
+        {
+          "marker": "IM-S390",
+          "count": 20,
+          "offsets": [
+            36,
+            140912,
+            400106,
+            8135535,
+            10384320,
+            10384719,
+            11018057,
+            11033688,
+            12905308,
+            13300332,
+            15576888,
+            16316552,
+            22298324,
+            25474696,
+            25484012,
+            26160332,
+            27930624,
+            71079672,
+            71297064,
+            71955928
+          ]
+        },
+        {
+          "marker": "S0177154",
+          "count": 4,
+          "offsets": [
+            52,
+            4229633,
+            4229794,
+            10384336
+          ]
+        },
+        {
+          "marker": "application/x-gnex-sgs",
+          "count": 10,
+          "offsets": [
+            19682464,
+            19840176,
+            19851936,
+            26189249,
+            26189493,
+            27806303,
+            30712121,
+            83116910,
+            83218054,
+            99252242
+          ]
+        },
+        {
+          "marker": "Sinjisoft",
+          "count": 4,
+          "offsets": [
+            80019436,
+            80027038,
+            80276650,
+            107158288
+          ]
+        },
+        {
+          "marker": "SINJISOFT",
+          "count": 45,
+          "offsets": [
+            76541320,
+            76541354,
+            76541578,
+            76541612,
+            79559976,
+            79560010,
+            79560550,
+            79560584,
+            79560786,
+            79560820,
+            79986148,
+            79986182,
+            79986396,
+            79986430,
+            79986636,
+            79986670,
+            79986870,
+            79986904,
+            79987354,
+            79989186,
+            79989220,
+            80003184,
+            80003220,
+            80279574,
+            80279610,
+            80296414,
+            80296448,
+            80446042,
+            80446076,
+            106152930,
+            106152964,
+            107163570,
+            107163599,
+            107539762,
+            107539796,
+            107944270,
+            107944304,
+            107997534,
+            107997568,
+            109908444,
+            109908478,
+            110011570,
+            110011606,
+            110050840,
+            110050874
+          ]
+        },
+        {
+          "marker": "GNEX",
+          "count": 5,
+          "offsets": [
+            19840200,
+            30712057,
+            83097811,
+            83144442,
+            83242742
+          ]
+        }
+      ],
+      "sgs_containers": 0,
+      "partitions": [
+        {
+          "index": 0,
+          "name": "PHONEINFO",
+          "record_offset": 150126608,
+          "file_offset": 0,
+          "bytes": 16384,
+          "device_address": 5341184,
+          "sha256": "57b59e38d3e729fa8611adbe91e3dd8976548906301fe8998a0b241b1343d31d"
+        },
+        {
+          "index": 1,
+          "name": "QCSBL_HDR",
+          "record_offset": 150126704,
+          "file_offset": 16384,
+          "bytes": 16384,
+          "device_address": 0,
+          "sha256": "51d42a59b2a2a5a186f089e740f2980b19e140ec49cb611c2cb2b9f5bfb8f4c8"
+        },
+        {
+          "index": 2,
+          "name": "QCSBL",
+          "record_offset": 150126800,
+          "file_offset": 32768,
+          "bytes": 49152,
+          "device_address": 507904,
+          "sha256": "8f46bd0ea1f1138dea0d3a508814442c7df02a6ce084f45cee32d88c7cbbf6dc"
+        },
+        {
+          "index": 3,
+          "name": "OEMSBL",
+          "record_offset": 150126896,
+          "file_offset": 81920,
+          "bytes": 360448,
+          "device_address": 917504,
+          "sha256": "0255b41fb81569bbf798141f6f2d8d8fc123234c40317bdce6df4ee2ee24e4d5"
+        },
+        {
+          "index": 4,
+          "name": "AMSS",
+          "record_offset": 150126992,
+          "file_offset": 442368,
+          "bytes": 36765696,
+          "device_address": 5799936,
+          "sha256": "41e702ea30c411a81cf6164d7b00fcace583fbee62a30059ae7722e0f218215c"
+        },
+        {
+          "index": 5,
+          "name": "RSC",
+          "record_offset": 150127088,
+          "file_offset": 37208064,
+          "bytes": 89063424,
+          "device_address": 43614208,
+          "sha256": "2bfd25d77e544fb058e921635d63e40a7cafb9a30eee0f080bfc8a995269c49b"
+        },
+        {
+          "index": 6,
+          "name": "DIC",
+          "record_offset": 150127184,
+          "file_offset": 126271488,
+          "bytes": 18612224,
+          "device_address": 134316032,
+          "sha256": "5b5c6cddca7aaf4231ed8a78e3fbf3a8ce6db0eb678f8d92d4a0f460d9f1e4d7"
+        },
+        {
+          "index": 7,
+          "name": "SYM",
+          "record_offset": 150127280,
+          "file_offset": 144883712,
+          "bytes": 5242880,
+          "device_address": 153419776,
+          "sha256": "4ad5b4c090f64c63bd0c7c5207bfdf9b6bd523a77db938a28c76bf4ea8e1ce42"
+        }
+      ],
+      "rsc": {
+        "table_rsc_offset": 0,
+        "content_descriptors": [
+          {
+            "resource_index": 1332,
+            "source_offset": 113724560,
+            "bytes": 305,
+            "sha256": "470fb039f10f22f0e507f704e3549e60d6660076ae182f5283f23beeb2d3416d",
+            "content_id": "0027140771",
+            "mime": "application/x-wipi-app",
+            "title": "큐브큐브",
+            "vendor": "MOBICLE Co.,Ltd",
+            "version": "001.000.000",
+            "is_game": false
+          },
+          {
+            "resource_index": 1336,
+            "source_offset": 116263316,
+            "bytes": 312,
+            "sha256": "be520ebd4cc4c2d1253e84642cc9b2c7e2e3e747bc04849b951b87588a5daee4",
+            "content_id": "A000Y00010",
+            "mime": "application/x-wipi-app",
+            "title": "i's box",
+            "vendor": "BTB Solution Co.,Ltd",
+            "version": "004.010.000",
+            "is_game": false
+          },
+          {
+            "resource_index": 1339,
+            "source_offset": 116772052,
+            "bytes": 278,
+            "sha256": "fd2d22750b6e697033d041c84e00bf6e396274a88bb3244e52f5c242a9946493",
+            "content_id": "A000Y00011",
+            "mime": "application/x-wipi-lib",
+            "title": "RMXEngine",
+            "vendor": "MTelo Co.,Ltd  ",
+            "version": "001.000.000",
+            "is_game": false
+          },
+          {
+            "resource_index": 1341,
+            "source_offset": 116795948,
+            "bytes": 294,
+            "sha256": "dd3e23bc07a53a97758710f9b4f5cb704a868e633adebe91904dbaa8718fe383",
+            "content_id": "A000Y9SEGN",
+            "mime": "application/x-wipi-lib",
+            "title": "WIPI_SyncMLEngineLib",
+            "vendor": "BTB Solution Co.,Ltd",
+            "version": "001.000.000",
+            "is_game": false
+          },
+          {
+            "resource_index": 1343,
+            "source_offset": 116834948,
+            "bytes": 287,
+            "sha256": "469d8ba0447b23885d97d0d4d8566d5accdba57d432653eb6284d25225927e59",
+            "content_id": "LEO00CL000",
+            "mime": "application/x-wipi-lib",
+            "title": "LEOCL_OEM Library",
+            "vendor": "BNSWorks Co.,Ltd",
+            "version": "001.000.000",
+            "is_game": false
+          }
+        ],
+        "type_counts": {
+          "0": 6,
+          "4": 835,
+          "2": 35,
+          "8": 4,
+          "7": 453,
+          "6": 12
+        }
+      }
+    },
+    {
+      "model_catalog": "IM-S480S",
+      "source": "https://archive.sunderland93.ru/Firmwares/SKY/IM-S480S/IM-S480S_S0183142.7z",
+      "archive": "IM-S480S_S0183142.7z",
+      "headers": {
+        "Content-Length": "152378959",
+        "Last-Modified": "Thu, 27 Feb 2025 22:52:02 GMT",
+        "ETag": "\"67c0ec92-9151e4f\""
+      },
+      "archive_bytes": 152378959,
+      "archive_sha256": "d85dd9f42f499d6002b9eb87debd24dc87b82d54792333be49a356aed0848b24",
+      "binx": "IM-S480S_S0183142.BINX",
+      "pdl": "IM-S480S_S0183142.PDL",
+      "decode": {
+        "chunks": 891,
+        "inputBytes": 152371030,
+        "inputSha256": "50b49c902418c45718f0c1b3b1b468ff866fc6123fc1a0c5ff8e8a1470d6b1f3",
+        "outputBytes": 233308960,
+        "outputSha256": "05a9298d4d5e1fcf469f85ab249abdff0c55271cc6842c7d8e1007fdabba6a67"
+      },
+      "model": "IM-S480S",
+      "build": "S0183142",
+      "original_payload_format": "BINX",
+      "pdl_bytes": 233308960,
+      "pdl_sha256": "05a9298d4d5e1fcf469f85ab249abdff0c55271cc6842c7d8e1007fdabba6a67",
+      "runtime_markers": [
+        {
+          "marker": "IM-S480S",
+          "count": 17,
+          "offsets": [
+            36,
+            452800,
+            685374,
+            6876172,
+            8450716,
+            9307480,
+            11005736,
+            11242556,
+            11755060,
+            17597052,
+            23043632,
+            24320596,
+            27209268,
+            27759454,
+            30851856,
+            33556096,
+            33558840
+          ]
+        },
+        {
+          "marker": "S0183142",
+          "count": 5,
+          "offsets": [
+            52,
+            4563385,
+            4563546,
+            33556050,
+            33556112
+          ]
+        },
+        {
+          "marker": "application/x-gnex-sgs",
+          "count": 7,
+          "offsets": [
+            12087616,
+            18030796,
+            26761184,
+            33774184,
+            121475250,
+            121919950,
+            138511294
+          ]
+        },
+        {
+          "marker": "Sinjisoft",
+          "count": 5,
+          "offsets": [
+            29613056,
+            115992000,
+            120197384,
+            157361164,
+            157370382
+          ]
+        },
+        {
+          "marker": "SINJISOFT",
+          "count": 52,
+          "offsets": [
+            11005018,
+            11005052,
+            13440260,
+            13440294,
+            23033804,
+            23033838,
+            26666284,
+            26666313,
+            33458522,
+            33458551,
+            117900050,
+            117900084,
+            118886372,
+            118886408,
+            118903718,
+            118903752,
+            120244440,
+            120244469,
+            120399502,
+            120399531,
+            151707258,
+            151707292,
+            152107274,
+            152107308,
+            152724172,
+            152724206,
+            152728776,
+            152728812,
+            152794308,
+            152794342,
+            152888968,
+            152889002,
+            152889220,
+            152889254,
+            155378072,
+            155378106,
+            155378646,
+            155378680,
+            155378882,
+            155378916,
+            155379722,
+            155379756,
+            155379972,
+            155380006,
+            155380402,
+            155380436,
+            155381014,
+            155381048,
+            155800354,
+            155800388,
+            157419134,
+            157419170
+          ]
+        },
+        {
+          "marker": "GNEX",
+          "count": 4,
+          "offsets": [
+            18030820,
+            26761120,
+            121669858,
+            121944814
+          ]
+        }
+      ],
+      "sgs_containers": 0,
+      "partitions": [
+        {
+          "index": 0,
+          "name": "PHONEINFO",
+          "record_offset": 233308176,
+          "file_offset": 0,
+          "bytes": 131072,
+          "device_address": 12582912,
+          "sha256": "810a05443e4556b29112bb9beb3ff0a7c741889c8c8bc6d3a77bb0fc993ae462"
+        },
+        {
+          "index": 1,
+          "name": "QCSBL_HDR",
+          "record_offset": 233308272,
+          "file_offset": 131072,
+          "bytes": 131072,
+          "device_address": 0,
+          "sha256": "344e1f02bc979c259dc51d67ed005c9fbf007c53f7da44c4bcb7d012d4b608b8"
+        },
+        {
+          "index": 2,
+          "name": "QCSBL",
+          "record_offset": 233308368,
+          "file_offset": 262144,
+          "bytes": 131072,
+          "device_address": 1572864,
+          "sha256": "699f338ac8380c74ae21b8ac34fab05d1fb643721f5d64c0e3eb83bcde036016"
+        },
+        {
+          "index": 3,
+          "name": "OEMSBL",
+          "record_offset": 233308464,
+          "file_offset": 393216,
+          "bytes": 393216,
+          "device_address": 2359296,
+          "sha256": "dec2edb251ba59338fe2ada6af26261c4c37455a1ce0ef5859ed597650751f14"
+        },
+        {
+          "index": 4,
+          "name": "AMSS",
+          "record_offset": 233308560,
+          "file_offset": 786432,
+          "bytes": 44040192,
+          "device_address": 14680064,
+          "sha256": "ef3f90a1eafca626a06c9ffba5c70ba84a953f58f1b4ef6d61c8917ff49f14c7"
+        },
+        {
+          "index": 5,
+          "name": "RSC",
+          "record_offset": 233308656,
+          "file_offset": 44826624,
+          "bytes": 136314880,
+          "device_address": 67108864,
+          "sha256": "3fd627ac5077c2ea0b8b18d7bc2a3367bce8367584605f40cfd007c98becef60"
+        },
+        {
+          "index": 6,
+          "name": "DIC",
+          "record_offset": 233308752,
+          "file_offset": 181141504,
+          "bytes": 46399488,
+          "device_address": 207618048,
+          "sha256": "6ece3299dfd7ff2f0b91188a6f0b5b5a3468c35d08c1874d4db68e36138562aa"
+        },
+        {
+          "index": 7,
+          "name": "SYM",
+          "record_offset": 233308848,
+          "file_offset": 227540992,
+          "bytes": 5767168,
+          "device_address": 255852544,
+          "sha256": "316ebba1f93aae8bc7267278d7683d7f98ad562d084a40ae957bbd2ef7dfb5e7"
+        }
+      ],
+      "rsc": {
+        "layout": "trailing-table",
+        "payload_offset": 44826624,
+        "table_offset": 170606592,
+        "records": 2214,
+        "games": 6,
+        "evidence": "sky-new-rsc-game-extractions.json"
+      }
+    },
+    {
+      "model_catalog": "IM-S550S",
+      "source": "https://archive.sunderland93.ru/Firmwares/SKY/IM-S550S/IM-S550S_S0188161.7z",
+      "archive": "IM-S550S_S0188161.7z",
+      "headers": {
+        "Content-Length": "236760183",
+        "Last-Modified": "Thu, 27 Feb 2025 22:51:46 GMT",
+        "ETag": "\"67c0ec82-e1cac77\""
+      },
+      "archive_bytes": 236760183,
+      "archive_sha256": "8f90b51fd9dbd83d40777000399a9a521b27031a22aa95089f2b8833a6db1f95",
+      "binx": "IM-S550S_S0188161.BINX",
+      "pdl": "IM-S550S_S0188161.PDL",
+      "decode": {
+        "chunks": 1153,
+        "inputBytes": 236745370,
+        "inputSha256": "1bd143eb10925b4c4f32fc21cd1569ffa82517af75daeff191d0263fee66973e",
+        "outputBytes": 302121856,
+        "outputSha256": "a9b53ec945dd6e660adcd056aca13c6bab107a3bfd57a681495c4a2230047d2b"
+      },
+      "model": "IM-S550S",
+      "build": "S0188161",
+      "original_payload_format": "BINX",
+      "pdl_bytes": 302121856,
+      "pdl_sha256": "a9b53ec945dd6e660adcd056aca13c6bab107a3bfd57a681495c4a2230047d2b",
+      "runtime_markers": [
+        {
+          "marker": "IM-S550S",
+          "count": 25,
+          "offsets": [
+            36,
+            7303164,
+            7573284,
+            10999888,
+            12891464,
+            17148712,
+            17290060,
+            20084496,
+            21254352,
+            23502272,
+            23764508,
+            23807284,
+            25941432,
+            26624232,
+            27624412,
+            32860348,
+            33420196,
+            36255248,
+            39253828,
+            40552276,
+            42221472,
+            43493216,
+            147273565,
+            301479820,
+            301659012
+          ]
+        },
+        {
+          "marker": "S0188161",
+          "count": 5,
+          "offsets": [
+            52,
+            8470760,
+            25623951,
+            43614360,
+            43614408
+          ]
+        },
+        {
+          "marker": "application/x-gnex-sgs",
+          "count": 7,
+          "offsets": [
+            8739536,
+            27705112,
+            38100163,
+            41764546,
+            127234102,
+            127682258,
+            145882290
+          ]
+        },
+        {
+          "marker": "Sinjisoft",
+          "count": 11,
+          "offsets": [
+            31685656,
+            34790520,
+            116683838,
+            118116632,
+            118126012,
+            119926612,
+            120247092,
+            120718106,
+            124851648,
+            164628092,
+            172706162
+          ]
+        },
+        {
+          "marker": "SINJISOFT",
+          "count": 48,
+          "offsets": [
+            16486874,
+            16486903,
+            21996696,
+            21996730,
+            22071004,
+            22071038,
+            123093986,
+            123094020,
+            124207020,
+            124207056,
+            124231634,
+            124231668,
+            125053654,
+            125053683,
+            162232992,
+            162233026,
+            164376532,
+            164376566,
+            164380948,
+            164380984,
+            164631256,
+            164631290,
+            164824888,
+            164824922,
+            164825152,
+            164825186,
+            167304796,
+            167304830,
+            167305370,
+            167305404,
+            167305606,
+            167305640,
+            167580164,
+            167580198,
+            167580642,
+            167580854,
+            167580888,
+            167581082,
+            167581116,
+            167581326,
+            167581360,
+            167581602,
+            167777718,
+            167777752,
+            172758478,
+            172758514,
+            173026244,
+            173026278
+          ]
+        },
+        {
+          "marker": "GNEX",
+          "count": 5,
+          "offsets": [
+            27705136,
+            33479304,
+            38100099,
+            127431742,
+            127707122
+          ]
+        }
+      ],
+      "sgs_containers": 0,
+      "partitions": [
+        {
+          "index": 0,
+          "name": "INFO",
+          "record_offset": 302120976,
+          "file_offset": 0,
+          "bytes": 131072,
+          "device_address": 12582912,
+          "sha256": "828142c2318ff118afddde30bc45217f8707fa9987657ca370936acfa380c3d2"
+        },
+        {
+          "index": 1,
+          "name": "AMSS",
+          "record_offset": 302121072,
+          "file_offset": 131072,
+          "bytes": 44171264,
+          "device_address": 13631488,
+          "sha256": "3bf715965b01809553fcef1f3484ddb74caed5a2bb7a5c032ee293872409578e"
+        },
+        {
+          "index": 2,
+          "name": "RSC",
+          "record_offset": 302121168,
+          "file_offset": 44302336,
+          "bytes": 140771328,
+          "device_address": 67108864,
+          "sha256": "d120e1311cfcece5ecdf6c1730209af0cba5da41d2ffd6371c07d9eeeffb9d68"
+        },
+        {
+          "index": 3,
+          "name": "DICTIONARY",
+          "record_offset": 302121264,
+          "file_offset": 185073664,
+          "bytes": 112984064,
+          "device_address": 213909504,
+          "sha256": "abfbea1b212155f2eeee6c051453ab4af6fbb413ebcb6e672e8dafaf4a499140"
+        },
+        {
+          "index": 4,
+          "name": "SYMBOL",
+          "record_offset": 302121360,
+          "file_offset": 298057728,
+          "bytes": 3145728,
+          "device_address": 338690048,
+          "sha256": "9682be0d5951dbaa2d238c86a85284eb7e07bb13cc3264da59e2a63a587b9f06"
+        },
+        {
+          "index": 5,
+          "name": "CONFIG",
+          "record_offset": 302121456,
+          "file_offset": 301203456,
+          "bytes": 131072,
+          "device_address": 0,
+          "sha256": "6bad790d2fbdf39b390ab434b5977d02c3a48e09ba1db051c059a53ab321c5f9"
+        },
+        {
+          "index": 6,
+          "name": "QCSBL",
+          "record_offset": 302121552,
+          "file_offset": 301334528,
+          "bytes": 131072,
+          "device_address": 1441792,
+          "sha256": "24e1e5997ed10eeb5afe7e612641d052715b29c4746dc1956d9194ca3e4da7b8"
+        },
+        {
+          "index": 7,
+          "name": "OEMSBL",
+          "record_offset": 302121648,
+          "file_offset": 301465600,
+          "bytes": 524288,
+          "device_address": 2097152,
+          "sha256": "5d46072c0fbe2123f8484adc1452359e1782ba4cd59f75c40bb7caa19840375b"
+        },
+        {
+          "index": 8,
+          "name": "OEMEXTBL",
+          "record_offset": 302121744,
+          "file_offset": 301989888,
+          "bytes": 131072,
+          "device_address": 4194304,
+          "sha256": "bab339d7690879a0c6ae9c5d83fb9d3b67dd721d6725767f3d50674eb4527190"
+        }
+      ],
+      "rsc": {
+        "layout": "trailing-table",
+        "payload_offset": 44339200,
+        "table_offset": 184971264,
+        "records": 2168,
+        "games": 4,
+        "evidence": "sky-new-rsc-game-extractions.json"
+      }
+    },
+    {
+      "model_catalog": "IM-S640S",
+      "source": "https://archive.sunderland93.ru/Firmwares/SKY/IM-S640S/IM-S640S_S0202126a.7z",
+      "archive": "IM-S640S_S0202126a.7z",
+      "headers": {
+        "Content-Length": "222365554",
+        "Last-Modified": "Thu, 27 Feb 2025 22:51:47 GMT",
+        "ETag": "\"67c0ec83-d410772\""
+      },
+      "archive_bytes": 222365554,
+      "archive_sha256": "2bb878b96403e92a573d03dd8c3015137b75e278f51115e8a613dc70c391f518",
+      "binx": "IM-S640S_S0202126a.BINX",
+      "pdl": "IM-S640S_S0202126a.PDL",
+      "decode": {
+        "chunks": 1339,
+        "inputBytes": 222353556,
+        "inputSha256": "52c1b7ad4f0a0f8a0d1d6bc234b8204b21596efa9d62638e19d975d9d7840703",
+        "outputBytes": 350749568,
+        "outputSha256": "8f1c734b748bf3f5efa5cc81264a0a4a30a9d5fa348de1fc4a7afedca870dc03"
+      },
+      "model": "IM-S640S",
+      "build": "S0202126a",
+      "original_payload_format": "BINX",
+      "pdl_bytes": 350749568,
+      "pdl_sha256": "8f1c734b748bf3f5efa5cc81264a0a4a30a9d5fa348de1fc4a7afedca870dc03",
+      "runtime_markers": [
+        {
+          "marker": "IM-S640S",
+          "count": 25,
+          "offsets": [
+            36,
+            454424,
+            687579,
+            6683916,
+            7111916,
+            8650984,
+            11608340,
+            11626768,
+            12323508,
+            12338396,
+            14918008,
+            15402780,
+            18832492,
+            18876780,
+            19351068,
+            22170792,
+            22919046,
+            26130256,
+            27054020,
+            34150720,
+            36942344,
+            150742822,
+            250458113,
+            250548335,
+            350656519
+          ]
+        },
+        {
+          "marker": "S0202126a",
+          "count": 8,
+          "offsets": [
+            52,
+            1251368,
+            4363693,
+            4363855,
+            22170808,
+            34122184,
+            38288620,
+            38288672
+          ]
+        },
+        {
+          "marker": "application/x-gnex-sgs",
+          "count": 8,
+          "offsets": [
+            19610352,
+            22257894,
+            28977726,
+            34436436,
+            134506006,
+            134953702,
+            148176302,
+            263971205
+          ]
+        },
+        {
+          "marker": "Sinjisoft",
+          "count": 5,
+          "offsets": [
+            25158880,
+            128431954,
+            133009344,
+            170258728,
+            170266630
+          ]
+        },
+        {
+          "marker": "SINJISOFT",
+          "count": 54,
+          "offsets": [
+            14047128,
+            14047162,
+            14056696,
+            14056725,
+            21781210,
+            21781239,
+            36902728,
+            36902762,
+            36902970,
+            36903004,
+            130459102,
+            130459136,
+            131484520,
+            131484556,
+            131501990,
+            131502024,
+            133072428,
+            133072457,
+            133298930,
+            133298959,
+            160661010,
+            160661044,
+            161068982,
+            161069016,
+            161942188,
+            161942222,
+            161946798,
+            161946834,
+            162014524,
+            162014558,
+            162109164,
+            162109198,
+            162109416,
+            162109450,
+            164604572,
+            164604606,
+            164605146,
+            164605180,
+            164605382,
+            164605416,
+            164606230,
+            164606264,
+            164606480,
+            164606514,
+            164606910,
+            164606944,
+            164607994,
+            164608028,
+            168681006,
+            168681040,
+            170317346,
+            170317382,
+            170426604,
+            170426638
+          ]
+        },
+        {
+          "marker": "GNEX",
+          "count": 4,
+          "offsets": [
+            19610376,
+            28977662,
+            134703114,
+            134978566
+          ]
+        }
+      ],
+      "sgs_containers": 0,
+      "partitions": [
+        {
+          "index": 0,
+          "name": "PHONEINFO",
+          "record_offset": 350748688,
+          "file_offset": 0,
+          "bytes": 131072,
+          "device_address": 12582912,
+          "sha256": "20f062255a355ec51a75ae96a5d599208924d9aca81f09dca51ceee4884f5de3"
+        },
+        {
+          "index": 1,
+          "name": "QCSBL_HDR",
+          "record_offset": 350748784,
+          "file_offset": 131072,
+          "bytes": 131072,
+          "device_address": 0,
+          "sha256": "fa733db8905a9e2ac818b9bb8df2867261e19bf056acc63d6bd9ba41d37379a2"
+        },
+        {
+          "index": 2,
+          "name": "QCSBL",
+          "record_offset": 350748880,
+          "file_offset": 262144,
+          "bytes": 131072,
+          "device_address": 1572864,
+          "sha256": "e003c55ee2d661047691f55951fe6cfc66f187b200298b78d227adbd39022ab4"
+        },
+        {
+          "index": 3,
+          "name": "OEMSBL",
+          "record_offset": 350748976,
+          "file_offset": 393216,
+          "bytes": 393216,
+          "device_address": 2359296,
+          "sha256": "63c02aa8eac88ff51a16904dc2ad2187d22d366b6e8d166753831c78b6f69f6c"
+        },
+        {
+          "index": 4,
+          "name": "AMSS",
+          "record_offset": 350749072,
+          "file_offset": 786432,
+          "bytes": 50331648,
+          "device_address": 14680064,
+          "sha256": "d7ca721f66f262ec6e8513fe5e4da62b43e9dcc75631a5bff447a4f9f27ba833"
+        },
+        {
+          "index": 5,
+          "name": "RSC",
+          "record_offset": 350749168,
+          "file_offset": 51118080,
+          "bytes": 146800640,
+          "device_address": 67108864,
+          "sha256": "c0415a4f714f9396191f2464b30ff5c8d561ded213f5ffb11ac2c38063f7211a"
+        },
+        {
+          "index": 6,
+          "name": "DIC",
+          "record_offset": 350749264,
+          "file_offset": 197918720,
+          "bytes": 46399488,
+          "device_address": 218103808,
+          "sha256": "6cdc48581190b2b42a24e7c3100adca9728645a8cc294e6bf6b54aadcdf15f9b"
+        },
+        {
+          "index": 7,
+          "name": "SYM",
+          "record_offset": 350749360,
+          "file_offset": 244318208,
+          "bytes": 5767168,
+          "device_address": 265551872,
+          "sha256": "4718f66ac1e591a360b930eac7f9f3ef0df866896b37bc31617efb071b67aab8"
+        },
+        {
+          "index": 8,
+          "name": "CEFS",
+          "record_offset": 350749456,
+          "file_offset": 250085376,
+          "bytes": 100663296,
+          "device_address": 272367616,
+          "sha256": "f925eafb192d27e1ac8e5127732c21ee07a1ca0a7129ed8292b103df3e514b0b"
+        }
+      ],
+      "rsc": {
+        "layout": "trailing-table",
+        "payload_offset": 51118080,
+        "table_offset": 185812992,
+        "records": 2692,
+        "games": 4,
+        "evidence": "sky-new-rsc-game-extractions.json"
+      }
+    },
+    {
+      "model_catalog": "IM-U490S",
+      "source": "https://archive.sunderland93.ru/Firmwares/SKY/IM-U490S/IM-U490S_S0184128.7z",
+      "archive": "IM-U490S_S0184128.7z",
+      "headers": {
+        "Content-Length": "227877301",
+        "Last-Modified": "Thu, 27 Feb 2025 22:51:56 GMT",
+        "ETag": "\"67c0ec8c-d9521b5\""
+      },
+      "archive_bytes": 227877301,
+      "archive_sha256": "6ee470549fd0f3a272f11ff1c5fc8bcea21f52b6f9657345288a388a47d438e4",
+      "binx": "IM-U490S_S0184128.BINX",
+      "pdl": "IM-U490S_S0184128.PDL",
+      "decode": {
+        "chunks": 1117,
+        "inputBytes": 227863037,
+        "inputSha256": "6ffe138620fa6b317c968f78ea6c650e05f3908b0bfaa2bc374984c93a14dca5",
+        "outputBytes": 292684672,
+        "outputSha256": "407c9698130c64a5ccb9e3ee7eee77a3648ba863a650a54a51eb6a410849d251"
+      },
+      "model": "IM-U490S",
+      "build": "S0184128",
+      "original_payload_format": "BINX",
+      "pdl_bytes": 292684672,
+      "pdl_sha256": "407c9698130c64a5ccb9e3ee7eee77a3648ba863a650a54a51eb6a410849d251",
+      "runtime_markers": [
+        {
+          "marker": "IM-U490S",
+          "count": 19,
+          "offsets": [
+            36,
+            4752124,
+            5858968,
+            10006204,
+            14965140,
+            18407716,
+            19345546,
+            20246556,
+            20821972,
+            25267072,
+            27420144,
+            28087588,
+            28224104,
+            32939676,
+            33493876,
+            35857824,
+            39780008,
+            292173068,
+            292346516
+          ]
+        },
+        {
+          "marker": "S0184128",
+          "count": 5,
+          "offsets": [
+            52,
+            19374596,
+            28583208,
+            39900776,
+            39900824
+          ]
+        },
+        {
+          "marker": "application/x-gnex-sgs",
+          "count": 7,
+          "offsets": [
+            21135980,
+            25174590,
+            31426072,
+            38142451,
+            132573790,
+            133018490,
+            150277882
+          ]
+        },
+        {
+          "marker": "Sinjisoft",
+          "count": 5,
+          "offsets": [
+            22076596,
+            126419152,
+            131278104,
+            169390912,
+            169399790
+          ]
+        },
+        {
+          "marker": "SINJISOFT",
+          "count": 56,
+          "offsets": [
+            13989966,
+            13989995,
+            24251300,
+            24251334,
+            27382546,
+            27382580,
+            29919536,
+            29919570,
+            32842164,
+            32842193,
+            128711490,
+            128711524,
+            129828648,
+            129828684,
+            129845902,
+            129845936,
+            131328056,
+            131328085,
+            131494586,
+            131494615,
+            162590342,
+            162590376,
+            162994082,
+            162994116,
+            163679152,
+            163679186,
+            163683756,
+            163683792,
+            163746400,
+            163746434,
+            163841432,
+            163841466,
+            163841690,
+            163841724,
+            166433544,
+            166433578,
+            166434118,
+            166434152,
+            166434354,
+            166434388,
+            166435194,
+            166435228,
+            166435444,
+            166435478,
+            166435874,
+            166435908,
+            166436346,
+            166436380,
+            166901174,
+            166901208,
+            167911454,
+            167911488,
+            169449558,
+            169449594,
+            169712524,
+            169712558
+          ]
+        },
+        {
+          "marker": "GNEX",
+          "count": 5,
+          "offsets": [
+            18186968,
+            21136004,
+            38142387,
+            132768398,
+            133043354
+          ]
+        }
+      ],
+      "sgs_containers": 0,
+      "partitions": [
+        {
+          "index": 0,
+          "name": "INFO",
+          "record_offset": 292683792,
+          "file_offset": 0,
+          "bytes": 131072,
+          "device_address": 13631488,
+          "sha256": "a50a4b411c01255106c84ba91db97c791a0392e522673d0399e579bb205dc053"
+        },
+        {
+          "index": 1,
+          "name": "AMSS",
+          "record_offset": 292683888,
+          "file_offset": 131072,
+          "bytes": 40894464,
+          "device_address": 14680064,
+          "sha256": "497ce72c81b4c42c05d55f0c0be528f1502bfb23f1535f856f7586ae5417b0dc"
+        },
+        {
+          "index": 2,
+          "name": "RSC",
+          "record_offset": 292683984,
+          "file_offset": 41025536,
+          "bytes": 135004160,
+          "device_address": 67108864,
+          "sha256": "6b1d7dffd5b6ce0bd473c3b91b75ca2467298e5b801f6b4cda45a0af1e7c53b4"
+        },
+        {
+          "index": 3,
+          "name": "DICTIONARY",
+          "record_offset": 292684080,
+          "file_offset": 176029696,
+          "bytes": 112984064,
+          "device_address": 207618048,
+          "sha256": "b3aeff051f4a568da5c980d4b075e4cd4b8129bb439f0fa84a18a2a25a0c13df"
+        },
+        {
+          "index": 4,
+          "name": "SYMBOL",
+          "record_offset": 292684176,
+          "file_offset": 289013760,
+          "bytes": 2883584,
+          "device_address": 332398592,
+          "sha256": "30c85e9a0969d6d91337139b8bf3b30b8bd58f8b31e22874e077ad06015c7bc6"
+        },
+        {
+          "index": 5,
+          "name": "CONFIG",
+          "record_offset": 292684272,
+          "file_offset": 291897344,
+          "bytes": 131072,
+          "device_address": 0,
+          "sha256": "11b3be3ff98a15bfe00b5f9da942a049700d71b45b0e2d8ed30be32229beaa9c"
+        },
+        {
+          "index": 6,
+          "name": "QCSBL",
+          "record_offset": 292684368,
+          "file_offset": 292028416,
+          "bytes": 131072,
+          "device_address": 1572864,
+          "sha256": "24e1e5997ed10eeb5afe7e612641d052715b29c4746dc1956d9194ca3e4da7b8"
+        },
+        {
+          "index": 7,
+          "name": "OEMSBL",
+          "record_offset": 292684464,
+          "file_offset": 292159488,
+          "bytes": 393216,
+          "device_address": 2359296,
+          "sha256": "ce86fbce7a1e50f67d0f16b6fa712bebb06e97a0709c5ddb7c68845c6c2b4fb2"
+        },
+        {
+          "index": 8,
+          "name": "OEMEXTBL",
+          "record_offset": 292684560,
+          "file_offset": 292552704,
+          "bytes": 131072,
+          "device_address": 4718592,
+          "sha256": "fcf0aa73cfa89ada2508d8c9f3e0577b536a7fa1a7a8dbd81cbaf64abb7307c3"
+        }
+      ],
+      "rsc": {
+        "layout": "trailing-table",
+        "payload_offset": 41060352,
+        "table_offset": 175904768,
+        "records": 2466,
+        "games": 4,
+        "evidence": "sky-new-rsc-game-extractions.json"
+      }
+    }
+  ],
+  "sgs_scan_limits": "Whole decoded files scanned in 32MiB steps plus1MiB overlap, every offset SGS1/2/4/36 plain/XORA5. No structurally valid whole SGS. Unknown packing/fragmentation and very large containers crossing slice boundaries are not excluded.",
+  "unretrieved": [
+    {
+      "model": "IM-U580S",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-U580S/",
+      "error": "<urlopen error [WinError 10060] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера>"
+    }
+  ]
+}

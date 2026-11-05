@@ -44,6 +44,12 @@ def main():
         )["games"]
     }
     catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
+    native_names = {
+        entry["name"]
+        for entry in json.loads(
+            (ROOT / "tests/native-goldens.json").read_text(encoding="utf-8")
+        )
+    }
     profiles = {}
     for name in ("phone-profiles.json", "legacy-profiles.json"):
         profiles.update(
@@ -55,6 +61,9 @@ def main():
         "desktop-gameplay.json",
         "modern-gameplay.json",
         "swerve-gameplay.json",
+        "kingston-naver-gameplay.json",
+        "phone-firmware-gameplay.json",
+        "lg-sd810-gameplay.json",
     ):
         path = VALIDATION / name
         if not path.exists():
@@ -95,7 +104,8 @@ def main():
             }
         )
         proof = proofs.get(game["id"])
-        if game["platform"] == "kpex":
+        has_native_golden = game["sourceName"] in native_names
+        if has_native_golden:
             game["compatibility"] = "verified"
         elif proof:
             game["compatibility"] = (
@@ -106,7 +116,8 @@ def main():
             game["compatibility"] = "research"
         game["startHint"] = HINTS.get(
             game["id"],
-            (
+            game.get("startHint")
+            or (
                 "Выбор — Z / OK. Цифры, * и # доступны на клавиатуре телефона; следуйте подсказкам игры."
                 if game["platform"] == "mobile"
                 else "Выбор — Z / A. Движение — стрелки."
@@ -128,7 +139,7 @@ def main():
                         "record": "tests/gnex.test.mjs",
                         "note": "Native desktop pixel, event and syscall goldens",
                     }
-                    if proof or game["platform"] == "kpex"
+                    if proof or has_native_golden
                     else None
                 ),
             }

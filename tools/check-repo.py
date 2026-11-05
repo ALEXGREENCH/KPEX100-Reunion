@@ -95,7 +95,7 @@ def main():
             print("Missing or changed bundled original: " + name)
             return 1
     print(
-        f"Checked {len(names)} tracked files and all 51 original hashes; no generated directories."
+        f"Checked {len(names)} tracked files and {len(original_files())} original hashes."
     )
     return 0
 

@@ -1,0 +1,482 @@
+{
+  "source_archive": {
+    "url": "https://archive.sunderland93.ru/Firmwares/LG/KU990%20%28Viewty%29/Ku990%20v10j.7z",
+    "size": 74194366,
+    "header_content_length": "74194366",
+    "sha256": "5aa4e01a8897f45e1c11a170f8f125122b426990b76be5b04b7fd61889eb0f10",
+    "magic": "377abcaf271c00041ddcaba2791d6c04"
+  },
+  "dz": {
+    "source": "KU990-DZ-V10j-MAR-15-2009-OPN-EU.dz",
+    "source_bytes": 73722389,
+    "source_sha256": "13d4552d918cd50e9dff7e6c355be4ccc18da39fddd595ea3cedd50505857e43",
+    "header_md5_valid": true,
+    "model": "KU990",
+    "title": "KU990-DZ-V10j-MAR-15-2009-OPN-EU",
+    "chip_os": [
+      "MSM6280",
+      "bigboss"
+    ],
+    "files": [
+      {
+        "name": "amss.mbn",
+        "offset": 316,
+        "compressed_bytes": 28359256,
+        "bytes": 29652848,
+        "sha256": "0c8ac1ca18b54397ab188fe0caaa1960985dce5a39ce0fb3096433e486aa1ceb",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "KU990-MEDIA-V10j-MAR-15-2009-OPN-EU.bin",
+        "offset": 28359768,
+        "compressed_bytes": 34009116,
+        "bytes": 60259074,
+        "sha256": "bfd6f163e281253f45c66741348fd3b34072d349859ce1b453f73e34acfd8f08",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "KU990-MODULE-V10j-MAR-15-2009-OPN-EU.bin",
+        "offset": 62369080,
+        "compressed_bytes": 11056317,
+        "bytes": 33474999,
+        "sha256": "f60bae93a958b22429f90b1582a4385121372ff1f8669b2d22390a51b201a8d9",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "partition.mbn",
+        "offset": 73425593,
+        "compressed_bytes": 158,
+        "bytes": 464,
+        "sha256": "4dcf64daf6607e787a75abe1108d1baafe25db9dcaec958efc73730c15415592",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "pbl.mbn",
+        "offset": 73425947,
+        "compressed_bytes": 8363,
+        "bytes": 14701,
+        "sha256": "da6acb4498a41d845f795ad577fc8d339acd9b94f8f9ce74ac5efd178af0ee76",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "qcsblhd_cfgdata.mbn",
+        "offset": 73434506,
+        "compressed_bytes": 511,
+        "bytes": 1260,
+        "sha256": "dca440abaab0cfd476e22f5d688d0286a104716d26959ab4e19fde56c3994bd2",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "qcsbl.mbn",
+        "offset": 73435213,
+        "compressed_bytes": 9084,
+        "bytes": 17947,
+        "sha256": "5c2673bd2852f86ecd3e5ed3a7f5b12ea2b412802e9febfec6a3575f66e56865",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "oemsblhd.mbn",
+        "offset": 73444493,
+        "compressed_bytes": 41,
+        "bytes": 40,
+        "sha256": "48fb074a0afc326259681359a206696f371d573179ca755a41e29e6b1accd772",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "oemsbl.mbn",
+        "offset": 73444730,
+        "compressed_bytes": 196754,
+        "bytes": 196676,
+        "sha256": "74451fee428bb6de8062598aa1851db4a79a1e618025d1c2baacec8eb064bf82",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "amsshd.mbn",
+        "offset": 73641680,
+        "compressed_bytes": 39,
+        "bytes": 40,
+        "sha256": "0841c884453a33b67a76d3b6fa15042ba8450683d837477995eb8f1243825a68",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      },
+      {
+        "name": "booting_logo.flb",
+        "offset": 73641915,
+        "compressed_bytes": 80158,
+        "bytes": 145408,
+        "sha256": "6fe56ec3efcc2182a0875a5b931769805a5d0f4ccac430b419decc158df87348",
+        "header_md5_valid": true,
+        "gzip_crc_valid": true,
+        "payload_md5_valid": true
+      }
+    ],
+    "trailing_offset": 73722269,
+    "trailing_bytes": 120,
+    "trailing_sha256": "5d64da98dd97013234d1b038226ed929a8dc3a8ad246a241db695c6297e81cab",
+    "format_source": "https://www.frenchcoder.com/dzextract-lg-dz-file-format-and-extract-tool-lg-ks20/"
+  },
+  "pxo": {
+    "sha256": "d2584ae35da1e536266a06e1ca72d3b8e3d28da949bc67e68be22df83d8d86ba",
+    "header_words": [
+      877615184,
+      268435456,
+      895622,
+      6172,
+      4594,
+      4294967295,
+      0,
+      0,
+      0,
+      1,
+      655360,
+      895572
+    ],
+    "metadata_words": [
+      553721856,
+      888492,
+      16781328,
+      16782236,
+      16782236,
+      16795688,
+      518729,
+      719
+    ],
+    "entry_points": [
+      {
+        "kind": "initializer",
+        "descriptor_value": 518729,
+        "thumb_bit": 1,
+        "file_offset": 524900,
+        "bytes": "002806d0034902680a6042684a60806888607047f424000112e003681a78002a07d15a78914206d3",
+        "disassembly": [
+          {
+            "address": 518728,
+            "mnemonic": "cmp",
+            "op_str": "r0, #0"
+          },
+          {
+            "address": 518730,
+            "mnemonic": "beq",
+            "op_str": "#0x7ea5a"
+          },
+          {
+            "address": 518732,
+            "mnemonic": "ldr",
+            "op_str": "r1, [pc, #0xc]"
+          },
+          {
+            "address": 518734,
+            "mnemonic": "ldr",
+            "op_str": "r2, [r0]"
+          },
+          {
+            "address": 518736,
+            "mnemonic": "str",
+            "op_str": "r2, [r1]"
+          },
+          {
+            "address": 518738,
+            "mnemonic": "ldr",
+            "op_str": "r2, [r0, #4]"
+          },
+          {
+            "address": 518740,
+            "mnemonic": "str",
+            "op_str": "r2, [r1, #4]"
+          },
+          {
+            "address": 518742,
+            "mnemonic": "ldr",
+            "op_str": "r0, [r0, #8]"
+          },
+          {
+            "address": 518744,
+            "mnemonic": "str",
+            "op_str": "r0, [r1, #8]"
+          },
+          {
+            "address": 518746,
+            "mnemonic": "bx",
+            "op_str": "lr"
+          },
+          {
+            "address": 518748,
+            "mnemonic": "movs",
+            "op_str": "r4, #0xf4"
+          },
+          {
+            "address": 518750,
+            "mnemonic": "lsls",
+            "op_str": "r0, r0, #4"
+          },
+          {
+            "address": 518752,
+            "mnemonic": "b",
+            "op_str": "#0x7ea88"
+          },
+          {
+            "address": 518754,
+            "mnemonic": "ldr",
+            "op_str": "r3, [r0]"
+          },
+          {
+            "address": 518756,
+            "mnemonic": "ldrb",
+            "op_str": "r2, [r3]"
+          },
+          {
+            "address": 518758,
+            "mnemonic": "cmp",
+            "op_str": "r2, #0"
+          },
+          {
+            "address": 518760,
+            "mnemonic": "bne",
+            "op_str": "#0x7ea7a"
+          },
+          {
+            "address": 518762,
+            "mnemonic": "ldrb",
+            "op_str": "r2, [r3, #1]"
+          },
+          {
+            "address": 518764,
+            "mnemonic": "cmp",
+            "op_str": "r1, r2"
+          },
+          {
+            "address": 518766,
+            "mnemonic": "blo",
+            "op_str": "#0x7ea7e"
+          }
+        ]
+      },
+      {
+        "kind": "entry",
+        "descriptor_value": 719,
+        "thumb_bit": 1,
+        "file_offset": 6890,
+        "bytes": "f8b5041c4a480e1c0168151c0a1cff324132042c71d02edc031c1b680127ff330133ff07012c54d0",
+        "disassembly": [
+          {
+            "address": 718,
+            "mnemonic": "push",
+            "op_str": "{r3, r4, r5, r6, r7, lr}"
+          },
+          {
+            "address": 720,
+            "mnemonic": "adds",
+            "op_str": "r4, r0, #0"
+          },
+          {
+            "address": 722,
+            "mnemonic": "ldr",
+            "op_str": "r0, [pc, #0x128]"
+          },
+          {
+            "address": 724,
+            "mnemonic": "adds",
+            "op_str": "r6, r1, #0"
+          },
+          {
+            "address": 726,
+            "mnemonic": "ldr",
+            "op_str": "r1, [r0]"
+          },
+          {
+            "address": 728,
+            "mnemonic": "adds",
+            "op_str": "r5, r2, #0"
+          },
+          {
+            "address": 730,
+            "mnemonic": "adds",
+            "op_str": "r2, r1, #0"
+          },
+          {
+            "address": 732,
+            "mnemonic": "adds",
+            "op_str": "r2, #0xff"
+          },
+          {
+            "address": 734,
+            "mnemonic": "adds",
+            "op_str": "r2, #0x41"
+          },
+          {
+            "address": 736,
+            "mnemonic": "cmp",
+            "op_str": "r4, #4"
+          },
+          {
+            "address": 738,
+            "mnemonic": "beq",
+            "op_str": "#0x3c8"
+          },
+          {
+            "address": 740,
+            "mnemonic": "bgt",
+            "op_str": "#0x344"
+          },
+          {
+            "address": 742,
+            "mnemonic": "adds",
+            "op_str": "r3, r0, #0"
+          },
+          {
+            "address": 744,
+            "mnemonic": "ldr",
+            "op_str": "r3, [r3]"
+          },
+          {
+            "address": 746,
+            "mnemonic": "movs",
+            "op_str": "r7, #1"
+          },
+          {
+            "address": 748,
+            "mnemonic": "adds",
+            "op_str": "r3, #0xff"
+          },
+          {
+            "address": 750,
+            "mnemonic": "adds",
+            "op_str": "r3, #1"
+          },
+          {
+            "address": 752,
+            "mnemonic": "lsls",
+            "op_str": "r7, r7, #0x1f"
+          },
+          {
+            "address": 754,
+            "mnemonic": "cmp",
+            "op_str": "r4, #1"
+          },
+          {
+            "address": 756,
+            "mnemonic": "beq",
+            "op_str": "#0x3a0"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "term": "/LGAPP/Media/SR/data.lkz",
+        "offsets": [
+          8492
+        ]
+      },
+      {
+        "term": "data/240_378/",
+        "offsets": [
+          8456,
+          8472
+        ]
+      },
+      {
+        "term": "Space Commando",
+        "offsets": []
+      },
+      {
+        "term": "LG Russia",
+        "offsets": []
+      },
+      {
+        "term": "Sinji",
+        "offsets": []
+      },
+      {
+        "term": "GNEX",
+        "offsets": []
+      }
+    ]
+  },
+  "game_files": [
+    {
+      "path": "MEDIA/LGAPP/Media/SR/campaign.lks",
+      "bytes": 997,
+      "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+    },
+    {
+      "path": "MEDIA/LGAPP/Media/SR/data.lkz",
+      "bytes": 4811104,
+      "sha256": "e9e6cdb2a21da08dc63a080c6ba7d1ac164bb7078a2b159a237694046aa9da35",
+      "zip_crc_valid": true,
+      "zip_entries": 508,
+      "title_evidence": [
+        {
+          "entry": "data/240_378/Menu/english.lks",
+          "term": "S\u0000p\u0000a\u0000c\u0000e\u0000 \u0000C\u0000o\u0000m\u0000m\u0000a\u0000n\u0000d\u0000o\u0000",
+          "offset": 2522,
+          "context_hex": "690067006e0020004d006f006400650020006f006600200053007000610063006500200043006f006d006d0061006e0064006f00200050006c00610074006f006f006e002000470061006d006500210032000000000000000800000043004f004e00540049004e005500450033000000000000000c000000"
+        },
+        {
+          "entry": "data/240_378/Menu/french.lks",
+          "term": "S\u0000p\u0000a\u0000c\u0000e\u0000 \u0000C\u0000o\u0000m\u0000m\u0000a\u0000n\u0000d\u0000o\u0000",
+          "offset": 216,
+          "context_hex": "200063006f0073006d00690071007500650073002000280053007000610063006500200043006f006d006d0061006e0064006f00200050006c00610074006f006f006e00290020006f006e0074002000e9007400e9007300200063007200e90065007300200045006e002000740061006e00740020007100"
+        },
+        {
+          "entry": "data/240_378/Menu/german.lks",
+          "term": "S\u0000p\u0000a\u0000c\u0000e\u0000 \u0000C\u0000o\u0000m\u0000m\u0000a\u0000n\u0000d\u0000o\u0000",
+          "offset": 92,
+          "context_hex": "20004a00610068007200200033003700360035002e00200053007000610063006500200043006f006d006d0061006e0064006f00200050006c00610074006f006f006f006e00200028005300430050002900200077007500720064006500200067006500620069006c006400650074002c00200075006d00"
+        },
+        {
+          "entry": "data/240_378/Menu/HelpContent.lks",
+          "term": "S\u0000p\u0000a\u0000c\u0000e\u0000 \u0000C\u0000o\u0000m\u0000m\u0000a\u0000n\u0000d\u0000o\u0000",
+          "offset": 5940,
+          "context_hex": "440020004c00610062003a0020000d000a0020000d000a0053007000610063006500200043006f006d006d0061006e0064006f00200050006c00610074006f006f006e000d000a0020000d000a0028006300290032003000300036000d000a000d000a004100630063006f0075006e00740020004d006100"
+        }
+      ]
+    },
+    {
+      "path": "MEDIA/LGAPP/Media/SR/options.lks",
+      "bytes": 1076,
+      "sha256": "8f50650e3415b148c6f58047636d232bc1c104c84b7254d548b2e436d76851b6"
+    },
+    {
+      "path": "MEDIA/LGAPP/Media/SR/targets.lks",
+      "bytes": 4556,
+      "sha256": "b7f03b589b0eee59c0621ab2b976cea3553881c5e80c49c011ce29118972cd45"
+    },
+    {
+      "path": "MEDIA/LGAPP/Media/SR/weapons.lks",
+      "bytes": 144,
+      "sha256": "b5e09cb7658598f2eb1ab5c5a694c5392f60f7513eff89243ac3e99597958f5b"
+    },
+    {
+      "path": "MODULE/UPLOAD/Pxo/Game_SR.pxo",
+      "bytes": 895622,
+      "sha256": "d2584ae35da1e536266a06e1ca72d3b8e3d28da949bc67e68be22df83d8d86ba"
+    }
+  ],
+  "sgs_candidates_in_dz_payloads": 0,
+  "developer_credit": "LG Russia R&D Lab",
+  "cyon_matching_lkz_resources": {
+    "KH1300": 157,
+    "SH130": 157,
+    "KH1400": 146
+  }
+}

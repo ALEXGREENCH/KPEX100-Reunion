@@ -7,9 +7,9 @@ const asset = (path) => new Uint8Array(readFileSync(new URL('../web/' + path, im
 const catalog = JSON.parse(new TextDecoder().decode(asset('data/catalog.json')));
 const digest = (data) => createHash('sha256').update(data).digest('hex');
 
-test('all nine ROMs, 38 SGS and three reached states retain original bytes', () => {
+test('all nine ROMs, 55 SGS and three reached states retain original bytes', () => {
   assert.equal(catalog.firmwares.length, 9);
-  assert.equal(catalog.games.length, 38);
+  assert.equal(catalog.games.length, 55);
   assert.equal(catalog.states.length, 3);
   for (const group of [catalog.firmwares, catalog.games, catalog.states]) {
     assert.equal(new Set(group.map((x) => x.id)).size, group.length);
@@ -33,7 +33,7 @@ test('browser FAT16 disk is byte-for-byte equal to the verified native disk', ()
   const disk = createDisk(files, asset('data/firmware/Kingston-2.12.rom'));
   assert.equal(digest(disk), 'e94efcedd5294f121ab721fd69e80b7919d64488d0a1623a9d429d791dc24017');
 });
-test('all 38 games can be read from FAT chains without changing raw ROM resources', () => {
+test('all catalogue apps can be read from FAT chains without changing raw ROM resources', () => {
   const files = catalog.games.map((g, i) => ({
     name: `R${String(i).padStart(7, '0')}.SGS`,
     data: asset(g.url),

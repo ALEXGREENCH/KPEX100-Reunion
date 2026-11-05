@@ -1,0 +1,1385 @@
+{
+  "schema": 1,
+  "checked": "2026-11-05",
+  "source": {
+    "item": "https://archive.org/details/largest-j2me-and-symbian-collection",
+    "archive": "https://archive.org/download/largest-j2me-and-symbian-collection/s60v2%2826684%29.7z",
+    "bytes": 9411665209,
+    "actual7zHeaderEntries": 26685,
+    "headerRangeBytesRead": 474804,
+    "webViewerEntriesPreviouslyObserved": 3130,
+    "method": "Read actual 7z headers over HTTP Range. The web archive viewer's shorter listing is not an exhaustive inventory."
+  },
+  "solidFolder": {
+    "folderIndex": 2,
+    "sourceOffset": 7403284751,
+    "codec": "RAW LZMA2",
+    "codecPropertyHex": "1c",
+    "dictionaryBytes": 67108864,
+    "verifiedPackedBytes": 2007905686,
+    "decodedBytes": 2346478882,
+    "partsVerified": 240,
+    "lzmaEof": true,
+    "unusedDataBytes": 0,
+    "packedSha256": "870a2c895a93ac57a2c5d21abc6a76da228046a943d74c3ca30507705b69f2bb",
+    "uncompressedSha256": "9a5238c7dc9d0195182fc9eb8de4679b6a8f859c1afa0c5529ca1386f6ec95c9"
+  },
+  "games": [
+    {
+      "title": "Storm of Silence Demo",
+      "classification": "Recovered original archive member; GNEX SGS v4 inside a native Symbian S60 application. No factory-phone provenance asserted.",
+      "installer": {
+        "archiveMember": "s60v2/stormofsilencedemo.sis",
+        "bytes": 339136,
+        "sha256": "2d276a81e795d467868575bd21a035b418707ab4bd573f567943972df7b98ec4",
+        "crc32": "5f7d3edf",
+        "crc32Matches7zHeader": true,
+        "componentNames": [
+          "StormOfSilenceDemo"
+        ],
+        "uid1": "10275469",
+        "versionMajor": 1,
+        "versionMinor": 0,
+        "uidCrcVerified": true,
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false,
+        "files": 18
+      },
+      "application": {
+        "name": "StormOfSilenceDemo.app",
+        "bytes": 430508,
+        "sha256": "7eac806b76e7479554a47847a6f77a7bf60981ae3a05680f8cfc16f56d1077ee"
+      },
+      "sgs": {
+        "sourceOffset": 275356,
+        "version": 4,
+        "bytes": 128690,
+        "sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+        "xorMask": 0,
+        "variables": 174,
+        "resources": 590,
+        "entries": [
+          59414,
+          0,
+          23328,
+          12886,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "bytesPreserved": true,
+        "firstString": "미션 브리핑",
+        "firstStringIsGameTitle": false
+      },
+      "replay": {
+        "engine": "Reunion GNEX runtime with verified original Kingston 2.12 ROM",
+        "clock": "Virtual monotonic deadlines and advancing civil time",
+        "keys": [
+          20,
+          20,
+          23,
+          17,
+          20,
+          1,
+          5,
+          20,
+          21,
+          20
+        ],
+        "beforePresentationFix": [
+          {
+            "width": 176,
+            "height": 208,
+            "status": "idle",
+            "error": null,
+            "uniqueFrames": 3
+          },
+          {
+            "width": 176,
+            "height": 220,
+            "status": "idle",
+            "error": null,
+            "uniqueFrames": 3
+          },
+          {
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "uniqueFrames": 3
+          }
+        ],
+        "afterPresentationFix": {
+          "width": 176,
+          "height": 208,
+          "status": "idle",
+          "error": null,
+          "uniqueFrames": 149,
+          "controlPlan": "START,25 scheduled timers,OK down/up,25 timers,OK down/up,90 timers; then held key through8 scheduled timers and key release.",
+          "controlValidation": [
+            {
+              "key": null,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "25dbeb110183901218ac6fe411ef5e402fe7dc9e253b23bde7a3cc88ff1f110e",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 153,
+              "now": 28750,
+              "filename": "control-storm-idle-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": []
+            },
+            {
+              "key": 2,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "25dbeb110183901218ac6fe411ef5e402fe7dc9e253b23bde7a3cc88ff1f110e",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-2-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    1,
+                    0,
+                    20,
+                    119
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 4,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "769ec95d2f2e38aed59aa736f1bee278012585a6eadd028f4f2d64b447e9f2db",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-4-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    8,
+                    1,
+                    20,
+                    119
+                  ]
+                },
+                {
+                  "index": 147,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    1
+                  ]
+                },
+                {
+                  "index": 149,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 5,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "503b15be718f41df97bcdbca71448be1e23083d7397d708e30656d089f7a3a8a",
+              "beforeState": 5,
+              "afterState": 27,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-5-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    10,
+                    0,
+                    20,
+                    119
+                  ]
+                },
+                {
+                  "index": 87,
+                  "idle": [
+                    5
+                  ],
+                  "actual": [
+                    27
+                  ]
+                },
+                {
+                  "index": 89,
+                  "idle": [
+                    1
+                  ],
+                  "actual": [
+                    0
+                  ]
+                },
+                {
+                  "index": 100,
+                  "idle": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "actual": [
+                    0,
+                    30,
+                    9
+                  ]
+                },
+                {
+                  "index": 154,
+                  "idle": [
+                    1
+                  ],
+                  "actual": [
+                    0
+                  ]
+                },
+                {
+                  "index": 159,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    7
+                  ]
+                },
+                {
+                  "index": 161,
+                  "idle": [
+                    20
+                  ],
+                  "actual": [
+                    10
+                  ]
+                },
+                {
+                  "index": 163,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    4294967295
+                  ]
+                },
+                {
+                  "index": 172,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    2
+                  ]
+                },
+                {
+                  "index": 173,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    14
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 6,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "3aff32b7905448a0c453646a5d4007e70e2caf9c30c65a56fc16008331c8ddd6",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-6-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    10,
+                    0,
+                    84,
+                    119
+                  ]
+                },
+                {
+                  "index": 86,
+                  "idle": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    64
+                  ],
+                  "actual": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "index": 147,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    11
+                  ]
+                },
+                {
+                  "index": 149,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    11
+                  ]
+                },
+                {
+                  "index": 156,
+                  "idle": [
+                    1
+                  ],
+                  "actual": [
+                    4
+                  ]
+                },
+                {
+                  "index": 157,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 8,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "916f6ca8e5fcc2949bc684494a9bb1d2babef667e3e5a587bb2426d5cc2fb01d",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-8-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    0,
+                    0,
+                    20,
+                    119
+                  ]
+                },
+                {
+                  "index": 172,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 16,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "769ec95d2f2e38aed59aa736f1bee278012585a6eadd028f4f2d64b447e9f2db",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-16-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    8,
+                    1,
+                    20,
+                    119
+                  ]
+                },
+                {
+                  "index": 147,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    1
+                  ]
+                },
+                {
+                  "index": 149,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 17,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "3aff32b7905448a0c453646a5d4007e70e2caf9c30c65a56fc16008331c8ddd6",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-17-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    10,
+                    0,
+                    84,
+                    119
+                  ]
+                },
+                {
+                  "index": 86,
+                  "idle": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    64
+                  ],
+                  "actual": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "index": 147,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    11
+                  ]
+                },
+                {
+                  "index": 149,
+                  "idle": [
+                    3
+                  ],
+                  "actual": [
+                    11
+                  ]
+                },
+                {
+                  "index": 156,
+                  "idle": [
+                    1
+                  ],
+                  "actual": [
+                    4
+                  ]
+                },
+                {
+                  "index": 157,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 18,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "25dbeb110183901218ac6fe411ef5e402fe7dc9e253b23bde7a3cc88ff1f110e",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-18-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    1,
+                    0,
+                    20,
+                    119
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 19,
+              "heldTimerSteps": 8,
+              "beforeFrame": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+              "afterFrame": "916f6ca8e5fcc2949bc684494a9bb1d2babef667e3e5a587bb2426d5cc2fb01d",
+              "beforeState": 5,
+              "afterState": 5,
+              "eventCount": 155,
+              "now": 28750,
+              "filename": "control-storm-19-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 51,
+                  "idle": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    18,
+                    0,
+                    20,
+                    119
+                  ],
+                  "actual": [
+                    1,
+                    100,
+                    0,
+                    0,
+                    0,
+                    0,
+                    20,
+                    119
+                  ]
+                },
+                {
+                  "index": 172,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "observed": "Title, dialogue and training level; RIGHT17/numeric6 moves the player x20 to84 over8 timer deadlines, distinct from an equal-time idle control.",
+        "playableScenarioVerified": true,
+        "audioVerified": false,
+        "limits": "No source bytes patched; native Symbian app not executed as an OS process. No full playthrough or save verification. External SIS WAV/MIDI audio is not integrated."
+      }
+    },
+    {
+      "title": "Waterski",
+      "classification": "Recovered original archive member; GNEX SGS v4 inside a native Symbian S60 application. No factory-phone provenance asserted.",
+      "installer": {
+        "archiveMember": "s60v2/waterski.sis",
+        "bytes": 623685,
+        "sha256": "329f93da2deac528e4b2793f75f9ebf73d33e2ec0097778233f8adfc5459c2cc",
+        "crc32": "37b61bcd",
+        "crc32Matches7zHeader": true,
+        "componentNames": [
+          "WaterSki"
+        ],
+        "uid1": "1027546a",
+        "versionMajor": 1,
+        "versionMinor": 0,
+        "uidCrcVerified": true,
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false,
+        "files": 16
+      },
+      "application": {
+        "name": "WaterSki.app",
+        "bytes": 449920,
+        "sha256": "c147e2c37bce0b33ee37b4585ddcfb1d5af4a69ee287820ae0893a7b347350a7"
+      },
+      "sgs": {
+        "sourceOffset": 275772,
+        "version": 4,
+        "bytes": 147636,
+        "sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+        "xorMask": 0,
+        "variables": 205,
+        "resources": 409,
+        "entries": [
+          26116,
+          0,
+          15952,
+          12696,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "bytesPreserved": true,
+        "firstString": "수상스키",
+        "firstStringIsGameTitle": true
+      },
+      "replay": {
+        "engine": "Reunion GNEX runtime with verified original Kingston 2.12 ROM",
+        "clock": "Virtual monotonic deadlines and advancing civil time",
+        "keys": [
+          20,
+          20,
+          23,
+          17,
+          20,
+          1,
+          5,
+          20,
+          21,
+          20
+        ],
+        "beforePresentationFix": [
+          {
+            "width": 176,
+            "height": 208,
+            "status": "idle",
+            "error": null,
+            "uniqueFrames": 3
+          },
+          {
+            "width": 176,
+            "height": 220,
+            "status": "idle",
+            "error": null,
+            "uniqueFrames": 3
+          },
+          {
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "uniqueFrames": 3
+          }
+        ],
+        "afterPresentationFix": {
+          "width": 176,
+          "height": 208,
+          "status": "idle",
+          "error": null,
+          "uniqueFrames": 78,
+          "controlPlan": "START; repeat6 times:25 scheduled timers,OK down/up; then held key through8 scheduled timers and key release.",
+          "controlValidation": [
+            {
+              "key": null,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 171,
+              "now": 51100,
+              "filename": "control-waterski-idle-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": []
+            },
+            {
+              "key": 2,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "e3afbd425805890f2908b929be6ad489ab04318d51a62b13af5e84d9a10c145f",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-2-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 96,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                },
+                {
+                  "index": 98,
+                  "idle": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "actual": [
+                    0,
+                    8,
+                    4294967295,
+                    0
+                  ]
+                },
+                {
+                  "index": 102,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                },
+                {
+                  "index": 109,
+                  "idle": [
+                    3,
+                    0,
+                    0
+                  ],
+                  "actual": [
+                    3,
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "index": 122,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    8
+                  ]
+                },
+                {
+                  "index": 133,
+                  "idle": [
+                    0,
+                    0,
+                    66,
+                    0,
+                    0,
+                    83,
+                    0,
+                    0
+                  ],
+                  "actual": [
+                    0,
+                    0,
+                    66,
+                    0,
+                    0,
+                    83,
+                    0,
+                    92
+                  ]
+                },
+                {
+                  "index": 198,
+                  "idle": [
+                    40
+                  ],
+                  "actual": [
+                    4294967295
+                  ]
+                },
+                {
+                  "index": 199,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    2
+                  ]
+                },
+                {
+                  "index": 203,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 4,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-4-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 5,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-5-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 6,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-6-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 8,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-8-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 16,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-16-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 17,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-17-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 18,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "e3afbd425805890f2908b929be6ad489ab04318d51a62b13af5e84d9a10c145f",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-18-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                },
+                {
+                  "index": 96,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                },
+                {
+                  "index": 98,
+                  "idle": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "actual": [
+                    0,
+                    8,
+                    4294967295,
+                    0
+                  ]
+                },
+                {
+                  "index": 102,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                },
+                {
+                  "index": 109,
+                  "idle": [
+                    3,
+                    0,
+                    0
+                  ],
+                  "actual": [
+                    3,
+                    1,
+                    0
+                  ]
+                },
+                {
+                  "index": 122,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    8
+                  ]
+                },
+                {
+                  "index": 133,
+                  "idle": [
+                    0,
+                    0,
+                    66,
+                    0,
+                    0,
+                    83,
+                    0,
+                    0
+                  ],
+                  "actual": [
+                    0,
+                    0,
+                    66,
+                    0,
+                    0,
+                    83,
+                    0,
+                    92
+                  ]
+                },
+                {
+                  "index": 198,
+                  "idle": [
+                    40
+                  ],
+                  "actual": [
+                    4294967295
+                  ]
+                },
+                {
+                  "index": 199,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    2
+                  ]
+                },
+                {
+                  "index": 203,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "key": 19,
+              "heldTimerSteps": 8,
+              "beforeFrame": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+              "afterFrame": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4",
+              "beforeState": 3,
+              "afterState": 3,
+              "eventCount": 173,
+              "now": 51100,
+              "filename": "control-waterski-19-after.rgba",
+              "status": "idle",
+              "error": null,
+              "variableDifferencesFromIdle": [
+                {
+                  "index": 0,
+                  "idle": [
+                    0
+                  ],
+                  "actual": [
+                    255
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "observed": "Menu, instructions, stage description and live gameplay; UP18/numeric2 triggers a jump, distinct from an equal-time idle control.",
+        "playableScenarioVerified": true,
+        "audioVerified": false,
+        "limits": "No source bytes patched; native Symbian app not executed as an OS process. No full playthrough or save verification. External SIS WAV/MIDI audio is not integrated."
+      }
+    }
+  ],
+  "reproduction": {
+    "extractSis": "python tools/extract-old-sis.py INPUT.sis NEW_OUTPUT_DIRECTORY",
+    "scanSgs": "python tools/scan-firmware-games.py EXTRACTED.app --extract NEW_SGS_DIRECTORY --output scan.json",
+    "formatReference": "https://thoukydides.github.io/riscos-psifs/sis.html"
+  },
+  "limits": [
+    "CRC and SHA verify recovery integrity, not a publisher signature or legal license.",
+    "Storm installer explicitly identifies a demo; no full-version recovery claimed.",
+    "Waterski installer version must be read from its original header; its unversioned filename alone is not version evidence.",
+    "These separate Symbian ports do not identify an embedded factory game in any particular Nokia ROM.",
+    "The two raw SGS are research recoveries, outside the currently verified 50-entry web catalogue."
+  ]
+}

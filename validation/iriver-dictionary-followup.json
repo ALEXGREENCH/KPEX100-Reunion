@@ -1,0 +1,162 @@
+{
+  "checked": "2026-11-05",
+  "classification": "Unconfirmed exact-model GNEX candidates; no valid SGS recovered in this dictionary pass",
+  "d10": {
+    "source": "https://best-bk.tistory.com/10",
+    "input": "D10.HEX",
+    "inputSize": 3773952,
+    "inputSha256": "9b6d8c9895cbedac8c941ca3b024010e3dd72545f322e0606d34dbcce954e249",
+    "decoderSource": "https://iriver-t10.sourceforge.net/bzr/irde/irde.c",
+    "decoderSha256": "b849d88ea57ef67d71b189c54ec17ec7243464e806531b1a74921c576aa0c926",
+    "output": "D10.decoded.bin",
+    "outputSize": 3685500,
+    "outputSha256": "a419b15ea6ab29bcade3b7b0d03e02467479fd5da62046a618b595bb5924d187",
+    "blocksVerified": 14742,
+    "groupChecksumsVerified": 73710,
+    "roundtripExact": true,
+    "headerDeclaredSize": 3773952,
+    "headerDeclaredChecksum": 474725082,
+    "encodedBodyChecksum": 474725082,
+    "markers": [
+      {
+        "offset": 0,
+        "text": "D10.HEX"
+      },
+      {
+        "offset": 187204,
+        "text": "iriver D10 Manager"
+      },
+      {
+        "offset": 1677740,
+        "text": "flex scanner push-back overflow"
+      },
+      {
+        "offset": 1925340,
+        "text": "iRiver  D10 Mass Driver 1.00"
+      },
+      {
+        "offset": 1925375,
+        "text": " iRiver    D10-100 USB MS"
+      },
+      {
+        "offset": 2446652,
+        "text": "REIGNCOM D10"
+      }
+    ]
+  },
+  "d10Scans": [
+    {
+      "input": "D10.HEX",
+      "images": 1,
+      "bytes": 3773952,
+      "candidate_offsets_tested": 111622,
+      "container_occurrences": 0,
+      "unique_decoded_bodies": 0
+    },
+    {
+      "input": "D10.decoded.bin",
+      "images": 1,
+      "bytes": 3685500,
+      "candidate_offsets_tested": 214279,
+      "container_occurrences": 0,
+      "unique_decoded_bodies": 0
+    }
+  ],
+  "d10Limits": [
+    "The recovered standalone HEX version is unknown; a neighbouring 1.60 installer filename does not identify it.",
+    "All 14742 outer and73710 inner checksums validate; independently reversed bytes match encoded input exactly.",
+    "No GNEX/GVM/Sinji/XEOVIA markers or structurally valid SGS found in these exact encoded/decoded bytes.",
+    "This is not a claim about every D10 firmware revision or proprietary packaging."
+  ],
+  "d26OfficialCards": [
+    {
+      "card": 726,
+      "releaseDate": "2007-01-02",
+      "title": "D26 Manager1.00",
+      "advertisedFile": "iriver_D26_Manager_Setup.exe",
+      "classification": "Desktop management utility; not a firmware image"
+    },
+    {
+      "card": 788,
+      "releaseDate": "2007-08-02",
+      "title": "iriver Plus3 3.3.1.2",
+      "classification": "Desktop utility update; not a firmware image"
+    }
+  ],
+  "requests": [
+    {
+      "name": "card-726",
+      "url": "https://web.archive.org/web/20070818123529id_/http://service.iriver.co.kr:80/cs_down_view.asp?idx=726&p_name=D26&p_group_cd=2&SrchItem=&SrchString=&SrchProduct=&page=1",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/web/20070818123529id_/http://service.iriver.co.kr:80/cs_down_view.asp?idx=726&p_name=D26&p_group_cd=2&SrchItem=&SrchString=&SrchProduct=&page=1",
+      "bytes": 46843,
+      "sha256": "a15b49cd8e38e3bf7fe482521f42a5690289968d08b6eaca879decf8992ca1a6",
+      "cdxSha1Match": true
+    },
+    {
+      "name": "card-759",
+      "url": "https://web.archive.org/web/20070818202700id_/http://service.iriver.co.kr:80/cs_down_view.asp?idx=759&p_name=D26&p_group_cd=2&SrchItem=&SrchString=&SrchProduct=&page=1",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "name": "card-788",
+      "url": "https://web.archive.org/web/20070818123909id_/http://service.iriver.co.kr:80/cs_down_view.asp?idx=788&p_name=D26&p_group_cd=2&SrchItem=&SrchString=&SrchProduct=&page=1",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/web/20070818123909id_/http://service.iriver.co.kr:80/cs_down_view.asp?idx=788&p_name=D26&p_group_cd=2&SrchItem=&SrchString=&SrchProduct=&page=1",
+      "bytes": 45631,
+      "sha256": "3fcd93f4b4b48a505597e09de7a5ae503d0b2b6e11167471987dc313d3e614c3",
+      "cdxSha1Match": true
+    },
+    {
+      "name": "blog-blacknoise",
+      "url": "https://blog.naver.com/PostView.naver?blogId=blacknoise&logNo=223857082102",
+      "status": 200,
+      "finalUrl": "https://blog.naver.com/PostView.naver?blogId=blacknoise&logNo=223857082102",
+      "bytes": 251755,
+      "sha256": "0610fe77fb123074f672ca2e0025dbd4e0c160b16a1d6ebeebbf8a6fab775df4"
+    },
+    {
+      "name": "blog-domuji6",
+      "url": "https://blog.naver.com/PostView.naver?blogId=domuji6&logNo=110027741368",
+      "status": 200,
+      "finalUrl": "https://blog.naver.com/PostView.naver?blogId=domuji6&logNo=110027741368",
+      "bytes": 193782,
+      "sha256": "eec272c5f072ea754fe4dae420ff397cf86067d77833b0b330514367d20626e7"
+    },
+    {
+      "name": "blog-kimkwno1",
+      "url": "https://blog.naver.com/PostView.naver?blogId=kimkwno1&logNo=140088921631",
+      "status": 200,
+      "finalUrl": "https://blog.naver.com/PostView.naver?blogId=kimkwno1&logNo=140088921631",
+      "bytes": 193324,
+      "sha256": "9a03171ace1324ae8e2752753793eb5965fa2a067f3d83a861e8a2fe68823598"
+    },
+    {
+      "name": "blog-eternal",
+      "url": "https://blog.naver.com/PostView.naver?blogId=eternal0416&logNo=10037206479",
+      "status": 200,
+      "finalUrl": "https://blog.naver.com/PostView.naver?blogId=eternal0416&logNo=10037206479",
+      "bytes": 185013,
+      "sha256": "0a6d15cda880526046b4d0c69944d04e311e2c311f15c0f5d058f103c8c3daaf"
+    },
+    {
+      "name": "blog-laputian",
+      "url": "https://laputian2.tistory.com/825",
+      "error": "HTTP Error 404: "
+    }
+  ],
+  "d20EarlierCard": {
+    "url": "https://web.archive.org/web/20070421144949id_/http://service.iriver.co.kr:80/cs_down_view.asp?idx=653&p_name=D20&p_group_cd=2&SrchItem=&SrchString=&SrchProduct=&page=1",
+    "title": "D20 system update1.20",
+    "releaseDate": "2006-05-09",
+    "bytes": 55074,
+    "sha256": "e6d0c353827ac56a02677982a4cd2cdac35738ee37139c9456fab916f1911992",
+    "status": "Original support card recovered; binary not obtained; download requires registered product ownership"
+  },
+  "limits": [
+    "Brand-level Sinjisoft/Reigncom statements and a game menu do not establish exact-model GNEX deployment.",
+    "D20/D25/D26 remain unconfirmed; no firmware/game binary recovered for them in this pass.",
+    "Public Naver owner/review bodies were read without useful target firmware attachments. P20 WinCE review was a false-positive D20 result.",
+    "429/403/404 failures retained as failures, not negative file inventories. No login/product-registration gate traversed."
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "archives": [
+    {
+      "filename": "curitel-s2.7z",
+      "source": "https://archive.sunderland93.ru/Firmwares/Curitel/S2/Curitel-S2%20%5BMemory%20dump%5D.7z",
+      "bytes": 3288752,
+      "sha256": "c8b68eb43c38da68834e562d64af54c14250ff0475df90870d53a7f7293c8bb8",
+      "signature": "377abcaf271c",
+      "http_status": 200
+    },
+    {
+      "filename": "curitel-s2-alt.7z",
+      "source": "https://archive.sunderland93.ru/Firmwares/Curitel/S2/S2.00.02%20%5BMemory%20dump%5D.7z",
+      "bytes": 3456549,
+      "sha256": "8daa8ed888b12bb30143663503d4952822d2773430113ffbce71892ecba04577",
+      "signature": "377abcaf271c",
+      "http_status": 200
+    },
+    {
+      "filename": "curitel-s5500.7z",
+      "source": "https://archive.sunderland93.ru/Firmwares/Curitel/PG-S5500/S5.01.22%20%5BMemory%20Dump%5D.7z",
+      "bytes": 3228158,
+      "sha256": "180d218e52a84386640459e52a1de217cf8ca8125d27d13a7a7bc4bf39c4ecf2",
+      "signature": "377abcaf271c",
+      "http_status": 200
+    },
+    {
+      "filename": "curitel-s5500-old.7z",
+      "source": "https://archive.sunderland93.ru/Firmwares/Curitel/PG-S5500/S5.00.06%20%5BMemory%20Dump%5D.7z",
+      "bytes": 3226948,
+      "sha256": "43dd7e2753502fd802c1f24579f37eef93fc6a142f0327b3847a9b13329e5ea2",
+      "signature": "377abcaf271c",
+      "http_status": 200
+    },
+    {
+      "filename": "vk100.7z",
+      "source": "https://archive.sunderland93.ru/Firmwares/VK%20Mobile/VK100/VK100_Memdump_FW.7z",
+      "bytes": 3452927,
+      "sha256": "0d2cd100b573028e5cfa324aacac8476c3f67f23d1d358efde89813216ecc5f8",
+      "signature": "377abcaf271c",
+      "http_status": 200
+    },
+    {
+      "filename": "vk200.7z",
+      "source": "https://archive.sunderland93.ru/Firmwares/VK%20Mobile/VK200/VK200.7z",
+      "bytes": 10883680,
+      "sha256": "43c90913135de17e401362884ef80a51e87c68927f9f6caf07a2274053001594",
+      "signature": "377abcaf271c",
+      "http_status": 200
+    },
+    {
+      "filename": "hanhwa-natruca.7z",
+      "source": "https://archive.sunderland93.ru/Firmwares/Hanhwa/NaTruca/HanHwa-NaTruca.7z",
+      "bytes": 853227,
+      "sha256": "6cbb858146f73d982340e74f239b8593b6a5e851f170a404b301e24c78b66441",
+      "signature": "377abcaf271c",
+      "http_status": 200
+    }
+  ],
+  "firmware_markers": [
+    {
+      "file": "Curitel-S2-pt2.bin",
+      "bytes": 4369408,
+      "sha256": "3c602cbb1304a7d0faf355dc5318486a591b8934280b2e3a788e552e527f8735",
+      "evidence": [
+        {
+          "term": "*SKT*GVMINFO",
+          "offsets": [
+            "0x5f8d4"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Curitel-S2.bin",
+      "bytes": 3611184,
+      "sha256": "13764bd69d0b1498a69050bfd027ecf1892c744419fbe41bc5e2f011c7330040",
+      "evidence": [
+        {
+          "term": "/skp/c/GVM/",
+          "offsets": [
+            "0x207940",
+            "0x20aec8",
+            "0x2228c8"
+          ]
+        },
+        {
+          "term": "*SKT*GVMINFO",
+          "offsets": [
+            "0x19e8dc",
+            "0x19e8ec",
+            "0x19e8fc",
+            "0x19e934"
+          ]
+        },
+        {
+          "term": "SKVM",
+          "offsets": [
+            "0x1f3bb8",
+            "0x207953",
+            "0x20aee3",
+            "0x220e04",
+            "0x222ccb",
+            "0x225816"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "CuritelS2-S2.00.02.BIN",
+      "bytes": 8388602,
+      "sha256": "aa2da5eb67aca14d9d6b0c2c2c8a333d4e065045043cc68f3a97c7d10b2a3918",
+      "evidence": [
+        {
+          "term": "/skp/c/GVM/",
+          "offsets": [
+            "0x22c404",
+            "0x22f988",
+            "0x2469c8"
+          ]
+        },
+        {
+          "term": "*SKT*GVMINFO",
+          "offsets": [
+            "0x1c2c34",
+            "0x1c2c44",
+            "0x1c2c54",
+            "0x1c2c8c",
+            "0x40c6dc"
+          ]
+        },
+        {
+          "term": "SKVM",
+          "offsets": [
+            "0x2183b8",
+            "0x22c417",
+            "0x22f9a3",
+            "0x244f10",
+            "0x246dcb",
+            "0x249922"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "PG-S5500-S5.01.22.bin",
+      "bytes": 8388602,
+      "sha256": "97c2d69388224c446ab65813919e4ba3d05f6d454064b568e473e04fc09bd01b",
+      "evidence": [
+        {
+          "term": "/skp/c/GVM/",
+          "offsets": [
+            "0x1fbce8",
+            "0x1ff270",
+            "0x216c60"
+          ]
+        },
+        {
+          "term": "*SKT*GVMINFO",
+          "offsets": [
+            "0x18e610",
+            "0x18e620",
+            "0x18e630",
+            "0x18e668",
+            "0x427a64"
+          ]
+        },
+        {
+          "term": "PG-S5500C",
+          "offsets": [
+            "0x425aa1"
+          ]
+        },
+        {
+          "term": "SKVM",
+          "offsets": [
+            "0x1e7edc",
+            "0x1fbcfb",
+            "0x1ff28b",
+            "0x21519c",
+            "0x217063",
+            "0x219bae"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "PG-S5500-S5.00.06.bin",
+      "bytes": 8388602,
+      "sha256": "592e7f2ad5580d917ef32425516cdf65b50487c71516246ed5546fb94c7ba2a9",
+      "evidence": [
+        {
+          "term": "/skp/c/GVM/",
+          "offsets": [
+            "0x1fa51c",
+            "0x1fdaa4",
+            "0x2153c0"
+          ]
+        },
+        {
+          "term": "*SKT*GVMINFO",
+          "offsets": [
+            "0x18e2d4",
+            "0x18e2e4",
+            "0x18e2f4",
+            "0x18e32c",
+            "0x4261c4"
+          ]
+        },
+        {
+          "term": "PG-S5500C",
+          "offsets": [
+            "0x424201"
+          ]
+        },
+        {
+          "term": "SKVM",
+          "offsets": [
+            "0x1e6710",
+            "0x1fa52f",
+            "0x1fdabf",
+            "0x2138fc",
+            "0x2157c3",
+            "0x21830e"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "VK100_Memdump_FW.bin",
+      "bytes": 8388622,
+      "sha256": "5be60efd81ed3c0f75c0de46aeaa15984e2e15fd6c2734e35aa108edf99bd3e2",
+      "evidence": [
+        {
+          "term": "/skp/c/GVM/",
+          "offsets": [
+            "0x1e12e4",
+            "0x1e3408",
+            "0x1f2efc"
+          ]
+        },
+        {
+          "term": "*SKT*GVMINFO",
+          "offsets": [
+            "0x32ad84"
+          ]
+        },
+        {
+          "term": "application/x-gvm-sgs",
+          "offsets": [
+            "0x6e0ba4"
+          ]
+        },
+        {
+          "term": "GVM Message",
+          "offsets": [
+            "0x3a1d4e",
+            "0x3a1f75"
+          ]
+        },
+        {
+          "term": "*GVM*DLOAD",
+          "offsets": [
+            "0x3ffc20"
+          ]
+        },
+        {
+          "term": "GVM Error!",
+          "offsets": [
+            "0x41b58c"
+          ]
+        },
+        {
+          "term": "VK100",
+          "offsets": [
+            "0x569c14"
+          ]
+        },
+        {
+          "term": "SKVM",
+          "offsets": [
+            "0x1d083c",
+            "0x1e12ff",
+            "0x1e341b",
+            "0x1f1438",
+            "0x1f32ff",
+            "0x1f5e4a",
+            "0x6e0c89"
+          ]
+        }
+      ]
+    }
+  ],
+  "efs_page_probe": {
+    "scope": "Only game-path EFS metadata. Markers DB/5B, 12-byte common header, name length +28, name +29, <=96 bytes before path. Candidate page sizes 256/512/1024; no unrelated filenames or files exported.",
+    "files": [
+      {
+        "file": "Curitel-S2-pt2.bin",
+        "bytes": 4369408,
+        "sha256": "3c602cbb1304a7d0faf355dc5318486a591b8934280b2e3a788e552e527f8735",
+        "raw_game_path_pattern_matches": 0,
+        "game_metadata": []
+      },
+      {
+        "file": "Curitel-S2.bin",
+        "bytes": 3611184,
+        "sha256": "13764bd69d0b1498a69050bfd027ecf1892c744419fbe41bc5e2f011c7330040",
+        "raw_game_path_pattern_matches": 3,
+        "game_metadata": []
+      },
+      {
+        "file": "CuritelS2-S2.00.02.BIN",
+        "bytes": 8388602,
+        "sha256": "aa2da5eb67aca14d9d6b0c2c2c8a333d4e065045043cc68f3a97c7d10b2a3918",
+        "raw_game_path_pattern_matches": 3,
+        "game_metadata": []
+      },
+      {
+        "file": "PG-S5500-S5.01.22.bin",
+        "bytes": 8388602,
+        "sha256": "97c2d69388224c446ab65813919e4ba3d05f6d454064b568e473e04fc09bd01b",
+        "raw_game_path_pattern_matches": 3,
+        "game_metadata": []
+      },
+      {
+        "file": "PG-S5500-S5.00.06.bin",
+        "bytes": 8388602,
+        "sha256": "592e7f2ad5580d917ef32425516cdf65b50487c71516246ed5546fb94c7ba2a9",
+        "raw_game_path_pattern_matches": 3,
+        "game_metadata": []
+      },
+      {
+        "file": "HanHwa-NaTruca.bin",
+        "bytes": 1834992,
+        "sha256": "43e80eaf813d51e8d346e39ca50f223de123dce2533dd31186ba0c554529a03f",
+        "raw_game_path_pattern_matches": 0,
+        "game_metadata": []
+      },
+      {
+        "file": "VK100_Memdump_FW.bin",
+        "bytes": 8388622,
+        "sha256": "5be60efd81ed3c0f75c0de46aeaa15984e2e15fd6c2734e35aa108edf99bd3e2",
+        "raw_game_path_pattern_matches": 4,
+        "game_metadata": []
+      }
+    ]
+  },
+  "contiguous_sgs_found": 0,
+  "distinctions": [
+    "VK100 identity does not resolve VK-100M.",
+    "VK200 WaveCom package does not establish VK-200C compatibility.",
+    "NaTruca image was not independently identified as CS-M210."
+  ]
+}

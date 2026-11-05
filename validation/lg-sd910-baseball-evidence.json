@@ -1,0 +1,86 @@
+{
+  "source": "https://archive.sunderland93.ru/Firmwares/LG/SD910/SX910610_jtag.7z",
+  "source_sha256": "0969140e21c8776057632b09555920f924c5abecc42990a9cda933fd33f1808b",
+  "efs2": {
+    "base": 23068672,
+    "end_exclusive": 134217728,
+    "page_bytes": 512,
+    "checked_game_data_pages": 1562,
+    "parser": "https://github.com/Crawlerop/dumpefs2/tree/86d2c9970894ec6ede2e72b6c126a3e2ac640d75",
+    "game_path": "/wipi/ctn/0056067106/0056067106.sgs",
+    "inode": 880839
+  },
+  "rom_vm": {
+    "version": "036.015.000",
+    "offset": 13855383
+  },
+  "game": {
+    "version": 4,
+    "title": "2007프로야구",
+    "title_bytes_hex": "32303037c7c1b7cebedfb1b8",
+    "declared_body_bytes": 799620,
+    "sections": {
+      "a": 227872,
+      "b": 249440,
+      "c": 294804,
+      "d": 347832
+    },
+    "entries": [
+      152222,
+      0,
+      9636,
+      9078,
+      0,
+      0,
+      9374,
+      0,
+      9114,
+      0,
+      0
+    ],
+    "variables": 2696,
+    "resources": 4419,
+    "compression_type": 0,
+    "source_offset": 0,
+    "body_offset": 32,
+    "wrapper_bytes": 32,
+    "xor_mask": 0,
+    "extracted_bytes": 799652,
+    "raw_sha256": "018225997e94ce0d7ebaa30e3d3ea2a411facf7c5f6c6085b3f5a8756c718c0c",
+    "decoded_body_sha256": "98aa080a95d5d5d0d5fcdd7690b2ce1b3a0826e25c37589d38d7ab1c24ce7e91"
+  },
+  "title_version": "1.0.4",
+  "boot": {
+    "runtime": {
+      "profile": "phone",
+      "width": 176,
+      "height": 220,
+      "deviceMin": "01000000000",
+      "deviceUserId": "64083C5A"
+    },
+    "comparisons": [
+      {
+        "ids": [
+          907,
+          908
+        ],
+        "values": [
+          "64083C5A",
+          "64083C5A"
+        ],
+        "pc": "0x000002de"
+      }
+    ],
+    "status": "idle",
+    "error": null
+  },
+  "gameplay_attempt": {
+    "status": "error",
+    "error": "Event TIMEOUT exceeded 20000000 ARM block work units"
+  },
+  "comparison": {
+    "existing_game_id": "gnex2_2007_pro_baseball",
+    "code_matches": false,
+    "common_resource_payload_hashes_as_multiset": 4299
+  }
+}

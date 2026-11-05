@@ -74,3 +74,28 @@ test('wrong ROM cannot use native fixed addresses', async () => {
   corrupted[0x40000] ^= 1;
   await assert.rejects(GnexRuntime.create(corrupted, game('hell_fire.sgs')), /unmodified Kingston/);
 });
+
+test('Star Fighter sends the release event required by its title screen', async () => {
+  const entry = catalog.games.find((game) => game.id === 'star-fighter');
+  const g = await GnexRuntime.create(
+    rom,
+    fs.readFileSync(new URL(entry.url, source)),
+    entry.runtime,
+  );
+  try {
+    const event = g.event.bind(g);
+    const input = [];
+    g.event = (name, value) => {
+      if (name === 'KEYPRESS') input.push(value);
+      return event(name, value);
+    };
+    g.event('START');
+    g.setKey(20, true);
+    g.setKey(20, false);
+    g.setKey(20, false);
+    assert.deepEqual(input, [20, 0xff]);
+    assert.equal(g.status, 'idle', g.error);
+  } finally {
+    g.close();
+  }
+});

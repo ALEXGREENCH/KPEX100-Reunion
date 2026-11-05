@@ -1,0 +1,2599 @@
+{
+  "scope": "Original level tables and XSB conversion. No ROM or user files distributed.",
+  "record_layout": "Width and height bytes, width times height tile bytes, then zero padding.",
+  "tile_codes": {
+    "1": "goal",
+    "2": "crate",
+    "3": "crate on goal",
+    "4": "floor",
+    "8": "outside",
+    "16": "wall",
+    "32": "player"
+  },
+  "reference_levels": "https://www.geocities.ws/namster2k/pushpush/Push-Push.txt",
+  "stage_entries": 166,
+  "distinct_layouts_across_editions": 65,
+  "confirmed_images": 21,
+  "confirmed_models": 16,
+  "editions": [
+    {
+      "edition": "I",
+      "levels": 50,
+      "distinct_layouts": 50,
+      "record_bytes": 122,
+      "table_bytes": 6100,
+      "table_sha256": "a9b49ef9bd94869ec8cc371e852765739184be16eb57e0e18c5afe5d749965e9",
+      "xsb_sha256": "cf46d77781ef1612e022260a274f1273c2ab138d26c45825d9d0afe2cb1372d5",
+      "source_images": [
+        {
+          "model": "SCH-A310",
+          "file": "a310_vl17.bin",
+          "table_offset": 2602646,
+          "image_bytes": 3145728,
+          "image_sha256": "241dca71c949124f5ad3b280cf1243c12de019e4098f1adad94458596992115b",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-A310.zip"
+        },
+        {
+          "model": "SCH-A310",
+          "file": "SCH-A310_VG18.bin",
+          "table_offset": 2600506,
+          "image_bytes": 4194304,
+          "image_sha256": "a78754ed3a96c38014eafaba5c5f4708cb572eff7fd61323a7d4057356016d3c",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-A310.zip"
+        },
+        {
+          "model": "SCH-A310",
+          "file": "SCH-A310_WJ23_JTAG.bin",
+          "table_offset": 2604346,
+          "image_bytes": 4194304,
+          "image_sha256": "ae847ed1af3c46b254d143b3683c337cf38898e62977495d518d9751e86dc967",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-A310.zip"
+        },
+        {
+          "model": "SCH-E135",
+          "file": "SCH-E135_Prototype.bin",
+          "table_offset": 4301114,
+          "image_bytes": 8388592,
+          "image_sha256": "87cfea4139b7301a54fa3bad6b93a27bcfec75b4e4cd591284b29c5d21537389",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-E135.zip"
+        },
+        {
+          "model": "SCH-X250",
+          "file": "X250rus.bin",
+          "table_offset": 2138890,
+          "image_bytes": 8388608,
+          "image_sha256": "46bd8d555ab09f7c4db19d22e50c9049ba837217e8e3c877f6d2cf0275361ef8",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X250.zip"
+        },
+        {
+          "model": "SCH-X590",
+          "file": "X590eng.bin",
+          "table_offset": 3420226,
+          "image_bytes": 4915200,
+          "image_sha256": "50f883f7cc4493c6d9983a01af6a041f4d5932765868217bca7512847eed92c5",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X590.zip"
+        },
+        {
+          "model": "SCH-X600",
+          "file": "X600_XC29.bin",
+          "table_offset": 3793214,
+          "image_bytes": 8388608,
+          "image_sha256": "300c4d5a6b818b9d0cdd606174cb6a7fb63be8d55ec363c28cda1ee1c5d5aaa1",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X600.zip"
+        },
+        {
+          "model": "SCH-X700",
+          "file": "X700_Kor_Eng.bin",
+          "table_offset": 3221291,
+          "image_bytes": 8388608,
+          "image_sha256": "151bc185ee86eeb141564a5fe5f57bb0a5360eb5a0caa7b7ae6dcfcf1710521f",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X700.zip"
+        }
+      ],
+      "native_validation": {
+        "variant": 1,
+        "source_image": "SCH-A310_VG18.bin",
+        "image_sha256": "a78754ed3a96c38014eafaba5c5f4708cb572eff7fd61323a7d4057356016d3c",
+        "table_offset": 2600506,
+        "native_thumb_entry": 1380894,
+        "table_pointer_literal": 1381084,
+        "execution": "Original Thumb initializer, bounded in Unicorn",
+        "verified_fields": [
+          "width",
+          "height",
+          "player coordinates",
+          "origin",
+          "every initialized tile"
+        ],
+        "stages": [
+          {
+            "stage": 1,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              4,
+              4
+            ],
+            "native_board_sha256": "599b8a9f9678e33c3a61986646b3ae87044f02729d0d4528993341e7c2bdb061",
+            "pixel_origin": [
+              24,
+              22
+            ]
+          },
+          {
+            "stage": 2,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              1,
+              1
+            ],
+            "native_board_sha256": "2854a0f44f55c5276a4f417684667782bccfa888d17e9acd1df102e3d8ef0a6a",
+            "pixel_origin": [
+              19,
+              17
+            ]
+          },
+          {
+            "stage": 3,
+            "width": 10,
+            "height": 7,
+            "player_xy": [
+              2,
+              3
+            ],
+            "native_board_sha256": "0bbaf77b53be3ff9253c7e77bde522fc66adee4c14fb9f68ea7d8abb6fe3e83e",
+            "pixel_origin": [
+              14,
+              27
+            ]
+          },
+          {
+            "stage": 4,
+            "width": 6,
+            "height": 8,
+            "player_xy": [
+              1,
+              2
+            ],
+            "native_board_sha256": "49ecab8c9045d8019a56b8da9f2fd09404e1ab01e7ac2ce214f227a4842a1c15",
+            "pixel_origin": [
+              34,
+              22
+            ]
+          },
+          {
+            "stage": 5,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              2,
+              1
+            ],
+            "native_board_sha256": "59f109e6572e80150152d59f9d6cc5050f259277d557f7fbf3ef45b3a2cafd1d",
+            "pixel_origin": [
+              24,
+              22
+            ]
+          },
+          {
+            "stage": 6,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              8,
+              1
+            ],
+            "native_board_sha256": "d6b237c8121ff61894a4f2a1d365b383146a5bf2341f17a72f8ecb8940a2469d",
+            "pixel_origin": [
+              14,
+              22
+            ]
+          },
+          {
+            "stage": 7,
+            "width": 10,
+            "height": 7,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "4a7d776b05d8b3662927b5e8ebafe0928a63122814a307b9d94c7ed875eceaf1",
+            "pixel_origin": [
+              14,
+              27
+            ]
+          },
+          {
+            "stage": 8,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              8,
+              7
+            ],
+            "native_board_sha256": "c6e903de3e9df00dbd4427a51ebc5bf455806ce9d63284aa589cdc98f2a65159",
+            "pixel_origin": [
+              9,
+              17
+            ]
+          },
+          {
+            "stage": 9,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "825a653ff455c112c28788939ed8fffb99ca815e1f00f763a089d6d5b3076d2c",
+            "pixel_origin": [
+              24,
+              27
+            ]
+          },
+          {
+            "stage": 10,
+            "width": 12,
+            "height": 6,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "ae3470449c26921d20a52e60b9671c3bfb2d52bce907c1b1bea5c5ae3d5a4655",
+            "pixel_origin": [
+              4,
+              32
+            ]
+          },
+          {
+            "stage": 11,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              5,
+              1
+            ],
+            "native_board_sha256": "4757b183f64e72e7f662c5aa161543887983ea11bdd9831ae7fc2f340bc59d2f",
+            "pixel_origin": [
+              24,
+              27
+            ]
+          },
+          {
+            "stage": 12,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              3,
+              6
+            ],
+            "native_board_sha256": "0d558543049758e6bdd12fa6aa42a6b03f2038aa00f3cc4774445bffc0765afa",
+            "pixel_origin": [
+              24,
+              22
+            ]
+          },
+          {
+            "stage": 13,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "c46bba6994d898291dd80e7ce0dd8d332bce141ea24d4f3b171643988a55ef48",
+            "pixel_origin": [
+              24,
+              27
+            ]
+          },
+          {
+            "stage": 14,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              4,
+              5
+            ],
+            "native_board_sha256": "4c51066b7e9cbd1a7ba7a8f8ef0f3de63232247d83cb49bc742a586a3447baec",
+            "pixel_origin": [
+              24,
+              27
+            ]
+          },
+          {
+            "stage": 15,
+            "width": 10,
+            "height": 9,
+            "player_xy": [
+              6,
+              7
+            ],
+            "native_board_sha256": "7160a1a0ff4be7bd37a0d678a8af8322e790c2bd5f7d6b36518a758ac9b3b110",
+            "pixel_origin": [
+              14,
+              17
+            ]
+          },
+          {
+            "stage": 16,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              3,
+              5
+            ],
+            "native_board_sha256": "5c4ae79c41599f39d397f693d350e79cac5b8467759131189da374675de66661",
+            "pixel_origin": [
+              19,
+              27
+            ]
+          },
+          {
+            "stage": 17,
+            "width": 10,
+            "height": 9,
+            "player_xy": [
+              7,
+              7
+            ],
+            "native_board_sha256": "5ded77904bf42a14c545af7c800da32ca2fa4467f822f3ec1dfea7bcf287d099",
+            "pixel_origin": [
+              14,
+              17
+            ]
+          },
+          {
+            "stage": 18,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              5,
+              6
+            ],
+            "native_board_sha256": "5c0adfe11e8c10c47846842d6e22febaa955558de343a8ff0c68dca414341d6e",
+            "pixel_origin": [
+              14,
+              22
+            ]
+          },
+          {
+            "stage": 19,
+            "width": 7,
+            "height": 8,
+            "player_xy": [
+              4,
+              6
+            ],
+            "native_board_sha256": "09f4d4177cb20dfdb8658f73f8dc1f0e40329d89cfafcb554b91667f67a8ca57",
+            "pixel_origin": [
+              29,
+              22
+            ]
+          },
+          {
+            "stage": 20,
+            "width": 11,
+            "height": 8,
+            "player_xy": [
+              1,
+              5
+            ],
+            "native_board_sha256": "93add7faaf34304330e5765074d6f3d5f695090e61a8b728fe88de3ce58a8356",
+            "pixel_origin": [
+              9,
+              22
+            ]
+          },
+          {
+            "stage": 21,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              7,
+              7
+            ],
+            "native_board_sha256": "e4e53f92d888da5b23777a5b3d822af0dbc0caddffb86970fba0e0c0514e6fac",
+            "pixel_origin": [
+              19,
+              17
+            ]
+          },
+          {
+            "stage": 22,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "055013e1160e8df8bafdd25d2fbb2cd6e3b04f71ab3d84c64136dc527f03bf8b",
+            "pixel_origin": [
+              14,
+              22
+            ]
+          },
+          {
+            "stage": 23,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              1,
+              8
+            ],
+            "native_board_sha256": "198c7e2a944d3916d0e0d0570cdacbf3b326128b75bca6bc1ac192361131ae99",
+            "pixel_origin": [
+              9,
+              12
+            ]
+          },
+          {
+            "stage": 24,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              4,
+              5
+            ],
+            "native_board_sha256": "da35591636021bdbfdb45f005e7a78b22607b27ae9c7d6d9882e0a4d760d4136",
+            "pixel_origin": [
+              19,
+              27
+            ]
+          },
+          {
+            "stage": 25,
+            "width": 12,
+            "height": 7,
+            "player_xy": [
+              2,
+              3
+            ],
+            "native_board_sha256": "b490923e3a675199bdc44b1ce3b3bc598ef115912f10b594dd99bd8fe9cb8746",
+            "pixel_origin": [
+              4,
+              27
+            ]
+          },
+          {
+            "stage": 26,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              7,
+              1
+            ],
+            "native_board_sha256": "03f800c0750b10b943e07b0ece2490fb31d90f37bfc85eaeed66b97bf5172dab",
+            "pixel_origin": [
+              19,
+              22
+            ]
+          },
+          {
+            "stage": 27,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              4,
+              6
+            ],
+            "native_board_sha256": "5bd6a36c1f8b0c941868208e1aff5bf064e0cccb40ebac8ef8e626b5408cecdf",
+            "pixel_origin": [
+              24,
+              22
+            ]
+          },
+          {
+            "stage": 28,
+            "width": 10,
+            "height": 10,
+            "player_xy": [
+              5,
+              4
+            ],
+            "native_board_sha256": "7120bd8fa5c51462898c7edaf878734d2d4ed5648a07e6e69b610946467f783f",
+            "pixel_origin": [
+              14,
+              12
+            ]
+          },
+          {
+            "stage": 29,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              5,
+              1
+            ],
+            "native_board_sha256": "e6ecf8d71b0ceb23e438be28d8d6eee00adab0698acbec2ec7349dc7d2c474be",
+            "pixel_origin": [
+              19,
+              22
+            ]
+          },
+          {
+            "stage": 30,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              9,
+              8
+            ],
+            "native_board_sha256": "ff611b475ba9a2136f410f0338cd1fb8446decc94ed6d4d07086341469d82748",
+            "pixel_origin": [
+              9,
+              12
+            ]
+          },
+          {
+            "stage": 31,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              7,
+              6
+            ],
+            "native_board_sha256": "e78138737f6e2a91922be48e1392a62410dcc1c72974ca04dd79322b9b7e5804",
+            "pixel_origin": [
+              14,
+              22
+            ]
+          },
+          {
+            "stage": 32,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              4,
+              2
+            ],
+            "native_board_sha256": "3116cb0591af69c4d49d6d964f5c6016973b568dffb5caa6a1e1b62bd6aeefed",
+            "pixel_origin": [
+              9,
+              12
+            ]
+          },
+          {
+            "stage": 33,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              2,
+              1
+            ],
+            "native_board_sha256": "58546929cf2db91189ad6a63e1607a4047f47b693c80df35c9be2fc7af47266f",
+            "pixel_origin": [
+              9,
+              12
+            ]
+          },
+          {
+            "stage": 34,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              5,
+              1
+            ],
+            "native_board_sha256": "a313729e6e19759f08b709d8cc890ba4d0e5347afe57d95026d6e2ad069767f0",
+            "pixel_origin": [
+              9,
+              17
+            ]
+          },
+          {
+            "stage": 35,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              6,
+              3
+            ],
+            "native_board_sha256": "c38d19d3094498037b53b10c8e1022bd8863a6069eb5e9c04248e8d583da9cc9",
+            "pixel_origin": [
+              19,
+              27
+            ]
+          },
+          {
+            "stage": 36,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              3,
+              2
+            ],
+            "native_board_sha256": "98a206b2c4dce16a6e035869d8337dfc37c02b3b9f553bc3bb02f43e99840c86",
+            "pixel_origin": [
+              9,
+              12
+            ]
+          },
+          {
+            "stage": 37,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              9,
+              4
+            ],
+            "native_board_sha256": "926743fef38eccbcf033d1a2f90f58e7c36c839fed012574b2f342c6d2500036",
+            "pixel_origin": [
+              4,
+              17
+            ]
+          },
+          {
+            "stage": 38,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              5,
+              6
+            ],
+            "native_board_sha256": "1218bff30ddfb073397e8e7b0c7aac7a6119832b718c919e766d5e283eb395c8",
+            "pixel_origin": [
+              19,
+              22
+            ]
+          },
+          {
+            "stage": 39,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "61a6d766811abeab13b2b4e4bf398abbcf0bcc08ceb085faaabb40aee78abd09",
+            "pixel_origin": [
+              19,
+              22
+            ]
+          },
+          {
+            "stage": 40,
+            "width": 12,
+            "height": 5,
+            "player_xy": [
+              10,
+              2
+            ],
+            "native_board_sha256": "3967e819c022cbaaf13e484eede08668fa06394f5163edb652d504a90f170a92",
+            "pixel_origin": [
+              4,
+              37
+            ]
+          },
+          {
+            "stage": 41,
+            "width": 10,
+            "height": 6,
+            "player_xy": [
+              2,
+              4
+            ],
+            "native_board_sha256": "b41bf9a3b0c74da73be13bcf20584a1b6996cf65d74d9958a01993d2de6a8715",
+            "pixel_origin": [
+              14,
+              32
+            ]
+          },
+          {
+            "stage": 42,
+            "width": 10,
+            "height": 9,
+            "player_xy": [
+              4,
+              3
+            ],
+            "native_board_sha256": "29e1e3c00b0dc24e471b585ff5baa7889fb1b709d69718778bd0393cb4cb2b82",
+            "pixel_origin": [
+              14,
+              17
+            ]
+          },
+          {
+            "stage": 43,
+            "width": 7,
+            "height": 7,
+            "player_xy": [
+              3,
+              3
+            ],
+            "native_board_sha256": "6e758f39f0f803cfbdda40cd522659f4e0a8c9c82a13686620bbb3666a541e9a",
+            "pixel_origin": [
+              29,
+              27
+            ]
+          },
+          {
+            "stage": 44,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              5,
+              7
+            ],
+            "native_board_sha256": "271e25b77098ac40aa8422ede975cf84d464542c407e52bdb2c18e97929f8ada",
+            "pixel_origin": [
+              4,
+              17
+            ]
+          },
+          {
+            "stage": 45,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              8,
+              5
+            ],
+            "native_board_sha256": "8032508c014ef45e54d561199c9496e4a14e1d48eebd86ecee2867ff2d3de89c",
+            "pixel_origin": [
+              4,
+              17
+            ]
+          },
+          {
+            "stage": 46,
+            "width": 11,
+            "height": 7,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "7c60c0e66267e6801f5c941c6015a2203df62febc38b31501e99f53e705b5673",
+            "pixel_origin": [
+              9,
+              27
+            ]
+          },
+          {
+            "stage": 47,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "4b38a18dde08a94f6136b10b21dfa6e14e1fc5ab211bad199d82427d26baee3b",
+            "pixel_origin": [
+              9,
+              17
+            ]
+          },
+          {
+            "stage": 48,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              3,
+              1
+            ],
+            "native_board_sha256": "fce595507121b6badca44dd1a8ed2e967a67000a28f1582e2853361767c97967",
+            "pixel_origin": [
+              9,
+              12
+            ]
+          },
+          {
+            "stage": 49,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              4,
+              1
+            ],
+            "native_board_sha256": "c08df7e9e8ff8f66cce425695622e212bf21e2f2bf3331c697cf71d0bed98283",
+            "pixel_origin": [
+              19,
+              17
+            ]
+          },
+          {
+            "stage": 50,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              5,
+              4
+            ],
+            "native_board_sha256": "b0c484ad3f4be83cca7459a1cb364dde3c0fa52300c88973e6adc90f6e996cd9",
+            "pixel_origin": [
+              9,
+              17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "edition": "II",
+      "levels": 66,
+      "distinct_layouts": 65,
+      "record_bytes": 162,
+      "table_bytes": 10692,
+      "table_sha256": "949fbf7e7d221bd253d7a9e2013beeb93c952b5471f64f4878b746326131ed04",
+      "xsb_sha256": "fe60b31f520f4e10ac9fbe1beaabfb8eef7b18a54619a6689c4c60856069263f",
+      "source_images": [
+        {
+          "model": "SCH-E135",
+          "file": "e135eng.bin",
+          "table_offset": 4810708,
+          "image_bytes": 8388608,
+          "image_sha256": "d90e9bc2367afca629369d032506be2a9244d10895242e333c70d12aaa7e00f3",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-E135.zip"
+        },
+        {
+          "model": "SCH-X780",
+          "file": "X780_VerEng150604.bin",
+          "table_offset": 3271408,
+          "image_bytes": 4915200,
+          "image_sha256": "56faec73e55e4cbde3c8d97f1f524ba8520ec91414ce044e388a6dab8d18b6f5",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X780.zip"
+        },
+        {
+          "model": "SCH-X720",
+          "file": "x720kr.bin",
+          "table_offset": 3928968,
+          "image_bytes": 8388608,
+          "image_sha256": "d5e0c00092b2634caafce249b60fc511c366341bd8687d49193c9c292b005721",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X720.zip"
+        },
+        {
+          "model": "SCH-X720",
+          "file": "X720_UB12_russified.bin",
+          "table_offset": 3928968,
+          "image_bytes": 5242880,
+          "image_sha256": "53b6299f495acb59cfa7e7ecdefeafd0be82e58c12f7d52528512f656199777a",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X720.zip"
+        },
+        {
+          "model": "SCH-X750",
+          "file": "schx750.bin",
+          "table_offset": 4067234,
+          "image_bytes": 6925840,
+          "image_sha256": "95980b92f8b791a22a7a59676d0a5394ecb75804909049cecc8d1be35f185f64",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X750.zip"
+        },
+        {
+          "model": "SCH-X800",
+          "file": "SCH-X800_memory.bin",
+          "table_offset": 3530410,
+          "image_bytes": 8388622,
+          "image_sha256": "0009ca9d47f015bfa4dda4400f3131c4a8119cfeb192102e82ebfda9e12334b9",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-X800.zip"
+        },
+        {
+          "model": "SCH-E200",
+          "file": "SCH-E200.bin",
+          "table_offset": 5662925,
+          "image_bytes": 8344928,
+          "image_sha256": "1c3078a454d90e450c3dd1d0d9bb480c3addb9fcf5502d07278fd1f365c1c9ba",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-E200.zip"
+        }
+      ],
+      "native_validation": {
+        "variant": 2,
+        "source_image": "X780_VerEng150604.bin",
+        "image_sha256": "56faec73e55e4cbde3c8d97f1f524ba8520ec91414ce044e388a6dab8d18b6f5",
+        "table_offset": 3271408,
+        "native_thumb_entry": 1283546,
+        "table_pointer_literal": 1283732,
+        "execution": "Original Thumb initializer, bounded in Unicorn",
+        "verified_fields": [
+          "width",
+          "height",
+          "player coordinates",
+          "origin",
+          "every initialized tile"
+        ],
+        "stages": [
+          {
+            "stage": 1,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              4,
+              4
+            ],
+            "native_board_sha256": "599b8a9f9678e33c3a61986646b3ae87044f02729d0d4528993341e7c2bdb061",
+            "pixel_origin": [
+              24,
+              52
+            ]
+          },
+          {
+            "stage": 2,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              1,
+              1
+            ],
+            "native_board_sha256": "2854a0f44f55c5276a4f417684667782bccfa888d17e9acd1df102e3d8ef0a6a",
+            "pixel_origin": [
+              19,
+              47
+            ]
+          },
+          {
+            "stage": 3,
+            "width": 10,
+            "height": 7,
+            "player_xy": [
+              2,
+              3
+            ],
+            "native_board_sha256": "0bbaf77b53be3ff9253c7e77bde522fc66adee4c14fb9f68ea7d8abb6fe3e83e",
+            "pixel_origin": [
+              15,
+              56
+            ]
+          },
+          {
+            "stage": 4,
+            "width": 6,
+            "height": 8,
+            "player_xy": [
+              1,
+              2
+            ],
+            "native_board_sha256": "49ecab8c9045d8019a56b8da9f2fd09404e1ab01e7ac2ce214f227a4842a1c15",
+            "pixel_origin": [
+              33,
+              52
+            ]
+          },
+          {
+            "stage": 5,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              2,
+              1
+            ],
+            "native_board_sha256": "59f109e6572e80150152d59f9d6cc5050f259277d557f7fbf3ef45b3a2cafd1d",
+            "pixel_origin": [
+              24,
+              52
+            ]
+          },
+          {
+            "stage": 6,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              8,
+              1
+            ],
+            "native_board_sha256": "d6b237c8121ff61894a4f2a1d365b383146a5bf2341f17a72f8ecb8940a2469d",
+            "pixel_origin": [
+              15,
+              52
+            ]
+          },
+          {
+            "stage": 7,
+            "width": 10,
+            "height": 7,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "4a7d776b05d8b3662927b5e8ebafe0928a63122814a307b9d94c7ed875eceaf1",
+            "pixel_origin": [
+              15,
+              56
+            ]
+          },
+          {
+            "stage": 8,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              8,
+              7
+            ],
+            "native_board_sha256": "c6e903de3e9df00dbd4427a51ebc5bf455806ce9d63284aa589cdc98f2a65159",
+            "pixel_origin": [
+              10,
+              47
+            ]
+          },
+          {
+            "stage": 9,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "825a653ff455c112c28788939ed8fffb99ca815e1f00f763a089d6d5b3076d2c",
+            "pixel_origin": [
+              24,
+              56
+            ]
+          },
+          {
+            "stage": 10,
+            "width": 12,
+            "height": 6,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "ae3470449c26921d20a52e60b9671c3bfb2d52bce907c1b1bea5c5ae3d5a4655",
+            "pixel_origin": [
+              6,
+              61
+            ]
+          },
+          {
+            "stage": 11,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              5,
+              1
+            ],
+            "native_board_sha256": "4757b183f64e72e7f662c5aa161543887983ea11bdd9831ae7fc2f340bc59d2f",
+            "pixel_origin": [
+              24,
+              56
+            ]
+          },
+          {
+            "stage": 12,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              3,
+              6
+            ],
+            "native_board_sha256": "0d558543049758e6bdd12fa6aa42a6b03f2038aa00f3cc4774445bffc0765afa",
+            "pixel_origin": [
+              24,
+              52
+            ]
+          },
+          {
+            "stage": 13,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "c46bba6994d898291dd80e7ce0dd8d332bce141ea24d4f3b171643988a55ef48",
+            "pixel_origin": [
+              24,
+              56
+            ]
+          },
+          {
+            "stage": 14,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              4,
+              5
+            ],
+            "native_board_sha256": "4c51066b7e9cbd1a7ba7a8f8ef0f3de63232247d83cb49bc742a586a3447baec",
+            "pixel_origin": [
+              24,
+              56
+            ]
+          },
+          {
+            "stage": 15,
+            "width": 10,
+            "height": 9,
+            "player_xy": [
+              6,
+              7
+            ],
+            "native_board_sha256": "7160a1a0ff4be7bd37a0d678a8af8322e790c2bd5f7d6b36518a758ac9b3b110",
+            "pixel_origin": [
+              15,
+              47
+            ]
+          },
+          {
+            "stage": 16,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              3,
+              5
+            ],
+            "native_board_sha256": "5c4ae79c41599f39d397f693d350e79cac5b8467759131189da374675de66661",
+            "pixel_origin": [
+              19,
+              56
+            ]
+          },
+          {
+            "stage": 17,
+            "width": 10,
+            "height": 9,
+            "player_xy": [
+              7,
+              7
+            ],
+            "native_board_sha256": "5ded77904bf42a14c545af7c800da32ca2fa4467f822f3ec1dfea7bcf287d099",
+            "pixel_origin": [
+              15,
+              47
+            ]
+          },
+          {
+            "stage": 18,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              5,
+              6
+            ],
+            "native_board_sha256": "5c0adfe11e8c10c47846842d6e22febaa955558de343a8ff0c68dca414341d6e",
+            "pixel_origin": [
+              15,
+              52
+            ]
+          },
+          {
+            "stage": 19,
+            "width": 7,
+            "height": 8,
+            "player_xy": [
+              4,
+              6
+            ],
+            "native_board_sha256": "09f4d4177cb20dfdb8658f73f8dc1f0e40329d89cfafcb554b91667f67a8ca57",
+            "pixel_origin": [
+              28,
+              52
+            ]
+          },
+          {
+            "stage": 20,
+            "width": 11,
+            "height": 8,
+            "player_xy": [
+              1,
+              5
+            ],
+            "native_board_sha256": "93add7faaf34304330e5765074d6f3d5f695090e61a8b728fe88de3ce58a8356",
+            "pixel_origin": [
+              10,
+              52
+            ]
+          },
+          {
+            "stage": 21,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              7,
+              7
+            ],
+            "native_board_sha256": "e4e53f92d888da5b23777a5b3d822af0dbc0caddffb86970fba0e0c0514e6fac",
+            "pixel_origin": [
+              19,
+              47
+            ]
+          },
+          {
+            "stage": 22,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "055013e1160e8df8bafdd25d2fbb2cd6e3b04f71ab3d84c64136dc527f03bf8b",
+            "pixel_origin": [
+              15,
+              52
+            ]
+          },
+          {
+            "stage": 23,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              1,
+              8
+            ],
+            "native_board_sha256": "198c7e2a944d3916d0e0d0570cdacbf3b326128b75bca6bc1ac192361131ae99",
+            "pixel_origin": [
+              10,
+              43
+            ]
+          },
+          {
+            "stage": 24,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              4,
+              5
+            ],
+            "native_board_sha256": "da35591636021bdbfdb45f005e7a78b22607b27ae9c7d6d9882e0a4d760d4136",
+            "pixel_origin": [
+              19,
+              56
+            ]
+          },
+          {
+            "stage": 25,
+            "width": 12,
+            "height": 7,
+            "player_xy": [
+              2,
+              3
+            ],
+            "native_board_sha256": "b490923e3a675199bdc44b1ce3b3bc598ef115912f10b594dd99bd8fe9cb8746",
+            "pixel_origin": [
+              6,
+              56
+            ]
+          },
+          {
+            "stage": 26,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              7,
+              1
+            ],
+            "native_board_sha256": "03f800c0750b10b943e07b0ece2490fb31d90f37bfc85eaeed66b97bf5172dab",
+            "pixel_origin": [
+              19,
+              52
+            ]
+          },
+          {
+            "stage": 27,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              4,
+              6
+            ],
+            "native_board_sha256": "5bd6a36c1f8b0c941868208e1aff5bf064e0cccb40ebac8ef8e626b5408cecdf",
+            "pixel_origin": [
+              24,
+              52
+            ]
+          },
+          {
+            "stage": 28,
+            "width": 10,
+            "height": 10,
+            "player_xy": [
+              5,
+              4
+            ],
+            "native_board_sha256": "7120bd8fa5c51462898c7edaf878734d2d4ed5648a07e6e69b610946467f783f",
+            "pixel_origin": [
+              15,
+              43
+            ]
+          },
+          {
+            "stage": 29,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              5,
+              1
+            ],
+            "native_board_sha256": "e6ecf8d71b0ceb23e438be28d8d6eee00adab0698acbec2ec7349dc7d2c474be",
+            "pixel_origin": [
+              19,
+              52
+            ]
+          },
+          {
+            "stage": 30,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              9,
+              8
+            ],
+            "native_board_sha256": "ff611b475ba9a2136f410f0338cd1fb8446decc94ed6d4d07086341469d82748",
+            "pixel_origin": [
+              10,
+              43
+            ]
+          },
+          {
+            "stage": 31,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              7,
+              6
+            ],
+            "native_board_sha256": "e78138737f6e2a91922be48e1392a62410dcc1c72974ca04dd79322b9b7e5804",
+            "pixel_origin": [
+              15,
+              52
+            ]
+          },
+          {
+            "stage": 32,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              4,
+              2
+            ],
+            "native_board_sha256": "3116cb0591af69c4d49d6d964f5c6016973b568dffb5caa6a1e1b62bd6aeefed",
+            "pixel_origin": [
+              10,
+              43
+            ]
+          },
+          {
+            "stage": 33,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              2,
+              1
+            ],
+            "native_board_sha256": "58546929cf2db91189ad6a63e1607a4047f47b693c80df35c9be2fc7af47266f",
+            "pixel_origin": [
+              10,
+              43
+            ]
+          },
+          {
+            "stage": 34,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              5,
+              1
+            ],
+            "native_board_sha256": "a313729e6e19759f08b709d8cc890ba4d0e5347afe57d95026d6e2ad069767f0",
+            "pixel_origin": [
+              10,
+              47
+            ]
+          },
+          {
+            "stage": 35,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              6,
+              3
+            ],
+            "native_board_sha256": "c38d19d3094498037b53b10c8e1022bd8863a6069eb5e9c04248e8d583da9cc9",
+            "pixel_origin": [
+              19,
+              56
+            ]
+          },
+          {
+            "stage": 36,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              3,
+              2
+            ],
+            "native_board_sha256": "98a206b2c4dce16a6e035869d8337dfc37c02b3b9f553bc3bb02f43e99840c86",
+            "pixel_origin": [
+              10,
+              43
+            ]
+          },
+          {
+            "stage": 37,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              9,
+              4
+            ],
+            "native_board_sha256": "926743fef38eccbcf033d1a2f90f58e7c36c839fed012574b2f342c6d2500036",
+            "pixel_origin": [
+              6,
+              47
+            ]
+          },
+          {
+            "stage": 38,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              5,
+              6
+            ],
+            "native_board_sha256": "1218bff30ddfb073397e8e7b0c7aac7a6119832b718c919e766d5e283eb395c8",
+            "pixel_origin": [
+              19,
+              52
+            ]
+          },
+          {
+            "stage": 39,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "61a6d766811abeab13b2b4e4bf398abbcf0bcc08ceb085faaabb40aee78abd09",
+            "pixel_origin": [
+              19,
+              52
+            ]
+          },
+          {
+            "stage": 40,
+            "width": 12,
+            "height": 5,
+            "player_xy": [
+              10,
+              2
+            ],
+            "native_board_sha256": "3967e819c022cbaaf13e484eede08668fa06394f5163edb652d504a90f170a92",
+            "pixel_origin": [
+              6,
+              65
+            ]
+          },
+          {
+            "stage": 41,
+            "width": 10,
+            "height": 6,
+            "player_xy": [
+              2,
+              4
+            ],
+            "native_board_sha256": "b41bf9a3b0c74da73be13bcf20584a1b6996cf65d74d9958a01993d2de6a8715",
+            "pixel_origin": [
+              15,
+              61
+            ]
+          },
+          {
+            "stage": 42,
+            "width": 10,
+            "height": 9,
+            "player_xy": [
+              4,
+              3
+            ],
+            "native_board_sha256": "29e1e3c00b0dc24e471b585ff5baa7889fb1b709d69718778bd0393cb4cb2b82",
+            "pixel_origin": [
+              15,
+              47
+            ]
+          },
+          {
+            "stage": 43,
+            "width": 7,
+            "height": 7,
+            "player_xy": [
+              3,
+              3
+            ],
+            "native_board_sha256": "6e758f39f0f803cfbdda40cd522659f4e0a8c9c82a13686620bbb3666a541e9a",
+            "pixel_origin": [
+              28,
+              56
+            ]
+          },
+          {
+            "stage": 44,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              5,
+              7
+            ],
+            "native_board_sha256": "271e25b77098ac40aa8422ede975cf84d464542c407e52bdb2c18e97929f8ada",
+            "pixel_origin": [
+              6,
+              47
+            ]
+          },
+          {
+            "stage": 45,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              8,
+              5
+            ],
+            "native_board_sha256": "8032508c014ef45e54d561199c9496e4a14e1d48eebd86ecee2867ff2d3de89c",
+            "pixel_origin": [
+              6,
+              47
+            ]
+          },
+          {
+            "stage": 46,
+            "width": 11,
+            "height": 7,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "7c60c0e66267e6801f5c941c6015a2203df62febc38b31501e99f53e705b5673",
+            "pixel_origin": [
+              10,
+              56
+            ]
+          },
+          {
+            "stage": 47,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "4b38a18dde08a94f6136b10b21dfa6e14e1fc5ab211bad199d82427d26baee3b",
+            "pixel_origin": [
+              10,
+              47
+            ]
+          },
+          {
+            "stage": 48,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              3,
+              1
+            ],
+            "native_board_sha256": "fce595507121b6badca44dd1a8ed2e967a67000a28f1582e2853361767c97967",
+            "pixel_origin": [
+              10,
+              43
+            ]
+          },
+          {
+            "stage": 49,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              4,
+              1
+            ],
+            "native_board_sha256": "c08df7e9e8ff8f66cce425695622e212bf21e2f2bf3331c697cf71d0bed98283",
+            "pixel_origin": [
+              19,
+              47
+            ]
+          },
+          {
+            "stage": 50,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              5,
+              4
+            ],
+            "native_board_sha256": "b0c484ad3f4be83cca7459a1cb364dde3c0fa52300c88973e6adc90f6e996cd9",
+            "pixel_origin": [
+              10,
+              47
+            ]
+          },
+          {
+            "stage": 51,
+            "width": 13,
+            "height": 11,
+            "player_xy": [
+              11,
+              8
+            ],
+            "native_board_sha256": "5e61d9d51948e180824eb3265a06ca59eea1588b601dfcb56d3b3006dd62c034",
+            "pixel_origin": [
+              1,
+              38
+            ]
+          },
+          {
+            "stage": 52,
+            "width": 10,
+            "height": 6,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "9b92ec82922eae3e0dbdf8bbe143f82627af05c07a4f54755e51acd42ff27c03",
+            "pixel_origin": [
+              15,
+              61
+            ]
+          },
+          {
+            "stage": 53,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              10,
+              8
+            ],
+            "native_board_sha256": "57295eaa88eda2b72d4273c05b81a44c18c48ed4b62c004c29a6b232467a5118",
+            "pixel_origin": [
+              1,
+              34
+            ]
+          },
+          {
+            "stage": 54,
+            "width": 12,
+            "height": 12,
+            "player_xy": [
+              2,
+              8
+            ],
+            "native_board_sha256": "011ce1fed99c2b1f8e8577e7a141418fb77b78f1cac407146bf2a0ea707207b3",
+            "pixel_origin": [
+              6,
+              34
+            ]
+          },
+          {
+            "stage": 55,
+            "width": 13,
+            "height": 9,
+            "player_xy": [
+              10,
+              2
+            ],
+            "native_board_sha256": "1a234ec8681a1bb0dfcdd87c18cff210b05cb017b8d0c1eb397817121e1ed865",
+            "pixel_origin": [
+              1,
+              47
+            ]
+          },
+          {
+            "stage": 56,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              1,
+              10
+            ],
+            "native_board_sha256": "8aac0c608df250013339bbb4952ab5245f934331e9e31d67d4fb85e2c539caf4",
+            "pixel_origin": [
+              1,
+              34
+            ]
+          },
+          {
+            "stage": 57,
+            "width": 13,
+            "height": 10,
+            "player_xy": [
+              1,
+              2
+            ],
+            "native_board_sha256": "b7176cca52452cdc1215f6c5caed579defc4c4632f955afd3a8a42ab118b84c0",
+            "pixel_origin": [
+              1,
+              43
+            ]
+          },
+          {
+            "stage": 58,
+            "width": 9,
+            "height": 12,
+            "player_xy": [
+              4,
+              1
+            ],
+            "native_board_sha256": "64282a21a91eb9740cf9c718ba20050241df028920d72fa1b88cf352a77fdcf8",
+            "pixel_origin": [
+              19,
+              34
+            ]
+          },
+          {
+            "stage": 59,
+            "width": 11,
+            "height": 11,
+            "player_xy": [
+              7,
+              3
+            ],
+            "native_board_sha256": "168447383e2f08cd1f675802f732e723c5cf5ef62e82975471d32f2654ffb97d",
+            "pixel_origin": [
+              10,
+              38
+            ]
+          },
+          {
+            "stage": 60,
+            "width": 12,
+            "height": 12,
+            "player_xy": [
+              6,
+              4
+            ],
+            "native_board_sha256": "65ca4a3966ef5466ea7db87051f2b4e8a08e038d075ce5c69b514eb2eccca1ed",
+            "pixel_origin": [
+              6,
+              34
+            ]
+          },
+          {
+            "stage": 61,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              6,
+              10
+            ],
+            "native_board_sha256": "60590d2b84539c7475e92596711168d6a2653f136e1d4a4b27310e9565eb509b",
+            "pixel_origin": [
+              1,
+              34
+            ]
+          },
+          {
+            "stage": 62,
+            "width": 13,
+            "height": 11,
+            "player_xy": [
+              10,
+              5
+            ],
+            "native_board_sha256": "073da586563a3c7c0abeef92b0a3493a1583194c6c32ae55026dd046b1d8e0e8",
+            "pixel_origin": [
+              1,
+              38
+            ]
+          },
+          {
+            "stage": 63,
+            "width": 10,
+            "height": 6,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "9b92ec82922eae3e0dbdf8bbe143f82627af05c07a4f54755e51acd42ff27c03",
+            "pixel_origin": [
+              15,
+              61
+            ]
+          },
+          {
+            "stage": 64,
+            "width": 12,
+            "height": 7,
+            "player_xy": [
+              1,
+              4
+            ],
+            "native_board_sha256": "6473d382643a321d251aa691efa49863cfcdc09672aab150e240ba1294d15a55",
+            "pixel_origin": [
+              6,
+              56
+            ]
+          },
+          {
+            "stage": 65,
+            "width": 7,
+            "height": 9,
+            "player_xy": [
+              2,
+              2
+            ],
+            "native_board_sha256": "2029657a58866e2e00cb45cdda3b2e0db9aa587d5fc75b094838e19b8df33194",
+            "pixel_origin": [
+              28,
+              47
+            ]
+          },
+          {
+            "stage": 66,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              2,
+              7
+            ],
+            "native_board_sha256": "269789796321d792959389c9223172156b6d68292eb220226e1f61f947365c89",
+            "pixel_origin": [
+              1,
+              34
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "edition": "III",
+      "levels": 50,
+      "distinct_layouts": 49,
+      "record_bytes": 162,
+      "table_bytes": 8100,
+      "table_sha256": "1563fb9016cedd18c00716325538761667ffe4cac23d15f5bf9ebb9d8a9debad",
+      "xsb_sha256": "db3d0e22c892ae84c8f671cef01f19f0cdfab57e424dc6295bbd3b62dbbba5c9",
+      "source_images": [
+        {
+          "model": "SCH-V310",
+          "file": "SCH-V310.bin",
+          "table_offset": 4917797,
+          "image_bytes": 8388592,
+          "image_sha256": "6a58fa7c8c824ecd88934c782119bac5439eabcc53a842fb5550bc27b9e79cfc",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-V310.zip"
+        },
+        {
+          "model": "SCH-V490",
+          "file": "V490MSM_CODE_YD18.bin",
+          "table_offset": 5960454,
+          "image_bytes": 8388608,
+          "image_sha256": "8aafee7cfd24e8e6729dba1f99a4fb2364022278f340394fc09f99a12246819b",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-V490.zip"
+        },
+        {
+          "model": "SCH-V490",
+          "file": "v490.bin",
+          "table_offset": 5958194,
+          "image_bytes": 8388592,
+          "image_sha256": "205aad0ce3216dced5ef41f913a480104f9a7e44af436cff7d14f3032e312cfd",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-V490.zip"
+        },
+        {
+          "model": "SCH-V300",
+          "file": "SCH-V300.bin",
+          "table_offset": 5017225,
+          "image_bytes": 6002096,
+          "image_sha256": "435a38e3479036dc9549d3bee623c926bacf3d99dbe6b0afa0ae2d0a03101d60",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-V300.zip"
+        },
+        {
+          "model": "SCH-E370",
+          "file": "SCH-E370.BIN",
+          "table_offset": 6105576,
+          "image_bytes": 16781786,
+          "image_sha256": "17c3c750dbfaf51aa8b0e4e6a9e0cef71c30e72aaaa2ea85efb4c55f9c962869",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-E370.zip"
+        },
+        {
+          "model": "SCH-V330",
+          "file": "v330.bin",
+          "table_offset": 7074769,
+          "image_bytes": 8388592,
+          "image_sha256": "bb8a3b07468c207c0a4fb9ff99ff47c464242a6ac6a17d629e6f748199c4fc81",
+          "archive": "https://archive.org/download/gt-b-7722_20250528/SCH-V330.zip"
+        }
+      ],
+      "native_validation": {
+        "variant": 3,
+        "source_image": "SCH-V310.bin",
+        "image_sha256": "6a58fa7c8c824ecd88934c782119bac5439eabcc53a842fb5550bc27b9e79cfc",
+        "table_offset": 4917797,
+        "native_thumb_entry": 2510086,
+        "table_pointer_literal": 2510276,
+        "execution": "Original Thumb level-loading loop, entered after the unrelated preceding firmware call with equivalent stack frame and level argument",
+        "verified_fields": [
+          "width",
+          "height",
+          "player coordinates",
+          "origin",
+          "every initialized tile"
+        ],
+        "stages": [
+          {
+            "stage": 1,
+            "width": 13,
+            "height": 11,
+            "player_xy": [
+              11,
+              8
+            ],
+            "native_board_sha256": "5e61d9d51948e180824eb3265a06ca59eea1588b601dfcb56d3b3006dd62c034",
+            "pixel_origin": [
+              16,
+              56
+            ]
+          },
+          {
+            "stage": 2,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              1,
+              1
+            ],
+            "native_board_sha256": "2854a0f44f55c5276a4f417684667782bccfa888d17e9acd1df102e3d8ef0a6a",
+            "pixel_origin": [
+              38,
+              67
+            ]
+          },
+          {
+            "stage": 3,
+            "width": 10,
+            "height": 6,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "9b92ec82922eae3e0dbdf8bbe143f82627af05c07a4f54755e51acd42ff27c03",
+            "pixel_origin": [
+              33,
+              84
+            ]
+          },
+          {
+            "stage": 4,
+            "width": 6,
+            "height": 8,
+            "player_xy": [
+              1,
+              2
+            ],
+            "native_board_sha256": "49ecab8c9045d8019a56b8da9f2fd09404e1ab01e7ac2ce214f227a4842a1c15",
+            "pixel_origin": [
+              55,
+              73
+            ]
+          },
+          {
+            "stage": 5,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              10,
+              8
+            ],
+            "native_board_sha256": "57295eaa88eda2b72d4273c05b81a44c18c48ed4b62c004c29a6b232467a5118",
+            "pixel_origin": [
+              16,
+              51
+            ]
+          },
+          {
+            "stage": 6,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              8,
+              1
+            ],
+            "native_board_sha256": "d6b237c8121ff61894a4f2a1d365b383146a5bf2341f17a72f8ecb8940a2469d",
+            "pixel_origin": [
+              33,
+              73
+            ]
+          },
+          {
+            "stage": 7,
+            "width": 12,
+            "height": 12,
+            "player_xy": [
+              2,
+              8
+            ],
+            "native_board_sha256": "011ce1fed99c2b1f8e8577e7a141418fb77b78f1cac407146bf2a0ea707207b3",
+            "pixel_origin": [
+              22,
+              51
+            ]
+          },
+          {
+            "stage": 8,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              8,
+              7
+            ],
+            "native_board_sha256": "c6e903de3e9df00dbd4427a51ebc5bf455806ce9d63284aa589cdc98f2a65159",
+            "pixel_origin": [
+              27,
+              67
+            ]
+          },
+          {
+            "stage": 9,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "825a653ff455c112c28788939ed8fffb99ca815e1f00f763a089d6d5b3076d2c",
+            "pixel_origin": [
+              44,
+              78
+            ]
+          },
+          {
+            "stage": 10,
+            "width": 12,
+            "height": 6,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "ae3470449c26921d20a52e60b9671c3bfb2d52bce907c1b1bea5c5ae3d5a4655",
+            "pixel_origin": [
+              22,
+              84
+            ]
+          },
+          {
+            "stage": 11,
+            "width": 13,
+            "height": 9,
+            "player_xy": [
+              10,
+              2
+            ],
+            "native_board_sha256": "1a234ec8681a1bb0dfcdd87c18cff210b05cb017b8d0c1eb397817121e1ed865",
+            "pixel_origin": [
+              16,
+              67
+            ]
+          },
+          {
+            "stage": 12,
+            "width": 8,
+            "height": 8,
+            "player_xy": [
+              3,
+              6
+            ],
+            "native_board_sha256": "0d558543049758e6bdd12fa6aa42a6b03f2038aa00f3cc4774445bffc0765afa",
+            "pixel_origin": [
+              44,
+              73
+            ]
+          },
+          {
+            "stage": 13,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              1,
+              10
+            ],
+            "native_board_sha256": "8aac0c608df250013339bbb4952ab5245f934331e9e31d67d4fb85e2c539caf4",
+            "pixel_origin": [
+              16,
+              51
+            ]
+          },
+          {
+            "stage": 14,
+            "width": 8,
+            "height": 7,
+            "player_xy": [
+              4,
+              5
+            ],
+            "native_board_sha256": "4c51066b7e9cbd1a7ba7a8f8ef0f3de63232247d83cb49bc742a586a3447baec",
+            "pixel_origin": [
+              44,
+              78
+            ]
+          },
+          {
+            "stage": 15,
+            "width": 13,
+            "height": 10,
+            "player_xy": [
+              1,
+              2
+            ],
+            "native_board_sha256": "b7176cca52452cdc1215f6c5caed579defc4c4632f955afd3a8a42ab118b84c0",
+            "pixel_origin": [
+              16,
+              62
+            ]
+          },
+          {
+            "stage": 16,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              3,
+              5
+            ],
+            "native_board_sha256": "5c4ae79c41599f39d397f693d350e79cac5b8467759131189da374675de66661",
+            "pixel_origin": [
+              38,
+              78
+            ]
+          },
+          {
+            "stage": 17,
+            "width": 9,
+            "height": 12,
+            "player_xy": [
+              4,
+              1
+            ],
+            "native_board_sha256": "64282a21a91eb9740cf9c718ba20050241df028920d72fa1b88cf352a77fdcf8",
+            "pixel_origin": [
+              38,
+              51
+            ]
+          },
+          {
+            "stage": 18,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              5,
+              6
+            ],
+            "native_board_sha256": "5c0adfe11e8c10c47846842d6e22febaa955558de343a8ff0c68dca414341d6e",
+            "pixel_origin": [
+              33,
+              73
+            ]
+          },
+          {
+            "stage": 19,
+            "width": 11,
+            "height": 11,
+            "player_xy": [
+              7,
+              3
+            ],
+            "native_board_sha256": "168447383e2f08cd1f675802f732e723c5cf5ef62e82975471d32f2654ffb97d",
+            "pixel_origin": [
+              27,
+              56
+            ]
+          },
+          {
+            "stage": 20,
+            "width": 11,
+            "height": 8,
+            "player_xy": [
+              1,
+              5
+            ],
+            "native_board_sha256": "93add7faaf34304330e5765074d6f3d5f695090e61a8b728fe88de3ce58a8356",
+            "pixel_origin": [
+              27,
+              73
+            ]
+          },
+          {
+            "stage": 21,
+            "width": 12,
+            "height": 12,
+            "player_xy": [
+              6,
+              4
+            ],
+            "native_board_sha256": "65ca4a3966ef5466ea7db87051f2b4e8a08e038d075ce5c69b514eb2eccca1ed",
+            "pixel_origin": [
+              22,
+              51
+            ]
+          },
+          {
+            "stage": 22,
+            "width": 10,
+            "height": 8,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "055013e1160e8df8bafdd25d2fbb2cd6e3b04f71ab3d84c64136dc527f03bf8b",
+            "pixel_origin": [
+              33,
+              73
+            ]
+          },
+          {
+            "stage": 23,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              6,
+              10
+            ],
+            "native_board_sha256": "60590d2b84539c7475e92596711168d6a2653f136e1d4a4b27310e9565eb509b",
+            "pixel_origin": [
+              16,
+              51
+            ]
+          },
+          {
+            "stage": 24,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              4,
+              5
+            ],
+            "native_board_sha256": "da35591636021bdbfdb45f005e7a78b22607b27ae9c7d6d9882e0a4d760d4136",
+            "pixel_origin": [
+              38,
+              78
+            ]
+          },
+          {
+            "stage": 25,
+            "width": 13,
+            "height": 11,
+            "player_xy": [
+              10,
+              5
+            ],
+            "native_board_sha256": "073da586563a3c7c0abeef92b0a3493a1583194c6c32ae55026dd046b1d8e0e8",
+            "pixel_origin": [
+              16,
+              56
+            ]
+          },
+          {
+            "stage": 26,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              7,
+              1
+            ],
+            "native_board_sha256": "03f800c0750b10b943e07b0ece2490fb31d90f37bfc85eaeed66b97bf5172dab",
+            "pixel_origin": [
+              38,
+              73
+            ]
+          },
+          {
+            "stage": 27,
+            "width": 10,
+            "height": 6,
+            "player_xy": [
+              8,
+              3
+            ],
+            "native_board_sha256": "9b92ec82922eae3e0dbdf8bbe143f82627af05c07a4f54755e51acd42ff27c03",
+            "pixel_origin": [
+              33,
+              84
+            ]
+          },
+          {
+            "stage": 28,
+            "width": 10,
+            "height": 10,
+            "player_xy": [
+              5,
+              4
+            ],
+            "native_board_sha256": "7120bd8fa5c51462898c7edaf878734d2d4ed5648a07e6e69b610946467f783f",
+            "pixel_origin": [
+              33,
+              62
+            ]
+          },
+          {
+            "stage": 29,
+            "width": 12,
+            "height": 7,
+            "player_xy": [
+              1,
+              4
+            ],
+            "native_board_sha256": "6473d382643a321d251aa691efa49863cfcdc09672aab150e240ba1294d15a55",
+            "pixel_origin": [
+              22,
+              78
+            ]
+          },
+          {
+            "stage": 30,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              9,
+              8
+            ],
+            "native_board_sha256": "ff611b475ba9a2136f410f0338cd1fb8446decc94ed6d4d07086341469d82748",
+            "pixel_origin": [
+              27,
+              62
+            ]
+          },
+          {
+            "stage": 31,
+            "width": 7,
+            "height": 9,
+            "player_xy": [
+              2,
+              2
+            ],
+            "native_board_sha256": "2029657a58866e2e00cb45cdda3b2e0db9aa587d5fc75b094838e19b8df33194",
+            "pixel_origin": [
+              49,
+              67
+            ]
+          },
+          {
+            "stage": 32,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              4,
+              2
+            ],
+            "native_board_sha256": "3116cb0591af69c4d49d6d964f5c6016973b568dffb5caa6a1e1b62bd6aeefed",
+            "pixel_origin": [
+              27,
+              62
+            ]
+          },
+          {
+            "stage": 33,
+            "width": 13,
+            "height": 12,
+            "player_xy": [
+              2,
+              7
+            ],
+            "native_board_sha256": "269789796321d792959389c9223172156b6d68292eb220226e1f61f947365c89",
+            "pixel_origin": [
+              16,
+              51
+            ]
+          },
+          {
+            "stage": 34,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              5,
+              1
+            ],
+            "native_board_sha256": "a313729e6e19759f08b709d8cc890ba4d0e5347afe57d95026d6e2ad069767f0",
+            "pixel_origin": [
+              27,
+              67
+            ]
+          },
+          {
+            "stage": 35,
+            "width": 9,
+            "height": 7,
+            "player_xy": [
+              6,
+              3
+            ],
+            "native_board_sha256": "c38d19d3094498037b53b10c8e1022bd8863a6069eb5e9c04248e8d583da9cc9",
+            "pixel_origin": [
+              38,
+              78
+            ]
+          },
+          {
+            "stage": 36,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              3,
+              2
+            ],
+            "native_board_sha256": "98a206b2c4dce16a6e035869d8337dfc37c02b3b9f553bc3bb02f43e99840c86",
+            "pixel_origin": [
+              27,
+              62
+            ]
+          },
+          {
+            "stage": 37,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              9,
+              4
+            ],
+            "native_board_sha256": "926743fef38eccbcf033d1a2f90f58e7c36c839fed012574b2f342c6d2500036",
+            "pixel_origin": [
+              22,
+              67
+            ]
+          },
+          {
+            "stage": 38,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              5,
+              6
+            ],
+            "native_board_sha256": "1218bff30ddfb073397e8e7b0c7aac7a6119832b718c919e766d5e283eb395c8",
+            "pixel_origin": [
+              38,
+              73
+            ]
+          },
+          {
+            "stage": 39,
+            "width": 9,
+            "height": 8,
+            "player_xy": [
+              1,
+              3
+            ],
+            "native_board_sha256": "61a6d766811abeab13b2b4e4bf398abbcf0bcc08ceb085faaabb40aee78abd09",
+            "pixel_origin": [
+              38,
+              73
+            ]
+          },
+          {
+            "stage": 40,
+            "width": 12,
+            "height": 5,
+            "player_xy": [
+              10,
+              2
+            ],
+            "native_board_sha256": "3967e819c022cbaaf13e484eede08668fa06394f5163edb652d504a90f170a92",
+            "pixel_origin": [
+              22,
+              89
+            ]
+          },
+          {
+            "stage": 41,
+            "width": 10,
+            "height": 6,
+            "player_xy": [
+              2,
+              4
+            ],
+            "native_board_sha256": "b41bf9a3b0c74da73be13bcf20584a1b6996cf65d74d9958a01993d2de6a8715",
+            "pixel_origin": [
+              33,
+              84
+            ]
+          },
+          {
+            "stage": 42,
+            "width": 10,
+            "height": 9,
+            "player_xy": [
+              4,
+              3
+            ],
+            "native_board_sha256": "29e1e3c00b0dc24e471b585ff5baa7889fb1b709d69718778bd0393cb4cb2b82",
+            "pixel_origin": [
+              33,
+              67
+            ]
+          },
+          {
+            "stage": 43,
+            "width": 7,
+            "height": 7,
+            "player_xy": [
+              3,
+              3
+            ],
+            "native_board_sha256": "6e758f39f0f803cfbdda40cd522659f4e0a8c9c82a13686620bbb3666a541e9a",
+            "pixel_origin": [
+              49,
+              78
+            ]
+          },
+          {
+            "stage": 44,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              5,
+              7
+            ],
+            "native_board_sha256": "271e25b77098ac40aa8422ede975cf84d464542c407e52bdb2c18e97929f8ada",
+            "pixel_origin": [
+              22,
+              67
+            ]
+          },
+          {
+            "stage": 45,
+            "width": 12,
+            "height": 9,
+            "player_xy": [
+              8,
+              5
+            ],
+            "native_board_sha256": "8032508c014ef45e54d561199c9496e4a14e1d48eebd86ecee2867ff2d3de89c",
+            "pixel_origin": [
+              22,
+              67
+            ]
+          },
+          {
+            "stage": 46,
+            "width": 11,
+            "height": 7,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "7c60c0e66267e6801f5c941c6015a2203df62febc38b31501e99f53e705b5673",
+            "pixel_origin": [
+              27,
+              78
+            ]
+          },
+          {
+            "stage": 47,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              8,
+              4
+            ],
+            "native_board_sha256": "4b38a18dde08a94f6136b10b21dfa6e14e1fc5ab211bad199d82427d26baee3b",
+            "pixel_origin": [
+              27,
+              67
+            ]
+          },
+          {
+            "stage": 48,
+            "width": 11,
+            "height": 10,
+            "player_xy": [
+              3,
+              1
+            ],
+            "native_board_sha256": "fce595507121b6badca44dd1a8ed2e967a67000a28f1582e2853361767c97967",
+            "pixel_origin": [
+              27,
+              62
+            ]
+          },
+          {
+            "stage": 49,
+            "width": 9,
+            "height": 9,
+            "player_xy": [
+              4,
+              1
+            ],
+            "native_board_sha256": "c08df7e9e8ff8f66cce425695622e212bf21e2f2bf3331c697cf71d0bed98283",
+            "pixel_origin": [
+              38,
+              67
+            ]
+          },
+          {
+            "stage": 50,
+            "width": 11,
+            "height": 9,
+            "player_xy": [
+              5,
+              4
+            ],
+            "native_board_sha256": "b0c484ad3f4be83cca7459a1cb364dde3c0fa52300c88973e6adc90f6e996cd9",
+            "pixel_origin": [
+              27,
+              67
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

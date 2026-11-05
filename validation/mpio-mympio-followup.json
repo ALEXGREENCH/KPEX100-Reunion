@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "status": "Two historical public model-support pages recovered; no firmware or game payload body recovered.",
+  "pages": [
+    {
+      "url": "https://web.archive.org/web/20111015044659id_/http://www.mympio.com:80/mpio/fg200.htm",
+      "status": 200,
+      "bytes": 26123,
+      "sha256": "115169a8dc2fda9b263f5a711f2ffcdc8b14e5e6ec941722097fbd66ba15110e"
+    },
+    {
+      "url": "https://web.archive.org/web/20111015044807id_/http://www.mympio.com:80/mpio/hd400.htm",
+      "status": 200,
+      "bytes": 27155,
+      "sha256": "e88a9a52eb376055ae0722be03e9abd1b36c1ad6c1380f7df3144dcc5eb01346"
+    }
+  ],
+  "links": [
+    {
+      "model": "FG200",
+      "originalUrl": "http://www.mympio.com/mpio/firmware/FG200%20Firmware%20ver%201.17.zip",
+      "linkLabel": "Latest PC Firmware",
+      "versionClaim": "Filename says 1.17; actual binary version unverified.",
+      "payloadRecovered": false
+    },
+    {
+      "model": "FG200",
+      "originalUrl": "http://www.mympio.com/mpio/Mac/firmware_fg200_v217.sit",
+      "linkLabel": "Latest Mac Firmware",
+      "payloadRecovered": false
+    },
+    {
+      "model": "FG200",
+      "originalUrl": "http://www.mympio.com/mpio/Mac/recovery_fg200_v1053.sit",
+      "linkLabel": "Mac Recovery File",
+      "payloadRecovered": false
+    },
+    {
+      "model": "HD400",
+      "originalUrl": "http://www.mpio.com/downloads/firmware/firmware_hd400_v01040us.zip",
+      "linkLabel": "Latest PC Firmware - Version 1.04.0",
+      "payloadRecovered": false,
+      "novelty": "Known URL independently corroborated by this support page."
+    },
+    {
+      "model": "HD400",
+      "originalUrl": "http://www.mpio.com/downloads/misc/games_hd400.zip",
+      "instructionSummary": "Extracted files are copied into the GAMES folder.",
+      "payloadRecovered": false,
+      "novelty": "Known URL independently corroborated by this support page."
+    }
+  ],
+  "cdxResult": [
+    ["timestamp", "original", "mimetype", "digest", "length"],
+    [
+      "20111015044659",
+      "http://www.mympio.com:80/mpio/fg200.htm",
+      "text/html",
+      "XGXT42TRFU4L4JER6T6KNHARFLI3QAFM",
+      "5106"
+    ],
+    [
+      "20111015044807",
+      "http://www.mympio.com:80/mpio/hd400.htm",
+      "text/html",
+      "A3ROXZ2WKO326OD3TWNFLL5EMZORUJXV",
+      "5374"
+    ],
+    [
+      "20171030033008",
+      "http://www.mympio.com/mpio/support_images/sub_fg200.gif",
+      "image/gif",
+      "3J5ZDNREGWMRSNASJG37XPSMBXJ4O7AT",
+      "2355"
+    ]
+  ],
+  "networkAttempts": [
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.mympio.com/*&output=json&filter=statuscode:200&collapse=urlkey&filter=timestamp:200[0-9].*&fl=timestamp,original,mimetype,digest,length&limit=5000",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=mympio.com&matchType=domain&output=json&filter=statuscode:200&filter=original:.*(zip|dwu|fg200|hd400).*&collapse=urlkey&fl=timestamp,original,mimetype,digest,length&limit=200",
+      "status": 200,
+      "bytes": 420,
+      "sha256": "1ca29aa0060036fe8f6b38d5a151e5cb06fb6330be371d1f6d0c426e0a02343b"
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=mympio.com&matchType=domain&output=json&filter=statuscode:200&filter=mimetype:application.*&collapse=urlkey&fl=timestamp,original,mimetype,digest,length&limit=1000",
+      "status": 503,
+      "bytes": 11832,
+      "sha256": "e084d527921708642a79724e9f0210da659bbc0905c6ce9a3a1f416e4628091c"
+    }
+  ],
+  "stopReason": "Stopped all further Wayback/CDX access on parent report of HTTP 429 in shared research session. Last local binary-index attempt had already returned 503.",
+  "caveats": [
+    "Archived support-page HTML is evidence of original links, not proof that the target archive survives.",
+    "A short filtered CDX result is not exhaustive proof of archive absence.",
+    "These MPIO pages do not identify a GNEX or XEOVIA engine. No new model is counted as platform-confirmed."
+  ],
+  "newGamesRecovered": 0,
+  "newPlatformConfirmedModels": 0
+}

@@ -1,0 +1,183 @@
+{
+  "scope": "Game records and gameplay evidence from two LG CYON dumps. The model of capture is not proof of factory preload.",
+  "sd1020": {
+    "archive": "https://archive.sunderland93.ru/Firmwares/LG/SD1020/SD43CI23_memory.7z",
+    "image": "SD43CI23_memory.bin",
+    "image_bytes": 8388592,
+    "image_sha256": "ab2e08c6bd92324e662b97741222f4a2fb5f9aec6870243cecd529af49fe74d2",
+    "layout": "Offsets are relative to the raw image. Take 207 bytes at metadata_offset+45, then each inclusive page run in index order at 256-byte strides, reading payload_bytes from each page start+12.",
+    "records": [
+      {
+        "filename": "gvm2x/gvm2x_001",
+        "file_id": 6632,
+        "metadata_offset": 7166976,
+        "metadata_revision": 21,
+        "bytes": 82336,
+        "sha256": "6eff9598f03a742f0727571a517d1c6e72611f5c253facff164f81eb01c41cd0",
+        "title_at_sgs_header": "보글보글",
+        "data_pages": [
+          {
+            "first": 1,
+            "last": 234,
+            "page_offset": 7607808,
+            "payload_bytes": 240
+          },
+          {
+            "first": 235,
+            "last": 317,
+            "page_offset": 7843072,
+            "payload_bytes": 240
+          },
+          {
+            "first": 318,
+            "last": 324,
+            "page_offset": 7146752,
+            "payload_bytes": 240
+          },
+          {
+            "first": 325,
+            "last": 342,
+            "page_offset": 7149056,
+            "payload_bytes": 240
+          },
+          {
+            "first": 343,
+            "last": 343,
+            "page_offset": 7153664,
+            "payload_bytes": 49
+          }
+        ],
+        "sgs": {
+          "version": 2,
+          "title": "보글보글",
+          "title_bytes_hex": "bab8b1dbbab8b1db",
+          "declared_body_bytes": 82160,
+          "sections": {
+            "a": 36748,
+            "b": 37564,
+            "c": 39034,
+            "d": 40338
+          },
+          "entries": [
+            36265,
+            36455,
+            36474,
+            36744,
+            0,
+            0,
+            0,
+            0
+          ],
+          "variables": 204,
+          "resources": 326,
+          "compression_type": 0,
+          "source_offset": 176,
+          "body_offset": 176,
+          "wrapper_bytes": 0,
+          "xor_mask": 0,
+          "extracted_bytes": 82160,
+          "raw_sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4",
+          "decoded_body_sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4"
+        }
+      },
+      {
+        "filename": "gvm2x/gvm2x_000",
+        "file_id": 136,
+        "metadata_offset": 7505152,
+        "metadata_revision": 5,
+        "bytes": 36423,
+        "sha256": "1ee6f07ace3f23e9214fcbe960a74de3f9a907843539d3312e901cad6f666a56",
+        "title_at_sgs_header": "힙합정신",
+        "data_pages": [
+          {
+            "first": 1,
+            "last": 150,
+            "page_offset": 7229184,
+            "payload_bytes": 240
+          },
+          {
+            "first": 151,
+            "last": 151,
+            "page_offset": 7267584,
+            "payload_bytes": 216
+          }
+        ],
+        "status": "Reconstructed GVM record. Header title and legacy entry fields present. The section data do not validate as an intact SGS."
+      }
+    ],
+    "replay": {
+      "actions": "lg-sd1020-bubble-bobble-replay.json",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 128
+      },
+      "status": "idle",
+      "events": 90,
+      "frames": [
+        {
+          "step": "0-tick35",
+          "time_ms": 1750,
+          "sha256_png": "6574d65b501e1e549604dbc6f4284afd75bcea71e9db5f639b8b4e67adae312d",
+          "observation": "Title credits Taito and MDream, 2002"
+        },
+        {
+          "step": "2-tick10",
+          "time_ms": 2250,
+          "sha256_png": "a43a64a64a11ce547ddc97b08a804a8502cedbcc8e57a7e1f1dd03fdae86c55c",
+          "observation": "Main menu"
+        },
+        {
+          "step": "4-tick10",
+          "time_ms": 2750,
+          "sha256_png": "dc8316d1995e2205926a92fe5505d470f1912ddf3e62ab48dd40eb0d15f7b181",
+          "observation": "Stage 01, initial playing field"
+        },
+        {
+          "step": "6-tick7",
+          "time_ms": 3100,
+          "sha256_png": "75ad3e72a62b096d2ff6eff03d401b01d8f046108eb300740995c94397929883",
+          "observation": "Player has moved right after the 6 key"
+        },
+        {
+          "step": "8-tick7",
+          "time_ms": 3450,
+          "sha256_png": "bb8193318ff2dbceb24336116366468ee6c6db6f1dd5b4e9d1252ee28b451d04",
+          "observation": "Player is back at the left wall after the 4 key"
+        },
+        {
+          "step": "10-tick6",
+          "time_ms": 3750,
+          "sha256_png": "e8b2c80b94e7f9441108524f2d5933fdf65a3c96db8c89a9d0f2c02a8d9b7f17",
+          "observation": "Player jumped after the 2 key"
+        },
+        {
+          "step": "12-tick8",
+          "time_ms": 4150,
+          "sha256_png": "213cb2940bd7d98fcc39493553c6ffaf07144ec3013ee64f07b5688da7521604",
+          "observation": "Bubble after the 5 key"
+        }
+      ]
+    }
+  },
+  "sd1250": {
+    "archive": "https://archive.sunderland93.ru/Firmwares/LG/SD1250/SD250I11.7z",
+    "image": "SD1250.bin",
+    "image_bytes": 5540144,
+    "image_sha256": "437b7107b1484cf21b9c31f2db815bfea9f9a8707198a536a4deed6eb8154aec",
+    "offset": 4892832,
+    "title": "Ladder",
+    "screen_title": "사다리 게임",
+    "format": 1,
+    "bytes": 110686,
+    "sha256": "8640f361827aaeced39c1af8bf48ab8575ffc2cdae9bb117d6f4262909ae435b",
+    "resources": 174,
+    "runtime": {
+      "profile": "phone",
+      "width": 120,
+      "height": 160
+    },
+    "status": "The participant-count prompt is visible before the START handler stops.",
+    "error": "Original GNEX exception 15 at SGS 0x00004114 (legacy opcode0xba)"
+  }
+}

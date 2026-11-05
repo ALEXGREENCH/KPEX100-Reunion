@@ -1,0 +1,5289 @@
+{
+  "scope": "Local static audit of GNEX SDK2.10/2.12 profiles, extensionless source fragments, nested SignedSystem metadata and legacy assembler opcode names. No installed program execution or runtime/catalog mutation.",
+  "sources": [
+    {
+      "version": "2.10",
+      "filename": "GNEX_SDK_v2.10.exe",
+      "sourceUrl": "https://archive.org/details/gnex-sdk-v-2.10",
+      "bytes": 24026547,
+      "sha256": "075f010557029a53a5c7e01fc7f492e4236a26b8edb019fcd7193d0719a0dd19",
+      "extractedFiles": 238,
+      "provenance": "Previously recovered public Internet Archive SDK distribution; this pass rechecked local bytes and statically read MSI/CAB. No new network or CDX requests."
+    },
+    {
+      "version": "2.12",
+      "filename": "GNEX_SDK_v2.12.exe",
+      "sourceUrl": "https://archive.org/details/gnex_sdk_v2.12",
+      "bytes": 42130867,
+      "sha256": "87d852091c8d25134d6b57bf14e8745b5e99f6c6277fdb56bff801b1ff0fd3a7",
+      "extractedFiles": 255,
+      "provenance": "Previously recovered public Internet Archive SDK distribution; this pass rechecked local bytes and statically read MSI/CAB. No new network or CDX requests."
+    }
+  ],
+  "profileRecords": [
+    {
+      "sdkVersion": "2.10",
+      "fileId": "Default.ini",
+      "bytes": 1350,
+      "sha256": "ea8ed8ec4c3e7da71e4a0637aae8854a1fd3bd141b02ea3f03d07e0203f087e4",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "128",
+          "LcdColor": "8",
+          "AudioType": "100",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "0",
+          "LcdStartPosY": "-300",
+          "MainLcdStartPosX": "170",
+          "MainLcdStartPosY": "40",
+          "OptionYPos": "40",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/Custom/Default.ini"
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "Emulator.ini",
+      "bytes": 542,
+      "sha256": "29afad5bc0208f13e68114de865782da46e3e2e0996eb6a7dd3f2011594b7d11",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "Skin": {
+          "DefaultVendor": "팬택&큐리텔",
+          "DefaultModel": "PG-S1200",
+          "VendorData": "Samsung,팬택&큐리텔,Custom,",
+          "Samsung": "SCH-E200,SCH-V330,SCH-X270,",
+          "팬택&큐리텔": "PG-S1200,",
+          "Custom": "GIGA_MA3_CAM,GIGA_MA5_CH_VOD_CAM,",
+          "DefaultCustomSkin": "GIGA_MA3_CAM"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Emulator.ini"
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "GIGA_MA3_CAM.ini",
+      "bytes": 1347,
+      "sha256": "eaccb0ba18ff5c2b198df56a024ea9eb66b8fb30c272b08f5b54da7ba42a97f6",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "176",
+          "Height": "174",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "1",
+          "Camera": "1",
+          "Photo": "1",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "0",
+          "LcdStartPosY": "-300",
+          "MainLcdStartPosX": "170",
+          "MainLcdStartPosY": "40",
+          "OptionYPos": "40",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/Custom/GIGA_MA3_CAM.ini"
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "GIGA_MA5_CH_VOD_CAM.ini",
+      "bytes": 1348,
+      "sha256": "bbc1cfd5bc2f275084fcfd87d1246b4491b1dd14f98332fd99607e99e4140823",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "128",
+          "LcdColor": "8",
+          "AudioType": "100",
+          "AudioChannel": "1",
+          "GIGA": "1",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "1",
+          "VODData": "1",
+          "CarrierType": "1",
+          "LcdStartPosX": "0",
+          "LcdStartPosY": "-300",
+          "MainLcdStartPosX": "170",
+          "MainLcdStartPosY": "40",
+          "OptionYPos": "40",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/Custom/GIGA_MA5_CH_VOD_CAM.ini"
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "PG_S1200.ini",
+      "bytes": 1361,
+      "sha256": "469b5a728caa45b8f129aeb7264a0c1e50efc375b7e4b9bf95522a9222a780eb",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "147",
+          "LcdColor": "8",
+          "AudioType": "100",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "33",
+          "LcdStartPosY": "69",
+          "MainLcdStartPosX": "190",
+          "MainLcdStartPosY": "69",
+          "OptionYPos": "36",
+          "OptionWidth": "90",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/PG-S1200/PG-S1200.ini"
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "SCH_E200.ini",
+      "bytes": 1361,
+      "sha256": "ba6ba24c1ac007ed0c3bd6200ab260f9ca46ad0f91bef57fd5c2b227a48e7338",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "146",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "32",
+          "LcdStartPosY": "79",
+          "MainLcdStartPosX": "187",
+          "MainLcdStartPosY": "79",
+          "OptionYPos": "45",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/SCH-E200/SCH-E200.ini"
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "SCH_V330.ini",
+      "bytes": 1364,
+      "sha256": "71c000b6b8245c5d0056865667579596ccecd0fa47ee2eb3b518a9f4700ae0c0",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "176",
+          "Height": "178",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "28",
+          "LcdStartPosY": "110",
+          "MainLcdStartPosX": "237",
+          "MainLcdStartPosY": "110",
+          "OptionYPos": "62",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/SCH-V330/SCH-V330.ini"
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "SCH_X270.ini",
+      "bytes": 1360,
+      "sha256": "753ecfbed84b7e8a1e95b1d5b51587c1e531ccdf3776dde00b4a0bef99b88cf5",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "120",
+          "Height": "149",
+          "LcdColor": "4",
+          "AudioType": "4",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "30",
+          "LcdStartPosY": "76",
+          "MainLcdStartPosX": "184",
+          "MainLcdStartPosY": "76",
+          "OptionYPos": "45",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/SCH-X270/SCH-X270.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "Default.ini",
+      "bytes": 1350,
+      "sha256": "ea8ed8ec4c3e7da71e4a0637aae8854a1fd3bd141b02ea3f03d07e0203f087e4",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "128",
+          "LcdColor": "8",
+          "AudioType": "100",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "0",
+          "LcdStartPosY": "-300",
+          "MainLcdStartPosX": "170",
+          "MainLcdStartPosY": "40",
+          "OptionYPos": "40",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/Custom/Default.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "Emulator.ini",
+      "bytes": 575,
+      "sha256": "d029e59aaa401ec5f9711ee52a0faa5309c9bad7105a6ec55b788d1489b336ca",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "Skin": {
+          "DefaultVendor": "Samsung",
+          "DefaultModel": "SCH-E200",
+          "VendorData": "Samsung,팬택&큐리텔,Custom,Myracer,",
+          "Samsung": "SCH-E200,SCH-V330,SCH-X270,SCH-W420,",
+          "팬택&큐리텔": "PG-S1200,",
+          "Myracer": "Myracer,",
+          "Custom": "GIGA_MA3_CAM,GIGA_MA5_CH_VOD_CAM,",
+          "DefaultCustomSkin": "GIGA_MA3_CAM"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Emulator.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "GIGA_MA3_CAM.ini",
+      "bytes": 1347,
+      "sha256": "eaccb0ba18ff5c2b198df56a024ea9eb66b8fb30c272b08f5b54da7ba42a97f6",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "176",
+          "Height": "174",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "1",
+          "Camera": "1",
+          "Photo": "1",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "0",
+          "LcdStartPosY": "-300",
+          "MainLcdStartPosX": "170",
+          "MainLcdStartPosY": "40",
+          "OptionYPos": "40",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/Custom/GIGA_MA3_CAM.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "GIGA_MA5_CH_VOD_CAM.ini",
+      "bytes": 1348,
+      "sha256": "bbc1cfd5bc2f275084fcfd87d1246b4491b1dd14f98332fd99607e99e4140823",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "128",
+          "LcdColor": "8",
+          "AudioType": "100",
+          "AudioChannel": "1",
+          "GIGA": "1",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "1",
+          "VODData": "1",
+          "CarrierType": "1",
+          "LcdStartPosX": "0",
+          "LcdStartPosY": "-300",
+          "MainLcdStartPosX": "170",
+          "MainLcdStartPosY": "40",
+          "OptionYPos": "40",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/Custom/GIGA_MA5_CH_VOD_CAM.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "Myracer.ini",
+      "bytes": 1213,
+      "sha256": "96d190a656bf2474e1f8ab199d74abb2cc36c8f3e11e045beafe3a5ae8a0ed40",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "320",
+          "Height": "240",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "240",
+          "LcdStartPosY": "77",
+          "MainLcdStartPosX": "80",
+          "MainLcdStartPosY": "370",
+          "OptionYPos": "100",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/Myracer/Myracer.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "PG_S1200.ini",
+      "bytes": 1361,
+      "sha256": "469b5a728caa45b8f129aeb7264a0c1e50efc375b7e4b9bf95522a9222a780eb",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "147",
+          "LcdColor": "8",
+          "AudioType": "100",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "33",
+          "LcdStartPosY": "69",
+          "MainLcdStartPosX": "190",
+          "MainLcdStartPosY": "69",
+          "OptionYPos": "36",
+          "OptionWidth": "90",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/PG-S1200/PG-S1200.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "SCH_E200.ini",
+      "bytes": 1361,
+      "sha256": "ba6ba24c1ac007ed0c3bd6200ab260f9ca46ad0f91bef57fd5c2b227a48e7338",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "128",
+          "Height": "146",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "32",
+          "LcdStartPosY": "79",
+          "MainLcdStartPosX": "187",
+          "MainLcdStartPosY": "79",
+          "OptionYPos": "45",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/SCH-E200/SCH-E200.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "SCH_V330.ini",
+      "bytes": 1364,
+      "sha256": "71c000b6b8245c5d0056865667579596ccecd0fa47ee2eb3b518a9f4700ae0c0",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "176",
+          "Height": "178",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "28",
+          "LcdStartPosY": "110",
+          "MainLcdStartPosX": "237",
+          "MainLcdStartPosY": "110",
+          "OptionYPos": "62",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/SCH-V330/SCH-V330.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "SCH_W420.ini",
+      "bytes": 1142,
+      "sha256": "b2e279ff5e625c80ce933f1c5b42de255d7dfa5145242425442d2f7f6cce0816",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "240",
+          "Height": "297",
+          "LcdColor": "8",
+          "AudioType": "36",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "42",
+          "LcdStartPosY": "120",
+          "MainLcdStartPosX": "330",
+          "MainLcdStartPosY": "30",
+          "OptionYPos": "45",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/SCH-W420/SCH-W420.ini"
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "SCH_X270.ini",
+      "bytes": 1360,
+      "sha256": "753ecfbed84b7e8a1e95b1d5b51587c1e531ccdf3776dde00b4a0bef99b88cf5",
+      "msiFileVersion": null,
+      "encoding": "cp949",
+      "sections": {
+        "PhoneInfo": {
+          "Width": "120",
+          "Height": "149",
+          "LcdColor": "4",
+          "AudioType": "4",
+          "AudioChannel": "0",
+          "GIGA": "0",
+          "Camera": "0",
+          "Photo": "0",
+          "VODControl": "0",
+          "VODData": "0",
+          "CarrierType": "1",
+          "LcdStartPosX": "30",
+          "LcdStartPosY": "76",
+          "MainLcdStartPosX": "184",
+          "MainLcdStartPosY": "76",
+          "OptionYPos": "45",
+          "OptionWidth": "100",
+          "FreeMemSize": "0x0F0000"
+        }
+      },
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./Skins/SCH-X270/SCH-X270.ini"
+    }
+  ],
+  "profileFinding": {
+    "newConfirmedDevices": 0,
+    "modelProfiles210": [
+      "SCH-E200",
+      "SCH-V330",
+      "SCH-X270",
+      "PG-S1200"
+    ],
+    "additionalProfiles212": [
+      "SCH-W420",
+      "Myracer"
+    ],
+    "genericProfiles": [
+      "Default",
+      "GIGA_MA3_CAM",
+      "GIGA_MA5_CH_VOD_CAM"
+    ],
+    "readmeHistory": {
+      "file": "Readme.txt",
+      "sdkVersion": "2.12",
+      "sha256": "d48314071bf3c82d8f85e6edd1d01f4ec1f3ec9703b55fdaa7e3ea2aa0335b70",
+      "section": "History:2009.03.16,GNEX SDKv2.1.1.0,Emulator Skin",
+      "addedNames": [
+        "Myracer",
+        "SCH-W420"
+      ]
+    },
+    "limits": [
+      "Myracer is a generic profile name without an MF/MT model number.",
+      "A skin is not independent proof of every serial handset capability or factory game.",
+      "The 2002 guide and 2003 XLS predate the later W420/Myracer profiles; no additional exact model names beyond those already recorded in gnex-devices.md were established."
+    ]
+  },
+  "extensionlessSources": [
+    {
+      "sdkVersion": "2.10",
+      "fileId": "_80721",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/_80721",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/280721",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 3221,
+      "sha256": "5221943fec22ed825982339867d1b3bfa9bf1ff0e3879551527238fb84a7ab80",
+      "firstLine": "/*======================================================================",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "a2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/a2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/a2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 34056,
+      "sha256": "04f77d726354f8401f5dcf49524efcb1fe2de24bf731fbac3615492e0fa89ef6",
+      "firstLine": "#ifndef _GNEXCOMDEF_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "a28071",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/a28071",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/b2807/a2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 2790,
+      "sha256": "067b054952f0392c61e858a418937486ca32cf0cc25999fd7fafe7f42aa71f04",
+      "firstLine": "#ifndef _ASYNCALL_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "a28072",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/a28072",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/a2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1765,
+      "sha256": "2f762763a75c6e8ebbd8d8ff458620b6bc1bd4fb1cabfee906982ffe2a83c202",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "a28073",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/a28073",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/d2807/a2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 5379,
+      "sha256": "f3d6b329acc047365b7f2041302e4361a5d96e2b5e6a58c7811b97856f325c09",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "b2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/b2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/b2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 28933,
+      "sha256": "e4e967cd3b2c6bd18f83757d19c135179bf8b82f366fa1163d31784686397122",
+      "firstLine": "/*---------------------------------------------------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "b28071",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/b28071",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/b2807/b2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 3086,
+      "sha256": "d5508a317ec2ef7bee329219a05ba07cc1d1c19a975e58e4e1855b38ed42c90c",
+      "firstLine": "#ifndef _GNEXIF_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "b28072",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/b28072",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/b2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 126800,
+      "sha256": "2982f726cf5d69f7941413e99f72cfbc7d717a7f15bd675cb17d97d12a0ec4fe",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "b28073",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/b28073",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/d2807/b2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 63879,
+      "sha256": "c55f1c504c1e89796a6b05644757e7b85b2812f361b04d13d02ee364fb0f48ea",
+      "firstLine": "#define HANFONT_0",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "c2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/c2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/c2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 140511,
+      "sha256": "4fc7b80d519a4e4883f54b4a8d2b1cfb09f468740c8684731918de4652f717e6",
+      "firstLine": "//----------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "c28071",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/c28071",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/c2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1524,
+      "sha256": "55db8e9cbf43a30750ba6e890bca0985e4a0e52ffb609f2b6c7e5e228ae9ee76",
+      "firstLine": "#ifndef\t_GNEXATMT_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "d2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/d2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/d2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 196021,
+      "sha256": "22805f4cf17c59011b06e22bf8f4d1c8e5b3be757d9dbd769dfeb87780d1b977",
+      "firstLine": "//------------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "e2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/e2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/e2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 196021,
+      "sha256": "3c105990f92851ae4d9349b27c3d6bd8f6487619cdd0497619fb224c4cb600d0",
+      "firstLine": "//------------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "e28071",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/e28071",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/e2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 6091,
+      "sha256": "03583ca5944cc8e39129aa761b1f639096d0f0056532aafcbf5de4ddcc476b29",
+      "firstLine": "#ifndef _GNEXMENU_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "f2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/f2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/f2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 29500,
+      "sha256": "94c4a86aec249ad1b2f9bb716e95d708a76c48a0e2220b1c5bbe24dcd8055aad",
+      "firstLine": "//==============================================================================",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "f28071",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/f28071",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/f2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 5360,
+      "sha256": "11187f6b864f83955d5b9488aad0a0d653121c2f9226e8c3d433898b57e1e03b",
+      "firstLine": "#ifndef _MMI_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "g2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/g2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/g2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1130530,
+      "sha256": "0f832990121479ce820818c431ce6780281a66d1d3d98c977beb69144e13bc01",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "g28071",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/g28071",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/g2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 89896,
+      "sha256": "436eb706f6aba95d21052e1f25833605106b959a3cd726cdfe4071ed042448d0",
+      "firstLine": "#ifndef _SYMBOL_H_",
+      "modelLiterals": [
+        {
+          "model": "SCH-S250",
+          "fileOffset": 9049,
+          "line": 301
+        }
+      ]
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "h2807",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/h2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/h2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1130530,
+      "sha256": "0f832990121479ce820818c431ce6780281a66d1d3d98c977beb69144e13bc01",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "k280721",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/k280721",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/k280721",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 4861,
+      "sha256": "fa9526639c3f09341716a6cd7874e3b258c0f6ef7fae81b6cfa75a96eb650869",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "fileId": "l280721",
+      "sourcePath": "work/sdk-device-roster-next-pass/files210/l280721",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/l280721",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 4912,
+      "sha256": "667ef1dc42db8937b27bf48c3fbaa7c3c2501685340e8b0f4d1714549db56e2a",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "_80721",
+      "sourcePath": "work/gnex-sdk/files/_80721",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/280721",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 3221,
+      "sha256": "5221943fec22ed825982339867d1b3bfa9bf1ff0e3879551527238fb84a7ab80",
+      "firstLine": "/*======================================================================",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "aa2807",
+      "sourcePath": "work/gnex-sdk/files/aa2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/aa2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 34037,
+      "sha256": "452a07505516f133a97726eaf0cdc1969dd8bdea79e38ff36c97efaa2f0b3221",
+      "firstLine": "#ifndef _GNEXCOMDEF_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ab2807",
+      "sourcePath": "work/gnex-sdk/files/ab2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/ab2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 28933,
+      "sha256": "e4e967cd3b2c6bd18f83757d19c135179bf8b82f366fa1163d31784686397122",
+      "firstLine": "/*---------------------------------------------------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ac2807",
+      "sourcePath": "work/gnex-sdk/files/ac2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/ac2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 140511,
+      "sha256": "4fc7b80d519a4e4883f54b4a8d2b1cfb09f468740c8684731918de4652f717e6",
+      "firstLine": "//----------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ad2807",
+      "sourcePath": "work/gnex-sdk/files/ad2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/ad2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 196021,
+      "sha256": "22805f4cf17c59011b06e22bf8f4d1c8e5b3be757d9dbd769dfeb87780d1b977",
+      "firstLine": "//------------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ae2807",
+      "sourcePath": "work/gnex-sdk/files/ae2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/ae2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 196021,
+      "sha256": "3c105990f92851ae4d9349b27c3d6bd8f6487619cdd0497619fb224c4cb600d0",
+      "firstLine": "//------------------------------------------------",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "af2807",
+      "sourcePath": "work/gnex-sdk/files/af2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/af2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 29688,
+      "sha256": "c03816152221f6d3d224240ed20d0b6ef1c4d9a0c3f866a34bdf505d3fe2948a",
+      "firstLine": "//==============================================================================",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ag2807",
+      "sourcePath": "work/gnex-sdk/files/ag2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/ag2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1130530,
+      "sha256": "0f832990121479ce820818c431ce6780281a66d1d3d98c977beb69144e13bc01",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ah2807",
+      "sourcePath": "work/gnex-sdk/files/ah2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/a2807/ah2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1130530,
+      "sha256": "0f832990121479ce820818c431ce6780281a66d1d3d98c977beb69144e13bc01",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ba2807",
+      "sourcePath": "work/gnex-sdk/files/ba2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/b2807/ba2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 2790,
+      "sha256": "067b054952f0392c61e858a418937486ca32cf0cc25999fd7fafe7f42aa71f04",
+      "firstLine": "#ifndef _ASYNCALL_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "bb2807",
+      "sourcePath": "work/gnex-sdk/files/bb2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/b2807/bb2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 3086,
+      "sha256": "d5508a317ec2ef7bee329219a05ba07cc1d1c19a975e58e4e1855b38ed42c90c",
+      "firstLine": "#ifndef _GNEXIF_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "c280721",
+      "sourcePath": "work/gnex-sdk/files/c280721",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c280721",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 12914,
+      "sha256": "23f321ed3ad9e3c0dc86a326da3e034e6e609f56aa013bc9b87120ef18037cc2",
+      "firstLine": "//============================== skeleton ==================================",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ca2807",
+      "sourcePath": "work/gnex-sdk/files/ca2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/ca2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1765,
+      "sha256": "2f762763a75c6e8ebbd8d8ff458620b6bc1bd4fb1cabfee906982ffe2a83c202",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "cb2807",
+      "sourcePath": "work/gnex-sdk/files/cb2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/cb2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 126800,
+      "sha256": "2982f726cf5d69f7941413e99f72cfbc7d717a7f15bd675cb17d97d12a0ec4fe",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "cc2807",
+      "sourcePath": "work/gnex-sdk/files/cc2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/cc2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 1524,
+      "sha256": "55db8e9cbf43a30750ba6e890bca0985e4a0e52ffb609f2b6c7e5e228ae9ee76",
+      "firstLine": "#ifndef\t_GNEXATMT_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "ce2807",
+      "sourcePath": "work/gnex-sdk/files/ce2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/ce2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 6091,
+      "sha256": "03583ca5944cc8e39129aa761b1f639096d0f0056532aafcbf5de4ddcc476b29",
+      "firstLine": "#ifndef _GNEXMENU_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "cf2807",
+      "sourcePath": "work/gnex-sdk/files/cf2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/cf2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 5360,
+      "sha256": "11187f6b864f83955d5b9488aad0a0d653121c2f9226e8c3d433898b57e1e03b",
+      "firstLine": "#ifndef _MMI_H_",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "cg2807",
+      "sourcePath": "work/gnex-sdk/files/cg2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/c2807/cg2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 90056,
+      "sha256": "a5248ccd15edd698be3be64b77ad82f4d739406f4a27eee7febb3739872beab1",
+      "firstLine": "#ifndef _SYMBOL_H_",
+      "modelLiterals": [
+        {
+          "model": "SCH-S250",
+          "fileOffset": 9205,
+          "line": 304
+        }
+      ]
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "da2807",
+      "sourcePath": "work/gnex-sdk/files/da2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/d2807/da2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 5379,
+      "sha256": "f3d6b329acc047365b7f2041302e4361a5d96e2b5e6a58c7811b97856f325c09",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "db2807",
+      "sourcePath": "work/gnex-sdk/files/db2807",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/d2807/db2807",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 69439,
+      "sha256": "dc582d006128566b4af62748f4717daa995aa58c5b82b58c90e61affcb39f944",
+      "firstLine": "#define HANFONT_0",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "k280721",
+      "sourcePath": "work/gnex-sdk/files/k280721",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/k280721",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 5309,
+      "sha256": "323698bdf653c1a3a7e7ff5ea42d3fe0225b152085618fa90992588867eb9e39",
+      "firstLine": "",
+      "modelLiterals": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "fileId": "l280721",
+      "sourcePath": "work/gnex-sdk/files/l280721",
+      "declaredMsiTargetPath": "SourceDir/./$NtUninstallKB280721_03$/Temp/l280721",
+      "targetPathNote": "MSI Directory/Component/File database declaration; not an installed or executed path.",
+      "bytes": 7027,
+      "sha256": "1ab66c560831a5aeb0a0892c6f16f8a779b244e5e24da18ad4dacc425c8a1661",
+      "firstLine": "",
+      "modelLiterals": []
+    }
+  ],
+  "modelLiteralReview": {
+    "model": "SCH-S250",
+    "files": [
+      "2.10:g28071",
+      "2.12:cg2807"
+    ],
+    "status": "commented-out",
+    "interpretation": "Historical Samsung symbol-dialog alignment branch is inside /*...*/ in both files; active code chooses x=LcdWidth-4 and ALIGN_RIGHT. In2.12 the subsequent close-label draw calls are also commented. It is not an active device compensation.",
+    "otherTokens": [
+      {
+        "token": "GNEX_TARGET_STB",
+        "value": 2,
+        "file": "cf2807",
+        "meaning": "Generic target constant; no named set-top-box or shipped-product proof."
+      },
+      {
+        "token": "MPEON11_29",
+        "file": "cf2807",
+        "meaning": "Comments beside GNEX_LCD_GRAY_VERT_LF2/LF3; no exact model or independent GNEX deployment proof."
+      },
+      {
+        "tokens": [
+          "IM-770",
+          "IM-2300"
+        ],
+        "source": "SDK User Guide2.12 PDFpage41 /2.10 page39",
+        "meaning": "PCM file format of the SKTeletech melody editor; this mention is not GNEX support proof."
+      }
+    ]
+  },
+  "opcodeHeaderReview": {
+    "source": "ab2807",
+    "bytes": 28933,
+    "sha256": "e4e967cd3b2c6bd18f83757d19c135179bf8b82f366fa1163d31784686397122",
+    "enumStatus": "Entire Dynamic library opcode enumeration is commented out, annotated SJKim050519. Not a legacy runtime dispatch table.",
+    "enum": [
+      {
+        "name": "dllNOP",
+        "value": 0,
+        "hex": "0x0"
+      },
+      {
+        "name": "dllPUSHX",
+        "value": 1,
+        "hex": "0x1"
+      },
+      {
+        "name": "dllPUSHI",
+        "value": 2,
+        "hex": "0x2"
+      },
+      {
+        "name": "dllPUSHIC",
+        "value": 3,
+        "hex": "0x3"
+      },
+      {
+        "name": "dllPUSHZ",
+        "value": 4,
+        "hex": "0x4"
+      },
+      {
+        "name": "dllPUSHC",
+        "value": 5,
+        "hex": "0x5"
+      },
+      {
+        "name": "dllPUSHMI",
+        "value": 6,
+        "hex": "0x6"
+      },
+      {
+        "name": "dllPUSHW",
+        "value": 7,
+        "hex": "0x7"
+      },
+      {
+        "name": "dllPOPX",
+        "value": 8,
+        "hex": "0x8"
+      },
+      {
+        "name": "dllPOPI",
+        "value": 9,
+        "hex": "0x9"
+      },
+      {
+        "name": "dllPOPIC",
+        "value": 10,
+        "hex": "0xa"
+      },
+      {
+        "name": "dllPOPZ",
+        "value": 11,
+        "hex": "0xb"
+      },
+      {
+        "name": "dllSSP",
+        "value": 12,
+        "hex": "0xc"
+      },
+      {
+        "name": "dllRSP",
+        "value": 13,
+        "hex": "0xd"
+      },
+      {
+        "name": "dllINC",
+        "value": 14,
+        "hex": "0xe"
+      },
+      {
+        "name": "dllDEC",
+        "value": 15,
+        "hex": "0xf"
+      },
+      {
+        "name": "dllDUP",
+        "value": 16,
+        "hex": "0x10"
+      },
+      {
+        "name": "dllNEG",
+        "value": 17,
+        "hex": "0x11"
+      },
+      {
+        "name": "dllSWP",
+        "value": 18,
+        "hex": "0x12"
+      },
+      {
+        "name": "dllADD",
+        "value": 19,
+        "hex": "0x13"
+      },
+      {
+        "name": "dllSUB",
+        "value": 20,
+        "hex": "0x14"
+      },
+      {
+        "name": "dllMULT",
+        "value": 80,
+        "hex": "0x50"
+      },
+      {
+        "name": "dllDIV",
+        "value": 81,
+        "hex": "0x51"
+      },
+      {
+        "name": "dllMOD",
+        "value": 82,
+        "hex": "0x52"
+      },
+      {
+        "name": "dllAND",
+        "value": 83,
+        "hex": "0x53"
+      },
+      {
+        "name": "dllOR",
+        "value": 84,
+        "hex": "0x54"
+      },
+      {
+        "name": "dllNOT",
+        "value": 85,
+        "hex": "0x55"
+      },
+      {
+        "name": "dllXOR",
+        "value": 86,
+        "hex": "0x56"
+      },
+      {
+        "name": "dllSHIFTR",
+        "value": 87,
+        "hex": "0x57"
+      },
+      {
+        "name": "dllSHIFTL",
+        "value": 88,
+        "hex": "0x58"
+      },
+      {
+        "name": "dllGT",
+        "value": 89,
+        "hex": "0x59"
+      },
+      {
+        "name": "dllLT",
+        "value": 90,
+        "hex": "0x5a"
+      },
+      {
+        "name": "dllGE",
+        "value": 91,
+        "hex": "0x5b"
+      },
+      {
+        "name": "dllLE",
+        "value": 92,
+        "hex": "0x5c"
+      },
+      {
+        "name": "dllEQ",
+        "value": 93,
+        "hex": "0x5d"
+      },
+      {
+        "name": "dllNE",
+        "value": 94,
+        "hex": "0x5e"
+      },
+      {
+        "name": "dllSETX",
+        "value": 95,
+        "hex": "0x5f"
+      },
+      {
+        "name": "dllSETI",
+        "value": 96,
+        "hex": "0x60"
+      },
+      {
+        "name": "dllSETN",
+        "value": 97,
+        "hex": "0x61"
+      },
+      {
+        "name": "dllSETZ",
+        "value": 98,
+        "hex": "0x62"
+      },
+      {
+        "name": "dllSETC",
+        "value": 99,
+        "hex": "0x63"
+      },
+      {
+        "name": "dllSETMI",
+        "value": 100,
+        "hex": "0x64"
+      },
+      {
+        "name": "dllISETX",
+        "value": 101,
+        "hex": "0x65"
+      },
+      {
+        "name": "dllISETI",
+        "value": 102,
+        "hex": "0x66"
+      },
+      {
+        "name": "dllISETN",
+        "value": 103,
+        "hex": "0x67"
+      },
+      {
+        "name": "dllISETZ",
+        "value": 104,
+        "hex": "0x68"
+      },
+      {
+        "name": "dllISETC",
+        "value": 105,
+        "hex": "0x69"
+      },
+      {
+        "name": "dllISETMI",
+        "value": 106,
+        "hex": "0x6a"
+      },
+      {
+        "name": "dllNSETX",
+        "value": 107,
+        "hex": "0x6b"
+      },
+      {
+        "name": "dllNSETI",
+        "value": 108,
+        "hex": "0x6c"
+      },
+      {
+        "name": "dllNSETN",
+        "value": 109,
+        "hex": "0x6d"
+      },
+      {
+        "name": "dllNSETZ",
+        "value": 110,
+        "hex": "0x6e"
+      },
+      {
+        "name": "dllNSETC",
+        "value": 111,
+        "hex": "0x6f"
+      },
+      {
+        "name": "dllNSETMI",
+        "value": 112,
+        "hex": "0x70"
+      },
+      {
+        "name": "dllZSETX",
+        "value": 113,
+        "hex": "0x71"
+      },
+      {
+        "name": "dllZSETI",
+        "value": 114,
+        "hex": "0x72"
+      },
+      {
+        "name": "dllZSETN",
+        "value": 115,
+        "hex": "0x73"
+      },
+      {
+        "name": "dllZSETZ",
+        "value": 116,
+        "hex": "0x74"
+      },
+      {
+        "name": "dllZSETC",
+        "value": 117,
+        "hex": "0x75"
+      },
+      {
+        "name": "dllZSETMI",
+        "value": 118,
+        "hex": "0x76"
+      },
+      {
+        "name": "dllINCX",
+        "value": 119,
+        "hex": "0x77"
+      },
+      {
+        "name": "dllINCI",
+        "value": 120,
+        "hex": "0x78"
+      },
+      {
+        "name": "dllINCN",
+        "value": 121,
+        "hex": "0x79"
+      },
+      {
+        "name": "dllINCZ",
+        "value": 122,
+        "hex": "0x7a"
+      },
+      {
+        "name": "dllGTJP",
+        "value": 123,
+        "hex": "0x7b"
+      },
+      {
+        "name": "dllLTJP",
+        "value": 124,
+        "hex": "0x7c"
+      },
+      {
+        "name": "dllGEJP",
+        "value": 125,
+        "hex": "0x7d"
+      },
+      {
+        "name": "dllLEJP",
+        "value": 126,
+        "hex": "0x7e"
+      },
+      {
+        "name": "dllEQJP",
+        "value": 127,
+        "hex": "0x7f"
+      },
+      {
+        "name": "dllNEJP",
+        "value": 128,
+        "hex": "0x80"
+      },
+      {
+        "name": "dllUJP",
+        "value": 129,
+        "hex": "0x81"
+      },
+      {
+        "name": "dllTJP",
+        "value": 130,
+        "hex": "0x82"
+      },
+      {
+        "name": "dllFJP",
+        "value": 131,
+        "hex": "0x83"
+      },
+      {
+        "name": "dllCALL",
+        "value": 133,
+        "hex": "0x85"
+      },
+      {
+        "name": "dllRET",
+        "value": 134,
+        "hex": "0x86"
+      },
+      {
+        "name": "dllSTOP",
+        "value": 135,
+        "hex": "0x87"
+      },
+      {
+        "name": "dllSKIP",
+        "value": 136,
+        "hex": "0x88"
+      },
+      {
+        "name": "dllSTNX",
+        "value": 137,
+        "hex": "0x89"
+      },
+      {
+        "name": "dllSTNI",
+        "value": 138,
+        "hex": "0x8a"
+      },
+      {
+        "name": "dllSTNIC",
+        "value": 139,
+        "hex": "0x8b"
+      },
+      {
+        "name": "dllSTNZ",
+        "value": 140,
+        "hex": "0x8c"
+      },
+      {
+        "name": "dllLDRIC",
+        "value": 141,
+        "hex": "0x8d"
+      },
+      {
+        "name": "dllLDRZ",
+        "value": 142,
+        "hex": "0x8e"
+      },
+      {
+        "name": "dllIXA",
+        "value": 143,
+        "hex": "0x8f"
+      },
+      {
+        "name": "dllSTA",
+        "value": 144,
+        "hex": "0x90"
+      },
+      {
+        "name": "dllSTAN",
+        "value": 145,
+        "hex": "0x91"
+      },
+      {
+        "name": "dllCALLS",
+        "value": 146,
+        "hex": "0x92"
+      },
+      {
+        "name": "dllCALLD",
+        "value": 147,
+        "hex": "0x93"
+      },
+      {
+        "name": "dllCOPYIMAGE",
+        "value": 148,
+        "hex": "0x94"
+      },
+      {
+        "name": "dllCOPYIMAGEDIR",
+        "value": 149,
+        "hex": "0x95"
+      },
+      {
+        "name": "dllCOPYIMAGEPAL",
+        "value": 150,
+        "hex": "0x96"
+      },
+      {
+        "name": "dllCOPYIMAGEDIRPAL",
+        "value": 151,
+        "hex": "0x97"
+      },
+      {
+        "name": "dllCOPYIMAGEEX",
+        "value": 152,
+        "hex": "0x98"
+      },
+      {
+        "name": "dllCOPYIMAGEPALEX",
+        "value": 153,
+        "hex": "0x99"
+      },
+      {
+        "name": "dllPUSHIXQ",
+        "value": 202,
+        "hex": "0xca"
+      },
+      {
+        "name": "dllPUSHICZQ",
+        "value": 203,
+        "hex": "0xcb"
+      },
+      {
+        "name": "dllPOPIXQ",
+        "value": 204,
+        "hex": "0xcc"
+      },
+      {
+        "name": "dllPOPICZQ",
+        "value": 205,
+        "hex": "0xcd"
+      },
+      {
+        "name": "dllSETIXQ",
+        "value": 206,
+        "hex": "0xce"
+      },
+      {
+        "name": "dllSETNZQ",
+        "value": 207,
+        "hex": "0xcf"
+      },
+      {
+        "name": "dllSETCQ",
+        "value": 208,
+        "hex": "0xd0"
+      },
+      {
+        "name": "dllNSETIXQ",
+        "value": 209,
+        "hex": "0xd1"
+      },
+      {
+        "name": "dllNSETNZQ",
+        "value": 210,
+        "hex": "0xd2"
+      },
+      {
+        "name": "dllNSETCQ",
+        "value": 211,
+        "hex": "0xd3"
+      },
+      {
+        "name": "dllINCIXQ",
+        "value": 212,
+        "hex": "0xd4"
+      },
+      {
+        "name": "dllINCNZQ",
+        "value": 213,
+        "hex": "0xd5"
+      },
+      {
+        "name": "dllSTNIXQ",
+        "value": 214,
+        "hex": "0xd6"
+      },
+      {
+        "name": "dllSTNICZQ",
+        "value": 215,
+        "hex": "0xd7"
+      },
+      {
+        "name": "dllLDRICZQ",
+        "value": 216,
+        "hex": "0xd8"
+      },
+      {
+        "name": "dllPUSHIX2Q",
+        "value": 217,
+        "hex": "0xd9"
+      },
+      {
+        "name": "dllPUSHICZ2Q",
+        "value": 218,
+        "hex": "0xda"
+      },
+      {
+        "name": "dllPOPIX2Q",
+        "value": 219,
+        "hex": "0xdb"
+      },
+      {
+        "name": "dllPOPICZ2Q",
+        "value": 220,
+        "hex": "0xdc"
+      },
+      {
+        "name": "dllSETIX2Q",
+        "value": 221,
+        "hex": "0xdd"
+      },
+      {
+        "name": "dllSETNZ2Q",
+        "value": 222,
+        "hex": "0xde"
+      },
+      {
+        "name": "dllSETC2Q",
+        "value": 223,
+        "hex": "0xdf"
+      },
+      {
+        "name": "dllNSETIX2Q",
+        "value": 224,
+        "hex": "0xe0"
+      },
+      {
+        "name": "dllNSETNZ2Q",
+        "value": 225,
+        "hex": "0xe1"
+      },
+      {
+        "name": "dllNSETC2Q",
+        "value": 226,
+        "hex": "0xe2"
+      },
+      {
+        "name": "dllINCIX2Q",
+        "value": 227,
+        "hex": "0xe3"
+      },
+      {
+        "name": "dllINCNZ2Q",
+        "value": 228,
+        "hex": "0xe4"
+      },
+      {
+        "name": "dllSTNIX2Q",
+        "value": 229,
+        "hex": "0xe5"
+      },
+      {
+        "name": "dllSTNICZ2Q",
+        "value": 230,
+        "hex": "0xe6"
+      },
+      {
+        "name": "dllLDRICZ2Q",
+        "value": 231,
+        "hex": "0xe7"
+      },
+      {
+        "name": "dllADDZZC",
+        "value": 232,
+        "hex": "0xe8"
+      },
+      {
+        "name": "dllADDZZCQ",
+        "value": 233,
+        "hex": "0xe9"
+      },
+      {
+        "name": "dllADDZZC2Q",
+        "value": 234,
+        "hex": "0xea"
+      },
+      {
+        "name": "dllADDZZ",
+        "value": 235,
+        "hex": "0xeb"
+      },
+      {
+        "name": "dllADDZZQ",
+        "value": 236,
+        "hex": "0xec"
+      },
+      {
+        "name": "dllADDZZ2Q",
+        "value": 237,
+        "hex": "0xed"
+      },
+      {
+        "name": "dllADDZ",
+        "value": 238,
+        "hex": "0xee"
+      },
+      {
+        "name": "dllADDZQ",
+        "value": 239,
+        "hex": "0xef"
+      },
+      {
+        "name": "dllADDZ2Q",
+        "value": 240,
+        "hex": "0xf0"
+      },
+      {
+        "name": "dllADDLDRZC",
+        "value": 241,
+        "hex": "0xf1"
+      },
+      {
+        "name": "dllADDLDRZCQ",
+        "value": 242,
+        "hex": "0xf2"
+      },
+      {
+        "name": "dllADDLDRZC2Q",
+        "value": 243,
+        "hex": "0xf3"
+      },
+      {
+        "name": "dllEND",
+        "value": 255,
+        "hex": "0xff"
+      }
+    ],
+    "missingRequestedValues": [
+      "0xba",
+      "0xbb",
+      "0xc4"
+    ],
+    "widthGuards": {
+      "GNEX_VM_FEATURE_QUICK_OPCODE": "Defined in aa2807; ab2807 selects WORD BASE_TYPE, GNEX_N_OPCODE0xF5, INC_COUNTER(a)=a>>1.",
+      "elseBranch": "BYTE BASE_TYPE, GNEX_N_OPCODE154, INC_COUNTER(a)=a. Both branches define GVM_N_OPCODE239.",
+      "header": "S_HeaderType2 is the GNEX128-byte layout with11 DWORD events,8-byte variable and12-byte media descriptors. It is not the Sanyo v1 52-byte header/16-bit stack format."
+    },
+    "limit": "The header enum cannot name SanyoBA/BB/C4; separate native MASM dataflow below provides those names."
+  },
+  "legacyMasm": {
+    "scope": "Static SDK legacy MASM opcode/name mapping, independently verified against descriptor codes and a one-byte emission path. No vendor executable executed; this is not a claim of identical platform callbacks on all handsets.",
+    "source": {
+      "path": "work/gnex-sdk/files/MASM.exe",
+      "bytes": 114688,
+      "sha256": "deebe7e45deef83e7ef87a622277ac51f79df84db63f1a0de35f62caf1d601ac"
+    },
+    "pointerTableFileOffset": "0x15d9c",
+    "descriptorTableFileOffset": "0x12248",
+    "descriptorStrideBytes": 28,
+    "nameRows": 243,
+    "selectedMappings": [
+      {
+        "nameIndex": 0,
+        "opcode": 0,
+        "opcodeHex": "0x0",
+        "name": "nop",
+        "namePointerFileOffset": "0x15d9c",
+        "nameVirtualAddress": "0x416e28",
+        "nameStringFileOffset": "0x16e28",
+        "descriptorFileOffset": "0x12248",
+        "descriptorHex": "00000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 1,
+        "opcode": 1,
+        "opcodeHex": "0x1",
+        "name": "pushx",
+        "namePointerFileOffset": "0x15da0",
+        "nameVirtualAddress": "0x416e20",
+        "nameStringFileOffset": "0x16e20",
+        "descriptorFileOffset": "0x12264",
+        "descriptorHex": "01000000010000000100000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 2,
+        "opcode": 2,
+        "opcodeHex": "0x2",
+        "name": "pushi",
+        "namePointerFileOffset": "0x15da4",
+        "nameVirtualAddress": "0x416e18",
+        "nameStringFileOffset": "0x16e18",
+        "descriptorFileOffset": "0x12280",
+        "descriptorHex": "02000000010000000100000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 5,
+        "opcode": 5,
+        "opcodeHex": "0x5",
+        "name": "pushc",
+        "namePointerFileOffset": "0x15db0",
+        "nameVirtualAddress": "0x416e00",
+        "nameStringFileOffset": "0x16e00",
+        "descriptorFileOffset": "0x122d4",
+        "descriptorHex": "05000000040000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 186,
+        "opcode": 186,
+        "opcodeHex": "0xba",
+        "name": "LockChatMode",
+        "namePointerFileOffset": "0x16084",
+        "nameVirtualAddress": "0x416778",
+        "nameStringFileOffset": "0x16778",
+        "descriptorFileOffset": "0x136a0",
+        "descriptorHex": "ba000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 187,
+        "opcode": 187,
+        "opcodeHex": "0xbb",
+        "name": "SetChatMode",
+        "namePointerFileOffset": "0x16088",
+        "nameVirtualAddress": "0x41676c",
+        "nameStringFileOffset": "0x1676c",
+        "descriptorFileOffset": "0x136bc",
+        "descriptorHex": "bb000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 196,
+        "opcode": 196,
+        "opcodeHex": "0xc4",
+        "name": "BackToBrowser",
+        "namePointerFileOffset": "0x160ac",
+        "nameVirtualAddress": "0x416704",
+        "nameStringFileOffset": "0x16704",
+        "descriptorFileOffset": "0x137b8",
+        "descriptorHex": "c4000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "allNames": [
+      {
+        "nameIndex": 0,
+        "opcode": 0,
+        "opcodeHex": "0x0",
+        "name": "nop",
+        "namePointerFileOffset": "0x15d9c",
+        "nameVirtualAddress": "0x416e28",
+        "nameStringFileOffset": "0x16e28",
+        "descriptorFileOffset": "0x12248",
+        "descriptorHex": "00000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 1,
+        "opcode": 1,
+        "opcodeHex": "0x1",
+        "name": "pushx",
+        "namePointerFileOffset": "0x15da0",
+        "nameVirtualAddress": "0x416e20",
+        "nameStringFileOffset": "0x16e20",
+        "descriptorFileOffset": "0x12264",
+        "descriptorHex": "01000000010000000100000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 2,
+        "opcode": 2,
+        "opcodeHex": "0x2",
+        "name": "pushi",
+        "namePointerFileOffset": "0x15da4",
+        "nameVirtualAddress": "0x416e18",
+        "nameStringFileOffset": "0x16e18",
+        "descriptorFileOffset": "0x12280",
+        "descriptorHex": "02000000010000000100000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 3,
+        "opcode": 3,
+        "opcodeHex": "0x3",
+        "name": "pushic",
+        "namePointerFileOffset": "0x15da8",
+        "nameVirtualAddress": "0x416e10",
+        "nameStringFileOffset": "0x16e10",
+        "descriptorFileOffset": "0x1229c",
+        "descriptorHex": "03000000010000000400000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 4,
+        "opcode": 4,
+        "opcodeHex": "0x4",
+        "name": "pushz",
+        "namePointerFileOffset": "0x15dac",
+        "nameVirtualAddress": "0x416e08",
+        "nameStringFileOffset": "0x16e08",
+        "descriptorFileOffset": "0x122b8",
+        "descriptorHex": "04000000010000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 5,
+        "opcode": 5,
+        "opcodeHex": "0x5",
+        "name": "pushc",
+        "namePointerFileOffset": "0x15db0",
+        "nameVirtualAddress": "0x416e00",
+        "nameStringFileOffset": "0x16e00",
+        "descriptorFileOffset": "0x122d4",
+        "descriptorHex": "05000000040000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 6,
+        "opcode": 6,
+        "opcodeHex": "0x6",
+        "name": "pushw",
+        "namePointerFileOffset": "0x15db4",
+        "nameVirtualAddress": "0x416df8",
+        "nameStringFileOffset": "0x16df8",
+        "descriptorFileOffset": "0x122f0",
+        "descriptorHex": "06000000050000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 7,
+        "opcode": 7,
+        "opcodeHex": "0x7",
+        "name": "popx",
+        "namePointerFileOffset": "0x15db8",
+        "nameVirtualAddress": "0x416df0",
+        "nameStringFileOffset": "0x16df0",
+        "descriptorFileOffset": "0x1230c",
+        "descriptorHex": "07000000010000000100000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 8,
+        "opcode": 8,
+        "opcodeHex": "0x8",
+        "name": "popi",
+        "namePointerFileOffset": "0x15dbc",
+        "nameVirtualAddress": "0x416de8",
+        "nameStringFileOffset": "0x16de8",
+        "descriptorFileOffset": "0x12328",
+        "descriptorHex": "08000000010000000100000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 9,
+        "opcode": 9,
+        "opcodeHex": "0x9",
+        "name": "popic",
+        "namePointerFileOffset": "0x15dc0",
+        "nameVirtualAddress": "0x416de0",
+        "nameStringFileOffset": "0x16de0",
+        "descriptorFileOffset": "0x12344",
+        "descriptorHex": "09000000010000000400000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 10,
+        "opcode": 10,
+        "opcodeHex": "0xa",
+        "name": "popz",
+        "namePointerFileOffset": "0x15dc4",
+        "nameVirtualAddress": "0x416dd8",
+        "nameStringFileOffset": "0x16dd8",
+        "descriptorFileOffset": "0x12360",
+        "descriptorHex": "0a000000010000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 11,
+        "opcode": 11,
+        "opcodeHex": "0xb",
+        "name": "ssp",
+        "namePointerFileOffset": "0x15dc8",
+        "nameVirtualAddress": "0x416dd4",
+        "nameStringFileOffset": "0x16dd4",
+        "descriptorFileOffset": "0x1237c",
+        "descriptorHex": "0b000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 12,
+        "opcode": 12,
+        "opcodeHex": "0xc",
+        "name": "rsp",
+        "namePointerFileOffset": "0x15dcc",
+        "nameVirtualAddress": "0x416dd0",
+        "nameStringFileOffset": "0x16dd0",
+        "descriptorFileOffset": "0x12398",
+        "descriptorHex": "0c000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 13,
+        "opcode": 13,
+        "opcodeHex": "0xd",
+        "name": "inc",
+        "namePointerFileOffset": "0x15dd0",
+        "nameVirtualAddress": "0x416dcc",
+        "nameStringFileOffset": "0x16dcc",
+        "descriptorFileOffset": "0x123b4",
+        "descriptorHex": "0d000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 14,
+        "opcode": 14,
+        "opcodeHex": "0xe",
+        "name": "dec",
+        "namePointerFileOffset": "0x15dd4",
+        "nameVirtualAddress": "0x416dc8",
+        "nameStringFileOffset": "0x16dc8",
+        "descriptorFileOffset": "0x123d0",
+        "descriptorHex": "0e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 15,
+        "opcode": 15,
+        "opcodeHex": "0xf",
+        "name": "dup",
+        "namePointerFileOffset": "0x15dd8",
+        "nameVirtualAddress": "0x416dc4",
+        "nameStringFileOffset": "0x16dc4",
+        "descriptorFileOffset": "0x123ec",
+        "descriptorHex": "0f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 16,
+        "opcode": 16,
+        "opcodeHex": "0x10",
+        "name": "neg",
+        "namePointerFileOffset": "0x15ddc",
+        "nameVirtualAddress": "0x416dc0",
+        "nameStringFileOffset": "0x16dc0",
+        "descriptorFileOffset": "0x12408",
+        "descriptorHex": "10000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 17,
+        "opcode": 17,
+        "opcodeHex": "0x11",
+        "name": "swp",
+        "namePointerFileOffset": "0x15de0",
+        "nameVirtualAddress": "0x416dbc",
+        "nameStringFileOffset": "0x16dbc",
+        "descriptorFileOffset": "0x12424",
+        "descriptorHex": "11000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 18,
+        "opcode": 18,
+        "opcodeHex": "0x12",
+        "name": "add",
+        "namePointerFileOffset": "0x15de4",
+        "nameVirtualAddress": "0x416db8",
+        "nameStringFileOffset": "0x16db8",
+        "descriptorFileOffset": "0x12440",
+        "descriptorHex": "12000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 19,
+        "opcode": 19,
+        "opcodeHex": "0x13",
+        "name": "sub",
+        "namePointerFileOffset": "0x15de8",
+        "nameVirtualAddress": "0x416db4",
+        "nameStringFileOffset": "0x16db4",
+        "descriptorFileOffset": "0x1245c",
+        "descriptorHex": "13000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 20,
+        "opcode": 20,
+        "opcodeHex": "0x14",
+        "name": "mult",
+        "namePointerFileOffset": "0x15dec",
+        "nameVirtualAddress": "0x416dac",
+        "nameStringFileOffset": "0x16dac",
+        "descriptorFileOffset": "0x12478",
+        "descriptorHex": "14000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 21,
+        "opcode": 21,
+        "opcodeHex": "0x15",
+        "name": "div",
+        "namePointerFileOffset": "0x15df0",
+        "nameVirtualAddress": "0x416da8",
+        "nameStringFileOffset": "0x16da8",
+        "descriptorFileOffset": "0x12494",
+        "descriptorHex": "15000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 22,
+        "opcode": 22,
+        "opcodeHex": "0x16",
+        "name": "mod",
+        "namePointerFileOffset": "0x15df4",
+        "nameVirtualAddress": "0x416da4",
+        "nameStringFileOffset": "0x16da4",
+        "descriptorFileOffset": "0x124b0",
+        "descriptorHex": "16000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 23,
+        "opcode": 23,
+        "opcodeHex": "0x17",
+        "name": "and",
+        "namePointerFileOffset": "0x15df8",
+        "nameVirtualAddress": "0x416da0",
+        "nameStringFileOffset": "0x16da0",
+        "descriptorFileOffset": "0x124cc",
+        "descriptorHex": "17000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 24,
+        "opcode": 24,
+        "opcodeHex": "0x18",
+        "name": "or",
+        "namePointerFileOffset": "0x15dfc",
+        "nameVirtualAddress": "0x416d9c",
+        "nameStringFileOffset": "0x16d9c",
+        "descriptorFileOffset": "0x124e8",
+        "descriptorHex": "18000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 25,
+        "opcode": 25,
+        "opcodeHex": "0x19",
+        "name": "not",
+        "namePointerFileOffset": "0x15e00",
+        "nameVirtualAddress": "0x416d98",
+        "nameStringFileOffset": "0x16d98",
+        "descriptorFileOffset": "0x12504",
+        "descriptorHex": "19000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 26,
+        "opcode": 26,
+        "opcodeHex": "0x1a",
+        "name": "xor",
+        "namePointerFileOffset": "0x15e04",
+        "nameVirtualAddress": "0x416d94",
+        "nameStringFileOffset": "0x16d94",
+        "descriptorFileOffset": "0x12520",
+        "descriptorHex": "1a000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 27,
+        "opcode": 27,
+        "opcodeHex": "0x1b",
+        "name": "shiftr",
+        "namePointerFileOffset": "0x15e08",
+        "nameVirtualAddress": "0x416d8c",
+        "nameStringFileOffset": "0x16d8c",
+        "descriptorFileOffset": "0x1253c",
+        "descriptorHex": "1b000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 28,
+        "opcode": 28,
+        "opcodeHex": "0x1c",
+        "name": "shiftl",
+        "namePointerFileOffset": "0x15e0c",
+        "nameVirtualAddress": "0x416d84",
+        "nameStringFileOffset": "0x16d84",
+        "descriptorFileOffset": "0x12558",
+        "descriptorHex": "1c000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 29,
+        "opcode": 29,
+        "opcodeHex": "0x1d",
+        "name": "gt",
+        "namePointerFileOffset": "0x15e10",
+        "nameVirtualAddress": "0x416d80",
+        "nameStringFileOffset": "0x16d80",
+        "descriptorFileOffset": "0x12574",
+        "descriptorHex": "1d000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 30,
+        "opcode": 30,
+        "opcodeHex": "0x1e",
+        "name": "lt",
+        "namePointerFileOffset": "0x15e14",
+        "nameVirtualAddress": "0x416d7c",
+        "nameStringFileOffset": "0x16d7c",
+        "descriptorFileOffset": "0x12590",
+        "descriptorHex": "1e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 31,
+        "opcode": 31,
+        "opcodeHex": "0x1f",
+        "name": "ge",
+        "namePointerFileOffset": "0x15e18",
+        "nameVirtualAddress": "0x416d78",
+        "nameStringFileOffset": "0x16d78",
+        "descriptorFileOffset": "0x125ac",
+        "descriptorHex": "1f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 32,
+        "opcode": 32,
+        "opcodeHex": "0x20",
+        "name": "le",
+        "namePointerFileOffset": "0x15e1c",
+        "nameVirtualAddress": "0x416d74",
+        "nameStringFileOffset": "0x16d74",
+        "descriptorFileOffset": "0x125c8",
+        "descriptorHex": "20000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 33,
+        "opcode": 33,
+        "opcodeHex": "0x21",
+        "name": "eq",
+        "namePointerFileOffset": "0x15e20",
+        "nameVirtualAddress": "0x416d70",
+        "nameStringFileOffset": "0x16d70",
+        "descriptorFileOffset": "0x125e4",
+        "descriptorHex": "21000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 34,
+        "opcode": 34,
+        "opcodeHex": "0x22",
+        "name": "ne",
+        "namePointerFileOffset": "0x15e24",
+        "nameVirtualAddress": "0x416d6c",
+        "nameStringFileOffset": "0x16d6c",
+        "descriptorFileOffset": "0x12600",
+        "descriptorHex": "22000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 35,
+        "opcode": 35,
+        "opcodeHex": "0x23",
+        "name": "setx",
+        "namePointerFileOffset": "0x15e28",
+        "nameVirtualAddress": "0x416d64",
+        "nameStringFileOffset": "0x16d64",
+        "descriptorFileOffset": "0x1261c",
+        "descriptorHex": "23000000010000000100000004000000010000000100000004000000"
+      },
+      {
+        "nameIndex": 36,
+        "opcode": 36,
+        "opcodeHex": "0x24",
+        "name": "seti",
+        "namePointerFileOffset": "0x15e2c",
+        "nameVirtualAddress": "0x416d5c",
+        "nameStringFileOffset": "0x16d5c",
+        "descriptorFileOffset": "0x12638",
+        "descriptorHex": "24000000010000000100000004000000010000000100000000000000"
+      },
+      {
+        "nameIndex": 37,
+        "opcode": 37,
+        "opcodeHex": "0x25",
+        "name": "setn",
+        "namePointerFileOffset": "0x15e30",
+        "nameVirtualAddress": "0x416d54",
+        "nameStringFileOffset": "0x16d54",
+        "descriptorFileOffset": "0x12654",
+        "descriptorHex": "25000000010000000100000004000000010000000400000000000000"
+      },
+      {
+        "nameIndex": 38,
+        "opcode": 38,
+        "opcodeHex": "0x26",
+        "name": "setz",
+        "namePointerFileOffset": "0x15e34",
+        "nameVirtualAddress": "0x416d4c",
+        "nameStringFileOffset": "0x16d4c",
+        "descriptorFileOffset": "0x12670",
+        "descriptorHex": "26000000010000000100000004000000010000000000000000000000"
+      },
+      {
+        "nameIndex": 39,
+        "opcode": 39,
+        "opcodeHex": "0x27",
+        "name": "setc",
+        "namePointerFileOffset": "0x15e38",
+        "nameVirtualAddress": "0x416d44",
+        "nameStringFileOffset": "0x16d44",
+        "descriptorFileOffset": "0x1268c",
+        "descriptorHex": "27000000010000000100000004000000040000000000000000000000"
+      },
+      {
+        "nameIndex": 40,
+        "opcode": 40,
+        "opcodeHex": "0x28",
+        "name": "isetx",
+        "namePointerFileOffset": "0x15e3c",
+        "nameVirtualAddress": "0x416d3c",
+        "nameStringFileOffset": "0x16d3c",
+        "descriptorFileOffset": "0x126a8",
+        "descriptorHex": "28000000010000000100000001000000010000000400000000000000"
+      },
+      {
+        "nameIndex": 41,
+        "opcode": 41,
+        "opcodeHex": "0x29",
+        "name": "iseti",
+        "namePointerFileOffset": "0x15e40",
+        "nameVirtualAddress": "0x416d34",
+        "nameStringFileOffset": "0x16d34",
+        "descriptorFileOffset": "0x126c4",
+        "descriptorHex": "29000000010000000100000001000000010000000000000000000000"
+      },
+      {
+        "nameIndex": 42,
+        "opcode": 42,
+        "opcodeHex": "0x2a",
+        "name": "isetn",
+        "namePointerFileOffset": "0x15e44",
+        "nameVirtualAddress": "0x416d2c",
+        "nameStringFileOffset": "0x16d2c",
+        "descriptorFileOffset": "0x126e0",
+        "descriptorHex": "2a000000010000000100000001000000040000000000000000000000"
+      },
+      {
+        "nameIndex": 43,
+        "opcode": 43,
+        "opcodeHex": "0x2b",
+        "name": "isetz",
+        "namePointerFileOffset": "0x15e48",
+        "nameVirtualAddress": "0x416d24",
+        "nameStringFileOffset": "0x16d24",
+        "descriptorFileOffset": "0x126fc",
+        "descriptorHex": "2b000000010000000100000001000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 44,
+        "opcode": 44,
+        "opcodeHex": "0x2c",
+        "name": "isetc",
+        "namePointerFileOffset": "0x15e4c",
+        "nameVirtualAddress": "0x416d1c",
+        "nameStringFileOffset": "0x16d1c",
+        "descriptorFileOffset": "0x12718",
+        "descriptorHex": "2c000000010000000100000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 45,
+        "opcode": 45,
+        "opcodeHex": "0x2d",
+        "name": "nsetx",
+        "namePointerFileOffset": "0x15e50",
+        "nameVirtualAddress": "0x416d14",
+        "nameStringFileOffset": "0x16d14",
+        "descriptorFileOffset": "0x12734",
+        "descriptorHex": "2d000000010000000400000001000000010000000400000000000000"
+      },
+      {
+        "nameIndex": 46,
+        "opcode": 46,
+        "opcodeHex": "0x2e",
+        "name": "nseti",
+        "namePointerFileOffset": "0x15e54",
+        "nameVirtualAddress": "0x416d0c",
+        "nameStringFileOffset": "0x16d0c",
+        "descriptorFileOffset": "0x12750",
+        "descriptorHex": "2e000000010000000400000001000000010000000000000000000000"
+      },
+      {
+        "nameIndex": 47,
+        "opcode": 47,
+        "opcodeHex": "0x2f",
+        "name": "nsetn",
+        "namePointerFileOffset": "0x15e58",
+        "nameVirtualAddress": "0x416d04",
+        "nameStringFileOffset": "0x16d04",
+        "descriptorFileOffset": "0x1276c",
+        "descriptorHex": "2f000000010000000400000001000000040000000000000000000000"
+      },
+      {
+        "nameIndex": 48,
+        "opcode": 48,
+        "opcodeHex": "0x30",
+        "name": "nsetz",
+        "namePointerFileOffset": "0x15e5c",
+        "nameVirtualAddress": "0x416cfc",
+        "nameStringFileOffset": "0x16cfc",
+        "descriptorFileOffset": "0x12788",
+        "descriptorHex": "30000000010000000400000001000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 49,
+        "opcode": 49,
+        "opcodeHex": "0x31",
+        "name": "nsetc",
+        "namePointerFileOffset": "0x15e60",
+        "nameVirtualAddress": "0x416cf4",
+        "nameStringFileOffset": "0x16cf4",
+        "descriptorFileOffset": "0x127a4",
+        "descriptorHex": "31000000010000000400000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 50,
+        "opcode": 50,
+        "opcodeHex": "0x32",
+        "name": "zsetx",
+        "namePointerFileOffset": "0x15e64",
+        "nameVirtualAddress": "0x416cec",
+        "nameStringFileOffset": "0x16cec",
+        "descriptorFileOffset": "0x127c0",
+        "descriptorHex": "32000000010000000100000001000000040000000000000000000000"
+      },
+      {
+        "nameIndex": 51,
+        "opcode": 51,
+        "opcodeHex": "0x33",
+        "name": "zseti",
+        "namePointerFileOffset": "0x15e68",
+        "nameVirtualAddress": "0x416ce4",
+        "nameStringFileOffset": "0x16ce4",
+        "descriptorFileOffset": "0x127dc",
+        "descriptorHex": "33000000010000000100000001000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 52,
+        "opcode": 52,
+        "opcodeHex": "0x34",
+        "name": "zsetn",
+        "namePointerFileOffset": "0x15e6c",
+        "nameVirtualAddress": "0x416cdc",
+        "nameStringFileOffset": "0x16cdc",
+        "descriptorFileOffset": "0x127f8",
+        "descriptorHex": "34000000010000000100000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 53,
+        "opcode": 53,
+        "opcodeHex": "0x35",
+        "name": "zsetz",
+        "namePointerFileOffset": "0x15e70",
+        "nameVirtualAddress": "0x416cd4",
+        "nameStringFileOffset": "0x16cd4",
+        "descriptorFileOffset": "0x12814",
+        "descriptorHex": "35000000010000000100000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 54,
+        "opcode": 54,
+        "opcodeHex": "0x36",
+        "name": "zsetc",
+        "namePointerFileOffset": "0x15e74",
+        "nameVirtualAddress": "0x416ccc",
+        "nameStringFileOffset": "0x16ccc",
+        "descriptorFileOffset": "0x12830",
+        "descriptorHex": "36000000010000000400000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 55,
+        "opcode": 55,
+        "opcodeHex": "0x37",
+        "name": "incx",
+        "namePointerFileOffset": "0x15e78",
+        "nameVirtualAddress": "0x416cc4",
+        "nameStringFileOffset": "0x16cc4",
+        "descriptorFileOffset": "0x1284c",
+        "descriptorHex": "37000000010000000100000004000000040000000000000000000000"
+      },
+      {
+        "nameIndex": 56,
+        "opcode": 56,
+        "opcodeHex": "0x38",
+        "name": "inci",
+        "namePointerFileOffset": "0x15e7c",
+        "nameVirtualAddress": "0x416cbc",
+        "nameStringFileOffset": "0x16cbc",
+        "descriptorFileOffset": "0x12868",
+        "descriptorHex": "38000000010000000100000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 57,
+        "opcode": 57,
+        "opcodeHex": "0x39",
+        "name": "incn",
+        "namePointerFileOffset": "0x15e80",
+        "nameVirtualAddress": "0x416cb4",
+        "nameStringFileOffset": "0x16cb4",
+        "descriptorFileOffset": "0x12884",
+        "descriptorHex": "39000000010000000400000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 58,
+        "opcode": 58,
+        "opcodeHex": "0x3a",
+        "name": "incz",
+        "namePointerFileOffset": "0x15e84",
+        "nameVirtualAddress": "0x416cac",
+        "nameStringFileOffset": "0x16cac",
+        "descriptorFileOffset": "0x128a0",
+        "descriptorHex": "3a000000010000000400000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 59,
+        "opcode": 59,
+        "opcodeHex": "0x3b",
+        "name": "gtjp",
+        "namePointerFileOffset": "0x15e88",
+        "nameVirtualAddress": "0x416ca4",
+        "nameStringFileOffset": "0x16ca4",
+        "descriptorFileOffset": "0x128bc",
+        "descriptorHex": "3b000000040000000600000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 60,
+        "opcode": 60,
+        "opcodeHex": "0x3c",
+        "name": "ltjp",
+        "namePointerFileOffset": "0x15e8c",
+        "nameVirtualAddress": "0x416c9c",
+        "nameStringFileOffset": "0x16c9c",
+        "descriptorFileOffset": "0x128d8",
+        "descriptorHex": "3c000000040000000600000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 61,
+        "opcode": 61,
+        "opcodeHex": "0x3d",
+        "name": "gejp",
+        "namePointerFileOffset": "0x15e90",
+        "nameVirtualAddress": "0x416c94",
+        "nameStringFileOffset": "0x16c94",
+        "descriptorFileOffset": "0x128f4",
+        "descriptorHex": "3d000000040000000600000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 62,
+        "opcode": 62,
+        "opcodeHex": "0x3e",
+        "name": "lejp",
+        "namePointerFileOffset": "0x15e94",
+        "nameVirtualAddress": "0x416c8c",
+        "nameStringFileOffset": "0x16c8c",
+        "descriptorFileOffset": "0x12910",
+        "descriptorHex": "3e000000040000000600000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 63,
+        "opcode": 63,
+        "opcodeHex": "0x3f",
+        "name": "eqjp",
+        "namePointerFileOffset": "0x15e98",
+        "nameVirtualAddress": "0x416c84",
+        "nameStringFileOffset": "0x16c84",
+        "descriptorFileOffset": "0x1292c",
+        "descriptorHex": "3f000000040000000600000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 64,
+        "opcode": 64,
+        "opcodeHex": "0x40",
+        "name": "nejp",
+        "namePointerFileOffset": "0x15e9c",
+        "nameVirtualAddress": "0x416c7c",
+        "nameStringFileOffset": "0x16c7c",
+        "descriptorFileOffset": "0x12948",
+        "descriptorHex": "40000000040000000600000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 65,
+        "opcode": 65,
+        "opcodeHex": "0x41",
+        "name": "ujp",
+        "namePointerFileOffset": "0x15ea0",
+        "nameVirtualAddress": "0x416c78",
+        "nameStringFileOffset": "0x16c78",
+        "descriptorFileOffset": "0x12964",
+        "descriptorHex": "41000000060000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 66,
+        "opcode": 66,
+        "opcodeHex": "0x42",
+        "name": "tjp",
+        "namePointerFileOffset": "0x15ea4",
+        "nameVirtualAddress": "0x416c74",
+        "nameStringFileOffset": "0x16c74",
+        "descriptorFileOffset": "0x12980",
+        "descriptorHex": "42000000060000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 67,
+        "opcode": 67,
+        "opcodeHex": "0x43",
+        "name": "fjp",
+        "namePointerFileOffset": "0x15ea8",
+        "nameVirtualAddress": "0x416c70",
+        "nameStringFileOffset": "0x16c70",
+        "descriptorFileOffset": "0x1299c",
+        "descriptorHex": "43000000060000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 68,
+        "opcode": 68,
+        "opcodeHex": "0x44",
+        "name": "call",
+        "namePointerFileOffset": "0x15eac",
+        "nameVirtualAddress": "0x416c68",
+        "nameStringFileOffset": "0x16c68",
+        "descriptorFileOffset": "0x129b8",
+        "descriptorHex": "44000000060000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 69,
+        "opcode": 69,
+        "opcodeHex": "0x45",
+        "name": "ret",
+        "namePointerFileOffset": "0x15eb0",
+        "nameVirtualAddress": "0x416c64",
+        "nameStringFileOffset": "0x16c64",
+        "descriptorFileOffset": "0x129d4",
+        "descriptorHex": "45000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 70,
+        "opcode": 70,
+        "opcodeHex": "0x46",
+        "name": "stop",
+        "namePointerFileOffset": "0x15eb4",
+        "nameVirtualAddress": "0x416c5c",
+        "nameStringFileOffset": "0x16c5c",
+        "descriptorFileOffset": "0x129f0",
+        "descriptorHex": "46000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 71,
+        "opcode": 71,
+        "opcodeHex": "0x47",
+        "name": "skip",
+        "namePointerFileOffset": "0x15eb8",
+        "nameVirtualAddress": "0x416c54",
+        "nameStringFileOffset": "0x16c54",
+        "descriptorFileOffset": "0x12a0c",
+        "descriptorHex": "47000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 72,
+        "opcode": 72,
+        "opcodeHex": "0x48",
+        "name": "stnx",
+        "namePointerFileOffset": "0x15ebc",
+        "nameVirtualAddress": "0x416c4c",
+        "nameStringFileOffset": "0x16c4c",
+        "descriptorFileOffset": "0x12a28",
+        "descriptorHex": "48000000010000000100000004000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 73,
+        "opcode": 73,
+        "opcodeHex": "0x49",
+        "name": "stni",
+        "namePointerFileOffset": "0x15ec0",
+        "nameVirtualAddress": "0x416c44",
+        "nameStringFileOffset": "0x16c44",
+        "descriptorFileOffset": "0x12a44",
+        "descriptorHex": "49000000010000000100000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 74,
+        "opcode": 74,
+        "opcodeHex": "0x4a",
+        "name": "stnic",
+        "namePointerFileOffset": "0x15ec4",
+        "nameVirtualAddress": "0x416c3c",
+        "nameStringFileOffset": "0x16c3c",
+        "descriptorFileOffset": "0x12a60",
+        "descriptorHex": "4a000000010000000400000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 75,
+        "opcode": 75,
+        "opcodeHex": "0x4b",
+        "name": "stnz",
+        "namePointerFileOffset": "0x15ec8",
+        "nameVirtualAddress": "0x416c34",
+        "nameStringFileOffset": "0x16c34",
+        "descriptorFileOffset": "0x12a7c",
+        "descriptorHex": "4b000000010000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 76,
+        "opcode": 76,
+        "opcodeHex": "0x4c",
+        "name": "ldric",
+        "namePointerFileOffset": "0x15ecc",
+        "nameVirtualAddress": "0x416c2c",
+        "nameStringFileOffset": "0x16c2c",
+        "descriptorFileOffset": "0x12a98",
+        "descriptorHex": "4c000000010000000400000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 77,
+        "opcode": 77,
+        "opcodeHex": "0x4d",
+        "name": "ldrz",
+        "namePointerFileOffset": "0x15ed0",
+        "nameVirtualAddress": "0x416c24",
+        "nameStringFileOffset": "0x16c24",
+        "descriptorFileOffset": "0x12ab4",
+        "descriptorHex": "4d000000010000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 78,
+        "opcode": 78,
+        "opcodeHex": "0x4e",
+        "name": "ixa",
+        "namePointerFileOffset": "0x15ed4",
+        "nameVirtualAddress": "0x416c20",
+        "nameStringFileOffset": "0x16c20",
+        "descriptorFileOffset": "0x12ad0",
+        "descriptorHex": "4e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 79,
+        "opcode": 79,
+        "opcodeHex": "0x4f",
+        "name": "sta",
+        "namePointerFileOffset": "0x15ed8",
+        "nameVirtualAddress": "0x416c1c",
+        "nameStringFileOffset": "0x16c1c",
+        "descriptorFileOffset": "0x12aec",
+        "descriptorHex": "4f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 80,
+        "opcode": 80,
+        "opcodeHex": "0x50",
+        "name": "stan",
+        "namePointerFileOffset": "0x15edc",
+        "nameVirtualAddress": "0x416c14",
+        "nameStringFileOffset": "0x16c14",
+        "descriptorFileOffset": "0x12b08",
+        "descriptorHex": "50000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 81,
+        "opcode": 81,
+        "opcodeHex": "0x51",
+        "name": "GetHwConfig",
+        "namePointerFileOffset": "0x15ee0",
+        "nameVirtualAddress": "0x416c08",
+        "nameStringFileOffset": "0x16c08",
+        "descriptorFileOffset": "0x12b24",
+        "descriptorHex": "51000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 82,
+        "opcode": 82,
+        "opcodeHex": "0x52",
+        "name": "GetSysMin",
+        "namePointerFileOffset": "0x15ee4",
+        "nameVirtualAddress": "0x416bfc",
+        "nameStringFileOffset": "0x16bfc",
+        "descriptorFileOffset": "0x12b40",
+        "descriptorHex": "52000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 83,
+        "opcode": 83,
+        "opcodeHex": "0x53",
+        "name": "GetSysUserID",
+        "namePointerFileOffset": "0x15ee8",
+        "nameVirtualAddress": "0x416bec",
+        "nameStringFileOffset": "0x16bec",
+        "descriptorFileOffset": "0x12b5c",
+        "descriptorHex": "53000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 84,
+        "opcode": 84,
+        "opcodeHex": "0x54",
+        "name": "GetLocInfo",
+        "namePointerFileOffset": "0x15eec",
+        "nameVirtualAddress": "0x416be0",
+        "nameStringFileOffset": "0x16be0",
+        "descriptorFileOffset": "0x12b78",
+        "descriptorHex": "54000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 85,
+        "opcode": 85,
+        "opcodeHex": "0x55",
+        "name": "ClearWhite",
+        "namePointerFileOffset": "0x15ef0",
+        "nameVirtualAddress": "0x416bd4",
+        "nameStringFileOffset": "0x16bd4",
+        "descriptorFileOffset": "0x12b94",
+        "descriptorHex": "55000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 86,
+        "opcode": 86,
+        "opcodeHex": "0x56",
+        "name": "ClearBlack",
+        "namePointerFileOffset": "0x15ef4",
+        "nameVirtualAddress": "0x416bc8",
+        "nameStringFileOffset": "0x16bc8",
+        "descriptorFileOffset": "0x12bb0",
+        "descriptorHex": "56000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 87,
+        "opcode": 87,
+        "opcodeHex": "0x57",
+        "name": "Clear",
+        "namePointerFileOffset": "0x15ef8",
+        "nameVirtualAddress": "0x416bc0",
+        "nameStringFileOffset": "0x16bc0",
+        "descriptorFileOffset": "0x12bcc",
+        "descriptorHex": "57000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 88,
+        "opcode": 88,
+        "opcodeHex": "0x58",
+        "name": "PutPixel",
+        "namePointerFileOffset": "0x15efc",
+        "nameVirtualAddress": "0x416bb4",
+        "nameStringFileOffset": "0x16bb4",
+        "descriptorFileOffset": "0x12be8",
+        "descriptorHex": "58000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 89,
+        "opcode": 89,
+        "opcodeHex": "0x59",
+        "name": "SetGamma",
+        "namePointerFileOffset": "0x15f00",
+        "nameVirtualAddress": "0x416ba8",
+        "nameStringFileOffset": "0x16ba8",
+        "descriptorFileOffset": "0x12c04",
+        "descriptorHex": "59000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 90,
+        "opcode": 90,
+        "opcodeHex": "0x5a",
+        "name": "GetWhite",
+        "namePointerFileOffset": "0x15f04",
+        "nameVirtualAddress": "0x416b9c",
+        "nameStringFileOffset": "0x16b9c",
+        "descriptorFileOffset": "0x12c20",
+        "descriptorHex": "5a000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 91,
+        "opcode": 91,
+        "opcodeHex": "0x5b",
+        "name": "GetBlack",
+        "namePointerFileOffset": "0x15f08",
+        "nameVirtualAddress": "0x416b90",
+        "nameStringFileOffset": "0x16b90",
+        "descriptorFileOffset": "0x12c3c",
+        "descriptorHex": "5b000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 92,
+        "opcode": 92,
+        "opcodeHex": "0x5c",
+        "name": "GetTransparent",
+        "namePointerFileOffset": "0x15f0c",
+        "nameVirtualAddress": "0x416b80",
+        "nameStringFileOffset": "0x16b80",
+        "descriptorFileOffset": "0x12c58",
+        "descriptorHex": "5c000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 93,
+        "opcode": 93,
+        "opcodeHex": "0x5d",
+        "name": "GetBlink",
+        "namePointerFileOffset": "0x15f10",
+        "nameVirtualAddress": "0x416b74",
+        "nameStringFileOffset": "0x16b74",
+        "descriptorFileOffset": "0x12c74",
+        "descriptorHex": "5d000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 94,
+        "opcode": 94,
+        "opcodeHex": "0x5e",
+        "name": "SetColor",
+        "namePointerFileOffset": "0x15f14",
+        "nameVirtualAddress": "0x416b68",
+        "nameStringFileOffset": "0x16b68",
+        "descriptorFileOffset": "0x12c90",
+        "descriptorHex": "5e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 95,
+        "opcode": 95,
+        "opcodeHex": "0x5f",
+        "name": "DrawLine",
+        "namePointerFileOffset": "0x15f18",
+        "nameVirtualAddress": "0x416b5c",
+        "nameStringFileOffset": "0x16b5c",
+        "descriptorFileOffset": "0x12cac",
+        "descriptorHex": "5f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 96,
+        "opcode": 96,
+        "opcodeHex": "0x60",
+        "name": "DrawHLine",
+        "namePointerFileOffset": "0x15f1c",
+        "nameVirtualAddress": "0x416b50",
+        "nameStringFileOffset": "0x16b50",
+        "descriptorFileOffset": "0x12cc8",
+        "descriptorHex": "60000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 97,
+        "opcode": 97,
+        "opcodeHex": "0x61",
+        "name": "DrawVLine",
+        "namePointerFileOffset": "0x15f20",
+        "nameVirtualAddress": "0x416b44",
+        "nameStringFileOffset": "0x16b44",
+        "descriptorFileOffset": "0x12ce4",
+        "descriptorHex": "61000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 98,
+        "opcode": 98,
+        "opcodeHex": "0x62",
+        "name": "DrawRect",
+        "namePointerFileOffset": "0x15f24",
+        "nameVirtualAddress": "0x416b38",
+        "nameStringFileOffset": "0x16b38",
+        "descriptorFileOffset": "0x12d00",
+        "descriptorHex": "62000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 99,
+        "opcode": 99,
+        "opcodeHex": "0x63",
+        "name": "FillRect",
+        "namePointerFileOffset": "0x15f28",
+        "nameVirtualAddress": "0x416b2c",
+        "nameStringFileOffset": "0x16b2c",
+        "descriptorFileOffset": "0x12d1c",
+        "descriptorHex": "63000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 100,
+        "opcode": 100,
+        "opcodeHex": "0x64",
+        "name": "DrawEllipse",
+        "namePointerFileOffset": "0x15f2c",
+        "nameVirtualAddress": "0x416b20",
+        "nameStringFileOffset": "0x16b20",
+        "descriptorFileOffset": "0x12d38",
+        "descriptorHex": "64000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 101,
+        "opcode": 101,
+        "opcodeHex": "0x65",
+        "name": "FillEllipse",
+        "namePointerFileOffset": "0x15f30",
+        "nameVirtualAddress": "0x416b14",
+        "nameStringFileOffset": "0x16b14",
+        "descriptorFileOffset": "0x12d54",
+        "descriptorHex": "65000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 102,
+        "opcode": 102,
+        "opcodeHex": "0x66",
+        "name": "SetStrType",
+        "namePointerFileOffset": "0x15f34",
+        "nameVirtualAddress": "0x416b08",
+        "nameStringFileOffset": "0x16b08",
+        "descriptorFileOffset": "0x12d70",
+        "descriptorHex": "66000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 103,
+        "opcode": 103,
+        "opcodeHex": "0x67",
+        "name": "SetStrFont",
+        "namePointerFileOffset": "0x15f38",
+        "nameVirtualAddress": "0x416afc",
+        "nameStringFileOffset": "0x16afc",
+        "descriptorFileOffset": "0x12d8c",
+        "descriptorHex": "67000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 104,
+        "opcode": 104,
+        "opcodeHex": "0x68",
+        "name": "SetStrColor",
+        "namePointerFileOffset": "0x15f3c",
+        "nameVirtualAddress": "0x416af0",
+        "nameStringFileOffset": "0x16af0",
+        "descriptorFileOffset": "0x12da8",
+        "descriptorHex": "68000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 105,
+        "opcode": 105,
+        "opcodeHex": "0x69",
+        "name": "SetStrAlign",
+        "namePointerFileOffset": "0x15f40",
+        "nameVirtualAddress": "0x416ae4",
+        "nameStringFileOffset": "0x16ae4",
+        "descriptorFileOffset": "0x12dc4",
+        "descriptorHex": "69000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 106,
+        "opcode": 106,
+        "opcodeHex": "0x6a",
+        "name": "DrawStr",
+        "namePointerFileOffset": "0x15f44",
+        "nameVirtualAddress": "0x416adc",
+        "nameStringFileOffset": "0x16adc",
+        "descriptorFileOffset": "0x12de0",
+        "descriptorHex": "6a000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 107,
+        "opcode": 107,
+        "opcodeHex": "0x6b",
+        "name": "DrawStrSolid",
+        "namePointerFileOffset": "0x15f48",
+        "nameVirtualAddress": "0x416acc",
+        "nameStringFileOffset": "0x16acc",
+        "descriptorFileOffset": "0x12dfc",
+        "descriptorHex": "6b000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 108,
+        "opcode": 108,
+        "opcodeHex": "0x6c",
+        "name": "DrawText",
+        "namePointerFileOffset": "0x15f4c",
+        "nameVirtualAddress": "0x416ac0",
+        "nameStringFileOffset": "0x16ac0",
+        "descriptorFileOffset": "0x12e18",
+        "descriptorHex": "6c000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 109,
+        "opcode": 109,
+        "opcodeHex": "0x6d",
+        "name": "DrawTextSolid",
+        "namePointerFileOffset": "0x15f50",
+        "nameVirtualAddress": "0x416ab0",
+        "nameStringFileOffset": "0x16ab0",
+        "descriptorFileOffset": "0x12e34",
+        "descriptorHex": "6d000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 110,
+        "opcode": 110,
+        "opcodeHex": "0x6e",
+        "name": "SetPalette",
+        "namePointerFileOffset": "0x15f54",
+        "nameVirtualAddress": "0x416aa4",
+        "nameStringFileOffset": "0x16aa4",
+        "descriptorFileOffset": "0x12e50",
+        "descriptorHex": "6e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 111,
+        "opcode": 111,
+        "opcodeHex": "0x6f",
+        "name": "CopyImage",
+        "namePointerFileOffset": "0x15f58",
+        "nameVirtualAddress": "0x416a98",
+        "nameStringFileOffset": "0x16a98",
+        "descriptorFileOffset": "0x12e6c",
+        "descriptorHex": "6f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 112,
+        "opcode": 112,
+        "opcodeHex": "0x70",
+        "name": "CopyImageDir",
+        "namePointerFileOffset": "0x15f5c",
+        "nameVirtualAddress": "0x416a88",
+        "nameStringFileOffset": "0x16a88",
+        "descriptorFileOffset": "0x12e88",
+        "descriptorHex": "70000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 113,
+        "opcode": 113,
+        "opcodeHex": "0x71",
+        "name": "CopyImagePal",
+        "namePointerFileOffset": "0x15f60",
+        "nameVirtualAddress": "0x416a78",
+        "nameStringFileOffset": "0x16a78",
+        "descriptorFileOffset": "0x12ea4",
+        "descriptorHex": "71000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 114,
+        "opcode": 114,
+        "opcodeHex": "0x72",
+        "name": "CopyImageDirPal",
+        "namePointerFileOffset": "0x15f64",
+        "nameVirtualAddress": "0x416a68",
+        "nameStringFileOffset": "0x16a68",
+        "descriptorFileOffset": "0x12ec0",
+        "descriptorHex": "72000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 115,
+        "opcode": 115,
+        "opcodeHex": "0x73",
+        "name": "InitDepthQ",
+        "namePointerFileOffset": "0x15f68",
+        "nameVirtualAddress": "0x416a5c",
+        "nameStringFileOffset": "0x16a5c",
+        "descriptorFileOffset": "0x12edc",
+        "descriptorHex": "73000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 116,
+        "opcode": 116,
+        "opcodeHex": "0x74",
+        "name": "AddDepthQ",
+        "namePointerFileOffset": "0x15f6c",
+        "nameVirtualAddress": "0x416a50",
+        "nameStringFileOffset": "0x16a50",
+        "descriptorFileOffset": "0x12ef8",
+        "descriptorHex": "74000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 117,
+        "opcode": 117,
+        "opcodeHex": "0x75",
+        "name": "DrawDepthQ",
+        "namePointerFileOffset": "0x15f70",
+        "nameVirtualAddress": "0x416a44",
+        "nameStringFileOffset": "0x16a44",
+        "descriptorFileOffset": "0x12f14",
+        "descriptorHex": "75000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 118,
+        "opcode": 118,
+        "opcodeHex": "0x76",
+        "name": "SaveLCD",
+        "namePointerFileOffset": "0x15f74",
+        "nameVirtualAddress": "0x416a3c",
+        "nameStringFileOffset": "0x16a3c",
+        "descriptorFileOffset": "0x12f30",
+        "descriptorHex": "76000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 119,
+        "opcode": 119,
+        "opcodeHex": "0x77",
+        "name": "RestoreLCD",
+        "namePointerFileOffset": "0x15f78",
+        "nameVirtualAddress": "0x416a30",
+        "nameStringFileOffset": "0x16a30",
+        "descriptorFileOffset": "0x12f4c",
+        "descriptorHex": "77000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 120,
+        "opcode": 120,
+        "opcodeHex": "0x78",
+        "name": "Flush",
+        "namePointerFileOffset": "0x15f7c",
+        "nameVirtualAddress": "0x416a28",
+        "nameStringFileOffset": "0x16a28",
+        "descriptorFileOffset": "0x12f68",
+        "descriptorHex": "78000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 121,
+        "opcode": 121,
+        "opcodeHex": "0x79",
+        "name": "GetMediaSize",
+        "namePointerFileOffset": "0x15f80",
+        "nameVirtualAddress": "0x416a18",
+        "nameStringFileOffset": "0x16a18",
+        "descriptorFileOffset": "0x12f84",
+        "descriptorHex": "79000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 122,
+        "opcode": 122,
+        "opcodeHex": "0x7a",
+        "name": "SetMediaSize",
+        "namePointerFileOffset": "0x15f84",
+        "nameVirtualAddress": "0x416a08",
+        "nameStringFileOffset": "0x16a08",
+        "descriptorFileOffset": "0x12fa0",
+        "descriptorHex": "7a000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 123,
+        "opcode": 123,
+        "opcodeHex": "0x7b",
+        "name": "StrInit",
+        "namePointerFileOffset": "0x15f88",
+        "nameVirtualAddress": "0x416a00",
+        "nameStringFileOffset": "0x16a00",
+        "descriptorFileOffset": "0x12fbc",
+        "descriptorHex": "7b000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 124,
+        "opcode": 124,
+        "opcodeHex": "0x7c",
+        "name": "StrLen",
+        "namePointerFileOffset": "0x15f8c",
+        "nameVirtualAddress": "0x4169f8",
+        "nameStringFileOffset": "0x169f8",
+        "descriptorFileOffset": "0x12fd8",
+        "descriptorHex": "7c000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 125,
+        "opcode": 125,
+        "opcodeHex": "0x7d",
+        "name": "StrCpy",
+        "namePointerFileOffset": "0x15f90",
+        "nameVirtualAddress": "0x4169f0",
+        "nameStringFileOffset": "0x169f0",
+        "descriptorFileOffset": "0x12ff4",
+        "descriptorHex": "7d000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 126,
+        "opcode": 126,
+        "opcodeHex": "0x7e",
+        "name": "StrSub",
+        "namePointerFileOffset": "0x15f94",
+        "nameVirtualAddress": "0x4169e8",
+        "nameStringFileOffset": "0x169e8",
+        "descriptorFileOffset": "0x13010",
+        "descriptorHex": "7e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 127,
+        "opcode": 127,
+        "opcodeHex": "0x7f",
+        "name": "StrCat",
+        "namePointerFileOffset": "0x15f98",
+        "nameVirtualAddress": "0x4169e0",
+        "nameStringFileOffset": "0x169e0",
+        "descriptorFileOffset": "0x1302c",
+        "descriptorHex": "7f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 128,
+        "opcode": 128,
+        "opcodeHex": "0x80",
+        "name": "StrCmp",
+        "namePointerFileOffset": "0x15f9c",
+        "nameVirtualAddress": "0x4169d8",
+        "nameStringFileOffset": "0x169d8",
+        "descriptorFileOffset": "0x13048",
+        "descriptorHex": "80000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 129,
+        "opcode": 129,
+        "opcodeHex": "0x81",
+        "name": "GetChar",
+        "namePointerFileOffset": "0x15fa0",
+        "nameVirtualAddress": "0x4169d0",
+        "nameStringFileOffset": "0x169d0",
+        "descriptorFileOffset": "0x13064",
+        "descriptorHex": "81000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 130,
+        "opcode": 130,
+        "opcodeHex": "0x82",
+        "name": "PutChar",
+        "namePointerFileOffset": "0x15fa4",
+        "nameVirtualAddress": "0x4169c8",
+        "nameStringFileOffset": "0x169c8",
+        "descriptorFileOffset": "0x13080",
+        "descriptorHex": "82000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 131,
+        "opcode": 131,
+        "opcodeHex": "0x83",
+        "name": "AsciiToInt",
+        "namePointerFileOffset": "0x15fa8",
+        "nameVirtualAddress": "0x4169bc",
+        "nameStringFileOffset": "0x169bc",
+        "descriptorFileOffset": "0x1309c",
+        "descriptorHex": "83000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 132,
+        "opcode": 132,
+        "opcodeHex": "0x84",
+        "name": "IntToAscii",
+        "namePointerFileOffset": "0x15fac",
+        "nameVirtualAddress": "0x4169b0",
+        "nameStringFileOffset": "0x169b0",
+        "descriptorFileOffset": "0x130b8",
+        "descriptorHex": "84000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 133,
+        "opcode": 133,
+        "opcodeHex": "0x85",
+        "name": "GetByte",
+        "namePointerFileOffset": "0x15fb0",
+        "nameVirtualAddress": "0x4169a8",
+        "nameStringFileOffset": "0x169a8",
+        "descriptorFileOffset": "0x130d4",
+        "descriptorHex": "85000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 134,
+        "opcode": 134,
+        "opcodeHex": "0x86",
+        "name": "PutByte",
+        "namePointerFileOffset": "0x15fb4",
+        "nameVirtualAddress": "0x4169a0",
+        "nameStringFileOffset": "0x169a0",
+        "descriptorFileOffset": "0x130f0",
+        "descriptorHex": "86000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 135,
+        "opcode": 135,
+        "opcodeHex": "0x87",
+        "name": "GetBytes",
+        "namePointerFileOffset": "0x15fb8",
+        "nameVirtualAddress": "0x416994",
+        "nameStringFileOffset": "0x16994",
+        "descriptorFileOffset": "0x1310c",
+        "descriptorHex": "87000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 136,
+        "opcode": 136,
+        "opcodeHex": "0x88",
+        "name": "PutBytes",
+        "namePointerFileOffset": "0x15fbc",
+        "nameVirtualAddress": "0x416988",
+        "nameStringFileOffset": "0x16988",
+        "descriptorFileOffset": "0x13128",
+        "descriptorHex": "88000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 137,
+        "opcode": 137,
+        "opcodeHex": "0x89",
+        "name": "MakeStrStr",
+        "namePointerFileOffset": "0x15fc0",
+        "nameVirtualAddress": "0x41697c",
+        "nameStringFileOffset": "0x1697c",
+        "descriptorFileOffset": "0x13144",
+        "descriptorHex": "89000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 138,
+        "opcode": 138,
+        "opcodeHex": "0x8a",
+        "name": "MakeStr1",
+        "namePointerFileOffset": "0x15fc4",
+        "nameVirtualAddress": "0x416970",
+        "nameStringFileOffset": "0x16970",
+        "descriptorFileOffset": "0x13160",
+        "descriptorHex": "8a000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 139,
+        "opcode": 139,
+        "opcodeHex": "0x8b",
+        "name": "MakeStr2",
+        "namePointerFileOffset": "0x15fc8",
+        "nameVirtualAddress": "0x416964",
+        "nameStringFileOffset": "0x16964",
+        "descriptorFileOffset": "0x1317c",
+        "descriptorHex": "8b000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 140,
+        "opcode": 140,
+        "opcodeHex": "0x8c",
+        "name": "MakeStr3",
+        "namePointerFileOffset": "0x15fcc",
+        "nameVirtualAddress": "0x416958",
+        "nameStringFileOffset": "0x16958",
+        "descriptorFileOffset": "0x13198",
+        "descriptorHex": "8c000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 141,
+        "opcode": 141,
+        "opcodeHex": "0x8d",
+        "name": "MakeStr4",
+        "namePointerFileOffset": "0x15fd0",
+        "nameVirtualAddress": "0x41694c",
+        "nameStringFileOffset": "0x1694c",
+        "descriptorFileOffset": "0x131b4",
+        "descriptorHex": "8d000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 142,
+        "opcode": 142,
+        "opcodeHex": "0x8e",
+        "name": "MakeStr5",
+        "namePointerFileOffset": "0x15fd4",
+        "nameVirtualAddress": "0x416940",
+        "nameStringFileOffset": "0x16940",
+        "descriptorFileOffset": "0x131d0",
+        "descriptorHex": "8e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 143,
+        "opcode": 143,
+        "opcodeHex": "0x8f",
+        "name": "StrInput",
+        "namePointerFileOffset": "0x15fd8",
+        "nameVirtualAddress": "0x416934",
+        "nameStringFileOffset": "0x16934",
+        "descriptorFileOffset": "0x131ec",
+        "descriptorHex": "8f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 144,
+        "opcode": 144,
+        "opcodeHex": "0x90",
+        "name": "PlaySound",
+        "namePointerFileOffset": "0x15fdc",
+        "nameVirtualAddress": "0x416928",
+        "nameStringFileOffset": "0x16928",
+        "descriptorFileOffset": "0x13208",
+        "descriptorHex": "90000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 145,
+        "opcode": 145,
+        "opcodeHex": "0x91",
+        "name": "StopSound",
+        "namePointerFileOffset": "0x15fe0",
+        "nameVirtualAddress": "0x41691c",
+        "nameStringFileOffset": "0x1691c",
+        "descriptorFileOffset": "0x13224",
+        "descriptorHex": "91000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 146,
+        "opcode": 146,
+        "opcodeHex": "0x92",
+        "name": "PlayVocoder",
+        "namePointerFileOffset": "0x15fe4",
+        "nameVirtualAddress": "0x416910",
+        "nameStringFileOffset": "0x16910",
+        "descriptorFileOffset": "0x13240",
+        "descriptorHex": "92000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 147,
+        "opcode": 147,
+        "opcodeHex": "0x93",
+        "name": "StopVocoder",
+        "namePointerFileOffset": "0x15fe8",
+        "nameVirtualAddress": "0x416904",
+        "nameStringFileOffset": "0x16904",
+        "descriptorFileOffset": "0x1325c",
+        "descriptorHex": "93000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 148,
+        "opcode": 148,
+        "opcodeHex": "0x94",
+        "name": "StartVib",
+        "namePointerFileOffset": "0x15fec",
+        "nameVirtualAddress": "0x4168f8",
+        "nameStringFileOffset": "0x168f8",
+        "descriptorFileOffset": "0x13278",
+        "descriptorHex": "94000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 149,
+        "opcode": 149,
+        "opcodeHex": "0x95",
+        "name": "StopVib",
+        "namePointerFileOffset": "0x15ff0",
+        "nameVirtualAddress": "0x4168f0",
+        "nameStringFileOffset": "0x168f0",
+        "descriptorFileOffset": "0x13294",
+        "descriptorHex": "95000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 150,
+        "opcode": 150,
+        "opcodeHex": "0x96",
+        "name": "SetKeyTone",
+        "namePointerFileOffset": "0x15ff4",
+        "nameVirtualAddress": "0x4168e4",
+        "nameStringFileOffset": "0x168e4",
+        "descriptorFileOffset": "0x132b0",
+        "descriptorHex": "96000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 151,
+        "opcode": 151,
+        "opcodeHex": "0x97",
+        "name": "SetBackLight",
+        "namePointerFileOffset": "0x15ff8",
+        "nameVirtualAddress": "0x4168d4",
+        "nameStringFileOffset": "0x168d4",
+        "descriptorFileOffset": "0x132cc",
+        "descriptorHex": "97000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 152,
+        "opcode": 152,
+        "opcodeHex": "0x98",
+        "name": "GetUserNV",
+        "namePointerFileOffset": "0x15ffc",
+        "nameVirtualAddress": "0x4168c8",
+        "nameStringFileOffset": "0x168c8",
+        "descriptorFileOffset": "0x132e8",
+        "descriptorHex": "98000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 153,
+        "opcode": 153,
+        "opcodeHex": "0x99",
+        "name": "PutUserNV",
+        "namePointerFileOffset": "0x16000",
+        "nameVirtualAddress": "0x4168bc",
+        "nameStringFileOffset": "0x168bc",
+        "descriptorFileOffset": "0x13304",
+        "descriptorHex": "99000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 154,
+        "opcode": 154,
+        "opcodeHex": "0x9a",
+        "name": "SetTimer",
+        "namePointerFileOffset": "0x16004",
+        "nameVirtualAddress": "0x4168b0",
+        "nameStringFileOffset": "0x168b0",
+        "descriptorFileOffset": "0x13320",
+        "descriptorHex": "9a000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 155,
+        "opcode": 155,
+        "opcodeHex": "0x9b",
+        "name": "SetTimer1",
+        "namePointerFileOffset": "0x16008",
+        "nameVirtualAddress": "0x4168a4",
+        "nameStringFileOffset": "0x168a4",
+        "descriptorFileOffset": "0x1333c",
+        "descriptorHex": "9b000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 156,
+        "opcode": 156,
+        "opcodeHex": "0x9c",
+        "name": "SetTimer2",
+        "namePointerFileOffset": "0x1600c",
+        "nameVirtualAddress": "0x416898",
+        "nameStringFileOffset": "0x16898",
+        "descriptorFileOffset": "0x13358",
+        "descriptorHex": "9c000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 157,
+        "opcode": 157,
+        "opcodeHex": "0x9d",
+        "name": "ResetTimer",
+        "namePointerFileOffset": "0x16010",
+        "nameVirtualAddress": "0x41688c",
+        "nameStringFileOffset": "0x1688c",
+        "descriptorFileOffset": "0x13374",
+        "descriptorHex": "9d000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 158,
+        "opcode": 158,
+        "opcodeHex": "0x9e",
+        "name": "ResetTimer1",
+        "namePointerFileOffset": "0x16014",
+        "nameVirtualAddress": "0x416880",
+        "nameStringFileOffset": "0x16880",
+        "descriptorFileOffset": "0x13390",
+        "descriptorHex": "9e000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 159,
+        "opcode": 159,
+        "opcodeHex": "0x9f",
+        "name": "ResetTimer2",
+        "namePointerFileOffset": "0x16018",
+        "nameVirtualAddress": "0x416874",
+        "nameStringFileOffset": "0x16874",
+        "descriptorFileOffset": "0x133ac",
+        "descriptorHex": "9f000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 160,
+        "opcode": 160,
+        "opcodeHex": "0xa0",
+        "name": "RandSeed",
+        "namePointerFileOffset": "0x1601c",
+        "nameVirtualAddress": "0x416868",
+        "nameStringFileOffset": "0x16868",
+        "descriptorFileOffset": "0x133c8",
+        "descriptorHex": "a0000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 161,
+        "opcode": 161,
+        "opcodeHex": "0xa1",
+        "name": "Rand",
+        "namePointerFileOffset": "0x16020",
+        "nameVirtualAddress": "0x416860",
+        "nameStringFileOffset": "0x16860",
+        "descriptorFileOffset": "0x133e4",
+        "descriptorHex": "a1000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 162,
+        "opcode": 162,
+        "opcodeHex": "0xa2",
+        "name": "RandRatio",
+        "namePointerFileOffset": "0x16024",
+        "nameVirtualAddress": "0x416854",
+        "nameStringFileOffset": "0x16854",
+        "descriptorFileOffset": "0x13400",
+        "descriptorHex": "a2000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 163,
+        "opcode": 163,
+        "opcodeHex": "0xa3",
+        "name": "Abs",
+        "namePointerFileOffset": "0x16028",
+        "nameVirtualAddress": "0x416850",
+        "nameStringFileOffset": "0x16850",
+        "descriptorFileOffset": "0x1341c",
+        "descriptorHex": "a3000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 164,
+        "opcode": 164,
+        "opcodeHex": "0xa4",
+        "name": "Sgn",
+        "namePointerFileOffset": "0x1602c",
+        "nameVirtualAddress": "0x41684c",
+        "nameStringFileOffset": "0x1684c",
+        "descriptorFileOffset": "0x13438",
+        "descriptorHex": "a4000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 165,
+        "opcode": 165,
+        "opcodeHex": "0xa5",
+        "name": "Sin100",
+        "namePointerFileOffset": "0x16030",
+        "nameVirtualAddress": "0x416844",
+        "nameStringFileOffset": "0x16844",
+        "descriptorFileOffset": "0x13454",
+        "descriptorHex": "a5000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 166,
+        "opcode": 166,
+        "opcodeHex": "0xa6",
+        "name": "Cos100",
+        "namePointerFileOffset": "0x16034",
+        "nameVirtualAddress": "0x41683c",
+        "nameStringFileOffset": "0x1683c",
+        "descriptorFileOffset": "0x13470",
+        "descriptorHex": "a6000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 167,
+        "opcode": 167,
+        "opcodeHex": "0xa7",
+        "name": "Tan100",
+        "namePointerFileOffset": "0x16038",
+        "nameVirtualAddress": "0x416834",
+        "nameStringFileOffset": "0x16834",
+        "descriptorFileOffset": "0x1348c",
+        "descriptorHex": "a7000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 168,
+        "opcode": 168,
+        "opcodeHex": "0xa8",
+        "name": "ArcSin100",
+        "namePointerFileOffset": "0x1603c",
+        "nameVirtualAddress": "0x416828",
+        "nameStringFileOffset": "0x16828",
+        "descriptorFileOffset": "0x134a8",
+        "descriptorHex": "a8000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 169,
+        "opcode": 169,
+        "opcodeHex": "0xa9",
+        "name": "ArcCos100",
+        "namePointerFileOffset": "0x16040",
+        "nameVirtualAddress": "0x41681c",
+        "nameStringFileOffset": "0x1681c",
+        "descriptorFileOffset": "0x134c4",
+        "descriptorHex": "a9000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 170,
+        "opcode": 170,
+        "opcodeHex": "0xaa",
+        "name": "ArcTan100",
+        "namePointerFileOffset": "0x16044",
+        "nameVirtualAddress": "0x416810",
+        "nameStringFileOffset": "0x16810",
+        "descriptorFileOffset": "0x134e0",
+        "descriptorHex": "aa000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 171,
+        "opcode": 171,
+        "opcodeHex": "0xab",
+        "name": "Avr",
+        "namePointerFileOffset": "0x16048",
+        "nameVirtualAddress": "0x41680c",
+        "nameStringFileOffset": "0x1680c",
+        "descriptorFileOffset": "0x134fc",
+        "descriptorHex": "ab000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 172,
+        "opcode": 172,
+        "opcodeHex": "0xac",
+        "name": "Avr3",
+        "namePointerFileOffset": "0x1604c",
+        "nameVirtualAddress": "0x416804",
+        "nameStringFileOffset": "0x16804",
+        "descriptorFileOffset": "0x13518",
+        "descriptorHex": "ac000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 173,
+        "opcode": 173,
+        "opcodeHex": "0xad",
+        "name": "Max",
+        "namePointerFileOffset": "0x16050",
+        "nameVirtualAddress": "0x416800",
+        "nameStringFileOffset": "0x16800",
+        "descriptorFileOffset": "0x13534",
+        "descriptorHex": "ad000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 174,
+        "opcode": 174,
+        "opcodeHex": "0xae",
+        "name": "Max3",
+        "namePointerFileOffset": "0x16054",
+        "nameVirtualAddress": "0x4167f8",
+        "nameStringFileOffset": "0x167f8",
+        "descriptorFileOffset": "0x13550",
+        "descriptorHex": "ae000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 175,
+        "opcode": 175,
+        "opcodeHex": "0xaf",
+        "name": "Min",
+        "namePointerFileOffset": "0x16058",
+        "nameVirtualAddress": "0x4167f4",
+        "nameStringFileOffset": "0x167f4",
+        "descriptorFileOffset": "0x1356c",
+        "descriptorHex": "af000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 176,
+        "opcode": 176,
+        "opcodeHex": "0xb0",
+        "name": "Min3",
+        "namePointerFileOffset": "0x1605c",
+        "nameVirtualAddress": "0x4167ec",
+        "nameStringFileOffset": "0x167ec",
+        "descriptorFileOffset": "0x13588",
+        "descriptorHex": "b0000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 177,
+        "opcode": 177,
+        "opcodeHex": "0xb1",
+        "name": "FindMax",
+        "namePointerFileOffset": "0x16060",
+        "nameVirtualAddress": "0x4167e4",
+        "nameStringFileOffset": "0x167e4",
+        "descriptorFileOffset": "0x135a4",
+        "descriptorHex": "b1000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 178,
+        "opcode": 178,
+        "opcodeHex": "0xb2",
+        "name": "FindMin",
+        "namePointerFileOffset": "0x16064",
+        "nameVirtualAddress": "0x4167dc",
+        "nameStringFileOffset": "0x167dc",
+        "descriptorFileOffset": "0x135c0",
+        "descriptorHex": "b2000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 179,
+        "opcode": 179,
+        "opcodeHex": "0xb3",
+        "name": "FindNear",
+        "namePointerFileOffset": "0x16068",
+        "nameVirtualAddress": "0x4167d0",
+        "nameStringFileOffset": "0x167d0",
+        "descriptorFileOffset": "0x135dc",
+        "descriptorHex": "b3000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 180,
+        "opcode": 180,
+        "opcodeHex": "0xb4",
+        "name": "ArrayToVar",
+        "namePointerFileOffset": "0x1606c",
+        "nameVirtualAddress": "0x4167c4",
+        "nameStringFileOffset": "0x167c4",
+        "descriptorFileOffset": "0x135f8",
+        "descriptorHex": "b4000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 181,
+        "opcode": 181,
+        "opcodeHex": "0xb5",
+        "name": "ArrayToArray",
+        "namePointerFileOffset": "0x16070",
+        "nameVirtualAddress": "0x4167b4",
+        "nameStringFileOffset": "0x167b4",
+        "descriptorFileOffset": "0x13614",
+        "descriptorHex": "b5000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 182,
+        "opcode": 182,
+        "opcodeHex": "0xb6",
+        "name": "ArrayToArray2",
+        "namePointerFileOffset": "0x16074",
+        "nameVirtualAddress": "0x4167a4",
+        "nameStringFileOffset": "0x167a4",
+        "descriptorFileOffset": "0x13630",
+        "descriptorHex": "b6000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 183,
+        "opcode": 183,
+        "opcodeHex": "0xb7",
+        "name": "HitCheck",
+        "namePointerFileOffset": "0x16078",
+        "nameVirtualAddress": "0x416798",
+        "nameStringFileOffset": "0x16798",
+        "descriptorFileOffset": "0x1364c",
+        "descriptorHex": "b7000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 184,
+        "opcode": 184,
+        "opcodeHex": "0xb8",
+        "name": "GetDate",
+        "namePointerFileOffset": "0x1607c",
+        "nameVirtualAddress": "0x416790",
+        "nameStringFileOffset": "0x16790",
+        "descriptorFileOffset": "0x13668",
+        "descriptorHex": "b8000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 185,
+        "opcode": 185,
+        "opcodeHex": "0xb9",
+        "name": "GetTime",
+        "namePointerFileOffset": "0x16080",
+        "nameVirtualAddress": "0x416788",
+        "nameStringFileOffset": "0x16788",
+        "descriptorFileOffset": "0x13684",
+        "descriptorHex": "b9000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 186,
+        "opcode": 186,
+        "opcodeHex": "0xba",
+        "name": "LockChatMode",
+        "namePointerFileOffset": "0x16084",
+        "nameVirtualAddress": "0x416778",
+        "nameStringFileOffset": "0x16778",
+        "descriptorFileOffset": "0x136a0",
+        "descriptorHex": "ba000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 187,
+        "opcode": 187,
+        "opcodeHex": "0xbb",
+        "name": "SetChatMode",
+        "namePointerFileOffset": "0x16088",
+        "nameVirtualAddress": "0x41676c",
+        "nameStringFileOffset": "0x1676c",
+        "descriptorFileOffset": "0x136bc",
+        "descriptorHex": "bb000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 188,
+        "opcode": 188,
+        "opcodeHex": "0xbc",
+        "name": "NetReconnect",
+        "namePointerFileOffset": "0x1608c",
+        "nameVirtualAddress": "0x41675c",
+        "nameStringFileOffset": "0x1675c",
+        "descriptorFileOffset": "0x136d8",
+        "descriptorHex": "bc000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 189,
+        "opcode": 189,
+        "opcodeHex": "0xbd",
+        "name": "NetSend",
+        "namePointerFileOffset": "0x16090",
+        "nameVirtualAddress": "0x416754",
+        "nameStringFileOffset": "0x16754",
+        "descriptorFileOffset": "0x136f4",
+        "descriptorHex": "bd000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 190,
+        "opcode": 190,
+        "opcodeHex": "0xbe",
+        "name": "LoadMedia",
+        "namePointerFileOffset": "0x16094",
+        "nameVirtualAddress": "0x416748",
+        "nameStringFileOffset": "0x16748",
+        "descriptorFileOffset": "0x13710",
+        "descriptorHex": "be000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 191,
+        "opcode": 191,
+        "opcodeHex": "0xbf",
+        "name": "LoadMediaResult",
+        "namePointerFileOffset": "0x16098",
+        "nameVirtualAddress": "0x416738",
+        "nameStringFileOffset": "0x16738",
+        "descriptorFileOffset": "0x1372c",
+        "descriptorHex": "bf000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 192,
+        "opcode": 192,
+        "opcodeHex": "0xc0",
+        "name": "RsCom",
+        "namePointerFileOffset": "0x1609c",
+        "nameVirtualAddress": "0x416730",
+        "nameStringFileOffset": "0x16730",
+        "descriptorFileOffset": "0x13748",
+        "descriptorHex": "c0000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 193,
+        "opcode": 193,
+        "opcodeHex": "0xc1",
+        "name": "RsSend",
+        "namePointerFileOffset": "0x160a0",
+        "nameVirtualAddress": "0x416728",
+        "nameStringFileOffset": "0x16728",
+        "descriptorFileOffset": "0x13764",
+        "descriptorHex": "c1000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 194,
+        "opcode": 194,
+        "opcodeHex": "0xc2",
+        "name": "SendSMS",
+        "namePointerFileOffset": "0x160a4",
+        "nameVirtualAddress": "0x416720",
+        "nameStringFileOffset": "0x16720",
+        "descriptorFileOffset": "0x13780",
+        "descriptorHex": "c2000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 195,
+        "opcode": 195,
+        "opcodeHex": "0xc3",
+        "name": "Download",
+        "namePointerFileOffset": "0x160a8",
+        "nameVirtualAddress": "0x416714",
+        "nameStringFileOffset": "0x16714",
+        "descriptorFileOffset": "0x1379c",
+        "descriptorHex": "c3000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 196,
+        "opcode": 196,
+        "opcodeHex": "0xc4",
+        "name": "BackToBrowser",
+        "namePointerFileOffset": "0x160ac",
+        "nameVirtualAddress": "0x416704",
+        "nameStringFileOffset": "0x16704",
+        "descriptorFileOffset": "0x137b8",
+        "descriptorHex": "c4000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 197,
+        "opcode": 197,
+        "opcodeHex": "0xc5",
+        "name": "Exit",
+        "namePointerFileOffset": "0x160b0",
+        "nameVirtualAddress": "0x4166fc",
+        "nameStringFileOffset": "0x166fc",
+        "descriptorFileOffset": "0x137d4",
+        "descriptorHex": "c5000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 198,
+        "opcode": 198,
+        "opcodeHex": "0xc6",
+        "name": "RegMusicBell",
+        "namePointerFileOffset": "0x160b4",
+        "nameVirtualAddress": "0x4166ec",
+        "nameStringFileOffset": "0x166ec",
+        "descriptorFileOffset": "0x137f0",
+        "descriptorHex": "c6000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 199,
+        "opcode": 199,
+        "opcodeHex": "0xc7",
+        "name": "RegScreen",
+        "namePointerFileOffset": "0x160b8",
+        "nameVirtualAddress": "0x4166e0",
+        "nameStringFileOffset": "0x166e0",
+        "descriptorFileOffset": "0x1380c",
+        "descriptorHex": "c7000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 200,
+        "opcode": 200,
+        "opcodeHex": "0xc8",
+        "name": "SetClip",
+        "namePointerFileOffset": "0x160bc",
+        "nameVirtualAddress": "0x4166d8",
+        "nameStringFileOffset": "0x166d8",
+        "descriptorFileOffset": "0x13828",
+        "descriptorHex": "c8000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 201,
+        "opcode": 201,
+        "opcodeHex": "0xc9",
+        "name": "ResetClip",
+        "namePointerFileOffset": "0x160c0",
+        "nameVirtualAddress": "0x4166cc",
+        "nameStringFileOffset": "0x166cc",
+        "descriptorFileOffset": "0x13844",
+        "descriptorHex": "c9000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 202,
+        "opcode": 202,
+        "opcodeHex": "0xca",
+        "name": "GetPixel",
+        "namePointerFileOffset": "0x160c4",
+        "nameVirtualAddress": "0x4166c0",
+        "nameStringFileOffset": "0x166c0",
+        "descriptorFileOffset": "0x13860",
+        "descriptorHex": "ca000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 203,
+        "opcode": 203,
+        "opcodeHex": "0xcb",
+        "name": "DrawRectRound",
+        "namePointerFileOffset": "0x160c8",
+        "nameVirtualAddress": "0x4166b0",
+        "nameStringFileOffset": "0x166b0",
+        "descriptorFileOffset": "0x1387c",
+        "descriptorHex": "cb000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 204,
+        "opcode": 204,
+        "opcodeHex": "0xcc",
+        "name": "FillRectRound",
+        "namePointerFileOffset": "0x160cc",
+        "nameVirtualAddress": "0x4166a0",
+        "nameStringFileOffset": "0x166a0",
+        "descriptorFileOffset": "0x13898",
+        "descriptorHex": "cc000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 205,
+        "opcode": 205,
+        "opcodeHex": "0xcd",
+        "name": "InvertRect",
+        "namePointerFileOffset": "0x160d0",
+        "nameVirtualAddress": "0x416694",
+        "nameStringFileOffset": "0x16694",
+        "descriptorFileOffset": "0x138b4",
+        "descriptorHex": "cd000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 206,
+        "opcode": 206,
+        "opcodeHex": "0xce",
+        "name": "ScrollLCD",
+        "namePointerFileOffset": "0x160d4",
+        "nameVirtualAddress": "0x416688",
+        "nameStringFileOffset": "0x16688",
+        "descriptorFileOffset": "0x138d0",
+        "descriptorHex": "ce000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 207,
+        "opcode": 207,
+        "opcodeHex": "0xcf",
+        "name": "DrawStr2",
+        "namePointerFileOffset": "0x160d8",
+        "nameVirtualAddress": "0x41667c",
+        "nameStringFileOffset": "0x1667c",
+        "descriptorFileOffset": "0x138ec",
+        "descriptorHex": "cf000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 208,
+        "opcode": 208,
+        "opcodeHex": "0xd0",
+        "name": "DrawStrSolid2",
+        "namePointerFileOffset": "0x160dc",
+        "nameVirtualAddress": "0x41666c",
+        "nameStringFileOffset": "0x1666c",
+        "descriptorFileOffset": "0x13908",
+        "descriptorHex": "d0000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 209,
+        "opcode": 209,
+        "opcodeHex": "0xd1",
+        "name": "StrInput2",
+        "namePointerFileOffset": "0x160e0",
+        "nameVirtualAddress": "0x416660",
+        "nameStringFileOffset": "0x16660",
+        "descriptorFileOffset": "0x13924",
+        "descriptorHex": "d1000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 210,
+        "opcode": 210,
+        "opcodeHex": "0xd2",
+        "name": "NetState",
+        "namePointerFileOffset": "0x160e4",
+        "nameVirtualAddress": "0x416654",
+        "nameStringFileOffset": "0x16654",
+        "descriptorFileOffset": "0x13940",
+        "descriptorHex": "d2000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 211,
+        "opcode": 211,
+        "opcodeHex": "0xd3",
+        "name": "NetConnect",
+        "namePointerFileOffset": "0x160e8",
+        "nameVirtualAddress": "0x416648",
+        "nameStringFileOffset": "0x16648",
+        "descriptorFileOffset": "0x1395c",
+        "descriptorHex": "d3000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 212,
+        "opcode": 212,
+        "opcodeHex": "0xd4",
+        "name": "NetDisconnect",
+        "namePointerFileOffset": "0x160ec",
+        "nameVirtualAddress": "0x416638",
+        "nameStringFileOffset": "0x16638",
+        "descriptorFileOffset": "0x13978",
+        "descriptorHex": "d4000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 213,
+        "opcode": 213,
+        "opcodeHex": "0xd5",
+        "name": "VoiceCall",
+        "namePointerFileOffset": "0x160f0",
+        "nameVirtualAddress": "0x41662c",
+        "nameStringFileOffset": "0x1662c",
+        "descriptorFileOffset": "0x13994",
+        "descriptorHex": "d5000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 214,
+        "opcode": 214,
+        "opcodeHex": "0xd6",
+        "name": "PtpCall",
+        "namePointerFileOffset": "0x160f4",
+        "nameVirtualAddress": "0x416624",
+        "nameStringFileOffset": "0x16624",
+        "descriptorFileOffset": "0x139b0",
+        "descriptorHex": "d6000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 215,
+        "opcode": 215,
+        "opcodeHex": "0xd7",
+        "name": "PtpCallMmi",
+        "namePointerFileOffset": "0x160f8",
+        "nameVirtualAddress": "0x416618",
+        "nameStringFileOffset": "0x16618",
+        "descriptorFileOffset": "0x139cc",
+        "descriptorHex": "d7000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 216,
+        "opcode": 216,
+        "opcodeHex": "0xd8",
+        "name": "PtpWait",
+        "namePointerFileOffset": "0x160fc",
+        "nameVirtualAddress": "0x416610",
+        "nameStringFileOffset": "0x16610",
+        "descriptorFileOffset": "0x139e8",
+        "descriptorHex": "d8000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 217,
+        "opcode": 217,
+        "opcodeHex": "0xd9",
+        "name": "PtpRelease",
+        "namePointerFileOffset": "0x16100",
+        "nameVirtualAddress": "0x416604",
+        "nameStringFileOffset": "0x16604",
+        "descriptorFileOffset": "0x13a04",
+        "descriptorHex": "d9000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 218,
+        "opcode": 218,
+        "opcodeHex": "0xda",
+        "name": "Download2",
+        "namePointerFileOffset": "0x16104",
+        "nameVirtualAddress": "0x4165f8",
+        "nameStringFileOffset": "0x165f8",
+        "descriptorFileOffset": "0x13a20",
+        "descriptorHex": "da000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 219,
+        "opcode": 219,
+        "opcodeHex": "0xdb",
+        "name": "RegAdvAudio",
+        "namePointerFileOffset": "0x16108",
+        "nameVirtualAddress": "0x4165ec",
+        "nameStringFileOffset": "0x165ec",
+        "descriptorFileOffset": "0x13a3c",
+        "descriptorHex": "db000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 220,
+        "opcode": 220,
+        "opcodeHex": "0xdc",
+        "name": "PlayAdvAudio",
+        "namePointerFileOffset": "0x1610c",
+        "nameVirtualAddress": "0x4165dc",
+        "nameStringFileOffset": "0x165dc",
+        "descriptorFileOffset": "0x13a58",
+        "descriptorHex": "dc000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 221,
+        "opcode": 221,
+        "opcodeHex": "0xdd",
+        "name": "ManAdvAudio",
+        "namePointerFileOffset": "0x16110",
+        "nameVirtualAddress": "0x4165d0",
+        "nameStringFileOffset": "0x165d0",
+        "descriptorFileOffset": "0x13a74",
+        "descriptorHex": "dd000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 222,
+        "opcode": 222,
+        "opcodeHex": "0xde",
+        "name": "ReadHandsetData",
+        "namePointerFileOffset": "0x16114",
+        "nameVirtualAddress": "0x4165c0",
+        "nameStringFileOffset": "0x165c0",
+        "descriptorFileOffset": "0x13a90",
+        "descriptorHex": "de000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 223,
+        "opcode": 223,
+        "opcodeHex": "0xdf",
+        "name": "WriteHandsetData",
+        "namePointerFileOffset": "0x16118",
+        "nameVirtualAddress": "0x4165ac",
+        "nameStringFileOffset": "0x165ac",
+        "descriptorFileOffset": "0x13aac",
+        "descriptorHex": "df000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 224,
+        "opcode": 224,
+        "opcodeHex": "0xe0",
+        "name": "OemApi",
+        "namePointerFileOffset": "0x1611c",
+        "nameVirtualAddress": "0x4165a4",
+        "nameStringFileOffset": "0x165a4",
+        "descriptorFileOffset": "0x13ac8",
+        "descriptorHex": "e0000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 225,
+        "opcode": 225,
+        "opcodeHex": "0xe1",
+        "name": "ExtQueryFeature",
+        "namePointerFileOffset": "0x16120",
+        "nameVirtualAddress": "0x416594",
+        "nameStringFileOffset": "0x16594",
+        "descriptorFileOffset": "0x13ae4",
+        "descriptorHex": "e1000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 226,
+        "opcode": 226,
+        "opcodeHex": "0xe2",
+        "name": "ExtApiType1",
+        "namePointerFileOffset": "0x16124",
+        "nameVirtualAddress": "0x416588",
+        "nameStringFileOffset": "0x16588",
+        "descriptorFileOffset": "0x13b00",
+        "descriptorHex": "e2000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 227,
+        "opcode": 227,
+        "opcodeHex": "0xe3",
+        "name": "ExtApiType2",
+        "namePointerFileOffset": "0x16128",
+        "nameVirtualAddress": "0x41657c",
+        "nameStringFileOffset": "0x1657c",
+        "descriptorFileOffset": "0x13b1c",
+        "descriptorHex": "e3000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 228,
+        "opcode": 228,
+        "opcodeHex": "0xe4",
+        "name": "ExtApiType3",
+        "namePointerFileOffset": "0x1612c",
+        "nameVirtualAddress": "0x416570",
+        "nameStringFileOffset": "0x16570",
+        "descriptorFileOffset": "0x13b38",
+        "descriptorHex": "e4000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 229,
+        "opcode": 229,
+        "opcodeHex": "0xe5",
+        "name": "ExtApiType4",
+        "namePointerFileOffset": "0x16130",
+        "nameVirtualAddress": "0x416564",
+        "nameStringFileOffset": "0x16564",
+        "descriptorFileOffset": "0x13b54",
+        "descriptorHex": "e5000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 230,
+        "opcode": 230,
+        "opcodeHex": "0xe6",
+        "name": "ExtApiType5",
+        "namePointerFileOffset": "0x16134",
+        "nameVirtualAddress": "0x416558",
+        "nameStringFileOffset": "0x16558",
+        "descriptorFileOffset": "0x13b70",
+        "descriptorHex": "e6000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 231,
+        "opcode": 231,
+        "opcodeHex": "0xe7",
+        "name": "ExtApiType6",
+        "namePointerFileOffset": "0x16138",
+        "nameVirtualAddress": "0x41654c",
+        "nameStringFileOffset": "0x1654c",
+        "descriptorFileOffset": "0x13b8c",
+        "descriptorHex": "e7000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 232,
+        "opcode": 232,
+        "opcodeHex": "0xe8",
+        "name": "ExtApiType7",
+        "namePointerFileOffset": "0x1613c",
+        "nameVirtualAddress": "0x416540",
+        "nameStringFileOffset": "0x16540",
+        "descriptorFileOffset": "0x13ba8",
+        "descriptorHex": "e8000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 233,
+        "opcode": 233,
+        "opcodeHex": "0xe9",
+        "name": "CvtColorRGB",
+        "namePointerFileOffset": "0x16140",
+        "nameVirtualAddress": "0x416534",
+        "nameStringFileOffset": "0x16534",
+        "descriptorFileOffset": "0x13bc4",
+        "descriptorHex": "e9000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 234,
+        "opcode": 234,
+        "opcodeHex": "0xea",
+        "name": "ClearRGB",
+        "namePointerFileOffset": "0x16144",
+        "nameVirtualAddress": "0x416528",
+        "nameStringFileOffset": "0x16528",
+        "descriptorFileOffset": "0x13be0",
+        "descriptorHex": "ea000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 235,
+        "opcode": 235,
+        "opcodeHex": "0xeb",
+        "name": "SetColorRGB",
+        "namePointerFileOffset": "0x16148",
+        "nameVirtualAddress": "0x41651c",
+        "nameStringFileOffset": "0x1651c",
+        "descriptorFileOffset": "0x13bfc",
+        "descriptorHex": "eb000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 236,
+        "opcode": 236,
+        "opcodeHex": "0xec",
+        "name": "PutPixelRGB",
+        "namePointerFileOffset": "0x1614c",
+        "nameVirtualAddress": "0x416510",
+        "nameStringFileOffset": "0x16510",
+        "descriptorFileOffset": "0x13c18",
+        "descriptorHex": "ec000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 237,
+        "opcode": 237,
+        "opcodeHex": "0xed",
+        "name": "GetPixelRGB",
+        "namePointerFileOffset": "0x16150",
+        "nameVirtualAddress": "0x416504",
+        "nameStringFileOffset": "0x16504",
+        "descriptorFileOffset": "0x13c34",
+        "descriptorHex": "ed000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 238,
+        "opcode": 238,
+        "opcodeHex": "0xee",
+        "name": "SetStrTypeRGB",
+        "namePointerFileOffset": "0x16154",
+        "nameVirtualAddress": "0x4164f4",
+        "nameStringFileOffset": "0x164f4",
+        "descriptorFileOffset": "0x13c50",
+        "descriptorHex": "ee000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 239,
+        "opcode": 239,
+        "opcodeHex": "0xef",
+        "name": "SetStrColorRGB",
+        "namePointerFileOffset": "0x16158",
+        "nameVirtualAddress": "0x4164e4",
+        "nameStringFileOffset": "0x164e4",
+        "descriptorFileOffset": "0x13c6c",
+        "descriptorHex": "ef000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 240,
+        "opcode": 240,
+        "opcodeHex": "0xf0",
+        "name": "Trace3",
+        "namePointerFileOffset": "0x1615c",
+        "nameVirtualAddress": "0x4164dc",
+        "nameStringFileOffset": "0x164dc",
+        "descriptorFileOffset": "0x13c88",
+        "descriptorHex": "f0000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 241,
+        "opcode": 241,
+        "opcodeHex": "0xf1",
+        "name": "TraceS",
+        "namePointerFileOffset": "0x16160",
+        "nameVirtualAddress": "0x4164d4",
+        "nameStringFileOffset": "0x164d4",
+        "descriptorFileOffset": "0x13ca4",
+        "descriptorHex": "f1000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "nameIndex": 242,
+        "opcode": 242,
+        "opcodeHex": "0xf2",
+        "name": "end",
+        "namePointerFileOffset": "0x16164",
+        "nameVirtualAddress": "0x4164d0",
+        "nameStringFileOffset": "0x164d0",
+        "descriptorFileOffset": "0x13cc0",
+        "descriptorHex": "f2000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "nativeDataflow": "At VA0x403948 the emitter reads an internal instruction opcode WORD. It searches the first BYTE of28-byte descriptors from0x412248, then VA0x40396b indexes the corresponding name pointer at0x415d9c. VA0x40398b reads the same opcode, VA0x403990 calls0x4092c0. In the direct byte-output branch, 0x409360 passes count1 to0x4092f0;0x409301/303 copies one byte to output. Selected descriptor opcode values equal BA/BB/C4, so their names are not inferred from array position alone.",
+    "binarySpans": [
+      {
+        "name": "opcode-name-and-emission",
+        "fileOffset": "0x3910",
+        "endExclusive": "0x3998",
+        "sha256": "fdc05f7de9014583165840bd0db075e375c92b7fd654fdfc6ccf1cf4995c82a1",
+        "hex": "83ec0c535556578bf98b0da0bf41008b470450e8a81000005068cc704100e8dd57000083c4088bcfe833fdffff8b6c24208b4f1833f633c0668b11660fb60d48224100663bca7413b948224100660fb6591c83c11c40663bda75f28b14859c5d41008b0d9cbf41008bc5522bc15068bc704100e8885700008b4f18668b115255e82b5900008be88b",
+        "instructions": [
+          {
+            "va": "0x403910",
+            "fileOffset": "0x3910",
+            "bytes": "83ec0c",
+            "mnemonic": "sub",
+            "operands": "esp, 0xc"
+          },
+          {
+            "va": "0x403913",
+            "fileOffset": "0x3913",
+            "bytes": "53",
+            "mnemonic": "push",
+            "operands": "ebx"
+          },
+          {
+            "va": "0x403914",
+            "fileOffset": "0x3914",
+            "bytes": "55",
+            "mnemonic": "push",
+            "operands": "ebp"
+          },
+          {
+            "va": "0x403915",
+            "fileOffset": "0x3915",
+            "bytes": "56",
+            "mnemonic": "push",
+            "operands": "esi"
+          },
+          {
+            "va": "0x403916",
+            "fileOffset": "0x3916",
+            "bytes": "57",
+            "mnemonic": "push",
+            "operands": "edi"
+          },
+          {
+            "va": "0x403917",
+            "fileOffset": "0x3917",
+            "bytes": "8bf9",
+            "mnemonic": "mov",
+            "operands": "edi, ecx"
+          },
+          {
+            "va": "0x403919",
+            "fileOffset": "0x3919",
+            "bytes": "8b0da0bf4100",
+            "mnemonic": "mov",
+            "operands": "ecx, dword ptr [0x41bfa0]"
+          },
+          {
+            "va": "0x40391f",
+            "fileOffset": "0x391f",
+            "bytes": "8b4704",
+            "mnemonic": "mov",
+            "operands": "eax, dword ptr [edi + 4]"
+          },
+          {
+            "va": "0x403922",
+            "fileOffset": "0x3922",
+            "bytes": "50",
+            "mnemonic": "push",
+            "operands": "eax"
+          },
+          {
+            "va": "0x403923",
+            "fileOffset": "0x3923",
+            "bytes": "e8a8100000",
+            "mnemonic": "call",
+            "operands": "0x4049d0"
+          },
+          {
+            "va": "0x403928",
+            "fileOffset": "0x3928",
+            "bytes": "50",
+            "mnemonic": "push",
+            "operands": "eax"
+          },
+          {
+            "va": "0x403929",
+            "fileOffset": "0x3929",
+            "bytes": "68cc704100",
+            "mnemonic": "push",
+            "operands": "0x4170cc"
+          },
+          {
+            "va": "0x40392e",
+            "fileOffset": "0x392e",
+            "bytes": "e8dd570000",
+            "mnemonic": "call",
+            "operands": "0x409110"
+          },
+          {
+            "va": "0x403933",
+            "fileOffset": "0x3933",
+            "bytes": "83c408",
+            "mnemonic": "add",
+            "operands": "esp, 8"
+          },
+          {
+            "va": "0x403936",
+            "fileOffset": "0x3936",
+            "bytes": "8bcf",
+            "mnemonic": "mov",
+            "operands": "ecx, edi"
+          },
+          {
+            "va": "0x403938",
+            "fileOffset": "0x3938",
+            "bytes": "e833fdffff",
+            "mnemonic": "call",
+            "operands": "0x403670"
+          },
+          {
+            "va": "0x40393d",
+            "fileOffset": "0x393d",
+            "bytes": "8b6c2420",
+            "mnemonic": "mov",
+            "operands": "ebp, dword ptr [esp + 0x20]"
+          },
+          {
+            "va": "0x403941",
+            "fileOffset": "0x3941",
+            "bytes": "8b4f18",
+            "mnemonic": "mov",
+            "operands": "ecx, dword ptr [edi + 0x18]"
+          },
+          {
+            "va": "0x403944",
+            "fileOffset": "0x3944",
+            "bytes": "33f6",
+            "mnemonic": "xor",
+            "operands": "esi, esi"
+          },
+          {
+            "va": "0x403946",
+            "fileOffset": "0x3946",
+            "bytes": "33c0",
+            "mnemonic": "xor",
+            "operands": "eax, eax"
+          },
+          {
+            "va": "0x403948",
+            "fileOffset": "0x3948",
+            "bytes": "668b11",
+            "mnemonic": "mov",
+            "operands": "dx, word ptr [ecx]"
+          },
+          {
+            "va": "0x40394b",
+            "fileOffset": "0x394b",
+            "bytes": "660fb60d48224100",
+            "mnemonic": "movzx",
+            "operands": "cx, byte ptr [0x412248]"
+          },
+          {
+            "va": "0x403953",
+            "fileOffset": "0x3953",
+            "bytes": "663bca",
+            "mnemonic": "cmp",
+            "operands": "cx, dx"
+          },
+          {
+            "va": "0x403956",
+            "fileOffset": "0x3956",
+            "bytes": "7413",
+            "mnemonic": "je",
+            "operands": "0x40396b"
+          },
+          {
+            "va": "0x403958",
+            "fileOffset": "0x3958",
+            "bytes": "b948224100",
+            "mnemonic": "mov",
+            "operands": "ecx, 0x412248"
+          },
+          {
+            "va": "0x40395d",
+            "fileOffset": "0x395d",
+            "bytes": "660fb6591c",
+            "mnemonic": "movzx",
+            "operands": "bx, byte ptr [ecx + 0x1c]"
+          },
+          {
+            "va": "0x403962",
+            "fileOffset": "0x3962",
+            "bytes": "83c11c",
+            "mnemonic": "add",
+            "operands": "ecx, 0x1c"
+          },
+          {
+            "va": "0x403965",
+            "fileOffset": "0x3965",
+            "bytes": "40",
+            "mnemonic": "inc",
+            "operands": "eax"
+          },
+          {
+            "va": "0x403966",
+            "fileOffset": "0x3966",
+            "bytes": "663bda",
+            "mnemonic": "cmp",
+            "operands": "bx, dx"
+          },
+          {
+            "va": "0x403969",
+            "fileOffset": "0x3969",
+            "bytes": "75f2",
+            "mnemonic": "jne",
+            "operands": "0x40395d"
+          },
+          {
+            "va": "0x40396b",
+            "fileOffset": "0x396b",
+            "bytes": "8b14859c5d4100",
+            "mnemonic": "mov",
+            "operands": "edx, dword ptr [eax*4 + 0x415d9c]"
+          },
+          {
+            "va": "0x403972",
+            "fileOffset": "0x3972",
+            "bytes": "8b0d9cbf4100",
+            "mnemonic": "mov",
+            "operands": "ecx, dword ptr [0x41bf9c]"
+          },
+          {
+            "va": "0x403978",
+            "fileOffset": "0x3978",
+            "bytes": "8bc5",
+            "mnemonic": "mov",
+            "operands": "eax, ebp"
+          },
+          {
+            "va": "0x40397a",
+            "fileOffset": "0x397a",
+            "bytes": "52",
+            "mnemonic": "push",
+            "operands": "edx"
+          },
+          {
+            "va": "0x40397b",
+            "fileOffset": "0x397b",
+            "bytes": "2bc1",
+            "mnemonic": "sub",
+            "operands": "eax, ecx"
+          },
+          {
+            "va": "0x40397d",
+            "fileOffset": "0x397d",
+            "bytes": "50",
+            "mnemonic": "push",
+            "operands": "eax"
+          },
+          {
+            "va": "0x40397e",
+            "fileOffset": "0x397e",
+            "bytes": "68bc704100",
+            "mnemonic": "push",
+            "operands": "0x4170bc"
+          },
+          {
+            "va": "0x403983",
+            "fileOffset": "0x3983",
+            "bytes": "e888570000",
+            "mnemonic": "call",
+            "operands": "0x409110"
+          },
+          {
+            "va": "0x403988",
+            "fileOffset": "0x3988",
+            "bytes": "8b4f18",
+            "mnemonic": "mov",
+            "operands": "ecx, dword ptr [edi + 0x18]"
+          },
+          {
+            "va": "0x40398b",
+            "fileOffset": "0x398b",
+            "bytes": "668b11",
+            "mnemonic": "mov",
+            "operands": "dx, word ptr [ecx]"
+          },
+          {
+            "va": "0x40398e",
+            "fileOffset": "0x398e",
+            "bytes": "52",
+            "mnemonic": "push",
+            "operands": "edx"
+          },
+          {
+            "va": "0x40398f",
+            "fileOffset": "0x398f",
+            "bytes": "55",
+            "mnemonic": "push",
+            "operands": "ebp"
+          },
+          {
+            "va": "0x403990",
+            "fileOffset": "0x3990",
+            "bytes": "e82b590000",
+            "mnemonic": "call",
+            "operands": "0x4092c0"
+          },
+          {
+            "va": "0x403995",
+            "fileOffset": "0x3995",
+            "bytes": "8be8",
+            "mnemonic": "mov",
+            "operands": "ebp, eax"
+          }
+        ]
+      },
+      {
+        "name": "emit-selector",
+        "fileOffset": "0x92c0",
+        "endExclusive": "0x92ef",
+        "sha256": "b158be2a986aab4016649d9483dc5b4e1e6d2c30c62d8011eda2c3bb73e2ac6f",
+        "hex": "a0c1bf410084c074138b4424088b4c24045051e8a801000083c408c38b5424088b4424045250e87500000083c408c3",
+        "instructions": [
+          {
+            "va": "0x4092c0",
+            "fileOffset": "0x92c0",
+            "bytes": "a0c1bf4100",
+            "mnemonic": "mov",
+            "operands": "al, byte ptr [0x41bfc1]"
+          },
+          {
+            "va": "0x4092c5",
+            "fileOffset": "0x92c5",
+            "bytes": "84c0",
+            "mnemonic": "test",
+            "operands": "al, al"
+          },
+          {
+            "va": "0x4092c7",
+            "fileOffset": "0x92c7",
+            "bytes": "7413",
+            "mnemonic": "je",
+            "operands": "0x4092dc"
+          },
+          {
+            "va": "0x4092c9",
+            "fileOffset": "0x92c9",
+            "bytes": "8b442408",
+            "mnemonic": "mov",
+            "operands": "eax, dword ptr [esp + 8]"
+          },
+          {
+            "va": "0x4092cd",
+            "fileOffset": "0x92cd",
+            "bytes": "8b4c2404",
+            "mnemonic": "mov",
+            "operands": "ecx, dword ptr [esp + 4]"
+          },
+          {
+            "va": "0x4092d1",
+            "fileOffset": "0x92d1",
+            "bytes": "50",
+            "mnemonic": "push",
+            "operands": "eax"
+          },
+          {
+            "va": "0x4092d2",
+            "fileOffset": "0x92d2",
+            "bytes": "51",
+            "mnemonic": "push",
+            "operands": "ecx"
+          },
+          {
+            "va": "0x4092d3",
+            "fileOffset": "0x92d3",
+            "bytes": "e8a8010000",
+            "mnemonic": "call",
+            "operands": "0x409480"
+          },
+          {
+            "va": "0x4092d8",
+            "fileOffset": "0x92d8",
+            "bytes": "83c408",
+            "mnemonic": "add",
+            "operands": "esp, 8"
+          },
+          {
+            "va": "0x4092db",
+            "fileOffset": "0x92db",
+            "bytes": "c3",
+            "mnemonic": "ret",
+            "operands": ""
+          },
+          {
+            "va": "0x4092dc",
+            "fileOffset": "0x92dc",
+            "bytes": "8b542408",
+            "mnemonic": "mov",
+            "operands": "edx, dword ptr [esp + 8]"
+          },
+          {
+            "va": "0x4092e0",
+            "fileOffset": "0x92e0",
+            "bytes": "8b442404",
+            "mnemonic": "mov",
+            "operands": "eax, dword ptr [esp + 4]"
+          },
+          {
+            "va": "0x4092e4",
+            "fileOffset": "0x92e4",
+            "bytes": "52",
+            "mnemonic": "push",
+            "operands": "edx"
+          },
+          {
+            "va": "0x4092e5",
+            "fileOffset": "0x92e5",
+            "bytes": "50",
+            "mnemonic": "push",
+            "operands": "eax"
+          },
+          {
+            "va": "0x4092e6",
+            "fileOffset": "0x92e6",
+            "bytes": "e875000000",
+            "mnemonic": "call",
+            "operands": "0x409360"
+          },
+          {
+            "va": "0x4092eb",
+            "fileOffset": "0x92eb",
+            "bytes": "83c408",
+            "mnemonic": "add",
+            "operands": "esp, 8"
+          },
+          {
+            "va": "0x4092ee",
+            "fileOffset": "0x92ee",
+            "bytes": "c3",
+            "mnemonic": "ret",
+            "operands": ""
+          }
+        ]
+      },
+      {
+        "name": "copy-one-byte-wrapper",
+        "fileOffset": "0x9360",
+        "endExclusive": "0x9375",
+        "sha256": "ae9079f7eddd66673fc719e6e89ddb5aa2612253fbffe2eb0b32fa1938e3a513",
+        "hex": "8b4c24048d4424086a015051e87fffffff83c40cc3",
+        "instructions": [
+          {
+            "va": "0x409360",
+            "fileOffset": "0x9360",
+            "bytes": "8b4c2404",
+            "mnemonic": "mov",
+            "operands": "ecx, dword ptr [esp + 4]"
+          },
+          {
+            "va": "0x409364",
+            "fileOffset": "0x9364",
+            "bytes": "8d442408",
+            "mnemonic": "lea",
+            "operands": "eax, [esp + 8]"
+          },
+          {
+            "va": "0x409368",
+            "fileOffset": "0x9368",
+            "bytes": "6a01",
+            "mnemonic": "push",
+            "operands": "1"
+          },
+          {
+            "va": "0x40936a",
+            "fileOffset": "0x936a",
+            "bytes": "50",
+            "mnemonic": "push",
+            "operands": "eax"
+          },
+          {
+            "va": "0x40936b",
+            "fileOffset": "0x936b",
+            "bytes": "51",
+            "mnemonic": "push",
+            "operands": "ecx"
+          },
+          {
+            "va": "0x40936c",
+            "fileOffset": "0x936c",
+            "bytes": "e87fffffff",
+            "mnemonic": "call",
+            "operands": "0x4092f0"
+          },
+          {
+            "va": "0x409371",
+            "fileOffset": "0x9371",
+            "bytes": "83c40c",
+            "mnemonic": "add",
+            "operands": "esp, 0xc"
+          },
+          {
+            "va": "0x409374",
+            "fileOffset": "0x9374",
+            "bytes": "c3",
+            "mnemonic": "ret",
+            "operands": ""
+          }
+        ]
+      },
+      {
+        "name": "copy-byte-loop",
+        "fileOffset": "0x92f0",
+        "endExclusive": "0x930c",
+        "sha256": "bdf8aa59fd8fc5e5b8b00030a5d4f474860073b3865eabaff851f53e578474c7",
+        "hex": "8b442404568b74241085f6760d8b4c240c8a11881040414e75f75ec3",
+        "instructions": [
+          {
+            "va": "0x4092f0",
+            "fileOffset": "0x92f0",
+            "bytes": "8b442404",
+            "mnemonic": "mov",
+            "operands": "eax, dword ptr [esp + 4]"
+          },
+          {
+            "va": "0x4092f4",
+            "fileOffset": "0x92f4",
+            "bytes": "56",
+            "mnemonic": "push",
+            "operands": "esi"
+          },
+          {
+            "va": "0x4092f5",
+            "fileOffset": "0x92f5",
+            "bytes": "8b742410",
+            "mnemonic": "mov",
+            "operands": "esi, dword ptr [esp + 0x10]"
+          },
+          {
+            "va": "0x4092f9",
+            "fileOffset": "0x92f9",
+            "bytes": "85f6",
+            "mnemonic": "test",
+            "operands": "esi, esi"
+          },
+          {
+            "va": "0x4092fb",
+            "fileOffset": "0x92fb",
+            "bytes": "760d",
+            "mnemonic": "jbe",
+            "operands": "0x40930a"
+          },
+          {
+            "va": "0x4092fd",
+            "fileOffset": "0x92fd",
+            "bytes": "8b4c240c",
+            "mnemonic": "mov",
+            "operands": "ecx, dword ptr [esp + 0xc]"
+          },
+          {
+            "va": "0x409301",
+            "fileOffset": "0x9301",
+            "bytes": "8a11",
+            "mnemonic": "mov",
+            "operands": "dl, byte ptr [ecx]"
+          },
+          {
+            "va": "0x409303",
+            "fileOffset": "0x9303",
+            "bytes": "8810",
+            "mnemonic": "mov",
+            "operands": "byte ptr [eax], dl"
+          },
+          {
+            "va": "0x409305",
+            "fileOffset": "0x9305",
+            "bytes": "40",
+            "mnemonic": "inc",
+            "operands": "eax"
+          },
+          {
+            "va": "0x409306",
+            "fileOffset": "0x9306",
+            "bytes": "41",
+            "mnemonic": "inc",
+            "operands": "ecx"
+          },
+          {
+            "va": "0x409307",
+            "fileOffset": "0x9307",
+            "bytes": "4e",
+            "mnemonic": "dec",
+            "operands": "esi"
+          },
+          {
+            "va": "0x409308",
+            "fileOffset": "0x9308",
+            "bytes": "75f7",
+            "mnemonic": "jne",
+            "operands": "0x409301"
+          },
+          {
+            "va": "0x40930a",
+            "fileOffset": "0x930a",
+            "bytes": "5e",
+            "mnemonic": "pop",
+            "operands": "esi"
+          },
+          {
+            "va": "0x40930b",
+            "fileOffset": "0x930b",
+            "bytes": "c3",
+            "mnemonic": "ret",
+            "operands": ""
+          }
+        ]
+      }
+    ],
+    "compilerSignatures": {
+      "source": {
+        "path": "work/gnex-sdk/files/mcc.exe",
+        "bytes": 393216,
+        "sha256": "5c9d8a95b15aae60acc377104dc08574e688e82c86583b059d9b1907fb402c52"
+      },
+      "records": [
+        {
+          "name": "LockChatMode",
+          "recordFileOffset": "0x1d568",
+          "recordHex": "74a4450001000000000000000a000000000000000000000000000000000000000000000000000000",
+          "nameStringFileOffset": "0x5a474",
+          "argumentCount": 1,
+          "returnTypeCode": 0,
+          "firstArgumentTypeCode": 10
+        },
+        {
+          "name": "BackToBrowser",
+          "recordFileOffset": "0x1d6f8",
+          "recordHex": "00a44500010000000000000001000000000000000000000000000000000000000000000000000000",
+          "nameStringFileOffset": "0x5a400",
+          "argumentCount": 1,
+          "returnTypeCode": 0,
+          "firstArgumentTypeCode": 1
+        }
+      ],
+      "limit": "Raw type codes preserved; names/signature records do not alone define handset callback semantics."
+    },
+    "crossSourceInterpretation": {
+      "sanyoEvidence": "validation/sanyo-a011-vm-evidence.json",
+      "BA": "The MASM name LockChatMode and one-argument compiler signature are consistent with Sanyo native pop-one-word/store-low-byte. This supersedes a debug-display guess for the API name, not the verified native behavior.",
+      "BB": "MASM names opcode0xBB SetChatMode; separate Sanyo implementation still needs its own native semantics.",
+      "C4": "MASM names opcode0xC4 BackToBrowser with one-argument compiler signature; compatible with Sanyo string/resource callback then event exit. Callback ABI/bounds and exact behavior on LG are not established by naming alone."
+    },
+    "validation": {
+      "selectedOpcodeRowsChecked": 7,
+      "nativeInstructionBytesAsserted": true,
+      "vendorBinaryExecuted": false
+    },
+    "sdk210IdenticalCopy": {
+      "path": "work/sdk-device-roster-next-pass/files210/MASM.exe",
+      "bytes": 114688,
+      "sha256": "deebe7e45deef83e7ef87a622277ac51f79df84db63f1a0de35f62caf1d601ac"
+    }
+  },
+  "signedSystem": {
+    "installer": {
+      "fileId": "SignedSystem_setup.exe",
+      "bytes": 13688529,
+      "sha256": "9e2daa8ea86830b9fbb852595c54c7beaa9b10bc66800f8fe3ef8e360ee0f29a",
+      "msiFileVersion": "1.0.1.9",
+      "declaredMsiTargetPath": "SourceDir/./Sinjisoft/GNEX SDK/./SignedSystem/SignedSystem_setup.exe"
+    },
+    "staticExtractedFiles": 51,
+    "bytes": 32887588,
+    "documents": [
+      {
+        "path": "docs/SKTSignedSystem_QuickGuide_GNEX°ЛБх.pdf",
+        "bytes": 1940746,
+        "sha256": "9da6035bcea3dc4e27fd138790def7a96f1c76f55f33228ca8c080faf561c1d0",
+        "pages": 31,
+        "textFile": "signed-9da6035bcea3.txt"
+      },
+      {
+        "path": "docs/SKTSignedSystem_QuickGuide_WIPIC°ЛБх.pdf",
+        "bytes": 2212195,
+        "sha256": "0568f2cdc8be78fc4ea467480d3043327e0d73eb1bd46c71afa2afe5507274aa",
+        "pages": 34,
+        "textFile": "signed-0568f2cdc8be.txt"
+      },
+      {
+        "path": "docs/SKTSignedSystem_ЕлЗХЕшЖРЕ°Бц_UserGuide.pdf",
+        "bytes": 4362281,
+        "sha256": "ab8a05f89b6a8bc8fa5edc8bade726dd7dddeb58b706dea332b0e508c79fd76f",
+        "pages": 90,
+        "textFile": "signed-ab8a05f89b6a.txt"
+      }
+    ],
+    "sqliteResult": "Both8KiB signedsystem.s3db copies contain empty user/project tables and no device/capability roster. Account fields, keys and credentials are not exported into this evidence.",
+    "workbookResult": "A WIPI/GNEX verification test-case guide, not a handset list. Generic width categories128/176/240/320 are not model identities.",
+    "networkUsed": false
+  },
+  "validation": {
+    "localMsiFileSizesVerified": 493,
+    "sampleSgsPairsIdentical": 4,
+    "vendorExecutablesRun": false,
+    "repositoryCatalogChanged": false
+  }
+}

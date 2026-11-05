@@ -1,0 +1,263 @@
+{
+  "checked": "2026-11-05",
+  "verifiedCard": {
+    "slug": "lg-sd1100",
+    "roster_capture": "https://web.archive.org/web/20041019110549/http://www.gnexclub.com/zone/htm/lg_p/lg-sd1100.htm",
+    "cdx_sha1_base32": "MENBAWUHX5LTTMEXCEAWGOOBHKV4LMKY",
+    "read_status": "verified_raw_card",
+    "fields_from_card": {
+      "manufacturer": "LG전자",
+      "model": "LG-SD1100",
+      "vm": "GVM2X",
+      "lcd": [
+        120,
+        160
+      ],
+      "vm_lcd_area": [
+        120,
+        146
+      ],
+      "lcd_class": 4,
+      "image": "65K Color",
+      "image_type": 12,
+      "compressed_image_type": 8,
+      "audio": "MA3 (MA2 compatible)",
+      "audio_type": 32,
+      "actual_GetHwConfig": 36
+    },
+    "request": {
+      "slug": "lg-sd1100",
+      "roster_capture": "https://web.archive.org/web/20041019110549/http://www.gnexclub.com/zone/htm/lg_p/lg-sd1100.htm",
+      "requested_url": "https://web.archive.org/web/20041019110549id_/http://www.gnexclub.com:80/zone/htm/lg_p/lg-sd1100.htm",
+      "cdx_sha1_base32": "MENBAWUHX5LTTMEXCEAWGOOBHKV4LMKY",
+      "status": 200,
+      "final_url": "https://web.archive.org/web/20041019110549id_/http://www.gnexclub.com:80/zone/htm/lg_p/lg-sd1100.htm",
+      "bytes": 5925,
+      "sha256": "7c6720884d29fdcc8c8520c1def07579587001af0b3767803b4a7e27ef0aca53",
+      "sha1_base32": "MENBAWUHX5LTTMEXCEAWGOOBHKV4LMKY",
+      "cdx_sha1_match": true,
+      "has_card_table": true
+    },
+    "not_stated_in_card": [
+      "script_version",
+      "download_protocol",
+      "builtin_game_titles"
+    ]
+  },
+  "gameLabels": [
+    {
+      "model": "LG-SD1100",
+      "labels": [
+        "X-Ship",
+        "뾰숑"
+      ],
+      "date": "2002-05-30",
+      "evidence": "contemporary_firsthand_review_builtin_games",
+      "source_name": "Cetizen-SD1100-menu",
+      "source_url": "https://review.cetizen.com/review.php?pid=324&q=view&vcat=5&pno=324&rno=1175&qv=rview",
+      "firmware_crosscheck": [
+        {
+          "file": "LG-SD1100.bin",
+          "bytes": 6291440,
+          "sha256": "bbbbee87865e11f24ea7e0f79bb2d6399e78371b5c490d46131fedb946a4f573",
+          "source_url": "https://archive.sunderland93.ru/Firmwares/LG/SD1100/SD110I42.7z",
+          "labels": {
+            "X-Ship": [
+              1523104,
+              2905672,
+              2905689
+            ],
+            "Poshong": [
+              1513393,
+              2905733
+            ],
+            "Game Select": [
+              2905645
+            ]
+          }
+        }
+      ],
+      "limitation": "Review has Hangul 뾰숑; ROM labels English Poshong beside Korean menu. No new SGS and no attribution of preloads to GNEX solely from separate GVM support."
+    },
+    {
+      "model": "SKY IM-5300",
+      "labels": [
+        "Brain Force",
+        "SKY Soccer"
+      ],
+      "date": "2002-11-23",
+      "evidence": "contemporary_firsthand_review_game_section",
+      "source_name": "Cetizen-IM5300-features",
+      "source_url": "https://review.cetizen.com/review.php?pid=396&q=view&vcat=5&pno=396&rno=1478&qv=rview",
+      "explicit_comparison_model": "IM-5400",
+      "limitation": "Exact names and original menu screenshot URLs recovered; no new IM5300 firmware/game bytes and no VM-format attribution."
+    },
+    {
+      "model": "LG-SD350",
+      "labels": [
+        "사나칸",
+        "3D 레이스"
+      ],
+      "date": "2004-11-08",
+      "evidence": "contemporary_firsthand_review_builtin_games",
+      "source_name": "LG-SD350-hands-on",
+      "source_url": "https://kbench.com/?page=0&q=node%2F26101",
+      "oem_release_url": "https://www.newswire.co.kr/newsRead.php?no=5089",
+      "limitation": "OEMrelease only says high-speed3Dgames, no names. Names from the actual review, no SGS proof."
+    },
+    {
+      "models": [
+        "LG-SV130",
+        "LG-SV9140",
+        "IM-7300",
+        "IM-6500",
+        "IM-7200",
+        "IM-6100",
+        "Pantech S4"
+      ],
+      "label": "라그모 상인편",
+      "date": "2004-12-27",
+      "evidence": "original_publisher_download_bug_notice",
+      "source_name": "Gravity-merchant-2004",
+      "source_url": "https://ro.gnjoy.com/news/notice/View.asp?BBSMode=10001&curpage=482&seq=1960",
+      "status_then": "Crash after entering field; downloads for listed models temporarily stopped after15:00, replacement promised.",
+      "limitation": "Downloadable game, not firmware preload; notice does not identify GNEX/GVM or provide surviving game payload."
+    }
+  ],
+  "primarySources": [
+    {
+      "name": "SKT-WIPI-2004",
+      "url": "https://www.sktelecom.com/en/press/press_detail.do?currentPage=1&idx=464&keyword=&type=",
+      "status": 200,
+      "final_url": "https://www.sktelecom.com/en/press/press_detail.do?currentPage=1&idx=464&keyword=&type=",
+      "bytes": 10511,
+      "sha256": "fcac6abd6c9889acf189cadc98c1e616fc53db6cf23859014f469f9878bcf8f7"
+    },
+    {
+      "name": "Gravity-merchant-2004",
+      "url": "https://ro.gnjoy.com/news/notice/View.asp?BBSMode=10001&curpage=482&seq=1960",
+      "status": 200,
+      "final_url": "https://ro.gnjoy.com/news/notice/View.asp?BBSMode=10001&curpage=482&seq=1960",
+      "bytes": 40414,
+      "sha256": "eb642bbc46d8e1ce42afe9f2a761ff02f189c8b511c945978b83632024e1388a"
+    },
+    {
+      "name": "LG-SD350-release",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=5089",
+      "status": 200,
+      "final_url": "https://www.newswire.co.kr/newsRead.php?no=5089",
+      "bytes": 101850,
+      "sha256": "abdd17927f2220e89c52aefd8f2d457abf10dbb0fa156502233c13dc3173dfd7"
+    },
+    {
+      "name": "LG-SD350-hands-on",
+      "url": "https://kbench.com/?page=0&q=node%2F26101",
+      "bytes": 51546,
+      "sha256": "a175e05a905a62b7814b4b188971f486fa7c2be4894e28ae3b5d6b79e8acac86",
+      "status": 200,
+      "recovery_note": "urllib TLS handshake failed; Windows curl fetched same public URL successfully."
+    },
+    {
+      "name": "Cetizen-SD1100-review",
+      "url": "https://review.cetizen.com/review.php?pid=324&pno=324&q=view&qv=rview&rno=1173&vcat=5",
+      "status": 200,
+      "final_url": "https://review.cetizen.com/review.php?pid=324&pno=324&q=view&qv=rview&rno=1173&vcat=5",
+      "bytes": 182264,
+      "sha256": "803009fe88c61a253ad387e4eb55b3aaa488f5d2342b18c0147957f26d5e76fb"
+    },
+    {
+      "name": "Cetizen-324-review-index",
+      "url": "https://review.cetizen.com/_system/data/review_list_json.php?mode=html_desktop&pmodel=324",
+      "bytes": 16565,
+      "sha256": "b222e8ce7bd53ac0085dd260091f93db46efc42cea7724c172dabde371b97867",
+      "status": 200
+    },
+    {
+      "name": "Cetizen-SD1100-menu",
+      "url": "https://review.cetizen.com/review.php?pid=324&q=view&vcat=5&pno=324&rno=1175&qv=rview",
+      "bytes": 203217,
+      "sha256": "2cac1e765df86445dfc16b640fa26aeca948fbc5f4a5d4cacfdb798795d114e1",
+      "status": 200
+    },
+    {
+      "name": "Cetizen-396-review-index",
+      "url": "https://review.cetizen.com/_system/data/review_list_json.php?mode=html_desktop&pmodel=396",
+      "bytes": 18471,
+      "sha256": "acc9457f4ce8ee823bda0b7d8432b190e1235284733894b11cdc475b4cb7e71c",
+      "status": 200
+    },
+    {
+      "name": "Cetizen-IM5300-features",
+      "url": "https://review.cetizen.com/review.php?pid=396&q=view&vcat=5&pno=396&rno=1478&qv=rview",
+      "bytes": 187013,
+      "sha256": "2b19433c039c07cb4d2fee7e3cb957e17d5156357ec4e74bec8f12cabe100565",
+      "status": 200
+    }
+  ],
+  "unreadCards": [
+    {
+      "slug": "lg-sd230",
+      "roster_capture": "https://web.archive.org/web/20040811211101/http://www.gnexclub.com/zone/htm/lg_p/lg-sd230.htm",
+      "read_status": "http_429"
+    },
+    {
+      "slug": "lg-sd340",
+      "roster_capture": "https://web.archive.org/web/20050214012448/http://www.gnexclub.com/zone/htm/lg_p/lg-sd340.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "lg-sd350",
+      "roster_capture": "https://web.archive.org/web/20041019225834/http://www.gnexclub.com/zone/htm/lg_p/lg-sd350.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "lg-sd840",
+      "roster_capture": "https://web.archive.org/web/20040811211747/http://www.gnexclub.com/zone/htm/lg_p/lg-sd840.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "lg-sv9140",
+      "roster_capture": "https://web.archive.org/web/20050214012516/http://www.gnexclub.com/zone/htm/lg_p/lg-sv9140.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "im-3100",
+      "roster_capture": "https://web.archive.org/web/20040811211348/http://www.gnexclub.com/zone/htm/sk_p/im-3100.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "im-5000",
+      "roster_capture": "https://web.archive.org/web/20040811211624/http://www.gnexclub.com/zone/htm/sk_p/im-5000.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "im-5300",
+      "roster_capture": "https://web.archive.org/web/20040811211852/http://www.gnexclub.com/zone/htm/sk_p/im-5300.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "im-6100",
+      "roster_capture": "https://web.archive.org/web/20040811212446/http://www.gnexclub.com/zone/htm/sk_p/im-6100.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "im-6400",
+      "roster_capture": "https://web.archive.org/web/20040811213033/http://www.gnexclub.com/zone/htm/sk_p/im-6400.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "im-7200",
+      "roster_capture": "https://web.archive.org/web/20041019222146/http://www.gnexclub.com/zone/htm/sk_p/im-7200.htm",
+      "read_status": "not_attempted_after_host_429"
+    },
+    {
+      "slug": "im-7400",
+      "roster_capture": "https://web.archive.org/web/20041019223449/http://www.gnexclub.com/zone/htm/sk_p/im-7400.htm",
+      "read_status": "not_attempted_after_host_429"
+    }
+  ],
+  "limits": [
+    "Only SD1100 card bytes were recovered in this pass; other runtime profiles remain unread.",
+    "Firsthand factory-game labels and separate platform support do not by themselves establish game container format."
+  ]
+}

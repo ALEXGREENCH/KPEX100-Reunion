@@ -1,0 +1,556 @@
+{
+  "aram_core_commit": "fea299cba15696ed1460f965b76626d6edab5e03",
+  "test": "TestExtractedNativeGamesUseVerifiedRuntime",
+  "test_scope": "Four exact binaries: startup, 180 frames, guest key event, save and restore, next frame.",
+  "extractions": [
+    {
+      "model": "W210",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W210.zip",
+      "archive_sha256": "9cede5f487db047911bc65bb7a7950a992a1eaaabbe69dc2c1608325cc570951",
+      "source_file": "SCH-W210_CK12_2840000.dat",
+      "source_sha256": "63c07ff36e50959bc02f2a4ceacb0c54b54be39b42448d2d8ed848bdb56c4b70",
+      "file": "Bomb-Link.dat",
+      "title": "Bomb Link",
+      "runtime_check_passed": true,
+      "offset": 6177028,
+      "bytes": 72480,
+      "sha256": "a8c47d3045639b12afd0de213a1c2ef1467f0495c8edad1bb5483a3ab74dc629",
+      "header_name": "Title(Main)",
+      "format_word": "0x300501",
+      "build_word": "0x12800dc",
+      "text_base": "0xf4000000",
+      "text_size": 72432,
+      "bss_base": "0xf5000000",
+      "bss_size": 51200,
+      "thumb_entry": "0xb587",
+      "matched_aram_game": "Bomb Link"
+    },
+    {
+      "model": "W240",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W240.zip",
+      "archive_sha256": "bb9d8f6c43d65e767b1db197d25e12c880b1de23e0e784dd32bb27e54bed582e",
+      "source_file": "SCH-W240_BJ24_32C0000.dat",
+      "source_sha256": "363779487dd64f7178fd1cfdb47b9f783ea17ec5973251efe7140a0cbc661de6",
+      "file": "Bomb-Link.dat",
+      "title": "Bomb Link",
+      "runtime_check_passed": true,
+      "offset": 15215060,
+      "bytes": 72480,
+      "sha256": "a8c47d3045639b12afd0de213a1c2ef1467f0495c8edad1bb5483a3ab74dc629",
+      "header_name": "Title(Main)",
+      "format_word": "0x300501",
+      "build_word": "0x12800dc",
+      "text_base": "0xf4000000",
+      "text_size": 72432,
+      "bss_base": "0xf5000000",
+      "bss_size": 51200,
+      "thumb_entry": "0xb587",
+      "matched_aram_game": "Bomb Link"
+    },
+    {
+      "model": "W240",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W240.zip",
+      "archive_sha256": "bb9d8f6c43d65e767b1db197d25e12c880b1de23e0e784dd32bb27e54bed582e",
+      "source_file": "SCH-W240_BJ24_32C0000.dat",
+      "source_sha256": "363779487dd64f7178fd1cfdb47b9f783ea17ec5973251efe7140a0cbc661de6",
+      "file": "SCH-W240-Bluetooth-Stony-2.eads",
+      "title": "Bluetooth Stony 2",
+      "runtime_check_passed": false,
+      "offset": 15287576,
+      "bytes": 306544,
+      "sha256": "5b22edf26893a189c8c7195a16260738f877fd196f18f9bcf7d3b6ecc0291b57",
+      "header_name": "블루투스_스토니2",
+      "format_word": "0x301001",
+      "build_word": "0x12900f0",
+      "text_base": "0xf4000000",
+      "text_size": 306496,
+      "bss_base": "0xf5000000",
+      "bss_size": 24924,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": null
+    },
+    {
+      "model": "W240",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W240.zip",
+      "archive_sha256": "bb9d8f6c43d65e767b1db197d25e12c880b1de23e0e784dd32bb27e54bed582e",
+      "source_file": "SCH-W240_BJ24_32C0000.dat",
+      "source_sha256": "363779487dd64f7178fd1cfdb47b9f783ea17ec5973251efe7140a0cbc661de6",
+      "file": "SCH-W240-Bluetooth-Janggi.eads",
+      "title": "Bluetooth Janggi",
+      "runtime_check_passed": false,
+      "offset": 15594120,
+      "bytes": 280872,
+      "sha256": "1ec9dddb22fcb4b37dd7f3f5b0b35756d26ce50d9273d012bc866ec4d62172d8",
+      "header_name": "블루투스_장기",
+      "format_word": "0x301001",
+      "build_word": "0x12900f0",
+      "text_base": "0xf4000000",
+      "text_size": 280824,
+      "bss_base": "0xf5000000",
+      "bss_size": 16472,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": null
+    },
+    {
+      "model": "W770",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W770.zip",
+      "archive_sha256": "8232dd2fba993a8901229b71cae44849634cac3c269deb0e55ffbc34b3100362",
+      "source_file": "SCH-W770_DA05_1900000.dat",
+      "source_sha256": "b837559aa0c9addb01c8d282fa17c8c250813c39c5ee2688436bd482a641dfab",
+      "file": "SCH-W770-Sudoku-WQVGA.eads",
+      "title": "Sudoku WQVGA",
+      "runtime_check_passed": false,
+      "offset": 22154260,
+      "bytes": 544676,
+      "sha256": "21313e2c5963f348dad0b8ca362b57370f909c2b2c4de8534c28d2094442d354",
+      "header_name": "SudokuWQVGA",
+      "format_word": "0x300f01",
+      "build_word": "0x17900f0",
+      "text_base": "0xf4000000",
+      "text_size": 544628,
+      "bss_base": "0xf5000000",
+      "bss_size": 130452,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": null
+    },
+    {
+      "model": "W770",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W770.zip",
+      "archive_sha256": "8232dd2fba993a8901229b71cae44849634cac3c269deb0e55ffbc34b3100362",
+      "source_file": "SCH-W770_DA05_1900000.dat",
+      "source_sha256": "b837559aa0c9addb01c8d282fa17c8c250813c39c5ee2688436bd482a641dfab",
+      "file": "SCH-W770-Minigame-WQVGA.dat",
+      "title": "Minigame WQVGA",
+      "runtime_check_passed": true,
+      "offset": 22698936,
+      "bytes": 660680,
+      "sha256": "16f0ccdf370069e2342aee29c05e22fa64577b7ca5e9d7cc87a98d87b50d391f",
+      "header_name": "Minigame WQVGA",
+      "format_word": "0x300f01",
+      "build_word": "0x17900f0",
+      "text_base": "0xf4000000",
+      "text_size": 660632,
+      "bss_base": "0xf5000000",
+      "bss_size": 284412,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": "Minigame WQVGA"
+    },
+    {
+      "model": "W770",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W770.zip",
+      "archive_sha256": "8232dd2fba993a8901229b71cae44849634cac3c269deb0e55ffbc34b3100362",
+      "source_file": "SCH-W770_DA05_1900000.dat",
+      "source_sha256": "b837559aa0c9addb01c8d282fa17c8c250813c39c5ee2688436bd482a641dfab",
+      "file": "SCH-W770-Pangya.eads",
+      "title": "Pangya",
+      "runtime_check_passed": false,
+      "offset": 23359616,
+      "bytes": 2296316,
+      "sha256": "ff2c9ee556d834f941e5aeacde4d62e74e1a6d4b312e42b0ce79d31188ee2d10",
+      "header_name": "Pangya",
+      "format_word": "0x300f01",
+      "build_word": "0xf00190",
+      "text_base": "0xf4000000",
+      "text_size": 2296268,
+      "bss_base": "0xf5000000",
+      "bss_size": 710084,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": null
+    },
+    {
+      "model": "W830",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W830.zip",
+      "archive_sha256": "312bab828b3476d1ed046aa3e8e209531204600a35339f6251f8fd2f59c1cb00",
+      "source_file": "SCH-W830_DL21_29360128_DL21.dat",
+      "source_sha256": "955a39b3c09d6228224234dab18b3b38fe89da518c0b614a7cba47e6f9f96900",
+      "file": "SCH-W830-Minigame-QVGA-OEM.dat",
+      "title": "Minigame QVGA OEM",
+      "runtime_check_passed": true,
+      "offset": 3915708,
+      "bytes": 482048,
+      "sha256": "c83d4f4ee9cbf6ba4280b17f8f8a3dd26157ce9f07849583c04a60ebf9c00429",
+      "header_name": "MinigameQVGAOEM",
+      "format_word": "0x300f01",
+      "build_word": "0x12900f0",
+      "text_base": "0xf4000000",
+      "text_size": 482000,
+      "bss_base": "0xf5000000",
+      "bss_size": 260520,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": "Minigame QVGA OEM"
+    },
+    {
+      "model": "W830",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W830.zip",
+      "archive_sha256": "312bab828b3476d1ed046aa3e8e209531204600a35339f6251f8fd2f59c1cb00",
+      "source_file": "SCH-W830_DA18_1C00000.dat",
+      "source_sha256": "ac9383d8ef99facfa6f425057c1bf9349e0870572c3b79867a03ca63a7495ed8",
+      "file": "SCH-W830-Minigame-QVGA-OEM.dat",
+      "title": "Minigame QVGA OEM",
+      "runtime_check_passed": true,
+      "offset": 3915708,
+      "bytes": 482048,
+      "sha256": "c83d4f4ee9cbf6ba4280b17f8f8a3dd26157ce9f07849583c04a60ebf9c00429",
+      "header_name": "MinigameQVGAOEM",
+      "format_word": "0x300f01",
+      "build_word": "0x12900f0",
+      "text_base": "0xf4000000",
+      "text_size": 482000,
+      "bss_base": "0xf5000000",
+      "bss_size": 260520,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": "Minigame QVGA OEM"
+    },
+    {
+      "model": "W860",
+      "source_url": "https://archive.org/download/gt-b-7722_20250528/SCH-W860.zip",
+      "archive_sha256": "0a3d318cf109be115b5497ed92e87627acc33a614bd5b180cbd1723cf70339c9",
+      "source_file": "SCH-W860_DA06_1C00000.dat",
+      "source_sha256": "006fc80de446d7b554e387e837d259e3372c00b35e3219c3dd7d242a77044b09",
+      "file": "SCH-W860-Minigame-QVGA-OEM.dat",
+      "title": "Minigame QVGA OEM",
+      "runtime_check_passed": true,
+      "offset": 8983116,
+      "bytes": 482028,
+      "sha256": "6b48455bc86e151967d75ec1b596cdd7a09838e495d3a8a1717bd5d67158ee71",
+      "header_name": "MinigameQVGAOEM",
+      "format_word": "0x300f01",
+      "build_word": "0x12900f0",
+      "text_base": "0xf4000000",
+      "text_size": 481980,
+      "bss_base": "0xf5000000",
+      "bss_size": 260520,
+      "thumb_entry": "0xb500",
+      "matched_aram_game": "Minigame QVGA OEM"
+    }
+  ],
+  "firmware_parts": [
+    {
+      "model": "W210",
+      "source_file": "SCH-W210_BA23_42C0000.fnt",
+      "source_sha256": "6e2ac12d20b892b46639f27478a14b41935e42abe169162dd16ecad5c3083d1a",
+      "bytes": 67416064,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W210",
+      "source_file": "SCH-W210_CK12_2840000.dat",
+      "source_sha256": "63c07ff36e50959bc02f2a4ceacb0c54b54be39b42448d2d8ed848bdb56c4b70",
+      "bytes": 27078656,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          24507916
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W210",
+      "source_file": "SCH-W210_CK12_300000.wbin",
+      "source_sha256": "f79c7adfda0632a914f21ef94fb08d5f3ec26bf352549ace8e64ba20ee9043b2",
+      "bytes": 38797312,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          5937296,
+          8368356,
+          9958836,
+          17656820,
+          35580035
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W210",
+      "source_file": "SCH-W210_ZH24.wbt",
+      "source_sha256": "873c0dc12a58148a922755773019fb2a51766bcaf60804dd0bac89234113fce0",
+      "bytes": 2621440,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W240",
+      "source_file": "SCH-W240_AE21.wbt",
+      "source_sha256": "7c7a52555ff528ccfc596f0efef1eeeff4e3fd9ab994cc4e9fe3f992a6ccc9f3",
+      "bytes": 3145728,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W240",
+      "source_file": "SCH-W240_AL13_5CC0000.fnt",
+      "source_sha256": "3d128c436ea85e54a7b39dc5322696a9b4951201222414bd2e292281ed30c3f4",
+      "bytes": 81444864,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W240",
+      "source_file": "SCH-W240_BJ24_32C0000.dat",
+      "source_sha256": "363779487dd64f7178fd1cfdb47b9f783ea17ec5973251efe7140a0cbc661de6",
+      "bytes": 42975232,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          39689732
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W240",
+      "source_file": "SCH-W240_CL28_300000.wbin",
+      "source_sha256": "6a6bc227f79ccea4a6d5bb42518c7af75edfc78119a7bbfadb4648a1374bcbf7",
+      "bytes": 47710208,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          11033648,
+          12266004,
+          19539052,
+          30759696,
+          31783348,
+          34342685,
+          34342929,
+          36382208,
+          37983710
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W770",
+      "source_file": "SCH-W770_CB27.wbt",
+      "source_sha256": "e88b5d1f5fb8249e63467f27f8a279712ded1d2c93d90cc304247a6c57fc5afc",
+      "bytes": 1703936,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W770",
+      "source_file": "SCH-W770_DA05_180000.wbin",
+      "source_sha256": "1f0626d93084b6bf657fa7abe4d377ef341d0621c43ad9c650a408db1d54099d",
+      "bytes": 20447232,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W770",
+      "source_file": "SCH-W770_DA05_1900000.dat",
+      "source_sha256": "b837559aa0c9addb01c8d282fa17c8c250813c39c5ee2688436bd482a641dfab",
+      "bytes": 76283904,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          59950252
+        ],
+        "SKT_GVM://": [
+          49096360,
+          51467020,
+          63198696,
+          63198708,
+          64177216,
+          64177228,
+          64958312,
+          64958324,
+          64976208,
+          64976220
+        ],
+        "MpwMinigameWindow": [
+          74518000,
+          75033280
+        ],
+        "MpwMinigameGameWindow": [
+          75033888
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W770",
+      "source_file": "SCH-W770_DA05_6700000.fnt",
+      "source_sha256": "61dd894f063a061b7abdabb8d0d0620a60244bce9386a060f1698db210cd99e9",
+      "bytes": 168103936,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": [
+        {
+          "offset": 152071808,
+          "rejected": "JPEG and table"
+        },
+        {
+          "offset": 155336814,
+          "rejected": "monotonic binary table without a valid SGS title"
+        }
+      ]
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_DL21_0_CG23.wbt",
+      "source_sha256": "b9b3e5a8175cff0813b074edec0ab852d6bd2f845900656a1a6521a32f0e8d74",
+      "bytes": 2752512,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_DL21_2621440_DL21.wbin",
+      "source_sha256": "2f4b1dc521cfae74efbf2ec6135409eaa5e736a8a504ef1123214895983472f2",
+      "bytes": 22806528,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_DL21_29360128_DL21.dat",
+      "source_sha256": "955a39b3c09d6228224234dab18b3b38fe89da518c0b614a7cba47e6f9f96900",
+      "bytes": 45465600,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          35201584,
+          44984784
+        ],
+        "SKT_GVM://": [
+          22631892,
+          25256376,
+          38500208,
+          38500220,
+          38693768,
+          38693780,
+          39494984,
+          39494996,
+          39512792,
+          39512804
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_DL21_82837504_DD08.fnt",
+      "source_sha256": "cd32ae08892946cac4908cab32eb3a929790fa6b287afb0b8f373683e0d581d9",
+      "bytes": 67469312,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_CG23.wbt",
+      "source_sha256": "b9b3e5a8175cff0813b074edec0ab852d6bd2f845900656a1a6521a32f0e8d74",
+      "bytes": 2752512,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_DA18_1C00000.dat",
+      "source_sha256": "ac9383d8ef99facfa6f425057c1bf9349e0870572c3b79867a03ca63a7495ed8",
+      "bytes": 45465600,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          35199412,
+          44982612
+        ],
+        "SKT_GVM://": [
+          22629720,
+          25254204,
+          38498036,
+          38498048,
+          38691596,
+          38691608,
+          39492812,
+          39492824,
+          39510620,
+          39510632
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_DA18_280000.wbin",
+      "source_sha256": "a0fc5f210623ede76f198dd26ef40f0f54ed3aadabc4c1fa2526ead4b5c1a159",
+      "bytes": 22806528,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W830",
+      "source_file": "SCH-W830_DA18_4F00000.fnt",
+      "source_sha256": "5eee858d40f1402031ee30aa8c0f724ae2bf36a91eb4c7c0669335967efcbb1c",
+      "bytes": 67436544,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W860",
+      "source_file": "SCH-W860_CG08.wbt",
+      "source_sha256": "860cd9467842da3ad7c2722523c02d292ef5f6b4c0eba41e227114cc9e9029e6",
+      "bytes": 2752512,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W860",
+      "source_file": "SCH-W860_DA06_1C00000.dat",
+      "source_sha256": "006fc80de446d7b554e387e837d259e3372c00b35e3219c3dd7d242a77044b09",
+      "bytes": 47988736,
+      "matches_aram_profile": true,
+      "markers": {
+        "application/x-gnex-sgs": [
+          37834548,
+          47504636
+        ],
+        "SKT_GVM://": [
+          26542404,
+          28782988,
+          41066316,
+          41066328,
+          41259876,
+          41259888,
+          42016844,
+          42016856,
+          42034700,
+          42034712
+        ]
+      },
+      "sgs_candidates": []
+    },
+    {
+      "model": "W860",
+      "source_file": "SCH-W860_DA06_280000.wbin",
+      "source_sha256": "3259c3c6e96896eec7e7e7c6d1a6eca25486f54b0795e3b7e370f1aca823f6d8",
+      "bytes": 23461888,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    },
+    {
+      "model": "W860",
+      "source_file": "SCH-W860_DA06_4F00000.fnt",
+      "source_sha256": "f3ce83be78dcf6615aa19e496595743c350c5f4cf372e2767968aee5c8e971a5",
+      "bytes": 73678848,
+      "matches_aram_profile": true,
+      "markers": {},
+      "sgs_candidates": []
+    }
+  ]
+}

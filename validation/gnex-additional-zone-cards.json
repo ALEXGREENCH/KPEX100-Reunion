@@ -1,0 +1,114 @@
+{
+  "checked": "2026-11-05",
+  "status": "Three original Sinjisoft handset cards read, each raw HTML SHA1 matches CDX",
+  "limits": "Model names already existed in archived roster. This verifies previously unread card contents; no new firmware/game executable or emulator support claim.",
+  "cards": [
+    {
+      "category": "moto_p",
+      "slug": "ms300",
+      "capture": "https://web.archive.org/web/20041214204829/http://www.gnexclub.com/zone/htm/moto_p/ms300.htm",
+      "cdx_sha1_base32": "DXIXUZ7KX7BJBFGY7SHYOHQKZX5T2NEE",
+      "requestUrl": "https://web.archive.org/web/20041214204829id_/http://www.gnexclub.com/zone/htm/moto_p/ms300.htm",
+      "bytes": 6146,
+      "sha256": "cd3a920c6d6db875d878a6054b7cae2cb2aa8241c1936db99d72b3e91cdb2b7e",
+      "cdxSha1Match": true,
+      "text": " [제조사] MS300 [제조사] 모토로라 [모델] MS300 [GVM Version] GNEX [LCD Size] 128*160 [GVM LCD Area] 128*145 : LCDCLASS : 4 [IMAGE Type] 260K Color IMAGETYPE: 5 (압축 사용시 4) [AUDIO Type] MA5 (MA3,MA2하위호환) : AUDIOTYPE: 64 [Platform] WIPI ",
+      "profile": {
+        "manufacturer": "Motorola",
+        "model": "MS300",
+        "vm": "GNEX",
+        "lcd": [
+          128,
+          160
+        ],
+        "vm_lcd_area": [
+          128,
+          145
+        ],
+        "lcd_class": 4,
+        "image_type": 5,
+        "compressed_image_type": 4,
+        "display_color_label": "260K Color",
+        "audio": "MA5",
+        "audio_backwards_compatibility": [
+          "MA3",
+          "MA2"
+        ],
+        "audio_type": 64,
+        "platform": "WIPI"
+      }
+    },
+    {
+      "category": "pq_p",
+      "slug": "p1",
+      "capture": "https://web.archive.org/web/20041015175320/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+      "cdx_sha1_base32": "VHK5DRQUJXTVRRLGMCSPRXNPFTB6A2TW",
+      "requestUrl": "https://web.archive.org/web/20041015175320id_/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+      "bytes": 6093,
+      "sha256": "d9f8d79028d27d340f91aaf58c7ff01ab0a7bf88c626b1e6946180b3d43158db",
+      "cdxSha1Match": true,
+      "text": " [제조사] P1 [제조사] 팬택큐리텔 [모델] P1 [GVM Version] GNEX [LCD Size] 220*176 [GVM LCD Area] 220*160 ::: LCDCLASS : 4 [IMAGE Type] 65K Color IMAGETYPE: 12 (압축 사용시 8) [AUDIO Type] MA5 (MA3,MA2하위호환) AUDIOTYPE: 64 [Platform] WIPI 1.2 ",
+      "profile": {
+        "manufacturer": "Pantech & Curitel",
+        "model": "P1",
+        "vm": "GNEX",
+        "lcd": [
+          220,
+          176
+        ],
+        "vm_lcd_area": [
+          220,
+          160
+        ],
+        "lcd_class": 4,
+        "image_type": 12,
+        "compressed_image_type": 8,
+        "display_color_label": "65K Color",
+        "audio": "MA5",
+        "audio_backwards_compatibility": [
+          "MA3",
+          "MA2"
+        ],
+        "audio_type": 64,
+        "platform": "WIPI 1.2"
+      }
+    },
+    {
+      "category": "pq_p",
+      "slug": "s4",
+      "capture": "https://web.archive.org/web/20041015180810/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+      "cdx_sha1_base32": "XXKE5WZMW434FDH2BKXCDVV6FQWMCWUB",
+      "requestUrl": "https://web.archive.org/web/20041015180810id_/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+      "bytes": 6318,
+      "sha256": "23713b727c4cbb464d1e1b2f62fe8f04e5600686f66fdd9ca03d5df846cfa35b",
+      "cdxSha1Match": true,
+      "text": " [제조사] S4 [제조사] 팬택큐리텔 [모델] S4 [GVM Version] GVM4X ::: SCRIPTVER : 2, Download Protocol : Sliding [LCD Size] 240*320 [GVM LCD Area] 240*294 ::: LCDCLASS : 8 [IMAGE Type] 65K Color IMAGETYPE: 12 (압축 사용시 8) [AUDIO Type] MA5 (MA2,MA3 하위호환) : AUDIOTYPE: 64 [Platform] WIPI 1.2 ",
+      "profile": {
+        "manufacturer": "Pantech & Curitel",
+        "model": "S4",
+        "vm": "GVM4X",
+        "script_version": 2,
+        "download_protocol": "Sliding",
+        "lcd": [
+          240,
+          320
+        ],
+        "vm_lcd_area": [
+          240,
+          294
+        ],
+        "lcd_class": 8,
+        "image_type": 12,
+        "compressed_image_type": 8,
+        "display_color_label": "65K Color",
+        "audio": "MA5",
+        "audio_backwards_compatibility": [
+          "MA2",
+          "MA3"
+        ],
+        "audio_type": 64,
+        "platform": "WIPI 1.2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,976 @@
+{
+  "scope": "Actual Korean-market Sanyo firmware and Nokia8887 original-manual evidence; separate documentary VM support, native runtime evidence and unrecovered game payloads.",
+  "sourceArchives": [
+    {
+      "model": "Telson-PS3000",
+      "url": "https://archive.sunderland93.ru/Firmwares/Telson/PS3000/PS3000%20%5BMemory%20Dump%5D.7z",
+      "status": 200,
+      "mime": "application/x-7z-compressed",
+      "bytes": 519106,
+      "sha256": "c37053e5c41519900badaad92273693e7ec14e674b9c498c0e1eb4a61791b51c",
+      "crc-test": {
+        "exitCode": 0,
+        "file": "Telson-PS3000-crc-test.txt"
+      },
+      "listing": {
+        "exitCode": 0,
+        "file": "Telson-PS3000-listing.txt"
+      }
+    },
+    {
+      "model": "Sanyo-SCP-A011",
+      "url": "https://archive.sunderland93.ru/Firmwares/Sanyo/SCP-A011/SCP_A011_K2_V2000.7z",
+      "status": 200,
+      "mime": "application/x-7z-compressed",
+      "bytes": 3864848,
+      "sha256": "b80b8ac6606619126ebe4c31560c44d98ff7eaa49c4d474305f73004099c3319",
+      "crc-test": {
+        "exitCode": 0,
+        "file": "Sanyo-SCP-A011-crc-test.txt"
+      },
+      "listing": {
+        "exitCode": 0,
+        "file": "Sanyo-SCP-A011-listing.txt"
+      }
+    },
+    {
+      "model": "Sanyo-SMP-A017S",
+      "url": "https://archive.sunderland93.ru/Firmwares/Sanyo/SMP-A017S/english_v11004sti.7z",
+      "status": 200,
+      "mime": "application/x-7z-compressed",
+      "bytes": 604181,
+      "sha256": "be8f368cfcf959efa2cccef56c45d1745ccc7166ed7352cdfa3ceabd85ea6861",
+      "crc-test": {
+        "exitCode": 0,
+        "file": "Sanyo-SMP-A017S-crc-test.txt"
+      },
+      "listing": {
+        "exitCode": 0,
+        "file": "Sanyo-SMP-A017S-listing.txt"
+      }
+    }
+  ],
+  "images": [
+    {
+      "modelDirectory": "Telson-PS3000",
+      "filename": "PS3000_memory.bin",
+      "bytes": 1048560,
+      "sha256": "f72e217f2c5c639e09e2e3b8c1e807b2a570c11c36c95f629594c11ef3687ad2",
+      "crc32": "297AA952",
+      "markers": [
+        {
+          "term": "sgs",
+          "count": 4,
+          "offsets": ["0xc555a", "0xc556b", "0xd7bb3", "0xd8119"]
+        }
+      ]
+    },
+    {
+      "modelDirectory": "Sanyo-SCP-A011",
+      "filename": "SCP_A011_K2_V2000.bin",
+      "bytes": 14614532,
+      "sha256": "07fe2747ec2e4e9eadb4f32b79fb47d560249d13d50a228f6e0d73bccba29a80",
+      "crc32": "2144DF1C",
+      "markers": [
+        {
+          "term": "GVM",
+          "count": 35,
+          "offsets": [
+            "0x31056b",
+            "0x313937",
+            "0x32e1b0",
+            "0x33028f",
+            "0x330934",
+            "0x330f60",
+            "0x3ff374",
+            "0x3ff88c",
+            "0x3ff8c0",
+            "0x3ff8f4",
+            "0x3ff928",
+            "0x3ff95c",
+            "0x3ff990",
+            "0x3ff9c4",
+            "0x3ff9f8",
+            "0x3ffa2c",
+            "0x3ffa60",
+            "0x3ffa94",
+            "0x3ffac8",
+            "0x3ffaf4",
+            "0x4b3af8",
+            "0x4b3b3a",
+            "0x4b3bf4",
+            "0x4b3c1e",
+            "0x4c3a68",
+            "0x4c5bed",
+            "0x4c5cf5",
+            "0x4e1d60",
+            "0x4e2a40",
+            "0x4e2c68",
+            "0x5eea0b",
+            "0x5eea51",
+            "0x652d5f",
+            "0x652e59",
+            "0x6a43fd"
+          ]
+        },
+        {
+          "term": "gvm",
+          "count": 6,
+          "offsets": ["0x31d8dc", "0x4c46b6", "0x652c44", "0x652cd2", "0x652e76", "0x6a7fd4"]
+        },
+        {
+          "term": "SKVM",
+          "count": 13,
+          "offsets": [
+            "0x30ab58",
+            "0x310577",
+            "0x31394b",
+            "0x31dad2",
+            "0x32e864",
+            "0x33068b",
+            "0x3fc721",
+            "0x4b3b0c",
+            "0x4b3b42",
+            "0x4b3c34",
+            "0x4b3c66",
+            "0x652d63",
+            "0x652e5d"
+          ]
+        },
+        {
+          "term": "SK-VM",
+          "count": 2,
+          "offsets": ["0x330940", "0x330f64"]
+        },
+        {
+          "term": "sgs",
+          "count": 13,
+          "offsets": [
+            "0x310838",
+            "0x3a01e9",
+            "0x3a06e1",
+            "0x3a0869",
+            "0x3ac32a",
+            "0x3baa4e",
+            "0x3baa5f",
+            "0x3be238",
+            "0x3fa872",
+            "0x45f862",
+            "0x4c4779",
+            "0x652cd6",
+            "0x6f7f24"
+          ]
+        },
+        {
+          "term": "BREW",
+          "count": 2,
+          "offsets": ["0x6a4428", "0x6a484e"]
+        },
+        {
+          "term": "SCP-A011",
+          "count": 4,
+          "offsets": ["0x1808", "0x10009", "0x2e8e3c", "0x3ad990"]
+        },
+        {
+          "term": "V2000",
+          "count": 1,
+          "offsets": ["0x3df1b8"]
+        }
+      ]
+    },
+    {
+      "modelDirectory": "Sanyo-SMP-A017S",
+      "filename": "english_v11004sti.bin",
+      "bytes": 2097152,
+      "sha256": "4b32a9563de065921058c4ee13d1734b40fb9403ae7508db109be8c754341566",
+      "crc32": "3A2E89E5",
+      "markers": [
+        {
+          "term": "sgs",
+          "count": 8,
+          "offsets": [
+            "0xacd03",
+            "0xde9b1",
+            "0xdec16",
+            "0xdec92",
+            "0xdff52",
+            "0xdff63",
+            "0xe1eee",
+            "0xed87b"
+          ]
+        },
+        {
+          "term": "A017",
+          "count": 3,
+          "offsets": ["0x1100d", "0xdf346", "0xe600c"]
+        }
+      ]
+    }
+  ],
+  "sanyoA011": {
+    "nativeMarkers": [
+      {
+        "text": "SCP-A011",
+        "offset": "0x1808"
+      },
+      {
+        "text": "V2000",
+        "offset": "0x3df1b8"
+      },
+      {
+        "text": "Feb 12 2003",
+        "offset": "0x1002b"
+      },
+      {
+        "text": "/skp/c/GVM/",
+        "offset": "0x310564"
+      },
+      {
+        "text": "/skp/c/SKVM/",
+        "offset": "0x310570"
+      },
+      {
+        "text": "mmiInitEnv()",
+        "offset": "0x4c4691"
+      },
+      {
+        "text": "InvokeParam->plat.gvm.eExecType=%d",
+        "offset": "0x4c46a4"
+      },
+      {
+        "text": "wCPID = %d",
+        "offset": "0x4c46f8"
+      },
+      {
+        "text": "wGID = %d",
+        "offset": "0x4c4704"
+      },
+      {
+        "text": ".sgs",
+        "offset": "0x4c4778"
+      },
+      {
+        "text": "application/x-gvm-inf",
+        "offset": "0x652c36"
+      },
+      {
+        "text": "application/x-gvm-sgs",
+        "offset": "0x652cc4"
+      },
+      {
+        "text": "application/x-skvm-jar",
+        "offset": "0x652cda"
+      },
+      {
+        "text": "GVM Error!",
+        "offset": "0x4e2c68"
+      },
+      {
+        "text": "Invalid OPcode",
+        "offset": "0x4e2051"
+      },
+      {
+        "text": "Wrong Compressed Script",
+        "offset": "0x4e2c74"
+      }
+    ],
+    "historicalEvidence": [
+      {
+        "sheet": "SKT",
+        "row": 230,
+        "manufacturer": "SANYO",
+        "model": {
+          "cell": "B230",
+          "value": "SCP-A011"
+        },
+        "carrier": {
+          "cell": "C230",
+          "value": "SKT/STI"
+        },
+        "gvmSupported": {
+          "cell": "R230",
+          "value": "O"
+        },
+        "gvmVersion": {
+          "cell": "S230",
+          "value": "2"
+        },
+        "skvmSupported": {
+          "cell": "T230",
+          "value": "O"
+        },
+        "skvmVersion": {
+          "cell": "U230",
+          "value": "1"
+        },
+        "physicalWidth": {
+          "cell": "AT230",
+          "value": "132"
+        },
+        "physicalHeight": {
+          "cell": "AU230",
+          "value": "176"
+        },
+        "applicationWidth": {
+          "cell": "AV230",
+          "value": "132"
+        },
+        "applicationHeight": {
+          "cell": "AW230",
+          "value": "160"
+        }
+      }
+    ],
+    "historicalEvidenceFile": "gvm-historical-handset-guides.json",
+    "footerCrc": {
+      "bytes": 14614532,
+      "sizeHex": "0xdf0004",
+      "footerHex": "f24358f5",
+      "bodyCrc32": "f55843f2",
+      "footerCrcLe": "f55843f2",
+      "crcMatches": true,
+      "fileCrc32": "2144df1c"
+    },
+    "sourceRuntimeVersionLimit": "GVM support is present in the actual image; GVM2 is separately documented by SKT!R230:S230. Shared GVM1X messages in the image do not establish that only one VM family exists.",
+    "execution": "Static inspection only; no full firmware boot or original game execution in this pass.",
+    "nativeInterpreterEvidenceFile": "sanyo-a011-vm-evidence.json"
+  },
+  "nokiaRegional": {
+    "guideProfiles": [
+      {
+        "page": 81,
+        "manufacturer": "Nokia",
+        "modelLabelVerbatim": "TDC-8887",
+        "releaseDateVerbatim": "2002.02",
+        "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+        "vm": "GVM2X",
+        "scriptVersion": 2,
+        "downloadProtocol": "Magic",
+        "userAgentVerbatim": "DDEEGG: NO0111, NO0211, NOA211",
+        "physicalLcdVerbatim": "128*128",
+        "physicalLcd": [128, 128],
+        "gvmAreaVerbatim": "128*112 :::::::::::::::: LCDCLASS : 2",
+        "gvmArea": [128, 112],
+        "lcdClass": 2,
+        "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+        "audioTypeVerbatim": "MIDI :::::::::::::::::::::: AUDIOTYPE: 16",
+        "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+        "sourceId": "gvm-handset-guide-2002"
+      },
+      {
+        "page": 82,
+        "manufacturer": "Nokia",
+        "modelLabelVerbatim": "TDC-8587",
+        "releaseDateVerbatim": "2002.",
+        "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+        "vm": "GVM2X",
+        "scriptVersion": 2,
+        "downloadProtocol": "Magic",
+        "userAgentVerbatim": "DDEEGG: NO0311",
+        "physicalLcdVerbatim": "128*160 :::::::::::::::: 문자 : 20*10",
+        "physicalLcd": [128, 160],
+        "gvmAreaVerbatim": "128*132 :::::::::::::::: LCDCLASS : 4",
+        "gvmArea": [128, 132],
+        "lcdClass": 4,
+        "imageTypeVerbatim": "64KColor ::::::::::::::: IMAGETYPE: 12 (압축 사용시 8)",
+        "audioTypeVerbatim": "MIDI :::::::::::::::::::::: AUDIOTYPE: 16",
+        "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+        "sourceId": "gvm-handset-guide-2002"
+      }
+    ],
+    "manual": {
+      "filename": "nokia-8887-manual.pdf",
+      "url": "https://altehandys.de/downloads/man-no-8887.pdf",
+      "status": 200,
+      "finalUrl": "https://altehandys.de/downloads/man-no-8887.pdf",
+      "mime": "application/pdf",
+      "bytes": 2697696,
+      "sha256": "c7851330e0a06905290b5d9cbf016b6140ca15893992be934228a7399861b446",
+      "pdfPages": 63,
+      "pdfMetadataCreated": "D:20020125093027Z",
+      "metadataDateIsNotAReleaseClaim": true,
+      "mirrorNotOriginalVendorHost": true
+    },
+    "builtinGames": [
+      {
+        "model": "Nokia8887",
+        "title": "Snake II",
+        "pdfPages": [45, 46],
+        "printedPages": [39, 40],
+        "menu": "Game, Menu6",
+        "payloadRecovered": false,
+        "format": "not established by this manual"
+      }
+    ],
+    "downloadFeature": {
+      "pdfPage": 35,
+      "printedPage": 29,
+      "menu": "NATE wizard1-2 / Wizard archive1-2-1",
+      "meaning": "Downloaded games/music are stored on the handset and may run offline. This does not identify the built-in SnakeII executable format."
+    },
+    "visuallyReviewedPdfPages": [1, 35, 45],
+    "firmwareSearchLimit": "No8887/8587-labelled directory in the fetched Sunderland Nokia root; Telson root contains onlyPS3000. These root listings do not establish worldwide absence or equivalent internal product codes.",
+    "oemIdentityLimit": "TDC labels follow the original Sinjisoft Nokia section. The PS3000 archive is not assigned to either Nokia model; actual OEM equivalences are not inferred from directory proximity."
+  },
+  "contiguousSgsScan": {
+    "schema": 1,
+    "method": "Every byte offset; SGS v1/v2/v4/v36; plain and XOR-A5; bounded header, entry, variable and complete resource validation.",
+    "limits": [
+      "Candidate requires nonzero START, at least one variable and resource, and at least 16 bytecode bytes; this is a conservative game scan.",
+      "Unknown proprietary packing and native ARM games are not ruled out.",
+      "Extraction preserves original bytes through the declared resource end, with a recognized 32-byte wrapper; unknown appended data is not guessed.",
+      "A structurally valid extraction is not proof that the game is playable."
+    ],
+    "scans": [
+      {
+        "file": "SCP_A011_K2_V2000.bin",
+        "bytes": 14614532,
+        "sha256": "07fe2747ec2e4e9eadb4f32b79fb47d560249d13d50a228f6e0d73bccba29a80",
+        "candidate_offsets_tested": 721007,
+        "containers": [],
+        "catalogue_firmware": null
+      },
+      {
+        "file": "english_v11004sti.bin",
+        "bytes": 2097152,
+        "sha256": "4b32a9563de065921058c4ee13d1734b40fb9403ae7508db109be8c754341566",
+        "candidate_offsets_tested": 141052,
+        "containers": [],
+        "catalogue_firmware": null
+      },
+      {
+        "file": "PS3000_memory.bin",
+        "bytes": 1048560,
+        "sha256": "f72e217f2c5c639e09e2e3b8c1e807b2a570c11c36c95f629594c11ef3687ad2",
+        "candidate_offsets_tested": 97219,
+        "containers": [],
+        "catalogue_firmware": null
+      }
+    ],
+    "summary": {
+      "images": 3,
+      "bytes": 17760244,
+      "candidate_offsets_tested": 959278,
+      "container_occurrences": 0,
+      "unique_decoded_bodies": 0
+    },
+    "extracted_files": []
+  },
+  "limitedLgStylePageProbe": [
+    {
+      "file": "SCP_A011_K2_V2000.bin",
+      "probes": [
+        {
+          "pageBytes": 512,
+          "dbOr5bAlignedPages": 175,
+          "technicalNameCandidates": []
+        },
+        {
+          "pageBytes": 1024,
+          "dbOr5bAlignedPages": 87,
+          "technicalNameCandidates": []
+        }
+      ]
+    },
+    {
+      "file": "english_v11004sti.bin",
+      "probes": [
+        {
+          "pageBytes": 512,
+          "dbOr5bAlignedPages": 14,
+          "technicalNameCandidates": []
+        },
+        {
+          "pageBytes": 1024,
+          "dbOr5bAlignedPages": 8,
+          "technicalNameCandidates": []
+        }
+      ]
+    },
+    {
+      "file": "PS3000_memory.bin",
+      "probes": [
+        {
+          "pageBytes": 512,
+          "dbOr5bAlignedPages": 7,
+          "technicalNameCandidates": []
+        },
+        {
+          "pageBytes": 1024,
+          "dbOr5bAlignedPages": 5,
+          "technicalNameCandidates": []
+        }
+      ]
+    }
+  ],
+  "directorySources": [
+    {
+      "filename": "nokia-index.html",
+      "url": "https://archive.sunderland93.ru/Firmwares/Nokia/",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Nokia/",
+      "mime": "text/html;charset=utf-8",
+      "bytes": 72547,
+      "sha256": "60ae02a2b58bd8d7307a1c96e2c5d31010181120070ea5929fb9cf00dbd8853d",
+      "links": [
+        "/_h5ai/public/images/favicon/favicon-16-32.ico",
+        "/_h5ai/public/images/favicon/favicon-152.png",
+        "/_h5ai/public/css/styles.css",
+        "//fonts.googleapis.com/css?family=Ubuntu:300,400,700%7CUbuntu+Mono:400,700",
+        "http://browsehappy.com",
+        "https://larsjung.de/h5ai/",
+        "..",
+        "/Firmwares/Nokia/1006/",
+        "/Firmwares/Nokia/1100/",
+        "/Firmwares/Nokia/1101/",
+        "/Firmwares/Nokia/1110/",
+        "/Firmwares/Nokia/1110i%20%281112%29/",
+        "/Firmwares/Nokia/1112/",
+        "/Firmwares/Nokia/1112i/",
+        "/Firmwares/Nokia/112%20%28RM-837%29/",
+        "/Firmwares/Nokia/1200/",
+        "/Firmwares/Nokia/1202/",
+        "/Firmwares/Nokia/1208%20%281209%29/",
+        "/Firmwares/Nokia/1255/",
+        "/Firmwares/Nokia/1315/",
+        "/Firmwares/Nokia/1325/",
+        "/Firmwares/Nokia/1506/",
+        "/Firmwares/Nokia/1508/",
+        "/Firmwares/Nokia/1600/",
+        "/Firmwares/Nokia/1616/",
+        "/Firmwares/Nokia/1650/",
+        "/Firmwares/Nokia/1661/",
+        "/Firmwares/Nokia/1680%20classic%20%28RM-394%29/",
+        "/Firmwares/Nokia/1680c/",
+        "/Firmwares/Nokia/2100/",
+        "/Firmwares/Nokia/2112/",
+        "/Firmwares/Nokia/2115/",
+        "/Firmwares/Nokia/2116/",
+        "/Firmwares/Nokia/2116%20%28RH-66%29/",
+        "/Firmwares/Nokia/2118/",
+        "/Firmwares/Nokia/2125/",
+        "/Firmwares/Nokia/2135/",
+        "/Firmwares/Nokia/2228/",
+        "/Firmwares/Nokia/2255/",
+        "/Firmwares/Nokia/2270/",
+        "/Firmwares/Nokia/2280/",
+        "/Firmwares/Nokia/2285/",
+        "/Firmwares/Nokia/2300/",
+        "/Firmwares/Nokia/2310/",
+        "/Firmwares/Nokia/2505/",
+        "/Firmwares/Nokia/2600/",
+        "/Firmwares/Nokia/2600c/",
+        "/Firmwares/Nokia/2610/",
+        "/Firmwares/Nokia/2626/",
+        "/Firmwares/Nokia/2630/",
+        "/Firmwares/Nokia/2650%20%282652%29/",
+        "/Firmwares/Nokia/2680s/",
+        "/Firmwares/Nokia/2730c/",
+        "/Firmwares/Nokia/2730c%20%281%29/",
+        "/Firmwares/Nokia/2760/",
+        "/Firmwares/Nokia/2865/",
+        "/Firmwares/Nokia/3100%20%283120%29/",
+        "/Firmwares/Nokia/3105/",
+        "/Firmwares/Nokia/3109c/",
+        "/Firmwares/Nokia/3110/",
+        "/Firmwares/Nokia/3120/",
+        "/Firmwares/Nokia/3120c/",
+        "/Firmwares/Nokia/3125/",
+        "/Firmwares/Nokia/3152/",
+        "/Firmwares/Nokia/3155/",
+        "/Firmwares/Nokia/3200/",
+        "/Firmwares/Nokia/3205/",
+        "/Firmwares/Nokia/3210/",
+        "/Firmwares/Nokia/3220/",
+        "/Firmwares/Nokia/3230/",
+        "/Firmwares/Nokia/3250/",
+        "/Firmwares/Nokia/3250%20%281%29/",
+        "/Firmwares/Nokia/3300/",
+        "/Firmwares/Nokia/3310/",
+        "/Firmwares/Nokia/3330/",
+        "/Firmwares/Nokia/3410/",
+        "/Firmwares/Nokia/3410%20%28NHM-2%29/",
+        "/Firmwares/Nokia/3500c/",
+        "/Firmwares/Nokia/3510/",
+        "/Firmwares/Nokia/3510i/",
+        "/Firmwares/Nokia/3585/",
+        "/Firmwares/Nokia/3600s/",
+        "/Firmwares/Nokia/3610/",
+        "/Firmwares/Nokia/3610f/",
+        "/Firmwares/Nokia/3650/",
+        "/Firmwares/Nokia/3660/",
+        "/Firmwares/Nokia/3806%20%28RM-583%29/",
+        "/Firmwares/Nokia/5000/",
+        "/Firmwares/Nokia/5100/",
+        "/Firmwares/Nokia/5130/",
+        "/Firmwares/Nokia/5130%20%281%29/",
+        "/Firmwares/Nokia/5140/",
+        "/Firmwares/Nokia/5140i/",
+        "/Firmwares/Nokia/5170/",
+        "/Firmwares/Nokia/5200/",
+        "/Firmwares/Nokia/5210/",
+        "/Firmwares/Nokia/5220/",
+        "/Firmwares/Nokia/5300/",
+        "/Firmwares/Nokia/5300%20%281%29/",
+        "/Firmwares/Nokia/5310/",
+        "/Firmwares/Nokia/5320/",
+        "/Firmwares/Nokia/5500/",
+        "/Firmwares/Nokia/5500%20%281%29/",
+        "/Firmwares/Nokia/5530/",
+        "/Firmwares/Nokia/5530%20%281%29/",
+        "/Firmwares/Nokia/5610d/",
+        "/Firmwares/Nokia/5630/",
+        "/Firmwares/Nokia/5700/",
+        "/Firmwares/Nokia/5730/",
+        "/Firmwares/Nokia/5730%20%281%29/",
+        "/Firmwares/Nokia/5800/",
+        "/Firmwares/Nokia/5800%20XpressMusic%20%28RM-356%29/",
+        "/Firmwares/Nokia/6012/",
+        "/Firmwares/Nokia/6015/",
+        "/Firmwares/Nokia/6020/",
+        "/Firmwares/Nokia/6021/",
+        "/Firmwares/Nokia/6030/",
+        "/Firmwares/Nokia/6060/",
+        "/Firmwares/Nokia/6060v/",
+        "/Firmwares/Nokia/6070%20%286080%29/",
+        "/Firmwares/Nokia/6085/",
+        "/Firmwares/Nokia/6086/",
+        "/Firmwares/Nokia/6088/",
+        "/Firmwares/Nokia/6100/",
+        "/Firmwares/Nokia/6101/",
+        "/Firmwares/Nokia/6103/",
+        "/Firmwares/Nokia/6110n/",
+        "/Firmwares/Nokia/6110n%20%281%29/",
+        "/Firmwares/Nokia/6111/",
+        "/Firmwares/Nokia/6120c/",
+        "/Firmwares/Nokia/6121c/",
+        "/Firmwares/Nokia/6125/",
+        "/Firmwares/Nokia/6131/",
+        "/Firmwares/Nokia/6131%20%281%29/",
+        "/Firmwares/Nokia/6136/",
+        "/Firmwares/Nokia/6151/",
+        "/Firmwares/Nokia/6155/",
+        "/Firmwares/Nokia/6170/",
+        "/Firmwares/Nokia/6185/",
+        "/Firmwares/Nokia/6205%20%28RM-347%29/",
+        "/Firmwares/Nokia/6210/",
+        "/Firmwares/Nokia/6220/",
+        "/Firmwares/Nokia/6220c/",
+        "/Firmwares/Nokia/6225/",
+        "/Firmwares/Nokia/6230/",
+        "/Firmwares/Nokia/6230i/",
+        "/Firmwares/Nokia/6233/",
+        "/Firmwares/Nokia/6235/",
+        "/Firmwares/Nokia/6255/",
+        "/Firmwares/Nokia/6260/",
+        "/Firmwares/Nokia/6265/",
+        "/Firmwares/Nokia/6267/",
+        "/Firmwares/Nokia/6268/",
+        "/Firmwares/Nokia/6270/",
+        "/Firmwares/Nokia/6270%20%281%29/",
+        "/Firmwares/Nokia/6275/",
+        "/Firmwares/Nokia/6280/",
+        "/Firmwares/Nokia/6280%20%281%29/",
+        "/Firmwares/Nokia/6290/",
+        "/Firmwares/Nokia/6300/",
+        "/Firmwares/Nokia/6300f/",
+        "/Firmwares/Nokia/6300i/",
+        "/Firmwares/Nokia/6301/",
+        "/Firmwares/Nokia/6303/",
+        "/Firmwares/Nokia/6303%20%281%29/",
+        "/Firmwares/Nokia/6310/",
+        "/Firmwares/Nokia/6310i/",
+        "/Firmwares/Nokia/6315i/",
+        "/Firmwares/Nokia/6385/",
+        "/Firmwares/Nokia/6500c/",
+        "/Firmwares/Nokia/6500s/",
+        "/Firmwares/Nokia/6510/",
+        "/Firmwares/Nokia/6555/",
+        "/Firmwares/Nokia/6585/",
+        "/Firmwares/Nokia/6600/",
+        "/Firmwares/Nokia/6600s/",
+        "/Firmwares/Nokia/6610/",
+        "/Firmwares/Nokia/6610i/",
+        "/Firmwares/Nokia/6630/",
+        "/Firmwares/Nokia/6630%20%281%29/",
+        "/Firmwares/Nokia/6670/",
+        "/Firmwares/Nokia/6680/",
+        "/Firmwares/Nokia/6680%20%281%29/",
+        "/Firmwares/Nokia/6681/",
+        "/Firmwares/Nokia/6681%20%281%29/",
+        "/Firmwares/Nokia/6710n/",
+        "/Firmwares/Nokia/6710n%20%281%29/",
+        "/Firmwares/Nokia/6720c/",
+        "/Firmwares/Nokia/6730c/",
+        "/Firmwares/Nokia/6730c%20%281%29/",
+        "/Firmwares/Nokia/6800/",
+        "/Firmwares/Nokia/6810/",
+        "/Firmwares/Nokia/6820/",
+        "/Firmwares/Nokia/6822/",
+        "/Firmwares/Nokia/7100s/",
+        "/Firmwares/Nokia/7200/",
+        "/Firmwares/Nokia/7205/",
+        "/Firmwares/Nokia/7205%20%28Intrigue%29/",
+        "/Firmwares/Nokia/7210/",
+        "/Firmwares/Nokia/7250/",
+        "/Firmwares/Nokia/7250i/",
+        "/Firmwares/Nokia/7260/",
+        "/Firmwares/Nokia/7270/",
+        "/Firmwares/Nokia/7280/",
+        "/Firmwares/Nokia/7310c/",
+        "/Firmwares/Nokia/7360/",
+        "/Firmwares/Nokia/7370/",
+        "/Firmwares/Nokia/7370%20%281%29/",
+        "/Firmwares/Nokia/7373/",
+        "/Firmwares/Nokia/7380/",
+        "/Firmwares/Nokia/7390/",
+        "/Firmwares/Nokia/7390%20%281%29/",
+        "/Firmwares/Nokia/7510s/",
+        "/Firmwares/Nokia/7600/",
+        "/Firmwares/Nokia/7610/",
+        "/Firmwares/Nokia/7610c/",
+        "/Firmwares/Nokia/7620/",
+        "/Firmwares/Nokia/7650/",
+        "/Firmwares/Nokia/7705%20Twist%20%28RM-526%29/",
+        "/Firmwares/Nokia/7710/",
+        "/Firmwares/Nokia/7900/",
+        "/Firmwares/Nokia/8310/",
+        "/Firmwares/Nokia/8600/",
+        "/Firmwares/Nokia/8800/",
+        "/Firmwares/Nokia/8800d/",
+        "/Firmwares/Nokia/8800e/",
+        "/Firmwares/Nokia/8910/",
+        "/Firmwares/Nokia/8910i/",
+        "/Firmwares/Nokia/9300/",
+        "/Firmwares/Nokia/9300i/",
+        "/Firmwares/Nokia/9500/",
+        "/Firmwares/Nokia/Asha%20311%20%28RM-714%29/",
+        "/Firmwares/Nokia/C5-00/",
+        "/Firmwares/Nokia/E-50/",
+        "/Firmwares/Nokia/E-51/",
+        "/Firmwares/Nokia/E-52/",
+        "/Firmwares/Nokia/E-52%20%281%29/",
+        "/Firmwares/Nokia/E-55/",
+        "/Firmwares/Nokia/E-55%20%281%29/",
+        "/Firmwares/Nokia/E-60/",
+        "/Firmwares/Nokia/E-60%20%281%29/",
+        "/Firmwares/Nokia/E-61/",
+        "/Firmwares/Nokia/E-61%20%281%29/",
+        "/Firmwares/Nokia/E-61i/",
+        "/Firmwares/Nokia/E-62/",
+        "/Firmwares/Nokia/E-62%20%281%29/",
+        "/Firmwares/Nokia/E-63/",
+        "/Firmwares/Nokia/E-65/",
+        "/Firmwares/Nokia/E-66/",
+        "/Firmwares/Nokia/E-70/",
+        "/Firmwares/Nokia/E-70%20%281%29/",
+        "/Firmwares/Nokia/E-90/",
+        "/Firmwares/Nokia/E-90%20%281%29/",
+        "/Firmwares/Nokia/E63%20%28RM-600%29%20%28China%20ver.%29/",
+        "/Firmwares/Nokia/E7-00/",
+        "/Firmwares/Nokia/E71/",
+        "/Firmwares/Nokia/E71X/",
+        "/Firmwares/Nokia/E71X%20%281%29/",
+        "/Firmwares/Nokia/N-70/",
+        "/Firmwares/Nokia/N-70%20%281%29/",
+        "/Firmwares/Nokia/N-71/",
+        "/Firmwares/Nokia/N-71%20%281%29/",
+        "/Firmwares/Nokia/N-72/",
+        "/Firmwares/Nokia/N-73/",
+        "/Firmwares/Nokia/N-73%20%281%29/",
+        "/Firmwares/Nokia/N-76/",
+        "/Firmwares/Nokia/N-76%20%281%29/",
+        "/Firmwares/Nokia/N-77/",
+        "/Firmwares/Nokia/N-78/",
+        "/Firmwares/Nokia/N-79/",
+        "/Firmwares/Nokia/N-80/",
+        "/Firmwares/Nokia/N-80%20%281%29/",
+        "/Firmwares/Nokia/N-81/",
+        "/Firmwares/Nokia/N-82/",
+        "/Firmwares/Nokia/N-85/",
+        "/Firmwares/Nokia/N-86/",
+        "/Firmwares/Nokia/N-86%20%281%29/",
+        "/Firmwares/Nokia/N-90/",
+        "/Firmwares/Nokia/N-90%20%281%29/",
+        "/Firmwares/Nokia/N-91/",
+        "/Firmwares/Nokia/N-91%20%281%29/",
+        "/Firmwares/Nokia/N-92/",
+        "/Firmwares/Nokia/N-92%20%281%29/",
+        "/Firmwares/Nokia/N-93/",
+        "/Firmwares/Nokia/N-93%20%281%29/",
+        "/Firmwares/Nokia/N-93i/",
+        "/Firmwares/Nokia/N-93i%20%281%29/",
+        "/Firmwares/Nokia/N-95/",
+        "/Firmwares/Nokia/N-96/",
+        "/Firmwares/Nokia/N-97/",
+        "/Firmwares/Nokia/N-97%20%281%29/",
+        "/Firmwares/Nokia/N-GAGE/",
+        "/Firmwares/Nokia/N-GAGE%20QD/",
+        "/Firmwares/Nokia/N8/",
+        "/Firmwares/Nokia/N9/",
+        "/Firmwares/Nokia/NEM-04%20%28N-Gage%29/",
+        "/Firmwares/Nokia/NHL-06%20%286800%29/",
+        "/Firmwares/Nokia/NPL-4%20%285140b%29/",
+        "/Firmwares/Nokia/RA-006%20%28E90%29/",
+        "/Firmwares/Nokia/RM-001%20%286630%29/",
+        "/Firmwares/Nokia/RM-004%20%282300%29/",
+        "/Firmwares/Nokia/RM-1035%20%28130%29/",
+        "/Firmwares/Nokia/RM-1136%20%28222%29/",
+        "/Firmwares/Nokia/RM-328%20%286220%20Classic%29/",
+        "/Firmwares/Nokia/RM-333%20%28N85%29/",
+        "/Firmwares/Nokia/RM-47%20%286170%29/",
+        "/Firmwares/Nokia/RM-48%20%286170b%29/",
+        "/Firmwares/Nokia/RM-608%20%28C1-01%29/",
+        "/Firmwares/Nokia/RM-721%20%28C2-01%29/",
+        "/Firmwares/Nokia/RM-761%20%28Asha%20200%29/",
+        "/Firmwares/Nokia/RM-8%20%287280%29/"
+      ]
+    },
+    {
+      "filename": "telson-index.html",
+      "url": "https://archive.sunderland93.ru/Firmwares/Telson/",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Telson/",
+      "mime": "text/html;charset=utf-8",
+      "bytes": 2088,
+      "sha256": "e22d3c1723ef8941c4e9d6ea2f9bb2ba19aa303d7aee3937f509535754fdcb7f",
+      "links": [
+        "/_h5ai/public/images/favicon/favicon-16-32.ico",
+        "/_h5ai/public/images/favicon/favicon-152.png",
+        "/_h5ai/public/css/styles.css",
+        "//fonts.googleapis.com/css?family=Ubuntu:300,400,700%7CUbuntu+Mono:400,700",
+        "http://browsehappy.com",
+        "https://larsjung.de/h5ai/",
+        "..",
+        "/Firmwares/Telson/PS3000/"
+      ]
+    },
+    {
+      "filename": "telson-ps3000-index.html",
+      "url": "https://archive.sunderland93.ru/Firmwares/Telson/PS3000/",
+      "status": 200,
+      "bytes": 2132,
+      "sha256": "ef61875c72cda7e32325e2916e8ca79f973f59cf1ccc35b38ec6f5e92e710b94",
+      "links": [
+        "/_h5ai/public/images/favicon/favicon-16-32.ico",
+        "/_h5ai/public/images/favicon/favicon-152.png",
+        "/_h5ai/public/css/styles.css",
+        "//fonts.googleapis.com/css?family=Ubuntu:300,400,700%7CUbuntu+Mono:400,700",
+        "http://browsehappy.com",
+        "https://larsjung.de/h5ai/",
+        "..",
+        "/Firmwares/Telson/PS3000/PS3000%20%5BMemory%20Dump%5D.7z"
+      ]
+    },
+    {
+      "filename": "sanyo-index.html",
+      "url": "https://archive.sunderland93.ru/Firmwares/Sanyo/",
+      "status": 200,
+      "bytes": 14071,
+      "sha256": "9d39ae0a59f6d3a8fd52bb7c64879f8a8415a3a19636618c4a5ac8ad15fcf6ef",
+      "links": [
+        "/_h5ai/public/images/favicon/favicon-16-32.ico",
+        "/_h5ai/public/images/favicon/favicon-152.png",
+        "/_h5ai/public/css/styles.css",
+        "//fonts.googleapis.com/css?family=Ubuntu:300,400,700%7CUbuntu+Mono:400,700",
+        "http://browsehappy.com",
+        "https://larsjung.de/h5ai/",
+        "..",
+        "/Firmwares/Sanyo/C1001SA/",
+        "/Firmwares/Sanyo/C401SA/",
+        "/Firmwares/Sanyo/C412SA/",
+        "/Firmwares/Sanyo/E4100%20%28Taho%29/",
+        "/Firmwares/Sanyo/M1/",
+        "/Firmwares/Sanyo/MM-8300/",
+        "/Firmwares/Sanyo/MVP/",
+        "/Firmwares/Sanyo/PM-8200/",
+        "/Firmwares/Sanyo/PRO-200/",
+        "/Firmwares/Sanyo/PRO-700/",
+        "/Firmwares/Sanyo/RL-4920/",
+        "/Firmwares/Sanyo/RL-4930/",
+        "/Firmwares/Sanyo/S1/",
+        "/Firmwares/Sanyo/SCP-200/",
+        "/Firmwares/Sanyo/SCP-2300/",
+        "/Firmwares/Sanyo/SCP-2400/",
+        "/Firmwares/Sanyo/SCP-3000/",
+        "/Firmwares/Sanyo/SCP-3100/",
+        "/Firmwares/Sanyo/SCP-3800%20%28Katana%20LX%29/",
+        "/Firmwares/Sanyo/SCP-3810%20%28Mirro%29/",
+        "/Firmwares/Sanyo/SCP-3820%20%28Vero%29/",
+        "/Firmwares/Sanyo/SCP-4000/",
+        "/Firmwares/Sanyo/SCP-4500/",
+        "/Firmwares/Sanyo/SCP-4700/",
+        "/Firmwares/Sanyo/SCP-4900/",
+        "/Firmwares/Sanyo/SCP-5000/",
+        "/Firmwares/Sanyo/SCP-5150/",
+        "/Firmwares/Sanyo/SCP-5300/",
+        "/Firmwares/Sanyo/SCP-550/",
+        "/Firmwares/Sanyo/SCP-5500/",
+        "/Firmwares/Sanyo/SCP-6000/",
+        "/Firmwares/Sanyo/SCP-6200/",
+        "/Firmwares/Sanyo/SCP-6400/",
+        "/Firmwares/Sanyo/SCP-6600%20%28Katana%29/",
+        "/Firmwares/Sanyo/SCP-6650%20%28Katana%20II%29/",
+        "/Firmwares/Sanyo/SCP-6750%20%28Katana%20Eclipse%29/",
+        "/Firmwares/Sanyo/SCP-6760%20%28Incognito%29/",
+        "/Firmwares/Sanyo/SCP-6780%20%28Innuendo%29/",
+        "/Firmwares/Sanyo/SCP-7000/",
+        "/Firmwares/Sanyo/SCP-7050/",
+        "/Firmwares/Sanyo/SCP-7200/",
+        "/Firmwares/Sanyo/SCP-7300/",
+        "/Firmwares/Sanyo/SCP-7500/",
+        "/Firmwares/Sanyo/SCP-8100/",
+        "/Firmwares/Sanyo/SCP-8300/",
+        "/Firmwares/Sanyo/SCP-8400/",
+        "/Firmwares/Sanyo/SCP-8500%20%28Katana%20DLX%29/",
+        "/Firmwares/Sanyo/SCP-A011/",
+        "/Firmwares/Sanyo/SMP-A017S/",
+        "/Firmwares/Sanyo/VI-2300/",
+        "/Firmwares/Sanyo/W64SA/"
+      ]
+    },
+    {
+      "model": "SCP-A011",
+      "url": "https://archive.sunderland93.ru/Firmwares/Sanyo/SCP-A011/",
+      "status": 200,
+      "bytes": 2120,
+      "sha256": "c1d5d834248acd6aec35af558c3a365b961959fc5460df127c467022d62741e2",
+      "links": [
+        "/_h5ai/public/images/favicon/favicon-16-32.ico",
+        "/_h5ai/public/images/favicon/favicon-152.png",
+        "/_h5ai/public/css/styles.css",
+        "//fonts.googleapis.com/css?family=Ubuntu:300,400,700%7CUbuntu+Mono:400,700",
+        "http://browsehappy.com",
+        "https://larsjung.de/h5ai/",
+        "..",
+        "/Firmwares/Sanyo/SCP-A011/SCP_A011_K2_V2000.7z"
+      ]
+    },
+    {
+      "model": "SMP-A017S",
+      "url": "https://archive.sunderland93.ru/Firmwares/Sanyo/SMP-A017S/",
+      "status": 200,
+      "bytes": 2120,
+      "sha256": "7af3ca3c87f8f9986588cf5fd84611ab6890dfe8678078a70d8a42010d4be8fc",
+      "links": [
+        "/_h5ai/public/images/favicon/favicon-16-32.ico",
+        "/_h5ai/public/images/favicon/favicon-152.png",
+        "/_h5ai/public/css/styles.css",
+        "//fonts.googleapis.com/css?family=Ubuntu:300,400,700%7CUbuntu+Mono:400,700",
+        "http://browsehappy.com",
+        "https://larsjung.de/h5ai/",
+        "..",
+        "/Firmwares/Sanyo/SMP-A017S/english_v11004sti.7z"
+      ]
+    }
+  ],
+  "bounds": [
+    "Three exact extracted members; 17,760,244 bytes total, not assumed complete phone flash",
+    "PS3000 member is16bytes shorter than1MiB; archive name alone does not prove an internal model",
+    "No validated contiguous SGS found; compression, fragmentation, other containers and native games are not excluded",
+    "LG-style page probe covers only two fixed alignments and selected technical names; it is not a general filesystem parser",
+    "SMP-A017S and PS3000 not promoted as GVM devices by absent/ambiguous markers",
+    "CRC checks are integrity checks for these bytes, not vendor signatures",
+    "No vendor executable run or private handset records exported"
+  ]
+}

@@ -6,7 +6,7 @@
 - [GitHub Pages](github-pages.md): статическая сборка и автоматическая публикация.
 - [Настольная версия](desktop.md): Python, Tkinter и сборка Windows.
 - [Архитектура](architecture.md): два режима исполнения, модули и границы модели.
-- [Совместимость](compatibility.md): 38 SGS-приложений, проверенные сценарии и ограничения.
+- [Совместимость](compatibility.md): 55 SGS-приложений, проверенные сценарии и ограничения.
 - [Производительность веб-версии](web-performance.md): ускорение ARM, таймеры, показ кадров и воспроизводимые измерения.
 - [Участие в разработке](../CONTRIBUTING.md): оформление, проверки и воспроизводимые сообщения об ошибках.
 
@@ -14,6 +14,9 @@
 
 - [Telechips TCC76x / ARM940T](hardware.md): память, LCD, периферия, IRQ и завершение работы ROM.
 - [GNEX SDK 2.10/2.12](gnex-sdk-research.md): найденные инструменты, Mobile C API, VM и ABI.
+- [Вывод кадров GNEX](gnex-display.md): Flush, RestoreLCD, частичный вывод и проверки оригинальным ARM.
+- [Устройства GNEX и GVM](gnex-devices.md): подтверждённые модели, прошивки и результаты извлечения SGS.
+- [Справочники GVM 2002–2003 годов](gvm-historical-handsets.md): 78 таблиц Sinjisoft, строки SKT/STI, версии VM и области экрана.
 - [Swerve 3D](swerve.md): оригинальный ARM-модуль, GNEX/BREW-мост, проверка миссии.
 - [Звук](browser-audio.md): Web Audio, SMAF, известные форматы и пересборка WASM.
 
@@ -25,7 +28,22 @@
 - [Поиск игр в прошивках](firmware-games.md): сканер SGS, проверенные ROM и происхождение игр в меню.
 - [Игры с фотографии Kingston](kingston-observed-games.md): шесть точных имён и исторические источники.
 - [Проверки полной прошивки](firmware-validation.md): холодные прогоны девяти ROM, аппаратные регрессии и скорость.
-- [Игры телефонов и плееров](phone-firmware-games.md): извлечённая Munkiki, Samsung EADS/XEOVIA, LG KDZ, DoJa/BREW, карта источников и инструменты сохранения.
+- [Игры телефонов и плееров](phone-firmware-games.md): оригиналы из Nokia, Sanyo и Samsung, LG CYON, DoJa/BREW и плееры с XEOVIA и COGP.
+- [LG SD810](lg-sd810.md): пять восстановленных игр, два музыкальных SGS и разбор фрагментированной файловой системы.
+- [Следующие дампы LG](lg-memory-followup.md): SD100, региональный SD7130 и границы поиска в восьми образах.
+- [Вложения старого GVM Club](gvm-community-recovery.md): комплекты WI-TOP, исходник Mobile C и оригинальный Hellfire v1.
+- [Новый проход старых форумов](gvm-forum-attachments.md): 13 оригинальных вложений, SGS файтинга zola, презентации и таблицы устройств.
+- [GVM в документах разработчика](gvm-service-deployment.md): 17 тестовых телефонов, варианты SGS/RES, иконки и серверный пример.
+- [XEOVIA в Samsung YP-T8](yepp-xov-runtime.md): оригинальный загрузчик XOV, структура VM и архивные маршруты MPIO.
+- [Ранние Samsung: X120, E300, E470, E560](samsung-early-gvm-followup.md): новые подтверждения GVM и отдельный native EADS Bomb Link.
+- [Корейские Sanyo и Nokia](sanyo-nokia-korean-gvm.md): реальная SCP-A011 K2 V2000, региональные профили и Snake II в инструкции 8887.
+- [Curitel C-500](curitel-c500.md): встроенная Magic Ball, скачиваемые NATE-приложения и сохранившийся PCSync.
+- [LG SV400](lg-sv400-games.md): пять извлечённых native PXO, проверенная декомпрессия и границы свидетельств GNEX.
+- [Основной код SH130/KH1300/KH1400](lg-main-images.md): три восстановленных software ELF и 3 475 блоков LZO1F.
+- [Покрытие следующих целей](gnex-firmware-coverage.md): исходные профили, отсутствующие дампы и отдельная BREW-находка CX-800V.
+- [Ранние сервисные документы GVM](gvm-early-service-guides.md): таблица из PPT, DD-101, особенности телефонов и исходные примеры 2001–2002 годов.
+- [Внутренние материалы SDK](gnex-sdk-internal-sources.md): исходные фрагменты, имена legacy-операций и четыре проверенных SGS-примера.
+- [Ресурсы форматирования Yepp](yepp-formatting-resources.md): новые FNT из установочного CD и отдельный кандидат YM-PD1L.
 - [908 системных функций SDK](sdk-syscalls.json), [хеши файлов SDK](sdk-file-hashes.json), [x86-свидетельства](sdk-x86-evidence.txt).
 - [Происхождение Swerve-модуля](swerve-provenance.json).
 

@@ -18,6 +18,8 @@ from unicorn.arm_const import (
     UC_ARM_REG_R0,
     UC_ARM_REG_R1,
     UC_ARM_REG_R2,
+    UC_ARM_REG_R3,
+    UC_ARM_REG_R12,
     UC_ARM_REG_PC,
 )
 from .sgs import SgsFile
@@ -66,6 +68,7 @@ class GnexRuntime:
         self._heap_allocations = {}
         self._heap_free = []
         self.frame_count = 0
+        self._lcd_presented = False
         self._exception = None
         self.u = Uc(UC_ARCH_ARM, UC_MODE_ARM)
         self.u.mem_map(0x20000000, 0x4000000)
@@ -102,12 +105,15 @@ class GnexRuntime:
         self.u.mem_write(0x200FEFB8, b"\xff\x00")
         self._set_var(4, width)
         self._set_var(5, height)
-        for addr in (0x336BC, 0x4E1E8, 0x3CF1C, 0x3CF4C):
+        for addr in (0x336BC, 0x4E1E8, 0x3CF1C, 0x3CF4C, 0x3CC30):
             self.u.hook_add(
                 UC_HOOK_CODE, self._hook, begin=RELOC + addr, end=RELOC + addr
             )
-        self._write(0x20B3F14C, width)
-        self._write(0x20B3F150, height)
+        # The native display adapter and SaveLCD/RestoreLCD use these geometry
+        # shadows independently of the drawing context initialized below.
+        for address in (0x20B40E6C, 0x20B3F144, 0x20B3F14C):
+            self._write(address, width)
+            self._write(address + 4, height)
         self.u.reg_write(UC_ARM_REG_SP, 0x23FF0000)
         self.u.reg_write(UC_ARM_REG_LR, STOP)
         self.u.reg_write(UC_ARM_REG_R0, width)
@@ -123,11 +129,33 @@ class GnexRuntime:
         return self._native_image
 
     def _refresh_lcd(self):
+        # Compatibility for scripts that never request a presentation. Once a
+        # Flush occurs, later drawing/RestoreLCD must not change the visible LCD.
+        if not self._lcd_presented:
+            self._native_image = self._read_lcd_image()
+
+    def _read_lcd_image(self):
         pointer = self._read(0x20B41260)
         data = bytes(self.u.mem_read(pointer, self.width * self.height * 2))
-        self._native_image = Image.frombytes(
-            "RGB", (self.width, self.height), data, "raw", "BGR;16"
-        )
+        return Image.frombytes("RGB", (self.width, self.height), data, "raw", "BGR;16")
+
+    def _present_lcd(self, rectangle=None):
+        # Mobile C reference: Flush presents the drawing buffer; RestoreLCD
+        # only restores that buffer and has no effect on the physical LCD.
+        self._lcd_presented = True
+        if rectangle is None:
+            self._native_image = self._read_lcd_image()
+            return
+        x1, y1, x2, y2 = rectangle
+        x1, x2 = min(x1, x2), max(x1, x2)
+        y1, y2 = min(y1, y2), max(y1, y2)
+        x1, y1 = max(0, x1), max(0, y1)
+        x2, y2 = min(self.width - 1, x2), min(self.height - 1, y2)
+        if x1 > x2 or y1 > y2:
+            return
+        # GNEX rectangles use inclusive end coordinates; Pillow uses exclusive.
+        box = (x1, y1, x2 + 1, y2 + 1)
+        self._native_image.paste(self._read_lcd_image().crop(box), (x1, y1))
 
     @property
     def diagnostics(self):
@@ -190,6 +218,18 @@ class GnexRuntime:
 
     def _hook(self, u, addr, size, user_data):
         try:
+            if addr == RELOC + 0x3CC30:
+                # GetDisplayInfo feeds native copy lengths and row strides.
+                # Match the configured screen, including portrait phone games.
+                for register, value in zip(
+                    (UC_ARM_REG_R0, UC_ARM_REG_R1, UC_ARM_REG_R2, UC_ARM_REG_R3),
+                    (self.width, self.height, 0, 0),
+                ):
+                    self._write(u.reg_read(register), value)
+                u.reg_write(UC_ARM_REG_R0, 0)
+                u.reg_write(UC_ARM_REG_R12, self.width)
+                self._return()
+                return
             if addr == RELOC + 0x3CF1C:
                 length = u.reg_read(UC_ARM_REG_R0)
                 if not 0 < length <= 8 * 1024 * 1024:
@@ -266,9 +306,9 @@ class GnexRuntime:
         if number == 0xE1:
             return False  # Native Exit writes state=3 and redirects VM_PC to END.
         if number == 0x5F:
-            pass  # Flush: framebuffer is already available to the host.
+            self._present_lcd()
         elif number == 0x60:
-            a(4)  # FlushPartial: same host presentation boundary.
+            self._present_lcd(a(4))
         elif number == 0x82:
             resource = a(1)[0]
             self.sgs.resource(resource)

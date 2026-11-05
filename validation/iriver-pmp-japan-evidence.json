@@ -1,0 +1,53 @@
+{
+  "sources": [
+    {
+      "name": "japan203",
+      "url": "https://www.iriver.jp/download.php?id=171",
+      "size": 2553356,
+      "sha256": "bd9eb25b5062b869b5be77478541bcc2ed5c1d927347fcea37737917c270c738"
+    },
+    {
+      "name": "japan204",
+      "url": "https://www.iriver.jp/download.php?id=182",
+      "size": 2553723,
+      "sha256": "b0eff3bceff4a5197d58155a04990e9a53a049a62da6170d4e6f5a19e8ba5d4e"
+    },
+    {
+      "name": "japan204-system",
+      "url": "https://www.iriver.jp/download.php?id=181",
+      "size": 736977,
+      "sha256": "f386b2acc7bf5d926fd54ba6ac69963262fea717e53a2f12a18269e15e0cb7fd"
+    }
+  ],
+  "transportTlsVerified": false,
+  "transportNote": "Host certificate-chain validation failed. Public downloads retried with an unverified TLS context. Hashes are local, not publisher-authenticated.",
+  "romfs": [
+    {
+      "version": "japan203",
+      "source_sha256": "2fce28d287072a03dfd6458145ddf54dca2d4b1d584c50e5c9165349c5b5a63c",
+      "romfs_offset": "0x1c0020",
+      "romfs_size": 2351936,
+      "filesystem_checksum": true
+    },
+    {
+      "version": "japan204",
+      "source_sha256": "4d3d1509f2fbfad0172290bc132d69ac4b3f99d50f8bc1f9f68252f823373143",
+      "romfs_offset": "0x1c0020",
+      "romfs_size": 2350704,
+      "filesystem_checksum": true
+    }
+  ],
+  "scan": {
+    "files": 102,
+    "bytes": 19083640,
+    "containers": 0,
+    "method": "Every byte offset; SGS v1/v2/v4/v36; plain and XOR-A5; bounded header, entry, variable and complete resource validation.",
+    "limits": [
+      "Candidate requires nonzero START, at least one variable and resource, and at least 16 bytecode bytes; this is a conservative game scan.",
+      "Unknown proprietary packing and native ARM games are not ruled out.",
+      "Extraction preserves original bytes through the declared resource end, with a recognized 32-byte wrapper; unknown appended data is not guessed.",
+      "A structurally valid extraction is not proof that the game is playable."
+    ]
+  },
+  "result": "No observed GNEX/GVM/Sinjisoft/XEOVIA markers or structurally valid SGS in these Japanese builds. Other regional builds remain unverified."
+}

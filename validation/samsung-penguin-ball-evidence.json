@@ -1,0 +1,461 @@
+{
+  "rom": {
+    "size": 4915200,
+    "sha256": "50f883f7cc4493c6d9983a01af6a041f4d5932765868217bca7512847eed92c5",
+    "file": "X590eng.bin"
+  },
+  "source": "https://archive.org/download/gt-b-7722_20250528/SCH-X590.zip",
+  "archive_member": "SCH-X590/X590eng.7z -> X590eng.bin",
+  "status": "Original native ARM/Thumb game code and resources identified and executed in a bounded scripted probe.",
+  "native_chain": {
+    "menu_title": "0x222593",
+    "menu_callback_pointer": "0x22257c",
+    "thumb_menu_callback": "0xce910",
+    "game_selector_address": "0x01211d05",
+    "game_selector_value": 1,
+    "dispatcher_branch": "0x13e372",
+    "init": "0x13bdcc",
+    "event_handler": "0x13be9c",
+    "source_marker": "0x383646: penggo_game.c"
+  },
+  "smaf": [
+    {
+      "file": "penguin-01-0038005a.mmf",
+      "size": 4233,
+      "sha256": "d777ec30477fb44f9c4b4b91c90eb822b1e5b7f67b5827cc896e25273f78ab9f",
+      "offset": "0x38005a",
+      "end_exclusive": "0x3810e3",
+      "native_literal_refs": [
+        "0x13ccaa"
+      ],
+      "crc16": "49fe",
+      "crc_valid": true,
+      "chunks": [
+        {
+          "id_hex": "434e5449",
+          "offset": 8,
+          "body_size": 20
+        },
+        {
+          "id_hex": "41545200",
+          "offset": 36,
+          "body_size": 4187
+        }
+      ]
+    },
+    {
+      "file": "penguin-02-003810e3.mmf",
+      "size": 5054,
+      "sha256": "d6d80970eb91f7482db7b73284ac066952f107cec390ef02b78a03c9c51734e3",
+      "offset": "0x3810e3",
+      "end_exclusive": "0x3824a1",
+      "native_literal_refs": [
+        "0x13be68",
+        "0x13beee"
+      ],
+      "crc16": "c7c6",
+      "crc_valid": true,
+      "chunks": [
+        {
+          "id_hex": "434e5449",
+          "offset": 8,
+          "body_size": 10
+        },
+        {
+          "id_hex": "4d545201",
+          "offset": 26,
+          "body_size": 767
+        },
+        {
+          "id_hex": "4d545202",
+          "offset": 801,
+          "body_size": 174
+        },
+        {
+          "id_hex": "4d545203",
+          "offset": 983,
+          "body_size": 353
+        },
+        {
+          "id_hex": "4d545204",
+          "offset": 1344,
+          "body_size": 413
+        },
+        {
+          "id_hex": "41545200",
+          "offset": 1765,
+          "body_size": 3279
+        }
+      ]
+    },
+    {
+      "file": "penguin-03-003824a1.mmf",
+      "size": 400,
+      "sha256": "58f3a90bade436623463b120e99018f25b30d4b21df3564d1bc800e1ef21a65d",
+      "offset": "0x3824a1",
+      "end_exclusive": "0x382631",
+      "native_literal_refs": [
+        "0x13d0c4",
+        "0x13d29e"
+      ],
+      "crc16": "08b2",
+      "crc_valid": true,
+      "chunks": [
+        {
+          "id_hex": "434e5449",
+          "offset": 8,
+          "body_size": 10
+        },
+        {
+          "id_hex": "4d545201",
+          "offset": 26,
+          "body_size": 196
+        },
+        {
+          "id_hex": "4d545202",
+          "offset": 230,
+          "body_size": 160
+        }
+      ]
+    },
+    {
+      "file": "penguin-04-00382631.mmf",
+      "size": 934,
+      "sha256": "720b9a07c7b9aa98f5a40ab1382568798dfd3a408e6cca4501fe4318ef43b9cf",
+      "offset": "0x382631",
+      "end_exclusive": "0x3829d7",
+      "native_literal_refs": [
+        "0x13bf6e"
+      ],
+      "crc16": "596a",
+      "crc_valid": true,
+      "chunks": [
+        {
+          "id_hex": "434e5449",
+          "offset": 8,
+          "body_size": 10
+        },
+        {
+          "id_hex": "4d545201",
+          "offset": 26,
+          "body_size": 398
+        },
+        {
+          "id_hex": "4d545202",
+          "offset": 432,
+          "body_size": 264
+        },
+        {
+          "id_hex": "4d545203",
+          "offset": 704,
+          "body_size": 220
+        }
+      ]
+    },
+    {
+      "file": "penguin-05-003829d7.mmf",
+      "size": 473,
+      "sha256": "367a932d84e75228c8e54271091ec26488433df396a7b5b82d8526acf4dad58e",
+      "offset": "0x3829d7",
+      "end_exclusive": "0x382bb0",
+      "native_literal_refs": [
+        "0x13d09e",
+        "0x13d17c"
+      ],
+      "crc16": "33ff",
+      "crc_valid": true,
+      "chunks": [
+        {
+          "id_hex": "434e5449",
+          "offset": 8,
+          "body_size": 10
+        },
+        {
+          "id_hex": "4d545201",
+          "offset": 26,
+          "body_size": 305
+        },
+        {
+          "id_hex": "4d545202",
+          "offset": 339,
+          "body_size": 124
+        }
+      ]
+    },
+    {
+      "file": "penguin-06-00382bb0.mmf",
+      "size": 638,
+      "sha256": "1b48e3c2ea38dc15a7676d1b30e9bebe2150acb1cb757768534ce54fb8b2be9e",
+      "offset": "0x382bb0",
+      "end_exclusive": "0x382e2e",
+      "native_literal_refs": [
+        "0x13c242"
+      ],
+      "crc16": "8f7a",
+      "crc_valid": true,
+      "chunks": [
+        {
+          "id_hex": "434e5449",
+          "offset": 8,
+          "body_size": 10
+        },
+        {
+          "id_hex": "4d545201",
+          "offset": 26,
+          "body_size": 195
+        },
+        {
+          "id_hex": "4d545202",
+          "offset": 229,
+          "body_size": 135
+        },
+        {
+          "id_hex": "4d545203",
+          "offset": 372,
+          "body_size": 124
+        },
+        {
+          "id_hex": "4d545204",
+          "offset": 504,
+          "body_size": 124
+        }
+      ]
+    },
+    {
+      "file": "penguin-07-00382e2e.mmf",
+      "size": 2072,
+      "sha256": "dca7032bf53d28b749dc92b548eb645cff0f98d4e2bc45478f6b5ea94dd5390d",
+      "offset": "0x382e2e",
+      "end_exclusive": "0x383646",
+      "native_literal_refs": [
+        "0x13c07a"
+      ],
+      "crc16": "3813",
+      "crc_valid": true,
+      "chunks": [
+        {
+          "id_hex": "434e5449",
+          "offset": 8,
+          "body_size": 20
+        },
+        {
+          "id_hex": "41545200",
+          "offset": 36,
+          "body_size": 2026
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "file": "penguin-00349650-120x160.rgb332",
+      "size": 19200,
+      "sha256": "e5a81e2235ecf9329b4f20607162f44f19cbf8d0c00a60ce3f8906d8cd94025e",
+      "offset": "0x349650",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13bf7e"
+    },
+    {
+      "file": "penguin-0034e150-120x160.rgb332",
+      "size": 19200,
+      "sha256": "861eebbe4435c05a18df8a533979d8cf7a4747163489bafbd131f7c506479f9a",
+      "offset": "0x34e150",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13bfa8"
+    },
+    {
+      "file": "penguin-00359216-120x160.rgb332",
+      "size": 19200,
+      "sha256": "d11516e61e4d84ebdb804dc0219bb96aec106785e03930af5cdf4cf9bcc99bfb",
+      "offset": "0x359216",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c120"
+    },
+    {
+      "file": "penguin-0035dd16-120x160.rgb332",
+      "size": 19200,
+      "sha256": "9158c90774524397257a4771a13119e3dbcc62a9be141bcd43ba00bf9370320a",
+      "offset": "0x35dd16",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c132"
+    },
+    {
+      "file": "penguin-00362816-120x160.rgb332",
+      "size": 19200,
+      "sha256": "40999ed574e9d1a9edadf40e07c9288d9597a9acfa9ca0e05009d0502e65c2bb",
+      "offset": "0x362816",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c144"
+    },
+    {
+      "file": "penguin-00367316-120x160.rgb332",
+      "size": 19200,
+      "sha256": "d5fd44c274f734e54896187f614c0c815d50254f3d4b91fd0c5ca713c2605f9c",
+      "offset": "0x367316",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c156"
+    },
+    {
+      "file": "penguin-0036be16-120x160.rgb332",
+      "size": 19200,
+      "sha256": "ab325947b833f44b16cb4cfa085f1bc9552f2077c7c04f88e0a03998945924f4",
+      "offset": "0x36be16",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c168"
+    },
+    {
+      "file": "penguin-00370916-120x160.rgb332",
+      "size": 19200,
+      "sha256": "d033fcce09dcacd322b345f56f25d31c2427f790238ceedd786e1dc8759dbc84",
+      "offset": "0x370916",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c178"
+    },
+    {
+      "file": "penguin-00375416-120x160.rgb332",
+      "size": 19200,
+      "sha256": "101438b4b6ee7d142e4a707fddc3d3b38b26bc2285407d4dc682e67345efede7",
+      "offset": "0x375416",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c10a"
+    },
+    {
+      "file": "penguin-00379f16-120x160.rgb332",
+      "size": 19200,
+      "sha256": "f146e055831837f3aa67d7076966148b5007d160c856c3c3724ebda5ca6f1596",
+      "offset": "0x379f16",
+      "width": 120,
+      "height": 160,
+      "native_literal_ref": "0x13c1c8"
+    },
+    {
+      "file": "penguin-00344a60-120x146.rgb332",
+      "size": 17520,
+      "sha256": "da0313c402cdb82b8426fcaf44089be3f3e9678d5a4aa1ad792e3f39c41a7aa5",
+      "offset": "0x344a60",
+      "width": 120,
+      "height": 146,
+      "native_literal_ref": "0x13c9c2"
+    },
+    {
+      "file": "penguin-00354306-128x14.rgb332",
+      "size": 1792,
+      "sha256": "88492b51fdce871ac5ad9b921b1544445259f508688268c7fe3fc4c0fff589c1",
+      "offset": "0x354306",
+      "width": 128,
+      "height": 14,
+      "native_literal_ref": "0x13c9b2"
+    },
+    {
+      "file": "penguin-00353ab0-15x15.rgb332",
+      "size": 225,
+      "sha256": "8875c78c3603679d00866daf1a3df72a83b36537a2e59f28ec393d5a798262c8",
+      "offset": "0x353ab0",
+      "width": 15,
+      "height": 15,
+      "native_literal_ref": "0x13c9d4"
+    }
+  ],
+  "image_format": {
+    "pixel_storage": "8 bits, one byte per pixel, row major",
+    "dimensions": "Proven by arguments to blit wrapper 0x13dfb4, which calls 0x13d9d4.",
+    "pixel_conversion": "At 0x13da24..0x13da46, p -> ((p<<8)&0xe000)|((p<<7)&0x0e00)|((p<<6)&0x00c0), written to LCD data register 0x02800004.",
+    "preview": "RGB332 components normalized to 0..255. Channel assignment/gamma and exact panel appearance not independently verified."
+  },
+  "wasm_smaf_validation": [
+    {
+      "file": "penguin-01-0038005a.mmf",
+      "frames": 55213,
+      "rate": 44100,
+      "peak": 0.5209307074546814,
+      "truncated": false,
+      "wavSha256": "76c6e5d4e8e86310d7aeed6f3904baaa26c44d90fc94295c46fdc9e23d676a68"
+    },
+    {
+      "file": "penguin-02-003810e3.mmf",
+      "frames": 1151967,
+      "rate": 44100,
+      "peak": 0.8987724184989929,
+      "truncated": false,
+      "wavSha256": "670776579d9af94885461393b08812f87627ebc9909129c20b8af032de4cb22b"
+    },
+    {
+      "file": "penguin-03-003824a1.mmf",
+      "frames": 118678,
+      "rate": 44100,
+      "peak": 0.5958797335624695,
+      "truncated": false,
+      "wavSha256": "2c5871d84223553520b3fe647e8c4e540fec90cdeabcb93804a5a277744060cb"
+    },
+    {
+      "file": "penguin-04-00382631.mmf",
+      "frames": 1093579,
+      "rate": 44100,
+      "peak": 0.7245436310768127,
+      "truncated": false,
+      "wavSha256": "7e3a0971cbfd9f9260cd05c4707ba4a4d6e87b058ef7807396802711b7f4583a"
+    },
+    {
+      "file": "penguin-05-003829d7.mmf",
+      "frames": 289201,
+      "rate": 44100,
+      "peak": 0.7481237649917603,
+      "truncated": false,
+      "wavSha256": "6121ea961f8c9392f14407cd3f5476ab4e3a7fbee671f184b74b77329609a32d"
+    },
+    {
+      "file": "penguin-06-00382bb0.mmf",
+      "frames": 59799,
+      "rate": 44100,
+      "peak": 0.32739394903182983,
+      "truncated": false,
+      "wavSha256": "35d6da70d651883f962171d0ccb81227acb142641aa9c0761898646b0b50b7ce"
+    },
+    {
+      "file": "penguin-07-00382e2e.mmf",
+      "frames": 55213,
+      "rate": 44100,
+      "peak": 0.38265669345855713,
+      "truncated": false,
+      "wavSha256": "40cba9411a52735059b235443112a19426ee8c479273199e6cc7b40a19ab2571"
+    }
+  ],
+  "native_probe": {
+    "verified": true,
+    "primary_calls": 68,
+    "repeat_calls": 68,
+    "control_calls": 109,
+    "instruction_limit_per_call": 3000000,
+    "checks": {
+      "all_68_calls_return_and_restore_stack": true,
+      "independent_repeat_exact": true,
+      "left_60_to_52": true,
+      "right_52_to_60": true,
+      "movement_changes_frame": true,
+      "pick_up_sets_ball_flag": true,
+      "launch_moves_ball_145_to_137": true,
+      "continued_original_motion_y89": true,
+      "no_throw_control_stays_y145": true,
+      "throw_changes_render_vs_control": true,
+      "remains_in_gameplay_mode20": true,
+      "native_left_clamp_20": true,
+      "native_right_clamp_93": true,
+      "ignored_event_preserves_game_and_lcd": true
+    },
+    "scope": "Original game, display initialization and relocated support code. Scripted events; NV, timers and sound service hooks. Full phone boot and real-time operation unverified.",
+    "artifact": {
+      "file": "SCH-X590-Penguin-Ball-native-probe-2026-11-05.zip",
+      "bytes": 338332,
+      "sha256": "dfd075857461e6772f5c14d9358a1120f5289ad651fab75a9b8edb2d901be61c"
+    }
+  }
+}

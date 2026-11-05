@@ -1,0 +1,76 @@
+{
+  "checked": "2026-11-05",
+  "scope": "LG SD810 recovery and additional device research",
+  "collection": {
+    "sgs": 55,
+    "games": 54,
+    "utilities": 1,
+    "legacySgs": 18,
+    "verifiedOriginalAssets": 68
+  },
+  "webTests": {
+    "unitPassed": 30,
+    "integrationPassed": 60,
+    "failed": 0,
+    "skipped": 0
+  },
+  "pythonToolsTests": {
+    "passed": 44,
+    "failed": 0
+  },
+  "recovery": {
+    "sgsFiles": 7,
+    "games": 5,
+    "musicApplications": 2,
+    "infFiles": 34,
+    "imageContainers": 4,
+    "totalPayloadFiles": 45,
+    "independentByteIdentity": true,
+    "partialWriteRollback": true,
+    "wrongInputHashRejectedBeforeOutput": true,
+    "existingOutputProtected": true
+  },
+  "runtime": {
+    "controlRunsWithoutError": 51,
+    "portableCliFrameMatches": 5,
+    "fullCompletionVerified": false,
+    "audioAudibilityVerified": false,
+    "testedViewport": [
+      120,
+      146
+    ],
+    "originalVmViewportEstablished": false
+  },
+  "otherDevices": {
+    "newSamsungModelsWithNativeMarkers": 6,
+    "sd1100OriginalCardCdxHashMatches": true,
+    "newMpioPayloads": 0
+  },
+  "format": {
+    "blackFilesUnchanged": 56,
+    "prettier": "pass",
+    "localDocumentationLinks": "pass"
+  },
+  "site": {
+    "files": 131,
+    "originalAssets": 68,
+    "verified": "pass"
+  },
+  "gitReview": {
+    "method": "Prospective tree with temporary Git index; user index unchanged",
+    "filesCheckedBeforeReceipt": 391,
+    "originalHashes": 68,
+    "commitOrPushPerformed": false
+  },
+  "recoveryArchive": {
+    "file": "LG-SD810-GVM-Recovered.zip",
+    "bytes": 595289,
+    "sha256": "2022e5594ba6bede19306c89c25ff902bf8f42f93aa98f2c8b30a74b8c4850d6",
+    "members": 64,
+    "games": 5,
+    "musicApplications": 2,
+    "originalSgs": 7,
+    "originalInf": 34,
+    "associatedImageContainers": 4
+  }
+}

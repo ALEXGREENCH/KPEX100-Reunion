@@ -114,6 +114,8 @@ export class LegacyRuntime extends GnexRuntime {
   }
   constructor(rom, sgs, options) {
     const parsed = parseLegacy(sgs);
+    if (parsed.body.length > 0xc00000)
+      throw new GnexError('SGS exceeds 12 MiB guest content region');
     super(rom, displayBootstrap(), options);
     this.sgs = parsed;
     this.title = parsed.title;
@@ -242,8 +244,20 @@ export class LegacyRuntime extends GnexRuntime {
         },
         { begin: RELOC + f, end: RELOC + f },
       );
-    // file4412C calls the physical screen callback; our framebuffer is its RAM source.
-    this.cpu.onCode(() => this._return(), { begin: RELOC + 0x4412c, end: RELOC + 0x4412c });
+    // Legacy Flush reaches the native physical screen adapter directly, without
+    // the v4 syscall dispatcher. Preserve its submitted image before RestoreLCD.
+    this.cpu.onCode(
+      () => {
+        try {
+          this._presentLCD();
+          this._return();
+        } catch (e) {
+          this.exception = e;
+          this.cpu.stop();
+        }
+      },
+      { begin: RELOC + 0x4412c, end: RELOC + 0x4412c },
+    );
     this.cpu.onCode(
       () => {
         this.legacyOpcode = this.cpu.regRead('r0');
