@@ -1,0 +1,94 @@
+{
+  "source": "Nokia_Games_Ultimate_SIS_Pack.tar.gz",
+  "sourceSha256": "e0c61f029cee12f984aba0263449cba7c415a6af646bb7070c8dae6fa5bc5ce0",
+  "scope": "All379 SIS re-parsed; structural SGS scan restricted to five formerly unsupported control packages. No original programs executed.",
+  "baselineCounts": {
+    "archiveFilesVisited": 1054,
+    "sisMembers": 379,
+    "sisParsedWithUidAndBodyCrc": 370,
+    "payloadsDecoded": 10040,
+    "payloadBytesDecoded": 347737068,
+    "payloadsStructurallyScanned": 1348,
+    "payloadBytesStructurallyScanned": 124199746,
+    "candidateOffsetsTested": 7049581
+  },
+  "newCounts": {
+    "sisVisited": 379,
+    "parsed": 375,
+    "rejected": 4
+  },
+  "recovered": [
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Boxing Maniac/Boxing_Maniac_v0.71.sis",
+      "inputSha256": "ace99b236e63c9acecdd5542d914d52f342e421e1e58a7f5b62a1c1dc4c9c4d6",
+      "payloads": 25,
+      "controlRecords": 3,
+      "policy": "all-branches",
+      "payloadsScanned": 4,
+      "bytesScanned": 255904,
+      "sgsHits": []
+    },
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Blue Voyage/blue voyage_v1.0.sis",
+      "inputSha256": "dd67fbb4084690876f04c297340c5c3c6d8312c449745e0215a01f33f349a334",
+      "payloads": 16,
+      "controlRecords": 5,
+      "policy": "all-branches",
+      "payloadsScanned": 5,
+      "bytesScanned": 315022,
+      "sgsHits": []
+    },
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sky hunter/Tendbeyond_1__1__1_.Skyhunter.v1.1.S60.SymbianOS.Retail_EViLPDA.sis",
+      "inputSha256": "5833e9095efdab9f1b312f4451e73d0bae07537a583120c9b9f92f32b06cb818",
+      "payloads": 158,
+      "controlRecords": 2,
+      "policy": "all-branches",
+      "payloadsScanned": 1,
+      "bytesScanned": 115880,
+      "sgsHits": []
+    },
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Karma Fighter/Karma Fighter - Symbian S60.sis",
+      "inputSha256": "80269a21e5f9163901df77b19f028fa076986b20b304a03cff41397d0e66dc7c",
+      "payloads": 14,
+      "controlRecords": 3,
+      "policy": "all-branches",
+      "payloadsScanned": 8,
+      "bytesScanned": 1163134,
+      "sgsHits": []
+    },
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fighters/Fighters v1.00 s60 symbianos binpda/victor.hall.fighters.v1.00.s60.symbianos.retail-binpda.sis",
+      "inputSha256": "4001242f5c153b4afad9debf85a8bb96d1091ad87788326b041777293095ab45",
+      "payloads": 165,
+      "controlRecords": 3,
+      "policy": "all-branches",
+      "payloadsScanned": 29,
+      "bytesScanned": 578296,
+      "sgsHits": []
+    }
+  ],
+  "remainingRejected": [
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Moorhen Camera X/Moorhen_Camera_X.sis",
+      "error": "Truncated zlib stream or declared output length mismatch"
+    },
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Alien Pinball/3D.Arts.Alien.Pinball.v1.20.S60v3.SymbianOS9.1.Retail-SyMPDA.sis",
+      "error": "Unsupported SIS format; expected EPOC release 6"
+    },
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Subsonic Racing Online (MGS)/MGS SubSonic Online S60v2.SIS",
+      "error": "Unsupported SIS format; expected EPOC release 6"
+    },
+    {
+      "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Daedalus 3D/d3d_patch.sis",
+      "error": "Truncated zlib stream or declared output length mismatch"
+    }
+  ],
+  "limits": [
+    "Previously accepted payloads were not re-scanned; previous report remains separate.",
+    "Unknown packing and other payload extensions remain outside the SGS scan."
+  ]
+}

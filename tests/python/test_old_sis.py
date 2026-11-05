@@ -135,7 +135,7 @@ class ExtractTests(unittest.TestCase):
 
     def test_unsupported_record_before_writes(self):
         data = fixture()
-        struct.pack_into("<I", data, 102, 3)
+        struct.pack_into("<I", data, 102, 7)
         with tempfile.TemporaryDirectory(dir=ROOT) as temporary:
             root = Path(temporary)
             self.assertEqual(root.parent.resolve(), ROOT.resolve())

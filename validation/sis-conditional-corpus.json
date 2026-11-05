@@ -1,0 +1,707 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "parserReadySnapshot": {
+    "rootAnnouncedParserReady": true,
+    "announcementUtc": "2026-11-05T22:17:17.266719+00:00",
+    "parserSha256": "7e668e233b0d2d3ff5d64dceb0caa9cd9326b8b69226f8a503ca92b5ee2d751a",
+    "scannerSha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e",
+    "rootReportedTests": "64 Python tests + 20 subtests; all 9 published SIS manifests and 163 payloads byte-identical to62c5727 baseline",
+    "allBranches": true,
+    "hostConditionEvaluation": false,
+    "expressionValidation": "opaque-bounds-only",
+    "parserSnapshot": "snapshot/extract-old-sis.py"
+  },
+  "hostConditionsEvaluated": false,
+  "allConditionalBranchesRequested": true,
+  "checkedUtc": "2026-11-05T22:18:52.244145+00:00",
+  "source": "https://archive.org/download/largest-j2me-and-symbian-collection/s60v2%2826684%29.7z",
+  "outerArchiveBytes": 9411665209,
+  "outerArchiveFilesAudited": false,
+  "folder": 2,
+  "sourcePackedOffset": 7403284751,
+  "packedBytes": 2007905686,
+  "packedSha256": "870a2c895a93ac57a2c5d21abc6a76da228046a943d74c3ca30507705b69f2bb",
+  "decodedBytes": 2346478882,
+  "decodedSha256": "9a5238c7dc9d0195182fc9eb8de4679b6a8f859c1afa0c5529ca1386f6ec95c9",
+  "decodedCrc32": "9907f7e2",
+  "firstHeaderFileIndex": 21273,
+  "membersAudited": 5412,
+  "counts": {
+    "topLevelSisVisited": 5411,
+    "sisParsed": 7127,
+    "decodedPayloads": 138461,
+    "payloadsScanned": 18325,
+    "membersVisited": 5412,
+    "sisWithControls": 989,
+    "controlRecords": 3779,
+    "controlType6": 1329,
+    "controlType5": 1018,
+    "controlType3": 1329,
+    "fileRecordsWithConditionTags": 4815,
+    "nestedSisVisited": 1844,
+    "sisRejected": 128,
+    "controlType2": 41,
+    "controlType4": 62,
+    "nonSisMembers": 1,
+    "memberHeaderCrcMatches": 2
+  },
+  "sisRejections": {
+    "SIS body CRC mismatch": 77,
+    "Unsupported SIS format; expected EPOC release 6": 9,
+    "Signature pointer is outside input bounds": 23,
+    "File data is outside SIS body bounds": 3,
+    "FILENULL record unexpectedly contains data": 6,
+    "Trailing or unconsumed bytes in compressed payload": 1,
+    "Unsupported record count": 7,
+    "SIS input must be between 100 bytes and 64 MiB": 1,
+    "Truncated zlib stream or declared output length mismatch": 1
+  },
+  "payloadScanBytes": 992693601,
+  "versionByteOffsetsChecked": 54959235,
+  "prefilterPasses": 56207,
+  "referenceScannerControlsPassed": 68,
+  "uidSelectors": [
+    {
+      "archiveMember": "s60v2/mobilephones_POCKET_BASEBALL_f37916_1.sis",
+      "sisSha256": "c18535a837d2567b284c547ed5c5e368c27b9e8ae68a5975e50b18a8143170f3",
+      "uid1": "10272e44",
+      "depth": 0
+    },
+    {
+      "archiveMember": "s60v2/stormofsilencedemo.sis",
+      "sisSha256": "2d276a81e795d467868575bd21a035b418707ab4bd573f567943972df7b98ec4",
+      "uid1": "10275469",
+      "depth": 0
+    },
+    {
+      "archiveMember": "s60v2/waterski.sis",
+      "sisSha256": "329f93da2deac528e4b2793f75f9ebf73d33e2ec0097778233f8adfc5459c2cc",
+      "uid1": "1027546a",
+      "depth": 0
+    },
+    {
+      "archiveMember": "s60v2/worldleaguedemo.sis",
+      "sisSha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe",
+      "uid1": "10272e41",
+      "depth": 0
+    },
+    {
+      "archiveMember": "s60v2/战鹰行动_诺基亚 3250系列(176x208).sis",
+      "sisSha256": "c1bc1a3f0011490d6189d1019966c7d7938234035abb3ed797bbc3088d634944",
+      "uid1": "10272e3d",
+      "depth": 0
+    }
+  ],
+  "targets": [
+    {
+      "source": {
+        "headerFileIndex": 22795,
+        "archiveMember": "s60v2/mobilephones_POCKET_BASEBALL_f37916_1.sis",
+        "folderDecodedOffset": 786374805,
+        "bytes": 299521,
+        "sha256": "c18535a837d2567b284c547ed5c5e368c27b9e8ae68a5975e50b18a8143170f3",
+        "computedCrc32": "2ee8baca",
+        "sis": {
+          "status": "parsed",
+          "depth": 0,
+          "uid1": "10272e44",
+          "uidCrcVerified": true,
+          "bodyCrcVerified": true,
+          "componentNames": [
+            "PocketBaseBall"
+          ],
+          "payloads": 21,
+          "payloadBytes": 692216,
+          "controlRecords": 0,
+          "extractionPolicy": "unconditional-files",
+          "conditionEvaluation": false,
+          "expressionValidation": null,
+          "sgsHits": [
+            {
+              "archiveMember": "s60v2/mobilephones_POCKET_BASEBALL_f37916_1.sis",
+              "sourceSisSha256": "c18535a837d2567b284c547ed5c5e368c27b9e8ae68a5975e50b18a8143170f3",
+              "sisUid1": "10272e44",
+              "payloadName": "08-PocketBaseBall.app",
+              "payloadBytes": 464684,
+              "payloadSha256": "3f04006f4e5bd38455b2903da4085f48e250aff94f2c42a7a84cab1b3159507b",
+              "matchesExisting": [
+                "catalog:pocket-baseball2-s60",
+                "preservedS60:pocket-baseball-2-s60",
+                "previousSolidFolderFollowup:pocket-baseball2-alternate-wrapper-s60"
+              ],
+              "newDecodedSgsBody": false,
+              "version": 4,
+              "title": "포켓야구2",
+              "title_bytes_hex": "c6f7c4cfbedfb1b832",
+              "declared_body_bytes": 162384,
+              "sections": {
+                "a": 91884,
+                "b": 93796,
+                "c": 110772,
+                "d": 113856
+              },
+              "entries": [
+                46834,
+                0,
+                6814,
+                1202,
+                0,
+                0,
+                6638,
+                0,
+                0,
+                0,
+                0
+              ],
+              "variables": 239,
+              "resources": 257,
+              "compression_type": 0,
+              "source_offset": 275796,
+              "body_offset": 275796,
+              "wrapper_bytes": 0,
+              "xor_mask": 0,
+              "extracted_bytes": 162384,
+              "raw_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+              "decoded_body_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726"
+            }
+          ],
+          "nativePayloads": [
+            {
+              "name": "08-PocketBaseBall.app",
+              "bytes": 464684,
+              "sha256": "3f04006f4e5bd38455b2903da4085f48e250aff94f2c42a7a84cab1b3159507b"
+            }
+          ]
+        }
+      },
+      "sis": {
+        "status": "parsed",
+        "depth": 0,
+        "uid1": "10272e44",
+        "uidCrcVerified": true,
+        "bodyCrcVerified": true,
+        "componentNames": [
+          "PocketBaseBall"
+        ],
+        "payloads": 21,
+        "payloadBytes": 692216,
+        "controlRecords": 0,
+        "extractionPolicy": "unconditional-files",
+        "conditionEvaluation": false,
+        "expressionValidation": null,
+        "sgsHits": [
+          {
+            "archiveMember": "s60v2/mobilephones_POCKET_BASEBALL_f37916_1.sis",
+            "sourceSisSha256": "c18535a837d2567b284c547ed5c5e368c27b9e8ae68a5975e50b18a8143170f3",
+            "sisUid1": "10272e44",
+            "payloadName": "08-PocketBaseBall.app",
+            "payloadBytes": 464684,
+            "payloadSha256": "3f04006f4e5bd38455b2903da4085f48e250aff94f2c42a7a84cab1b3159507b",
+            "matchesExisting": [
+              "catalog:pocket-baseball2-s60",
+              "preservedS60:pocket-baseball-2-s60",
+              "previousSolidFolderFollowup:pocket-baseball2-alternate-wrapper-s60"
+            ],
+            "newDecodedSgsBody": false,
+            "version": 4,
+            "title": "포켓야구2",
+            "title_bytes_hex": "c6f7c4cfbedfb1b832",
+            "declared_body_bytes": 162384,
+            "sections": {
+              "a": 91884,
+              "b": 93796,
+              "c": 110772,
+              "d": 113856
+            },
+            "entries": [
+              46834,
+              0,
+              6814,
+              1202,
+              0,
+              0,
+              6638,
+              0,
+              0,
+              0,
+              0
+            ],
+            "variables": 239,
+            "resources": 257,
+            "compression_type": 0,
+            "source_offset": 275796,
+            "body_offset": 275796,
+            "wrapper_bytes": 0,
+            "xor_mask": 0,
+            "extracted_bytes": 162384,
+            "raw_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+            "decoded_body_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726"
+          }
+        ],
+        "nativePayloads": [
+          {
+            "name": "08-PocketBaseBall.app",
+            "bytes": 464684,
+            "sha256": "3f04006f4e5bd38455b2903da4085f48e250aff94f2c42a7a84cab1b3159507b"
+          }
+        ]
+      }
+    },
+    {
+      "source": {
+        "headerFileIndex": 26380,
+        "archiveMember": "s60v2/worldleaguedemo.sis",
+        "folderDecodedOffset": 2180822959,
+        "bytes": 338491,
+        "sha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe",
+        "computedCrc32": "3588ca59",
+        "sis": {
+          "status": "parsed",
+          "depth": 0,
+          "uid1": "10272e41",
+          "uidCrcVerified": true,
+          "bodyCrcVerified": true,
+          "componentNames": [
+            "WorldLeagueDemo"
+          ],
+          "payloads": 11,
+          "payloadBytes": 868094,
+          "controlRecords": 0,
+          "extractionPolicy": "unconditional-files",
+          "conditionEvaluation": false,
+          "expressionValidation": null,
+          "sgsHits": [
+            {
+              "archiveMember": "s60v2/worldleaguedemo.sis",
+              "sourceSisSha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe",
+              "sisUid1": "10272e41",
+              "payloadName": "10-WorldLeagueDemo.app",
+              "payloadBytes": 473560,
+              "payloadSha256": "b966767e51bed4eca8f0760cda7a28cdb6e07aa36637a5966fd225e3268b6313",
+              "matchesExisting": [
+                "previousSolidFolderFollowup:world-league-2005-soccer-demo-s60"
+              ],
+              "newDecodedSgsBody": false,
+              "version": 4,
+              "title": "World League 20",
+              "title_bytes_hex": "576f726c64204c6561677565203230",
+              "declared_body_bytes": 172632,
+              "sections": {
+                "a": 99188,
+                "b": 101332,
+                "c": 113736,
+                "d": 120396
+              },
+              "entries": [
+                68954,
+                0,
+                690,
+                294,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "variables": 268,
+              "resources": 555,
+              "compression_type": 0,
+              "source_offset": 274480,
+              "body_offset": 274480,
+              "wrapper_bytes": 0,
+              "xor_mask": 0,
+              "extracted_bytes": 172632,
+              "raw_sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0",
+              "decoded_body_sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0"
+            }
+          ],
+          "nativePayloads": [
+            {
+              "name": "10-WorldLeagueDemo.app",
+              "bytes": 473560,
+              "sha256": "b966767e51bed4eca8f0760cda7a28cdb6e07aa36637a5966fd225e3268b6313"
+            }
+          ]
+        }
+      },
+      "sis": {
+        "status": "parsed",
+        "depth": 0,
+        "uid1": "10272e41",
+        "uidCrcVerified": true,
+        "bodyCrcVerified": true,
+        "componentNames": [
+          "WorldLeagueDemo"
+        ],
+        "payloads": 11,
+        "payloadBytes": 868094,
+        "controlRecords": 0,
+        "extractionPolicy": "unconditional-files",
+        "conditionEvaluation": false,
+        "expressionValidation": null,
+        "sgsHits": [
+          {
+            "archiveMember": "s60v2/worldleaguedemo.sis",
+            "sourceSisSha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe",
+            "sisUid1": "10272e41",
+            "payloadName": "10-WorldLeagueDemo.app",
+            "payloadBytes": 473560,
+            "payloadSha256": "b966767e51bed4eca8f0760cda7a28cdb6e07aa36637a5966fd225e3268b6313",
+            "matchesExisting": [
+              "previousSolidFolderFollowup:world-league-2005-soccer-demo-s60"
+            ],
+            "newDecodedSgsBody": false,
+            "version": 4,
+            "title": "World League 20",
+            "title_bytes_hex": "576f726c64204c6561677565203230",
+            "declared_body_bytes": 172632,
+            "sections": {
+              "a": 99188,
+              "b": 101332,
+              "c": 113736,
+              "d": 120396
+            },
+            "entries": [
+              68954,
+              0,
+              690,
+              294,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "variables": 268,
+            "resources": 555,
+            "compression_type": 0,
+            "source_offset": 274480,
+            "body_offset": 274480,
+            "wrapper_bytes": 0,
+            "xor_mask": 0,
+            "extracted_bytes": 172632,
+            "raw_sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0",
+            "decoded_body_sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0"
+          }
+        ],
+        "nativePayloads": [
+          {
+            "name": "10-WorldLeagueDemo.app",
+            "bytes": 473560,
+            "sha256": "b966767e51bed4eca8f0760cda7a28cdb6e07aa36637a5966fd225e3268b6313"
+          }
+        ]
+      }
+    }
+  ],
+  "sgsOccurrences": [
+    {
+      "archiveMember": "s60v2/mobilephones_POCKET_BASEBALL_f37916_1.sis",
+      "sourceSisSha256": "c18535a837d2567b284c547ed5c5e368c27b9e8ae68a5975e50b18a8143170f3",
+      "sisUid1": "10272e44",
+      "payloadName": "08-PocketBaseBall.app",
+      "payloadBytes": 464684,
+      "payloadSha256": "3f04006f4e5bd38455b2903da4085f48e250aff94f2c42a7a84cab1b3159507b",
+      "matchesExisting": [
+        "catalog:pocket-baseball2-s60",
+        "preservedS60:pocket-baseball-2-s60",
+        "previousSolidFolderFollowup:pocket-baseball2-alternate-wrapper-s60"
+      ],
+      "newDecodedSgsBody": false,
+      "version": 4,
+      "title": "포켓야구2",
+      "title_bytes_hex": "c6f7c4cfbedfb1b832",
+      "declared_body_bytes": 162384,
+      "sections": {
+        "a": 91884,
+        "b": 93796,
+        "c": 110772,
+        "d": 113856
+      },
+      "entries": [
+        46834,
+        0,
+        6814,
+        1202,
+        0,
+        0,
+        6638,
+        0,
+        0,
+        0,
+        0
+      ],
+      "variables": 239,
+      "resources": 257,
+      "compression_type": 0,
+      "source_offset": 275796,
+      "body_offset": 275796,
+      "wrapper_bytes": 0,
+      "xor_mask": 0,
+      "extracted_bytes": 162384,
+      "raw_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+      "decoded_body_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726"
+    },
+    {
+      "archiveMember": "s60v2/stormofsilencedemo.sis",
+      "sourceSisSha256": "2d276a81e795d467868575bd21a035b418707ab4bd573f567943972df7b98ec4",
+      "sisUid1": "10275469",
+      "payloadName": "17-StormOfSilenceDemo.app",
+      "payloadBytes": 430508,
+      "payloadSha256": "7eac806b76e7479554a47847a6f77a7bf60981ae3a05680f8cfc16f56d1077ee",
+      "matchesExisting": [
+        "catalog:storm-of-silence-demo-s60",
+        "preservedS60:storm-of-silence-demo-s60"
+      ],
+      "newDecodedSgsBody": false,
+      "version": 4,
+      "title": "미션 브리핑",
+      "title_bytes_hex": "b9ccbcc720baeab8aec7ce",
+      "declared_body_bytes": 128690,
+      "sections": {
+        "a": 59800,
+        "b": 61192,
+        "c": 67280,
+        "d": 74360
+      },
+      "entries": [
+        59414,
+        0,
+        23328,
+        12886,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "variables": 174,
+      "resources": 590,
+      "compression_type": 0,
+      "source_offset": 275356,
+      "body_offset": 275356,
+      "wrapper_bytes": 0,
+      "xor_mask": 0,
+      "extracted_bytes": 128690,
+      "raw_sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+      "decoded_body_sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e"
+    },
+    {
+      "archiveMember": "s60v2/waterski.sis",
+      "sourceSisSha256": "329f93da2deac528e4b2793f75f9ebf73d33e2ec0097778233f8adfc5459c2cc",
+      "sisUid1": "1027546a",
+      "payloadName": "15-WaterSki.app",
+      "payloadBytes": 449920,
+      "payloadSha256": "c147e2c37bce0b33ee37b4585ddcfb1d5af4a69ee287820ae0893a7b347350a7",
+      "matchesExisting": [
+        "catalog:waterski-s60",
+        "preservedS60:waterski-s60"
+      ],
+      "newDecodedSgsBody": false,
+      "version": 4,
+      "title": "수상스키",
+      "title_bytes_hex": "bcf6bbf3bdbac5b0",
+      "declared_body_bytes": 147636,
+      "sections": {
+        "a": 26900,
+        "b": 28540,
+        "c": 35000,
+        "d": 39908
+      },
+      "entries": [
+        26116,
+        0,
+        15952,
+        12696,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "variables": 205,
+      "resources": 409,
+      "compression_type": 0,
+      "source_offset": 275772,
+      "body_offset": 275772,
+      "wrapper_bytes": 0,
+      "xor_mask": 0,
+      "extracted_bytes": 147636,
+      "raw_sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+      "decoded_body_sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207"
+    },
+    {
+      "archiveMember": "s60v2/worldleaguedemo.sis",
+      "sourceSisSha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe",
+      "sisUid1": "10272e41",
+      "payloadName": "10-WorldLeagueDemo.app",
+      "payloadBytes": 473560,
+      "payloadSha256": "b966767e51bed4eca8f0760cda7a28cdb6e07aa36637a5966fd225e3268b6313",
+      "matchesExisting": [
+        "previousSolidFolderFollowup:world-league-2005-soccer-demo-s60"
+      ],
+      "newDecodedSgsBody": false,
+      "version": 4,
+      "title": "World League 20",
+      "title_bytes_hex": "576f726c64204c6561677565203230",
+      "declared_body_bytes": 172632,
+      "sections": {
+        "a": 99188,
+        "b": 101332,
+        "c": 113736,
+        "d": 120396
+      },
+      "entries": [
+        68954,
+        0,
+        690,
+        294,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "variables": 268,
+      "resources": 555,
+      "compression_type": 0,
+      "source_offset": 274480,
+      "body_offset": 274480,
+      "wrapper_bytes": 0,
+      "xor_mask": 0,
+      "extracted_bytes": 172632,
+      "raw_sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0",
+      "decoded_body_sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0"
+    },
+    {
+      "archiveMember": "s60v2/战鹰行动_诺基亚 3250系列(176x208).sis",
+      "sourceSisSha256": "c1bc1a3f0011490d6189d1019966c7d7938234035abb3ed797bbc3088d634944",
+      "sisUid1": "10272e3d",
+      "payloadName": "02-Aiolos.app",
+      "payloadBytes": 571424,
+      "payloadSha256": "31e9ffd32d60f62945747e3d759ac47b4074f99efbe21f843af6f6db9143c7cb",
+      "matchesExisting": [
+        "catalog:aiolos-fighter-s60",
+        "preservedS60:aiolos-fighter-s60"
+      ],
+      "newDecodedSgsBody": false,
+      "version": 4,
+      "title": "Aiolos",
+      "title_bytes_hex": "41696f6c6f73",
+      "declared_body_bytes": 270080,
+      "sections": {
+        "a": 93468,
+        "b": 95500,
+        "c": 103268,
+        "d": 108500
+      },
+      "entries": [
+        93446,
+        43468,
+        43896,
+        43476,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "variables": 254,
+      "resources": 436,
+      "compression_type": 0,
+      "source_offset": 274848,
+      "body_offset": 274848,
+      "wrapper_bytes": 0,
+      "xor_mask": 0,
+      "extracted_bytes": 270080,
+      "raw_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+      "decoded_body_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b"
+    }
+  ],
+  "preservedCandidates": [
+    {
+      "sha256": "c18535a837d2567b284c547ed5c5e368c27b9e8ae68a5975e50b18a8143170f3",
+      "savedSis": "work\\pass9-s60-conditional-audit\\candidate-sis\\c18535a837d2567b-mobilephones_POCKET_BASEBALL_f37916_1.sis",
+      "archiveMember": "s60v2/mobilephones_POCKET_BASEBALL_f37916_1.sis",
+      "reason": [
+        "explicit-uninspected-target",
+        "uid-neighborhood-selector-not-authorship-proof",
+        "structurally-validated-sgs",
+        "sinjisoft-text-selector-not-authorship-proof"
+      ]
+    },
+    {
+      "sha256": "2d276a81e795d467868575bd21a035b418707ab4bd573f567943972df7b98ec4",
+      "savedSis": "work\\pass9-s60-conditional-audit\\candidate-sis\\2d276a81e795d467-stormofsilencedemo.sis",
+      "archiveMember": "s60v2/stormofsilencedemo.sis",
+      "reason": [
+        "uid-neighborhood-selector-not-authorship-proof",
+        "structurally-validated-sgs"
+      ]
+    },
+    {
+      "sha256": "329f93da2deac528e4b2793f75f9ebf73d33e2ec0097778233f8adfc5459c2cc",
+      "savedSis": "work\\pass9-s60-conditional-audit\\candidate-sis\\329f93da2deac528-waterski.sis",
+      "archiveMember": "s60v2/waterski.sis",
+      "reason": [
+        "uid-neighborhood-selector-not-authorship-proof",
+        "structurally-validated-sgs",
+        "sinjisoft-text-selector-not-authorship-proof"
+      ]
+    },
+    {
+      "sha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe",
+      "savedSis": "work\\pass9-s60-conditional-audit\\candidate-sis\\b63ee8b2fccb513d-worldleaguedemo.sis",
+      "archiveMember": "s60v2/worldleaguedemo.sis",
+      "reason": [
+        "explicit-uninspected-target",
+        "uid-neighborhood-selector-not-authorship-proof",
+        "structurally-validated-sgs",
+        "sinjisoft-text-selector-not-authorship-proof"
+      ]
+    },
+    {
+      "sha256": "c1bc1a3f0011490d6189d1019966c7d7938234035abb3ed797bbc3088d634944",
+      "savedSis": "work\\pass9-s60-conditional-audit\\candidate-sis\\c1bc1a3f0011490d-_________3250___176x208_.sis",
+      "archiveMember": "s60v2/战鹰行动_诺基亚 3250系列(176x208).sis",
+      "reason": [
+        "uid-neighborhood-selector-not-authorship-proof",
+        "structurally-validated-sgs"
+      ]
+    }
+  ],
+  "limits": [
+    "Only local solid folder2 (5412 members) was decoded, not the entire 26684-file outer archive.",
+    "Fresh per-part hashes match earlier download receipts; source archive publisher authenticity is not independently established.",
+    "Whole decoded hash matches earlier local decode; it is not an independent publisher digest.",
+    "All members have exact header-derived boundaries and computed SHA/CRC; only two per-member 7z CRCs are available in saved metadata.",
+    "SIS parser enumerates simple/multilingual and supported conditional/options branches as data; host conditions are not evaluated. Rejected contents remain unaudited.",
+    "Scans cover decoded EPOC binaries, APP/DLL/SGS extensions, direct plain SGS headers at0/32, or Sinjisoft text selectors; unknown proprietary/encrypted packing is not excluded.",
+    "Nested SIS decoding is limited to depth2; no vendor program was executed."
+  ],
+  "evidence": {
+    "memberAudit": "member-audit.jsonl",
+    "payloadAudit": "payload-audit.jsonl",
+    "sisAudit": "sis-audit.jsonl",
+    "branchAudit": "conditional-package-audit.jsonl",
+    "parts": "fresh-parts-verification.json",
+    "scannerControls": "scanner-controls.json"
+  },
+  "elapsedSeconds": 92.922,
+  "networkRequests": 0,
+  "vendorCodeExecuted": false,
+  "sharedRepoModified": false
+}

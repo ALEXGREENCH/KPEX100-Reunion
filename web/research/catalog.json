@@ -408,6 +408,21 @@
           "url": "https://archive.org/details/largest-j2me-and-symbian-collection"
         }
       ]
+    },
+    {
+      "id": "classic-sis-format-reference",
+      "title": "Classic SIS: исходное описание формата",
+      "category": "Форматы и инструменты исследования",
+      "description": "Неизменённый авторский HTML с полной GFDL и проверкой Git blob. Описывает условные записи и варианты EPOC SIS. Распаковщик Reunion теперь сохраняет все ветки; условия установки не выполняются.",
+      "repositoryPath": "research/archives/EPOC-Classic-SIS-Format-Reference.zip",
+      "bytes": 25080,
+      "sha256": "26ad8164125482665c23b3a5c9f8cd0691bfc99dfb3e0a845dd3928b99cc646c",
+      "sources": [
+        {
+          "label": "Описание автора формата",
+          "url": "https://thoukydides.github.io/riscos-psifs/sis.html"
+        }
+      ]
     }
   ],
   "reports": [
@@ -478,6 +493,10 @@
     {
       "title": "Новая S60-демоверсия и дальнейшая проверка устройств",
       "repositoryPath": "doc/platform-recovery-pass8.md"
+    },
+    {
+      "title": "Условные SIS: расширенный разбор и повторная проверка",
+      "repositoryPath": "doc/sis-conditional-recovery.md"
     }
   ]
 }

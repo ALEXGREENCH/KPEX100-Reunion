@@ -1,0 +1,215 @@
+{
+  "schema": 1,
+  "dateUtc": "2026-11-05",
+  "scope": "Independent specification review for the classic EPOC6 SIS control-record extension. No shared parser/tests/docs edits or corpus rescan.",
+  "specification": {
+    "author": "Alexander Thoukydides",
+    "title": "SIS File Format",
+    "version": "1.19,19-Nov-2024",
+    "liveDocument": "https://thoukydides.github.io/riscos-psifs/sis.html",
+    "canonicalDocumentAsDeclared": "https://www.thouky.co.uk/software/psifs/sis.html",
+    "repository": "https://github.com/thoukydides/riscos-psifs",
+    "repositoryRevision": "3333fd42528e70c00694cb24b74cfeca09d9cb21",
+    "repositoryPath": "docs/sis.html",
+    "immutableBlobApi": "https://api.github.com/repos/thoukydides/riscos-psifs/git/blobs/9404399da0d7dbbe10283cdbcb7c95e9360ac0c7",
+    "gitBlobSha1": "9404399da0d7dbbe10283cdbcb7c95e9360ac0c7",
+    "localFile": "work/pass9-sis-spec-sources/sis-format.html",
+    "bytes": 91323,
+    "sha256": "796a8a5f3e8a1e15e906481754ec5cab90dec0610e960ca68c91ffe2245837c8",
+    "identityVerified": "Re-encoded connector UTF8 content matches exact file length and SHA1('blob '+decimal_len+NUL+bytes), including original lack of final newline.",
+    "license": "Original full GFDL1.1 and original notices are embedded in the unchanged HTML.",
+    "rawTransport": "GitHub connector public git-blob read. Previous timed-out direct site GET was not blindly repeated.",
+    "sourceLines": {
+      "noSectionPaddingAndEndian": [
+        96,
+        105
+      ],
+      "recordTagsAndReverseStorage": [
+        345,
+        355
+      ],
+      "options": [
+        443,
+        467
+      ],
+      "ifElseIf": [
+        469,
+        480
+      ],
+      "expressionOperatorsAndLeaves": [
+        482,
+        605
+      ],
+      "elseEndIf": [
+        607,
+        614
+      ],
+      "reverseInstallation": [
+        724,
+        724
+      ]
+    }
+  },
+  "verifiedLayouts": {
+    "tag2Options": {
+      "header": [
+        {
+          "offset": 0,
+          "width": 4,
+          "meaning": "record tag2"
+        },
+        {
+          "offset": 4,
+          "width": 4,
+          "meaning": "m option count"
+        }
+      ],
+      "optionGroup": {
+        "count": "m",
+        "offsetForGroupI": "8+i*(8*n), where n=language_count and0<=i<m",
+        "layout": "n u32LE lengths followed by n u32LE absolute SIS file offsets; groups are per option, not one global lengths array followed by one global pointers array.",
+        "stringBytes": "Labels are separately pointed-to strings; length is bytes under ordinary string/header encoding rules."
+      },
+      "selection": {
+        "offset": "8+8*m*n",
+        "bytes": 16,
+        "meaning": "bitmap for up to128 options; source states initial bits are all set."
+      },
+      "totalBytes": "24+8*m*n",
+      "documentedLimits": "At most128 represented selectable options; source does not explicitly forbid m=0.",
+      "importantCornerCase": "Do not require bits beyond m to be zero. Do not infer option numbering/selection or evaluate the bitmap on the host; retain exact16 bytes."
+    },
+    "tags3And4": {
+      "header": [
+        {
+          "offset": 0,
+          "width": 4,
+          "meaning": "If3 or ElseIf4"
+        },
+        {
+          "offset": 4,
+          "width": 4,
+          "meaning": "expression byte count N"
+        }
+      ],
+      "expressionOffset": 8,
+      "totalBytes": "8+N",
+      "alignment": "No extra pad/align-up field is specified. Consume the declared N exactly. External string data are not inline expression tails."
+    },
+    "tags5And6": {
+      "tag5": "Else",
+      "tag6": "EndIf",
+      "bytes": 4,
+      "payloadFields": false
+    },
+    "expressionEncoding": {
+      "endianness": "little endian",
+      "binary": {
+        "tags": [
+          "0x00..0x07",
+          "0x0a"
+        ],
+        "layout": "u32 tag + immediately serialized left subtree + immediately serialized right subtree",
+        "special": "appcap0x0a operands are both number leaves0x0e."
+      },
+      "unary": {
+        "tags": [
+          "0x08",
+          "0x09",
+          "0x0b"
+        ],
+        "layout": "u32 tag + immediately serialized subtree",
+        "special": "exists0x08 has a string0x0c child; devcap0x09 has a number0x0e child; NOT0x0b has a condition child."
+      },
+      "stringLeaf": {
+        "tag": "0x0c",
+        "bytes": 12,
+        "layout": "u32 tag,u32 string byte length,u32 absolute string offset; pointed-to bytes are elsewhere in the SIS."
+      },
+      "attributeLeaf": {
+        "tag": "0x0d",
+        "bytes": 12,
+        "layout": "u32 tag,u32 attribute,u32 unused"
+      },
+      "numberLeaf": {
+        "tag": "0x0e",
+        "bytes": 12,
+        "layout": "u32 tag,u32 number,u32 unused"
+      },
+      "derivedNotAdditionalField": "All documented complete trees have at least12 bytes and sizes divisible by4, because leaves are12 and operator prefixes are4. This is an inference from documented node layouts, not permission to round up an arbitrary declared size.",
+      "unusedWord": "The document says unused, not required zero; do not invent a zero-value validation requirement."
+    }
+  },
+  "behaviorReview": {
+    "allBranches": "Preservation mode extracts every tags0/1 payload/language/device branch without installation, FILETEXT prompts, FILERUN execution or host condition evaluation. Same destination alternatives need distinct physical-record-based output names.",
+    "controlOrder": "Parse physical records using their sizes, then validate IF/ELSEIF/ELSE/ENDIF nesting in reverse physical order (installation order). Physical-first EndIf is expected for a closing logical block.",
+    "branchRules": "IF pushes; ELSEIF requires an open IF without a preceding ELSE; ELSE at most once in the same IF; ENDIF pops; require balanced stack if advertising structural branch validation. Nested blocks get independent state.",
+    "optionsScope": "The source calls options global attributes affecting embedded SIS. Preservation must retain metadata, not simulate inheritance or evaluate host/global option state.",
+    "opaqueExpressionMode": "Bounds-checking an opaque expression is sufficient to locate later files safely, but it does not prove expression syntax, operand types, referenced strings or installability. Explicitly label these validations unsupported unless a bounded AST validator actually performs them."
+  },
+  "boundsRecommendations": [
+    {
+      "basis": "implementation safety, not new format fields",
+      "check": "Bound type4/header8 before reading dynamic counts; use signature-trimmed SIS body bounds consistently."
+    },
+    {
+      "basis": "documented exact layout",
+      "check": "Options: bound 8+8*m*n+16 bytes; enforce supported128-option envelope; validate each per-option language label with the existing string pointer/length and aggregate budgets."
+    },
+    {
+      "basis": "documented exact layout",
+      "check": "If/ElseIf: bound exactly N bytes from cursor+8; never round cursor up, never append pointed-to string bytes to record size."
+    },
+    {
+      "basis": "forensic scope distinction",
+      "check": "If retaining opaque expressions, record offset,size,hash and syntax-validation status. A stricter AST checker should constrain nodes/depth and consume the declared expression window exactly without evaluating conditions."
+    },
+    {
+      "basis": "existing security/integrity behavior",
+      "check": "Keep UID/body CRC, signature boundary, payload lengths, strict bounded decompression, total variants/data budgets and delayed filesystem mutation unchanged."
+    }
+  ],
+  "authorCodeCrossCheck": {
+    "sourceRepositorySameAsDocument": true,
+    "filesRead": [
+      {
+        "path": "src/sis.c",
+        "gitBlobSha1": "eca95a194db0a84ec5a66808aec857f37f63c094",
+        "bytes": 66319
+      },
+      {
+        "path": "src/sis.h",
+        "gitBlobSha1": "b432e9b9b6cb35f4fefd796dbdd12de5c972aa44",
+        "bytes": 12741
+      }
+    ],
+    "result": "These implementation files support older UID2=0x1000006d and treat record word0 as simple/multilingual flags. They are not an independent implementation of EPOC6 records2–6, so copying their parser behavior would be misleading.",
+    "sourceCRelevantLines": [
+      158,
+      160,
+      186,
+      195,
+      940,
+      987
+    ],
+    "publishedInReferenceArchive": false
+  },
+  "recommendedCornerCaseTests": [
+    "Options with m=2,n=2 and distinct labels/pointers distinguish grouped-per-option layout from a flat table.",
+    "A16-byte all-ones selection bitmap with m<128 is retained, not rejected as out-of-range selected bits.",
+    "If expression with string leaf points outside the expression window but inside SIS body: do not include pointed-to text in cursor advancement.",
+    "A physical-first EndIf with matching reversed IF and multiple ELSEIF blocks validates logically; orphan ELSE/ELSEIF, duplicate ELSE, ELSEIF after ELSE and unbalanced blocks reject if structural validation is claimed.",
+    "Declared expression overrun and truncated option bitmap reject before decompression/output. Never use align-up to conceal malformed sizes.",
+    "A bounded opaque expression may be preserved as unvalidated; do not report semantic validity or execute any install action."
+  ],
+  "findingsForRoot": [
+    "Documented tag2 total24+8*m*n and tags3/4 total8+N are confirmed.",
+    "No padding field or host-condition evaluation should be added.",
+    "The128-bit bitmap starts all-ones; unused high bits are not required zero.",
+    "Known expression leaves are12 bytes, and string bytes are addressed by absolute pointers.",
+    "Reverse-order validation must operate on logical installation order."
+  ],
+  "sharedFilesEdited": false,
+  "vendorCodeExecuted": false,
+  "corpusRescanned": false
+}

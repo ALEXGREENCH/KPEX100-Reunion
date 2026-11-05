@@ -1,8 +1,9 @@
 """Extract and validate original payloads from EPOC release 6 SIS files.
 
 Usage: python extract-old-sis.py INPUT.sis NEW_OUTPUT_DIRECTORY
-Python 3.11+, standard library. Supports simple and multilingual file records;
-conditional/options records are rejected. Output names are flat and prefixed.
+Python 3.11+, standard library. Preserves simple/multilingual files and every
+conditional branch. Installer expressions and option choices are not evaluated.
+Output names are flat and prefixed; alternatives are not an installed layout.
 The output directory must be new and its parent must already exist.
 Format reference: https://thoukydides.github.io/riscos-psifs/sis.html
 """
@@ -24,6 +25,8 @@ MAX_TOTAL = 256 * 1024 * 1024
 MAX_RECORDS = 4096
 MAX_LANGUAGES = 256
 MAX_STRING = 65536
+MAX_OPTIONS = 128
+MAX_CONDITION_DEPTH = 64
 
 
 def sha256(data):
@@ -49,6 +52,43 @@ def decode_payload(packed, expected, compressed):
     if stream.unused_data or stream.unconsumed_tail:
         raise ValueError("Trailing or unconsumed bytes in compressed payload")
     return decoded
+
+
+def annotate_conditions(records):
+    """Validate nesting in installation order; preserve every branch as data."""
+    stack = []
+    for record in reversed(records):
+        kind = record["record_type"]
+        if kind == 3:
+            if len(stack) >= MAX_CONDITION_DEPTH:
+                raise ValueError("Conditional nesting exceeds depth limit")
+            stack.append(
+                {
+                    "if_record_index": record["index"],
+                    "branch_record_index": record["index"],
+                    "else_seen": False,
+                }
+            )
+        elif kind in (4, 5):
+            label = "ELSEIF" if kind == 4 else "ELSE"
+            if not stack:
+                raise ValueError(f"{label} without IF in installation order")
+            if stack[-1]["else_seen"]:
+                raise ValueError(f"{label} follows ELSE in installation order")
+            stack[-1]["branch_record_index"] = record["index"]
+            if kind == 5:
+                stack[-1]["else_seen"] = True
+        elif kind == 6:
+            if not stack:
+                raise ValueError("ENDIF without IF in installation order")
+            stack.pop()
+        else:
+            record["conditions"] = [
+                {key: item[key] for key in ("if_record_index", "branch_record_index")}
+                for item in stack
+            ]
+    if stack:
+        raise ValueError("Unterminated IF in installation order")
 
 
 def parse_sis(data):
@@ -136,8 +176,51 @@ def parse_sis(data):
     total_variants = 0
     for index in range(record_count):
         kind = struct.unpack("<I", bounded(cursor, 4, "File record type"))[0]
-        if kind not in (0, 1):
+        if kind not in range(7):
             raise ValueError(f"Unsupported file record type {kind} at record {index}")
+        if kind >= 2:
+            record = dict(
+                index=index,
+                record_offset=cursor,
+                record_type=kind,
+                variants=[],
+            )
+            if kind == 2:
+                header = bounded(cursor, 8, "Options record header")
+                count = struct.unpack_from("<I", header, 4)[0]
+                if count > MAX_OPTIONS:
+                    raise ValueError("Option count exceeds 128 limit")
+                record_size = 24 + 8 * count * language_count
+                raw = bounded(cursor, record_size, f"Options record {index}")
+                labels = [
+                    strings(
+                        cursor + 8 + option * language_count * 8,
+                        language_count,
+                        "Option labels",
+                    )
+                    for option in range(count)
+                ]
+                record.update(
+                    option_count=count,
+                    option_labels=labels,
+                    selected_options_bitmap_hex=raw[-16:].hex(),
+                )
+            elif kind in (3, 4):
+                header = bounded(cursor, 8, "Conditional record header")
+                size = struct.unpack_from("<I", header, 4)[0]
+                expression = bounded(cursor + 8, size, "Conditional expression")
+                record_size = 8 + size
+                record.update(
+                    expression_offset=cursor + 8,
+                    expression_bytes=size,
+                    expression_sha256=sha256(expression),
+                )
+            else:
+                record_size = 4
+            record["record_bytes"] = record_size
+            records.append(record)
+            cursor += record_size
+            continue
         variants = language_count if kind == 1 else 1
         total_variants += variants
         if total_variants > MAX_RECORDS:
@@ -203,6 +286,10 @@ def parse_sis(data):
         records.append(record)
         cursor += record_size
 
+    has_controls = any(record["record_type"] >= 2 for record in records)
+    if has_controls:
+        annotate_conditions(records)
+
     # Every record is accepted before any decompression or filesystem mutation.
     outputs = []
     for variant in output_specs:
@@ -232,6 +319,12 @@ def parse_sis(data):
         extracted_files=len(outputs),
         records=records,
     )
+    if has_controls:
+        manifest.update(
+            extraction_policy="all-branches",
+            condition_evaluation=False,
+            expression_validation="opaque-bounds-only",
+        )
     return manifest, outputs
 
 
