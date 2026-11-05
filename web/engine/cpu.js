@@ -143,6 +143,26 @@ export class ArmCPU {
     this.hooks.push(h);
     return h;
   }
+  _ensureBlockMonitor() {
+    if (this.blockMonitor) return;
+    this.blockMonitor = this.onBlock((address, size) => {
+      if (this.blockBudget !== null && this.blockBudget !== undefined) {
+        // Two bytes per instruction is conservative for both ARM and Thumb.
+        // Refuse the next block before its work could exceed the watchdog.
+        const cost = Math.max(1, Math.ceil(size / 2));
+        if (cost > this.blockBudget) {
+          this.stop();
+          return;
+        }
+        this.blockBudget -= cost;
+      }
+      this.blockObserver?.(address, size);
+    });
+  }
+  setBlockObserver(callback) {
+    this.blockObserver = callback;
+    this._ensureBlockMonitor();
+  }
   onMemory(callback, { begin = 1, end = 0, invalid = false } = {}) {
     const types = invalid
       ? this.uc.HOOK_MEM_INVALID
@@ -168,6 +188,20 @@ export class ArmCPU {
   }
   run(start, stop, budget) {
     this.engine.emu_start(start >>> 0, stop >>> 0, 0, budget);
+  }
+  runGuarded(start, stop, workBudget) {
+    if (!Number.isSafeInteger(workBudget) || workBudget < 1 || workBudget > 100_000_000)
+      throw new Error('Invalid ARM block work budget');
+    if (this.blockBudget != null) throw new Error('Nested execution on the same ARM CPU');
+    this._ensureBlockMonitor();
+    this.blockBudget = workBudget;
+    try {
+      // Unicorn's count hook instruments every instruction. A persistent
+      // block watchdog keeps ordinary event calls bounded without that cost.
+      this.engine.emu_start(start >>> 0, stop >>> 0, 0, 0);
+    } finally {
+      this.blockBudget = null;
+    }
   }
   stop() {
     this.engine.emu_stop();

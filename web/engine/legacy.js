@@ -315,9 +315,16 @@ export class LegacyRuntime extends GnexRuntime {
     this._write(d + 4, p);
   }
   event(name, value = 0, instructionBudget = 20000000) {
+    const guarded = this.fastVmExecution && arguments.length < 3 && this.cpu.runGuarded;
     name = String(name).toUpperCase();
     if (!(name in this.sgs.entries)) throw new GnexError('Unknown legacy event');
     if (['error', 'exited', 'closed'].includes(this.status)) return this.diagnostics;
+    if (
+      !Number.isInteger(instructionBudget) ||
+      instructionBudget < 1 ||
+      instructionBudget > 100_000_000
+    )
+      throw new GnexError('Invalid instruction budget');
     const entry = this.sgs.entries[name];
     if (!entry) return this.diagnostics;
     this._setVar(0, value);
@@ -340,11 +347,15 @@ export class LegacyRuntime extends GnexRuntime {
     this.cpu.regWrite('lr', STOP);
     this.cpu.regWrite('sp', 0x23ff0000);
     this.status = 'running';
+    this._fastEventActive = !!guarded;
     try {
-      this.cpu.run(RELOC + 0x36274, STOP, instructionBudget);
+      if (guarded) this.cpu.runGuarded(RELOC + 0x36274, STOP, instructionBudget);
+      else this.cpu.run(RELOC + 0x36274, STOP, instructionBudget);
       if (this.exception) throw this.exception;
       if (this.cpu.regRead('pc') !== STOP)
-        throw new GnexError('Legacy event exceeded instruction budget');
+        throw new GnexError(
+          `Legacy event exceeded ${guarded ? 'block work' : 'instruction'} budget`,
+        );
       this.eventCount++;
       this.status = this._read(0x20b3ece4) === 3 ? 'exited' : 'idle';
       if (this.status === 'exited') {
@@ -355,6 +366,8 @@ export class LegacyRuntime extends GnexRuntime {
       this.error =
         String(e.message || e) + ' (legacy opcode0x' + (this.legacyOpcode ?? 0).toString(16) + ')';
       this.status = 'error';
+    } finally {
+      this._fastEventActive = false;
     }
     try {
       this._refreshLCD();

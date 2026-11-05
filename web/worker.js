@@ -51,8 +51,10 @@ let machine = null,
 let timers = new TimerScheduler(),
   pausedAt = null,
   lastFrame = 0,
+  framePending = false,
   lastStatus = 0,
   firmwareBudget = 100000;
+const frameInterval = 1000 / 60;
 let queue = Promise.resolve();
 let activeSession = null;
 function emit(message, transfers = []) {
@@ -113,13 +115,16 @@ function status(extra = {}) {
   lastStatus = performance.now();
 }
 function frame(force = false) {
-  if (!machine || (!force && performance.now() - lastFrame < 33)) return;
+  if (!machine) return;
+  framePending = true;
+  if (!force && performance.now() - lastFrame < frameInterval) return;
   const original = machine.framebufferRGBA || machine.framebuffer?.data;
   if (!original) return;
-  const pixels = new Uint8ClampedArray(original).slice();
+  const pixels = new Uint8ClampedArray(original);
   emit({ type: 'frame', width: machine.width || 220, height: machine.height || 176, pixels }, [
     pixels.buffer,
   ]);
+  framePending = false;
   lastFrame = performance.now();
 }
 function fail(error) {
@@ -132,12 +137,14 @@ function fail(error) {
   });
   frame(true);
 }
-function syncTimer(firedChannel = null) {
-  if (mode === 'game') timers.sync(machine.timerStates, performance.now(), firedChannel);
+function syncTimer(firedChannel = null, now = performance.now()) {
+  if (mode === 'game') timers.sync(machine.timerStates, now, firedChannel);
 }
 function fireTimer(channel) {
+  const started = performance.now();
   machine.event('TIMEOUT', channel);
-  syncTimer(channel);
+  // Guest execution consumes the interval; do not add another full delay after it.
+  syncTimer(channel, started);
 }
 function checkState() {
   if (['blocked', 'error', 'exited', 'stopped', 'closed', 'off'].includes(machine?.status)) {
@@ -182,6 +189,7 @@ async function load(message) {
   audio.setVolume(1);
   machine?.close?.();
   machine = null;
+  framePending = false;
   timers = new TimerScheduler();
   nativeStarts.clear();
   nativeReleases.clear();
@@ -209,9 +217,10 @@ async function load(message) {
         emit({ type: 'save', gameId, data });
       },
     });
+    const started = performance.now();
     machine.event('START');
     gameTitle = message.gameTitle || machine.title;
-    syncTimer();
+    syncTimer(null, started);
   } else {
     const diskImage =
       message.type === 'boot' ? await buildDisk(rom, message.diskGames ?? null) : undefined;
@@ -241,9 +250,10 @@ async function command(message) {
       pressed = !!message.pressed;
     if (mode === 'game') {
       const mapping = machine.profile === 'phone' ? phoneKeys : keys;
+      const started = performance.now();
       if ((running || !pressed) && mapping[key] !== undefined)
         machine.setKey(mapping[key], pressed);
-      syncTimer();
+      syncTimer(null, started);
     } else if (pressed) {
       nativeStarts.set(key, nativeStarts.get(key) ?? machine.instructions);
       nativeReleases.delete(key);
@@ -318,6 +328,9 @@ function tick() {
       }
       if (performance.now() - lastStatus > 250) status();
     }
+    // A short key event may finish before the display deadline and arm no timer.
+    // Keep its latest pixels pending instead of waiting for another guest event.
+    if (framePending) frame();
   } catch (error) {
     fail(error);
   }

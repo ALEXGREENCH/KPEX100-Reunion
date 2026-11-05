@@ -1,0 +1,168 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import { TimerScheduler } from '../../web/engine/timers.js';
+
+// Execute the actual worker with a deterministic clock and guest. No wall-clock
+// thresholds or ARM execution speed are involved in these scheduling checks.
+const source = fs
+  .readFileSync(new URL('../../web/worker.js', import.meta.url), 'utf8')
+  .replace(/^import .*;\r?$/gm, '');
+
+function harness(onEvent = () => {}) {
+  let now = 1000;
+  const messages = [],
+    tasks = [],
+    events = [];
+  const guest = {
+    status: 'idle',
+    timerStates: [],
+    eventCount: 0,
+    width: 1,
+    height: 1,
+    framebufferRGBA: new Uint8ClampedArray([10, 20, 30, 255]),
+    event(name, channel = 0) {
+      events.push({ name, channel, at: now });
+      this.eventCount++;
+      onEvent(this, name, channel, (milliseconds) => (now += milliseconds));
+    },
+    setKey() {
+      this.event('KEYPRESS');
+    },
+  };
+  const Runtime = { create: async () => guest };
+  const sandbox = {
+    GnexRuntime: Runtime,
+    LegacyRuntime: Runtime,
+    detectVersion: () => 4,
+    TimerScheduler,
+    performance: { now: () => now },
+    fetch: async () => ({ ok: true, arrayBuffer: async () => new ArrayBuffer(4) }),
+    postMessage(message, transfer = []) {
+      messages.push(structuredClone(message, { transfer }));
+    },
+    setTimeout(callback, delay) {
+      tasks.push({ callback, delay });
+    },
+  };
+  vm.createContext(sandbox);
+  vm.runInContext(
+    source +
+      '\nglobalThis.control = { command, tick, deadline: (n) => timers.deadlines.get(n)?.at };',
+    sandbox,
+  );
+  return {
+    guest,
+    messages,
+    tasks,
+    events,
+    ...sandbox.control,
+    now: () => now,
+    advance(milliseconds) {
+      now += milliseconds;
+    },
+    load() {
+      return sandbox.control.command({
+        type: 'loadGame',
+        sessionId: 1,
+        romUrl: 'rom',
+        gameUrl: 'game',
+      });
+    },
+  };
+}
+
+test('worker anchors new START/key timers before guest work and retains untouched deadlines', async () => {
+  const h = harness((guest, name, channel, spend) => {
+    if (name === 'START') {
+      guest.timerStates = [{ channel: 0, delay: 20, repeat: true, revision: 1 }];
+      spend(75);
+    } else if (name === 'KEYPRESS') {
+      guest.timerStates.push({ channel: 1, delay: 80, repeat: false, revision: 1 });
+      spend(13);
+    }
+  });
+  await h.load();
+  assert.equal(h.now(), 1075);
+  assert.equal(h.deadline(0), 1020, 'START execution must consume its timer interval');
+  await h.command({ type: 'key', sessionId: 1, key: 'a', pressed: true });
+  assert.equal(h.now(), 1088);
+  assert.equal(h.deadline(0), 1020, 'Key input must not restart untouched timers');
+  assert.equal(h.deadline(1), 1155, 'New key timers must not wait for guest work plus their delay');
+});
+
+test('a timer armed late in a long START receives its full requested interval', async () => {
+  const h = harness((guest, name, channel, spend) => {
+    if (name !== 'START') return;
+    const armedAt = spend(80);
+    guest.timerStates = [{ channel: 0, delay: 50, repeat: true, revision: 1, armedAt }];
+    spend(20);
+  });
+  await h.load();
+  assert.equal(h.now(), 1100);
+  assert.equal(h.deadline(0), 1130, 'SetTimer time must override the START-entry fallback');
+});
+
+test('slow worker timer callbacks stay single-dispatch and preserve pause, step and resume', async () => {
+  const h = harness((guest, name, channel, spend) => {
+    if (name === 'START')
+      guest.timerStates = [{ channel: 0, delay: 20, repeat: true, revision: 1 }];
+    else if (name === 'TIMEOUT') spend(80);
+  });
+  await h.load();
+  h.advance(20);
+  h.tick();
+  assert.equal(h.events.length, 2, 'An overdue guest must run only one timer callback per tick');
+  assert.equal(h.now(), 1100);
+  assert.equal(h.deadline(0), 1040, 'Guest CPU time must not be added to the repeating delay');
+  assert.equal(h.tasks.at(-1).delay, 1, 'An overdue callback must still yield to worker commands');
+
+  await h.command({ type: 'pause', sessionId: 1 });
+  h.advance(1000);
+  h.tick();
+  assert.equal(h.events.length, 2, 'Paused ticks must not dispatch overdue callbacks');
+  await h.command({ type: 'step', sessionId: 1 });
+  assert.equal(h.events.length, 3);
+  assert.equal(h.deadline(0), 2120);
+  assert.equal(h.messages.at(-1).running, false);
+  h.advance(500);
+  await h.command({ type: 'resume', sessionId: 1 });
+  assert.equal(h.deadline(0), 2620, 'Resume shifts deadlines only by time spent paused');
+  h.tick();
+  assert.equal(h.events.length, 4, 'Resume also dispatches at most one overdue callback per tick');
+  assert.equal(h.deadline(0), 2700);
+});
+
+test('worker transfers an independent frame without detaching the guest framebuffer', async () => {
+  const h = harness();
+  await h.load();
+  const frame = h.messages.find((message) => message.type === 'frame');
+  assert.deepEqual([...frame.pixels], [10, 20, 30, 255]);
+  assert.equal(h.guest.framebufferRGBA.byteLength, 4);
+  h.guest.framebufferRGBA[0] = 99;
+  assert.equal(frame.pixels[0], 10, 'Transferred pixels must not alias live guest memory');
+});
+
+test('throttled key frames flush at the display deadline without another guest timer', async () => {
+  const h = harness((guest, name) => {
+    if (name === 'KEYPRESS') guest.framebufferRGBA[0]++;
+  });
+  const frames = () => h.messages.filter((message) => message.type === 'frame');
+  await h.load();
+  assert.equal(frames().length, 1);
+  await h.command({ type: 'key', sessionId: 1, key: 'a', pressed: true });
+  await h.command({ type: 'key', sessionId: 1, key: 'left', pressed: true });
+  assert.equal(h.guest.timerStates.length, 0);
+  assert.equal(frames().length, 1, 'Key events must still obey the display cap');
+  h.advance(16);
+  h.tick();
+  assert.equal(frames().length, 1, 'Pending pixels must wait for the 60 Hz deadline');
+  h.advance(1);
+  h.tick();
+  assert.equal(frames().length, 2);
+  assert.equal(frames().at(-1).pixels[0], 12, 'Display the newest of the throttled key frames');
+  h.advance(100);
+  h.tick();
+  assert.equal(frames().length, 2, 'Idle ticks must not resend an unchanged framebuffer');
+});

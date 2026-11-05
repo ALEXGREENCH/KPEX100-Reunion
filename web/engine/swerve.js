@@ -5,7 +5,7 @@ const signatures = Object.entries(API).map(([id, s]) => ({ id: Number(id), ...s 
 const methods = Object.fromEntries(
   signatures.filter((s) => s.offset !== undefined).map((s) => [s.name, s]),
 );
-export async function createSwerve(runtime, { binary = null } = {}) {
+export async function createSwerve(runtime, { binary = null, fastExecution = true } = {}) {
   if (!binary) {
     const response = await fetch(new URL('./vendor/swerve/swv21brew.mod', import.meta.url));
     if (!response.ok) throw Error('Cannot load original Swerve engine: ' + response.status);
@@ -16,7 +16,7 @@ export async function createSwerve(runtime, { binary = null } = {}) {
     .join('');
   if (digest !== '1e76412e158bc3948bf6ad173b181368e0f0d554d6b0e1488a29402d96b0cdab')
     throw Error('Unrecognized Swerve ARM binary');
-  return new SwerveBridge(runtime, await SwerveMachine.create(binary, HELPERS));
+  return new SwerveBridge(runtime, await SwerveMachine.create(binary, HELPERS, { fastExecution }));
 }
 export class SwerveBridge {
   constructor(runtime, machine) {

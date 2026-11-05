@@ -10,6 +10,38 @@ import { GnexRuntime } from '../web/engine/gnex.js';
 const binary = fs.readFileSync(
   new URL('../web/engine/vendor/swerve/swv21brew.mod', import.meta.url),
 );
+
+test('accelerated 3D preserves the reference GNEX phone clock during startup', async () => {
+  const rom = fs.readFileSync(new URL('../web/data/firmware/Kingston-2.12.rom', import.meta.url));
+  const sgs = fs.readFileSync(
+    new URL('../web/data/games/gnex26_independence_day_3d.sgs', import.meta.url),
+  );
+  const snapshots = [];
+  for (const fastExecution of [false, true]) {
+    const g = await GnexRuntime.create(rom, sgs, {
+      profile: 'phone',
+      width: 176,
+      height: 220,
+      fastExecution,
+      nowMs: () => 0,
+      clock: () => new Date('2026-01-01T12:00:00Z'),
+      swerve: { binary },
+    });
+    try {
+      g.event('START');
+      assert.equal(g.status, 'idle', g.error);
+      snapshots.push({
+        armInstructions: g.armInstructions,
+        frame: crypto.createHash('sha256').update(g.framebufferRGBA).digest('hex'),
+        timers: g.timerStates,
+        syscalls: g.syscalls,
+      });
+    } finally {
+      g.close();
+    }
+  }
+  assert.deepEqual(snapshots[1], snapshots[0]);
+});
 test('Original Swerve ARM engine creates RGB565 buffer and renders a green clear', async () => {
   assert.equal(
     crypto.createHash('sha256').update(binary).digest('hex'),

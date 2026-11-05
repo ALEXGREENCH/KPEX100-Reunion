@@ -57,6 +57,47 @@ test('real guest LCD writes produce the displayed RGB565 pixel', async () => {
   }
 });
 
+test('firmware instruction boundary stops infinite guest code before extra device effects', async () => {
+  const m = await FirmwareMachine.create(rom);
+  try {
+    const start = 0x20010000;
+    // ADD r0, r0, #1; B back to ADD. The machine hook must stop an endless loop.
+    m.cpu.write(start, Buffer.from('010080e2fdffffea', 'hex'));
+    m.cpu.regWrite('pc', start);
+    m.cpu.regWrite('r0', 0);
+    assert.equal(m.run(1).instructions, 1);
+    assert.equal(m.cpu.regRead('r0'), 1);
+    assert.equal(m.cpu.regRead('pc'), start + 4);
+    assert.equal(m.run(2).instructions, 3);
+    assert.equal(m.cpu.regRead('r0'), 2);
+    assert.equal(m.cpu.regRead('pc'), start + 4);
+
+    // STR r0, [r1]; MOV r0, r0. A deferred masked device write belongs to
+    // the next instruction boundary and must not run after a one-step budget.
+    const store = start + 0x100;
+    m.cpu.write(store, Buffer.from('000081e50000a0e1', 'hex'));
+    m.cpu.regWrite('pc', store);
+    m.cpu.regWrite('r0', 0x12345678);
+    m.cpu.regWrite('r1', 0x80000040);
+    m.run(1);
+    assert.equal(m.cpu.read32(0x80000040), 0x12345678);
+    assert.equal(m._deferred_writes[0x80000040], 0x5678);
+    m.run(1);
+    assert.equal(m.cpu.read32(0x80000040), 0x5678);
+
+    // Reaching the shutdown address is not the same as executing its hook.
+    m.cpu.write(0x200279ac, Buffer.from('0000a0e1', 'hex'));
+    m.cpu.regWrite('pc', 0x200279ac);
+    m.mmio[0x80000304] = 0xffff27ff;
+    m.mmio[0x80000300] = 0x572;
+    assert.equal(m.run(1).status, 'paused');
+    assert.equal(m.cpu.regRead('pc'), 0x200279b0);
+    assert.equal(m.run(1).status, 'off');
+  } finally {
+    m.close();
+  }
+});
+
 for (const [name, file] of [
   ['menu', 'Kingston-2.12-menu.reunion-state'],
   ['hellfire', 'Kingston-2.12-HellFire-gameplay.reunion-state'],

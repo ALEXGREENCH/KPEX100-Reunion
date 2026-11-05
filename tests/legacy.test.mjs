@@ -92,6 +92,19 @@ test('all legacy original START handlers and armed timer channels execute withou
   }
 });
 
+test('legacy explicit instruction budgets cannot disable the execution limit', async () => {
+  const g = await create('gnex25_ys3_the_oath_in_felghana');
+  try {
+    for (const budget of [0, -1, null, NaN, Infinity, 0.5, 100_000_001])
+      assert.throws(() => g.event('START', 0, budget), /Invalid instruction budget/);
+    g.event('START', 0, 1);
+    assert.equal(g.status, 'error');
+    assert.match(g.error, /instruction budget/);
+  } finally {
+    g.close();
+  }
+});
+
 test('legacy user NV storage uses exact original byte driver and persists per application', async () => {
   const id = 'gnex25_ys3_the_oath_in_felghana',
     g = await create(id);

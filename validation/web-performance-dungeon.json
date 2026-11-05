@@ -1,0 +1,510 @@
+{
+  "schema": 1,
+  "createdAt": "2026-11-05T00:54:48.014Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 5 5500                               "
+  },
+  "parameters": {
+    "runs": 3,
+    "frames": 20,
+    "warmups": 1,
+    "swerveMode": "auto"
+  },
+  "methodology": [
+    "Real GNEX/legacy/Swerve WASM runtimes in Node; this measures guest work, not browser paint FPS, network or audio synthesis.",
+    "Paired exact/guarded runs alternate order. Fresh runtime each time; optional warmups excluded; medians reported.",
+    "START and exactly frames explicit manual TIMEOUT calls, including unarmed timers. This is a deterministic execution benchmark, not browser scheduler replay.",
+    "Civil clock starts 2026-01-01T12:00:00Z and monotonic clock advances by the selected armed timer delay or 50 ms fallback. First five Swerve intro steps use 500 ms.",
+    "Frame-trail SHA hashes pixels after each event and input; hashes and result inspection are outside measured guest-call time.",
+    "Every mode and repetition must match frames, status, error, event count, syscalls and timer states. Guarded/exact call routing is checked independently.",
+    "SGS36 retains exact GNEX VM timing in both modes; its native Swerve renderer uses the selected execution mode. Other formats use guarded VM execution and safe native helpers when enabled."
+  ],
+  "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+  "games": [
+    {
+      "id": "gnex36_dungeon_fighter",
+      "format": 4,
+      "gameSha256": "883c4c6fb9398ec1ceb6dfe8b102c12ac7c79aa5cfb6ed021316d7aacb17c3dd",
+      "exact": [
+        {
+          "initializationMs": 16.882500000000164,
+          "guestMs": 1496.0719,
+          "guardedCalls": 0,
+          "exactCalls": 25,
+          "swerveGuardedCalls": 0,
+          "swerveExactCalls": 0,
+          "result": {
+            "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+            "frameTrailSha256": "ff4acf221153fe4dae681bde11bc7ed6e1c7099d2a7572e453e3dba31c838ae4",
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "events": 25,
+            "syscalls": {
+              "0x00000005": 44,
+              "0x0000006b": 2,
+              "0x00000067": 1,
+              "0x00000095": 1,
+              "0x0000001e": 1,
+              "0x0000001f": 1,
+              "0x000000b5": 28,
+              "0x000000c8": 1,
+              "0x000000a5": 510,
+              "0x0000003a": 20,
+              "0x00000026": 26,
+              "0x00000046": 14,
+              "0x0000005f": 20,
+              "0x0000009e": 257,
+              "0x000000c9": 195,
+              "0x0000009d": 10,
+              "0x000000bf": 10,
+              "0x0000002f": 42,
+              "0x000000a6": 1734,
+              "0x00000082": 1,
+              "0x00000027": 6,
+              "0x00000047": 6
+            },
+            "timerStates": [
+              {
+                "channel": 0,
+                "delay": 100,
+                "repeat": true,
+                "revision": 1,
+                "armedAt": 0
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ],
+            "virtualMs": 2000,
+            "checkpoints": [
+              {
+                "frame": 0,
+                "timeMs": 0,
+                "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                "events": 1
+              },
+              {
+                "frame": 20,
+                "timeMs": 2000,
+                "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+                "events": 25
+              }
+            ]
+          },
+          "matches": true
+        },
+        {
+          "initializationMs": 15.640999999999622,
+          "guestMs": 1648.5004,
+          "guardedCalls": 0,
+          "exactCalls": 25,
+          "swerveGuardedCalls": 0,
+          "swerveExactCalls": 0,
+          "result": {
+            "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+            "frameTrailSha256": "ff4acf221153fe4dae681bde11bc7ed6e1c7099d2a7572e453e3dba31c838ae4",
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "events": 25,
+            "syscalls": {
+              "0x00000005": 44,
+              "0x0000006b": 2,
+              "0x00000067": 1,
+              "0x00000095": 1,
+              "0x0000001e": 1,
+              "0x0000001f": 1,
+              "0x000000b5": 28,
+              "0x000000c8": 1,
+              "0x000000a5": 510,
+              "0x0000003a": 20,
+              "0x00000026": 26,
+              "0x00000046": 14,
+              "0x0000005f": 20,
+              "0x0000009e": 257,
+              "0x000000c9": 195,
+              "0x0000009d": 10,
+              "0x000000bf": 10,
+              "0x0000002f": 42,
+              "0x000000a6": 1734,
+              "0x00000082": 1,
+              "0x00000027": 6,
+              "0x00000047": 6
+            },
+            "timerStates": [
+              {
+                "channel": 0,
+                "delay": 100,
+                "repeat": true,
+                "revision": 1,
+                "armedAt": 0
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ],
+            "virtualMs": 2000,
+            "checkpoints": [
+              {
+                "frame": 0,
+                "timeMs": 0,
+                "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                "events": 1
+              },
+              {
+                "frame": 20,
+                "timeMs": 2000,
+                "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+                "events": 25
+              }
+            ]
+          },
+          "matches": true
+        },
+        {
+          "initializationMs": 16.043400000000474,
+          "guestMs": 1649.271899999998,
+          "guardedCalls": 0,
+          "exactCalls": 25,
+          "swerveGuardedCalls": 0,
+          "swerveExactCalls": 0,
+          "result": {
+            "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+            "frameTrailSha256": "ff4acf221153fe4dae681bde11bc7ed6e1c7099d2a7572e453e3dba31c838ae4",
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "events": 25,
+            "syscalls": {
+              "0x00000005": 44,
+              "0x0000006b": 2,
+              "0x00000067": 1,
+              "0x00000095": 1,
+              "0x0000001e": 1,
+              "0x0000001f": 1,
+              "0x000000b5": 28,
+              "0x000000c8": 1,
+              "0x000000a5": 510,
+              "0x0000003a": 20,
+              "0x00000026": 26,
+              "0x00000046": 14,
+              "0x0000005f": 20,
+              "0x0000009e": 257,
+              "0x000000c9": 195,
+              "0x0000009d": 10,
+              "0x000000bf": 10,
+              "0x0000002f": 42,
+              "0x000000a6": 1734,
+              "0x00000082": 1,
+              "0x00000027": 6,
+              "0x00000047": 6
+            },
+            "timerStates": [
+              {
+                "channel": 0,
+                "delay": 100,
+                "repeat": true,
+                "revision": 1,
+                "armedAt": 0
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ],
+            "virtualMs": 2000,
+            "checkpoints": [
+              {
+                "frame": 0,
+                "timeMs": 0,
+                "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                "events": 1
+              },
+              {
+                "frame": 20,
+                "timeMs": 2000,
+                "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+                "events": 25
+              }
+            ]
+          },
+          "matches": true
+        }
+      ],
+      "guarded": [
+        {
+          "initializationMs": 16.075500000000375,
+          "guestMs": 525.4672000000005,
+          "guardedCalls": 25,
+          "exactCalls": 0,
+          "swerveGuardedCalls": 0,
+          "swerveExactCalls": 0,
+          "result": {
+            "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+            "frameTrailSha256": "ff4acf221153fe4dae681bde11bc7ed6e1c7099d2a7572e453e3dba31c838ae4",
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "events": 25,
+            "syscalls": {
+              "0x00000005": 44,
+              "0x0000006b": 2,
+              "0x00000067": 1,
+              "0x00000095": 1,
+              "0x0000001e": 1,
+              "0x0000001f": 1,
+              "0x000000b5": 28,
+              "0x000000c8": 1,
+              "0x000000a5": 510,
+              "0x0000003a": 20,
+              "0x00000026": 26,
+              "0x00000046": 14,
+              "0x0000005f": 20,
+              "0x0000009e": 257,
+              "0x000000c9": 195,
+              "0x0000009d": 10,
+              "0x000000bf": 10,
+              "0x0000002f": 42,
+              "0x000000a6": 1734,
+              "0x00000082": 1,
+              "0x00000027": 6,
+              "0x00000047": 6
+            },
+            "timerStates": [
+              {
+                "channel": 0,
+                "delay": 100,
+                "repeat": true,
+                "revision": 1,
+                "armedAt": 0
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ],
+            "virtualMs": 2000,
+            "checkpoints": [
+              {
+                "frame": 0,
+                "timeMs": 0,
+                "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                "events": 1
+              },
+              {
+                "frame": 20,
+                "timeMs": 2000,
+                "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+                "events": 25
+              }
+            ]
+          },
+          "matches": true
+        },
+        {
+          "initializationMs": 19.489599999999882,
+          "guestMs": 531.7345999999998,
+          "guardedCalls": 25,
+          "exactCalls": 0,
+          "swerveGuardedCalls": 0,
+          "swerveExactCalls": 0,
+          "result": {
+            "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+            "frameTrailSha256": "ff4acf221153fe4dae681bde11bc7ed6e1c7099d2a7572e453e3dba31c838ae4",
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "events": 25,
+            "syscalls": {
+              "0x00000005": 44,
+              "0x0000006b": 2,
+              "0x00000067": 1,
+              "0x00000095": 1,
+              "0x0000001e": 1,
+              "0x0000001f": 1,
+              "0x000000b5": 28,
+              "0x000000c8": 1,
+              "0x000000a5": 510,
+              "0x0000003a": 20,
+              "0x00000026": 26,
+              "0x00000046": 14,
+              "0x0000005f": 20,
+              "0x0000009e": 257,
+              "0x000000c9": 195,
+              "0x0000009d": 10,
+              "0x000000bf": 10,
+              "0x0000002f": 42,
+              "0x000000a6": 1734,
+              "0x00000082": 1,
+              "0x00000027": 6,
+              "0x00000047": 6
+            },
+            "timerStates": [
+              {
+                "channel": 0,
+                "delay": 100,
+                "repeat": true,
+                "revision": 1,
+                "armedAt": 0
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ],
+            "virtualMs": 2000,
+            "checkpoints": [
+              {
+                "frame": 0,
+                "timeMs": 0,
+                "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                "events": 1
+              },
+              {
+                "frame": 20,
+                "timeMs": 2000,
+                "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+                "events": 25
+              }
+            ]
+          },
+          "matches": true
+        },
+        {
+          "initializationMs": 15.649200000000747,
+          "guestMs": 521.0630000000028,
+          "guardedCalls": 25,
+          "exactCalls": 0,
+          "swerveGuardedCalls": 0,
+          "swerveExactCalls": 0,
+          "result": {
+            "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+            "frameTrailSha256": "ff4acf221153fe4dae681bde11bc7ed6e1c7099d2a7572e453e3dba31c838ae4",
+            "width": 128,
+            "height": 160,
+            "status": "idle",
+            "error": null,
+            "events": 25,
+            "syscalls": {
+              "0x00000005": 44,
+              "0x0000006b": 2,
+              "0x00000067": 1,
+              "0x00000095": 1,
+              "0x0000001e": 1,
+              "0x0000001f": 1,
+              "0x000000b5": 28,
+              "0x000000c8": 1,
+              "0x000000a5": 510,
+              "0x0000003a": 20,
+              "0x00000026": 26,
+              "0x00000046": 14,
+              "0x0000005f": 20,
+              "0x0000009e": 257,
+              "0x000000c9": 195,
+              "0x0000009d": 10,
+              "0x000000bf": 10,
+              "0x0000002f": 42,
+              "0x000000a6": 1734,
+              "0x00000082": 1,
+              "0x00000027": 6,
+              "0x00000047": 6
+            },
+            "timerStates": [
+              {
+                "channel": 0,
+                "delay": 100,
+                "repeat": true,
+                "revision": 1,
+                "armedAt": 0
+              },
+              {
+                "channel": 1,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              },
+              {
+                "channel": 2,
+                "delay": null,
+                "repeat": false,
+                "revision": 0
+              }
+            ],
+            "virtualMs": 2000,
+            "checkpoints": [
+              {
+                "frame": 0,
+                "timeMs": 0,
+                "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                "events": 1
+              },
+              {
+                "frame": 20,
+                "timeMs": 2000,
+                "rgbaSha256": "f39432b5abfaf0e9e2195748ab8277d77669e3692b3482067ce437434b1e0c5f",
+                "events": 25
+              }
+            ]
+          },
+          "matches": true
+        }
+      ],
+      "matches": true,
+      "medianExactMs": 1648.5004,
+      "medianGuardedMs": 525.4672000000005,
+      "speedup": 3.137208944725757
+    }
+  ],
+  "passed": true
+}

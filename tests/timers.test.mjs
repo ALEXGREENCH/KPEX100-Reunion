@@ -2,6 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { TimerScheduler } from '../web/engine/timers.js';
 
+test('new timers use guest registration time while repeating callbacks consume their interval', () => {
+  const scheduler = new TimerScheduler();
+  const state = { channel: 0, delay: 100, repeat: true, revision: 1, armedAt: 1480 };
+  // START began at 1000 but SetTimer was not called until 1480.
+  scheduler.sync([state], 1000);
+  assert.equal(scheduler.next().at, 1580);
+  scheduler.sync([state], 1580, 0);
+  assert.equal(scheduler.next().at, 1680, 'Repeat must not reuse stale registration time');
+  scheduler.sync([{ ...state, delay: 50, revision: 2, armedAt: 1720 }], 1680, 0);
+  assert.equal(scheduler.next().at, 1770, 'Callback reprogramming gets its own registration time');
+});
+
 test('three GNEX timers retain independent deadlines and accept callback reprogramming', () => {
   const scheduler = new TimerScheduler();
   let states = [

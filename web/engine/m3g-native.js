@@ -6,17 +6,18 @@ const BASE = 0x04000000,
   STACK = 0x09ff0000,
   STOP = 0x09fff000;
 export class SwerveMachine {
-  static async create(binary, helperNames) {
+  static async create(binary, helperNames, options = {}) {
     const cpu = await createARM({ isolated: true });
     try {
-      return new SwerveMachine(cpu, binary, helperNames);
+      return new SwerveMachine(cpu, binary, helperNames, options);
     } catch (e) {
       cpu.close();
       throw e;
     }
   }
-  constructor(cpu, binary, names) {
+  constructor(cpu, binary, names, { fastExecution = true } = {}) {
     this.cpu = cpu;
+    this.fastExecution = !!fastExecution;
     this.heap = HEAP;
     this.allocs = new Map();
     this.freeBlocks = [];
@@ -269,7 +270,8 @@ export class SwerveMachine {
     });
     this.nativeCalls++;
     try {
-      c.run(p, STOP, 100_000_000);
+      if (this.fastExecution) c.runGuarded(p, STOP, 100_000_000);
+      else c.run(p, STOP, 100_000_000);
     } catch (e) {
       throw Error((e.message || String(e)) + ' at Swerve ARM ' + c.regRead('pc').toString(16));
     }

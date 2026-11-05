@@ -9,8 +9,12 @@ export class TimerScheduler {
       if (!(state.delay > 0)) continue;
       active.add(state.channel);
       const previous = this.deadlines.get(state.channel);
-      if (!previous || previous.revision !== state.revision || state.channel === firedChannel) {
-        this.deadlines.set(state.channel, { ...state, at: now + state.delay });
+      const changed = !previous || previous.revision !== state.revision;
+      if (changed || state.channel === firedChannel) {
+        // A guest may arm a timer near the end of a long event. Only unchanged
+        // repeating timers use the event-start anchor supplied by the worker.
+        const anchor = changed && Number.isFinite(state.armedAt) ? state.armedAt : now;
+        this.deadlines.set(state.channel, { ...state, at: anchor + state.delay });
       }
     }
     for (const channel of this.deadlines.keys())

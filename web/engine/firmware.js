@@ -324,6 +324,12 @@ export class FirmwareMachine {
     ][cond];
   }
   _code(address, size) {
+    // Unicorn invokes this hook before executing the next instruction. Stop
+    // before any device or power-off side effect at an exhausted run boundary.
+    if (this._run_end !== null && this.instructions >= this._run_end) {
+      this.cpu.stop();
+      return;
+    }
     if (
       address === 0x200279b0 &&
       this.rom_info.sha256 === key212 &&
@@ -335,10 +341,6 @@ export class FirmwareMachine {
     }
     for (const a in this._deferred_writes) this._writeMMIO(Number(a), this._deferred_writes[a]);
     this._deferred_writes = {};
-    if (this._run_end !== null && this.instructions >= this._run_end) {
-      this.cpu.stop();
-      return;
-    }
     if (
       this.fast_idle &&
       this._run_end !== null &&
@@ -839,7 +841,9 @@ export class FirmwareMachine {
     const pc = this.cpu.regRead('pc'),
       thumb = !!(this.cpu.regRead('cpsr') & 32);
     try {
-      this.cpu.run(pc | Number(thumb), 0xffffffff, budget);
+      // _code enforces the exact instruction limit, including fast-forwarded
+      // idle work. A second per-instruction counter inside Unicorn is redundant.
+      this.cpu.run(pc | Number(thumb), 0xffffffff, 0);
     } catch (e) {
       if (!['blocked', 'error'].includes(this.status)) {
         this.status = 'error';

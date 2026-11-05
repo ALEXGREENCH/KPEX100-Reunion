@@ -2,6 +2,7 @@
 import { createARM } from './cpu.js';
 import { SgsFile, bytes, decodeKorean } from './sgs.js';
 import { VirtualFileSystem } from './vfs.js';
+import { installRomAccelerators } from './rom-accelerators.js';
 export const ROM_SHA256 = '743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a';
 const RELOC = 0x2000f8dc,
   BASE = 0x21000000,
@@ -74,7 +75,10 @@ export class GnexRuntime {
       });
       if (runtime.sgs.version === 36) {
         const { createSwerve } = await import('./swerve.js');
-        runtime.swerve = await createSwerve(runtime, options.swerve || {});
+        runtime.swerve = await createSwerve(runtime, {
+          fastExecution: runtime.fastExecution,
+          ...options.swerve,
+        });
       }
       return runtime;
     } catch (e) {
@@ -106,6 +110,7 @@ export class GnexRuntime {
       nowMs = () => performance.now(),
       deviceMin = '01000000000',
       deviceUserId = 'Sinji',
+      fastExecution = true,
     } = {},
   ) {
     if (!cpu) throw new GnexError('Use await GnexRuntime.create(), or provide an initialized CPU');
@@ -130,6 +135,10 @@ export class GnexRuntime {
       throw new GnexError('Virtual script user ID must be at most 8 ASCII bytes');
     this.deviceUserId = deviceUserId;
     this.cpu = cpu;
+    this.fastExecution = !!fastExecution;
+    // SGS 36 intros consume the block-derived phone clock while loading 3D.
+    // Keep their interpreter's reference block layout; accelerate Swerve itself.
+    this.fastVmExecution = this.fastExecution && this.sgs.version !== 36;
     this.audio = audio;
     this.clock = clock;
     this.nowMs = nowMs;
@@ -227,10 +236,22 @@ export class GnexRuntime {
     cpu.run(RELOC + 0x45bfc, STOP, 5_000_000);
     if (this.exception || cpu.regRead('pc') !== STOP)
       throw new GnexError(`Native display init failed: ${this.exception || 'instruction budget'}`);
-    if (this.profile === 'phone' && cpu.onBlock)
-      cpu.onBlock((address, size) => {
+    if (this.profile === 'phone' && cpu.onBlock) {
+      const observer = (address, size) => {
         this.armInstructions += Math.ceil(size / 4);
+      };
+      if (cpu.setBlockObserver) cpu.setBlockObserver(observer);
+      else cpu.onBlock(observer);
+    }
+    if (this.fastVmExecution) {
+      this.romAccelerators = installRomAccelerators(cpu, {
+        romHash,
+        enabled: () => this._fastEventActive,
+        onSkippedInstructions: (count) => {
+          if (this.profile === 'phone') this.armInstructions += count;
+        },
       });
+    }
     this._refreshLCD();
   }
   get timerMs() {
@@ -275,6 +296,11 @@ export class GnexRuntime {
             (this.swerve ? ' + Swerve 2.1 ARM' : '')
           : 'Original Kingston 2.12 ARM GNEX / Unicorn WASM',
       profile: this.profile,
+      execution: this.fastVmExecution
+        ? 'Bounded block execution and verified ROM shortcuts'
+        : this.fastExecution
+          ? 'Reference GNEX clock and bounded Swerve execution'
+          : 'Instruction-count reference',
       events: this.eventCount,
       timer_ms: this.timerMs,
       bytecode_pc: pc >= BASE && pc < BASE + this.sgs.body.length ? hex(pc - BASE) : null,
@@ -301,13 +327,10 @@ export class GnexRuntime {
     };
   }
   _read(p) {
-    const b = this.cpu.read(p, 4);
-    return new DataView(b.buffer, b.byteOffset, 4).getUint32(0, true);
+    return this.cpu.read32(p);
   }
   _write(p, n) {
-    const b = new Uint8Array(4);
-    new DataView(b.buffer).setUint32(0, n >>> 0, true);
-    this.cpu.write(p, b);
+    this.cpu.write32(p, n);
   }
   _setVar(i, n) {
     if (i < this.varAddresses.length) this._write(this.varAddresses[i], n);
@@ -625,6 +648,7 @@ export class GnexRuntime {
       const [delay, repeat] = this._args(2),
         timer = this.timers[n - 0x95];
       timer.delay = delay > 0 ? delay : null;
+      timer.armedAt = this.nowMs();
       timer.repeat = !!repeat;
       timer.revision++;
       this.timerRevision++;
@@ -648,6 +672,7 @@ export class GnexRuntime {
     return true;
   }
   event(name, value = 0, instructionBudget = 20_000_000) {
+    const guarded = this.fastVmExecution && arguments.length < 3 && this.cpu.runGuarded;
     name = String(name).toUpperCase();
     if (!(name in this.sgs.entries)) throw new GnexError(`Unknown event ${name}`);
     if (['error', 'exited', 'closed'].includes(this.status)) return this.diagnostics;
@@ -677,11 +702,15 @@ export class GnexRuntime {
     this.cpu.regWrite('lr', STOP);
     this.cpu.regWrite('sp', 0x23ff0000);
     this.status = 'running';
+    this._fastEventActive = !!guarded;
     try {
-      this.cpu.run(RELOC + 0x399bc, STOP, instructionBudget);
+      if (guarded) this.cpu.runGuarded(RELOC + 0x399bc, STOP, instructionBudget);
+      else this.cpu.run(RELOC + 0x399bc, STOP, instructionBudget);
       if (this.exception) throw this.exception;
       if (this.cpu.regRead('pc') !== STOP)
-        throw new GnexError(`Event ${name} exceeded ${instructionBudget} ARM instructions`);
+        throw new GnexError(
+          `Event ${name} exceeded ${instructionBudget} ARM ${guarded ? 'block work units' : 'instructions'}`,
+        );
       this.eventCount++;
       this.status = this._read(0x20b3ece4) === 3 ? 'exited' : 'idle';
       if (this.status === 'exited') {
@@ -691,6 +720,8 @@ export class GnexRuntime {
     } catch (e) {
       this.error = String(e.message || e);
       this.status = 'error';
+    } finally {
+      this._fastEventActive = false;
     }
     try {
       this._refreshLCD();
