@@ -446,6 +446,40 @@
           "url": "https://www.sec.gov/Archives/edgar/data/1076541/000107878207000189/innocom8k030507ex991.htm"
         }
       ]
+    },
+    {
+      "id": "samsung-s250-code-manuals",
+      "title": "Samsung SCH-S250: код и официальные руководства",
+      "category": "Прошивки и средства сопровождения телефонов",
+      "description": "Исходный кодовый образ YD01, три точных PDF Samsung, страницы происхождения и статические доказательства. Есть GNEX/SGS-маркеры и метка маршрута; работающий интерпретатор и отдельные игровые SGS не восстановлены.",
+      "repositoryPath": "research/archives/Samsung-SCH-S250-Code-and-Manuals.zip",
+      "bytes": 49833776,
+      "sha256": "7bfec592162b0cecf593de4a5162d327eca953b61281d8c4e31f310c8119bfdb",
+      "sources": [
+        {
+          "label": "Официальная поддержка SCH-S250",
+          "url": "https://www.samsungsvc.co.kr/download/view?code=SCH-S250"
+        },
+        {
+          "label": "Архив исходного кода телефона",
+          "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z"
+        }
+      ]
+    },
+    {
+      "id": "samsung-pc-link-2000-originals",
+      "title": "Samsung PC Link 2000: два оригинальных дистрибутива",
+      "category": "Прошивки и средства сопровождения телефонов",
+      "description": "Оригинальные загрузки Samsung для SCH-S250. Утилиты синхронизации, не GNEX SDK. Только статический разбор; полная внутренняя проверка старой 040331 завершилась ошибками, ограничение сохранено в отчёте.",
+      "repositoryPath": "research/archives/Samsung-PC-Link-2000-Originals.zip",
+      "bytes": 43867230,
+      "sha256": "5a2ee83375f2542f70e7934547c953b21e385cabc01679a6daeca6e3ed02633a",
+      "sources": [
+        {
+          "label": "Официальная поддержка SCH-S250",
+          "url": "https://www.samsungsvc.co.kr/download/view?code=SCH-S250"
+        }
+      ]
     }
   ],
   "reports": [
@@ -524,6 +558,10 @@
     {
       "title": "Innocom, Китай и Super GNEX: OEM-направления и сохранённые источники",
       "repositoryPath": "doc/innocom-super-gnex.md"
+    },
+    {
+      "title": "Samsung SCH-S250 и SCH-S380: новые образы, GNEX-маршрут и официальные файлы",
+      "repositoryPath": "doc/samsung-s250-s380.md"
     }
   ]
 }

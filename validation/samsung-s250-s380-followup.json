@@ -1,0 +1,3977 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-11-05T23:38:37.398007+00:00",
+  "scope": "Two newly acquired Samsung model-labelled archives plus official SCH-S250 manuals and PC Link downloads. Static research, no firmware boot or vendor executable run.",
+  "rootListing": {
+    "sourceUrl": "https://archive.sunderland93.ru/Firmwares/Samsung/",
+    "retrievedUtc": "2026-11-05T23:20:07.462667+00:00",
+    "status": 200,
+    "bytes": 324825,
+    "sha256": "5a75d06b7fc6ab9c1a5276a62b72dd49a146ae585fca79648611c37c017d5862",
+    "targetLinks": [
+      "/Firmwares/Samsung/SCH-S109/",
+      "/Firmwares/Samsung/SCH-S130/",
+      "/Firmwares/Samsung/SCH-S169/",
+      "/Firmwares/Samsung/SCH-S179/",
+      "/Firmwares/Samsung/SCH-S189/",
+      "/Firmwares/Samsung/SCH-S199/",
+      "/Firmwares/Samsung/SCH-S229/",
+      "/Firmwares/Samsung/SCH-S239/",
+      "/Firmwares/Samsung/SCH-S250/",
+      "/Firmwares/Samsung/SCH-S259/",
+      "/Firmwares/Samsung/SCH-S269/",
+      "/Firmwares/Samsung/SCH-S299/",
+      "/Firmwares/Samsung/SCH-S319/",
+      "/Firmwares/Samsung/SCH-S379/",
+      "/Firmwares/Samsung/SCH-S380/",
+      "/Firmwares/Samsung/SCH-S390/",
+      "/Firmwares/Samsung/SCH-S399/"
+    ]
+  },
+  "directoryReceipts": [
+    {
+      "model": "SCH-S250",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/",
+      "retrievedUtc": "2026-11-05T23:20:38.134423+00:00",
+      "status": 200,
+      "bytes": 2122,
+      "sha256": "8f79b082795afd1b9c60a05b058ebfb4fcdf4e0b3d938f78350299c6b155fb7a",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z"
+      ]
+    },
+    {
+      "model": "SCH-S380",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S380/",
+      "retrievedUtc": "2026-11-05T23:20:38.135423+00:00",
+      "status": 200,
+      "bytes": 2173,
+      "sha256": "4d3179aec66064b5d27484c16d769468da14c53a968ae18fae9f8c3caaa38656",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S380/SCH-S380%20%5B%27Framebuffer%27%20memory%20dump%5D.7z"
+      ]
+    },
+    {
+      "model": "SCH-S390",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S390/",
+      "retrievedUtc": "2026-11-05T23:20:38.135423+00:00",
+      "error": "<urlopen error timed out>"
+    }
+  ],
+  "firmwareDownloads": [
+    {
+      "model": "SCH-S250",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z",
+      "retrievedUtc": "2026-11-05T23:21:23.355616+00:00",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z",
+      "bytes": 8227944,
+      "sha256": "bf64c6cbc992df21003cc050e0127bb927f92345b4bcd62195abe33f67a10808",
+      "declaredLength": "8227944",
+      "file": "inputs/S250MSM_CODE_YD01.7z"
+    },
+    {
+      "model": "SCH-S380",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S380/SCH-S380%20%5B%27Framebuffer%27%20memory%20dump%5D.7z",
+      "retrievedUtc": "2026-11-05T23:21:23.356616+00:00",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S380/SCH-S380%20%5B%27Framebuffer%27%20memory%20dump%5D.7z",
+      "bytes": 774993,
+      "sha256": "9741145150b1ed0a0ea49fe7efe629c7aefed0109c80f771dc3ad173e902431f",
+      "declaredLength": "774993",
+      "file": "inputs/SCH-S380 ['Framebuffer' memory dump].7z"
+    }
+  ],
+  "firmwareScan": {
+    "schema": 1,
+    "checkedUtc": "2026-11-05T23:22:35.378975+00:00",
+    "scope": "Two newly acquired model-labelled Samsung archives. Static extraction and scan only. S380 source describes a framebuffer memory dump; no complete phone image claimed.",
+    "inputs": [
+      {
+        "model": "SCH-S250",
+        "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z",
+        "retrievedUtc": "2026-11-05T23:21:23.355616+00:00",
+        "status": 200,
+        "finalUrl": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z",
+        "bytes": 8227944,
+        "sha256": "bf64c6cbc992df21003cc050e0127bb927f92345b4bcd62195abe33f67a10808",
+        "declaredLength": "8227944",
+        "file": "inputs/S250MSM_CODE_YD01.7z"
+      },
+      {
+        "model": "SCH-S380",
+        "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S380/SCH-S380%20%5B%27Framebuffer%27%20memory%20dump%5D.7z",
+        "retrievedUtc": "2026-11-05T23:21:23.356616+00:00",
+        "status": 200,
+        "finalUrl": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S380/SCH-S380%20%5B%27Framebuffer%27%20memory%20dump%5D.7z",
+        "bytes": 774993,
+        "sha256": "9741145150b1ed0a0ea49fe7efe629c7aefed0109c80f771dc3ad173e902431f",
+        "declaredLength": "774993",
+        "file": "inputs/SCH-S380 ['Framebuffer' memory dump].7z"
+      }
+    ],
+    "scannerSha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e",
+    "positiveControls": {
+      "files": 68,
+      "passed": 68,
+      "records": [
+        {
+          "id": "godori",
+          "sha256": "0f9b70d38c86ccb32fbd2b24d6e28eaf9328a1eacbf578a3c19baace36b90e93",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bfd63bf0a4be12882b9340df162b4a83817c013223b8728f73dd97848b91f257",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "hellfire",
+          "sha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "3940f46d723cee7057094083e02e93a0e1febefad3ade8c49b670bd6b3a3989d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "ikaria",
+          "sha256": "c04204a6eec21188c4e499a8e2baa0ebb2d8d2007802e579085288edfdf5a5de",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e0c43e910ebd9cb9f33dbb8c70dda5389912d00250d6198a4710a708c8454c4f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "kpetris",
+          "sha256": "f4584767eac0ba15c568fc89687f9aed38b484811e3b2658ef45dec0fc392792",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "97c0cde3d631d5c3a0948361fba57e49c663799ba5efead5e60370cb077d93df",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "battle-armor",
+          "sha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "145a2613699935234b1828c17a6f82cdeafc556428da8df5515202b0460945c9",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "soul-sword",
+          "sha256": "9827804cd97c394a949a37f0b45a0d73d8a417ae31d52ff13575230c3936bd50",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "090247628ccc5a3cb74ee83721762a87badddedbdcca28a27dfd4c28e4ffa84b",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "treasure-hunter",
+          "sha256": "a5c0445c7440342cc0fc6d17a7a72c0482d561df2511931177f243dd64b888a1",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e6bcc8488f87fb37fc8af4d1e0eff631db3198a603cb417cb743d69794a0ef4c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "the-man-jong",
+          "sha256": "7d4708b39cbb54ea1b5e2e3156a0717747d20d553193e16c4e18dc0ac4023aa1",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "7ea258b9d72b2e07f7f8f7e2b24a9d52dfbdff8c2f464f1061fbb715b5e0de8d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "star-fighter",
+          "sha256": "277ee7a3dc4d5732cbfede82c19599ef23969558facfce37c65777f0b8cb74cf",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5a23ffc591b5e558e5fdfc0a4811dc2ed14ede2204371d81267320ae0965da86",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "aiolos-kpex",
+          "sha256": "2ce5dc39657ee2327f6ef1829f663b8742b11a02f8360ea31fc129b3d5eb7264",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e8c1e0c2629560aa60ae84a452cd9e195737db8a448982f8755ae7135d22a56c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "blocks",
+          "sha256": "c91564487df14d7db4ae3fed009a447bcd5c4151541fa8d6e2ba05b7c25da191",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "725c7ef3a127a7253213a134cc36f15142e4eda48dc6d81c303578d1c85f3621",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "exciting-drop",
+          "sha256": "5f4dc8afec8bc3f581b7566b124bc78cc4c1d0a10a38b14999aed3af1ec3c016",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5ecc022abf098f9348d191c49bf94ce693d8baff64899bd98a556fb8253ee213",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "blue-swallow",
+          "sha256": "993aed5426fe214c84d47bb4b376c37fe43db3d150207a39f492fcaeb79c4d6f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "2a2ee9d8011dc117eb26b90f237b0edcd6d8e91c8c148281dcdb2c4daef6e28a",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex1_1zimae",
+          "sha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "6f008e13c5a35c58970d4c64596c4aa326e7e8c0bbb44ae9cd629fbf7b4d1c21",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex2_2007_pro_baseball",
+          "sha256": "8ea81140fc5586667cee4376c4dcc1a3e98e63b3477eabebe734fd50d0cec296",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "026b944a9cd58a6cf0cdc901abb15eac0b868a9f406e764116b4e77c36bb9250",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex6_alchemist",
+          "sha256": "863e4f02bc166acaeb935701c7456f76e9eb4a5174200b6c6c219ad627bbd72a",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "e4e594954360967711656584fc9a997b40bcd4074473cff051f6529cb4afb56b",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "galaga-lg-sd1000",
+          "sha256": "bd85fa7948d98b4248605178e1e9f74929ba93518093974554864247a84b1fca",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bd85fa7948d98b4248605178e1e9f74929ba93518093974554864247a84b1fca",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "vocabulary-quiz-lg-sv130",
+          "sha256": "bf769132b1076d24b55d618b14b4bb3ebb11139fbbfae05edbbac6088ecdd69f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bf769132b1076d24b55d618b14b4bb3ebb11139fbbfae05edbbac6088ecdd69f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "bubble-bobble-lg-sd1020",
+          "sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "zzayo-zzayo-tycoon-lg-sd810",
+          "sha256": "bb03033013802f75f4d6ac3e77ec24374a3b3c785e89a27226ab964bad6c82d6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bb03033013802f75f4d6ac3e77ec24374a3b3c785e89a27226ab964bad6c82d6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sword-master-chronicle-lg-sd810",
+          "sha256": "cc2b82b45258f0a201eace8bd2e286cbbbf7e73cfec3a6be212747954c176fc3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "cc2b82b45258f0a201eace8bd2e286cbbbf7e73cfec3a6be212747954c176fc3",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "tetris-classic-lg-sd810",
+          "sha256": "18084691a98d209b5bd355b1117a05220618acd4845e8277109532d97a0b4d8f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "18084691a98d209b5bd355b1117a05220618acd4845e8277109532d97a0b4d8f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "rolling-fry-lg-sd810",
+          "sha256": "edb640fde26e85f566f9a4f59c14ae679115a491897110877409c0ec425e3cb4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "edb640fde26e85f566f9a4f59c14ae679115a491897110877409c0ec425e3cb4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "shrek-2-lg-sd810",
+          "sha256": "ee44fe104dab3f36d14779d1aae416d1a19405abc56d0db013b7e893bc936fd3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "ee44fe104dab3f36d14779d1aae416d1a19405abc56d0db013b7e893bc936fd3",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex16_bubble_bubble",
+          "sha256": "0c2d18a5d5260fb784d0ad1169f683e290a3d5ddc02b46647eb7c8d6eee3ae45",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "3e7f230063b846b5ad951d9962d027a371478c271ad575ecfcb4665af88a6e4d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex31_com2us_soccer_2006",
+          "sha256": "0e39f2dabc95ff71f7999b1495644f48f1c3bbb8cb890c89309f8a6aaa483e71",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "61eb6c65810c2a3d4ca2e15ad63bd34c0ccab36955402be361680fb139a0f115",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex29_crow2",
+          "sha256": "c64d9fb3e08c81448c727ee47f2733c8e46a46fed8dc2ab409b34e7b9eccb952",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "02226de4dbb85ee2e1158bc704998b7a332c192cfc425e0a180790156e2defd2",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex36_dungeon_fighter",
+          "sha256": "883c4c6fb9398ec1ceb6dfe8b102c12ac7c79aa5cfb6ed021316d7aacb17c3dd",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "9fc168d3cf2337a23502bd37f0ebcc96c3672f3cd9b12e2c7e83e4dc6f696324",
+          "bytes_after_declared_end": 47176
+        },
+        {
+          "id": "gnex21_eska2",
+          "sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex3_fist_of_fury2",
+          "sha256": "9012fa4fc75063f1cf3fdb009506a08d83bbd42c84dd10e9d9f47b94ff094e13",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "224216863e7fbf368d8e9ad334f3b03c646a641d15b91fa0fe0cdefcfd1deeb8",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex35_gostop_w_",
+          "sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex37_hero",
+          "sha256": "ecb024bdef451d0b7bd60f08cf54862682b6a4c7e7dc7d3843d786ed8ea338a2",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "96d52ff35cf63c5c4961d5a16b40d4595f7acc7a9bac6c8670b65e6847696c87",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex26_independence_day_3d",
+          "sha256": "9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "665abf9b97b0c2223124c1ee5a7b08225d3240bedf543f503d36e0fe139cacc9",
+          "bytes_after_declared_end": 139811
+        },
+        {
+          "id": "gnex34_major2007",
+          "sha256": "4aad29e41dbfc435bdb89306b44f03bd60e70b6e7205e77c443dc9b622f93af5",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "c2ab0c97e25b30b39a0c6646cc953521416e8e3429fe19096d32e38c1b05d520",
+          "bytes_after_declared_end": 27108
+        },
+        {
+          "id": "gnex10_marineblues",
+          "sha256": "fd0453b481c960d3b1b45c26a98e64f04f018c65962fcf532717a4b672174637",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "dd389437910a3920a9c2134e6d93bbef40707fac81a96c9dea49407a1916802a",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex14_mini_game2-_qvga_",
+          "sha256": "c6f99479dd49a139f67d2ee68386a7bb578fe361a28d51ab42d25bd540a9e5a9",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "fb4f1b85faea92523982558f5a57ef574ed7b7812b67f33b5fbad628a1d0b3a2",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex12_mosquito",
+          "sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex13_mu_-_fairy",
+          "sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex8_nom",
+          "sha256": "c3697ab331f0906ddf9bf4a81c1163c0e01e99adacfc1595a90fa97a58508fc3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "33607f1bd94792e638a7dbce13afd6e137f9b3ea83c6439eff777d1d8c98ef4d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex9_nom2",
+          "sha256": "386525ab6e1c8aa89c5c89aa3605fdf20a19e1d9ce0973780c920f7d73918769",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "f10177fcd976fdcd793355dd6612fa12857db11990074fc0a2c7b3e7dfb48fea",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex33_pocket_pro_baseball3",
+          "sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex17_samgugji_hero5",
+          "sha256": "85fb4fd27aefba5d7bd7bceb4f86ef7812aba2999bce55237ecc1acc7ae5e6fa",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "0c832a7151787578aeb0d76c8e2f4a4daaaffcfa505c469644d3fdeb00aa6213",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex18_shing_stone",
+          "sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex28_sketcher",
+          "sha256": "4dfd9f37daeb872a388ea5901c84e6e82a25659094c227ed693bd4ef3c811dee",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "89e7cd5d8afef1b69d823c2a85ff5580e1ab240e1393591f3b60b28f64cdd245",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex27_sketcher_.2inch",
+          "sha256": "4fe8a18069eb1b17d4a762b6430d609b020c47b789fd27a764a9eb928d12ba98",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "a98de037d298f6ca6053b6e18c8e757670276d9743fdfadb7bf8b5a36d2edc84",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex7_squash",
+          "sha256": "84ac7797e6cac8fac693f0fe6479d6a83a9880b681fb5dbbca8bfcbeb00c9d58",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "8c19f989408c3901c7d10c23747f65bf35e7dc0cae8ccb7d295a2a8522613702",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex19_super_action_hero",
+          "sha256": "d285b30564daf4d28e5d704919ac9e952d7e3066fbc934b7b52f6aa4a001fde4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "e2b348238cddbff7dbf324f527403beb2d8cdd95f8fc172c3459dc3d45bef70c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex30_susi_man3",
+          "sha256": "0016eb7d2c7ea888f4792d9f18a20161fadda922be236960cddb100d552c2db3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "0eee2ccc15f7306610811df12879031a65a9749a88e47757827898764579e9dc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex32_traffic",
+          "sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex15_virus",
+          "sha256": "53cdbe01aa0cd6a203f687ce78a0fcdd6b9e1eca80696d77486a2c65953dd68a",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "a18f06fd8b6362569e6d290477f615308c4135ef390850f0d6ff6f4f4e06dee9",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex5_viva_soccer2006",
+          "sha256": "a9c672d2f9ec3bec98370795c1f3983cab2a966e97a88e3b6abe99bc470a7ee8",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "c90caa2c4d04841c67c88e963e0aab8386440f9ddec0a30b9a7c83df0f785d49",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex25_ys3_the_oath_in_felghana",
+          "sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex22_yulgang2_-_1",
+          "sha256": "0a88d3ffc132df9735762ab8e63a16e7a4e486ff1c4ddddbd667b2b9f4a108d3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "314de9d89fe38b9035ab0322916408706737c7c981a8cc060b8bc7f0c6dd90cd",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex23_yulgang2_-_2",
+          "sha256": "e8e4a83f65db80b5f1fd7f21156cd3aa085dd59ae09b011c2d15f8d28e07f2ed",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "6a32c81552865061f883faa003a779febc50fff94776301bd4836a4e168325b5",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex24_yulgang2_-_3",
+          "sha256": "3ff584e6d5686e7d975d67d63006c4a695a2eba6a2b99f858599e9da0e837ffa",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5606d1eb982db971fc23188db9786b82872d0bf41cf88559b0f2a51901fe0574",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "zola",
+          "sha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "zzayo-zzayo-tycoon-naver-2004",
+          "sha256": "9acc6477607d7724f79a58a3b89279e56f395dba32ba7d9bd2c307b5c9a361f6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "9acc6477607d7724f79a58a3b89279e56f395dba32ba7d9bd2c307b5c9a361f6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "fighting-five-part1",
+          "sha256": "c6f582bbfcc7ed9efc6cb64d4ad3ae880b5bbe8f0e2301d88e33c11c09335337",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "c6f582bbfcc7ed9efc6cb64d4ad3ae880b5bbe8f0e2301d88e33c11c09335337",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "fighting-five-part2",
+          "sha256": "dceb8317edeabab5e0109d902ed5c4d877852e938d82f951e1c3383f04e2b5c0",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "dceb8317edeabab5e0109d902ed5c4d877852e938d82f951e1c3383f04e2b5c0",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "matgo-jjang",
+          "sha256": "12b5da94ab883681be91420e4013a7f8773ca1ed3e90049b48e1866de6ea2917",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "12b5da94ab883681be91420e4013a7f8773ca1ed3e90049b48e1866de6ea2917",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "storm-of-silence-demo-s60",
+          "sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "waterski-s60",
+          "sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-gvm-ranking",
+          "sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-character-scroll",
+          "sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-character-movement",
+          "sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "aiolos-fighter-s60",
+          "sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "pocket-baseball2-s60",
+          "sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "pocket-golf-s60",
+          "sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+          "bytes_after_declared_end": 0
+        }
+      ]
+    },
+    "records": [
+      {
+        "model": "SCH-S250",
+        "file": "raw/SCH-S250/S250MSM_CODE_YD01.bin",
+        "bytes": 19300352,
+        "sha256": "ea94aac903d463a943423d4b1e682da4de0c9010f41e06a9aaa0dedefa6fad7b",
+        "crc32": "26209baf",
+        "archiveCrcMatches": true,
+        "markers": {
+          "b'SCH-S250'": {
+            "count": 4,
+            "offsets": [
+              2720676,
+              5842411,
+              6060265,
+              6060444
+            ]
+          },
+          "b'S250'": {
+            "count": 6,
+            "offsets": [
+              2547747,
+              2581971,
+              2720680,
+              5842415,
+              6060269,
+              6060448
+            ]
+          },
+          "b'GNEX'": {
+            "count": 2,
+            "offsets": [
+              4249032,
+              15711898
+            ]
+          },
+          "b'GVM'": {
+            "count": 13,
+            "offsets": [
+              1793240,
+              2501908,
+              2702120,
+              2747814,
+              5856673,
+              6375050,
+              6375083,
+              13835058,
+              14314593,
+              14319343,
+              15446002,
+              15446222,
+              17138296
+            ]
+          },
+          "b'Sinjisoft'": {
+            "count": 1,
+            "offsets": [
+              8833945
+            ]
+          },
+          "b'application/x-gnex-sgs'": {
+            "count": 4,
+            "offsets": [
+              3163824,
+              3466496,
+              4249008,
+              15711970
+            ]
+          },
+          "b'Haunted'": {
+            "count": 3,
+            "offsets": [
+              6075941,
+              6145434,
+              6145458
+            ]
+          },
+          "b'Lost Planet'": {
+            "count": 2,
+            "offsets": [
+              6145386,
+              6145410
+            ]
+          },
+          "b'WIPI'": {
+            "count": 79,
+            "offsets": [
+              2317644,
+              2769764,
+              2769788,
+              2769808,
+              2769828,
+              2769852,
+              2777672,
+              3184469,
+              3185497,
+              3186593,
+              3187069,
+              3187497,
+              3188321,
+              3188881,
+              3189373,
+              3190125,
+              3193509,
+              3204428,
+              3223377,
+              3371064,
+              3472900,
+              3524196,
+              3660772,
+              4093069,
+              4729489,
+              4732268,
+              4735998,
+              4736768,
+              4737187,
+              4753426,
+              4754336,
+              4754418,
+              4754503,
+              4754601,
+              4754696,
+              4757429,
+              5857069,
+              6065905,
+              6096624,
+              8709970,
+              8713052,
+              8835048,
+              8917659,
+              9502520,
+              9503072,
+              9990981,
+              10210429,
+              10326021,
+              10443980,
+              10458720,
+              10473192,
+              11972583,
+              12158896,
+              12433671,
+              12651355,
+              12669131,
+              12669328,
+              12669404,
+              12687775,
+              13776124,
+              13780664,
+              13819908,
+              13826652,
+              13836764,
+              15647636,
+              15647664,
+              15709547,
+              15709569,
+              15709595,
+              15709628,
+              15709663,
+              15709700,
+              15709723,
+              15709753,
+              15709785,
+              15711677,
+              15711893,
+              15874957,
+              15874990
+            ]
+          },
+          "b'PK\\x03\\x04'": {
+            "count": 56,
+            "offsets": [
+              4717208,
+              4717246,
+              4717288,
+              4717336,
+              4720062,
+              4723831,
+              4724701,
+              4725174,
+              4729441,
+              4732220,
+              4735950,
+              4736720,
+              4737139,
+              4741068,
+              4741105,
+              4741272,
+              4743415,
+              4743663,
+              4743843,
+              4744023,
+              4744159,
+              4744305,
+              4747563,
+              4747709,
+              4747856,
+              4748016,
+              4748174,
+              4748318,
+              4748476,
+              4748622,
+              4748800,
+              4748927,
+              4749085,
+              4749234,
+              4749367,
+              4749532,
+              4749702,
+              4749864,
+              4750038,
+              4750202,
+              4750535,
+              4750637,
+              4750763,
+              4751073,
+              4751518,
+              4751621,
+              4751819,
+              4752006,
+              4752196,
+              4752406,
+              4752610,
+              4752817,
+              4752996,
+              4753171,
+              4753396,
+              4753629
+            ]
+          }
+        },
+        "scan": {
+          "bytes": 19300352,
+          "sha256": "ea94aac903d463a943423d4b1e682da4de0c9010f41e06a9aaa0dedefa6fad7b",
+          "candidate_offsets_tested": 1252174,
+          "containers": []
+        }
+      },
+      {
+        "model": "SCH-S380",
+        "file": "raw/SCH-S380/SCH-S380-FB.bin",
+        "bytes": 471072,
+        "sha256": "5b6e954065d81e5e93f753a91fc0799d058391a1a64c62b58255b6ff0329f17f",
+        "crc32": "0431c8ca",
+        "archiveCrcMatches": true,
+        "markers": {
+          "b'SCH-S380'": {
+            "count": 1,
+            "offsets": [
+              137836
+            ]
+          },
+          "b'S380'": {
+            "count": 2,
+            "offsets": [
+              137840,
+              177042
+            ]
+          }
+        },
+        "scan": {
+          "bytes": 471072,
+          "sha256": "5b6e954065d81e5e93f753a91fc0799d058391a1a64c62b58255b6ff0329f17f",
+          "candidate_offsets_tested": 30429,
+          "containers": []
+        }
+      },
+      {
+        "model": "SCH-S380",
+        "file": "raw/SCH-S380/SCH-S380-FB2.bin",
+        "bytes": 24370304,
+        "sha256": "c1b6e6a04f0e60334ec8db0a328217081a6edc7765ac3db69c389a54a28b0a38",
+        "crc32": "ae75ab29",
+        "archiveCrcMatches": true,
+        "markers": {
+          "b'WIPI'": {
+            "count": 1,
+            "offsets": [
+              5915072
+            ]
+          }
+        },
+        "scan": {
+          "bytes": 24370304,
+          "sha256": "c1b6e6a04f0e60334ec8db0a328217081a6edc7765ac3db69c389a54a28b0a38",
+          "candidate_offsets_tested": 142625,
+          "containers": []
+        }
+      }
+    ],
+    "summary": {
+      "inputs": 2,
+      "files": 3,
+      "bytes": 44141728,
+      "candidateOffsets": 1425228,
+      "sgsOccurrences": 0
+    }
+  },
+  "officialSupport": {
+    "id": "s250-official-support",
+    "url": "https://www.samsungsvc.co.kr/download/view?code=SCH-S250",
+    "retrievedUtc": "2026-11-05T23:27:57.110545+00:00",
+    "status": 200,
+    "bytes": 404668,
+    "sha256": "628a37d1794b5705115cb2210450191e486d035ca7828788a4c39ef17c37142c",
+    "file": "sources/s250-official-support.html",
+    "resourceLinks": [
+      "https://www.samsungsvc.co.kr/download/view?code=SCH-S250",
+      "/assets/js/plugins/jquery-1.11.3.min.js",
+      "/assets/js/plugins/jquery-ui.min.js",
+      "/assets/js/plugins/jquery.ui.touch-punch.min.js",
+      "https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js",
+      "//developers.kakao.com/sdk/js/kakao.min.js",
+      "/assets/js/plugins/swiper.min.js",
+      "/assets/js/plugins/jquery.mCustomScrollbar.concat.min.js",
+      "/assets/js/plugins/stickyfill.min.js",
+      "https://www.googletagmanager.com/gtag/js?id=UA-47543334-1",
+      "//wcs.naver.net/wcslog.js",
+      "/_nuxt/runtime.9d16f82.js",
+      "/_nuxt/vendors/commons.07ce48e.js",
+      "/_nuxt/app.86b2739.js",
+      "/_nuxt/pages/download/view.da61741.js",
+      "/_nuxt/commons/8dca158e.d688acb.js",
+      "/download",
+      "/_nuxt/runtime.9d16f82.js",
+      "/_nuxt/pages/download/view.da61741.js",
+      "/_nuxt/commons/8dca158e.d688acb.js",
+      "/_nuxt/vendors/commons.07ce48e.js",
+      "/_nuxt/app.86b2739.js",
+      "/assets/js/plugins/polyfill.min.js"
+    ]
+  },
+  "officialSupportFiles": [
+    {
+      "CTTVersion": "1.2",
+      "DTUpdate": {
+        "nuxtVariable": "kU"
+      },
+      "description": "Open",
+      "CTTFileSize": 20212526,
+      "VPath": "UM/200507/20050714102358875_SCH-S250_6194_1.2.pdf",
+      "NMFILE": "20050714102358875_SCH-S250_6194_1.2.pdf",
+      "CTTFileID": 223666,
+      "NMOperSystem": {
+        "nuxtVariable": "X"
+      }
+    },
+    {
+      "CTTVersion": "1.3",
+      "DTUpdate": {
+        "nuxtVariable": "kU"
+      },
+      "description": "SKT",
+      "CTTFileSize": 23376429,
+      "VPath": "UM/200507/20050714102358875_SCH-S250_SKT_6017_1.3.pdf",
+      "NMFILE": "20050714102358875_SCH-S250_SKT_6017_1.3.pdf",
+      "CTTFileID": 223667,
+      "NMOperSystem": {
+        "nuxtVariable": "X"
+      }
+    },
+    {
+      "CTTVersion": {
+        "nuxtVariable": "kk"
+      },
+      "DTUpdate": "2004-05-22",
+      "description": "PC link",
+      "CTTFileSize": 22885585,
+      "VPath": "SW/200405/20040522093239625_PCLink2000.zip",
+      "NMFILE": "20040522093239625_PCLink2000.zip",
+      "CTTFileID": 184823,
+      "NMOperSystem": {
+        "nuxtVariable": "kW"
+      }
+    },
+    {
+      "CTTVersion": {
+        "nuxtVariable": "kk"
+      },
+      "DTUpdate": "2004-11-06",
+      "description": "PC Link",
+      "CTTFileSize": 20886079,
+      "VPath": "SW/200411/20041105154319859_PCLink2000kor_040831.exe",
+      "NMFILE": "20041105154319859_PCLink2000kor_040831.exe",
+      "CTTFileID": 214530,
+      "NMOperSystem": {
+        "nuxtVariable": "kW"
+      }
+    },
+    {
+      "CTTVersion": {
+        "nuxtVariable": "kk"
+      },
+      "DTUpdate": "2005-01-11",
+      "description": "Quick Guide",
+      "CTTFileSize": 967538,
+      "VPath": "EM/200412/20041229160912468_SCH-S250_easy.pdf",
+      "NMFILE": "20041229160912468_SCH-S250_easy.pdf",
+      "CTTFileID": 224592,
+      "NMOperSystem": {
+        "nuxtVariable": "X"
+      }
+    }
+  ],
+  "officialDownloads": [
+    {
+      "fileId": 223666,
+      "description": "Open",
+      "url": "https://downloadcenter.samsung.com/content/UM/200507/20050714102358875_SCH-S250_6194_1.2.pdf",
+      "retrievedUtc": "2026-11-05T23:30:10.706774+00:00",
+      "expectedBytesFromOfficialSupport": 20212526,
+      "provenance": "VPath from official SCH-S250 support serialized data; content URL prefix appears literally in its linked download UI JavaScript.",
+      "status": 200,
+      "finalUrl": "https://downloadcenter.samsung.com/content/UM/200507/20050714102358875_SCH-S250_6194_1.2.pdf",
+      "bytes": 20212526,
+      "sha256": "dd3cb9b065ffdebdfd80bc1b26c239e6e01a22dea8d01d8e3109f6f59700c342",
+      "declaredLength": "20212526",
+      "file": "official-files/20050714102358875_SCH-S250_6194_1.2.pdf",
+      "lengthMatchesOfficialSupport": true
+    },
+    {
+      "fileId": 223667,
+      "description": "SKT",
+      "url": "https://downloadcenter.samsung.com/content/UM/200507/20050714102358875_SCH-S250_SKT_6017_1.3.pdf",
+      "retrievedUtc": "2026-11-05T23:30:10.707292+00:00",
+      "expectedBytesFromOfficialSupport": 23376429,
+      "provenance": "VPath from official SCH-S250 support serialized data; content URL prefix appears literally in its linked download UI JavaScript.",
+      "status": 200,
+      "finalUrl": "https://downloadcenter.samsung.com/content/UM/200507/20050714102358875_SCH-S250_SKT_6017_1.3.pdf",
+      "bytes": 23376429,
+      "sha256": "b1a429a1747305b9c430e9b1b63811587d21b2b9f6c142ebc8317d55b2f3d9be",
+      "declaredLength": "23376429",
+      "file": "official-files/20050714102358875_SCH-S250_SKT_6017_1.3.pdf",
+      "lengthMatchesOfficialSupport": true
+    },
+    {
+      "fileId": 184823,
+      "description": "PC link",
+      "url": "https://downloadcenter.samsung.com/content/SW/200405/20040522093239625_PCLink2000.zip",
+      "retrievedUtc": "2026-11-05T23:30:10.707802+00:00",
+      "expectedBytesFromOfficialSupport": 22885585,
+      "provenance": "VPath from official SCH-S250 support serialized data; content URL prefix appears literally in its linked download UI JavaScript.",
+      "status": 200,
+      "finalUrl": "https://downloadcenter.samsung.com/content/SW/200405/20040522093239625_PCLink2000.zip",
+      "bytes": 22885585,
+      "sha256": "bf7db13746a61617c1a2f16b25fded9e8bd1f761e3d0cf8646dc0e2345f90997",
+      "declaredLength": "22885585",
+      "file": "official-files/20040522093239625_PCLink2000.zip",
+      "lengthMatchesOfficialSupport": true
+    },
+    {
+      "fileId": 214530,
+      "description": "PC Link",
+      "url": "https://downloadcenter.samsung.com/content/SW/200411/20041105154319859_PCLink2000kor_040831.exe",
+      "retrievedUtc": "2026-11-05T23:30:33.160722+00:00",
+      "expectedBytesFromOfficialSupport": 20886079,
+      "provenance": "VPath from official SCH-S250 support serialized data; content URL prefix appears literally in its linked download UI JavaScript.",
+      "status": 200,
+      "finalUrl": "https://downloadcenter.samsung.com/content/SW/200411/20041105154319859_PCLink2000kor_040831.exe",
+      "bytes": 20886079,
+      "sha256": "931d6d522dff61df08bb0ed7f6340c104048c3cfabbfab9dcca068ebce7aeea8",
+      "declaredLength": "20886079",
+      "file": "official-files/20041105154319859_PCLink2000kor_040831.exe",
+      "lengthMatchesOfficialSupport": true
+    },
+    {
+      "fileId": 224592,
+      "description": "Quick Guide",
+      "url": "https://downloadcenter.samsung.com/content/EM/200412/20041229160912468_SCH-S250_easy.pdf",
+      "retrievedUtc": "2026-11-05T23:31:02.684896+00:00",
+      "expectedBytesFromOfficialSupport": 967538,
+      "provenance": "VPath from official SCH-S250 support serialized data; content URL prefix appears literally in its linked download UI JavaScript.",
+      "status": 200,
+      "finalUrl": "https://downloadcenter.samsung.com/content/EM/200412/20041229160912468_SCH-S250_easy.pdf",
+      "bytes": 967538,
+      "sha256": "067496c4306fba8a960cabaec34cdbe3ea12a7820d0c27b3ab024ed823a63d7e",
+      "declaredLength": "967538",
+      "file": "official-files/20041229160912468_SCH-S250_easy.pdf",
+      "lengthMatchesOfficialSupport": true
+    }
+  ],
+  "manualInventory": [
+    {
+      "file": "20041229160912468_SCH-S250_easy.pdf",
+      "pages": 2,
+      "metadata": {
+        "format": "PDF 1.5",
+        "title": "00_S250-Ç¥Áös",
+        "author": "Katie",
+        "subject": "",
+        "keywords": "",
+        "creator": "QuarkXPress¢â: LaserWriter 8 KH-8.7.1",
+        "producer": "Acrobat Distiller 4.0 for Macintosh",
+        "creationDate": "D:20041229162115+09'00'",
+        "modDate": "D:20041229162320+09'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "textSearchMatches": [],
+      "textSearchLimit": "Korean text extraction is incomplete on some pages; no matches cannot establish absence."
+    },
+    {
+      "file": "20050714102358875_SCH-S250_6194_1.2.pdf",
+      "pages": 93,
+      "metadata": {
+        "format": "PDF 1.5",
+        "title": "00_S250-Ç¥Áö-À¯ÅëÇâ",
+        "author": "Katie",
+        "subject": "",
+        "keywords": "",
+        "creator": "QuarkXPress¢â: LaserWriter 8 KH-8.7.1",
+        "producer": "Acrobat Distiller 4.0 for Macintosh",
+        "creationDate": "D:20041222073717Z",
+        "modDate": "D:20050714104134+09'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "textSearchMatches": [
+        {
+          "physicalPage": 4,
+          "terms": [
+            "NATE Air"
+          ]
+        },
+        {
+          "physicalPage": 90,
+          "terms": [
+            "Lost",
+            "Haunted",
+            "NATE Air"
+          ]
+        }
+      ],
+      "textSearchLimit": "Korean text extraction is incomplete on some pages; no matches cannot establish absence."
+    },
+    {
+      "file": "20050714102358875_SCH-S250_SKT_6017_1.3.pdf",
+      "pages": 93,
+      "metadata": {
+        "format": "PDF 1.5",
+        "title": "00_S250-Ç¥Áös",
+        "author": "Katie",
+        "subject": "",
+        "keywords": "",
+        "creator": "QuarkXPress¢â: LaserWriter 8 KH-8.7.1",
+        "producer": "Acrobat Distiller 4.0 for Macintosh",
+        "creationDate": "D:20041222091746Z",
+        "modDate": "D:20050714104349+09'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "textSearchMatches": [
+        {
+          "physicalPage": 90,
+          "terms": [
+            "Lost",
+            "Haunted",
+            "NATE Air"
+          ]
+        }
+      ],
+      "textSearchLimit": "Korean text extraction is incomplete on some pages; no matches cannot establish absence."
+    }
+  ],
+  "manualVisualReview": {
+    "open12PhysicalPages": [
+      1,
+      90
+    ],
+    "skt13PhysicalPages": [
+      1,
+      90
+    ],
+    "quickGuidePhysicalPages": [
+      1,
+      2
+    ],
+    "gameListPrintedPages": [
+      178,
+      179
+    ],
+    "finding": "Both full manuals identify the two default games under Entertainment > Game, separately from Anycall Land downloads. NATE Air is listed under Internet/SMS. No game executable format is established by the menu.",
+    "limits": "Only these complete rendered pages were visually reviewed. Whole-PDF text search was run, but some Korean font mappings are incomplete. No absence claim is made from text search."
+  },
+  "s250BinaryEvidence": {
+    "bytes": 19300352,
+    "sha256": "ea94aac903d463a943423d4b1e682da4de0c9010f41e06a9aaa0dedefa6fad7b",
+    "literals": [
+      {
+        "literal": "SCH-S250",
+        "offsets": [
+          2720676,
+          5842411,
+          6060265,
+          6060444
+        ],
+        "count": 4
+      },
+      {
+        "literal": "application/x-gnex-sgs",
+        "offsets": [
+          3163824,
+          3466496,
+          4249008,
+          15711970
+        ],
+        "count": 4
+      },
+      {
+        "literal": "GNEX",
+        "offsets": [
+          4249032,
+          15711898
+        ],
+        "count": 2
+      },
+      {
+        "literal": "application/x-gnex-dd",
+        "offsets": [
+          3197660,
+          10576296,
+          11705292,
+          15711269
+        ],
+        "count": 4
+      },
+      {
+        "literal": "application/x-gnex-smf",
+        "offsets": [
+          15711363
+        ],
+        "count": 1
+      },
+      {
+        "literal": "NATEAIR",
+        "offsets": [
+          1709972,
+          1709984,
+          1710012,
+          1710044,
+          1710072,
+          1710100,
+          1710132,
+          1714620,
+          1714664,
+          1798444,
+          2314420,
+          2775904,
+          2775928,
+          2782000,
+          3224788,
+          3224796,
+          3262792,
+          3262820,
+          3262852,
+          3262880,
+          3262912,
+          3262940,
+          3263588,
+          3263612,
+          3538928,
+          3552496,
+          3745936,
+          3747334,
+          3748116,
+          4167304,
+          4171532,
+          4173260,
+          4174316,
+          4176484,
+          4176636,
+          4176672,
+          4178636,
+          4179472,
+          8833934,
+          8839200,
+          10624236
+        ],
+        "count": 41
+      },
+      {
+        "literal": "Sinjisoft",
+        "offsets": [
+          8833945
+        ],
+        "count": 1
+      },
+      {
+        "literal": "001.001.002",
+        "offsets": [
+          8833958
+        ],
+        "count": 1
+      },
+      {
+        "literal": "1:Lost Planet2",
+        "offsets": [
+          6145384,
+          6145408
+        ],
+        "count": 2
+      },
+      {
+        "literal": "2:Haunted School",
+        "offsets": [
+          6145432,
+          6145456
+        ],
+        "count": 2
+      }
+    ],
+    "excerpts": [
+      {
+        "path": "s250-gnex-route.bin",
+        "sourceOffset": 4248896,
+        "bytes": 208,
+        "sha256": "0766bd8ee993a790a953354e3e05279f4f65b89dce1dce8be910a30e231d68cd",
+        "kind": "Exact bounded evidence excerpt; not a complete application, manifest, function or game"
+      },
+      {
+        "path": "s250-nateair-metadata.bin",
+        "sourceOffset": 8833847,
+        "bytes": 448,
+        "sha256": "4c440ba8b4ff239ffddf21ee5e0b85c22a59d03b0db4b6db80bb48548476e951",
+        "kind": "Exact bounded evidence excerpt; not a complete application, manifest, function or game"
+      },
+      {
+        "path": "s250-game-menu.bin",
+        "sourceOffset": 6145312,
+        "bytes": 192,
+        "sha256": "141b82acac0a3753e0bcb723ae54de5dd417c5d527c151524f97de029319dbb8",
+        "kind": "Exact bounded evidence excerpt; not a complete application, manifest, function or game"
+      }
+    ],
+    "assessment": "SCH-S250 model labels, GNEX/SGS MIME handling and a GNEX routing label are present. The separate Sinjisoft metadata names NATEAIR, version 001.001.002; this is not identified as a GNEX interpreter. An installed, callable SGS interpreter and its version are not established.",
+    "builtinGameNames": [
+      "Lost Planet2",
+      "Haunted School"
+    ],
+    "gameFormat": "Not established; neither name is assigned to SGS, native code or a specific engine solely from menu labels.",
+    "buildLabel": "YD01 is in the source filename; the literal was not independently found inside the image.",
+    "completeness": "A model-labelled code image, not a verified complete phone flash dump."
+  },
+  "s380Assessment": {
+    "sourceDescription": "Framebuffer memory dump",
+    "modelLiteral": "SCH-S380 occurs in the first member; the second has a WIPI string.",
+    "gnexSupport": "Not established from these two members.",
+    "completeness": "Two memory segments; no complete phone image claimed.",
+    "publication": "Original archive retained locally. Raw memory members are not included in either public preservation bundle."
+  },
+  "embeddedZip": [
+    {
+      "offset": 4717208,
+      "offsetHex": "0x47fa98",
+      "end": 4757530,
+      "bytes": 40322,
+      "sha256": "b585086bbf9544481c09e299ce7621fafb24930ffb3bce23f610ddb81503f52d",
+      "members": 56,
+      "files": [
+        {
+          "path": "com/samsung/lcdui/Automata.class",
+          "bytes": 5549,
+          "sha256": "963041bb4f3c083bc621bb90df33ced2fa06526b2af7e3898a5c9777ce050c65",
+          "crc32": "9847dc38",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/SymbolTable.class",
+          "bytes": 6833,
+          "sha256": "446703aa94cd17aae69ff8a7814be8107163860306a4017e5fa42ddc262bc4e2",
+          "crc32": "f9d7d391",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/TCHandler$NumTimerClient.class",
+          "bytes": 1354,
+          "sha256": "f1b705fb330e2db96abb735bc10c6a40f1774c68cdfc35b81c440eb05670e185",
+          "crc32": "894c7119",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/TCHandler$TimerClient.class",
+          "bytes": 654,
+          "sha256": "f02e07b15b5da54b054a1707260589d39c2fb5922bddb78169a59c08c21df983",
+          "crc32": "30b52a66",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/TCHandler.class",
+          "bytes": 8348,
+          "sha256": "68cc0b591a7eeb32b0b742965885b169e6eafa4982a29b6e7d48e24a164246d5",
+          "crc32": "bfc69bb8",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/WIPIAutomata.class",
+          "bytes": 5612,
+          "sha256": "d647d891bc5f15e8345f97c8075916bd9b1d1701e5d60b9a4574f1d4efe6c72b",
+          "crc32": "e00922eb",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/WIPISymbolTable.class",
+          "bytes": 9028,
+          "sha256": "05d03371a90b4f7ccf5be61fba21d425f41cf3dac3246ffb4d6d4a3aa3021195",
+          "crc32": "c1f3ee47",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/WIPITCHandler$NumTimerClient.class",
+          "bytes": 1168,
+          "sha256": "25f5c40c29647129e18d8e1976ea6e7ae29ee894a45c616a1f6af07b56b50974",
+          "crc32": "654d1ce2",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/WIPITCHandler$TimerClient.class",
+          "bytes": 519,
+          "sha256": "0991360aedcb666b72165d6be97cf91c158ebcc10e06c4234d67d11441dd7089",
+          "crc32": "d9411b87",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "com/samsung/lcdui/WIPITCHandler.class",
+          "bytes": 7699,
+          "sha256": "e68dd218d5378e86386ac9154f2276a3acb4f0adb10197fe674eda5d2853a88a",
+          "crc32": "575c956a",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/app.lbm",
+          "bytes": 192,
+          "sha256": "464fd7ba350c76460f4759e911869098a1936814e09bdc7bb539cd83643583e8",
+          "crc32": "2fb571f7",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/app_open.lbm",
+          "bytes": 17574,
+          "sha256": "cc48ab7969e03bd3df830497fa5fd3a7b921e5729bb52741400a8f8df7affabf",
+          "crc32": "a3dd2251",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/app_prog.lbm",
+          "bytes": 2214,
+          "sha256": "d05d275dcdcf0eab8436d59a40694ebad1968d85217807307254dca4fc28886f",
+          "crc32": "11dc6a29",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/button_back_l.lbm",
+          "bytes": 7164,
+          "sha256": "b6fadc1540240e033722d28e741fe028f3fc51b1eec3a8e8c163b5fa2502ff48",
+          "crc32": "6b3bc799",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/button_back_r.lbm",
+          "bytes": 7164,
+          "sha256": "b9c39208cdea408cd07cf0bb182413da00adda77ae18f36993646686810ebf76",
+          "crc32": "b702cf06",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/circle-1.lbm",
+          "bytes": 144,
+          "sha256": "0ba14933da8b52145537f256d482d7ab7e806e44c4692da8e16a282fe9a198ce",
+          "crc32": "367b4084",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/circle-11.lbm",
+          "bytes": 144,
+          "sha256": "27db67d914607b8c21735d7afb66bb60f5b07d1f63355aad580fe5ac3bee8a0b",
+          "crc32": "6155602b",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/closing.lbm",
+          "bytes": 18456,
+          "sha256": "7ae73ddcf9aef6b18f1c85b98e3a111e1e866999305a862d37f2efc5d8973e9a",
+          "crc32": "0cfab15d",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/g-1.lbm",
+          "bytes": 1441,
+          "sha256": "aad142e44cabd1d2ca265f6658f1e21b227920c104e12a6a2f8797b0cec82ce9",
+          "crc32": "38801386",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/g-11.lbm",
+          "bytes": 1441,
+          "sha256": "60a333f888aafa02e8a7eafb1b2a56916340cbf30ee4d727805b90a12a4aeb08",
+          "crc32": "df40f9ae",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_back.lbm",
+          "bytes": 206,
+          "sha256": "befe99e9f13203fa31d9b6aeeac6e8945d9e6cf0dca22babb6b8dc6cd172c6d8",
+          "crc32": "6c5fbdbd",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_cancel.lbm",
+          "bytes": 206,
+          "sha256": "5857245ad20b0c0d8d39d2702e1e255697c6fdc24c88cc38122de5b45655a48c",
+          "crc32": "34edcacf",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_exit.lbm",
+          "bytes": 206,
+          "sha256": "1406f341420efd1db4c290ac46cc888c451f1ab819b98b6a0f9ff76a07fc8426",
+          "crc32": "ebcc56c0",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_help.lbm",
+          "bytes": 206,
+          "sha256": "58238112073d3c70976c21bf0ab86f39bcf01ffe12c92df0e9ce928488eb6e61",
+          "crc32": "ba9361a9",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_item.lbm",
+          "bytes": 206,
+          "sha256": "8a9e77e8836dd44a05e8646ae3f38331b047d22b1251cf4a3761e9efc3762667",
+          "crc32": "d0181025",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_menu.lbm",
+          "bytes": 206,
+          "sha256": "7aa60ac305fd9ddf2b585945088462d78726332c9f3e028015604358ef706847",
+          "crc32": "06b8b554",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_ok.lbm",
+          "bytes": 206,
+          "sha256": "c0ddf18536f179c09530d26804720dd4974941c6012dda2fb437d1f7891313da",
+          "crc32": "48b0123d",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_screen.lbm",
+          "bytes": 192,
+          "sha256": "22a65d8dd5b0c7bf91c5aedda40fcfb3b80587915ff51509d09537abceec1430",
+          "crc32": "532d2737",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/icon_stop.lbm",
+          "bytes": 206,
+          "sha256": "532110ab256477bfcdb8378a7576c073ae7c6c2371cc3686454d73f7befabb17",
+          "crc32": "bfa84a03",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/im_hint.lbm",
+          "bytes": 294,
+          "sha256": "a6ce22d9eadd025ee99176307fa8514fd66120def6e93e90e7e42113b707e363",
+          "crc32": "8bf8acfc",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/im_k.lbm",
+          "bytes": 312,
+          "sha256": "05281974b9cc9a12d433888ad58e3792e96bfaa54ab1efc82b516b7f1447f823",
+          "crc32": "1a0af7eb",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/im_le.lbm",
+          "bytes": 312,
+          "sha256": "ec9f290c8d5d34396aa1b5a3dcf3e6a9be6905f5214c63ad57440ebc6807db6d",
+          "crc32": "ee243ea1",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/im_n.lbm",
+          "bytes": 312,
+          "sha256": "7deaff37f07107f18e75e38fa2acb5051d4d51a5fc705a093af78abe17d858cc",
+          "crc32": "95c6e9f4",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/im_s.lbm",
+          "bytes": 312,
+          "sha256": "57f961d9dcbe09d211c63bf7307417f3dace272559b2d6febf01703931790d54",
+          "crc32": "029ef552",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/im_ue.lbm",
+          "bytes": 312,
+          "sha256": "9bb9d0dbeb397ec8515659bdd5b37be754cb5ec2978f8c891a5801a315f9e782",
+          "crc32": "e36c25c8",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/number.lbm",
+          "bytes": 824,
+          "sha256": "04141f14bc32778b21e9b7ebf2a4a2b991c91f44cf50cec553d55886e59968e2",
+          "crc32": "94a0ca43",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/rectangle-1.lbm",
+          "bytes": 144,
+          "sha256": "bcc1d42dce0938cbdb1896df70d650c4f95faf1ee105cc528a0e398a5ad9bc95",
+          "crc32": "5fa2248b",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/rectangle-11.lbm",
+          "bytes": 144,
+          "sha256": "a0a4061a0e926112e675fbde947d54cc3bc8d8f486b5d54e30fd21f23767c29c",
+          "crc32": "52117e09",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/s-back.lbm",
+          "bytes": 4760,
+          "sha256": "5976c655835765421574e68ab900cc37961c1e29e58ffc0a350dfe8dfce1a05c",
+          "crc32": "295c3001",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/s-back_big.lbm",
+          "bytes": 12668,
+          "sha256": "82e43b4749349f596d9672cb45067c711f70b84318ca45836defef381df675a1",
+          "crc32": "b1d85da9",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/scrollbar.lbm",
+          "bytes": 348,
+          "sha256": "d5039ad4f92c4ee02d4543e669e0ca4aa2a247a7886c514059fbe313285c2ba3",
+          "crc32": "6c001aa2",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/symbol_mode0.lbm",
+          "bytes": 369,
+          "sha256": "b1f9f1b80e024a44459dca1d15274866f4b35b10fc51c57ecfc6036bd9963e03",
+          "crc32": "dfa85717",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/symbol_mode1.lbm",
+          "bytes": 354,
+          "sha256": "fe3bcae2e220729aa3537e16602b05d0826884feffddf9e14238a3ce1af66e75",
+          "crc32": "93ca28e1",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/symbol_mode2.lbm",
+          "bytes": 354,
+          "sha256": "6dd3c751c9b4ac380341ed120ad093664c244554e941dcb7d182f50eb90b7d75",
+          "crc32": "083975dd",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/symbol_mode3.lbm",
+          "bytes": 369,
+          "sha256": "617fdb877e8d8238193caf8441676dff0e20e607edcb00e6e2f1b1e6ba42d5f4",
+          "crc32": "73b91002",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/symbol_mode4.lbm",
+          "bytes": 354,
+          "sha256": "100bda4f1baa45056b65a5921658562d4d64196223a67f0a43fb41ba028a7c0b",
+          "crc32": "25fecfef",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/symbol_mode5.lbm",
+          "bytes": 369,
+          "sha256": "712adf1975d624c6c8f2f356003cf10c4cb307df2624967f34bd353d5d5479a8",
+          "crc32": "93bdc19d",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/symbol_title.lbm",
+          "bytes": 1572,
+          "sha256": "50128bb85ff302ee181cc578beb39d10fd883cdccac0b78b88e3c8b52493083f",
+          "crc32": "1f8d8600",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "iconsm/title.lbm",
+          "bytes": 7704,
+          "sha256": "70f61fe9817e85c1689afea15b07455f3c800d93f1288c289976c401fd5cac27",
+          "crc32": "34fc6a50",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "TCHandler.class",
+          "bytes": 203,
+          "sha256": "72289c0472ee713fae14d0a268b9d79df413dade2236eca609bad2e8e9f86d7f",
+          "crc32": "04c09b37",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "WIPITCHandler.class",
+          "bytes": 215,
+          "sha256": "ec149b819f14062646e366ddf8b471b7e9364654b836efefd4a0b59f4a0238ff",
+          "crc32": "ee1bc554",
+          "sgsOccurrences": 0
+        },
+        {
+          "path": "__xvmrom__.lst",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "crc32": "00000000",
+          "sgsOccurrences": 0
+        }
+      ],
+      "allCrcsPass": true,
+      "sgsOccurrences": 0,
+      "scope": "One valid embedded ZIP; Samsung WIPI/SKVM text entry and input-method UI resources, not identified as either built-in 3D game."
+    }
+  ],
+  "pcLinkWrapperAudit": [
+    {
+      "source": "20040522093239625_PCLink2000.zip",
+      "file": "pc-link-wrappers/20040522093239625_PCLink2000/PCLink2000_040331.exe",
+      "bytes": 23073396,
+      "sha256": "5d8452961781fc4731ede05e1a52a9bee273f1a1ac42af1f1d65557380ea6629",
+      "crc32": "028c43ac",
+      "zipCrcPassed": true,
+      "innerArchiveListExitCode": 0
+    },
+    {
+      "source": "20041105154319859_PCLink2000kor_040831.exe",
+      "file": "pc-link-wrappers/20041105154319859_PCLink2000kor_040831/PCLink2000kor_XH31A.exe",
+      "bytes": 21044646,
+      "sha256": "b495040a810c10c924424effe05559f3c579178960aba0d692d5441aa7e331d8",
+      "crc32": "2341c131",
+      "zipCrcPassed": true,
+      "innerArchiveListExitCode": 0
+    }
+  ],
+  "pcLinkPayloadAudit": [
+    {
+      "label": "PCLink2000_040331",
+      "fullCabTestExitCode": 1,
+      "fullCabTestLog": "PCLink2000_040331-installshield-test.txt",
+      "selectedGroups": [
+        {
+          "group": "App Executables",
+          "files": 116,
+          "exitCode": 0
+        },
+        {
+          "group": "app_db",
+          "files": 2,
+          "exitCode": 0
+        },
+        {
+          "group": "App Self Reg DLLs",
+          "files": 1,
+          "exitCode": 0
+        },
+        {
+          "group": "Movie dlls",
+          "files": 20,
+          "exitCode": 0
+        }
+      ],
+      "filesScanned": 139,
+      "payloadBytesScanned": 31920741,
+      "sgsOccurrences": 0,
+      "records": [
+        {
+          "group": "App Executables",
+          "file": "0.bmp",
+          "bytes": 190,
+          "sha256": "6d31683641c0460802643efe53d23c38dc916921b790b136296fa4f263332365",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000",
+          "bytes": 53,
+          "sha256": "dabda6da1da76fadc5e0348dfe82c7d92a2ed873b7fbd551c31281c80796d66a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(0).bmp",
+          "bytes": 190,
+          "sha256": "6d31683641c0460802643efe53d23c38dc916921b790b136296fa4f263332365",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(1).bmp",
+          "bytes": 190,
+          "sha256": "45246f10fedac85a2647ae0f17c875562e7876d4dc1e10f2867f11697b84581f",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(10).bmp",
+          "bytes": 190,
+          "sha256": "61c54dfc1b1fb119b43ef828ac5ac5a62abfaed887523e952c1f65f80e8b48d9",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(11).bmp",
+          "bytes": 190,
+          "sha256": "7e3c2cb296a50f84e9d0c905a4796c9a014bda52420f878c674df8b7526fbf2e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(12).bmp",
+          "bytes": 190,
+          "sha256": "ba8c47696beda6fa5132ee5b355d46e05a123454a33c0318a4ef0e2bae6f6744",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(13).bmp",
+          "bytes": 190,
+          "sha256": "2fc5d46f6869841cc7b882a4bd10037c8bbb5afd658cd135f7da0f381b85a0d7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(14).bmp",
+          "bytes": 190,
+          "sha256": "df50c115128882b40b45ba29462ba3f56212985d049b9665313358de9315d843",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(15).bmp",
+          "bytes": 190,
+          "sha256": "1e4a0322657af9cbb0e51ffe8e84849275cca4729ff2e5748cc25c3c570ea7ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(16).bmp",
+          "bytes": 190,
+          "sha256": "135079c260880541c2db844a7dd4f391b783bf2ae38112cc57b1d0c9339cc5e8",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(17).bmp",
+          "bytes": 190,
+          "sha256": "b2214468ee3999ce78c8bb697456f5d728414a19bea8e9c57500140e5fa63c2b",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(18).bmp",
+          "bytes": 190,
+          "sha256": "3774eb99b9e87a98a0d703a708fef767c3d249467013ceee48464c1c2f541fc1",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(19).bmp",
+          "bytes": 190,
+          "sha256": "d1684e01cfe1ac168bfff47e6fa0c4c0e79006ebfc4a0964d555ef30574bbe4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(2).bmp",
+          "bytes": 190,
+          "sha256": "2ab29286ceac507b0a40ebcde774ba83cb63736cb044d74632439c223d668152",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(20).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(21).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(22).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(23).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(24).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(25).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(26).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(27).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(28).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(29).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(3).bmp",
+          "bytes": 190,
+          "sha256": "6257d22ca19355ea22ec70bbceff1c50ac7cda1c11e56e4c96826534411e6e4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(4).bmp",
+          "bytes": 190,
+          "sha256": "06c20b4c8fb23f9e0f6c4e96b385c84d5965f3dd9dc4d6c19a412e75036473fc",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(5).bmp",
+          "bytes": 190,
+          "sha256": "98a51894a3d1808b3527357c97d4fd58f2ad3973b3dacc01c788e691d2eedb50",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(6).bmp",
+          "bytes": 190,
+          "sha256": "d65948310402c20cdddb1fc8e529e65d9641bc243304cb9f0cee74be74474d79",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(7).bmp",
+          "bytes": 190,
+          "sha256": "cd46f928c2e20ba8a47710bed62f2409737c9c791a558ea7eccc8bf90ede9565",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(8).bmp",
+          "bytes": 190,
+          "sha256": "c370ee8a0668440f80da0feb97193ae64b43d24ef4061526a06172382e750d59",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(9).bmp",
+          "bytes": 190,
+          "sha256": "84233a95112a6134b14c00fb356a01bab79bb3e6c891a16398e3a0dab7ac0b08",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "1.bmp",
+          "bytes": 190,
+          "sha256": "45246f10fedac85a2647ae0f17c875562e7876d4dc1e10f2867f11697b84581f",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "10.bmp",
+          "bytes": 190,
+          "sha256": "61c54dfc1b1fb119b43ef828ac5ac5a62abfaed887523e952c1f65f80e8b48d9",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "11.bmp",
+          "bytes": 190,
+          "sha256": "7e3c2cb296a50f84e9d0c905a4796c9a014bda52420f878c674df8b7526fbf2e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "12.bmp",
+          "bytes": 190,
+          "sha256": "ba8c47696beda6fa5132ee5b355d46e05a123454a33c0318a4ef0e2bae6f6744",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "13.bmp",
+          "bytes": 190,
+          "sha256": "2fc5d46f6869841cc7b882a4bd10037c8bbb5afd658cd135f7da0f381b85a0d7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "14.bmp",
+          "bytes": 190,
+          "sha256": "df50c115128882b40b45ba29462ba3f56212985d049b9665313358de9315d843",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "15.bmp",
+          "bytes": 190,
+          "sha256": "1e4a0322657af9cbb0e51ffe8e84849275cca4729ff2e5748cc25c3c570ea7ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "16.bmp",
+          "bytes": 190,
+          "sha256": "135079c260880541c2db844a7dd4f391b783bf2ae38112cc57b1d0c9339cc5e8",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "17.bmp",
+          "bytes": 190,
+          "sha256": "b2214468ee3999ce78c8bb697456f5d728414a19bea8e9c57500140e5fa63c2b",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "18.bmp",
+          "bytes": 190,
+          "sha256": "3774eb99b9e87a98a0d703a708fef767c3d249467013ceee48464c1c2f541fc1",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "19.bmp",
+          "bytes": 190,
+          "sha256": "d1684e01cfe1ac168bfff47e6fa0c4c0e79006ebfc4a0964d555ef30574bbe4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "1_4g.bmp",
+          "bytes": 630,
+          "sha256": "981f5c7e0fceb389a6ccd6bd2db1bda5246a98a4aa65dbc1870f0504f756c0ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2.bmp",
+          "bytes": 190,
+          "sha256": "2ab29286ceac507b0a40ebcde774ba83cb63736cb044d74632439c223d668152",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "20.bmp",
+          "bytes": 190,
+          "sha256": "a0e36a9873b9197cda7511a0b7a9f834cfbb79d8e5ce0491415e5b835b5874cb",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "21.bmp",
+          "bytes": 190,
+          "sha256": "8e92074aec7e090f8a2e9d94c5dc61d14860c4bf4dbefb46c07612ec64141eff",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "22.bmp",
+          "bytes": 190,
+          "sha256": "13661abdfadf1bc00c854ab5ccf7e8083f0108d030e7fcd8ee60e90082eb5d76",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "23.bmp",
+          "bytes": 190,
+          "sha256": "cc051dfc70ec995be8637958c4d0f6729b9b3b2ef75398827172e7ecc1ad5734",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "24.bmp",
+          "bytes": 190,
+          "sha256": "5aad8f44c89b7b59ae7bab5c4463141810f6f9c9caaadbaca9b14ede70fa5c4b",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "25.bmp",
+          "bytes": 190,
+          "sha256": "56c9a7f6945fc432c7a0615a411f7426dfc912f6af11f66e841046317693acca",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "26.bmp",
+          "bytes": 190,
+          "sha256": "85f8a0452f8405a68222f228b3145db719d529b46b04dd0bc0946e221fdaaabe",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "27.bmp",
+          "bytes": 190,
+          "sha256": "c3b9a88339aff1e1bc2b007209a4bcff6b318e4e5c0b82529673cf0886f51eb0",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "28.bmp",
+          "bytes": 190,
+          "sha256": "ae9dc6c7e9ff7ec0c479b6416463fd64217b80f7535175ae68257d53671b6242",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "29.bmp",
+          "bytes": 190,
+          "sha256": "c240fd30ae25e3c741f704b179651a5348141167acf305fa4e41bf7b3be230ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2_4g.bmp",
+          "bytes": 630,
+          "sha256": "d8d110e05c0681bc75ad80462765b4daf3a1409388ffd66634e9a09f0f1caa28",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2frame4grayICON.mgi",
+          "bytes": 1336,
+          "sha256": "39403f0b9d7f5b6da63a936d92167d6d49c37dc4997af84f4af32c8a1ff8dbc7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2frameICON.mgi",
+          "bytes": 456,
+          "sha256": "32f87a853c95700794b67f203e9c075f6016f9aa2590a27c67c082273e58c62e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "3.bmp",
+          "bytes": 190,
+          "sha256": "6257d22ca19355ea22ec70bbceff1c50ac7cda1c11e56e4c96826534411e6e4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "30.bmp",
+          "bytes": 190,
+          "sha256": "69ce08e4bdf06093457a2ace97c9d8f442c8fe58c0c7b98fad1548497858ed98",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "31.bmp",
+          "bytes": 190,
+          "sha256": "cc1e3c9084128f060f0db91c63a4b60aa248f8e6127ff276567671a364653fa8",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "32.bmp",
+          "bytes": 190,
+          "sha256": "ce56c96f869f28f7157427841e517796d492a7220b52b8085ef8ff2334c7c07a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "33.bmp",
+          "bytes": 190,
+          "sha256": "2f219d89d4da384e3aa0e5f51d2ea279d74dfab069ecf08f5432768c90664079",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "4.bmp",
+          "bytes": 190,
+          "sha256": "06c20b4c8fb23f9e0f6c4e96b385c84d5965f3dd9dc4d6c19a412e75036473fc",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "5.bmp",
+          "bytes": 190,
+          "sha256": "98a51894a3d1808b3527357c97d4fd58f2ad3973b3dacc01c788e691d2eedb50",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "6.bmp",
+          "bytes": 190,
+          "sha256": "d65948310402c20cdddb1fc8e529e65d9641bc243304cb9f0cee74be74474d79",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "7.bmp",
+          "bytes": 190,
+          "sha256": "cd46f928c2e20ba8a47710bed62f2409737c9c791a558ea7eccc8bf90ede9565",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "8.bmp",
+          "bytes": 190,
+          "sha256": "c370ee8a0668440f80da0feb97193ae64b43d24ef4061526a06172382e750d59",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "9.bmp",
+          "bytes": 190,
+          "sha256": "84233a95112a6134b14c00fb356a01bab79bb3e6c891a16398e3a0dab7ac0b08",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "aAACDecoder.dll",
+          "bytes": 147456,
+          "sha256": "3cd097197f463c42fe86cfe8d9fe45bb6d0b2c5ec41a930270b08d71cdfac9cc",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "aAMRDecoder.dll",
+          "bytes": 172032,
+          "sha256": "bc75ac16416c36840f15a7f8f689a2597ce9c3456fbec3c9def65e65e178978d",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "aEVRCDecoder.dll",
+          "bytes": 94208,
+          "sha256": "70d97b39435cb4c1f3aa39942e48c29c917d2677bb985eb97c4132b81cac481d",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "aG723Decoder.dll",
+          "bytes": 77824,
+          "sha256": "91f8be51f122206a455efa60b5650096e1d26eece58999e4ee31ffa511ea2104",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANI1.AVI",
+          "bytes": 138752,
+          "sha256": "92e25420afc05e5c14174d0bdb904ad3af638d05292882801c51551ca5af0cbe",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANY2OL_2K.dll",
+          "bytes": 36864,
+          "sha256": "8dd028e23d1686fa2e4696ebd41d76363c1a6f23a4bcd18b64286907214ae0ab",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANY2OL_98.dll",
+          "bytes": 36864,
+          "sha256": "8dd028e23d1686fa2e4696ebd41d76363c1a6f23a4bcd18b64286907214ae0ab",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANY2OL_XP.dll",
+          "bytes": 40960,
+          "sha256": "8e67594e1360b20c534d29ed84047d9512b8fbf2fd653135237ed1bd3c435ad6",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "Any2Palm.dll",
+          "bytes": 24576,
+          "sha256": "7f237b519b0cf22e19592b58436dc15e5b2ea592e585c712a42f332687b6e1a3",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "aQCELPDecoder.dll",
+          "bytes": 65536,
+          "sha256": "fdafbab8e6d72ff76c423e9ecf5f36b520ff3afe21b6c1a779961a2db46bfaf6",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "compact.exe",
+          "bytes": 345600,
+          "sha256": "159f4c1f53de3cc5049c928abd10c1088fc253a9be76914ae82aa350a122a78e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "crack90.dll",
+          "bytes": 1361920,
+          "sha256": "235e28275607a3adf2586127f01a6e04d76e75a46871629f1c890d7df9e8a112",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "cross.bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "EmActionStylers_PCLink_Samsung.dll",
+          "bytes": 573440,
+          "sha256": "147eff3a6156e0bdd6631eb0958fd7bf5645cdf6507509933dd438fe74fce635",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "EmCommon_PCLink_Samsung.dll",
+          "bytes": 57344,
+          "sha256": "a2f277a9ffc5618a2724a3c4d151915c213f6b85d51a2bec888e964c9d91e89c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "FileFormatDMIF.dll",
+          "bytes": 53248,
+          "sha256": "c56f71a0fc6ebdd7f6c85730c896f73c64af2d51b53707f83c7e36682ea1c93c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "FileFormatMOTIONJPG.dll",
+          "bytes": 57344,
+          "sha256": "d8dca9f652c4026c9c0528c9523f9bbc7b1bdca3641650f4359042c1e021c924",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "FileFormatMP4.dll",
+          "bytes": 53248,
+          "sha256": "adce3e2470da5c3fd65e9dc621419bc2866b6e62845e61ae9d2d5afb3a62edfd",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "FileFormatSEMIMOTION.dll",
+          "bytes": 126976,
+          "sha256": "e4396ad4db5e95bd360e787b21090927d51166daa7cfe6961953f7b8400052e9",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "FTPClient.dll",
+          "bytes": 493056,
+          "sha256": "e3ddf08668e02373fc7d1c10e7e80ab4fd2f484ca351d84764376232cb2d89f6",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "JpegDll.dll",
+          "bytes": 516194,
+          "sha256": "63ab3c63ddb44cbcee047719ac9cb82d5a67b373e3be306ed5f68c127016f8e7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "libmmd.dll",
+          "bytes": 1032266,
+          "sha256": "2670d8994137fe533f7f44cc7cbf0b4ac7ce4286698bf359b6c397defaa990f3",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "LinkCore.dll",
+          "bytes": 1935872,
+          "sha256": "1e806357ba5eb14aa9b5fde6c60547c7c748c5940a2d8229bee98d4385018528",
+          "sgsOccurrences": 0,
+          "markers": [
+            {
+              "term": "GVM",
+              "count": 1,
+              "offsets": [
+                314370
+              ]
+            }
+          ]
+        },
+        {
+          "group": "App Executables",
+          "file": "ma3smwemu_gsm.dll",
+          "bytes": 716800,
+          "sha256": "182cebdcde14505d88f14c40135efcc1ab23fc980538e22638e0c688286a954e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "MP4File_General.dll",
+          "bytes": 176128,
+          "sha256": "512f3e61977ede32f376b585fb58608d730ee0607701b85b9f64bcd3ed3100e3",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "OTT_ParseMOTIONJPG.dll",
+          "bytes": 53248,
+          "sha256": "a288b466119d4159974911756b09ba57c844cc096bcd17c995aae7b90afe25fe",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "OTT_SAMSUNG_PCLink_MMPlayer.dll",
+          "bytes": 49152,
+          "sha256": "b6bc34431ab551e3787c58be981ad947103867b93776e8dcffe1916bdbe2f96c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PalmCmn.dll",
+          "bytes": 7168,
+          "sha256": "2be9d8d863af1c82b4136fc7d1ea747abfe71be98d9f0cd5c1d08f22a4f2edbb",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "Pclink.000",
+          "bytes": 1298432,
+          "sha256": "fac9799387dbf0e6c74f00935f0ab87af679cdc0353b94da5afdc435f1fdaf31",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000.exe",
+          "bytes": 6759936,
+          "sha256": "696f84a5d18e83c65f76d58a48fb696e625cca1034f0af87655f0f2c072aae65",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000.ini",
+          "bytes": 559,
+          "sha256": "339fb8b006fc452363c7824af09466499b3ddaeab50410824084315bfd7ed4ef",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000Help.chm",
+          "bytes": 3760906,
+          "sha256": "557183e04d3587a781515e81d6a8d91dc2ce2c247cdad6bcae4c708a2b363078",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000Help.hhc",
+          "bytes": 9392,
+          "sha256": "9e75af238d5fd610fdbaf16668e3b2ca991ee2bd58bbc7396eee7942d7021697",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000Help.hhk",
+          "bytes": 10535,
+          "sha256": "3dab17103e3988063c96a3c093d707c3544c7430c00b8260da294dab2d883033",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "sdl_thread.dll",
+          "bytes": 69632,
+          "sha256": "ae7a2e8ede549d8331a4099ad17012c820361935a631d47434cd9103ceef333f",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "SYNCH.AVI",
+          "bytes": 1331712,
+          "sha256": "18c8c193b4f29e932eacb6dadde825dec7b34cd5b1ad974bf4ce4d3d8e32ca78",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "table21.dll",
+          "bytes": 166912,
+          "sha256": "7d2164b74ab1fcda06aac55744d910f9db9b7e4214a8984d299c96899772cccb",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "targetVerCheck.dll",
+          "bytes": 453120,
+          "sha256": "6e42c038ee7f2e23aa3ac54491f33ac2974106fb9503926ac3e5768188e25e5e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "TCM2_Decoder12.dll",
+          "bytes": 32768,
+          "sha256": "7e1bb5f2def33cff0bc1f0810cb20d33d6dc26fb8fb3e701771cd546bc2160f2",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "TCM2_Decoder16.dll",
+          "bytes": 32768,
+          "sha256": "9b2527965eb6d32df05d11ab6079e973a53b3e400a3afc217c9642062d3c52b2",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "TCM3MGI16.dll",
+          "bytes": 40960,
+          "sha256": "34ed81eb82e0afd7b37bbb2ab9d48e76f41de8a4018e2e40ceb8ad23bdac0822",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "Update.exe",
+          "bytes": 642048,
+          "sha256": "c55fec9cff60c5e6bf58af56702f097909bb59b1b821f28dbddb2f22af05550c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "UserData.dll",
+          "bytes": 147456,
+          "sha256": "cba7d6be452762007cfcc19951a7fea9d813d258c5052870d1c1b6296c43c8d7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "vH263Decoder.dll",
+          "bytes": 114688,
+          "sha256": "91b6803c7cef320ad99c0bedd7ee9c52243fce1b17359a2d3392123e179b1471",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "vH264Decoder.dll",
+          "bytes": 102400,
+          "sha256": "03c9bad4e9e1dbdef65a297b10fcd430cca2a5c00ff216d1a7b28285986a0d11",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "vMOTIONJPGDecoder.dll",
+          "bytes": 114688,
+          "sha256": "dd36763b92c347c09963e4fc2f1b5cca7a71631b6bf0e974597d76caf8324230",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "vMPEG4.dll",
+          "bytes": 167936,
+          "sha256": "767491d87772ed859b3b7bba506657b088d1f9dc5e4ff91753ac39d184649e70",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "app_db",
+          "file": "Pclink.mdb",
+          "bytes": 1298432,
+          "sha256": "f143b5ad69050d3d033b9763371d3f7a5ef2ed0c4f492d3a2e8b2b489b6f6a83",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "app_db",
+          "file": "ZIP_NEW.MDB",
+          "bytes": 3403776,
+          "sha256": "9e438ed7e844cd7df4617c6f90dd83dad0c13f0df0a91abcc7d7635fc5f65b55",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Self Reg DLLs",
+          "file": "PlayerX_PCLink_Samsung.ocx",
+          "bytes": 151552,
+          "sha256": "c5708a5fe98e480c6368c51f2b8e095183d33dc01cd9941a0f4089721adf909e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "aAACDecoder.dll",
+          "bytes": 147456,
+          "sha256": "3cd097197f463c42fe86cfe8d9fe45bb6d0b2c5ec41a930270b08d71cdfac9cc",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "aAMRDecoder.dll",
+          "bytes": 172032,
+          "sha256": "bc75ac16416c36840f15a7f8f689a2597ce9c3456fbec3c9def65e65e178978d",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "aEVRCDecoder.dll",
+          "bytes": 94208,
+          "sha256": "70d97b39435cb4c1f3aa39942e48c29c917d2677bb985eb97c4132b81cac481d",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "aG723Decoder.dll",
+          "bytes": 77824,
+          "sha256": "91f8be51f122206a455efa60b5650096e1d26eece58999e4ee31ffa511ea2104",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "aQCELPDecoder.dll",
+          "bytes": 65536,
+          "sha256": "fdafbab8e6d72ff76c423e9ecf5f36b520ff3afe21b6c1a779961a2db46bfaf6",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "EmActionStylers_PCLink_Samsung.dll",
+          "bytes": 573440,
+          "sha256": "147eff3a6156e0bdd6631eb0958fd7bf5645cdf6507509933dd438fe74fce635",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "EmCommon_PCLink_Samsung.dll",
+          "bytes": 57344,
+          "sha256": "a2f277a9ffc5618a2724a3c4d151915c213f6b85d51a2bec888e964c9d91e89c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "FileFormatDMIF.dll",
+          "bytes": 53248,
+          "sha256": "c56f71a0fc6ebdd7f6c85730c896f73c64af2d51b53707f83c7e36682ea1c93c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "FileFormatMOTIONJPG.dll",
+          "bytes": 57344,
+          "sha256": "d8dca9f652c4026c9c0528c9523f9bbc7b1bdca3641650f4359042c1e021c924",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "FileFormatMP4.dll",
+          "bytes": 53248,
+          "sha256": "adce3e2470da5c3fd65e9dc621419bc2866b6e62845e61ae9d2d5afb3a62edfd",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "FileFormatSEMIMOTION.dll",
+          "bytes": 126976,
+          "sha256": "e4396ad4db5e95bd360e787b21090927d51166daa7cfe6961953f7b8400052e9",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "libmmd.dll",
+          "bytes": 1032266,
+          "sha256": "2670d8994137fe533f7f44cc7cbf0b4ac7ce4286698bf359b6c397defaa990f3",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "MMPlayer.dll",
+          "bytes": 45056,
+          "sha256": "05a76bc435363604b86f141f4d34163ce0ee1d034f872257f2a763f3a3022a81",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "MP4File_General.dll",
+          "bytes": 176128,
+          "sha256": "512f3e61977ede32f376b585fb58608d730ee0607701b85b9f64bcd3ed3100e3",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "OTT_SAMSUNG_PCLink_MMPlayer.dll",
+          "bytes": 49152,
+          "sha256": "b6bc34431ab551e3787c58be981ad947103867b93776e8dcffe1916bdbe2f96c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "sdl_thread.dll",
+          "bytes": 69632,
+          "sha256": "ae7a2e8ede549d8331a4099ad17012c820361935a631d47434cd9103ceef333f",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "vH263Decoder.dll",
+          "bytes": 114688,
+          "sha256": "91b6803c7cef320ad99c0bedd7ee9c52243fce1b17359a2d3392123e179b1471",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "vH264Decoder.dll",
+          "bytes": 102400,
+          "sha256": "03c9bad4e9e1dbdef65a297b10fcd430cca2a5c00ff216d1a7b28285986a0d11",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "vMOTIONJPGDecoder.dll",
+          "bytes": 114688,
+          "sha256": "dd36763b92c347c09963e4fc2f1b5cca7a71631b6bf0e974597d76caf8324230",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "Movie dlls",
+          "file": "vMPEG4.dll",
+          "bytes": 167936,
+          "sha256": "767491d87772ed859b3b7bba506657b088d1f9dc5e4ff91753ac39d184649e70",
+          "sgsOccurrences": 0,
+          "markers": []
+        }
+      ],
+      "limits": "Only the four named application groups were structurally scanned. Original outer ZIP/CAB tests passed; full InstallShield test result is recorded separately. A previous long-path extraction failed and is not counted as a complete extraction."
+    },
+    {
+      "label": "PCLink2000kor_XH31A",
+      "fullCabTestExitCode": 0,
+      "fullCabTestLog": "PCLink2000kor_XH31A-installshield-test.txt",
+      "selectedGroups": [
+        {
+          "group": "App Executables",
+          "files": 107,
+          "exitCode": 0
+        },
+        {
+          "group": "app_db",
+          "files": 2,
+          "exitCode": 0
+        },
+        {
+          "group": "App Self Reg DLLs",
+          "files": 0,
+          "exitCode": 0
+        },
+        {
+          "group": "Movie dlls",
+          "files": 0,
+          "exitCode": 0
+        }
+      ],
+      "filesScanned": 109,
+      "payloadBytesScanned": 26949926,
+      "sgsOccurrences": 0,
+      "records": [
+        {
+          "group": "App Executables",
+          "file": "0.bmp",
+          "bytes": 190,
+          "sha256": "6d31683641c0460802643efe53d23c38dc916921b790b136296fa4f263332365",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000",
+          "bytes": 53,
+          "sha256": "dabda6da1da76fadc5e0348dfe82c7d92a2ed873b7fbd551c31281c80796d66a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(0).bmp",
+          "bytes": 190,
+          "sha256": "6d31683641c0460802643efe53d23c38dc916921b790b136296fa4f263332365",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(1).bmp",
+          "bytes": 190,
+          "sha256": "45246f10fedac85a2647ae0f17c875562e7876d4dc1e10f2867f11697b84581f",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(10).bmp",
+          "bytes": 190,
+          "sha256": "61c54dfc1b1fb119b43ef828ac5ac5a62abfaed887523e952c1f65f80e8b48d9",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(11).bmp",
+          "bytes": 190,
+          "sha256": "7e3c2cb296a50f84e9d0c905a4796c9a014bda52420f878c674df8b7526fbf2e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(12).bmp",
+          "bytes": 190,
+          "sha256": "ba8c47696beda6fa5132ee5b355d46e05a123454a33c0318a4ef0e2bae6f6744",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(13).bmp",
+          "bytes": 190,
+          "sha256": "2fc5d46f6869841cc7b882a4bd10037c8bbb5afd658cd135f7da0f381b85a0d7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(14).bmp",
+          "bytes": 190,
+          "sha256": "df50c115128882b40b45ba29462ba3f56212985d049b9665313358de9315d843",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(15).bmp",
+          "bytes": 190,
+          "sha256": "1e4a0322657af9cbb0e51ffe8e84849275cca4729ff2e5748cc25c3c570ea7ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(16).bmp",
+          "bytes": 190,
+          "sha256": "135079c260880541c2db844a7dd4f391b783bf2ae38112cc57b1d0c9339cc5e8",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(17).bmp",
+          "bytes": 190,
+          "sha256": "b2214468ee3999ce78c8bb697456f5d728414a19bea8e9c57500140e5fa63c2b",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(18).bmp",
+          "bytes": 190,
+          "sha256": "3774eb99b9e87a98a0d703a708fef767c3d249467013ceee48464c1c2f541fc1",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(19).bmp",
+          "bytes": 190,
+          "sha256": "d1684e01cfe1ac168bfff47e6fa0c4c0e79006ebfc4a0964d555ef30574bbe4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(2).bmp",
+          "bytes": 190,
+          "sha256": "2ab29286ceac507b0a40ebcde774ba83cb63736cb044d74632439c223d668152",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(20).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(21).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(22).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(23).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(24).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(25).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(26).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(27).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(28).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(29).bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(3).bmp",
+          "bytes": 190,
+          "sha256": "6257d22ca19355ea22ec70bbceff1c50ac7cda1c11e56e4c96826534411e6e4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(4).bmp",
+          "bytes": 190,
+          "sha256": "06c20b4c8fb23f9e0f6c4e96b385c84d5965f3dd9dc4d6c19a412e75036473fc",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(5).bmp",
+          "bytes": 190,
+          "sha256": "98a51894a3d1808b3527357c97d4fd58f2ad3973b3dacc01c788e691d2eedb50",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(6).bmp",
+          "bytes": 190,
+          "sha256": "d65948310402c20cdddb1fc8e529e65d9641bc243304cb9f0cee74be74474d79",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(7).bmp",
+          "bytes": 190,
+          "sha256": "cd46f928c2e20ba8a47710bed62f2409737c9c791a558ea7eccc8bf90ede9565",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(8).bmp",
+          "bytes": 190,
+          "sha256": "c370ee8a0668440f80da0feb97193ae64b43d24ef4061526a06172382e750d59",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "030-0300-3000(9).bmp",
+          "bytes": 190,
+          "sha256": "84233a95112a6134b14c00fb356a01bab79bb3e6c891a16398e3a0dab7ac0b08",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "1.bmp",
+          "bytes": 190,
+          "sha256": "45246f10fedac85a2647ae0f17c875562e7876d4dc1e10f2867f11697b84581f",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "10.bmp",
+          "bytes": 190,
+          "sha256": "61c54dfc1b1fb119b43ef828ac5ac5a62abfaed887523e952c1f65f80e8b48d9",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "11.bmp",
+          "bytes": 190,
+          "sha256": "7e3c2cb296a50f84e9d0c905a4796c9a014bda52420f878c674df8b7526fbf2e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "12.bmp",
+          "bytes": 190,
+          "sha256": "ba8c47696beda6fa5132ee5b355d46e05a123454a33c0318a4ef0e2bae6f6744",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "13.bmp",
+          "bytes": 190,
+          "sha256": "2fc5d46f6869841cc7b882a4bd10037c8bbb5afd658cd135f7da0f381b85a0d7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "14.bmp",
+          "bytes": 190,
+          "sha256": "df50c115128882b40b45ba29462ba3f56212985d049b9665313358de9315d843",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "15.bmp",
+          "bytes": 190,
+          "sha256": "1e4a0322657af9cbb0e51ffe8e84849275cca4729ff2e5748cc25c3c570ea7ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "16.bmp",
+          "bytes": 190,
+          "sha256": "135079c260880541c2db844a7dd4f391b783bf2ae38112cc57b1d0c9339cc5e8",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "17.bmp",
+          "bytes": 190,
+          "sha256": "b2214468ee3999ce78c8bb697456f5d728414a19bea8e9c57500140e5fa63c2b",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "18.bmp",
+          "bytes": 190,
+          "sha256": "3774eb99b9e87a98a0d703a708fef767c3d249467013ceee48464c1c2f541fc1",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "19.bmp",
+          "bytes": 190,
+          "sha256": "d1684e01cfe1ac168bfff47e6fa0c4c0e79006ebfc4a0964d555ef30574bbe4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "1_4g.bmp",
+          "bytes": 630,
+          "sha256": "981f5c7e0fceb389a6ccd6bd2db1bda5246a98a4aa65dbc1870f0504f756c0ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2.bmp",
+          "bytes": 190,
+          "sha256": "2ab29286ceac507b0a40ebcde774ba83cb63736cb044d74632439c223d668152",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "20.bmp",
+          "bytes": 190,
+          "sha256": "a0e36a9873b9197cda7511a0b7a9f834cfbb79d8e5ce0491415e5b835b5874cb",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "21.bmp",
+          "bytes": 190,
+          "sha256": "8e92074aec7e090f8a2e9d94c5dc61d14860c4bf4dbefb46c07612ec64141eff",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "22.bmp",
+          "bytes": 190,
+          "sha256": "13661abdfadf1bc00c854ab5ccf7e8083f0108d030e7fcd8ee60e90082eb5d76",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "23.bmp",
+          "bytes": 190,
+          "sha256": "cc051dfc70ec995be8637958c4d0f6729b9b3b2ef75398827172e7ecc1ad5734",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "24.bmp",
+          "bytes": 190,
+          "sha256": "5aad8f44c89b7b59ae7bab5c4463141810f6f9c9caaadbaca9b14ede70fa5c4b",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "25.bmp",
+          "bytes": 190,
+          "sha256": "56c9a7f6945fc432c7a0615a411f7426dfc912f6af11f66e841046317693acca",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "26.bmp",
+          "bytes": 190,
+          "sha256": "85f8a0452f8405a68222f228b3145db719d529b46b04dd0bc0946e221fdaaabe",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "27.bmp",
+          "bytes": 190,
+          "sha256": "c3b9a88339aff1e1bc2b007209a4bcff6b318e4e5c0b82529673cf0886f51eb0",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "28.bmp",
+          "bytes": 190,
+          "sha256": "ae9dc6c7e9ff7ec0c479b6416463fd64217b80f7535175ae68257d53671b6242",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "29.bmp",
+          "bytes": 190,
+          "sha256": "c240fd30ae25e3c741f704b179651a5348141167acf305fa4e41bf7b3be230ee",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2_4g.bmp",
+          "bytes": 630,
+          "sha256": "d8d110e05c0681bc75ad80462765b4daf3a1409388ffd66634e9a09f0f1caa28",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2frame4grayICON.mgi",
+          "bytes": 1336,
+          "sha256": "39403f0b9d7f5b6da63a936d92167d6d49c37dc4997af84f4af32c8a1ff8dbc7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "2frameICON.mgi",
+          "bytes": 456,
+          "sha256": "32f87a853c95700794b67f203e9c075f6016f9aa2590a27c67c082273e58c62e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "3.bmp",
+          "bytes": 190,
+          "sha256": "6257d22ca19355ea22ec70bbceff1c50ac7cda1c11e56e4c96826534411e6e4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "30.bmp",
+          "bytes": 190,
+          "sha256": "69ce08e4bdf06093457a2ace97c9d8f442c8fe58c0c7b98fad1548497858ed98",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "31.bmp",
+          "bytes": 190,
+          "sha256": "cc1e3c9084128f060f0db91c63a4b60aa248f8e6127ff276567671a364653fa8",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "32.bmp",
+          "bytes": 190,
+          "sha256": "ce56c96f869f28f7157427841e517796d492a7220b52b8085ef8ff2334c7c07a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "33.bmp",
+          "bytes": 190,
+          "sha256": "2f219d89d4da384e3aa0e5f51d2ea279d74dfab069ecf08f5432768c90664079",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "4.bmp",
+          "bytes": 190,
+          "sha256": "06c20b4c8fb23f9e0f6c4e96b385c84d5965f3dd9dc4d6c19a412e75036473fc",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "5.bmp",
+          "bytes": 190,
+          "sha256": "98a51894a3d1808b3527357c97d4fd58f2ad3973b3dacc01c788e691d2eedb50",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "6.bmp",
+          "bytes": 190,
+          "sha256": "d65948310402c20cdddb1fc8e529e65d9641bc243304cb9f0cee74be74474d79",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "7.bmp",
+          "bytes": 190,
+          "sha256": "cd46f928c2e20ba8a47710bed62f2409737c9c791a558ea7eccc8bf90ede9565",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "8.bmp",
+          "bytes": 190,
+          "sha256": "c370ee8a0668440f80da0feb97193ae64b43d24ef4061526a06172382e750d59",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "9.bmp",
+          "bytes": 190,
+          "sha256": "84233a95112a6134b14c00fb356a01bab79bb3e6c891a16398e3a0dab7ac0b08",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANI1.AVI",
+          "bytes": 196096,
+          "sha256": "02d530cb2a66e0f63cd99dfbf4ecd5c1ae2ed0d1addd90f198e78920343dc935",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANY2OL_2K.dll",
+          "bytes": 36864,
+          "sha256": "8dd028e23d1686fa2e4696ebd41d76363c1a6f23a4bcd18b64286907214ae0ab",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANY2OL_98.dll",
+          "bytes": 36864,
+          "sha256": "8dd028e23d1686fa2e4696ebd41d76363c1a6f23a4bcd18b64286907214ae0ab",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "ANY2OL_XP.dll",
+          "bytes": 40960,
+          "sha256": "8e67594e1360b20c534d29ed84047d9512b8fbf2fd653135237ed1bd3c435ad6",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "Any2Palm.dll",
+          "bytes": 24576,
+          "sha256": "7f237b519b0cf22e19592b58436dc15e5b2ea592e585c712a42f332687b6e1a3",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "compact.exe",
+          "bytes": 345600,
+          "sha256": "159f4c1f53de3cc5049c928abd10c1088fc253a9be76914ae82aa350a122a78e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "crack90.dll",
+          "bytes": 1361920,
+          "sha256": "235e28275607a3adf2586127f01a6e04d76e75a46871629f1c890d7df9e8a112",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "cross.bmp",
+          "bytes": 190,
+          "sha256": "587ad2c452538cc862b6ea71c2ddb9080ae2f2fa616ee5295275ed920a11c0ed",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "FTPClient.dll",
+          "bytes": 493056,
+          "sha256": "e3ddf08668e02373fc7d1c10e7e80ab4fd2f484ca351d84764376232cb2d89f6",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "HSP98USB.inf",
+          "bytes": 1244,
+          "sha256": "cd2656856afea2ca9228475e18b1c192066fba78b19e9c6693eea021c9414754",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "HSP98USB.sys",
+          "bytes": 144564,
+          "sha256": "8eb4648ffaf935becf63953be5b70095ef9126d58a1fba3129d0acdfd4a3875d",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "HSPACM.inf",
+          "bytes": 45175,
+          "sha256": "59358413d56bf58bbfc2a8130768d465887f96749d090ad14af324d0e24bb652",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "HSPACM.sys",
+          "bytes": 225368,
+          "sha256": "f571900e393fdf2c8fd5feadd75bc8b5a4ae9375068c05d1c328cfa50f2f5e4a",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "HSPACMFilter.sys",
+          "bytes": 116624,
+          "sha256": "0e5f44f213cafe215e2960d68c7a4354a7b03e4fc2ecbf608b00ba9929365cc7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "HSPUSB.inf",
+          "bytes": 1995,
+          "sha256": "c3e8c20c934efaeae3896b67fb534341b8598f373e576b339cfca7718df06138",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "HSPUSB.sys",
+          "bytes": 26882,
+          "sha256": "28d8378afe1e046a356020a4e8aed54ea7924c344883545ff567e074ed3a98bc",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "JpegDll.dll",
+          "bytes": 516194,
+          "sha256": "63ab3c63ddb44cbcee047719ac9cb82d5a67b373e3be306ed5f68c127016f8e7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "LinkCore.dll",
+          "bytes": 1935872,
+          "sha256": "1e806357ba5eb14aa9b5fde6c60547c7c748c5940a2d8229bee98d4385018528",
+          "sgsOccurrences": 0,
+          "markers": [
+            {
+              "term": "GVM",
+              "count": 1,
+              "offsets": [
+                314370
+              ]
+            }
+          ]
+        },
+        {
+          "group": "App Executables",
+          "file": "ma3smwemu_gsm.dll",
+          "bytes": 716800,
+          "sha256": "182cebdcde14505d88f14c40135efcc1ab23fc980538e22638e0c688286a954e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "OTT_ParseMOTIONJPG.dll",
+          "bytes": 53248,
+          "sha256": "a288b466119d4159974911756b09ba57c844cc096bcd17c995aae7b90afe25fe",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "OTT_ParseSEMIMOTION.dll",
+          "bytes": 94208,
+          "sha256": "b11df9e953712307ba82b7f3b1d5bfc8306585b5705496bf3e41b5cd1449f933",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PalmCmn.dll",
+          "bytes": 7168,
+          "sha256": "2be9d8d863af1c82b4136fc7d1ea747abfe71be98d9f0cd5c1d08f22a4f2edbb",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "Pclink.000",
+          "bytes": 1298432,
+          "sha256": "fac9799387dbf0e6c74f00935f0ab87af679cdc0353b94da5afdc435f1fdaf31",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000.exe",
+          "bytes": 7290368,
+          "sha256": "bf4acb4c7e96d617ea6ecd9e9f50a2e4c9f0cfd0d1df8c5d964f1ba5da08b414",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000.ini",
+          "bytes": 559,
+          "sha256": "339fb8b006fc452363c7824af09466499b3ddaeab50410824084315bfd7ed4ef",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000Help.chm",
+          "bytes": 3915340,
+          "sha256": "10da95957273a3b9d806f3513a2b5ff1c3fd95fb364303574d515ff9525a161e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000Help.hhc",
+          "bytes": 9544,
+          "sha256": "c72ae31215ded4d140a7fc52bb33389ea6425dad846d8afcc0f65f910027eebe",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "PCLink2000Help.hhk",
+          "bytes": 10726,
+          "sha256": "c059dabcbc85312a86b651b5f282bf0586d753138bdeca92e0a7a115343a2f0c",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "Setup.exe",
+          "bytes": 299008,
+          "sha256": "a6faa0fd7e8666e85eae106ba5db0eda2088f5a50512928f72f88decb46de0c4",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "SYNCH.AVI",
+          "bytes": 1331712,
+          "sha256": "18c8c193b4f29e932eacb6dadde825dec7b34cd5b1ad974bf4ce4d3d8e32ca78",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "table21.dll",
+          "bytes": 166912,
+          "sha256": "7d2164b74ab1fcda06aac55744d910f9db9b7e4214a8984d299c96899772cccb",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "targetVerCheck.dll",
+          "bytes": 453120,
+          "sha256": "6e42c038ee7f2e23aa3ac54491f33ac2974106fb9503926ac3e5768188e25e5e",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "TCM2_Decoder12.dll",
+          "bytes": 32768,
+          "sha256": "7e1bb5f2def33cff0bc1f0810cb20d33d6dc26fb8fb3e701771cd546bc2160f2",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "TCM2_Decoder16.dll",
+          "bytes": 32768,
+          "sha256": "9b2527965eb6d32df05d11ab6079e973a53b3e400a3afc217c9642062d3c52b2",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "TCM3MGI16.dll",
+          "bytes": 40960,
+          "sha256": "fff5d55c238773eea075849b06320a0a7f937e0d98a1138780862b5a1f5ba4c3",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "Update.exe",
+          "bytes": 642048,
+          "sha256": "5eb61959a7e97764e67b2db4d00f35568ae641f6adf302c6ab5d571f882f70e9",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "USBDriverLoader.dll",
+          "bytes": 139264,
+          "sha256": "a347240a9f116dfb5d43a673a6c57ce4fae71badb2e7e3a2d1c381ab3a8bae51",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "App Executables",
+          "file": "UserData.dll",
+          "bytes": 147456,
+          "sha256": "cba7d6be452762007cfcc19951a7fea9d813d258c5052870d1c1b6296c43c8d7",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "app_db",
+          "file": "Pclink.mdb",
+          "bytes": 1298432,
+          "sha256": "f143b5ad69050d3d033b9763371d3f7a5ef2ed0c4f492d3a2e8b2b489b6f6a83",
+          "sgsOccurrences": 0,
+          "markers": []
+        },
+        {
+          "group": "app_db",
+          "file": "ZIP_NEW.MDB",
+          "bytes": 3403776,
+          "sha256": "9e438ed7e844cd7df4617c6f90dd83dad0c13f0df0a91abcc7d7635fc5f65b55",
+          "sgsOccurrences": 0,
+          "markers": []
+        }
+      ],
+      "limits": "Only the four named application groups were structurally scanned. Original outer ZIP/CAB tests passed; full InstallShield test result is recorded separately. A previous long-path extraction failed and is not counted as a complete extraction."
+    }
+  ],
+  "pcLinkLimits": [
+    "PC Link is original Samsung synchronization/support software, not a GNEX SDK or emulator.",
+    "Both outer downloads and embedded Microsoft CABs passed 7z tests. The 040331 InstallShield full test returned 1 and reported support-file failures; its complete internal payload integrity is not claimed. The XH31A full InstallShield test returned 0.",
+    "Four selected application groups extracted successfully for each build; 248 files / 58,870,667 bytes were structurally scanned, with no SGS. MDAC/installer-engine groups were not included in that SGS scan.",
+    "The GVM substring in LinkCore.dll at 0x4cc02 belongs to bitmap-like data and is not treated as a runtime/protocol marker.",
+    "The first all-group extraction hit Windows path-length limits. Those partial files are excluded from the selected-group scan counts."
+  ],
+  "summary": {
+    "newInputArchives": 2,
+    "newCodeImageArchives": 1,
+    "newMemoryCaptureArchives": 1,
+    "newRawMembers": 3,
+    "rawBytesScanned": 44141728,
+    "rawCandidateOffsets": 1425228,
+    "sgsPositiveControlsPassed": 68,
+    "newSgsGames": 0,
+    "newVerifiedInterpreters": 0,
+    "newModelWithGnexRoutingEvidence": "SCH-S250",
+    "officialDownloads": 5,
+    "officialDownloadBytes": 88328157
+  },
+  "limits": [
+    "Plain/XOR-A5 scan covers SGS v1/v2/v4/v36 in the inspected bytes. Unknown compression, encryption, fragmentation, ROMized data and native games remain possible.",
+    "The embedded ZIP has 56 entries and validated CRCs; all file payloads were scanned separately. It contains Samsung input-method/UI resources and is not identified as either 3D game.",
+    "S140/E350/S200/S230 firmware was not recovered by the finite discovery searches. SCH-S390 directory timed out; no absence claim follows.",
+    "The official support HTML displays a no-data placeholder but contains five complete file records in serialized Nuxt data. Paths were read as data without evaluating site JavaScript; the static content URL prefix is present in its linked download component.",
+    "No phone user files, SMS, contacts, persistent account data or raw S380 memory exported to the public repository.",
+    "Original source rights are separate from the Reunion MIT license. Installer and firmware programs were treated as data only."
+  ]
+}
