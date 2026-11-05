@@ -1,0 +1,817 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-11-05T12:48:00.448373+00:00",
+  "scope": "Newly obtained SCH-X850 archive and two exact raw segments. Static byte/marker and conservative SGS scanning only; not a complete phone reconstruction.",
+  "source": {
+    "url": "https://archive.org/download/gt-b-7722_20250528/SCH-X850.zip",
+    "status": 200,
+    "finalUrl": "https://dn711401.ca.archive.org/0/items/gt-b-7722_20250528/SCH-X850.zip",
+    "retrievedUtc": "2026-11-05T12:40:03.761562+00:00",
+    "bytes": 2202301,
+    "sha1": "dfd93cae45ff95236c093e85f2e0624fd6ddba85",
+    "sha256": "a15ee054c8fc668e9837078b818194feda1f5cfb8003440f650e5d25a1826361",
+    "sha1MatchesInternetArchiveMetadata": true,
+    "zipCrcVerified": true,
+    "members": [
+      {
+        "name": "SCH-X850/X850.7z",
+        "bytes": 2202005,
+        "sha256": "0ad8e8f639d57d7cf812a6e203aad045e90c1228b6d4d39389cb79974cefffcb"
+      }
+    ]
+  },
+  "internetArchiveMetadata": {
+    "url": "https://archive.org/metadata/gt-b-7722_20250528",
+    "file": "SCH-X850.zip",
+    "expectedBytes": 2202301,
+    "expectedSha1": "dfd93cae45ff95236c093e85f2e0624fd6ddba85",
+    "method": "Download byte length and SHA-1 compared to the previously recovered Internet Archive file metadata."
+  },
+  "nestedArchive": {
+    "name": "X850.7z",
+    "bytes": 2202005,
+    "sha256": "0ad8e8f639d57d7cf812a6e203aad045e90c1228b6d4d39389cb79974cefffcb",
+    "sevenZipCrcPassed": true,
+    "members": [
+      {
+        "name": "X850-Fb-Pt1.bin",
+        "bytes": 8385808,
+        "crc32": "1a942ae5"
+      },
+      {
+        "name": "X850-retry1.bin",
+        "bytes": 3670000,
+        "crc32": "e1727be3"
+      }
+    ]
+  },
+  "segments": [
+    {
+      "file": "X850-Fb-Pt1.bin",
+      "bytes": 8385808,
+      "sha256": "0a4b74244d938516f09c4063648cdfd72e32f0aa7eee744d79bd93f1f5e9e222",
+      "first32": "991f040186f00401bb7806016cf407016eb4140180a9180135910a01dcbf0a01",
+      "markers": {
+        "SCH-X850": {
+          "count": 1,
+          "offsets": [7259312]
+        },
+        "X850": {
+          "count": 1,
+          "offsets": [7259316]
+        }
+      },
+      "vmAndModelStrings": [
+        {
+          "offset": 7259312,
+          "text": "SCH-X850  YB04"
+        }
+      ],
+      "selectedWideMarkers": {},
+      "verifiedPushPushTables": []
+    },
+    {
+      "file": "X850-retry1.bin",
+      "bytes": 3670000,
+      "sha256": "11f1bb69965b80439d454feee37f9446fa09d449ae21dbef17213eba26859c77",
+      "first32": "820500eafe3f00eafe3f00eafe3f00eafe3f00eafe3f00eafe3f00eafe3f00ea",
+      "markers": {
+        "SCH-X850": {
+          "count": 1,
+          "offsets": [186440]
+        },
+        "SCHX850": {
+          "count": 2,
+          "offsets": [2311776, 2367456]
+        },
+        "X850": {
+          "count": 10,
+          "offsets": [
+            186444, 2311779, 2367459, 2697944, 2714132, 2752048, 2797960, 2799304, 2975324, 3290452
+          ]
+        },
+        "/GVM/": {
+          "count": 3,
+          "offsets": [2869094, 2978506, 2993590]
+        },
+        "Push": {
+          "count": 2,
+          "offsets": [1206444, 1206449]
+        }
+      },
+      "vmAndModelStrings": [
+        {
+          "offset": 186440,
+          "text": "SCH-X850"
+        },
+        {
+          "offset": 1206444,
+          "text": "Push-Push "
+        },
+        {
+          "offset": 2179512,
+          "text": "gvmcafe.com"
+        },
+        {
+          "offset": 2860520,
+          "text": "GVM %s"
+        },
+        {
+          "offset": 2869088,
+          "text": "/skp/c/GVM/"
+        },
+        {
+          "offset": 2978500,
+          "text": "/skp/c/GVM/"
+        },
+        {
+          "offset": 2993584,
+          "text": "/skp/c/GVM/"
+        }
+      ],
+      "selectedWideMarkers": {},
+      "verifiedPushPushTables": []
+    }
+  ],
+  "sgsScan": {
+    "schema": 1,
+    "method": "Every byte offset; SGS v1/v2/v4/v36; plain and XOR-A5; bounded header, entry, variable and complete resource validation.",
+    "limits": [
+      "Candidate requires nonzero START, at least one variable and resource, and at least 16 bytecode bytes; this is a conservative game scan.",
+      "Unknown proprietary packing and native ARM games are not ruled out.",
+      "Extraction preserves original bytes through the declared resource end, with a recognized 32-byte wrapper; unknown appended data is not guessed.",
+      "A structurally valid extraction is not proof that the game is playable."
+    ],
+    "scans": [
+      {
+        "file": "X850-Fb-Pt1.bin",
+        "bytes": 8385808,
+        "sha256": "0a4b74244d938516f09c4063648cdfd72e32f0aa7eee744d79bd93f1f5e9e222",
+        "candidate_offsets_tested": 37546,
+        "containers": [],
+        "catalogue_firmware": null
+      },
+      {
+        "file": "X850-retry1.bin",
+        "bytes": 3670000,
+        "sha256": "11f1bb69965b80439d454feee37f9446fa09d449ae21dbef17213eba26859c77",
+        "candidate_offsets_tested": 270453,
+        "containers": [],
+        "catalogue_firmware": null
+      }
+    ],
+    "summary": {
+      "images": 2,
+      "bytes": 12055808,
+      "candidate_offsets_tested": 307999,
+      "container_occurrences": 0,
+      "unique_decoded_bodies": 0
+    },
+    "extracted_files": [],
+    "positive_controls": {
+      "files": 65,
+      "passed": 65,
+      "records": [
+        {
+          "id": "godori",
+          "sha256": "0f9b70d38c86ccb32fbd2b24d6e28eaf9328a1eacbf578a3c19baace36b90e93",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bfd63bf0a4be12882b9340df162b4a83817c013223b8728f73dd97848b91f257",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "hellfire",
+          "sha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "3940f46d723cee7057094083e02e93a0e1febefad3ade8c49b670bd6b3a3989d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "ikaria",
+          "sha256": "c04204a6eec21188c4e499a8e2baa0ebb2d8d2007802e579085288edfdf5a5de",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e0c43e910ebd9cb9f33dbb8c70dda5389912d00250d6198a4710a708c8454c4f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "kpetris",
+          "sha256": "f4584767eac0ba15c568fc89687f9aed38b484811e3b2658ef45dec0fc392792",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "97c0cde3d631d5c3a0948361fba57e49c663799ba5efead5e60370cb077d93df",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "battle-armor",
+          "sha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "145a2613699935234b1828c17a6f82cdeafc556428da8df5515202b0460945c9",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "soul-sword",
+          "sha256": "9827804cd97c394a949a37f0b45a0d73d8a417ae31d52ff13575230c3936bd50",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "090247628ccc5a3cb74ee83721762a87badddedbdcca28a27dfd4c28e4ffa84b",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "treasure-hunter",
+          "sha256": "a5c0445c7440342cc0fc6d17a7a72c0482d561df2511931177f243dd64b888a1",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e6bcc8488f87fb37fc8af4d1e0eff631db3198a603cb417cb743d69794a0ef4c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "the-man-jong",
+          "sha256": "7d4708b39cbb54ea1b5e2e3156a0717747d20d553193e16c4e18dc0ac4023aa1",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "7ea258b9d72b2e07f7f8f7e2b24a9d52dfbdff8c2f464f1061fbb715b5e0de8d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "star-fighter",
+          "sha256": "277ee7a3dc4d5732cbfede82c19599ef23969558facfce37c65777f0b8cb74cf",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5a23ffc591b5e558e5fdfc0a4811dc2ed14ede2204371d81267320ae0965da86",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "aiolos-kpex",
+          "sha256": "2ce5dc39657ee2327f6ef1829f663b8742b11a02f8360ea31fc129b3d5eb7264",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e8c1e0c2629560aa60ae84a452cd9e195737db8a448982f8755ae7135d22a56c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "blocks",
+          "sha256": "c91564487df14d7db4ae3fed009a447bcd5c4151541fa8d6e2ba05b7c25da191",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "725c7ef3a127a7253213a134cc36f15142e4eda48dc6d81c303578d1c85f3621",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "exciting-drop",
+          "sha256": "5f4dc8afec8bc3f581b7566b124bc78cc4c1d0a10a38b14999aed3af1ec3c016",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5ecc022abf098f9348d191c49bf94ce693d8baff64899bd98a556fb8253ee213",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "blue-swallow",
+          "sha256": "993aed5426fe214c84d47bb4b376c37fe43db3d150207a39f492fcaeb79c4d6f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "2a2ee9d8011dc117eb26b90f237b0edcd6d8e91c8c148281dcdb2c4daef6e28a",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex1_1zimae",
+          "sha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "6f008e13c5a35c58970d4c64596c4aa326e7e8c0bbb44ae9cd629fbf7b4d1c21",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex2_2007_pro_baseball",
+          "sha256": "8ea81140fc5586667cee4376c4dcc1a3e98e63b3477eabebe734fd50d0cec296",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "026b944a9cd58a6cf0cdc901abb15eac0b868a9f406e764116b4e77c36bb9250",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex6_alchemist",
+          "sha256": "863e4f02bc166acaeb935701c7456f76e9eb4a5174200b6c6c219ad627bbd72a",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "e4e594954360967711656584fc9a997b40bcd4074473cff051f6529cb4afb56b",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "galaga-lg-sd1000",
+          "sha256": "bd85fa7948d98b4248605178e1e9f74929ba93518093974554864247a84b1fca",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bd85fa7948d98b4248605178e1e9f74929ba93518093974554864247a84b1fca",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "vocabulary-quiz-lg-sv130",
+          "sha256": "bf769132b1076d24b55d618b14b4bb3ebb11139fbbfae05edbbac6088ecdd69f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bf769132b1076d24b55d618b14b4bb3ebb11139fbbfae05edbbac6088ecdd69f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "bubble-bobble-lg-sd1020",
+          "sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "zzayo-zzayo-tycoon-lg-sd810",
+          "sha256": "bb03033013802f75f4d6ac3e77ec24374a3b3c785e89a27226ab964bad6c82d6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bb03033013802f75f4d6ac3e77ec24374a3b3c785e89a27226ab964bad6c82d6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sword-master-chronicle-lg-sd810",
+          "sha256": "cc2b82b45258f0a201eace8bd2e286cbbbf7e73cfec3a6be212747954c176fc3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "cc2b82b45258f0a201eace8bd2e286cbbbf7e73cfec3a6be212747954c176fc3",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "tetris-classic-lg-sd810",
+          "sha256": "18084691a98d209b5bd355b1117a05220618acd4845e8277109532d97a0b4d8f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "18084691a98d209b5bd355b1117a05220618acd4845e8277109532d97a0b4d8f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "rolling-fry-lg-sd810",
+          "sha256": "edb640fde26e85f566f9a4f59c14ae679115a491897110877409c0ec425e3cb4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "edb640fde26e85f566f9a4f59c14ae679115a491897110877409c0ec425e3cb4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "shrek-2-lg-sd810",
+          "sha256": "ee44fe104dab3f36d14779d1aae416d1a19405abc56d0db013b7e893bc936fd3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "ee44fe104dab3f36d14779d1aae416d1a19405abc56d0db013b7e893bc936fd3",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex16_bubble_bubble",
+          "sha256": "0c2d18a5d5260fb784d0ad1169f683e290a3d5ddc02b46647eb7c8d6eee3ae45",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "3e7f230063b846b5ad951d9962d027a371478c271ad575ecfcb4665af88a6e4d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex31_com2us_soccer_2006",
+          "sha256": "0e39f2dabc95ff71f7999b1495644f48f1c3bbb8cb890c89309f8a6aaa483e71",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "61eb6c65810c2a3d4ca2e15ad63bd34c0ccab36955402be361680fb139a0f115",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex29_crow2",
+          "sha256": "c64d9fb3e08c81448c727ee47f2733c8e46a46fed8dc2ab409b34e7b9eccb952",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "02226de4dbb85ee2e1158bc704998b7a332c192cfc425e0a180790156e2defd2",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex36_dungeon_fighter",
+          "sha256": "883c4c6fb9398ec1ceb6dfe8b102c12ac7c79aa5cfb6ed021316d7aacb17c3dd",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "9fc168d3cf2337a23502bd37f0ebcc96c3672f3cd9b12e2c7e83e4dc6f696324",
+          "bytes_after_declared_end": 47176
+        },
+        {
+          "id": "gnex21_eska2",
+          "sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex3_fist_of_fury2",
+          "sha256": "9012fa4fc75063f1cf3fdb009506a08d83bbd42c84dd10e9d9f47b94ff094e13",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "224216863e7fbf368d8e9ad334f3b03c646a641d15b91fa0fe0cdefcfd1deeb8",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex35_gostop_w_",
+          "sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex37_hero",
+          "sha256": "ecb024bdef451d0b7bd60f08cf54862682b6a4c7e7dc7d3843d786ed8ea338a2",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "96d52ff35cf63c5c4961d5a16b40d4595f7acc7a9bac6c8670b65e6847696c87",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex26_independence_day_3d",
+          "sha256": "9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "665abf9b97b0c2223124c1ee5a7b08225d3240bedf543f503d36e0fe139cacc9",
+          "bytes_after_declared_end": 139811
+        },
+        {
+          "id": "gnex34_major2007",
+          "sha256": "4aad29e41dbfc435bdb89306b44f03bd60e70b6e7205e77c443dc9b622f93af5",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "c2ab0c97e25b30b39a0c6646cc953521416e8e3429fe19096d32e38c1b05d520",
+          "bytes_after_declared_end": 27108
+        },
+        {
+          "id": "gnex10_marineblues",
+          "sha256": "fd0453b481c960d3b1b45c26a98e64f04f018c65962fcf532717a4b672174637",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "dd389437910a3920a9c2134e6d93bbef40707fac81a96c9dea49407a1916802a",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex14_mini_game2-_qvga_",
+          "sha256": "c6f99479dd49a139f67d2ee68386a7bb578fe361a28d51ab42d25bd540a9e5a9",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "fb4f1b85faea92523982558f5a57ef574ed7b7812b67f33b5fbad628a1d0b3a2",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex12_mosquito",
+          "sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex13_mu_-_fairy",
+          "sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex8_nom",
+          "sha256": "c3697ab331f0906ddf9bf4a81c1163c0e01e99adacfc1595a90fa97a58508fc3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "33607f1bd94792e638a7dbce13afd6e137f9b3ea83c6439eff777d1d8c98ef4d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex9_nom2",
+          "sha256": "386525ab6e1c8aa89c5c89aa3605fdf20a19e1d9ce0973780c920f7d73918769",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "f10177fcd976fdcd793355dd6612fa12857db11990074fc0a2c7b3e7dfb48fea",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex33_pocket_pro_baseball3",
+          "sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex17_samgugji_hero5",
+          "sha256": "85fb4fd27aefba5d7bd7bceb4f86ef7812aba2999bce55237ecc1acc7ae5e6fa",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "0c832a7151787578aeb0d76c8e2f4a4daaaffcfa505c469644d3fdeb00aa6213",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex18_shing_stone",
+          "sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex28_sketcher",
+          "sha256": "4dfd9f37daeb872a388ea5901c84e6e82a25659094c227ed693bd4ef3c811dee",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "89e7cd5d8afef1b69d823c2a85ff5580e1ab240e1393591f3b60b28f64cdd245",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex27_sketcher_.2inch",
+          "sha256": "4fe8a18069eb1b17d4a762b6430d609b020c47b789fd27a764a9eb928d12ba98",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "a98de037d298f6ca6053b6e18c8e757670276d9743fdfadb7bf8b5a36d2edc84",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex7_squash",
+          "sha256": "84ac7797e6cac8fac693f0fe6479d6a83a9880b681fb5dbbca8bfcbeb00c9d58",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "8c19f989408c3901c7d10c23747f65bf35e7dc0cae8ccb7d295a2a8522613702",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex19_super_action_hero",
+          "sha256": "d285b30564daf4d28e5d704919ac9e952d7e3066fbc934b7b52f6aa4a001fde4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "e2b348238cddbff7dbf324f527403beb2d8cdd95f8fc172c3459dc3d45bef70c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex30_susi_man3",
+          "sha256": "0016eb7d2c7ea888f4792d9f18a20161fadda922be236960cddb100d552c2db3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "0eee2ccc15f7306610811df12879031a65a9749a88e47757827898764579e9dc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex32_traffic",
+          "sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex15_virus",
+          "sha256": "53cdbe01aa0cd6a203f687ce78a0fcdd6b9e1eca80696d77486a2c65953dd68a",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "a18f06fd8b6362569e6d290477f615308c4135ef390850f0d6ff6f4f4e06dee9",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex5_viva_soccer2006",
+          "sha256": "a9c672d2f9ec3bec98370795c1f3983cab2a966e97a88e3b6abe99bc470a7ee8",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "c90caa2c4d04841c67c88e963e0aab8386440f9ddec0a30b9a7c83df0f785d49",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex25_ys3_the_oath_in_felghana",
+          "sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex22_yulgang2_-_1",
+          "sha256": "0a88d3ffc132df9735762ab8e63a16e7a4e486ff1c4ddddbd667b2b9f4a108d3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "314de9d89fe38b9035ab0322916408706737c7c981a8cc060b8bc7f0c6dd90cd",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex23_yulgang2_-_2",
+          "sha256": "e8e4a83f65db80b5f1fd7f21156cd3aa085dd59ae09b011c2d15f8d28e07f2ed",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "6a32c81552865061f883faa003a779febc50fff94776301bd4836a4e168325b5",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex24_yulgang2_-_3",
+          "sha256": "3ff584e6d5686e7d975d67d63006c4a695a2eba6a2b99f858599e9da0e837ffa",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5606d1eb982db971fc23188db9786b82872d0bf41cf88559b0f2a51901fe0574",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "zola",
+          "sha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "zzayo-zzayo-tycoon-naver-2004",
+          "sha256": "9acc6477607d7724f79a58a3b89279e56f395dba32ba7d9bd2c307b5c9a361f6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "9acc6477607d7724f79a58a3b89279e56f395dba32ba7d9bd2c307b5c9a361f6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "fighting-five-part1",
+          "sha256": "c6f582bbfcc7ed9efc6cb64d4ad3ae880b5bbe8f0e2301d88e33c11c09335337",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "c6f582bbfcc7ed9efc6cb64d4ad3ae880b5bbe8f0e2301d88e33c11c09335337",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "fighting-five-part2",
+          "sha256": "dceb8317edeabab5e0109d902ed5c4d877852e938d82f951e1c3383f04e2b5c0",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "dceb8317edeabab5e0109d902ed5c4d877852e938d82f951e1c3383f04e2b5c0",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "matgo-jjang",
+          "sha256": "12b5da94ab883681be91420e4013a7f8773ca1ed3e90049b48e1866de6ea2917",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "12b5da94ab883681be91420e4013a7f8773ca1ed3e90049b48e1866de6ea2917",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "storm-of-silence-demo-s60",
+          "sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "waterski-s60",
+          "sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-gvm-ranking",
+          "sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-character-scroll",
+          "sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-character-movement",
+          "sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+          "bytes_after_declared_end": 0
+        }
+      ]
+    }
+  },
+  "documentation": [
+    {
+      "url": "https://game.donga.com/21244/",
+      "published": "2004-10-15",
+      "claim": "SCH-X850 is named in the GNEX/GIGA Formula Championship compatibility list; this is downloaded-content support, not a preload/file claim."
+    },
+    {
+      "url": "https://manualzz.com/doc/4262613/samsung-sch-x850ly-user-manual",
+      "issuer": "Samsung Electronics",
+      "pages": [134, 135],
+      "claim": "SCH-X850LY manual separates Anycall downloaded content from built-in Push-Push III; exact binary format is not supplied by the manual."
+    }
+  ],
+  "directoryChecks": [
+    {
+      "model": "SCH-X850",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X850/",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X850/",
+      "bytes": 2096,
+      "sha256": "f40e95fbe3c699bd1f0da8c477276d45b93b29967ddbe270d4a4bafde2ec7d54",
+      "archiveLinks": ["https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X850/X850.7z"]
+    },
+    {
+      "model": "SCH-E350",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-E350/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "model": "SCH-X590",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X590/",
+      "error": "<urlopen error [WinError 10060] Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера>"
+    },
+    {
+      "model": "SCH-X780",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X780/",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X780/",
+      "bytes": 2122,
+      "sha256": "4322b3adc651fe91a3785372bedcf954f6793e644c7583c48ea4cc166a4c28d8",
+      "archiveLinks": [
+        "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X780/X780_VerEng150604.7z"
+      ]
+    }
+  ],
+  "limits": [
+    "Both files retain their original names and bytes; flash base addresses, overlap, completeness and build relationship have not been established. No combined ROM was guessed.",
+    "SCH-X850 YB04 identifies one segment. SCH-X850 and three /skp/c/GVM/ strings identify the other model-labelled segment and its GVM storage routes. These strings do not locate or execute a complete interpreter.",
+    "No literal GNEX or GVM1X/GVM2X marker was found by this selected marker list. Firmware runtime version and hardware accelerator access remain unestablished.",
+    "The scanner checks v1/v2/v4/v36 at every byte offset, plain and XOR-A5, subject to its documented resource/header bounds. No accepted container does not exclude unknown packing, fragmentation, missing segments or native games.",
+    "The existing exact-hash Push Push I/II/III level table recognizer accepted no table in either segment; it cannot exclude other revisions or layouts.",
+    "Sunderland SCH-E350 directory returned 404, X590 timed out, X850 payload connection timed out twice. These are bounded route observations, not worldwide absence claims. X850 bytes were recovered through Internet Archive instead.",
+    "No original firmware code, vendor installer or private user storage was executed or exported. No SGS or native game was promoted to the runnable catalogue."
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "title": "Non-phone Sinjisoft platforms, round 4",
+  "counts": {
+    "discoveryQueries": 18,
+    "discoveryQueriesHttp200": 18,
+    "historicalSourcePagesRead": 5,
+    "newRelevantHistoricalSources": 3,
+    "knownBaselineSourcesReread": 2,
+    "cdxRequests": 2,
+    "cdxIndexPayloadsReceived": 0,
+    "archiveMetadataRequests": 1,
+    "liveHistoricalHomepageRequests": 2,
+    "newExactRetailModelsConfirmed": 0,
+    "firmwareBinaryPayloadsRecovered": 0,
+    "gameBinaryPayloadsRecovered": 0
+  },
+  "newFindings": [
+    {
+      "name": "mds-mediaon",
+      "url": "https://www.mdstech.co.kr/notice/618",
+      "finalUrl": "https://www.mdstech.co.kr/notice/618",
+      "status": 200,
+      "bytes": 263417,
+      "sha256": "7e80eb0f3cabfa464fa1cfb53e31e534bf44f6565d4d9b984c76427b6f27c8d2",
+      "contentType": "text/html;charset=UTF-8",
+      "publishedDate": "2004-09-07",
+      "publisher": "MDS Technology, a project partner",
+      "title": "PMP용 통합솔루션 MediaOn 출시",
+      "evidenceKind": "Primary partner announcement",
+      "claims": [
+        "MediaOn integrates VELOS RTOS from MDS, XEOVIA middleware from Sinjisoft, and MMSP2 SoC from MagicEyes.",
+        "PMP OEM supply was planned from September 2004."
+      ],
+      "limits": [
+        "No exact retail player model or firmware/game binary URL is named.",
+        "MMSP2 in another device, including GP2X, does not establish XEOVIA support.",
+        "No ABI identity with SGS or Samsung XOV is established."
+      ]
+    },
+    {
+      "name": "hevm-fnnews",
+      "url": "https://n.news.naver.com/mnews/article/014/0000129836",
+      "finalUrl": "https://n.news.naver.com/mnews/article/014/0000129836",
+      "status": 200,
+      "bytes": 288067,
+      "sha256": "d3c57974594b7c6a8e329fb681e720c18c440a4ec085a275aa07534e5f8a2b9c",
+      "contentType": "text/html; charset=utf-8",
+      "publishedDateTimeAsDisplayed": "2004-06-24 20:21:00",
+      "publisher": "Financial News, public Naver publisher syndication",
+      "title": "[장외 유망기업 지상IR－신지소프트] 휴대폰 다운로드 솔루션 개발…기술개발 집중",
+      "evidenceKind": "Contemporaneous company-profile news report",
+      "claims": [
+        "Explicitly attributes HEVM (Home Entertainment Virtual machine) for digital set-top games/multimedia to Sinjisoft.",
+        "Separately attributes Xeovia for MP3/multimedia players to Sinjisoft."
+      ],
+      "limits": ["No retail set-top model or distributable HEVM bytes are identified."]
+    },
+    {
+      "name": "hevm-etnews",
+      "url": "https://n.news.naver.com/mnews/article/030/0000079439",
+      "finalUrl": "https://n.news.naver.com/mnews/article/030/0000079439",
+      "status": 200,
+      "bytes": 290518,
+      "sha256": "3567cc0019a9fa2ed231eb2300b91e81a0474596f3181b46b21fde4fcf31ad99",
+      "contentType": "text/html; charset=utf-8",
+      "publishedDateTimeAsDisplayed": "2004-08-18 09:23:00",
+      "publisher": "ETNews, public Naver publisher syndication",
+      "title": "무선인터넷솔루션업체들, DMB 플랫폼을 잡아라",
+      "evidenceKind": "Contemporaneous development announcement news report",
+      "claims": [
+        "Names Sinjisoft and Alticast developing HEVM (tentative name) for DMB data broadcasting.",
+        "Names Daewoo Electronics, EMS Korea and Alticast in the related DMB receiver-platform consortium."
+      ],
+      "limits": [
+        "Development-stage report; no retail receiver model, firmware or game file is provided.",
+        "Does not establish identical ABI across HEVM target classes."
+      ]
+    }
+  ],
+  "knownBaselineSources": [
+    {
+      "name": "sinji-xeovia",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=23774",
+      "finalUrl": "https://www.newswire.co.kr/newsRead.php?no=23774",
+      "status": 200,
+      "bytes": 96524,
+      "sha256": "b6dde4b3bb42760ad99b6b6ae9fc56b1e6b57bbf9161076270ab8351bfdeb191",
+      "contentType": "text/html; charset=UTF-8",
+      "publishedDate": "2004-12-29",
+      "evidenceKind": "Previously known Sinjisoft release, reread as baseline",
+      "newFinding": false
+    },
+    {
+      "name": "sinji-cenix",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=125649",
+      "finalUrl": "https://www.newswire.co.kr/newsRead.php?no=125649",
+      "status": 200,
+      "bytes": 100641,
+      "sha256": "cf612b9058853d01687534d7100d28ba49095a651a585bcf1894fc0d6b8aa885",
+      "contentType": "text/html; charset=UTF-8",
+      "publishedDate": "2006-02-21",
+      "evidenceKind": "Previously known Sinjisoft release, reread as baseline",
+      "newFinding": false
+    }
+  ],
+  "archiveFollowups": [
+    {
+      "name": "velos-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=velos.co.kr%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28mediaon%7Cpmp%7Cmmsp%7Cxeovia%7C%5C.zip%7C%5C.pdf%29.%2A&collapse=urlkey&limit=200",
+      "error": "The read operation timed out"
+    },
+    {
+      "name": "magiceyes-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=mesdigital.com%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28mediaon%7Cpmp%7Cmmsp%7Cxeovia%7C%5C.zip%7C%5C.pdf%29.%2A&collapse=urlkey&limit=200",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "mediaon-ia",
+      "url": "https://archive.org/advancedsearch.php?q=%22MediaOn%22+AND+%28%22MMSP2%22+OR+%22VELOS%22%29&output=json&rows=20&fl%5B%5D=identifier%2Ctitle",
+      "status": 200,
+      "bytes": 408,
+      "sha256": "5a058e20ffd3539922cd904cb62e4143d8f073416b77503293ebb37e6b76fe6e",
+      "contentType": "application/json",
+      "metadataNumFound": 0
+    }
+  ],
+  "originFollowups": [
+    {
+      "name": "velos-origin",
+      "url": "http://www.velos.co.kr/",
+      "httpStatus": 200,
+      "finalUrl": "http://www.velos.co.kr/",
+      "bytes": 788,
+      "sha256": "69afbe099e4118c3bc93b0a92e5d3f8b4b0611896f0369cbf15233809886cea8",
+      "contentType": "text/html; charset=UTF-8",
+      "scope": "One ordinary public GET of historical partner homepage; no endpoint guessing or TLS override.",
+      "observedContent": "Unrelated leather-workshop forwarding page; not a recovered VELOS RTOS OEM support directory. Linked blog not followed."
+    },
+    {
+      "name": "magiceyes-origin",
+      "url": "http://www.mesdigital.com/",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.mesdigital.com'. (_ssl.c:1006)>",
+      "scope": "One ordinary public GET; no retry."
+    }
+  ],
+  "discoveryQueryReceipts": [
+    {
+      "query": "\"신지소프트\" \"제오비아\"",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%22%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8%22+%22%EC%A0%9C%EC%98%A4%EB%B9%84%EC%95%84%22&sm=tab_jum",
+      "status": 200,
+      "bytes": 768332,
+      "sha256": "3c48b84eb6594ca56cc146efda3a5b042bbd6b410e9111839e1935886ef9450a"
+    },
+    {
+      "query": "\"제오비아\"",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%22%EC%A0%9C%EC%98%A4%EB%B9%84%EC%95%84%22&sm=tab_jum",
+      "status": 200,
+      "bytes": 170269,
+      "sha256": "cb4d1b5ee7d605f92fbd1775a30496b5a91e80cd3e27761bc08b3b14c9a05117"
+    },
+    {
+      "query": "\"GNEX\" \"MP3\"",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%22GNEX%22+%22MP3%22&sm=tab_jum",
+      "status": 200,
+      "bytes": 564948,
+      "sha256": "b8f033d182ca8eaa08b48db3b6ed2a5553ffe97a1dae375c02fd815677597eb5"
+    },
+    {
+      "query": "\"신지소프트\" \"PMP\"",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%22%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8%22+%22PMP%22&sm=tab_jum",
+      "status": 200,
+      "bytes": 836153,
+      "sha256": "9b02de31b99f772f90f00b5d5e5c2dde236ddb286ea63f2c40b48bf513366769"
+    },
+    {
+      "query": "\"신지소프트\" \"임베디드\"",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%22%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8%22+%22%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C%22&sm=tab_jum",
+      "status": 200,
+      "bytes": 759425,
+      "sha256": "98763aa2e64ede031a5702d4143420b46addb3ec2628317ef4599940eb5f0378"
+    },
+    {
+      "query": "\"XEOVIA\" \"Samsung\"",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%22XEOVIA%22+%22Samsung%22&sm=tab_jum",
+      "status": 200,
+      "bytes": 96244,
+      "sha256": "2af5952980334e4cc12cf20225bb0f48dd3fc69b081fd8db92c1654e3b50ebd2"
+    },
+    {
+      "query": "미디어온 PMP",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%EB%AF%B8%EB%94%94%EC%96%B4%EC%98%A8+PMP&sm=tab_jum",
+      "status": 200,
+      "bytes": 575310,
+      "sha256": "9e38b50c80d7835cd621e5a29a27b8153834b8857ebbf15f40a0e04b46972c66"
+    },
+    {
+      "query": "MMSP2 VELOS",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=MMSP2+VELOS&sm=tab_jum",
+      "status": 200,
+      "bytes": 111185,
+      "sha256": "ae0a15d4b2ced7cde08803171959bb01b474c75cf5c5c7dfd81212511e7c9b9a"
+    },
+    {
+      "query": "신지소프트 레인콤",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8+%EB%A0%88%EC%9D%B8%EC%BD%A4&sm=tab_jum",
+      "status": 200,
+      "bytes": 432537,
+      "sha256": "e4dfda913d741e760b2fce08c0328a11a45ae7b2e8e153d06f3126e1e83d8091"
+    },
+    {
+      "query": "신지소프트 IPTV",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8+IPTV&sm=tab_jum",
+      "status": 200,
+      "bytes": 544915,
+      "sha256": "4e409a4ec19931ce71d9a3862d724a68280775a37828bec5a989993a7799aa42"
+    },
+    {
+      "query": "신지소프트 텔레매틱스",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8+%ED%85%94%EB%A0%88%EB%A7%A4%ED%8B%B1%EC%8A%A4&sm=tab_jum",
+      "status": 200,
+      "bytes": 453567,
+      "sha256": "7a576de3fc8406260a7b77186774930ed0e5cfa0ba6b36776b8c76c7dda5a035"
+    },
+    {
+      "query": "세닉스 GNEX",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%EC%84%B8%EB%8B%89%EC%8A%A4+GNEX&sm=tab_jum",
+      "status": 200,
+      "bytes": 147103,
+      "sha256": "e11af06afa05d96df0e57b21fe92dd827c77b2ff24ace7397fc0b27770af5bdf"
+    },
+    {
+      "query": "GNEX 아이스테이션",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=GNEX+%EC%95%84%EC%9D%B4%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%85%98&sm=tab_jum",
+      "status": 200,
+      "bytes": 407306,
+      "sha256": "32a5f8eebbdb1ebe4b3fe48339443a253014d40c7671f0d7c7c2adbe5641ab6e"
+    },
+    {
+      "query": "GNEX 맥시안",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=GNEX+%EB%A7%A5%EC%8B%9C%EC%95%88&sm=tab_jum",
+      "status": 200,
+      "bytes": 75230,
+      "sha256": "50137cf55164ddf714199fdb74f140d5d9d338b9841f18fea2bd6e8f6b58067e"
+    },
+    {
+      "query": "GNEX 코원",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=GNEX+%EC%BD%94%EC%9B%90&sm=tab_jum",
+      "status": 200,
+      "bytes": 115366,
+      "sha256": "d99248d7a02241008f88b536465436d0f5e8059015763ff049145c3207a702c1"
+    },
+    {
+      "query": "GNEX 아이리버",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=GNEX+%EC%95%84%EC%9D%B4%EB%A6%AC%EB%B2%84&sm=tab_jum",
+      "status": 200,
+      "bytes": 115517,
+      "sha256": "a87b6376edf956c26cb48efb1f521a2be687692f3e35fe01e5997884bbf1bc21"
+    },
+    {
+      "query": "신지소프트 게임기",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8+%EA%B2%8C%EC%9E%84%EA%B8%B0&sm=tab_jum",
+      "status": 200,
+      "bytes": 699729,
+      "sha256": "2bf5d623c1837a4ded0cd7f91221f0ed8f7865cec8c703b89d5a6458caa6b3ba"
+    },
+    {
+      "query": "HEVM 신지소프트",
+      "url": "https://search.naver.com/search.naver?ssc=tab.web.all&query=HEVM+%EC%8B%A0%EC%A7%80%EC%86%8C%ED%94%84%ED%8A%B8&sm=tab_jum",
+      "status": 200,
+      "bytes": 126538,
+      "sha256": "28d3a8332039084a3666b8089c91a65f23ddaff469c5d5da21e519875c7883aa"
+    }
+  ],
+  "methods": {
+    "manufacturerBinaryExecution": false,
+    "loginOr403Bypass": false,
+    "tlsVerificationDisabled": false,
+    "endpointGuessingOrBruteForce": false,
+    "cdxRetryLoops": false
+  },
+  "limits": [
+    "Reference/development platform is not a confirmed retail product.",
+    "Search results are discovery pointers, not exact-model deployment evidence.",
+    "CDX timeout/503 is not an empty archive-index result.",
+    "No new vendor firmware or game payload bytes were recovered.",
+    "Existing Grundig archives and AHYANE were not downloaded or investigated in this pass."
+  ]
+}

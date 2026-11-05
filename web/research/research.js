@@ -2,7 +2,16 @@ const container = document.getElementById('archives');
 try {
   const response = await fetch('./catalog.json');
   if (!response.ok) throw Error('Catalogue unavailable');
-  const { repository, revision, artifacts } = await response.json();
+  const { repository, revision, artifacts, reports = [] } = await response.json();
+  const reportList = document.getElementById('reports');
+  for (const report of reports) {
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = `https://github.com/${repository}/blob/${revision}/${report.repositoryPath}`;
+    link.textContent = report.title;
+    item.append(link);
+    reportList.append(item);
+  }
   const fragment = document.createDocumentFragment();
   for (const entry of artifacts) {
     const card = document.createElement('article');

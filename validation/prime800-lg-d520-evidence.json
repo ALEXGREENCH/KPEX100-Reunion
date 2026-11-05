@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "checkedUtc": "2026-11-05T12:45:08.715179+00:00",
+  "task": "New bounded GVM/GNEX handset firmware pass; scratch only, no shared repository changes",
+  "repositoryHeadAtScan": "48b1e92829a38eb3edc3c59dabfe1d5d8684a804",
+  "newFirmwareInputs": [
+    {
+      "sourceArchive": {
+        "modelLabel": "Motorola-TP226",
+        "canonicalUrl": "https://archive.sunderland93.ru/Firmwares/Motorola/TP226/Motorola-TP226%20%5BMemory%20dump%5D.7z",
+        "checkedUtc": "2026-11-05T12:36:41.911148+00:00",
+        "transport": "curl --ipv4; original public archive, not vendor-program execution",
+        "exitCode": 0,
+        "response": [
+          "200",
+          "https://archive.sunderland93.ru/Firmwares/Motorola/TP226/Motorola-TP226%20%5BMemory%20dump%5D.7z",
+          "1114350"
+        ],
+        "file": "inputs/Motorola-TP226.7z",
+        "originalName": "Motorola-TP226 [Memory dump].7z",
+        "bytes": 1114350,
+        "sha256": "29af83ffed264493cbd29fe671b1e7b1a396a7af941aefd4fc0f74a862969f3c"
+      },
+      "image": {
+        "label": "Motorola-TP226",
+        "file": "raw/Motorola-TP226/Motorola-TP226_memdump.bin",
+        "bytes": 2129904,
+        "sha256": "73e4a14ed18cbaadc19e7294d2af06250fb204622c9235e3cf15855838b4f8b3",
+        "crc32": "f8887485",
+        "archiveDeclaredCrc32Matches": true,
+        "sevenZipTestPassed": true,
+        "markers": {
+          "Prime800": {
+            "count": 1,
+            "offsets": [954769]
+          }
+        },
+        "scan": {
+          "bytes": 2129904,
+          "sha256": "73e4a14ed18cbaadc19e7294d2af06250fb204622c9235e3cf15855838b4f8b3",
+          "candidate_offsets_tested": 142406,
+          "containers": []
+        }
+      },
+      "identityAndSupport": {
+        "archiveModelLabel": "Motorola TP226",
+        "internalModelLiteral": "Motorola Prime800",
+        "internalLiteralOffset": 954760,
+        "documentLabel": "Prime800(TP226)",
+        "documentPage": 88,
+        "gvmDocumented": "GVM2X, SCRIPTVER2, Magic; GVM120x144 / physical120x160",
+        "binaryRuntimeEvidence": "No tested characteristic ASCII GVM/GNEX markers or structurally valid SGS found in this particular image. Documentary GVM support is not a claim that its component is present in these bytes.",
+        "identityConclusion": "Public archive TP226 label independently corroborated by internal Motorola Prime800 literal and the exact combined guide label."
+      },
+      "gameOnlyEfsProbe": {
+        "file": "raw/Motorola-TP226/Motorola-TP226_memdump.bin",
+        "sha256": "73e4a14ed18cbaadc19e7294d2af06250fb204622c9235e3cf15855838b4f8b3",
+        "gamePathPatternMatches": 0,
+        "gameMetadataRecords": [],
+        "targetStrings": [
+          {
+            "offset": 954760,
+            "text": "Motorola Prime800"
+          }
+        ]
+      },
+      "status": "original bytes downloaded, archive/member CRC checked, bounded raw SGS and known game-metadata layout checks completed; no new SGS recovered",
+      "fullPhoneImageEstablished": false,
+      "nativeVendorCodeExecuted": false
+    },
+    {
+      "sourceArchive": {
+        "modelLabel": "LG-CX300V-SD520I41",
+        "canonicalUrl": "https://archive.sunderland93.ru/Firmwares/LG/CX300V/SD520I41%20%5BMemory%20Dump%5D.7z",
+        "checkedUtc": "2026-11-05T12:36:41.902122+00:00",
+        "transport": "curl --ipv4; original public archive, not vendor-program execution",
+        "exitCode": 0,
+        "response": [
+          "200",
+          "https://archive.sunderland93.ru/Firmwares/LG/CX300V/SD520I41%20%5BMemory%20Dump%5D.7z",
+          "1202945"
+        ],
+        "file": "inputs/LG-CX300V-SD520I41.7z",
+        "originalName": "SD520I41 [Memory Dump].7z",
+        "bytes": 1202945,
+        "sha256": "ba8e1a762c681e1d8e322275823a87e8ed2a485151cd9c6191c24f79d0a5f2f4"
+      },
+      "image": {
+        "label": "LG-CX300V-SD520I41",
+        "file": "raw/LG-CX300V-SD520I41/SD520I41_memory.bin",
+        "bytes": 4194288,
+        "sha256": "28f023640f3891198b79c297f1adfa987dcbea7e138a17e1c9691e6f273a888b",
+        "crc32": "c9d57dc8",
+        "archiveDeclaredCrc32Matches": true,
+        "sevenZipTestPassed": true,
+        "markers": {
+          "gvm2x": {
+            "count": 15,
+            "offsets": [
+              524296, 527860, 527866, 527880, 527886, 527900, 527906, 544624, 1440301, 1440384,
+              1442480, 1443412, 1443844, 1444845, 3900960
+            ]
+          },
+          "SD520": {
+            "count": 2,
+            "offsets": [1439068, 1611758]
+          }
+        },
+        "scan": {
+          "bytes": 4194288,
+          "sha256": "28f023640f3891198b79c297f1adfa987dcbea7e138a17e1c9691e6f273a888b",
+          "candidate_offsets_tested": 201374,
+          "containers": []
+        }
+      },
+      "identityAndSupport": {
+        "archiveModelLabel": "LG CX300V",
+        "internalModelLiteral": "LG-D520",
+        "internalLiteralOffset": 1580282,
+        "internalBuildLiteral": "SD520I41",
+        "internalBuildOffset": 1611758,
+        "documentLabel": "LG CX-300A(D520)",
+        "documentPage": 59,
+        "gvmDocumented": "GVM2X, SCRIPTVER2, Magic; GVM120x144 / physical120x160 in guide's CX-300A(D520) profile",
+        "binaryRuntimeEvidence": "Fifteen gvm2x substrings, including native /gvm2x_%03d, gvm2x_bell and need_gvm2x_process_data again. This supports the GVM2X processing component, not original-phone boot or working SGS execution.",
+        "identityConclusion": "Preserve the archive's CX300V label, internal D520/SD520I41 and guide CX-300A(D520) separately. Do not establish A=V=DV aliases from a mirror directory name.",
+        "variantCaveat": "The historical workbook separately labels CX-300V and CX-300Dv; generic app geometry differs from the guide's GVM area. No automatic variant/profile merge."
+      },
+      "gameOnlyEfsProbe": {
+        "file": "raw/LG-CX300V-SD520I41/SD520I41_memory.bin",
+        "sha256": "28f023640f3891198b79c297f1adfa987dcbea7e138a17e1c9691e6f273a888b",
+        "gamePathPatternMatches": 3,
+        "gameMetadataRecords": [],
+        "targetStrings": [
+          {
+            "offset": 524296,
+            "text": "gvm2x"
+          },
+          {
+            "offset": 527860,
+            "text": "gvm2x/gvm2x_bell0"
+          },
+          {
+            "offset": 527880,
+            "text": "gvm2x/gvm2x_bell1"
+          },
+          {
+            "offset": 527900,
+            "text": "gvm2x/gvm2x_bell2"
+          },
+          {
+            "offset": 544624,
+            "text": "gvm2x"
+          },
+          {
+            "offset": 1442480,
+            "text": "gvm2x"
+          },
+          {
+            "offset": 1443412,
+            "text": "gvm2x"
+          },
+          {
+            "offset": 1443844,
+            "text": "gvm2x"
+          },
+          {
+            "offset": 1444840,
+            "text": "need_gvm2x_process_data again"
+          },
+          {
+            "offset": 1611758,
+            "text": "SD520I41"
+          },
+          {
+            "offset": 3900960,
+            "text": "gvm2x"
+          }
+        ]
+      },
+      "status": "original bytes downloaded, archive/member CRC checked, bounded raw SGS and known game-metadata layout checks completed; no new SGS recovered",
+      "fullPhoneImageEstablished": false,
+      "nativeVendorCodeExecuted": false
+    }
+  ],
+  "primaryDocumentSupport": {
+    "guideProfiles": [
+      {
+        "page": 59,
+        "manufacturer": "LG",
+        "modelLabelVerbatim": "LG CX-300A(D520)",
+        "releaseDateVerbatim": "2001.08",
+        "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+        "vm": "GVM2X",
+        "scriptVersion": 2,
+        "downloadProtocol": "Magic",
+        "userAgentVerbatim": "DDEEGG: LG1211, LG1511, LGA311, LGA611",
+        "physicalLcdVerbatim": "120*160",
+        "physicalLcd": [120, 160],
+        "gvmAreaVerbatim": "120*144 :::::::::::::::: LCDCLASS : 1 (LCDCLASS 예전 기준 적용됨)",
+        "gvmArea": [120, 144],
+        "lcdClass": 1,
+        "imageTypeVerbatim": "256KColor :::::::::::::: IMAGETYPE: 12 (압축을 사용할 경우 4)",
+        "audioTypeVerbatim": "Buzzer :::::::::::::::::::: AUDIOTYPE: 1",
+        "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+        "sourceId": "gvm-handset-guide-2002"
+      },
+      {
+        "page": 88,
+        "manufacturer": "Motorola",
+        "modelLabelVerbatim": "Prime800(TP226)",
+        "releaseDateVerbatim": "2001.08",
+        "vmVersionVerbatim": "GVM2X :::::::::::::::::: SCRIPTVER : 2, Download Protocol : Magic",
+        "vm": "GVM2X",
+        "scriptVersion": 2,
+        "downloadProtocol": "Magic",
+        "userAgentVerbatim": "DDEEGG: MT0411",
+        "physicalLcdVerbatim": "120*160",
+        "physicalLcd": [120, 160],
+        "gvmAreaVerbatim": "120*144 :::::::::::::::: LCDCLASS : 1 (LCDCLASS 예전 기준 적용됨)",
+        "gvmArea": [120, 144],
+        "lcdClass": 1,
+        "imageTypeVerbatim": "4-Gray :::::::::::::::::: IMAGETYPE: 2",
+        "audioTypeVerbatim": "MA2 :::::::::::::::::::::: AUDIOTYPE: 4",
+        "vocTypeVerbatim": "1 (SKT) :::::::::::::::::: VOCTYPE : 1",
+        "sourceId": "gvm-handset-guide-2002"
+      }
+    ],
+    "separateWorkbookVariantRows": [
+      {
+        "sheet": "SKT",
+        "row": 152,
+        "manufacturer": "LG전자",
+        "model": {
+          "cell": "B152",
+          "value": "CX-300V"
+        },
+        "carrier": {
+          "cell": "C152",
+          "value": "SKT"
+        },
+        "gvmSupported": {
+          "cell": "R152",
+          "value": "O"
+        },
+        "gvmVersion": {
+          "cell": "S152",
+          "value": "2"
+        },
+        "skvmSupported": {
+          "cell": "T152",
+          "value": "X"
+        },
+        "skvmVersion": {
+          "cell": "U152",
+          "value": "X"
+        },
+        "physicalWidth": {
+          "cell": "AT152",
+          "value": "120"
+        },
+        "physicalHeight": {
+          "cell": "AU152",
+          "value": "160"
+        },
+        "applicationWidth": {
+          "cell": "AV152",
+          "value": "120"
+        },
+        "applicationHeight": {
+          "cell": "AW152",
+          "value": "128"
+        }
+      },
+      {
+        "sheet": "SKT",
+        "row": 159,
+        "manufacturer": "LG전자",
+        "model": {
+          "cell": "B159",
+          "value": "CX-300Dv"
+        },
+        "carrier": {
+          "cell": "C159",
+          "value": "SKT/STI"
+        },
+        "gvmSupported": {
+          "cell": "R159",
+          "value": "O"
+        },
+        "gvmVersion": {
+          "cell": "S159",
+          "value": "2"
+        },
+        "skvmSupported": {
+          "cell": "T159",
+          "value": "X"
+        },
+        "skvmVersion": {
+          "cell": "U159",
+          "value": "X"
+        },
+        "physicalWidth": {
+          "cell": "AT159",
+          "value": "120"
+        },
+        "physicalHeight": {
+          "cell": "AU159",
+          "value": "160"
+        },
+        "applicationWidth": {
+          "cell": "AV159",
+          "value": "120"
+        },
+        "applicationHeight": {
+          "cell": "AW159",
+          "value": "128"
+        }
+      }
+    ],
+    "guideSource": {
+      "url": "https://web.archive.org/web/20030914195710id_/http://gvmclub.com:80/20021130_%b4%dc%b8%bb%b1%e2%ba%b0_%b0%b3%b9%df%b0%a1%c0%cc%b5%e5.pdf",
+      "expectedSha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee",
+      "status": 200,
+      "mime": "application/pdf",
+      "bytes": 1285394,
+      "sha256": "ee3210a1bb535bccd2c138641fd0478486ab1cd063cce05619ab6c316d3487de",
+      "sha1": "06265ed23af9bab6170f8e67f758e9efd57e2cee",
+      "id": "gvm-handset-guide-2002",
+      "title": "GVM 단말기별 개발가이드",
+      "coverDate": "2002-11-30",
+      "pdfCreationDate": "2002-12-12",
+      "issuer": "Sinjisoft Corporation",
+      "pages": 101,
+      "cdxSha1MatchesPayload": true,
+      "originalUrl": "http://gvmclub.com:80/20021130_%b4%dc%b8%bb%b1%e2%ba%b0_%b0%b3%b9%df%b0%a1%c0%cc%b5%e5.pdf",
+      "cdxSha1Base32": "AYTF5UR27G5LMFYPRZT7OWHJ57KX4LHO",
+      "captureTimestamp": "20030914195710",
+      "cdxMime": "application/pdf",
+      "warcCompressedRecordLength": 348857
+    },
+    "workbookSource": {
+      "filename": "20031014-SKT-STI-handsets.xls",
+      "url": "https://web.archive.org/web/20040623225914id_/http://gvmclub.com:80/board/free/include/tbl_board_free/files/phpxLSKoF/%b4%dc%b8%bb%b1%e2_%c1%a4%ba%b8_skt,sti_031014.xls",
+      "expectedSha1": "d5fd873d7e90f31dadbe911459c93a792012c8ab",
+      "status": 200,
+      "mime": "application/vnd.ms-excel",
+      "bytes": 337920,
+      "sha256": "1449e3820c0ea0c194f6f494b47186b2f0e45b59f214828e16272f443310c672",
+      "sha1": "d5fd873d7e90f31dadbe911459c93a792012c8ab",
+      "sha1MatchesCdx": true,
+      "id": "skt-sti-roster-2003",
+      "title": "단말기_정보_skt,sti_031014.xls",
+      "dateInFilename": "2003-10-14",
+      "provenance": "Original workbook attached on the public GVM Club forum. An official operator issuer or named author has not been authenticated. Column labels and cells are transcribed as stored.",
+      "cdxSha1Base32": "2X6YOPL6SDZR3LN6SEKFTSJ2PEQBFSFL",
+      "captureTimestamp": "20040623225914",
+      "originalUrl": "http://gvmclub.com:80/board/free/include/tbl_board_free/files/phpxLSKoF/%b4%dc%b8%bb%b1%e2_%c1%a4%ba%b8_skt,sti_031014.xls",
+      "cdxMime": "application/vnd",
+      "warcCompressedRecordLength": 76861
+    }
+  },
+  "newScanSummary": {
+    "inputs": 2,
+    "bytes": 6324192,
+    "candidateOffsetsTested": 343780,
+    "structurallyValidContainers": 0
+  },
+  "positiveControls": {
+    "files": 65,
+    "passed": 65,
+    "catalogueSha256": "049bb5817b07bf536fcab889d1876fc9cbff89e01ebfb0815ead46217667f14e"
+  },
+  "scanner": {
+    "file": "tools/scan-firmware-games.py",
+    "sha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e",
+    "method": "Plain/XOR-A5 v1/v2/v4/v36, bounded complete sections/events/variables/resources validation. No changes to repository scanner."
+  },
+  "indexesRead": [
+    {
+      "file": "indexes/Firmwares__Curitel.html",
+      "bytes": 2556,
+      "sha256": "64ee7b0897fe56b341295aac215a4e66c163677e317f365e3cb89ce09f41bbd1",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__LG.html",
+      "bytes": 235747,
+      "sha256": "063b8b445eb0d111e5686ee56e5e79ed4c83d643ebbba4b55beccb1f3f09930e",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__LG__CX300V.html",
+      "bytes": 2133,
+      "sha256": "682a20dacaf5c93cb2854ea6d37dd36e3e2c6cae97db480c08efcca3ec630b6a",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__LG__SC8000.html",
+      "bytes": 2122,
+      "sha256": "bb92d1b5764ebe681dcb630f699c9513cfd54fee8adfe7f51771e564beeb2ee6",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__LG__SD1020.html",
+      "bytes": 2111,
+      "sha256": "d66b61018030e9c468639fc299ddb97c3cb63e736310265feae34c24e3fe795e",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__LG__SD1250.html",
+      "bytes": 2097,
+      "sha256": "a41326108a1dd6efbe6e19a145fb11475f651e0da20f9917badd3278a1d8d9db",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__Motorola.html",
+      "bytes": 57005,
+      "sha256": "54f9377c8995323021b52cca7900e860d663402dcfd1893ba739baab12899630",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__Motorola__TP226.html",
+      "bytes": 2150,
+      "sha256": "0212abb155e3e3ee8821c40e57415b37c2fde988c060c89eb16712bfbeaa91ac",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__Motorola__V710.html",
+      "bytes": 2538,
+      "sha256": "bd1cda37591e5ec055eedb3e7825ffe088e7fdbeeb763d1b11e7ccb2c848d5bb",
+      "containsExpectedIndexMarkup": true
+    },
+    {
+      "file": "indexes/Firmwares__Telson.html",
+      "bytes": 2088,
+      "sha256": "e22d3c1723ef8941c4e9d6ea2f9bb2ba19aa303d7aee3937f509535754fdcb7f",
+      "containsExpectedIndexMarkup": true
+    }
+  ],
+  "freshDirectoryDecisions": [
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "decision": "SV130 already recovered and deliberately not downloaded/scanned again; exact SV140 and SV9140 directories absent from this root listing. This is not worldwide firmware absence."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/Motorola/TP226/",
+      "decision": "Exact combined historical model and fresh archive, selected and downloaded."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/LG/CX300V/",
+      "decision": "New original SD520I41 memory bytes selected; source label/internal D520/guide CX-300A kept distinct."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/Motorola/V710/",
+      "decision": "Listing contains DST/USC/Vivo 1.x MONSTER builds. No proof these are the Korean Apex V710; not downloaded or attributed to that GVM handset."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/Curitel/",
+      "decision": "urllib timeout superseded by successful curl IPv4 HTML retrieval. Actual listing only CX-800V, PG-S5500, PT-K1000, S2; all previously inspected. No repeated dump scan."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/Telson/",
+      "decision": "Only PS3000, already inspected. No TWC1030 or Nokia TDC-labelled archive found here; no OEM alias inferred."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/LG/SC8000/",
+      "decision": "SKT_RUU_SV2_KR156XU2.7z listed, not downloaded: exact GNEX/GVM support not established by the current sources; do not count as inspected firmware."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/LG/SD1020/",
+      "decision": "Only already-inspected SD43CI23_memory.7z; no redownload/rescan."
+    },
+    {
+      "directory": "https://archive.sunderland93.ru/Firmwares/LG/SD1250/",
+      "decision": "Only already-inspected SD250I11.7z; no redownload/rescan."
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "file": "download-receipts.json",
+      "bytes": 1383,
+      "sha256": "06e3c69296f2e9a5450b11382442cf4bd83b136bcc4b4587a12d07b8c4174645"
+    },
+    {
+      "file": "initial-firmware-scan.json",
+      "bytes": 26224,
+      "sha256": "0e5294b7af723f0c6b92edd1ab2c7e4135245f1b657da2614def43c49b91ca28"
+    },
+    {
+      "file": "game-only-efs-check.json",
+      "bytes": 1959,
+      "sha256": "430a3804fab3affe38e1977df1ce0762de637d92983d0f4f7fa093f37ec5b7df"
+    },
+    {
+      "file": "browse-indexes.py",
+      "bytes": 2404,
+      "sha256": "b67196cdf2f51eda38930d9712654f504b23cb4ec470617d9402ca81d7cb977b"
+    },
+    {
+      "file": "fetch-targets.py",
+      "bytes": 2151,
+      "sha256": "69263b6e987d31cad46a128b35a2c97f9fc47464e1cc32ad3cc522d6685820da"
+    },
+    {
+      "file": "extract-and-scan.py",
+      "bytes": 4237,
+      "sha256": "8f852fbf5c051b942c823d9b26c754e384e3ace926562f02da6910ce35da3550"
+    },
+    {
+      "file": "check-game-metadata.py",
+      "bytes": 2539,
+      "sha256": "164a0608cd9b8ee83952a0db9122449989ae4d196b6f9119afd7f33efc513420"
+    }
+  ],
+  "reproductionCommands": [
+    "python work/device-hunt-round4-phones/fetch-targets.py  # only into a fresh scratch copy; refuses existing inputs",
+    "python work/device-hunt-round4-phones/extract-and-scan.py  # requires 7-Zip, new raw output directories",
+    "python work/device-hunt-round4-phones/check-game-metadata.py"
+  ],
+  "newGamePayloads": [],
+  "limits": [
+    "No validated SGS bytes recovered, so there is no new playable entry to publish from this pass.",
+    "Zero hits are bounded scanner/layout results; unknown compression, fragments, another filesystem and native built-ins are not excluded.",
+    "Memory dump archive labels are not proof of complete phone flash, exact flash mapping or original-phone functionality.",
+    "Only game-path metadata was sought; no contacts/SMS/private user files or individual EFS records were exported.",
+    "Neither original vendor programs nor phone code was run. No credentials, installers, outreach or password search used.",
+    "LG CX300V mirror label is not used to merge CX-300A, CX-300V and CX-300Dv variants or their distinct application geometries."
+  ]
+}

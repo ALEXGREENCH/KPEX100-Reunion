@@ -53,6 +53,11 @@
 
 ## История и источники
 
+- [Полный известный реестр GNEX Zone](gnex-zone-complete-profiles.md): 52 прочитанные карточки, версии VM, размеры, исходные HTML и расхождения.
+- [Motorola Prime800 / LG D520](motorola-prime800-lg-d520.md): новые дампы и раздельная идентификация вариантов.
+- [Samsung SCH-X850](samsung-x850-round4.md): два оригинальных сегмента и пути GVM.
+- [MediaOn и HEVM](nonphone-platforms-round4.md): XEOVIA/VELOS/MMSP2, приставки и DMB; границы доказательств серийных устройств.
+
 - [Три учебных SGS из корейских блогов](korean-developer-samples.md): оригиналы, локальные сценарии и отдельная вкладка примеров.
 - [Новые исходники и книжные CD](gnex-book-source-followup.md): GNEX3D, Mobile C и проверенные границы поиска.
 - [LG SB260 / SV730](lg-sb260-sv730-games.md): native PXO и FreeKick Flash с ресурсами.

@@ -20,6 +20,10 @@ MIT licence does not relicense them. The LG archive carries the LGUI-derived
 decoder, corresponding source, GPL-3.0-or-later notices and provenance alongside
 the historical payloads. Read each archive's manifest and licence files.
 
+The preserved GNEX Zone handset cards retain Sinjisoft's original notices and
+archived HTML. Their tables are historical device documentation, not a new
+Reunion licence for the original pages or proof of emulator compatibility.
+
 ## Unicorn.js / Unicorn Engine for the browser
 
 - Upstream: [Unicorn.js ARM v1.0.3](https://github.com/AlexAltea/unicorn.js/releases/tag/v1.0.3).
