@@ -1,0 +1,280 @@
+{
+  "schema": 1,
+  "researchDate": "2026-11-05",
+  "scope": "Bounded primary-source verification of supplied GVM/GNEX historical paragraph, with actual catalogue/legacy coverage and named compatibility limits.",
+  "primarySource": {
+    "title": "GNEX Technical White Paper",
+    "issuer": "Sinjisoft, Co., Ltd.",
+    "originalUrl": "http://www.sinjisoft.co.kr:80/download/GNEX_Technical_Whitepaper_K.zip",
+    "archiveUrl": "https://web.archive.org/web/20051102215510id_/http://www.sinjisoft.co.kr:80/download/GNEX_Technical_Whitepaper_K.zip",
+    "captureTimestamp": "20051102215510",
+    "cdxMime": "application/zip",
+    "cdxStatus": "200",
+    "cdxDigestSha1Base32": "7FVR2BX2PZAFGEEAPYSOG4KHPHI5KBH4",
+    "archiveBytes": 1165176,
+    "archiveSha256": "6490538c8f9d1bd3feb2995e78b14598097038f37d61a66bb3e9a43ea0dba034",
+    "archiveSha1": "f96b1d06fa7e405310807e24e3714779d1d504fc",
+    "payloadSha1MatchesCdx": true,
+    "zipCrcTest": "passed",
+    "member": "GNEX_Technical_WhitePaper_K_20030901.pdf",
+    "memberCrc32": "65f5536c",
+    "pdfBytes": 1561280,
+    "pdfSha256": "d61650eb6aeb383b229e4c2fc1be3d1b34988f64854ebf1048a5ce1f1de44de4",
+    "pdfPages": 31,
+    "coverDate": "July2003",
+    "dateInFilename": "20030901",
+    "pdfCreationDateRaw": "D:20050816153416+09'00'",
+    "pdfModificationDateRaw": "D:20050816153634+09'00'",
+    "sourceModifiedRaw": "D:20030918021652",
+    "dateCaveat": "Cover, filename date, source modification, PDF generation and capture date are distinct; none silently substitutes for another.",
+    "payloadAcquisition": "Reused previously recovered original ZIP; local size/hash/ZIP-CRC/member equality and original saved CDX digest independently checked in this pass. No successful fresh ZIP download claimed.",
+    "visualReview": {
+      "renderer": "Poppler pdftoppm",
+      "pdfPages": [4, 5, 12],
+      "printedPages": [4, 5, 12],
+      "koreanTextReadable": true
+    },
+    "locators": [
+      {
+        "section": "1.1 GNEX Introduction",
+        "pdfPage": 4,
+        "printedPage": 4,
+        "content": "Exact supplied paragraph: October2000 GVM, SKTelecom commercialisation, first/market-leader vendor claims, GNEX lineage, full backward compatibility and about50000 GVM contents."
+      },
+      {
+        "section": "1.2 GNEX History",
+        "pdfPages": [5, 6],
+        "printedPages": [5, 6],
+        "content": "SWAP June2000; GVM1X proposal August2000; SKTelecom GVM October2000; GVM2X August2001; Obox/GVM2.5X June2002; GNEX June2003."
+      },
+      {
+        "section": "2.4 GNEX Compatibility",
+        "pdfPage": 12,
+        "printedPage": 12,
+        "content": "Repeated claim of backward compatibility from GVM1X through GNEX and unchanged execution of earlier GVM contents."
+      }
+    ],
+    "shortKoreanFragments": [
+      {
+        "page": 4,
+        "text": "세계 최초",
+        "meaningRu": "Первое в мире; историческое заявление самого производителя, не установленный независимый мировой приоритет."
+      },
+      {
+        "page": 4,
+        "text": "부동의 1위",
+        "meaningRu": "Неизменное первое место; заявление Sinjisoft о рынке того времени, без независимой методики подсчёта."
+      },
+      {
+        "page": 4,
+        "text": "완벽한 하위 호환성",
+        "meaningRu": "Полная обратная совместимость; обещание продукта Sinjisoft, не измеренная полнота эмулятора Reunion."
+      },
+      {
+        "page": 4,
+        "text": "5만여개의 기 출시된 GVM컨텐츠를 그대로",
+        "meaningRu": "Прежний GVM-контент числом около50тысяч без изменений; термин не равен50тысячам уникальных игр."
+      }
+    ],
+    "quoteWhitespace": "Linewrap/text-extractor whitespace normalized; quoted Korean glyphs independently checked against rendered page4."
+  },
+  "secondVendorSource": {
+    "url": "https://www.newswire.co.kr/newsRead.php?no=93865",
+    "issuer": "Sinjisoft",
+    "publishedLocal": "2005-11-02 09:41",
+    "scope": "Onse Telecom So1 GNEX licensing press release.",
+    "paraphraseRu": "Релиз отдельно перечисляет игры, эмотиконы и мелодии, затем сообщает примерно50тысяч разнообразных единиц контента. Это не инвентарь50тысяч игр и не расшифровка состава статистики2003года.",
+    "independentMarketVerification": false
+  },
+  "catalogueSnapshot": {
+    "sgsApplications": 62,
+    "legacySgs": 23,
+    "sgsV1": 2,
+    "sgsV2": 21,
+    "legacyGames": 22,
+    "legacyUtilities": 1,
+    "engine": "web/engine/legacy.js, original Kingston ARM interpreter",
+    "test": "tests/legacy.test.mjs; all23layout/START/armedtimer checks",
+    "examples": [
+      {
+        "id": "gnex21_eska2",
+        "title": "Eska2",
+        "format": 1,
+        "bytes": 130164,
+        "sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+        "runtime": {
+          "profile": "phone",
+          "width": 176,
+          "height": 220
+        },
+        "compatibility": "playable",
+        "evidence": "validation/legacy-gameplay.json",
+        "scene": "Game scene and controls recorded in the existing legacy coverage."
+      },
+      {
+        "id": "shrek-2-lg-sd810",
+        "title": "Shrek 2 (LG SD810)",
+        "format": 1,
+        "bytes": 130916,
+        "sha256": "ee44fe104dab3f36d14779d1aae416d1a19405abc56d0db013b7e893bc936fd3",
+        "runtime": {
+          "profile": "phone",
+          "width": 120,
+          "height": 146
+        },
+        "compatibility": "playable",
+        "evidence": "validation/lg-sd810-gameplay.json",
+        "scene": "LG-SD810 original SGSv1; original CLI scene and controls."
+      },
+      {
+        "id": "galaga-lg-sd1000",
+        "title": "Galaga (LG SD1000)",
+        "format": 2,
+        "bytes": 58756,
+        "sha256": "bd85fa7948d98b4248605178e1e9f74929ba93518093974554864247a84b1fca",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 128
+        },
+        "compatibility": "playable",
+        "evidence": "validation/galaga-sd1000-replay.json",
+        "scene": "LG-SD1000 recovered SGSv2; level, movement and shooting scenario."
+      },
+      {
+        "id": "zola",
+        "title": "Zola (졸라피이터)",
+        "format": 2,
+        "bytes": 9354,
+        "sha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 128,
+          "startData": 1
+        },
+        "compatibility": "playable",
+        "evidence": "validation/community-gameplay.json",
+        "scene": "Single-player fighting with original STARTdata1, movement and attacks."
+      },
+      {
+        "id": "fighting-five-part1",
+        "title": "Fighting Five · Part 1",
+        "format": 2,
+        "bytes": 130950,
+        "sha256": "c6f582bbfcc7ed9efc6cb64d4ad3ae880b5bbe8f0e2301d88e33c11c09335337",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 128,
+          "startData": 0
+        },
+        "compatibility": "playable",
+        "evidence": "validation/mobaill-gameplay.json",
+        "scene": "Arcade bout, fixed-time paired input/control."
+      },
+      {
+        "id": "fighting-five-part2",
+        "title": "Fighting Five · Part 2",
+        "format": 2,
+        "bytes": 130300,
+        "sha256": "dceb8317edeabab5e0109d902ed5c4d877852e938d82f951e1c3383f04e2b5c0",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 128,
+          "startData": 0
+        },
+        "compatibility": "playable",
+        "evidence": "validation/mobaill-gameplay.json",
+        "scene": "Arcade bout, fixed-time paired input/control."
+      },
+      {
+        "id": "matgo-jjang",
+        "title": "Matgo Jjang",
+        "format": 2,
+        "bytes": 131048,
+        "sha256": "12b5da94ab883681be91420e4013a7f8773ca1ed3e90049b48e1866de6ea2917",
+        "runtime": {
+          "profile": "phone",
+          "width": 128,
+          "height": 128,
+          "startData": 0
+        },
+        "compatibility": "playable",
+        "evidence": "validation/mobaill-gameplay.json",
+        "scene": "Infinite mode card table and number-key card play."
+      }
+    ],
+    "newLocalCliChecks": [
+      {
+        "id": "shrek-2-lg-sd810",
+        "sgsFormat": 1,
+        "allStepsIdle": true,
+        "allErrorsNull": true,
+        "events": 162,
+        "finalTimeMs": 24900,
+        "finalPngSha256": "ab2a754134cb7703f66a99c20c1217aa6e86a625c71c01f954279b4360b04124"
+      },
+      {
+        "id": "galaga-lg-sd1000",
+        "sgsFormat": 2,
+        "allStepsIdle": true,
+        "allErrorsNull": true,
+        "events": 287,
+        "finalTimeMs": 40800,
+        "finalPngSha256": "5add956655cb79a2da03976d8102102f6578d49f3283c4a43f3f2ea016182bd5"
+      }
+    ],
+    "coverageCaveat": "SGS file-header versions1/2 are not a one-to-one identification of handset platform generationsGVM1X/GVM2X. Short scenes and START/timer checks are not a full historical-ecosystem compatibility percentage."
+  },
+  "knownCompatibilityBoundary": {
+    "game": "WI-TOP Hellfire",
+    "sgsFormat": 1,
+    "bytes": 24502,
+    "sha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+    "status": "Original Kingston interpreter exception15 during START, opcode0xba at body0x650, reportedPC0x651; no gameplay reached.",
+    "evidence": "validation/gvm-community-source-recovery.json",
+    "replay": "validation/replay-witop-hellfire.json",
+    "catalogueIncluded": false
+  },
+  "legacyOpcodeNames": {
+    "source": "Original GNEX SDK2.10/2.12 MASM.exe static opcode/name descriptors plus independently inspected mcc.exe one-argument records.",
+    "masmBytes": 114688,
+    "masmSha256": "deebe7e45deef83e7ef87a622277ac51f79df84db63f1a0de35f62caf1d601ac",
+    "evidence": "validation/sdk-internal-source-evidence.json",
+    "opcodes": [
+      {
+        "opcode": "0xba",
+        "name": "LockChatMode",
+        "descriptorFileOffset": "0x136a0",
+        "nameFileOffset": "0x16778",
+        "compilerArgumentCount": 1,
+        "limit": "Name/signature proven; original WI-TOP Hellfire still fails at this opcode. API name does not establish universal OEM callback behavior."
+      },
+      {
+        "opcode": "0xbb",
+        "name": "SetChatMode",
+        "descriptorFileOffset": "0x136bc",
+        "nameFileOffset": "0x1676c",
+        "limit": "Name proven; independent native semantics and common behavior across all phones not established by the name."
+      },
+      {
+        "opcode": "0xc4",
+        "name": "BackToBrowser",
+        "descriptorFileOffset": "0x137b8",
+        "nameFileOffset": "0x16704",
+        "compilerArgumentCount": 1,
+        "limit": "Name/signature proven; exact per-OEM callback ABI/bounds remain separate work."
+      }
+    ],
+    "sdkSourceObservation": "HellfireGNEX.mc comments out LockChatMode(0) with a note that GNEX no longer supports the API.",
+    "noOpJustification": false
+  },
+  "limits": [
+    "First-in-world and market-number-one are dated Sinjisoft marketing claims, not independently verified research conclusions.",
+    "About50000 GVM contents is neither50000 unique games nor a recovered corpus or Reunion compatibility count.",
+    "Full backward compatibility was a Sinjisoft product claim; this specific Kingston-derived implementation still has named legacy/OEM/network gaps.",
+    "No old network/PTP service, vendor executable or additional unknown firmware was launched in this bounded source-verification pass."
+  ]
+}

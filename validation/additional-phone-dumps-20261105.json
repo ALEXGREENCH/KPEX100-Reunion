@@ -1,0 +1,304 @@
+{
+  "scope": "Bounded static recovery of original Motorola V740 memory segments, Curitel PT-K1000 NAND and Hyundai HGC-600E images. No validated new SGS game recovered.",
+  "method": "Original public archives read as data, 7-Zip CRC tested and statically extracted. Conservative SGS versions 1/2/4/36 at all candidate offsets, plain and XOR A5, complete section/resource boundary checks. Research scan input bound raised only in scratch to 160 MiB for the 132 MiB NAND image.",
+  "archives": [
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Motorola/V740/V740_memdump.7z",
+      "retrievedUtc": "2026-11-05T11:04:08.047321+00:00",
+      "file": "V740_memdump.7z",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Motorola/V740/V740_memdump.7z",
+      "bytes": 1094444,
+      "sha256": "557961505634d9ef8281b57424a32927cd16c708f6a5858432b1c1df577cf61b",
+      "sha1": "b6ad575b065dbefc3b0b17fd08f76fc3dffbb2f0"
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Curitel/PT-K1000/K1000M07.7z",
+      "retrievedUtc": "2026-11-05T11:04:08.048321+00:00",
+      "file": "K1000M07.7z",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Curitel/PT-K1000/K1000M07.7z",
+      "bytes": 35089040,
+      "sha256": "d7196745736043ae7739b5692567af96072874b43c128875a963009c9437499f",
+      "sha1": "b2f01470654f072d0638d48312e8df0158fbac65"
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/600ISR37.7z",
+      "retrievedUtc": "2026-11-05T11:04:08.048321+00:00",
+      "file": "600ISR37.7z",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/600ISR37.7z",
+      "bytes": 656628,
+      "sha256": "54f28b302bb25de318f4e611cd5c6572be1a09f7074b849e06a7ab44d266ec35",
+      "sha1": "fc4e3a4323208579a8a4001fa275a8983d0c4b34"
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/600RUS14.7z",
+      "retrievedUtc": "2026-11-05T11:04:08.048321+00:00",
+      "file": "600RUS14.7z",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/600RUS14.7z",
+      "bytes": 451590,
+      "sha256": "3b6dad8f94fe5c676958cd26acb16cdc80921553204cb2723f053f5edaa77ec8",
+      "sha1": "0db1d58a4c4f27e666e0bd1795591c197e4782b8"
+    }
+  ],
+  "archiveCrc": [
+    {
+      "archive": "V740_memdump.7z",
+      "crcPassed": true
+    },
+    {
+      "archive": "K1000M07.7z",
+      "crcPassed": true
+    },
+    {
+      "archive": "600ISR37.7z",
+      "crcPassed": true
+    },
+    {
+      "archive": "600RUS14.7z",
+      "crcPassed": true
+    }
+  ],
+  "targetIndexes": [
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Motorola/V740/",
+      "retrievedUtc": "2026-11-05T11:03:52.222872+00:00",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Motorola/V740/",
+      "bytes": 2109,
+      "sha256": "244f3a3933ab3a6a0d29e2b76e96680497205a4c45bb18a0795b3a1dfc947ce9",
+      "file": "Motorola-V740-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Motorola/V740/V740_memdump.7z"
+      ]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Curitel/PT-K1000/",
+      "retrievedUtc": "2026-11-05T11:03:52.223871+00:00",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Curitel/PT-K1000/",
+      "bytes": 2105,
+      "sha256": "71e24edfc0f8fed02ab18f6b5c8c78bc0b069483955ff9bbdb10fb43220a8371",
+      "file": "Curitel-PT-K1000-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Curitel/PT-K1000/K1000M07.7z"
+      ]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/",
+      "retrievedUtc": "2026-11-05T11:03:52.224874+00:00",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/",
+      "bytes": 2349,
+      "sha256": "428766f41239c5e37a6fda8ceeb903827364b019206a964df3f90b03ee6a6b3f",
+      "file": "Hyundai-HGC-600E-index.html",
+      "links": [
+        "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/600ISR37.7z",
+        "https://archive.sunderland93.ru/Firmwares/Hyundai/HGC-600E/600RUS14.7z"
+      ]
+    }
+  ],
+  "motorolaV740": {
+    "rosterSource": "validation/gvm-historical-handset-guides.json",
+    "profile": [
+      {
+        "sheet": "SKT",
+        "row": 131,
+        "manufacturer": "모토로라",
+        "model": {
+          "cell": "B131",
+          "value": "V740 \n(T.T)"
+        },
+        "carrier": {
+          "cell": "C131",
+          "value": "SKT/STI"
+        },
+        "gvmSupported": {
+          "cell": "R131",
+          "value": "O"
+        },
+        "gvmVersion": {
+          "cell": "S131",
+          "value": "2"
+        },
+        "skvmSupported": {
+          "cell": "T131",
+          "value": "O"
+        },
+        "skvmVersion": {
+          "cell": "U131",
+          "value": "1.1"
+        },
+        "physicalWidth": {
+          "cell": "AT131",
+          "value": "128"
+        },
+        "physicalHeight": {
+          "cell": "AU131",
+          "value": "160"
+        },
+        "applicationWidth": {
+          "cell": "AV131",
+          "value": "128"
+        },
+        "applicationHeight": {
+          "cell": "AW131",
+          "value": "145"
+        }
+      }
+    ],
+    "binaryModelAnchors": [
+      {
+        "file": "extracted/V740_memdump/V740-fb.bin",
+        "offset": 89529,
+        "literal": "Moto V740"
+      },
+      {
+        "file": "extracted/V740_memdump/V740-fb.bin",
+        "offset": 89565,
+        "literal": "Moto V740"
+      },
+      {
+        "file": "extracted/V740_memdump/V740-fb.bin",
+        "offset": 89534,
+        "literal": "V740"
+      },
+      {
+        "file": "extracted/V740_memdump/V740-fb.bin",
+        "offset": 89570,
+        "literal": "V740"
+      },
+      {
+        "file": "extracted/V740_memdump/V740.bin",
+        "offset": 586276,
+        "literal": "V740"
+      }
+    ],
+    "interpretation": "Exact V740-labelled memory segments recovered and model text corroborated. Roster gives GVM2X and SKVM1.1; GVM component not located in these segments. Build, original flash mapping and completeness are not established. No SGS extracted; this cannot establish absence from every V740 build or runtime."
+  },
+  "nandViews": {
+    "source": "K1000M07.bin",
+    "testedLayouts": [
+      [
+        512,
+        16
+      ],
+      [
+        2048,
+        64
+      ]
+    ],
+    "caveat": "Both spare-stripping interpretations are hypotheses. Physical NAND geometry, ECC correction, bad-block mapping and logical filesystem reconstruction have not been established.",
+    "markerRejections": [
+      ".mod occurs within plt.phone.model, not a BREW game filename.",
+      ".bar occurs in www.barota.com URLs, not evidence of BREW resources.",
+      "Two three-byte GVM matches are in binary data without runtime text context and are not promoted to platform evidence."
+    ]
+  },
+  "scans": [
+    {
+      "source": "extracted/600ISR37/600ISR37.bin",
+      "view": "raw",
+      "bytes": 2097152,
+      "sha256": "1ede65856d14ceb405c2e30bc1234c2a980a61f991df525175c56852e675a891",
+      "scan": {
+        "bytes": 2097152,
+        "sha256": "1ede65856d14ceb405c2e30bc1234c2a980a61f991df525175c56852e675a891",
+        "candidate_offsets_tested": 103408,
+        "containers": []
+      }
+    },
+    {
+      "source": "extracted/600RUS14/600RUS14.bin",
+      "view": "raw",
+      "bytes": 2097152,
+      "sha256": "3630ab2f9f26965109f2f6be201534db3e2365574de568f5c31d7449500f9fc1",
+      "scan": {
+        "bytes": 2097152,
+        "sha256": "3630ab2f9f26965109f2f6be201534db3e2365574de568f5c31d7449500f9fc1",
+        "candidate_offsets_tested": 97434,
+        "containers": []
+      }
+    },
+    {
+      "source": "extracted/K1000M07/K1000M07.bin",
+      "view": "raw",
+      "bytes": 138412032,
+      "sha256": "86e6e3c4417c67e4de0d960c8ae9631138eb50bc36aca55303866f356e7b460b",
+      "scan": {
+        "bytes": 138412032,
+        "sha256": "86e6e3c4417c67e4de0d960c8ae9631138eb50bc36aca55303866f356e7b460b",
+        "candidate_offsets_tested": 6042202,
+        "containers": []
+      }
+    },
+    {
+      "source": "extracted/K1000M07/K1000M07.bin",
+      "view": "assumed-512-byte-page-16-byte-spare-stripped",
+      "bytes": 134217728,
+      "sha256": "767c212cfc2ec035585832b50523c4c2d272cba9cfce3417953e59557ac3087f",
+      "scan": {
+        "bytes": 134217728,
+        "sha256": "767c212cfc2ec035585832b50523c4c2d272cba9cfce3417953e59557ac3087f",
+        "candidate_offsets_tested": 5859657,
+        "containers": []
+      }
+    },
+    {
+      "source": "extracted/V740_memdump/V740-fb.bin",
+      "view": "raw",
+      "bytes": 4030816,
+      "sha256": "5666c7eba2b586b8c2414ebb8c86c3017774fc9f578508e3fac843cf214bb7a8",
+      "scan": {
+        "bytes": 4030816,
+        "sha256": "5666c7eba2b586b8c2414ebb8c86c3017774fc9f578508e3fac843cf214bb7a8",
+        "candidate_offsets_tested": 60387,
+        "containers": []
+      }
+    },
+    {
+      "source": "extracted/V740_memdump/V740.bin",
+      "view": "raw",
+      "bytes": 1572848,
+      "sha256": "8c2543bef0df6123a63e13dc8a4cfba236ae82e646289b3e8101d373b382cecd",
+      "scan": {
+        "bytes": 1572848,
+        "sha256": "8c2543bef0df6123a63e13dc8a4cfba236ae82e646289b3e8101d373b382cecd",
+        "candidate_offsets_tested": 128453,
+        "containers": []
+      }
+    },
+    {
+      "source": "extracted/K1000M07/K1000M07.bin",
+      "view": "assumed-2048-byte-page-64-byte-spare-stripped",
+      "bytes": 134217728,
+      "sha256": "276b350d53b92fa555bbfc5f7bbf98538e1d6854306c096a614b4d96ba2378cf",
+      "scan": {
+        "bytes": 134217728,
+        "sha256": "276b350d53b92fa555bbfc5f7bbf98538e1d6854306c096a614b4d96ba2378cf",
+        "candidate_offsets_tested": 5860813,
+        "containers": []
+      }
+    }
+  ],
+  "summary": {
+    "archives": 4,
+    "rawImages": 5,
+    "scanViews": 7,
+    "rawImageBytes": 148210000,
+    "scanViewBytes": 416645456,
+    "candidateOffsetsTested": 18152354,
+    "validatedSgsOccurrences": 0,
+    "newRecoveredGames": 0,
+    "positiveControlFiles": 56,
+    "positiveControlsPassed": 56
+  },
+  "limitations": [
+    "Unknown packed, fragmented, encrypted, native or ROMized game formats are not excluded by a contiguous SGS scan.",
+    "Handset model support is separate from presence and format of a built-in game.",
+    "No phone boot or game execution was attempted because no validated new standalone game was recovered.",
+    "No unrelated user files or records exported. Scratch software-strings.json is investigative material, not a publication payload."
+  ]
+}

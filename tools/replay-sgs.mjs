@@ -172,6 +172,18 @@ try {
         game.event('TIMEOUT', timer.channel);
         timers.sync(game.timerStates, now, timer.channel);
       }
+    } else if (kind === 'advance') {
+      const until = now + value;
+      let dispatched = 0;
+      while (game.status === 'idle') {
+        const timer = timers.next();
+        if (!timer || timer.at > until) break;
+        if (++dispatched > 10000) throw Error('Too many timer events in one advance');
+        now = timer.at;
+        game.event('TIMEOUT', timer.channel);
+        timers.sync(game.timerStates, now, timer.channel);
+      }
+      now = until;
     } else if (kind === 'manualTick') {
       if (!Number.isInteger(deltaMs) || deltaMs < 1 || deltaMs > 10000)
         throw Error('manualTick requires a virtual time delta of 1–10000 milliseconds');

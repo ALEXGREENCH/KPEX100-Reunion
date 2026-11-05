@@ -6,7 +6,7 @@
 - [GitHub Pages](github-pages.md): статическая сборка и автоматическая публикация.
 - [Настольная версия](desktop.md): Python, Tkinter и сборка Windows.
 - [Архитектура](architecture.md): два режима исполнения, модули и границы модели.
-- [Совместимость](compatibility.md): 55 SGS-приложений, проверенные сценарии и ограничения.
+- [Совместимость](compatibility.md): каталог SGS-приложений, проверенные сценарии и ограничения.
 - [Производительность веб-версии](web-performance.md): ускорение ARM, таймеры, показ кадров и воспроизводимые измерения.
 - [Участие в разработке](../CONTRIBUTING.md): оформление, проверки и воспроизводимые сообщения об ошибках.
 
@@ -14,6 +14,9 @@
 
 - [Telechips TCC76x / ARM940T](hardware.md): память, LCD, периферия, IRQ и завершение работы ROM.
 - [GNEX SDK 2.10/2.12](gnex-sdk-research.md): найденные инструменты, Mobile C API, VM и ABI.
+- [GVM → GNEX](gvm-gnex-lineage.md): первичный White Paper 2003 года, обратная совместимость и реально проверенные GVM-сборки.
+- [Windows-эмуляторы SDK](gnex-emulators.md): сохранённые дистрибутивы, интерпретаторы, IDE и происхождение сборок.
+- [Рантаймы Symbian S60](s60-runtimes.md): исходные SIS/APP, встроенный SGS и границы понятия «эмулятор».
 - [Вывод кадров GNEX](gnex-display.md): Flush, RestoreLCD, частичный вывод и проверки оригинальным ARM.
 - [Устройства GNEX и GVM](gnex-devices.md): подтверждённые модели, прошивки и результаты извлечения SGS.
 - [Справочники GVM 2002–2003 годов](gvm-historical-handsets.md): 78 таблиц Sinjisoft, строки SKT/STI, версии VM и области экрана.
@@ -41,6 +44,7 @@
 - [LG SV400](lg-sv400-games.md): пять извлечённых native PXO, проверенная декомпрессия и границы свидетельств GNEX.
 - [Основной код SH130/KH1300/KH1400](lg-main-images.md): три восстановленных software ELF и 3 475 блоков LZO1F.
 - [Покрытие следующих целей](gnex-firmware-coverage.md): исходные профили, отсутствующие дампы и отдельная BREW-находка CX-800V.
+- [Дополнительные дампы телефонов](additional-phone-dumps.md): два сегмента Motorola V740, сырой NAND Curitel PT-K1000 и две редакции Hyundai HGC-600E; границы отрицательного SGS-скана.
 - [Ранние сервисные документы GVM](gvm-early-service-guides.md): таблица из PPT, DD-101, особенности телефонов и исходные примеры 2001–2002 годов.
 - [Внутренние материалы SDK](gnex-sdk-internal-sources.md): исходные фрагменты, имена legacy-операций и четыре проверенных SGS-примера.
 - [Ресурсы форматирования Yepp](yepp-formatting-resources.md): новые FNT из установочного CD и отдельный кандидат YM-PD1L.
@@ -48,6 +52,9 @@
 - [Происхождение Swerve-модуля](swerve-provenance.json).
 
 ## История и источники
+
+- [Четыре SGS с Mobaill](mobaill-games.md): открытые вложения, оригинальные GVM2-сборки и парные проверки управления.
+- [Следующий проход по плеерам](player-game-hunt-followup.md): проверенные архивы Grundig и зависимость VGN от NAND-конфигурации.
 
 - [Библиография](reference-index.md): Sinjisoft Mobile C Reference, Telechips, Cenix и LG CYON SH150A.
 - [Sinjisoft, GNEX и XEOVIA](sinjisoft-history.md): первичные сообщения о телефонах, плеерах и встраиваемых играх.

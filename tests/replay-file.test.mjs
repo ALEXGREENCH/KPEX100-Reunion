@@ -137,3 +137,40 @@ test('oversized unwrapped legacy bodies fail before runtime initialization or ou
   assert.match(result.stderr, /SGS exceeds 12 MiB guest content region/);
   assert.equal(fs.existsSync(output), false);
 });
+
+test('CLI advance dispatches only due timers and retains time between deadlines', (t) => {
+  const directory = temporary(t),
+    actions = path.join(directory, 'actions.json'),
+    output = path.join(directory, 'advance');
+  fs.writeFileSync(
+    actions,
+    JSON.stringify({
+      actions: [
+        ['advance', 150],
+        ['advance', 50],
+        ['advance', 0],
+      ],
+    }),
+  );
+  let result = run('zola', actions, output);
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  const report = JSON.parse(fs.readFileSync(path.join(output, 'zola.json')));
+  assert.deepEqual(
+    report.trace.map(({ timeMs, events }) => [timeMs, events]),
+    [
+      [0, 1],
+      [150, 2],
+      [200, 3],
+      [200, 3],
+    ],
+  );
+  fs.writeFileSync(actions, JSON.stringify({ actions: [['tick', 2]] }));
+  const tickOutput = path.join(directory, 'tick');
+  result = run('zola', actions, tickOutput);
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  const tick = JSON.parse(fs.readFileSync(path.join(tickOutput, 'zola.json')));
+  assert.deepEqual(
+    fs.readFileSync(path.join(output, report.trace.at(-1).filename)),
+    fs.readFileSync(path.join(tickOutput, tick.trace.at(-1).filename)),
+  );
+});

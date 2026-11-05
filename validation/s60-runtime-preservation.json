@@ -1,0 +1,538 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-11-05T11:26:10.314758+00:00",
+  "bundle": {
+    "file": "Sinjisoft-S60-Runtimes-Recovered.zip",
+    "bytes": 6083797,
+    "sha256": "88a1623a040968a4838ab3b7a58101ed2833293cc6be4ffb91228967f5605e0d",
+    "zipMembers": 159,
+    "zipCrcPassed": true
+  },
+  "cleanExtraction": {
+    "ok": true,
+    "manifestedFiles": 158,
+    "packages": 7,
+    "sisUidAndBodyCrcPassed": 7,
+    "extractedPayloadsEqualToFreshSisDecode": 131,
+    "embeddedSgsSlicesVerified": 7,
+    "nativeApplicationExecuted": false
+  },
+  "packages": [
+    {
+      "id": "aiolos-fighter-s60",
+      "title": "Aiolos Fighter",
+      "classification": "Native Symbian S60 E32 application with embedded GNEX bytecode runtime and SGS payload; not a full-phone emulator.",
+      "source": {
+        "sourcePage": "https://www.pc-freak.net/archives/2010/01/22/download_nokia_sis_ultimate_pack_games/index.html",
+        "archiveUrl": "http://pc-freak.net/files/Nokia_Games_Ultimate_SIS_Pack.tar.gz",
+        "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Aiolos/Sinjisoft_Aiolos_v1.03_S60_Cracked_MMC_SMPDA.sis",
+        "tarMemberBytesRechecked": true
+      },
+      "installer": {
+        "path": "original-sis/aiolos-fighter-s60/Sinjisoft_Aiolos_v1.03_S60_Cracked_MMC_SMPDA.sis",
+        "bytes": 513852,
+        "sha256": "8d330271d4163636190c21cd4c6b583dfa2f89dd6d377f2c86682ee7c716b816",
+        "crc32": "fe67fedc",
+        "uid": "10272e3d",
+        "componentNames": [
+          "Aiolos 1.03 SMPDA"
+        ],
+        "versionMajor": 1,
+        "versionMinor": 3,
+        "uidCrc": "6825418b",
+        "uidCrcVerified": true,
+        "bodyCrc": "76fd",
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false
+      },
+      "extractedDirectory": "extracted/aiolos-fighter-s60",
+      "extractionManifest": "extracted/aiolos-fighter-s60/manifest.json",
+      "extractedFiles": 28,
+      "payloadExtensions": {
+        ".wav": 19,
+        ".mid": 4,
+        ".aif": 1,
+        ".rsc": 2,
+        ".app": 1,
+        ".txt": 1
+      },
+      "application": {
+        "path": "extracted/aiolos-fighter-s60/26-Aiolos.app",
+        "bytes": 571424,
+        "sha256": "31e9ffd32d60f62945747e3d759ac47b4074f99efbe21f843af6f6db9143c7cb",
+        "crc32": "a66d6175",
+        "originalName": "Aiolos.app",
+        "nativeContainerSignature": "EPOC at file offset 0x10",
+        "gnexMarkerFileOffsets": {
+          "Powered by GNEX": {
+            "utf-16-le": [
+              274700
+            ]
+          },
+          "GNEX EXCEPTION": {
+            "ascii": [
+              237344
+            ]
+          }
+        }
+      },
+      "derivedSgs": {
+        "path": "derived-sgs/aiolos-fighter-s60.sgs",
+        "bytes": 270080,
+        "sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+        "crc32": "f16fc888",
+        "format": 4,
+        "sourceAppPath": "extracted/aiolos-fighter-s60/26-Aiolos.app",
+        "sourceAppOffset": 274848,
+        "sourceAppOffsetHex": "0x431a0",
+        "byteForByteSlice": true,
+        "structuralValidationPassed": true
+      }
+    },
+    {
+      "id": "pocket-baseball-2-s60",
+      "title": "Pocket Baseball 2 / 포켓야구2",
+      "classification": "Native Symbian S60 E32 application with embedded GNEX bytecode runtime and SGS payload; not a full-phone emulator.",
+      "source": {
+        "sourcePage": "https://www.pc-freak.net/archives/2010/01/22/download_nokia_sis_ultimate_pack_games/index.html",
+        "archiveUrl": "http://pc-freak.net/files/Nokia_Games_Ultimate_SIS_Pack.tar.gz",
+        "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pocket Baseball/Sinjisoft.Pocket.Baseball.2.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shino mau.sis",
+        "tarMemberBytesRechecked": true
+      },
+      "installer": {
+        "path": "original-sis/pocket-baseball-2-s60/Sinjisoft.Pocket.Baseball.2.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shino mau.sis",
+        "bytes": 299061,
+        "sha256": "1389ca94527a899cc1f0df28bcb997caaae7e4fac8ad5f2dca86ff241a96e705",
+        "crc32": "b79430e0",
+        "uid": "10272e44",
+        "componentNames": [
+          "PocketBaseBall"
+        ],
+        "versionMajor": 1,
+        "versionMinor": 3,
+        "uidCrc": "68254cf5",
+        "uidCrcVerified": true,
+        "bodyCrc": "e545",
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false
+      },
+      "extractedDirectory": "extracted/pocket-baseball-2-s60",
+      "extractionManifest": "extracted/pocket-baseball-2-s60/manifest.json",
+      "extractedFiles": 20,
+      "payloadExtensions": {
+        ".mid": 6,
+        ".wav": 9,
+        ".aif": 1,
+        ".rsc": 2,
+        ".app": 1,
+        ".txt": 1
+      },
+      "application": {
+        "path": "extracted/pocket-baseball-2-s60/18-PocketBaseBall.app",
+        "bytes": 464684,
+        "sha256": "1d7aba91b9a325304e68f9666f4f245fb054e95a2d5d137c7970eaec70636ab7",
+        "crc32": "c0131ac6",
+        "originalName": "PocketBaseBall.app",
+        "nativeContainerSignature": "EPOC at file offset 0x10",
+        "gnexMarkerFileOffsets": {
+          "Powered by GNEX": {
+            "utf-16-le": [
+              275632
+            ]
+          },
+          "GNEX EXCEPTION": {
+            "ascii": [
+              238276
+            ]
+          }
+        }
+      },
+      "derivedSgs": {
+        "path": "derived-sgs/pocket-baseball-2-s60.sgs",
+        "bytes": 162384,
+        "sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+        "crc32": "e2c0470a",
+        "format": 4,
+        "sourceAppPath": "extracted/pocket-baseball-2-s60/18-PocketBaseBall.app",
+        "sourceAppOffset": 275796,
+        "sourceAppOffsetHex": "0x43554",
+        "byteForByteSlice": true,
+        "structuralValidationPassed": true
+      }
+    },
+    {
+      "id": "pocket-golf-s60",
+      "title": "Pocket Golf",
+      "classification": "Native Symbian S60 E32 application with embedded GNEX bytecode runtime and SGS payload; not a full-phone emulator.",
+      "source": {
+        "sourcePage": "https://www.pc-freak.net/archives/2010/01/22/download_nokia_sis_ultimate_pack_games/index.html",
+        "archiveUrl": "http://pc-freak.net/files/Nokia_Games_Ultimate_SIS_Pack.tar.gz",
+        "member": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pocket Golf/Sinjisoft.Pocket.Golf.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shio mau.sis",
+        "tarMemberBytesRechecked": true
+      },
+      "installer": {
+        "path": "original-sis/pocket-golf-s60/Sinjisoft.Pocket.Golf.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shio mau.sis",
+        "bytes": 344475,
+        "sha256": "f9a0cb24e74fd19707d7e8afb2ed2ff0e85df40c3924eeda5d1f5ec1b0ac2012",
+        "crc32": "6eaba397",
+        "uid": "10272e46",
+        "componentNames": [
+          "PocketGolf"
+        ],
+        "versionMajor": 1,
+        "versionMinor": 3,
+        "uidCrc": "6825c7b5",
+        "uidCrcVerified": true,
+        "bodyCrc": "071b",
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false
+      },
+      "extractedDirectory": "extracted/pocket-golf-s60",
+      "extractionManifest": "extracted/pocket-golf-s60/manifest.json",
+      "extractedFiles": 21,
+      "payloadExtensions": {
+        ".wav": 11,
+        ".mid": 5,
+        ".aif": 1,
+        ".rsc": 2,
+        ".app": 1,
+        ".txt": 1
+      },
+      "application": {
+        "path": "extracted/pocket-golf-s60/19-PocketGolf.app",
+        "bytes": 628812,
+        "sha256": "f072f6a6a91419e8e3df3173dc6e33dae66bc69e6ff791e890236f58e3b7b5d4",
+        "crc32": "fe266b92",
+        "originalName": "PocketGolf.app",
+        "nativeContainerSignature": "EPOC at file offset 0x10",
+        "gnexMarkerFileOffsets": {
+          "Powered by GNEX": {
+            "utf-16-le": [
+              275624
+            ]
+          },
+          "GNEX EXCEPTION": {
+            "ascii": [
+              238268
+            ]
+          }
+        }
+      },
+      "derivedSgs": {
+        "path": "derived-sgs/pocket-golf-s60.sgs",
+        "bytes": 326528,
+        "sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+        "crc32": "bd64e85c",
+        "format": 4,
+        "sourceAppPath": "extracted/pocket-golf-s60/19-PocketGolf.app",
+        "sourceAppOffset": 275780,
+        "sourceAppOffsetHex": "0x43544",
+        "byteForByteSlice": true,
+        "structuralValidationPassed": true
+      }
+    },
+    {
+      "id": "world-league-2005-soccer-s60",
+      "title": "World League 2005 Soccer",
+      "classification": "Native Symbian S60 E32 application with embedded GNEX bytecode runtime and SGS payload; not a full-phone emulator.",
+      "source": {
+        "sourcePage": "https://archive.org/details/dertz-part-5-s-z",
+        "archiveUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%205%2C%20S-Z%29.rar",
+        "member": "World League 2005 Soccer-1.sis",
+        "memberUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%205%2C%20S-Z%29.rar/World%20League%202005%20Soccer-1.sis"
+      },
+      "installer": {
+        "path": "original-sis/world-league-2005-soccer-s60/World League 2005 Soccer-1.sis",
+        "bytes": 339008,
+        "sha256": "2ee7726ab8d76b57b8de9737f31631d242f18468e88b22be22e8e8ee12e4d9ae",
+        "crc32": "ef9f8786",
+        "uid": "10272e3e",
+        "componentNames": [
+          "WorldLeague 1.03 SMPDA"
+        ],
+        "versionMajor": 1,
+        "versionMinor": 3,
+        "uidCrc": "68258f6b",
+        "uidCrcVerified": true,
+        "bodyCrc": "5ffd",
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false
+      },
+      "extractedDirectory": "extracted/world-league-2005-soccer-s60",
+      "extractionManifest": "extracted/world-league-2005-soccer-s60/manifest.json",
+      "extractedFiles": 12,
+      "payloadExtensions": {
+        ".wav": 7,
+        ".aif": 1,
+        ".rsc": 2,
+        ".app": 1,
+        ".txt": 1
+      },
+      "application": {
+        "path": "extracted/world-league-2005-soccer-s60/10-WorldLeague.app",
+        "bytes": 473976,
+        "sha256": "02021af3a611cc9482033d9e2433d5e3d0a83fc4642270187f7fafe0f61e368f",
+        "crc32": "3ba918b0",
+        "originalName": "WorldLeague.app",
+        "nativeContainerSignature": "EPOC at file offset 0x10",
+        "gnexMarkerFileOffsets": {
+          "Powered by GNEX": {
+            "utf-16-le": [
+              274712
+            ]
+          },
+          "GNEX EXCEPTION": {
+            "ascii": [
+              237356
+            ]
+          }
+        }
+      },
+      "derivedSgs": {
+        "path": "derived-sgs/world-league-2005-soccer-s60.sgs",
+        "bytes": 172604,
+        "sha256": "439c7c59850dd58b265512a157ae65e67602055e01b2891dc0b3743046a38e08",
+        "crc32": "7efcde66",
+        "format": 4,
+        "sourceAppPath": "extracted/world-league-2005-soccer-s60/10-WorldLeague.app",
+        "sourceAppOffset": 274872,
+        "sourceAppOffsetHex": "0x431b8",
+        "byteForByteSlice": true,
+        "structuralValidationPassed": true
+      }
+    },
+    {
+      "id": "bounce-rubberball-story-s60",
+      "title": "Bounce! Rubberball Story",
+      "classification": "Native Symbian S60 E32 application with embedded GNEX bytecode runtime and SGS payload; not a full-phone emulator.",
+      "source": {
+        "sourcePage": "https://archive.org/details/dertz-part-5-s-z",
+        "archiveUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%201%2C%201-B%29.rar",
+        "member": "Bounce Rubberball Story s60-1.sis",
+        "memberUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%201%2C%201-B%29.rar/Bounce%20Rubberball%20Story%20s60-1.sis"
+      },
+      "installer": {
+        "path": "original-sis/bounce-rubberball-story-s60/Bounce Rubberball Story s60-1.sis",
+        "bytes": 345338,
+        "sha256": "dddf3ec9212cc48a615c0f6813061fc03900df06d88d3d8aebe8de5a3feea396",
+        "crc32": "68c61b69",
+        "uid": "10272e3f",
+        "componentNames": [
+          "Bounce 1.03 SMPDA"
+        ],
+        "versionMajor": 1,
+        "versionMinor": 3,
+        "uidCrc": "6825cacb",
+        "uidCrcVerified": true,
+        "bodyCrc": "9d2b",
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false
+      },
+      "extractedDirectory": "extracted/bounce-rubberball-story-s60",
+      "extractionManifest": "extracted/bounce-rubberball-story-s60/manifest.json",
+      "extractedFiles": 16,
+      "payloadExtensions": {
+        ".wav": 11,
+        ".aif": 1,
+        ".rsc": 2,
+        ".app": 1,
+        ".txt": 1
+      },
+      "application": {
+        "path": "extracted/bounce-rubberball-story-s60/14-Bounce.app",
+        "bytes": 470744,
+        "sha256": "91bc6ae343fa72a3351b4c6bcb89a00b0cf60c0d4917bf2152aa6762a861b270",
+        "crc32": "5d9cabb3",
+        "originalName": "Bounce.app",
+        "nativeContainerSignature": "EPOC at file offset 0x10",
+        "gnexMarkerFileOffsets": {
+          "Powered by GNEX": {
+            "utf-16-le": [
+              274700
+            ]
+          },
+          "GNEX EXCEPTION": {
+            "ascii": [
+              237344
+            ]
+          }
+        }
+      },
+      "derivedSgs": {
+        "path": "derived-sgs/bounce-rubberball-story-s60.sgs",
+        "bytes": 169388,
+        "sha256": "e646fa49a6cef04971dad124c55bc9506a152a9d1f457e39db9b239c6ed06594",
+        "crc32": "520f1188",
+        "format": 4,
+        "sourceAppPath": "extracted/bounce-rubberball-story-s60/14-Bounce.app",
+        "sourceAppOffset": 274848,
+        "sourceAppOffsetHex": "0x431a0",
+        "byteForByteSlice": true,
+        "structuralValidationPassed": true
+      }
+    },
+    {
+      "id": "storm-of-silence-demo-s60",
+      "title": "Storm of Silence Demo",
+      "classification": "Native Symbian S60 E32 application with embedded GNEX bytecode runtime and SGS payload; not a full-phone emulator.",
+      "source": {
+        "sourcePage": "https://archive.org/details/largest-j2me-and-symbian-collection",
+        "archiveUrl": "https://archive.org/download/largest-j2me-and-symbian-collection/s60v2%2826684%29.7z",
+        "member": "s60v2/stormofsilencedemo.sis",
+        "archiveMemberCrc32": "5f7d3edf"
+      },
+      "installer": {
+        "path": "original-sis/storm-of-silence-demo-s60/stormofsilencedemo.sis",
+        "bytes": 339136,
+        "sha256": "2d276a81e795d467868575bd21a035b418707ab4bd573f567943972df7b98ec4",
+        "crc32": "5f7d3edf",
+        "uid": "10275469",
+        "componentNames": [
+          "StormOfSilenceDemo"
+        ],
+        "versionMajor": 1,
+        "versionMinor": 0,
+        "uidCrc": "abbb37be",
+        "uidCrcVerified": true,
+        "bodyCrc": "1eb9",
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false
+      },
+      "extractedDirectory": "extracted/storm-of-silence-demo-s60",
+      "extractionManifest": "extracted/storm-of-silence-demo-s60/manifest.json",
+      "extractedFiles": 18,
+      "payloadExtensions": {
+        ".wav": 12,
+        ".mid": 2,
+        ".aif": 1,
+        ".rsc": 2,
+        ".app": 1
+      },
+      "application": {
+        "path": "extracted/storm-of-silence-demo-s60/17-StormOfSilenceDemo.app",
+        "bytes": 430508,
+        "sha256": "7eac806b76e7479554a47847a6f77a7bf60981ae3a05680f8cfc16f56d1077ee",
+        "crc32": "e14d05a9",
+        "originalName": "StormOfSilenceDemo.app",
+        "nativeContainerSignature": "EPOC at file offset 0x10",
+        "gnexMarkerFileOffsets": {
+          "Powered by GNEX": {
+            "utf-16-le": [
+              275184
+            ]
+          },
+          "GNEX EXCEPTION": {
+            "ascii": [
+              237828
+            ]
+          }
+        }
+      },
+      "derivedSgs": {
+        "path": "derived-sgs/storm-of-silence-demo-s60.sgs",
+        "bytes": 128690,
+        "sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+        "crc32": "26e66040",
+        "format": 4,
+        "sourceAppPath": "extracted/storm-of-silence-demo-s60/17-StormOfSilenceDemo.app",
+        "sourceAppOffset": 275356,
+        "sourceAppOffsetHex": "0x4339c",
+        "byteForByteSlice": true,
+        "structuralValidationPassed": true
+      }
+    },
+    {
+      "id": "waterski-s60",
+      "title": "Waterski",
+      "classification": "Native Symbian S60 E32 application with embedded GNEX bytecode runtime and SGS payload; not a full-phone emulator.",
+      "source": {
+        "sourcePage": "https://archive.org/details/largest-j2me-and-symbian-collection",
+        "archiveUrl": "https://archive.org/download/largest-j2me-and-symbian-collection/s60v2%2826684%29.7z",
+        "member": "s60v2/waterski.sis",
+        "archiveMemberCrc32": "37b61bcd"
+      },
+      "installer": {
+        "path": "original-sis/waterski-s60/waterski.sis",
+        "bytes": 623685,
+        "sha256": "329f93da2deac528e4b2793f75f9ebf73d33e2ec0097778233f8adfc5459c2cc",
+        "crc32": "37b61bcd",
+        "uid": "1027546a",
+        "componentNames": [
+          "WaterSki"
+        ],
+        "versionMajor": 1,
+        "versionMinor": 0,
+        "uidCrc": "abbbf95e",
+        "uidCrcVerified": true,
+        "bodyCrc": "2e24",
+        "bodyCrcVerified": true,
+        "signatureBytes": 0,
+        "signatureVerified": false
+      },
+      "extractedDirectory": "extracted/waterski-s60",
+      "extractionManifest": "extracted/waterski-s60/manifest.json",
+      "extractedFiles": 16,
+      "payloadExtensions": {
+        ".wav": 11,
+        ".mid": 1,
+        ".aif": 1,
+        ".rsc": 2,
+        ".app": 1
+      },
+      "application": {
+        "path": "extracted/waterski-s60/15-WaterSki.app",
+        "bytes": 449920,
+        "sha256": "c147e2c37bce0b33ee37b4585ddcfb1d5af4a69ee287820ae0893a7b347350a7",
+        "crc32": "c51e9abb",
+        "originalName": "WaterSki.app",
+        "nativeContainerSignature": "EPOC at file offset 0x10",
+        "gnexMarkerFileOffsets": {
+          "Powered by GNEX": {
+            "utf-16-le": [
+              275620
+            ]
+          },
+          "GNEX EXCEPTION": {
+            "ascii": [
+              238264
+            ]
+          }
+        }
+      },
+      "derivedSgs": {
+        "path": "derived-sgs/waterski-s60.sgs",
+        "bytes": 147636,
+        "sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+        "crc32": "71f87242",
+        "format": 4,
+        "sourceAppPath": "extracted/waterski-s60/15-WaterSki.app",
+        "sourceAppOffset": 275772,
+        "sourceAppOffsetHex": "0x4353c",
+        "byteForByteSlice": true,
+        "structuralValidationPassed": true
+      }
+    }
+  ],
+  "counts": {
+    "originalSis": 7,
+    "nativeApps": 7,
+    "derivedSgs": 7,
+    "allExtractedSisPayloads": 131,
+    "dllPayloads": 0
+  },
+  "classification": "Seven recovered native Symbian S60 applications with GNEX bytecode runtimes and embedded games. No unofficial status or full-phone emulation claimed.",
+  "authenticity": "Recovered bytes preserved unchanged. Third-party repacks exist; exact vendor/Handango originals and publisher signatures are not authenticated.",
+  "limits": [
+    "Static extraction only; no SIS or native APP executed.",
+    "External WAV/MIDI preserved, not integrated into Reunion SGS playback.",
+    "No claim of full Symbian OS, CPU or phone emulation.",
+    "No 2 GB solid folder, archive cache, decoded stream, phone memory dump or private EFS included.",
+    "Seven packages need not represent seven independent runtime implementations."
+  ]
+}

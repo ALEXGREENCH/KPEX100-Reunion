@@ -101,6 +101,7 @@ export class GnexRuntime {
       width = 220,
       height = 176,
       profile = null,
+      startData = 0,
       keyReleaseEvent = false,
       audio = null,
       saveKey = null,
@@ -125,6 +126,9 @@ export class GnexRuntime {
       height > 512
     )
       throw new GnexError('LCD dimensions must be 64–512 pixels');
+    if (!Number.isInteger(startData) || startData < 0 || startData > 0xffffffff)
+      throw new GnexError('START data must be an unsigned 32-bit integer');
+    this.startData = startData;
     this.sgs = new SgsFile(sgs);
     this.title = this.sgs.title;
     this.profile = profile || (this.sgs.xorMask === 165 ? 'kpex' : 'phone');
@@ -703,9 +707,10 @@ export class GnexRuntime {
     } else throw new GnexError(`Unsupported syscall ${hex(n)}; stopped without invented behavior`);
     return true;
   }
-  event(name, value = 0, instructionBudget = 20_000_000) {
+  event(name, value, instructionBudget = 20_000_000) {
     const guarded = this.fastVmExecution && arguments.length < 3 && this.cpu.runGuarded;
     name = String(name).toUpperCase();
+    if (value === undefined) value = name === 'START' ? this.startData : 0;
     if (!(name in this.sgs.entries)) throw new GnexError(`Unknown event ${name}`);
     if (['error', 'exited', 'closed'].includes(this.status)) return this.diagnostics;
     if (

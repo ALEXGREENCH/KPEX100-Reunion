@@ -21,6 +21,7 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 - `replay-sgs.mjs`: replay JSON key/timer actions with the original interpreter and capture PNG frames plus diagnostics.
   Use `--file GAME.sgs actions.json OUTPUT_DIRECTORY` for an uncatalogued SGS, with an explicit device profile in the action plan.
   In an object with `actions`, set `advanceClock: true` to advance the emulated civil clock with scheduled time. This lets scripts that poll `GetTime` leave their splash screens.
+  `runtime.startData` selects an evidenced START argument; `advance` steps by 0–10000 virtual milliseconds while dispatching only due timers. See [the replay guide](../doc/replay.md).
 - `benchmark-web.mjs`: compare reference and accelerated execution on identical originals, checking frame hashes and game state; see [methodology and measurements](../doc/web-performance.md).
 - `benchmark-firmware.mjs`: compare full ROM execution against a reference checkout, including CPU, timers, ATA, LCD, and SDRAM; see [firmware validation](../doc/firmware-validation.md).
 - `serve.mjs`: serve `web/` or `site/` locally, including a project path prefix.

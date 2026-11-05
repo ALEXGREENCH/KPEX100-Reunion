@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "scope": "Bounded continuation on seven ambiguous archive names from public manufacturer catalogs and static provenance of the MyRacer VGN key input.",
+  "acceptedNewSgs": [],
+  "bundledResearchPayloads": false,
+  "grundig": {
+    "sourceCatalogs": [
+      "https://download.arcelik.com.tr/Download.UsageManuals/",
+      "https://download.arcelik.com.tr/Download.UsageManualsBeko/"
+    ],
+    "previousInventory": "grundig-directory-route-evidence.json",
+    "archiveLinks": 577,
+    "filenameOnlyExclusions": 570,
+    "exclusionPattern": "fridge|freezer|buzdol|nofrost|neofrost|user|kullan|[0-9]{4,}.*[0-9]{4,}|_TR|_EN|en-us|en_US|tr_TR|[0-9]{4}.*[0-9]{4}|dondurucu",
+    "filenameExclusionIsContentCheck": false,
+    "filenameExclusionCaveat": "The 570 excluded payloads were not downloaded. Matching appliance/manual names or recurring manual identifiers does not prove their contents lack games.",
+    "genericNamesChecked": 7,
+    "fullyDownloadedArchives": 6,
+    "uniqueArchiveSha256": 4,
+    "fullArchiveReceipts": [
+      {
+        "url": "https://download.arcelik.com.tr/Download.UsageManualsBeko/31471_New-folder-(2).zip",
+        "filename": "31471_New-folder-(2).zip",
+        "status": 200,
+        "bytes": 1829905,
+        "sha256": "d612a4f4431c8ab835d51940195572cbce089e862ad4c0769cca14fd67578c8f",
+        "integrity": {
+          "method": "Python zipfile.testzip; every member decompressed and CRC checked",
+          "passed": true
+        },
+        "members": [
+          {
+            "name": "B 9476 NMN_489104.TR.pdf",
+            "bytes": 710036,
+            "compressedBytes": 517262,
+            "crc32": "a0ed0dbc"
+          },
+          {
+            "name": "B 9476 NM_489104.TRi.pdf",
+            "bytes": 2142285,
+            "compressedBytes": 1312373,
+            "crc32": "cd2e0142"
+          }
+        ]
+      },
+      {
+        "url": "https://download.arcelik.com.tr/Download.UsageManualsBeko/7693_1_12.7z",
+        "filename": "7693_1_12.7z",
+        "status": 200,
+        "bytes": 3404048,
+        "sha256": "835c3c01b3dfeaf9b8ab798ac48c3ce04d4a53d26713d4d987affd84ed30829b",
+        "integrity": {
+          "method": "7-Zip 26.02 l -slt and t",
+          "passed": true
+        },
+        "members": [
+          {
+            "name": "7236145512_TSM1541A++_483509_1.pdf",
+            "bytes": 1413692,
+            "crc32": "510af7b3"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_2.pdf",
+            "bytes": 1287803,
+            "crc32": "ab545111"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_3.pdf",
+            "bytes": 1581056,
+            "crc32": "847e14c0"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_4.pdf",
+            "bytes": 767916,
+            "crc32": "a230959c"
+          }
+        ]
+      },
+      {
+        "url": "https://download.arcelik.com.tr/Download.UsageManualsBeko/7693_1_Kılavuzlar20.zip",
+        "filename": "7693_1_Kılavuzlar20.zip",
+        "status": 200,
+        "bytes": 3901570,
+        "sha256": "2710c1c05e6d0888b1115df99946611ab0b49e91d7806a92cc48ca204c20964d",
+        "integrity": {
+          "method": "Python zipfile.testzip; every member decompressed and CRC checked",
+          "passed": true
+        },
+        "members": [
+          {
+            "name": "7236145512_TSM1541A++_483509_1.pdf",
+            "bytes": 1413692,
+            "compressedBytes": 1102554,
+            "crc32": "510af7b3"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_2.pdf",
+            "bytes": 1287803,
+            "compressedBytes": 968362,
+            "crc32": "ab545111"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_3.pdf",
+            "bytes": 1581056,
+            "compressedBytes": 1248306,
+            "crc32": "847e14c0"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_4.pdf",
+            "bytes": 767916,
+            "compressedBytes": 581750,
+            "crc32": "a230959c"
+          }
+        ]
+      },
+      {
+        "url": "https://download.arcelik.com.tr/Download.UsageManualsBeko/7693_Kılavuzlar20.zip",
+        "filename": "7693_Kılavuzlar20.zip",
+        "status": 200,
+        "bytes": 3901570,
+        "sha256": "2710c1c05e6d0888b1115df99946611ab0b49e91d7806a92cc48ca204c20964d",
+        "integrity": {
+          "method": "Python zipfile.testzip; every member decompressed and CRC checked",
+          "passed": true
+        },
+        "members": [
+          {
+            "name": "7236145512_TSM1541A++_483509_1.pdf",
+            "bytes": 1413692,
+            "compressedBytes": 1102554,
+            "crc32": "510af7b3"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_2.pdf",
+            "bytes": 1287803,
+            "compressedBytes": 968362,
+            "crc32": "ab545111"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_3.pdf",
+            "bytes": 1581056,
+            "compressedBytes": 1248306,
+            "crc32": "847e14c0"
+          },
+          {
+            "name": "7236145512_TSM1541A++_483509_4.pdf",
+            "bytes": 767916,
+            "compressedBytes": 581750,
+            "crc32": "a230959c"
+          }
+        ]
+      },
+      {
+        "url": "https://download.arcelik.com.tr/Download.UsageManualsBeko/Cisco314.zip",
+        "filename": "Cisco314.zip",
+        "status": 200,
+        "bytes": 9666052,
+        "sha256": "bd95c01b23d16053d02f2863ae1b845d26c82448b1460569fa4f683af334b6ff",
+        "integrity": {
+          "method": "Python zipfile.testzip; every member decompressed and CRC checked",
+          "passed": true
+        },
+        "members": [
+          {
+            "name": "Cisco3.14/anyconnect-macosx-i386-3.1.14018-k9.dmg",
+            "bytes": 9732788,
+            "compressedBytes": 9665856,
+            "crc32": "20103941"
+          }
+        ]
+      },
+      {
+        "url": "https://download.arcelik.com.tr/Download.UsageManualsBeko/Cisco3_14.zip",
+        "filename": "Cisco3_14.zip",
+        "status": 200,
+        "bytes": 9666052,
+        "sha256": "bd95c01b23d16053d02f2863ae1b845d26c82448b1460569fa4f683af334b6ff",
+        "integrity": {
+          "method": "Python zipfile.testzip; every member decompressed and CRC checked",
+          "passed": true
+        },
+        "members": [
+          {
+            "name": "Cisco3.14/anyconnect-macosx-i386-3.1.14018-k9.dmg",
+            "bytes": 9732788,
+            "compressedBytes": 9665856,
+            "crc32": "20103941"
+          }
+        ]
+      }
+    ],
+    "directoryOnlyReceipt": {
+      "url": "https://download.arcelik.com.tr/Download.UsageManualsBeko/Cisco.zip",
+      "status": 206,
+      "contentRange": "bytes 37592469-37658004/37658005",
+      "downloadedBytes": 65536,
+      "tailSha256": "41a25f33d80c906752a596b7d2afad5e06ee60c7d891eb6399bf1f093d3241bc",
+      "centralDirectoryEntryCount": 11,
+      "members": [
+        {
+          "name": "Cisco/",
+          "bytes": 0,
+          "compressedBytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "Cisco/Cisco/",
+          "bytes": 0,
+          "compressedBytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "Cisco/Cisco/MAC/",
+          "bytes": 0,
+          "compressedBytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "Cisco/Cisco/MAC/anyconnect-macosx-i386-2.4.1012-k9.dmg",
+          "bytes": 4055040,
+          "compressedBytes": 3556972,
+          "crc32": "966df09f"
+        },
+        {
+          "name": "Cisco/Cisco/MAC/anyconnect-macosx-i386-2.5.6005-k9.dmg",
+          "bytes": 4534272,
+          "compressedBytes": 4035205,
+          "crc32": "cffe4507"
+        },
+        {
+          "name": "Cisco/Cisco/MAC/anyconnect-macosx-i386-3.1.05160-k9.dmg",
+          "bytes": 8793929,
+          "compressedBytes": 8747563,
+          "crc32": "b25f6d7d"
+        },
+        {
+          "name": "Cisco/Cisco/MAC/anyconnect-macosx-i386-3.1.14018-k9.dmg",
+          "bytes": 9732788,
+          "compressedBytes": 9667381,
+          "crc32": "20103941"
+        },
+        {
+          "name": "Cisco/Cisco/MAC/anyconnect-macosx-powerpc-2.4.1012-k9.dmg",
+          "bytes": 4124672,
+          "compressedBytes": 3610602,
+          "crc32": "f27e64f2"
+        },
+        {
+          "name": "Cisco/Cisco/Windows/",
+          "bytes": 0,
+          "compressedBytes": 0,
+          "crc32": "00000000"
+        },
+        {
+          "name": "Cisco/Cisco/Windows/win-3.1.02026-pre-deploy-k9-x64_Windows_64Bit.msi",
+          "bytes": 4247552,
+          "compressedBytes": 4019051,
+          "crc32": "fe87b349"
+        },
+        {
+          "name": "Cisco/Cisco/Windows/win-3.1.02026-pre-deploy-k9_Windows_32Bit.msi",
+          "bytes": 4247552,
+          "compressedBytes": 4019051,
+          "crc32": "fe87b349"
+        }
+      ],
+      "scope": "Central directory only; no payload CRC or executable execution"
+    },
+    "result": "Only PDF manual members and Cisco AnyConnect installer members among the inspected generic archive names. No player/game pack obtained. Installers and DMG contents were not executed or analyzed as games.",
+    "unresolved": "Exact VP1000 CD 759540666100 remains unrecovered; GNEX support for VP1000 is still unproven."
+  },
+  "myracerVgn": {
+    "sourceArticle": "https://cafe.naver.com/halfstudy/1949",
+    "sourceUrl": "https://cafeattach.naver.net/0a9f16a5bfe7ee321ff19aa090760d70d0827c9e63/20110316_250_cafefile/16804284_1300260479350_FeKaRs_vgn/clubzio_sketcher.vgn",
+    "filename": "clubzio_sketcher.vgn",
+    "bytes": 939698,
+    "sha256": "ced8ba4961e2c57b9af644a06577adfedf3918852f1a3d446514f85812bd0318",
+    "sourceBytesChanged": false,
+    "targetModelCaveat": "The Halfstudy post does not establish this VGN as an MF101 build. A key from an unrelated device/build is not guaranteed to match.",
+    "referenceRuntime": {
+      "sourceArticle": "https://cafe.naver.com/myracer/4921",
+      "member": "ROM_EXEC",
+      "bytes": 3030408,
+      "sha256": "1e83c0ebf7afc01f9b483384b63c0e819ec1a972d476679086e59c63ad6d4a9a"
+    },
+    "method": "Static ARM disassembly with Capstone. No key brute force, native execution, SGS header replacement, or synthesized SGS.",
+    "anchors": [
+      {
+        "address": "0x0805984c",
+        "fact": "VGN extension branch calls 0x0809a368 and stores the returned word."
+      },
+      {
+        "address": "0x0809a368-0x0809a370",
+        "fact": "Returns word at RAM 0x086bb948 + 0x10."
+      },
+      {
+        "address": "0x0809b310-0x0809b314",
+        "fact": "After successful NAND configuration read, copies word from buffer + 0x58 to RAM 0x086bb948 + 0x10."
+      },
+      {
+        "address": "0x08099f00",
+        "fact": "Configuration reader accesses NAND controller 0x0021d000 and supplies the read buffer."
+      },
+      {
+        "address": "0x08099f4c-0x08099f5c",
+        "fact": "The inspected 2048-byte-page branch passes address 0, 0 to 0x08099424; subsequent read copies first data page into destination."
+      },
+      {
+        "address": "0x0809bf08-0x0809bf34",
+        "fact": "Builds DES key from literal TPSP and four caller-supplied bytes."
+      },
+      {
+        "address": "0x08059928-0x08059968",
+        "fact": "Nonzero configuration word chooses configurable DES path; zero chooses fixed XGN path."
+      },
+      {
+        "address": "0x080599b8",
+        "fact": "vgn extension literal in ROM."
+      },
+      {
+        "address": "0x0809bf38",
+        "fact": "TPSP prefix literal in ROM."
+      }
+    ],
+    "keyState": {
+      "nandConfigurationDataOffset": "0x58",
+      "destinationRamAddress": "0x086bb958",
+      "keyPrefixAscii": "TPSP",
+      "additionalKeyBytes": 4,
+      "knownAdditionalKeyValue": null
+    },
+    "neededInput": "A genuine NAND boot-configuration data page tied to the actual VGN target, including the word at data offset 0x58. The current ROM_EXEC update is not this NAND image. An unrelated device/build may use a different value.",
+    "flashkeyStringCaveat": "ROM contains nf:1:\\flashkey.bin, but its relationship to the NAND word was not established. It is not asserted to be the missing VGN key.",
+    "comparison": {
+      "existingCatalogSketcherBytes": [
+        593340,
+        508442
+      ],
+      "possibleVgnPayloadBytes": 939682,
+      "identityEstablished": false,
+      "recoveredSgs": false,
+      "playabilityEstablished": false
+    },
+    "fixedXgnFooterCheck": "Earlier fixed-key extraction rejected the VGN footer; not repeated in this pass.",
+    "staticDisassemblySha256": "cabbbf4586613ce939cac1eb983c341404dc6354e87e29262c53f3a7b4f953b1"
+  },
+  "accessAndExecution": {
+    "outreach": false,
+    "loginOrPrivateAttachments": false,
+    "installerExecution": false,
+    "bruteForce": false,
+    "newSgsPublication": false
+  }
+}

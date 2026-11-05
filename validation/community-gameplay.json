@@ -1,0 +1,66 @@
+{
+  "scope": "Original public GVM Club community fighting game, single-player only. Not a commercial-release claim or full playthrough. No bytecode patch and no PTP/server connection.",
+  "source": {
+    "archiveUrl": "https://web.archive.org/web/20040123191359id_/http://gvmclub.com:80/q&a/download/include/tbl_qna_download/files/phpCKjSWl/%b4%c0%bd%c3.alz",
+    "sgsSha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+    "bytes": 9354,
+    "filename": "0000102FFFFFFFF.sgs",
+    "labelFromWml": "졸라피이터"
+  },
+  "games": {
+    "zola": {
+      "id": "zola",
+      "runtime": {
+        "profile": "phone",
+        "width": 128,
+        "height": 128,
+        "startData": 1
+      },
+      "replay": "replay-zola.json",
+      "status": "idle",
+      "error": null,
+      "events": 21,
+      "evidence": "Single-player stick-figure combat; equal-time movement and attack controls differ from the OK-only control. START0 remains on Ready.",
+      "frame": "gameplay/zola/zola-10-tick3.png",
+      "frameSha256": "2fb5632a05c2eabaab9f9a4828b40909589089b3101f39da8f5684722137675a",
+      "frameRgbaSha256": "0b72f017d227c10312c9e5936c17e9374d178c914482da53237b7d66b2b119a7",
+      "controlProof": [
+        {
+          "timeMs": 0,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "49f6ff9b24c008dc281f9b5e78644c12d9398ed5af3a3160620a88edbb117b00",
+          "controlRgbaSha256": "49f6ff9b24c008dc281f9b5e78644c12d9398ed5af3a3160620a88edbb117b00"
+        },
+        {
+          "timeMs": 600,
+          "sameVirtualTime": true,
+          "differingPixels": 99,
+          "inputRgbaSha256": "ddfec889c9ef0dc43f6020f07f5b364c89f42400e3a4021e709dd32359c1a0a0",
+          "controlRgbaSha256": "4ae95ac80ca0df3ad4509cd0f3d2f269d50085316084ffe19d08728fbbe4d58a"
+        },
+        {
+          "timeMs": 900,
+          "sameVirtualTime": true,
+          "differingPixels": 152,
+          "inputRgbaSha256": "f04c0e700951a8015f53c761418ae78f5817e94cf6fb7a746381b8b94082a784",
+          "controlRgbaSha256": "5b93e57eb4cc406d48894b41beb073b44669d51507c1f4ab208c2e5ecb147a10"
+        },
+        {
+          "timeMs": 1500,
+          "sameVirtualTime": true,
+          "differingPixels": 113,
+          "inputRgbaSha256": "0b72f017d227c10312c9e5936c17e9374d178c914482da53237b7d66b2b119a7",
+          "controlRgbaSha256": "f0d429e20e6d919570de23fb6c4bbc84f8901a43e4f9e32cdad34f78c7a9f366"
+        }
+      ],
+      "startModeProof": {
+        "startData": 1,
+        "constant": "S_GTYPE_ALONE",
+        "source": "Original zola.mc main stores swData in GameType; original SDK SScript.h defines S_GTYPE_ALONE=1",
+        "zeroControlReplay": "replay-zola-start0.json",
+        "explicitOverrideRegression": "tests/zola.test.mjs"
+      }
+    }
+  }
+}

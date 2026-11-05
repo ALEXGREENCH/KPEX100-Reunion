@@ -64,6 +64,9 @@ def main():
         "kingston-naver-gameplay.json",
         "phone-firmware-gameplay.json",
         "lg-sd810-gameplay.json",
+        "community-gameplay.json",
+        "mobaill-gameplay.json",
+        "s60-catalog-gameplay.json",
     ):
         path = VALIDATION / name
         if not path.exists():

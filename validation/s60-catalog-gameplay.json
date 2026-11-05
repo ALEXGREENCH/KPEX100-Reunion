@@ -1,0 +1,334 @@
+{
+  "scope": "Catalogue promotion of two unchanged SGS v4 recovered from native Symbian S60 applications, not a new firmware or factory-preload claim. Four fresh generic CLI runs compare held input with idle at identical virtual deadlines. External SIS WAV/MIDI not connected.",
+  "sourceEvidence": "sinjisoft-s60-recovery.json",
+  "games": {
+    "storm-of-silence-demo-s60": {
+      "id": "storm-of-silence-demo-s60",
+      "title": "Storm of Silence Demo",
+      "runtime": {
+        "width": 176,
+        "height": 208,
+        "profile": "phone"
+      },
+      "source": {
+        "sgsSha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+        "bytes": 128690,
+        "installerSha256": "2d276a81e795d467868575bd21a035b418707ab4bd573f567943972df7b98ec4",
+        "archiveMember": "s60v2/stormofsilencedemo.sis",
+        "application": {
+          "name": "StormOfSilenceDemo.app",
+          "bytes": 430508,
+          "sha256": "7eac806b76e7479554a47847a6f77a7bf60981ae3a05680f8cfc16f56d1077ee"
+        },
+        "sgsSourceOffset": 275356
+      },
+      "replay": "replay-storm-of-silence-demo-s60.json",
+      "controlReplay": "replay-storm-of-silence-demo-s60-control.json",
+      "status": "idle",
+      "error": null,
+      "events": 155,
+      "evidence": "Original Storm of Silence Demo reaches training; holding RIGHT (17) through eight scheduled timer deadlines moves the character. Identical-time idle control retains a different position.",
+      "frame": "gameplay/storm-of-silence-demo-s60/local-storm-of-silence-demo-s60-7-release17.png",
+      "frameSha256": "19be0840b2f5ac1cbb12c66a3ed4108aa3a44a69a2948e44bea286f1c040214b",
+      "frameRgbaSha256": "3aff32b7905448a0c453646a5d4007e70e2caf9c30c65a56fc16008331c8ddd6",
+      "controlProof": [
+        {
+          "index": 0,
+          "inputLabel": "start",
+          "controlLabel": "start",
+          "timeMs": 0,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "a805abce46d0049f755700daa28fcd34f06cd399f564989225dc5f980420cc8d",
+          "controlRgbaSha256": "a805abce46d0049f755700daa28fcd34f06cd399f564989225dc5f980420cc8d"
+        },
+        {
+          "index": 1,
+          "inputLabel": "0-tick25",
+          "controlLabel": "0-tick25",
+          "timeMs": 4150,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "20a713e0a9fa5fa7a8f10b3c5ca75c04d5f705612c0f51f4d19609b09c66a24f",
+          "controlRgbaSha256": "20a713e0a9fa5fa7a8f10b3c5ca75c04d5f705612c0f51f4d19609b09c66a24f"
+        },
+        {
+          "index": 2,
+          "inputLabel": "1-key20",
+          "controlLabel": "1-key20",
+          "timeMs": 4150,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "20a713e0a9fa5fa7a8f10b3c5ca75c04d5f705612c0f51f4d19609b09c66a24f",
+          "controlRgbaSha256": "20a713e0a9fa5fa7a8f10b3c5ca75c04d5f705612c0f51f4d19609b09c66a24f"
+        },
+        {
+          "index": 3,
+          "inputLabel": "2-tick25",
+          "controlLabel": "2-tick25",
+          "timeMs": 9150,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "4d3a3d8dab34fb3f392876706e345c7054d3b2ca7cf657881937d538e7b1260e",
+          "controlRgbaSha256": "4d3a3d8dab34fb3f392876706e345c7054d3b2ca7cf657881937d538e7b1260e"
+        },
+        {
+          "index": 4,
+          "inputLabel": "3-key20",
+          "controlLabel": "3-key20",
+          "timeMs": 9150,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "4d3a3d8dab34fb3f392876706e345c7054d3b2ca7cf657881937d538e7b1260e",
+          "controlRgbaSha256": "4d3a3d8dab34fb3f392876706e345c7054d3b2ca7cf657881937d538e7b1260e"
+        },
+        {
+          "index": 5,
+          "inputLabel": "4-tick90",
+          "controlLabel": "4-tick90",
+          "timeMs": 27150,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+          "controlRgbaSha256": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4"
+        },
+        {
+          "index": 6,
+          "inputLabel": "5-hold17",
+          "controlLabel": "5-tick0",
+          "timeMs": 27150,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4",
+          "controlRgbaSha256": "44eb8dce7096d51dc1f803e6ac49cf1fdc3ca79a638c13702e454143e510a4c4"
+        },
+        {
+          "index": 7,
+          "inputLabel": "6-tick8",
+          "controlLabel": "6-tick8",
+          "timeMs": 28750,
+          "sameVirtualTime": true,
+          "differingPixels": 315,
+          "inputRgbaSha256": "3aff32b7905448a0c453646a5d4007e70e2caf9c30c65a56fc16008331c8ddd6",
+          "controlRgbaSha256": "25dbeb110183901218ac6fe411ef5e402fe7dc9e253b23bde7a3cc88ff1f110e"
+        },
+        {
+          "index": 8,
+          "inputLabel": "7-release17",
+          "controlLabel": "7-tick0",
+          "timeMs": 28750,
+          "sameVirtualTime": true,
+          "differingPixels": 315,
+          "inputRgbaSha256": "3aff32b7905448a0c453646a5d4007e70e2caf9c30c65a56fc16008331c8ddd6",
+          "controlRgbaSha256": "25dbeb110183901218ac6fe411ef5e402fe7dc9e253b23bde7a3cc88ff1f110e"
+        }
+      ],
+      "control": {
+        "status": "idle",
+        "error": null,
+        "events": 153,
+        "finalTimeMs": 28750
+      },
+      "limitations": "Short single-player/input replay only. Storm is a demo; Waterski SIS is version1.00, not evidence of1.03. Full playthrough, persistence, Symbian wrapper execution and external WAV/MIDI playback are not verified. Original SGS and ROM bytes unchanged; no forced timer or game-state patches."
+    },
+    "waterski-s60": {
+      "id": "waterski-s60",
+      "title": "Waterski",
+      "runtime": {
+        "width": 176,
+        "height": 208,
+        "profile": "phone"
+      },
+      "source": {
+        "sgsSha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+        "bytes": 147636,
+        "installerSha256": "329f93da2deac528e4b2793f75f9ebf73d33e2ec0097778233f8adfc5459c2cc",
+        "archiveMember": "s60v2/waterski.sis",
+        "application": {
+          "name": "WaterSki.app",
+          "bytes": 449920,
+          "sha256": "c147e2c37bce0b33ee37b4585ddcfb1d5af4a69ee287820ae0893a7b347350a7"
+        },
+        "sgsSourceOffset": 275772
+      },
+      "replay": "replay-waterski-s60.json",
+      "controlReplay": "replay-waterski-s60-control.json",
+      "status": "idle",
+      "error": null,
+      "events": 173,
+      "evidence": "Original Waterski reaches gameplay; holding UP (18) through eight scheduled timer deadlines performs a jump. Identical-time idle control has a different skier pose.",
+      "frame": "gameplay/waterski-s60/local-waterski-s60-14-release18.png",
+      "frameSha256": "94324156da0acd919931318050cfee2223a2d92f604294f1206181c544f2f8ad",
+      "frameRgbaSha256": "e3afbd425805890f2908b929be6ad489ab04318d51a62b13af5e84d9a10c145f",
+      "controlProof": [
+        {
+          "index": 0,
+          "inputLabel": "start",
+          "controlLabel": "start",
+          "timeMs": 0,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "a805abce46d0049f755700daa28fcd34f06cd399f564989225dc5f980420cc8d",
+          "controlRgbaSha256": "a805abce46d0049f755700daa28fcd34f06cd399f564989225dc5f980420cc8d"
+        },
+        {
+          "index": 1,
+          "inputLabel": "0-tick25",
+          "controlLabel": "0-tick25",
+          "timeMs": 4550,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "f515c2ea1e7a2524eb4ac4abc079cdd9dee3aecd804a57947e13ba008807f150",
+          "controlRgbaSha256": "f515c2ea1e7a2524eb4ac4abc079cdd9dee3aecd804a57947e13ba008807f150"
+        },
+        {
+          "index": 2,
+          "inputLabel": "1-key20",
+          "controlLabel": "1-key20",
+          "timeMs": 4550,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "f515c2ea1e7a2524eb4ac4abc079cdd9dee3aecd804a57947e13ba008807f150",
+          "controlRgbaSha256": "f515c2ea1e7a2524eb4ac4abc079cdd9dee3aecd804a57947e13ba008807f150"
+        },
+        {
+          "index": 3,
+          "inputLabel": "2-tick25",
+          "controlLabel": "2-tick25",
+          "timeMs": 13300,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "2a792cbb04a3bbc22db8f8861029ae15a1d35292c1846ecf72b23314e14a67f3",
+          "controlRgbaSha256": "2a792cbb04a3bbc22db8f8861029ae15a1d35292c1846ecf72b23314e14a67f3"
+        },
+        {
+          "index": 4,
+          "inputLabel": "3-key20",
+          "controlLabel": "3-key20",
+          "timeMs": 13300,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "2a792cbb04a3bbc22db8f8861029ae15a1d35292c1846ecf72b23314e14a67f3",
+          "controlRgbaSha256": "2a792cbb04a3bbc22db8f8861029ae15a1d35292c1846ecf72b23314e14a67f3"
+        },
+        {
+          "index": 5,
+          "inputLabel": "4-tick25",
+          "controlLabel": "4-tick25",
+          "timeMs": 22050,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "6c48a03922884154dee3a86774ee4fe693ec606c2b6a4c18c84ca12cdc65666b",
+          "controlRgbaSha256": "6c48a03922884154dee3a86774ee4fe693ec606c2b6a4c18c84ca12cdc65666b"
+        },
+        {
+          "index": 6,
+          "inputLabel": "5-key20",
+          "controlLabel": "5-key20",
+          "timeMs": 22050,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "6c48a03922884154dee3a86774ee4fe693ec606c2b6a4c18c84ca12cdc65666b",
+          "controlRgbaSha256": "6c48a03922884154dee3a86774ee4fe693ec606c2b6a4c18c84ca12cdc65666b"
+        },
+        {
+          "index": 7,
+          "inputLabel": "6-tick25",
+          "controlLabel": "6-tick25",
+          "timeMs": 30800,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "5223e9760ea149f98a8339e04430ef5bdf1cfb3fcf48b6df7f82493a7d52adea",
+          "controlRgbaSha256": "5223e9760ea149f98a8339e04430ef5bdf1cfb3fcf48b6df7f82493a7d52adea"
+        },
+        {
+          "index": 8,
+          "inputLabel": "7-key20",
+          "controlLabel": "7-key20",
+          "timeMs": 30800,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "5223e9760ea149f98a8339e04430ef5bdf1cfb3fcf48b6df7f82493a7d52adea",
+          "controlRgbaSha256": "5223e9760ea149f98a8339e04430ef5bdf1cfb3fcf48b6df7f82493a7d52adea"
+        },
+        {
+          "index": 9,
+          "inputLabel": "8-tick25",
+          "controlLabel": "8-tick25",
+          "timeMs": 39550,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "4f0d0d184e4d4c57eadce6553b0e6916203fdd9bdd703a5107cc1187e857fffa",
+          "controlRgbaSha256": "4f0d0d184e4d4c57eadce6553b0e6916203fdd9bdd703a5107cc1187e857fffa"
+        },
+        {
+          "index": 10,
+          "inputLabel": "9-key20",
+          "controlLabel": "9-key20",
+          "timeMs": 39550,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "4f0d0d184e4d4c57eadce6553b0e6916203fdd9bdd703a5107cc1187e857fffa",
+          "controlRgbaSha256": "4f0d0d184e4d4c57eadce6553b0e6916203fdd9bdd703a5107cc1187e857fffa"
+        },
+        {
+          "index": 11,
+          "inputLabel": "10-tick25",
+          "controlLabel": "10-tick25",
+          "timeMs": 48300,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+          "controlRgbaSha256": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1"
+        },
+        {
+          "index": 12,
+          "inputLabel": "11-key20",
+          "controlLabel": "11-key20",
+          "timeMs": 48300,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+          "controlRgbaSha256": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1"
+        },
+        {
+          "index": 13,
+          "inputLabel": "12-hold18",
+          "controlLabel": "12-tick0",
+          "timeMs": 48300,
+          "sameVirtualTime": true,
+          "differingPixels": 0,
+          "inputRgbaSha256": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1",
+          "controlRgbaSha256": "f3dec5fac158d79df5e888039d28c961bed22f322f0392cb5a499b7767d4a0a1"
+        },
+        {
+          "index": 14,
+          "inputLabel": "13-tick8",
+          "controlLabel": "13-tick8",
+          "timeMs": 51100,
+          "sameVirtualTime": true,
+          "differingPixels": 1394,
+          "inputRgbaSha256": "e3afbd425805890f2908b929be6ad489ab04318d51a62b13af5e84d9a10c145f",
+          "controlRgbaSha256": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4"
+        },
+        {
+          "index": 15,
+          "inputLabel": "14-release18",
+          "controlLabel": "14-tick0",
+          "timeMs": 51100,
+          "sameVirtualTime": true,
+          "differingPixels": 1394,
+          "inputRgbaSha256": "e3afbd425805890f2908b929be6ad489ab04318d51a62b13af5e84d9a10c145f",
+          "controlRgbaSha256": "918c1895a0b45e3dd2362b3230fcce0cc995737596f0237a27591cdf307474a4"
+        }
+      ],
+      "control": {
+        "status": "idle",
+        "error": null,
+        "events": 171,
+        "finalTimeMs": 51100
+      },
+      "limitations": "Short single-player/input replay only. Storm is a demo; Waterski SIS is version1.00, not evidence of1.03. Full playthrough, persistence, Symbian wrapper execution and external WAV/MIDI playback are not verified. Original SGS and ROM bytes unchanged; no forced timer or game-state patches."
+    }
+  }
+}

@@ -89,9 +89,9 @@ The Swerve binary itself is not part of either project's source licence.
 
 ## Historical binary inputs
 
-The repository and default Pages build include 9 firmware images, 50 SGS
+The repository and default Pages build include 9 firmware images, 62 SGS
 applications, 3 native quick-start snapshots and the original Swerve 2.1 module.
-These 63 historical files are preserved byte-for-byte. `web/data/catalog.json`
+These 75 historical files are preserved byte-for-byte. `web/data/catalog.json`
 records catalogue sizes, SHA-256 hashes and runtime profiles; the Swerve module
 has separate [archive provenance](doc/swerve-provenance.json). Snapshot RAM
 contains original firmware/game data. These materials retain their own
@@ -123,10 +123,19 @@ No additional historical binaries are downloaded automatically. The optional
 Original SDK installers, extracted SDK programs and manual PDFs are not bundled.
 Research documents retain their URLs, hashes and derived findings.
 
+Four additional unmodified GVM2 builds come from public Mobaill attachments;
+[provenance and limits](doc/mobaill-games.md). Storm of Silence Demo and
+Waterski are unchanged SGS extracted from native S60 applications;
+[source installers and hashes](validation/s60-catalog-gameplay.json).
+The full S60 wrappers and SDK emulators are preserved in separate research
+bundles; they are not runtime dependencies or covered by Reunion's MIT licence.
+
 Additional GVM Club / Naver forum recoveries are documented in
 [the forum attachment report](doc/gvm-forum-attachments.md). Their research bundle
 preserves third-party Mobile C examples, resources, historical documents and
-an original SGS separately from the ordinary application catalogue. The
+original SGS files. Zola's unchanged SGS is also included in the ordinary
+catalogue; its single-player START mode comes from the original Mobile C and
+SDK constants. The
 Reunion source licence does not relicense those historical files.
 
 The separate LG MAIN research tools use the official LZO 2.10 safe decoder

@@ -1,0 +1,740 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "scope": "Preservation and static reproducibility validation of already recovered Windows GVM/GNEX emulators and their original SDK companions. No new broad web search.",
+  "bundle": {
+    "archive": "Sinjisoft-GVM-GNEX-Emulators-Recovered.zip",
+    "bytes": 91170938,
+    "sha256": "68b37ec3514bcaac7443dc05262e1f72b081b477d7f1145a70c34c5a2918c7e7",
+    "verifiedUtc": "2026-11-05T11:28:38.733522+00:00",
+    "zipCrcAllMembersPassed": true,
+    "zipMembers": 166,
+    "cleanExtractionHashVerificationPassed": true,
+    "manifestPayloadFilesVerified": 165,
+    "staticReproduction": [
+      {
+        "version": "2.10",
+        "unchangedFilesVerified": 71,
+        "source": "Bundled original installer -> InstallShield overlay -> MSI -> CAB -> MSI-selected paths",
+        "vendorExecution": false
+      },
+      {
+        "version": "2.12",
+        "unchangedFilesVerified": 82,
+        "source": "Bundled original installer -> InstallShield overlay -> MSI -> CAB -> MSI-selected paths",
+        "vendorExecution": false
+      }
+    ],
+    "vendorProgramsExecuted": false,
+    "currentWindowsUsabilityTested": false,
+    "bundleUnchangedAfterReproduction": true
+  },
+  "networkRequestsThisPass": 0,
+  "sdkSources": [
+    {
+      "version": "2.10",
+      "installerPath": "original-installers/GNEX_SDK_v2.10.exe",
+      "bytes": 24026547,
+      "sha256": "075f010557029a53a5c7e01fc7f492e4236a26b8edb019fcd7193d0719a0dd19",
+      "sourcePage": "https://archive.org/details/gnex-sdk-v-2.10",
+      "sourceUrl": "https://archive.org/download/gnex-sdk-v-2.10/GNEX_SDK_v2.10.exe",
+      "provenance": "Already recovered Internet Archive redistribution; immutable local byte identity rechecked. Vendor signature authenticity not established.",
+      "fullInstallerMembers": 238
+    },
+    {
+      "version": "2.12",
+      "installerPath": "original-installers/GNEX_SDK_v2.12.exe",
+      "bytes": 42130867,
+      "sha256": "87d852091c8d25134d6b57bf14e8745b5e99f6c6277fdb56bff801b1ff0fd3a7",
+      "sourcePage": "https://archive.org/details/gnex_sdk_v2.12",
+      "sourceUrl": "https://archive.org/download/gnex_sdk_v2.12/GNEX_SDK_v2.12.exe",
+      "provenance": "Already recovered Internet Archive redistribution; immutable local byte identity rechecked. Vendor signature authenticity not established.",
+      "fullInstallerMembers": 255
+    }
+  ],
+  "coreTools": [
+    {
+      "bundlePath": "SDK-2.10/MobileC_GNEX.exe",
+      "bytes": 98304,
+      "sha256": "07958099bb84e75660904db1b07e519fc60f7bbc8672f1ce32bc50ce4d3259dd",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "Mobile C for GNEX",
+        "FileVersion": "1, 6, 1, 60124",
+        "OriginalFilename": "MobileC_GNEX.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 3, 2, 60124"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "GDI32.dll",
+        "InstallModule.dll",
+        "KERNEL32.dll",
+        "MFC42.DLL",
+        "MSVCRT.dll",
+        "USER32.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.10/masm_GNEX.exe",
+      "bytes": 163840,
+      "sha256": "469d5d58c27ed9e4bbbb04f38f7be59fd1e98c3374e2f69942d0b79108e53032",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "mobileC Assembler for GNEX",
+        "FileVersion": "3, 4, 0, 7122",
+        "OriginalFilename": "masm_GNEX.exe",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.10/GNEXIDE.exe",
+      "bytes": 2129920,
+      "sha256": "762f58a80cdad23651e4ff5e5fc4bc78fa6d5b428fd5c6553b216b4a5b3f83ed",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "IDE for GNEX",
+        "FileVersion": "1, 6, 0, 7122",
+        "OriginalFilename": "GNEXIDE.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "COMCTL32.dll",
+        "GDI32.dll",
+        "IMM32.dll",
+        "InstallModule.dll",
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "OLEPRO32.DLL",
+        "SHELL32.dll",
+        "SHLWAPI.dll",
+        "USER32.dll",
+        "WINSPOOL.DRV",
+        "WSOCK32.dll",
+        "comdlg32.dll",
+        "ole32.dll",
+        "oledlg.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.10/EmulController.exe",
+      "bytes": 851968,
+      "sha256": "cdc48e006da2f547f04c688c21950815f8864c9695f6f222fc303e9e851d9c3e",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "Emulator Controller",
+        "FileVersion": "1, 2, 3, 60404",
+        "OriginalFilename": "EmulController.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 3, 3, 60404"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "COMCTL32.dll",
+        "GDI32.dll",
+        "InstallModule.dll",
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "OLEPRO32.DLL",
+        "USER32.dll",
+        "WINSPOOL.DRV",
+        "comdlg32.dll",
+        "ole32.dll",
+        "oledlg.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.10/Emulator.exe",
+      "bytes": 1228800,
+      "sha256": "e4657382c950160090cfa77b465edad2b225db1cd282e776672b7fb96022e87b",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "GNEX Emulator",
+        "FileVersion": "3, 7, 0, 7122",
+        "OriginalFilename": "Emulator.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "COMCTL32.dll",
+        "GDI32.dll",
+        "InstallModule.dll",
+        "KERNEL32.dll",
+        "M5_EmuSmw5.dll",
+        "OLEAUT32.dll",
+        "OLEPRO32.DLL",
+        "USER32.dll",
+        "WININET.dll",
+        "WINMM.dll",
+        "WINSPOOL.DRV",
+        "WSOCK32.dll",
+        "comdlg32.dll",
+        "iphlpapi.dll",
+        "ole32.dll",
+        "oledlg.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.10/mcc_GNEX.exe",
+      "bytes": 495616,
+      "sha256": "09de0d106781872129d8e6a5c3dff9f67c054e044d64b6949f282c8576a38f85",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "MobileC Compiler for GNEX",
+        "FileVersion": "3, 2, 7, 60405",
+        "OriginalFilename": "mcc_GNEX.exe",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 3, 7, 60405"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.10/mcc.exe",
+      "bytes": 393216,
+      "sha256": "de5fb2e9042406df22b9c4b9a2ef4915b5dc35044d85598962bd82e4d0abbe0b",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "mcc",
+        "FileVersion": "3, 2, 3, 60404",
+        "OriginalFilename": "mcc.exe",
+        "ProductName": "MobileC Compiler",
+        "ProductVersion": "1, 5, 3, 60404"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.10/MASM.exe",
+      "bytes": 114688,
+      "sha256": "deebe7e45deef83e7ef87a622277ac51f79df84db63f1a0de35f62caf1d601ac",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "mobileC Assembler 1.53",
+        "FileVersion": "3, 3, 0, 7122",
+        "OriginalFilename": "masm.exe",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex-sdk-v-2.10"
+    },
+    {
+      "bundlePath": "SDK-2.12/MobileC_GNEX.exe",
+      "bytes": 98304,
+      "sha256": "b50e06e536feb7490a444f0e9d4909de0c1e1382960f8671a92ae39730a079b3",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "Mobile C for GNEX",
+        "FileVersion": "1, 6, 1, 60124",
+        "OriginalFilename": "MobileC_GNEX.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 3, 2, 60124"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "GDI32.dll",
+        "InstallModule.dll",
+        "KERNEL32.dll",
+        "MFC42.DLL",
+        "MSVCRT.dll",
+        "USER32.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    },
+    {
+      "bundlePath": "SDK-2.12/masm_GNEX.exe",
+      "bytes": 159744,
+      "sha256": "c9dd8612c392b0a1f9189b838b529157c1235f48e344e781fdb4c47ff3b5530a",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "mobileC Assembler for GNEX",
+        "FileVersion": "3, 4, 0, 7122",
+        "OriginalFilename": "masm_GNEX.exe",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    },
+    {
+      "bundlePath": "SDK-2.12/GNEXIDE.exe",
+      "bytes": 2162688,
+      "sha256": "b945752230d1df2efc84336c8b8ef2b2a6849de85c6c813adf32718e3b43849f",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "IDE for GNEX",
+        "FileVersion": "1, 6, 0, 7122",
+        "OriginalFilename": "GNEXIDE.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "COMCTL32.dll",
+        "GDI32.dll",
+        "IMM32.dll",
+        "InstallModule.dll",
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "OLEPRO32.DLL",
+        "SHELL32.dll",
+        "SHLWAPI.dll",
+        "USER32.dll",
+        "WINSPOOL.DRV",
+        "WSOCK32.dll",
+        "comdlg32.dll",
+        "ole32.dll",
+        "oledlg.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    },
+    {
+      "bundlePath": "SDK-2.12/EmulController.exe",
+      "bytes": 851968,
+      "sha256": "89e506ae412247cbb3a24878009eb6255415a710d83439f142e224e637a26ebd",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "Emulator Controller",
+        "FileVersion": "1, 2, 3, 60404",
+        "OriginalFilename": "EmulController.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 3, 3, 60404"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "COMCTL32.dll",
+        "GDI32.dll",
+        "InstallModule.dll",
+        "KERNEL32.dll",
+        "OLEAUT32.dll",
+        "OLEPRO32.DLL",
+        "USER32.dll",
+        "WINSPOOL.DRV",
+        "comdlg32.dll",
+        "ole32.dll",
+        "oledlg.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    },
+    {
+      "bundlePath": "SDK-2.12/Emulator.exe",
+      "bytes": 1228800,
+      "sha256": "81ed4493f5b50748b332f63476634bd7ba82c96f059e816b741eb4bb4f918e0a",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft",
+        "FileDescription": "GNEX Emulator",
+        "FileVersion": "3, 7, 0, 7122",
+        "OriginalFilename": "Emulator.EXE",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "ADVAPI32.dll",
+        "COMCTL32.dll",
+        "GDI32.dll",
+        "KERNEL32.dll",
+        "M5_EmuSmw5.dll",
+        "OLEAUT32.dll",
+        "OLEPRO32.DLL",
+        "USER32.dll",
+        "WININET.dll",
+        "WINMM.dll",
+        "WINSPOOL.DRV",
+        "WSOCK32.dll",
+        "comdlg32.dll",
+        "iphlpapi.dll",
+        "ole32.dll",
+        "oledlg.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    },
+    {
+      "bundlePath": "SDK-2.12/mcc_GNEX.exe",
+      "bytes": 495616,
+      "sha256": "a02ffd612a4a242852f35a1fc0fc4bdf1911c0a07375a75955822ce5629f996f",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "MobileC Compiler for GNEX",
+        "FileVersion": "3, 2, 7, 60405",
+        "OriginalFilename": "mcc_GNEX.exe",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 3, 7, 60405"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    },
+    {
+      "bundlePath": "SDK-2.12/mcc.exe",
+      "bytes": 393216,
+      "sha256": "5c9d8a95b15aae60acc377104dc08574e688e82c86583b059d9b1907fb402c52",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "mcc",
+        "FileVersion": "3, 2, 3, 60404",
+        "OriginalFilename": "mcc.exe",
+        "ProductName": "MobileC Compiler",
+        "ProductVersion": "1, 5, 3, 60404"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    },
+    {
+      "bundlePath": "SDK-2.12/MASM.exe",
+      "bytes": 114688,
+      "sha256": "deebe7e45deef83e7ef87a622277ac51f79df84db63f1a0de35f62caf1d601ac",
+      "machine": "0x014c",
+      "peVersion": {
+        "CompanyName": "Sinjisoft Corp.",
+        "FileDescription": "mobileC Assembler 1.53",
+        "FileVersion": "3, 3, 0, 7122",
+        "OriginalFilename": "masm.exe",
+        "ProductName": "GNEX SDK",
+        "ProductVersion": "1, 6, 0, 7122"
+      },
+      "staticImportedDlls": [
+        "KERNEL32.dll"
+      ],
+      "source": "https://archive.org/details/gnex_sdk_v2.12"
+    }
+  ],
+  "standaloneGvm2x": {
+    "bundlePath": "GVM2X-2.0.6.40328-modified/2x_Cr256_Magic_expired_remove.exe",
+    "bytes": 1056768,
+    "sha256": "c2c170b3c47cd99dc55fdadad31dd1927473b4362868205c5eb49eff96c60719",
+    "sourcePage": "https://123fu.tistory.com/11",
+    "originalAttachmentName": "2x_Cr256_Magic_expired_remove.exe",
+    "versionFromPe": "2.0.6.40328",
+    "machine": "0x014c",
+    "staticImportedDlls": [
+      "ADVAPI32.dll",
+      "COMCTL32.dll",
+      "GDI32.dll",
+      "KERNEL32.dll",
+      "OLEAUT32.dll",
+      "OLEPRO32.DLL",
+      "USER32.dll",
+      "WINMM.dll",
+      "WINSPOOL.DRV",
+      "WSOCK32.dll",
+      "comdlg32.dll",
+      "ole32.dll",
+      "oledlg.dll"
+    ],
+    "modificationStatus": "Filename indicates a modified expiry-removed GVM2X mirror; not presented as untouched official release. No modifications made during preservation.",
+    "currentWindowsUsabilityTested": false
+  },
+  "interpretation": {
+    "executedVendorPrograms": false,
+    "currentWindowsUsabilityTested": false,
+    "phoneCpuOrFullFirmwareEmulationEstablished": false,
+    "virtualMachineScope": "Mobile C/GVM/GNEX application interpreter/emulator with SDK profiles; no demonstrated complete phone hardware emulation.",
+    "completeVmSourceReleaseEstablished": false,
+    "namedSourceFilesNotFound": [
+      "M16VM",
+      "M32VM"
+    ],
+    "sourceFragments": 43,
+    "sourceFragmentScope": "Original extensionless C/header/palette/font fragments preserved with their CAB File IDs and declared MSI paths. Not declared complete buildable emulator source.",
+    "originalInstallersUnchanged": true,
+    "sdkSubsetPortableExecutionGuaranteed": false,
+    "systemDllsBundled": false,
+    "originalInstallerExamplesRemainEmbedded": true,
+    "additionalStandaloneGameFilesBundled": false,
+    "personalProfilesOrSavesAdded": false
+  },
+  "preservedCounts": {
+    "windowsEmulatorExecutables": 3,
+    "sdkInstallers": 2,
+    "selectedSdkFiles": 153,
+    "selectedSdk210Files": 71,
+    "selectedSdk212Files": 82,
+    "sourceFragments": 43,
+    "coreToolRecords": 16,
+    "zipMembers": 166,
+    "manifestFilesExcludingManifestItself": 165
+  },
+  "metadataHashes": [
+    {
+      "path": "manifest.json",
+      "bytes": 27654,
+      "sha256": "80703f9c45454d6d14aabc5c191b3b93323c054d78095d2ac3873f6d2bdcb46e"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 20294,
+      "sha256": "1f22e3cad5237a3d38ec3a9b361332f3b12a631d1a9cfc90cb2c6ff98ca22485"
+    },
+    {
+      "path": "sdk-member-map.json",
+      "bytes": 68833,
+      "sha256": "9984e1426996bc95aa0cb100b9551157045f7a05c5e81bbfe8043dccc9a04ba0"
+    },
+    {
+      "path": "README.ru.txt",
+      "bytes": 5906,
+      "sha256": "204ec62afa0cb667e1f8f79776d3b12808b66004f3870f72cb2eae83d190b4a8"
+    },
+    {
+      "path": "README.en.txt",
+      "bytes": 3588,
+      "sha256": "1243f10d1f8a465d7be17b063ed93c50982c2a6793b472bdf65714b0922de9ec"
+    }
+  ],
+  "staticExtraction": {
+    "steps": [
+      "Verify original installer SHA-256",
+      "Read InstallShield ANSI overlay with sdk-static.py",
+      "Read MSI and Data1.cab with installed 7-Zip",
+      "Restore selected entries according to MSI file identifiers and declared paths",
+      "Verify size and SHA-256 for every selected file"
+    ],
+    "vendorExeOrCustomActionExecution": false,
+    "phoneCpuOrFirmwareExecution": false,
+    "repeatedFromCleanExtractedBundle": true,
+    "sameSdk210InOriginalUserArchive": true,
+    "containerReference": "https://github.com/lifenjoiner/ISx"
+  },
+  "skinReferenceChecks": [
+    {
+      "sdkVersion": "2.10",
+      "ini": "SDK-2.10/Skins/Custom/Default.ini",
+      "bitmapReferences": [
+        "Custom-mask.bmp",
+        "Custom-main.bmp",
+        "Custom-push.bmp",
+        "Custom-main.bmp",
+        "Custom-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "ini": "SDK-2.10/Skins/Custom/GIGA_MA3_CAM.ini",
+      "bitmapReferences": [
+        "Custom-mask.bmp",
+        "Custom-main.bmp",
+        "Custom-push.bmp",
+        "Custom-main.bmp",
+        "Custom-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "ini": "SDK-2.10/Skins/Custom/GIGA_MA5_CH_VOD_CAM.ini",
+      "bitmapReferences": [
+        "Custom-mask.bmp",
+        "Custom-main.bmp",
+        "Custom-push.bmp",
+        "Custom-main.bmp",
+        "Custom-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "ini": "SDK-2.10/Skins/PG-S1200/PG-S1200.ini",
+      "bitmapReferences": [
+        "PG-S1200-mask.bmp",
+        "PG-S1200-main.bmp",
+        "PG-S1200-push.bmp",
+        "PG-S1200-main.bmp",
+        "PG-S1200-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "ini": "SDK-2.10/Skins/SCH-E200/SCH-E200.ini",
+      "bitmapReferences": [
+        "SCH-E200-mask.bmp",
+        "SCH-E200-main.bmp",
+        "SCH-E200-push.bmp",
+        "SCH-E200-main.bmp",
+        "SCH-E200-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "ini": "SDK-2.10/Skins/SCH-V330/SCH-V330.ini",
+      "bitmapReferences": [
+        "SCH-V330-mask.bmp",
+        "SCH-V330-main.bmp",
+        "SCH-V330-push.bmp",
+        "SCH-V330-main.bmp",
+        "SCH-V330-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.10",
+      "ini": "SDK-2.10/Skins/SCH-X270/SCH-X270.ini",
+      "bitmapReferences": [
+        "SCH-X270-mask.bmp",
+        "SCH-X270-main.bmp",
+        "SCH-X270-push.bmp",
+        "SCH-X270-main.bmp",
+        "SCH-X270-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/Custom/Default.ini",
+      "bitmapReferences": [
+        "Custom-mask.bmp",
+        "Custom-main.bmp",
+        "Custom-push.bmp",
+        "Custom-main.bmp",
+        "Custom-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/Custom/GIGA_MA3_CAM.ini",
+      "bitmapReferences": [
+        "Custom-mask.bmp",
+        "Custom-main.bmp",
+        "Custom-push.bmp",
+        "Custom-main.bmp",
+        "Custom-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/Custom/GIGA_MA5_CH_VOD_CAM.ini",
+      "bitmapReferences": [
+        "Custom-mask.bmp",
+        "Custom-main.bmp",
+        "Custom-push.bmp",
+        "Custom-main.bmp",
+        "Custom-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/Myracer/Myracer.ini",
+      "bitmapReferences": [
+        "Myracer-mask.bmp",
+        "Myracer-main.bmp",
+        "Myracer-push.bmp",
+        "Myracer-main.bmp",
+        "Myracer-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/PG-S1200/PG-S1200.ini",
+      "bitmapReferences": [
+        "PG-S1200-mask.bmp",
+        "PG-S1200-main.bmp",
+        "PG-S1200-push.bmp",
+        "PG-S1200-main.bmp",
+        "PG-S1200-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/SCH-E200/SCH-E200.ini",
+      "bitmapReferences": [
+        "SCH-E200-mask.bmp",
+        "SCH-E200-main.bmp",
+        "SCH-E200-push.bmp",
+        "SCH-E200-main.bmp",
+        "SCH-E200-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/SCH-V330/SCH-V330.ini",
+      "bitmapReferences": [
+        "SCH-V330-mask.bmp",
+        "SCH-V330-main.bmp",
+        "SCH-V330-push.bmp",
+        "SCH-V330-main.bmp",
+        "SCH-V330-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/SCH-W420/SCH-W420.ini",
+      "bitmapReferences": [
+        "SCH-W420-mask.bmp",
+        "SCH-W420-main.bmp",
+        "SCH-W420-push.bmp",
+        "SCH-W420-main.bmp",
+        "SCH-W420-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    },
+    {
+      "sdkVersion": "2.12",
+      "ini": "SDK-2.12/Skins/SCH-X270/SCH-X270.ini",
+      "bitmapReferences": [
+        "SCH-X270-mask.bmp",
+        "SCH-X270-main.bmp",
+        "SCH-X270-push.bmp",
+        "SCH-X270-main.bmp",
+        "SCH-X270-main.bmp"
+      ],
+      "missingLocalBitmapReferences": []
+    }
+  ],
+  "privacy": {
+    "signedDownloadQueriesRetained": false,
+    "rawForumResponsesBundled": false,
+    "mirrorUploaderPersonalDetailsBundled": false,
+    "newPersonalProfilesOrSavesBundled": false,
+    "originalSdkDemoIniUnchanged": true
+  },
+  "rights": "Original SDK binaries, headers, bitmaps and manuals retain their owners rights. Reunion MIT applies only to the new preservation scripts, not to the original Sinjisoft software.",
+  "catalogueEffect": "No SGS catalogue mutation by this emulator-preservation subtask. Original installer-internal examples are preserved as part of each unchanged distribution; no extra retail game set is bundled."
+}
