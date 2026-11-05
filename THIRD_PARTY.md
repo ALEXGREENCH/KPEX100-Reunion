@@ -24,6 +24,11 @@ The preserved GNEX Zone handset cards retain Sinjisoft's original notices and
 archived HTML. Their tables are historical device documentation, not a new
 Reunion licence for the original pages or proof of emulator compatibility.
 
+The early GNEX Club source archive preserves historical SDK announcements and
+Sinjisoft's original June 2003 company brochure, with their existing rights.
+It contains no recovered SDK installer. Original pages and PDFs are not
+relicensed under Reunion's MIT licence.
+
 ## Unicorn.js / Unicorn Engine for the browser
 
 - Upstream: [Unicorn.js ARM v1.0.3](https://github.com/AlexAltea/unicorn.js/releases/tag/v1.0.3).

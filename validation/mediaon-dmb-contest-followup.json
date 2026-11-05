@@ -1,0 +1,1007 @@
+{
+  "schema": 1,
+  "curatedUtc": "2026-11-05T16:29:40.846726+00:00",
+  "scope": "Continuation of MediaOn/HEVM partner and contest routes. Discovery results are separate from read primary sources, downloaded source files, and unverified candidate paths. No retail firmware or SGS was recovered.",
+  "counts": {
+    "discoveryQueries": 16,
+    "httpReceiptRecords": 39,
+    "uniqueRequestedUrlsInReceipts": 39,
+    "http200PayloadsLocallySizeShaVerified": 35,
+    "failedReceiptRecords": 4,
+    "contestCdxCandidatePaths": 43,
+    "downloadedContestArchives": 2,
+    "downloadedContestZipSha1MatchesCdx": 2,
+    "contestArchivesPassingCompleteZipCrc": 1,
+    "listedContestMembers": 107,
+    "crcValidContestMembers": 104,
+    "crcOrDeflateFailedContestMembers": 3,
+    "newExactRetailModelsConfirmed": 0,
+    "newFirmwareImages": 0,
+    "newSgs": 0
+  },
+  "primarySources": [
+    {
+      "name": "dmb-mhp-gnex",
+      "url": "https://n.news.naver.com/mnews/article/030/0000075928",
+      "status": 200,
+      "finalUrl": "https://n.news.naver.com/mnews/article/030/0000075928",
+      "bytes": 289527,
+      "sha256": "04bdc45a3561689db19e01220581a818fe1e703814d83b7636410f1729091cc7",
+      "contentType": "text/html; charset=utf-8",
+      "publisher": "ETNews via its public Naver syndication",
+      "published": "2004-07-13",
+      "title": "DMB data-broadcast middleware: MHP-GNEX working name",
+      "findings": [
+        "Alticast and Sinjisoft announced a proposed MHP-GNEX DMB integration platform.",
+        "The report quotes the GVM-to-MHP integration as already completed, but the first middleware release was planned for the following month and commercialization for later upgrades.",
+        "No actual retail receiver model, firmware or application payload is identified."
+      ]
+    },
+    {
+      "name": "mediaon-etnews",
+      "url": "https://n.news.naver.com/mnews/article/030/0000081598",
+      "status": 200,
+      "finalUrl": "https://n.news.naver.com/mnews/article/030/0000081598",
+      "bytes": 287765,
+      "sha256": "0578bc47ea5b1b5f7ea743f7dd2ad0453d0594fd8028fde9dad3d51595924091",
+      "contentType": "text/html; charset=utf-8",
+      "publisher": "ETNews via its public Naver syndication",
+      "published": "2004-09-07",
+      "title": "MediaOn chip/OS/middleware integration",
+      "findings": [
+        "XEOVIA is described explicitly as a multimedia development from GNEX.",
+        "Reigncom, Samsung Bluetek and Ternocom are named as PMP developers/manufacturers in discussions. This is not a confirmation of shipping models or a common binary ABI."
+      ]
+    },
+    {
+      "name": "sinji-vision2005",
+      "url": "https://www.etnews.com/200501200234",
+      "status": 200,
+      "finalUrl": "https://www.etnews.com/200501200234",
+      "bytes": 49760,
+      "sha256": "81e4784198b031c60a7a522358a7125b8601bc4c216c39b54ac4c171014ac1e6",
+      "contentType": "text/html; charset=UTF-8",
+      "publisher": "ETNews",
+      "published": "2005-01-26",
+      "publicationDateCaveat": "URL contains 20050120; the displayed publication date is 2005-01-26.",
+      "findings": [
+        "Sinjisoft describes an Any Device division and planned GVM supply to set-top boxes in the SK Telecom home-network pilot.",
+        "Development/testing completion and vendor discussions are not treated as proof of retail deployment."
+      ]
+    },
+    {
+      "name": "mds-648",
+      "url": "https://www.mdstech.co.kr/notice/648",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice/648",
+      "bytes": 266064,
+      "sha256": "5ab39d9127f18beaff5ed45b02a4e5d2fa365205e64049a89451ca37e51e6ce3",
+      "contentType": "text/html;charset=UTF-8",
+      "publisher": "MDS Technology",
+      "published": "2005-06-29",
+      "findings": [
+        "The contest notice lists separate MDS Velos and Sinjisoft GVM/GNEX special tracks and links contest.kesic.or.kr."
+      ]
+    },
+    {
+      "name": "sinji-contest2005",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=78536",
+      "status": 200,
+      "finalUrl": "https://www.newswire.co.kr/newsRead.php?no=78536",
+      "bytes": 97069,
+      "sha256": "05d969814179f247aac9437eb87cd5b2ac80ff182aa8f34bcadf0db42adea257",
+      "contentType": "text/html; charset=UTF-8",
+      "publisher": "Sinjisoft, original Newswire release",
+      "published": "2005-09-08",
+      "findings": [
+        "The release describes the GVM/GNEX embedded software special track and identifies www.g-nex.com as its notice-board route.",
+        "Submission window stated as July 13 to October 17, award presentation planned for SoftExpo2005. These details do not prove any recovered finished entry."
+      ]
+    }
+  ],
+  "investorPdf": {
+    "name": "mds-irbook2006",
+    "url": "https://www.mdstech.co.kr/comm/getFile?srvcId=BBSTY1&upperNo=3906&fileTy=ATTACH&fileNo=1",
+    "status": 200,
+    "finalUrl": "https://www.mdstech.co.kr/comm/getFile?srvcId=BBSTY1&upperNo=3906&fileTy=ATTACH&fileNo=1",
+    "bytes": 5946674,
+    "sha256": "dd0ef280dfa56e90999c220a5423a0771afbe8448ab49158451d3d99cfba54c4",
+    "contentType": "application/octet-stream",
+    "title": "MDS Technology Investor Relations 2006",
+    "pages": 33,
+    "textPagesReviewed": 33,
+    "visualPagesChecked": [8, 17],
+    "selectedExactTermsAbsentFromExtractedText": ["XEOVIA", "MediaOn", "GNEX", "GVM", "MMSP2"],
+    "findings": [
+      "Page 8 documents Velos/NEOS RTOS, Core Logic licensing and generic DMB work.",
+      "Page 17 names generic SoC/DMB partners including Core Logic, net&tv and AIRCODE.",
+      "This PDF does not establish an XEOVIA/GNEX retail OEM model. The bounded text-term result is not a universal statement about every MDS product."
+    ]
+  },
+  "contestArchives": [
+    {
+      "file": "contest-face-zip.raw",
+      "bytes": 3899,
+      "sha256": "fc1955908ecc6c3e12d0907e58f79e0b65d86253be1ae9c22c8f209894c44d44",
+      "sha1Base32": "TTOJT4VAN6BKNOJHFKC65O7XNJHL5CSB",
+      "cdx": {
+        "urlkey": "kr,or,kesic,contest)/lboard/pds/kesic10/face.zip",
+        "timestamp": "20060826164342",
+        "original": "http://contest.kesic.or.kr/lboard/pds/kesic10/face.zip",
+        "mimetype": "application/x-zip-compressed",
+        "statuscode": "200",
+        "digest": "TTOJT4VAN6BKNOJHFKC65O7XNJHL5CSB",
+        "length": "4023"
+      },
+      "cdxSha1MatchesPayload": true,
+      "allZipCrcVerified": true,
+      "fileCount": 5,
+      "validFileCount": 5,
+      "memberExtensionCounts": {
+        ".cpp": 3,
+        ".h": 2
+      },
+      "declaredTotalUncompressedBytes": 8866,
+      "selectedMembers": []
+    },
+    {
+      "file": "contest-corpidea-zip.raw",
+      "bytes": 11973201,
+      "sha256": "ed501e5d05ab3297c94ab5aa4f117838635ef13c21509c200f8cad71f1d7b938",
+      "sha1Base32": "MZ6ZXVQ6EEM2UNBANEIYGPXR5PDP6Q2X",
+      "cdx": {
+        "urlkey": "kr,or,kesic,contest)/samukuk/corp_idea.zip",
+        "timestamp": "20070901173301",
+        "original": "http://contest.kesic.or.kr/samukuk/corp_idea.zip",
+        "mimetype": "application/x-zip-compressed",
+        "statuscode": "200",
+        "digest": "MZ6ZXVQ6EEM2UNBANEIYGPXR5PDP6Q2X",
+        "length": "11951030"
+      },
+      "cdxSha1MatchesPayload": true,
+      "allZipCrcVerified": false,
+      "fileCount": 102,
+      "validFileCount": 99,
+      "memberExtensionCounts": {
+        ".doc": 54,
+        ".hwp": 44,
+        ".pdf": 2,
+        ".ppt": 2
+      },
+      "declaredTotalUncompressedBytes": 17843532,
+      "selectedMembers": [
+        {
+          "decodedName": "(030)WIBRO를 이용한 퍼즐 게임 구현.hwp",
+          "declaredBytes": 111616,
+          "declaredCrc32": "e9ba6e1b",
+          "bytes": 111616,
+          "sha256": "b41034b76bac4674cee4084d0f648b6b744258352bd717f17f1a5182278157a7",
+          "crcVerified": true
+        },
+        {
+          "decodedName": "(031)GNEX 기반의 휴대폰용 게임 연구 제작.hwp",
+          "declaredBytes": 30720,
+          "declaredCrc32": "d52c53ab",
+          "bytes": 30720,
+          "sha256": "06d4262b71adab3da6be820db2de2bd05254e3e6f302be4ad7dedec893f18e0e",
+          "crcVerified": true
+        },
+        {
+          "decodedName": "(094)900MHz대역 RFID Reader용 ASK 모뎀 보드의 설계 실습.doc",
+          "declaredBytes": 32768,
+          "declaredCrc32": "e62f4fe2",
+          "crcVerified": false,
+          "error": "error: Error -3 while decompressing data: invalid distance too far back"
+        },
+        {
+          "decodedName": "(125)bulverde pxa270기반 실시간 FFT System구현.doc",
+          "declaredBytes": 1823232,
+          "declaredCrc32": "635343b7",
+          "crcVerified": false,
+          "error": "BadZipFile: Bad CRC-32 for file '(125)bulverde pxa270▒Γ╣▌ ╜╟╜├░ú FFT System▒╕╟÷.doc'"
+        },
+        {
+          "decodedName": "(213)운동프로그램관리제어시스템.doc",
+          "declaredBytes": 1089024,
+          "declaredCrc32": "b8b951cb",
+          "crcVerified": false,
+          "error": "BadZipFile: Bad CRC-32 for file '(213)┐ε╡┐╟┴╖╬▒╫╖Ñ░ⁿ╕«┴ª╛ε╜├╜║┼█.doc'"
+        }
+      ]
+    }
+  ],
+  "independentSevenZipTests": [
+    {
+      "file": "contest-face-zip.raw",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "file": "contest-corpidea-zip.raw",
+      "exitCode": 2,
+      "passed": false
+    }
+  ],
+  "selectedDocumentAnalysis": [
+    {
+      "memberPrefix": "(031)",
+      "role": "IT Mentor project-template proposal, not a finished game or SDK",
+      "subject": "GNEX-based phone game research and creation",
+      "plannedPeriodVerbatim": "2006.03 ~ 2006.09",
+      "technicalFindings": [
+        "A proposed Music Playing Game based on Mobile C and GNEX SDK.",
+        "Proposed workflow: emulator testing, upload to a download test server, download to a handset and run on-device."
+      ],
+      "namedHandsetModels": [],
+      "method": "Read-only HWP OLE PrvText stream through xlrd.compdoc; preview is not a full-page visual conversion.",
+      "privacy": "Names, phone numbers and other contact fields were not exported."
+    },
+    {
+      "memberPrefix": "(030)",
+      "role": "WiBro puzzle-game project idea",
+      "technicalFindings": [
+        "The preview proposes Windows CE and Embedded Visual C++.",
+        "This route is not established as a GNEX/SGS implementation merely because it is in the same contest archive."
+      ],
+      "method": "Read-only HWP OLE PrvText stream through xlrd.compdoc."
+    },
+    {
+      "archive": "contest-face-zip.raw",
+      "role": "Five C++ source/header files",
+      "findings": [
+        "CRC-valid files are main.cpp, screen.cpp, shape.cpp, screen.h and shape.h.",
+        "The observed includes are standard C++ and local shape/screen headers; no SDK installer, SGS or firmware member is listed.",
+        "The sample was not compiled or executed and is not classified as a GNEX emulator."
+      ]
+    }
+  ],
+  "contestCandidateIndex": {
+    "source": {
+      "name": "contest-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=contest.kesic.or.kr%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28%5C.zip%7C%5C.alz%7C%5C.hwp%7C%5C.pdf%7Cgnex%7Cgvm%7Cresult%7Caward%29.%2A&from=2004&to=2007&collapse=urlkey&limit=100",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/cdx/search/cdx?url=contest.kesic.or.kr%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28%5C.zip%7C%5C.alz%7C%5C.hwp%7C%5C.pdf%7Cgnex%7Cgvm%7Cresult%7Caward%29.%2A&from=2004&to=2007&collapse=urlkey&limit=100",
+      "bytes": 13955,
+      "sha256": "2bd9ef9586d0d110e3ead6f0b5c0dd2015fcfe6305a7e39d7c7f17e71d7b92a1",
+      "contentType": "application/json"
+    },
+    "rows": [
+      ["urlkey", "timestamp", "original", "mimetype", "statuscode", "digest", "length"],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/%b9%b0%b7%f9%b0%e6%b1%e2%c0%e5%bc%f6%c1%a4.pdf",
+        "20040915131348",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/ë¬¼ë¥ê²½ê¸°ì¥ìì .pdf",
+        "application/pdf",
+        "200",
+        "SIBEYNVVUNK6JL2BL3ZMEJDLXR5Y47C6",
+        "176517"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/%c0%d3%ba%a3%b5%f0%b5%e5%bc%d2%c7%c1%c6%ae%bf%fe%be%ee%20%b1%b9%b3%bb%bf%dc%20%b1%e2%bc%fa%b5%bf%c7%e2.pdf",
+        "20040625032718",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/ìë² ëëìíí¸ì¨ì´%20êµ­ë´ì¸%20ê¸°ì ëí¥.pdf",
+        "application/pdf",
+        "200",
+        "C6RBDVUTZ537YZPVHV3LAFURXW5OJZ4Q",
+        "88887"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/%c0%d3%ba%a3%b5%f0%b5%e5%bc%d2%c7%c1%c6%ae%bf%fe%be%ee%20%b1%e2%bc%fa%b0%b3%b9%df%20%c3%df%c1%f8%b0%e8%c8%b9.pdf",
+        "20040311073149",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/ìë² ëëìíí¸ì¨ì´%20ê¸°ì ê°ë°%20ì¶ì§ê³í.pdf",
+        "application/pdf",
+        "200",
+        "GIC4J47OEZUGQEU6VGJQZ4YBL63FK7A3",
+        "89402"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/%c0%fc%c0%da%be%f7%b0%e8%bf%a1%bc%ad%20%b9%d9%b6%f3%ba%bb%20%c0%d3%ba%a3%b5%f0%b5%e5%bc%d2%c7%c1%c6%ae%bf%fe%be%ee.pdf",
+        "20040515090229",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/ì ììê³ìì%20ë°ë¼ë³¸%20ìë² ëëìíí¸ì¨ì´.pdf",
+        "application/pdf",
+        "200",
+        "FDFBAZQFWJF5FP4EO32DNO7IBDQA5AHU",
+        "75635"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/%c1%a62%c8%b8%c0%d3%ba%a3%b5%f0%b5%e5%b0%f8%b8%f0%b4%eb%c0%fc%ba%ea%b7%ce%bc%c5.pdf",
+        "20040620225148",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/ì 2íìë² ëëê³µëª¨ëì ë¸ë¡ì.pdf",
+        "application/pdf",
+        "200",
+        "7DX7IPQBAAAPED6BBVP6NIOMQGIOM67S",
+        "1940521"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/%c1%f6%c1%a4%b0%f8%b8%f0%c1%d6%c1%a62-p2p%bc%ad%ba%f1%bd%ba(97).pdf",
+        "20040705041038",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/ì§ì ê³µëª¨ì£¼ì 2-P2Pìë¹ì¤(97).pdf",
+        "application/pdf",
+        "200",
+        "TLFLMHAZAQUQ77S75W3B3E73GDH6K5VZ",
+        "195016"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/01_%c1%f6%c1%a4%b0%f8%b8%f0%b9%df%c7%a5%c0%da%b7%e1.pdf",
+        "20040730063407",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/01_ì§ì ê³µëª¨ë°íìë£.pdf",
+        "application/pdf",
+        "200",
+        "AJ2LLJLU6TDNBMIFEQSY4I7OWRQM3BIS",
+        "266910"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/1%c0%d3%ba%a3%b5%f0%b5%e5%bc%d2%c7%c1%c6%ae%bf%fe%be%ee%bb%ea%be%f7it%bc%ba%c0%e5%c0%c7%20%b1%e2%b9%dd%bb%ea%be%f7%c0%b8%b7%ce%20%c1%fd%c1%df%20%c0%b0%bc%ba.pdf",
+        "20040625032000",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/1ìë² ëëìíí¸ì¨ì´ì°ìITì±ì¥ì%20ê¸°ë°ì°ìì¼ë¡%20ì§ì¤%20ì¡ì±.pdf",
+        "application/pdf",
+        "200",
+        "DATK2EN7J3OF77E37TBOUQHC2HV5UWHH",
+        "65738"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/2%b5%f0%c1%f6%c5%d0%20%b9%e6%bc%db%20%bc%f6%bd%c5%b1%e2%bf%eb%20%c0%d3%ba%a3%b5%f0%b5%e5%bc%d2%c7%c1%c6%ae%bf%fe%be%ee%20%c7%f6%c8%b2.pdf",
+        "20040622230529",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/2ëì§í¸%20ë°©ì¡%20ìì ê¸°ì©%20ìë² ëëìíí¸ì¨ì´%20íí©.pdf",
+        "application/pdf",
+        "200",
+        "7Q6J6EQCTOUJONYFME3BQOVEGLHBP2FB",
+        "110477"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/dnw050a.alz",
+        "20040812023746",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/dnw050a.alz",
+        "application/octet-stream",
+        "200",
+        "QMZNFN2C2PKZFHVXGQMFXNGZR6IRUZRK",
+        "2069263"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/embedded_linux-chapter13_start_kernel_3.pdf",
+        "20041212013206",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/Embedded_Linux-chapter13_start_kernel_3.pdf",
+        "application/pdf",
+        "200",
+        "C6BFZGLCYMSEAHILJ4XRQUWOCP3CIY7D",
+        "18289"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/embeddedlinux%c5%bd%bb%f6%bf%ac%b1%b8.pdf",
+        "20041212031021",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/embeddedlinuxÄ¹ËÅ¥Ã¶Å¼Å¹ÄÂ¸.pdf",
+        "application/pdf",
+        "200",
+        "ZBYXAGBBKYNHMSVK7EYQX7Y2L6TUTTO6",
+        "2095003"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/linuxkerneinternel.pdf",
+        "20041212034452",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/LinuxKerneInternel.pdf",
+        "application/pdf",
+        "200",
+        "X2SUUS2KCRDN24WYKOP6UZF2SYBP62D4",
+        "109610"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/lkp.pdf",
+        "20041212022606",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/lkp.pdf",
+        "application/pdf",
+        "200",
+        "QFOVD4KDKP3WZ3Z2CGSBUCQUKDWBPLFJ",
+        "386644"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/snull.alz",
+        "20040225075339",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/snull.alz",
+        "application/octet-stream",
+        "200",
+        "ZHSSDF6CILN4JZTNSEKALT3MMHN2RLYK",
+        "16594"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/thelinuxkernelapi.pdf",
+        "20041212022902",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/TheLinuxKernelAPI.pdf",
+        "application/pdf",
+        "200",
+        "DN5ZJQACTA3WSMUSG3VP2PYLGPMH5DBG",
+        "174865"
+      ],
+      [
+        "kr,or,kesic,contest)/dataroom/pdsfile/vxworks_rtlinux_perfomancedata.pdf",
+        "20040715060059",
+        "http://contest.kesic.or.kr:80/dataroom/pdsfile/VxWorks_RTLinux_PerfomanceData.pdf",
+        "application/pdf",
+        "200",
+        "4WLMFS2AQRMUEKPMODMXGJ4FJKQBAQ7R",
+        "85574"
+      ],
+      [
+        "kr,or,kesic,contest)/down/1.hwp",
+        "20060819064912",
+        "http://contest.kesic.or.kr/down/1.hwp",
+        "application/octet-stream",
+        "200",
+        "DDGNMQSEILTKEI4XFTDYEXRNOSRGS7WC",
+        "11727"
+      ],
+      [
+        "kr,or,kesic,contest)/down/2.hwp",
+        "20060819064956",
+        "http://contest.kesic.or.kr/down/2.hwp",
+        "application/octet-stream",
+        "200",
+        "EGTEDR4ZNBN5OSWBPH7LF2NJK4KNJZ5O",
+        "11745"
+      ],
+      [
+        "kr,or,kesic,contest)/down/3.hwp",
+        "20060819064936",
+        "http://contest.kesic.or.kr/down/3.hwp",
+        "application/octet-stream",
+        "200",
+        "AUVYF5B2RPBLDCFMT4THSKLS2KFDA65I",
+        "17904"
+      ],
+      [
+        "kr,or,kesic,contest)/down/s1.hwp",
+        "20060819051718",
+        "http://contest.kesic.or.kr/down/s1.hwp",
+        "application/octet-stream",
+        "200",
+        "BM7RZ3QXONPIK5SDNTDZ6STHAGCGXXMA",
+        "317464"
+      ],
+      [
+        "kr,or,kesic,contest)/down/s2.hwp",
+        "20060819051742",
+        "http://contest.kesic.or.kr/down/s2.hwp",
+        "application/octet-stream",
+        "200",
+        "OQVGCU6B65WBSPZB6MSRHHYH6O33KKQK",
+        "7270"
+      ],
+      [
+        "kr,or,kesic,contest)/down/smdk2440.pdf",
+        "20060512093447",
+        "http://contest.kesic.or.kr:80/down/SMDK2440.pdf",
+        "application/pdf",
+        "200",
+        "7CF353Z3W6XK2LSWZ2EFCLK6VN6JB67H",
+        "4605038"
+      ],
+      [
+        "kr,or,kesic,contest)/lboard/pds/kesic1/estk2440-uart2-20060724.zip",
+        "20060819054637",
+        "http://contest.kesic.or.kr/lboard/pds/kesic1/estk2440-uart2-20060724.zip",
+        "application/x-zip-compressed",
+        "200",
+        "6XJOTBOS2THRYRDDUTOJIC62MXRXOAFB",
+        "705"
+      ],
+      [
+        "kr,or,kesic,contest)/lboard/pds/kesic1/uimage-estk-uart2.zip",
+        "20060819051633",
+        "http://contest.kesic.or.kr/lboard/pds/kesic1/uImage-estk-uart2.zip",
+        "application/x-zip-compressed",
+        "200",
+        "N67QN3OLXIBJ7VFV2EQXQ4QQOXXQ72NF",
+        "1341297"
+      ],
+      [
+        "kr,or,kesic,contest)/lboard/pds/kesic10/face.zip",
+        "20060826164342",
+        "http://contest.kesic.or.kr/lboard/pds/kesic10/face.zip",
+        "application/x-zip-compressed",
+        "200",
+        "TTOJT4VAN6BKNOJHFKC65O7XNJHL5CSB",
+        "4023"
+      ],
+      [
+        "kr,or,kesic,contest)/lboard/pds/kesic3/smdk2440-sound-20060807.zip",
+        "20060821173430",
+        "http://contest.kesic.or.kr/lboard/pds/kesic3/smdk2440-sound-20060807.zip",
+        "application/x-zip-compressed",
+        "200",
+        "L2CSJXMD6QLQBU3IZCYCONDP3NHWP453",
+        "25718"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%b0%df%c7%d0%b0%f8%c1%f6.pdf",
+        "20040116232208",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ê²¬íê³µì§.pdf",
+        "application/pdf",
+        "200",
+        "3DL4WFU6LIUZX4YHQMMT4V3ZCBEOZUCS",
+        "138830"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%bc%f6%bb%f3%c8%ae%c0%ce%bc%ad(sample).pdf",
+        "20040715045350",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ììíì¸ì(sample).pdf",
+        "application/pdf",
+        "200",
+        "HOMTDIS5JYNJAMY5RPV5VIWWAAXT3DQJ",
+        "91837"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%be%c8%b3%bb%b9%ae.pdf",
+        "20040524162506",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ìë´ë¬¸.pdf",
+        "application/pdf",
+        "200",
+        "3PJXF5LLBS3RDE3UGTTODDU4BF5NFZBM",
+        "6471"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%c1%a62%c8%b8%c0%d3%ba%a3%b5%f0%b5%e5%b0%f8%b8%f0%b4%eb%c0%fc%ba%ea%b7%ce%bc%c5.pdf",
+        "20040626191133",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ì 2íìë² ëëê³µëª¨ëì ë¸ë¡ì.PDF",
+        "application/pdf",
+        "200",
+        "7DX7IPQBAAAPED6BBVP6NIOMQGIOM67S",
+        "1940517"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%c1%f6%c1%a4%b0%f8%b8%f0%c1%d6%c1%a61-%b9%ab%c0%ce%c0%da%b5%bf%c2%f7.pdf",
+        "20040626201727",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ì§ì ê³µëª¨ì£¼ì 1-ë¬´ì¸ìëì°¨.pdf",
+        "application/pdf",
+        "200",
+        "W6VSSSPISC547VJ7B34MFRPJXOZWW3QP",
+        "161353"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%c1%f6%c1%a4%b0%f8%b8%f0%c1%d6%c1%a61-%b9%ab%c0%ce%c0%da%b5%bf%c2%f71.pdf",
+        "20040626211547",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ì§ì ê³µëª¨ì£¼ì 1-ë¬´ì¸ìëì°¨1.pdf",
+        "application/pdf",
+        "200",
+        "W6VSSSPISC547VJ7B34MFRPJXOZWW3QP",
+        "161352"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%c1%f6%c1%a4%b0%f8%b8%f0%c1%d6%c1%a61-p2p.pdf",
+        "20040627230801",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ì§ì ê³µëª¨ì£¼ì 1-P2P.pdf",
+        "application/pdf",
+        "200",
+        "6M3QGM6JSLPR5LRXA65GGO3YJKBIHSMD",
+        "95255"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%c1%f6%c1%a4%b0%f8%b8%f0%c1%d6%c1%a61-p2p1.pdf",
+        "20040626174239",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ì§ì ê³µëª¨ì£¼ì 1-P2P1.pdf",
+        "application/pdf",
+        "200",
+        "6M3QGM6JSLPR5LRXA65GGO3YJKBIHSMD",
+        "95258"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/%c1%f6%c1%a4%b0%f8%b8%f0%c1%d6%c1%a62-p2p%bc%ad%ba%f1%bd%ba(97).pdf",
+        "20040807000925",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/ì§ì ê³µëª¨ì£¼ì 2-P2Pìë¹ì¤(97).pdf",
+        "application/pdf",
+        "200",
+        "TLFLMHAZAQUQ77S75W3B3E73GDH6K5VZ",
+        "195017"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/07_%bc%ad%b7%f9_%b5%a5%b8%f0%bd%c9%bb%e7%20%bf%ee%bf%b5%20%b9%d7%20%bd%c9%bb%e7_1109.pdf",
+        "20041207112247",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/07_ìë¥_ë°ëª¨ì¬ì¬%20ì´ì%20ë°%20ì¬ì¬_1109.pdf",
+        "application/pdf",
+        "200",
+        "ZLDXBT3Y4FTVZYF3K2RLZMK37TAXET53",
+        "1324943"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/embedded_contest.pdf",
+        "20040110191000",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/embedded_contest.PDF",
+        "application/pdf",
+        "200",
+        "LCI7REQG5WQFBTBINTMUFQMZR6ODKMLN",
+        "1498224"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/s3c2440_%bf%e4%be%e0.pdf",
+        "20040627212024",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/S3C2440_ìì½.pdf",
+        "application/pdf",
+        "200",
+        "2OXHWECK5TWOEEPIR3Z7KPYO2FSLTQON",
+        "68381"
+      ],
+      [
+        "kr,or,kesic,contest)/notice/pdsfile/s3c2440_2003111.pdf",
+        "20040626212802",
+        "http://contest.kesic.or.kr:80/notice/pdsfile/S3C2440_2003111.pdf",
+        "application/pdf",
+        "200",
+        "FINVBZNNPFPK6EW3B2F76O7Z5ORCIKAU",
+        "1139730"
+      ],
+      [
+        "kr,or,kesic,contest)/samukuk/corp_idea.zip",
+        "20070901173301",
+        "http://contest.kesic.or.kr/samukuk/corp_idea.zip",
+        "application/x-zip-compressed",
+        "200",
+        "MZ6ZXVQ6EEM2UNBANEIYGPXR5PDP6Q2X",
+        "11951030"
+      ],
+      [
+        "kr,or,kesic,contest)/temp/subject1.pdf",
+        "20040807001039",
+        "http://contest.kesic.or.kr:80/temp/subject1.pdf",
+        "application/pdf",
+        "200",
+        "W6VSSSPISC547VJ7B34MFRPJXOZWW3QP",
+        "161335"
+      ],
+      [
+        "kr,or,kesic,contest)/temp/subject2.pdf",
+        "20040807000124",
+        "http://contest.kesic.or.kr:80/temp/subject2.pdf",
+        "application/pdf",
+        "200",
+        "6M3QGM6JSLPR5LRXA65GGO3YJKBIHSMD",
+        "95243"
+      ]
+    ],
+    "limits": "43 indexed paths from this bounded query; only the two selected ZIP payloads were downloaded. Other paths were not inspected as file contents."
+  },
+  "requestLedger": [
+    {
+      "name": "contest-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=contest.kesic.or.kr%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28%5C.zip%7C%5C.alz%7C%5C.hwp%7C%5C.pdf%7Cgnex%7Cgvm%7Cresult%7Caward%29.%2A&from=2004&to=2007&collapse=urlkey&limit=100",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/cdx/search/cdx?url=contest.kesic.or.kr%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28%5C.zip%7C%5C.alz%7C%5C.hwp%7C%5C.pdf%7Cgnex%7Cgvm%7Cresult%7Caward%29.%2A&from=2004&to=2007&collapse=urlkey&limit=100",
+      "bytes": 13955,
+      "sha256": "2bd9ef9586d0d110e3ead6f0b5c0dd2015fcfe6305a7e39d7c7f17e71d7b92a1",
+      "contentType": "application/json"
+    },
+    {
+      "name": "mdstec-mediaon-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=mdstec.com%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28mediaon%7Cxeovia%7Cmmsp2%7Cvelos%29.%2A&from=2004&to=2007&collapse=urlkey&limit=100",
+      "error": "The read operation timed out"
+    },
+    {
+      "name": "alticast-hevm-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=alticast.com%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28gnex%7Chevm%7Csinji%29.%2A&from=2003&to=2007&collapse=urlkey&limit=100",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/cdx/search/cdx?url=alticast.com%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&filter=urlkey%3A.%2A%28gnex%7Chevm%7Csinji%29.%2A&from=2003&to=2007&collapse=urlkey&limit=100",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "contentType": "application/json"
+    },
+    {
+      "name": "contest-face-zip",
+      "url": "https://web.archive.org/web/20060826164342id_/http://contest.kesic.or.kr/lboard/pds/kesic10/face.zip",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/web/20060826164342id_/http://contest.kesic.or.kr/lboard/pds/kesic10/face.zip",
+      "bytes": 3899,
+      "sha256": "fc1955908ecc6c3e12d0907e58f79e0b65d86253be1ae9c22c8f209894c44d44",
+      "contentType": "application/x-zip-compressed"
+    },
+    {
+      "name": "contest-corpidea-zip",
+      "url": "https://web.archive.org/web/20070901173301id_/http://contest.kesic.or.kr/samukuk/corp_idea.zip",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/web/20070901173301id_/http://contest.kesic.or.kr/samukuk/corp_idea.zip",
+      "bytes": 11973201,
+      "sha256": "ed501e5d05ab3297c94ab5aa4f117838635ef13c21509c200f8cad71f1d7b938",
+      "contentType": "application/x-zip-compressed"
+    },
+    {
+      "name": "gnex-contest-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=g-nex.com%2F%2A&matchType=domain&output=json&filter=statuscode%3A200&from=2004&to=2007&collapse=urlkey&limit=150",
+      "status": 503,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "sinji-contest2005",
+      "url": "https://www.newswire.co.kr/newsRead.php?no=78536",
+      "status": 200,
+      "finalUrl": "https://www.newswire.co.kr/newsRead.php?no=78536",
+      "bytes": 97069,
+      "sha256": "05d969814179f247aac9437eb87cd5b2ac80ff182aa8f34bcadf0db42adea257",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "gnex-contest-origin",
+      "url": "http://www.g-nex.com/",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1006)>"
+    },
+    {
+      "name": "mds-velos-search",
+      "url": "https://www.mdstech.co.kr/search?searchTag=Velos",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/Inquiry",
+      "bytes": 274951,
+      "sha256": "613f0af64cfcbc3c8f982103702029906de74c299710fd6451fe3db662b4efd5",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-mediaon-search",
+      "url": "https://www.mdstech.co.kr/search?searchTag=MediaOn",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/Inquiry",
+      "bytes": 274951,
+      "sha256": "613f0af64cfcbc3c8f982103702029906de74c299710fd6451fe3db662b4efd5",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-xeovia-search",
+      "url": "https://www.mdstech.co.kr/search?searchTag=XEOVIA",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/Inquiry",
+      "bytes": 274951,
+      "sha256": "613f0af64cfcbc3c8f982103702029906de74c299710fd6451fe3db662b4efd5",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-633",
+      "url": "https://www.mdstech.co.kr/notice/633",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice/633",
+      "bytes": 265578,
+      "sha256": "9bb334e85af3a9ab124d2b6e2d85fca8ac2736943c2c6ef8c12ed94e06b45bba",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-604",
+      "url": "https://www.mdstech.co.kr/notice/604",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice/604",
+      "bytes": 261356,
+      "sha256": "eb9a051c1a52fb1320f26e582b6e2f2a8b1831f22d63fefcf0757ac3718c2be8",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-648",
+      "url": "https://www.mdstech.co.kr/notice/648",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice/648",
+      "bytes": 266064,
+      "sha256": "5ab39d9127f18beaff5ed45b02a4e5d2fa365205e64049a89451ca37e51e6ce3",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-velos-board",
+      "url": "https://www.mdstech.co.kr/notice?cntPerPage=100&curPage=1&srchKey=cn&srchText=Velos",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice?cntPerPage=100&curPage=1&srchKey=cn&srchText=Velos",
+      "bytes": 255855,
+      "sha256": "23bb3ccfcf00218d9930c39830ff29c9a34ec6865cc8a85b2ab53af09f50b51f",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-mediaon-board",
+      "url": "https://www.mdstech.co.kr/notice?cntPerPage=100&curPage=1&srchKey=cn&srchText=MediaOn",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice?cntPerPage=100&curPage=1&srchKey=cn&srchText=MediaOn",
+      "bytes": 252552,
+      "sha256": "e84c291467a0d7492fa0fd94897bf5a5f083dbddfbaaf49e5b399442b7d6c87a",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-sinji-board",
+      "url": "https://www.mdstech.co.kr/notice?cntPerPage=100&curPage=1&srchKey=cn&srchText=%EC%8B%A0%EC%A7%80",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice?cntPerPage=100&curPage=1&srchKey=cn&srchText=%EC%8B%A0%EC%A7%80",
+      "bytes": 253196,
+      "sha256": "7a83f4c430eace9c926f519f2c87b07d529af8fc40cef9ab62951705f9c48abb",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "dmb-mhp-gnex",
+      "url": "https://n.news.naver.com/mnews/article/030/0000075928",
+      "status": 200,
+      "finalUrl": "https://n.news.naver.com/mnews/article/030/0000075928",
+      "bytes": 289527,
+      "sha256": "04bdc45a3561689db19e01220581a818fe1e703814d83b7636410f1729091cc7",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "name": "mediaon-etnews",
+      "url": "https://n.news.naver.com/mnews/article/030/0000081598",
+      "status": 200,
+      "finalUrl": "https://n.news.naver.com/mnews/article/030/0000081598",
+      "bytes": 287765,
+      "sha256": "0578bc47ea5b1b5f7ea743f7dd2ad0453d0594fd8028fde9dad3d51595924091",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "name": "sinji-vision2005",
+      "url": "https://www.etnews.com/200501200234",
+      "status": 200,
+      "finalUrl": "https://www.etnews.com/200501200234",
+      "bytes": 49760,
+      "sha256": "81e4784198b031c60a7a522358a7125b8601bc4c216c39b54ac4c171014ac1e6",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "alticast-home",
+      "url": "https://www.alticast.com/",
+      "status": 200,
+      "finalUrl": "https://www.alticast.com/",
+      "bytes": 51,
+      "sha256": "b0f072e13ab293b7600601c9be1f34e27f97cadcbcd4ae2d094d71bec849766f",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "mds-history",
+      "url": "https://www.mdstech.co.kr/history",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/history",
+      "bytes": 249762,
+      "sha256": "05d92ea03d13f3f71055639d020752f808f660108459fe1780afa4af4ff236f4",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-irdata",
+      "url": "https://www.mdstech.co.kr/irdata",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/irdata",
+      "bytes": 256851,
+      "sha256": "c4234ab591cb7b19b0fca3bc64e5dd26c2e199170be0e572af5476de28a07e99",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-irdata-oldest",
+      "url": "https://www.mdstech.co.kr/irdata?cntPerPage=10&curPage=15",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/irdata?cntPerPage=10&curPage=15",
+      "bytes": 256160,
+      "sha256": "1c4a3718f1545a0a9dfd30b4c626851bfc3ba034eb7c18535cfc9a2cecf1040f",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-irdata-mediaon",
+      "url": "https://www.mdstech.co.kr/irdata?cntPerPage=100&curPage=1&srchKey=cn&srchText=MediaOn",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/irdata?cntPerPage=100&curPage=1&srchKey=cn&srchText=MediaOn",
+      "bytes": 251418,
+      "sha256": "da3c16a6b9012d0e79fa17bd8ae0ac7ccb1d7d8c868551cabed6c7a313acbc16",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-irdata-velos",
+      "url": "https://www.mdstech.co.kr/irdata?cntPerPage=100&curPage=1&srchKey=cn&srchText=Velos",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/irdata?cntPerPage=100&curPage=1&srchKey=cn&srchText=Velos",
+      "bytes": 251416,
+      "sha256": "bd2a7bfd266dc66b6df0221f2f90f5e465b7558624dc0040baebfb7c2b8d754e",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-608",
+      "url": "https://www.mdstech.co.kr/notice/608",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/notice/608",
+      "bytes": 272865,
+      "sha256": "3232b7878f722f1e8f0c99880b7d74fe1df3cad43343d4a0a4f24a86c42fb384",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-data",
+      "url": "https://www.mdstech.co.kr/techdata",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/Inquiry",
+      "bytes": 274951,
+      "sha256": "613f0af64cfcbc3c8f982103702029906de74c299710fd6451fe3db662b4efd5",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "etnews-sitemap-20040901",
+      "url": "https://m.etnews.com/sitemap.html?d=01&m=09&y=2004",
+      "status": 200,
+      "finalUrl": "https://m.etnews.com/sitemap.html?d=01&m=09&y=2004",
+      "bytes": 50102,
+      "sha256": "01070c0d9b9386f923386506c37683c43489c9b2db3cc7c8f91a6ccafe4e6541",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "mds-irbook2006-page",
+      "url": "https://www.mdstech.co.kr/irdata/3906",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/irdata/3906",
+      "bytes": 259808,
+      "sha256": "c84272be6682146a865f2d9c2af4ac1cf996259bc71a07f5f0e5071a6568914a",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "alticast-main",
+      "url": "https://www.alticast.com/main.html",
+      "status": 200,
+      "finalUrl": "https://www.alticast.com/main.html",
+      "bytes": 25865,
+      "sha256": "5661dcd752640ac90b1debcbbf156f6da83570ef79509bd0285c51f5c7c52318",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "mds-reference-velos",
+      "url": "https://www.mdstech.co.kr/reference?cntPerPage=100&curPage=1&srchKey=cn&srchText=Velos",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/reference?cntPerPage=100&curPage=1&srchKey=cn&srchText=Velos",
+      "bytes": 251662,
+      "sha256": "4d0b37ed9a6df94434885fc3cadfcf655209db9a2ed391fd9baab36295020500",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "mds-reference-mediaon",
+      "url": "https://www.mdstech.co.kr/reference?cntPerPage=100&curPage=1&srchKey=cn&srchText=MediaOn",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/reference?cntPerPage=100&curPage=1&srchKey=cn&srchText=MediaOn",
+      "bytes": 251664,
+      "sha256": "30687e1eeccd87d92c7fcf0d819ba673a64099ba6357e9eb40284c15a7d9f6a4",
+      "contentType": "text/html;charset=UTF-8"
+    },
+    {
+      "name": "dmb-alliance",
+      "url": "https://www.etnews.com/200408310079",
+      "status": 200,
+      "finalUrl": "https://www.etnews.com/200408310079",
+      "bytes": 50032,
+      "sha256": "1e23ca37af2a6ae5f522061c7612976c46a02bb54759c8cdb1d6bf217772c2b0",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "contest-origin",
+      "url": "http://contest.kesic.or.kr/",
+      "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
+    },
+    {
+      "name": "mds-irbook2006",
+      "url": "https://www.mdstech.co.kr/comm/getFile?srvcId=BBSTY1&upperNo=3906&fileTy=ATTACH&fileNo=1",
+      "status": 200,
+      "finalUrl": "https://www.mdstech.co.kr/comm/getFile?srvcId=BBSTY1&upperNo=3906&fileTy=ATTACH&fileNo=1",
+      "bytes": 5946674,
+      "sha256": "dd0ef280dfa56e90999c220a5423a0771afbe8448ab49158451d3d99cfba54c4",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "name": "alticast-history",
+      "url": "http://www.alticast.com/about/about03.html",
+      "status": 200,
+      "finalUrl": "https://www.alticast.com/about/about03.html",
+      "bytes": 18662,
+      "sha256": "a3b31ca8a35985d6d5da90d7a8539367cfb4065c7f2b6f4d1a05fd0dceb00bc1",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "alticast-news",
+      "url": "http://www.alticast.com/bbs/?bm_sid=1&SearchCate=News",
+      "status": 200,
+      "finalUrl": "https://www.alticast.com/bbs/?bm_sid=1&SearchCate=News",
+      "bytes": 20638,
+      "sha256": "a636ef063fc6b6fbc59dac6a246552423a72598c245bf9e9b64c4cfa3c0047cd",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "name": "alticast-actual-history",
+      "url": "http://www.alticast.com/about/about02.html",
+      "status": 200,
+      "finalUrl": "https://www.alticast.com/about/about02.html",
+      "bytes": 20448,
+      "sha256": "dc6088bffbe559ba3c1fd0ef45edbb6b9f2c31d2e14558090ba37bb7f70494c7",
+      "contentType": "text/html; charset=UTF-8"
+    }
+  ],
+  "limitations": [
+    "MDS direct search parameters did not produce a reliable historical result set; template/contact redirects are not treated as meaningful negative search evidence.",
+    "Alticast current history/news pages did not add an exact historical receiver model; a present-day partner logo does not prove a GNEX installation.",
+    "The mdstec.com MediaOn CDX query timed out. The g-nex.com CDX query returned 503, and its live origin request failed TLS expiry validation. Validation was not disabled and failures were not retried in a loop.",
+    "contest.kesic.or.kr live-origin DNS failed; the CDX index and two archived payloads nevertheless succeeded. The Alticast HEVM CDX query returned an empty JSON array for that exact bounded query.",
+    "corp_idea.zip matches its CDX digest but has three independently confirmed bad members. It is not a fully verified ZIP, and no bytes were repaired, reconstructed, or called original after repair.",
+    "The 102-member corp_idea container was inventoried. CRC-valid selected HWP previews were read; embedded OLE objects, every full document layout, and all 41 remaining indexed paths were not exhaustively analyzed.",
+    "No downloaded vendor executable, macro, firmware or game was run. No whole contest archive or participant contact data is republished in this evidence."
+  ]
+}

@@ -1,0 +1,5267 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-11-05T16:26:40.456382+00:00",
+  "scope": "Bounded candidate join of positive LG/SKY/Pantech-Curitel/VK workbook rows and the relevant completed GNEX Zone cards against five already captured public brand indexes. Observations, directories, listing bytes and locally hashed basename candidates are separate evidence levels.",
+  "counts": {
+    "positiveWorkbookRows": 98,
+    "zoneCardObservations": 31,
+    "totalSourceObservations": 129,
+    "brandIndexInputs": 5,
+    "directoryEntriesInCapturedIndexes": 1100,
+    "matchedCandidateDirectories": 24,
+    "sourceObservationsWithDirectoryCandidate": 34,
+    "sourceObservationsWithoutExactKeyDirectory": 95,
+    "subdirectoryOrSupportHttpAttemptsRecorded": 14,
+    "http200IndexPayloads": 12,
+    "distinctLocalArchiveCandidatesRehashed": 11,
+    "newFirmwarePayloadsDownloaded": 0,
+    "newSgsPayloads": 0,
+    "newSgsScansRun": 0
+  },
+  "sourceInputs": [
+    {
+      "repositoryPath": "validation/gvm-historical-handset-guides.json",
+      "commit": "915025625540411b2aa669d9090d93dd07f724f7",
+      "gitBlobSha1": "81b8866f1b8303b772cf76beab5dd591164635b4",
+      "gitFileBytes": 287242,
+      "gitFileSha256": "722fa6f9c709392b7d972b5b476bc958543f616aa10e593e52327f4321515d2a",
+      "workingCopyAudit": {
+        "path": "outputs/KPEX100-Reunion/validation/gvm-historical-handset-guides.json",
+        "bytes": 287242,
+        "sha256": "722fa6f9c709392b7d972b5b476bc958543f616aa10e593e52327f4321515d2a"
+      },
+      "lineEndingNote": "Git file hashes identify committed bytes. Working-copy JSON bytes may differ only by checkout line endings; source rows are referenced independently by JSON pointer."
+    },
+    {
+      "repositoryPath": "validation/gnex-zone-handsets.json",
+      "commit": "915025625540411b2aa669d9090d93dd07f724f7",
+      "gitBlobSha1": "a87ff44f96e4d57a6cdd94e2601560195ef24c6d",
+      "gitFileBytes": 77064,
+      "gitFileSha256": "d81c8de5e9206837ce8051c5c442a7e4260b199cdc5f74b8197527f737f9b9fb",
+      "workingCopyAudit": {
+        "path": "outputs/KPEX100-Reunion/validation/gnex-zone-handsets.json",
+        "bytes": 77064,
+        "sha256": "d81c8de5e9206837ce8051c5c442a7e4260b199cdc5f74b8197527f737f9b9fb"
+      },
+      "lineEndingNote": "Git file hashes identify committed bytes. Working-copy JSON bytes may differ only by checkout line endings; source rows are referenced independently by JSON pointer."
+    }
+  ],
+  "normalization": {
+    "purpose": "Candidate directory search only, never an alias or firmware-variant assertion.",
+    "steps": [
+      "Take text before the first parenthesis for the candidate search key only.",
+      "Strip a leading LG or SKY label, case-fold to uppercase, remove punctuation and spacing.",
+      "Match the resulting full key only within allowed manufacturer buckets; keep original labels and all source rows separately.",
+      "Do not trim model suffixes C, M, V, Dv, W or merge PG/PH, SK/IM, carrier variants or Upgrade names."
+    ],
+    "importantLimit": "An IM-5000 Worldcup/WI-TOP row may lead to the base IM-5000 directory. That does not establish that any archive in it covers the indicated variant."
+  },
+  "parentIndexes": [
+    {
+      "manufacturer": "LG",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "input": {
+        "path": "work/device-hunt-round4-phones/indexes/Firmwares__LG.html",
+        "bytes": 235747,
+        "sha256": "063b8b445eb0d111e5686ee56e5e79ed4c83d643ebbba4b55beccb1f3f09930e"
+      },
+      "acquisition": "Previously received anonymous public index; local bytes rehashed in this audit. This record does not claim a new HTTP request."
+    },
+    {
+      "manufacturer": "SKY",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "input": {
+        "path": "work/sky-early-firmware/sunderland-SKY.html",
+        "bytes": 10036,
+        "sha256": "3e542b8e5603ea22273201e5a3048c0eacb14b851216f57d622f436cd011d113"
+      },
+      "acquisition": "Previously received anonymous public index; local bytes rehashed in this audit. This record does not claim a new HTTP request."
+    },
+    {
+      "manufacturer": "Pantech",
+      "url": "https://archive.sunderland93.ru/Firmwares/Pantech/",
+      "input": {
+        "path": "work/sky-early-firmware/sunderland-Pantech.html",
+        "bytes": 12539,
+        "sha256": "ea8624efc1849d0537308deaa6e982c4c7c5832657c30e0ddb8e7aa9762ea377"
+      },
+      "acquisition": "Previously received anonymous public index; local bytes rehashed in this audit. This record does not claim a new HTTP request."
+    },
+    {
+      "manufacturer": "Curitel",
+      "url": "https://archive.sunderland93.ru/Firmwares/Curitel/",
+      "input": {
+        "path": "work/device-hunt-round4-phones/indexes/Firmwares__Curitel.html",
+        "bytes": 2556,
+        "sha256": "64ee7b0897fe56b341295aac215a4e66c163677e317f365e3cb89ce09f41bbd1"
+      },
+      "acquisition": "Previously received anonymous public index; local bytes rehashed in this audit. This record does not claim a new HTTP request."
+    },
+    {
+      "manufacturer": "VK Mobile",
+      "url": "https://archive.sunderland93.ru/Firmwares/VK%20Mobile/",
+      "input": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__VK_Mobile.html",
+        "bytes": 3506,
+        "sha256": "d40b03fd2d01e3f84dc39b80757da0d6a9f3747c0ccb6be06b454369f0a5f5c9"
+      },
+      "acquisition": "Previously received anonymous public index; local bytes rehashed in this audit. This record does not claim a new HTTP request."
+    }
+  ],
+  "directoryRequests": [
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD200/",
+      "checkedUtc": "2026-11-05T12:58:53.593635+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/LG/SD200/", "1874"],
+      "bytes": 1874,
+      "sha256": "74782d16de4b78e6d8ee5e29f4193cf9f33a2cdd16c8a24770d1c3376e355ec2",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-125905.json",
+        "bytes": 3194,
+        "sha256": "fa0d26046baac091dad1e9118d0ccbf5a341e21e54477c0e824f301244588e4a"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__LG__SD200.html",
+        "bytes": 1874,
+        "sha256": "74782d16de4b78e6d8ee5e29f4193cf9f33a2cdd16c8a24770d1c3376e355ec2"
+      },
+      "archiveLinks": ["https://archive.sunderland93.ru/Firmwares/LG/SD200/SX40W339_memory.7z"]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1100/",
+      "checkedUtc": "2026-11-05T12:59:05.019186+00:00",
+      "exitCode": 28,
+      "response": ["000", "https://archive.sunderland93.ru/Firmwares/LG/SD1100/", "0"],
+      "error": "curl: (28) Connection timed out after 12007 milliseconds\n",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-125905.json",
+        "bytes": 3194,
+        "sha256": "fa0d26046baac091dad1e9118d0ccbf5a341e21e54477c0e824f301244588e4a"
+      }
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1200/",
+      "checkedUtc": "2026-11-05T12:58:53.522531+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/LG/SD1200/", "1861"],
+      "bytes": 1861,
+      "sha256": "145d3911b1a287f24e202ed3162d9c810f2e6aff00e08dd4dc6d81f9308ea813",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-125905.json",
+        "bytes": 3194,
+        "sha256": "fa0d26046baac091dad1e9118d0ccbf5a341e21e54477c0e824f301244588e4a"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__LG__SD1200.html",
+        "bytes": 1861,
+        "sha256": "145d3911b1a287f24e202ed3162d9c810f2e6aff00e08dd4dc6d81f9308ea813"
+      },
+      "archiveLinks": ["https://archive.sunderland93.ru/Firmwares/LG/SD1200/SD120I05.7z"]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/VK%20Mobile/",
+      "checkedUtc": "2026-11-05T12:58:53.625232+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/VK%20Mobile/", "3506"],
+      "bytes": 3506,
+      "sha256": "d40b03fd2d01e3f84dc39b80757da0d6a9f3747c0ccb6be06b454369f0a5f5c9",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-125905.json",
+        "bytes": 3194,
+        "sha256": "fa0d26046baac091dad1e9118d0ccbf5a341e21e54477c0e824f301244588e4a"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__VK_Mobile.html",
+        "bytes": 3506,
+        "sha256": "d40b03fd2d01e3f84dc39b80757da0d6a9f3747c0ccb6be06b454369f0a5f5c9"
+      },
+      "archiveLinks": []
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1100/",
+      "checkedUtc": "2026-11-05T13:00:44.814331+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/LG/SD1100/", "2115"],
+      "bytes": 2115,
+      "sha256": "3b72110e15d2986d73242c23ecf0afaf71f39059dbba0dc6f5f77c7581c9ae3b",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130045.json",
+        "bytes": 7675,
+        "sha256": "f4b8b8002b0790fda695977a754e201a3c42e5b67ae571d1ece3bc39be35e168"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__LG__SD1100.html",
+        "bytes": 2115,
+        "sha256": "3b72110e15d2986d73242c23ecf0afaf71f39059dbba0dc6f5f77c7581c9ae3b"
+      },
+      "archiveLinks": [
+        "https://archive.sunderland93.ru/Firmwares/LG/SD1100/SD110I40_memory.7z",
+        "https://archive.sunderland93.ru/Firmwares/LG/SD1100/SD110I42.7z"
+      ]
+    },
+    {
+      "url": "https://lg-firmwares.com/lg-sd340-firmwares/",
+      "checkedUtc": "2026-11-05T13:00:44.946085+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://lg-firmwares.com/lg-sd340-firmwares/", "38165"],
+      "bytes": 38165,
+      "sha256": "aa38aa31b8aa8f053cd62d15a6ebf679d04e05d9ddd5d72e076bcc4f29b8b978",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130045.json",
+        "bytes": 7675,
+        "sha256": "f4b8b8002b0790fda695977a754e201a3c42e5b67ae571d1ece3bc39be35e168"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/lg-sd340-firmwares.html",
+        "bytes": 38165,
+        "sha256": "aa38aa31b8aa8f053cd62d15a6ebf679d04e05d9ddd5d72e076bcc4f29b8b978"
+      },
+      "archiveLinks": []
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1000/",
+      "checkedUtc": "2026-11-05T13:02:44.488718+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/LG/SD1000/", "1861"],
+      "bytes": 1861,
+      "sha256": "d982fbb75839897ae31b93c77cb5e40e94cd969d879a1f2d99af3394d060c0b7",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__LG__SD1000.html",
+        "bytes": 1861,
+        "sha256": "d982fbb75839897ae31b93c77cb5e40e94cd969d879a1f2d99af3394d060c0b7"
+      },
+      "archiveLinks": ["https://archive.sunderland93.ru/Firmwares/LG/SD1000/SD430I13.7z"]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1600/",
+      "checkedUtc": "2026-11-05T13:02:44.436144+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/LG/SD1600/", "1863"],
+      "bytes": 1863,
+      "sha256": "a8f4c55be284c87f6a10bc746ae0b4eef23af2e2bd00125f924f4a09de0a2d39",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__LG__SD1600.html",
+        "bytes": 1863,
+        "sha256": "a8f4c55be284c87f6a10bc746ae0b4eef23af2e2bd00125f924f4a09de0a2d39"
+      },
+      "archiveLinks": ["https://archive.sunderland93.ru/Firmwares/LG/SD1600/LG-SD1600.7z"]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD810/",
+      "checkedUtc": "2026-11-05T13:02:44.436144+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/LG/SD810/", "2171"],
+      "bytes": 2171,
+      "sha256": "61920bef2c1c3fdcc2847ff3275dee2c54d175005f3d93548b0f7b12c5c620ec",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__LG__SD810.html",
+        "bytes": 2171,
+        "sha256": "61920bef2c1c3fdcc2847ff3275dee2c54d175005f3d93548b0f7b12c5c620ec"
+      },
+      "archiveLinks": [
+        "https://archive.sunderland93.ru/Firmwares/LG/SD810/SXS1V306%20%5BMemory%20Dump%5D.7z",
+        "https://archive.sunderland93.ru/Firmwares/LG/SD810/SXS2V309%20%5BMemory%20Dump%5D.7z"
+      ]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD9220/",
+      "checkedUtc": "2026-11-05T13:02:44.424311+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/LG/SD9220/", "1921"],
+      "bytes": 1921,
+      "sha256": "5841d7e127d0faa4fe18d796eee8cfde794a8d5f6f1f8be4a8e50ca847a5bdec",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__LG__SD9220.html",
+        "bytes": 1921,
+        "sha256": "5841d7e127d0faa4fe18d796eee8cfde794a8d5f6f1f8be4a8e50ca847a5bdec"
+      },
+      "archiveLinks": [
+        "https://archive.sunderland93.ru/Firmwares/LG/SD9220/SX601318%20%5BIncomplete%20Memory%20dump%5D.7z"
+      ]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-5400/",
+      "checkedUtc": "2026-11-05T13:02:56.457551+00:00",
+      "exitCode": 28,
+      "response": ["000", "https://archive.sunderland93.ru/Firmwares/SKY/IM-5400/", "0"],
+      "error": "curl: (28) Connection timed out after 12005 milliseconds\n",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      }
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/",
+      "checkedUtc": "2026-11-05T13:02:44.865186+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/", "2149"],
+      "bytes": 2149,
+      "sha256": "c008d1d3e8771413a6887df19b759087b80d5deda69e348759d197f5a0f1ec96",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__SKY__IM-6500.html",
+        "bytes": 2149,
+        "sha256": "c008d1d3e8771413a6887df19b759087b80d5deda69e348759d197f5a0f1ec96"
+      },
+      "archiveLinks": [
+        "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/IM6500_S0129143_usa.7z",
+        "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/IM6500_S0129150_usa.7z"
+      ]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/",
+      "checkedUtc": "2026-11-05T13:02:44.852358+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/", "2180"],
+      "bytes": 2180,
+      "sha256": "943aa0d02c314531c85349ef7785cfd5fc713afce3a83c3ead64d9c4bbd22b52",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__SKY__IM-7200.html",
+        "bytes": 2180,
+        "sha256": "943aa0d02c314531c85349ef7785cfd5fc713afce3a83c3ead64d9c4bbd22b52"
+      },
+      "archiveLinks": [
+        "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/7200_16mb_S0134127%20%28Korean%29.7z",
+        "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/S0134135%20%5BSKD%20file%5D.7z"
+      ]
+    },
+    {
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7300/",
+      "checkedUtc": "2026-11-05T13:02:44.909326+00:00",
+      "exitCode": 0,
+      "response": ["200", "https://archive.sunderland93.ru/Firmwares/SKY/IM-7300/", "1854"],
+      "bytes": 1854,
+      "sha256": "c312830635f7139f8f173a8f65bf2357dea380d5221b41c81b219850a15c0351",
+      "receiptInput": {
+        "path": "work/device-hunt-round5-phones/directory-receipts-130256.json",
+        "bytes": 5313,
+        "sha256": "428b34fd93d082b340fe87db184963ec4d3747a67f2cd8e680080c4d2319c9d9"
+      },
+      "receivedInput": {
+        "path": "work/device-hunt-round5-phones/indexes/Firmwares__SKY__IM-7300.html",
+        "bytes": 1854,
+        "sha256": "c312830635f7139f8f173a8f65bf2357dea380d5221b41c81b219850a15c0351"
+      },
+      "archiveLinks": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-7300/B22.7z"]
+    }
+  ],
+  "observations": [
+    {
+      "id": "xls:SKT:89",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-2100",
+      "candidateSearchKey": "IM2100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/84",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 89
+      },
+      "model": {
+        "cell": "B89",
+        "value": "IM-2100"
+      },
+      "gvmSupported": {
+        "cell": "R89",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S89",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C89",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:90",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-2200T(S)",
+      "candidateSearchKey": "IM2200T",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/85",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 90
+      },
+      "model": {
+        "cell": "B90",
+        "value": "IM-2200T(S)"
+      },
+      "gvmSupported": {
+        "cell": "R90",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S90",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C90",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:92",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-2400",
+      "candidateSearchKey": "IM2400",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/87",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 92
+      },
+      "model": {
+        "cell": "B92",
+        "value": "IM-2400"
+      },
+      "gvmSupported": {
+        "cell": "R92",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S92",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C92",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-2400/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:93",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-3000",
+      "candidateSearchKey": "IM3000",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/88",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 93
+      },
+      "model": {
+        "cell": "B93",
+        "value": "IM-3000"
+      },
+      "gvmSupported": {
+        "cell": "R93",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S93",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C93",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:94",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-3100",
+      "candidateSearchKey": "IM3100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/89",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 94
+      },
+      "model": {
+        "cell": "B94",
+        "value": "IM-3100"
+      },
+      "gvmSupported": {
+        "cell": "R94",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S94",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C94",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-3100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:95",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-3400          (IM-3000M)",
+      "candidateSearchKey": "IM3400",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/90",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 95
+      },
+      "model": {
+        "cell": "B95",
+        "value": "IM-3400          (IM-3000M)"
+      },
+      "gvmSupported": {
+        "cell": "R95",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S95",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C95",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:97",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5000",
+      "candidateSearchKey": "IM5000",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/91",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 97
+      },
+      "model": {
+        "cell": "B97",
+        "value": "IM-5000"
+      },
+      "gvmSupported": {
+        "cell": "R97",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S97",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C97",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-5000/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:98",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5100",
+      "candidateSearchKey": "IM5100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/92",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 98
+      },
+      "model": {
+        "cell": "B98",
+        "value": "IM-5100"
+      },
+      "gvmSupported": {
+        "cell": "R98",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S98",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C98",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-5100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:99",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5000\n(Worldcup)",
+      "candidateSearchKey": "IM5000",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/93",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 99
+      },
+      "model": {
+        "cell": "B99",
+        "value": "IM-5000\n(Worldcup)"
+      },
+      "gvmSupported": {
+        "cell": "R99",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S99",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C99",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-5000/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:100",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5000\n(WI-TOP)",
+      "candidateSearchKey": "IM5000",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/94",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 100
+      },
+      "model": {
+        "cell": "B100",
+        "value": "IM-5000\n(WI-TOP)"
+      },
+      "gvmSupported": {
+        "cell": "R100",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S100",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C100",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-5000/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:101",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5000\n(WI-TOP+NGB)",
+      "candidateSearchKey": "IM5000",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/95",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 101
+      },
+      "model": {
+        "cell": "B101",
+        "value": "IM-5000\n(WI-TOP+NGB)"
+      },
+      "gvmSupported": {
+        "cell": "R101",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S101",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C101",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-5000/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:102",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5300",
+      "candidateSearchKey": "IM5300",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/96",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 102
+      },
+      "model": {
+        "cell": "B102",
+        "value": "IM-5300"
+      },
+      "gvmSupported": {
+        "cell": "R102",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S102",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C102",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:103",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5300\n(MMS R/C)",
+      "candidateSearchKey": "IM5300",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/97",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 103
+      },
+      "model": {
+        "cell": "B103",
+        "value": "IM-5300\n(MMS R/C)"
+      },
+      "gvmSupported": {
+        "cell": "R103",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S103",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C103",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:104",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5400",
+      "candidateSearchKey": "IM5400",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/98",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 104
+      },
+      "model": {
+        "cell": "B104",
+        "value": "IM-5400"
+      },
+      "gvmSupported": {
+        "cell": "R104",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S104",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C104",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-5400/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:105",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-6100",
+      "candidateSearchKey": "IM6100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/99",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 105
+      },
+      "model": {
+        "cell": "B105",
+        "value": "IM-6100"
+      },
+      "gvmSupported": {
+        "cell": "R105",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S105",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C105",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-6100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:106",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-6200",
+      "candidateSearchKey": "IM6200",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/100",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 106
+      },
+      "model": {
+        "cell": "B106",
+        "value": "IM-6200"
+      },
+      "gvmSupported": {
+        "cell": "R106",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S106",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C106",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:107",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-6100\nMMS",
+      "candidateSearchKey": "IM6100MMS",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/101",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 107
+      },
+      "model": {
+        "cell": "B107",
+        "value": "IM-6100\nMMS"
+      },
+      "gvmSupported": {
+        "cell": "R107",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S107",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C107",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:108",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-6400",
+      "candidateSearchKey": "IM6400",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/102",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 108
+      },
+      "model": {
+        "cell": "B108",
+        "value": "IM-6400"
+      },
+      "gvmSupported": {
+        "cell": "R108",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S108",
+        "value": "WITOP APP."
+      },
+      "carrier": {
+        "cell": "C108",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:109",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-6400\n(UP-Grade)",
+      "candidateSearchKey": "IM6400",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/103",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 109
+      },
+      "model": {
+        "cell": "B109",
+        "value": "IM-6400\n(UP-Grade)"
+      },
+      "gvmSupported": {
+        "cell": "R109",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S109",
+        "value": "WITOP APP."
+      },
+      "carrier": {
+        "cell": "C109",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:110",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-6500",
+      "candidateSearchKey": "IM6500",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/104",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 110
+      },
+      "model": {
+        "cell": "B110",
+        "value": "IM-6500"
+      },
+      "gvmSupported": {
+        "cell": "R110",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S110",
+        "value": "WITOP APP."
+      },
+      "carrier": {
+        "cell": "C110",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:111",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-6200\n(WIPI)",
+      "candidateSearchKey": "IM6200",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/105",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 111
+      },
+      "model": {
+        "cell": "B111",
+        "value": "IM-6200\n(WIPI)"
+      },
+      "gvmSupported": {
+        "cell": "R111",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S111",
+        "value": "WITOP APP."
+      },
+      "carrier": {
+        "cell": "C111",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:112",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM-5000M",
+      "candidateSearchKey": "IM5000M",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/106",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 112
+      },
+      "model": {
+        "cell": "B112",
+        "value": "IM-5000M"
+      },
+      "gvmSupported": {
+        "cell": "R112",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S112",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C112",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:113",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM7100",
+      "candidateSearchKey": "IM7100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/107",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 113
+      },
+      "model": {
+        "cell": "B113",
+        "value": "IM7100"
+      },
+      "gvmSupported": {
+        "cell": "R113",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S113",
+        "value": "WITOP APP."
+      },
+      "carrier": {
+        "cell": "C113",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:114",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK Teletech",
+      "modelLiteral": "IM7200",
+      "candidateSearchKey": "IM7200",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/108",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 114
+      },
+      "model": {
+        "cell": "B114",
+        "value": "IM7200"
+      },
+      "gvmSupported": {
+        "cell": "R114",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S114",
+        "value": "WITOP APP."
+      },
+      "carrier": {
+        "cell": "C114",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:152",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "CX-300V",
+      "candidateSearchKey": "CX300V",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/141",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 152
+      },
+      "model": {
+        "cell": "B152",
+        "value": "CX-300V"
+      },
+      "gvmSupported": {
+        "cell": "R152",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S152",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C152",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/CX300V/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:154",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-D3000",
+      "candidateSearchKey": "D3000",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/143",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 154
+      },
+      "model": {
+        "cell": "B154",
+        "value": "LG-D3000"
+      },
+      "gvmSupported": {
+        "cell": "R154",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S154",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C154",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:155",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "Cyber-5000",
+      "candidateSearchKey": "CYBER5000",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/144",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 155
+      },
+      "model": {
+        "cell": "B155",
+        "value": "Cyber-5000"
+      },
+      "gvmSupported": {
+        "cell": "R155",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S155",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C155",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:157",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "Cyber-VX2",
+      "candidateSearchKey": "CYBERVX2",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/145",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 157
+      },
+      "model": {
+        "cell": "B157",
+        "value": "Cyber-VX2"
+      },
+      "gvmSupported": {
+        "cell": "R157",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S157",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C157",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:159",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "CX-300Dv",
+      "candidateSearchKey": "CX300DV",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/146",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 159
+      },
+      "model": {
+        "cell": "B159",
+        "value": "CX-300Dv"
+      },
+      "gvmSupported": {
+        "cell": "R159",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S159",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C159",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:160",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1000     (D430) ",
+      "candidateSearchKey": "SD1000",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/147",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 160
+      },
+      "model": {
+        "cell": "B160",
+        "value": "LG-SD1000     (D430) "
+      },
+      "gvmSupported": {
+        "cell": "R160",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S160",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C160",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1000/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:162",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD2002",
+      "candidateSearchKey": "SD2002",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/148",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 162
+      },
+      "model": {
+        "cell": "B162",
+        "value": "LG-SD2002"
+      },
+      "gvmSupported": {
+        "cell": "R162",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S162",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C162",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:163",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "Cyber-6000",
+      "candidateSearchKey": "CYBER6000",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/149",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 163
+      },
+      "model": {
+        "cell": "B163",
+        "value": "Cyber-6000"
+      },
+      "gvmSupported": {
+        "cell": "R163",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S163",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C163",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:164",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1010   (D431)",
+      "candidateSearchKey": "SD1010",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/150",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 164
+      },
+      "model": {
+        "cell": "B164",
+        "value": "LG-SD1010   (D431)"
+      },
+      "gvmSupported": {
+        "cell": "R164",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S164",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C164",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:165",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1020   (D430C)",
+      "candidateSearchKey": "SD1020",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/151",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 165
+      },
+      "model": {
+        "cell": "B165",
+        "value": "LG-SD1020   (D430C)"
+      },
+      "gvmSupported": {
+        "cell": "R165",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S165",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C165",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1020/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:166",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD100        (S415)",
+      "candidateSearchKey": "SD100",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/152",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 166
+      },
+      "model": {
+        "cell": "B166",
+        "value": "LG-SD100        (S415)"
+      },
+      "gvmSupported": {
+        "cell": "R166",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S166",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C166",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:167",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1100      (S100)",
+      "candidateSearchKey": "SD1100",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/153",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 167
+      },
+      "model": {
+        "cell": "B167",
+        "value": "LG-SD1100      (S100)"
+      },
+      "gvmSupported": {
+        "cell": "R167",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S167",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C167",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:168",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD2100      (S100)",
+      "candidateSearchKey": "SD2100",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/154",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 168
+      },
+      "model": {
+        "cell": "B168",
+        "value": "LG-SD2100      (S100)"
+      },
+      "gvmSupported": {
+        "cell": "R168",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S168",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C168",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:169",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1110\n(S100F)",
+      "candidateSearchKey": "SD1110",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/155",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 169
+      },
+      "model": {
+        "cell": "B169",
+        "value": "LG-SD1110\n(S100F)"
+      },
+      "gvmSupported": {
+        "cell": "R169",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S169",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C169",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:170",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1000\nUpgrade",
+      "candidateSearchKey": "SD1000UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/156",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 170
+      },
+      "model": {
+        "cell": "B170",
+        "value": "LG-SD1000\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R170",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S170",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C170",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:171",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1010\nUpgrade",
+      "candidateSearchKey": "SD1010UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/157",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 171
+      },
+      "model": {
+        "cell": "B171",
+        "value": "LG-SD1010\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R171",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S171",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C171",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:172",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD2002\nUpgrade",
+      "candidateSearchKey": "SD2002UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/158",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 172
+      },
+      "model": {
+        "cell": "B172",
+        "value": "LG-SD2002\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R172",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S172",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C172",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:173",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1020\nUpgrade",
+      "candidateSearchKey": "SD1020UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/159",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 173
+      },
+      "model": {
+        "cell": "B173",
+        "value": "LG-SD1020\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R173",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S173",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C173",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:174",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1200\n(S200)",
+      "candidateSearchKey": "SD1200",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/160",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 174
+      },
+      "model": {
+        "cell": "B174",
+        "value": "LG-SD1200\n(S200)"
+      },
+      "gvmSupported": {
+        "cell": "R174",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S174",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C174",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1200/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:175",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1250\n(S250)",
+      "candidateSearchKey": "SD1250",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/161",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 175
+      },
+      "model": {
+        "cell": "B175",
+        "value": "LG-SD1250\n(S250)"
+      },
+      "gvmSupported": {
+        "cell": "R175",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S175",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C175",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1250/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:176",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1100\n(Upgade1)",
+      "candidateSearchKey": "SD1100",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/162",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 176
+      },
+      "model": {
+        "cell": "B176",
+        "value": "LG-SD1100\n(Upgade1)"
+      },
+      "gvmSupported": {
+        "cell": "R176",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S176",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C176",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:177",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1300\n(S300)",
+      "candidateSearchKey": "SD1300",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/163",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 177
+      },
+      "model": {
+        "cell": "B177",
+        "value": "LG-SD1300\n(S300)"
+      },
+      "gvmSupported": {
+        "cell": "R177",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S177",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C177",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:178",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1600\n(S350)",
+      "candidateSearchKey": "SD1600",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/164",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 178
+      },
+      "model": {
+        "cell": "B178",
+        "value": "LG-SD1600\n(S350)"
+      },
+      "gvmSupported": {
+        "cell": "R178",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S178",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C178",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1600/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:179",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV110\n(SHX2)",
+      "candidateSearchKey": "SV110",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/165",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 179
+      },
+      "model": {
+        "cell": "B179",
+        "value": "LG-SV110\n(SHX2)"
+      },
+      "gvmSupported": {
+        "cell": "R179",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S179",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C179",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:180",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV9120\n(SHX2F)",
+      "candidateSearchKey": "SV9120",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/166",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 180
+      },
+      "model": {
+        "cell": "B180",
+        "value": "LG-SV9120\n(SHX2F)"
+      },
+      "gvmSupported": {
+        "cell": "R180",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S180",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C180",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:181",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1100\nUpgrade 2",
+      "candidateSearchKey": "SD1100UPGRADE2",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/167",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 181
+      },
+      "model": {
+        "cell": "B181",
+        "value": "LG-SD1100\nUpgrade 2"
+      },
+      "gvmSupported": {
+        "cell": "R181",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S181",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C181",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:182",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD2100\nUpgrade",
+      "candidateSearchKey": "SD2100UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/168",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 182
+      },
+      "model": {
+        "cell": "B182",
+        "value": "LG-SD2100\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R182",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S182",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C182",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:183",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1110\nUpgrade",
+      "candidateSearchKey": "SD1110UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/169",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 183
+      },
+      "model": {
+        "cell": "B183",
+        "value": "LG-SD1110\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R183",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S183",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C183",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:184",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "HX-2\n(MMS test용)",
+      "candidateSearchKey": "HX2",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/170",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 184
+      },
+      "model": {
+        "cell": "B184",
+        "value": "HX-2\n(MMS test용)"
+      },
+      "gvmSupported": {
+        "cell": "R184",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S184",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C184",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:185",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD2200\n(S201)",
+      "candidateSearchKey": "SD2200",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/171",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 185
+      },
+      "model": {
+        "cell": "B185",
+        "value": "LG-SD2200\n(S201)"
+      },
+      "gvmSupported": {
+        "cell": "R185",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S185",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C185",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:186",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD2500\n(S301)",
+      "candidateSearchKey": "SD2500",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/172",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 186
+      },
+      "model": {
+        "cell": "B186",
+        "value": "LG-SD2500\n(S301)"
+      },
+      "gvmSupported": {
+        "cell": "R186",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S186",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C186",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:187",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1500\n(S310)",
+      "candidateSearchKey": "SD1500",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/173",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 187
+      },
+      "model": {
+        "cell": "B187",
+        "value": "LG-SD1500\n(S310)"
+      },
+      "gvmSupported": {
+        "cell": "R187",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S187",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C187",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:188",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD200\n(S400)\nWIPI (SD200W)",
+      "candidateSearchKey": "SD200",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/174",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 188
+      },
+      "model": {
+        "cell": "B188",
+        "value": "LG-SD200\n(S400)\nWIPI (SD200W)"
+      },
+      "gvmSupported": {
+        "cell": "R188",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S188",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C188",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD200/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:189",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV120\n(SHX2V)",
+      "candidateSearchKey": "SV120",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/175",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 189
+      },
+      "model": {
+        "cell": "B189",
+        "value": "LG-SV120\n(SHX2V)"
+      },
+      "gvmSupported": {
+        "cell": "R189",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S189",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C189",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:190",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV110\nUpgrade",
+      "candidateSearchKey": "SV110UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/176",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 190
+      },
+      "model": {
+        "cell": "B190",
+        "value": "LG-SV110\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R190",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S190",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C190",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:191",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV9120\nUpgrade",
+      "candidateSearchKey": "SV9120UPGRADE",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/177",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 191
+      },
+      "model": {
+        "cell": "B191",
+        "value": "LG-SV9120\nUpgrade"
+      },
+      "gvmSupported": {
+        "cell": "R191",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S191",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C191",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:192",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD9200\n(S401)",
+      "candidateSearchKey": "SD9200",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/178",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 192
+      },
+      "model": {
+        "cell": "B192",
+        "value": "LG-SD9200\n(S401)"
+      },
+      "gvmSupported": {
+        "cell": "R192",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S192",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C192",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:193",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SV130(SHX3)",
+      "candidateSearchKey": "SV130",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/179",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 193
+      },
+      "model": {
+        "cell": "B193",
+        "value": "SV130(SHX3)"
+      },
+      "gvmSupported": {
+        "cell": "R193",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S193",
+        "value": "GNex1x\n(GIGA)"
+      },
+      "carrier": {
+        "cell": "C193",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SV130/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:194",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD210\n(S500)",
+      "candidateSearchKey": "SD210",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/180",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 194
+      },
+      "model": {
+        "cell": "B194",
+        "value": "LG-SD210\n(S500)"
+      },
+      "gvmSupported": {
+        "cell": "R194",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S194",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C194",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:195",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD810\n(SKT1)",
+      "candidateSearchKey": "SD810",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/181",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 195
+      },
+      "model": {
+        "cell": "B195",
+        "value": "LG-SD810\n(SKT1)"
+      },
+      "gvmSupported": {
+        "cell": "R195",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S195",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C195",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD810/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:196",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SD220\n(S600)",
+      "candidateSearchKey": "SD220",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/182",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 196
+      },
+      "model": {
+        "cell": "B196",
+        "value": "SD220\n(S600)"
+      },
+      "gvmSupported": {
+        "cell": "R196",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S196",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C196",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:198",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD9210\n(S500U)",
+      "candidateSearchKey": "SD9210",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/184",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 198
+      },
+      "model": {
+        "cell": "B198",
+        "value": "LG-SD9210\n(S500U)"
+      },
+      "gvmSupported": {
+        "cell": "R198",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S198",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C198",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:199",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD815\n(SKT1U)",
+      "candidateSearchKey": "SD815",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/185",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 199
+      },
+      "model": {
+        "cell": "B199",
+        "value": "LG-SD815\n(SKT1U)"
+      },
+      "gvmSupported": {
+        "cell": "R199",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S199",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C199",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:200",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SD200W(S400W) WIPI",
+      "candidateSearchKey": "SD200W",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/186",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 200
+      },
+      "model": {
+        "cell": "B200",
+        "value": "SD200W(S400W) WIPI"
+      },
+      "gvmSupported": {
+        "cell": "R200",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S200",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C200",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:201",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SD9220(S600U)",
+      "candidateSearchKey": "SD9220",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/187",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 201
+      },
+      "model": {
+        "cell": "B201",
+        "value": "SD9220(S600U)"
+      },
+      "gvmSupported": {
+        "cell": "R201",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S201",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C201",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD9220/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:SKT:202",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SD230(S700)",
+      "candidateSearchKey": "SD230",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/188",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 202
+      },
+      "model": {
+        "cell": "B202",
+        "value": "SD230(S700)"
+      },
+      "gvmSupported": {
+        "cell": "R202",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S202",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C202",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:203",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SD9230(S700U)",
+      "candidateSearchKey": "SD9230",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/189",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 203
+      },
+      "model": {
+        "cell": "B203",
+        "value": "SD9230(S700U)"
+      },
+      "gvmSupported": {
+        "cell": "R203",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S203",
+        "value": "2.0"
+      },
+      "carrier": {
+        "cell": "C203",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:204",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SV140(SHX4)",
+      "candidateSearchKey": "SV140",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/190",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 204
+      },
+      "model": {
+        "cell": "B204",
+        "value": "SV140(SHX4)"
+      },
+      "gvmSupported": {
+        "cell": "R204",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S204",
+        "value": "GNex1x\n(GIGA)"
+      },
+      "carrier": {
+        "cell": "C204",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:205",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "SV9140(SHX4U)",
+      "candidateSearchKey": "SV9140",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/191",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 205
+      },
+      "model": {
+        "cell": "B205",
+        "value": "SV9140(SHX4U)"
+      },
+      "gvmSupported": {
+        "cell": "R205",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S205",
+        "value": "GNex1x\n(GIGA)"
+      },
+      "carrier": {
+        "cell": "C205",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:213",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "HGC-R402",
+      "candidateSearchKey": "HGCR402",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/197",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 213
+      },
+      "model": {
+        "cell": "B213",
+        "value": "HGC-R402"
+      },
+      "gvmSupported": {
+        "cell": "R213",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S213",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "C213",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:214",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "DD-101",
+      "candidateSearchKey": "DD101",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/198",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 214
+      },
+      "model": {
+        "cell": "B214",
+        "value": "DD-101"
+      },
+      "gvmSupported": {
+        "cell": "R214",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S214",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C214",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:215",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "DD-500",
+      "candidateSearchKey": "DD500",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/199",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 215
+      },
+      "model": {
+        "cell": "B215",
+        "value": "DD-500"
+      },
+      "gvmSupported": {
+        "cell": "R215",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S215",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C215",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:216",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "DD-600",
+      "candidateSearchKey": "DD600",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/200",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 216
+      },
+      "model": {
+        "cell": "B216",
+        "value": "DD-600"
+      },
+      "gvmSupported": {
+        "cell": "R216",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S216",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C216",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:217",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "C-500",
+      "candidateSearchKey": "C500",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/201",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 217
+      },
+      "model": {
+        "cell": "B217",
+        "value": "C-500"
+      },
+      "gvmSupported": {
+        "cell": "R217",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S217",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C217",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:218",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "DD-630",
+      "candidateSearchKey": "DD630",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/202",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 218
+      },
+      "model": {
+        "cell": "B218",
+        "value": "DD-630"
+      },
+      "gvmSupported": {
+        "cell": "R218",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S218",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C218",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:219",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "DD-1100\n(PS-E100)",
+      "candidateSearchKey": "DD1100",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/203",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 219
+      },
+      "model": {
+        "cell": "B219",
+        "value": "DD-1100\n(PS-E100)"
+      },
+      "gvmSupported": {
+        "cell": "R219",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S219",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C219",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:220",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PS-E200",
+      "candidateSearchKey": "PSE200",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/204",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 220
+      },
+      "model": {
+        "cell": "B220",
+        "value": "PS-E200"
+      },
+      "gvmSupported": {
+        "cell": "R220",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S220",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "C220",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:221",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "S1(DD-700)",
+      "candidateSearchKey": "S1",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/205",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 221
+      },
+      "model": {
+        "cell": "B221",
+        "value": "S1(DD-700)"
+      },
+      "gvmSupported": {
+        "cell": "R221",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S221",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C221",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:222",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PG-S3000C",
+      "candidateSearchKey": "PGS3000C",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/206",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 222
+      },
+      "model": {
+        "cell": "B222",
+        "value": "PG-S3000C"
+      },
+      "gvmSupported": {
+        "cell": "R222",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S222",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C222",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:223",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PG-S1200",
+      "candidateSearchKey": "PGS1200",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/207",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 223
+      },
+      "model": {
+        "cell": "B223",
+        "value": "PG-S1200"
+      },
+      "gvmSupported": {
+        "cell": "R223",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S223",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C223",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:224",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PG-S4100",
+      "candidateSearchKey": "PGS4100",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/208",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 224
+      },
+      "model": {
+        "cell": "B224",
+        "value": "PG-S4100"
+      },
+      "gvmSupported": {
+        "cell": "R224",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S224",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C224",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:225",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PG-S4600",
+      "candidateSearchKey": "PGS4600",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/209",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 225
+      },
+      "model": {
+        "cell": "B225",
+        "value": "PG-S4600"
+      },
+      "gvmSupported": {
+        "cell": "R225",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S225",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C225",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:226",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PG-S3500C\n→ S2",
+      "candidateSearchKey": "PGS3500CS2",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/210",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 226
+      },
+      "model": {
+        "cell": "B226",
+        "value": "PG-S3500C\n→ S2"
+      },
+      "gvmSupported": {
+        "cell": "R226",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S226",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C226",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:227",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PG-S5500C",
+      "candidateSearchKey": "PGS5500C",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/211",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 227
+      },
+      "model": {
+        "cell": "B227",
+        "value": "PG-S5500C"
+      },
+      "gvmSupported": {
+        "cell": "R227",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S227",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C227",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:228",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "현대 큐리텔",
+      "modelLiteral": "PG-S5000",
+      "candidateSearchKey": "PGS5000",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/212",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 228
+      },
+      "model": {
+        "cell": "B228",
+        "value": "PG-S5000"
+      },
+      "gvmSupported": {
+        "cell": "R228",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S228",
+        "value": 2.0
+      },
+      "carrier": {
+        "cell": "C228",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:SKT:234",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "VK",
+      "modelLiteral": "VK-100",
+      "candidateSearchKey": "VK100",
+      "candidateManufacturerBuckets": ["VK Mobile"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/215",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "SKT",
+        "row": 234
+      },
+      "model": {
+        "cell": "B234",
+        "value": "VK-100"
+      },
+      "gvmSupported": {
+        "cell": "R234",
+        "value": 0.0
+      },
+      "gvmVersion": {
+        "cell": "S234",
+        "value": "2.05.02"
+      },
+      "carrier": {
+        "cell": "C234",
+        "value": "SKT"
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/VK%20Mobile/VK100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "xls:STI:29",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "Cyber-i1000A",
+      "candidateSearchKey": "CYBERI1000A",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/226",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 29
+      },
+      "model": {
+        "cell": "C29",
+        "value": "Cyber-i1000A"
+      },
+      "gvmSupported": {
+        "cell": "T29",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U29",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "D29",
+        "value": "STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:STI:30",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "Power-5000 (D401)",
+      "candidateSearchKey": "POWER5000",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/227",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 30
+      },
+      "model": {
+        "cell": "C30",
+        "value": "Power-5000 (D401)"
+      },
+      "gvmSupported": {
+        "cell": "T30",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U30",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "D30",
+        "value": "STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:STI:34",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "CX-300A     (D521)",
+      "candidateSearchKey": "CX300A",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/228",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 34
+      },
+      "model": {
+        "cell": "C34",
+        "value": "CX-300A     (D521)"
+      },
+      "gvmSupported": {
+        "cell": "T34",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U34",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "D34",
+        "value": "STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:STI:36",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-D510A",
+      "candidateSearchKey": "D510A",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/229",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 36
+      },
+      "model": {
+        "cell": "C36",
+        "value": "LG-D510A"
+      },
+      "gvmSupported": {
+        "cell": "T36",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U36",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "D36",
+        "value": "STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:STI:37",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "CX-300DA (D523)",
+      "candidateSearchKey": "CX300DA",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/230",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 37
+      },
+      "model": {
+        "cell": "C37",
+        "value": "CX-300DA (D523)"
+      },
+      "gvmSupported": {
+        "cell": "T37",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U37",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "D37",
+        "value": "STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:STI:38",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "Cyber-ix2 (D411)",
+      "candidateSearchKey": "CYBERIX2",
+      "candidateManufacturerBuckets": ["LG"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/231",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 38
+      },
+      "model": {
+        "cell": "C38",
+        "value": "Cyber-ix2 (D411)"
+      },
+      "gvmSupported": {
+        "cell": "T38",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U38",
+        "value": "2"
+      },
+      "carrier": {
+        "cell": "D38",
+        "value": "STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:STI:57",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK 텔레텍",
+      "modelLiteral": "IM-3000S",
+      "candidateSearchKey": "IM3000S",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/236",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 57
+      },
+      "model": {
+        "cell": "C57",
+        "value": "IM-3000S"
+      },
+      "gvmSupported": {
+        "cell": "T57",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U57",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "D57",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "xls:STI:59",
+      "kind": "workbook-row",
+      "manufacturerLiteral": "SK 텔레텍",
+      "modelLiteral": "IM-3100S",
+      "candidateSearchKey": "IM3100S",
+      "candidateManufacturerBuckets": ["SKY"],
+      "source": {
+        "repositoryPath": "validation/gvm-historical-handset-guides.json",
+        "jsonPointer": "/workbookProfiles/237",
+        "sourceId": "skt-sti-roster-2003",
+        "sheet": "STI",
+        "row": 59
+      },
+      "model": {
+        "cell": "C59",
+        "value": "IM-3100S"
+      },
+      "gvmSupported": {
+        "cell": "T59",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "U59",
+        "value": "1"
+      },
+      "carrier": {
+        "cell": "D59",
+        "value": "SKT/STI"
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sd1100",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD1100",
+      "candidateSearchKey": "SD1100",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/1",
+        "category": "lg_p",
+        "slug": "lg-sd1100",
+        "captureUrl": "https://web.archive.org/web/20041019110549/http://www.gnexclub.com/zone/htm/lg_p/lg-sd1100.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sd1100.htm",
+          "captureUrl": "https://web.archive.org/web/20041019110549id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sd1100.htm",
+          "captureTimestamp": "20041019110549",
+          "bytes": 5925,
+          "sha256": "7c6720884d29fdcc8c8520c1def07579587001af0b3767803b4a7e27ef0aca53",
+          "sha1Base32": "MENBAWUHX5LTTMEXCEAWGOOBHKV4LMKY",
+          "expectedCdxSha1Base32": "MENBAWUHX5LTTMEXCEAWGOOBHKV4LMKY",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sd1100.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD1100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:lg_p:lg-sd230",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD230",
+      "candidateSearchKey": "SD230",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/2",
+        "category": "lg_p",
+        "slug": "lg-sd230",
+        "captureUrl": "https://web.archive.org/web/20040811211101/http://www.gnexclub.com/zone/htm/lg_p/lg-sd230.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sd230.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211101id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sd230.htm",
+          "captureTimestamp": "20040811211101",
+          "bytes": 6497,
+          "sha256": "5ec7bfb48fb98229f6ea907ace0a407bfdf4b7831d86c08317c62db3cb28431e",
+          "sha1Base32": "AWLFHARSJAA75PHLHKGZMYQ33RCX6IHF",
+          "expectedCdxSha1Base32": "AWLFHARSJAA75PHLHKGZMYQ33RCX6IHF",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sd230.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sd330",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD330",
+      "candidateSearchKey": "SD330",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/3",
+        "category": "lg_p",
+        "slug": "lg-sd330",
+        "captureUrl": "https://web.archive.org/web/20050214012958/http://www.gnexclub.com/zone/htm/lg_p/lg-sd330.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sd330.htm",
+          "captureUrl": "https://web.archive.org/web/20050214012958id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sd330.htm",
+          "captureTimestamp": "20050214012958",
+          "bytes": 6364,
+          "sha256": "04099616e2fcd08ed4446171545e6c721d43f0312ce53cd44b59d31d9a472aef",
+          "sha1Base32": "NH2RPZJEJLXT4OKLG7PRGMSGRGN573IB",
+          "expectedCdxSha1Base32": "NH2RPZJEJLXT4OKLG7PRGMSGRGN573IB",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sd330.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sd340",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD340",
+      "candidateSearchKey": "SD340",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/4",
+        "category": "lg_p",
+        "slug": "lg-sd340",
+        "captureUrl": "https://web.archive.org/web/20050214012448/http://www.gnexclub.com/zone/htm/lg_p/lg-sd340.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com:80/zone/htm/lg_p/lg-sd340.htm",
+          "captureUrl": "https://web.archive.org/web/20050214012448id_/http://www.gnexclub.com:80/zone/htm/lg_p/lg-sd340.htm",
+          "captureTimestamp": "20050214012448",
+          "bytes": 6868,
+          "sha256": "46f04a5f107f5c51c0886f7e60e72eb0d24c030e39adb0d2dd33edc1698f7c6a",
+          "sha1Base32": "PALA5JZ3JTJGJECTRPTRAJLZGK6J56NM",
+          "expectedCdxSha1Base32": "PALA5JZ3JTJGJECTRPTRAJLZGK6J56NM",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sd340.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sd350",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD350",
+      "candidateSearchKey": "SD350",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/5",
+        "category": "lg_p",
+        "slug": "lg-sd350",
+        "captureUrl": "https://web.archive.org/web/20041019225834/http://www.gnexclub.com/zone/htm/lg_p/lg-sd350.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sd350.htm",
+          "captureUrl": "https://web.archive.org/web/20041019225834id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sd350.htm",
+          "captureTimestamp": "20041019225834",
+          "bytes": 6364,
+          "sha256": "975ff735942066885438a706dd6fbb468f53e9fe315beb8fa0df9c84b16d577a",
+          "sha1Base32": "R4KDUIKZZXLQ364W3SQX255VQ7WDDHQI",
+          "expectedCdxSha1Base32": "R4KDUIKZZXLQ364W3SQX255VQ7WDDHQI",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sd350.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sd840",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD840",
+      "candidateSearchKey": "SD840",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/6",
+        "category": "lg_p",
+        "slug": "lg-sd840",
+        "captureUrl": "https://web.archive.org/web/20040811211747/http://www.gnexclub.com/zone/htm/lg_p/lg-sd840.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sd840.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211747id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sd840.htm",
+          "captureTimestamp": "20040811211747",
+          "bytes": 6496,
+          "sha256": "d1fbd382adfe489b4fb5f709105cb6b24f7c5badbb23655c019a9e2e74515b65",
+          "sha1Base32": "PNZGYZ7EQG7FBSRHE2XVMHFMXWU3RUBJ",
+          "expectedCdxSha1Base32": "PNZGYZ7EQG7FBSRHE2XVMHFMXWU3RUBJ",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sd840.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SD840/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:lg_p:lg-sd9230",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SD9230",
+      "candidateSearchKey": "SD9230",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/7",
+        "category": "lg_p",
+        "slug": "lg-sd9230",
+        "captureUrl": "https://web.archive.org/web/20040811212148/http://www.gnexclub.com/zone/htm/lg_p/lg-sd9230.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sd9230.htm",
+          "captureUrl": "https://web.archive.org/web/20040811212148id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sd9230.htm",
+          "captureTimestamp": "20040811212148",
+          "bytes": 6562,
+          "sha256": "222f8bb21166aeed75361a327f1bbdffa4757a617b2ebfe439c5f2ef4d6e90c5",
+          "sha1Base32": "XTBVGLDAGHQUCUTBOXT2U4D5ON2GXLTW",
+          "expectedCdxSha1Base32": "XTBVGLDAGHQUCUTBOXT2U4D5ON2GXLTW",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sd9230.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sv130",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV130",
+      "candidateSearchKey": "SV130",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX (GIGA)",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/8",
+        "category": "lg_p",
+        "slug": "lg-sv130",
+        "captureUrl": "https://web.archive.org/web/20041209135210/http://www.gnexclub.com/zone/htm/lg_p/lg-sv130.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sv130.htm",
+          "captureUrl": "https://web.archive.org/web/20041209135210id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sv130.htm",
+          "captureTimestamp": "20041209135210",
+          "bytes": 7203,
+          "sha256": "d89942ef2e912a2bdfed689d12a9b3e6d88f45eb6302cb674e0547c937b647bb",
+          "sha1Base32": "6SXZQMNG3AKTOSUBGQS7AX7PQWJD4CFH",
+          "expectedCdxSha1Base32": "6SXZQMNG3AKTOSUBGQS7AX7PQWJD4CFH",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sv130.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/LG/SV130/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:lg_p:lg-sv510",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV510",
+      "candidateSearchKey": "SV510",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/9",
+        "category": "lg_p",
+        "slug": "lg-sv510",
+        "captureUrl": "https://web.archive.org/web/20041209135949/http://www.gnexclub.com/zone/htm/lg_p/lg-sv510.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sv510.htm",
+          "captureUrl": "https://web.archive.org/web/20041209135949id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sv510.htm",
+          "captureTimestamp": "20041209135949",
+          "bytes": 6419,
+          "sha256": "01524fc73da247756a4851e7c13523801bf0eb4149e6afcb082855253f62e2e2",
+          "sha1Base32": "QRXV3V47ODALK6ZBNN2D4FZM7IISWODB",
+          "expectedCdxSha1Base32": "QRXV3V47ODALK6ZBNN2D4FZM7IISWODB",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sv510.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sv9120",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV9120",
+      "candidateSearchKey": "SV9120",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/10",
+        "category": "lg_p",
+        "slug": "lg-sv9120",
+        "captureUrl": "https://web.archive.org/web/20040811213047/http://www.gnexclub.com/zone/htm/lg_p/lg-sv9120.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sv9120.htm",
+          "captureUrl": "https://web.archive.org/web/20040811213047id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sv9120.htm",
+          "captureTimestamp": "20040811213047",
+          "bytes": 7294,
+          "sha256": "89b694ad895219eee0001fc7847dbfd4ec708d29c72646316f1cd47a9056e795",
+          "sha1Base32": "BGDS42ZJGPICZL236DGTCXAMMFF2YKJC",
+          "expectedCdxSha1Base32": "BGDS42ZJGPICZL236DGTCXAMMFF2YKJC",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sv9120.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:lg_p:lg-sv9140",
+      "kind": "zone-card",
+      "manufacturerLiteral": "LG전자",
+      "modelLiteral": "LG-SV9140",
+      "candidateSearchKey": "SV9140",
+      "candidateManufacturerBuckets": ["LG"],
+      "vmLiteral": "GNEX (GIGA)",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/11",
+        "category": "lg_p",
+        "slug": "lg-sv9140",
+        "captureUrl": "https://web.archive.org/web/20050214012516/http://www.gnexclub.com/zone/htm/lg_p/lg-sv9140.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/lg_p/lg-sv9140.htm",
+          "captureUrl": "https://web.archive.org/web/20050214012516id_/http://www.gnexclub.com/zone/htm/lg_p/lg-sv9140.htm",
+          "captureTimestamp": "20050214012516",
+          "bytes": 7141,
+          "sha256": "1bcb28a1b4ccf5ea543a5b199ed714c78445e66b960dcd73390ae91439ebe4f7",
+          "sha1Base32": "B6PNM2VQQ3EVHTEUATNYK47H5FA6CMZ4",
+          "expectedCdxSha1Base32": "B6PNM2VQQ3EVHTEUATNYK47H5FA6CMZ4",
+          "cdxSha1Match": true,
+          "archivePath": "cards/lg_p/lg-sv9140.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:dd-600",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "DD-600",
+      "candidateSearchKey": "DD600",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/17",
+        "category": "pq_p",
+        "slug": "dd-600",
+        "captureUrl": "https://web.archive.org/web/20040811210553/http://www.gnexclub.com/zone/htm/pq_p/dd-600.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/dd-600.htm",
+          "captureUrl": "https://web.archive.org/web/20040811210553id_/http://www.gnexclub.com/zone/htm/pq_p/dd-600.htm",
+          "captureTimestamp": "20040811210553",
+          "bytes": 6515,
+          "sha256": "cb200fba491bb53ef07aae5f8c6da78deaafa14b5451957c1fbce72dbc004b70",
+          "sha1Base32": "DT73OAVHPWS4Z5TTHJ67ODPL65HW4G3P",
+          "expectedCdxSha1Base32": "DT73OAVHPWS4Z5TTHJ67ODPL65HW4G3P",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/dd-600.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:dd-630",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "DD-630",
+      "candidateSearchKey": "DD630",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/18",
+        "category": "pq_p",
+        "slug": "dd-630",
+        "captureUrl": "https://web.archive.org/web/20040811211000/http://www.gnexclub.com/zone/htm/pq_p/dd-630.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/dd-630.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211000id_/http://www.gnexclub.com/zone/htm/pq_p/dd-630.htm",
+          "captureTimestamp": "20040811211000",
+          "bytes": 6474,
+          "sha256": "9dae75c1a9e175d61e415e067cc38dbb60f86c9540aacff23827317e6e9706cd",
+          "sha1Base32": "W3CV7JWICTNJ4GYATGEQTLWP6NHGZHP7",
+          "expectedCdxSha1Base32": "W3CV7JWICTNJ4GYATGEQTLWP6NHGZHP7",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/dd-630.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:p1",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "P1",
+      "candidateSearchKey": "P1",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/19",
+        "category": "pq_p",
+        "slug": "p1",
+        "captureUrl": "https://web.archive.org/web/20041015175320/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+          "captureUrl": "https://web.archive.org/web/20041015175320id_/http://www.gnexclub.com/zone/htm/pq_p/p1.htm",
+          "captureTimestamp": "20041015175320",
+          "bytes": 6093,
+          "sha256": "d9f8d79028d27d340f91aaf58c7ff01ab0a7bf88c626b1e6946180b3d43158db",
+          "sha1Base32": "VHK5DRQUJXTVRRLGMCSPRXNPFTB6A2TW",
+          "expectedCdxSha1Base32": "VHK5DRQUJXTVRRLGMCSPRXNPFTB6A2TW",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/p1.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:pg-s5000",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "PG-S5000",
+      "candidateSearchKey": "PGS5000",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/20",
+        "category": "pq_p",
+        "slug": "pg-s5000",
+        "captureUrl": "https://web.archive.org/web/20040811211412/http://www.gnexclub.com/zone/htm/pq_p/pg-s5000.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/pg-s5000.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211412id_/http://www.gnexclub.com/zone/htm/pq_p/pg-s5000.htm",
+          "captureTimestamp": "20040811211412",
+          "bytes": 6446,
+          "sha256": "00c2beb7789703b141a65cabb727d79798e364cdf8abeb9686cc922a6bc7f766",
+          "sha1Base32": "O2IUQW4HM6ISXYVAIKII4RQZQM2EXVBH",
+          "expectedCdxSha1Base32": "O2IUQW4HM6ISXYVAIKII4RQZQM2EXVBH",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/pg-s5000.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:ph-s3000v",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "PH-S3000V",
+      "candidateSearchKey": "PHS3000V",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/21",
+        "category": "pq_p",
+        "slug": "ph-s3000v",
+        "captureUrl": "https://web.archive.org/web/20050214012826/http://www.gnexclub.com/zone/htm/pq_p/ph-s3000v.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/ph-s3000v.htm",
+          "captureUrl": "https://web.archive.org/web/20050214012826id_/http://www.gnexclub.com/zone/htm/pq_p/ph-s3000v.htm",
+          "captureTimestamp": "20050214012826",
+          "bytes": 6609,
+          "sha256": "f21e3219fa5d07e9171c384f2e230837a6fd3d3720a418cc7ee9de8c7cb44454",
+          "sha1Base32": "ZO6XWFMDSJAO7MTR63UPNGEQV3K56XS6",
+          "expectedCdxSha1Base32": "ZO6XWFMDSJAO7MTR63UPNGEQV3K56XS6",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/ph-s3000v.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:ph-s3500",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "PH-S3500",
+      "candidateSearchKey": "PHS3500",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GNEX(GIGA)",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/22",
+        "category": "pq_p",
+        "slug": "ph-s3500",
+        "captureUrl": "https://web.archive.org/web/20041020004756/http://www.gnexclub.com/zone/htm/pq_p/ph-s3500.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/ph-s3500.htm",
+          "captureUrl": "https://web.archive.org/web/20041020004756id_/http://www.gnexclub.com/zone/htm/pq_p/ph-s3500.htm",
+          "captureTimestamp": "20041020004756",
+          "bytes": 6093,
+          "sha256": "410b761eaea827fe8111945939d0126260dd037e4b975b20e813e2bd94eac111",
+          "sha1Base32": "52KXD3MPYDFJLOJSRSOYFTHIPRRY3HKV",
+          "expectedCdxSha1Base32": "52KXD3MPYDFJLOJSRSOYFTHIPRRY3HKV",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/ph-s3500.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:ph-s5700",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "PH-S5700",
+      "candidateSearchKey": "PHS5700",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GVM",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/23",
+        "category": "pq_p",
+        "slug": "ph-s5700",
+        "captureUrl": "https://web.archive.org/web/20050214012047/http://www.gnexclub.com/zone/htm/pq_p/ph-s5700.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/ph-s5700.htm",
+          "captureUrl": "https://web.archive.org/web/20050214012047id_/http://www.gnexclub.com/zone/htm/pq_p/ph-s5700.htm",
+          "captureTimestamp": "20050214012047",
+          "bytes": 6603,
+          "sha256": "ddab70c3e6fca72e9609b06700a3b932ad47e467de454f09d8d287c4d3725561",
+          "sha1Base32": "SX6L7GULOVRDZ47VDUQW7VIHNDNNXP2T",
+          "expectedCdxSha1Base32": "SX6L7GULOVRDZ47VDUQW7VIHNDNNXP2T",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/ph-s5700.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:pq_p:s2",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "S2",
+      "candidateSearchKey": "S2",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/24",
+        "category": "pq_p",
+        "slug": "s2",
+        "captureUrl": "https://web.archive.org/web/20040811211503/http://www.gnexclub.com/zone/htm/pq_p/s2.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/s2.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211503id_/http://www.gnexclub.com/zone/htm/pq_p/s2.htm",
+          "captureTimestamp": "20040811211503",
+          "bytes": 6475,
+          "sha256": "da28062b4b8a2663e134d3d92b14030d7413194adbfe7e85238e90f057f0384a",
+          "sha1Base32": "ILLXVKKE5LXPJ2KRR6R65LFFOKOIB7SQ",
+          "expectedCdxSha1Base32": "ILLXVKKE5LXPJ2KRR6R65LFFOKOIB7SQ",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/s2.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/Curitel/S2/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:pq_p:s4",
+      "kind": "zone-card",
+      "manufacturerLiteral": "팬택큐리텔",
+      "modelLiteral": "S4",
+      "candidateSearchKey": "S4",
+      "candidateManufacturerBuckets": ["Pantech", "Curitel"],
+      "vmLiteral": "GVM4X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/25",
+        "category": "pq_p",
+        "slug": "s4",
+        "captureUrl": "https://web.archive.org/web/20041015180810/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+          "captureUrl": "https://web.archive.org/web/20041015180810id_/http://www.gnexclub.com/zone/htm/pq_p/s4.htm",
+          "captureTimestamp": "20041015180810",
+          "bytes": 6318,
+          "sha256": "23713b727c4cbb464d1e1b2f62fe8f04e5600686f66fdd9ca03d5df846cfa35b",
+          "sha1Base32": "XXKE5WZMW434FDH2BKXCDVV6FQWMCWUB",
+          "expectedCdxSha1Base32": "XXKE5WZMW434FDH2BKXCDVV6FQWMCWUB",
+          "cdxSha1Match": true,
+          "archivePath": "cards/pq_p/s4.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:sk_p:im-3100",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-3100",
+      "candidateSearchKey": "IM3100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GVM1X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/41",
+        "category": "sk_p",
+        "slug": "im-3100",
+        "captureUrl": "https://web.archive.org/web/20040811211348/http://www.gnexclub.com/zone/htm/sk_p/im-3100.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-3100.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211348id_/http://www.gnexclub.com/zone/htm/sk_p/im-3100.htm",
+          "captureTimestamp": "20040811211348",
+          "bytes": 6595,
+          "sha256": "f980e7f72e05cc23315a3f968034e149dfaffa9757f06b9501aadfb018a7caa1",
+          "sha1Base32": "NNTEVSFYOY4YCLO67CSN5HJIL23FKAGJ",
+          "expectedCdxSha1Base32": "NNTEVSFYOY4YCLO67CSN5HJIL23FKAGJ",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-3100.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-3100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:sk_p:im-5000",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-5000",
+      "candidateSearchKey": "IM5000",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/42",
+        "category": "sk_p",
+        "slug": "im-5000",
+        "captureUrl": "https://web.archive.org/web/20040811211624/http://www.gnexclub.com/zone/htm/sk_p/im-5000.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-5000.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211624id_/http://www.gnexclub.com/zone/htm/sk_p/im-5000.htm",
+          "captureTimestamp": "20040811211624",
+          "bytes": 6039,
+          "sha256": "50b54ff2327e1698731ad7873b38771411357895e226c2dba343bae8d3b849a1",
+          "sha1Base32": "EIUYZLP6EB6RNQF42APBPNSESHCDPRSX",
+          "expectedCdxSha1Base32": "EIUYZLP6EB6RNQF42APBPNSESHCDPRSX",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-5000.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-5000/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:sk_p:im-5300",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-5300",
+      "candidateSearchKey": "IM5300",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/43",
+        "category": "sk_p",
+        "slug": "im-5300",
+        "captureUrl": "https://web.archive.org/web/20040811211852/http://www.gnexclub.com/zone/htm/sk_p/im-5300.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-5300.htm",
+          "captureUrl": "https://web.archive.org/web/20040811211852id_/http://www.gnexclub.com/zone/htm/sk_p/im-5300.htm",
+          "captureTimestamp": "20040811211852",
+          "bytes": 6552,
+          "sha256": "7b22880283e98169e136e89206acaf3e11408853d8fa6bb1f0310bb014bbf490",
+          "sha1Base32": "MFC4I3QVA7GAYUH6SACIPEJVMWTVLD2K",
+          "expectedCdxSha1Base32": "MFC4I3QVA7GAYUH6SACIPEJVMWTVLD2K",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-5300.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:sk_p:im-6100",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-6100",
+      "candidateSearchKey": "IM6100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/44",
+        "category": "sk_p",
+        "slug": "im-6100",
+        "captureUrl": "https://web.archive.org/web/20040811212446/http://www.gnexclub.com/zone/htm/sk_p/im-6100.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-6100.htm",
+          "captureUrl": "https://web.archive.org/web/20040811212446id_/http://www.gnexclub.com/zone/htm/sk_p/im-6100.htm",
+          "captureTimestamp": "20040811212446",
+          "bytes": 7172,
+          "sha256": "b72db984660b8eab75b7f3857e15189154ccf44c61a6f4f4c937dabc80e52119",
+          "sha1Base32": "M42NQWORQWP4FYBBHO36E6YMVOKG6XST",
+          "expectedCdxSha1Base32": "M42NQWORQWP4FYBBHO36E6YMVOKG6XST",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-6100.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-6100/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:sk_p:im-6400",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-6400",
+      "candidateSearchKey": "IM6400",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GVM4X (GNEX GIGA)",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/45",
+        "category": "sk_p",
+        "slug": "im-6400",
+        "captureUrl": "https://web.archive.org/web/20040811213033/http://www.gnexclub.com/zone/htm/sk_p/im-6400.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-6400.htm",
+          "captureUrl": "https://web.archive.org/web/20040811213033id_/http://www.gnexclub.com/zone/htm/sk_p/im-6400.htm",
+          "captureTimestamp": "20040811213033",
+          "bytes": 6526,
+          "sha256": "ad2f40e83054f6b93e3bacb9fa2a990affca51c409453429501e667bef29740b",
+          "sha1Base32": "ZAYSVU2UJHMMNKIWCZKTEXWHNTRRH7IX",
+          "expectedCdxSha1Base32": "ZAYSVU2UJHMMNKIWCZKTEXWHNTRRH7IX",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-6400.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:sk_p:im-7100",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-7100",
+      "candidateSearchKey": "IM7100",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/46",
+        "category": "sk_p",
+        "slug": "im-7100",
+        "captureUrl": "https://web.archive.org/web/20040811213453/http://www.gnexclub.com/zone/htm/sk_p/im-7100.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-7100.htm",
+          "captureUrl": "https://web.archive.org/web/20040811213453id_/http://www.gnexclub.com/zone/htm/sk_p/im-7100.htm",
+          "captureTimestamp": "20040811213453",
+          "bytes": 6436,
+          "sha256": "b691b817ed7f87c493380e2092f5d8114095cdfb57c97772adbfd835b99aa3bd",
+          "sha1Base32": "56Z5KZUWYWFR7F6QQYD5JROVL7VS5AVC",
+          "expectedCdxSha1Base32": "56Z5KZUWYWFR7F6QQYD5JROVL7VS5AVC",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-7100.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:sk_p:im-7200",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-7200",
+      "candidateSearchKey": "IM7200",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/47",
+        "category": "sk_p",
+        "slug": "im-7200",
+        "captureUrl": "https://web.archive.org/web/20041019222146/http://www.gnexclub.com/zone/htm/sk_p/im-7200.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-7200.htm",
+          "captureUrl": "https://web.archive.org/web/20041019222146id_/http://www.gnexclub.com/zone/htm/sk_p/im-7200.htm",
+          "captureTimestamp": "20041019222146",
+          "bytes": 6331,
+          "sha256": "8b4a99ba9e8d835845a40b3530ff3cc95d310b58ff0e4dcb4f8091d2862a4b33",
+          "sha1Base32": "GGFK5UQ7VZCXLTHT5M3VZXFVMJZORBHE",
+          "expectedCdxSha1Base32": "GGFK5UQ7VZCXLTHT5M3VZXFVMJZORBHE",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-7200.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:sk_p:im-7300",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-7300",
+      "candidateSearchKey": "IM7300",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/48",
+        "category": "sk_p",
+        "slug": "im-7300",
+        "captureUrl": "https://web.archive.org/web/20040811205819/http://www.gnexclub.com/zone/htm/sk_p/im-7300.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-7300.htm",
+          "captureUrl": "https://web.archive.org/web/20040811205819id_/http://www.gnexclub.com/zone/htm/sk_p/im-7300.htm",
+          "captureTimestamp": "20040811205819",
+          "bytes": 6440,
+          "sha256": "c627f43840351b81896cf3f3ba571c23bb1a3fc84580de91913b191fc702ec7d",
+          "sha1Base32": "ESNTLR66GEPMNYYDJKIBSJGETMS5W7N3",
+          "expectedCdxSha1Base32": "ESNTLR66GEPMNYYDJKIBSJGETMS5W7N3",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-7300.html"
+        }
+      },
+      "matchingDirectoryUrls": ["https://archive.sunderland93.ru/Firmwares/SKY/IM-7300/"],
+      "directoryJoinStatus": "candidate-directory-found"
+    },
+    {
+      "id": "zone:sk_p:im-7400",
+      "kind": "zone-card",
+      "manufacturerLiteral": "SK텔레텍",
+      "modelLiteral": "IM-7400",
+      "candidateSearchKey": "IM7400",
+      "candidateManufacturerBuckets": ["SKY"],
+      "vmLiteral": "GNEX(GIGA)",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/49",
+        "category": "sk_p",
+        "slug": "im-7400",
+        "captureUrl": "https://web.archive.org/web/20041019223449/http://www.gnexclub.com/zone/htm/sk_p/im-7400.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/sk_p/im-7400.htm",
+          "captureUrl": "https://web.archive.org/web/20041019223449id_/http://www.gnexclub.com/zone/htm/sk_p/im-7400.htm",
+          "captureTimestamp": "20041019223449",
+          "bytes": 6104,
+          "sha256": "3b100f794faad4e2dc6f6aebf112c84a343cf7bcbb6aa47afacd725989f166a4",
+          "sha1Base32": "3NIQUBXE6JIO3JHXRLJ2UYRRB33Z2EOQ",
+          "expectedCdxSha1Base32": "3NIQUBXE6JIO3JHXRLJ2UYRRB33Z2EOQ",
+          "cdxSha1Match": true,
+          "archivePath": "cards/sk_p/im-7400.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:vk_p:vk-100m",
+      "kind": "zone-card",
+      "manufacturerLiteral": "VK",
+      "modelLiteral": "VK-100M",
+      "candidateSearchKey": "VK100M",
+      "candidateManufacturerBuckets": ["VK Mobile"],
+      "vmLiteral": "GVM2X",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/50",
+        "category": "vk_p",
+        "slug": "vk-100m",
+        "captureUrl": "https://web.archive.org/web/20040811205953/http://www.gnexclub.com/zone/htm/vk_p/vk-100m.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/vk_p/vk-100m.htm",
+          "captureUrl": "https://web.archive.org/web/20040811205953id_/http://www.gnexclub.com/zone/htm/vk_p/vk-100m.htm",
+          "captureTimestamp": "20040811205953",
+          "bytes": 7030,
+          "sha256": "b2242bbc8015b5db41836adc5be321a30edb1d6ff7aad2d12b6081b2e92e243d",
+          "sha1Base32": "7KZUYZX6CXPI3DS5GKX4Q7TRAFMGNMGP",
+          "expectedCdxSha1Base32": "7KZUYZX6CXPI3DS5GKX4Q7TRAFMGNMGP",
+          "cdxSha1Match": true,
+          "archivePath": "cards/vk_p/vk-100m.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    },
+    {
+      "id": "zone:vk_p:vk-200c",
+      "kind": "zone-card",
+      "manufacturerLiteral": "VK",
+      "modelLiteral": "VK-200C",
+      "candidateSearchKey": "VK200C",
+      "candidateManufacturerBuckets": ["VK Mobile"],
+      "vmLiteral": "GNEX",
+      "source": {
+        "repositoryPath": "validation/gnex-zone-handsets.json",
+        "jsonPointer": "/handsets/51",
+        "category": "vk_p",
+        "slug": "vk-200c",
+        "captureUrl": "https://web.archive.org/web/20040811210507/http://www.gnexclub.com/zone/htm/vk_p/vk-200c.htm",
+        "rawVerification": {
+          "originalUrl": "http://www.gnexclub.com/zone/htm/vk_p/vk-200c.htm",
+          "captureUrl": "https://web.archive.org/web/20040811210507id_/http://www.gnexclub.com/zone/htm/vk_p/vk-200c.htm",
+          "captureTimestamp": "20040811210507",
+          "bytes": 7052,
+          "sha256": "f4fea1e0c138c64ccd7da36f4cff1b48f6fd7c42a0b84a78f00bfb9e7764e7b8",
+          "sha1Base32": "QVKZ6AHQRSM2GUFQRVDZRN7GXYSAZBWX",
+          "expectedCdxSha1Base32": "QVKZ6AHQRSM2GUFQRVDZRN7GXYSAZBWX",
+          "cdxSha1Match": true,
+          "archivePath": "cards/vk_p/vk-200c.html"
+        }
+      },
+      "matchingDirectoryUrls": [],
+      "directoryJoinStatus": "no-exact-key-directory-in-captured-indexes"
+    }
+  ],
+  "matchedDirectories": [
+    {
+      "manufacturer": "LG",
+      "label": "CX300V",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/CX300V/",
+      "candidateSearchKey": "CX300V",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:152"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD100",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD100/",
+      "candidateSearchKey": "SD100",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:166"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD1000",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1000/",
+      "candidateSearchKey": "SD1000",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:160"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1000/",
+          "checkedUtc": "2026-11-05T13:02:44.488718+00:00",
+          "bytes": 1861,
+          "sha256": "d982fbb75839897ae31b93c77cb5e40e94cd969d879a1f2d99af3394d060c0b7"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1000/SD430I13.7z",
+          "basename": "SD430I13.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/lg-formula-firmware/SD430I13.7z",
+              "bytes": 2211843,
+              "sha256": "e53dea8039bb07a3ef659ad2a02a4bd999e5344e8692d1e8204db6ed7d29ae61"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD1020",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1020/",
+      "candidateSearchKey": "SD1020",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:165"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD1100",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1100/",
+      "candidateSearchKey": "SD1100",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:167", "xls:SKT:176", "zone:lg_p:lg-sd1100"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1100/",
+          "checkedUtc": "2026-11-05T13:00:44.814331+00:00",
+          "bytes": 2115,
+          "sha256": "3b72110e15d2986d73242c23ecf0afaf71f39059dbba0dc6f5f77c7581c9ae3b"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1100/SD110I40_memory.7z",
+          "basename": "SD110I40_memory.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/lg-early-additional/SD110I40_memory.7z",
+              "bytes": 1909874,
+              "sha256": "6fc1424da650fda048f0b2d9719e38306cf7de0c2c9eb7d7aae17f6ba6355313"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        },
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1100/SD110I42.7z",
+          "basename": "SD110I42.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/lg-formula-firmware/SD110I42.7z",
+              "bytes": 1909998,
+              "sha256": "819eaab585e04f0e4bc7626e9e1523429983b616fb213fd2e790794c946771cc"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD1200",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1200/",
+      "candidateSearchKey": "SD1200",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:174"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1200/",
+          "checkedUtc": "2026-11-05T12:58:53.522531+00:00",
+          "bytes": 1861,
+          "sha256": "145d3911b1a287f24e202ed3162d9c810f2e6aff00e08dd4dc6d81f9308ea813"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1200/SD120I05.7z",
+          "basename": "SD120I05.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/lg-early-additional/SD120I05.7z",
+              "bytes": 2873183,
+              "sha256": "9d4a9259023013b39c321b6d61d51d39736182660c00f85a00b72d91b250e60d"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD1250",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1250/",
+      "candidateSearchKey": "SD1250",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:175"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD1600",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1600/",
+      "candidateSearchKey": "SD1600",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:178"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1600/",
+          "checkedUtc": "2026-11-05T13:02:44.436144+00:00",
+          "bytes": 1863,
+          "sha256": "a8f4c55be284c87f6a10bc746ae0b4eef23af2e2bd00125f924f4a09de0a2d39"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1600/LG-SD1600.7z",
+          "basename": "LG-SD1600.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/lg-early-additional/LG-SD1600.7z",
+              "bytes": 1263188,
+              "sha256": "cc83fe629ca75c2f895fbcffb6883aa5b0fa42a7ea104120736f24f530b9c3f4"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD200",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD200/",
+      "candidateSearchKey": "SD200",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:188"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD200/",
+          "checkedUtc": "2026-11-05T12:58:53.593635+00:00",
+          "bytes": 1874,
+          "sha256": "74782d16de4b78e6d8ee5e29f4193cf9f33a2cdd16c8a24770d1c3376e355ec2"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD200/SX40W339_memory.7z",
+          "basename": "SX40W339_memory.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/lg-formula-firmware/SX40W339_memory.7z",
+              "bytes": 1710853,
+              "sha256": "de9218f4be09bc9ec02fd33f27db35ec584d9d9800dde3687e5e18b67a3dcbce"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD810",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD810/",
+      "candidateSearchKey": "SD810",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:195"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD810/",
+          "checkedUtc": "2026-11-05T13:02:44.436144+00:00",
+          "bytes": 2171,
+          "sha256": "61920bef2c1c3fdcc2847ff3275dee2c54d175005f3d93548b0f7b12c5c620ec"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD810/SXS1V306%20%5BMemory%20Dump%5D.7z",
+          "basename": "SXS1V306 [Memory Dump].7z",
+          "localExactBasenameCandidates": [],
+          "status": "listing-only-no-exact-basename-match",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        },
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD810/SXS2V309%20%5BMemory%20Dump%5D.7z",
+          "basename": "SXS2V309 [Memory Dump].7z",
+          "localExactBasenameCandidates": [],
+          "status": "listing-only-no-exact-basename-match",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD840",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD840/",
+      "candidateSearchKey": "SD840",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["zone:lg_p:lg-sd840"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SD9220",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD9220/",
+      "candidateSearchKey": "SD9220",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:201"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD9220/",
+          "checkedUtc": "2026-11-05T13:02:44.424311+00:00",
+          "bytes": 1921,
+          "sha256": "5841d7e127d0faa4fe18d796eee8cfde794a8d5f6f1f8be4a8e50ca847a5bdec"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD9220/SX601318%20%5BIncomplete%20Memory%20dump%5D.7z",
+          "basename": "SX601318 [Incomplete Memory dump].7z",
+          "localExactBasenameCandidates": [],
+          "status": "listing-only-no-exact-basename-match",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "LG",
+      "label": "SV130",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SV130/",
+      "candidateSearchKey": "SV130",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/LG/",
+      "observationIds": ["xls:SKT:193", "zone:lg_p:lg-sv130"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-2400",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-2400/",
+      "candidateSearchKey": "IM2400",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["xls:SKT:92"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-3100",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-3100/",
+      "candidateSearchKey": "IM3100",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["xls:SKT:94", "zone:sk_p:im-3100"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-5000",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-5000/",
+      "candidateSearchKey": "IM5000",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": [
+        "xls:SKT:97",
+        "xls:SKT:99",
+        "xls:SKT:100",
+        "xls:SKT:101",
+        "zone:sk_p:im-5000"
+      ],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-5100",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-5100/",
+      "candidateSearchKey": "IM5100",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["xls:SKT:98"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-5400",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-5400/",
+      "candidateSearchKey": "IM5400",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["xls:SKT:104"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-6100",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-6100/",
+      "candidateSearchKey": "IM6100",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["xls:SKT:105", "zone:sk_p:im-6100"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-6500",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/",
+      "candidateSearchKey": "IM6500",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["xls:SKT:110"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/",
+          "checkedUtc": "2026-11-05T13:02:44.865186+00:00",
+          "bytes": 2149,
+          "sha256": "c008d1d3e8771413a6887df19b759087b80d5deda69e348759d197f5a0f1ec96"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/IM6500_S0129143_usa.7z",
+          "basename": "IM6500_S0129143_usa.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/sky-early-firmware/packages/IM-6500/IM6500_S0129143_usa.7z",
+              "bytes": 7646900,
+              "sha256": "5b030ef7ab61f6d2e9dacceefbbdaed500b85a317904e27d5ad9417b8b87c58a"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        },
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-6500/IM6500_S0129150_usa.7z",
+          "basename": "IM6500_S0129150_usa.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/sky-early-firmware/packages/IM-6500/IM6500_S0129150_usa.7z",
+              "bytes": 7653792,
+              "sha256": "064abd8cb4f615cb0a231e843da5535726a9e0af9289a7df97b5b233f5b43833"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-7200",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/",
+      "candidateSearchKey": "IM7200",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["xls:SKT:114", "zone:sk_p:im-7200"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/",
+          "checkedUtc": "2026-11-05T13:02:44.852358+00:00",
+          "bytes": 2180,
+          "sha256": "943aa0d02c314531c85349ef7785cfd5fc713afce3a83c3ead64d9c4bbd22b52"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/7200_16mb_S0134127%20%28Korean%29.7z",
+          "basename": "7200_16mb_S0134127 (Korean).7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/sky-early-firmware/packages/IM-7200/7200_16mb_S0134127 (Korean).7z",
+              "bytes": 5909135,
+              "sha256": "b9f4af5b43271ccb5d2fe419827a7def46fc1fe5f94b45b036ecdf6c11f2d753"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        },
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7200/S0134135%20%5BSKD%20file%5D.7z",
+          "basename": "S0134135 [SKD file].7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/sky-early-firmware/packages/IM-7200/S0134135 [SKD file].7z",
+              "bytes": 30791867,
+              "sha256": "2849311d2e943fcdd1bac0ed4feeefceffc0b282ef75ed90571e15994ed9d48e"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "SKY",
+      "label": "IM-7300",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7300/",
+      "candidateSearchKey": "IM7300",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/SKY/",
+      "observationIds": ["zone:sk_p:im-7300"],
+      "successfulSubdirectoryListingsThisPass": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7300/",
+          "checkedUtc": "2026-11-05T13:02:44.909326+00:00",
+          "bytes": 1854,
+          "sha256": "c312830635f7139f8f173a8f65bf2357dea380d5221b41c81b219850a15c0351"
+        }
+      ],
+      "observedArchiveFiles": [
+        {
+          "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-7300/B22.7z",
+          "basename": "B22.7z",
+          "localExactBasenameCandidates": [
+            {
+              "path": "work/sky-early-firmware/packages/IM-7300/B22.7z",
+              "bytes": 27779084,
+              "sha256": "7f29626e2db2756d21057a1878f74566ab11a15f2aa8ce4376c42f7e1bc8d704"
+            }
+          ],
+          "status": "local-basename-candidate-hashed",
+          "sourceUrlByteIdentityVerifiedThisPass": false
+        }
+      ]
+    },
+    {
+      "manufacturer": "Curitel",
+      "label": "S2",
+      "url": "https://archive.sunderland93.ru/Firmwares/Curitel/S2/",
+      "candidateSearchKey": "S2",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/Curitel/",
+      "observationIds": ["zone:pq_p:s2"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    },
+    {
+      "manufacturer": "VK Mobile",
+      "label": "VK100",
+      "url": "https://archive.sunderland93.ru/Firmwares/VK%20Mobile/VK100/",
+      "candidateSearchKey": "VK100",
+      "parentIndexUrl": "https://archive.sunderland93.ru/Firmwares/VK%20Mobile/",
+      "observationIds": ["xls:SKT:234"],
+      "successfulSubdirectoryListingsThisPass": [],
+      "observedArchiveFiles": []
+    }
+  ],
+  "alternateCollectionMetadata": {
+    "url": "https://archive.org/metadata/im-s-550-s",
+    "input": {
+      "path": "work/device-hunt-round5-phones/ia-im-s-550-s-metadata.json",
+      "bytes": 9975,
+      "sha256": "13ae7837ce2bf279576322af3df0a9571c7cc622a5784a98699bf89e49e02283"
+    },
+    "metadataOnly": true,
+    "originalZipRecords": [
+      {
+        "name": "IM-2400.zip",
+        "size": "876259",
+        "sha1": "6bd2ad8be5d76987245b279325d72c775c6a97a0",
+        "crc32": "035165b1"
+      },
+      {
+        "name": "IM-3100.zip",
+        "size": "1090579",
+        "sha1": "0992da8e72202645894ae62eec2c4af107487403",
+        "crc32": "ea575312"
+      },
+      {
+        "name": "IM-5000.zip",
+        "size": "1535953",
+        "sha1": "a0b291a5b9efc7dbf5f1d4bc410e41f5777fca36",
+        "crc32": "78958eef"
+      },
+      {
+        "name": "IM-5100.zip",
+        "size": "2666261",
+        "sha1": "00f9d07e43f01fe59000628559a29bfdb6bb3708",
+        "crc32": "e57e4934"
+      },
+      {
+        "name": "IM-5400.zip",
+        "size": "2671393",
+        "sha1": "5b6a3b9cf759c9c72332da6409fd96f9089ea1d6",
+        "crc32": "fc57b048"
+      },
+      {
+        "name": "IM-6100.zip",
+        "size": "3047027",
+        "sha1": "3e5b889bdb3a5aa8fd70cd48e3132ad5f2d46dfa",
+        "crc32": "d15a3429"
+      },
+      {
+        "name": "IM-6500.zip",
+        "size": "15301234",
+        "sha1": "24cb5e967342b1718ea05fbd141a4aa5cd0ecf48",
+        "crc32": "fef8688a"
+      },
+      {
+        "name": "IM-7200.zip",
+        "size": "36701560",
+        "sha1": "5e1dcc439e073a8d6c9d13c89e5997417734b90e",
+        "crc32": "c208703f"
+      },
+      {
+        "name": "IM-7300.zip",
+        "size": "27779406",
+        "sha1": "0222850188b00756a71bdea71345328c4c938686",
+        "crc32": "e6557b81"
+      },
+      {
+        "name": "IM-S240k.zip",
+        "size": "76697945",
+        "sha1": "7680edc9ee1fae60dda5173f700812a5a07bf48c",
+        "crc32": "2613b7f8"
+      },
+      {
+        "name": "IM-S330.zip",
+        "size": "93045538",
+        "sha1": "3529c5bb39caab1a09843c5de766a417f1dca2a8",
+        "crc32": "9d1b5776"
+      },
+      {
+        "name": "IM-S330K.zip",
+        "size": "87490554",
+        "sha1": "f92892ec68f43e32664f645420341534fe2086e7",
+        "crc32": "5be2a856"
+      },
+      {
+        "name": "IM-S350.zip",
+        "size": "94255985",
+        "sha1": "69905c06e55bdf1c7075f7a35c60ff87f4f458c7",
+        "crc32": "b18761cc"
+      },
+      {
+        "name": "IM-S390 (Cupid).zip",
+        "size": "78779640",
+        "sha1": "dddf8cea91f8d8608bf72f0f26cdb895bc9a5531",
+        "crc32": "a1ef8f88"
+      },
+      {
+        "name": "IM-S400L.zip",
+        "size": "98485348",
+        "sha1": "7f656b317bf5aa74a78b4d87c95678b11a560218",
+        "crc32": "23e69dc7"
+      },
+      {
+        "name": "IM-S410K.zip",
+        "size": "108030597",
+        "sha1": "5a2eee9a0cdddd219e332f9bc457a676f7aac386",
+        "crc32": "5eb304ea"
+      },
+      {
+        "name": "IM-S480S.zip",
+        "size": "152379313",
+        "sha1": "987b262efd8b67cc32a4e49d382029e66c6798f3",
+        "crc32": "fb2a431e"
+      },
+      {
+        "name": "IM-S500K.zip",
+        "size": "100198567",
+        "sha1": "c7574e1a56a847c26628468ceb62de487a16112c",
+        "crc32": "eb1ceba6"
+      },
+      {
+        "name": "IM-S550S.zip",
+        "size": "236760537",
+        "sha1": "b37da6aff3c9b10aa9b1667081bb46531defaedf",
+        "crc32": "22f15369"
+      },
+      {
+        "name": "IM-S610K.zip",
+        "size": "117667284",
+        "sha1": "90fc14e746b284248239bc21c4cdf8f0b42cfc65",
+        "crc32": "ccd86b88"
+      },
+      {
+        "name": "IM-S640S.zip",
+        "size": "222365910",
+        "sha1": "ea5f5f9411850f126691458b91c9e0ceeb62eeff",
+        "crc32": "fc8dba0f"
+      },
+      {
+        "name": "IM-U160K.zip",
+        "size": "67050614",
+        "sha1": "18794de18c79cc7eda700033428d09e33f56d2a4",
+        "crc32": "5f3dd38e"
+      },
+      {
+        "name": "IM-U210K.zip",
+        "size": "73569984",
+        "sha1": "497376610d76e4573c6712883704c755dd43466a",
+        "crc32": "39839275"
+      },
+      {
+        "name": "IM-U220.zip",
+        "size": "78862128",
+        "sha1": "6e517d9c658dd77e4a7ec550a7c964e21ac0a283",
+        "crc32": "284d5818"
+      },
+      {
+        "name": "IM-U300K.zip",
+        "size": "88637801",
+        "sha1": "ff028c77bc899e3f555b578653bb8cf05825c5f5",
+        "crc32": "040271f0"
+      },
+      {
+        "name": "IM-U310K.zip",
+        "size": "111235342",
+        "sha1": "aea13bb2602f68b36ee288e58fe4681112725f53",
+        "crc32": "7ed59ffb"
+      },
+      {
+        "name": "IM-U440K.zip",
+        "size": "142437321",
+        "sha1": "7c0fd9e36987c9c1834b5bf015dd6cd2b87b8a60",
+        "crc32": "679dc18f"
+      },
+      {
+        "name": "IM-U450L.zip",
+        "size": "130091963",
+        "sha1": "fd3c6c6adb5736a9561419a9c9d97e5aa634fdc8",
+        "crc32": "2e94ab66"
+      },
+      {
+        "name": "IM-U460K.zip",
+        "size": "110922676",
+        "sha1": "833c8392b6ae7fc0331d1c4e6482eec73878b9e6",
+        "crc32": "0333e9ad"
+      },
+      {
+        "name": "IM-U490S.zip",
+        "size": "227877655",
+        "sha1": "d2d615015ff77b1011dcc23ccb69225edab930f1",
+        "crc32": "a600d51d"
+      },
+      {
+        "name": "IM-U580S.zip",
+        "size": "161193792",
+        "sha1": "84fc7b8be6b897b00551feb5f1721abf1429d5a5",
+        "crc32": "d40744ca"
+      },
+      {
+        "name": "SK-5000.zip",
+        "size": "6383714",
+        "sha1": "10a28e14e9f5fe7b49721cae762a6587437459c9",
+        "crc32": "f5f7305a"
+      },
+      {
+        "name": "SK-5100.zip",
+        "size": "2027115",
+        "sha1": "1241fa0c991c9b239bbf8c628394c3b2379bf4c1",
+        "crc32": "3394df82"
+      },
+      {
+        "name": "SK-5400.zip",
+        "size": "2860504",
+        "sha1": "719b6d76fef32d0169a3db1dbbc27ddd31f1e04b",
+        "crc32": "590de2f4"
+      },
+      {
+        "name": "SK-7200.zip",
+        "size": "27098669",
+        "sha1": "72fa4833823637a3bee73e07aa46e1264ae9eb1b",
+        "crc32": "a8d701c6"
+      }
+    ],
+    "exactWantedNamesAbsent": ["IM-6400.zip", "IM-7100.zip", "IM-7400.zip"],
+    "limit": "Only this returned file-name inventory was checked; no ZIP payload was downloaded from this route in this pass."
+  },
+  "excludedFalseNewDownloads": [
+    {
+      "modelLabel": "LG SD200",
+      "observedUrl": "https://archive.sunderland93.ru/Firmwares/LG/SD200/SX40W339_memory.7z",
+      "existingLocal": {
+        "path": "work/lg-formula-firmware/SX40W339_memory.7z",
+        "bytes": 1710853,
+        "sha256": "de9218f4be09bc9ec02fd33f27db35ec584d9d9800dde3687e5e18b67a3dcbce"
+      },
+      "reason": "The observed archive basename already exists in prior research; no new payload is claimed or fetched."
+    },
+    {
+      "modelLabel": "LG SD1200",
+      "observedUrl": "https://archive.sunderland93.ru/Firmwares/LG/SD1200/SD120I05.7z",
+      "existingLocal": {
+        "path": "work/lg-early-additional/SD120I05.7z",
+        "bytes": 2873183,
+        "sha256": "9d4a9259023013b39c321b6d61d51d39736182660c00f85a00b72d91b250e60d"
+      },
+      "reason": "The observed archive basename already exists in prior research; no new payload is claimed or fetched."
+    }
+  ],
+  "unmergedLabels": [
+    "VK-100M card versus VK100 archive directory",
+    "VK-200C card versus VK200 archive directory",
+    "PG-S5500C row versus PG-S5500 archive directory",
+    "CX-300A(D520), CX-300V and CX-300Dv retain their separate source labels",
+    "SK-5400 versus IM-5400, and SK-7200 versus IM-7200 are not automatic aliases"
+  ],
+  "limits": [
+    "129 source observations are not 129 distinct phones; workbook rows retain operator, update and test variants and may repeat Zone models.",
+    "A matching directory name is neither a downloaded archive nor a validated ROM nor proof of VM presence in that firmware revision.",
+    "A locally hashed same-basename file is only a candidate; URL-to-payload byte identity and old archive CRC/scan coverage are not re-proven by this join.",
+    "A missing exact key concerns five captured directory snapshots only; alternate names, other providers and later copies remain possible.",
+    "Timeout attempts are retained alongside later successes. They do not mean no archive exists.",
+    "The lg-firmwares SD340 page returned HTTP200 but no direct archive URL was observed in its HTML. This is not a whole-site or executable-JavaScript inspection.",
+    "No new firmware or SGS bytes were downloaded, no firmware scan was claimed, no vendor code was executed and no private EFS data was exported."
+  ]
+}

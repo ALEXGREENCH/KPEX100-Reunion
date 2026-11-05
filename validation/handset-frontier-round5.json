@@ -1,0 +1,266 @@
+{
+  "schema": 1,
+  "scope": "Telson watch-phone identity crosschecked against an existing GVM roster; publicly visible Nokia firmware-name leads. No original firmware or game recovered in this pass.",
+  "captures": [
+    {
+      "name": "twc1030-inews-april",
+      "url": "https://m.inews24.com/v/88603",
+      "retrievedUtc": "2026-11-05T13:02:25.642002+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "twc1030-inews-may",
+      "url": "https://inews24.com/view/89615",
+      "retrievedUtc": "2026-11-05T13:02:26.579065+00:00",
+      "status": 200,
+      "finalUrl": "https://inews24.com/view/89615",
+      "bytes": 183124,
+      "sha256": "06ea4fbdb77ea81007b9cbca0b317b60e793ac3338abf37ed5cfc0a573e80b0e",
+      "localPayloadHashVerified": true
+    },
+    {
+      "name": "gsmforum-cdma-index",
+      "url": "https://gsmforum.ru/forums/telefony-cdma-tdma.31/",
+      "retrievedUtc": "2026-11-05T13:02:27.489146+00:00",
+      "status": 200,
+      "finalUrl": "https://gsmforum.ru/forums/telefony-cdma-tdma.31/",
+      "bytes": 305157,
+      "sha256": "eeefe607e770400230fdeea6afdd39788d8e2171898464b72571d71af4180da1",
+      "localPayloadHashVerified": true
+    },
+    {
+      "name": "gsmforum-nokia-thread-0",
+      "url": "https://gsmforum.ru/threads/nuzhna-proshivka-ot-nokia-8587-i-8887.308919/",
+      "retrievedUtc": "2026-11-05T13:02:51.839257+00:00",
+      "status": 200,
+      "finalUrl": "https://gsmforum.ru/threads/nuzhna-proshivka-ot-nokia-8587-i-8887.308919/",
+      "bytes": 63360,
+      "sha256": "e05bdf7d6aecc6f63fdad14e927c45e27432308847787ee43b38b84f1468aafd",
+      "localPayloadHashVerified": true
+    },
+    {
+      "name": "gsmforum-nokia-thread-1",
+      "url": "https://gsmforum.ru/threads/proshivki-s-russkim-yazykom-dlya-nokia-cdma.72159/",
+      "retrievedUtc": "2026-11-05T13:03:17.034332+00:00",
+      "error": "<urlopen error [WinError 10053] Программа на вашем хост-компьютере разорвала установленное подключение>"
+    },
+    {
+      "name": "twc1030-inews-april-desktop",
+      "url": "https://www.inews24.com/view/88603",
+      "retrievedUtc": "2026-11-05T16:21:56.698790+00:00",
+      "status": 200,
+      "finalUrl": "https://www.inews24.com/view/88603",
+      "bytes": 181950,
+      "sha256": "0c470077fd897d23bcded8b8b725e7f6a9a237714c3cbc90117a6cf21416c92b",
+      "localPayloadHashVerified": true
+    },
+    {
+      "name": "gsmforum-nokia-rus-first",
+      "url": "https://gsmforum.ru/threads/proshivki-s-russkim-yazykom-dlya-nokia-cdma.72159/",
+      "retrievedUtc": "2026-11-05T16:21:57.840062+00:00",
+      "status": 200,
+      "finalUrl": "https://gsmforum.ru/threads/proshivki-s-russkim-yazykom-dlya-nokia-cdma.72159/",
+      "bytes": 582911,
+      "sha256": "d43b168644ee3681721821effd44309a9c117207b665072c15d148bd4867d276",
+      "localPayloadHashVerified": true
+    },
+    {
+      "name": "gsmforum-nokia-rus-last",
+      "url": "https://gsmforum.ru/threads/proshivki-s-russkim-yazykom-dlya-nokia-cdma.72159/page-6",
+      "retrievedUtc": "2026-11-05T16:22:02.402020+00:00",
+      "error": "<urlopen error [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение>"
+    }
+  ],
+  "watchPhone": {
+    "manufacturer": "Telson",
+    "articleModel": "TWC-1030",
+    "brand": "STING",
+    "formFactor": "watch phone / wrist-worn cellular telephone",
+    "sources": [
+      {
+        "url": "https://www.inews24.com/view/88603",
+        "published": "2003-04-10",
+        "observation": "Contemporaneous report describes the Telson watch-phone exhibition launch; retail availability was still prospective."
+      },
+      {
+        "url": "https://inews24.com/view/89615",
+        "published": "2003-05-07",
+        "updated": "2003-07-25",
+        "observation": "Names STING TWC-1030, CDMA2000 1x, 256-colour STN display, 128x112 display and NATE Wizard. The text/specification still use future availability including May-June; shipment is not proved by the title."
+      }
+    ],
+    "rosterInput": {
+      "path": "validation/gvm-historical-handset-guides.json",
+      "commit": "915025625540411b2aa669d9090d93dd07f724f7",
+      "blob": "81b8866f1b8303b772cf76beab5dd591164635b4",
+      "committedBytesSha256": "722fa6f9c709392b7d972b5b476bc958543f616aa10e593e52327f4321515d2a"
+    },
+    "originalWorkbookRow": {
+      "sheet": "SKT",
+      "row": 232,
+      "manufacturer": "텔슨",
+      "model": {
+        "cell": "B232",
+        "value": "TWC1030"
+      },
+      "carrier": {
+        "cell": "C232",
+        "value": "SKT/STI"
+      },
+      "gvmSupported": {
+        "cell": "R232",
+        "value": "O"
+      },
+      "gvmVersion": {
+        "cell": "S232",
+        "value": "2"
+      },
+      "skvmSupported": {
+        "cell": "T232",
+        "value": "O"
+      },
+      "skvmVersion": {
+        "cell": "U232",
+        "value": "1"
+      },
+      "physicalWidth": {
+        "cell": "AT232",
+        "value": "120"
+      },
+      "physicalHeight": {
+        "cell": "AU232",
+        "value": "096"
+      },
+      "applicationWidth": {
+        "cell": "AV232",
+        "value": "120"
+      },
+      "applicationHeight": {
+        "cell": "AW232",
+        "value": "064"
+      }
+    },
+    "sourceConflict": {
+      "field": "physical display dimensions",
+      "article": [128, 112],
+      "workbook": [120, 96],
+      "workbookGeneralApplicationArea": [120, 64],
+      "resolution": "Unresolved. The workbook application field is not relabelled as a proven GVM framebuffer; no emulator runtime profile is inferred."
+    },
+    "shippingFirmwareVerified": false,
+    "gamePayloadRecovered": false,
+    "modelVariantsMergedWithTwc1150": false
+  },
+  "nokiaLeads": {
+    "source": "https://gsmforum.ru/threads/nuzhna-proshivka-ot-nokia-8587-i-8887.308919/",
+    "postDate": "2018-11-25",
+    "reportedTypeCode": "NSD-8CX",
+    "reportedFileNames": [
+      "skw_211.bin",
+      "skw_225.bin",
+      "skw_229.bin",
+      "st85v167.bin",
+      "st85v172.bin",
+      "st85v173.bin",
+      "kt75v637.bin"
+    ],
+    "claimStatus": "Unverified first-person forum leads. The author explicitly states the files themselves are missing. No Nokia/Telson manufacturer attribution or individual build/model mapping has been established from these names.",
+    "publicThreadIndex": "https://gsmforum.ru/threads/proshivki-s-russkim-yazykom-dlya-nokia-cdma.72159/",
+    "publicRusThreadPagesRead": [1],
+    "rusThreadLastPage": "Connection rejected; not treated as an observed page.",
+    "paidAttachmentsRequested": false,
+    "accountOrPaywallBypassAttempted": false,
+    "payloadsReceived": 0
+  },
+  "archiveQueries": [
+    {
+      "name": "nokia-exact-metadata",
+      "url": "https://archive.org/advancedsearch.php?q=%28%22skw_211.bin%22+OR+%22skw_229.bin%22+OR+%22st85v173.bin%22+OR+%22NSD-8CX%22%29&output=json&rows=10&fl%5B%5D=identifier%2Ctitle",
+      "retrievedUtc": "2026-11-05T16:24:50.937527+00:00",
+      "status": 200,
+      "finalUrl": "https://archive.org/advancedsearch.php?q=%28%22skw_211.bin%22+OR+%22skw_229.bin%22+OR+%22st85v173.bin%22+OR+%22NSD-8CX%22%29&output=json&rows=10&fl%5B%5D=identifier%2Ctitle",
+      "bytes": 922,
+      "sha256": "5a0dbbc19601539cc729c258d2ac52cf2c26196d4a16b243e0e3cd1ee32d298d",
+      "metadataMatches": 2,
+      "items": [
+        {
+          "identifier": "cia-readingroom-document-cia-rdp91-00403r000100800020-6",
+          "title": "CIA Reading Room cia-rdp91-00403r000100800020-6: FR:KAMIL M TO:GERASIMOV G V"
+        },
+        {
+          "identifier": "cia-readingroom-document-cia-rdp91-00772r000100700062-2",
+          "title": "CIA Reading Room cia-rdp91-00772r000100700062-2: A FR: NEYMAN, M.S. TO: NEZGOVOROV, L. A."
+        }
+      ]
+    },
+    {
+      "name": "telson-watch-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=telson.co.kr&matchType=domain&filter=original%3A.%2A1030.%2A&collapse=urlkey&output=json&from=2001&to=2005&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength",
+      "retrievedUtc": "2026-11-05T16:24:52.143292+00:00",
+      "status": 200,
+      "finalUrl": "https://web.archive.org/cdx/search/cdx?url=telson.co.kr&matchType=domain&filter=original%3A.%2A1030.%2A&collapse=urlkey&output=json&from=2001&to=2005&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength",
+      "bytes": 1131,
+      "sha256": "d09125d32092f6077c6bd3db5d8326f284728e6af9ecb6b2c667f4baa95c13a9",
+      "cdxRows": 5,
+      "records": [
+        ["timestamp", "original", "statuscode", "mimetype", "digest", "length"],
+        [
+          "20020218115642",
+          "http://www.telson.co.kr:80/public_information/tp_news_publish_read.asp?dateval=2001-12-28&type=B&idx=1030&page=20&strtype=&strsearch=",
+          "200",
+          "text/html",
+          "VMRO6WBZA5KMMJSRJWEWFO6AUPUKU6NX",
+          "4674"
+        ],
+        [
+          "20020224100544",
+          "http://www.telson.co.kr:80/public_information/tp_news_publish_read.asp?dateval=2001-12-28&type=B&idx=1030&page=22&strtype=&strsearch=",
+          "200",
+          "text/html",
+          "XDT6FFXU7NA6DRDFN7THL5X2O4ULOQL2",
+          "4678"
+        ],
+        [
+          "20020302001617",
+          "http://www.telson.co.kr:80/public_information/tp_news_publish_read.asp?dateval=2001-12-28&type=B&idx=1030&page=23&strtype=&strsearch=",
+          "200",
+          "text/html",
+          "BDCW6N3OWGI7FAEONQW4GRWRXRHJUPXG",
+          "4673"
+        ],
+        [
+          "20021126132032",
+          "http://www.telson.co.kr:80/public_information/tp_news_publish_read.asp?dateval=2001-12-28&type=B&idx=1030&page=77&strtype=&strsearch=",
+          "200",
+          "text/html",
+          "VNLICA7OHWZJ6ZPWCJETSDKMCYKWHXHP",
+          "4675"
+        ],
+        [
+          "20030923091236",
+          "http://www.telson.co.kr:80/public_information/tp_news_publish_read.asp?type=B&idx=1030&page=105&strtype=&strsearch=",
+          "200",
+          "text/html",
+          "WJWL3UG2QW5N5OH2XBM6DTGK4SOEBTSI",
+          "4684"
+        ]
+      ]
+    }
+  ],
+  "telsonCatalogQuery": {
+    "url": "https://web.archive.org/cdx/search/cdx?url=telson.co.kr&matchType=domain&filter=statuscode%3A200&collapse=urlkey&output=json&from=2002&to=2004&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength",
+    "retrievedUtc": "2026-11-05T16:27:00.038531+00:00",
+    "error": "The read operation timed out"
+  },
+  "queryInterpretation": [
+    "The exact-name Internet Archive metadata search returned two CIA Reading Room item titles, not a recovered phone image. Their underlying contents were not downloaded; this is not a full archive-content search or proof of worldwide absence.",
+    "The first Telson CDX query returned five URLs whose unrelated news database parameter idx=1030 matched the string. None identifies a TWC-1030 firmware file; the five pages were not fetched as model evidence.",
+    "A second domain-level 2002-2004 Telson CDX request timed out. Its catalogue and any potential packages remain unknown.",
+    "Mobile iNews URL returned 404 while its canonical desktop article returned 200. Transport failures for the forum do not imply missing historical content."
+  ],
+  "limits": [
+    "NATE Wizard alone is not proof of the GVM bytecode format; the separate workbook row supplies the GVM version claim.",
+    "The workbook's original author and official-operator status remain unverified as documented in gvm-historical-handsets.md.",
+    "No firmware was combined, patched, executed or added to the runnable catalogue."
+  ]
+}
