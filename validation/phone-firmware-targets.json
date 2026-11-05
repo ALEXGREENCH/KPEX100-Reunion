@@ -1,0 +1,78 @@
+{
+  "research_date": "2026-11-05",
+  "records": [
+    {
+      "model": "SCH-W830",
+      "firmware_build": "DL21",
+      "record_name": "MinigameQVGAOEM.dat",
+      "sha256": "c83d4f4ee9cbf6ba4280b17f8f8a3dd26157ce9f07849583c04a60ebf9c00429",
+      "format": "EADS",
+      "execution": "native ARM/Thumb",
+      "source": "https://github.com/mirusu400/aram-core/blob/fea299cba15696ed1460f965b76626d6edab5e03/application/eads_native_games_reference_test.go",
+      "evidence": "Upstream exact-hash extracted game reference test; original bytes not obtained here.",
+      "downloaded": false,
+      "kpex_compatible": null
+    },
+    {
+      "model": "SCH-W860",
+      "firmware_build": "DA06",
+      "record_name": "MinigameQVGAOEM.dat",
+      "sha256": "6b48455bc86e151967d75ec1b596cdd7a09838e495d3a8a1717bd5d67158ee71",
+      "format": "EADS",
+      "execution": "native ARM/Thumb",
+      "source": "https://github.com/mirusu400/aram-core/blob/fea299cba15696ed1460f965b76626d6edab5e03/application/eads_native_games_reference_test.go",
+      "evidence": "Upstream exact-hash extracted game reference test; original bytes not obtained here.",
+      "downloaded": false,
+      "kpex_compatible": null
+    },
+    {
+      "model": "SCH-W210/SCH-W240",
+      "firmware_build": null,
+      "record_name": "Bomb_Link.dat",
+      "sha256": "a8c47d3045639b12afd0de213a1c2ef1467f0495c8edad1bb5483a3ab74dc629",
+      "format": "EADS",
+      "execution": "native ARM/Thumb",
+      "source": "https://github.com/mirusu400/aram-core/blob/fea299cba15696ed1460f965b76626d6edab5e03/application/eads_native_games_reference_test.go",
+      "evidence": "Upstream exact-hash extracted game reference test; original bytes not obtained here.",
+      "downloaded": false,
+      "kpex_compatible": null,
+      "model_mapping_source": "https://github.com/mirusu400/aram-core/blob/fea299cba15696ed1460f965b76626d6edab5e03/README.md"
+    },
+    {
+      "model": "SCH-W770",
+      "firmware_build": "DA05",
+      "record_name": "Minigame_WQVGA.dat",
+      "sha256": "16f0ccdf370069e2342aee29c05e22fa64577b7ca5e9d7cc87a98d87b50d391f",
+      "format": "EADS",
+      "execution": "native ARM/Thumb",
+      "source": "https://github.com/mirusu400/aram-core/blob/fea299cba15696ed1460f965b76626d6edab5e03/application/eads_native_games_reference_test.go",
+      "evidence": "Upstream exact-hash extracted game reference test; original bytes not obtained here.",
+      "downloaded": false,
+      "kpex_compatible": null
+    },
+    {
+      "model": "LG-SH150A",
+      "firmware_build": "SW15A712_00",
+      "record_name": "SW15A712_00.kdz",
+      "carrier": "SKT",
+      "listed_size_mib": 76.71,
+      "listed_hash": "0028d37c5bf59262b194514ea36793d3",
+      "hash_algorithm": "unspecified",
+      "source": "https://lg-firmwares.com/downloads-file/3566/SW15A712_00",
+      "historical_manufacturer_url": "http://csmgdl.lgmobile.com/swdata/WDLSW/LGSH150A/ASKTWA/SW15A712_00/CSE/SW15A712_00.kdz",
+      "status": "metadata-only",
+      "downloaded": false,
+      "download_obstacle": "mirror reCAPTCHA; historical manufacturer host DNS failure",
+      "preloaded_games": null,
+      "runtime": null,
+      "kpex_compatible": null
+    }
+  ],
+  "stock_dat_sha256": {
+    "SCH-W830 DL21": "955a39b3c09d6228224234dab18b3b38fe89da518c0b614a7cba47e6f9f96900",
+    "SCH-W830 DA18": "ac9383d8ef99facfa6f425057c1bf9349e0870572c3b79867a03ca63a7495ed8",
+    "SCH-W770 DA05": "b837559aa0c9addb01c8d282fa17c8c250813c39c5ee2688436bd482a641dfab",
+    "SCH-W860 DA06": "006fc80de446d7b554e387e837d259e3372c00b35e3219c3dd7d242a77044b09"
+  },
+  "stock_hash_source": "https://github.com/mirusu400/aram-core/blob/fea299cba15696ed1460f965b76626d6edab5e03/loader/samsung/profile.go"
+}

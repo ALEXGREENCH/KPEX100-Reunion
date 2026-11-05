@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "verification_date": "2026-11-05",
+  "method": "Independent reread of existing archive and extracted-file bytes, SHA-256, ZIP CRC, exact byte-string offsets, SWF header. No downloads or execution of preserved software.",
+  "samsung_yp_t8": {
+    "source_url": "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=UNI_FR&OriginYN=N&ModelType=N&ModelName=YP-T8Q%2FELS&CttFileID=1072613&CDCttType=FM&VPath=FM%2F200611%2F20061114161749984_YP_T8_ROM_20060609_138FR.zip",
+    "local_file": "samsung-t8-138fr.zip",
+    "bytes": 2199490,
+    "sha256": "1806caaf2fede1f3871978e9ae0bb51ea34fb422b0ec1372d2047efe6d8aec34",
+    "recorded_size_matches": true,
+    "recorded_sha256_matches": true,
+    "zip_crc_valid": true,
+    "members": [
+      {
+        "name": "YP_T8.rom",
+        "bytes": 944020,
+        "sha256": "36dd184a8d3a71f78e1348ac46387c4854092475f0d57ce89e4f09c1823b597d",
+        "recorded_size_matches": true,
+        "recorded_sha256_matches": true,
+        "extracted_file_identical_to_archive": true
+      },
+      {
+        "name": "YP_T8D1.FNT",
+        "bytes": 1486488,
+        "sha256": "6048be2f5fbe1e6a7022da212adbf7991771b7354068efdedabd1258ebd3c1fb",
+        "recorded_size_matches": true,
+        "recorded_sha256_matches": true,
+        "extracted_file_identical_to_archive": true
+      },
+      {
+        "name": "YP_T8.img",
+        "bytes": 2738020,
+        "sha256": "fe2bf7531a8e05a8a4107e359d295abfca5cfcb52222fc7e5ba1838442625e90",
+        "recorded_size_matches": true,
+        "recorded_sha256_matches": true,
+        "extracted_file_identical_to_archive": true
+      }
+    ],
+    "rom_markers": [
+      {
+        "ascii": "Xeovia System",
+        "offsets": [
+          {
+            "decimal": 361296,
+            "hex": "0x58350"
+          }
+        ],
+        "recorded_offsets_match": true
+      },
+      {
+        "ascii": "Xeovia Contents",
+        "offsets": [
+          {
+            "decimal": 362684,
+            "hex": "0x588bc"
+          }
+        ],
+        "recorded_offsets_match": true
+      },
+      {
+        "ascii": "XEOVIA EXCEPTION",
+        "offsets": [
+          {
+            "decimal": 363132,
+            "hex": "0x58a7c"
+          }
+        ],
+        "recorded_offsets_match": true
+      },
+      {
+        "ascii": "GameExt.bin",
+        "offsets": [
+          {
+            "decimal": 32904,
+            "hex": "0x8088"
+          }
+        ],
+        "recorded_offsets_match": true
+      },
+      {
+        "ascii": "%s.xov",
+        "offsets": [
+          {
+            "decimal": 358020,
+            "hex": "0x57684"
+          }
+        ],
+        "recorded_offsets_match": true
+      },
+      {
+        "ascii": ".XOV",
+        "offsets": [
+          {
+            "decimal": 661801,
+            "hex": "0xa1929"
+          },
+          {
+            "decimal": 728429,
+            "hex": "0xb1d6d"
+          }
+        ],
+        "recorded_offsets_match": true
+      }
+    ],
+    "xov_status": {
+      "runtime_evidence": "ROM contains Xeovia System, Xeovia Contents and XEOVIA EXCEPTION markers plus %s.xov and .XOV filename markers.",
+      "payload_recovered": false,
+      "xov_payload_file_present": false,
+      "sgs_compatibility_verified": false,
+      "interpretation": "Evidence identifies an XEOVIA runtime and XOV filename handling. It does not prove XOV and SGS binary compatibility or that games reside inside this upgrade package."
+    },
+    "recorded_sgs_scan": {
+      "file": "t8-sgs-scan.json",
+      "summary": {
+        "images": 3,
+        "bytes": 5168528,
+        "candidate_offsets_tested": 222414,
+        "container_occurrences": 0,
+        "unique_decoded_bodies": 0
+      },
+      "source_files_match_recorded_hashes": true,
+      "scope": "Existing recorded scanner result checked against file hashes; scanner not rerun in this independent pass."
+    }
+  },
+  "iriver_clix_logjam": {
+    "source_url": "https://archive.org/download/iriverclixgames/smashingcontent.com/iriver/u10/flash/blueskynorth/iriver_clix_LogJam.zip",
+    "local_file": "iriver_clix_LogJam.zip",
+    "bytes": 38712,
+    "sha256": "f94cb19aee1a8403d4bbea89989de713269762f28eaedfe0168b3a519ca6ef3f",
+    "recorded_size_matches": true,
+    "recorded_sha256_matches": true,
+    "zip_crc_valid": true,
+    "members": [
+      {
+        "name": "LogJam.swf",
+        "bytes": 44691,
+        "sha256": "583381aa6994724c0453d9e42e9eeb04b8f9d9088905eb685f1d971cfb7abc45",
+        "recorded_size_matches": true,
+        "recorded_sha256_matches": true,
+        "header_hex": "4657530493ae000070000c8000009600",
+        "recorded_header_matches": true,
+        "swf": {
+          "signature": "FWS",
+          "version": 4,
+          "declared_uncompressed_bytes": 44691,
+          "declared_length_matches_actual": true,
+          "executed": false
+        }
+      },
+      {
+        "name": "readme.txt",
+        "bytes": 890,
+        "sha256": "14451fc424a111e3b22af39d4ff1eaa51e4f0c55376293df438c459758e50842",
+        "recorded_size_matches": true,
+        "recorded_sha256_matches": true,
+        "header_hex": "efbbbf546f20436f7079205468652053",
+        "recorded_header_matches": true
+      }
+    ]
+  },
+  "verification_summary": {
+    "consistency_checks": 29,
+    "all_consistency_checks_passed": true
+  }
+}
