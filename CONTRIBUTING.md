@@ -39,8 +39,9 @@ npm run test:integration
 - Сторонний код и исторические данные не переформатируются автоматически.
 
 ```sh
-python -m pip install black==25.1.0
-python -m black --check tools desktop/kpex desktop/tools desktop/tests desktop/launch.py
+python -m pip install -r requirements-dev.txt
+python -m black --check tools desktop tests/python
+python -m pytest tests/python -q
 ```
 
 Вносите небольшие изменения с понятной причиной. Выносите общий код в модуль,

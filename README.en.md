@@ -5,7 +5,7 @@ Reunion executes original ARM firmware and the original GNEX interpreter and
 graphics routines. Game logic and assets come from unmodified SGS files.
 
 [Русский README](README.md) · [Documentation](doc/README.md) ·
-[Compatibility](doc/compatibility.md) · [GitHub Pages](doc/github-pages.md)
+[Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
 **The collection is included:** 9 firmware images, 38 SGS applications,
 3 quick-start snapshots and the original Swerve 2.1 module. Both the repository
@@ -17,6 +17,8 @@ are unchanged; the catalogue records SHA-256 hashes and tested runtime profiles.
 Install Node.js 22+ and npm, then run these commands in the cloned repository:
 
 ```sh
+git clone https://github.com/ALEXGREENCH/KPEX100-Reunion.git
+cd KPEX100-Reunion
 npm ci
 npm run dev
 ```
@@ -64,6 +66,11 @@ one utility**, covering SGS v1/v2/v4/v36. These checks do not establish complete
 playthroughs. Independence Day 3D uses the included original Swerve ARM module;
 complex scenes remain slow. Full-firmware boot is verified through the
 Kingston 2.12 menu and Hell Fire. Eight other firmware versions are experimental.
+
+No structurally valid SGS game containers were found inside the nine ROMs.
+Games shown in the full-firmware menu are separate collection files placed on
+the emulator's virtual FAT16 disk. The [scan report and tool](doc/firmware-games.md)
+document the result and its limits, including unknown packing and native code.
 
 The Python desktop version has a narrower scope: four K-PEX games and the
 experimental full-firmware path. It requires Python 3.11+ with Tkinter:

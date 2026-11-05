@@ -6,6 +6,7 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 - `sdk-syscalls.py`: reproduce the SDK 2.12 syscall name/signature catalogue from MASM and MCC.
 - `pe_reader.py`: bounded PE32 parsing shared by those two Python tools; standard library only.
 - `sgs-info.mjs`: inspect a local SGS container and optionally extract one resource.
+- `scan-firmware-games.py`: find and optionally extract structurally validated SGS containers from ROMs; see the [scan report and limits](../doc/firmware-games.md).
 - `replay-sgs.mjs`: replay JSON key/timer actions with the original interpreter and capture PNG frames plus diagnostics.
 - `serve.mjs`: serve `web/` or `site/` locally, including a project path prefix.
 - `build.mjs` / `check-site.mjs`: create and verify the public GitHub Pages artifact.

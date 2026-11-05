@@ -39,7 +39,9 @@ jobs:
             requirements-dev.txt
             desktop/requirements*.txt
       - run: python -m pip install -r requirements-dev.txt -r desktop/requirements.txt
-      - run: python -m black --check tools desktop
+      - run: python -m black --check tools desktop tests/python
+      - run: python -m pytest tests/python -q
+      - run: python tools/scan-firmware-games.py --check-controls --output firmware-scan.json
       - run: python -m pytest desktop/tests -q
       - name: Prepare native collection
         if: matrix.os == 'windows-latest'

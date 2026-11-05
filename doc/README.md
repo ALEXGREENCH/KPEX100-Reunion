@@ -21,6 +21,7 @@
 - [Обзор tools](../tools/README.md): команды для разработчика и исследователя.
 - [Статический анализ SDK](tools-guide.md): распаковка InstallShield и извлечение таблицы функций.
 - [Повтор игровых сценариев](replay.md): клавиши, таймеры и сохранение framebuffer.
+- [Поиск игр в прошивках](firmware-games.md): сканер SGS, проверенные ROM и происхождение игр в меню.
 - [908 системных функций SDK](sdk-syscalls.json), [хеши файлов SDK](sdk-file-hashes.json), [x86-свидетельства](sdk-x86-evidence.txt).
 - [Происхождение Swerve-модуля](swerve-provenance.json).
 

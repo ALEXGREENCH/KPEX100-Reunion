@@ -5,7 +5,7 @@
 графической библиотеки. Игровая логика и ресурсы поступают из исходных SGS.
 
 [English quick start](README.en.md) · [Совместимость](doc/compatibility.md) ·
-[Документация](doc/README.md) · [GitHub Pages](doc/github-pages.md)
+[Документация](doc/README.md) · [Играть в браузере](https://alexgreench.github.io/KPEX100-Reunion/)
 
 **Коллекция уже включена:** 9 прошивок, 38 SGS-приложений, 3 быстрых состояния
 и оригинальный модуль Swerve 2.1. Репозиторий и обычная сборка GitHub Pages готовы
@@ -32,6 +32,8 @@ SHA-256 и проверенные профили. Дополнительные �
 После клонирования репозитория или распаковки исходников выполните из его корня:
 
 ```sh
+git clone https://github.com/ALEXGREENCH/KPEX100-Reunion.git
+cd KPEX100-Reunion
 npm ci
 npm run dev
 ```
@@ -79,6 +81,10 @@ python tools/assets.py import /path/to/originals
 
 Хеши и профили записаны в [каталоге](web/data/catalog.json), происхождение
 Swerve — в [отдельном отчёте](doc/swerve-provenance.json).
+
+В девяти ROM готовые SGS не обнаружены. Игры в меню полного устройства
+загружаются с виртуального FAT16-накопителя, куда Reunion помещает отдельные
+файлы коллекции. [Отчёт и воспроизводимый сканер](doc/firmware-games.md).
 
 ## Сборка для GitHub Pages
 

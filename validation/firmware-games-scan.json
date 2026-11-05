@@ -1,0 +1,440 @@
+{
+  "schema": 1,
+  "method": "Every byte offset; SGS v1/v2/v4/v36; plain and XOR-A5; bounded header, entry, variable and complete resource validation.",
+  "limits": [
+    "Candidate requires nonzero START, at least one variable and resource, and at least 16 bytecode bytes; this is a conservative game scan.",
+    "Unknown proprietary packing and native ARM games are not ruled out.",
+    "Extraction preserves original bytes through the declared resource end, with a recognized 32-byte wrapper; unknown appended data is not guessed.",
+    "A structurally valid extraction is not proof that the game is playable."
+  ],
+  "scans": [
+    {
+      "file": "Cenix-1.00.rom",
+      "bytes": 6884864,
+      "sha256": "6f4cfa569d070e9d4167a7e8ab2aae9d65f31f5407ce761e32f3199e7013f0c8",
+      "candidate_offsets_tested": 267735,
+      "containers": [],
+      "catalogue_firmware": "cenix-1.00"
+    },
+    {
+      "file": "Cenix-1.02.rom",
+      "bytes": 6884864,
+      "sha256": "72ba8bfd80fbc669b678a5cdfaf9c5dc43722e4c2f01f0bfaf90e793dfef78f8",
+      "candidate_offsets_tested": 267357,
+      "containers": [],
+      "catalogue_firmware": "cenix-1.02"
+    },
+    {
+      "file": "Cenix-2.00.rom",
+      "bytes": 7215616,
+      "sha256": "e4ca76f5909bb20ca0d0ae8b680698ee912b143eeb7a5c8a262d577a7b734cdc",
+      "candidate_offsets_tested": 276138,
+      "containers": [],
+      "catalogue_firmware": "cenix-2.00"
+    },
+    {
+      "file": "Cenix-2.01.rom",
+      "bytes": 7215616,
+      "sha256": "efe2e8215dc123f1e0a9c1257461d7d30f376184711ddf9fde17ba6929370643",
+      "candidate_offsets_tested": 276464,
+      "containers": [],
+      "catalogue_firmware": "cenix-2.01"
+    },
+    {
+      "file": "Cenix-2.10.rom",
+      "bytes": 7916032,
+      "sha256": "15f49a0aa6d15ae07d39b9cf32aca0f41e8bdd598fb09726026640654465a282",
+      "candidate_offsets_tested": 277437,
+      "containers": [],
+      "catalogue_firmware": "cenix-2.10"
+    },
+    {
+      "file": "Cenix-2.20.rom",
+      "bytes": 7293440,
+      "sha256": "8ba987031c28ebc51c202c3c809bd607c746c6529472e067382ef940aa1c1407",
+      "candidate_offsets_tested": 278074,
+      "containers": [],
+      "catalogue_firmware": "cenix-2.20"
+    },
+    {
+      "file": "Cenix-2.21.rom",
+      "bytes": 7293440,
+      "sha256": "4c3a8b1ca0282e23ae7696857a919842732e71d0bbccb093c41a0746435b40c2",
+      "candidate_offsets_tested": 277595,
+      "containers": [],
+      "catalogue_firmware": "cenix-2.21"
+    },
+    {
+      "file": "Kingston-2.09.rom",
+      "bytes": 6149632,
+      "sha256": "4c66faa7dd686fc4df20e9e6249953c97a975b2df3a3455764c99dc0afe21b40",
+      "candidate_offsets_tested": 208148,
+      "containers": [],
+      "catalogue_firmware": "kingston-2.09"
+    },
+    {
+      "file": "Kingston-2.12.rom",
+      "bytes": 6149632,
+      "sha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+      "candidate_offsets_tested": 207714,
+      "containers": [],
+      "catalogue_firmware": "kingston-2.12"
+    }
+  ],
+  "summary": {
+    "images": 9,
+    "bytes": 63003136,
+    "candidate_offsets_tested": 2336662,
+    "container_occurrences": 0,
+    "unique_decoded_bodies": 0
+  },
+  "extracted_files": [],
+  "positive_controls": {
+    "files": 38,
+    "passed": 38,
+    "records": [
+      {
+        "id": "godori",
+        "sha256": "0f9b70d38c86ccb32fbd2b24d6e28eaf9328a1eacbf578a3c19baace36b90e93",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "bfd63bf0a4be12882b9340df162b4a83817c013223b8728f73dd97848b91f257",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "hellfire",
+        "sha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "3940f46d723cee7057094083e02e93a0e1febefad3ade8c49b670bd6b3a3989d",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "ikaria",
+        "sha256": "c04204a6eec21188c4e499a8e2baa0ebb2d8d2007802e579085288edfdf5a5de",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "e0c43e910ebd9cb9f33dbb8c70dda5389912d00250d6198a4710a708c8454c4f",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "kpetris",
+        "sha256": "f4584767eac0ba15c568fc89687f9aed38b484811e3b2658ef45dec0fc392792",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "97c0cde3d631d5c3a0948361fba57e49c663799ba5efead5e60370cb077d93df",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex1_1zimae",
+        "sha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "6f008e13c5a35c58970d4c64596c4aa326e7e8c0bbb44ae9cd629fbf7b4d1c21",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex2_2007_pro_baseball",
+        "sha256": "8ea81140fc5586667cee4376c4dcc1a3e98e63b3477eabebe734fd50d0cec296",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "026b944a9cd58a6cf0cdc901abb15eac0b868a9f406e764116b4e77c36bb9250",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex6_alchemist",
+        "sha256": "863e4f02bc166acaeb935701c7456f76e9eb4a5174200b6c6c219ad627bbd72a",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "e4e594954360967711656584fc9a997b40bcd4074473cff051f6529cb4afb56b",
+        "bytes_after_declared_end": 1
+      },
+      {
+        "id": "gnex16_bubble_bubble",
+        "sha256": "0c2d18a5d5260fb784d0ad1169f683e290a3d5ddc02b46647eb7c8d6eee3ae45",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "3e7f230063b846b5ad951d9962d027a371478c271ad575ecfcb4665af88a6e4d",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex31_com2us_soccer_2006",
+        "sha256": "0e39f2dabc95ff71f7999b1495644f48f1c3bbb8cb890c89309f8a6aaa483e71",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "61eb6c65810c2a3d4ca2e15ad63bd34c0ccab36955402be361680fb139a0f115",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex29_crow2",
+        "sha256": "c64d9fb3e08c81448c727ee47f2733c8e46a46fed8dc2ab409b34e7b9eccb952",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "02226de4dbb85ee2e1158bc704998b7a332c192cfc425e0a180790156e2defd2",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex36_dungeon_fighter",
+        "sha256": "883c4c6fb9398ec1ceb6dfe8b102c12ac7c79aa5cfb6ed021316d7aacb17c3dd",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "9fc168d3cf2337a23502bd37f0ebcc96c3672f3cd9b12e2c7e83e4dc6f696324",
+        "bytes_after_declared_end": 47176
+      },
+      {
+        "id": "gnex21_eska2",
+        "sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex3_fist_of_fury2",
+        "sha256": "9012fa4fc75063f1cf3fdb009506a08d83bbd42c84dd10e9d9f47b94ff094e13",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "224216863e7fbf368d8e9ad334f3b03c646a641d15b91fa0fe0cdefcfd1deeb8",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex35_gostop_w_",
+        "sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex37_hero",
+        "sha256": "ecb024bdef451d0b7bd60f08cf54862682b6a4c7e7dc7d3843d786ed8ea338a2",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "96d52ff35cf63c5c4961d5a16b40d4595f7acc7a9bac6c8670b65e6847696c87",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex26_independence_day_3d",
+        "sha256": "9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "665abf9b97b0c2223124c1ee5a7b08225d3240bedf543f503d36e0fe139cacc9",
+        "bytes_after_declared_end": 139811
+      },
+      {
+        "id": "gnex34_major2007",
+        "sha256": "4aad29e41dbfc435bdb89306b44f03bd60e70b6e7205e77c443dc9b622f93af5",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "c2ab0c97e25b30b39a0c6646cc953521416e8e3429fe19096d32e38c1b05d520",
+        "bytes_after_declared_end": 27108
+      },
+      {
+        "id": "gnex10_marineblues",
+        "sha256": "fd0453b481c960d3b1b45c26a98e64f04f018c65962fcf532717a4b672174637",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "dd389437910a3920a9c2134e6d93bbef40707fac81a96c9dea49407a1916802a",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex14_mini_game2-_qvga_",
+        "sha256": "c6f99479dd49a139f67d2ee68386a7bb578fe361a28d51ab42d25bd540a9e5a9",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "fb4f1b85faea92523982558f5a57ef574ed7b7812b67f33b5fbad628a1d0b3a2",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex12_mosquito",
+        "sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex13_mu_-_fairy",
+        "sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex8_nom",
+        "sha256": "c3697ab331f0906ddf9bf4a81c1163c0e01e99adacfc1595a90fa97a58508fc3",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "33607f1bd94792e638a7dbce13afd6e137f9b3ea83c6439eff777d1d8c98ef4d",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex9_nom2",
+        "sha256": "386525ab6e1c8aa89c5c89aa3605fdf20a19e1d9ce0973780c920f7d73918769",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "f10177fcd976fdcd793355dd6612fa12857db11990074fc0a2c7b3e7dfb48fea",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex33_pocket_pro_baseball3",
+        "sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex17_samgugji_hero5",
+        "sha256": "85fb4fd27aefba5d7bd7bceb4f86ef7812aba2999bce55237ecc1acc7ae5e6fa",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "0c832a7151787578aeb0d76c8e2f4a4daaaffcfa505c469644d3fdeb00aa6213",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex18_shing_stone",
+        "sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex28_sketcher",
+        "sha256": "4dfd9f37daeb872a388ea5901c84e6e82a25659094c227ed693bd4ef3c811dee",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "89e7cd5d8afef1b69d823c2a85ff5580e1ab240e1393591f3b60b28f64cdd245",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex27_sketcher_.2inch",
+        "sha256": "4fe8a18069eb1b17d4a762b6430d609b020c47b789fd27a764a9eb928d12ba98",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "a98de037d298f6ca6053b6e18c8e757670276d9743fdfadb7bf8b5a36d2edc84",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex7_squash",
+        "sha256": "84ac7797e6cac8fac693f0fe6479d6a83a9880b681fb5dbbca8bfcbeb00c9d58",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "8c19f989408c3901c7d10c23747f65bf35e7dc0cae8ccb7d295a2a8522613702",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex19_super_action_hero",
+        "sha256": "d285b30564daf4d28e5d704919ac9e952d7e3066fbc934b7b52f6aa4a001fde4",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "e2b348238cddbff7dbf324f527403beb2d8cdd95f8fc172c3459dc3d45bef70c",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex30_susi_man3",
+        "sha256": "0016eb7d2c7ea888f4792d9f18a20161fadda922be236960cddb100d552c2db3",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "0eee2ccc15f7306610811df12879031a65a9749a88e47757827898764579e9dc",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex32_traffic",
+        "sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex15_virus",
+        "sha256": "53cdbe01aa0cd6a203f687ce78a0fcdd6b9e1eca80696d77486a2c65953dd68a",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "a18f06fd8b6362569e6d290477f615308c4135ef390850f0d6ff6f4f4e06dee9",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex5_viva_soccer2006",
+        "sha256": "a9c672d2f9ec3bec98370795c1f3983cab2a966e97a88e3b6abe99bc470a7ee8",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 32,
+        "decoded_body_sha256": "c90caa2c4d04841c67c88e963e0aab8386440f9ddec0a30b9a7c83df0f785d49",
+        "bytes_after_declared_end": 1
+      },
+      {
+        "id": "gnex25_ys3_the_oath_in_felghana",
+        "sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+        "bytes_after_declared_end": 0
+      },
+      {
+        "id": "gnex22_yulgang2_-_1",
+        "sha256": "0a88d3ffc132df9735762ab8e63a16e7a4e486ff1c4ddddbd667b2b9f4a108d3",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "314de9d89fe38b9035ab0322916408706737c7c981a8cc060b8bc7f0c6dd90cd",
+        "bytes_after_declared_end": 1
+      },
+      {
+        "id": "gnex23_yulgang2_-_2",
+        "sha256": "e8e4a83f65db80b5f1fd7f21156cd3aa085dd59ae09b011c2d15f8d28e07f2ed",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "6a32c81552865061f883faa003a779febc50fff94776301bd4836a4e168325b5",
+        "bytes_after_declared_end": 1
+      },
+      {
+        "id": "gnex24_yulgang2_-_3",
+        "sha256": "3ff584e6d5686e7d975d67d63006c4a695a2eba6a2b99f858599e9da0e837ffa",
+        "passed": true,
+        "containers_found": 1,
+        "body_offset": 0,
+        "decoded_body_sha256": "5606d1eb982db971fc23188db9786b82872d0bf41cf88559b0f2a51901fe0574",
+        "bytes_after_declared_end": 1
+      }
+    ]
+  }
+}
