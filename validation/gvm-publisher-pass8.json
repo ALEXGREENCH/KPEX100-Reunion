@@ -1,0 +1,138 @@
+{
+  "schema": 1,
+  "dateUtc": "2026-11-05",
+  "baselineRead": "outputs/KPEX100-Reunion/validation/gvm-2002-title-search-followup.json",
+  "scope": "Bounded attempt to retrieve actual historical publisher/portal indexes and content from www.webengkr.com, www.pocketspace.co.kr, www.n-top.com; priority 낚시왕, 포켓프로야구, DDR/Pump.",
+  "newGameBinaryFiles": 0,
+  "newSdkBinaryFiles": 0,
+  "newFirmwareFiles": 0,
+  "newRawOriginalDocumentFiles": 0,
+  "newPreservationArchive": null,
+  "sharedRepositoryChanges": false,
+  "vendorCodeExecuted": false,
+  "rawTransportReceipts": "index-receipts.json",
+  "webToolReads": [
+    {
+      "kind": "CDX index fallback",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.webengkr.com%2F%2A&from=2000&to=2005&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "CDX index fallback",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.pocketspace.co.kr%2F%2A&from=2000&to=2005&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "CDX index fallback",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.n-top.com%2F%2A&from=2000&to=2005&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "nearest-date homepage request, capture not established",
+      "url": "https://web.archive.org/web/20020801000000id_/http://www.webengkr.com/",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "nearest-date homepage request, capture not established",
+      "url": "https://web.archive.org/web/20020801000000id_/http://www.pocketspace.co.kr/",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "nearest-date homepage request, capture not established",
+      "url": "https://web.archive.org/web/20020401000000id_/http://www.n-top.com/",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "availability API fallback",
+      "url": "https://archive.org/wayback/available?url=www.webengkr.com&timestamp=20020801",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "live public root request, redirected to HTTPS by web tool",
+      "url": "http://www.pocketspace.co.kr/",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    },
+    {
+      "kind": "live public root request, redirected to HTTPS by web tool",
+      "url": "http://www.n-top.com/",
+      "attempts": 1,
+      "outcome": "Web tool: URL not accessible via this tool. No readable document or original raw payload supplied.",
+      "httpStatusEstablished": false,
+      "archiveAbsenceEstablished": false
+    }
+  ],
+  "nativeTransportFallback": {
+    "tool": "curl.exe 8.21.0, Windows Schannel",
+    "url": "https://archive.org/wayback/available?url=www.webengkr.com&timestamp=20020801",
+    "attempts": 1,
+    "tlsVerificationDisabled": false,
+    "connectTimeoutSeconds": 7,
+    "maxTimeSeconds": 15,
+    "result": "curl (28): connection timed out after 7009 ms; HTTP=000, MIME empty, SIZE=0",
+    "rawPayloadReceived": false,
+    "notes": "Different native TLS transport checked once after Python handshake timeouts. Empty diagnostic headers file is not preserved site content."
+  },
+  "searches": [
+    {
+      "q": "\"www.webengkr.com\" \"낚시왕\"",
+      "result": "Contemporary press hits identify publisher and later sequels; no archived publisher content/download path verified."
+    },
+    {
+      "q": "site:web.archive.org/web/ \"webengkr.com\"",
+      "result": "No usable archived publisher route obtained."
+    },
+    {
+      "q": "site:web.archive.org/web/ \"pocketspace.co.kr\"",
+      "result": "No usable archived publisher route obtained."
+    },
+    {
+      "q": "\"n-top.com\" \"GVM\" 다운로드 게시판",
+      "result": "Historical news and a later slide rehost; no original payload or usable forum download route obtained."
+    },
+    {
+      "q": "\"낚시왕\" \"webengkr.com\" 자료실",
+      "result": "No usable original publisher download index obtained."
+    }
+  ],
+  "localStaticCrossCheck": {
+    "filesRead": [
+      "work/early-samsung-gvm/static-scan.json",
+      "work/early-samsung-gvm-pass2/static-scan.json",
+      "work/gvm-community-source-next-pass/early-document-evidence.json"
+    ],
+    "existingLiteralEndpoint": "http://dev.n-top.com:9090/bok/java.wml",
+    "observation": "Existing Samsung static string reports contain this old Java development endpoint. It is not a new retrieved file and does not establish a GVM download service. It was not contacted.",
+    "newBinaryRead": false
+  },
+  "limits": [
+    "All three new raw CDX requests failed during TLS handshake after one attempt each; no index bytes, empty index result or CDX digest was obtained.",
+    "Requested homepage timestamps are lookup dates, not verified capture timestamps. Web tool access failure is not HTTP 404 or proof of archive absence.",
+    "The native availability fallback returned no payload. No raw-source SHA256/MIME/CDX match can honestly be assigned to nonexistent bytes.",
+    "No login, credentials, private gate, author contact, certificate-verification bypass or vendor binary execution used.",
+    "This bounded transport-limited pass does not determine whether the games survive. The three hostname leads remain unresolved. Names and later press mentions are not equated with a particular recovered game version."
+  ]
+}

@@ -344,6 +344,70 @@
           "url": "https://cfile209.uf.daum.net/attach/165521104A3E87994E43CC"
         }
       ]
+    },
+    {
+      "id": "platform-source-documents-pass8",
+      "title": "Исходные документы о платформах и GNEX FAIR",
+      "category": "Документы и исторические страницы",
+      "description": "Исходный PDF отчёта 2005 года на 262 страницах, анонс GNEX FAIR и два исторических HTML. Проверены восемь страниц PDF. Серийные модели, прошивки и новые SDK по этим материалам не установлены.",
+      "repositoryPath": "research/archives/KOCCA-and-GNEX-Platform-Source-Documents.zip",
+      "bytes": 4896557,
+      "sha256": "9edaa10a673d267e4529889721eb2781ef25536ad6a4eac66baaf2debe764d22",
+      "sources": [
+        {
+          "label": "Исходный материал 1",
+          "url": "https://kocca.kr/knowledge/research/__icsFiles/afieldfile/2010/05/01/x0CGIygutxln.pdf"
+        },
+        {
+          "label": "Исходный материал 2",
+          "url": "https://www.newswire.co.kr/newsRead.php?no=27876"
+        }
+      ]
+    },
+    {
+      "id": "telson-twc1150-owner-sources",
+      "title": "Telson TWC1150: сохранённая тема владельцев",
+      "category": "Неподтверждённые цели прошивок",
+      "description": "Две исходные HTML-страницы, текст, ссылки и provenance. Есть упоминание обновления через WAP, но прошивка не получена; поддержка GNEX/GVM и эквивалентность TWC1030 не установлены.",
+      "repositoryPath": "research/archives/Telson-TWC1150-Owner-Thread-Preservation.zip",
+      "bytes": 23398,
+      "sha256": "ae645b577aa0d8452996d7a4008712b71fbe1d375a2fc9d8aa8f42dd317fa24c",
+      "sources": [
+        {
+          "label": "Исходный материал 1",
+          "url": "https://www.esato.com/board/viewtopic.php?topic=78372"
+        }
+      ]
+    },
+    {
+      "id": "samsung-wince-source-check",
+      "title": "Samsung Windows CE: проверка источника устройств",
+      "category": "Неподтверждённые цели платформы",
+      "description": "Исходный HTML Samsung и журнал ограниченной проверки Windows CE/Palm. Конкретная модель с GNEX/GVM и CAB-рантайм не подтверждены; необычная дата страницы сохранена с оговоркой.",
+      "repositoryPath": "research/archives/Samsung-WinCE-Device-Source-Check.zip",
+      "bytes": 41791,
+      "sha256": "0fea8dd879a198c45b6a6a94eb44c9d340908e17ed873834901336ca3d28b83b",
+      "sources": [
+        {
+          "label": "Исходный материал 1",
+          "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-pdadmb%EC%9D%B8%ED%84%B0%EB%84%B7%EC%95%A0%EB%8B%88%EC%BD%9C-fx%ED%8F%B0-%EC%B6%9C%EC%8B%9C"
+        }
+      ]
+    },
+    {
+      "id": "s60-world-league-demo-followup",
+      "title": "World League 2005 Soccer Demo: исходный SGS и SIS",
+      "category": "S60: новая сборка и доказательства исполнения",
+      "description": "Две SIS, 32 извлечённых файла, два SGS и проверка Practice. Демоверсия доходит до поля и реагирует на ввод; интерфейс и звук проверены частично. Китайская перепаковка с посторонним системным компонентом исключена.",
+      "repositoryPath": "research/archives/Sinjisoft-S60-World-League-Demo-Recovered.zip",
+      "bytes": 2880324,
+      "sha256": "03424b2a0a173a6a88c5f910fb08a0059b4b775db7a35cd8b1951e077b1b0f54",
+      "sources": [
+        {
+          "label": "Исходная коллекция S60",
+          "url": "https://archive.org/details/largest-j2me-and-symbian-collection"
+        }
+      ]
     }
   ],
   "reports": [
@@ -410,6 +474,10 @@
     {
       "title": "Сохранение SDK, эмуляторов и первичных файлов",
       "repositoryPath": "doc/preservation.md"
+    },
+    {
+      "title": "Новая S60-демоверсия и дальнейшая проверка устройств",
+      "repositoryPath": "doc/platform-recovery-pass8.md"
     }
   ]
 }

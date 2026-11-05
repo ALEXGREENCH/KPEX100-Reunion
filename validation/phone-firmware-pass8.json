@@ -1,0 +1,301 @@
+{
+  "schema": 1,
+  "checked": "2026-11-06",
+  "scope": "One bounded handset branch after authoritative local deduplication; alternative exact Telson/Nokia firmware-model route. Not an exhaustive Internet holdings search.",
+  "counts": {
+    "newFirmwareArchives": 0,
+    "newFirmwareBuilds": 0,
+    "newGames": 0,
+    "newConfirmedGvmDevices": 0,
+    "newFirmwareScans": 0,
+    "newEfs2SignatureProbesOnOldInput": 1,
+    "successfulHttpPayloads": 4,
+    "httpAttempts": 9
+  },
+  "authoritativeInputs": [
+    {
+      "path": "outputs/KPEX100-Reunion/doc/phone-firmware-target-join.md",
+      "bytes": 14639,
+      "sha256": "7f2202c3bdfa864633ff69ef85599e7dd56797cc8f4a021cd9c7383bd8914599"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/firmware-target-join-round5.json",
+      "bytes": 175275,
+      "sha256": "4d949449ea401062eaa26fa5db6a2d065fb6b58c7e0f6500b28e79d01110b1e0"
+    },
+    {
+      "path": "outputs/KPEX100-Reunion/validation/gvm-historical-handset-guides.json",
+      "bytes": 287242,
+      "sha256": "722fa6f9c709392b7d972b5b476bc958543f616aa10e593e52327f4321515d2a"
+    },
+    {
+      "path": "work/lg-early-additional/findings.md",
+      "bytes": 7663,
+      "sha256": "fd6e524f9d756b08b9f156d3a51201a676ffe49e0fb9b5a09118f9fa54c952cf"
+    },
+    {
+      "path": "work/motorola-gvm/ms500w-scan.json",
+      "bytes": 4631,
+      "sha256": "a7e34c9676e44e5bdcc2cae580fb71872a0f0e51efced6de0970a8ce33c23a58"
+    }
+  ],
+  "target": {
+    "model": "Telson TWC1030",
+    "basis": [
+      {
+        "jsonPointer": "/workbookProfiles/214",
+        "profile": {
+          "sheet": "SKT",
+          "row": 232,
+          "manufacturer": "텔슨",
+          "model": {
+            "cell": "B232",
+            "value": "TWC1030"
+          },
+          "carrier": {
+            "cell": "C232",
+            "value": "SKT/STI"
+          },
+          "gvmSupported": {
+            "cell": "R232",
+            "value": "O"
+          },
+          "gvmVersion": {
+            "cell": "S232",
+            "value": "2"
+          },
+          "skvmSupported": {
+            "cell": "T232",
+            "value": "O"
+          },
+          "skvmVersion": {
+            "cell": "U232",
+            "value": "1"
+          },
+          "physicalWidth": {
+            "cell": "AT232",
+            "value": "120"
+          },
+          "physicalHeight": {
+            "cell": "AU232",
+            "value": "096"
+          },
+          "applicationWidth": {
+            "cell": "AV232",
+            "value": "120"
+          },
+          "applicationHeight": {
+            "cell": "AW232",
+            "value": "064"
+          }
+        }
+      }
+    ],
+    "missing": "Exact original firmware or primary firmware-build/model mapping; not another product photograph.",
+    "alternateSearchModel": "TWC1150",
+    "aliasProven": false,
+    "gvmTransferToAlternateProven": false
+  },
+  "excludedOldInputs": [
+    {
+      "path": "work/lg-early-additional/LG-SD1600.7z",
+      "bytes": 1263188,
+      "sha256": "cc83fe629ca75c2f895fbcffb6883aa5b0fa42a7ea104120736f24f530b9c3f4",
+      "reason": "Already acquired and two memory pieces scanned by the earlier raw/game-EFS pass. Same archive in round5 join is not a new target payload."
+    },
+    {
+      "path": "work/motorola-gvm/ms500w-71.11.32.7z",
+      "bytes": 18853393,
+      "sha256": "745aa15daaa3639a57e12d48285ac85a663f95c14d777019e497cb61f91daf8d",
+      "reason": "Known build 71.11.32, known 86 MiB raw image already structurally scanned. No re-download or new-firmware claim."
+    },
+    {
+      "path": "work/nokia-korean-next-pass/nokia-8887-manual.pdf",
+      "bytes": 2697696,
+      "sha256": "c7851330e0a06905290b5d9cbf016b6140ca15893992be934228a7399861b446",
+      "reason": "Original Nokia 8887 manual already preserved and documented. Search result was deduplicated before download."
+    }
+  ],
+  "existingMs500wProbe": {
+    "receipt": {
+      "path": "work/pass8-phone-firmware-hunt/ms500w-superblock-probe.json",
+      "bytes": 814,
+      "sha256": "4ef9fb5213f9fbb14814cc2d8f3edab40cbe24bf12610c0377d8dfe7d4153bbd"
+    },
+    "result": "Only EFSSuper match is not a plausible EFS2 superblock. Fixed geometry fields fail before parser/mount. This does not establish absence of other filesystem formats or game files."
+  },
+  "newSourceReceipts": {
+    "twc1150-vendor-cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.telson.co.kr%2Fenglish%2Fproducts%2Feng_twc1150.asp&output=json&filter=statuscode%3A200&collapse=digest",
+      "checkedUtc": "2026-11-05T21:24:27.133238+00:00",
+      "error": "<urlopen error _ssl.c:989: The handshake operation timed out>"
+    },
+    "twc1030-vendor-cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.telson.co.kr%2F%2Atwc1030%2A&output=json&filter=%21mimetype%3Aimage%2F.%2A&collapse=urlkey",
+      "checkedUtc": "2026-11-05T21:24:27.134237+00:00",
+      "error": "<urlopen error _ssl.c:989: The handshake operation timed out>"
+    },
+    "telson-vendor-path-cdx": {
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.telson.co.kr%2F%2A&output=json&filter=urlkey%3A.%2A%28twc%7CTWC%7C8887%7C8587%29.%2A&collapse=urlkey&limit=100",
+      "checkedUtc": "2026-11-05T21:24:27.134237+00:00",
+      "error": "<urlopen error _ssl.c:989: The handshake operation timed out>"
+    },
+    "nokia-sales-2007": {
+      "url": "https://forum.gsmhosting.com/vbb/2162517-post1.html",
+      "checkedUtc": "2026-11-05T21:24:27.134784+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    "esato-twc1150-owner-p1": {
+      "url": "https://www.esato.com/board/viewtopic.php?topic=78372",
+      "checkedUtc": "2026-11-05T21:27:33.861993+00:00",
+      "status": 200,
+      "finalUrl": "https://www.esato.com/board/viewtopic.php?topic=78372",
+      "headers": {
+        "Server": "nginx",
+        "Date": "Thu, 05 Nov 2026 21:27:34 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept-Encoding",
+        "X-Powered-By": "PHP/8.5.12",
+        "Set-Cookie": "LastVisit=1793914054; expires=Sat, 06 Nov 2027 21:27:34 GMT; Max-Age=31622400; path=/; domain=www.esato.com; HttpOnly",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Xss-Protection": "1; mode=block",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff"
+      },
+      "path": "work/pass8-phone-firmware-hunt/esato-twc1150-owner-p1.html",
+      "bytes": 38977,
+      "sha256": "ab330512b0a2776b1d17f2ec7aaa18f8762f4a8a10c8d84e07ea9a03f07d7b9d"
+    },
+    "esato-twc1150-owner-p2": {
+      "url": "https://www.esato.com/board/viewtopic.php?topic=78372&start=15",
+      "checkedUtc": "2026-11-05T21:27:33.862992+00:00",
+      "status": 200,
+      "finalUrl": "https://www.esato.com/board/viewtopic.php?topic=78372&start=15",
+      "headers": {
+        "Server": "nginx",
+        "Date": "Thu, 05 Nov 2026 21:27:34 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "close",
+        "Vary": "Accept-Encoding",
+        "X-Powered-By": "PHP/8.5.12",
+        "Set-Cookie": "LastVisit=1793914054; expires=Sat, 06 Nov 2027 21:27:34 GMT; Max-Age=31622400; path=/; domain=www.esato.com; HttpOnly",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-Xss-Protection": "1; mode=block",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff"
+      },
+      "path": "work/pass8-phone-firmware-hunt/esato-twc1150-owner-p2.html",
+      "bytes": 19079,
+      "sha256": "b9edc522aba850d35a58f2d3f4813acb51e69c3b6f18d88933edc0c345a850ee"
+    },
+    "arquivo-telson-models": {
+      "url": "https://arquivo.pt/wayback/cdx?url=www.telson.co.kr%2F%2Atwc%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+      "checkedUtc": "2026-11-05T21:27:33.862992+00:00",
+      "status": 200,
+      "finalUrl": "https://arquivo.pt/wayback/cdx?url=www.telson.co.kr%2F%2Atwc%2A&output=json&filter=statuscode%3A200&collapse=urlkey&limit=100",
+      "headers": {
+        "Date": "Thu, 05 Nov 2026 21:27:34 GMT",
+        "Server": "Apache",
+        "X-RateLimit-Limit": "250",
+        "X-RateLimit-Reset": "t=1793914054023512",
+        "RateLimit-Limit": "250",
+        "RateLimit-Reset": "60",
+        "X-RateLimit-Policy": "250;w=60",
+        "X-RateLimit-Scope": "ip",
+        "Vary": "User-Agent",
+        "Content-Type": "text/x-ndjson",
+        "Cache-Control": "max-age=300, public, must-revalidate",
+        "Strict-Transport-Security": "max-age=31536000; preload",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "X-Requested-With",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "path": "work/pass8-phone-firmware-hunt/arquivo-telson-models.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "arquivo-telson-text": {
+      "url": "https://arquivo.pt/textsearch?q=TWC1150&maxItems=10&prettyPrint=true",
+      "checkedUtc": "2026-11-05T21:27:33.862992+00:00",
+      "status": 200,
+      "finalUrl": "https://arquivo.pt/textsearch?q=TWC1150&maxItems=10&prettyPrint=true",
+      "headers": {
+        "Date": "Thu, 05 Nov 2026 21:27:34 GMT",
+        "Server": "Apache",
+        "X-RateLimit-Limit": "250",
+        "X-RateLimit-Reset": "t=1793914054019182",
+        "RateLimit-Limit": "250",
+        "RateLimit-Reset": "60",
+        "X-RateLimit-Policy": "250;w=60",
+        "X-RateLimit-Scope": "ip",
+        "Vary": "Origin,Accept-Encoding,Access-Control-Request-Method,Access-Control-Request-Headers",
+        "Content-Type": "application/json",
+        "Cache-Control": "max-age=300, public, must-revalidate",
+        "Strict-Transport-Security": "max-age=31536000; preload",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "1; mode=block",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "X-Requested-With",
+        "Connection": "close",
+        "Transfer-Encoding": "chunked"
+      },
+      "path": "work/pass8-phone-firmware-hunt/arquivo-telson-text.json",
+      "bytes": 1954,
+      "sha256": "e3356fdaf426054cdffeea8bc70380cac4163ef603a020bb261a4243dd84205d"
+    },
+    "telson-fcc-manufacturer": {
+      "url": "https://fcc.report/company/Telson-Electronics-Co-L-T-D",
+      "checkedUtc": "2026-11-05T21:27:33.863992+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  },
+  "successfulSourceFindings": [
+    {
+      "receiptKeys": [
+        "esato-twc1150-owner-p1",
+        "esato-twc1150-owner-p2"
+      ],
+      "status": "Original 2004 owner testimony; firmware bytes absent.",
+      "observations": [
+        "Author names TWC-1150, Reliance/RIM and receipt of a working RUIM/CDMA handset in Bangalore in December 2004.",
+        "First page mentions a carrier-restricted WAP browser and watch software upgrade, but supplies no update URL, build identifier, downloadable archive, or updater binary.",
+        "Both pages' actual href lists contain no ZIP/RAR/PDF/EXE or Telson/Reliance payload link. The linked photos were not downloaded as firmware substitutes.",
+        "Author reports 128x96 display. This attributed owner figure does not resolve the existing TWC1030 128x112 vs workbook 120x96 conflict and is not a GVM framebuffer measurement."
+      ],
+      "limits": "Does not prove TWC1030 is TWC1150, does not prove TWC1150 has GVM/GNEX, and does not establish actual firmware/build identity."
+    },
+    {
+      "receiptKeys": [
+        "arquivo-telson-models",
+        "arquivo-telson-text"
+      ],
+      "status": "Alternative public archival catalogue inspected, no firmware link recovered.",
+      "observations": [
+        "The requested Telson wildcard CDX returned HTTP200 with zero bytes; this is only that query's empty response.",
+        "Textsearch estimated one result: a 2004 Harrow report captured in 2009, mentioning the Reliance product page. It is a secondary report, not an OEM update payload. Its linked original archived article was not fetched."
+      ]
+    }
+  ],
+  "failedRoutes": [
+    "Three Telson CDX queries were attempted once as one parallel batch; local TLS handshake timeout. No retry loop, no claim that Wayback lacks these pages.",
+    "Nokia 2007 software-sales post returned HTTP403. Indexed names duplicate the old seven BIN filename leads, not verified file bodies or manufacturer mapping.",
+    "FCC manufacturer index returned HTTP403. No model certification table or firmware version was read."
+  ],
+  "concreteNextStep": {
+    "primary": "Seek an original TWC1030 service/download package or a firmware version/build page tied to that exact model. A TWC1150 owner WAP-upgrade mention is insufficient for a ROM filename or GNEX attribution.",
+    "nokia": "Obtain a public original PST/service package with model/build manifest or one of the exact skw_211.bin/skw_225.bin/skw_229.bin/st85v167.bin/st85v172.bin/st85v173.bin/kt75v637.bin bodies. Do not assign all seven to 8887 from a repeated sales list.",
+    "notPerformed": "No requests to owners, paid/private attachment access, arbitrary guessed ROM endpoint downloading, or personal-data export."
+  },
+  "limits": [
+    "No newly acquired phone firmware archive exists in this branch, so no new CRC/SGS scan or positive-control run is claimed.",
+    "No vendor program or phone code was executed. The old MS500W image was read only for a fixed signature/geometry probe; no private EFS listing or content was exported.",
+    "No shared repository/catalog/index/git files were changed by this agent.",
+    "Successful raw source bytes and HTTP receipts are local scratch-relative paths; source failure is not worldwide absence."
+  ]
+}

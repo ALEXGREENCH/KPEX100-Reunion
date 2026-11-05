@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "classification": "Preserved archival demo; partial rendering; not promoted as fully playable.",
+  "sgs": {
+    "filename": "world-league-2005-soccer-demo-s60.sgs",
+    "bytes": 172632,
+    "sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0"
+  },
+  "newRetailTitle": false,
+  "newDistinctSgsBuild": true,
+  "codeAndResourceBytesDifferFromPreservedFullVersion": true,
+  "staticComparison": {
+    "previousFull": {
+      "bytes": 172604,
+      "sha256": "439c7c59850dd58b265512a157ae65e67602055e01b2891dc0b3743046a38e08",
+      "sections": [
+        99112,
+        101256,
+        113660,
+        120320
+      ],
+      "codeBytes": 98984,
+      "codeSha256": "566cb7f84b3799a66f0c8e2aa503763921d32afe48954a1b7d7dac699a7571b8",
+      "variableTableSha256": "363baf4b1ce44d9ee1e99011387b0e06705a99c403cca503a3acd1640e269642",
+      "initializedDataSha256": "1b2bc04563beba1f1191cbe40213caddff5b4e2c27efa88cffc27585f9c5db59",
+      "resourceTableSha256": "eb52bcf2234dfa3e46d21446dc334244d3bc8119be971435f98053f577c8ca26",
+      "resourceDataSha256": "a13f9dbe9465a36057abf4c8b6e5f0fe58395ee2ca902cfb3841638681b156da"
+    },
+    "newDemo": {
+      "bytes": 172632,
+      "sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0",
+      "sections": [
+        99188,
+        101332,
+        113736,
+        120396
+      ],
+      "codeBytes": 99060,
+      "codeSha256": "e2e9d5efaa979655cd441321941461268227dd2b1d66a8a707bb2fd3ca976ac7",
+      "variableTableSha256": "363baf4b1ce44d9ee1e99011387b0e06705a99c403cca503a3acd1640e269642",
+      "initializedDataSha256": "1b2bc04563beba1f1191cbe40213caddff5b4e2c27efa88cffc27585f9c5db59",
+      "resourceTableSha256": "9e94ab683b4adbc52f159ab6c1901ab696827332cf113709973901cbed7a3da4",
+      "resourceDataSha256": "9dc349b7558a82897b16d0350f37373d0053a5a20159c86db920feb99bc44d1d"
+    }
+  },
+  "runtime": {
+    "profile": "phone",
+    "width": 176,
+    "height": 208
+  },
+  "engineCommit": "351fe3d292f8e3f152228f2b4dfe43ac1f286506",
+  "all24EngineRomCliFilesExactRawBytesMatchCommit": true,
+  "runtimeSourceEvidence": "gameplay/runtime-source-identities.json",
+  "explorationFiniteRuns": 9,
+  "comparativeRuns": 2,
+  "additionalProbesAfterComparison": 0,
+  "route": "Main menu → Practice → Phoenix team roster → Tigers team roster → Formation/Time → 5 min practice match.",
+  "demoRestrictionsObserved": [
+    "New Game displays: New game not available in demo version.",
+    "Match up selection did not enter gameplay in these probes; Practice does."
+  ],
+  "actualFieldReached": true,
+  "inputChangesActualPitchAtMatchedDeadlines": true,
+  "matchingNavigationPrefixActions": 45,
+  "allPrefixFramesByteIdentical": true,
+  "inputSequenceAfterCommonPrefix": [
+    [
+      "hold",
+      17
+    ],
+    [
+      "advance",
+      600
+    ],
+    [
+      "release",
+      17
+    ],
+    [
+      "advance",
+      400
+    ],
+    [
+      "hold",
+      18
+    ],
+    [
+      "advance",
+      600
+    ],
+    [
+      "release",
+      18
+    ],
+    [
+      "advance",
+      400
+    ],
+    [
+      "key",
+      5
+    ],
+    [
+      "advance",
+      1000
+    ],
+    [
+      "key",
+      20
+    ],
+    [
+      "advance",
+      1000
+    ]
+  ],
+  "idleSequenceAfterCommonPrefix": [
+    [
+      "advance",
+      0
+    ],
+    [
+      "advance",
+      600
+    ],
+    [
+      "advance",
+      0
+    ],
+    [
+      "advance",
+      400
+    ],
+    [
+      "advance",
+      0
+    ],
+    [
+      "advance",
+      600
+    ],
+    [
+      "advance",
+      0
+    ],
+    [
+      "advance",
+      400
+    ],
+    [
+      "advance",
+      0
+    ],
+    [
+      "advance",
+      1000
+    ],
+    [
+      "advance",
+      0
+    ],
+    [
+      "advance",
+      1000
+    ]
+  ],
+  "allComparisonVirtualDeadlinesEqual": true,
+  "comparisons": [
+    {
+      "actionIndex": 45,
+      "virtualDeadlineMs": 20300,
+      "inputAction": [
+        "hold",
+        17
+      ],
+      "idleAction": [
+        "advance",
+        0
+      ],
+      "differentPixels": 0,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 0,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-45-hold17.png",
+      "inputFrameSha256": "6b3a4ae40810c2948568ad205c6185b6678cc148521958748e95a2d484447efb",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-45-advance0.png",
+      "idleFrameSha256": "6b3a4ae40810c2948568ad205c6185b6678cc148521958748e95a2d484447efb"
+    },
+    {
+      "actionIndex": 46,
+      "virtualDeadlineMs": 20900,
+      "inputAction": [
+        "advance",
+        600
+      ],
+      "idleAction": [
+        "advance",
+        600
+      ],
+      "differentPixels": 273,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 266,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-46-advance600.png",
+      "inputFrameSha256": "8205cfc41139edea6cf2e80f1ed558da96815c1f02b48b4f740d4746bc1a0bae",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-46-advance600.png",
+      "idleFrameSha256": "658edda4a0445ca3dee60a6865ae22eec2de9e8623ffc294b9367030fe285766"
+    },
+    {
+      "actionIndex": 47,
+      "virtualDeadlineMs": 20900,
+      "inputAction": [
+        "release",
+        17
+      ],
+      "idleAction": [
+        "advance",
+        0
+      ],
+      "differentPixels": 273,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 266,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-47-release17.png",
+      "inputFrameSha256": "8205cfc41139edea6cf2e80f1ed558da96815c1f02b48b4f740d4746bc1a0bae",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-47-advance0.png",
+      "idleFrameSha256": "658edda4a0445ca3dee60a6865ae22eec2de9e8623ffc294b9367030fe285766"
+    },
+    {
+      "actionIndex": 48,
+      "virtualDeadlineMs": 21300,
+      "inputAction": [
+        "advance",
+        400
+      ],
+      "idleAction": [
+        "advance",
+        400
+      ],
+      "differentPixels": 284,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 276,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-48-advance400.png",
+      "inputFrameSha256": "26530319a16778b294503d57d9aac7007a1177298ee4e141e3c44080ddf2aaf1",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-48-advance400.png",
+      "idleFrameSha256": "2fed657a8005114e1956352dd1f43d0288fa923808939fd83b71fd41dc8eca17"
+    },
+    {
+      "actionIndex": 49,
+      "virtualDeadlineMs": 21300,
+      "inputAction": [
+        "hold",
+        18
+      ],
+      "idleAction": [
+        "advance",
+        0
+      ],
+      "differentPixels": 284,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 276,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-49-hold18.png",
+      "inputFrameSha256": "26530319a16778b294503d57d9aac7007a1177298ee4e141e3c44080ddf2aaf1",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-49-advance0.png",
+      "idleFrameSha256": "2fed657a8005114e1956352dd1f43d0288fa923808939fd83b71fd41dc8eca17"
+    },
+    {
+      "actionIndex": 50,
+      "virtualDeadlineMs": 21900,
+      "inputAction": [
+        "advance",
+        600
+      ],
+      "idleAction": [
+        "advance",
+        600
+      ],
+      "differentPixels": 214,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 206,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-50-advance600.png",
+      "inputFrameSha256": "8abba3d8637893e6adb0cad36c2428e578483c1cdc4b27fc8ab39cdcfeddac2c",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-50-advance600.png",
+      "idleFrameSha256": "8ce30b274162a846b9e5b583e3e283eb7294ed0a11f569d47fa1c35766447365"
+    },
+    {
+      "actionIndex": 51,
+      "virtualDeadlineMs": 21900,
+      "inputAction": [
+        "release",
+        18
+      ],
+      "idleAction": [
+        "advance",
+        0
+      ],
+      "differentPixels": 214,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 206,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-51-release18.png",
+      "inputFrameSha256": "8abba3d8637893e6adb0cad36c2428e578483c1cdc4b27fc8ab39cdcfeddac2c",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-51-advance0.png",
+      "idleFrameSha256": "8ce30b274162a846b9e5b583e3e283eb7294ed0a11f569d47fa1c35766447365"
+    },
+    {
+      "actionIndex": 52,
+      "virtualDeadlineMs": 22300,
+      "inputAction": [
+        "advance",
+        400
+      ],
+      "idleAction": [
+        "advance",
+        400
+      ],
+      "differentPixels": 443,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 433,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-52-advance400.png",
+      "inputFrameSha256": "ab2f6aa884e2db27f3e8bd69c2bc17cd70f051bf82cab9e37995804f2fcce22a",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-52-advance400.png",
+      "idleFrameSha256": "7a882f59b3c3ca431ee98f036cd784ccd4418339ded91a50fb3274e4756a9067"
+    },
+    {
+      "actionIndex": 53,
+      "virtualDeadlineMs": 22300,
+      "inputAction": [
+        "key",
+        5
+      ],
+      "idleAction": [
+        "advance",
+        0
+      ],
+      "differentPixels": 443,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 433,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-53-key5.png",
+      "inputFrameSha256": "ab2f6aa884e2db27f3e8bd69c2bc17cd70f051bf82cab9e37995804f2fcce22a",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-53-advance0.png",
+      "idleFrameSha256": "7a882f59b3c3ca431ee98f036cd784ccd4418339ded91a50fb3274e4756a9067"
+    },
+    {
+      "actionIndex": 54,
+      "virtualDeadlineMs": 23300,
+      "inputAction": [
+        "advance",
+        1000
+      ],
+      "idleAction": [
+        "advance",
+        1000
+      ],
+      "differentPixels": 3148,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 2694,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-54-advance1000.png",
+      "inputFrameSha256": "7bb0118ff8da63cb3bfdbe3eb79c6873315f1b978f4fcba260946089e9f0124d",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-54-advance1000.png",
+      "idleFrameSha256": "7fb47781f0437615644ae121ce08d02b076375b6ddcf795ceb5a8d8a91c44c6d"
+    },
+    {
+      "actionIndex": 55,
+      "virtualDeadlineMs": 23300,
+      "inputAction": [
+        "key",
+        20
+      ],
+      "idleAction": [
+        "advance",
+        0
+      ],
+      "differentPixels": 3148,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 2694,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-55-key20.png",
+      "inputFrameSha256": "7bb0118ff8da63cb3bfdbe3eb79c6873315f1b978f4fcba260946089e9f0124d",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-55-advance0.png",
+      "idleFrameSha256": "7fb47781f0437615644ae121ce08d02b076375b6ddcf795ceb5a8d8a91c44c6d"
+    },
+    {
+      "actionIndex": 56,
+      "virtualDeadlineMs": 24300,
+      "inputAction": [
+        "advance",
+        1000
+      ],
+      "idleAction": [
+        "advance",
+        1000
+      ],
+      "differentPixels": 3831,
+      "pitchRoi": {
+        "x": 0,
+        "y": 18,
+        "width": 176,
+        "height": 152
+      },
+      "differentPitchPixels": 2516,
+      "inputFrame": "work\\pass6-s60-large-corpus\\gameplay\\input\\local-world-league-2005-soccer-demo-s60-56-advance1000.png",
+      "inputFrameSha256": "55b682b2c1e47d738a762fd93ab5532fd1e50731ffbbd3b0da464f76fc54ac58",
+      "idleFrame": "work\\pass6-s60-large-corpus\\gameplay\\idle\\local-world-league-2005-soccer-demo-s60-56-advance1000.png",
+      "idleFrameSha256": "b03eb2166bf86a61ff6df41bea29e94431292502a3e806b2c0f7c32bc77441cc"
+    }
+  ],
+  "vmErrors": {
+    "input": null,
+    "idle": null
+  },
+  "finalVmStatus": {
+    "input": "idle",
+    "idle": "idle"
+  },
+  "finalEvents": {
+    "input": 190,
+    "idle": 182
+  },
+  "audioDiagnostics": {
+    "input": {
+      "requests": 14,
+      "ignoredNativeSubtypes": [
+        29738,
+        27946,
+        28714
+      ],
+      "lastError": null,
+      "lastFormat": null
+    },
+    "idle": {
+      "requests": 14,
+      "ignoredNativeSubtypes": [
+        29738,
+        27946,
+        28714
+      ],
+      "lastError": null,
+      "lastFormat": null
+    }
+  },
+  "limitations": [
+    "Formation/time menu visibly has dark/garbled or missing elements; this remains a rendering defect.",
+    "No complete match, save/load, audio correctness or native S60 wrapper execution was tested.",
+    "Pixel divergence on the actual football field at equal deadlines establishes causal input response, not complete correctness.",
+    "No VM/core fixes or catalogue promotion were made."
+  ],
+  "selectedImages": [
+    {
+      "path": "outputs\\World-League-Demo-S60-Input-Field.png",
+      "caption": "Input sequence final match field",
+      "bytes": 5133,
+      "sha256": "55b682b2c1e47d738a762fd93ab5532fd1e50731ffbbd3b0da464f76fc54ac58"
+    },
+    {
+      "path": "outputs\\World-League-Demo-S60-Idle-Field.png",
+      "caption": "Idle control at identical virtual deadline",
+      "bytes": 5114,
+      "sha256": "b03eb2166bf86a61ff6df41bea29e94431292502a3e806b2c0f7c32bc77441cc"
+    },
+    {
+      "path": "outputs\\World-League-Demo-S60-Formation-Limitation.png",
+      "caption": "Formation/time menu showing incomplete graphics",
+      "bytes": 2661,
+      "sha256": "cef81cd28ec561e4bb0a73fa0eea8b0e5faac662d22032fcc677b2e30ff9c2b3"
+    }
+  ],
+  "nativeSisAppHostCodeExecuted": false,
+  "emulatedGuestSgsExecution": true,
+  "sharedRepoModified": false,
+  "networkRequests": 0,
+  "finiteRunsTotal": 11,
+  "publicReplayFiles": [
+    {
+      "path": "replay-world-league-demo-s60.json",
+      "bytes": 2261,
+      "sha256": "4a9df4cc1095ec80905e1ff1eca6392fd79694e7881ce503b37bb59c0eed9605"
+    },
+    {
+      "path": "replay-world-league-demo-s60-control.json",
+      "bytes": 2270,
+      "sha256": "6a6d9953cf412e20022f27b51661800fd3c7d0473a73d457a21fa32d01bc1a17"
+    }
+  ],
+  "cataloguePromotion": "Not added to the working catalogue. Field/input verified; full interface/audio and Symbian rendering parity remain unverified.",
+  "visualInterpretationLimit": "Some Formation/Time labels are dark or hard to read. Without an original Symbian reference their cause (demo restrictions, design or emulation) is not established.",
+  "evidenceArchive": "research/archives/Sinjisoft-S60-World-League-Demo-Recovered.zip"
+}

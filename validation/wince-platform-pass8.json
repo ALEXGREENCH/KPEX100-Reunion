@@ -1,0 +1,179 @@
+{
+  "schema": 1,
+  "dateUtc": "2026-11-05",
+  "scope": "Finite primary-source check of GNEX/GVM on Windows CE, Pocket PC and Palm, including exact Samsung MITs/SCH-M450/SPH-M4500, i-series, LG KC1 and Cyberbank candidates.",
+  "conclusion": "No actual shipped GNEX/GVM model on Windows CE/PocketPC/Palm was established in this branch; no CAB, ARM EXE, runtime or game for these OS families was recovered.",
+  "newRawSourceFiles": 1,
+  "newGnexGvmRuntimeFiles": 0,
+  "newCabFiles": 0,
+  "newArmExeFiles": 0,
+  "newGameFiles": 0,
+  "confirmedShippedGnexGvmModels": [],
+  "unconfirmedCandidateLabels": [
+    "Samsung MITs",
+    "Samsung SCH-M450",
+    "Samsung SPH-M4500",
+    "Samsung SGH-i300",
+    "Samsung SGH-i700",
+    "LG KC1",
+    "Cyberbank/POZ X301"
+  ],
+  "sources": [
+    {
+      "id": "official-samsung-fx",
+      "kind": "Manufacturer product announcement, exact live HTML response preserved",
+      "url": "https://news.samsung.com/kr/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-pdadmb%EC%9D%B8%ED%84%B0%EB%84%B7%EC%95%A0%EB%8B%88%EC%BD%9C-fx%ED%8F%B0-%EC%B6%9C%EC%8B%9C",
+      "file": "samsung-fx-primary.html",
+      "httpStatus": 200,
+      "mime": "text/html; charset=UTF-8",
+      "bytes": 137832,
+      "sha256": "c4859577674e03324af02df8136a94048b6997e1e8b54e34e15a9218e7424db3",
+      "observation": "Actual product body names SPH-M4500, PDA/office functions, WiFi, DMB and a planned SKT SCH-M450 variant. It does not establish GNEX/GVM or a WinCE runtime download.",
+      "literalDisplayDate": "2001/01/29",
+      "literalDateMeta": "2001-01-29T09:22:46+09:00",
+      "dateResolution": "Unresolved anomaly. Retained verbatim; not accepted as a verified release date, corrected by guesswork or used to date GNEX support.",
+      "rawLiteralCounts": {
+        "SPH_M4500": 4,
+        "SCH_M450": 3,
+        "GNEX": 0,
+        "GVM": 0
+      },
+      "cdxDigest": null,
+      "cdxDigestReason": "Live HTTPS source response, not a Wayback replay."
+    },
+    {
+      "id": "samsung-manual-mirror",
+      "kind": "Manufacturer-authored manual text hosted by third-party mirror; original PDF not obtained",
+      "url": "https://manualzilla.com/doc/6844094/samsung-sch-m450-user-manual",
+      "printedPage": 147,
+      "webTextLines": [
+        4852,
+        4878
+      ],
+      "observation": "The games section explicitly lists 카드놀이 and Bubble Breaker under the ordinary Programs/Games menu. Text-find returned no GNEX, GVM, WIPI or 위피 matches.",
+      "limits": "No match in extracted/OCR text does not prove the firmware lacks a VM. The game names do not establish SGS packaging or native binary identity.",
+      "originalRawManualObtained": false,
+      "webDownloadButton": "https://manualzilla.com/download/6844094",
+      "webDownloadOutcome": "HTTP403; no gate bypass",
+      "shellOutcome": "HTTP403 HTML body saved only as local transport diagnostic; not bundled as a manual or original source."
+    },
+    {
+      "id": "kocca-existing-primary",
+      "kind": "Previously recovered 262-page research report; root owns original preservation package",
+      "url": "https://kocca.kr/knowledge/research/__icsFiles/afieldfile/2010/05/01/x0CGIygutxln.pdf",
+      "existingOriginalFile": "outputs/KOCCA-Cross-Platform-Game-Development-2005.pdf",
+      "bytes": 5105834,
+      "sha256": "a272dccae2ed1a663fe41d9e25192117732e9900d4f6606c4906ff29966ac281",
+      "newDownloadInThisBranch": false,
+      "visualReviewPhysicalPdfPages": [
+        252
+      ],
+      "printedPages": [
+        246
+      ],
+      "observation": "Distinguishes current GNEX-on-SKT-WIPI from proposals to put WIPI on Symbian/Windows CE. Names Samsung, LG and Cyberbank as Windows Mobile PocketPC vendors without specifying models or demonstrating a GNEX runtime on them.",
+      "coverage": "Whole-file keyword search performed; only physical page252 text and rendered page were specifically reviewed here. This is not a full new visual review of262pages.",
+      "derivedReviewRasterLocal": "KOCCA-p252.png",
+      "derivedRasterSha256": "f4010a64adffcaa5e3342683b31a5d010f8ac45b2f06e539834ec85e3ef5a631",
+      "bundledHere": false
+    },
+    {
+      "id": "hpc-catalog-false-positive",
+      "kind": "Distributor catalog read through web tool; raw response not preserved",
+      "url": "https://hpc.ru/soft/softlist.phtml?t=dvl&u=4318",
+      "observation": "The generic site navigation advertises PocketPC and Palm. All five listed Sinjisoft products explicitly state Symbian Series60 v6/v7/v8: World League2005 Soccer, Storm of Silence, Bounce!, Waterski and Aiolos Fighter. This is not evidence of WinCE/Palm releases.",
+      "newRuntimeObtained": false
+    },
+    {
+      "id": "tta-candidate-only",
+      "kind": "Standards-body source candidate",
+      "url": "https://www.tta.or.kr/data/androReport/ttaJnal/5-3-6.pdf",
+      "observation": "Search snippets mention Cyberbank/PocketPC in platform context. Neither web tool nor raw request obtained the PDF; no model or GNEX support is asserted from the snippet.",
+      "rawOutcome": "TLS handshake timeout; attempted once",
+      "newOriginalObtained": false
+    }
+  ],
+  "searches": {
+    "queryCount": 36,
+    "batches": [
+      [
+        "\"GNEX\" \"Windows CE\"",
+        "\"GVM\" \"Pocket PC\" Sinjisoft",
+        "\"SCH-M450\" \"GVM\"",
+        "\"LG-KC1\" \"GNEX\""
+      ],
+      [
+        "\"SCH-M450\" \"위피\"",
+        "\"LG-KC1\" \"WIPI\"",
+        "\"신지소프트\" \"윈도\" \"PDA\"",
+        "\"사이버뱅크\" \"GNEX\""
+      ],
+      [
+        "\"SCH-M450\" \"WIPI\"",
+        "\"SPH-M4500\" \"GVM\"",
+        "\"KC1\" \"GNEX\" -site:htcmania.com",
+        "\"신지소프트\" \"WinCE\""
+      ],
+      [
+        "\"GVM\" \"POZ\"",
+        "\"GNEX\" \"X301\"",
+        "\"SCH-M450\" \"manual\" site:samsung.com",
+        "\"LG-KC1\" \"게임\" site:lge.co.kr"
+      ],
+      [
+        "\"SCH-M450\" 삼성 공식",
+        "\"GVM\" \"Windows CE\" Sinjisoft -site:emulation.gametechwiki.com",
+        "\"GNEX\" \"Palm\"",
+        "\"사이버뱅크\" \"WIPI\""
+      ],
+      [
+        "\"SCH-M450\" \"지넥스\"",
+        "\"SCH-M450\" \"NATE\" \"게임\"",
+        "\"삼성\" \"Pocket PC\" \"GNEX\"",
+        "\"신지소프트\" \"PocketPC\""
+      ],
+      [
+        "\"LG-KC1\" \"설명서\" LG전자",
+        "\"사이버뱅크\" \"위피\" PDA",
+        "\"GNEX\" \"CAB\" Sinjisoft",
+        "\"Sinjisoft\" \"Pocket\""
+      ],
+      [
+        "\"SCH-M450\" site:news.samsung.com",
+        "\"Samsung\" \"MITs\" \"GVM\"",
+        "\"Samsung SGH-i300\" \"GNEX\"",
+        "\"Samsung SGH-i700\" \"GVM\""
+      ],
+      [
+        "\"Sinjisoft\" \"Palm OS\"",
+        "\"GNEX\" \"PalmOS\"",
+        "\"GVM\" \"MITs\" -Garnet",
+        "\"LG-KC1\" \"GVM\""
+      ]
+    ]
+  },
+  "baselineEvidence": {
+    "doc": "doc/gnex-devices.md",
+    "existingPrimaryReleaseUrl": "https://www.newswire.co.kr/newsRead.php?no=114580",
+    "status": "Existing repository source describes WinCE demonstrations without exact models; retained as demonstrations, not a newly recovered shipped product or runtime. No duplicate FAIR2005 branch or archive packaging."
+  },
+  "transportReceipts": "primary-raw-receipts.json",
+  "preservedWhitelist": [
+    "samsung-fx-primary.html",
+    "primary-raw-receipts.json",
+    "result.json",
+    "result.md",
+    "README.md"
+  ],
+  "excludedLocalDiagnostics": [
+    "sch-m450-manufacturer-manual-mirror.html (HTTP403 response body)"
+  ],
+  "limits": [
+    "No known device or OS support was inferred merely from WIPI, Java, ARM PE, general vendor relationships, generic catalog navigation, planned PDA ports or a matching game title.",
+    "No original CAB, WinCE ARM.EXE, GNEX runtime or game was found; runtime compatibility was not tested.",
+    "No failed Wayback/publisher endpoints from the preceding branch were retried.",
+    "No login, credentials, private gate, author contact, vendor code, Office macro, installer or firmware execution used.",
+    "Samsung HTML was reread locally: byte length and SHA256 match the HTTP receipt; expected title/product body and literal metadata are present. HTML text counts are limited static checks, not a firmware audit.",
+    "Shared repository/index/catalog/Git files were not modified."
+  ]
+}
