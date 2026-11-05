@@ -138,9 +138,10 @@ No additional historical binaries are downloaded automatically. The optional
 `npm run build:source-only` omits the collection from the site output; the default
 `npm run build` includes it.
 
-Original SDK installers, extracted SDK programs and the Mobile C Reference Manual
-are external research inputs. The separate research archives include historical
-company pages and the corporate brochure PDF; they retain their own notices.
+The separate optional research archives now preserve original SDK installers,
+extracted SDK programs, the exact Daum Mobile C Reference Manual, historical
+company pages and the corporate brochure PDF. They retain their own notices
+and are not runtime dependencies. [Inventory and provenance](doc/preservation.md).
 
 Four additional unmodified GVM2 builds come from public Mobaill attachments;
 [provenance and limits](doc/mobaill-games.md). Storm of Silence Demo and

@@ -19,6 +19,11 @@ source projects and research downloads are available on the
 provenance, sizes and SHA-256 hashes. Native PXO and Flash finds are preserved
 research inputs; Reunion does not claim to run them.
 
+[Platform preservation](doc/preservation.md) provides the complete SDK 2.10/2.12
+installers, emulators, the exact original Mobile C Reference 311 and early GVM
+documents. Eighteen downloadable ZIPs retain actual files, with a complete
+direct-member hash inventory and an offline verification tool.
+
 ## Run locally
 
 Install Node.js 22+ and npm, then run these commands in the cloned repository:

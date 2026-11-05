@@ -1,0 +1,670 @@
+{
+  "schema": 1,
+  "scope": "Publication integrity review of previously retained platform bundles and exact Daum API311. No fresh download or vendor execution claimed.",
+  "sdk": {
+    "schemaVersion": 1,
+    "checkedUtc": "2026-11-05T20:58:00.943078+00:00",
+    "archive": "outputs\\Sinjisoft-GVM-GNEX-Emulators-Recovered.zip",
+    "bytes": 91170938,
+    "sha256": "68b37ec3514bcaac7443dc05262e1f72b081b477d7f1145a70c34c5a2918c7e7",
+    "wholeZipCrcPassed": true,
+    "independentSevenZipTestPassed": true,
+    "safeUniqueMemberPaths": true,
+    "zipMembers": 166,
+    "manifestFilesVerified": 165,
+    "manifestExactCoverage": true,
+    "metadataHashesMatchValidation": 5,
+    "provenanceMatchesExistingValidation": true,
+    "coreToolIdentitiesMatched": 16,
+    "standaloneGvm2xIdentityMatched": true,
+    "standaloneGvm2xIsExplicitlyLabeledModified": true,
+    "installers": [
+      {
+        "sdkVersion": "2.10",
+        "installerPath": "original-installers/GNEX_SDK_v2.10.exe",
+        "bytes": 24026547,
+        "sha256": "075f010557029a53a5c7e01fc7f492e4236a26b8edb019fcd7193d0719a0dd19",
+        "sourcePage": "https://archive.org/details/gnex-sdk-v-2.10",
+        "sourceUrl": "https://archive.org/download/gnex-sdk-v-2.10/GNEX_SDK_v2.10.exe",
+        "fullInstallerIdentityMatchesValidation": true,
+        "installShieldOverlayCompletelyParsed": true,
+        "installShieldMembers": [
+          {
+            "name": "Setup.bmp",
+            "offset": 225638,
+            "bytes": 450056,
+            "sha256": "d97a468ef9922797b1add831cf9e0279f34af10689d2899091ceeceb77b8c538"
+          },
+          {
+            "name": "0x0412.ini",
+            "offset": 676006,
+            "bytes": 4303,
+            "sha256": "f51be423bd0fa9c7c75e4f3df92e991d70de2c2602aa7f37eb179abf7a7c68d0"
+          },
+          {
+            "name": "instmsiw.exe",
+            "offset": 680621,
+            "bytes": 1822520,
+            "sha256": "b93fdcd1136faa9a8cb73a329b2f1f5f430a150ddcec35de916e3a1539f09351"
+          },
+          {
+            "name": "instmsia.exe",
+            "offset": 2503453,
+            "bytes": 1708856,
+            "sha256": "267304efcc831e35927c1f25d610d36fb64121d108a6f4ff0168c53df01e2b16"
+          },
+          {
+            "name": "ISScript8.Msi",
+            "offset": 4212621,
+            "bytes": 713216,
+            "sha256": "b8e0f598ffe8b4b136c5238da0ff275fa197526ae6ebc1d135abe208be3e747d"
+          },
+          {
+            "name": "GNEX SDK.msi",
+            "offset": 4926149,
+            "bytes": 18854400,
+            "sha256": "4a84a24dc5b9b708da57aacebcad9f8a95ea799ec978d585d32f96b24cd4ddb6"
+          },
+          {
+            "name": "Setup.ini",
+            "offset": 23780861,
+            "bytes": 1251,
+            "sha256": "53d050ec5db75492865983c6044400777970aff1dd90e5236305dc9eee01d274"
+          },
+          {
+            "name": "Setup.skin",
+            "offset": 23782424,
+            "bytes": 244123,
+            "sha256": "99075a31ebd2740e1fde3982bfe049a98112f80fa1c303e0e6818c4aa78f17ca"
+          }
+        ],
+        "embeddedMsiBytes": 18854400,
+        "embeddedMsiSha256": "4a84a24dc5b9b708da57aacebcad9f8a95ea799ec978d585d32f96b24cd4ddb6",
+        "embeddedCabBytes": 17558662,
+        "embeddedCabSha256": "a58e4a4d2b06cf5d2f785c186771ccc08f2e50898cc782c5c7a7dfbf31d30a71",
+        "cabWholeCrcPassed": true,
+        "allFullCabFilesHashMatchedPriorInventory": 238,
+        "selectedPayloadsReproducedByteIdentical": 71,
+        "selectedRoles": {
+          "extensionless source fragment; original CAB File ID retained": 21,
+          "SDK-distributed OCX; no system registration": 1,
+          "emulator, IDE or compiler/assembler companion": 12,
+          "SDK-distributed DLL companion": 9,
+          "emulator skin/profile and bitmap companions": 22,
+          "original application ABI header": 2,
+          "original SDK manual": 4
+        },
+        "manualsInsideUnchangedInstaller": [
+          {
+            "fileId": "MCC_PRG_301_311.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/MCC_PRG_301_311.pdf",
+            "bytes": 1968338,
+            "sha256": "57daf209554a5d5fd84c3b67751308c0a39a7c1370b0ec0720eeb642ded2a3e6"
+          },
+          {
+            "fileId": "SDK_MAN_302_208.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/SDK_MAN_302_208.pdf",
+            "bytes": 2826102,
+            "sha256": "e576d0df3d29362a6a0397916bb7e5cc9ed4b5072a52552f47c1a68fcac71cbb"
+          },
+          {
+            "fileId": "MCC_API_301_313.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/MCC_API_301_313.pdf",
+            "bytes": 1347551,
+            "sha256": "79c60acebea82a35e1d7e970bfde710fdf34a6cc32731b67597dd8f11c5ca176"
+          },
+          {
+            "fileId": "SDK_OVW_301_205.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/SDK_OVW_301_205.pdf",
+            "bytes": 664335,
+            "sha256": "a4dfacdb1f4b19522e7a5927d5a075c0fac228201fb414975d61d248ee078703"
+          }
+        ],
+        "manualsDirectlyExtracted": [
+          "SDK-2.10/Doc/MCC_PRG_301_311.pdf",
+          "SDK-2.10/Doc/SDK_MAN_302_208.pdf",
+          "SDK-2.10/Doc/MCC_API_301_313.pdf",
+          "SDK-2.10/Doc/SDK_OVW_301_205.pdf"
+        ],
+        "samplePayloadFilesInsideUnchangedInstaller": 76,
+        "sampleProjectsInsideUnchangedInstaller": [
+          "AioloS",
+          "Hellfire",
+          "MglTest",
+          "Ring"
+        ],
+        "sampleSgsInsideUnchangedInstaller": [
+          {
+            "fileId": "MglTestGNEX.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/MglTest/MglTestGNEX.sgs",
+            "bytes": 48250,
+            "sha256": "f1ba220f27116875fe732e25f26be2604dba799bd85a9b4559195a0a81142903"
+          },
+          {
+            "fileId": "HellfireGNEX.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/Hellfire/HellfireGNEX.sgs",
+            "bytes": 29888,
+            "sha256": "e6b609a5f6d1f3c10311ed9d2476311cd4aa63cbdaa47811eb568d76cd9fed5b"
+          },
+          {
+            "fileId": "AioloS.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/AioloS/AioloS.sgs",
+            "bytes": 339912,
+            "sha256": "17334d4f22c9e467aabefeff1ec73123a345a2cb566c1d452e328632bfad28ee"
+          },
+          {
+            "fileId": "ring.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/Ring/ring.sgs",
+            "bytes": 7392,
+            "sha256": "4033c79c8cfd56ed9ba138c246b8b17f903eb5ed8fae6c0c9e4f3afca7364852"
+          }
+        ],
+        "nonCuratedOriginalPayloadCountStillFullyPreservedInsideInstaller": 167
+      },
+      {
+        "sdkVersion": "2.12",
+        "installerPath": "original-installers/GNEX_SDK_v2.12.exe",
+        "bytes": 42130867,
+        "sha256": "87d852091c8d25134d6b57bf14e8745b5e99f6c6277fdb56bff801b1ff0fd3a7",
+        "sourcePage": "https://archive.org/details/gnex_sdk_v2.12",
+        "sourceUrl": "https://archive.org/download/gnex_sdk_v2.12/GNEX_SDK_v2.12.exe",
+        "fullInstallerIdentityMatchesValidation": true,
+        "installShieldOverlayCompletelyParsed": true,
+        "installShieldMembers": [
+          {
+            "name": "Setup.bmp",
+            "offset": 225638,
+            "bytes": 450056,
+            "sha256": "d97a468ef9922797b1add831cf9e0279f34af10689d2899091ceeceb77b8c538"
+          },
+          {
+            "name": "0x0412.ini",
+            "offset": 676006,
+            "bytes": 4303,
+            "sha256": "f51be423bd0fa9c7c75e4f3df92e991d70de2c2602aa7f37eb179abf7a7c68d0"
+          },
+          {
+            "name": "instmsiw.exe",
+            "offset": 680621,
+            "bytes": 1822520,
+            "sha256": "b93fdcd1136faa9a8cb73a329b2f1f5f430a150ddcec35de916e3a1539f09351"
+          },
+          {
+            "name": "instmsia.exe",
+            "offset": 2503453,
+            "bytes": 1708856,
+            "sha256": "267304efcc831e35927c1f25d610d36fb64121d108a6f4ff0168c53df01e2b16"
+          },
+          {
+            "name": "ISScript8.Msi",
+            "offset": 4212621,
+            "bytes": 713216,
+            "sha256": "b8e0f598ffe8b4b136c5238da0ff275fa197526ae6ebc1d135abe208be3e747d"
+          },
+          {
+            "name": "GNEX SDK.msi",
+            "offset": 4926149,
+            "bytes": 36958720,
+            "sha256": "c4aba3fa5ff5b36cbfbf00cf12d2e7b531097fca8c14c26a006f560d8a4d7fa7"
+          },
+          {
+            "name": "Setup.ini",
+            "offset": 41885181,
+            "bytes": 1251,
+            "sha256": "d25420559b16447a029370dbc3acce524fedd012d4add75a8a9dc14821bd9a00"
+          },
+          {
+            "name": "Setup.skin",
+            "offset": 41886744,
+            "bytes": 244123,
+            "sha256": "99075a31ebd2740e1fde3982bfe049a98112f80fa1c303e0e6818c4aa78f17ca"
+          }
+        ],
+        "embeddedMsiBytes": 36958720,
+        "embeddedMsiSha256": "c4aba3fa5ff5b36cbfbf00cf12d2e7b531097fca8c14c26a006f560d8a4d7fa7",
+        "embeddedCabBytes": 35511304,
+        "embeddedCabSha256": "4bc477403f00bbccc835290e9b461c05c21caa547a3def6e3d0de9ceecbdb1e3",
+        "cabWholeCrcPassed": true,
+        "allFullCabFilesHashMatchedPriorInventory": 255,
+        "selectedPayloadsReproducedByteIdentical": 82,
+        "selectedRoles": {
+          "SDK-distributed OCX; no system registration": 1,
+          "emulator, IDE or compiler/assembler companion": 12,
+          "SDK-distributed DLL companion": 9,
+          "emulator skin/profile and bitmap companions": 30,
+          "original application ABI header": 4,
+          "original SDK manual": 4,
+          "extensionless source fragment; original CAB File ID retained": 22
+        },
+        "manualsInsideUnchangedInstaller": [
+          {
+            "fileId": "SKTSignedSystem_QuickGuide_G",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/SKTSignedSystem_QuickGuide_GNEX검증.pdf",
+            "bytes": 963993,
+            "sha256": "b5cedf0fa79131364899448a4843ac6da95a0870a0d517bf1c911dfe0d5b7554"
+          },
+          {
+            "fileId": "New_File2",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/SKTSignedSystem_통합툴패키지_UserGuide.pdf",
+            "bytes": 3713907,
+            "sha256": "e7bf26833e8c3570905122c57e7c0e2bf7cb6f9bee7d206827c5759eb5793a7e"
+          },
+          {
+            "fileId": "New_File1",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/SKTSignedSystem_통합툴패키지_InstallGuide.pdf",
+            "bytes": 587950,
+            "sha256": "66d2cf7a2c6d00eb0010e3969c4b462ab8e19eadcf11268464400686e0883b42"
+          },
+          {
+            "fileId": "MCC_PRG_301_311.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/MCC_PRG_301_311.pdf",
+            "bytes": 1727138,
+            "sha256": "eeee589b173524f1df99fb5edaa5506839b46b83534658377129ea80214b779e"
+          },
+          {
+            "fileId": "SDK_MAN_302_208.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/SDK_MAN_302_208.pdf",
+            "bytes": 2863432,
+            "sha256": "9ef0e1e37654a9e3099038fa55497d6ad513066e5a972067ead909cfea5f7a53"
+          },
+          {
+            "fileId": "MCC_API_301_313.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/MCC_API_301_313.pdf",
+            "bytes": 1500078,
+            "sha256": "2e9f6e30f47da8c522065cad7bc7fbe1761a2fdf0ce941af646ef3132be6e6a6"
+          },
+          {
+            "fileId": "SDK_OVW_301_205.pdf",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Doc/SDK_OVW_301_205.pdf",
+            "bytes": 664335,
+            "sha256": "a4dfacdb1f4b19522e7a5927d5a075c0fac228201fb414975d61d248ee078703"
+          }
+        ],
+        "manualsDirectlyExtracted": [
+          "SDK-2.12/Doc/MCC_PRG_301_311.pdf",
+          "SDK-2.12/Doc/SDK_MAN_302_208.pdf",
+          "SDK-2.12/Doc/MCC_API_301_313.pdf",
+          "SDK-2.12/Doc/SDK_OVW_301_205.pdf"
+        ],
+        "samplePayloadFilesInsideUnchangedInstaller": 76,
+        "sampleProjectsInsideUnchangedInstaller": [
+          "AioloS",
+          "Hellfire",
+          "MglTest",
+          "Ring"
+        ],
+        "sampleSgsInsideUnchangedInstaller": [
+          {
+            "fileId": "MglTestGNEX.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/MglTest/MglTestGNEX.sgs",
+            "bytes": 48250,
+            "sha256": "f1ba220f27116875fe732e25f26be2604dba799bd85a9b4559195a0a81142903"
+          },
+          {
+            "fileId": "HellfireGNEX.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/Hellfire/HellfireGNEX.sgs",
+            "bytes": 29888,
+            "sha256": "e6b609a5f6d1f3c10311ed9d2476311cd4aa63cbdaa47811eb568d76cd9fed5b"
+          },
+          {
+            "fileId": "AioloS.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/AioloS/AioloS.sgs",
+            "bytes": 339912,
+            "sha256": "17334d4f22c9e467aabefeff1ec73123a345a2cb566c1d452e328632bfad28ee"
+          },
+          {
+            "fileId": "ring.sgs",
+            "installedPath": "SourceDir/./Sinjisoft/GNEX SDK/./Samples/Ring/ring.sgs",
+            "bytes": 7392,
+            "sha256": "4033c79c8cfd56ed9ba138c246b8b17f903eb5ed8fae6c0c9e4f3afca7364852"
+          }
+        ],
+        "nonCuratedOriginalPayloadCountStillFullyPreservedInsideInstaller": 173
+      }
+    ],
+    "preservationCoverage": "Both unchanged full original SDK installers are included, preserving all installer payloads. The directly extracted SDK trees are a documented subset (71 + 82 files), not the full distributions. All 238 + 255 CAB payloads were freshly extracted as data and size/SHA checked against prior full MSI inventories; all 153 curated files were byte-compared to these fresh payloads.",
+    "limits": [
+      "No vendor EXE, DLL, MSI CustomAction, emulator or compiler was executed.",
+      "Original vendor signature authenticity and present-day usability are not established.",
+      "43 original source fragments are preserved, not declared a complete buildable VM source release.",
+      "MSI installed-path annotations use the preexisting full MSI inventories; all underlying CAB bytes were independently rechecked in this audit.",
+      "Preservation completeness is for these two known distributions and one modified GVM2X executable, not a claim that every historical SDK/emulator survives."
+    ],
+    "networkRequests": 0,
+    "vendorCodeExecuted": false,
+    "sharedRepoModified": false,
+    "scratch": "work\\gnex-preservation-publication\\sdk-review-clean-b258a35d87f34b73a8109e3195d43ac1",
+    "ok": true
+  },
+  "manual": {
+    "schema": 1,
+    "sourceUrl": "http://cfile209.uf.daum.net/attach/165521104A3E87994E43CC",
+    "userProvidedHttpsUrl": "https://cfile209.uf.daum.net/attach/165521104A3E87994E43CC",
+    "sourceRetrievalEvidence": "Previously verified HTTP200 application/pdf and research/reverse/reference/sources.json; current pass uses the exact existing local download, no fresh network response claimed.",
+    "storedFilename": "MobileC-Library-Function-Reference-MCC-API-301-311.pdf",
+    "storedFilenameIsAssigned": true,
+    "bytes": 1340616,
+    "sha256": "f3fe78dba53055774e83b94668e4f3cae2862662a66653877577edda0da54e0e",
+    "documentId": "MCC-API-301-311",
+    "documentDate": "2007-10",
+    "internalLabelConflict": "Copyright page still says MCC-API-301-310; cover and2007-10-25 changes say311.",
+    "sourceBytesUnchanged": true,
+    "sourceAuthenticityLimit": "Historical public copy; publisher digital signature not authenticated.",
+    "rights": "Original Sinjisoft document, not relicensed by Reunion.",
+    "archive": "Sinjisoft-MobileC-API-311-Reference.zip",
+    "archiveBytes": 959291,
+    "archiveSha256": "2abb865b4bcf5239d8c9ef1635156b51c21bd0090fa332809cb1dc0cc66ed16f",
+    "zipCrcPassed": true,
+    "zipMembers": 4,
+    "manifestFilesVerified": 3
+  },
+  "otherArchives": [
+    {
+      "filename": "Early-Korean-GVM-Recovered.zip",
+      "bytes": 15591193,
+      "sha256": "da1f296bfe18a0f010d5a72a22e3d5c1325597bedc6683d315d7891c21454b5c",
+      "members": 37,
+      "manifest": {
+        "path": "Early-Korean-GVM/SHA256SUMS.txt",
+        "shape": "sha256sum text, paths relative to package root",
+        "entries": 36,
+        "hashMatches": 36,
+        "uncoveredMembers": [],
+        "selfExcluded": true
+      },
+      "canonicalHttpsSources": [
+        "https://altehandys.de/downloads/man-no-8887.pdf",
+        "https://pfile.imholic.com:2822/Pantech/%ED%94%BC%EC%B2%98%ED%8F%B0_%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B2%84%EC%99%80_%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A7%A4%EB%8B%88%EC%A0%80/C-500/PCSync_C500_Setup_V251.zip"
+      ],
+      "relatedDocs": [
+        "doc/curitel-c500.md",
+        "doc/samsung-early-gvm-followup.md",
+        "doc/sanyo-nokia-korean-gvm.md"
+      ],
+      "publicationRecommendation": "Preserve and publish unchanged as a research/source archive, subject to the recorded scope notes; no integrity or identified unrelated private-data blocker.",
+      "privacyReview": {
+        "credentialPatternFlags": 0,
+        "privateDataFilenameFlags": 0,
+        "identifiedUnrelatedPrivateUserData": false,
+        "basis": "Inspected outer member inventory, README/source receipts and nested ZIP inventories; strict credential-pattern scan plus personal-data filename scan found no flags. Full handset/user storage dumps are not bundled. Public developer source/contact metadata is part of historical source provenance.",
+        "limits": "Not exhaustive decompilation of packed installers/PEs or an assurance of absence of arbitrary embedded data; no old executable run."
+      },
+      "notes": [
+        "Bomb Link is Samsung native EADS, not SGS. Its previously unmatched direct-download record is explained by the explicit stored derivation chain/source BIN hash, offset and module hash; exact bundled header and length agree. Source BIN was not freshly reread in this audit."
+      ]
+    },
+    {
+      "filename": "GVM-Club-2002-2003-Recovered.zip",
+      "bytes": 18533341,
+      "sha256": "7eae5cc4d101ad26420e9776de4a91bb47f4b7381fc46af09961573166fdfa0a",
+      "members": 46,
+      "manifest": {
+        "path": "GVM-Club-Recovered/SHA256SUMS.txt",
+        "shape": "sha256sum text, paths relative to package root",
+        "entries": 45,
+        "hashMatches": 45,
+        "uncoveredMembers": [],
+        "selfExcluded": true
+      },
+      "canonicalHttpsSources": [
+        "https://web.archive.org/web/20020623052226id_/http://www.gvmclub.com:80/boardcomm/board.cgi?bd=no&j=dl&i=49&c=18",
+        "https://web.archive.org/web/20020623052620id_/http://www.gvmclub.com:80/boardcomm/board.cgi?bd=no&j=dl&i=53&c=14"
+      ],
+      "relatedDocs": [
+        "doc/gvm-community-recovery.md",
+        "doc/gvm-historical-handsets.md"
+      ],
+      "publicationRecommendation": "Preserve and publish unchanged as a research/source archive, subject to the recorded scope notes; no integrity or identified unrelated private-data blocker.",
+      "privacyReview": {
+        "credentialPatternFlags": 0,
+        "privateDataFilenameFlags": 0,
+        "identifiedUnrelatedPrivateUserData": false,
+        "basis": "Inspected outer member inventory, README/source receipts and nested ZIP inventories; strict credential-pattern scan plus personal-data filename scan found no flags. Full handset/user storage dumps are not bundled. Public developer source/contact metadata is part of historical source provenance.",
+        "limits": "Not exhaustive decompilation of packed installers/PEs or an assurance of absence of arbitrary embedded data; no old executable run."
+      },
+      "notes": [
+        "Contains original WI-TOP SDK/service material and Hellfire SGS v1. Historical replay result is an exception, not a working-game claim; README is a snapshot of its packaging date."
+      ]
+    },
+    {
+      "filename": "Korean-GVM-Forum-Recovered.zip",
+      "bytes": 6069729,
+      "sha256": "66dd674fdef470d87521a2043325d8f79c84b67c50d0c166d2e3137ea2ec0f97",
+      "members": 216,
+      "manifest": {
+        "path": "Korean-GVM-Forum-Recovered/SHA256SUMS",
+        "shape": "sha256sum text, paths relative to package root",
+        "entries": 215,
+        "hashMatches": 215,
+        "uncoveredMembers": [],
+        "selfExcluded": true
+      },
+      "canonicalHttpsSources": [
+        "https://web.archive.org/web/20030726040556id_/http://www.gvmclub.com:80/board/free/include/tbl_board_free/files/php7ch3Lm/2.alz",
+        "https://cafe.naver.com/mobileprograming/34"
+      ],
+      "relatedDocs": [
+        "doc/gvm-forum-attachments.md",
+        "doc/korean-developer-samples.md"
+      ],
+      "publicationRecommendation": "Preserve and publish unchanged as a research/source archive, subject to the recorded scope notes; no integrity or identified unrelated private-data blocker.",
+      "privacyReview": {
+        "credentialPatternFlags": 0,
+        "privateDataFilenameFlags": 0,
+        "identifiedUnrelatedPrivateUserData": false,
+        "basis": "Inspected outer member inventory, README/source receipts and nested ZIP inventories; strict credential-pattern scan plus personal-data filename scan found no flags. Full handset/user storage dumps are not bundled. Public developer source/contact metadata is part of historical source provenance.",
+        "limits": "Not exhaustive decompilation of packed installers/PEs or an assurance of absence of arbitrary embedded data; no old executable run."
+      },
+      "notes": [
+        "Original ALZ inventories/CRC-derived members are preserved with prior validation; this audit rereads their outer CRC/hash, while the 7 nested ZIPs are independently CRC/path checked. No new ALZ decompression performed. README catalog/runtime statements predate later library updates; preserve as historical packaging notes."
+      ]
+    },
+    {
+      "filename": "GVM-2004-Korean-Forum-Tools.zip",
+      "bytes": 855341,
+      "sha256": "ba7e96ffbb69f270fb40cf9a66192889f15f084b7a1390e563e0833c10049197",
+      "members": 3,
+      "manifest": {
+        "path": "manifest.json",
+        "shape": "context/source manifest object: confirmed_handset, manuals_text_scanned, forum_attachments, penoa_wipi, cenix_firmware_prefix",
+        "entriesForPresentFiles": 2,
+        "hashMatches": 2,
+        "uncoveredMembers": [],
+        "selfExcluded": true,
+        "contextOnlyRecordsNotBundled": [
+          "PH-S5700 manual",
+          "페노아전기2.zip / Java WIPI",
+          "Cenix firmware prefix"
+        ]
+      },
+      "canonicalHttpsSources": [
+        "https://download.blog.naver.com/17820bb8acf3f32f02ec87bd8d6a1c6bcd9f61831d/data4/2004/9/10/196/GVM_Templet.c",
+        "https://download.blog.naver.com/de4bc271633f3ae6cb254e7444a3d5a20456a84a7a/data3/2004/7/16/27/ImagePlus_GetId.zip"
+      ],
+      "relatedDocs": [
+        "doc/gnex-sdk-research.md"
+      ],
+      "publicationRecommendation": "Preserve and publish unchanged as a research/source archive, subject to the recorded scope notes; no integrity or identified unrelated private-data blocker.",
+      "privacyReview": {
+        "credentialPatternFlags": 0,
+        "privateDataFilenameFlags": 0,
+        "identifiedUnrelatedPrivateUserData": false,
+        "basis": "Inspected outer member inventory, README/source receipts and nested ZIP inventories; strict credential-pattern scan plus personal-data filename scan found no flags. Full handset/user storage dumps are not bundled. Public developer source/contact metadata is part of historical source provenance.",
+        "limits": "Not exhaustive decompilation of packed installers/PEs or an assurance of absence of arbitrary embedded data; no old executable run."
+      },
+      "notes": [
+        "Only ImagePlus_GetId.zip, GVM_Templet.c and manifest.json are bundled. The manifest also describes PH-S5700, a Java WIPI game and a Cenix fragment that are absent here; these are context records, not promised members. Both actual payload hashes match; no separate external .receipt.json or package README is present."
+      ]
+    },
+    {
+      "archive": "Sinjisoft-GNEX-Technical-Whitepaper-2003.zip",
+      "bytes": 1165176,
+      "sha256": "6490538c8f9d1bd3feb2995e78b14598097038f37d61a66bb3e9a43ea0dba034",
+      "category": "Original Sinjisoft ZIP containing one historical technical PDF",
+      "sourceUrls": [
+        "https://web.archive.org/web/20051102215510id_/http://www.sinjisoft.co.kr:80/download/GNEX_Technical_Whitepaper_K.zip"
+      ],
+      "docLinks": [
+        "doc/gvm-gnex-lineage.md",
+        "doc/gnex-sdk-research.md"
+      ],
+      "zipCrcPassed": true,
+      "safeUniqueMemberPaths": true,
+      "noSymlinks": true,
+      "memberCount": 1,
+      "uncompressedBytes": 1561280,
+      "sourceCdxSha1Base32": "7FVR2BX2PZAFGEEAPYSOG4KHPHI5KBH4",
+      "sourceCdxDigestMatched": true,
+      "manifestValidation": {
+        "type": "Unmodified original publisher archive; no added member manifest",
+        "allZipMemberCrcPassed": true,
+        "currentMemberSizeSha256InventoryIncludedInThisReview": true
+      },
+      "publicationAssessment": "Suitable as an explicitly labelled historical research/source archive; retain existing notices and full original bytes. No unreviewed raw EFS/user partition found in the included payload inventory.",
+      "excludeMembers": [],
+      "limits": [
+        "Original publisher archive bytes are retained, including legacy Korean ZIP filename encoding. The archive has no added manifest; this review supplies exact member hashes.",
+        "Document dates, filename dates, PDF generation and capture dates must remain distinct as described in linked documentation."
+      ]
+    },
+    {
+      "archive": "Sinjisoft-GNEX-Service-2003.zip",
+      "bytes": 965093,
+      "sha256": "d1c38300291532943a3a6bf9f7a6ad21c7dfc4159424a43c2579850157db98eb",
+      "category": "Original Sinjisoft ZIP containing two historical service/development PDFs",
+      "sourceUrls": [
+        "https://web.archive.org/web/20051102220514id_/http://www.sinjisoft.co.kr/download/GNEX_Service.zip"
+      ],
+      "docLinks": [
+        "doc/gnex-sdk-research.md"
+      ],
+      "zipCrcPassed": true,
+      "safeUniqueMemberPaths": true,
+      "noSymlinks": true,
+      "memberCount": 2,
+      "uncompressedBytes": 1863316,
+      "sourceCdxSha1Base32": "PIOXKJXFEAKJK4LQ5LX43RUHVMU5YVOA",
+      "sourceCdxDigestMatched": true,
+      "manifestValidation": {
+        "type": "Unmodified original publisher archive; no added member manifest",
+        "allZipMemberCrcPassed": true,
+        "currentMemberSizeSha256InventoryIncludedInThisReview": true
+      },
+      "originalCp949Names": [
+        {
+          "zipReaderName": "GNEX_┤┘┐ε╖╬╡σ└┌╖ß2.pdf",
+          "recoveredCp949Name": "GNEX_다운로드자료2.pdf"
+        },
+        {
+          "zipReaderName": "GNEX_┤┘┐ε╖╬╡σ└┌╖ß1.pdf",
+          "recoveredCp949Name": "GNEX_다운로드자료1.pdf"
+        }
+      ],
+      "publicationAssessment": "Suitable as an explicitly labelled historical research/source archive; retain existing notices and full original bytes. No unreviewed raw EFS/user partition found in the included payload inventory.",
+      "excludeMembers": [],
+      "limits": [
+        "Original publisher archive bytes are retained, including legacy Korean ZIP filename encoding. The archive has no added manifest; this review supplies exact member hashes.",
+        "Document dates, filename dates, PDF generation and capture dates must remain distinct as described in linked documentation."
+      ]
+    },
+    {
+      "archive": "SV400-GNEX-Research.zip",
+      "bytes": 17194661,
+      "sha256": "83df5985a6914e55ae5af1cde51aa5bbe2a11b5257120c99a79100731c50ac5d",
+      "category": "SV400 factory-main reconstruction, GNEX dispatcher research, GPL LGLZ source and Lala developer project",
+      "sourceUrls": [
+        "https://archive.sunderland93.ru/Firmwares/LG/SV400%20%28Hotline%29/SV400005_03.7z",
+        "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/lgui/source-archive.zip",
+        "https://cafe.naver.com/jzsdn/8970"
+      ],
+      "docLinks": [
+        "doc/lg-sv400-games.md",
+        "doc/gnex-devices.md",
+        "doc/gvm-forum-attachments.md"
+      ],
+      "zipCrcPassed": true,
+      "safeUniqueMemberPaths": true,
+      "noSymlinks": true,
+      "memberCount": 86,
+      "uncompressedBytes": 36494698,
+      "manifestValidation": {
+        "internalSha256Sums": "SV400-GNEX-Research/SHA256SUMS",
+        "internalFilesVerified": 85,
+        "allNonSelfFilesCovered": true,
+        "externalReceipt": "SV400-GNEX-Research.receipt.json",
+        "externalReceiptSha256": "5dea39d00ba1c7a7a70346f794c2b08fbd2d4ad7eeb950835a471682dc321405",
+        "externalReceiptFilesVerified": 85,
+        "externalReceiptZipHashMatched": true
+      },
+      "privacyReview": {
+        "method": "Complete member inventory and source provenance; no EFS/userdata/phonebook/message partitions or whole raw KDZ/WDB/BIN/IMG/NAND/DLL/EXE are included. Strong private-key markers absent. This is a bounded archival review, not semantic identification of every possible byte string.",
+        "rawUserPartitionMembers": [],
+        "wholeRawImageOrVendorExecutableMembers": [],
+        "privateKeyMarkerMembers": []
+      },
+      "factoryElfReview": {
+        "member": "SV400-GNEX-Research/SV400/SV400005_03-main-reconstructed.elf",
+        "bytes": 33993664,
+        "sha256": "fb2b5e1abe3b9d8155e1f59f63e49434d77fcaade08ae9a27a6b006ea0447cbb",
+        "armElf32HeadersVerified": true,
+        "boundedProgramHeaders": 20,
+        "sourceKind": "Reconstructed MAIN software from the exact public LG factory service update",
+        "userPartitionIncluded": false,
+        "limit": "ELF rodata/code are preserved as factory software; this is not a whole phone/NAND image and does not establish a complete installed GNEX interpreter or phone boot."
+      },
+      "publicationAssessment": "Suitable as an explicitly labelled historical research/source archive; retain existing notices and full original bytes. No unreviewed raw EFS/user partition found in the included payload inventory.",
+      "excludeMembers": [],
+      "limits": [
+        "Native LG PXO/ELF modules are research material, not playable SGS or a full emulated LG phone.",
+        "Original publisher archives and older research README/doc snapshots retain historical counts/dates; they are not a current runtime compatibility statement.",
+        "The GPL LGLZ decoder notices and corresponding source must remain with its code. The original game/vendor/document rights are separate from Reunion's MIT code licence."
+      ]
+    },
+    {
+      "archive": "SV400-and-GVM-Recovered.zip",
+      "bytes": 10738157,
+      "sha256": "cbe8c803c5089f0d080c5e1ed9beda46f5ad232cea0a63fd1bc31d5ee6db3834",
+      "category": "Eight SV400 PXO modules, source/decoded pairs, four SDK sample projects, six GVM Club originals and Yepp system-font resources",
+      "sourceUrls": [
+        "https://archive.sunderland93.ru/Firmwares/LG/SV400%20%28Hotline%29/SV400005_03.7z",
+        "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/lgui/source-archive.zip",
+        "https://archive.org/details/gnex_sdk_v2.12"
+      ],
+      "docLinks": [
+        "doc/lg-sv400-games.md",
+        "doc/gvm-early-service-guides.md",
+        "doc/gnex-sdk-internal-sources.md",
+        "doc/yepp-formatting-resources.md"
+      ],
+      "zipCrcPassed": true,
+      "safeUniqueMemberPaths": true,
+      "noSymlinks": true,
+      "memberCount": 286,
+      "uncompressedBytes": 24977049,
+      "manifestValidation": {
+        "internalSha256Sums": "SV400-GVM-Recovered/SHA256SUMS.txt",
+        "internalFilesVerified": 285,
+        "allNonSelfFilesCovered": true,
+        "externalReceipt": "SV400-and-GVM-Recovered.receipt.json",
+        "externalReceiptSha256": "f46e230b1b974b6f049f8f9ababd30d58aaf19f7b8634acc3395d9b66d8d4dc7",
+        "externalReceiptFilesVerified": 285,
+        "externalReceiptZipHashMatched": true
+      },
+      "privacyReview": {
+        "method": "Complete member inventory and source provenance; no EFS/userdata/phonebook/message partitions or whole raw KDZ/WDB/BIN/IMG/NAND/DLL/EXE are included. Strong private-key markers absent. This is a bounded archival review, not semantic identification of every possible byte string.",
+        "rawUserPartitionMembers": [],
+        "wholeRawImageOrVendorExecutableMembers": [],
+        "privateKeyMarkerMembers": []
+      },
+      "sdkSampleManifestFilesVerified": 76,
+      "pxoPairsManifestVerified": 8,
+      "publicationAssessment": "Suitable as an explicitly labelled historical research/source archive; retain existing notices and full original bytes. No unreviewed raw EFS/user partition found in the included payload inventory.",
+      "excludeMembers": [],
+      "limits": [
+        "Native LG PXO/ELF modules are research material, not playable SGS or a full emulated LG phone.",
+        "Original publisher archives and older research README/doc snapshots retain historical counts/dates; they are not a current runtime compatibility statement.",
+        "The GPL LGLZ decoder notices and corresponding source must remain with its code. The original game/vendor/document rights are separate from Reunion's MIT code licence."
+      ]
+    }
+  ]
+}

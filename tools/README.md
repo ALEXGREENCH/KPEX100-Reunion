@@ -27,6 +27,7 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 - `serve.mjs`: serve `web/` or `site/` locally, including a project path prefix.
 - `build.mjs` / `check-site.mjs`: create and verify the public GitHub Pages artifact.
 - `research-assets.mjs`: verify the size and SHA-256 of every preserved ZIP listed in `web/research/catalog.json`; the full build calls it before publishing archive links.
+- `preservation-inventory.py`: verify every research ZIP hash and each direct member's CRC, then write a new JSON inventory with member SHA-256, sizes and archive identities. No vendor software is executed. See [preservation](../doc/preservation.md).
 - `check-repo.py` / `check-doc-links.py`: check tracked files and local documentation links.
 - `assets.py`: verify original assets or import matching local files by SHA-256.
 - `package-repo.py`: export the Git-tracked repository and verified collection as a deterministic ZIP.

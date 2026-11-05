@@ -1,7 +1,7 @@
 # Сохранённые эмуляторы GVM / GNEX для Windows
 
 5 ноября 2026 года собран отдельный комплект
-`Sinjisoft-GVM-GNEX-Emulators-Recovered.zip`: **91 170 938 байт**,
+[Sinjisoft-GVM-GNEX-Emulators-Recovered.zip](../research/archives/Sinjisoft-GVM-GNEX-Emulators-Recovered.zip): **91 170 938 байт**,
 SHA-256 `68b37ec3514bcaac7443dc05262e1f72b081b477d7f1145a70c34c5a2918c7e7`.
 Он сохраняет уже найденные программы, исходные установщики и материалы SDK.
 Новые сетевые загрузки для этого прохода не выполнялись.
