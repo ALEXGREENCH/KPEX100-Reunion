@@ -1,0 +1,224 @@
+{
+  "schema": 1,
+  "date": "2026-11-05",
+  "scope": "One bounded follow-up from Sinjisoft's recovered 2002 catalog: exact Korean titles and downloadable Orange Israel obox/GVM.",
+  "baselineRead": "doc/sinjisoft-2002-sdk-content.md",
+  "newGameBinaryFiles": 0,
+  "newSdkBinaryFiles": 0,
+  "newFirmwareFiles": 0,
+  "newPreservationArchive": null,
+  "vendorExecutablesRun": false,
+  "sharedRepositoryChanges": false,
+  "searchLog": {
+    "date": "2026-11-05",
+    "service": "web search",
+    "queryCount": 30,
+    "batches": [
+      [
+        "\"신지소프트\" \"Orange\" \"GVM\"",
+        "\"obox\" \"Sinjisoft\""
+      ],
+      [
+        "\"캡틴플래그\" GVM",
+        "\"왕대박인형뽑기\" 다운로드",
+        "\"전투축구\" \"GVM\"",
+        "\"obox\" \"gvm\" \"download\" games Samsung"
+      ],
+      [
+        "\"왕대박인형뽑기\" GVM",
+        "\"포켓프로야구\" \"다운\"",
+        "\"길거리농구\" \"GVM\"",
+        "\"obox\" \"GVM\" games -site:financialfilings.com -site:dev.modelhub.org.cn"
+      ],
+      [
+        "\"obox\" \"GVM\" \"sgs\"",
+        "\"obox\" \"GVM\" \"games\" \"download\" samsung 824 forum",
+        "\"포켓프로야구\" \"sgs\"",
+        "\"스트레스 파이터\" \"다운로드\" GVM"
+      ],
+      [
+        "\"컴온베이비\" \"GVM\" \"다운로드\"",
+        "\"왕대박인형뽑기\" -site:bunjang.co.kr",
+        "\"스트레스파이터\" \"GVM\"",
+        "\"obox\" \"gamez\" download Samsung 2003"
+      ],
+      [
+        "\"GVM\" \"obox\" forum download -site:financialfilings.com",
+        "\"סמסונג 824\" \"משחקים\" \"הורדה\"",
+        "\"포켓프로야구\" site:cafe.naver.com",
+        "\"캡틴플래그\" site:blog.naver.com GVM"
+      ],
+      [
+        "\"낚시왕\" \"웹이엔지코리아\" 다운로드",
+        "\"캡틴플래그\" \"엠드림\"",
+        "\"9슬롯머신\" GVM",
+        "\"폰고도리\" \"sgs\""
+      ],
+      [
+        "\"obox\" \"developers\" \"orange.co.il\"",
+        "\"webengkr.com\" game download",
+        "\"캡틴플래그\" \"모바일\" \"다운로드\" -site:bunjang.co.kr",
+        "\"포켓프로야구\" filetype:sgs"
+      ]
+    ],
+    "notes": [
+      "Result sets contain irrelevant matches; a search hit is not a recovered file.",
+      "Naver blog/cafe domain searches were explicitly reported blocked by robots.txt; no bypass attempted."
+    ]
+  },
+  "directHttpReceipts": [
+    {
+      "name": "naver-captain",
+      "url": "https://search.naver.com/search.naver?where=nexearch&query=%22%EC%BA%A1%ED%8B%B4%ED%94%8C%EB%9E%98%EA%B7%B8%22%20%22GVM%22",
+      "query": "\"캡틴플래그\" \"GVM\"",
+      "attempts": 1,
+      "error": "URLError",
+      "message": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+      "seconds": 18.47
+    },
+    {
+      "name": "naver-puppet",
+      "url": "https://search.naver.com/search.naver?where=nexearch&query=%22%EC%99%95%EB%8C%80%EB%B0%95%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0%22",
+      "query": "\"왕대박인형뽑기\"",
+      "attempts": 1,
+      "error": "URLError",
+      "message": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+      "seconds": 18.49
+    },
+    {
+      "name": "naver-basket",
+      "url": "https://search.naver.com/search.naver?where=nexearch&query=%22%EA%B8%B8%EA%B1%B0%EB%A6%AC%EB%86%8D%EA%B5%AC%22%20%22GVM%22",
+      "query": "\"길거리농구\" \"GVM\"",
+      "attempts": 1,
+      "error": "URLError",
+      "message": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+      "seconds": 18.44
+    },
+    {
+      "name": "naver-baseball",
+      "url": "https://search.naver.com/search.naver?where=nexearch&query=%22%ED%8F%AC%EC%BC%93%ED%94%84%EB%A1%9C%EC%95%BC%EA%B5%AC%22%20%22%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C%22",
+      "query": "\"포켓프로야구\" \"다운로드\"",
+      "attempts": 1,
+      "error": "URLError",
+      "message": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+      "seconds": 18.38
+    },
+    {
+      "name": "cdx-gamelist",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.sinjisoft.co.kr%2Fgamelist%2F*&output=json&filter=statuscode%3A200&collapse=urlkey&limit=40",
+      "source": "literal gamelist/mars.hrml, hony.hrml, posong.hrml hrefs in recovered vendor example.html; not corrected to .html",
+      "attempts": 1,
+      "error": "URLError",
+      "message": "<urlopen error _ssl.c:989: The handshake operation timed out>",
+      "seconds": 18.48
+    }
+  ],
+  "titlesSearched": [
+    "캡틴플래그",
+    "왕대박인형뽑기",
+    "전투축구",
+    "포켓프로야구",
+    "길거리농구",
+    "스트레스 파이터",
+    "컴온베이비",
+    "낚시왕",
+    "9슬롯머신",
+    "폰고도리"
+  ],
+  "sources": [
+    {
+      "id": "partner2002annual",
+      "url": "https://www.sec.gov/Archives/edgar/data/1096691/000095012303002847/u45961e20vf.htm",
+      "kind": "primary issuer filing, Partner Communications 2002 Form 20-F",
+      "filingDate": "2003-03-14",
+      "access": "Read successfully through web tool; no raw HTML payload preserved in this pass.",
+      "printedPages": [
+        48,
+        49
+      ],
+      "webLineAnchors": [
+        1884,
+        1908
+      ],
+      "observation": "The issuer explicitly describes ORANGE OBOX as using J2ME and proprietary GVM. ORANGE GAMEZ is separately described as interactive games over WAP, internet, SMS and IVR.",
+      "inference": "An obox/Gamez catalog or title cannot automatically be classified as a GVM binary. This is stronger primary support for the mixed-platform distinction already recognized in Reunion; it does not recover games or an endpoint."
+    },
+    {
+      "id": "webeng2001",
+      "url": "https://m.inews24.com/v/43193",
+      "kind": "contemporary trade press, secondary source",
+      "publicationDateAsPrinted": "2001-08-24",
+      "access": "Read successfully through web tool; no raw HTML payload preserved in this pass.",
+      "observation": "Names www.webengkr.com for 웹이엔지코리아 and explicitly identifies 낚시왕 as GVM. Separately mentions n.TOP DDR/Pump offerings as GVM. The page has an anomalous modification date of 2000-01-01; the displayed article publication date is recorded separately.",
+      "binaryUrlFound": false
+    },
+    {
+      "id": "pocket2001",
+      "url": "https://inews24.com/view/32818",
+      "kind": "contemporary trade press reporting publisher announcement, secondary source",
+      "publicationDateAsPrinted": "2001-04-18",
+      "access": "Read successfully through web tool; no raw HTML payload preserved in this pass.",
+      "observation": "Names www.pocketspace.co.kr and reports 포켓프로야구 for GVM, with service planned for April 19 via SK Telecom n.TOP. Gives www.n-top.com and the historical menu route, with a later network version only planned.",
+      "historicalMenuVerbatim": "3.엔터테인먼트→3.게임랜드→2.GVM게임→5.액션/스포츠→포켓 프로야구",
+      "binaryUrlFound": false
+    },
+    {
+      "id": "fresh2005candidate",
+      "url": "https://www.fresh.co.il/vBulletin/showthread.php?t=22325",
+      "kind": "contemporary user forum candidate",
+      "access": "Web search returned a ringtone/download guide; opening returned HTTP 403. No gate bypass or follow-up attempted.",
+      "gvmProven": false,
+      "gameFileRetrieved": false
+    }
+  ],
+  "duplicateBaselineNotCountedAsNew": [
+    "Partner April 10 2002 press release at SEC /Archives/edgar/vprr/0203/02036533.pdf",
+    "T100.org obox thread t=1063 and 29 CPID/GID records",
+    "Typhone 595-byte WML launcher and Device:gvm/Multimedia.GameRun",
+    "T10JHVJ1 obox firmware target and missing ntlworld archive"
+  ],
+  "candidateQueue": [
+    {
+      "target": "www.webengkr.com",
+      "sourceId": "webeng2001",
+      "reason": "Historical publisher hostname, now tied to a specific 2002 catalog game by a contemporary source.",
+      "archiveOrLiveHostQueriedInThisPass": false,
+      "binaryRetrieved": false
+    },
+    {
+      "target": "www.pocketspace.co.kr",
+      "sourceId": "pocket2001",
+      "reason": "Historical publisher hostname for the exact Pocket Pro Baseball entry; current identity/availability unverified.",
+      "archiveOrLiveHostQueriedInThisPass": false,
+      "binaryRetrieved": false
+    },
+    {
+      "target": "www.n-top.com",
+      "sourceId": "pocket2001",
+      "reason": "A wired portal and menu route is explicitly documented, but no content URL or saved payload was found.",
+      "archiveOrLiveHostQueriedInThisPass": false,
+      "binaryRetrieved": false
+    },
+    {
+      "target": "http://www.sinjisoft.co.kr/gamelist/",
+      "source": "Recovered 2002 example.html, SHA256 7086ffd5743b5b91d7299fa69b6fd9afeaf703164215e48d88026f63f933f696",
+      "literalLinks": [
+        "gamelist/mars.hrml",
+        "gamelist/hony.hrml",
+        "gamelist/posong.hrml"
+      ],
+      "reason": "Three exact image-map links overlooked in the first catalog curation. The .hrml extension is retained verbatim, not corrected by guessing.",
+      "gvmProven": false,
+      "archiveLookup": "A new prefix CDX request timed out during TLS handshake; no index or linked page obtained.",
+      "binaryRetrieved": false
+    }
+  ],
+  "limits": [
+    "This pass covers ten exact catalog titles, not all 24 entries and not all Korean archives.",
+    "Four direct Naver searches and one new Sinjisoft gamelist CDX lookup failed at TLS handshake after one attempt each. This is not an empty archive result or a claim that content is missing.",
+    "Blog/cafe Naver web-tool searches were blocked by robots.txt; no authentication or restriction bypass attempted.",
+    "No CPID/GID server addresses, private IPs, old authentication forms, paid gates or vendor executables were used.",
+    "No new source archive was produced because no new original network payload file was obtained. Derived notes are not substituted for original binaries."
+  ],
+  "repositoryIntegration": "Derived research notes published after the bounded pass; no new binary or raw HTML archive."
+}

@@ -107,9 +107,9 @@ The Swerve binary itself is not part of either project's source licence.
 
 ## Historical binary inputs
 
-The repository and default Pages build include 9 firmware images, 65 SGS
+The repository and default Pages build include 9 firmware images, 68 SGS
 applications, 3 native quick-start snapshots and the original Swerve 2.1 module.
-These 78 historical files are preserved byte-for-byte. `web/data/catalog.json`
+These 81 historical files are preserved byte-for-byte. `web/data/catalog.json`
 records catalogue sizes, SHA-256 hashes and runtime profiles; the Swerve module
 has separate [archive provenance](doc/swerve-provenance.json). Snapshot RAM
 contains original firmware/game data. These materials retain their own
@@ -138,15 +138,21 @@ No additional historical binaries are downloaded automatically. The optional
 `npm run build:source-only` omits the collection from the site output; the default
 `npm run build` includes it.
 
-Original SDK installers, extracted SDK programs and manual PDFs are not bundled.
-Research documents retain their URLs, hashes and derived findings.
+Original SDK installers, extracted SDK programs and the Mobile C Reference Manual
+are external research inputs. The separate research archives include historical
+company pages and the corporate brochure PDF; they retain their own notices.
 
 Four additional unmodified GVM2 builds come from public Mobaill attachments;
 [provenance and limits](doc/mobaill-games.md). Storm of Silence Demo and
 Waterski are unchanged SGS extracted from native S60 applications;
 [source installers and hashes](validation/s60-catalog-gameplay.json).
-The full S60 wrappers and SDK emulators are preserved in separate research
-bundles; they are not runtime dependencies or covered by Reunion's MIT licence.
+Aiolos Fighter, Pocket Baseball 2 and Pocket Golf are also unchanged SGS from
+previously preserved native S60 distributions;
+[source hashes and bounded gameplay evidence](validation/s60-extra-gameplay.json).
+The full S60 wrappers and external WAV/MIDI are now downloadable in the
+[preserved S60 research archive](doc/s60-runtimes.md). Historical repacks are
+identified as received; publisher authenticity is not established. They are
+not runtime dependencies or covered by Reunion's MIT licence.
 
 Additional GVM Club / Naver forum recoveries are documented in
 [the forum attachment report](doc/gvm-forum-attachments.md). Their research bundle

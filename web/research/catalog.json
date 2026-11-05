@@ -112,6 +112,48 @@
           "url": "https://web.archive.org/web/20040215031403id_/http://www.gnexclub.com:80/download/download.jsp"
         }
       ]
+    },
+    {
+      "id": "sinjisoft-2002-mobilec-content",
+      "title": "Sinjisoft 2002: Mobile C и каталог контента",
+      "category": "Первичные страницы GVM и SDK",
+      "description": "Четыре исходных HTML июня 2002 года, 24 записи каталога, 46 точных URI иллюстраций и очередь изготовителей встроенных игр. Все четыре HTML совпали с CDX. Самих SGS, установщиков SDK и изображений в этом комплекте нет.",
+      "sources": [
+        {
+          "label": "Sinjisoft: Mobile C SDK",
+          "url": "https://web.archive.org/web/20020623165959id_/http://www.sinjisoft.co.kr:80/mobilcsdk.html"
+        },
+        {
+          "label": "Sinjisoft: каталог контента",
+          "url": "https://web.archive.org/web/20020619041717id_/http://www.sinjisoft.co.kr:80/example.html"
+        }
+      ],
+      "repositoryPath": "research/archives/Sinjisoft-2002-MobileC-and-Content-Catalog.zip",
+      "bytes": 20988,
+      "sha256": "ab5b387a5e8417e6d1be93d19ccc2fee8b561834df00e006a96786e2ec48349d"
+    },
+    {
+      "id": "sinjisoft-s60-runtimes",
+      "title": "Семь исторических пакетов GNEX для S60",
+      "category": "Нативные среды, игры и ресурсы Symbian",
+      "description": "Оригинальные SIS, 131 payload, семь APP со встроенными SGS, отдельные SGS и внешние WAV/MIDI. Проверены CRC, манифест и точные срезы SGS. Среди копий есть исторические репаки; подпись издателя не аутентифицирована. Это сохранение данных, а не эмуляция Symbian OS.",
+      "sources": [
+        {
+          "label": "Nokia Games Ultimate SIS Pack",
+          "url": "https://www.pc-freak.net/archives/2010/01/22/download_nokia_sis_ultimate_pack_games/index.html"
+        },
+        {
+          "label": "Dertz S–Z",
+          "url": "https://archive.org/details/dertz-part-5-s-z"
+        },
+        {
+          "label": "Largest J2ME and Symbian Collection",
+          "url": "https://archive.org/details/largest-j2me-and-symbian-collection"
+        }
+      ],
+      "repositoryPath": "research/archives/Sinjisoft-S60-Runtimes-Recovered.zip",
+      "bytes": 6083797,
+      "sha256": "88a1623a040968a4838ab3b7a58101ed2833293cc6be4ffb91228967f5605e0d"
     }
   ],
   "reports": [
@@ -158,6 +200,22 @@
     {
       "title": "Покрытие прошивок и следующие цели поиска",
       "repositoryPath": "doc/gnex-firmware-coverage.md"
+    },
+    {
+      "title": "Sinjisoft 2002: каталог игр, Mobile C и GVM SDK",
+      "repositoryPath": "doc/sinjisoft-2002-sdk-content.md"
+    },
+    {
+      "title": "Конкурсный архив: ещё пять проверенных пакетов",
+      "repositoryPath": "doc/contest-finite-archive-followup.md"
+    },
+    {
+      "title": "Поиск SGS в 379 SIS",
+      "repositoryPath": "doc/s60-corpus-audit.md"
+    },
+    {
+      "title": "Семь сохранённых S60-рантаймов GNEX",
+      "repositoryPath": "doc/s60-runtimes.md"
     }
   ]
 }

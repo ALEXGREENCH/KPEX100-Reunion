@@ -1,0 +1,450 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-11-05T16:58:58.398139+00:00",
+  "scope": "Actual ZIP central directories and stored 7z header ranges of five SKT/S-family archives from the fresh Internet Archive im-s-550-s file catalogue. This is a queue/deduplication audit, not a new firmware scan.",
+  "sourceMetadata": {
+    "url": "https://archive.org/metadata/im-s-550-s",
+    "status": 200,
+    "finalUrl": "https://archive.org/metadata/im-s-550-s",
+    "bytes": 9974,
+    "sha256": "a1adf442a24aa101be6c24628b4673c31ddadaed2d995775a45e13a260cc40be",
+    "contentRange": null,
+    "checkedUtc": "2026-11-05T16:44:30.476349+00:00"
+  },
+  "counts": {
+    "currentMetadataResponses": 1,
+    "zipCentralDirectoriesParsed": 5,
+    "zipEntriesParsed": 10,
+    "sevenZipPayloadEntries": 5,
+    "http206RangeResponses": 15,
+    "rangeBytesReceived": 348883,
+    "metadataBytesReceived": 9974,
+    "advertisedWholeZipBytes": 1000577207,
+    "cachedArchiveFilesRehashed": 5,
+    "newBuildNamesObserved": 0,
+    "newWholeFirmwarePayloadsDownloaded": 0,
+    "newModelClaims": 0,
+    "newSgsOrGamePayloads": 0
+  },
+  "archives": [
+    {
+      "name": "IM-S480S.zip",
+      "metadataBytes": 152379313,
+      "metadataSha1": "987b262efd8b67cc32a4e49d382029e66c6798f3",
+      "metadataCrc32": "fb2a431e",
+      "tailRequest": {
+        "url": "https://archive.org/download/im-s-550-s/IM-S480S.zip",
+        "status": 206,
+        "finalUrl": "https://dn711400.ca.archive.org/0/items/im-s-550-s/IM-S480S.zip",
+        "bytes": 65557,
+        "sha256": "332db90b9dbbdaa1f4f8320c0c74688155c44613ea73853fe9944184a9f9950c",
+        "contentRange": "bytes 152313756-152379312/152379313",
+        "checkedUtc": "2026-11-05T16:44:36.415083+00:00"
+      },
+      "centralDirectoryParsed": true,
+      "entryCount": 2,
+      "centralDirectoryBytes": 178,
+      "members": [
+        {
+          "name": "IM-S480S/",
+          "method": 0,
+          "flags": 0,
+          "crc32": "00000000",
+          "compressedBytes": 0,
+          "uncompressedBytes": 0,
+          "localHeaderOffset": 0,
+          "sameNameAndSizeLocalCandidates": [],
+          "memberCrcVerifiedFromRemoteData": false
+        },
+        {
+          "name": "IM-S480S/IM-S480S_S0183142.7z",
+          "method": 0,
+          "flags": 0,
+          "crc32": "25934416",
+          "compressedBytes": 152378959,
+          "uncompressedBytes": 152378959,
+          "localHeaderOffset": 67,
+          "sameNameAndSizeLocalCandidates": [
+            {
+              "path": "work/sky-binx-inventory-pass/archives/IM-S480S_S0183142.7z",
+              "bytes": 152378959,
+              "sha256": "d85dd9f42f499d6002b9eb87debd24dc87b82d54792333be49a356aed0848b24"
+            }
+          ],
+          "memberCrcVerifiedFromRemoteData": false
+        }
+      ],
+      "payloadDownloaded": false,
+      "metadataWholeZipHashVerified": false,
+      "localCachedMemberComparison": {
+        "localCandidate": {
+          "path": "work/sky-binx-inventory-pass/archives/IM-S480S_S0183142.7z",
+          "bytes": 152378959,
+          "sha256": "d85dd9f42f499d6002b9eb87debd24dc87b82d54792333be49a356aed0848b24"
+        },
+        "localFileCrc32": "25934416",
+        "zipMemberNameSizeAndDeclaredCrcMatchCachedFile": true,
+        "prefixRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-S480S.zip",
+          "contentRange": "bytes 67-4162/152379313",
+          "bytes": 4096,
+          "sha256": "cb7f8ddaff816e9052cf9f37e7ca5cd46331c2661f5a5e1ef5ab66d8b9b861d6"
+        },
+        "prefixBytesCompared": 4009,
+        "prefixByteEqual": true,
+        "sevenZipStartHeaderCrcVerified": true,
+        "nextHeaderRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-S480S.zip",
+          "contentRange": "bytes 152378991-152379112/152379313",
+          "bytes": 122,
+          "sha256": "9dd398b4e3ccdfc126c1802415ccae649de141d4b1386a4b29f6ce866b87bb11"
+        },
+        "nextHeaderBytesCompared": 122,
+        "nextHeaderCrcVerified": true,
+        "nextHeaderByteEqual": true,
+        "wholeRemoteMemberSha256Verified": false,
+        "newBuildNameObserved": false
+      }
+    },
+    {
+      "name": "IM-S550S.zip",
+      "metadataBytes": 236760537,
+      "metadataSha1": "b37da6aff3c9b10aa9b1667081bb46531defaedf",
+      "metadataCrc32": "22f15369",
+      "tailRequest": {
+        "url": "https://archive.org/download/im-s-550-s/IM-S550S.zip",
+        "status": 206,
+        "finalUrl": "https://dn711400.ca.archive.org/0/items/im-s-550-s/IM-S550S.zip",
+        "bytes": 65557,
+        "sha256": "2f111efc0e7d0cde37f0427db2721528abc20a705273bfc41f02556209cff1b7",
+        "contentRange": "bytes 236694980-236760536/236760537",
+        "checkedUtc": "2026-11-05T16:44:36.460498+00:00"
+      },
+      "centralDirectoryParsed": true,
+      "entryCount": 2,
+      "centralDirectoryBytes": 178,
+      "members": [
+        {
+          "name": "IM-S550S/",
+          "method": 0,
+          "flags": 0,
+          "crc32": "00000000",
+          "compressedBytes": 0,
+          "uncompressedBytes": 0,
+          "localHeaderOffset": 0,
+          "sameNameAndSizeLocalCandidates": [],
+          "memberCrcVerifiedFromRemoteData": false
+        },
+        {
+          "name": "IM-S550S/IM-S550S_S0188161.7z",
+          "method": 0,
+          "flags": 0,
+          "crc32": "f8461b70",
+          "compressedBytes": 236760183,
+          "uncompressedBytes": 236760183,
+          "localHeaderOffset": 67,
+          "sameNameAndSizeLocalCandidates": [
+            {
+              "path": "work/sky-binx-inventory-pass/archives/IM-S550S_S0188161.7z",
+              "bytes": 236760183,
+              "sha256": "8f90b51fd9dbd83d40777000399a9a521b27031a22aa95089f2b8833a6db1f95"
+            }
+          ],
+          "memberCrcVerifiedFromRemoteData": false
+        }
+      ],
+      "payloadDownloaded": false,
+      "metadataWholeZipHashVerified": false,
+      "localCachedMemberComparison": {
+        "localCandidate": {
+          "path": "work/sky-binx-inventory-pass/archives/IM-S550S_S0188161.7z",
+          "bytes": 236760183,
+          "sha256": "8f90b51fd9dbd83d40777000399a9a521b27031a22aa95089f2b8833a6db1f95"
+        },
+        "localFileCrc32": "f8461b70",
+        "zipMemberNameSizeAndDeclaredCrcMatchCachedFile": true,
+        "prefixRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-S550S.zip",
+          "contentRange": "bytes 67-4162/236760537",
+          "bytes": 4096,
+          "sha256": "fd25e4528c444fb175aeed68f1476de3db573d477726afbf45d49b69f3f13aae"
+        },
+        "prefixBytesCompared": 4009,
+        "prefixByteEqual": true,
+        "sevenZipStartHeaderCrcVerified": true,
+        "nextHeaderRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-S550S.zip",
+          "contentRange": "bytes 236760215-236760336/236760537",
+          "bytes": 122,
+          "sha256": "a9ec367c5320073a77411cdd74133327c8d66a4e0eb38b5521874fcc0bc98bd6"
+        },
+        "nextHeaderBytesCompared": 122,
+        "nextHeaderCrcVerified": true,
+        "nextHeaderByteEqual": true,
+        "wholeRemoteMemberSha256Verified": false,
+        "newBuildNameObserved": false
+      }
+    },
+    {
+      "name": "IM-S640S.zip",
+      "metadataBytes": 222365910,
+      "metadataSha1": "ea5f5f9411850f126691458b91c9e0ceeb62eeff",
+      "metadataCrc32": "fc8dba0f",
+      "tailRequest": {
+        "url": "https://archive.org/download/im-s-550-s/IM-S640S.zip",
+        "status": 206,
+        "finalUrl": "https://dn711400.ca.archive.org/0/items/im-s-550-s/IM-S640S.zip",
+        "bytes": 65557,
+        "sha256": "e20ec7be6dfc287aa7ba20dabe48b57652cfd88127e42edeaec511ae474ed9b9",
+        "contentRange": "bytes 222300353-222365909/222365910",
+        "checkedUtc": "2026-11-05T16:44:38.940022+00:00"
+      },
+      "centralDirectoryParsed": true,
+      "entryCount": 2,
+      "centralDirectoryBytes": 179,
+      "members": [
+        {
+          "name": "IM-S640S/",
+          "method": 0,
+          "flags": 0,
+          "crc32": "00000000",
+          "compressedBytes": 0,
+          "uncompressedBytes": 0,
+          "localHeaderOffset": 0,
+          "sameNameAndSizeLocalCandidates": [],
+          "memberCrcVerifiedFromRemoteData": false
+        },
+        {
+          "name": "IM-S640S/IM-S640S_S0202126a.7z",
+          "method": 0,
+          "flags": 0,
+          "crc32": "1956e539",
+          "compressedBytes": 222365554,
+          "uncompressedBytes": 222365554,
+          "localHeaderOffset": 67,
+          "sameNameAndSizeLocalCandidates": [
+            {
+              "path": "work/sky-binx-inventory-pass/archives/IM-S640S_S0202126a.7z",
+              "bytes": 222365554,
+              "sha256": "2bb878b96403e92a573d03dd8c3015137b75e278f51115e8a613dc70c391f518"
+            }
+          ],
+          "memberCrcVerifiedFromRemoteData": false
+        }
+      ],
+      "payloadDownloaded": false,
+      "metadataWholeZipHashVerified": false,
+      "localCachedMemberComparison": {
+        "localCandidate": {
+          "path": "work/sky-binx-inventory-pass/archives/IM-S640S_S0202126a.7z",
+          "bytes": 222365554,
+          "sha256": "2bb878b96403e92a573d03dd8c3015137b75e278f51115e8a613dc70c391f518"
+        },
+        "localFileCrc32": "1956e539",
+        "zipMemberNameSizeAndDeclaredCrcMatchCachedFile": true,
+        "prefixRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-S640S.zip",
+          "contentRange": "bytes 67-4162/222365910",
+          "bytes": 4096,
+          "sha256": "f4abba2f227f27f42b4167bf10a03a232b6fea8432c10acc1e5e689e00eb146c"
+        },
+        "prefixBytesCompared": 4008,
+        "prefixByteEqual": true,
+        "sevenZipStartHeaderCrcVerified": true,
+        "nextHeaderRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-S640S.zip",
+          "contentRange": "bytes 222365587-222365708/222365910",
+          "bytes": 122,
+          "sha256": "1e6fb3fb5bbd6a518a775545e706c4007fa21ee5afbe5952dee0a6fd1242e6af"
+        },
+        "nextHeaderBytesCompared": 122,
+        "nextHeaderCrcVerified": true,
+        "nextHeaderByteEqual": true,
+        "wholeRemoteMemberSha256Verified": false,
+        "newBuildNameObserved": false
+      }
+    },
+    {
+      "name": "IM-U490S.zip",
+      "metadataBytes": 227877655,
+      "metadataSha1": "d2d615015ff77b1011dcc23ccb69225edab930f1",
+      "metadataCrc32": "a600d51d",
+      "tailRequest": {
+        "url": "https://archive.org/download/im-s-550-s/IM-U490S.zip",
+        "status": 206,
+        "finalUrl": "https://dn711400.ca.archive.org/0/items/im-s-550-s/IM-U490S.zip",
+        "bytes": 65557,
+        "sha256": "9381016067532b9efb7a42608a68c7679252619ab4eae3c75ac13deb245f95f3",
+        "contentRange": "bytes 227812098-227877654/227877655",
+        "checkedUtc": "2026-11-05T16:44:39.535601+00:00"
+      },
+      "centralDirectoryParsed": true,
+      "entryCount": 2,
+      "centralDirectoryBytes": 178,
+      "members": [
+        {
+          "name": "IM-U490S/",
+          "method": 0,
+          "flags": 0,
+          "crc32": "00000000",
+          "compressedBytes": 0,
+          "uncompressedBytes": 0,
+          "localHeaderOffset": 0,
+          "sameNameAndSizeLocalCandidates": [],
+          "memberCrcVerifiedFromRemoteData": false
+        },
+        {
+          "name": "IM-U490S/IM-U490S_S0184128.7z",
+          "method": 0,
+          "flags": 0,
+          "crc32": "69fefe60",
+          "compressedBytes": 227877301,
+          "uncompressedBytes": 227877301,
+          "localHeaderOffset": 67,
+          "sameNameAndSizeLocalCandidates": [
+            {
+              "path": "work/sky-binx-inventory-pass/archives/IM-U490S_S0184128.7z",
+              "bytes": 227877301,
+              "sha256": "6ee470549fd0f3a272f11ff1c5fc8bcea21f52b6f9657345288a388a47d438e4"
+            }
+          ],
+          "memberCrcVerifiedFromRemoteData": false
+        }
+      ],
+      "payloadDownloaded": false,
+      "metadataWholeZipHashVerified": false,
+      "localCachedMemberComparison": {
+        "localCandidate": {
+          "path": "work/sky-binx-inventory-pass/archives/IM-U490S_S0184128.7z",
+          "bytes": 227877301,
+          "sha256": "6ee470549fd0f3a272f11ff1c5fc8bcea21f52b6f9657345288a388a47d438e4"
+        },
+        "localFileCrc32": "69fefe60",
+        "zipMemberNameSizeAndDeclaredCrcMatchCachedFile": true,
+        "prefixRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-U490S.zip",
+          "contentRange": "bytes 67-4162/227877655",
+          "bytes": 4096,
+          "sha256": "35394d06147f4766320d8eaf14b45a5f2c0fdc47892dd3a9baab091dec245ef8"
+        },
+        "prefixBytesCompared": 4009,
+        "prefixByteEqual": true,
+        "sevenZipStartHeaderCrcVerified": true,
+        "nextHeaderRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-U490S.zip",
+          "contentRange": "bytes 227877333-227877454/227877655",
+          "bytes": 122,
+          "sha256": "d6b0bd6fd8d1425d3a9b6bfbaa52d67e1d9f7f1cca70bfd51c838c6b9cf923f6"
+        },
+        "nextHeaderBytesCompared": 122,
+        "nextHeaderCrcVerified": true,
+        "nextHeaderByteEqual": true,
+        "wholeRemoteMemberSha256Verified": false,
+        "newBuildNameObserved": false
+      }
+    },
+    {
+      "name": "IM-U580S.zip",
+      "metadataBytes": 161193792,
+      "metadataSha1": "84fc7b8be6b897b00551feb5f1721abf1429d5a5",
+      "metadataCrc32": "d40744ca",
+      "tailRequest": {
+        "url": "https://archive.org/download/im-s-550-s/IM-U580S.zip",
+        "status": 206,
+        "finalUrl": "https://dn711400.ca.archive.org/0/items/im-s-550-s/IM-U580S.zip",
+        "bytes": 65557,
+        "sha256": "857b7358162c9f1f40e7972e323074c4914439e341f0a34cf4318b6073588ab8",
+        "contentRange": "bytes 161128235-161193791/161193792",
+        "checkedUtc": "2026-11-05T16:44:41.609641+00:00"
+      },
+      "centralDirectoryParsed": true,
+      "entryCount": 2,
+      "centralDirectoryBytes": 188,
+      "members": [
+        {
+          "name": "IM-U580S/",
+          "method": 0,
+          "flags": 0,
+          "crc32": "00000000",
+          "compressedBytes": 0,
+          "uncompressedBytes": 0,
+          "localHeaderOffset": 0,
+          "sameNameAndSizeLocalCandidates": [],
+          "memberCrcVerifiedFromRemoteData": false
+        },
+        {
+          "name": "IM-U580S/IM-U580S_S0191130a.000.BINX.7z",
+          "method": 0,
+          "flags": 0,
+          "crc32": "95d8096d",
+          "compressedBytes": 161193418,
+          "uncompressedBytes": 161193418,
+          "localHeaderOffset": 67,
+          "sameNameAndSizeLocalCandidates": [
+            {
+              "path": "work/new-sky-followup/archives/IM-U580S_S0191130a.000.BINX.7z",
+              "bytes": 161193418,
+              "sha256": "91e0750afed95a09c44e1c925d7fc0cc81fab8f5ef5bf3a0fa713bcf34acf9b1"
+            }
+          ],
+          "memberCrcVerifiedFromRemoteData": false
+        }
+      ],
+      "payloadDownloaded": false,
+      "metadataWholeZipHashVerified": false,
+      "localCachedMemberComparison": {
+        "localCandidate": {
+          "path": "work/new-sky-followup/archives/IM-U580S_S0191130a.000.BINX.7z",
+          "bytes": 161193418,
+          "sha256": "91e0750afed95a09c44e1c925d7fc0cc81fab8f5ef5bf3a0fa713bcf34acf9b1"
+        },
+        "localFileCrc32": "95d8096d",
+        "zipMemberNameSizeAndDeclaredCrcMatchCachedFile": true,
+        "prefixRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-U580S.zip",
+          "contentRange": "bytes 67-4162/161193792",
+          "bytes": 4096,
+          "sha256": "ef95b821d95973d6e39beab29058c1ad728a7449630a302d13235183a709c8bb"
+        },
+        "prefixBytesCompared": 3999,
+        "prefixByteEqual": true,
+        "sevenZipStartHeaderCrcVerified": true,
+        "nextHeaderRequest": {
+          "status": 206,
+          "url": "https://archive.org/download/im-s-550-s/IM-U580S.zip",
+          "contentRange": "bytes 161193452-161193581/161193792",
+          "bytes": 130,
+          "sha256": "c38a0ffc6477c043fd81b99169ccf7ff9fc320778f13eddbdbeeaf1ff9616de8"
+        },
+        "nextHeaderBytesCompared": 130,
+        "nextHeaderCrcVerified": true,
+        "nextHeaderByteEqual": true,
+        "wholeRemoteMemberSha256Verified": false,
+        "newBuildNameObserved": false
+      }
+    }
+  ],
+  "baselineEvidence": [
+    "sky-additional-firmware-evidence.json",
+    "sky-u580-ktf-firmware-evidence.json",
+    "sky-new-rsc-game-extractions.json"
+  ],
+  "limits": [
+    "The whole remote ZIP/member hashes and remote member CRCs are not verified, because full payloads were not downloaded. Metadata whole-ZIP hashes remain expected values from IA only.",
+    "Names, sizes and declared member CRCs match the existing local archives; remote stored-member prefixes and complete 7z next headers match the same local files byte-for-byte with header CRC checks. This is strong queue triage evidence, not a claim that all remote payload bytes were compared.",
+    "All five inner build names already have firmware/runtime/resource research in the existing repository. They must not be counted as new devices because the Internet Archive item had not been examined as a provider.",
+    "No KTF/BREW adjacent game extraction was substituted for the requested GVM/GNEX device scope.",
+    "Other file records in this item and other providers remain outside this five-archive range audit; their original contents are not declared scanned or absent.",
+    "Only anonymous public HTTP metadata, ZIP central directories and bounded stored-member headers were fetched. No vendor code was executed, no private EFS/user data was exported and no emulator catalogue entry was changed."
+  ],
+  "nextAction": "Do not spend another 1 GB transfer re-running these five named firmware builds as new discoveries; seek a distinct exact SKT build/member or a genuinely uninspected original supported device source."
+}

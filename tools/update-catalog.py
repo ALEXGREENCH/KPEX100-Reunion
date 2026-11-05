@@ -67,6 +67,7 @@ def main():
         "community-gameplay.json",
         "mobaill-gameplay.json",
         "s60-catalog-gameplay.json",
+        "s60-extra-gameplay.json",
         "developer-sample-gameplay.json",
     ):
         path = VALIDATION / name

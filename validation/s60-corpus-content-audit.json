@@ -1,0 +1,2526 @@
+{
+  "source": "Nokia_Games_Ultimate_SIS_Pack.tar.gz",
+  "sourceBytes": 241971428,
+  "scope": "All .sis members at most 10 MB in this exact local TAR; strict old-SIS parser; selected decoded app/dll/exe/sgs/gam/dat payloads scanned plain and XOR-A5. No guest code or installer executed.",
+  "totals": {
+    "archiveFilesVisited": 1054,
+    "sisMembers": 379,
+    "sisParsedWithUidAndBodyCrc": 370,
+    "payloadsDecoded": 10040,
+    "payloadBytesDecoded": 347737068,
+    "payloadsStructurallyScanned": 1348,
+    "payloadBytesStructurallyScanned": 124199746,
+    "candidateOffsetsTested": 7049581
+  },
+  "errors": {
+    "ValueError: Truncated zlib stream or declared output length mismatch": 2,
+    "ValueError: Unsupported SIS format; expected EPOC release 6": 2,
+    "ValueError: Unsupported file record type 6 at record 20": 1,
+    "ValueError: Unsupported file record type 6 at record 13": 1,
+    "ValueError: Unsupported file record type 6 at record 128": 1,
+    "ValueError: Unsupported file record type 6 at record 0": 1,
+    "ValueError: Unsupported file record type 6 at record 163": 1
+  },
+  "hits": [
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Aiolos/Sinjisoft_Aiolos_v1.03_S60_Cracked_MMC_SMPDA.sis",
+      "payloadName": "26-Aiolos.app",
+      "candidate": {
+        "version": 4,
+        "title": "Aiolos",
+        "title_bytes_hex": "41696f6c6f73",
+        "declared_body_bytes": 270080,
+        "sections": {
+          "a": 93468,
+          "b": 95500,
+          "c": 103268,
+          "d": 108500
+        },
+        "entries": [93446, 43468, 43896, 43476, 0, 0, 0, 0, 0, 0, 0],
+        "variables": 254,
+        "resources": 436,
+        "compression_type": 0,
+        "source_offset": 274848,
+        "body_offset": 274848,
+        "wrapper_bytes": 0,
+        "xor_mask": 0,
+        "extracted_bytes": 270080,
+        "raw_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+        "decoded_body_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b"
+      },
+      "sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+      "knownCatalogId": null,
+      "scratchFile": "candidate-c635f8989ac112a3.sgs",
+      "alreadyPreservedS60Runtime": true
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pocket Golf/Sinjisoft.Pocket.Golf.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shio mau.sis",
+      "payloadName": "19-PocketGolf.app",
+      "candidate": {
+        "version": 4,
+        "title": "POCKET GOLF",
+        "title_bytes_hex": "504f434b455420474f4c46",
+        "declared_body_bytes": 326528,
+        "sections": {
+          "a": 87656,
+          "b": 91512,
+          "c": 219044,
+          "d": 227036
+        },
+        "entries": [30878, 0, 3198, 540, 0, 0, 0, 0, 0, 0, 0],
+        "variables": 482,
+        "resources": 666,
+        "compression_type": 0,
+        "source_offset": 275780,
+        "body_offset": 275780,
+        "wrapper_bytes": 0,
+        "xor_mask": 0,
+        "extracted_bytes": 326528,
+        "raw_sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+        "decoded_body_sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b"
+      },
+      "sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+      "knownCatalogId": null,
+      "scratchFile": "candidate-38bab3117c4a3f4a.sgs",
+      "alreadyPreservedS60Runtime": true
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pocket Baseball/Sinjisoft.Pocket.Baseball.2.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shino mau.sis",
+      "payloadName": "18-PocketBaseBall.app",
+      "candidate": {
+        "version": 4,
+        "title": "포켓야구2",
+        "title_bytes_hex": "c6f7c4cfbedfb1b832",
+        "declared_body_bytes": 162384,
+        "sections": {
+          "a": 91884,
+          "b": 93796,
+          "c": 110772,
+          "d": 113856
+        },
+        "entries": [46834, 0, 6814, 1202, 0, 0, 6638, 0, 0, 0, 0],
+        "variables": 239,
+        "resources": 257,
+        "compression_type": 0,
+        "source_offset": 275796,
+        "body_offset": 275796,
+        "wrapper_bytes": 0,
+        "xor_mask": 0,
+        "extracted_bytes": 162384,
+        "raw_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+        "decoded_body_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726"
+      },
+      "sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+      "knownCatalogId": null,
+      "scratchFile": "candidate-a95c38d561423821.sgs",
+      "alreadyPreservedS60Runtime": true
+    }
+  ],
+  "records": [
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Blackjack/MGS2.1.SIS",
+      "bytes": 329306,
+      "sha256": "426f0a0854533a17e07b3f4121d703809f4bcd4d1ee64825092be13e71117a98",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Blackjack/Noumena.BlackJack v1.0_Full_Dotsis.sis",
+      "bytes": 184565,
+      "sha256": "58b85e8437d2e70479f5291662e840982a56541d5ae499267f6c31c6bb1a90f9",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mosquitos/Mosquitos.sis",
+      "bytes": 140637,
+      "sha256": "b440f89c4f3ecbeb159ef7dde63bf551a5d1f4409ddaaf69b6d6716a474761a4",
+      "payloads": 17
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mahjongg Deluxe 3D/Klaar.Mahjongg.Deluxe.3D.v2.0.UIQ.SymbianOS7.Retail-BiNPDA.sis",
+      "bytes": 529223,
+      "sha256": "99d5c3fcfe1285594c7b6a257fbda38655c24e666af64713297a8d1605bce98a",
+      "payloads": 33
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Massive Snowboarding/Gameloft.Massive.Snowboarding.RETAIL.1.0.6.s60.SMPDA.SIS",
+      "bytes": 716914,
+      "sha256": "95f08c18457b7793f2a76612157c91662654bfdbe33139d1a136321f8145e118",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/mBounce Volleyball/Volleyball v1.00.S60v2.sis",
+      "bytes": 138486,
+      "sha256": "2b49887dc1b81834b6f048e86a32187705b629c870a0df47802e3b94711b7c7f",
+      "payloads": 18
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Martial Arts 3D/ma3d.sis",
+      "bytes": 607576,
+      "sha256": "ebab9a4f899a30d21d1e528d21455f0307e471ff0cd0cffda063dd96cfb1ca62",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MatrixFire/MatrixFire.sis",
+      "bytes": 582045,
+      "sha256": "600eb9cad92e53227709009e1b5cfa543de359a7cb74a84215997e9ef1377fac",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Jewel Impulse 2/[SymbianOS8]Noumena.Innovations.Jewel.Impulse.2.v1.10.S60.Cracked-PWNPDA/Noumena.Innovations.Jewel.Impulse.2.v1.10.S60.SymbianOS8.Cracked-PWNPDA.sis",
+      "bytes": 304844,
+      "sha256": "a9050a874738b201fcfba24ffe92e340a1a43add79bb85d99273dbbd6b5398e2",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Jewel Impulse 2/[SymbianOS8]Noumena.Innovations.Jewel.Impulse.2.v1.10.S60.Cracked-PWNPDA/MGS2.1.SIS",
+      "bytes": 329306,
+      "sha256": "426f0a0854533a17e07b3f4121d703809f4bcd4d1ee64825092be13e71117a98",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Jewel Impulse 2/[SymbianOS7]Noumena.Innovations.Jewel.Impulse.2.v1.10.S60.Cracked-PWNPDA/MGS2.1.sis",
+      "bytes": 329293,
+      "sha256": "a4f06f8dd26ee999a5417641eaa58017cca7e381523f5beb1a8ecca644695d65",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Jewel Impulse 2/[SymbianOS7]Noumena.Innovations.Jewel.Impulse.2.v1.10.S60.Cracked-PWNPDA/Noumena.Innovations.Jewel.Impulse.2.v1.10.S60.SymbianOS7.Cracked-PWNPDA.sis",
+      "bytes": 304844,
+      "sha256": "e293dba9fc94fb8dd339c99b56ee1e084e4f392fe318ea728530e49e95316a48",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Cobra Attack/MGS2.1.SIS",
+      "bytes": 329306,
+      "sha256": "426f0a0854533a17e07b3f4121d703809f4bcd4d1ee64825092be13e71117a98",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Cobra Attack/Noumena.Innovations.Cobra.Attack.v1.50.S60.SymbianOS8.Cracked-PWNPDA.sis",
+      "bytes": 376918,
+      "sha256": "01f50f821463a845ee2ae4f5c290e6863094c6fbf2003d579e9542aff61b7aa1",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Metal Bluster 1/MetalBluster1.sis",
+      "bytes": 490778,
+      "sha256": "4cb29f5eaa127d0ce6522130b921a51da3a51794a048c39483f68b8a01201277",
+      "payloads": 13
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Midtown Madness 3/midtownmadness_byHasio.sis",
+      "bytes": 1024104,
+      "sha256": "f8ee5030940707c4124de114f62ed7cc24ac832d0fdd6852523893adca596794",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Old School Classics/PackageBooster.Series60.sis",
+      "bytes": 393940,
+      "sha256": "055aa9aa43bfa55f07e3cd949ec64957ceb5a440621a06db8247b791d2fb2b59",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Old School Classics/Mastersoft.Games.Pack.1.v1.01.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 70485,
+      "sha256": "0e9f62ae3fce55ea7b62884cfcf6cf8dc1dfec39883ca042060aca1fa3f9a6ba",
+      "payloads": 32
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MUD/Tendbeyond.MUD.v1.00.Plus.2.Trainer.S60.SymbianOS-BiNPDA.sis",
+      "bytes": 11829,
+      "sha256": "d89ed811af2034920754762cbd56c59edcb9aac49da4851e849c1b0c11c23457",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Minesweep/FeeJo.Soft.Minesweep.v1.00.S60.SymbianOS.Cracked-SyMPDA.sis",
+      "bytes": 111334,
+      "sha256": "14424101a21a9750127d5b2ad282fa8f1b5b1fa921ae2fc8a5e981f0bb50c869",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Fatal Gear/FatalGearS60_L02.SIS",
+      "bytes": 930668,
+      "sha256": "7dec826ff38ec822375bc143de63f1bdd170437ee9b546c085b05760d55a104d",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Fatal Gear/FatalGearS60_v1.00_L01.SIS",
+      "bytes": 824588,
+      "sha256": "568f5cf28b37c50f512d3b177986509cc8520438153152c840cc5a60a8d31801",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Fatal Gear/FatalGearS60_L03.SIS",
+      "bytes": 929447,
+      "sha256": "733b28bf54940c35ef1470179558ae4bb6e800b4f5b67114f56208abe924679d",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Fatal Gear/MGS.SIS",
+      "bytes": 399424,
+      "sha256": "35311375a2e9ccd105112410158f8d5aa64882ee04fba8f908186ba493d3f2d1",
+      "payloads": 22
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Fatal Gear/FatalGearS60_L04.SIS",
+      "bytes": 449032,
+      "sha256": "fbfd5c46a5a9de3796bf90816950668d7758f3fac938442c1e8cece106462a5d",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Moorhen Camera X/Moorhen_Camera_X.sis",
+      "bytes": 244407,
+      "sha256": "515a12af91b07d48b8a64cc2d042eb8b0b0307fb1937c1adb078a60e6fb744e5",
+      "error": "Truncated zlib stream or declared output length mismatch"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Micro Pinball Snowball/Micro Pinball Snowball.sis",
+      "bytes": 464291,
+      "sha256": "ecf3ef377906a561852a44a9a982675cf303f5a00d560f279964be0fdfaabad1",
+      "payloads": 28
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mike 2in1/Mike2in1_English_S60_Full.sis",
+      "bytes": 517764,
+      "sha256": "d7942a7c55e77b280e7209a1c07c3bcd5177f776df35438c56e9a75ae62a183f",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MiniBlaster/MiniBlaster v1.01 S60.sis",
+      "bytes": 72252,
+      "sha256": "f90aa26769b8fc45a3657fee18a640ddd0bd6580970cbdd1498cf61066801a19",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MotoGear/Mobirate.MotoGear.v1.40.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 1227845,
+      "sha256": "e484a2fe15b428d553733f7c53f45819855861b7418d5f23704647ca8d07cc9c",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Midnight Bowling 3D/Midnight.Bowling.3D.S60.SymbianOS.RETAiL-COMPRO.sis",
+      "bytes": 714027,
+      "sha256": "bed04647f1696076cecf30829acdfd2379e4cfa15bafab9819175e833d4d772b",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Marble Revolution/Marble_1_.Revolution.v1.01.S60.SymbianOS.Cracked_SymBoSS.sis",
+      "bytes": 422777,
+      "sha256": "7a3839223a80d98b7ce996ce29f9cd1ab9608a55c236bf9bb7eeda3b324343e5",
+      "payloads": 29
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Magi-Swap/ZingMagic Limited Magi-Swap v2.00.sis",
+      "bytes": 304285,
+      "sha256": "4683c220fdaddcffd1a4212b426601a27bb8967f89d9597435b0af2bb016bf15",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mission Pandora/pandora_N_S60_EN_3.SIS",
+      "bytes": 870385,
+      "sha256": "d306f1b88b5cb2f610b8ad6cda173dc95586717e4bb9e3f18000e52b57f60f98",
+      "payloads": 112
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mission Pandora/pandora_N_S60_EN_2.SIS",
+      "bytes": 748885,
+      "sha256": "790c0c233ce37f110eb02bc0cee1b5a37f3ea0cb31689fe6b5fd633484ffa178",
+      "payloads": 70
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mission Pandora/pandora_N_S60_EN_4.SIS",
+      "bytes": 815628,
+      "sha256": "78a01f6b027516469fd9fc2cc43acf62307c87bffd0e898322b30a074106dce2",
+      "payloads": 79
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mission Pandora/Panora_1.1_Enlish_S60_CRACKED_SMPDA_1.sis",
+      "bytes": 642627,
+      "sha256": "58deed4d2396b6dfd0cf6628b48fcbd216bc3ff59a5b5bb846d9e45e6d12d298",
+      "payloads": 82
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Magic Broom/PocketStudio_MagicBroom_v1.00_Cracked_CN_SMPDA.sis",
+      "bytes": 1652660,
+      "sha256": "186e98461be8339bf79052b6001b7f566536854ae56b0bbba273a72c916c9ee0",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Micro Quad/MicroQuad.v1.1.S60.SymbianOS.Cracked_SymBoSS.sis",
+      "bytes": 716657,
+      "sha256": "36533c1427352f6473a4bcdfe8c39764c0030f59651de21fc6b0ed081d9bfe73",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Karting Plus/KartingPlusS60_100.SIS",
+      "bytes": 478191,
+      "sha256": "1ba40e2660a952af004d1dc97671b5b96e56701530cf7ea39bc2303d82d172e0",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Karting Plus/MGS2.1.SIS",
+      "bytes": 329306,
+      "sha256": "426f0a0854533a17e07b3f4121d703809f4bcd4d1ee64825092be13e71117a98",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MineField/Minefield_s.sis",
+      "bytes": 106718,
+      "sha256": "d9b3c6f51ee9248736547d43713cd62f139a96dff86941f8739137d7a1533e50",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS WWII The African Campaign/[SymbianOS8]Noumena.Innovations.WWII.Africa.Campaign.v1.10.S60.Cracked-PWNPDA/MGS2.1.sis",
+      "bytes": 329306,
+      "sha256": "426f0a0854533a17e07b3f4121d703809f4bcd4d1ee64825092be13e71117a98",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS WWII The African Campaign/[SymbianOS8]Noumena.Innovations.WWII.Africa.Campaign.v1.10.S60.Cracked-PWNPDA/Noumena.Innovations.WWII.Africa.Campaign.v1.10.S60.SymbianOS8.Cracked-PWNPDA.sis",
+      "bytes": 1644381,
+      "sha256": "55c62ce0ca70d71c6e4c1c07af052929ad80e438f44141fb1d7331dec93b111b",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS WWII The African Campaign/[SymbianOS7]Noumena.Innovations.WWII.Africa.Campaign.v1.10.S60.Cracked-PWNPDA/Noumena.Innovations.WWII.Africa.Campaign.v1.10.S60.SymbianOS7.Cracked-PWNPDA.sis",
+      "bytes": 1644381,
+      "sha256": "2104a1e4a6529396e0d507fe513ba631a5defce48e97d2c1e641865f4da2e4ff",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS WWII The African Campaign/[SymbianOS7]Noumena.Innovations.WWII.Africa.Campaign.v1.10.S60.Cracked-PWNPDA/MGS2.1.sis",
+      "bytes": 329293,
+      "sha256": "a4f06f8dd26ee999a5417641eaa58017cca7e381523f5beb1a8ecca644695d65",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Treasure Mine/[SymbianOS8]Noumena.Innovations.Treasure.Mine.v1.25.S60.Cracked-PWNPDA/MGS2.1.SIS",
+      "bytes": 329306,
+      "sha256": "426f0a0854533a17e07b3f4121d703809f4bcd4d1ee64825092be13e71117a98",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Treasure Mine/[SymbianOS8]Noumena.Innovations.Treasure.Mine.v1.25.S60.Cracked-PWNPDA/Noumena.Innovations.Treasure.Mine.v1.25.S60.SymbianOS8.Cracked-PWNPDA.sis",
+      "bytes": 262123,
+      "sha256": "e1dfa5649528495716e4b7f9a84c1b9c3f446f556808fd6f79aff543b4f0eb91",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Treasure Mine/[SymbianOS7]Noumena.Innovations.Treasure.Mine.v1.25.S60.Cracked-PWNPDA/Noumena.Innovations.Treasure.Mine.v1.25.S60.SymbianOS7.Cracked-PWNPDA.sis",
+      "bytes": 262123,
+      "sha256": "0beca320e5d799a17f595dcbe94e3e80bd63e1acfd550ed7ded9f4943b31ea77",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Treasure Mine/[SymbianOS7]Noumena.Innovations.Treasure.Mine.v1.25.S60.Cracked-PWNPDA/MGS2.1.SIS",
+      "bytes": 329293,
+      "sha256": "a4f06f8dd26ee999a5417641eaa58017cca7e381523f5beb1a8ecca644695d65",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Oval Racer/Great Ape Oval Racer v1.03 S60v2 SymbianOS8 Cracked BiNPDA.sis",
+      "bytes": 748010,
+      "sha256": "09e277f19f63f2ba7c399110020ef21aff622e2c600dad544eab13af4533f082",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Metal Bluster 2/MetalBluster2_v1.31_Cracked_S60_SMPDA.sis",
+      "bytes": 1731515,
+      "sha256": "e5f076f195311761a56f7965e7a4badca1d740fc6d9a1b2a576b688eec8f97e7",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Mad Macs/[SymbianOS8]Noumena.Innovations.Mad.Macs.v1.06.S60.Cracked-PWNPDA/MGS2.1.SIS",
+      "bytes": 329306,
+      "sha256": "426f0a0854533a17e07b3f4121d703809f4bcd4d1ee64825092be13e71117a98",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Mad Macs/[SymbianOS8]Noumena.Innovations.Mad.Macs.v1.06.S60.Cracked-PWNPDA/Noumena.Innovations.Mad.Macs.v1.06.S60.SymbianOS8.Cracked-PWNPDA.sis",
+      "bytes": 928501,
+      "sha256": "a4043002d269b18f85036df9a5fe6bc6999a092a0a3eedb7ca952135f9ac98aa",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Mad Macs/[SymbianOS7}Noumena.Innovations.Mad.Macs.v1.06.S60.Cracked-PWNPDA/MGS2.1.SIS",
+      "bytes": 329293,
+      "sha256": "a4f06f8dd26ee999a5417641eaa58017cca7e381523f5beb1a8ecca644695d65",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS Mad Macs/[SymbianOS7}Noumena.Innovations.Mad.Macs.v1.06.S60.Cracked-PWNPDA/Noumena.Innovations.Mad.Macs.v1.06.S60.SymbianOS7.Cracked-PWNPDA.sis",
+      "bytes": 928501,
+      "sha256": "84e71aa3083f2be25fe87bbe88915cdf81df1851bfad8edbc0bb41650ebe397c",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Match The Batch/SIXELA.Productions.Match.The.Batch.v2.10.885.S60v2.SymbianOS7.Retail-BiNPDA.sis",
+      "bytes": 767765,
+      "sha256": "c1f4156803667c23ff9fa8a6cb24a843a4f88c6f3cb15b622bb240e2b6b088b7",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Meteor Breakout 2/Mobile_stream_meteor_breakout_2.sis",
+      "bytes": 535347,
+      "sha256": "e75ca265e4c7b616bf29c0a402329e6e7d0a6877d9e4eeb851fd07a7a8de5439",
+      "payloads": 58
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mars Lander/marslander_2nd_ed.sis",
+      "bytes": 92344,
+      "sha256": "28345933cfa1a024dea32993dd9ea6802c87147aabe2c3426de6ada9f630c6cc",
+      "payloads": 11
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Nebulus/Magic.Productions.Nebulus.v1.00.S60.SymbianOS.Retail-daddyfatsax.sis",
+      "bytes": 311350,
+      "sha256": "565cc0fc022bc075dad3d3a07b6dfd10ac5036c22cc00744b758002152c3653e",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MiniBowling/Megasoft2000.MiniBowling.v1.00.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 250813,
+      "sha256": "311037f7d762eb1b55ed5c56a17e64358a4388765c020ae0eedfe9995208366a",
+      "payloads": 15
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Next/next_s60.sis",
+      "bytes": 42394,
+      "sha256": "86cd8080afc54579613996b3f266c99c4ca310a67e8bc2769aa2659c1847985a",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Mau Mau/LonelyCatGames.Mau.Mau.v2.35.S60.SymbianOS.Cracked-PWNPDA.sis",
+      "bytes": 404547,
+      "sha256": "c909784db0b9e8ac01de3ed36d064c77d0714f4a4077d92f361cb1e94b415671",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Magic Puz/Magic_Productions.Magic.Puz.v1.0.S60.SymbianOS.Retail.Cracked.Fixed_SMPDA.sis",
+      "bytes": 224635,
+      "sha256": "8ba4f94ecad34c5401b2a33d3c1c7a94a084ba2b4cfd1c4bacea4e2e5f258662",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/Meteor Attack/SIXELA.Productions.Meteor.Attack.v1.0.S60v2.SymbianOS.Retail-BiNPDA.sis",
+      "bytes": 922370,
+      "sha256": "9ce8bbbfa8e8a923a09774b961a4f177ada231875506babfbe08c447c7464fc6",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS MVR Pool 2/Noumena.MVRPool2(1.10)_Full_Dotsis.sis",
+      "bytes": 497919,
+      "sha256": "69289355dae99f8a645c3d65dc123a774c5918b9771cc60cc85346691771910b",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__M-O__Part4/MGS MVR Pool 2/MGS2.1.SIS",
+      "bytes": 329293,
+      "sha256": "a4f06f8dd26ee999a5417641eaa58017cca7e381523f5beb1a8ecca644695d65",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/BaadLand/BaadLands.BaadLand.v1.1.S60.SymbianOS.Cracked-SyMPDA.sis",
+      "bytes": 79556,
+      "sha256": "8b1b4e46350d36062b40fa9d6faeaaa7c3bb8ea8dabb19e1bc006bcef277c617",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/A Bad Day In Space/BadDayInSpace_v1.2_S60_Cracked_SMPDA.sis",
+      "bytes": 561661,
+      "sha256": "01e314d934448d529543576f7e1a07ddb5bc9b617920498b9e4d3f3ec0f57217",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/10 Ball Micropool/Gabor.Fetter.10.Ball.MicroPool.v3.30.S60.SymbianOS.Cracked-EViLPDA.sis",
+      "bytes": 235449,
+      "sha256": "03bf81b85c0b5983970fcea26d057351b19cad5f0299e6a4d255aa7feb3bd7df",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Black Eagle/Black Eagle V 1.0_FULL.sis",
+      "bytes": 502608,
+      "sha256": "db97bed18de09070dd82212f2e0ffd3487cd955b9c9cea206d76c77398ae0da5",
+      "payloads": 40
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Aiolos/Sinjisoft_Aiolos_v1.03_S60_Cracked_MMC_SMPDA.sis",
+      "bytes": 513852,
+      "sha256": "8d330271d4163636190c21cd4c6b583dfa2f89dd6d377f2c86682ee7c716b816",
+      "payloads": 28,
+      "containerPayloads": [
+        {
+          "name": "26-Aiolos.app",
+          "bytes": 571424,
+          "sha256": "31e9ffd32d60f62945747e3d759ac47b4074f99efbe21f843af6f6db9143c7cb",
+          "scan": {
+            "bytes": 571424,
+            "sha256": "31e9ffd32d60f62945747e3d759ac47b4074f99efbe21f843af6f6db9143c7cb",
+            "candidate_offsets_tested": 29108,
+            "containers": [
+              {
+                "version": 4,
+                "title": "Aiolos",
+                "title_bytes_hex": "41696f6c6f73",
+                "declared_body_bytes": 270080,
+                "sections": {
+                  "a": 93468,
+                  "b": 95500,
+                  "c": 103268,
+                  "d": 108500
+                },
+                "entries": [93446, 43468, 43896, 43476, 0, 0, 0, 0, 0, 0, 0],
+                "variables": 254,
+                "resources": 436,
+                "compression_type": 0,
+                "source_offset": 274848,
+                "body_offset": 274848,
+                "wrapper_bytes": 0,
+                "xor_mask": 0,
+                "extracted_bytes": 270080,
+                "raw_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+                "decoded_body_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/3D Sudoku/3D.Arts.3D.Sudoku.v1.10.S60.SymbianOS.Retail-SyMPDA.sis",
+      "bytes": 318706,
+      "sha256": "445ef47c19f1498fa04826dc8827bde6131b8b82749b8cef827812f049fd5314",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Avalanche+/Avalanche_v1_1.SIS",
+      "bytes": 70570,
+      "sha256": "734c3bcde3b1232aeff319eb7e92dda4a570e6b99acd727658c10b1c2f43fd30",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Amiba's Candy/Amibas Candy.sis",
+      "bytes": 311178,
+      "sha256": "3196c2b84d5fe824c94a24ee7363bfd18eac7da22f7359a7ecd0a27db5ab6b2a",
+      "payloads": 19
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Atari Retro/AtariRetro.sis",
+      "bytes": 206657,
+      "sha256": "a133481ccc05c38d876ae105ce19761c337f3ab7842a6a09b6162b72e3296177",
+      "payloads": 50
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/180 Darts/Overloaded 180_Darts.sis",
+      "bytes": 150460,
+      "sha256": "1deb9277a57ec9e75a32e84947f5d87b4d21af38d27229d549b265d5a8fafa65",
+      "payloads": 22
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Arcade Classics/PackageBooster.Series60.sis",
+      "bytes": 393940,
+      "sha256": "055aa9aa43bfa55f07e3cd949ec64957ceb5a440621a06db8247b791d2fb2b59",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Arcade Classics/Mastersoft.Games.Pack.2.v1.06.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 340254,
+      "sha256": "78de4121e79101b1114aa0fc6b655120c89acac099132183e9f5982c115463cd",
+      "payloads": 74
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Berry Hunter/Codewaves.Berry.Hunter.SymbianOS.sis",
+      "bytes": 451097,
+      "sha256": "9e8fdbe49ecaa58177e1f123d58f804177bfa8fa58dc7c06726c710f9f192919",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Ball Rush Aqua/HeroCraft.Ball.Rush.Aqua.v1.S60.SymbianOS.Cracked-illusion.sis",
+      "bytes": 603245,
+      "sha256": "b6ad1a59bfd320d2e201c754c1a2d2a258d6d8c1c650404acfa29e216bdb4fcb",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Ball Rush Aqua/HeroCraft.Ball.Rush.Aqua.v1.S60.N90.SymbianOS8.1.Cracked-illusion.sis",
+      "bytes": 736295,
+      "sha256": "9fc427a74a0e4db4aa993bcbaa5e73f993a51d4ceac8db2dfd5316d1e054c991",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/American 3D Racing/American 3D_Racing_v1.01_CRACKED_6600_SMPDA.sis",
+      "bytes": 338199,
+      "sha256": "38724d4d9707875a0fe5a505d8642eee63ac8e44670993645341dcae32e543c4",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/BePlumbed/FeeJo.Soft.BePlumbed.v1.00.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 262262,
+      "sha256": "d11137be48f5ed4fdd60d5494b656f0bcae7086492ef0cb2b2b945dbc731d2c9",
+      "payloads": 28
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Atomanic/BitRabbit.Atomanic.SIS",
+      "bytes": 328882,
+      "sha256": "0f8c4d84c292c38bb227f31ce9c86e955d32f37330afc62e8e50031c9a0e9be3",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bitstorm/M.Bizzard.Bitstorm.2006.v1.0.S60.SymbianOS.Retail-BWOPDA.sis",
+      "bytes": 635303,
+      "sha256": "3be0f2aafc4934b704f67864f6a0492bdc7df535c961fc3237db2e50bf18bf51",
+      "payloads": 3
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Box Boy/Yewsoft.Box.boy.v1.0.S60.SymbianOS.Retail.Cracked-SMPDA.sis",
+      "bytes": 131458,
+      "sha256": "81d5ef06cd811d6910c747c6e9d0718ebbf26b88b8fbeff9eab193939492b52f",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Astro Quest/magixoft_astroquest_v100.sis",
+      "bytes": 651879,
+      "sha256": "f95c45d4fb18c6f7aeb4eb942da194cef26a0501024118da7c335fc6026d6a87",
+      "payloads": 26
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Agile Fighter/AglieFighter.sis",
+      "bytes": 468919,
+      "sha256": "3315ff5d6cecbd9a3ba76dada968cc5bcf86b1561a093058cc9cc0cfdb3c48f9",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bean/Tendbeyond.Bean.v1.0.S60.SymbianOS.Retail-SyMPDA.sis",
+      "bytes": 440797,
+      "sha256": "b97e03ed91f744efac65e25a015acdd7a12d9e457ff18244872410d2f7694186",
+      "payloads": 98
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Alonso Racing 3D/Alonso_Racing_3d_2005.sis",
+      "bytes": 491600,
+      "sha256": "bb1de3ce46367410fd84f7a8bf1993d43a0c0959ed1c4bbfe38b37db8f3bc0dd",
+      "payloads": 64
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Alien Pinball/3D.Arts.Alien.Pinball.v1.20.S60v3.SymbianOS9.1.Retail-SyMPDA.sis",
+      "bytes": 438540,
+      "sha256": "e94c2d010639f95e7a909c539ecadc4b9b4abec95055cd2f46737fbbafb30801",
+      "error": "Unsupported SIS format; expected EPOC release 6"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/3D Pet Fish/3d_petfish_v10a_n-gage.sis",
+      "bytes": 254286,
+      "sha256": "43330bafb03b27dec6804db0ac9b8579d3bb453c11a6536f76e509fc6121104d",
+      "payloads": 33
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Asphalt 2 3D/ASPHALT23D-6600.SIS",
+      "bytes": 977192,
+      "sha256": "a30f5a8dfeede30b5e325324820985f9184fa8527db5ec3926fc676d689369aa",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Battle Cake Multiplayer/Online.MultiplAyer.Part2.SIS",
+      "bytes": 859192,
+      "sha256": "54648b54ff61a7f3639df74c0ed9abf85492f1a86f00e6f3654a58dc56d6338b",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Battle Cake Multiplayer/Online.MultiplAyer.Part1.SIS",
+      "bytes": 229853,
+      "sha256": "a99c80952f9a8f0c08d5f8588170e7883712b3c29a3c8505d4f002aa0644290d",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Amazing World/amazingworld_1_3.sis",
+      "bytes": 373861,
+      "sha256": "eae87f2828ec44cc8fb181e749e6629023b9449bc2e6cdab390383a682fde419",
+      "payloads": 105
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Backgammon Professional/ZingMagicBackgammon.Professional.v2.S80.SymbianOS7.sis",
+      "bytes": 476959,
+      "sha256": "e456f28f3b2ad9065e85839b96ce737e54f04602b25ca0b225bab4a1611e0ab8",
+      "payloads": 18
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Backgammon Professional/ZingMagic.Backgammon.Professional.v1.0.S60.SymbianOS.Retail-SMPDA.sis",
+      "bytes": 197995,
+      "sha256": "c001955d9f3f4ea1c77238c5598b4795a08c68b665e13d4b6d532c5859446497",
+      "payloads": 18
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Asphalt 2 3D Extended/Asphalt23D_nokiaN70_ML_nonIGP_v1_1_0_Signed.SIS",
+      "bytes": 2250146,
+      "sha256": "c2c6dff6ede9b4eeac072cf5c9f94a8e3aebe612b09be3dde0c13f351ea46d9e",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/3D Minigolf/3D.Minigolf.v1.40.S60.SymbianOS.sis",
+      "bytes": 255028,
+      "sha256": "8740657d4409dc7d60fcbac646d3341077303ad88da3a01992d98b2388ce77d9",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/BusinessMan/Business Man 1.1 THX.sis",
+      "bytes": 311112,
+      "sha256": "9561b2c450c5ed5f98f8b8ebb72bca1901a6b352d1f3100c86804d024886f806",
+      "payloads": 21
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Another World/Telcogames_1_1_Another_World_v1_25_S60_SymbianOS_Cracked_SyMPDA.sis",
+      "bytes": 753982,
+      "sha256": "a1bd6a042f4ffd9b76e3c468ec6b94ae1fa3b45460359577b3179c3ea7807b64",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bikini Beach Jet Ski/Bikini_beach_jet_ski.sis",
+      "bytes": 314319,
+      "sha256": "e580d23dc5df173503929ee23c1dff762a6cf8779590dcffe0535dac0b956913",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Arcade Park/Arcade_Park_v1.00_S60.sis",
+      "bytes": 1071576,
+      "sha256": "09b25a53cb1b03d458c3b207cfc5361e510adc8448c1c0809a2e301a1eb68ea7",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/3D Zapman/pkm_full_part2.sis",
+      "bytes": 385361,
+      "sha256": "c6d8fc4f423d27d49a215d5cf4dadf9b1576df221d24c17d52ac71b070f47d29",
+      "payloads": 69
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/3D Zapman/pkm_full_part1_cracked.sis",
+      "bytes": 480374,
+      "sha256": "a8cf0e009d31b79a6f3cf61a5ab0081dbf96b797caa96f03747e6e82f148e25f",
+      "payloads": 25
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bubble Factory/Antares.Bubble.Factory.v1.0.S60.SymbianOS.Retail-SMPDA.sis",
+      "bytes": 617479,
+      "sha256": "cd79e2b1c5b35c8cf61a26d4232a088968607d8b65890aed4208cf8d51e42aa9",
+      "payloads": 196
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Astronix/Astronix.v1.01-XiMpDA.sis",
+      "bytes": 468972,
+      "sha256": "4dff2c073bd5f7880cba7993265c327857cde3daef0a4995e89de8bc04165fc2",
+      "payloads": 13
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Agile Basketball/AgileBasketbal.SIS",
+      "bytes": 422339,
+      "sha256": "58f0375d2b141e59b76ae395c480ab81c1298bd972b4d958c4a878a66773132d",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/5 Glory Holes/susigames.5.glory.holes.v1.10.s60.symbianos.retail-binpda.sis",
+      "bytes": 363497,
+      "sha256": "cb5816d37639708437f4560cf4a73d3b6094416914a560239398a1a053fceee8",
+      "payloads": 22
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bounce/Bounce_4.16_With_Extra_Level.sis",
+      "bytes": 291875,
+      "sha256": "ecd48cc086e840c2cf6feda7ff3f1180ad16c754a78c79a5fa4e27a935e045f4",
+      "payloads": 109
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Blazar/blazar_v1-10_s60.sis",
+      "bytes": 597474,
+      "sha256": "68cbe18dfb5263c6a36f5a8da00d3c313b3136e88f02e0fcb35b999430d668ac",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Animal Farm/Animal.Farm.v1.0.sis",
+      "bytes": 56880,
+      "sha256": "a2b8417d7e2910a9a3d89e354ab774ca7d6b25d9f867dd415489cb4c7b1c9cd4",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/3D Mi Snooker/M_Bounce_3D_MI_Snooker_v1.00_S60_SymbianOS_Retail_BiNPDA.sis",
+      "bytes": 157753,
+      "sha256": "babfc12ca86e27533b4b4f17538a277a753b922647fbaec402d8d47ba073208d",
+      "payloads": 13
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Boxing Maniac/Boxing_Maniac_v0.71.sis",
+      "bytes": 471284,
+      "sha256": "ace99b236e63c9acecdd5542d914d52f342e421e1e58a7f5b62a1c1dc4c9c4d6",
+      "error": "Unsupported file record type 6 at record 20"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Atomix/1st-EasySoft.Atomix.v1.02.S60.SymbianOS.Retail.Cracked-SMPDA.sis",
+      "bytes": 293777,
+      "sha256": "d6abf7d07fb6a1afefc5359344bc6efbb5c4c4a36d1b31e49e1f4b1a6437a514",
+      "payloads": 56
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bowling Master/Mobirate.Bowling.Master.v1.10.S60.SymbianOS.Cracked_BiNPDA.sis",
+      "bytes": 691106,
+      "sha256": "0a5168787ec4694823bee44fe6dfb730a36b18148a91f809932e928bb77d9020",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/16 Bit Color Roller/GameZoneProject.16.Bit.Color.Roller.v1.17.S60.SymbianOS.Retail-SMPDA.SIS",
+      "bytes": 289987,
+      "sha256": "492b8484af9ed1bf59e7a4e7b225f1c409c11297f5bc9ad4bb7c7a31727e8b34",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/BoXplosion/boxplosion_symb.sis",
+      "bytes": 219063,
+      "sha256": "3bb950bd3984f13201edf94eb7851837fcfcecb019a055b6bc6db05bd5c2dcdf",
+      "payloads": 15
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/5 to GO/Jatis.5toGO.v1.00.S60v2.SymbianOS7.Cracked-BiNPDA.sis",
+      "bytes": 305349,
+      "sha256": "c7fd33b75adb5582539f00486ec4c3272c2407f7dd78ff27da80b27e42fa74ad",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Blue Voyage/blue voyage_v1.0.sis",
+      "bytes": 574231,
+      "sha256": "dd67fbb4084690876f04c297340c5c3c6d8312c449745e0215a01f33f349a334",
+      "error": "Unsupported file record type 6 at record 13"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Aqua Blocks/pdamill.aqua.blocks.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 223640,
+      "sha256": "806f09784e5b94d25888590c9b56166290d1fc8e542bb062ece9b63a07e8c5cc",
+      "payloads": 18
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bear's Job Honey Fever/Bear'sJob_HoneyFever_1.2_FULL.sis",
+      "bytes": 566754,
+      "sha256": "c06dfb79d609b6166c95a8fcdc8234dc2ea0071564f87d9c751490bb64f56d6c",
+      "payloads": 137
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Across It/MBounce AcrossIt.SIS",
+      "bytes": 227477,
+      "sha256": "e571f157ba57b6c25e4cd00a4aa754897ad5e188df189e8ea4cc3c2210f1159a",
+      "payloads": 18
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Boyan/BoyanApp.v0.1.S60.2nd.Cracked.cnpda.sis",
+      "bytes": 1288290,
+      "sha256": "d03bc7e78da0c1c1b6c2c0198a973c8fe24ee963aa94aadc6799054ca190bc80",
+      "payloads": 11
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Boyan/AppShell.v1.1.S60.2nd.Cracked.cnpda.sis",
+      "bytes": 60231,
+      "sha256": "97ba465c51ec16fa9a35a1232f808f6cf99ea9aa3e2e3ff019171337f0f77bf8",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bubble Shooter/Absolutist.Bubble.Shooter.v1.0.S60.SymbianOS.sis",
+      "bytes": 210997,
+      "sha256": "e201c9f9a35d374ba8f40f3edf92a57e360b4760d8696fe60ceb4dffd1f2b2e1",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Barrage/Tendbeyond Barrage.sis",
+      "bytes": 398316,
+      "sha256": "29642aa408ff6a790fdd5c7e5828a92798dd3c00df351c9823a0f459c0ce49fd",
+      "payloads": 106
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Brother In Arms EIB 3D/BIA_EIB_3D_S60V2_v100.sis",
+      "bytes": 1562999,
+      "sha256": "6437776c3493fd8894a339f90fcc75972d0324a0b2428e8eb7022f77e86cd68b",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/3D Motoracer/3DMotoRacer_N_S60_EN.SIS",
+      "bytes": 826460,
+      "sha256": "f3083eea5d159dc806545e8c4eabace9f98758048095cd51e9987075047e1209",
+      "payloads": 114
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Angelfish/Angelfish_1.sis",
+      "bytes": 1745673,
+      "sha256": "a79f976f8b73fc51191e24a99c9e77b98e9526416945f8e31a0ce88a353e74d6",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Angelfish/Angelfish_3.sis",
+      "bytes": 1769067,
+      "sha256": "d3b3c0e2b2e0af8dcf0a3b022802f684a1339209b1e7f316d45ba7565b1285a8",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Angelfish/Angelfish_2.sis",
+      "bytes": 1804123,
+      "sha256": "b6c8af58c5c07f31c54de744342fa1a7bf5859c4f028233776a72b38ea9406a1",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Aqua Blocks Plus/pdamill.blocks.plus.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 223782,
+      "sha256": "b509778c9a0f8701e708ddcb4499bb35730772db53c0abaa78fa3d634da20a0a",
+      "payloads": 17
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Anarchy Boxing 3D/For Nokia 7650,3600,3650 or N-Gage/Boxing3D.sis",
+      "bytes": 323233,
+      "sha256": "ff0382d29cc99114a75c30474b39010c63420ed90ee2e7af01dbc904d9e8551b",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Anarchy Boxing 3D/For Nokia 3620 or 3660/Boxing3D.sis",
+      "bytes": 323174,
+      "sha256": "1b23a033dafcc05c396639369fbcea479b709a511bdc7edff19a76fed6e11792",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Anarchy Boxing 3D/For Nokia 6600,6620,6630,6260,3230,6670 or 7610/Boxing3D.sis",
+      "bytes": 333440,
+      "sha256": "e9769e657edf99b0f06f26c5825a3a7590080349e88dc058325e52e4011a288d",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Bamboo Dance/Bamboo Dance v1.00.S60v2.sis",
+      "bytes": 195642,
+      "sha256": "8e7f93f8eef2e8dc503992eed427b72241b81b3215e40e140ac6a2388f1252a8",
+      "payloads": 18
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/16 Bit Color Match/GameZoneProject.16.Bit.Color.Match.v1.00.S60.SymbianOS.Retail-SMPDA.SIS",
+      "bytes": 505837,
+      "sha256": "9d457a20d2bcd9850dd963b56dc4c79580bb45680ae066e78b427ddc0286ae33",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Aquanoid/SIXELA.Productions.Aquanoid.v1.00.S60v2.SymbianOS7.SymbianOS8.Retail-BiNPDA.sis",
+      "bytes": 1850581,
+      "sha256": "a923b91749350d40171cf39bb0772e6f9fde9e5720dc621cdcb0678c315b0366",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__0-B__Part1/Attack of the Killervirus/elocom_1_.attack.of.the.killervirus.v1.02.s60.symbianos.retail_binpda.sis",
+      "bytes": 181600,
+      "sha256": "3bbda394c3a72a081b2f87fd2562b5ce20115cbd3527862525925eca065843e6",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pocket Bar Billiards/barbilliardsretail.100565.SIS",
+      "bytes": 1303228,
+      "sha256": "e9a1739a9d06d78b9277ee788dbfae288c805ea2f5456a679d7e8401b8d03fa8",
+      "payloads": 131
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rodland/Rodland.sis",
+      "bytes": 752641,
+      "sha256": "64ac79e5bb7f4d63f06b17a66576df9b539a8c194d985fb6e4c72e3a80c1bd2f",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rotate Mania/Absolutist.Rotate.Mania.v1.0.S60.sis",
+      "bytes": 268809,
+      "sha256": "da3913deacfcc60a2b4fa3c8f25c1afc40d2c159dda9a30209f4ed0dfa8db10a",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/SARS Killer/SARS.Killer.s60.Cr@cked.BiNPDA.sis",
+      "bytes": 306207,
+      "sha256": "95acc2afe6edc310316b1f1c3e124810691539a892ccc2970876a603d6d9edb8",
+      "payloads": 143
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pong Deluxe/Astral.Vision.Pong.Deluxe.v1.01.S60.SymbianOS.Retail-daddyfatsax.sis",
+      "bytes": 444414,
+      "sha256": "5ca2fdba4f7a43ed36afa895d1743666abdbea3ba9e5cec2de13f9c318883cb0",
+      "payloads": 36
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Sky Force/SkyForce.sis",
+      "bytes": 797760,
+      "sha256": "5cd8fb88ad9ab23cb0c2d3cd9ae87f576e1e37c486bd77435731be9ded30bfa4",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Plumber Pete/plumberpete_s60.sis",
+      "bytes": 651672,
+      "sha256": "9ff77128160b2990c597c370a4e22c0e56967b6dedeaf9ebffb7343bc8d8084c",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Robo/HeroCraft.Robo.v1.00.S60.SymbianOS.Cracked_BiNPDA.sis",
+      "bytes": 614380,
+      "sha256": "d5e7c4f444119df55af0cac246cbdbbeaf0174f32b859dacdf6a08efa2fa66e3",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Quartz 2/Elements.Interactive.Quartz2.v1.20.S60.sis",
+      "bytes": 328717,
+      "sha256": "beaf93e57d815878f8a5230130be951a9b2635d9621f6cde37b37a960660affa",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Sizzler Supremacy/Clickgamer.Eggstreme3.Sizzler.Supremacy.v1.10.S60v2.SymbianOS7.Cracked-illusion.sis",
+      "bytes": 1026223,
+      "sha256": "ce66988c39a3d8734ce5c9214aa4536f96127958a40b691a841c19116a80bf4c",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pneumatic/Pneumatic.DDJ.sis",
+      "bytes": 234751,
+      "sha256": "7172f9dc9edbf532abacd1529984790a0d392931544cde9d9d6d955e8eee97a2",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pneumatic/Extra/Pneumatic_theme.DDJ.sis",
+      "bytes": 53582,
+      "sha256": "9808e77f1e93a1ad34280b6e3a89f11ee91156642e93dbc16b964950bb39eb49",
+      "payloads": 2
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pneumatic/Extra/Pneumatic_ringtone.DDJ.sis",
+      "bytes": 228922,
+      "sha256": "1caa65ff513510e8cf4424b5220be56db056a9a22c87f5b708988140a8830249",
+      "payloads": 3
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Perfect Drummer/perfect_drummer.SIS",
+      "bytes": 162064,
+      "sha256": "bd90ec34dd4f67e38626f7ce229cfe3cffb86a92c4067b9e2c42d85b4eefadfc",
+      "payloads": 24
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rescue The Soldiers/Rescue The Soldiers v1.01.S60v2.sis",
+      "bytes": 192922,
+      "sha256": "11e4b752390e1f1becf0876c7f458c09073393ae20a55f34eb198aca70d7acdc",
+      "payloads": 22
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rick Rocketson/Extra/RickRocketson_ringtone.DDJ.sis",
+      "bytes": 233021,
+      "sha256": "2e0c6f02fa3325a964a81854533c6c9ce4f37142e9cbd7d1832f6200507a9297",
+      "payloads": 3
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rick Rocketson/Extra/RickRocketson_theme.DDJ.sis",
+      "bytes": 98749,
+      "sha256": "294049b52b545c2a759efb65f4b5cde545ff672f3f6cfb971b529fdf1d9e6d52",
+      "payloads": 2
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rick Rocketson/RickRocketson.DDJ.sis",
+      "bytes": 314229,
+      "sha256": "3d2ecd13e4151701d80a3194fb2e2000f277d7d5cf8113ec6ae2a45cc55c8613",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pentathlon/Pentathlon.sis",
+      "bytes": 830175,
+      "sha256": "1327860d39dcc2ebb98ba0f892fde63567cb985eed3f0c73c7198604caa8949d",
+      "payloads": 58
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/PlayPackman/playpac.sis",
+      "bytes": 87992,
+      "sha256": "e7d68a4f926f769533969e9ea6fb953c2632777dcd118feefcb509e2c0b119e2",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Sky Force Reloaded/Infinite.Dreams.Sky.Force.Reloaded.v1.00.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 1491646,
+      "sha256": "eda29a7ee88c50997f1117a1064f9d82385e8bcbfe242578bebddd4c09f19598",
+      "payloads": 11
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rainbow Jek/Rainbow_Jek_Part1_Retail.sis",
+      "bytes": 2041311,
+      "sha256": "0c58ba41eee7b6dd8bb18f635c220b3b40520906d5a8814a194c7f8fc56f95ae",
+      "payloads": 23
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rainbow Jek/Rainbow_Jek_Part2_Retail.sis",
+      "bytes": 1141710,
+      "sha256": "eeb7953a517b3eaa2ae3c73a5f09baa42d1138750a6131d2cfcd66e5a689f77a",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pocket Golf/Sinjisoft.Pocket.Golf.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shio mau.sis",
+      "bytes": 344475,
+      "sha256": "f9a0cb24e74fd19707d7e8afb2ed2ff0e85df40c3924eeda5d1f5ec1b0ac2012",
+      "payloads": 21,
+      "containerPayloads": [
+        {
+          "name": "19-PocketGolf.app",
+          "bytes": 628812,
+          "sha256": "f072f6a6a91419e8e3df3173dc6e33dae66bc69e6ff791e890236f58e3b7b5d4",
+          "scan": {
+            "bytes": 628812,
+            "sha256": "f072f6a6a91419e8e3df3173dc6e33dae66bc69e6ff791e890236f58e3b7b5d4",
+            "candidate_offsets_tested": 30688,
+            "containers": [
+              {
+                "version": 4,
+                "title": "POCKET GOLF",
+                "title_bytes_hex": "504f434b455420474f4c46",
+                "declared_body_bytes": 326528,
+                "sections": {
+                  "a": 87656,
+                  "b": 91512,
+                  "c": 219044,
+                  "d": 227036
+                },
+                "entries": [30878, 0, 3198, 540, 0, 0, 0, 0, 0, 0, 0],
+                "variables": 482,
+                "resources": 666,
+                "compression_type": 0,
+                "source_offset": 275780,
+                "body_offset": 275780,
+                "wrapper_bytes": 0,
+                "xor_mask": 0,
+                "extracted_bytes": 326528,
+                "raw_sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+                "decoded_body_sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Shadow Fighter/shadowfighter.v1.2.s60.2nd.cracked.cnpda.sis",
+      "bytes": 1307521,
+      "sha256": "e9f3a2a02b4146ef9088ce81a72dbb21620443bb3b4cdd573daa1c9fae2075f8",
+      "payloads": 25
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Shadow Fighter/AppShell.v1.1.S60.2nd.Cracked.cnpda.sis",
+      "bytes": 60231,
+      "sha256": "97ba465c51ec16fa9a35a1232f808f6cf99ea9aa3e2e3ff019171337f0f77bf8",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/RollBot/BitFire.RollBot.v1.01.S60.SymbianOS7.Cracked-BiNPDA.sis",
+      "bytes": 703553,
+      "sha256": "4cf8229745d5cd600256ccdcfa3e3398b4b595ffecbebaccf79d28e59e8eb22a",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pingis/pingis_by_vaha.sis",
+      "bytes": 153109,
+      "sha256": "1efec2eec417f7f6994805fbc0dc9c0ff707292b5b4ff09a46be0744a607e52b",
+      "payloads": 15
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Resistance/overloaded.resistance.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 258979,
+      "sha256": "586b7846ac1d94b0b9946191607546aaf67967f9637082bf25b16f4ec8f74e07",
+      "payloads": 43
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rally Pro Contest/[SymbianOS8]Synergenix.Rally.Pro.Contest.v1.31.S60.N6630.Retail-BiNPDA.sis",
+      "bytes": 311990,
+      "sha256": "fa23c0733dc62c4b9d477a74d8606faea563a14c7d52ea2ddbf91ddacca20550",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rally Pro Contest/[SymbianOS7]Synergenix.Rally.Pro.Contest.v1.31.S60.N6600.Retail-BiNPDA.sis",
+      "bytes": 313774,
+      "sha256": "0dcb6fc4a6c4057b478ea9d45bb131afd69ef380b7f6b99300bd86716df955a7",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rally Pro Contest/[SymbianOS6]Synergenix.Rally.Pro.Contest.v1.31.S60.N3660.Retail-BiNPDA.sis",
+      "bytes": 298129,
+      "sha256": "3fe1e921459f109bfd462804b9077906ea18ddbf368f9ec6c07fc8c06790e7d2",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Saga of Stone 2 (CN)/SOS2_V1.0.51(1)_CRACKED.SIS",
+      "bytes": 877857,
+      "sha256": "ccf0a1b95577d1259c2bc39cf986fa98c52fef4ee300c35f7a0059f062bb7fb2",
+      "payloads": 19
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Saga of Stone 2 (CN)/SOS2_V1.0.51(2).SIS",
+      "bytes": 857037,
+      "sha256": "8ebd75ab660932c9ffe16a19c161db25100d842695c8002e3c96c7a0cfabf8e2",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Project Gotham Racing 3D/Project Gotham Racing 3D - Symbian OS 7.sis",
+      "bytes": 1715400,
+      "sha256": "8a4e79f497ebbba1db1b6f589cc0ce38b0590b02cdda20a6ae06908ec4cfb210",
+      "payloads": 16
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Project Gotham Racing 3D/Project Gotham Racing 3D - Symbian OS 8.sis",
+      "bytes": 1720035,
+      "sha256": "2d9dbf9798966cee2e190f379af435905346ab2782d9bab55a07a88a50f17c96",
+      "payloads": 16
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pong/Dangeross Studios Pong_1.0.sis",
+      "bytes": 16960,
+      "sha256": "477b750fb33b6ec02d1f0d7e96d7b35b62f65350c973cc8c748b463a868a59a7",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rush Mole 3D/Rush Mole 3D v1.1.sis",
+      "bytes": 877181,
+      "sha256": "4a68c5524275bea53564aff48ca419d683e66247fd917b835058af3ebf50d485",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Skeeter/Skeeter_1.1_Full_6600_7610_DotSiS.sis",
+      "bytes": 130784,
+      "sha256": "49de0968031918f510d01a18517290afb6284e7bc20d138584c7dd491748eda6",
+      "payloads": 30
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rockit Pinball/6600RockIt.Pinball.v1.0-XiMPDA.sis",
+      "bytes": 1091038,
+      "sha256": "1af5b8e52cdbfec9cee7bed1a9524bbb13f05328c039ba24c7015d309534b825",
+      "payloads": 77
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Saga of Stone/Saga.of.Stone.v1.0_XiMPDA.sis",
+      "bytes": 471253,
+      "sha256": "84bd4b9ba1ef23462e570fcbbd7923d88204511c71002c97909a728aecafb961",
+      "payloads": 35
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Prince of Persia Sands of Time/Prince_of_Persia___Sands_of_Time_OS6.SIS",
+      "bytes": 168568,
+      "sha256": "4d914e890bfe5d6617a0fe91d342beba74a0f98ce50bc3c36317bcb9f4a8d327",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Powerball/PowerBall_v1.00_Cracked_SMPDA.SIS",
+      "bytes": 220954,
+      "sha256": "551f59b119a1eb18f1aa6bbb5d6fbd57c925e8994028c6684555a4b8e8f609da",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rings & Colors/Rings&Colors_v1.0.5.sis",
+      "bytes": 296577,
+      "sha256": "fe02979145da44443806b35f0f59bf45a0e792096a7485c6189bf4733f686c06",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pushing/Tendbeyond.Pushing.full.SIS",
+      "bytes": 362368,
+      "sha256": "cb804a18b81e52a018ebb16189cf90c63d32842d44ae386871927d833760a6b3",
+      "payloads": 84
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/QWAK/Telcogames.QWAK.v1.00.S60.SymbianOS.Cracked-SyMPDA.sis",
+      "bytes": 315699,
+      "sha256": "e864c3014d09dd47360c2b52dd6ae96c47d08fea8cb20a17fbcd722bb2f55321",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rons Adventure/psiloc.rons.adventure.v1.11.symbianos.cracked.read.nfo-binpda.sis",
+      "bytes": 618918,
+      "sha256": "f74484ea2876b2777510647e71b9d18f840f09c41b3b9c7299fe4875ec296aa7",
+      "payloads": 38
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rail Rider/Rail Rider.sis",
+      "bytes": 182299,
+      "sha256": "518fbe7a5591f0ab4235722382c66e41cc51c691bb203a55b2a60f54c5bcae00",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Pocket Baseball/Sinjisoft.Pocket.Baseball.2.v1.03.S60.SymbianOS.Regged-EViLPDA.fixed.shino mau.sis",
+      "bytes": 299061,
+      "sha256": "1389ca94527a899cc1f0df28bcb997caaae7e4fac8ad5f2dca86ff241a96e705",
+      "payloads": 20,
+      "containerPayloads": [
+        {
+          "name": "18-PocketBaseBall.app",
+          "bytes": 464684,
+          "sha256": "1d7aba91b9a325304e68f9666f4f245fb054e95a2d5d137c7970eaec70636ab7",
+          "scan": {
+            "bytes": 464684,
+            "sha256": "1d7aba91b9a325304e68f9666f4f245fb054e95a2d5d137c7970eaec70636ab7",
+            "candidate_offsets_tested": 24450,
+            "containers": [
+              {
+                "version": 4,
+                "title": "포켓야구2",
+                "title_bytes_hex": "c6f7c4cfbedfb1b832",
+                "declared_body_bytes": 162384,
+                "sections": {
+                  "a": 91884,
+                  "b": 93796,
+                  "c": 110772,
+                  "d": 113856
+                },
+                "entries": [46834, 0, 6814, 1202, 0, 0, 6638, 0, 0, 0, 0],
+                "variables": 239,
+                "resources": 257,
+                "compression_type": 0,
+                "source_offset": 275796,
+                "body_offset": 275796,
+                "wrapper_bytes": 0,
+                "xor_mask": 0,
+                "extracted_bytes": 162384,
+                "raw_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+                "decoded_body_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Raging Thunder/[SymbianOS7]Polarbit.Raging.Thunder.v1.0.6.S60.Cracked-BiNPDA.sis",
+      "bytes": 832956,
+      "sha256": "13370bbf271a502aa7b4f98c900038edb2ff49c6aee392f3ea324c915e05fb73",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Raging Thunder/[SymbianOS8]Polarbit.Raging.Thunder.v1.0.6.S60.Cracked-BiNPDA.sis",
+      "bytes": 860008,
+      "sha256": "0d0da8d6f79896ab4276a61b068b49e9333925bff1accf140e090249658655a3",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Raging Thunder/[SymbianOS6]Polarbit.Raging.Thunder.v1.0.6.S60.Cracked-BiNPDA.sis",
+      "bytes": 832219,
+      "sha256": "b5dd44fc4cc8dce2db15de6d495d0d3b4eff49837076ad4e4e67edb3c62a79c6",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rocketeer/MidNight.Studio.Rocketeer.v1.00.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 929074,
+      "sha256": "ea899557fd1d61c386c7b74fcf803d2ae71b7489e23eee1b2ae69698c18fb599",
+      "payloads": 93
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Sensible Sudoku/Ludimate.Sensible Sudoku.v2.0.S60.SymbianOS.Cracked-OPDA.sis",
+      "bytes": 577100,
+      "sha256": "2de91d1f883b442a231c513910c9ee3ddfd14141cc1e1f69a970fef95022dbf3",
+      "payloads": 173
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Sapphire Spires/pdamill.sapphire.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 402163,
+      "sha256": "3e4e55576e8b1ec7b5ff9e10f50f91562e63c39510df51ce4d2ed631b02c84ae",
+      "payloads": 34
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Rising Diamonds/pdamill.rising.diamonds.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 367190,
+      "sha256": "57d19a48253826d5c6f442dc637fb280aa9b970c5d2acc96c7e050c061972068",
+      "payloads": 31
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Saffron/AppShell.v1.1.S60.2nd.Cracked.cnpda.sis",
+      "bytes": 60231,
+      "sha256": "97ba465c51ec16fa9a35a1232f808f6cf99ea9aa3e2e3ff019171337f0f77bf8",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Saffron/SaffronApp.v0.1.s60.2nd.cracked.cnpda.sis",
+      "bytes": 1490633,
+      "sha256": "c19a1247e6c629fe3b2b667d39a6e152d08af560a676785d8fb2c206214bb3e1",
+      "payloads": 11
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/Planet Zero/G@meloft Planet 2003 N70 Zero - supplied by dung1291985.SIS",
+      "bytes": 157616,
+      "sha256": "a81a1724ae975692bd8b42181ed93b847e33b7761907f74b4cd07e63d727b118",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__P-S1__Part5/SiL/SiL_1.07_retail.sis",
+      "bytes": 1083299,
+      "sha256": "2e1b6825a2e57488dacd3929f454f2c086bc6de1c0ff05d66c423ad1d5fff693",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Smash Tour Tennis 3D/SmashTourTennis3D.sis",
+      "bytes": 733745,
+      "sha256": "46d839765636964bffd14450071a4a922a732d826fac0cbc1d366b1b5e47cd39",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sunstone Swap/pdamill.sunstone.swap.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 389632,
+      "sha256": "956405678bce9e8ed2de5a1d29e3f9153d510973b71a26d2f7de1ada04b8c975",
+      "payloads": 35
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sunshine Beach Volley/Extra/SunshineBeachVolley_ringtone.DDJ.sis",
+      "bytes": 230926,
+      "sha256": "d1058ecdcda7469da93868ab21745576a145707b72f553cdcdb02df9ba4efa21",
+      "payloads": 3
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sunshine Beach Volley/Extra/SunshineBeachVolley_theme.DDJ.sis",
+      "bytes": 68995,
+      "sha256": "48a5e0d7f753281856128152f971c1d0d232a496496ab454abd2e8bc300752d5",
+      "payloads": 2
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sunshine Beach Volley/SunshineBeachVolley.DDJ.sis",
+      "bytes": 194020,
+      "sha256": "73c7995e859ead184fd9301c2d0c32c466713504281f0ae6fe845da86e484ca1",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sky Striker/[SymbianOS8]Warelex.Sky.Striker.v1.67.S60.N6630.Cracked-BiNPDA.sis",
+      "bytes": 3199178,
+      "sha256": "d3845fde7c0ee7bcf3e20a06674a07f730f3a08e6a5944927182429a8ddfcad2",
+      "payloads": 82
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Tennis Addict/TennisAddict_full.sis",
+      "bytes": 503736,
+      "sha256": "633dc741c6176ae43af8d37116d0eb89a5cf4452303e667e0bdeab0944e2e6d1",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stone Pilot/pdamill.stone.pilot.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 399509,
+      "sha256": "839c63da266f41868d192cb8ea106dfee2a4827f08a9ed5180a211b734774e1d",
+      "payloads": 35
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stolen In 60 Seconds/sym-StolenIn60SecS60.SIS",
+      "bytes": 929494,
+      "sha256": "ea54766d28a980d54925f79cac56c98c503eab2914dc8c73c2c9326216a88b9d",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Snails/PDAmill.Snails.v1.00.S60.SymbianOS.Retail-BiNPDA.sis",
+      "bytes": 493909,
+      "sha256": "ad0ebd6020006382ea129b63b021770016684b14d4aae3a5d66b87f132557436",
+      "payloads": 70
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stone Stacker/pdamill.stone.stacker.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 374769,
+      "sha256": "0db117b6fd216ce2663b01ad00a632da07f5eea321e08ce3624cf25d199f7cb8",
+      "payloads": 29
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Tetris/Tendbeyond.Tetris.v1.00.S60.SymbianOS.Retail-daddyfatsax.sis",
+      "bytes": 439230,
+      "sha256": "c66efebc9a4e06200fc8925155a1a9418d4e4bd6f264f5966fdcf60124944a82",
+      "payloads": 132
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Spinning Ball/Cube.Spinning.Ball.v1.30.S60.SymbianOS.Cracked-SymBoSS.sis",
+      "bytes": 1194673,
+      "sha256": "45af87374226acdb46a57c78c28b86e38b5ee9d11d86002d7c2daa9ef70a6374",
+      "payloads": 40
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/TechWars/Stormbasic_TechWars.sis",
+      "bytes": 1415604,
+      "sha256": "930b91a6d04eada0429a009bcc48731a849bdf3b4f257f480b1ac59fe6069bc2",
+      "payloads": 11
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Tangram Babe Crash/TBCrash.by.100565.sis",
+      "bytes": 413547,
+      "sha256": "5015d86c5c28064863b45753534b17dc1d3d6d4a3ef672edd01d94df0c863902",
+      "payloads": 166
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/SoftSpin SuDoKu/SoftSpin.SuDoKu.v1.1.S60.SymbianOS.Retail-Cracked-SMPDA.sis",
+      "bytes": 39765,
+      "sha256": "7c5bf737e2986ec9c574f115f4037fb29e068a17b0c040a466626fcb29c692b7",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Swim Survivor/MBounce.Swim.Survivor.v1.3.S60v2.SymbianOS7.Cracked-BiNPDA.sis",
+      "bytes": 274382,
+      "sha256": "6742605954b2dc64fe7d6d0fe12d4c884da9b205eebe138ac029ecd4d29add6c",
+      "payloads": 15
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Steel Warrior/Steel_Warrior_FULL.sis",
+      "bytes": 562508,
+      "sha256": "fbdac89792a59fc9f468d16cadf1985e234efc74edf031f42e9e3f8508a976fc",
+      "payloads": 13
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Snapshots 10 in 1/snapshots10in1.sis",
+      "bytes": 204847,
+      "sha256": "e6bb10e83193f5304d68088e6b07730b9b4b01aac48b0071b61637a010bcbdd4",
+      "payloads": 76
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Square Off/Wireless1.Interactive.Square.Off.v1.10.S60.SymbianOS.Retail-BiNPDA.sis",
+      "bytes": 102620,
+      "sha256": "72db84be259ed1b402689c2025b34c501b5166608b9d42d1b638ba4d35557ebf",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sky Racer 3D/Warelex LLC Sky Racer 3D.sis",
+      "bytes": 2055879,
+      "sha256": "0979cb790f3a86313ea30170e474caa665c462c15633c7beb90395c4098ccd58",
+      "payloads": 39
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stormlord/Telcogames.StormLord.v1.00.S60.SymbianOS.Cracked-SyMPDA.sis",
+      "bytes": 297373,
+      "sha256": "bd5782f7a3fbf420200a0cddaa92352f9d1d5822818bf60ede74d2b1da19fbcb",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Space Impact Evolution X/Nokia  Space Impact Evolution X.sis",
+      "bytes": 553707,
+      "sha256": "493c7acdf92f2b3aa76f49083138d83f7fe38490a4128fdcd1f7aff6c074a7e4",
+      "payloads": 99
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sky panic/SIXELA.Productions.Skypanic.v1.00.S60v2.SymbianOS7.Retail-BiNPDA.sis",
+      "bytes": 774146,
+      "sha256": "72eb7ec5087cef268493b0642eb60e180cd62c80296efc1e8e527855eca3643a",
+      "payloads": 24
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stunt Chopper/StuntChopper_1_12.SIS",
+      "bytes": 2125318,
+      "sha256": "04634b4e50dc64232b0603b36bd33ed3087336133d1ad95e175c38cc11a87710",
+      "payloads": 38
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/SpaceCraft/Smartphoneware.SpaceCraft.v1.01.S60.SymbianOS.Cracked.ganthur.BWOPDA.SIS",
+      "bytes": 473347,
+      "sha256": "6ac3184f92321457598303dbc98b3208ab17fe78de39f84e3acbecea62246a7d",
+      "payloads": 15
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sokoban/Telbi.Sokoban.v1.00.S60.SymbianOS.Cracked-HeXPDA.sis",
+      "bytes": 1157688,
+      "sha256": "da6ec74ff86df2776c4bad9bac11add26536f78c0294f781babf990225e0ed3f",
+      "payloads": 112
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sudoku Pro/Mobirate.SudokuPro.V1.2.SymbianOS.S60.Cracked.by.FoXoN.BWOPDA.sis",
+      "bytes": 202398,
+      "sha256": "775a071720857ce75351d19f559e3f7cf659355573411f1d5bf2e08fbaa5c6fc",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Subsonic Racing Online (MGS)/MGS SubSonic Online S60v2.SIS",
+      "bytes": 975576,
+      "sha256": "8b48e20e8b58411d31651b1d58644bd0bbd9fa79838383e7de283c66b1e600f9",
+      "error": "Unsupported SIS format; expected EPOC release 6"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Subsonic Racing Online (MGS)/MGS_Online.v3.21_S60v2.SIS",
+      "bytes": 510562,
+      "sha256": "337d19d37a6f3127954684eadf85d0b09541320e18fb1655477fe0539d1dac68",
+      "payloads": 28
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Snowed in 6 Deep Freeze/Snowed.in.6.Deep.Freeze.sis",
+      "bytes": 1103071,
+      "sha256": "44039a9e6754da7bddf45e5c6da83efd49883401f59b51a4df35ba5412727823",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/StuntPlane/Fathammer.Stuntplane.v1.00.S60.SymbianOS.Retail-HeXPDA.sis",
+      "bytes": 1005007,
+      "sha256": "15761c979dcddc028e00f320e45663d877e36af31d3c445d124e0f26fa4bc4a7",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stack Match/CondetSoft_StackMatch.SIS",
+      "bytes": 186327,
+      "sha256": "85bd763780510ef635560351e1e17dec1a9f6e92c5459cb5bc7bf7aab43451e4",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Snow Lines/SnowLinesS60.SIS",
+      "bytes": 1256038,
+      "sha256": "4599fd48d5f9f4b6edb32275edfc9f89692107635074f6af0e81680aa3e72b18",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/The Match 2/Thyamis.The.Match.v2.01.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 603135,
+      "sha256": "8c409704aa742b167d62a2030e1504453bfdc67f7d8c92eb5b22ad3e3eba8d1b",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Tanker Mania/Tankermania.s60.1.00.sis",
+      "bytes": 763645,
+      "sha256": "b1f6a90631dfe57ef7058c702d61e828290a7ffa659c928a2402195f91805bfd",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Snooker 3D/Snooker_3D_by_Tha_Skull.sis",
+      "bytes": 158539,
+      "sha256": "661d10b3bd880be1fd4f74ea6b49fe127a84c38c42edf2888e3207bb3d4e06ee",
+      "payloads": 16
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Superminers/InfiniteDreams.SuperMiners.v1.07b.S60.SymbianOS.Cracked.Read.NFO-BiNPDA.sis",
+      "bytes": 820904,
+      "sha256": "6362a8cfa1be0d70919c29b19b6120708878452359b678aaa7e6e65e8b53a99d",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Sky hunter/Tendbeyond_1__1__1_.Skyhunter.v1.1.S60.SymbianOS.Retail_EViLPDA.sis",
+      "bytes": 372513,
+      "sha256": "5833e9095efdab9f1b312f4451e73d0bae07537a583120c9b9f92f32b06cb818",
+      "error": "Unsupported file record type 6 at record 128"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Super Drop Mania/[SymbianOS_6_7]Super_Drop_Mania_S60_v1.0.sis",
+      "bytes": 1192255,
+      "sha256": "1ea8289daa3d1e5dc411ac1a6b9846a33e615f11e32c5834b716e94719a409d0",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Super Drop Mania/[SymbianOS_8]Super_Drop_Mania_S60_v1.0.sis",
+      "bytes": 1195809,
+      "sha256": "dc0706a3acd342e8417777d6f012d172456f70bcb0af5deea90a528f883361b8",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Soccer Pinball/3D_Arts_Soccer_Pinball.sis",
+      "bytes": 295022,
+      "sha256": "597dd1066e7eee67be323be21c8960e578383cd550d553a1102ea7ddf1b69412",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/The Da Vinci Code 3D/[SymbianOS.6.1]Blaze.The.Da.Vinci.Code.3D.S60.Supplied.By.Nitro.sis",
+      "bytes": 350964,
+      "sha256": "d01ba0185e4faae96aa111a27ead291f215210fa64b2852eb41578e1336877ba",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/The Da Vinci Code 3D/Blaze.The.Da.Vinci.Code.3D.SymbianOS.S60.sis",
+      "bytes": 522777,
+      "sha256": "87b10e9c074b7678f172ffe93a59fca96da4f60f7bc2e5af47cde70ac7d96eeb",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stuntcar Extreme/SCE_inst_1.sis",
+      "bytes": 938577,
+      "sha256": "e7ad5b19b84c5c494f7b715311ec9f4d4e631b3d05ffd8bacac25319f9903a66",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stuntcar Extreme/SCE_inst_2.sis",
+      "bytes": 1109213,
+      "sha256": "92094bfbff23af93b468eda671b0a5195fd1cdc6f080cc1e9be221db78cb4476",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Stuntcar Extreme/SCE_inst_3.sis",
+      "bytes": 1065719,
+      "sha256": "e58a3939bd8649bcc295b70ef99f14d4f835edc736db2d85d696be0281c27cec",
+      "payloads": 2
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/SOD Monster Hunt/SysOpenDigia_MonsterHunt_v1.1.2_S60_Cracked_SMPDA.sis",
+      "bytes": 112885,
+      "sha256": "8b9f4e0ee9695577860a494ee87194521b98c75381e8aff52606c37e217793ca",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Snake (PDAmill)/pdamill.snake.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 321454,
+      "sha256": "1ad10a8c6d70009d93d20c9a7957e70d8eb035a2fbbcff5bfa70b46e683056e1",
+      "payloads": 34
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Tetris 3D/Karapuzzz.Tetris3D.v1.10.S60.SymbianOS.Cracked_BiNPDA.sis",
+      "bytes": 154258,
+      "sha256": "c9c994525fb0c0a72c6198a4ccb59dc8c22e47cd0111850b9e3469154eccf0ad",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/Snake 3D/snake3d.SIS",
+      "bytes": 194258,
+      "sha256": "4bfdbaf0c785bc90e6951bbc6ddd9dd80b695808779554495fbccfedf0cc7759",
+      "payloads": 13
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__S2-T1__Part6/S-Tris/s-tris_v1-3_s60.sis",
+      "bytes": 175896,
+      "sha256": "89af589c844af4695098c18900c8ecb61ecec791376e8f5f5e93bf05ad059bde",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Jungle King/Digia_JungleKing_v1.01_Cracked_SMPDA.SIS",
+      "bytes": 337982,
+      "sha256": "583cc97c07ec3de8ac2731628c46a1f6c51edb24957e3b8ee8d82ee5f2550844",
+      "payloads": 41
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/GearStorm/Touchtao.Gearstorm.v1.00.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 1921162,
+      "sha256": "fb186de812a3e391321241daff512530c4e9c63b6b2dab98eb2d9e46fb74d5f7",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Golf Pro Contest/For Nokia 7650,3600,3650 or N-Gage/GolfProContests60.sis",
+      "bytes": 326969,
+      "sha256": "8c5155831e9a74cfa120995c70694fff5d4a03cbcd272fe6b2a6cc351a4ed7a0",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Golf Pro Contest/For Nokia 3620 or 3660/GolfProContest.sis",
+      "bytes": 326736,
+      "sha256": "9a7b4c5819601d9b49c4dd38c1c6040854a6206d4a077d372993c3ca92e94707",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Golf Pro Contest/For Nokia 6600,6620,6630,6260,3230,6670 or 7610/GolfProContest.sis",
+      "bytes": 326426,
+      "sha256": "65fcb8caf16cca2cbddee1b1af1bdb7328fdb9147ac17b7b940c0ecc7067ed1f",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Hyperspace Invasion/Hyperspaceinvasion.sis",
+      "bytes": 182501,
+      "sha256": "66c06568db1d6ee4055d81c319fc6db49a397e52e5fae49f000ad0a21ce04a87",
+      "payloads": 17
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Geopod Dc/Telcogames Geopod DC v1.00 S60v2 SymbianOS7-OS8 Retail BiNPDA.SIS",
+      "bytes": 1365607,
+      "sha256": "ba029601c7329b5e40e5d0e36eef71899b42347c41201be95e3236d1c5a388d9",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/KRally/Infinite dreams krally s60 v1 & v2 BiNPDA/KRallyA.sis",
+      "bytes": 728396,
+      "sha256": "8a72ae7da3a1ce53dab45c40834860da5358b1f3a7a8752736148b7c4b40b1b5",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/KRally/Infinite dreams krally s60 v1 & v2 BiNPDA/KRallyB.sis",
+      "bytes": 729371,
+      "sha256": "60c9c0e621a3f2cbf40d9f03fa89edb138a7c903802a80f444083b1bec013c13",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/KRally/Infinite dreams krally s60 v1 & v2 BiNPDA/Infinite[1].Dreams.KRally.v1.00b.S60v1.S60v2.SymbianOS6.SymbianOS7.Cracked_BiNPDA.sis",
+      "bytes": 793038,
+      "sha256": "b65f4a10804e53e3e645dbf8d20b51ba24a59eed9a2a873270a583921244828c",
+      "payloads": 13
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/KRally/Infinite dreams krally s60 v1 & v2 BiNPDA/KRallyC.sis",
+      "bytes": 718427,
+      "sha256": "8bcc4efe373e36265c1323e2fd0f8ad040a9f13c40588af215af610925742a97",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/KRally/KRally cr@cked by wl [Beta]/KRally_cracked.sis",
+      "bytes": 2961050,
+      "sha256": "0af855d59c481bacd9b33934cbc0d2b506f13a57ac9ef6e4b183d82d224f78cd",
+      "payloads": 11
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/JumpShot/JumpShot v1.01.S60v2.sis",
+      "bytes": 170956,
+      "sha256": "9d34d5baacbb86b5097399a095d800750061b557e4b8b8343181824605a6fffb",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Guroo/Guroo.sis",
+      "bytes": 410074,
+      "sha256": "d1167b01a540d7a6c34a63129eb310eeef4333d364c9c99a8850de8c6536b151",
+      "payloads": 140
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Lock N Load 2/[SymbianOS6.1]Blaze.Lock.N.Load.2.v1.20.S60.Retail-BiNPDA.sis",
+      "bytes": 349672,
+      "sha256": "22b76cc9c73495479cd0fa41f47a4c828ecdb8270c296635063a6c00a024f839",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Lock N Load 2/[SymbianOS8]Blaze.Lock.N.Load.2.v1.20.S60.SymbianOS8.1.Retail-BiNPDA.sis",
+      "bytes": 545799,
+      "sha256": "8f7fa5d9faef8cb38e68090b8bc324c6a23f0568fe3440a2c421aa69f67269d4",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Lock N Load 2/[SymbianOS7]Blaze.Lock.N.Load.2.v1.20.S60.Retail-BiNPDA.sis",
+      "bytes": 544689,
+      "sha256": "916bf905f41521f1e7455494c70c14465b56bf1b0af8ac14e164b9cb8d1c2f0d",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Jackpot Mini/LowerMars.JackpotMini.v1.17.S60.SymbianOS.Retail-EViLPDA.sis",
+      "bytes": 713481,
+      "sha256": "43c90809581e4d52f60bbe1826a7d42a9f25145ea714f406da0264ecabbfa09d",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Kick A Ball/OnMobile_1_.Kick.A.Ball.S60.SymbianOS.Retail_Lijoe.sis",
+      "bytes": 422582,
+      "sha256": "60ef37555ac40ea4e6f574df9391e6faf8bbd9baf5794facee064950b34ba92e",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Li Nuggz/li-nuggz_v1-20_s60.sis",
+      "bytes": 1209044,
+      "sha256": "bbc9634756e35b8a780b24a380cc7cc627edad9b335461d74e0b4a0ff75caccd",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Invasion/PocketTorch.Invasion.v1.00.S60v2.SymbianOS7.Cracked-BiNPDA.sis",
+      "bytes": 1664983,
+      "sha256": "97925b9e9ec055258cc84b91aed3d9a22200f1781a2de5805afb8a8c37d7cf37",
+      "payloads": 53
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/GunBound/GunBound.sis",
+      "bytes": 764517,
+      "sha256": "772a95f00087df9eacad9f329b980544243370cf896519f4af94666f89d5fe6a",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Head2Head Streetracing/Darxun.Head2Head.Streetracing.v1.00.Part1.sis",
+      "bytes": 755899,
+      "sha256": "5aa2279aca8e095cf2c6aefbc059806374f7097db95377f2939920c06db5e1cd",
+      "payloads": 66
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Head2Head Streetracing/Darxun.Head2Head.Streetracing.v1.00.Part3.sis",
+      "bytes": 624116,
+      "sha256": "808c8d28889287abc5a8111139ff739bf6e920c5c17d0907806c84ec9192d67f",
+      "payloads": 27
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Head2Head Streetracing/Darxun.Head2Head.Streetracing.v1.00.Part2.sis",
+      "bytes": 708298,
+      "sha256": "d9c9829369589e234e3c6952a828fa70d9005a0e5d9f41bb880e4893476942c0",
+      "payloads": 28
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Head2Head Streetracing/Darxun.Head2Head.Streetracing.v1.00.Part4.sis",
+      "bytes": 605633,
+      "sha256": "c302deae8f5f43ba4d7e8fcb2ebf3968f1d2991049bb4d18b3cea381676faddf",
+      "payloads": 25
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Grow Up/Grow_Up_S60.sis",
+      "bytes": 418879,
+      "sha256": "f66cb5129c71b4fa1359f142aaab0c1f226e5d1f2001e6ce39fcff16c0028811",
+      "payloads": 144
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Legacy/legacy s60/Legacy.SIS",
+      "bytes": 939868,
+      "sha256": "cf3ef0d055eaf9fa92e9a14cc185db654601c4d3f605fc9abb1e0c338824cc87",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Legacy/legacy s60/LegacyAdd.SIS",
+      "bytes": 941041,
+      "sha256": "97a93055f5d2d8d0cac6fe55cdcd4fe73ac83631fc671e93a5a618084a9b2e8f",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Legacy/Expansion Packs/LegacyLegendS60.sis",
+      "bytes": 514547,
+      "sha256": "0e157e200053c1e67262014570b71eb6ef3b30487164eb4cd16d8afc37c9e0ec",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Legacy/Expansion Packs/LegacyRevengeS60.sis",
+      "bytes": 121875,
+      "sha256": "a5f78f6e1b4b9fec8b059a415cb638044290a41a85e69d9a2b954fa6ae0b9f38",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Legacy/Expansion Packs/legacyexps60.sis",
+      "bytes": 139263,
+      "sha256": "c03ebe92b6163cb0dcbc406645cb15a59655d7641e2f47b20826c557f043b1cc",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Go Bananas/Dangeross.Studios.Go.Bananas.v1.00.S60v2.SymbianOS7.Cracked-illusion.sis",
+      "bytes": 443093,
+      "sha256": "1e5b07ae7a42c299042c60c3b9dd2abbed08bdcf7b79e3faa0ad603cd3735a08",
+      "payloads": 29
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Illustrix Dream Birds/illustrix_dreams_symb.sis",
+      "bytes": 554027,
+      "sha256": "a7aa9db21367632f22e4121592d6f68a7d73ae012e5bb5d5976b3cc035529113",
+      "payloads": 73
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Hell Striker 2/Hell Striker 2 S60v2.SIS",
+      "bytes": 1948930,
+      "sha256": "3bb8e0d05d9a6cbc183e4537927937facb39491382a6d945113454b35eeb02f6",
+      "payloads": 502
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Guns'N'Girls/Nostromo.Gun'N'Girl.sis",
+      "bytes": 108481,
+      "sha256": "5fe0771949727dbef3db8a0550494e3276d217dbc14ef97c45dee3a8347e9593",
+      "payloads": 13
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Hockey Rage 2005 3D/ShaWneS Hockey Rage 2005 3D.sis",
+      "bytes": 2338741,
+      "sha256": "59e209cabb4c07cffe9a6785a8491959b230ac4641d8944d723a856b9e8d61ac",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Happy Lines/sym-HappyLinesS60.SIS",
+      "bytes": 865102,
+      "sha256": "a7bfacc4ef80e4fde1ce5b6e10c25eb23c3f5cb88f8654a26dd53e3a84a5d68c",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Gem Queue/GemQueue.sis",
+      "bytes": 136551,
+      "sha256": "6b4f65674727792a580916734a76b3dac3529f34ee3593e33cabe6d398cee0fc",
+      "payloads": 12
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/GunFire (CN)/NewX.Studio.Gun.Fire.v1.0.Chinese.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 694016,
+      "sha256": "eaa12a1dbcdbf4b835f281ed07c55faf6df0976e31d76121489c15e23fe74c6c",
+      "payloads": 20
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Ice Fall/IceFall_v1.00_full.sis",
+      "bytes": 323083,
+      "sha256": "e2e0ff6cd6cfc2d714e0929bfa831d4c2381ad6f4fb2fc609bbdc57bceea073b",
+      "payloads": 16
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Kwoki/Kwoki_v0.15b_S60_CRACKED_SMPDA.sis",
+      "bytes": 192310,
+      "sha256": "696fb4a2c3919995040f0ea77df2eef0df9246cdf26aa4820a2c42df2e3cf5eb",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Jet Ducks/duckshooter_symb.sis",
+      "bytes": 626072,
+      "sha256": "a11d91a5336381de6d45ab28b22acdd13ce4ea2edb3dbe46695a77d30fab8753",
+      "payloads": 48
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Golf Pro Contest 2/Blaze.Golf.Pro.Contest.2.v1.00.S60.SymbianOS7.Retail-daddyfatsax.sis",
+      "bytes": 532752,
+      "sha256": "82e9d4bb7d18272ee7b95b1f49ebe3fcfb7226fd46881bbf72d82d42621d23ed",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/I Hate Guns!/I_hate_guns.cracked.sis",
+      "bytes": 547681,
+      "sha256": "f8d655f3092a45c9bfe01b4baa77eb59741c191e0f26a1002705a78ad88b7094",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Leon and Diamond/Tendbeyond_1_.Leon.And.Diamond.v1.0.S60.SymbianOS.Retail_SyMPDA.sis",
+      "bytes": 423873,
+      "sha256": "e8e27e41b58bc6bfefab11e1efdd1cf9bd39fa09eb745cd62dfbe1c25a96f3d5",
+      "payloads": 178
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Lemonade Tycoon/lemonade Tycoon.sis",
+      "bytes": 260046,
+      "sha256": "31e0e8841ba746c2402dbcf66a91cc6d5d5f2e36bb90fcbfff20af706bed91ea",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Joe's Treasure Quest 3D/For Nokia 7650,3600,3650 or N-Gage/JoesTreasureQuest3D.sis",
+      "bytes": 275204,
+      "sha256": "e094d3eb15ecbec796869e9779e0a07d68833e70cd9dc81e46dc4a75bc951652",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Joe's Treasure Quest 3D/For Nokia 3620 or 3660/JoesTreasureQuest3D.sis",
+      "bytes": 274553,
+      "sha256": "51cb4e8b75f5afe56a13e63d31633613ba2c4165bb289e6b8d946bb7d0c70733",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Joe's Treasure Quest 3D/For Nokia 6600,6620,6630,6260,3230,6670 or 7610/JoesTreasureQuest3D.sis",
+      "bytes": 284828,
+      "sha256": "dd692381edfd592a1350c2eaf1018c36d74a3ced9b3be6bab0f15d90df1eaa29",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Galatron/Redboss Galatron v1.01 S60 SymbianOS/Galatron_part2.SIS",
+      "bytes": 388070,
+      "sha256": "2871ae545b3cf850f1089e26b0a4ac2d8cc5ef0f5ac600c80ddc39c9f68d2302",
+      "payloads": 1
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Galatron/Redboss Galatron v1.01 S60 SymbianOS/Galatron_part1.SIS",
+      "bytes": 526811,
+      "sha256": "5be4dbeef74540df38305d6409d14004b6795c50a3b571587cf188ff4a1d26fb",
+      "payloads": 18
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Galatron/Redboss Galatron v1.00 S60 SymbianOS SyMPDA/Redboss.Galatron.v1.00.S60.SymbianOS.Retail-SyMPDA.sis",
+      "bytes": 899590,
+      "sha256": "697b98fcafe343345ebda51a3f1abedd21d98e84a1f6052ebbde6d85bd705edf",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Jewel Master/pdamill.jewel.master.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 320790,
+      "sha256": "3f22b4e98d394a52f28fdeacd9038eeb8b717d22434175ea1b04dfa5a0ff7704",
+      "payloads": 25
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Karma Fighter/Karma Fighter - Symbian S60.sis",
+      "bytes": 678002,
+      "sha256": "80269a21e5f9163901df77b19f028fa076986b20b304a03cff41397d0e66dc7c",
+      "error": "Unsupported file record type 6 at record 0"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_PACK_Part3/Heli Attack 2/HeliAttack2.sis",
+      "bytes": 323325,
+      "sha256": "f3086a80053910d6517fc922a5de07de4dba813609ae52f9f40ae692f044a704",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Football Pro Contest 3D/Football Pro Contest 3D.sis",
+      "bytes": 438434,
+      "sha256": "97d31cf9f33e4c590bc05f813df725bea5eb3aafe57fdc3a54d942fb843b7aca",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Explode.Arena/InfiniteDreams.Explode.Arena.v1.1.S60.SymbianOS.Retail-oWnPDA.sis",
+      "bytes": 547961,
+      "sha256": "2d47263342b3adc72fa9d8c1206bcb00c487adde40e282e6b29c6c813ffa8587",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Future Trooper/Future Trooper.sis",
+      "bytes": 155524,
+      "sha256": "39cc1196fc0c9fb844ee43524ef75d34e47f970c6dfa79647903cad54c1795b8",
+      "payloads": 29
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Colony/Rusty.Axe.Games.Colony.v1.10.S60.NGAGE.SymbianOS6.Retail-BiNPDA.sis",
+      "bytes": 350020,
+      "sha256": "1e54ab433332ac5ef29c35f43a9a416b756807a2ce0190410aefc59cadddf94f",
+      "payloads": 9
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Checkers Challenge/Absolutist.Checkers.Challenge.v1.0.S60.sis",
+      "bytes": 242534,
+      "sha256": "71e8acfd7bcfce97517ba6e7df28a4f693524a9f41d1ad26b7a6b2a98c4cc87b",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Carmageddon 3D/Carmageddon3D_6680-6681_by_lupus.sis",
+      "bytes": 520399,
+      "sha256": "84f84ced34b3d7f17f6b279ad5be1009abc136a7db62de82b6c398806e7ac36c",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Carmageddon 3D/Carmageddon3D.sis",
+      "bytes": 500186,
+      "sha256": "f1e715529463b8205ed8c54f198fb2a28944fa48895992a0e25021eb7d014b9f",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Carmageddon 3D/Carmageddon3D_sx1_3660_by_lupus.sis",
+      "bytes": 507065,
+      "sha256": "97b9c9ed7361a23fc0f5ecc003b68eccace51bfb970d3107a39ac231d5dcf37f",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Carmageddon 3D/Carmageddon3D_ngage_fixed_by_lupus.sis",
+      "bytes": 508402,
+      "sha256": "0f59bcbc7e96dd3ca12cf820d326dfce3bfb8a9158d1779c91f036472dc48b79",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Enigma/ZingMagic Limited Enigma v1.00.sis",
+      "bytes": 522485,
+      "sha256": "484e1cc4408f44028e48307afa2b09a2f8aadec9b7b7e9d2191904ef583fbd54",
+      "payloads": 10
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Casino Simulation/PackageBooster.Series60.sis",
+      "bytes": 393940,
+      "sha256": "055aa9aa43bfa55f07e3cd949ec64957ceb5a440621a06db8247b791d2fb2b59",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Casino Simulation/Mastersoft.Casino.Simulation.v1.01.S60.SymbianOS.Cracked-BiNPDA.sis",
+      "bytes": 388702,
+      "sha256": "019a000cd505183a13c34e44f7b76aef1dcfe2ab096016a9926fff99bccc24c7",
+      "payloads": 125
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Four Elements/4 Elements Cracked Symbian OS 678.sis",
+      "bytes": 932197,
+      "sha256": "120a2a214766c2e9a05711d3ff8d6c6a651f855f118c4d4f2501f74e3e9406fb",
+      "payloads": 45
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Four Elements/PocketTorch FourElements v1.2 SymbianOS7  BiNPDA/PocketTorch.FourElements.v1.2a.S60.SymbianOS7.Cracked-BiNPDA.sis",
+      "bytes": 941993,
+      "sha256": "72cdc6fa304e4f394706db370146fc86d7b6d660d354b81d68bc2befe0df96a2",
+      "payloads": 47
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Crystal Cave-in/pdamill.crystal.cave-in.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 376854,
+      "sha256": "65b993632ed2672163a0e7d571b38f855d444543985b02e5397ea07392ba0d4a",
+      "payloads": 29
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Elfin Forest/Elfin_Forest _v1.0_S60_CRACKED_SMPDA.sis",
+      "bytes": 231757,
+      "sha256": "b7e4c3097241336490dcf8822c158f605eb23ce03b7ac73ee8fb41e657c809bf",
+      "payloads": 90
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Camster/Camster_N70.SIS",
+      "bytes": 971712,
+      "sha256": "d0aa36ebbe88af05020331a08c07366c64b50cb3a0f0b5dd4a973a6162eba091",
+      "payloads": 19
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Diamond Mine/ag.diamond.mine.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 84752,
+      "sha256": "47260cfd0564cc06cae6c93c217aafeccc96de66f8d287df40245dc9abf5fb37",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dragon World/Impossible.Dragon.World.v1.00.S60.SymbianOS.Retail_BiNPDA.sis",
+      "bytes": 718047,
+      "sha256": "10b272c81b44d82935f44d7fd02f439520beffc252dfa5db5dac8ab5e2a4b039",
+      "payloads": 306
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dawn of the Fly/dotf_2nd_edition.sis",
+      "bytes": 270972,
+      "sha256": "5c075fa0d3d3c9d0e00f8f9c968332e88ea7dc13f7aec4d3c634cb201b4ed673",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Cheat/cheat.sis",
+      "bytes": 1319173,
+      "sha256": "e7e69b19d0e8553969a31d48be48fd9a9cced6b57161ddbbd5b3751dc8977646",
+      "payloads": 43
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Frog/Frog.SIS",
+      "bytes": 357684,
+      "sha256": "2c3c87299f57ebc9eeea72f9ace2c46626b80b47ef62c962278e1ba861adab2d",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dance/dance 176x208 (CHI).SIS",
+      "bytes": 858796,
+      "sha256": "4fd04f3006d414c9c5a66a8b15b919d1e5c188373e97c20c372bb3434efa961b",
+      "payloads": 28
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fire Storm/FireStorm English Repacked SymbianOS Cracked-DJJ.sis",
+      "bytes": 1866508,
+      "sha256": "299271ce11cf643d033c56a2d67304ea9e8d47089831bb13d71a664c06378f5a",
+      "payloads": 131
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dope Wars/Dope_wars.sis",
+      "bytes": 170699,
+      "sha256": "7f496f82fb962a3912bbc3c38dfb2d2329534921d76c41c5425a7efecc049282",
+      "payloads": 24
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Crimson After Dusk/PalmSoft.Crimson.After.Dusk.v1.0.S60.SymbianOS.Retail-BiNPDA.sis",
+      "bytes": 1217635,
+      "sha256": "c1d3fc71afdea2759c3a15ec6fb41538d893ba592dcfd9a1a64b0464d5065015",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Capjong/3D.Arts.Capjong.v1.10.S60.SymbianOS.Retail-EViLPDA.sis",
+      "bytes": 163211,
+      "sha256": "91701d930f18026bc10a70208f5ea655968bde972755b73c5726c80218fcfe8e",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Chess Professional/ZingMagic Limited Chess Professional.sis",
+      "bytes": 609644,
+      "sha256": "673f775e4971af8538dd6abfd1ea627ca621c2886646742962fa1f4ef2799516",
+      "payloads": 26
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Checkers Reversi and Four in a Line/checkers.reversi.and.four.in.a.line.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 524481,
+      "sha256": "8f1c166dba0b8b257fadab5769d9741ccf7cb61a320e2a53eadfe9e5bf7d3b8f",
+      "payloads": 3
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Chinese Chess Professional/Cascata Chinese Chess Professional (Series 60) (English).sis",
+      "bytes": 200363,
+      "sha256": "63e3549d88dde453b5e001197bb92e43d60cc60af2b05dc87be333a95b6b14e3",
+      "payloads": 22
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Final Ancient Battle/Funmobile.Final.Ancient.Battle.v1.00.S60.SymbianOS.Cracked-EViLPDA.sis",
+      "bytes": 758297,
+      "sha256": "f8a5d4815ddbef123c3ca36966676e5be31ab83f699332840cbb117b7c76961e",
+      "payloads": 211
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/CaveBlaster/CaveBlaster_1.0_S60_CRACKED_SMPDA.sis",
+      "bytes": 345686,
+      "sha256": "520b639aebfc6ec6ab64effce7f4c6897341400140caee707dd93626cc1750aa",
+      "payloads": 40
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Carnage/MBounce.Carnage.v1.4.S60v2.SymbianOS7.Cracked-BiNPDA.sis",
+      "bytes": 1005128,
+      "sha256": "cd2a7b183496c430150f67fa71d7b692885206783935670461cdfa9b35b54b04",
+      "payloads": 27
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Destiny/Black.Bull.Studios.Ltd.Destiny.v1.00.S60.SymbianOS.Retail-SyMPDA.sis",
+      "bytes": 680675,
+      "sha256": "b9730558a8d6ab214d21aa4743c5bf2684cde44163410cf1fb46c65aab90de13",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Cheez/cheez.sis",
+      "bytes": 242284,
+      "sha256": "94c8a42f806eb192d3e7b66fe15885c198e44d951f80a0e7ebcfb86860bb713b",
+      "payloads": 37
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/CA Carting/CA Karting Symbian S60  riolatino.sis",
+      "bytes": 324555,
+      "sha256": "132ed2a29cc0a856c6c69c4df20cd573d26ba1e22ca791510ac07dccc8c9da1d",
+      "payloads": 27
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Filao Solitaire Pack/Filao.Solitaire.Pack.v1.00.S60.SymbianOS.Retail-BiNPDA.sis",
+      "bytes": 278624,
+      "sha256": "a381810de4264d580c423443d5c3cefde6e029e512bc29984271c0473384c8bd",
+      "payloads": 23
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dropathon/boomslang.studios.dropathon.v1.00.s60.symbianos.cracked-binpda.sis",
+      "bytes": 241965,
+      "sha256": "81069f4ec9a5b3f39f3c7d9e2e701c666fea4fe96a96b2dc3f00865064ebc816",
+      "payloads": 15
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Defraxion/Defraxion_s60.sis",
+      "bytes": 415967,
+      "sha256": "e12e7d0a45291ca125141724e05c8ef3b78a15383df4c16b84ce328709cce3d1",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dynomite/Dynomite_fixed.SIS",
+      "bytes": 345092,
+      "sha256": "8c060139ef59a4864cfe6462fbae5e442aa025d3e97e80b07a901dd5bd06957f",
+      "payloads": 26
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Cricket 3D/Galular Inc Cricket3D s60 v1.0.SIS",
+      "bytes": 762574,
+      "sha256": "d75a38d8bc06575814f71e5aa632a4bb91d95124aefeea74d0191e0cb09f22c1",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Coin Up/psiloc.coin.up.v1.31.symbianos.cracked.read.nfo-binpda.sis",
+      "bytes": 256633,
+      "sha256": "ff17416ccbfdb913ff8fc86dd6f3dd28666f05597c15f0f04819ca10717530bd",
+      "payloads": 25
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Calypso 2D/calypso_v1.0 cracked.sis",
+      "bytes": 951803,
+      "sha256": "42fd7baed34fbbdd72c3d46f4bfeee678e7d74f9dd023bd0c3c1cb94a5680151",
+      "payloads": 28
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/DiceKing/diceking_nokias60_en_v1_0.sis",
+      "bytes": 1083991,
+      "sha256": "c242548d8ed15c50f297de3fd52f296fa8c0ca9aafa0a6d47fd7212506714e26",
+      "payloads": 7
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fisherman/FisherMan.SIS",
+      "bytes": 281389,
+      "sha256": "a52950cf335584a4156d4e1a207e2238d86228642650e1ad445bf07a8b833072",
+      "payloads": 50
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Daedalus 3D/d3d_full1.sis",
+      "bytes": 1136395,
+      "sha256": "02128e82f4942bc67d92b7189d5d0f5c93f079531c8e730700a8d2f33afeeec6",
+      "payloads": 89
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Daedalus 3D/d3d_full2.sis",
+      "bytes": 1081287,
+      "sha256": "9ed6a8ff90160c0ad4e6556539422c00f9e28c71bce74e4424ef8d5ee81e5aab",
+      "payloads": 70
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Daedalus 3D/d3d_patch.sis",
+      "bytes": 54281,
+      "sha256": "28a0fa84e579f529c5d724fa0c9a10a7a07904abca8243c40f86739abe302147",
+      "error": "Truncated zlib stream or declared output length mismatch"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Daedalus 3D/d3d_full4.sis",
+      "bytes": 383555,
+      "sha256": "7bedb924a68f879b8b37fdcb11bb55ad9baf4f589bf35d27fc9de3cfd8d0a931",
+      "payloads": 82
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Daedalus 3D/d3d_full3.sis",
+      "bytes": 649883,
+      "sha256": "0998140507f09d95ffcf804c4e00cb5a9db7c2adca6c9baafb76820037f04d7a",
+      "payloads": 38
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Creature Kingdom/Eagle.Eye.Vision.Creature.Kingdom.Cracked.sis",
+      "bytes": 607091,
+      "sha256": "3b94ca34feea95bc8a1d308b2db21c60ca52b4615256c067023c439cb100d738",
+      "payloads": 38
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Flames/InterstellarFlames.sis",
+      "bytes": 483500,
+      "sha256": "93e58f2c3baa83432fac27dd27995f26185d4248bd638cd3f235c4d8f0068887",
+      "payloads": 4
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dark Kioko Pinball/3D.Arts.Dark.Kioko.Pinball.v1.00.S60.SymbianOS.Retail-EViLPDA.sis",
+      "bytes": 281709,
+      "sha256": "8dbaa0db712ea363f6d36e82bb405df7c9b6d6c1d4111771f52f999301eba9c5",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/DigTumulus/Mobiward.DigTumulus.v2.0.S60.SymbianOS.Cracked-Prodigal.sis",
+      "bytes": 478744,
+      "sha256": "914f8e6655bdad690e513cb8b0bf32f7b7d223761fdec953caa4f5560255ab5c",
+      "payloads": 16
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fighters/Fighters v1.00 s60 symbianos binpda/victor.hall.fighters.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 545606,
+      "sha256": "4001242f5c153b4afad9debf85a8bb96d1091ad87788326b041777293095ab45",
+      "error": "Unsupported file record type 6 at record 163"
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fighters/Fighters v1.02 S60 SymbianOS7 ThNdRbRd/Fighters!.v1.02.S60.SymbianOS7.ThNdRbRd.sis",
+      "bytes": 434042,
+      "sha256": "673bc466ca3dbb5c2440b7ee6d618c9d105c7a4e6300be9b55a69e7a0bbf48e5",
+      "payloads": 165
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Captain Dynamo/Telcogames.Captain.Dynamo.v1.00.S60.SymbianOS.Cracked-SyMPDA.sis",
+      "bytes": 185242,
+      "sha256": "c7926949328f2543942e339e839870319ab43dafaa400d643af051a1f1ba5f6d",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Diamonds/DiaMonds_1.05_Full_DotSIS.sis",
+      "bytes": 295035,
+      "sha256": "d8ff286d0022d1e099118ac705570b1a31e4ef89b9fb0f58948c9fad3d2470dc",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fatal Arena 3D/For Nokia 7650,3600,3650 or N-Gage/fa3d.sis",
+      "bytes": 284684,
+      "sha256": "d74e0ed22cfff65bb8a37508a05a03501c23cbb128d01eb1dc2ba9289849d7f7",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fatal Arena 3D/For Nokia 3620 or 3660/fa3d.sis",
+      "bytes": 284368,
+      "sha256": "2e23072d121b67f60f58d3b86de7ef94aae42786b51c4d138aa2d54051055b85",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fatal Arena 3D/For Nokia 6600,6620,6630,6260,3230,6670 or 7610/fa3d.sis",
+      "bytes": 294347,
+      "sha256": "434450e5318196c170f272a4dce7a5f38d203e1807888edc4636f207170f82c0",
+      "payloads": 6
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Cannon Fodder/Telcogames.Cannon.Fodder.v1.00.S60.SymbianOS.Cracked-SyMPDA.sis",
+      "bytes": 823922,
+      "sha256": "8eb49b7b18b0e2e83546e75801f9e757917a7912976be1d38d6a5d3025cc4167",
+      "payloads": 5
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Cannons/pdamill.cannons.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 330872,
+      "sha256": "dcf5a084217079ad26b22322e3612d0be6e54d4c71e10a87c8d357e13b616927",
+      "payloads": 14
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Dreamway/Mobile.Stream.Dreamway.v1.00.S60.SymbianOS.Cracked_BiNPDA.sis",
+      "bytes": 1906154,
+      "sha256": "98ba34339cc0e6348216235097de4eb523273639ed05bd8afa03b1f3b593a021",
+      "payloads": 42
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Fireball/pdamill.fireball.v1.00.s60.symbianos.retail-binpda.sis",
+      "bytes": 346972,
+      "sha256": "b014eb05fbb7ddc65f8471e7e7a0362255a408bb407fc4b12c59d638669fbdff",
+      "payloads": 29
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Firehammer/Fire Hammer full.sis",
+      "bytes": 1527274,
+      "sha256": "dfbe05d991585fd4c1e9564ad4c848ad7f07ba90c6b295e5cb1b7c956c3471ff",
+      "payloads": 39
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Escape/escape_full_1_1_.0.retail.by.100565.sis",
+      "bytes": 321856,
+      "sha256": "064beef5c397a00c598f78f5986bd6eac2664958092498bc9332e62132b089f5",
+      "payloads": 94
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Flurkies/Elements.Interactive.Flurkies.v1.00.SymbianOS.S60.Cracked_CnPDA.sis",
+      "bytes": 665306,
+      "sha256": "efee724502f8aaee4f0d4f3053681bad96512ce59649295c0307b9cd86ab5b99",
+      "payloads": 8
+    },
+    {
+      "sourceMember": "Ultimate_SIS_Pack/Ultimate_SIS_Pack__C-F__Part2/Earth Guardian 3D/EarthGuardian3D_1.0_Full_DotSiS.sis",
+      "bytes": 384380,
+      "sha256": "d54f7eb9e890965d026cf5ef1cb51b7da18188b62cd21fcf4c4d31d1dd6b7924",
+      "payloads": 54
+    }
+  ],
+  "limits": [
+    "Other files and other payload extensions not structurally scanned.",
+    "Unsupported SIS variants and CRC failures are not proof of absence.",
+    "Candidate validity is structural only, not game execution or completeness."
+  ],
+  "runtimeCatalogCommitAtScan": "0ef37cd5d61d6ee84ef99d4435df4935220001bb",
+  "preservationComparison": {
+    "source": "validation/s60-runtime-preservation.json",
+    "bytes": 20218,
+    "sha256": "9d55c427e22c6f8624fd76a4f28f81501f9207e049eadedf496583a74afc515e",
+    "knownPreservedHits": 3,
+    "notInRuntimeCatalogueAtScan": 3,
+    "newToPreservedResearchCollection": 0
+  },
+  "sourceSha256": "e0c61f029cee12f984aba0263449cba7c415a6af646bb7070c8dae6fa5bc5ce0",
+  "schema": 1,
+  "sourcePage": "https://www.pc-freak.net/archives/2010/01/22/download_nokia_sis_ultimate_pack_games/index.html",
+  "sourceUrl": "http://pc-freak.net/files/Nokia_Games_Ultimate_SIS_Pack.tar.gz",
+  "newToPreservedCollection": 0,
+  "tools": ["tools/extract-old-sis.py", "tools/scan-firmware-games.py"]
+}
