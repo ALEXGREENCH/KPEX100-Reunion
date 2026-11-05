@@ -23,6 +23,8 @@
 - [Статический анализ SDK](tools-guide.md): распаковка InstallShield и извлечение таблицы функций.
 - [Повтор игровых сценариев](replay.md): клавиши, таймеры и сохранение framebuffer.
 - [Поиск игр в прошивках](firmware-games.md): сканер SGS, проверенные ROM и происхождение игр в меню.
+- [Игры с фотографии Kingston](kingston-observed-games.md): шесть точных имён и исторические источники.
+- [Проверки полной прошивки](firmware-validation.md): холодные прогоны девяти ROM, аппаратные регрессии и скорость.
 - [Игры телефонов и плееров](phone-firmware-games.md): извлечённая Munkiki, Samsung EADS/XEOVIA, LG KDZ, DoJa/BREW, карта источников и инструменты сохранения.
 - [908 системных функций SDK](sdk-syscalls.json), [хеши файлов SDK](sdk-file-hashes.json), [x86-свидетельства](sdk-x86-evidence.txt).
 - [Происхождение Swerve-модуля](swerve-provenance.json).

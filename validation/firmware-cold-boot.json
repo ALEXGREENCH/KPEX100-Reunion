@@ -1,0 +1,988 @@
+{
+  "reference": "67382c60003717f541a23a956d535540bfda5fab",
+  "instructions_per_rom": 100000000,
+  "method": "Cold reset with virtual FAT16 disk containing all 38 catalog SGS. Named K-PEX files use their historical aliases; other names use the zero-based catalog index. Compared CPU registers, IRQ, timer state, ATA trace tail, LCD counters, RGBA SHA-256 and the full 16 MiB SDRAM SHA-256. No wall-clock claims from this compatibility run.",
+  "roms": [
+    {
+      "id": "cenix-1.00",
+      "rom_sha256": "6f4cfa569d070e9d4167a7e8ab2aae9d65f31f5407ce761e32f3199e7013f0c8",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 1639415,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548222192,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548223512,
+          "r14": 537330240,
+          "r15": 537330252,
+          "sp": 548223512,
+          "lr": 537330240,
+          "pc": 537330252,
+          "cpsr": 1610612883,
+          "spsr": 19
+        },
+        "irq_count": 266,
+        "lcd_pixel_writes": 1458688,
+        "lcd_frames": 37,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 64624207,
+            "pc": 537316280,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 64632465,
+            "pc": 537316280,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 64634835,
+            "pc": 537315976
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 64639441,
+            "pc": 537316280,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 64641811,
+            "pc": 537315976
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 64641974,
+            "pc": 537316280,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 64643835,
+            "pc": 537315976
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 64646057,
+            "pc": 537315976
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          6.339285714178423,
+          0,
+          0,
+          1687.3392857199863,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "7b17dd0f6401a99bdf5b3bbc295d552799e64df6e489dde429ed9bb7dea140b4",
+        "sdram": "b36c467c4cdfd6d65aac6b039319007ed6644e71022a071c0bee315575701f09"
+      }
+    },
+    {
+      "id": "cenix-1.02",
+      "rom_sha256": "72ba8bfd80fbc669b678a5cdfaf9c5dc43722e4c2f01f0bfaf90e793dfef78f8",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 1660894,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548222752,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548224072,
+          "r14": 537330780,
+          "r15": 537530756,
+          "sp": 548224072,
+          "lr": 537330780,
+          "pc": 537530756,
+          "cpsr": 1610612755,
+          "spsr": 19
+        },
+        "irq_count": 266,
+        "lcd_pixel_writes": 1419264,
+        "lcd_frames": 36,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66775084,
+            "pc": 537316820,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66783342,
+            "pc": 537316820,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66785712,
+            "pc": 537316516
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66790318,
+            "pc": 537316820,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66792688,
+            "pc": 537316516
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 66792851,
+            "pc": 537316820,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66794712,
+            "pc": 537316516
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66796934,
+            "pc": 537316516
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          6.303571428464137,
+          0,
+          0,
+          1687.303571434272,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "78cf231d8cd2f8080436ad8a578b61cd68ff41abbb5befeaac73cf928bf347da",
+        "sdram": "9feb2afe0b2ae30485f6a3562216086efdfda4516677484dce8e662baf5dcd81"
+      }
+    },
+    {
+      "id": "cenix-2.00",
+      "rom_sha256": "e4ca76f5909bb20ca0d0ae8b680698ee912b143eeb7a5c8a262d577a7b734cdc",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 1610612883,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548780152,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548781472,
+          "r14": 537334312,
+          "r15": 537528512,
+          "sp": 548781472,
+          "lr": 537334312,
+          "pc": 537528512,
+          "cpsr": 1610612883,
+          "spsr": 19
+        },
+        "irq_count": 266,
+        "lcd_pixel_writes": 1419264,
+        "lcd_frames": 36,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66862627,
+            "pc": 537320352,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66870885,
+            "pc": 537320352,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66873255,
+            "pc": 537320048
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66877861,
+            "pc": 537320352,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66880231,
+            "pc": 537320048
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 66880394,
+            "pc": 537320352,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66882255,
+            "pc": 537320048
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66884477,
+            "pc": 537320048
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          0.19642857132123984,
+          0,
+          0,
+          1681.1964285771403,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "1ae86c8515164bc3c895d97e78fdb98fe9fc87b31dbc9e184a1f3fa7e1fb8e57",
+        "sdram": "38e70777a078d0497ce469850808bc4bdf36844d2d5c2875e83e64953bcbf1b7"
+      }
+    },
+    {
+      "id": "cenix-2.01",
+      "rom_sha256": "efe2e8215dc123f1e0a9c1257461d7d30f376184711ddf9fde17ba6929370643",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 1655918,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548782952,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548784272,
+          "r14": 537336164,
+          "r15": 537531804,
+          "sp": 548784272,
+          "lr": 537336164,
+          "pc": 537531804,
+          "cpsr": 1610612883,
+          "spsr": 19
+        },
+        "irq_count": 265,
+        "lcd_pixel_writes": 1419264,
+        "lcd_frames": 36,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66866004,
+            "pc": 537322188,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66874262,
+            "pc": 537322188,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66876632,
+            "pc": 537321884
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 66881238,
+            "pc": 537322188,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66883608,
+            "pc": 537321884
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 66883771,
+            "pc": 537322188,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66885632,
+            "pc": 537321884
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 66887854,
+            "pc": 537321884
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          24.964285714178384,
+          0,
+          0,
+          1680.9642857199979,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "7aee9d4cbb4a87d066a7f2e0a5e6e8f32ba11ca03de1913f2f20fd7545497845",
+        "sdram": "2cf1f5a10a42e070218fd40d5e1c91049c5e2bd343bceef00c1c617f1467a5c6"
+      }
+    },
+    {
+      "id": "cenix-2.10",
+      "rom_sha256": "15f49a0aa6d15ae07d39b9cf32aca0f41e8bdd598fb09726026640654465a282",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 10,
+          "r1": 9,
+          "r2": 542150072,
+          "r3": 2147486976,
+          "r4": 536873692,
+          "r5": 0,
+          "r6": 0,
+          "r7": 0,
+          "r8": 0,
+          "r9": 536873484,
+          "r10": 0,
+          "r11": 1,
+          "r12": 0,
+          "r13": 543136284,
+          "r14": 537334904,
+          "r15": 537331684,
+          "sp": 543136284,
+          "lr": 537334904,
+          "pc": 537331684,
+          "cpsr": 2147483667,
+          "spsr": 19
+        },
+        "irq_count": 279,
+        "lcd_pixel_writes": 851840,
+        "lcd_frames": 22,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91311412,
+            "pc": 537323536,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91319670,
+            "pc": 537323536,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91322040,
+            "pc": 537323232
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91326646,
+            "pc": 537323536,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91329016,
+            "pc": 537323232
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 91329179,
+            "pc": 537323536,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91331040,
+            "pc": 537323232
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91333262,
+            "pc": 537323232
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          19.784523809419454,
+          0,
+          0,
+          2025.7845238151278,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "45729a1ab1c11a1c331f32063241333790b20af04b0b772e20ea62e0eb8c17f4",
+        "sdram": "f0df829eacde1cb37234e203b41a524f43617695bf9c5cebdf884013939c405c"
+      }
+    },
+    {
+      "id": "cenix-2.20",
+      "rom_sha256": "8ba987031c28ebc51c202c3c809bd607c746c6529472e067382ef940aa1c1407",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 10,
+          "r1": 9,
+          "r2": 542167272,
+          "r3": 2147486976,
+          "r4": 536873692,
+          "r5": 0,
+          "r6": 0,
+          "r7": 0,
+          "r8": 0,
+          "r9": 536873484,
+          "r10": 0,
+          "r11": 1,
+          "r12": 0,
+          "r13": 543153492,
+          "r14": 537338592,
+          "r15": 537335372,
+          "sp": 543153492,
+          "lr": 537338592,
+          "pc": 537335372,
+          "cpsr": 2147483667,
+          "spsr": 19
+        },
+        "irq_count": 279,
+        "lcd_pixel_writes": 851840,
+        "lcd_frames": 22,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91327303,
+            "pc": 537327224,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91335561,
+            "pc": 537327224,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91337931,
+            "pc": 537326920
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91342537,
+            "pc": 537327224,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91344907,
+            "pc": 537326920
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 91345070,
+            "pc": 537327224,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91346931,
+            "pc": 537326920
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91349153,
+            "pc": 537326920
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          18.669047618943292,
+          0,
+          0,
+          2024.6690476246538,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "ad4bf20e88bc8fbc2d0e58a8f2ab7cf24669a47cb2bf21ea1d71b3c794bd29e3",
+        "sdram": "a582cc8cc7db9c2ac5dd138b392c47c905dfc104f61d9c7477776f2f102ae32d"
+      }
+    },
+    {
+      "id": "cenix-2.21",
+      "rom_sha256": "4c3a8b1ca0282e23ae7696857a919842732e71d0bbccb093c41a0746435b40c2",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 10,
+          "r1": 9,
+          "r2": 542168660,
+          "r3": 2147486976,
+          "r4": 536873692,
+          "r5": 0,
+          "r6": 0,
+          "r7": 0,
+          "r8": 0,
+          "r9": 536873484,
+          "r10": 0,
+          "r11": 1,
+          "r12": 0,
+          "r13": 543154880,
+          "r14": 537339980,
+          "r15": 537336764,
+          "sp": 543154880,
+          "lr": 537339980,
+          "pc": 537336764,
+          "cpsr": 2147483667,
+          "spsr": 19
+        },
+        "irq_count": 279,
+        "lcd_pixel_writes": 851840,
+        "lcd_frames": 22,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91330127,
+            "pc": 537328612,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91338385,
+            "pc": 537328612,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91340755,
+            "pc": 537328308
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91345361,
+            "pc": 537328612,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91347731,
+            "pc": 537328308
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 91347894,
+            "pc": 537328612,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91349755,
+            "pc": 537328308
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91351977,
+            "pc": 537328308
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          18.480952380848063,
+          0,
+          0,
+          2024.4809523865588,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "17a6f7ec977dcf59014639fd32eb9cfc8d077eacf7661dae2c45f72d1f9663ce",
+        "sdram": "af090a96be5da0e8f6383dbf05c3fa1da3294471ec561c429f8741fa709427fa"
+      }
+    },
+    {
+      "id": "kingston-2.09",
+      "rom_sha256": "4c66faa7dd686fc4df20e9e6249953c97a975b2df3a3455764c99dc0afe21b40",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 10,
+          "r1": 9,
+          "r2": 542209912,
+          "r3": 2147486976,
+          "r4": 536873692,
+          "r5": 0,
+          "r6": 0,
+          "r7": 0,
+          "r8": 0,
+          "r9": 536873484,
+          "r10": 0,
+          "r11": 1,
+          "r12": 0,
+          "r13": 543196172,
+          "r14": 537337148,
+          "r15": 537333936,
+          "sp": 543196172,
+          "lr": 537337148,
+          "pc": 537333936,
+          "cpsr": 2147483667,
+          "spsr": 19
+        },
+        "irq_count": 279,
+        "lcd_pixel_writes": 851840,
+        "lcd_frames": 22,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91362889,
+            "pc": 537325780,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91371147,
+            "pc": 537325780,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91373517,
+            "pc": 537325476
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91378123,
+            "pc": 537325780,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91380493,
+            "pc": 537325476
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 91380656,
+            "pc": 537325780,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91382517,
+            "pc": 537325476
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91384739,
+            "pc": 537325476
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          16.195238095133842,
+          0,
+          0,
+          2022.1952381008487,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "3cd9fff4321ffcc7837e884edeb4d7ff983345db484d7176d87a8ec13220f9cd",
+        "sdram": "1c033bf7da66ec92cee41ff098f72ce77a0811022cbcb74520b6be50f7ad6f2d"
+      }
+    },
+    {
+      "id": "kingston-2.12",
+      "rom_sha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+      "matches_reference": true,
+      "checkpoint": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 10,
+          "r1": 9,
+          "r2": 542211240,
+          "r3": 2147486976,
+          "r4": 536873692,
+          "r5": 0,
+          "r6": 0,
+          "r7": 0,
+          "r8": 0,
+          "r9": 536873484,
+          "r10": 0,
+          "r11": 1,
+          "r12": 0,
+          "r13": 543197500,
+          "r14": 537338440,
+          "r15": 537335220,
+          "sp": 543197500,
+          "lr": 537338440,
+          "pc": 537335220,
+          "cpsr": 2147483667,
+          "spsr": 19
+        },
+        "irq_count": 279,
+        "lcd_pixel_writes": 851840,
+        "lcd_frames": 22,
+        "firmware_resources_loaded": false,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91363405,
+            "pc": 537327072,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91371663,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91374033,
+            "pc": 537326768
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91378639,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91381009,
+            "pc": 537326768
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 91381172,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91383033,
+            "pc": 537326768
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91385255,
+            "pc": 537326768
+          }
+        ],
+        "ata_commands": 109,
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          16.148809523705268,
+          0,
+          0,
+          2022.1488095294203,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "frame": "06d3b93836db5fc59dfae91c3bdabb06a5be1626322d34e678fc8fd485dc3aa2",
+        "sdram": "1c6a67626b249a379d8bd1fb4544dc8b027047b193a5f30f249cebe5bd5ad559"
+      }
+    }
+  ]
+}

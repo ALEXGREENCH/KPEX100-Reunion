@@ -52,6 +52,7 @@ let timers = new TimerScheduler(),
   pausedAt = null,
   lastFrame = 0,
   framePending = false,
+  lastFirmwareLcdWrites = null,
   lastStatus = 0,
   firmwareBudget = 100000;
 const frameInterval = 1000 / 60;
@@ -116,6 +117,11 @@ function status(extra = {}) {
 }
 function frame(force = false) {
   if (!machine) return;
+  const lcdWrites = mode === 'firmware' ? machine.lcd_pixel_writes : undefined;
+  if (!force && lcdWrites !== undefined && lcdWrites === lastFirmwareLcdWrites) {
+    framePending = false;
+    return;
+  }
   framePending = true;
   if (!force && performance.now() - lastFrame < frameInterval) return;
   const original = machine.framebufferRGBA || machine.framebuffer?.data;
@@ -124,6 +130,7 @@ function frame(force = false) {
   emit({ type: 'frame', width: machine.width || 220, height: machine.height || 176, pixels }, [
     pixels.buffer,
   ]);
+  if (mode === 'firmware') lastFirmwareLcdWrites = lcdWrites;
   framePending = false;
   lastFrame = performance.now();
 }
@@ -153,8 +160,15 @@ function checkState() {
   }
 }
 function releaseNative(force = false) {
+  if (force) {
+    for (const key of new Set([...nativeStarts.keys(), ...nativeReleases.keys()]))
+      machine.key(key, false);
+    nativeStarts.clear();
+    nativeReleases.clear();
+    return;
+  }
   for (const [key, at] of nativeReleases)
-    if (force || machine.instructions >= at) {
+    if (machine.instructions >= at) {
       machine.key(key, false);
       nativeReleases.delete(key);
     }
@@ -165,7 +179,7 @@ async function catalog() {
     return r.json();
   });
 }
-async function buildDisk(rom, entries = null) {
+async function diskFiles(entries = null) {
   const data = entries === null ? await catalog() : { games: entries },
     aliases = {
       hellfire: 'HELLFIRE.SGS',
@@ -178,10 +192,9 @@ async function buildDisk(rom, entries = null) {
     entry,
     name: aliases[entry.id] || `R${String(++research).padStart(7, '0')}.SGS`,
   }));
-  const files = await Promise.all(
+  return Promise.all(
     jobs.map(async ({ entry, name }) => ({ name, data: await fetchBytes(entry.url) })),
   );
-  return createDisk(files, rom);
 }
 async function load(message) {
   running = false;
@@ -190,6 +203,8 @@ async function load(message) {
   machine?.close?.();
   machine = null;
   framePending = false;
+  lastFirmwareLcdWrites = null;
+  firmwareBudget = 100000;
   timers = new TimerScheduler();
   nativeStarts.clear();
   nativeReleases.clear();
@@ -203,13 +218,23 @@ async function load(message) {
     status: 'loading',
     message: mode === 'game' ? 'Загрузка оригинального GNEX…' : 'Подготовка полной машины…',
   });
-  const rom = await fetchBytes(message.romUrl);
+  // ROM, disk files and quickstate downloads are independent. Start them
+  // together, including blob URLs for originals imported in the main thread.
+  const [rom, content, swerveBinary] = await Promise.all([
+    fetchBytes(message.romUrl),
+    mode === 'game'
+      ? fetchBytes(message.gameUrl)
+      : message.type === 'boot'
+        ? diskFiles(message.diskGames ?? null)
+        : fetchBytes(message.stateUrl),
+    message.swerveUrl ? fetchBytes(message.swerveUrl) : undefined,
+  ]);
   if (mode === 'game') {
-    const game = await fetchBytes(message.gameUrl);
+    const game = content;
     const Runtime = detectVersion(game) < 4 ? LegacyRuntime : GnexRuntime;
     machine = await Runtime.create(rom, game, {
       ...message.runtime,
-      ...(message.swerveUrl ? { swerve: { binary: await fetchBytes(message.swerveUrl) } } : {}),
+      ...(swerveBinary ? { swerve: { binary: swerveBinary } } : {}),
       audio,
       saveData: saves.get(gameId) ?? message.saveData ?? null,
       onSave(data) {
@@ -222,11 +247,15 @@ async function load(message) {
     gameTitle = message.gameTitle || machine.title;
     syncTimer(null, started);
   } else {
-    const diskImage =
-      message.type === 'boot' ? await buildDisk(rom, message.diskGames ?? null) : undefined;
-    machine = await FirmwareMachine.create(rom, { diskImage, fastIdle: true });
+    const diskImage = message.type === 'boot' ? createDisk(content, rom) : undefined;
+    machine = await FirmwareMachine.create(rom, {
+      diskImage,
+      adoptDiskImage: !!diskImage,
+      fastIdle: true,
+      traceInstructions: false,
+    });
     if (message.type === 'loadState') {
-      await machine.loadState(await fetchBytes(message.stateUrl));
+      await machine.loadState(content);
       for (const key of ['up', 'down', 'left', 'right', 'a', 'b', 'menu', 'start', 'mode', 'rec'])
         machine.key(key, false);
     }
@@ -242,8 +271,7 @@ async function command(message) {
     await load(message);
     return;
   }
-  if (message.type !== 'reset' && message.sessionId != null && message.sessionId !== activeSession)
-    return;
+  if (message.sessionId != null && message.sessionId !== activeSession) return;
   if (!machine) return;
   if (message.type === 'key') {
     const key = message.key,
@@ -287,7 +315,7 @@ async function command(message) {
     status();
   } else if (message.type === 'step') {
     running = false;
-    if (mode === 'firmware') machine.run(1);
+    if (mode === 'firmware') machine.run(1, { snapshot: false });
     else {
       const timer = timers.next();
       if (timer) fireTimer(timer.channel);
@@ -309,13 +337,13 @@ function tick() {
     if (running && machine) {
       if (mode === 'firmware') {
         const started = performance.now();
-        machine.run(firmwareBudget);
+        let budget = firmwareBudget;
+        for (const at of nativeReleases.values())
+          budget = Math.min(budget, Math.max(1, at - machine.instructions));
+        machine.run(budget, { snapshot: false });
         releaseNative();
         const elapsed = Math.max(1, performance.now() - started);
-        firmwareBudget = Math.max(
-          2000,
-          Math.min(1000000, Math.round((firmwareBudget * 20) / elapsed)),
-        );
+        firmwareBudget = Math.max(2000, Math.min(1000000, Math.round((budget * 20) / elapsed)));
         checkState();
         frame();
       } else {

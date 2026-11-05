@@ -10,6 +10,7 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 - `carve-gzip-jars.py`: recover intact MIDlet JARs from bounded gzip streams without running the installer; verified on the Nokia 3410 v5.46 service package. See [phone firmware research](../doc/phone-firmware-games.md).
 - `replay-sgs.mjs`: replay JSON key/timer actions with the original interpreter and capture PNG frames plus diagnostics.
 - `benchmark-web.mjs`: compare reference and accelerated execution on identical originals, checking frame hashes and game state; see [methodology and measurements](../doc/web-performance.md).
+- `benchmark-firmware.mjs`: compare full ROM execution against a reference checkout, including CPU, timers, ATA, LCD, and SDRAM; see [firmware validation](../doc/firmware-validation.md).
 - `serve.mjs`: serve `web/` or `site/` locally, including a project path prefix.
 - `build.mjs` / `check-site.mjs`: create and verify the public GitHub Pages artifact.
 - `check-repo.py` / `check-doc-links.py`: check tracked files and local documentation links.

@@ -105,6 +105,7 @@ class EmulatorWorker(threading.Thread):
         self.smaf_enhancement = False
         self.native_key_starts = {}
         self.native_key_releases = {}
+        self.firmware_budget = 100_000
 
     def submit(self, action, *args):
         self.commands.put((action, args))
@@ -132,6 +133,7 @@ class EmulatorWorker(threading.Thread):
         self.machine = None
         self.native_key_starts.clear()
         self.native_key_releases.clear()
+        self.firmware_budget = 100_000
         self.error = ""
         self.events = 0
         self.last_run = {}
@@ -173,6 +175,7 @@ class EmulatorWorker(threading.Thread):
             "unsupported",
             "stopped",
             "exited",
+            "off",
         )
         self.last_tick = time.monotonic()
         self.timer_revision = getattr(self.machine, "timer_revision", None)
@@ -193,9 +196,24 @@ class EmulatorWorker(threading.Thread):
         if self.machine is None:
             return
         if self.mode == "firmware":
-            self.last_run = (
-                self.machine.run(instruction_budget=1 if single else 100_000) or {}
-            )
+            self._release_native_keys()
+            budget = 1 if single else self.firmware_budget
+            if self.native_key_releases:
+                budget = min(
+                    budget,
+                    max(
+                        1,
+                        min(self.native_key_releases.values())
+                        - self.machine.instructions,
+                    ),
+                )
+            started = time.monotonic()
+            self.last_run = self.machine.run(instruction_budget=budget) or {}
+            if not single:
+                elapsed = max(0.001, time.monotonic() - started)
+                self.firmware_budget = max(
+                    2000, min(100_000, round(budget * 0.020 / elapsed))
+                )
             self._release_native_keys()
         else:
             if not getattr(self.machine, "timer_ms", None):
@@ -211,6 +229,7 @@ class EmulatorWorker(threading.Thread):
             "unsupported",
             "stopped",
             "exited",
+            "off",
         ):
             self.running = False
 
@@ -252,6 +271,7 @@ class EmulatorWorker(threading.Thread):
             "unsupported",
             "stopped",
             "exited",
+            "off",
         ):
             self.running = False
 
@@ -298,6 +318,7 @@ class EmulatorWorker(threading.Thread):
             self.machine, self.rom, self.source = restored, rom, rom
             self.native_key_starts.clear()
             self.native_key_releases.clear()
+            self.firmware_budget = 100_000
             self.mode, self.game = "firmware", None
             self.running, self.error, self.events = False, "", 0
             self.last_run = restored.snapshot()
@@ -315,6 +336,7 @@ class EmulatorWorker(threading.Thread):
                     "unsupported",
                     "stopped",
                     "exited",
+                    "off",
                 )
                 if (
                     self.running
@@ -327,6 +349,10 @@ class EmulatorWorker(threading.Thread):
                 self.paused_at = time.monotonic()
             self.running = False
             self._release_native_keys(force=True)
+            if self.mode == "firmware" and self.machine is not None:
+                for name in self.native_key_starts:
+                    self.machine.key(name, False)
+                self.native_key_starts.clear()
             if self.audio is not None and hasattr(self.audio, "resume"):
                 self.audio.pause()
             self.note("Исполнение приостановлено.")
@@ -388,19 +414,36 @@ class EmulatorWorker(threading.Thread):
                     pass
         self.last_publish = time.monotonic()
 
+    def _process_commands(self):
+        """Drain a bounded command burst before another CPU batch.
+
+        A running firmware has work ready immediately. Blocking for input on
+        every batch imposes a host-speed ceiling even when the CPU is idle.
+        """
+        timeout = 0 if self.running and self.mode == "firmware" else 0.008
+        try:
+            action, args = self.commands.get(timeout=timeout)
+        except queue.Empty:
+            return False
+        self._command(action, args)
+        for _ in range(63):
+            if self.closed:
+                break
+            try:
+                action, args = self.commands.get_nowait()
+            except queue.Empty:
+                break
+            self._command(action, args)
+        return True
+
     def run(self):
         while not self.closed:
             changed = False
             try:
-                try:
-                    action, args = self.commands.get(timeout=0.008)
-                    self._command(action, args)
-                    changed = True
-                except queue.Empty:
-                    pass
+                changed = self._process_commands()
                 now = time.monotonic()
                 if self.running and self.machine is not None:
-                    interval = 0.005
+                    interval = 0.0
                     if self.mode == "game":
                         timer = getattr(self.machine, "timer_ms", None)
                         # A disabled timer means that the game waits for input.
@@ -1115,6 +1158,7 @@ class ReunionApp:
                 "unsupported": "Не поддерживается",
                 "stopped": "Остановлен",
                 "exited": "Игра завершена",
+                "off": "Плеер выключен",
                 "idle": "Ожидание события",
             }
             state = snapshot["status"].lower()
@@ -1123,7 +1167,7 @@ class ReunionApp:
                 mode != "none"
                 and not snapshot["running"]
                 and state
-                not in ("blocked", "error", "unsupported", "stopped", "exited")
+                not in ("blocked", "error", "unsupported", "stopped", "exited", "off")
             ):
                 status = "Пауза"
             elif snapshot["running"] and state in ("ready", "paused"):

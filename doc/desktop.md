@@ -98,6 +98,7 @@ python tools/build_smaf.py
 - [Карта памяти и архитектура](../desktop/docs/architecture.md).
 - [Гостевая клавиатура](../desktop/docs/firmware-keyboard.md).
 - [Холодная загрузка и ожидание прерываний](../desktop/docs/firmware-performance.md).
+- [Проверки и ускорение режима полной прошивки](firmware-validation.md).
 - [Исходный путь запуска SGS](../desktop/docs/native-game-launch.md).
 
 Протоколы запуска исходной коллекции не заменяют новых проверок. Для изменений

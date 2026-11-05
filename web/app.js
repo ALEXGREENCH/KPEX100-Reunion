@@ -392,7 +392,7 @@ function populateCatalog() {
   if (selectedRom) $('firmwareSelect').value = selectedRom.id;
   const states = catalog.states.filter((state) => state.available);
   $('quickStateHint').textContent = states.length
-    ? 'Быстрый запуск восстанавливает настоящее состояние прошивки. Поддержка аппаратуры экспериментальная.'
+    ? 'Быстрый запуск возвращает игры из снимка накопителя. Для полной коллекции и добавленных игр выберите холодный старт.'
     : 'Быстрый запуск появится после добавления проверенного файла .reunion-state. Поддержка аппаратуры экспериментальная.';
   $('quickStates').replaceChildren(
     ...states.map((state) => {

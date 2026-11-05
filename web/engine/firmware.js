@@ -91,14 +91,32 @@ export class FirmwareMachine {
     await machine.ready;
     return machine;
   }
-  constructor(rom, { cpuModule, diskImage = null, strictMMIO = true, fastIdle = true } = {}) {
+  constructor(
+    rom,
+    {
+      cpuModule,
+      diskImage = null,
+      adoptDiskImage = false,
+      strictMMIO = true,
+      fastIdle = true,
+      traceInstructions = true,
+    } = {},
+  ) {
     this.rom = new Uint8Array(rom);
     this.rom_info = inspectRom(this.rom);
     if (!this.rom_info.checksum_valid) throw new Error('ROM checksum mismatch');
     this.uc = cpuModule || getCpuModule();
     this.strict_mmio = strictMMIO;
     this.fast_idle = fastIdle;
-    this.disk_image = diskImage ? new Uint8Array(diskImage) : null;
+    this.traceInstructions = traceInstructions;
+    this.disk_image = diskImage
+      ? diskImage instanceof Uint8Array
+        ? adoptDiskImage
+          ? diskImage
+          : new Uint8Array(diskImage)
+        : new Uint8Array(diskImage).slice()
+      : null;
+    this._idleWords = IDLE.map((address) => word(this.rom, address - 0x2000f8dc));
     this.width = 220;
     this.height = 176;
     this.ready = sha256(this.rom).then((h) => {
@@ -111,13 +129,13 @@ export class FirmwareMachine {
     if (this.cpu) this.cpu.close();
     this.cpu = new ArmCPU(this.uc);
     const c = this.cpu;
-    c.mapAlias([0x20000000, 0x21000000], 0x1000000);
+    this._sdramPointer = c.mapAlias([0x20000000, 0x21000000], 0x1000000);
+    this._romPointer = c.mapAlias([0x70000000], 0x100000);
     for (const [a, s] of [
       [0, 0x100000],
       [0x30000000, 0x10000],
       [0x40000000, 0x1000],
       [0x50000000, 0x1000],
-      [0x70000000, 0x100000],
       [0x80000000, 0x1000],
       [0xf0000000, 0x1000],
       [0xfffff000, 0x1000],
@@ -176,11 +194,12 @@ export class FirmwareMachine {
     this.ata_write_target = null;
     this.ata_trace = [];
     this.ata_disks = {
-      0: this.disk_image ? this.disk_image.slice() : new Uint8Array(16 * 1024 * 1024),
+      0: this.disk_image ?? new Uint8Array(16 * 1024 * 1024),
     };
-    this._instruction_cache = new Map();
-    this._deferred_writes = {};
+    this._deferred_writes = null;
     this._open_bus_pages = new Set();
+    this._enteredSDRAM = false;
+    this._displayedPixel = false;
     const defaults = {
       0x80000040: 0,
       0x80000044: 0,
@@ -294,6 +313,25 @@ export class FirmwareMachine {
     this.mmio[a] = U32(v);
     this.cpu.write32(a, v);
   }
+  _deferMMIO(a, v) {
+    (this._deferred_writes ??= {})[a] = v;
+  }
+  _instruction(address) {
+    // Both SDRAM windows refer to the same live WASM storage. Read the current
+    // instruction instead of caching decoded RAM that the guest can overwrite.
+    if (address >= 0x20000000 && address < 0x22000000)
+      return U32(this.uc.getValue(this._sdramPointer + (address & 0xffffff), 'i32'));
+    if (address >= 0x70000000 && address < 0x70100000)
+      return U32(this.uc.getValue(this._romPointer + (address & 0xfffff), 'i32'));
+    return this.cpu.read32(address);
+  }
+  _enabledInterrupts() {
+    const ien = this.mmio[0x80000100] || 0;
+    // TCC76x §5.2: IEN bit 15 gates delivery unless MISC.RDYIRQEN
+    // repurposes it as the external READY interrupt's individual enable.
+    if (this.mmio[0x80000a1c] & 0x8000) return this.pending & ien;
+    return ien & 0x8000 ? this.pending & ien & ~0x8000 : 0;
+  }
   _stop(reason, status = 'blocked') {
     this.status = status;
     this.stop_reason = reason;
@@ -339,8 +377,10 @@ export class FirmwareMachine {
       this._stop('Прошивка перешла в цикл выключения', 'off');
       return;
     }
-    for (const a in this._deferred_writes) this._writeMMIO(Number(a), this._deferred_writes[a]);
-    this._deferred_writes = {};
+    if (this._deferred_writes !== null) {
+      for (const a in this._deferred_writes) this._writeMMIO(Number(a), this._deferred_writes[a]);
+      this._deferred_writes = null;
+    }
     if (
       this.fast_idle &&
       this._run_end !== null &&
@@ -350,38 +390,30 @@ export class FirmwareMachine {
     )
       return;
     this.instructions++;
-    push(this.trace, address);
-    if (
-      address >= 0x20000000 &&
-      address < 0x22000000 &&
-      !this.milestones.includes('Entered SDRAM executable')
-    )
+    if (this.traceInstructions) push(this.trace, address);
+    if (!this._enteredSDRAM && address >= 0x20000000 && address < 0x22000000) {
       this.milestones.push('Entered SDRAM executable');
+      this._enteredSDRAM = true;
+    }
     if (this.instructions % 256 === 0) {
       this._advanceTimers();
-      const psr = this.cpu.regRead('cpsr'),
-        enabled = this.pending & (this.mmio[0x80000100] || 0),
-        irq = enabled & (this.mmio[0x8000010c] || 0),
-        fiq = enabled & ~(this.mmio[0x8000010c] || 0);
-      if (fiq && !(psr & 64)) {
-        this._enterInterrupt(address, psr, true);
-        return;
-      }
-      if (irq && !(psr & 128)) {
-        this._enterInterrupt(address, psr, false);
-        return;
+      const enabled = this._enabledInterrupts();
+      if (enabled) {
+        const psr = this.cpu.regRead('cpsr'),
+          irq = enabled & (this.mmio[0x8000010c] || 0),
+          fiq = enabled & ~(this.mmio[0x8000010c] || 0);
+        if (fiq && !(psr & 64)) {
+          this._enterInterrupt(address, psr, true);
+          return;
+        }
+        if (irq && !(psr & 128)) {
+          this._enterInterrupt(address, psr, false);
+          return;
+        }
       }
     }
     if (size !== 4) return;
-    let w = this._instruction_cache.get(address);
-    if (w === undefined) {
-      w = this.cpu.read32(address);
-      if (
-        (address >= 0x70000000 && address < 0x70100000) ||
-        (address >= 0x20010000 && address < 0x20100000)
-      )
-        this._instruction_cache.set(address, w);
-    }
+    const w = this._instruction(address);
     if ((w & 0x0f000010) !== 0x0e000010) return;
     const cop = (w >>> 8) & 15;
     if (cop !== 14 && cop !== 15) {
@@ -399,7 +431,6 @@ export class FirmwareMachine {
       else this.cpu.regWrite(R[rn], value);
     } else {
       this.cp15[key] = this.cpu.regRead(R[rn]);
-      if (parts[0] === 15 && parts[1] === 0 && parts[2] === 7) this._instruction_cache.clear();
     }
     this.cpu.regWrite('pc', address + 4);
   }
@@ -408,13 +439,29 @@ export class FirmwareMachine {
     let psr = c.regRead('cpsr'),
       a = c.regRead('r4') + 16;
     if (psr & 32 || (psr & 31) === 16 || a & 3 || a < 0x20000000 || a > 0x21fffffc) return false;
+    const physical = 0x20000000 + (a & 0xffffff);
+    if (
+      IDLE.includes(physical) ||
+      !IDLE.every((pc, i) => this._instruction(pc) === this._idleWords[i])
+    )
+      return false;
     let counter = c.read32(a),
       r0 = c.regRead('r0'),
       r1 = c.regRead('r1'),
       lr = c.regRead('lr'),
       phase = 0;
-    const initial = this.instructions;
+    const initial = this.instructions,
+      batch = { ratio: this._clockRatio(), dirty: false };
     const flush = () => {
+      if (batch.dirty) {
+        for (let n = 0; n < 6; n++) {
+          const base = 0x80000200 + n * 16,
+            cfg = this.mmio[base] || 0;
+          if (cfg & 1 && ((cfg >>> 4) & 7) !== 7)
+            this._writeMMIO(base + 4, Math.floor(this.timer_counts[n]));
+        }
+        this._writeMMIO(0x80000260, this.timer_pending);
+      }
       c.write32(a, counter);
       c.regWrite('r0', r0);
       c.regWrite('r1', r1);
@@ -422,7 +469,7 @@ export class FirmwareMachine {
       c.regWrite('cpsr', psr);
       c.regWrite('pc', IDLE[phase]);
       this.fast_forwarded_instructions += this.instructions - initial;
-      push(this.trace, IDLE[phase]);
+      if (this.traceInstructions) push(this.trace, IDLE[phase]);
     };
     while (this.instructions < this._run_end) {
       const available = Math.min(
@@ -441,8 +488,8 @@ export class FirmwareMachine {
       }
       this.instructions++;
       if (this.instructions % 256 === 0) {
-        this._advanceTimers();
-        const enabled = this.pending & (this.mmio[0x80000100] || 0),
+        this._advanceTimers(batch);
+        const enabled = this._enabledInterrupts(),
           irq = enabled & (this.mmio[0x8000010c] || 0),
           fiq = enabled & ~(this.mmio[0x8000010c] || 0);
         if ((fiq && !(psr & 64)) || (irq && !(psr & 128))) {
@@ -524,10 +571,10 @@ export class FirmwareMachine {
       timer = div & 256 ? ts / (tp + 1) : (ts * tp) / 64;
     return timer / Math.max(1, cpu);
   }
-  _advanceTimers() {
+  _advanceTimers(batch = null) {
     const elapsed = this.instructions - this.timer_last;
     this.timer_last = this.instructions;
-    const ticks = elapsed * this._clockRatio();
+    const ticks = elapsed * (batch?.ratio ?? this._clockRatio());
     for (let n = 0; n < 6; n++) {
       const base = 0x80000200 + n * 16,
         cfg = this.mmio[base] || 0;
@@ -545,9 +592,10 @@ export class FirmwareMachine {
       if (!(cfg & 2)) current %= ref;
       current %= 2 ** (n < 4 ? 16 : 20);
       this.timer_counts[n] = current;
-      this._writeMMIO(base + 4, Math.floor(current));
+      if (!batch) this._writeMMIO(base + 4, Math.floor(current));
     }
-    this._writeMMIO(0x80000260, this.timer_pending);
+    if (batch) batch.dirty = true;
+    else this._writeMMIO(0x80000260, this.timer_pending);
   }
   _knownMMIO(a) {
     if (a === 0x80000040 || a === 0x80000044) return true;
@@ -585,26 +633,35 @@ export class FirmwareMachine {
       if (a === 0x80000040 || a === 0x80000044) {
         value &= a === 0x80000040 ? 65535 : 15;
         this._writeMMIO(a, value);
-        this._deferred_writes[a] = value;
+        this._deferMMIO(a, value);
       } else if (a === 0x80000104) {
         this.pending = U32(this.pending & ~value);
         if (this.timer_pending) this.pending |= 64;
       } else if (a === 0x80000260) {
         this.timer_pending &= ~value;
-        this._deferred_writes[a] = this.timer_pending;
+        this._deferMMIO(a, this.timer_pending);
       } else if (a >= 0x80000200 && a <= 0x80000250 && !(a & 15)) {
-        if (value & 256) this.timer_counts[(a - 0x80000200) / 16] = 0;
-        this._deferred_writes[a] = value & ~256;
+        if (value & 256) {
+          this.timer_counts[(a - 0x80000200) / 16] = 0;
+          this._writeMMIO(a + 4, 0);
+        }
+        this._deferMMIO(a, value & ~256);
+      } else if (a >= 0x80000204 && a <= 0x80000254 && (a & 15) === 4) {
+        const n = (a - 0x80000204) / 16;
+        const count = value & (n < 4 ? 0xffff : 0xfffff);
+        this.timer_counts[n] = count;
+        this.mmio[a] = count;
+        this._deferMMIO(a, count);
       } else if (a === 0x80000400) {
         if (old & 2048 && !(value & 2048)) this.pll_enable_at = this.instructions;
       } else if (a === 0x80000a00 || a === 0x80000a80) {
         this.adc_channel = value & 7;
         this.adc_started = !(value & 16);
-      } else if (a === 0x80000d08) this._deferred_writes[a] = 0;
-      else if (a === 0x80000d0c) this._deferred_writes[a] = U32(old & ~value);
-      else if (a === 0x80000d10) this._deferred_writes[a] = U32(old | value);
+      } else if (a === 0x80000d08) this._deferMMIO(a, 0);
+      else if (a === 0x80000d0c) this._deferMMIO(a, U32(old & ~value));
+      else if (a === 0x80000d10) this._deferMMIO(a, U32(old | value));
       else if (a === 0x80000d14) this._writeMMIO(0x80000d10, (this.mmio[0x80000d10] || 0) & ~value);
-      else if (a === 0x80000d54 || a === 0x80000d58) this._deferred_writes[a] = 256;
+      else if (a === 0x80000d54 || a === 0x80000d58) this._deferMMIO(a, 256);
       else if (a >= 0x80000f00 && a <= 0x80000f60) this.lcd_writes++;
       return;
     }
@@ -646,26 +703,42 @@ export class FirmwareMachine {
     if (access === this.uc.MEM_READ) {
       if (port === 0) {
         const end = this.ata_position + size;
-        if (end > this.ata_buffer.length) {
-          this._stop('ATA FIFO underflow');
+        if (
+          !(this.ata_registers[28] & 8) ||
+          this.ata_write_target ||
+          ![1, 2, 4].includes(size) ||
+          end > this.ata_buffer.length
+        ) {
+          this._stop('ATA read without an active read transfer');
           return;
         }
-        c.write(address, this.ata_buffer.subarray(this.ata_position, end));
+        let data = 0;
+        for (let i = 0; i < size; i++) data |= this.ata_buffer[this.ata_position + i] << (i * 8);
+        c.writeSized(address, data, size);
         this.ata_position = end;
         if (end === this.ata_buffer.length) this.ata_registers[28] = 0x40;
       } else c.writeSized(address, this.ata_registers[port === 56 ? 28 : port] || 0, size);
       return;
     }
     if (port === 0) {
-      if (!this.ata_write_target) {
-        this._stop('ATA write without WRITE SECTORS');
+      if (!(this.ata_registers[28] & 8) || !this.ata_write_target) {
+        this._stop('ATA write without an active write transfer');
         return;
       }
       const [drive, offset, length] = this.ata_write_target;
-      if (this.ata_buffer.length !== length) this.ata_buffer = new Uint8Array(length);
+      if (
+        ![1, 2, 4].includes(size) ||
+        this.ata_position + size > length ||
+        this.ata_buffer.length !== length
+      ) {
+        this._stop('ATA write exceeds the active transfer');
+        return;
+      }
       for (let i = 0; i < size; i++)
         this.ata_buffer[this.ata_position++] = (value >>> (8 * i)) & 255;
-      if (this.ata_position >= length) {
+      if (this.ata_position === length) {
+        const disk = this.ata_disks[drive];
+        if (disk === this.disk_image) this.ata_disks[drive] = disk.slice();
         this.ata_disks[drive].set(this.ata_buffer, offset);
         this.ata_write_target = null;
         this.ata_registers[28] = 0x40;
@@ -675,6 +748,8 @@ export class FirmwareMachine {
     this.ata_registers[port] = value & 255;
     if (port !== 28) return;
     const command = value & 255;
+    this.ata_write_target = null;
+    this.ata_buffer = new Uint8Array();
     this.ata_position = 0;
     this.ata_registers[28] = 0x40;
     const event = {
@@ -692,6 +767,7 @@ export class FirmwareMachine {
       } else this.ata_registers[4] = 32;
       return;
     }
+    this.ata_registers[4] = 0;
     const disk = this.ata_disks[this.ata_drive] || new Uint8Array(),
       sectors = disk.length / 512;
     if (command === 0x63) {
@@ -739,7 +815,7 @@ export class FirmwareMachine {
       }
       r[28] = 0x48;
       if (command === 0x20 || command === 0x21)
-        this.ata_buffer = disk.slice(offset, offset + length);
+        this.ata_buffer = disk.subarray(offset, offset + length);
       else {
         this.ata_buffer = new Uint8Array(length);
         this.ata_write_target = [this.ata_drive, offset, length];
@@ -782,8 +858,10 @@ export class FirmwareMachine {
       this.lcd_pixels[o + 1] = (value >>> 8) & 255;
       this.lcd_pixel_writes++;
       this.lcd_source = 0x50000002;
-      if (!this.milestones.includes('Firmware wrote LCD pixels'))
+      if (!this._displayedPixel) {
         this.milestones.push('Firmware wrote LCD pixels');
+        this._displayedPixel = true;
+      }
     }
     this.lcd_x++;
     const xe = Math.min(219, (this.lcd_registers[0x45] ?? 0xdb00) >>> 8),
@@ -832,10 +910,11 @@ export class FirmwareMachine {
     }
     return this._rgba;
   }
-  run(budget = 100000) {
+  run(budget = 100000, { snapshot = true } = {}) {
     if (!Number.isSafeInteger(budget) || budget < 1 || budget > 10000000)
       throw new Error('Instruction budget must be 1..10000000');
-    if (['blocked', 'error', 'off'].includes(this.status)) return this.snapshot();
+    if (['blocked', 'error', 'off'].includes(this.status))
+      return snapshot ? this.snapshot() : undefined;
     this.status = 'running';
     this._run_end = this.instructions + budget;
     const pc = this.cpu.regRead('pc'),
@@ -853,7 +932,7 @@ export class FirmwareMachine {
       this._run_end = null;
     }
     if (this.status === 'running') this.status = 'paused';
-    return this.snapshot();
+    if (snapshot) return this.snapshot();
   }
   snapshot() {
     return {
@@ -1039,7 +1118,10 @@ export class FirmwareMachine {
     this.cpu.regWrite('cpsr', state.cpsr);
     this.cpu.regWrite('pc', state.pc);
     Object.assign(this, attributes);
-    this._instruction_cache = new Map();
+    this._enteredSDRAM = this.milestones.includes('Entered SDRAM executable');
+    this._displayedPixel = this.milestones.includes('Firmware wrote LCD pixels');
+    if (this._deferred_writes && !Object.keys(this._deferred_writes).length)
+      this._deferred_writes = null;
     this._run_end = null;
     this._lcd_rendered_count = -1;
     this.status = 'paused';

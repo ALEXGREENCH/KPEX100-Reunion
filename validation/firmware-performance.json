@@ -1,0 +1,756 @@
+{
+  "reference": "67382c60003717f541a23a956d535540bfda5fab",
+  "currentBase": "67382c60003717f541a23a956d535540bfda5fab",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "cpu": "AMD Ryzen 5 5500                               "
+  },
+  "mode": "timed",
+  "scenarios": [
+    {
+      "name": "cold-start",
+      "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+      "budget": 100000000,
+      "matchingCheckpoint": true,
+      "differingFields": [],
+      "timingsMs": [
+        [
+          6313.2915,
+          6320.6975999999995,
+          6807.552
+        ],
+        [
+          5271.5689999999995,
+          5260.807799999999,
+          6028.703800000003
+        ]
+      ],
+      "speedup": 1.199016383926683,
+      "reference": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 10,
+          "r1": 9,
+          "r2": 542211240,
+          "r3": 2147486976,
+          "r4": 536873692,
+          "r5": 0,
+          "r6": 0,
+          "r7": 0,
+          "r8": 0,
+          "r9": 536873484,
+          "r10": 0,
+          "r11": 1,
+          "r12": 0,
+          "r13": 543197500,
+          "r14": 537338440,
+          "r15": 537335220,
+          "sp": 543197500,
+          "lr": 537338440,
+          "pc": 537335220,
+          "cpsr": 2147483667,
+          "spsr": 19
+        },
+        "irq_count": 279,
+        "lcd_pixel_writes": 851840,
+        "lcd_frames": 22,
+        "firmware_resources_loaded": false,
+        "ata_commands": 109,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91363405,
+            "pc": 537327072,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91371663,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91374033,
+            "pc": 537326768
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91378639,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91381009,
+            "pc": 537326768
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 91381172,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91383033,
+            "pc": 537326768
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91385255,
+            "pc": 537326768
+          }
+        ],
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          16.148809523705268,
+          0,
+          0,
+          2022.1488095294203,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "lcdSha256": "06d3b93836db5fc59dfae91c3bdabb06a5be1626322d34e678fc8fd485dc3aa2",
+        "sdramSha256": "1c6a67626b249a379d8bd1fb4544dc8b027047b193a5f30f249cebe5bd5ad559"
+      },
+      "current": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 100000000,
+        "registers": {
+          "r0": 10,
+          "r1": 9,
+          "r2": 542211240,
+          "r3": 2147486976,
+          "r4": 536873692,
+          "r5": 0,
+          "r6": 0,
+          "r7": 0,
+          "r8": 0,
+          "r9": 536873484,
+          "r10": 0,
+          "r11": 1,
+          "r12": 0,
+          "r13": 543197500,
+          "r14": 537338440,
+          "r15": 537335220,
+          "sp": 543197500,
+          "lr": 537338440,
+          "pc": 537335220,
+          "cpsr": 2147483667,
+          "spsr": 19
+        },
+        "irq_count": 279,
+        "lcd_pixel_writes": 851840,
+        "lcd_frames": 22,
+        "firmware_resources_loaded": false,
+        "ata_commands": 109,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91363405,
+            "pc": 537327072,
+            "lba": 32864,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91371663,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91374033,
+            "pc": 537326768
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 91378639,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91381009,
+            "pc": 537326768
+          },
+          {
+            "command": 48,
+            "drive": 0,
+            "instructions": 91381172,
+            "pc": 537327072,
+            "lba": 1001,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91383033,
+            "pc": 537326768
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 91385255,
+            "pc": 537326768
+          }
+        ],
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          16.148809523705268,
+          0,
+          0,
+          2022.1488095294203,
+          0,
+          0
+        ],
+        "timer_last": 100000000,
+        "lcdSha256": "06d3b93836db5fc59dfae91c3bdabb06a5be1626322d34e678fc8fd485dc3aa2",
+        "sdramSha256": "1c6a67626b249a379d8bd1fb4544dc8b027047b193a5f30f249cebe5bd5ad559"
+      }
+    },
+    {
+      "name": "menu-state",
+      "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+      "budget": 50000000,
+      "matchingCheckpoint": true,
+      "differingFields": [],
+      "timingsMs": [
+        [
+          1090.1483000000007,
+          1065.7641999999978,
+          1071.058600000004
+        ],
+        [
+          830.0319999999992,
+          820.6275000000023,
+          825.8396999999968
+        ]
+      ],
+      "speedup": 1.296932806693609,
+      "reference": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 550000000,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 21461623,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548786492,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548787812,
+          "r14": 537341032,
+          "r15": 537533196,
+          "sp": 548787812,
+          "lr": 537341032,
+          "pc": 537533196,
+          "cpsr": 1610612755,
+          "spsr": 19
+        },
+        "irq_count": 1541,
+        "lcd_pixel_writes": 7821440,
+        "lcd_frames": 202,
+        "firmware_resources_loaded": true,
+        "ata_commands": 256,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302924139,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32774,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302929731,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 33009,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302936340,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32769,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302939163,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32770,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302941986,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32771,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302947578,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 33005,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302955570,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32961,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 303015368,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537326768
+          }
+        ],
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          5.648809523196755,
+          0,
+          0,
+          3747.6488095930904,
+          0,
+          0
+        ],
+        "timer_last": 549999872,
+        "lcdSha256": "378e619ccffc3f844a56a50366026ee73d0b1a058d277d694c7740c587a49a9a",
+        "sdramSha256": "a6d457e1fb8817bd9503debcd2fae3649a323dd112c7ffb97cc58c1785055c68"
+      },
+      "current": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 550000000,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 21461623,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548786492,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548787812,
+          "r14": 537341032,
+          "r15": 537533196,
+          "sp": 548787812,
+          "lr": 537341032,
+          "pc": 537533196,
+          "cpsr": 1610612755,
+          "spsr": 19
+        },
+        "irq_count": 1541,
+        "lcd_pixel_writes": 7821440,
+        "lcd_frames": 202,
+        "firmware_resources_loaded": true,
+        "ata_commands": 256,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302924139,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32774,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302929731,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 33009,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302936340,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32769,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302939163,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32770,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302941986,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32771,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302947578,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 33005,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 302955570,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537327072,
+            "lba": 32961,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 303015368,
+            "fast_forwarded_instructions": 51131700,
+            "pc": 537326768
+          }
+        ],
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          5.648809523196755,
+          0,
+          0,
+          3747.6488095930904,
+          0,
+          0
+        ],
+        "timer_last": 549999872,
+        "lcdSha256": "378e619ccffc3f844a56a50366026ee73d0b1a058d277d694c7740c587a49a9a",
+        "sdramSha256": "a6d457e1fb8817bd9503debcd2fae3649a323dd112c7ffb97cc58c1785055c68"
+      }
+    },
+    {
+      "name": "hellfire-state",
+      "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+      "budget": 20000000,
+      "matchingCheckpoint": true,
+      "differingFields": [],
+      "timingsMs": [
+        [
+          418.91189999999915,
+          413.3159000000014,
+          423.9660999999978
+        ],
+        [
+          328.6570999999967,
+          324.1650000000009,
+          324.32280000000173
+        ]
+      ],
+      "speedup": 1.2916510957601406,
+      "reference": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 1102738842,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 46984144,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548786492,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548787812,
+          "r14": 537341032,
+          "r15": 537533196,
+          "sp": 548787812,
+          "lr": 537341032,
+          "pc": 537533196,
+          "cpsr": 1610612755,
+          "spsr": 19
+        },
+        "irq_count": 3091,
+        "lcd_pixel_writes": 16339840,
+        "lcd_frames": 422,
+        "firmware_resources_loaded": true,
+        "ata_commands": 256,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 878996117,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35950,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 878998598,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35951,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879001079,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35952,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879004722,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35953,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879007203,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35954,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879009684,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35955,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879012165,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35956,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 879024762,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537326768
+          }
+        ],
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          11.648809522572177,
+          0,
+          0,
+          2751.648809642443,
+          0,
+          0
+        ],
+        "timer_last": 1102738688,
+        "lcdSha256": "e4fcc49f4400cc7c46c36e6f0c8efb60f5e9aee35e03ce87d774e24759f12987",
+        "sdramSha256": "68a05678f2762c454ac2eeb224f208490f9527c6818b77cd5ae9990ba218c24c"
+      },
+      "current": {
+        "status": "paused",
+        "stop_reason": "",
+        "instructions": 1102738842,
+        "registers": {
+          "r0": 1610612755,
+          "r1": 46984144,
+          "r2": 33686018,
+          "r3": 50529027,
+          "r4": 548786492,
+          "r5": 84215045,
+          "r6": 101058054,
+          "r7": 117901063,
+          "r8": 134744072,
+          "r9": 151587081,
+          "r10": 269488144,
+          "r11": 286331153,
+          "r12": 303174162,
+          "r13": 548787812,
+          "r14": 537341032,
+          "r15": 537533196,
+          "sp": 548787812,
+          "lr": 537341032,
+          "pc": 537533196,
+          "cpsr": 1610612755,
+          "spsr": 19
+        },
+        "irq_count": 3091,
+        "lcd_pixel_writes": 16339840,
+        "lcd_frames": 422,
+        "firmware_resources_loaded": true,
+        "ata_commands": 256,
+        "ata_last": [
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 878996117,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35950,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 878998598,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35951,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879001079,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35952,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879004722,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35953,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879007203,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35954,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879009684,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35955,
+            "count": 1
+          },
+          {
+            "command": 32,
+            "drive": 0,
+            "instructions": 879012165,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537327072,
+            "lba": 35956,
+            "count": 1
+          },
+          {
+            "command": 100,
+            "drive": 0,
+            "instructions": 879024762,
+            "fast_forwarded_instructions": 499389948,
+            "pc": 537326768
+          }
+        ],
+        "pending": 0,
+        "timer_pending": 0,
+        "timer_counts": [
+          11.648809522572177,
+          0,
+          0,
+          2751.648809642443,
+          0,
+          0
+        ],
+        "timer_last": 1102738688,
+        "lcdSha256": "e4fcc49f4400cc7c46c36e6f0c8efb60f5e9aee35e03ce87d774e24759f12987",
+        "sdramSha256": "68a05678f2762c454ac2eeb224f208490f9527c6818b77cd5ae9990ba218c24c"
+      }
+    }
+  ],
+  "engineSha256": {
+    "reference": "886da3d6978367647b77dac8b4cea75c720c2e3a8662ce21afd7003c1e41f9ed",
+    "current": "6b3f00b6cd0de5530cfa5b886cd61ad2a49ad3376556dffc5a1c10bf6405db20"
+  }
+}

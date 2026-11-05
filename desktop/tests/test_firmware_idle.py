@@ -53,7 +53,7 @@ def prepare(
         machine.mmio[0x80000424] = 0x20  # Nonzero timer clock phase.
         machine.mmio[0x80000200] = 9  # Timer 0, periodic, enabled with interrupt.
         machine.mmio[0x80000208] = 200
-        machine.mmio[0x80000100] = 1 << 6
+        machine.mmio[0x80000100] = (1 << 15) | (1 << 6)
         machine.mmio[0x8000010C] = (1 << 6) if interrupt == "irq" else 0
 
 

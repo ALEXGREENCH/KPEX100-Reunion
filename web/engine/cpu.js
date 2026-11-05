@@ -77,6 +77,7 @@ export class ArmCPU {
           pointer,
         ),
       );
+    return pointer;
   }
   bufferFor(size) {
     if (size > this.bufferSize) {

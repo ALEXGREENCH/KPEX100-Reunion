@@ -145,6 +145,132 @@ test('state ROM mismatch is rejected before modifying the guest', async () => {
   }
 });
 
+test('rewritten SDRAM instructions use the current coprocessor opcode', async () => {
+  const m = await FirmwareMachine.create(rom);
+  try {
+    const pc = 0x20010000;
+    m.cpu.write32(pc, 0xe1a00000); // MOV r0,r0
+    m.cpu.regWrite('pc', pc);
+    m.run(1);
+    m.cpu.write32(pc + 0x1000000, 0xee100f10); // MRC p15,0,r0,c0,c0,0 through SDRAM mirror
+    m.cpu.regWrite('pc', pc);
+    m.run(1);
+    assert.equal(m.cpu.regRead('r0'), 0x41009400);
+    assert.equal(m.cpu.regRead('pc'), pc + 4);
+  } finally {
+    m.close();
+  }
+});
+
+test('modified Kingston idle code executes as ARM without a shortcut', async () => {
+  const m = await FirmwareMachine.create(rom);
+  try {
+    m.cpu.write(0x20010000, rom.subarray(0x724, 0x100000));
+    const entry = 0x20072c64;
+    m.cpu.write32(entry, 0xe2877001); // ADD r7,r7,#1
+    m.cpu.regWrite('r7', 12);
+    m.cpu.regWrite('r4', 0x20008000);
+    m.cpu.regWrite('pc', entry);
+    m.run(1);
+    assert.equal(m.cpu.regRead('r7'), 13);
+    assert.equal(m.fast_forwarded_instructions, 0);
+  } finally {
+    m.close();
+  }
+});
+
+test('a guest TCNT write sets the running timer, with 16- and 20-bit counters', async () => {
+  const m = await FirmwareMachine.create(rom);
+  try {
+    const code = 0x20010000;
+    m.cpu.write(code, Buffer.from('000081e50000a0e1', 'hex')); // STR r0,[r1]; NOP
+    const store = (address, value) => {
+      m.cpu.regWrite('pc', code);
+      m.cpu.regWrite('r0', value);
+      m.cpu.regWrite('r1', address);
+      m.run(2);
+    };
+    m._writeMMIO(0x80000444, 0x101);
+    m._writeMMIO(0x80000408, 0);
+    m._writeMMIO(0x80000424, 0x13f); // timer clock = CPU/64
+    m._writeMMIO(0x80000200, 3);
+    m.instructions = 254;
+    store(0x80000204, 0xdead1234);
+    assert.equal(m.timer_counts[0], 0x1236);
+    assert.equal(m.cpu.read32(0x80000204), 0x1236);
+    store(0x80000244, 0xfabc1234);
+    assert.equal(m.timer_counts[4], 0xc1234);
+    assert.equal(m.cpu.read32(0x80000244), 0xc1234);
+    store(0x80000240, 0x100);
+    assert.equal(m.timer_counts[4], 0);
+    assert.equal(m.cpu.read32(0x80000244), 0);
+  } finally {
+    m.close();
+  }
+});
+
+test('IRQ delivery respects the TCC76x master enable and READY exception', async () => {
+  const m = await FirmwareMachine.create(rom);
+  try {
+    const code = 0x20010000;
+    m.cpu.write32(code, 0xeafffffe); // B .
+    const tick = (ien, misc) => {
+      m.instructions = 255;
+      m.timer_last = 0;
+      m.pending = 0x40;
+      m._writeMMIO(0x80000100, ien);
+      m._writeMMIO(0x8000010c, 0x40);
+      m._writeMMIO(0x80000a1c, misc);
+      m.cpu.regWrite('cpsr', 0x13);
+      m.cpu.regWrite('pc', code);
+      return m.run(1).pc;
+    };
+    assert.equal(tick(0x40, 0), code);
+    assert.equal(m.pending, 0x40);
+    assert.equal(tick(0x8040, 0), 0x18);
+    assert.equal(tick(0x40, 0x8000), 0x18);
+  } finally {
+    m.close();
+  }
+});
+
+test('ATA reissue aborts partial writes and completed writes preserve the reset image', async () => {
+  const disk = new Uint8Array(1024).fill(0x56);
+  const m = await FirmwareMachine.create(rom, { diskImage: disk, adoptDiskImage: true });
+  try {
+    const io = (port, value) => m._ataMemory(m.uc.MEM_WRITE, 0x40000000 + port, 2, value);
+    const read = () => m._ataMemory(m.uc.MEM_READ, 0x40000000, 2, 0);
+    const writeSector = () => {
+      io(8, 1);
+      io(28, 0x30);
+    };
+    assert.equal(m.ata_disks[0], disk);
+    writeSector();
+    io(0, 0x1234);
+    io(28, 0xec);
+    assert.equal(m.ata_write_target, null);
+    read();
+    assert.equal(m.cpu.read32(0x40000000) & 0xffff, 0x40);
+    io(0, 0xffff);
+    assert.equal(m.status, 'blocked');
+    assert.equal(disk[0], 0x56);
+    m.reset();
+    writeSector();
+    for (let i = 0; i < 256; i++) io(0, 0x1234);
+    assert.equal(m.ata_registers[28], 0x40);
+    assert.deepEqual([...m.ata_disks[0].subarray(0, 4)], [0x34, 0x12, 0x34, 0x12]);
+    assert.equal(disk[0], 0x56);
+    m.reset();
+    assert.equal(m.ata_disks[0], disk);
+    writeSector();
+    read();
+    assert.equal(m.status, 'blocked');
+    assert.equal(m.ata_position, 0);
+  } finally {
+    m.close();
+  }
+});
+
 test('native power-off loop is terminal only with its confirmed hardware signature', async () => {
   const m = await FirmwareMachine.create(rom);
   try {

@@ -1,6 +1,7 @@
 // Reproducible FAT16 media with the ROM's raw resource area at LBA 4096.
 const encoder = new TextEncoder();
 export function createDisk(files, rom) {
+  if (files.length > 62) throw new Error('Слишком много файлов в каталоге GAME');
   const total = 131072,
     start = 32768,
     reserved = 1,
@@ -59,8 +60,10 @@ export function createDisk(files, rom) {
     for (let i = 0; i < n; i++) {
       const cluster = next++;
       fv.setUint16(cluster * 2, i === n - 1 ? 0xffff : cluster + 1, true);
-      image.set(payload.subarray(i * 2048, (i + 1) * 2048), (dataLba + (cluster - 2) * spc) * 512);
     }
+    // This builder allocates contiguous chains; copy the payload once, retaining
+    // the same FAT links and zero padding as the per-cluster copy.
+    image.set(payload, (dataLba + (first - 2) * spc) * 512);
     return first;
   }
   function entry(at, name, attr, cluster = 0, size = 0) {
@@ -84,7 +87,6 @@ export function createDisk(files, rom) {
     entry(rootLba * 512 + (i + 1) * 32, name.padEnd(11), 0x10, cluster);
   });
   const gameOffset = (dataLba + (directories.GAME - 2) * spc) * 512;
-  if (files.length > 62) throw new Error('Слишком много файлов в каталоге GAME');
   const used = new Set();
   [...files]
     .sort((a, b) => a.name.localeCompare(b.name))

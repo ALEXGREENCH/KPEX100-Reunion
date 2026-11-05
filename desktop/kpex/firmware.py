@@ -16,6 +16,7 @@ from pathlib import Path
 import hashlib
 import ctypes
 import struct
+import sys
 from typing import Any
 
 from PIL import Image
@@ -27,6 +28,15 @@ except ImportError as exc:
     raise ImportError("Firmware execution requires: pip install unicorn") from exc
 
 MASK = 0xFFFFFFFF
+KINGSTON_212_SHA256 = "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a"
+# Pillow's native RGB565 decoder scales to 255; the panel uses bit replication.
+# Correct the small rounding differences in a second native lookup-table pass.
+_RGB565_EXPAND = list(range(256)) * 3
+for _channel, _bits in enumerate((5, 6, 5)):
+    for _value in range(1 << _bits):
+        _RGB565_EXPAND[_channel * 256 + _value * 255 // ((1 << _bits) - 1)] = (
+            _value << (8 - _bits)
+        ) | (_value >> (2 * _bits - 8))
 REG_IDS = [getattr(ar, f"UC_ARM_REG_R{i}") for i in range(13)] + [
     ar.UC_ARM_REG_SP,
     ar.UC_ARM_REG_LR,
@@ -56,6 +66,10 @@ IDLE_PC = (
 
 def _word(data: bytes, offset: int) -> int:
     return struct.unpack_from("<I", data, offset)[0]
+
+
+def _rgb565_image(pixels: bytes | bytearray, size: tuple[int, int]) -> Image.Image:
+    return Image.frombytes("RGB", size, pixels, "raw", "BGR;16").point(_RGB565_EXPAND)
 
 
 def inspect_rom(source: bytes | str | Path) -> dict[str, Any]:
@@ -184,6 +198,11 @@ class FirmwareMachine:
         # SDCFG 6268A020: 16-bit bus, 9 CAS bits, 12 RAS bits, four banks =16MiB.
         # Firmware loads resources at20C00000 and dereferences their21C00000 mirror.
         self._ram_backing = ctypes.create_string_buffer(0x1000000)
+        self._ram_words = (
+            memoryview(self._ram_backing).cast("B").cast("I")
+            if sys.byteorder == "little"
+            else None
+        )
         ram_pointer = ctypes.addressof(self._ram_backing)
         self.cpu.mem_map_ptr(0x20000000, 0x1000000, uc.UC_PROT_ALL, ram_pointer)
         self.cpu.mem_map_ptr(0x21000000, 0x1000000, uc.UC_PROT_ALL, ram_pointer)
@@ -424,20 +443,28 @@ class FirmwareMachine:
         ][cond]
 
     def _code(self, cpu, address: int, size: int, _):
+        # Stop before device side effects belonging to the next instruction.
+        if self._run_end is not None and self.instructions >= self._run_end:
+            cpu.emu_stop()
+            return
+        if (
+            address == 0x200279B0
+            and self.rom_info["sha256"] == KINGSTON_212_SHA256
+            and self.mmio.get(0x80000304) == 0xFFFF27FF
+            and self.mmio.get(0x80000300) == 0x572
+        ):
+            self._stop("Firmware entered its power-off loop", "off")
+            return
         # Complete W1C and read-only register semantics after Unicorn's write.
         if self._deferred_writes:
             for a, v in self._deferred_writes.items():
                 self._write_mmio(a, v)
             self._deferred_writes.clear()
-        if self._run_end is not None and self.instructions >= self._run_end:
-            cpu.emu_stop()
-            return
         if (
             self.fast_idle
             and self._run_end is not None
             and address == 0x20072C64
-            and self.rom_info["sha256"]
-            == "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a"
+            and self.rom_info["sha256"] == KINGSTON_212_SHA256
         ):
             if self._fast_idle_replay(cpu):
                 return
@@ -451,7 +478,7 @@ class FirmwareMachine:
         if self.instructions % 256 == 0:
             self._advance_timers()
             psr = cpu.reg_read(ar.UC_ARM_REG_CPSR)
-            enabled = self.pending & self.mmio.get(0x80000100, 0)
+            enabled = self._enabled_interrupts()
             irq = enabled & self.mmio.get(0x8000010C, 0)
             fiq = enabled & ~self.mmio.get(0x8000010C, 0)
             if fiq and not psr & 0x40:
@@ -462,12 +489,22 @@ class FirmwareMachine:
                 return
         if size != 4:
             return
-        # Only static NOR / main ROM code can safely use this decode cache.
-        word = self._instruction_cache.get(address)
-        if word is None:
-            word = _word(cpu.mem_read(address, 4), 0)
-            if 0x70000000 <= address < 0x70100000 or 0x20010000 <= address < 0x20100000:
+        # Guest code in SDRAM can be rewritten through either 16 MiB alias.
+        # Read its shared backing directly instead of caching stale opcodes or
+        # crossing the Unicorn FFI once more for every ARM instruction.
+        if 0x20000000 <= address <= 0x21FFFFFC:
+            word = (
+                self._ram_words[(address >> 2) & 0x3FFFFF]
+                if self._ram_words is not None and not address & 3
+                else _word(self._ram_backing, address & 0xFFFFFF)
+            )
+        elif 0x70000000 <= address < 0x70100000:
+            word = self._instruction_cache.get(address)
+            if word is None:
+                word = _word(cpu.mem_read(address, 4), 0)
                 self._instruction_cache[address] = word
+        else:
+            word = _word(cpu.mem_read(address, 4), 0)
         if word & 0x0F000010 != 0x0E000010:
             return
         cop = word >> 8 & 15
@@ -548,7 +585,7 @@ class FirmwareMachine:
             self.instructions += 1
             if self.instructions % 256 == 0:
                 self._advance_timers()
-                enabled = self.pending & self.mmio.get(0x80000100, 0)
+                enabled = self._enabled_interrupts()
                 irq = enabled & self.mmio.get(0x8000010C, 0)
                 fiq = enabled & ~self.mmio.get(0x8000010C, 0)
                 if (fiq and not psr & 0x40) or (irq and not psr & 0x80):
@@ -588,6 +625,15 @@ class FirmwareMachine:
         flush()
         cpu.emu_stop()
         return True
+
+    def _enabled_interrupts(self) -> int:
+        # TCC76x IEN.15 is MEN unless MISCCFG.RDYIRQEN selects source 15.
+        # This gates delivery only; masked request registers retain their own
+        # documented per-source masks even while master delivery is disabled.
+        enabled = self.mmio.get(0x80000100, 0)
+        if self.mmio.get(0x80000A1C, 0) & 0x8000:
+            return self.pending & enabled
+        return self.pending & enabled & ~0x8000 if enabled & 0x8000 else 0
 
     def _enter_interrupt(self, address: int, psr: int, fiq: bool):
         mode = 0xD1 if fiq else 0x92
@@ -708,7 +754,14 @@ class FirmwareMachine:
             elif 0x80000200 <= a <= 0x80000250 and (a & 15) == 0:
                 if value & 0x100:
                     self.timer_counts[(a - 0x80000200) // 16] = 0
+                    self._write_mmio(a + 4, 0)
                 self._deferred_writes[a] = value & ~0x100
+            elif 0x80000204 <= a <= 0x80000254 and (a & 15) == 4:
+                index = (a - 0x80000204) // 16
+                count = value & (0xFFFF if index < 4 else 0xFFFFF)
+                self.timer_counts[index] = count
+                self.mmio[a] = count
+                self._deferred_writes[a] = count
             elif a == 0x80000400:
                 if old & 0x800 and not value & 0x800:
                     self.pll_enable_at = self.instructions
@@ -779,11 +832,14 @@ class FirmwareMachine:
 
     def _ata_memory(self, cpu, access, address, size, value, _):
         port = address - 0x40000000
-        if port not in (0, 4, 8, 12, 16, 20, 24, 28, 56):
+        if port not in (0, 4, 8, 12, 16, 20, 24, 28, 56) or size not in (1, 2, 4):
             self._stop(f"Unsupported ATA port 0x{address:08X}")
             return
         if access == uc.UC_MEM_READ:
             if port == 0:
+                if self.ata_write_target is not None or not self.ata_registers[28] & 8:
+                    self._stop("ATA data read without active READ/IDENTIFY transfer")
+                    return
                 end = self.ata_position + size
                 if end > len(self.ata_buffer):
                     self._stop("ATA data FIFO underflow")
@@ -798,15 +854,16 @@ class FirmwareMachine:
                 cpu.mem_write(address, result.to_bytes(size, "little"))
             return
         if port == 0:
-            if self.ata_write_target is None:
+            if self.ata_write_target is None or not self.ata_registers[28] & 8:
                 self._stop("ATA data write without WRITE SECTORS command")
                 return
-            self.ata_buffer.extend(int(value).to_bytes(size, "little"))
             drive, offset, length = self.ata_write_target
-            if len(self.ata_buffer) >= length:
-                self.ata_disks[drive][offset : offset + length] = self.ata_buffer[
-                    :length
-                ]
+            if len(self.ata_buffer) + size > length:
+                self._stop("ATA data FIFO overflow")
+                return
+            self.ata_buffer.extend(int(value).to_bytes(size, "little"))
+            if len(self.ata_buffer) == length:
+                self.ata_disks[drive][offset : offset + length] = self.ata_buffer
                 self.ata_write_target = None
                 self.ata_registers[28] = 0x40
             return
@@ -814,7 +871,11 @@ class FirmwareMachine:
         if port != 28:
             return
         command = value & 255
+        selected = self.ata_registers.get(4, 0)
         self.ata_position = 0
+        self.ata_buffer = bytearray()
+        self.ata_write_target = None
+        self.ata_registers[4] = 0
         self.ata_registers[28] = 0x40
         self.ata_trace.append(
             dict(
@@ -827,7 +888,6 @@ class FirmwareMachine:
         )
         if command in (0x61, 0x62):
             # Vendor logical-drive select/status, inferred from ROM 2006F4E0.
-            selected = self.ata_registers.get(4, 0)
             if selected in self.ata_disks:
                 self.ata_drive = selected
                 self.ata_registers[4] = 0
@@ -915,7 +975,8 @@ class FirmwareMachine:
             return
         if 0 <= self.lcd_x < 220 and 0 <= self.lcd_y < 176:
             offset = (self.lcd_y * 220 + self.lcd_x) * 2
-            self.lcd_pixels[offset : offset + 2] = struct.pack("<H", value & 0xFFFF)
+            self.lcd_pixels[offset] = value & 255
+            self.lcd_pixels[offset + 1] = (value >> 8) & 255
             self.lcd_pixel_writes += 1
             self.lcd_source = 0x50000002
             if "Firmware wrote LCD pixels" not in self.milestones:
@@ -957,16 +1018,9 @@ class FirmwareMachine:
             if self._lcd_rendered_count == self.lcd_pixel_writes:
                 return
             self._lcd_rendered_count = self.lcd_pixel_writes
-            rgb = bytearray(220 * 176 * 3)
-            for i, (v,) in enumerate(struct.iter_unpack("<H", self.lcd_pixels)):
-                r, g, b = v >> 11 & 31, v >> 5 & 63, v & 31
-                rgb[i * 3 : i * 3 + 3] = bytes(
-                    ((r << 3) | (r >> 2), (g << 2) | (g >> 4), (b << 3) | (b >> 2))
-                )
-            self.framebuffer = Image.frombytes("RGB", (220, 176), bytes(rgb))
+            self.framebuffer = _rgb565_image(self.lcd_pixels, (220, 176))
             return
-        # TCC761 integrated LCD path. K-PEX's external panel path is still
-        # unidentified; this only displays pixels when firmware configures it.
+        # TCC761 integrated LCD path, separate from K-PEX's external panel.
         control = self.mmio.get(0x80000F00, 0)
         base = self.mmio.get(0x80000F54, 0)
         dimensions = self.mmio.get(0x80000F50, 0)
@@ -984,26 +1038,25 @@ class FirmwareMachine:
         except (uc.UcError, ValueError):
             self._stop(f"LCD framebuffer points outside mapped RAM: 0x{base:08X}")
             return
-        rgb = bytearray(w * h * 3)
-        for i, (v,) in enumerate(struct.iter_unpack("<H", pixels)):
-            r, g, b = v >> 11 & 31, v >> 5 & 63, v & 31
-            rgb[i * 3 : i * 3 + 3] = bytes(
-                ((r << 3) | (r >> 2), (g << 2) | (g >> 4), (b << 3) | (b >> 2))
-            )
-        self.framebuffer = Image.frombytes("RGB", (w, h), bytes(rgb))
+        self.framebuffer = _rgb565_image(pixels, (w, h))
         self.lcd_source = base
 
     def run(self, instruction_budget: int = 100_000) -> dict[str, Any]:
-        if instruction_budget < 1 or instruction_budget > 10_000_000:
+        if (
+            type(instruction_budget) is not int
+            or not 1 <= instruction_budget <= 10_000_000
+        ):
             raise ValueError("Instruction budget must be between 1 and 10,000,000")
-        if self.status in ("blocked", "error"):
+        if self.status in ("blocked", "error", "off"):
             return self.snapshot()
         self.status = "running"
         self._run_end = self.instructions + instruction_budget
         pc = self.cpu.reg_read(ar.UC_ARM_REG_PC)
         thumb = bool(self.cpu.reg_read(ar.UC_ARM_REG_CPSR) & 0x20)
         try:
-            self.cpu.emu_start(pc | int(thumb), 0xFFFFFFFF, count=instruction_budget)
+            # _code already enforces the exact budget, including accelerated
+            # idle instructions; avoid Unicorn's duplicate instruction counter.
+            self.cpu.emu_start(pc | int(thumb), 0xFFFFFFFF, count=0)
         except uc.UcError as exc:
             if self.status not in ("blocked", "error"):
                 self.status, self.stop_reason = "error", str(exc)

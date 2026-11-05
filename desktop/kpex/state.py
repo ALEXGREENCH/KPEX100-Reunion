@@ -21,6 +21,7 @@ MAX_EXPANDED = 384 * 1024 * 1024
 EXCLUDED = {
     "cpu",
     "_ram_backing",
+    "_ram_words",
     "_instruction_cache",
     "_run_end",
     "rom",
