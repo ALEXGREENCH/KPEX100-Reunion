@@ -1,0 +1,4649 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T19:25:17.379986+00:00",
+  "baselineCommit": "64d55a1c7de5694f8f435e44158b10b139f0ebd8",
+  "sourceFiles": [
+    {
+      "path": "web/engine/rgb565.js",
+      "bytes": 1389,
+      "sha256": "65154882681ff5c9d83889ab1f1d76318a25f03f9a5d31320ef7dbe1d7a2d4c2"
+    },
+    {
+      "path": "web/engine/gnex.js",
+      "bytes": 28691,
+      "sha256": "3fc3c9c9f36018f0952d62ee6e168c030c97a3239f419ec043ee1152a13d587b"
+    },
+    {
+      "path": "tools/benchmark-web.mjs",
+      "bytes": 15601,
+      "sha256": "1c00042b18c6cbfe439a90fc929e1677a2487f7eae07f4a62a9c2f3f9112222d"
+    },
+    {
+      "path": "tools/benchmark-rgb565.mjs",
+      "bytes": 3294,
+      "sha256": "ab57e92f79dc3899ffefbc5653592d3d1ad7b9c91934df45b06fe016a83b2248"
+    }
+  ],
+  "scope": "Only host RGB565-to-RGBA conversion for direct GNEX/GVM/legacy runtimes. Original floor scaling,128channelwords512bytes,lazyinitialization,ownedframeoutput. ARM/ROM/SGS/timers/input unchanged. Fullfirmware has a separatebit-replication converter and is not modified.",
+  "colorVerification": {
+    "all65536ColorsEqualToOriginal": true,
+    "unalignedInputTested": true,
+    "frameOwnershipAndTransferTested": true,
+    "tests": 4
+  },
+  "isolatedConversion": {
+    "schema": 1,
+    "utc": "2026-11-06T19:14:18.822Z",
+    "node": "v24.22.1",
+    "platform": "win32",
+    "scope": "Independent host RGB565-to-RGBA conversion including new output allocation. Original GNEX floor scaling, alternating measured order, 5 rounds of300frames after20warmups per method/size. Both paths must produce the same bytes. Not a browser FPS or whole-game speed claim.",
+    "sourceSha256": "65154882681ff5c9d83889ab1f1d76318a25f03f9a5d31320ef7dbe1d7a2d4c2",
+    "framesPerRound": 300,
+    "rounds": 5,
+    "sizes": [
+      {
+        "width": 160,
+        "height": 128,
+        "samples": {
+          "original": [
+            {
+              "ms": 39.30910000000001,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 36.579200000000014,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 35.68459999999999,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 42.95890000000003,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 34.82819999999998,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            }
+          ],
+          "lookup": [
+            {
+              "ms": 22.92949999999999,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 25.120400000000018,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 30.36670000000001,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 25.275800000000032,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            },
+            {
+              "ms": 23.264599999999973,
+              "checksum": 47724,
+              "lastRgbaSha256": "4747621d38fa8839340d995ef03b34eb30de80fafedef4ced458d076844aed78"
+            }
+          ]
+        },
+        "medianOriginalMs": 36.579200000000014,
+        "medianLookupMs": 25.120400000000018,
+        "speedup": 1.4561551567650193
+      },
+      {
+        "width": 176,
+        "height": 220,
+        "samples": {
+          "original": [
+            {
+              "ms": 69.0557,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 64.26709999999991,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 64.42439999999999,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 65.09540000000004,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 64.02639999999997,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            }
+          ],
+          "lookup": [
+            {
+              "ms": 43.056899999999985,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 36.42199999999997,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 39.16820000000007,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 44.72040000000004,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            },
+            {
+              "ms": 39.40620000000001,
+              "checksum": 47724,
+              "lastRgbaSha256": "c72afd1461de37bd179d3b34740e894c6614cbb0da288ddeb358eedd66cf86b0"
+            }
+          ]
+        },
+        "medianOriginalMs": 64.42439999999999,
+        "medianLookupMs": 39.40620000000001,
+        "speedup": 1.6348797904898207
+      },
+      {
+        "width": 320,
+        "height": 240,
+        "samples": {
+          "original": [
+            {
+              "ms": 125.95260000000007,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 125.74919999999997,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 131.38300000000004,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 128.8655000000001,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 123.97540000000004,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            }
+          ],
+          "lookup": [
+            {
+              "ms": 71.26250000000005,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 72.96859999999992,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 71.21100000000001,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 70.37419999999997,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            },
+            {
+              "ms": 72.79899999999998,
+              "checksum": 47724,
+              "lastRgbaSha256": "3ff17bc6e3284bb6d72cf39503a6317b5e2f3bf12d6502e808eb049d82bf37c8"
+            }
+          ]
+        },
+        "medianOriginalMs": 125.95260000000007,
+        "medianLookupMs": 71.26250000000005,
+        "speedup": 1.767445711278723
+      }
+    ],
+    "firstCallIncludingTableMs": 0.11499999999999488
+  },
+  "pairedBattle": {
+    "schema": 1,
+    "createdAt": "2026-11-06T19:21:38.203Z",
+    "environment": {
+      "node": "v24.22.1",
+      "platform": "win32",
+      "arch": "x64",
+      "cpu": "AMD Ryzen 5 5500                               "
+    },
+    "parameters": {
+      "runs": 3,
+      "frames": 240,
+      "warmups": 1,
+      "swerveMode": "auto",
+      "preludeSha256": "828ae7183a19541c3e591a6531d335ccc2642b62564ff5439385efca808f7c20",
+      "execution": "both",
+      "compare": "display",
+      "kpexKeyRelease": "catalogue"
+    },
+    "methodology": [
+      "Paired original/lookup display conversion on the same runtime, ARM backend, ROM and SGS. Both paths use guarded execution. The current application uses the lookup method; the reference host display method is from64d55a1.",
+      "Fresh runtime per run, alternating measured order after paired warmups. Complete result fingerprints must match: frames, status, error, events, syscalls, timers and virtual time.",
+      "This measures guest-event host work including host display conversion, not browser paint FPS, network or audio synthesis. Existing prelude and deterministic clock policies are unchanged."
+    ],
+    "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+    "games": [
+      {
+        "id": "battle-armor",
+        "format": 4,
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "matches": true,
+        "speedup": 1.0067328536989828,
+        "original": [
+          {
+            "initializationMs": 22.889899999998306,
+            "guestMs": 8754.96819999997,
+            "guardedCalls": 884,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 346,
+              "pixels": 13397120,
+              "skippedInstructions": 159471073,
+              "fallbacks": 0,
+              "rectangles": 959,
+              "rectanglePixels": 11184928,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 11924,
+              "paletteRows": 10951,
+              "paletteBatches": 395,
+              "palettePixels": 2387894,
+              "paletteWrites": 2104052,
+              "paletteFallbacks": 193510
+            },
+            "result": {
+              "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+              "frameTrailSha256": "08bdcd9394709b3769ca17ab122759a60df3e92fdb3263305106500e479734ae",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 884,
+              "syscalls": {
+                "0x0000006b": 2,
+                "0x00000095": 794,
+                "0x0000003b": 321,
+                "0x0000003a": 25,
+                "0x0000005f": 792,
+                "0x00000022": 37,
+                "0x00000023": 48,
+                "0x00000082": 13,
+                "0x00000083": 8,
+                "0x00000027": 13687,
+                "0x00000046": 12883,
+                "0x00000028": 179,
+                "0x00000055": 1402,
+                "0x00000063": 1,
+                "0x00000067": 1,
+                "0x00000064": 1,
+                "0x000000ae": 13,
+                "0x000000a2": 454,
+                "0x000000a0": 455,
+                "0x00000045": 291,
+                "0x00000042": 437,
+                "0x000000a8": 429,
+                "0x000000a7": 441,
+                "0x000000cb": 72
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 175,
+                  "repeat": false,
+                  "revision": 794,
+                  "armedAt": 114925
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 114925,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 72925,
+                  "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+                  "events": 596
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 76425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 620
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 79925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 644
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 83425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 668
+                },
+                {
+                  "frame": 80,
+                  "timeMs": 86925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 692
+                },
+                {
+                  "frame": 100,
+                  "timeMs": 90425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 716
+                },
+                {
+                  "frame": 120,
+                  "timeMs": 93925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 740
+                },
+                {
+                  "frame": 140,
+                  "timeMs": 97425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 764
+                },
+                {
+                  "frame": 160,
+                  "timeMs": 100925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 788
+                },
+                {
+                  "frame": 180,
+                  "timeMs": 104425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 812
+                },
+                {
+                  "frame": 200,
+                  "timeMs": 107925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 836
+                },
+                {
+                  "frame": 220,
+                  "timeMs": 111425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 860
+                },
+                {
+                  "frame": 240,
+                  "timeMs": 114925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 884
+                }
+              ]
+            },
+            "matches": true
+          },
+          {
+            "initializationMs": 24.016800000004878,
+            "guestMs": 8864.324499999988,
+            "guardedCalls": 884,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 346,
+              "pixels": 13397120,
+              "skippedInstructions": 159471073,
+              "fallbacks": 0,
+              "rectangles": 959,
+              "rectanglePixels": 11184928,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 11924,
+              "paletteRows": 10951,
+              "paletteBatches": 395,
+              "palettePixels": 2387894,
+              "paletteWrites": 2104052,
+              "paletteFallbacks": 193510
+            },
+            "result": {
+              "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+              "frameTrailSha256": "08bdcd9394709b3769ca17ab122759a60df3e92fdb3263305106500e479734ae",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 884,
+              "syscalls": {
+                "0x0000006b": 2,
+                "0x00000095": 794,
+                "0x0000003b": 321,
+                "0x0000003a": 25,
+                "0x0000005f": 792,
+                "0x00000022": 37,
+                "0x00000023": 48,
+                "0x00000082": 13,
+                "0x00000083": 8,
+                "0x00000027": 13687,
+                "0x00000046": 12883,
+                "0x00000028": 179,
+                "0x00000055": 1402,
+                "0x00000063": 1,
+                "0x00000067": 1,
+                "0x00000064": 1,
+                "0x000000ae": 13,
+                "0x000000a2": 454,
+                "0x000000a0": 455,
+                "0x00000045": 291,
+                "0x00000042": 437,
+                "0x000000a8": 429,
+                "0x000000a7": 441,
+                "0x000000cb": 72
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 175,
+                  "repeat": false,
+                  "revision": 794,
+                  "armedAt": 114925
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 114925,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 72925,
+                  "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+                  "events": 596
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 76425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 620
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 79925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 644
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 83425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 668
+                },
+                {
+                  "frame": 80,
+                  "timeMs": 86925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 692
+                },
+                {
+                  "frame": 100,
+                  "timeMs": 90425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 716
+                },
+                {
+                  "frame": 120,
+                  "timeMs": 93925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 740
+                },
+                {
+                  "frame": 140,
+                  "timeMs": 97425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 764
+                },
+                {
+                  "frame": 160,
+                  "timeMs": 100925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 788
+                },
+                {
+                  "frame": 180,
+                  "timeMs": 104425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 812
+                },
+                {
+                  "frame": 200,
+                  "timeMs": 107925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 836
+                },
+                {
+                  "frame": 220,
+                  "timeMs": 111425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 860
+                },
+                {
+                  "frame": 240,
+                  "timeMs": 114925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 884
+                }
+              ]
+            },
+            "matches": true
+          },
+          {
+            "initializationMs": 20.806299999996554,
+            "guestMs": 8697.469900000026,
+            "guardedCalls": 884,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 346,
+              "pixels": 13397120,
+              "skippedInstructions": 159471073,
+              "fallbacks": 0,
+              "rectangles": 959,
+              "rectanglePixels": 11184928,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 11924,
+              "paletteRows": 10951,
+              "paletteBatches": 395,
+              "palettePixels": 2387894,
+              "paletteWrites": 2104052,
+              "paletteFallbacks": 193510
+            },
+            "result": {
+              "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+              "frameTrailSha256": "08bdcd9394709b3769ca17ab122759a60df3e92fdb3263305106500e479734ae",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 884,
+              "syscalls": {
+                "0x0000006b": 2,
+                "0x00000095": 794,
+                "0x0000003b": 321,
+                "0x0000003a": 25,
+                "0x0000005f": 792,
+                "0x00000022": 37,
+                "0x00000023": 48,
+                "0x00000082": 13,
+                "0x00000083": 8,
+                "0x00000027": 13687,
+                "0x00000046": 12883,
+                "0x00000028": 179,
+                "0x00000055": 1402,
+                "0x00000063": 1,
+                "0x00000067": 1,
+                "0x00000064": 1,
+                "0x000000ae": 13,
+                "0x000000a2": 454,
+                "0x000000a0": 455,
+                "0x00000045": 291,
+                "0x00000042": 437,
+                "0x000000a8": 429,
+                "0x000000a7": 441,
+                "0x000000cb": 72
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 175,
+                  "repeat": false,
+                  "revision": 794,
+                  "armedAt": 114925
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 114925,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 72925,
+                  "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+                  "events": 596
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 76425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 620
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 79925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 644
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 83425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 668
+                },
+                {
+                  "frame": 80,
+                  "timeMs": 86925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 692
+                },
+                {
+                  "frame": 100,
+                  "timeMs": 90425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 716
+                },
+                {
+                  "frame": 120,
+                  "timeMs": 93925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 740
+                },
+                {
+                  "frame": 140,
+                  "timeMs": 97425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 764
+                },
+                {
+                  "frame": 160,
+                  "timeMs": 100925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 788
+                },
+                {
+                  "frame": 180,
+                  "timeMs": 104425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 812
+                },
+                {
+                  "frame": 200,
+                  "timeMs": 107925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 836
+                },
+                {
+                  "frame": 220,
+                  "timeMs": 111425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 860
+                },
+                {
+                  "frame": 240,
+                  "timeMs": 114925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 884
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "lookup": [
+          {
+            "initializationMs": 23.193699999999808,
+            "guestMs": 8696.41650000005,
+            "guardedCalls": 884,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 346,
+              "pixels": 13397120,
+              "skippedInstructions": 159471073,
+              "fallbacks": 0,
+              "rectangles": 959,
+              "rectanglePixels": 11184928,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 11924,
+              "paletteRows": 10951,
+              "paletteBatches": 395,
+              "palettePixels": 2387894,
+              "paletteWrites": 2104052,
+              "paletteFallbacks": 193510
+            },
+            "result": {
+              "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+              "frameTrailSha256": "08bdcd9394709b3769ca17ab122759a60df3e92fdb3263305106500e479734ae",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 884,
+              "syscalls": {
+                "0x0000006b": 2,
+                "0x00000095": 794,
+                "0x0000003b": 321,
+                "0x0000003a": 25,
+                "0x0000005f": 792,
+                "0x00000022": 37,
+                "0x00000023": 48,
+                "0x00000082": 13,
+                "0x00000083": 8,
+                "0x00000027": 13687,
+                "0x00000046": 12883,
+                "0x00000028": 179,
+                "0x00000055": 1402,
+                "0x00000063": 1,
+                "0x00000067": 1,
+                "0x00000064": 1,
+                "0x000000ae": 13,
+                "0x000000a2": 454,
+                "0x000000a0": 455,
+                "0x00000045": 291,
+                "0x00000042": 437,
+                "0x000000a8": 429,
+                "0x000000a7": 441,
+                "0x000000cb": 72
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 175,
+                  "repeat": false,
+                  "revision": 794,
+                  "armedAt": 114925
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 114925,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 72925,
+                  "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+                  "events": 596
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 76425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 620
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 79925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 644
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 83425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 668
+                },
+                {
+                  "frame": 80,
+                  "timeMs": 86925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 692
+                },
+                {
+                  "frame": 100,
+                  "timeMs": 90425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 716
+                },
+                {
+                  "frame": 120,
+                  "timeMs": 93925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 740
+                },
+                {
+                  "frame": 140,
+                  "timeMs": 97425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 764
+                },
+                {
+                  "frame": 160,
+                  "timeMs": 100925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 788
+                },
+                {
+                  "frame": 180,
+                  "timeMs": 104425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 812
+                },
+                {
+                  "frame": 200,
+                  "timeMs": 107925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 836
+                },
+                {
+                  "frame": 220,
+                  "timeMs": 111425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 860
+                },
+                {
+                  "frame": 240,
+                  "timeMs": 114925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 884
+                }
+              ]
+            },
+            "matches": true
+          },
+          {
+            "initializationMs": 21.76480000000447,
+            "guestMs": 8645.55960000011,
+            "guardedCalls": 884,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 346,
+              "pixels": 13397120,
+              "skippedInstructions": 159471073,
+              "fallbacks": 0,
+              "rectangles": 959,
+              "rectanglePixels": 11184928,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 11924,
+              "paletteRows": 10951,
+              "paletteBatches": 395,
+              "palettePixels": 2387894,
+              "paletteWrites": 2104052,
+              "paletteFallbacks": 193510
+            },
+            "result": {
+              "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+              "frameTrailSha256": "08bdcd9394709b3769ca17ab122759a60df3e92fdb3263305106500e479734ae",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 884,
+              "syscalls": {
+                "0x0000006b": 2,
+                "0x00000095": 794,
+                "0x0000003b": 321,
+                "0x0000003a": 25,
+                "0x0000005f": 792,
+                "0x00000022": 37,
+                "0x00000023": 48,
+                "0x00000082": 13,
+                "0x00000083": 8,
+                "0x00000027": 13687,
+                "0x00000046": 12883,
+                "0x00000028": 179,
+                "0x00000055": 1402,
+                "0x00000063": 1,
+                "0x00000067": 1,
+                "0x00000064": 1,
+                "0x000000ae": 13,
+                "0x000000a2": 454,
+                "0x000000a0": 455,
+                "0x00000045": 291,
+                "0x00000042": 437,
+                "0x000000a8": 429,
+                "0x000000a7": 441,
+                "0x000000cb": 72
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 175,
+                  "repeat": false,
+                  "revision": 794,
+                  "armedAt": 114925
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 114925,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 72925,
+                  "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+                  "events": 596
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 76425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 620
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 79925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 644
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 83425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 668
+                },
+                {
+                  "frame": 80,
+                  "timeMs": 86925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 692
+                },
+                {
+                  "frame": 100,
+                  "timeMs": 90425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 716
+                },
+                {
+                  "frame": 120,
+                  "timeMs": 93925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 740
+                },
+                {
+                  "frame": 140,
+                  "timeMs": 97425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 764
+                },
+                {
+                  "frame": 160,
+                  "timeMs": 100925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 788
+                },
+                {
+                  "frame": 180,
+                  "timeMs": 104425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 812
+                },
+                {
+                  "frame": 200,
+                  "timeMs": 107925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 836
+                },
+                {
+                  "frame": 220,
+                  "timeMs": 111425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 860
+                },
+                {
+                  "frame": 240,
+                  "timeMs": 114925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 884
+                }
+              ]
+            },
+            "matches": true
+          },
+          {
+            "initializationMs": 22.529799999996612,
+            "guestMs": 9100.973800000116,
+            "guardedCalls": 884,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 346,
+              "pixels": 13397120,
+              "skippedInstructions": 159471073,
+              "fallbacks": 0,
+              "rectangles": 959,
+              "rectanglePixels": 11184928,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 11924,
+              "paletteRows": 10951,
+              "paletteBatches": 395,
+              "palettePixels": 2387894,
+              "paletteWrites": 2104052,
+              "paletteFallbacks": 193510
+            },
+            "result": {
+              "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+              "frameTrailSha256": "08bdcd9394709b3769ca17ab122759a60df3e92fdb3263305106500e479734ae",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 884,
+              "syscalls": {
+                "0x0000006b": 2,
+                "0x00000095": 794,
+                "0x0000003b": 321,
+                "0x0000003a": 25,
+                "0x0000005f": 792,
+                "0x00000022": 37,
+                "0x00000023": 48,
+                "0x00000082": 13,
+                "0x00000083": 8,
+                "0x00000027": 13687,
+                "0x00000046": 12883,
+                "0x00000028": 179,
+                "0x00000055": 1402,
+                "0x00000063": 1,
+                "0x00000067": 1,
+                "0x00000064": 1,
+                "0x000000ae": 13,
+                "0x000000a2": 454,
+                "0x000000a0": 455,
+                "0x00000045": 291,
+                "0x00000042": 437,
+                "0x000000a8": 429,
+                "0x000000a7": 441,
+                "0x000000cb": 72
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 175,
+                  "repeat": false,
+                  "revision": 794,
+                  "armedAt": 114925
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 114925,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 72925,
+                  "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+                  "events": 596
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 76425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 620
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 79925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 644
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 83425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 668
+                },
+                {
+                  "frame": 80,
+                  "timeMs": 86925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 692
+                },
+                {
+                  "frame": 100,
+                  "timeMs": 90425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 716
+                },
+                {
+                  "frame": 120,
+                  "timeMs": 93925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 740
+                },
+                {
+                  "frame": 140,
+                  "timeMs": 97425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 764
+                },
+                {
+                  "frame": 160,
+                  "timeMs": 100925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 788
+                },
+                {
+                  "frame": 180,
+                  "timeMs": 104425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 812
+                },
+                {
+                  "frame": 200,
+                  "timeMs": 107925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 836
+                },
+                {
+                  "frame": 220,
+                  "timeMs": 111425,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 860
+                },
+                {
+                  "frame": 240,
+                  "timeMs": 114925,
+                  "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+                  "events": 884
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "medianOriginalMs": 8754.96819999997,
+        "medianLookupMs": 8696.41650000005
+      }
+    ],
+    "passed": true
+  },
+  "pairedBattleSummary": {
+    "medianOriginalMs": 8754.96819999997,
+    "medianLookupMs": 8696.41650000005,
+    "timeReductionPercent": 0.6687825548003734,
+    "allEventAndFrameResultsEqual": true,
+    "limits": "Three paired samples after one paired warmup, alternating order on one host; small0.67%pointestimate, not proof of a stable browserFPSincrease."
+  },
+  "eightGameComparison": [
+    {
+      "id": "hellfire",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    },
+    {
+      "id": "kpetris",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    },
+    {
+      "id": "ikaria",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    },
+    {
+      "id": "godori",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    },
+    {
+      "id": "gnex13_mu_-_fairy",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    },
+    {
+      "id": "gnex26_independence_day_3d",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    },
+    {
+      "id": "gnex1_1zimae",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    },
+    {
+      "id": "gnex19_super_action_hero",
+      "bothModesBeforeAfterEqual": true,
+      "bothModesIndividuallyMatch": true
+    }
+  ],
+  "eightGamesBefore": {
+    "schema": 1,
+    "createdAt": "2026-11-06T19:19:38.045Z",
+    "environment": {
+      "node": "v24.22.1",
+      "platform": "win32",
+      "arch": "x64",
+      "cpu": "AMD Ryzen 5 5500                               "
+    },
+    "parameters": {
+      "runs": 1,
+      "frames": 60,
+      "warmups": 0,
+      "swerveMode": "auto",
+      "execution": "both",
+      "kpexKeyRelease": "catalogue"
+    },
+    "methodology": [
+      "Real GNEX/legacy/Swerve WASM runtimes in Node; this measures guest work, not browser paint FPS, network or audio synthesis.",
+      "Paired exact/guarded runs alternate order. Fresh runtime each time; optional warmups excluded; medians reported.",
+      "START and exactly frames explicit manual TIMEOUT calls, including unarmed timers. This is a deterministic execution benchmark, not browser scheduler replay.",
+      "Civil clock starts 2026-01-01T12:00:00Z and monotonic clock advances by the selected armed timer delay or 50 ms fallback. First five Swerve intro steps use 500 ms.",
+      "Frame-trail SHA hashes pixels after each event and input; hashes and result inspection are outside measured guest-call time.",
+      "Every mode and repetition must match frames, status, error, event count, syscalls and timer states. Guarded/exact call routing is checked independently.",
+      "SGS36 retains exact GNEX VM timing in both modes; its native Swerve renderer uses the selected execution mode. Other formats use guarded VM execution and safe native helpers when enabled."
+    ],
+    "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+    "games": [
+      {
+        "id": "hellfire",
+        "format": 4,
+        "gameSha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+        "exact": [
+          {
+            "initializationMs": 50.200500000000005,
+            "guestMs": 1210.9705000000001,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+              "frameTrailSha256": "31c9b7e15a2a4751dbc886b394d053b40eb8d1c3c2e55130e13064b0129ff498",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000082": 16,
+                "0x00000095": 1,
+                "0x0000003a": 59,
+                "0x000000c9": 66,
+                "0x0000005f": 59,
+                "0x000000b0": 54,
+                "0x00000055": 54
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 300,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 18000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 6000,
+                  "rgbaSha256": "c085daf5b3f8251ba78897ff2db1e6b94a98aa9c4854024116caf0205fa9cb43",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 12000,
+                  "rgbaSha256": "88142b2c4422999ee41a18959a661e74cad6d941c532feafc4676ed462b37d4a",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 18000,
+                  "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 17.104700000000093,
+            "guestMs": 292.17090000000053,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 59,
+              "pixels": 2284480,
+              "skippedInstructions": 9844262,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 250,
+              "paletteBatches": 5,
+              "palettePixels": 32000,
+              "paletteWrites": 12954,
+              "paletteFallbacks": 5065
+            },
+            "result": {
+              "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+              "frameTrailSha256": "31c9b7e15a2a4751dbc886b394d053b40eb8d1c3c2e55130e13064b0129ff498",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000082": 16,
+                "0x00000095": 1,
+                "0x0000003a": 59,
+                "0x000000c9": 66,
+                "0x0000005f": 59,
+                "0x000000b0": 54,
+                "0x00000055": 54
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 300,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 18000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 6000,
+                  "rgbaSha256": "c085daf5b3f8251ba78897ff2db1e6b94a98aa9c4854024116caf0205fa9cb43",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 12000,
+                  "rgbaSha256": "88142b2c4422999ee41a18959a661e74cad6d941c532feafc4676ed462b37d4a",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 18000,
+                  "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1210.9705000000001,
+        "medianGuardedMs": 292.17090000000053,
+        "speedup": 4.144733441968375
+      },
+      {
+        "id": "kpetris",
+        "format": 4,
+        "gameSha256": "f4584767eac0ba15c568fc89687f9aed38b484811e3b2658ef45dec0fc392792",
+        "exact": [
+          {
+            "initializationMs": 19.159200000000055,
+            "guestMs": 2215.472999999999,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+              "frameTrailSha256": "8c056616cf0be24bada97a185076132a0be682b6df8cefcdd5b7c0828570b69d",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x0000005f": 67,
+                "0x000000be": 258,
+                "0x00000027": 131,
+                "0x00000046": 131,
+                "0x00000029": 66,
+                "0x0000002c": 462,
+                "0x0000002a": 66,
+                "0x00000055": 462,
+                "0x0000002b": 396,
+                "0x000000ae": 198,
+                "0x00000098": 4,
+                "0x000000c9": 6,
+                "0x00000095": 5
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 1000,
+                  "repeat": true,
+                  "revision": 9,
+                  "armedAt": 57100
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 58100,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "4107c84b6cb6ae45cfdf375ae4723d56566af2e8d419a09b67f69280da8838f0",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 18100,
+                  "rgbaSha256": "96a514a42b75a15955eae154465bf49611773130d390bd92082961bf2c27935d",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 38100,
+                  "rgbaSha256": "02995d56d74941d72bb926165138ec3baea94dbc0bd39ccb7b1d17bf9b49495c",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 58100,
+                  "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 20.09230000000025,
+            "guestMs": 994.8514999999989,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 0,
+              "pixels": 0,
+              "skippedInstructions": 8047116,
+              "fallbacks": 0,
+              "rectangles": 131,
+              "rectanglePixels": 1448000,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 352,
+              "paletteBatches": 2,
+              "palettePixels": 77440,
+              "paletteWrites": 77440,
+              "paletteFallbacks": 7749
+            },
+            "result": {
+              "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+              "frameTrailSha256": "8c056616cf0be24bada97a185076132a0be682b6df8cefcdd5b7c0828570b69d",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x0000005f": 67,
+                "0x000000be": 258,
+                "0x00000027": 131,
+                "0x00000046": 131,
+                "0x00000029": 66,
+                "0x0000002c": 462,
+                "0x0000002a": 66,
+                "0x00000055": 462,
+                "0x0000002b": 396,
+                "0x000000ae": 198,
+                "0x00000098": 4,
+                "0x000000c9": 6,
+                "0x00000095": 5
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 1000,
+                  "repeat": true,
+                  "revision": 9,
+                  "armedAt": 57100
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 58100,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "4107c84b6cb6ae45cfdf375ae4723d56566af2e8d419a09b67f69280da8838f0",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 18100,
+                  "rgbaSha256": "96a514a42b75a15955eae154465bf49611773130d390bd92082961bf2c27935d",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 38100,
+                  "rgbaSha256": "02995d56d74941d72bb926165138ec3baea94dbc0bd39ccb7b1d17bf9b49495c",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 58100,
+                  "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 2215.472999999999,
+        "medianGuardedMs": 994.8514999999989,
+        "speedup": 2.226938392312824
+      },
+      {
+        "id": "ikaria",
+        "format": 4,
+        "gameSha256": "c04204a6eec21188c4e499a8e2baa0ebb2d8d2007802e579085288edfdf5a5de",
+        "exact": [
+          {
+            "initializationMs": 37.664199999999255,
+            "guestMs": 841.1719999999987,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+              "frameTrailSha256": "05aee6cf2997ed040728fdbb59be03c9b6312b0251510b86d2e8392112f82f02",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000006b": 2,
+                "0x00000063": 2,
+                "0x00000064": 2,
+                "0x000000dd": 1,
+                "0x00000067": 1,
+                "0x0000003b": 2,
+                "0x00000051": 2,
+                "0x00000095": 30,
+                "0x00000098": 60,
+                "0x00000052": 92,
+                "0x0000005f": 60,
+                "0x00000060": 29
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 90,
+                  "armedAt": 1450
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d4e359c09cefbe44ab7647099963ba83136ea4d6a69e8c84dd4f0ef992258393",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "0252abfdf745471b7b0c7b3317eed8b52406cccd2b0996da485114fd3f93f0a9",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 27.29199999999946,
+            "guestMs": 425.615200000002,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 2,
+              "pixels": 77440,
+              "skippedInstructions": 309762,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 5995
+            },
+            "result": {
+              "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+              "frameTrailSha256": "05aee6cf2997ed040728fdbb59be03c9b6312b0251510b86d2e8392112f82f02",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000006b": 2,
+                "0x00000063": 2,
+                "0x00000064": 2,
+                "0x000000dd": 1,
+                "0x00000067": 1,
+                "0x0000003b": 2,
+                "0x00000051": 2,
+                "0x00000095": 30,
+                "0x00000098": 60,
+                "0x00000052": 92,
+                "0x0000005f": 60,
+                "0x00000060": 29
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 90,
+                  "armedAt": 1450
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d4e359c09cefbe44ab7647099963ba83136ea4d6a69e8c84dd4f0ef992258393",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "0252abfdf745471b7b0c7b3317eed8b52406cccd2b0996da485114fd3f93f0a9",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 841.1719999999987,
+        "medianGuardedMs": 425.615200000002,
+        "speedup": 1.9763673853753219
+      },
+      {
+        "id": "godori",
+        "format": 4,
+        "gameSha256": "0f9b70d38c86ccb32fbd2b24d6e28eaf9328a1eacbf578a3c19baace36b90e93",
+        "exact": [
+          {
+            "initializationMs": 28.64350000000013,
+            "guestMs": 1175.0067999999983,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+              "frameTrailSha256": "7337b663792fe2d4fc2e845e1534bd40e2e5108012b480eb8a11980b253e5ae2",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000000dd": 1,
+                "0x00000093": 1,
+                "0x00000094": 1,
+                "0x00000025": 7,
+                "0x00000095": 61,
+                "0x0000003a": 29,
+                "0x00000051": 9,
+                "0x000000a0": 520,
+                "0x0000002d": 80,
+                "0x000000a5": 1540,
+                "0x00000022": 900,
+                "0x0000005f": 60,
+                "0x00000052": 57,
+                "0x0000003b": 5,
+                "0x00000027": 16,
+                "0x00000046": 40,
+                "0x00000044": 16,
+                "0x00000026": 8,
+                "0x00000082": 1
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 100,
+                  "repeat": false,
+                  "revision": 61,
+                  "armedAt": 6000
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 6000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 2000,
+                  "rgbaSha256": "e7c8c9b0aee97d7a8e5127c8ca4d2b9d7e62fca6a83746336d7e66ab9450372e",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4000,
+                  "rgbaSha256": "990626c297825f770e5be1252d2954b06bf83d074a70a4b81205ae9707fbee63",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 6000,
+                  "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 26.474200000000565,
+            "guestMs": 446.92789999999695,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 34,
+              "pixels": 1316480,
+              "skippedInstructions": 5383574,
+              "fallbacks": 0,
+              "rectangles": 4,
+              "rectanglePixels": 29040,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 36,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 7514
+            },
+            "result": {
+              "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+              "frameTrailSha256": "7337b663792fe2d4fc2e845e1534bd40e2e5108012b480eb8a11980b253e5ae2",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000000dd": 1,
+                "0x00000093": 1,
+                "0x00000094": 1,
+                "0x00000025": 7,
+                "0x00000095": 61,
+                "0x0000003a": 29,
+                "0x00000051": 9,
+                "0x000000a0": 520,
+                "0x0000002d": 80,
+                "0x000000a5": 1540,
+                "0x00000022": 900,
+                "0x0000005f": 60,
+                "0x00000052": 57,
+                "0x0000003b": 5,
+                "0x00000027": 16,
+                "0x00000046": 40,
+                "0x00000044": 16,
+                "0x00000026": 8,
+                "0x00000082": 1
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 100,
+                  "repeat": false,
+                  "revision": 61,
+                  "armedAt": 6000
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 6000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 2000,
+                  "rgbaSha256": "e7c8c9b0aee97d7a8e5127c8ca4d2b9d7e62fca6a83746336d7e66ab9450372e",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4000,
+                  "rgbaSha256": "990626c297825f770e5be1252d2954b06bf83d074a70a4b81205ae9707fbee63",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 6000,
+                  "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1175.0067999999983,
+        "medianGuardedMs": 446.92789999999695,
+        "speedup": 2.629074622550989
+      },
+      {
+        "id": "gnex13_mu_-_fairy",
+        "format": 2,
+        "gameSha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+        "exact": [
+          {
+            "initializationMs": 24.034099999999853,
+            "guestMs": 2216.092100000006,
+            "guardedCalls": 0,
+            "exactCalls": 67,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+              "frameTrailSha256": "e8febd90faecf96944199a0ffacab607c711a7a53cab34ac1f7e19b52b919753",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 67,
+              "syscalls": {},
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 23
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 45
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 67
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 21.7445000000007,
+            "guestMs": 524.1699999999983,
+            "guardedCalls": 67,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 60,
+              "pixels": 1228800,
+              "skippedInstructions": 4915260,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 13238
+            },
+            "result": {
+              "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+              "frameTrailSha256": "e8febd90faecf96944199a0ffacab607c711a7a53cab34ac1f7e19b52b919753",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 67,
+              "syscalls": {},
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 23
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 45
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 67
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 2216.092100000006,
+        "medianGuardedMs": 524.1699999999983,
+        "speedup": 4.227811778621466
+      },
+      {
+        "id": "gnex26_independence_day_3d",
+        "format": 36,
+        "gameSha256": "9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+        "exact": [
+          {
+            "initializationMs": 45.15450000000055,
+            "guestMs": 8309.506299999986,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 132,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+              "frameTrailSha256": "c8be9f1f68310576300ce55fb84996d1ab204cd582950985919b41b203b044d5",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000001e3": 1,
+                "0x00000231": 1,
+                "0x000000b6": 100,
+                "0x000000c5": 100,
+                "0x0000009f": 135,
+                "0x00000062": 1,
+                "0x00000063": 1,
+                "0x0000006a": 1,
+                "0x00000064": 1,
+                "0x000000a5": 14802,
+                "0x000000a2": 361,
+                "0x000000a6": 362,
+                "0x000000a7": 181,
+                "0x000000a1": 76,
+                "0x00000318": 4,
+                "0x000000be": 18,
+                "0x00000241": 1,
+                "0x000002e0": 1,
+                "0x0000009b": 183,
+                "0x0000024a": 1,
+                "0x00000251": 1,
+                "0x00000203": 1,
+                "0x0000020f": 1,
+                "0x0000020e": 1,
+                "0x0000009c": 1,
+                "0x00000095": 1,
+                "0x00000312": 1,
+                "0x0000029d": 60,
+                "0x00000248": 60,
+                "0x0000005f": 60
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 5250,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 3250,
+                  "rgbaSha256": "15a8308192ec5e1f1b2aee8e42b8bff5232bd452875731058b393e554d3ae262",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4250,
+                  "rgbaSha256": "b2f8ac7f69a330abf36771d9ee231ace2197606bf93b6e1fa19e3bf6bacb465b",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 5250,
+                  "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 34.38400000000183,
+            "guestMs": 5384.743000000013,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 132,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+              "frameTrailSha256": "c8be9f1f68310576300ce55fb84996d1ab204cd582950985919b41b203b044d5",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000001e3": 1,
+                "0x00000231": 1,
+                "0x000000b6": 100,
+                "0x000000c5": 100,
+                "0x0000009f": 135,
+                "0x00000062": 1,
+                "0x00000063": 1,
+                "0x0000006a": 1,
+                "0x00000064": 1,
+                "0x000000a5": 14802,
+                "0x000000a2": 361,
+                "0x000000a6": 362,
+                "0x000000a7": 181,
+                "0x000000a1": 76,
+                "0x00000318": 4,
+                "0x000000be": 18,
+                "0x00000241": 1,
+                "0x000002e0": 1,
+                "0x0000009b": 183,
+                "0x0000024a": 1,
+                "0x00000251": 1,
+                "0x00000203": 1,
+                "0x0000020f": 1,
+                "0x0000020e": 1,
+                "0x0000009c": 1,
+                "0x00000095": 1,
+                "0x00000312": 1,
+                "0x0000029d": 60,
+                "0x00000248": 60,
+                "0x0000005f": 60
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 5250,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 3250,
+                  "rgbaSha256": "15a8308192ec5e1f1b2aee8e42b8bff5232bd452875731058b393e554d3ae262",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4250,
+                  "rgbaSha256": "b2f8ac7f69a330abf36771d9ee231ace2197606bf93b6e1fa19e3bf6bacb465b",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 5250,
+                  "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 8309.506299999986,
+        "medianGuardedMs": 5384.743000000013,
+        "speedup": 1.5431574543111837
+      },
+      {
+        "id": "gnex1_1zimae",
+        "format": 4,
+        "gameSha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+        "exact": [
+          {
+            "initializationMs": 18.79019999999946,
+            "guestMs": 1066.6169999999875,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+              "frameTrailSha256": "b24dd390d7fa9d1e2f250ec73f549db387e89138d54f2dd1398205ee2951b766",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 3,
+                "0x000000a5": 160,
+                "0x000000a0": 43,
+                "0x000000a6": 16,
+                "0x0000009f": 7,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x000000a1": 3,
+                "0x000000a2": 2,
+                "0x000000a3": 2,
+                "0x000000c5": 151,
+                "0x00000093": 1,
+                "0x0000006b": 1,
+                "0x000000c9": 48,
+                "0x00000095": 1,
+                "0x00000005": 61,
+                "0x000000c8": 1,
+                "0x00000052": 60,
+                "0x0000003a": 50,
+                "0x00000022": 8,
+                "0x00000023": 8,
+                "0x0000005f": 60,
+                "0x0000003b": 1,
+                "0x00000051": 1,
+                "0x00000028": 20,
+                "0x00000056": 50,
+                "0x00000026": 4,
+                "0x00000047": 4
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 10,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 600,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 200,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 400,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 600,
+                  "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 18.020800000002055,
+            "guestMs": 342.2201000000059,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 51,
+              "pixels": 1044480,
+              "skippedInstructions": 4261653,
+              "fallbacks": 0,
+              "rectangles": 1,
+              "rectanglePixels": 20480,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 1904
+            },
+            "result": {
+              "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+              "frameTrailSha256": "b24dd390d7fa9d1e2f250ec73f549db387e89138d54f2dd1398205ee2951b766",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 3,
+                "0x000000a5": 160,
+                "0x000000a0": 43,
+                "0x000000a6": 16,
+                "0x0000009f": 7,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x000000a1": 3,
+                "0x000000a2": 2,
+                "0x000000a3": 2,
+                "0x000000c5": 151,
+                "0x00000093": 1,
+                "0x0000006b": 1,
+                "0x000000c9": 48,
+                "0x00000095": 1,
+                "0x00000005": 61,
+                "0x000000c8": 1,
+                "0x00000052": 60,
+                "0x0000003a": 50,
+                "0x00000022": 8,
+                "0x00000023": 8,
+                "0x0000005f": 60,
+                "0x0000003b": 1,
+                "0x00000051": 1,
+                "0x00000028": 20,
+                "0x00000056": 50,
+                "0x00000026": 4,
+                "0x00000047": 4
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 10,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 600,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 200,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 400,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 600,
+                  "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1066.6169999999875,
+        "medianGuardedMs": 342.2201000000059,
+        "speedup": 3.116757314955986
+      },
+      {
+        "id": "gnex19_super_action_hero",
+        "format": 4,
+        "gameSha256": "d285b30564daf4d28e5d704919ac9e952d7e3066fbc934b7b52f6aa4a001fde4",
+        "exact": [
+          {
+            "initializationMs": 26.53200000000288,
+            "guestMs": 1394.026600000012,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+              "frameTrailSha256": "6e3ddd47440a5b6872fc96ff0fa9c2c6e46a48d2be8f7207af83026b3f83f9a3",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 1,
+                "0x000000a5": 2025,
+                "0x000000a0": 41,
+                "0x000000a6": 16,
+                "0x0000009f": 1,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x00000005": 1,
+                "0x000000c8": 1,
+                "0x00000093": 1,
+                "0x000000aa": 250,
+                "0x000000a9": 126,
+                "0x000000de": 2,
+                "0x000000a1": 2,
+                "0x000000c9": 1,
+                "0x00000094": 1,
+                "0x0000001f": 1,
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000003a": 1,
+                "0x00000026": 664,
+                "0x00000046": 670,
+                "0x0000005f": 58,
+                "0x00000095": 62,
+                "0x00000082": 1,
+                "0x00000096": 1,
+                "0x00000036": 2,
+                "0x00000051": 2,
+                "0x00000052": 58,
+                "0x00000022": 21,
+                "0x00000023": 6,
+                "0x000000d6": 171,
+                "0x0000002d": 335,
+                "0x000000d8": 168
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 170,
+                  "repeat": false,
+                  "revision": 62,
+                  "armedAt": 12690
+                },
+                {
+                  "channel": 1,
+                  "delay": 12000,
+                  "repeat": false,
+                  "revision": 1,
+                  "armedAt": 3000
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 12690,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "db44e96437c60812cfb3e0bb76b20f12e994c93566eb2e3d9aacd6fbbc028866",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 5890,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 9290,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 12690,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 16.193299999999,
+            "guestMs": 663.6736999999994,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 3,
+              "pixels": 116160,
+              "skippedInstructions": 464643,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 670,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 8052
+            },
+            "result": {
+              "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+              "frameTrailSha256": "6e3ddd47440a5b6872fc96ff0fa9c2c6e46a48d2be8f7207af83026b3f83f9a3",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 1,
+                "0x000000a5": 2025,
+                "0x000000a0": 41,
+                "0x000000a6": 16,
+                "0x0000009f": 1,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x00000005": 1,
+                "0x000000c8": 1,
+                "0x00000093": 1,
+                "0x000000aa": 250,
+                "0x000000a9": 126,
+                "0x000000de": 2,
+                "0x000000a1": 2,
+                "0x000000c9": 1,
+                "0x00000094": 1,
+                "0x0000001f": 1,
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000003a": 1,
+                "0x00000026": 664,
+                "0x00000046": 670,
+                "0x0000005f": 58,
+                "0x00000095": 62,
+                "0x00000082": 1,
+                "0x00000096": 1,
+                "0x00000036": 2,
+                "0x00000051": 2,
+                "0x00000052": 58,
+                "0x00000022": 21,
+                "0x00000023": 6,
+                "0x000000d6": 171,
+                "0x0000002d": 335,
+                "0x000000d8": 168
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 170,
+                  "repeat": false,
+                  "revision": 62,
+                  "armedAt": 12690
+                },
+                {
+                  "channel": 1,
+                  "delay": 12000,
+                  "repeat": false,
+                  "revision": 1,
+                  "armedAt": 3000
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 12690,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "db44e96437c60812cfb3e0bb76b20f12e994c93566eb2e3d9aacd6fbbc028866",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 5890,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 9290,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 12690,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1394.026600000012,
+        "medianGuardedMs": 663.6736999999994,
+        "speedup": 2.1004698543878013
+      }
+    ],
+    "passed": true
+  },
+  "eightGamesAfter": {
+    "schema": 1,
+    "createdAt": "2026-11-06T19:20:06.191Z",
+    "environment": {
+      "node": "v24.22.1",
+      "platform": "win32",
+      "arch": "x64",
+      "cpu": "AMD Ryzen 5 5500                               "
+    },
+    "parameters": {
+      "runs": 1,
+      "frames": 60,
+      "warmups": 0,
+      "swerveMode": "auto",
+      "execution": "both",
+      "kpexKeyRelease": "catalogue"
+    },
+    "methodology": [
+      "Real GNEX/legacy/Swerve WASM runtimes in Node; this measures guest work, not browser paint FPS, network or audio synthesis.",
+      "Paired exact/guarded runs alternate order. Fresh runtime each time; optional warmups excluded; medians reported.",
+      "START and exactly frames explicit manual TIMEOUT calls, including unarmed timers. This is a deterministic execution benchmark, not browser scheduler replay.",
+      "Civil clock starts 2026-01-01T12:00:00Z and monotonic clock advances by the selected armed timer delay or 50 ms fallback. First five Swerve intro steps use 500 ms.",
+      "Frame-trail SHA hashes pixels after each event and input; hashes and result inspection are outside measured guest-call time.",
+      "Every mode and repetition must match frames, status, error, event count, syscalls and timer states. Guarded/exact call routing is checked independently.",
+      "SGS36 retains exact GNEX VM timing in both modes; its native Swerve renderer uses the selected execution mode. Other formats use guarded VM execution and safe native helpers when enabled."
+    ],
+    "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+    "games": [
+      {
+        "id": "hellfire",
+        "format": 4,
+        "gameSha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+        "exact": [
+          {
+            "initializationMs": 49.465599999999995,
+            "guestMs": 1153.6081999999992,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+              "frameTrailSha256": "31c9b7e15a2a4751dbc886b394d053b40eb8d1c3c2e55130e13064b0129ff498",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000082": 16,
+                "0x00000095": 1,
+                "0x0000003a": 59,
+                "0x000000c9": 66,
+                "0x0000005f": 59,
+                "0x000000b0": 54,
+                "0x00000055": 54
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 300,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 18000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 6000,
+                  "rgbaSha256": "c085daf5b3f8251ba78897ff2db1e6b94a98aa9c4854024116caf0205fa9cb43",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 12000,
+                  "rgbaSha256": "88142b2c4422999ee41a18959a661e74cad6d941c532feafc4676ed462b37d4a",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 18000,
+                  "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 17.90800000000013,
+            "guestMs": 282.9983000000009,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 59,
+              "pixels": 2284480,
+              "skippedInstructions": 9844262,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 250,
+              "paletteBatches": 5,
+              "palettePixels": 32000,
+              "paletteWrites": 12954,
+              "paletteFallbacks": 5065
+            },
+            "result": {
+              "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+              "frameTrailSha256": "31c9b7e15a2a4751dbc886b394d053b40eb8d1c3c2e55130e13064b0129ff498",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000082": 16,
+                "0x00000095": 1,
+                "0x0000003a": 59,
+                "0x000000c9": 66,
+                "0x0000005f": 59,
+                "0x000000b0": 54,
+                "0x00000055": 54
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 300,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 18000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 6000,
+                  "rgbaSha256": "c085daf5b3f8251ba78897ff2db1e6b94a98aa9c4854024116caf0205fa9cb43",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 12000,
+                  "rgbaSha256": "88142b2c4422999ee41a18959a661e74cad6d941c532feafc4676ed462b37d4a",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 18000,
+                  "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1153.6081999999992,
+        "medianGuardedMs": 282.9983000000009,
+        "speedup": 4.076378550683858
+      },
+      {
+        "id": "kpetris",
+        "format": 4,
+        "gameSha256": "f4584767eac0ba15c568fc89687f9aed38b484811e3b2658ef45dec0fc392792",
+        "exact": [
+          {
+            "initializationMs": 17.047500000000127,
+            "guestMs": 2401.737499999999,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+              "frameTrailSha256": "8c056616cf0be24bada97a185076132a0be682b6df8cefcdd5b7c0828570b69d",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x0000005f": 67,
+                "0x000000be": 258,
+                "0x00000027": 131,
+                "0x00000046": 131,
+                "0x00000029": 66,
+                "0x0000002c": 462,
+                "0x0000002a": 66,
+                "0x00000055": 462,
+                "0x0000002b": 396,
+                "0x000000ae": 198,
+                "0x00000098": 4,
+                "0x000000c9": 6,
+                "0x00000095": 5
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 1000,
+                  "repeat": true,
+                  "revision": 9,
+                  "armedAt": 57100
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 58100,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "4107c84b6cb6ae45cfdf375ae4723d56566af2e8d419a09b67f69280da8838f0",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 18100,
+                  "rgbaSha256": "96a514a42b75a15955eae154465bf49611773130d390bd92082961bf2c27935d",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 38100,
+                  "rgbaSha256": "02995d56d74941d72bb926165138ec3baea94dbc0bd39ccb7b1d17bf9b49495c",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 58100,
+                  "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 16.562800000000152,
+            "guestMs": 886.0366999999947,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 0,
+              "pixels": 0,
+              "skippedInstructions": 8047116,
+              "fallbacks": 0,
+              "rectangles": 131,
+              "rectanglePixels": 1448000,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 352,
+              "paletteBatches": 2,
+              "palettePixels": 77440,
+              "paletteWrites": 77440,
+              "paletteFallbacks": 7749
+            },
+            "result": {
+              "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+              "frameTrailSha256": "8c056616cf0be24bada97a185076132a0be682b6df8cefcdd5b7c0828570b69d",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x0000005f": 67,
+                "0x000000be": 258,
+                "0x00000027": 131,
+                "0x00000046": 131,
+                "0x00000029": 66,
+                "0x0000002c": 462,
+                "0x0000002a": 66,
+                "0x00000055": 462,
+                "0x0000002b": 396,
+                "0x000000ae": 198,
+                "0x00000098": 4,
+                "0x000000c9": 6,
+                "0x00000095": 5
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 1000,
+                  "repeat": true,
+                  "revision": 9,
+                  "armedAt": 57100
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 58100,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "4107c84b6cb6ae45cfdf375ae4723d56566af2e8d419a09b67f69280da8838f0",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 18100,
+                  "rgbaSha256": "96a514a42b75a15955eae154465bf49611773130d390bd92082961bf2c27935d",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 38100,
+                  "rgbaSha256": "02995d56d74941d72bb926165138ec3baea94dbc0bd39ccb7b1d17bf9b49495c",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 58100,
+                  "rgbaSha256": "61108582439ba0f70021219eac1e8fada711c07869440932f0ff152764f7fd19",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 2401.737499999999,
+        "medianGuardedMs": 886.0366999999947,
+        "speedup": 2.7106523917124576
+      },
+      {
+        "id": "ikaria",
+        "format": 4,
+        "gameSha256": "c04204a6eec21188c4e499a8e2baa0ebb2d8d2007802e579085288edfdf5a5de",
+        "exact": [
+          {
+            "initializationMs": 22.48360000000048,
+            "guestMs": 798.2620999999999,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+              "frameTrailSha256": "05aee6cf2997ed040728fdbb59be03c9b6312b0251510b86d2e8392112f82f02",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000006b": 2,
+                "0x00000063": 2,
+                "0x00000064": 2,
+                "0x000000dd": 1,
+                "0x00000067": 1,
+                "0x0000003b": 2,
+                "0x00000051": 2,
+                "0x00000095": 30,
+                "0x00000098": 60,
+                "0x00000052": 92,
+                "0x0000005f": 60,
+                "0x00000060": 29
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 90,
+                  "armedAt": 1450
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d4e359c09cefbe44ab7647099963ba83136ea4d6a69e8c84dd4f0ef992258393",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "0252abfdf745471b7b0c7b3317eed8b52406cccd2b0996da485114fd3f93f0a9",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 23.017299999999523,
+            "guestMs": 402.81249999999545,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 2,
+              "pixels": 77440,
+              "skippedInstructions": 309762,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 5995
+            },
+            "result": {
+              "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+              "frameTrailSha256": "05aee6cf2997ed040728fdbb59be03c9b6312b0251510b86d2e8392112f82f02",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000006b": 2,
+                "0x00000063": 2,
+                "0x00000064": 2,
+                "0x000000dd": 1,
+                "0x00000067": 1,
+                "0x0000003b": 2,
+                "0x00000051": 2,
+                "0x00000095": 30,
+                "0x00000098": 60,
+                "0x00000052": 92,
+                "0x0000005f": 60,
+                "0x00000060": 29
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 90,
+                  "armedAt": 1450
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d4e359c09cefbe44ab7647099963ba83136ea4d6a69e8c84dd4f0ef992258393",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "0252abfdf745471b7b0c7b3317eed8b52406cccd2b0996da485114fd3f93f0a9",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "314777a9c4485ef2c81208630b1fd76d04b23257abc2a6d74adfeb970e2bd64f",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 798.2620999999999,
+        "medianGuardedMs": 402.81249999999545,
+        "speedup": 1.981721272304134
+      },
+      {
+        "id": "godori",
+        "format": 4,
+        "gameSha256": "0f9b70d38c86ccb32fbd2b24d6e28eaf9328a1eacbf578a3c19baace36b90e93",
+        "exact": [
+          {
+            "initializationMs": 25.835900000000038,
+            "guestMs": 1133.2406,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+              "frameTrailSha256": "7337b663792fe2d4fc2e845e1534bd40e2e5108012b480eb8a11980b253e5ae2",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000000dd": 1,
+                "0x00000093": 1,
+                "0x00000094": 1,
+                "0x00000025": 7,
+                "0x00000095": 61,
+                "0x0000003a": 29,
+                "0x00000051": 9,
+                "0x000000a0": 520,
+                "0x0000002d": 80,
+                "0x000000a5": 1540,
+                "0x00000022": 900,
+                "0x0000005f": 60,
+                "0x00000052": 57,
+                "0x0000003b": 5,
+                "0x00000027": 16,
+                "0x00000046": 40,
+                "0x00000044": 16,
+                "0x00000026": 8,
+                "0x00000082": 1
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 100,
+                  "repeat": false,
+                  "revision": 61,
+                  "armedAt": 6000
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 6000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 2000,
+                  "rgbaSha256": "e7c8c9b0aee97d7a8e5127c8ca4d2b9d7e62fca6a83746336d7e66ab9450372e",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4000,
+                  "rgbaSha256": "990626c297825f770e5be1252d2954b06bf83d074a70a4b81205ae9707fbee63",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 6000,
+                  "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 27.881400000000212,
+            "guestMs": 456.58339999999953,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 34,
+              "pixels": 1316480,
+              "skippedInstructions": 5383574,
+              "fallbacks": 0,
+              "rectangles": 4,
+              "rectanglePixels": 29040,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 36,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 7514
+            },
+            "result": {
+              "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+              "frameTrailSha256": "7337b663792fe2d4fc2e845e1534bd40e2e5108012b480eb8a11980b253e5ae2",
+              "width": 220,
+              "height": 176,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000000dd": 1,
+                "0x00000093": 1,
+                "0x00000094": 1,
+                "0x00000025": 7,
+                "0x00000095": 61,
+                "0x0000003a": 29,
+                "0x00000051": 9,
+                "0x000000a0": 520,
+                "0x0000002d": 80,
+                "0x000000a5": 1540,
+                "0x00000022": 900,
+                "0x0000005f": 60,
+                "0x00000052": 57,
+                "0x0000003b": 5,
+                "0x00000027": 16,
+                "0x00000046": 40,
+                "0x00000044": 16,
+                "0x00000026": 8,
+                "0x00000082": 1
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 100,
+                  "repeat": false,
+                  "revision": 61,
+                  "armedAt": 6000
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 6000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 2000,
+                  "rgbaSha256": "e7c8c9b0aee97d7a8e5127c8ca4d2b9d7e62fca6a83746336d7e66ab9450372e",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4000,
+                  "rgbaSha256": "990626c297825f770e5be1252d2954b06bf83d074a70a4b81205ae9707fbee63",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 6000,
+                  "rgbaSha256": "2abd00482a0ae3006fd8a6c5b53dabd063c4a2588f1c79ff33137574b7496a51",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1133.2406,
+        "medianGuardedMs": 456.58339999999953,
+        "speedup": 2.4820013167364414
+      },
+      {
+        "id": "gnex13_mu_-_fairy",
+        "format": 2,
+        "gameSha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+        "exact": [
+          {
+            "initializationMs": 22.654599999999846,
+            "guestMs": 2141.258599999999,
+            "guardedCalls": 0,
+            "exactCalls": 67,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+              "frameTrailSha256": "e8febd90faecf96944199a0ffacab607c711a7a53cab34ac1f7e19b52b919753",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 67,
+              "syscalls": {},
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 23
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 45
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 67
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 20.97440000000097,
+            "guestMs": 531.2148000000016,
+            "guardedCalls": 67,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 60,
+              "pixels": 1228800,
+              "skippedInstructions": 4915260,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 13238
+            },
+            "result": {
+              "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+              "frameTrailSha256": "e8febd90faecf96944199a0ffacab607c711a7a53cab34ac1f7e19b52b919753",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 67,
+              "syscalls": {},
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 3000,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 1000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 23
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 2000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 45
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 3000,
+                  "rgbaSha256": "4654a502cf10b87cad321bb2b13194d7d12cdb77618f68c66625513a1dcd7b39",
+                  "events": 67
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 2141.258599999999,
+        "medianGuardedMs": 531.2148000000016,
+        "speedup": 4.030871504333073
+      },
+      {
+        "id": "gnex26_independence_day_3d",
+        "format": 36,
+        "gameSha256": "9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+        "exact": [
+          {
+            "initializationMs": 40.228800000000774,
+            "guestMs": 8222.768199999997,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 132,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+              "frameTrailSha256": "c8be9f1f68310576300ce55fb84996d1ab204cd582950985919b41b203b044d5",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000001e3": 1,
+                "0x00000231": 1,
+                "0x000000b6": 100,
+                "0x000000c5": 100,
+                "0x0000009f": 135,
+                "0x00000062": 1,
+                "0x00000063": 1,
+                "0x0000006a": 1,
+                "0x00000064": 1,
+                "0x000000a5": 14802,
+                "0x000000a2": 361,
+                "0x000000a6": 362,
+                "0x000000a7": 181,
+                "0x000000a1": 76,
+                "0x00000318": 4,
+                "0x000000be": 18,
+                "0x00000241": 1,
+                "0x000002e0": 1,
+                "0x0000009b": 183,
+                "0x0000024a": 1,
+                "0x00000251": 1,
+                "0x00000203": 1,
+                "0x0000020f": 1,
+                "0x0000020e": 1,
+                "0x0000009c": 1,
+                "0x00000095": 1,
+                "0x00000312": 1,
+                "0x0000029d": 60,
+                "0x00000248": 60,
+                "0x0000005f": 60
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 5250,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 3250,
+                  "rgbaSha256": "15a8308192ec5e1f1b2aee8e42b8bff5232bd452875731058b393e554d3ae262",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4250,
+                  "rgbaSha256": "b2f8ac7f69a330abf36771d9ee231ace2197606bf93b6e1fa19e3bf6bacb465b",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 5250,
+                  "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 32.83599999999933,
+            "guestMs": 5195.232300000018,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 132,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+              "frameTrailSha256": "c8be9f1f68310576300ce55fb84996d1ab204cd582950985919b41b203b044d5",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000091": 1,
+                "0x000001e3": 1,
+                "0x00000231": 1,
+                "0x000000b6": 100,
+                "0x000000c5": 100,
+                "0x0000009f": 135,
+                "0x00000062": 1,
+                "0x00000063": 1,
+                "0x0000006a": 1,
+                "0x00000064": 1,
+                "0x000000a5": 14802,
+                "0x000000a2": 361,
+                "0x000000a6": 362,
+                "0x000000a7": 181,
+                "0x000000a1": 76,
+                "0x00000318": 4,
+                "0x000000be": 18,
+                "0x00000241": 1,
+                "0x000002e0": 1,
+                "0x0000009b": 183,
+                "0x0000024a": 1,
+                "0x00000251": 1,
+                "0x00000203": 1,
+                "0x0000020f": 1,
+                "0x0000020e": 1,
+                "0x0000009c": 1,
+                "0x00000095": 1,
+                "0x00000312": 1,
+                "0x0000029d": 60,
+                "0x00000248": 60,
+                "0x0000005f": 60
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 50,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 5250,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 3250,
+                  "rgbaSha256": "15a8308192ec5e1f1b2aee8e42b8bff5232bd452875731058b393e554d3ae262",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 4250,
+                  "rgbaSha256": "b2f8ac7f69a330abf36771d9ee231ace2197606bf93b6e1fa19e3bf6bacb465b",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 5250,
+                  "rgbaSha256": "2b75a6d442acb74c846b51468189326535eb8a10909af460c5e8f5e906d1fb96",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 8222.768199999997,
+        "medianGuardedMs": 5195.232300000018,
+        "speedup": 1.5827527481302364
+      },
+      {
+        "id": "gnex1_1zimae",
+        "format": 4,
+        "gameSha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+        "exact": [
+          {
+            "initializationMs": 17.798800000000483,
+            "guestMs": 1012.4824000000044,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+              "frameTrailSha256": "b24dd390d7fa9d1e2f250ec73f549db387e89138d54f2dd1398205ee2951b766",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 3,
+                "0x000000a5": 160,
+                "0x000000a0": 43,
+                "0x000000a6": 16,
+                "0x0000009f": 7,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x000000a1": 3,
+                "0x000000a2": 2,
+                "0x000000a3": 2,
+                "0x000000c5": 151,
+                "0x00000093": 1,
+                "0x0000006b": 1,
+                "0x000000c9": 48,
+                "0x00000095": 1,
+                "0x00000005": 61,
+                "0x000000c8": 1,
+                "0x00000052": 60,
+                "0x0000003a": 50,
+                "0x00000022": 8,
+                "0x00000023": 8,
+                "0x0000005f": 60,
+                "0x0000003b": 1,
+                "0x00000051": 1,
+                "0x00000028": 20,
+                "0x00000056": 50,
+                "0x00000026": 4,
+                "0x00000047": 4
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 10,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 600,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 200,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 400,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 600,
+                  "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 17.694799999997485,
+            "guestMs": 325.77179999998407,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 51,
+              "pixels": 1044480,
+              "skippedInstructions": 4261653,
+              "fallbacks": 0,
+              "rectangles": 1,
+              "rectanglePixels": 20480,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 0,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 1904
+            },
+            "result": {
+              "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+              "frameTrailSha256": "b24dd390d7fa9d1e2f250ec73f549db387e89138d54f2dd1398205ee2951b766",
+              "width": 128,
+              "height": 160,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 3,
+                "0x000000a5": 160,
+                "0x000000a0": 43,
+                "0x000000a6": 16,
+                "0x0000009f": 7,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x000000a1": 3,
+                "0x000000a2": 2,
+                "0x000000a3": 2,
+                "0x000000c5": 151,
+                "0x00000093": 1,
+                "0x0000006b": 1,
+                "0x000000c9": 48,
+                "0x00000095": 1,
+                "0x00000005": 61,
+                "0x000000c8": 1,
+                "0x00000052": 60,
+                "0x0000003a": 50,
+                "0x00000022": 8,
+                "0x00000023": 8,
+                "0x0000005f": 60,
+                "0x0000003b": 1,
+                "0x00000051": 1,
+                "0x00000028": 20,
+                "0x00000056": 50,
+                "0x00000026": 4,
+                "0x00000047": 4
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 10,
+                  "repeat": true,
+                  "revision": 1,
+                  "armedAt": 0
+                },
+                {
+                  "channel": 1,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 600,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 200,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 400,
+                  "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 600,
+                  "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1012.4824000000044,
+        "medianGuardedMs": 325.77179999998407,
+        "speedup": 3.107949797987591
+      },
+      {
+        "id": "gnex19_super_action_hero",
+        "format": 4,
+        "gameSha256": "d285b30564daf4d28e5d704919ac9e952d7e3066fbc934b7b52f6aa4a001fde4",
+        "exact": [
+          {
+            "initializationMs": 15.87449999999808,
+            "guestMs": 1346.8587000000043,
+            "guardedCalls": 0,
+            "exactCalls": 73,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": null,
+            "result": {
+              "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+              "frameTrailSha256": "6e3ddd47440a5b6872fc96ff0fa9c2c6e46a48d2be8f7207af83026b3f83f9a3",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 1,
+                "0x000000a5": 2025,
+                "0x000000a0": 41,
+                "0x000000a6": 16,
+                "0x0000009f": 1,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x00000005": 1,
+                "0x000000c8": 1,
+                "0x00000093": 1,
+                "0x000000aa": 250,
+                "0x000000a9": 126,
+                "0x000000de": 2,
+                "0x000000a1": 2,
+                "0x000000c9": 1,
+                "0x00000094": 1,
+                "0x0000001f": 1,
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000003a": 1,
+                "0x00000026": 664,
+                "0x00000046": 670,
+                "0x0000005f": 58,
+                "0x00000095": 62,
+                "0x00000082": 1,
+                "0x00000096": 1,
+                "0x00000036": 2,
+                "0x00000051": 2,
+                "0x00000052": 58,
+                "0x00000022": 21,
+                "0x00000023": 6,
+                "0x000000d6": 171,
+                "0x0000002d": 335,
+                "0x000000d8": 168
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 170,
+                  "repeat": false,
+                  "revision": 62,
+                  "armedAt": 12690
+                },
+                {
+                  "channel": 1,
+                  "delay": 12000,
+                  "repeat": false,
+                  "revision": 1,
+                  "armedAt": 3000
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 12690,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "db44e96437c60812cfb3e0bb76b20f12e994c93566eb2e3d9aacd6fbbc028866",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 5890,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 9290,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 12690,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "guarded": [
+          {
+            "initializationMs": 16.97940000000017,
+            "guestMs": 629.6072000000022,
+            "guardedCalls": 73,
+            "exactCalls": 0,
+            "swerveGuardedCalls": 0,
+            "swerveExactCalls": 0,
+            "nativeHelpers": {
+              "fills": 3,
+              "pixels": 116160,
+              "skippedInstructions": 464643,
+              "fallbacks": 0,
+              "rectangles": 0,
+              "rectanglePixels": 0,
+              "rectangleFallbacks": 0,
+              "rectangleSmall": 670,
+              "paletteRows": 0,
+              "paletteBatches": 0,
+              "palettePixels": 0,
+              "paletteWrites": 0,
+              "paletteFallbacks": 8052
+            },
+            "result": {
+              "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+              "frameTrailSha256": "6e3ddd47440a5b6872fc96ff0fa9c2c6e46a48d2be8f7207af83026b3f83f9a3",
+              "width": 176,
+              "height": 220,
+              "status": "idle",
+              "error": null,
+              "events": 73,
+              "syscalls": {
+                "0x00000001": 1,
+                "0x000000a5": 2025,
+                "0x000000a0": 41,
+                "0x000000a6": 16,
+                "0x0000009f": 1,
+                "0x00000002": 1,
+                "0x000000a4": 1,
+                "0x00000005": 1,
+                "0x000000c8": 1,
+                "0x00000093": 1,
+                "0x000000aa": 250,
+                "0x000000a9": 126,
+                "0x000000de": 2,
+                "0x000000a1": 2,
+                "0x000000c9": 1,
+                "0x00000094": 1,
+                "0x0000001f": 1,
+                "0x00000091": 1,
+                "0x00000090": 1,
+                "0x0000003a": 1,
+                "0x00000026": 664,
+                "0x00000046": 670,
+                "0x0000005f": 58,
+                "0x00000095": 62,
+                "0x00000082": 1,
+                "0x00000096": 1,
+                "0x00000036": 2,
+                "0x00000051": 2,
+                "0x00000052": 58,
+                "0x00000022": 21,
+                "0x00000023": 6,
+                "0x000000d6": 171,
+                "0x0000002d": 335,
+                "0x000000d8": 168
+              },
+              "timerStates": [
+                {
+                  "channel": 0,
+                  "delay": 170,
+                  "repeat": false,
+                  "revision": 62,
+                  "armedAt": 12690
+                },
+                {
+                  "channel": 1,
+                  "delay": 12000,
+                  "repeat": false,
+                  "revision": 1,
+                  "armedAt": 3000
+                },
+                {
+                  "channel": 2,
+                  "delay": null,
+                  "repeat": false,
+                  "revision": 0
+                }
+              ],
+              "virtualMs": 12690,
+              "checkpoints": [
+                {
+                  "frame": 0,
+                  "timeMs": 0,
+                  "rgbaSha256": "db44e96437c60812cfb3e0bb76b20f12e994c93566eb2e3d9aacd6fbbc028866",
+                  "events": 1
+                },
+                {
+                  "frame": 20,
+                  "timeMs": 5890,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 25
+                },
+                {
+                  "frame": 40,
+                  "timeMs": 9290,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 49
+                },
+                {
+                  "frame": 60,
+                  "timeMs": 12690,
+                  "rgbaSha256": "bf3581c92b7ee50e4b87b4be7c84c94b401df0416d224e7a01fbb5837d526c24",
+                  "events": 73
+                }
+              ]
+            },
+            "matches": true
+          }
+        ],
+        "matches": true,
+        "medianExactMs": 1346.8587000000043,
+        "medianGuardedMs": 629.6072000000022,
+        "speedup": 2.139204729552012
+      }
+    ],
+    "passed": true
+  },
+  "stress": {
+    "schema": 1,
+    "utc": "2026-11-06T19:20:33.682Z",
+    "options": {
+      "minutes": 10,
+      "seed": 67890,
+      "game": "battle-armor",
+      "prelude": "validation/kingston-naver-replays/battle-armor.json",
+      "output": "C:\\Users\\Sanya\\Documents\\Codex\\2026-11-04\\k-pex-100\\work\\reunion-pass7-20261106\\battle-compact-stress.json"
+    },
+    "preludeSha256": "828ae7183a19541c3e591a6531d335ccc2642b62564ff5439385efca808f7c20",
+    "limits": "Seeded input, virtual time, no physical device or full level coverage. A clean script Exit is not a freeze. Host timeout: 15 seconds without returning from an event. Wall times depend on the host and concurrent work.",
+    "results": [
+      {
+        "id": "battle-armor",
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "trail": [
+          {
+            "ms": 120954,
+            "events": 1000,
+            "rgbaSha256": "6523d9ebc02477c2599d09a45e58ec3508764c06d9532165a66058e099db3251",
+            "vmPc": "0x00000c88"
+          },
+          {
+            "ms": 241275,
+            "events": 2000,
+            "rgbaSha256": "c5858e953d40c89a7dc823861b82f9be26a380ab93d38f9cbd98d934733ccd47",
+            "vmPc": "0x00000d6e"
+          },
+          {
+            "ms": 360975,
+            "events": 3000,
+            "rgbaSha256": "c5858e953d40c89a7dc823861b82f9be26a380ab93d38f9cbd98d934733ccd47",
+            "vmPc": "0x00000d6e"
+          },
+          {
+            "ms": 480434,
+            "events": 4000,
+            "rgbaSha256": "aa01862a90e4d412de682901c29fd4ecdf22e7c149497f11f63c7539df190e95",
+            "vmPc": "0x00000c88"
+          },
+          {
+            "ms": 600844,
+            "events": 5000,
+            "rgbaSha256": "5e97b6c043e796169675dc934858f69d29cb5c75a36c6fcd94d6e134714d410e",
+            "vmPc": "0x00000c88"
+          }
+        ],
+        "preludeEndMs": 72925,
+        "preludeFrameSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+        "status": "idle",
+        "error": null,
+        "virtualMs": 672925,
+        "events": 5602,
+        "longestEventMs": 64.99,
+        "wallMs": 19761,
+        "rgbaSha256": "fd93ec4d4dc710d0068c3785fe2d473db5024ec0f2d4efa334d0c07e5a857997",
+        "timerStates": [
+          {
+            "channel": 0,
+            "delay": 175,
+            "repeat": false,
+            "revision": 3982,
+            "armedAt": 672825
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ],
+        "externalRequest": null
+      }
+    ]
+  },
+  "discardedExperiment": {
+    "lookupWords": 65536,
+    "lookupBytes": 262144,
+    "status": "not-shipped",
+    "reason": "Faster isolated conversion but slower wholeBattleArmor pairedmeasurement. Replaced by compact128wordchanneltable; do not advertise its isolated2xresult asfinal."
+  },
+  "limits": [
+    "Benchmark host work doesnotmeasure browserpaintFPS orphysicalhardware performance.",
+    "No allgame/levelcoverage and no reproduction/resolution of everyrandomBattleArmorfreeze.",
+    "Exhaustivecolorcomparison provesbyteidentity withthepreviousdisplaypolicy, notphysicalLCDcolorcalibration."
+  ]
+}

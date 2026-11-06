@@ -3,6 +3,7 @@ import { createARM } from './cpu.js';
 import { SgsFile, bytes, decodeKorean } from './sgs.js';
 import { VirtualFileSystem } from './vfs.js';
 import { installRomAccelerators } from './rom-accelerators.js';
+import { rgb565ToRGBA } from './rgb565.js';
 export const ROM_SHA256 = '743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a';
 const RELOC = 0x2000f8dc,
   BASE = 0x21000000,
@@ -429,15 +430,8 @@ export class GnexRuntime {
       // K-PEX retains its startup preview until the first explicit flush; phone
       // profiles initialize the physical display during construction.
       src = this.presentedLCD || this.cpu.read(p, this.width * this.height * 2),
-      rgba = new Uint8ClampedArray(this.width * this.height * 4);
+      rgba = rgb565ToRGBA(src);
     this.lcdPixels = src;
-    for (let i = 0, j = 0; i < src.length; i += 2, j += 4) {
-      const c = src[i] | (src[i + 1] << 8);
-      rgba[j] = Math.floor(((c >>> 11) * 255) / 31);
-      rgba[j + 1] = Math.floor((((c >>> 5) & 63) * 255) / 63);
-      rgba[j + 2] = Math.floor(((c & 31) * 255) / 31);
-      rgba[j + 3] = 255;
-    }
     this.framebuffer = { width: this.width, height: this.height, data: rgba };
   }
   _hook(address) {

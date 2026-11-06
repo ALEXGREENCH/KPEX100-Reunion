@@ -20,9 +20,10 @@ const options = {
   prelude: null,
   execution: 'both',
   kpexKeyRelease: 'catalogue',
+  compare: 'execution',
 };
 const usage =
-  'Usage: node tools/benchmark-web.mjs [--root DIR] [--runs 3] [--frames 60] [--warmups 1] [--games id,id] [--swerveMode auto|exact|guarded] [--prelude actions.json] [--execution both|exact|guarded] [--kpexKeyRelease catalogue|native|legacy] [--output FILE]';
+  'Usage: node tools/benchmark-web.mjs [--root DIR] [--runs 3] [--frames 60] [--warmups 1] [--games id,id] [--swerveMode auto|exact|guarded] [--prelude actions.json] [--execution both|exact|guarded] [--compare execution|display] [--kpexKeyRelease catalogue|native|legacy] [--output FILE]';
 if (process.argv.includes('--help')) {
   console.log(usage);
   process.exit(0);
@@ -43,6 +44,9 @@ for (const [name, min, max] of [
     throw Error(`Invalid --${name}: expected integer ${min}..${max}`);
 if (!['auto', 'exact', 'guarded'].includes(options.swerveMode)) throw Error('Invalid --swerveMode');
 if (!['both', 'exact', 'guarded'].includes(options.execution)) throw Error('Invalid --execution');
+if (!['execution', 'display'].includes(options.compare)) throw Error('Invalid --compare');
+if (options.compare === 'display' && options.execution !== 'both')
+  throw Error('--compare display requires --execution both');
 if (!['catalogue', 'native', 'legacy'].includes(options.kpexKeyRelease))
   throw Error('Invalid --kpexKeyRelease');
 
@@ -109,6 +113,7 @@ const report = {
     swerveMode: options.swerveMode,
     ...(prelude ? { preludeSha256: hash(preludeBytes) } : {}),
     execution: options.execution,
+    compare: options.compare,
     kpexKeyRelease: options.kpexKeyRelease,
   },
   methodology: [
@@ -130,6 +135,39 @@ const report = {
   romSha256: hash(rom),
   games: [],
 };
+
+// Exact host display method from64d55a1; never installed by the application.
+function originalDisplay() {
+  const p = this._read(0x20b41260);
+  const src = this.presentedLCD || this.cpu.read(p, this.width * this.height * 2);
+  const rgba = new Uint8ClampedArray(this.width * this.height * 4);
+  this.lcdPixels = src;
+  for (let i = 0, j = 0; i < src.length; i += 2, j += 4) {
+    const c = src[i] | (src[i + 1] << 8);
+    rgba[j] = Math.floor(((c >>> 11) * 255) / 31);
+    rgba[j + 1] = Math.floor((((c >>> 5) & 63) * 255) / 63);
+    rgba[j + 2] = Math.floor(((c & 31) * 255) / 31);
+    rgba[j + 3] = 255;
+  }
+  this.framebuffer = { width: this.width, height: this.height, data: rgba };
+}
+if (options.compare === 'display') {
+  report.methodology = [
+    'Paired original/lookup display conversion on the same runtime, ARM backend, ROM and SGS. Both paths use guarded execution. The current application uses the lookup method; the reference host display method is from64d55a1.',
+    'Fresh runtime per run, alternating measured order after paired warmups. Complete result fingerprints must match: frames, status, error, events, syscalls, timers and virtual time.',
+    'This measures guest-event host work including host display conversion, not browser paint FPS, network or audio synthesis. Existing prelude and deterministic clock policies are unchanged.',
+  ];
+}
+async function measure(entry, mode) {
+  if (options.compare === 'execution') return run(entry, mode);
+  const currentDisplay = GnexRuntime.prototype._refreshLCD;
+  try {
+    if (!mode) GnexRuntime.prototype._refreshLCD = originalDisplay;
+    return await run(entry, true);
+  } finally {
+    GnexRuntime.prototype._refreshLCD = currentDisplay;
+  }
+}
 
 async function run(entry, fastExecution) {
   let virtualMs = 0;
@@ -287,11 +325,11 @@ for (const entry of selected) {
   report.games.push(record);
   try {
     const modes = options.execution === 'both' ? [false, true] : [options.execution === 'guarded'];
-    for (let i = 0; i < options.warmups; i++) for (const fast of modes) await run(entry, fast);
+    for (let i = 0; i < options.warmups; i++) for (const fast of modes) await measure(entry, fast);
     let expected;
     for (let i = 0; i < options.runs; i++)
       for (const fast of i % 2 === 0 ? modes : [...modes].reverse()) {
-        const measured = await run(entry, fast);
+        const measured = await measure(entry, fast);
         const fingerprint = stable(measured.result);
         expected ??= fingerprint;
         measured.matches = fingerprint === expected;
@@ -305,7 +343,7 @@ for (const entry of selected) {
     record.speedup =
       options.execution === 'both' ? record.medianExactMs / record.medianGuardedMs : null;
     console.error(
-      `  exact=${record.medianExactMs?.toFixed(1) ?? '-'} ms, guarded=${record.medianGuardedMs?.toFixed(1) ?? '-'} ms, matching=${record.matches}`,
+      `  ${options.compare === 'display' ? 'original' : 'exact'}=${record.medianExactMs?.toFixed(1) ?? '-'} ms, ${options.compare === 'display' ? 'lookup' : 'guarded'}=${record.medianGuardedMs?.toFixed(1) ?? '-'} ms, matching=${record.matches}`,
     );
   } catch (error) {
     record.error = String(error.stack || error);
@@ -314,6 +352,17 @@ for (const entry of selected) {
   }
 }
 report.passed = report.games.every((entry) => entry.matches);
+if (options.compare === 'display')
+  for (const record of report.games) {
+    record.original = record.exact;
+    record.lookup = record.guarded;
+    record.medianOriginalMs = record.medianExactMs;
+    record.medianLookupMs = record.medianGuardedMs;
+    delete record.exact;
+    delete record.guarded;
+    delete record.medianExactMs;
+    delete record.medianGuardedMs;
+  }
 const output = JSON.stringify(report, null, 2) + '\n';
 if (options.output) fs.writeFileSync(path.resolve(options.output), output);
 else process.stdout.write(output);
