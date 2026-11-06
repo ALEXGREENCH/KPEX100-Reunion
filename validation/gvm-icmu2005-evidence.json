@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T14:13:11.221698+00:00",
+  "title": "ICMU 2005 GVM/MobileC paper and original program",
+  "sources": [
+    {
+      "id": "icmu-gvm-paper",
+      "url": "https://www.icmu.org/icmu2005/Papers/117299-1-050228181611.pdf",
+      "utc": "2026-11-06T13:55:36.277247+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1662073,
+      "sha256": "ba08709b2281d5a4eb4d0fc2978186988d24b55a42e1a9ea61de3ea420a13274",
+      "body": "icmu-gvm-paper.body",
+      "savedAs": "originals/117299-1-050228181611.pdf"
+    },
+    {
+      "id": "icmu-program",
+      "url": "https://www.icmu.org/icmu2005/ICMU2005FinalProgram.pdf",
+      "utc": "2026-11-06T14:03:24.801275+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 841463,
+      "sha256": "4cfacfc553000ddeace7d7fcc401d97676a1eb75bbccf7108fa21712d72790db",
+      "body": "icmu-program.body",
+      "savedAs": "originals/ICMU2005FinalProgram.pdf"
+    },
+    {
+      "id": "gnex-doc-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=gnexclub.com&matchType=domain&output=json&filter=statuscode%3A200&filter=original%3A.%2A%28MCC-PRG-152%7CSVR-SRG-120%7CGVM_SDK%29.%2A&collapse=urlkey",
+      "utc": "2026-11-06T14:03:21.122255+00:00",
+      "status": "503",
+      "error": "",
+      "bytes": 11832,
+      "sha256": "e084d527921708642a79724e9f0210da659bbc0905c6ce9a3a1f416e4628091c",
+      "body": "gnex-doc-cdx.body",
+      "savedAs": "original-responses/gnex-doc-cdx.body"
+    },
+    {
+      "id": "gvm-doc-cdx",
+      "url": "https://web.archive.org/cdx/search/cdx?url=gvmclub.com&matchType=domain&output=json&filter=statuscode%3A200&filter=original%3A.%2A%28MCC-PRG-152%7CSVR-SRG-120%7CGVM_SDK%29.%2A&collapse=urlkey",
+      "utc": "2026-11-06T14:03:25.043537+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "body": "gvm-doc-cdx.body",
+      "savedAs": "original-responses/gvm-doc-cdx.body"
+    }
+  ],
+  "pdfs": [
+    {
+      "path": "originals/117299-1-050228181611.pdf",
+      "pages": 10,
+      "sha256": "ba08709b2281d5a4eb4d0fc2978186988d24b55a42e1a9ea61de3ea420a13274",
+      "bytes": 1662073,
+      "metadata": {
+        "format": "PDF 1.4",
+        "title": "Microsoft Word - GVM_MobileC_camera_.rtf",
+        "author": "koreaprana",
+        "subject": "",
+        "keywords": "",
+        "creator": "PScript5.dll Version 5.2",
+        "producer": "Acrobat Distiller 6.0 (Windows)",
+        "creationDate": "D:20050228164531+09'00'",
+        "modDate": "D:20050228164531+09'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "encrypted": false,
+      "allPagesParsed": true
+    },
+    {
+      "path": "originals/ICMU2005FinalProgram.pdf",
+      "pages": 12,
+      "sha256": "4cfacfc553000ddeace7d7fcc401d97676a1eb75bbccf7108fa21712d72790db",
+      "bytes": 841463,
+      "metadata": {
+        "format": "PDF 1.4",
+        "title": "Microsoft Word - ICMU2005FinalProgram.doc",
+        "author": "amizt",
+        "subject": "",
+        "keywords": "",
+        "creator": "PScript5.dll Version 5.2",
+        "producer": "Acrobat Distiller 5.0 (Windows)",
+        "creationDate": "D:20050324033024Z",
+        "modDate": "D:20050324134815+09'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "encrypted": false,
+      "allPagesParsed": true
+    }
+  ],
+  "locators": {
+    "paperArchitecture": {
+      "page": 2,
+      "figures": [
+        1,
+        2
+      ]
+    },
+    "mobileCDescription": {
+      "page": 3
+    },
+    "applicationScreens": {
+      "page": 9,
+      "figures": [
+        7,
+        8
+      ]
+    },
+    "bibliography": {
+      "page": 10,
+      "manualIds": [
+        "MCC-PRG-152-200",
+        "SVR-SRG-120"
+      ]
+    },
+    "conferenceProgram": {
+      "page": 3,
+      "session": "Security",
+      "date": "2005-04-13",
+      "time": "16:00–17:30"
+    }
+  },
+  "limits": [
+    "Historical GVM application research, not a recovered SDK or SGS.",
+    "Referenced 1.52 Programming Guide and SWAP Service Guide are leads, not downloaded manuals.",
+    "GVM Club bounded CDX returned HTTP 200 []; GNEX Club bounded CDX returned HTTP 503, not an empty successful index.",
+    "No original application binary, game or phone player recovered. Original PDFs retain their existing rights."
+  ],
+  "vendorCodeExecuted": false,
+  "archive": {
+    "id": "gvm-mobilec-icmu2005",
+    "bytes": 2218740,
+    "sha256": "7deaebc4c131672d78a578db5e20ddf13d6796f629b072318d01c58b828010c1",
+    "repositoryPath": "research/archives/GVM-MobileC-ICMU2005-Paper-and-Program.zip",
+    "category": "Документация GVM и Mobile C",
+    "title": "GVM/MobileC: доклад ICMU 2005",
+    "description": "Два исходных PDF: 10-страничная работа о приложении GVM и 12-страничная программа конференции. Сохранены происхождение, хеши и точные зацепки MCC-PRG-152-200 / SVR-SRG-120. Это документы, без нового SDK, SGS или проигрывателя.",
+    "sources": [
+      {
+        "label": "Исходный доклад ICMU 2005",
+        "url": "https://www.icmu.org/icmu2005/Papers/117299-1-050228181611.pdf"
+      },
+      {
+        "label": "Исходная программа конференции",
+        "url": "https://www.icmu.org/icmu2005/ICMU2005FinalProgram.pdf"
+      }
+    ]
+  },
+  "zipMembers": 15,
+  "manifestMembersVerified": 14,
+  "zipCrcPassed": true
+}
