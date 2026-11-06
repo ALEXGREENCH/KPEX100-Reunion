@@ -1,0 +1,238 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T18:24:18.741960+00:00",
+  "collections": {
+    "technical-library": {
+      "captures": 81,
+      "states": {
+        "mismatch": 1,
+        "verified": 80
+      },
+      "uniqueVerifiedPayloads": 71,
+      "responses": 91
+    },
+    "chamcham-gnex-tag": {
+      "captures": 1,
+      "states": {
+        "verified": 1
+      },
+      "uniqueVerifiedPayloads": 1,
+      "responses": 1
+    },
+    "download-probes": {
+      "captures": 0,
+      "states": {},
+      "uniqueVerifiedPayloads": 0,
+      "responses": 2
+    },
+    "direct-sdk-links": {
+      "captures": 0,
+      "states": {},
+      "uniqueVerifiedPayloads": 0,
+      "responses": 3
+    },
+    "platform-doc-files": {
+      "captures": 5,
+      "states": {
+        "mismatch": 1,
+        "verified": 4
+      },
+      "uniqueVerifiedPayloads": 4,
+      "responses": 6
+    }
+  },
+  "attachmentNames": [
+    "011120_비압축GVM컨텐츠개발가이드.ppt",
+    "020328_CPSeminar.zip",
+    "020821_GVM_icon지원관련개발고려사항.ppt",
+    "20021016_발표자료.zip",
+    "200305_GVM_LCD_Class8_컨텐츠개발가이드.pdf",
+    "200310_GVM_RS232C_ContestsDevGuide.pdf",
+    "AudioMaster.exe",
+    "GNEX_ContentsDevGuide_v100.pdf",
+    "GNEX_ContentsDevGuide_v101.pdf",
+    "GVM_CP_Seminar.zip",
+    "GVM_Image변환.zip",
+    "GVM_SDK_v1.52.zip",
+    "GVM_SDK_v1.52_300.zip",
+    "GVM_SDK_v152.zip",
+    "GVM_icon지원관련개발고려사항.ppt",
+    "GVM_service_guide.zip",
+    "LcdSound변경관련컨텐츠개발고려사항.ppt",
+    "MCC_REF_152_400.pdf",
+    "MobileC.exe",
+    "SVR_SRG_110_K.zip",
+    "SerialComm.pdf",
+    "mPOSS_CP_Site_User_Guide_v1.zip",
+    "masm.exe",
+    "masm_GNEX.exe",
+    "mcc.exe",
+    "witop.zip"
+  ],
+  "confirmedWordDocuments": [
+    {
+      "capture": "686e7d23855fbc10832defc47bd8229de4b8582963c422e93b5982e6dd54518e",
+      "record": {
+        "digest": "S55PO64POH3DPPLEPA2GQEB7SIV62J55",
+        "length": "11585",
+        "mimetype": "application/msword",
+        "original": "http://www.gnexclub.com:80/zone/gnexzone%20agreement.doc",
+        "statuscode": "200",
+        "timestamp": "20040705235149",
+        "urlkey": "com,gnexclub)/zone/gnexzone%20agreement.doc"
+      },
+      "state": "verified",
+      "bytes": 58880,
+      "payloadSha256": "614e189dd1b4361b4f0f91f00f291ca7f903642ff24b48c18f87e8b7c7b9845e",
+      "magicHex": "d0cf11e0a1b11ae10000000000000000",
+      "isOle": true,
+      "parser": "olefile0.47, read-only, no Office/VBA execution",
+      "wordIdent": "0xa5ec",
+      "nFib": "0xc1",
+      "encrypted": false,
+      "streams": [
+        {
+          "path": [
+            "\u0001CompObj"
+          ],
+          "bytes": 109,
+          "sha256": "e316e8f5dbf0c6367fe39c9588c5f9c55bf5fb8a8c562b7177af16cc94deb480"
+        },
+        {
+          "path": [
+            "\u0005DocumentSummaryInformation"
+          ],
+          "bytes": 4096,
+          "sha256": "0ea678807d19626811da607874fc51e63225f92bd91c86fdd1f108838d3e7aea"
+        },
+        {
+          "path": [
+            "\u0005SummaryInformation"
+          ],
+          "bytes": 4096,
+          "sha256": "0761dd14133353d10e09999dd527144e06d502bbfcebdfb8d12c9364da8850d0"
+        },
+        {
+          "path": [
+            "1Table"
+          ],
+          "bytes": 15329,
+          "sha256": "dde564af4916bd9d41ae3c66d44b0041a1fc31caa2d9103383de927663a44696"
+        },
+        {
+          "path": [
+            "Data"
+          ],
+          "bytes": 4803,
+          "sha256": "0ef259311e7ca491df647f48425fa2c065e055827269c4a26252490cb7feafe4"
+        },
+        {
+          "path": [
+            "WordDocument"
+          ],
+          "bytes": 26674,
+          "sha256": "daf6214ced25d47d4116d43a22187029f9eb51987637c9be267018db1eba1dd6"
+        }
+      ],
+      "vbaStreamsPresent": false,
+      "allStreamsRead": true
+    },
+    {
+      "capture": "8705d212eed245b89aff1d8332d60a8a5ef8c79de2baabcb30aa835c40051c7b",
+      "record": {
+        "digest": "I7KFUXUVEBWWKMPHVISN4AR5OYGNDFXM",
+        "length": "3342",
+        "mimetype": "application/msword",
+        "original": "http://www.gvmclub.com:80/business/CP.doc",
+        "statuscode": "200",
+        "timestamp": "20041018212002",
+        "urlkey": "com,gvmclub)/business/cp.doc"
+      },
+      "state": "verified",
+      "bytes": 23552,
+      "payloadSha256": "6fdc0d76db3cb67d4112703ef962fb11ed44eda88b20ad331affd6da9689c6d8",
+      "magicHex": "d0cf11e0a1b11ae10000000000000000",
+      "isOle": true,
+      "parser": "olefile0.47, read-only, no Office/VBA execution",
+      "wordIdent": "0xa5ec",
+      "nFib": "0xc1",
+      "encrypted": false,
+      "streams": [
+        {
+          "path": [
+            "\u0001CompObj"
+          ],
+          "bytes": 102,
+          "sha256": "a057333acad5015610165140de534444bb75c99cf8a32f7b9550674d3539056d"
+        },
+        {
+          "path": [
+            "\u0005DocumentSummaryInformation"
+          ],
+          "bytes": 4096,
+          "sha256": "8a1119fa270a1efe0fefeeb0b9b1b458537c47a6bc18f638b55972dddc57792c"
+        },
+        {
+          "path": [
+            "\u0005SummaryInformation"
+          ],
+          "bytes": 4096,
+          "sha256": "e9e7e9f2acfe03946d8cc8874910a4da8017644be0e71babf7ccc93344bd7d92"
+        },
+        {
+          "path": [
+            "1Table"
+          ],
+          "bytes": 4096,
+          "sha256": "a3b2188d57f9b0e27a44dc6ac3d58d38b3b5fb7736f7e993cc6b99a3ac348036"
+        },
+        {
+          "path": [
+            "WordDocument"
+          ],
+          "bytes": 7734,
+          "sha256": "2c16b5cede1b2c620475655c0c3cb5adc83be42a0b200757e6b7423a8c08e2eb"
+        }
+      ],
+      "vbaStreamsPresent": false,
+      "allStreamsRead": true
+    }
+  ],
+  "sdk140Reconciliation": {
+    "schema": 1,
+    "correctFilename": "GNEX_SDK_v1.40.exe",
+    "status": "Exact filename already confirmed by preserved primary page; installer remains unrecovered.",
+    "supersedes": "The incorrect unconfirmed-filename status in evidence/search-leads.json of GVM-API2X-and-Early-Sinjisoft-Patents.zip. That immutable archive remains unchanged.",
+    "sourceArchive": {
+      "repositoryPath": "research/archives/GNEX-Early-SDK-Pages-and-GVM2X-Original.zip",
+      "sha256": "fc58dd1acbe55c7476a5e168c46481d27c489431b225e9a46746673676b15019"
+    },
+    "sourceHtmlSha256": "90831e4d3e6861eef3e69588e3ef25f90b3703eb688b7f680e53bd3ae6cbae8b",
+    "matchesOriginalCdx": true
+  },
+  "hostAliasAudit": {
+    "rawCdxRows": 231,
+    "duplicateIdenticalRows": 50,
+    "scope": "Exact blog host plus one leading www alias; no neighboring Tistory blog admitted.",
+    "indexedCaptures": 181,
+    "wwwCaptures": 3,
+    "newTasksComparedWithPublishedPass2": 181,
+    "oldCaptureRecordsRechecked": 43696,
+    "allOldCaptureRecordsUnchanged": true
+  },
+  "archive": {
+    "repositoryPath": "research/archives/GVM-Technical-Library-and-Early-SDK-Leads.zip",
+    "bytes": 532972,
+    "sha256": "8891a1e997df154dce963346e097bbde6ea1bb6e2dec14c9261f30e8c2c0864b"
+  },
+  "zipMembers": 124,
+  "manifestMembersVerified": 123,
+  "zipCrcPassed": true,
+  "limits": [
+    "No new executable SGS or early SDK/phone GNEX player recovered.",
+    "SDK 1.40 filename is confirmed, installer not recovered.",
+    "Attachment names are not binaries; login links were not submitted.",
+    "Some requests returned404/403/503; precise originals retained as errors.",
+    "Not a full domain/blog capture or all document attachments."
+  ]
+}

@@ -49,3 +49,7 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `wayback-harvest.py`: resumable uncollapsed CDX indexes and exact replay bodies with digest checks; [configuration, status and commands](../doc/wayback-collection.md).
 - `package-wayback.py`: consistent SQLite snapshot, immutable response objects and a verified ZIP manifest, including while a collector is running.
 - `preserve-sinjisoft-newswire.py`: save the publicly listed Korean Sinjisoft press releases and their directly linked photographs; [coverage](../doc/sinjisoft-press-preservation.md).
+
+Сборщик Wayback также приоритизирует ALZ/HWP/CHM/DOC/MSI и учитывает
+обычный `www`-алиас хостового CDX без соседних блогов;
+[проверенный пример](../doc/gvm-technical-library-pass.md).

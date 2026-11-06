@@ -51,6 +51,17 @@ def test_scopes_do_not_collect_a_shared_host_or_fake_suffix():
     scope = {"url": "https://cafe.naver.com/kpex100/", "matchType": "prefix"}
     assert harvest.in_scope("http://cafe.naver.com/kpex100/79", scope)
     assert not harvest.in_scope("https://cafe.naver.com/unrelated/79", scope)
+    host = {"url": "chamcham.tistory.com", "matchType": "host"}
+    assert harvest.in_scope("http://www.chamcham.tistory.com/robots.txt", host)
+    assert harvest.in_scope("https://chamcham.tistory.com/1", host)
+    for name in [
+        "other.tistory.com",
+        "evilchamcham.tistory.com",
+        "sub.chamcham.tistory.com",
+        "www.www.chamcham.tistory.com",
+    ]:
+        assert not harvest.in_scope("https://" + name + "/1", host)
+    assert not harvest.in_scope("https://www.cafe.naver.com/kpex100/79", scope)
 
 
 def test_failed_index_does_not_advance_and_resume_survives_reopen(tmp_path):
@@ -416,5 +427,38 @@ def test_redirect_chain_is_bounded_and_captured_redirects_are_not_followed(
     assert len(calls) == (1 if historical_redirect else 3)
     assert (
         collector.db.execute("SELECT state FROM captures").fetchone()[0] == "mismatch"
+    )
+    collector.db.close()
+
+
+def test_downloads_prioritize_korean_archive_and_document_types_before_html(tmp_path):
+    collector = harvest.Collector(tmp_path, delay=0)
+    records = []
+    for extension in ["html", "alz", "hwp", "doc", "chm"]:
+        item = record()
+        item[2] = "https://gnexclub.com/archive." + extension
+        records.append(item)
+    collector.request = lambda *_: ({"status": 200}, page(records))
+    collector.index({"id": "gnexclub", "url": "gnexclub.com", "matchType": "domain"})
+    calls = []
+
+    def receive(url, _):
+        calls.append(url)
+        return {"status": 200, "object": collector.blob(b"original")}, b"original"
+
+    collector.request = receive
+    collector.download()
+    assert len(calls) == 5 and calls[-1].endswith(".html")
+    assert set(url.rsplit(".", 1)[1] for url in calls[:-1]) == {
+        "alz",
+        "hwp",
+        "doc",
+        "chm",
+    }
+    assert (
+        collector.db.execute(
+            "SELECT count(*) FROM captures WHERE state='verified'"
+        ).fetchone()[0]
+        == 5
     )
     collector.db.close()

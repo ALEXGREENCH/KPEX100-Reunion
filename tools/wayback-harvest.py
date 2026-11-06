@@ -104,9 +104,13 @@ def in_scope(original, scope):
     host, wanted = (parsed.hostname or "").lower(), (target.hostname or "").lower()
     if scope["matchType"] == "domain":
         return host == wanted or host.endswith("." + wanted)
+    if scope["matchType"] == "host":
+        # CDX canonical host queries can include the ordinary www alias.
+        # Accept that one alias only, never neighboring shared-host blogs.
+        return host.removeprefix("www.") == wanted.removeprefix("www.")
     if host != wanted:
         return False
-    return scope["matchType"] == "host" or parsed.path.startswith(target.path)
+    return parsed.path.startswith(target.path)
 
 
 def korean_replay_variants(original):
@@ -467,7 +471,7 @@ class Collector:
             key=lambda row: (
                 not bool(
                     re.search(
-                        r"\.(exe|zip|rar|alz|7z|sgs|sis|cab|pdf|xls|ppt|mc|ssl|o|c|h)(?:[?]|$)",
+                        r"\.(exe|msi|zip|rar|alz|7z|sgs|sis|cab|pdf|hwp|chm|doc|xls|ppt|mc|ssl|o|c|h)(?:[?]|$)",
                         json.loads(row["record"])["original"],
                         re.I,
                     )
