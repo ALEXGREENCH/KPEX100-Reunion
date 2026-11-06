@@ -842,6 +842,44 @@
       ],
       "repositoryPath": "research/archives/GVM-Buzzer-and-MA1-Source-Research.zip",
       "bytes": 879755
+    },
+    {
+      "id": "wayback-partial-pass5",
+      "category": "Документация и сохранение сайтов",
+      "title": "Wayback: пятый частичный снимок",
+      "description": "53 659 записей CDX, 2 952 совпавших ответа и 3 263 объекта HTTP. Возобновляемая очередь с оригинальными телами, заголовками и хешами; сбор продолжается. Есть исторические ошибки и служебные страницы.",
+      "repositoryPath": "research/archives/GNEX-GVM-Wayback-Partial-Pass5-20261107.zip",
+      "bytes": 38584526,
+      "sha256": "c965cacbbf6a537d4a33bfa72a1f5fb7d6a9080aec24868a9dd9be5305c577c8",
+      "sources": [
+        {
+          "label": "Internet Archive CDX",
+          "url": "https://web.archive.org/cdx/search/cdx"
+        },
+        {
+          "label": "Метод и ограничения",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/sinjisoft-korean-programming-and-press.md"
+        }
+      ]
+    },
+    {
+      "id": "sinjisoft-programming-press",
+      "category": "Документация и сохранение сайтов",
+      "title": "Sinjisoft: Mobile C и корейские публикации",
+      "description": "Десять собственных объявлений с точным происхождением, четыре статьи iNews24 и ETNews, офлайн-поиск по 2 441 HTML. Оригиналы отделены от извлечённого текста. Новых SDK и телефонного проигрывателя нет.",
+      "repositoryPath": "research/archives/Sinjisoft-Korean-Programming-Tips-and-Press-Followup.zip",
+      "bytes": 1897112,
+      "sha256": "ccc0d71b2ea8df7e6386e0dbde41db44fbe7b8ad23e97a8327b7fb0c956b5b5b",
+      "sources": [
+        {
+          "label": "iNews24: запуск GNEX",
+          "url": "https://www.inews24.com/view/93095"
+        },
+        {
+          "label": "ETNews: сенсорный GNEX",
+          "url": "https://www.etnews.com/200809090112"
+        }
+      ]
     }
   ],
   "reports": [
@@ -1004,6 +1042,10 @@
     {
       "title": "Зуммер GVM: эталон SDK, звук в браузере и разбор MA1",
       "repositoryPath": "doc/gvm-buzzer-audio.md"
+    },
+    {
+      "title": "Sinjisoft: инструкции Mobile C, корейская пресса и Wayback Pass 5",
+      "repositoryPath": "doc/sinjisoft-korean-programming-and-press.md"
     }
   ]
 }

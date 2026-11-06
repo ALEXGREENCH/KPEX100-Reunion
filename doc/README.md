@@ -130,3 +130,6 @@ SGS на любом устройстве. SDK и руководства опис
 - [Hellfire из WI-TOP](witop-hellfire-legacy.md): исходный SGS v1, независимый эталон LockChatMode, управление и проверки.
 
 - [Зуммер GVM и MA1](gvm-buzzer-audio.md): точные события SDK, отдельный аудиопоток и сохранённая документация Yamaha.
+
+[Инструкции Mobile C и корейская пресса](sinjisoft-korean-programming-and-press.md):
+десять корпоративных сообщений, четыре статьи издателей и снимок Wayback Pass 5.
