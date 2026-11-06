@@ -35,3 +35,6 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 - `build-smaf.py` and `smaf-wrapper.cpp`: build the optional audio renderer.
 
 The shared original collection is in `web/data/`; SDK installers are external inputs. The extraction tools never launch the installer or load native code. Existing extraction outputs are not overwritten.
+
+- `inspect-gnex-sdk-pages.py`: inspect the preserved SDK page ZIP, verify original page hashes/CDX and list literal download filenames without running JavaScript. See [early SDK sources](../doc/gnex-early-sdk-player-followup.md).
+- `browser-presentation-check.mjs`: optional isolated Chromium/Chrome checks for the fixed LCD, device controls, touch cancellation and volume persistence. See [setup](../doc/web-interface.md).
