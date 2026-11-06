@@ -1,0 +1,817 @@
+{
+  "schema": 1,
+  "game": {
+    "id": "hellfire-witop-v1",
+    "title": "Hellfire (WI-TOP, GVM v1)",
+    "nativeTitle": "Hellfire",
+    "url": "data/games/hellfire-witop-v1.sgs",
+    "sha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+    "bytes": 24502,
+    "format": 1,
+    "resources": 50,
+    "platform": "mobile",
+    "compatibility": "playable",
+    "runtime": {
+      "profile": "phone",
+      "width": 120,
+      "height": 100
+    },
+    "sourceName": "Sample File/GVM/0007501FFFFFFFF.sgs",
+    "sourceUrl": "https://web.archive.org/web/20020623052620id_/http://www.gvmclub.com:80/boardcomm/board.cgi?bd=no&j=dl&i=53&c=14",
+    "provenance": "Unchanged SGS shared by both preserved WI-TOP distributions. Header/layout and 120x100 runtime checked against accompanying INS; no exact handset attribution. Standalone LockChatMode bridge; network/chat UI not implemented. See doc/witop-hellfire-legacy.md. Native sound subtypes 0/1 are currently ignored; audio is not claimed restored.",
+    "startHint": "Любая клавиша — начать. Движение: 1/7/4/5; огонь: 3. Стрелки и Z на клавиатуре, направления и первая кнопка геймпада — альтернативы."
+  },
+  "baseline": {
+    "commit": "137ed6e0bc3299fc1aad205b1329c88dac4acc9f",
+    "exitCode": 1,
+    "stdout": "{\"id\":\"local-witop-hellfire-v1\",\"status\":\"error\",\"error\":\"Original GNEX exception 15 at SGS 0x00000651 (legacy opcode0xba)\",\"events\":0,\"output\":\"C:\\\\Users\\\\Sanya\\\\Documents\\\\Codex\\\\2026-11-04\\\\k-pex-100\\\\work\\\\reunion-pass8-20261106\\\\witop-before\"}\n",
+    "stderr": ""
+  },
+  "nativeReference": {
+    "report": "validation/gvm-legacy-chat-native-reference.json",
+    "sourceSha256": "2bcc2554605bc277a99ff1220db1a509f875c207221647f806d0fff3efd66f88",
+    "vectors": 99,
+    "exhaustiveX86Inputs": 65536,
+    "exhaustiveX86ResultSha256": "bcdd697bdb41aa5fe9bcff69bb1b23c2acedadb0e1165c6c29c398dd45ad20e5",
+    "sgsVersionsTested": [
+      1,
+      2
+    ],
+    "armComparisons": 198,
+    "underflowAndUnsupportedBBChecked": true
+  },
+  "replay": {
+    "id": "hellfire-witop-v1",
+    "runtime": {
+      "profile": "phone",
+      "width": 120,
+      "height": 100
+    },
+    "advanceClock": false,
+    "clockMode": "TimerScheduler scheduled deadlines",
+    "actions": [
+      [
+        "tick",
+        40
+      ],
+      [
+        "key",
+        20
+      ],
+      [
+        "tick",
+        8
+      ],
+      [
+        "hold",
+        4
+      ],
+      [
+        "tick",
+        10
+      ],
+      [
+        "release",
+        4
+      ],
+      [
+        "hold",
+        5
+      ],
+      [
+        "tick",
+        10
+      ],
+      [
+        "release",
+        5
+      ],
+      [
+        "hold",
+        1
+      ],
+      [
+        "tick",
+        10
+      ],
+      [
+        "release",
+        1
+      ],
+      [
+        "hold",
+        7
+      ],
+      [
+        "tick",
+        10
+      ],
+      [
+        "release",
+        7
+      ],
+      [
+        "hold",
+        3
+      ],
+      [
+        "tick",
+        20
+      ],
+      [
+        "release",
+        3
+      ]
+    ],
+    "trace": [
+      {
+        "label": "start",
+        "filename": "hellfire-witop-v1-start.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 0,
+        "events": 1,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "0-tick40",
+        "filename": "hellfire-witop-v1-0-tick40.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 12000,
+        "events": 41,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "1-key20",
+        "filename": "hellfire-witop-v1-1-key20.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 12000,
+        "events": 42,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "2-tick8",
+        "filename": "hellfire-witop-v1-2-tick8.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 14400,
+        "events": 50,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "3-hold4",
+        "filename": "hellfire-witop-v1-3-hold4.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 14400,
+        "events": 51,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "4-tick10",
+        "filename": "hellfire-witop-v1-4-tick10.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 17400,
+        "events": 61,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "5-release4",
+        "filename": "hellfire-witop-v1-5-release4.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 17400,
+        "events": 61,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "6-hold5",
+        "filename": "hellfire-witop-v1-6-hold5.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 17400,
+        "events": 62,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "7-tick10",
+        "filename": "hellfire-witop-v1-7-tick10.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 20400,
+        "events": 72,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "8-release5",
+        "filename": "hellfire-witop-v1-8-release5.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 20400,
+        "events": 72,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "9-hold1",
+        "filename": "hellfire-witop-v1-9-hold1.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 20400,
+        "events": 73,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "10-tick10",
+        "filename": "hellfire-witop-v1-10-tick10.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 23400,
+        "events": 83,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "11-release1",
+        "filename": "hellfire-witop-v1-11-release1.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 23400,
+        "events": 83,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "12-hold7",
+        "filename": "hellfire-witop-v1-12-hold7.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 23400,
+        "events": 84,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "13-tick10",
+        "filename": "hellfire-witop-v1-13-tick10.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 26400,
+        "events": 94,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "14-release7",
+        "filename": "hellfire-witop-v1-14-release7.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 26400,
+        "events": 94,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "15-hold3",
+        "filename": "hellfire-witop-v1-15-hold3.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 26400,
+        "events": 95,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "16-tick20",
+        "filename": "hellfire-witop-v1-16-tick20.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 32400,
+        "events": 115,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "label": "17-release3",
+        "filename": "hellfire-witop-v1-17-release3.png",
+        "status": "idle",
+        "error": null,
+        "timeMs": 32400,
+        "events": 115,
+        "timers": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ]
+      }
+    ],
+    "diagnostics": {
+      "status": "idle",
+      "error": null,
+      "title": "Hellfire",
+      "engine": "Original Kingston 2.12 8-bit GNEX / Unicorn WASM",
+      "profile": "phone",
+      "execution": "Bounded block execution and verified ROM shortcuts",
+      "events": 115,
+      "timer_ms": 300,
+      "bytecode_pc": "0x00000728",
+      "interpreter_pc": "0x21000728",
+      "syscalls": {},
+      "trace": [],
+      "audio": {
+        "requests": 22,
+        "ignoredNativeSubtypes": [
+          0,
+          1
+        ],
+        "lastError": null,
+        "lastFormat": null
+      },
+      "filesystem": {
+        "files": [],
+        "openHandles": 0,
+        "readonlyFiles": 0,
+        "operations": 0,
+        "persistence": "reunion.saves.37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+        "persistenceError": null
+      },
+      "timers": [
+        {
+          "channel": 0,
+          "delay": 300,
+          "repeat": true,
+          "revision": 1,
+          "armedAt": 0
+        },
+        {
+          "channel": 1,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        },
+        {
+          "channel": 2,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        }
+      ],
+      "externalRequest": null,
+      "environment": {
+        "phoneMIN": "Synthetic virtual handset identifier",
+        "tickResolutionMs": 20,
+        "phoneClock": "Host monotonic plus 10 MHz virtual ARM block clock"
+      },
+      "graphics": [
+        "Original ROM RGB565 renderer, palette, ASCII and Korean fonts"
+      ],
+      "swerve": null,
+      "format": 1,
+      "legacyChatLockValue": 0
+    }
+  },
+  "longRun": {
+    "test": "tests/hellfire-witop.test.mjs",
+    "timerEventsAfterPreludePerMode": 2000,
+    "virtualMsAfterPreludePerMode": 600000,
+    "seed": 12345,
+    "executionModes": [
+      "exact",
+      "guarded"
+    ],
+    "actualRoutingChecked": true,
+    "allFrameTrailsFinalVariablesAndTimersEqual": true,
+    "correctedRoutingTestWallMs": 59942.3514,
+    "scope": "Two deterministic ten-virtual-minute runs, not a playthrough or proof against every random freeze."
+  },
+  "localBrowser": {
+    "wallMs": 65395,
+    "frames": 412,
+    "keyTransitions": 200,
+    "lastStatus": {
+      "at": 65792,
+      "events": 312,
+      "status": "idle",
+      "error": null,
+      "timers": [
+        {
+          "channel": 0,
+          "delay": 300,
+          "repeat": true,
+          "revision": 1,
+          "armedAt": 529.7000000029802
+        },
+        {
+          "channel": 1,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        },
+        {
+          "channel": 2,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        }
+      ]
+    },
+    "lcd": {
+      "x": 500,
+      "y": 288,
+      "width": 440,
+      "height": 352
+    },
+    "actualResponseHashes": {
+      "input-bindings.js": "134b695d05347ca2fb49b925f49027afb4ccca9eb83a2ff9dd2cf21d6cb52dfe",
+      "worker.js": "804ed8970ac0183e08e9f2c643c7a0512fe986f57914608a3d6cd604ea55a009",
+      "engine/gnex.js": "3fc3c9c9f36018f0952d62ee6e168c030c97a3239f419ec043ee1152a13d587b",
+      "engine/legacy.js": "baad2b96dbd37f0f12a495d1590b5724e5c9f7a7ab7d5e78745597570c127494",
+      "engine/cpu.js": "410ae5897ad28519e9e50ead9476df4396103735d349c4346eeee6718480ac4d",
+      "engine/rom-accelerators.js": "0b9cf224bcc7e69a660b474e0434bf4180ef980d70bc4f2d7d665a6b43bde179",
+      "engine/rgb565.js": "65154882681ff5c9d83889ab1f1d76318a25f03f9a5d31320ef7dbe1d7a2d4c2",
+      "data/games/hellfire-witop-v1.sgs": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+      "data/firmware/Kingston-2.12.rom": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a"
+    },
+    "errors": [],
+    "ok": true,
+    "scope": "Actual original Worker, ROM and SGS, keyboard alternatives and fixed LCD. No physical gamepad or audio-restoration claim."
+  },
+  "limitations": [
+    "No full mission coverage or exact handset attribution.",
+    "Standalone LockChatMode state is implemented; BB, network and chat UI are not.",
+    "Native sound subtypes0/1 observed but ignored by the existing adapter.",
+    "Desktop SGSv4 interpreter does not gain legacy execution.",
+    "Does not resolve every Battle Armor freeze."
+  ]
+}

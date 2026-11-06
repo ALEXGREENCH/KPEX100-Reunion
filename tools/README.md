@@ -57,3 +57,5 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `wayback-text-index.py`: build a static Korean/English search index from a frozen Wayback ZIP, verifying HTML bodies against both SHA-256 and CDX SHA-1. Search NFC-normalized text without executing pages or fetching links; [coverage and decoding limits](../doc/sinjisoft-early-sdk-notices.md).
 
 - `benchmark-rgb565.mjs`: compare the original GNEX host color conversion and the compact channel lookup, including output allocation and exact pixel checks. `benchmark-web.mjs --compare display` alternates the two display methods on one guarded runtime; [measurements and limits](../doc/rgb565-display-performance.md).
+
+- `inspect-gvm-legacy-chat.py`: hash-locked x86 GVM dispatcher and chat callbacks. Optional `--reference` emulates only the verified 25-byte LockChatMode callback in isolated Unicorn memory and records independent stack/state vectors; [method, dependencies and limits](../doc/witop-hellfire-legacy.md).

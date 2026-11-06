@@ -69,3 +69,42 @@ test('a game override owns its token even after a later global profile edit', ()
   assert.ok(!game.b.includes('key:KeyF'));
   assert.equal(actionForToken(activeBindings(state, 'player'), 'key:KeyF'), 'b');
 });
+
+test('WI-TOP alternatives are scoped to its phone build and user overrides take priority', () => {
+  const state = restoreBindings(null),
+    id = 'hellfire-witop-v1';
+  const game = activeBindings(state, 'phone', id);
+  for (const [token, action] of [
+    ['key:ArrowUp', 'digit1'],
+    ['pad:a1-', 'digit1'],
+    ['key:ArrowDown', 'digit7'],
+    ['pad:b13', 'digit7'],
+    ['key:ArrowLeft', 'digit4'],
+    ['pad:a0-', 'digit4'],
+    ['key:ArrowRight', 'digit5'],
+    ['pad:b15', 'digit5'],
+    ['key:KeyZ', 'digit3'],
+    ['pad:b0', 'digit3'],
+  ])
+    assert.equal(actionForToken(game, token), action);
+  assert.ok(game.digit1.includes('key:Digit1'));
+  assert.ok(game.digit3.includes('key:Numpad3'));
+  for (const [profile, other] of [
+    ['phone', 'hellfire'],
+    ['player', id],
+    ['phone', '__proto__'],
+  ]) {
+    const bindings = activeBindings(state, profile, other);
+    assert.equal(actionForToken(bindings, 'key:ArrowUp'), 'up');
+    assert.equal(actionForToken(bindings, 'pad:b0'), 'a');
+  }
+  assert.deepEqual(state, restoreBindings(null), 'presets do not write user preferences');
+  assignBinding(state, 'phone', null, 'digit9', 'key:ArrowUp');
+  assert.equal(actionForToken(activeBindings(state, 'phone', id), 'key:ArrowUp'), 'digit9');
+  assignBinding(state, 'phone', id, 'digit1', 'key:ArrowUp');
+  assert.equal(actionForToken(activeBindings(state, 'phone', id), 'key:ArrowUp'), 'digit1');
+  removeBinding(state, 'phone', id, 'digit3', 'pad:b0');
+  assert.equal(actionForToken(activeBindings(state, 'phone', id), 'pad:b0'), null);
+  const restored = restoreBindings(JSON.parse(JSON.stringify(state)));
+  assert.deepEqual(activeBindings(restored, 'phone', id), activeBindings(state, 'phone', id));
+});

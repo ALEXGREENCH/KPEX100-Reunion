@@ -120,6 +120,9 @@ export class LegacyRuntime extends GnexRuntime {
     this.sgs = parsed;
     this.title = parsed.title;
     this.legacyReady = true;
+    // Standalone host service: native GVM initializes chat locking to S_ON.
+    // Keep the raw byte: the original BA callback does not coerce to boolean.
+    this.legacyChatLockValue = 1;
     this.vfs = new VirtualFileSystem(parsed, {
       saveKey: options.saveKey,
       storage: options.storage,
@@ -264,13 +267,14 @@ export class LegacyRuntime extends GnexRuntime {
       },
       { begin: RELOC + 0x362b0, end: RELOC + 0x362b0 },
     );
-    // Legacy system opcode52 is the old GetSysMin resource-output operation.
-    // Kingston leaves its implementation at the same error15 stub as v4 API1.
+    // Kingston leaves these legacy platform operations at the error15 stub.
+    // Preserve their argument/state ABI instead of discarding an unknown opcode.
     this.cpu.onCode(
       () => {
-        if (this.legacyOpcode === 0x52) {
+        if (this.legacyOpcode === 0x52 || this.legacyOpcode === 0xba) {
           try {
-            this._syscall(1);
+            if (this.legacyOpcode === 0x52) this._syscall(1);
+            else this.legacyChatLockValue = this._args(1)[0] & 255;
             this._return();
           } catch (e) {
             this.exception = e;
@@ -397,6 +401,7 @@ export class LegacyRuntime extends GnexRuntime {
       ...super.diagnostics,
       engine: 'Original Kingston 2.12 8-bit GNEX / Unicorn WASM',
       format: this.sgs.version,
+      legacyChatLockValue: this.legacyChatLockValue,
     };
   }
 }

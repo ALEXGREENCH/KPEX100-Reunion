@@ -55,6 +55,21 @@ export const defaults = {
     pause: ['key:Space'],
   },
 };
+// This original WI-TOP build uses 1/7/4/5/3 rather than navigation key codes.
+// Host alternatives stay here so every source shares the normal held-action
+// accounting, and user profile/game overrides retain priority.
+const gameDefaults = {
+  'hellfire-witop-v1': {
+    profile: 'phone',
+    bindings: {
+      digit1: [...defaults.phone.digit1, ...directions.up],
+      digit7: [...defaults.phone.digit7, ...directions.down],
+      digit4: [...defaults.phone.digit4, ...directions.left],
+      digit5: [...defaults.phone.digit5, ...directions.right],
+      digit3: [...defaults.phone.digit3, ...defaults.phone.a],
+    },
+  },
+};
 export const validToken = (token) =>
   typeof token === 'string' &&
   /^(?:key:[A-Za-z][A-Za-z0-9]{0,31}|char:[*#]|mouse:[0-4]|wheel:(?:up|down)|pad:(?:b(?:[0-9]|[1-9][0-9])|a(?:[0-9]|[1-2][0-9]|3[01])[-+]))$/.test(
@@ -83,10 +98,15 @@ export function restoreBindings(raw) {
 }
 export function activeBindings(state, profile, gameId = null) {
   const game = Object.hasOwn(state.games, gameId) ? state.games[gameId] : null;
+  const preset = Object.hasOwn(gameDefaults, gameId) ? gameDefaults[gameId] : null;
   const result = Object.fromEntries(
     Object.entries(defaults[profile]).map(([id, tokens]) => [id, [...tokens]]),
   );
-  for (const overrides of [state.profiles[profile], game?.profile === profile ? game.bindings : {}])
+  for (const overrides of [
+    preset?.profile === profile ? preset.bindings : {},
+    state.profiles[profile],
+    game?.profile === profile ? game.bindings : {},
+  ])
     for (const [id, tokens] of Object.entries(overrides)) {
       if (!Object.hasOwn(result, id)) continue;
       for (const other of Object.keys(result))

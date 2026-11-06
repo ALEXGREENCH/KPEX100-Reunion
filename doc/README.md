@@ -126,3 +126,5 @@ SGS на любом устройстве. SDK и руководства опис
 - [Sinjisoft: корейские объявления и семинар 2000 года](sinjisoft-corporate-seminar-2000.md): два новых PDF, 28 выбранных HTML и корейский поиск.
 
 - [Wayback Pass 4](wayback-partial-pass4.md): согласованный частичный снимок, сравнение с предыдущим и ограничения.
+
+- [Hellfire из WI-TOP](witop-hellfire-legacy.md): исходный SGS v1, независимый эталон LockChatMode, управление и проверки.
