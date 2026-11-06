@@ -148,6 +148,8 @@ SHA-1 `LED6I6IPM7ZVVWT4NNWOLZJ72C3L63WQ` в Base32. SHA-256 локального
 этап Treasure Hunter, партия The Man-Jong и первый уровень Star Fighter.
 В Soul Sword заставка зависит от системных часов. Для Star Fighter
 профиль отправляет событие `KEYPRESS 0xff` при отпускании клавиши.
+После [сверки с оригинальной прошивкой](kpex-key-release.md) это включено
+также для остальных современных K-PEX SGS.
 Сценарии работают на интерпретаторе Kingston 2.12.
 [Повторы и хеши кадров](../validation/kingston-naver-gameplay.json).
 

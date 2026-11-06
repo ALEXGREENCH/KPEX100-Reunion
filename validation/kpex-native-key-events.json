@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T15:04:17.108Z",
+  "scope": "Original Kingston 2.12 firmware and reached Hell Fire state, modeled hardware key presses/releases. No direct VM event injection, ROM/SGS patch or physical-device test.",
+  "identities": {
+    "rom": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+    "state": "29dc80cb5ca38b491f3196f14510aa15fb144ebae4716d745687c8e26591851d",
+    "game": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622"
+  },
+  "vmEntry": "0x20049298",
+  "keyEntry": 688,
+  "reachedStateBytecodeSha256": "9c50707ca9d4d9839c848e153be1220c9b456a78ea2f879be1a527823b011583",
+  "instructions": 25000000,
+  "records": [
+    {
+      "phase": "press-select",
+      "instructions": 1090746011,
+      "entry": 688,
+      "value": 20
+    },
+    {
+      "phase": "release-select",
+      "instructions": 1093613074,
+      "entry": 688,
+      "value": 255
+    },
+    {
+      "phase": "press-right",
+      "instructions": 1099347360,
+      "entry": 688,
+      "value": 17
+    },
+    {
+      "phase": "release-right",
+      "instructions": 1105081874,
+      "entry": 688,
+      "value": 255
+    }
+  ],
+  "status": "paused"
+}

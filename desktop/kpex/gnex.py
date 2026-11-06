@@ -44,7 +44,14 @@ def signed(v):
 
 class GnexRuntime:
     def __init__(
-        self, rom: bytes, sgs: bytes, width=220, height=176, save_path=None, audio=None
+        self,
+        rom: bytes,
+        sgs: bytes,
+        width=220,
+        height=176,
+        save_path=None,
+        audio=None,
+        key_release_event=True,
     ):
         if hashlib.sha256(rom).hexdigest() != ROM_SHA256:
             raise GnexError("GNEX native profile requires unmodified Kingston 2.12 ROM")
@@ -58,6 +65,7 @@ class GnexRuntime:
         self.timer_repeat = False
         self.timer_revision = 0
         self.held_keys = set()
+        self.key_release_event = key_release_event
         self.status = "ready"
         self.error = None
         self.syscalls = Counter()
@@ -384,5 +392,13 @@ class GnexRuntime:
         if pressed:
             self.held_keys.add(code)
             return self.event("KEYPRESS", code)
+        released = code in self.held_keys
         self.held_keys.discard(code)
+        # Original Kingston firmware sends KEYPRESS 255 after each real release.
+        if (
+            released
+            and self.key_release_event
+            and self.status not in ("error", "exited", "closed")
+        ):
+            return self.event("KEYPRESS", 0xFF)
         return self.diagnostics

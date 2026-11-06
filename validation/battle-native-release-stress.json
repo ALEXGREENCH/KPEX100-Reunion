@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T15:04:28.845Z",
+  "options": {
+    "minutes": 10,
+    "seed": 12345,
+    "game": "battle-armor",
+    "prelude": "validation/kingston-naver-replays/battle-armor.json",
+    "output": "../../work/gnex-controls-pass2-20261106/battle-native-release-stress.json"
+  },
+  "preludeSha256": "828ae7183a19541c3e591a6531d335ccc2642b62564ff5439385efca808f7c20",
+  "limits": "Seeded input, virtual time, no physical device or full level coverage. A clean script Exit is not a freeze. Host timeout: 15 seconds without returning from an event. Wall times depend on the host and concurrent work.",
+  "results": [
+    {
+      "id": "battle-armor",
+      "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+      "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+      "trail": [
+        {
+          "ms": 121750,
+          "events": 1000,
+          "rgbaSha256": "d9c5f91601aedd0c56d6301f4b975d2169bb95bfad781a7315e3adfdadec9c44",
+          "vmPc": "0x00000d6e"
+        },
+        {
+          "ms": 241100,
+          "events": 2000,
+          "rgbaSha256": "f239e60dc649ee85262c731c260db922251107c816936185eb29e01b5256ac1d",
+          "vmPc": "0x00000d6e"
+        },
+        {
+          "ms": 361325,
+          "events": 3000,
+          "rgbaSha256": "be245d2cf4ea0a093baf1f3e4c3bac4088c89616d98bcf21c41130e0ffce3e7a",
+          "vmPc": "0x00000d6e"
+        },
+        {
+          "ms": 479799,
+          "events": 4000,
+          "rgbaSha256": "e8914a4e3ae4dd741720452697055fd9c0cb719cf0c6014f521a50d375b96402",
+          "vmPc": "0x00000c88"
+        },
+        {
+          "ms": 597750,
+          "events": 5000,
+          "rgbaSha256": "38722f18ac88d43be1a62ebeb19dbc6c6f0df8950924097e980b69b7c1cf5938",
+          "vmPc": "0x00000d6e"
+        }
+      ],
+      "preludeEndMs": 72925,
+      "preludeFrameSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+      "status": "idle",
+      "error": null,
+      "virtualMs": 672925,
+      "events": 5626,
+      "longestEventMs": 107.45,
+      "wallMs": 28602,
+      "rgbaSha256": "45dc81def54f634a1e420cd6a9fd994e877f767fcd69ae103edbc89f88e94ab5",
+      "timerStates": [
+        {
+          "channel": 0,
+          "delay": 175,
+          "repeat": false,
+          "revision": 3982,
+          "armedAt": 672825
+        },
+        {
+          "channel": 1,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        },
+        {
+          "channel": 2,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        }
+      ],
+      "externalRequest": null
+    }
+  ]
+}

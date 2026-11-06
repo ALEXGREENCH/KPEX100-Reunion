@@ -40,4 +40,9 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `browser-input-check.mjs`: exercise binding settings and source-aware input releases in an isolated browser. See [controls](../doc/input-controls.md).
 - `stress-kpex.mjs`: seeded inputs, scheduled virtual timers and host timeouts for original K-PEX SGS. See [Battle Armor checks and limits](../doc/battle-armor-stability.md).
 - `benchmark-memory-copy.mjs`: compare real bulk/scalar WASM memory copies; [scope and whole-game measurements](../doc/web-performance-pass2.md).
+- `trace-kpex-key-events.mjs`: observe original full-firmware VM input through modeled hardware keys; [hashes and limits](../doc/kpex-key-release.md).
+- `record-native-key-goldens.py`: independently record four corrected input scenarios with Python/Unicorn, checking catalogue originals and the native key-event receipt first.
+- `inspect-sdk-emulator.py`: hash-locked static x86 disassembly of the SDK VM, event queue and timers; [method and limitations](../doc/sdk-emulator-internals.md).
 - `browser-presentation-check.mjs`: optional isolated Chromium/Chrome checks for the fixed LCD, device controls, touch cancellation and volume persistence. See [setup](../doc/web-interface.md).
+
+- `browser-gameplay-check.mjs`: 65-second actual Worker/ROM/SGS smoke with keyboard input and host timers; [scope and results](../doc/kpex-key-release.md).

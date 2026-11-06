@@ -102,7 +102,7 @@ export class GnexRuntime {
       height = 176,
       profile = null,
       startData = 0,
-      keyReleaseEvent = false,
+      keyReleaseEvent = true,
       audio = null,
       saveKey = null,
       storage = null,
@@ -779,7 +779,8 @@ export class GnexRuntime {
     // 0x40BE10 -> 0x409DC9 -> 0x44BF90, table 0x50F254[0x2f]).
     // The following VM dispatcher explicitly filters it for pre-v4/16-bit
     // scripts at 0x443BCC; only the modern 32-bit path receives the event.
-    // Star Fighter's K-PEX script also advances its title on KEYPRESS 0xff.
+    // Kingston's original key service also sends 0xff: traced through its
+    // unmodified firmware at the 32-bit VM entry after hardware key releases.
     if (
       released &&
       this.keyReleaseEvent &&
