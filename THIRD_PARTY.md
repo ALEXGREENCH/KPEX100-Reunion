@@ -38,8 +38,12 @@ relicensed under Reunion's MIT licence.
 - Exact revisions, original and modified hashes: [unicorn-provenance.json](web/engine/vendor/unicorn-provenance.json).
 
 The upstream JavaScript was renamed and given one global export,
-`globalThis.MUnicornLegacy = MUnicorn`, for module-worker loading. The ARM WASM
-binary is unchanged. The corresponding source archives include both the
+`globalThis.MUnicornLegacy = MUnicorn`, for module-worker loading. It also exports
+a bounded `readArrayFromMemory` helper that returns an owned byte copy from the
+current WASM heap. The exact changes can be reproduced with
+[prepare-reunion-bridge.mjs](vendor/unicorn-sources/prepare-reunion-bridge.mjs)
+from the hash-checked original release JavaScript. This modified bridge remains
+under GPL-2.0. The ARM WASM binary is unchanged. The corresponding source archives include both the
 JavaScript project and its exact Unicorn submodule:
 
 | Component      | Revision                                   | Included source                                                                                         |

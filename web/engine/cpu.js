@@ -30,6 +30,8 @@ export class ArmCPU {
     this.bufferSize = 0;
     this.allocations = [];
     this.hooks = [];
+    this.blockShortcutLow = Infinity;
+    this.blockShortcutHigh = -Infinity;
     this.regs = {};
     for (let i = 0; i < 16; i++) this.regs['r' + i] = uc['ARM_REG_R' + i];
     Object.assign(this.regs, {
@@ -90,6 +92,7 @@ export class ArmCPU {
   read(address, size) {
     const p = this.bufferFor(size);
     this.check(this.uc._uc_mem_read(this.handle, BigInt(address), p, this.sizeArgument(size)));
+    if (this.uc.readArrayFromMemory) return this.uc.readArrayFromMemory(p, size);
     const bytes = new Uint8Array(size),
       view = new DataView(bytes.buffer);
     let i = 0;
@@ -158,7 +161,35 @@ export class ArmCPU {
         this.blockBudget -= cost;
       }
       this.blockObserver?.(address, size);
+      // Unicorn can announce the initial TB twice when count instrumentation
+      // changes. Keep direct emu_start entries native; accelerate ARM calls only.
+      if (
+        address >= this.blockShortcutLow &&
+        address <= this.blockShortcutHigh &&
+        address !== this.runStart
+      )
+        this.blockShortcuts.get(address)?.(address, size);
     });
+  }
+  addBlockShortcut(address, callback) {
+    if (
+      !Number.isInteger(address) ||
+      address < 0 ||
+      address > 0xffffffff ||
+      typeof callback !== 'function'
+    )
+      throw Error('Invalid block shortcut');
+    this._ensureBlockMonitor();
+    this.blockShortcuts ??= new Map();
+    if (this.blockShortcuts.has(address)) throw Error('Block shortcut already registered');
+    this.blockShortcuts.set(address, callback);
+    this.blockShortcutLow = Math.min(this.blockShortcutLow, address);
+    this.blockShortcutHigh = Math.max(this.blockShortcutHigh, address);
+    return () => {
+      this.blockShortcuts?.delete(address);
+      this.blockShortcutLow = Math.min(...(this.blockShortcuts?.keys() || []));
+      this.blockShortcutHigh = Math.max(...(this.blockShortcuts?.keys() || []));
+    };
   }
   setBlockObserver(callback) {
     this.blockObserver = callback;
@@ -188,7 +219,13 @@ export class ArmCPU {
     this.hooks = this.hooks.filter((x) => x !== h);
   }
   run(start, stop, budget) {
-    this.engine.emu_start(start >>> 0, stop >>> 0, 0, budget);
+    const previousStart = this.runStart;
+    this.runStart = (start & ~1) >>> 0;
+    try {
+      this.engine.emu_start(start >>> 0, stop >>> 0, 0, budget);
+    } finally {
+      this.runStart = previousStart;
+    }
   }
   runGuarded(start, stop, workBudget) {
     if (!Number.isSafeInteger(workBudget) || workBudget < 1 || workBudget > 100_000_000)
@@ -196,18 +233,24 @@ export class ArmCPU {
     if (this.blockBudget != null) throw new Error('Nested execution on the same ARM CPU');
     this._ensureBlockMonitor();
     this.blockBudget = workBudget;
+    const previousStart = this.runStart;
+    this.runStart = (start & ~1) >>> 0;
     try {
       // Unicorn's count hook instruments every instruction. A persistent
       // block watchdog keeps ordinary event calls bounded without that cost.
       this.engine.emu_start(start >>> 0, stop >>> 0, 0, 0);
     } finally {
       this.blockBudget = null;
+      this.runStart = previousStart;
     }
   }
   stop() {
     this.engine.emu_stop();
   }
   close() {
+    this.blockShortcuts = null;
+    this.blockShortcutLow = Infinity;
+    this.blockShortcutHigh = -Infinity;
     for (const h of this.hooks) this.engine.hook_del(h);
     this.hooks = [];
     this.engine.close();

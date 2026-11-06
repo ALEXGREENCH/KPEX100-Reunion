@@ -39,4 +39,5 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `inspect-gnex-sdk-pages.py`: inspect the preserved SDK page ZIP, verify original page hashes/CDX and list literal download filenames without running JavaScript. See [early SDK sources](../doc/gnex-early-sdk-player-followup.md).
 - `browser-input-check.mjs`: exercise binding settings and source-aware input releases in an isolated browser. See [controls](../doc/input-controls.md).
 - `stress-kpex.mjs`: seeded inputs, scheduled virtual timers and host timeouts for original K-PEX SGS. See [Battle Armor checks and limits](../doc/battle-armor-stability.md).
+- `benchmark-memory-copy.mjs`: compare real bulk/scalar WASM memory copies; [scope and whole-game measurements](../doc/web-performance-pass2.md).
 - `browser-presentation-check.mjs`: optional isolated Chromium/Chrome checks for the fixed LCD, device controls, touch cancellation and volume persistence. See [setup](../doc/web-interface.md).

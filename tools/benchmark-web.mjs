@@ -17,9 +17,12 @@ const options = {
   games:
     'hellfire,kpetris,ikaria,godori,gnex13_mu_-_fairy,gnex26_independence_day_3d,gnex1_1zimae,gnex19_super_action_hero',
   output: null,
+  prelude: null,
+  execution: 'both',
+  kpexKeyRelease: 'catalogue',
 };
 const usage =
-  'Usage: node tools/benchmark-web.mjs [--root DIR] [--runs 3] [--frames 60] [--warmups 1] [--games id,id] [--swerveMode auto|exact|guarded] [--output FILE]';
+  'Usage: node tools/benchmark-web.mjs [--root DIR] [--runs 3] [--frames 60] [--warmups 1] [--games id,id] [--swerveMode auto|exact|guarded] [--prelude actions.json] [--execution both|exact|guarded] [--kpexKeyRelease catalogue|native|legacy] [--output FILE]';
 if (process.argv.includes('--help')) {
   console.log(usage);
   process.exit(0);
@@ -39,6 +42,9 @@ for (const [name, min, max] of [
   if (!Number.isInteger(options[name]) || options[name] < min || options[name] > max)
     throw Error(`Invalid --${name}: expected integer ${min}..${max}`);
 if (!['auto', 'exact', 'guarded'].includes(options.swerveMode)) throw Error('Invalid --swerveMode');
+if (!['both', 'exact', 'guarded'].includes(options.execution)) throw Error('Invalid --execution');
+if (!['catalogue', 'native', 'legacy'].includes(options.kpexKeyRelease))
+  throw Error('Invalid --kpexKeyRelease');
 
 process.env.TZ = 'UTC';
 const root = path.resolve(options.root);
@@ -46,6 +52,7 @@ const web = path.join(root, 'web');
 const { GnexRuntime } = await import(pathToFileURL(path.join(web, 'engine/gnex.js')));
 const { LegacyRuntime } = await import(pathToFileURL(path.join(web, 'engine/legacy.js')));
 const { initCpu } = await import(pathToFileURL(path.join(web, 'engine/cpu.js')));
+const { TimerScheduler } = await import(pathToFileURL(path.join(web, 'engine/timers.js')));
 const catalog = JSON.parse(fs.readFileSync(path.join(web, 'data/catalog.json')));
 const rom = fs.readFileSync(path.join(web, 'data/firmware/Kingston-2.12.rom'));
 const hash = (data) => createHash('sha256').update(data).digest('hex');
@@ -65,6 +72,22 @@ const selected = options.games.split(',').map((id) => {
   if (!entry) throw Error('Unknown game: ' + id);
   return { ...entry, data: fs.readFileSync(path.join(web, entry.url)) };
 });
+const preludeBytes = options.prelude ? fs.readFileSync(path.resolve(options.prelude)) : null;
+const prelude = preludeBytes ? JSON.parse(preludeBytes) : null;
+if (
+  prelude &&
+  (selected.length !== 1 ||
+    !Array.isArray(prelude.actions) ||
+    prelude.actions.some(
+      (pair) =>
+        !Array.isArray(pair) ||
+        !['key', 'tick', 'hold', 'release'].includes(pair[0]) ||
+        !Number.isInteger(pair[1]) ||
+        pair[1] < 0 ||
+        pair[1] > (pair[0] === 'tick' ? 100000 : 255),
+    ))
+)
+  throw Error('--prelude requires one game and bounded key/tick/hold/release pairs');
 const swerve = selected.some((entry) => entry.format === 36)
   ? fs.readFileSync(path.join(web, 'engine/vendor/swerve/swv21brew.mod'))
   : null;
@@ -84,15 +107,25 @@ const report = {
     frames: options.frames,
     warmups: options.warmups,
     swerveMode: options.swerveMode,
+    ...(prelude ? { preludeSha256: hash(preludeBytes) } : {}),
+    execution: options.execution,
+    kpexKeyRelease: options.kpexKeyRelease,
   },
   methodology: [
     'Real GNEX/legacy/Swerve WASM runtimes in Node; this measures guest work, not browser paint FPS, network or audio synthesis.',
-    'Paired exact/guarded runs alternate order. Fresh runtime each time; optional warmups excluded; medians reported.',
+    options.execution === 'both'
+      ? 'Paired exact/guarded runs alternate order. Fresh runtime each time; optional warmups excluded; medians reported.'
+      : 'Single execution mode selected. Fresh runtime each time; warmups excluded. No paired exact/guarded comparison is claimed; compare complete result fingerprints with a separate reference report.',
     'START and exactly frames explicit manual TIMEOUT calls, including unarmed timers. This is a deterministic execution benchmark, not browser scheduler replay.',
     'Civil clock starts 2026-01-01T12:00:00Z and monotonic clock advances by the selected armed timer delay or 50 ms fallback. First five Swerve intro steps use 500 ms.',
     'Frame-trail SHA hashes pixels after each event and input; hashes and result inspection are outside measured guest-call time.',
     'Every mode and repetition must match frames, status, error, event count, syscalls and timer states. Guarded/exact call routing is checked independently.',
     'SGS36 retains exact GNEX VM timing in both modes; its native Swerve renderer uses the selected execution mode. Other formats use guarded VM execution and safe native helpers when enabled.',
+    ...(prelude
+      ? [
+          'Prelude actions run after START, including held inputs and scheduled timer deadlines. Their guest work and pixels are included before the requested explicit benchmark frames.',
+        ]
+      : []),
   ],
   romSha256: hash(rom),
   games: [],
@@ -105,6 +138,9 @@ async function run(entry, fastExecution) {
   const started = performance.now();
   const runtime = await Runtime.create(rom, entry.data, {
     ...entry.runtime,
+    ...(entry.platform === 'kpex' && options.kpexKeyRelease !== 'catalogue'
+      ? { keyReleaseEvent: options.kpexKeyRelease === 'native' }
+      : {}),
     fastExecution,
     nowMs: () => virtualMs,
     clock: () => new Date(civilEpoch + virtualMs),
@@ -175,6 +211,26 @@ async function run(entry, fastExecution) {
       });
     }
     call(() => runtime.event('START'));
+    if (prelude) {
+      const timers = new TimerScheduler();
+      const sync = (channel = null) => timers.sync(runtime.timerStates, virtualMs, channel);
+      sync();
+      for (const [type, value] of prelude.actions) {
+        if (type === 'tick')
+          for (let i = 0; i < value; i++) {
+            const timer = timers.next();
+            if (!timer) break;
+            virtualMs = Math.max(virtualMs, timer.at);
+            call(() => runtime.event('TIMEOUT', timer.channel));
+            sync(timer.channel);
+          }
+        else {
+          if (type === 'key') key(value);
+          else call(() => runtime.setKey(value, type === 'hold'));
+          sync();
+        }
+      }
+    }
     checkpoint(0);
     for (let i = 0; i < options.frames; i++) {
       if (i === 5) key(entry.id === 'hellfire' ? 21 : entry.format === 36 ? 5 : 20);
@@ -199,6 +255,7 @@ async function run(entry, fastExecution) {
       exactCalls,
       swerveGuardedCalls,
       swerveExactCalls,
+      nativeHelpers: runtime.romAccelerators ? { ...runtime.romAccelerators.stats } : null,
       result: {
         rgbaSha256: hash(runtime.framebufferRGBA),
         frameTrailSha256: frameTrail.digest('hex'),
@@ -229,13 +286,11 @@ for (const entry of selected) {
   };
   report.games.push(record);
   try {
-    for (let i = 0; i < options.warmups; i++) {
-      await run(entry, false);
-      await run(entry, true);
-    }
+    const modes = options.execution === 'both' ? [false, true] : [options.execution === 'guarded'];
+    for (let i = 0; i < options.warmups; i++) for (const fast of modes) await run(entry, fast);
     let expected;
     for (let i = 0; i < options.runs; i++)
-      for (const fast of i % 2 === 0 ? [false, true] : [true, false]) {
+      for (const fast of i % 2 === 0 ? modes : [...modes].reverse()) {
         const measured = await run(entry, fast);
         const fingerprint = stable(measured.result);
         expected ??= fingerprint;
@@ -243,11 +298,14 @@ for (const entry of selected) {
         record[fast ? 'guarded' : 'exact'].push(measured);
       }
     record.matches = [...record.exact, ...record.guarded].every((r) => r.matches);
-    record.medianExactMs = median(record.exact.map((r) => r.guestMs));
-    record.medianGuardedMs = median(record.guarded.map((r) => r.guestMs));
-    record.speedup = record.medianExactMs / record.medianGuardedMs;
+    record.medianExactMs = record.exact.length ? median(record.exact.map((r) => r.guestMs)) : null;
+    record.medianGuardedMs = record.guarded.length
+      ? median(record.guarded.map((r) => r.guestMs))
+      : null;
+    record.speedup =
+      options.execution === 'both' ? record.medianExactMs / record.medianGuardedMs : null;
     console.error(
-      `  ${record.medianExactMs.toFixed(1)} -> ${record.medianGuardedMs.toFixed(1)} ms (${record.speedup.toFixed(2)}x), matching=${record.matches}`,
+      `  exact=${record.medianExactMs?.toFixed(1) ?? '-'} ms, guarded=${record.medianGuardedMs?.toFixed(1) ?? '-'} ms, matching=${record.matches}`,
     );
   } catch (error) {
     record.error = String(error.stack || error);

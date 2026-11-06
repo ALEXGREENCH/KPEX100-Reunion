@@ -6,13 +6,14 @@
   "release": "https://github.com/AlexAltea/unicorn.js/releases/tag/v1.0.3",
   "archive": "https://github.com/AlexAltea/unicorn.js/releases/download/v1.0.3/unicorn_arm_1.0.3.zip",
   "modifications": [
-    "Renamed unicorn_arm.js to unicorn_arm_legacy.js; appended globalThis.MUnicornLegacy = MUnicorn for module-worker loading. WASM is unmodified."
+    "Renamed unicorn_arm.js to unicorn_arm_legacy.js; appended globalThis.MUnicornLegacy = MUnicorn for module-worker loading.",
+    "Added readArrayFromMemory(pointer,length): bounded owned HEAPU8.slice, resolving the current heap on each call. No changes to the ARM WASM."
   ],
   "files": [
     {
       "path": "unicorn_arm_legacy.js",
-      "bytes": 34903,
-      "sha256": "359685259e53ad025781c7b6422bc766d27116f78a0e7f564cdd0570b1ee5336"
+      "bytes": 35161,
+      "sha256": "8bfb5404c1be7add95bac9dfc8e1e0a698e5c5ef18e07bf7a99f39e14853ac27"
     },
     {
       "path": "unicorn_arm.wasm",
@@ -34,5 +35,6 @@
       "bytes": 3761228,
       "sha256": "32e5ad7d37d79cb96a216443fe1bcd90f63e0525a919e545c73e3762e5f41a3e"
     }
-  ]
+  ],
+  "bridgePreparation": "vendor/unicorn-sources/prepare-reunion-bridge.mjs"
 }
