@@ -8,6 +8,7 @@ export function historicalAssets(webRoot) {
     ...catalog.firmwares,
     ...catalog.games,
     ...catalog.states,
+    ...JSON.parse(fs.readFileSync(path.join(webRoot, 'devices/catalog.json'))).skins,
     {
       id: 'swerve-2.1',
       url: 'engine/vendor/swerve/swv21brew.mod',

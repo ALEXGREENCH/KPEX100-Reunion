@@ -13,7 +13,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check": "npm run format:check && npm test && npm run build && npm run check:site",
-    "build:source-only": "node tools/build.mjs --source-only"
+    "build:source-only": "node tools/build.mjs --source-only",
+    "test:browser": "node tools/browser-presentation-check.mjs"
   },
   "engines": {
     "node": ">=22"

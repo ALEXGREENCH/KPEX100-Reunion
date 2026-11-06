@@ -3,12 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <meta name="theme-color" content="#0b1119" />
-    <meta
-      name="description"
-      content="K-PEX 100 — Reunion. Оригинальные прошивки и SGS-игры в браузере."
-    />
-    <title>K-PEX 100 — Reunion</title>
+    <meta name="theme-color" content="#151515" />
+    <meta name="description" content="Reunion — K-PEX100 и игры GVM / GNEX в браузере." />
+    <title>Reunion — K-PEX100</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="app.js"></script>
   </head>
@@ -38,240 +35,155 @@
           <path d="M3 7h5l2-3h4l2 3h5v13H3Z" />
           <circle cx="12" cy="13" r="4" />
         </symbol>
-        <symbol id="i-step" viewBox="0 0 24 24"><path d="m5 5 10 7-10 7Zm14 0v14" /></symbol>
-        <symbol id="i-chip" viewBox="0 0 24 24">
-          <rect x="5" y="5" width="14" height="14" rx="2" />
-          <path d="M9 1v4m6-4v4M9 19v4m6-4v4M1 9h4m-4 6h4m14-6h4m-4 6h4" />
-          <path d="M9 9h6v6H9Z" />
-        </symbol>
       </defs>
     </svg>
 
-    <header class="topbar">
-      <a class="brand" href="./" aria-label="Reunion — главная"
-        ><span class="brand-mark">R<span>•</span></span
-        ><span class="brand-name">REUNION<span>K-PEX 100 / WEB EDITION</span></span></a
-      >
-      <div class="top-note">Тот самый плеер.<span> Снова вместе.</span></div>
-      <div class="connection">
-        <span id="connectionDot" class="status-dot loading"></span
-        ><span id="connectionText">Загрузка ядра</span><span class="version">v0.1</span>
+    <main id="player" class="player">
+      <header class="topbar">
+        <a class="brand" href="./">reunion</a
+        ><button
+          id="openMenu"
+          aria-haspopup="dialog"
+          aria-label="Настройки и файлы"
+          class="menu-button"
+        >
+          •••
+        </button>
+      </header>
+      <div class="session-heading">
+        <h1 id="nowPlaying">Выберите игру</h1>
+        <span id="runStatus" role="status">Ожидание</span>
       </div>
-    </header>
-
-    <main class="workspace">
-      <aside class="library panel" aria-label="Библиотека">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">ВАША КОЛЛЕКЦИЯ</span>
-            <h1>Библиотека</h1>
-          </div>
-          <span id="collectionCount" class="count-pill">—</span>
-        </div>
-        <p id="setupHint" class="setup-hint">
-          Добавьте оригинальную прошивку Kingston 2.12 и свои SGS. Можно выбрать несколько файлов
-          или перетащить их на экран. Для 3D также нужен swv21brew.mod.
-        </p>
-        <div class="library-tabs" role="tablist" aria-label="Тип файлов">
-          <button
-            id="gamesTab"
-            class="selected"
-            role="tab"
-            aria-selected="true"
-            aria-controls="libraryList"
-            data-tab="games"
-          >
-            Игры <span id="gamesCount">—</span>
-          </button>
-          <button
-            id="samplesTab"
-            role="tab"
-            aria-selected="false"
-            aria-controls="libraryList"
-            data-tab="samples"
-          >
-            Примеры <span id="samplesCount">—</span>
-          </button>
-          <button
-            id="romsTab"
-            role="tab"
-            aria-selected="false"
-            aria-controls="libraryList"
-            data-tab="firmwares"
-          >
-            Прошивки <span id="romsCount">—</span>
-          </button>
-        </div>
-        <label class="search-field"
-          ><svg class="icon"><use href="#i-search" /></svg
+      <div class="transport" aria-label="Управление эмулятором">
+        <button id="openLibrary" aria-haspopup="dialog">Библиотека</button>
+        <button id="playPause" disabled>
+          <svg class="icon"><use href="#i-play" /></svg><span>Продолжить</span>
+        </button>
+        <button id="sound" aria-pressed="true" title="Выключить звук">
+          <svg class="icon"><use href="#i-volume" /></svg></button
+        ><label class="volume-control"
+          ><span class="visually-hidden">Громкость</span
           ><input
-            id="librarySearch"
-            type="search"
-            placeholder="Найти игру…"
-            aria-label="Поиск по библиотеке"
-            autocomplete="off"
-        /></label>
-        <div id="libraryHint" class="library-hint">Каталог совместимости · добавьте свои файлы</div>
-        <div id="libraryList" class="library-list" role="tabpanel" aria-labelledby="gamesTab">
-          <p class="empty-list">Загружаем коллекцию…</p>
+            id="volume"
+            type="range"
+            min="0"
+            max="100"
+            step="5"
+            value="75"
+            aria-label="Громкость"
+          /><output id="volumeValue" for="volume">75%</output></label
+        >
+        <button id="fullscreen" title="На весь экран">
+          <svg class="icon"><use href="#i-expand" /></svg><span>Полный экран</span>
+        </button>
+      </div>
+      <section id="screenArea" class="screen-area" aria-label="Устройство">
+        <div class="device-label">
+          <span id="deviceLabel">Kingston K-PEX100</span
+          ><span id="deviceLed" class="device-led"></span>
         </div>
-        <div class="library-footer">
-          <button id="uploadAssets" class="button subtle">
-            <svg class="icon"><use href="#i-upload" /></svg>Добавить файлы
-          </button>
-        </div>
-        <input
-          id="assetFile"
-          type="file"
-          accept=".sgs,.rom,.bin,.mod,.reunion-state"
-          multiple
-          hidden
-        />
-        <p id="assetStatus" class="local-note" aria-live="polite">0 SGS · 0 ROM</p>
-        <p id="localNote" class="local-note">
-          Добавленные вами файлы и сохранения хранятся в этом браузере. На сервер они не
-          отправляются.
-        </p>
-      </aside>
-
-      <section id="player" class="player" aria-label="Эмулятор">
-        <div class="player-heading">
-          <div>
-            <span id="modeLabel" class="eyebrow">K-PEX 100</span>
-            <h2 id="nowPlaying">Выберите игру</h2>
-            <p id="sourceLabel">Добавьте свою коллекцию и запустите оригинальный код устройства.</p>
-            <p id="gameHint" class="game-hint" hidden></p>
+        <div id="deviceShell" class="device-shell" aria-hidden="true"></div>
+        <div id="lcdWindow" class="lcd-window">
+          <canvas
+            id="screen"
+            width="220"
+            height="176"
+            tabindex="0"
+            aria-label="Экран эмулятора"
+          ></canvas>
+          <div id="screenEmpty" class="screen-empty">
+            <strong id="emptyTitle">Выберите игру</strong
+            ><span id="emptyHint">Откройте библиотеку</span
+            ><button id="emptyLibrary">Открыть библиотеку</button>
           </div>
-          <span id="runStatus" class="state-badge">Ожидание</span>
-        </div>
-        <div id="screenArea" class="screen-area">
-          <div class="device-viewport">
-            <div class="device">
-              <div class="device-top">
-                <span class="device-model">K-PEX<span>100</span></span
-                ><span class="speaker" aria-hidden="true">••••••</span>
-              </div>
-              <div class="lcd-bezel">
-                <canvas
-                  id="screen"
-                  width="220"
-                  height="176"
-                  tabindex="0"
-                  aria-label="Экран K-PEX 100, 220 на 176 пикселей"
-                ></canvas>
-                <div id="screenEmpty" class="screen-empty">
-                  <span class="screen-empty-mark">R<span>•</span></span
-                  ><strong id="emptyTitle">Готов к возвращению</strong
-                  ><span id="emptyHint">Откройте игру из библиотеки</span>
-                </div>
-              </div>
-              <div class="device-bottom">
-                <span>DIGITAL MULTIMEDIA PLAYER</span
-                ><span class="device-led" id="deviceLed"></span>
-              </div>
-            </div>
-          </div>
-          <div class="screen-meta">
-            <span
-              ><span class="tiny-dot"></span
-              ><span id="screenDimensions">220 × 176 · пиксельное масштабирование</span></span
-            ><span id="frameCounter">0 кадров</span>
+          <div id="errorBanner" class="error-banner" hidden role="alert">
+            <strong id="errorTitle">Запуск остановлен</strong
+            ><button id="showError">Подробнее</button>
           </div>
         </div>
-        <div id="errorBanner" class="error-banner" role="alert" hidden>
-          <strong id="errorTitle">Исполнение остановлено</strong>
-          <p id="errorText"></p>
-        </div>
-        <div class="transport" aria-label="Управление исполнением">
-          <button id="playPause" class="button primary" disabled>
-            <svg class="icon"><use href="#i-play" /></svg><span>Продолжить</span></button
-          ><button
-            id="reset"
-            class="button icon-button"
-            title="Начать заново"
-            aria-label="Начать заново"
-            disabled
-          >
-            <svg class="icon"><use href="#i-reset" /></svg></button
-          ><button
-            id="step"
-            class="button icon-button"
-            title="Один шаг"
-            aria-label="Один шаг"
-            disabled
-          >
-            <svg class="icon"><use href="#i-step" /></svg></button
-          ><span class="transport-spacer"></span
-          ><button
-            id="sound"
-            class="button icon-button"
-            title="Выключить звук"
-            aria-label="Выключить звук"
-            aria-pressed="true"
-          >
-            <svg class="icon"><use href="#i-volume" /></svg></button
-          ><button
-            id="screenshot"
-            class="button icon-button"
-            title="Сохранить экран PNG"
-            aria-label="Сохранить экран PNG"
-            disabled
-          >
-            <svg class="icon"><use href="#i-camera" /></svg></button
-          ><button
-            id="fullscreen"
-            class="button icon-button"
-            title="На весь экран"
-            aria-label="На весь экран"
-          >
-            <svg class="icon"><use href="#i-expand" /></svg>
-          </button>
-        </div>
-        <div class="controls" aria-label="Кнопки плеера">
-          <div class="dpad">
-            <button data-key="up" class="pad up" aria-label="Вверх">▲</button
-            ><button data-key="left" class="pad left" aria-label="Влево">◀</button
-            ><span class="pad-center"></span
-            ><button data-key="right" class="pad right" aria-label="Вправо">▶</button
-            ><button data-key="down" class="pad down" aria-label="Вниз">▼</button>
-          </div>
-          <div class="utility-keys">
-            <button data-key="menu"><span>MENU</span><kbd>Tab</kbd></button
-            ><button data-key="start"><span>PLAY</span><kbd>Enter</kbd></button>
-          </div>
-          <div class="action-keys">
-            <button data-key="b" class="action-b"><span>B</span><kbd>X</kbd></button
-            ><button data-key="a" class="action-a"><span>A</span><kbd>Z</kbd></button>
-          </div>
-        </div>
-        <p class="keyboard-note">
-          <span>← ↑ ↓ →</span> движение <i>·</i> <span>Z / X</span> выбор / назад <i>·</i>
-          <span>Enter</span> PLAY <i>·</i> <span>Space</span> пауза
-        </p>
-        <details id="phoneKeys" class="phone-keys" hidden open>
-          <summary>Клавиатура телефона</summary>
-          <p>Цифры 0–9 · Z — OK · Q / E — F1 / F2 · X — CLR</p>
-          <div class="phone-softkeys">
-            <button data-key="f1">F1 <kbd>Q</kbd></button
-            ><button data-key="clear">CLR <kbd>X</kbd></button
-            ><button data-key="f2">F2 <kbd>E</kbd></button>
-          </div>
-          <div class="phone-digits">
-            <button data-key="digit1">1</button><button data-key="digit2">2</button
-            ><button data-key="digit3">3</button><button data-key="digit4">4</button
-            ><button data-key="digit5">5</button><button data-key="digit6">6</button
-            ><button data-key="digit7">7</button><button data-key="digit8">8</button
-            ><button data-key="digit9">9</button><button data-key="star">*</button
-            ><button data-key="digit0">0</button><button data-key="hash">#</button>
-          </div>
-          <div class="phone-softkeys">
-            <button data-key="send">SEND</button><button data-key="start">ENTER</button
-            ><button data-key="end">END</button>
-          </div>
-        </details>
+        <div id="controls" class="controls" aria-label="Кнопки устройства"></div>
       </section>
+      <p class="session-note"><span id="sourceLabel"></span><span id="gameHint" hidden></span></p>
+      <footer class="page-footer">
+        <a href="./research/">Архив платформы</a
+        ><a href="https://github.com/ALEXGREENCH/KPEX100-Reunion">GitHub</a
+        ><a href="./licenses/">Лицензии</a>
+      </footer>
+      <dialog id="libraryDrawer" class="drawer">
+        <div class="dialog-header">
+          <h2 id="libraryTitle">Библиотека</h2>
+          <button data-close="libraryDrawer" aria-label="Закрыть библиотеку">×</button>
+        </div>
+        <aside class="library panel" aria-label="Библиотека">
+          <span id="collectionCount" hidden></span>
+          <p id="setupHint" class="setup-hint">
+            Добавьте оригинальную прошивку Kingston 2.12 и свои SGS. Можно выбрать несколько файлов
+            или перетащить их на экран. Для 3D также нужен swv21brew.mod.
+          </p>
+          <div class="library-tabs" role="tablist" aria-label="Тип файлов">
+            <button
+              id="gamesTab"
+              class="selected"
+              role="tab"
+              aria-selected="true"
+              aria-controls="libraryList"
+              data-tab="games"
+            >
+              Игры <span id="gamesCount">—</span>
+            </button>
+            <button
+              id="samplesTab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="libraryList"
+              data-tab="samples"
+            >
+              Примеры <span id="samplesCount">—</span>
+            </button>
+            <button
+              id="romsTab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="libraryList"
+              data-tab="firmwares"
+            >
+              Прошивки <span id="romsCount">—</span>
+            </button>
+          </div>
+          <label class="search-field"
+            ><svg class="icon"><use href="#i-search" /></svg
+            ><input
+              id="librarySearch"
+              type="search"
+              placeholder="Найти игру…"
+              aria-label="Поиск по библиотеке"
+              autocomplete="off"
+          /></label>
+          <div id="libraryHint" class="library-hint">
+            Каталог совместимости · добавьте свои файлы
+          </div>
+          <div id="libraryList" class="library-list" role="tabpanel" aria-labelledby="gamesTab">
+            <p class="empty-list">Загружаем коллекцию…</p>
+          </div>
+          <div class="library-footer">
+            <button id="uploadAssets" class="button subtle">
+              <svg class="icon"><use href="#i-upload" /></svg>Добавить файлы
+            </button>
+          </div>
+          <input
+            id="assetFile"
+            type="file"
+            accept=".sgs,.rom,.bin,.mod,.reunion-state"
+            multiple
+            hidden
+          />
+          <p id="assetStatus" class="local-note" aria-live="polite">0 SGS · 0 ROM</p>
+          <p id="localNote" class="local-note">
+            Добавленные вами файлы и сохранения хранятся в этом браузере. На сервер они не
+            отправляются.
+          </p>
+        </aside>
 
-      <aside class="inspector" aria-label="Система и прошивка">
         <section class="panel firmware-panel">
           <div class="small-heading">
             <svg class="icon"><use href="#i-chip" /></svg>
@@ -292,53 +204,42 @@
             аппаратуры экспериментальная.
           </p>
         </section>
-        <section class="panel diagnostics-panel">
-          <div class="small-heading">
-            <span class="tiny-dot mint"></span>
-            <h2>Сейчас в системе</h2>
-          </div>
-          <dl id="diagnostics">
-            <div>
-              <dt>Режим</dt>
-              <dd id="diagMode">—</dd>
-            </div>
-            <div>
-              <dt>Прошивка</dt>
-              <dd id="diagRom">—</dd>
-            </div>
-            <div>
-              <dt>Инструкции</dt>
-              <dd id="diagInstructions">0</dd>
-            </div>
-            <div>
-              <dt>События</dt>
-              <dd id="diagEvents">0</dd>
-            </div>
-            <div>
-              <dt>Звук</dt>
-              <dd id="diagAudio">Включён</dd>
-            </div>
-          </dl>
-          <details class="technical">
-            <summary>Технические данные</summary>
-            <pre id="technicalData">Ядро ещё не запущено.</pre>
-          </details>
-        </section>
-        <details class="panel log-panel">
-          <summary>Журнал <span id="logCount">0</span></summary>
-          <ol id="log"></ol>
-        </details>
-      </aside>
+      </dialog>
+      <dialog id="settings" aria-labelledby="settingsTitle">
+        <div class="dialog-header">
+          <h2 id="settingsTitle">Настройки</h2>
+          <button data-close="settings" aria-label="Закрыть настройки">×</button>
+        </div>
+        <label for="deviceSelect">Корпус устройства</label
+        ><select id="deviceSelect">
+          <option value="auto">Автоматически</option>
+        </select>
+        <p class="fine-print">Оформление не меняет профиль совместимости игры.</p>
+        <div class="menu-actions">
+          <button id="reset" disabled>Начать заново</button
+          ><button id="screenshot" disabled>Сохранить экран PNG</button
+          ><button id="importAssets">Добавить файлы</button
+          ><button id="showHelp">Управление</button>
+        </div>
+        <p id="skinCredit" class="fine-print"></p>
+      </dialog>
+      <dialog id="help" aria-labelledby="helpTitle">
+        <div class="dialog-header">
+          <h2 id="helpTitle">Управление</h2>
+          <button data-close="help" aria-label="Закрыть подсказки">×</button>
+        </div>
+        <p id="keyboardHelp"></p>
+        <p>Space — пауза. Одновременно можно удерживать несколько кнопок.</p>
+      </dialog>
+      <dialog id="errorDetails" aria-labelledby="errorDetailsTitle">
+        <div class="dialog-header">
+          <h2 id="errorDetailsTitle">Ошибка запуска</h2>
+          <button data-close="errorDetails" aria-label="Закрыть ошибку">×</button>
+        </div>
+        <p id="errorText"></p>
+      </dialog>
     </main>
-    <footer class="page-footer">
-      <span>K-PEX 100 <span class="footer-cross">×</span> REUNION</span>
-      <p>ROM → ARM → LCD. Исполняется оригинальный код устройства.</p>
-      <span class="footer-tag">Сделано для возвращения.</span>
-      <a href="./research/">Материалы исследования</a>
-    </footer>
     <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-    <noscript
-      ><p class="noscript">Для эмулятора нужен JavaScript и браузер с WebAssembly.</p></noscript
-    >
+    <noscript>Для эмулятора нужен JavaScript и браузер с WebAssembly.</noscript>
   </body>
 </html>

@@ -11,6 +11,7 @@ test('Runtime selection leaves original assets to the explicit verified catalogu
     'data/states/menu.reunion-state',
     'data/unrecognized.bin',
     'data/availability.json',
+    'devices/photos/kingston.jpg',
     'engine/vendor/swerve/swv21brew.mod',
     '.openai/state.json',
     'engine/game.sgs',

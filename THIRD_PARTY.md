@@ -168,3 +168,9 @@ The separate LG MAIN research tools use the official LZO 2.10 safe decoder
 library hash accompany that research bundle. The new unpacker is
 GPL-3.0-or-later; neither it nor the decoder is placed in the MIT runtime.
 [Recovery method and exact sources](doc/lg-main-images.md).
+
+Device photographs retain their original authors’ rights; Reunion MIT does not
+relicense them. The exact JPEGs, origin URLs, hashes, cosmetic transforms and
+limitations are listed in [the interface report](doc/web-interface.md) and
+[photo provenance](validation/device-photo-sources.json). Source-only builds
+exclude these historical JPEG files.

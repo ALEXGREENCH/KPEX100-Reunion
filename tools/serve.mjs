@@ -14,6 +14,7 @@ const types = {
   '.wasm': 'application/wasm',
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
+  '.jpg': 'image/jpeg',
   '.txt': 'text/plain; charset=utf-8',
 };
 

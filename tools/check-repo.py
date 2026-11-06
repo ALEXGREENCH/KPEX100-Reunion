@@ -16,6 +16,9 @@ def original_files():
     entries = [
         entry for group in ("firmwares", "games", "states") for entry in catalog[group]
     ]
+    entries.extend(
+        json.loads((ROOT / "web/devices/catalog.json").read_text(encoding="utf-8"))["skins"]
+    )
     entries.append(
         {
             "url": "engine/vendor/swerve/swv21brew.mod",

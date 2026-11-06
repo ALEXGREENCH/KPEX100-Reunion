@@ -6,6 +6,7 @@ export function isPublicWebFile(name) {
   const file = name.replaceAll('\\', '/');
   if (file === 'data/catalog.json') return true;
   if (file.startsWith('data/')) return false;
+  if (file.startsWith('devices/photos/')) return false;
   if (file.startsWith('engine/vendor/swerve/')) return false;
   if (file.split('/').some((part) => part.startsWith('.') || part === '..')) return false;
   return /\.(?:html|css|js|mjs|json|wasm|svg|txt)$/.test(file) || file === 'engine/vendor/LICENSE';

@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "lcd": {
+        "x": 500,
+        "y": 288,
+        "width": 440,
+        "height": 352
+      },
+      "errors": [],
+      "ok": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lcd": {
+        "x": 18,
+        "y": 248.5,
+        "width": 354,
+        "height": 283.1875
+      },
+      "errors": [],
+      "ok": true
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "lcd": {
+        "x": 18,
+        "y": 231,
+        "width": 284,
+        "height": 227.1875
+      },
+      "errors": [],
+      "ok": true
+    }
+  ],
+  "checkedUtc": "2026-11-06T12:27:26.067722+00:00",
+  "browser": "Chrome in isolated headless profiles",
+  "frameWorker": "Deterministic test fixture; production Worker/VM unchanged",
+  "unitTests": 35,
+  "integrationTests": 64,
+  "fullBuildFiles": 156,
+  "sourceOnlyBuildFiles": 69,
+  "originalRuntimeAssets": 81,
+  "originalPhotoAssets": 6,
+  "usablePhotographicShells": 5,
+  "sd1020Fallback": true,
+  "sourceOnlyBrowserFallbackPassed": true,
+  "realHellFireSmoke": {
+    "status": "Запущено",
+    "pageErrors": [],
+    "scope": "Original ROM/SGS boot in production Worker, title screen visually reviewed; integration suite checks runtime separately"
+  },
+  "cases": [
+    "fixed LCD across six games and known/unknown handset resolutions",
+    "manual shell does not reload VM or change framebuffer",
+    "library/settings/error/long title do not shift LCD",
+    "keyboard release on blur",
+    "two simultaneous touch inputs cancelled without held keys",
+    "volume 35 -> mute 0 -> restore 35 -> reload 35",
+    "fullscreen and manual shell change",
+    "no diagnostic DOM",
+    "no horizontal page overflow"
+  ]
+}

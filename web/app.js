@@ -1,12 +1,9 @@
+import { devices, deviceFor, fitFrame } from './presentation.js';
 import { SmafDecoder } from './smaf-decoder.js';
 import { SWERVE, MAX_ASSET_BYTES, assetCatalog, identifyAsset, sha256 } from './local-assets.js';
 import { libraryEntries, libraryCounts } from './library.js';
 
 const $ = (id) => document.getElementById(id);
-const ui = Object.fromEntries(
-  [...document.querySelectorAll('[id]')].map((node) => [node.id, node]),
-);
-const number = new Intl.NumberFormat('ru-RU');
 const canvas = $('screen');
 const context = canvas.getContext('2d', { alpha: false });
 context.imageSmoothingEnabled = false;
@@ -22,12 +19,22 @@ let workerReady = false;
 let running = false;
 let machineOff = false;
 let hasFrame = false;
-let frameCount = 0;
 let pendingCommand = null;
 let toastTimer = 0;
 let loadSequence = 0;
 let sessionCounter = 0;
 let soundEnabled = true;
+let userVolume = 75;
+let lastVolume = 75;
+try {
+  const saved = localStorage.getItem('reunion-volume');
+  if (saved !== null && Number.isFinite(Number(saved)))
+    userVolume = Math.max(0, Math.min(100, Math.round(Number(saved) / 5) * 5));
+  const previous = Number(localStorage.getItem('reunion-last-volume'));
+  if (previous > 0 && previous <= 100) lastVolume = previous;
+} catch {
+  /* Optional browser preference. */
+}
 let warnedMemorySaves = false;
 const uploads = new Set();
 const held = new Map();
@@ -53,17 +60,6 @@ function log(message, error = false) {
   if (logs.at(-1)?.message === text) return;
   logs.push({ message: text, error, at: new Date() });
   if (logs.length > 80) logs.shift();
-  $('logCount').textContent = String(logs.length);
-  const fragment = document.createDocumentFragment();
-  for (const entry of [...logs].reverse()) {
-    const item = document.createElement('li');
-    item.className = entry.error ? 'log-error' : '';
-    const time = document.createElement('time');
-    time.textContent = entry.at.toLocaleTimeString('ru-RU');
-    item.append(time, document.createTextNode(entry.message));
-    fragment.append(item);
-  }
-  $('log').replaceChildren(fragment);
 }
 
 function toast(message) {
@@ -99,7 +95,6 @@ function setStatus(text, kind = '') {
 function updateTransport() {
   $('playPause').disabled = !current || !workerReady || machineOff;
   $('reset').disabled = !current || !workerReady;
-  $('step').disabled = !current || !workerReady || running || machineOff;
   $('playPause').querySelector('span').textContent = running ? 'Пауза' : 'Продолжить';
   $('playPause')
     .querySelector('use')
@@ -119,16 +114,192 @@ function post(message) {
   worker.postMessage({ ...message, sessionId: message.sessionId ?? current?.sessionId ?? null });
 }
 
+let skinOverride = 'auto';
+try {
+  skinOverride = localStorage.getItem('reunion-device') || 'auto';
+} catch {
+  /* optional preference */
+}
+let skinCatalog = {};
+function showDialog(id) {
+  releaseAll();
+  const dialog = $(id);
+  if (!dialog.open) dialog.showModal();
+}
+function applyDevice() {
+  releaseAll();
+  const device = deviceFor(current, skinOverride);
+  $('screenArea').dataset.device = device.id;
+  $('screenArea').dataset.kind = device.type;
+  $('deviceLabel').textContent = device.title;
+  const skin = skinCatalog[device.id];
+  $('controls').replaceChildren(
+    ...device.keys
+      .filter(([key]) => current?.kind === 'firmware' || !['mode', 'rec'].includes(key))
+      .map(([key, title], index) => {
+        const button = document.createElement('button');
+        button.dataset.key = key;
+        button.textContent = title;
+        button.setAttribute('aria-label', title);
+        const playerPositions = {
+          menu: [118, 89],
+          up: [124, 198],
+          left: [66, 261],
+          down: [141, 332],
+          right: [184, 261],
+          a: [809, 130],
+          b: [809, 220],
+          start: [809, 440],
+          mode: [425, 66],
+          rec: [535, 66],
+        };
+        const [x, y, width, height] =
+          skin?.buttonZones?.[key] ||
+          (device.type === 'phone'
+            ? [350 + (index % 3) * 103, 510 + Math.floor(index / 3) * 39, 94, 35.7]
+            : [...playerPositions[key], 80, 51]);
+        Object.assign(button.style, {
+          left: `${x / 10}%`,
+          top: `${y / 8.5}%`,
+          width: `${width / 10}%`,
+          height: `${height / 8.5}%`,
+        });
+        return button;
+      }),
+  );
+  bindControls();
+  $('deviceShell').replaceChildren();
+  $('screenArea').classList.toggle('has-photo', Boolean(skin));
+  if (skin) renderShell(skin);
+  $('skinCredit').textContent = skin
+    ? skin.credit
+    : 'Универсальное оформление. Фотография модели не используется.';
+  $('keyboardHelp').textContent =
+    device.type === 'phone'
+      ? 'Стрелки — движение; Z — OK; X / Backspace — CLR; Q / E — F1 / F2; цифры 0–9, * и # — клавиатура телефона; Enter — ENTER.'
+      : 'Стрелки — движение; Z — SELECT; X / Escape — ESC; Enter — PLAY; Tab на экране — MENU; C — MODE; V — REC.';
+  updateTransport();
+}
+function renderShell(skin) {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 1000 850');
+  svg.setAttribute('preserveAspectRatio', 'none');
+  const [x, y, w, h] = skin.lcd;
+  const [left, top, right, bottom] = skin.body;
+  const [dl, dt, dr, db] = skin.destination;
+  const defs = document.createElementNS(ns, 'defs');
+  const clip = document.createElementNS(ns, 'clipPath');
+  clip.id = 'shell-clip';
+  const outline = document.createElementNS(ns, 'rect');
+  for (const [key, value] of Object.entries({
+    x: dl,
+    y: dt,
+    width: dr - dl,
+    height: db - dt,
+    rx: skin.mask?.radius ?? 48,
+  }))
+    outline.setAttribute(key, value);
+  clip.append(outline);
+  defs.append(clip);
+  svg.append(defs);
+  const sx = [left, x, x + w, right],
+    sy = [top, y, y + h, bottom];
+  const dx = [dl, 280, 720, dr],
+    dy = [dt, 110, 462, db];
+  // Eight photographic slices preserve the fixed LCD. Original bytes stay untouched.
+  for (let row = 0; row < 3; row++)
+    for (let col = 0; col < 3; col++) {
+      if (row === 1 && col === 1) continue;
+      const tile = document.createElementNS(ns, 'svg');
+      for (const [key, value] of Object.entries({
+        x: dx[col],
+        y: dy[row],
+        width: dx[col + 1] - dx[col],
+        height: dy[row + 1] - dy[row],
+        viewBox: `${sx[col]} ${sy[row]} ${sx[col + 1] - sx[col]} ${sy[row + 1] - sy[row]}`,
+        preserveAspectRatio: 'none',
+      }))
+        tile.setAttribute(key, value);
+      const image = document.createElementNS(ns, 'image');
+      image.setAttribute('href', new URL(skin.url, import.meta.url));
+      image.setAttribute('width', skin.width);
+      image.setAttribute('height', skin.height);
+      if (skin.transform) image.setAttribute('transform', skin.transform);
+      tile.append(image);
+      const group = document.createElementNS(ns, 'g');
+      group.setAttribute('clip-path', 'url(#shell-clip)');
+      group.append(tile);
+      svg.append(group);
+    }
+  $('deviceShell').append(svg);
+}
+for (const device of devices) {
+  const option = document.createElement('option');
+  option.value = device.id;
+  option.textContent = device.title;
+  $('deviceSelect').append(option);
+}
+if (!devices.some((device) => device.id === skinOverride)) skinOverride = 'auto';
+$('deviceSelect').value = skinOverride;
+$('deviceSelect').addEventListener('change', (event) => {
+  skinOverride = event.target.value;
+  try {
+    localStorage.setItem('reunion-device', skinOverride);
+  } catch {
+    /* optional preference */
+  }
+  applyDevice();
+});
+for (const [id, dialog] of [
+  ['openLibrary', 'libraryDrawer'],
+  ['emptyLibrary', 'libraryDrawer'],
+  ['openMenu', 'settings'],
+  ['showError', 'errorDetails'],
+])
+  $(id).addEventListener('click', () => showDialog(dialog));
+$('importAssets').addEventListener('click', () => $('assetFile').click());
+$('showHelp').addEventListener('click', () => {
+  $('settings').close();
+  showDialog('help');
+});
+document
+  .querySelectorAll('[data-close]')
+  .forEach((button) => button.addEventListener('click', () => $(button.dataset.close).close()));
+for (const dialog of document.querySelectorAll('dialog')) {
+  dialog.addEventListener('close', releaseAll);
+  dialog.addEventListener('click', (event) => {
+    const rect = dialog.getBoundingClientRect();
+    if (
+      event.target === dialog &&
+      (event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom)
+    )
+      dialog.close();
+  });
+}
+async function loadSkins() {
+  try {
+    const response = await fetch(new URL('./devices/catalog.json', import.meta.url));
+    if (!response.ok) throw Error('No skin catalogue');
+    const data = await response.json();
+    const manifest = await fetch(new URL('./data/availability.json', import.meta.url));
+    const ids = manifest.ok ? (await manifest.json()).assets || [] : [];
+    skinCatalog = Object.fromEntries(
+      data.skins
+        .filter((skin) => !skin.disabled && ids.includes(skin.id))
+        .map((skin) => [skin.device, skin]),
+    );
+    applyDevice();
+  } catch {
+    /* Source-only builds keep the functional universal shell. */
+  }
+}
+
 function sourceText(details) {
-  return details.kind === 'game'
-    ? (details.applicationType === 'sample' ? 'Учебный пример · ' : '') +
-        (details.platform === 'mobile'
-          ? 'GNEX · телефонный профиль'
-          : 'Оригинальный GNEX · Kingston 2.12') +
-        (details.research ? ' · совместимость исследуется' : '')
-    : details.checkpoint
-      ? `${details.rom.title} · сохранённый запуск устройства`
-      : `${details.rom.title} · холодный старт ARM`;
+  return details.research ? 'Совместимость этой игры ещё проверяется.' : '';
 }
 
 function beginSession(details, command) {
@@ -138,7 +309,6 @@ function beginSession(details, command) {
   command = { ...command, sessionId: current.sessionId };
   running = false;
   machineOff = false;
-  frameCount = 0;
   hasFrame = false;
   $('errorBanner').hidden = true;
   $('screenEmpty').hidden = false;
@@ -148,21 +318,11 @@ function beginSession(details, command) {
   context.fillRect(0, 0, canvas.width, canvas.height);
   $('screenshot').disabled = true;
   $('nowPlaying').textContent = details.title;
-  $('modeLabel').textContent =
-    details.kind === 'game'
-      ? details.applicationType === 'sample'
-        ? 'ПРИМЕР SGS'
-        : 'ИГРА SGS'
-      : 'РОДНАЯ ПРОШИВКА';
-  $('phoneKeys').hidden = details.platform !== 'mobile';
   $('sourceLabel').textContent = sourceText(details);
   $('gameHint').textContent = details.startHint || '';
   $('gameHint').hidden = !details.startHint;
-  $('diagMode').textContent = details.kind === 'game' ? 'GNEX / ARM' : 'Полная прошивка';
-  $('diagRom').textContent = details.rom.title;
-  $('diagInstructions').textContent = '0';
-  $('diagEvents').textContent = '0';
-  $('frameCounter').textContent = '0 кадров';
+  applyDevice();
+  $('libraryDrawer').close();
   setStatus('Загрузка');
   if (workerReady) post(command);
   else pendingCommand = command;
@@ -378,18 +538,13 @@ function populateCatalog() {
   $('assetStatus').textContent =
     `${sgs.length} SGS · ${roms.length} ROM${swerve.available ? ' · Swerve 2.1' : ''}`;
   if (!current) {
-    $('emptyTitle').textContent =
-      gnexReady && sgs.length ? 'Готов к возвращению' : 'Добавьте ROM и игры';
+    $('emptyTitle').textContent = gnexReady && sgs.length ? 'Выберите игру' : 'Добавьте ROM и игры';
     $('emptyHint').textContent =
       gnexReady && sgs.length
         ? 'Откройте игру или пример из библиотеки'
         : 'Kingston 2.12 + ваши SGS';
-    $('nowPlaying').textContent =
-      gnexReady && sgs.length ? 'Выберите игру или пример' : 'Ваша коллекция — на вашем устройстве';
-    $('sourceLabel').textContent =
-      gnexReady && sgs.length
-        ? 'Оригинальный код. Маленький экран. Большое возвращение.'
-        : 'Добавьте свою коллекцию и запустите оригинальный код устройства.';
+    $('nowPlaying').textContent = gnexReady && sgs.length ? 'Выберите игру' : 'Добавьте файлы';
+    $('sourceLabel').textContent = gnexReady && sgs.length ? '' : '';
   }
   $('firmwareSelect').replaceChildren(
     ...roms.map((rom) => {
@@ -433,22 +588,10 @@ function populateCatalog() {
 }
 
 function resizeScreen() {
-  const area = $('screenArea');
-  const device = area.querySelector('.device');
-  const bezel = area.querySelector('.lcd-bezel');
-  const padding = (node) => {
-    const style = getComputedStyle(node);
-    return parseFloat(style.paddingLeft) + parseFloat(style.paddingRight) + 2;
-  };
-  const available = area.clientWidth - padding(area) - padding(device) - padding(bezel) - 2;
-  // Leave room for transport and physical buttons, while keeping every LCD pixel square.
-  const heightScale = Math.max(
-    1,
-    Math.floor((window.innerHeight - (document.fullscreenElement ? 360 : 500)) / canvas.height),
-  );
-  const scale = Math.max(1, Math.min(heightScale, Math.floor(available / canvas.width)));
-  canvas.style.width = `${canvas.width * scale}px`;
-  canvas.style.height = `${canvas.height * scale}px`;
+  const box = $('lcdWindow').getBoundingClientRect();
+  const fitted = fitFrame(canvas.width, canvas.height, box.width, box.height);
+  canvas.style.width = `${fitted.width}px`;
+  canvas.style.height = `${fitted.height}px`;
 }
 
 function drawFrame(message) {
@@ -467,28 +610,11 @@ function drawFrame(message) {
     canvas.height = height;
     resizeScreen();
   }
-  $('screenDimensions').textContent = `${width} × ${height} · пиксельное масштабирование`;
   canvas.setAttribute('aria-label', `Экран эмулятора, ${width} на ${height} пикселей`);
   context.putImageData(new ImageData(pixels, width, height), 0, 0);
   hasFrame = true;
-  frameCount++;
   $('screenEmpty').hidden = true;
   $('screenshot').disabled = false;
-  $('frameCounter').textContent = `${number.format(frameCount)} кадров`;
-}
-
-function bounded(value, depth = 0) {
-  if (ArrayBuffer.isView(value) || value instanceof ArrayBuffer)
-    return `[${value.byteLength} байт]`;
-  if (typeof value === 'bigint') return String(value);
-  if (value === null || typeof value !== 'object') return value;
-  if (depth > 4) return '…';
-  if (Array.isArray(value)) return value.slice(0, 30).map((item) => bounded(item, depth + 1));
-  return Object.fromEntries(
-    Object.entries(value)
-      .slice(0, 50)
-      .map(([key, item]) => [key, bounded(item, depth + 1)]),
-  );
 }
 
 function receiveStatus(message) {
@@ -525,15 +651,10 @@ function receiveStatus(message) {
   } else {
     if (state !== 'loading') $('errorBanner').hidden = true;
     setStatus(
-      state === 'loading' ? 'Загрузка' : running ? 'Исполняется' : current ? 'Пауза' : 'Ожидание',
+      state === 'loading' ? 'Загрузка' : running ? 'Запущено' : current ? 'Пауза' : 'Ожидание',
       running ? 'running' : '',
     );
   }
-  const instructions = diagnostics.instructions ?? message.instructions;
-  const events = diagnostics.events ?? diagnostics.event_count ?? message.events;
-  if (instructions !== undefined) $('diagInstructions').textContent = number.format(instructions);
-  if (events !== undefined) $('diagEvents').textContent = number.format(events);
-  $('technicalData').textContent = JSON.stringify(bounded(diagnostics), null, 2).slice(0, 14000);
   if (message.message) log(message.message, Boolean(error));
   if (running && audio.buffer && !audio.paused && !audio.node) audio.resume();
   updateTransport();
@@ -554,8 +675,7 @@ function connectWorker() {
       switch (data.type) {
         case 'ready':
           workerReady = true;
-          $('connectionText').textContent = 'Ядро готово';
-          $('connectionDot').className = 'status-dot ready';
+
           log('Ядро WebAssembly готово.');
           if (pendingCommand) {
             post(pendingCommand);
@@ -599,16 +719,15 @@ function connectWorker() {
     });
     worker.addEventListener('error', (event) => {
       workerReady = false;
-      $('connectionText').textContent = 'Ошибка ядра';
-      $('connectionDot').className = 'status-dot error';
+
       fail(
         event.message ||
           'Не удалось загрузить WebAssembly. Проверьте соединение и обновите страницу.',
-        'Не удалось запустить ядро',
+        'Не удалось запустить эмулятор',
       );
     });
   } catch (error) {
-    fail(error.message, 'Браузер не смог создать ядро');
+    fail(error.message, 'Не удалось запустить эмулятор');
   }
 }
 
@@ -638,6 +757,7 @@ function sendKey(key, pressed, source, repeat = false) {
 function releaseAll() {
   for (const key of held.keys()) if (workerReady) post({ type: 'key', key, pressed: false });
   held.clear();
+  keyboardHolds.clear();
   document.querySelectorAll('.held').forEach((button) => button.classList.remove('held'));
 }
 
@@ -648,7 +768,7 @@ function togglePlayback() {
   running = !running;
   post({ type: running ? 'resume' : 'pause' });
   running ? audio.resume() : audio.pause();
-  setStatus(running ? 'Исполняется' : 'Пауза', running ? 'running' : '');
+  setStatus(running ? 'Запущено' : 'Пауза', running ? 'running' : '');
   updateTransport();
 }
 
@@ -667,6 +787,8 @@ const keyMap = {
 };
 const phoneKeyMap = {
   ...keyMap,
+  KeyX: 'clear',
+  Escape: 'clear',
   Backspace: 'clear',
   KeyQ: 'f1',
   KeyE: 'f2',
@@ -689,7 +811,15 @@ const editable = (target) =>
   target instanceof Element &&
   (target.matches('input,select,textarea') || target.isContentEditable);
 document.addEventListener('keydown', (event) => {
-  if (event.ctrlKey || event.metaKey || event.altKey || editable(event.target) || !current) return;
+  if (
+    event.ctrlKey ||
+    event.metaKey ||
+    event.altKey ||
+    editable(event.target) ||
+    !current ||
+    document.querySelector('dialog[open]')
+  )
+    return;
   if (['Enter', 'Space'].includes(event.code) && event.target.closest('button,a,summary')) return;
   if (event.code === 'Space' && !event.repeat) {
     event.preventDefault();
@@ -718,26 +848,26 @@ window.addEventListener('blur', releaseAll);
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) releaseAll();
 });
-document.querySelectorAll('[data-key]').forEach((button) => {
-  button.addEventListener('pointerdown', (event) => {
-    if (event.button !== 0) return;
-    event.preventDefault();
-    audio.unlock();
-    button.setPointerCapture(event.pointerId);
-    sendKey(button.dataset.key, true, `pointer:${event.pointerId}`);
+function bindControls() {
+  document.querySelectorAll('[data-key]').forEach((button) => {
+    button.addEventListener('pointerdown', (event) => {
+      if (event.button !== 0) return;
+      event.preventDefault();
+      audio.unlock();
+      button.setPointerCapture(event.pointerId);
+      sendKey(button.dataset.key, true, `pointer:${event.pointerId}`);
+    });
+    const release = (event) => sendKey(button.dataset.key, false, `pointer:${event.pointerId}`);
+    for (const type of ['pointerup', 'pointercancel', 'lostpointercapture'])
+      button.addEventListener(type, release);
+    button.addEventListener('click', (event) => {
+      if (event.detail !== 0) return;
+      const key = button.dataset.key;
+      sendKey(key, true, 'accessible');
+      setTimeout(() => sendKey(key, false, 'accessible'), 80);
+    });
   });
-  const release = (event) => sendKey(button.dataset.key, false, `pointer:${event.pointerId}`);
-  button.addEventListener('pointerup', release);
-  button.addEventListener('pointercancel', release);
-  button.addEventListener('lostpointercapture', release);
-  // Keyboard activation for focused on-screen controls.
-  button.addEventListener('click', (event) => {
-    if (event.detail === 0) {
-      sendKey(button.dataset.key, true, 'accessible');
-      setTimeout(() => sendKey(button.dataset.key, false, 'accessible'), 80);
-    }
-  });
-});
+}
 
 class BrowserAudio {
   constructor() {
@@ -749,9 +879,12 @@ class BrowserAudio {
     this.loop = false;
     this.generation = 0;
     this.paused = false;
+    this.masterVolume = 1;
+  }
+  updateGain() {
+    if (this.gain) this.gain.gain.value = (this.volume ?? 1) * this.masterVolume;
   }
   unlock() {
-    if (!soundEnabled) return;
     try {
       this.context ||= new (window.AudioContext || window.webkitAudioContext)();
       if (this.context.state === 'suspended') this.context.resume().catch(() => {});
@@ -763,7 +896,7 @@ class BrowserAudio {
     const action = message.action || 'play';
     if (action === 'volume') {
       this.volume = Math.max(0, Math.min(1, Number(message.value) || 0));
-      if (this.gain) this.gain.gain.value = this.volume;
+      this.updateGain();
       return;
     }
     if (action === 'stop') {
@@ -783,7 +916,6 @@ class BrowserAudio {
     this.paused = false;
     const generation = this.generation;
     if (!this.context) {
-      $('diagAudio').textContent = 'Нажмите кнопку';
       return;
     }
     try {
@@ -805,11 +937,9 @@ class BrowserAudio {
       this.loop = Boolean(message.loop);
       this.offset = 0;
       if (!this.paused && running) this.resume();
-      $('diagAudio').textContent = message.format || message.mime || 'Воспроизведение';
     } catch (error) {
       if (generation !== this.generation || error.name === 'AbortError') return;
       log(`Звук: ${message.format || 'формат'} не воспроизводится (${error.message}).`, true);
-      $('diagAudio').textContent = 'Формат недоступен';
     }
   }
   pause() {
@@ -829,7 +959,7 @@ class BrowserAudio {
   }
   resume() {
     this.paused = false;
-    if (!soundEnabled || !this.context || !this.buffer || this.node) return;
+    if (!this.context || !this.buffer || this.node) return;
     if (this.offset >= this.buffer.duration) {
       if (!this.loop) return;
       this.offset %= this.buffer.duration;
@@ -840,7 +970,7 @@ class BrowserAudio {
       this.gain = this.context.createGain();
       this.gain.connect(this.context.destination);
     }
-    this.gain.gain.value = this.volume ?? 1;
+    this.updateGain();
     node.buffer = this.buffer;
     node.loop = this.loop;
     node.connect(this.gain);
@@ -868,6 +998,14 @@ class BrowserAudioMixer {
   constructor() {
     this.channels = new Map([[0, new BrowserAudio()]]);
     this.volume = 1;
+    this.masterVolume = 1;
+  }
+  setMasterVolume(value) {
+    this.masterVolume = Math.max(0, Math.min(1, Number(value) || 0));
+    for (const track of this.channels.values()) {
+      track.masterVolume = this.masterVolume;
+      track.updateGain();
+    }
   }
   track(channel = 0) {
     if (!Number.isInteger(channel) || channel < 0 || channel > 4)
@@ -876,6 +1014,7 @@ class BrowserAudioMixer {
       const track = new BrowserAudio();
       track.context = this.context;
       track.volume = this.volume;
+      track.masterVolume = this.masterVolume;
       this.channels.set(channel, track);
     }
     return this.channels.get(channel);
@@ -1004,25 +1143,33 @@ $('reset').addEventListener('click', () => {
   $('sourceLabel').textContent = sourceText(current);
   log('Повторный запуск текущего сеанса.');
 });
-$('step').addEventListener('click', () => {
-  releaseAll();
-  post({ type: 'step' });
-});
-$('sound').addEventListener('click', () => {
-  soundEnabled = !soundEnabled;
-  if (!soundEnabled) audio.pause();
-  else {
-    audio.unlock();
-    if (running) audio.resume();
-  }
+function setUserVolume(value, activate = true) {
+  userVolume = Math.max(0, Math.min(100, Math.round(Number(value) / 5) * 5));
+  if (userVolume > 0) lastVolume = userVolume;
+  soundEnabled = userVolume > 0;
+  audio.setMasterVolume(userVolume / 100);
+  $('volume').value = String(userVolume);
+  $('volumeValue').textContent = `${userVolume}%`;
   $('sound')
     .querySelector('use')
     .setAttribute('href', soundEnabled ? '#i-volume' : '#i-muted');
   $('sound').setAttribute('aria-pressed', String(soundEnabled));
   $('sound').title = soundEnabled ? 'Выключить звук' : 'Включить звук';
   $('sound').setAttribute('aria-label', $('sound').title);
-  $('diagAudio').textContent = soundEnabled ? 'Включён' : 'Выключен';
-});
+  try {
+    localStorage.setItem('reunion-volume', String(userVolume));
+    localStorage.setItem('reunion-last-volume', String(lastVolume));
+  } catch {
+    /* Optional browser preference. */
+  }
+  // Muting keeps playback position advancing. Restoring gain does not restart music.
+  if (activate) {
+    audio.unlock();
+    if (running) audio.resume();
+  }
+}
+$('sound').addEventListener('click', () => setUserVolume(soundEnabled ? 0 : lastVolume));
+$('volume').addEventListener('input', (event) => setUserVolume(event.target.value));
 $('fullscreen').addEventListener('click', async () => {
   try {
     if (document.fullscreenElement) await document.exitFullscreen();
@@ -1067,9 +1214,12 @@ window.addEventListener('pagehide', () => {
 window.addEventListener('beforeunload', () => {
   for (const url of uploads) URL.revokeObjectURL(url);
 });
-new ResizeObserver(resizeScreen).observe($('screenArea'));
+new ResizeObserver(resizeScreen).observe($('lcdWindow'));
 window.addEventListener('resize', resizeScreen);
-updateTransport();
+setUserVolume(userVolume, false);
+applyDevice();
+resizeScreen();
+loadSkins();
 connectWorker();
 const libraryReady = (async () => {
   const response = await fetch(new URL('./data/catalog.json', import.meta.url));

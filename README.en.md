@@ -126,3 +126,9 @@ URL and hash, not redistributed.
 Original Reunion code is [MIT-licensed](LICENSE). Bundled components retain
 their GPL-2.0, Apache-2.0 and MIT terms; see [THIRD_PARTY.md](THIRD_PARTY.md).
 No licence for original firmware, games, SDKs or Swerve is granted by this project.
+
+The web player uses a fixed 5:4 LCD, a library drawer and device-specific controls.
+Volume is adjustable in 5% steps and remembered locally. Photographic shells are
+cosmetic and never change VM compatibility settings. [Interface, photo sources
+and browser checks](doc/web-interface.md). The SD1020 photo is preserved but is
+not enabled as an overlay because it only shows the closed device.
