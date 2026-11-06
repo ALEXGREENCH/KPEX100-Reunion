@@ -793,6 +793,40 @@
       "repositoryPath": "research/archives/GVM-Service-Portals-and-Korean-Industry-Report.zip",
       "bytes": 6221562,
       "sha256": "c46b6ea421f11271825c0322b106858f783da9efe4b23bbfcfb4216aa7c3924f"
+    },
+    {
+      "id": "wayback-clubs-partial-pass4",
+      "sha256": "d5d94ae1c7c3a19c5b2d1786fbcba5ba458303e61ffd46bd8c95f55d0489a7d3",
+      "category": "Сохранение сайтов и документации",
+      "title": "Wayback: частичный снимок Pass 4",
+      "description": "53 659 задач и 2 359 ответов с совпавшим digest. Не полный обход; сохранены также ошибки и перенаправления. Все буквальные записи Pass 3 проверены как неизменённое подмножество.",
+      "sources": [
+        {
+          "label": "GNEX Club, GVM Club и Sinjisoft: метод сохранения",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/wayback-collection.md"
+        }
+      ],
+      "repositoryPath": "research/archives/GNEX-GVM-Wayback-Partial-Pass4-20261106.zip",
+      "bytes": 35700054
+    },
+    {
+      "id": "sinjisoft-corporate-seminar-2000",
+      "sha256": "fc41e5a9a96d58417f97b56f21235ac21dbaeecabcd539bed475eb4d39098f07",
+      "category": "Сохранение сайтов и документации",
+      "title": "Sinjisoft: объявления и семинар GVM 2000 года",
+      "description": "Два восстановленных PDF: разработка Hellfire и политика n.TOP. Дополнительно — 28 выбранных корпоративных HTML и поиск по корейским оригиналам. SHA-1 PDF и HTML совпали с CDX.",
+      "sources": [
+        {
+          "label": "Оригинальный gvm3.pdf Sinjisoft, 17 августа 2000",
+          "url": "https://web.archive.org/web/20040504192159id_/http://www.sinjisoft.com:80/HP/data/gvm3.pdf"
+        },
+        {
+          "label": "Оригинальный gvm1.pdf SK Telecom",
+          "url": "https://web.archive.org/web/20040504173304id_/http://www.sinjisoft.com:80/HP/data/gvm1.pdf"
+        }
+      ],
+      "repositoryPath": "research/archives/Sinjisoft-Korean-Corporate-Notices-and-GVM-Seminar-2000.zip",
+      "bytes": 2033306
     }
   ],
   "reports": [
@@ -939,6 +973,14 @@
     {
       "title": "GVM Cafe, So1 и корейский отраслевой отчёт",
       "repositoryPath": "doc/gvm-service-portals.md"
+    },
+    {
+      "title": "Sinjisoft: корейские объявления и семинар Hellfire 2000 года",
+      "repositoryPath": "doc/sinjisoft-corporate-seminar-2000.md"
+    },
+    {
+      "title": "Wayback: четвёртый частичный снимок",
+      "repositoryPath": "doc/wayback-partial-pass4.md"
     }
   ]
 }
