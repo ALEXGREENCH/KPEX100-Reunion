@@ -8,13 +8,20 @@ import { Worker, isMainThread, parentPort, workerData } from 'node:worker_thread
 const root = fileURLToPath(new URL('../', import.meta.url));
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 if (isMainThread) {
-  const options = { minutes: 10, seed: 0x12345678, game: null, prelude: null, output: null };
+  const options = {
+    minutes: 10,
+    seed: 0x12345678,
+    game: null,
+    prelude: null,
+    output: null,
+    execution: 'guarded',
+  };
   const args = process.argv.slice(2);
   while (args.length) {
     const key = args.shift().replace(/^--/, '');
     if (!Object.hasOwn(options, key) || !args.length)
       throw Error(
-        'Usage: node tools/stress-kpex.mjs --output NEW.json [--game ID] [--minutes 10] [--seed 12345] [--prelude actions.json]',
+        'Usage: node tools/stress-kpex.mjs --output NEW.json [--game ID] [--minutes 10] [--seed 12345] [--prelude actions.json] [--execution guarded|exact|both]',
       );
     options[key] = ['minutes', 'seed'].includes(key) ? Number(args.shift()) : args.shift();
   }
@@ -28,6 +35,8 @@ if (isMainThread) {
     !options.output
   )
     throw Error('Require a new output file, 0.01–60 minutes and a uint32 seed');
+  if (!['guarded', 'exact', 'both'].includes(options.execution))
+    throw Error('Execution must be guarded, exact or both');
   const catalog = JSON.parse(fs.readFileSync(path.join(root, 'web/data/catalog.json')));
   const entries = catalog.games.filter(
     (g) => g.platform === 'kpex' && (!options.game || g.id === options.game),
@@ -55,16 +64,30 @@ if (isMainThread) {
     preludeSha256: prelude ? hash(fs.readFileSync(options.prelude)) : null,
     limits:
       'Seeded input, virtual time, no physical device or full level coverage. A clean script Exit is not a freeze. Host timeout: 15 seconds without returning from an event. Wall times depend on the host and concurrent work.',
+    runtimeSourceSha256: Object.fromEntries(
+      ['gnex.js', 'cpu.js', 'rom-accelerators.js', 'timers.js'].map((name) => [
+        name,
+        hash(fs.readFileSync(path.join(root, 'web/engine', name))),
+      ]),
+    ),
     results: [],
   };
+  const jobs = entries.flatMap((entry) =>
+    (options.execution === 'both' ? ['exact', 'guarded'] : [options.execution]).map(
+      (execution) => ({
+        entry,
+        execution,
+      }),
+    ),
+  );
   let next = 0;
   await Promise.all(
-    Array.from({ length: Math.min(2, entries.length) }, async () => {
-      while (next < entries.length) {
-        const entry = entries[next++];
+    Array.from({ length: Math.min(2, jobs.length) }, async () => {
+      while (next < jobs.length) {
+        const { entry, execution } = jobs[next++];
         const result = await new Promise((resolve) => {
           const w = new Worker(new URL(import.meta.url), {
-            workerData: { entry, options, prelude },
+            workerData: { entry, options, prelude, execution },
           });
           let timer,
             last = null,
@@ -74,7 +97,7 @@ if (isMainThread) {
             settled = true;
             clearTimeout(timer);
             w.terminate();
-            resolve(result);
+            resolve({ ...result, execution });
           };
           const arm = () => {
             clearTimeout(timer);
@@ -100,6 +123,7 @@ if (isMainThread) {
         console.log(
           JSON.stringify({
             id: result.id,
+            execution,
             status: result.status,
             virtualMs: result.virtualMs,
             wallMs: result.wallMs,
@@ -108,11 +132,31 @@ if (isMainThread) {
       }
     }),
   );
+  if (options.execution === 'both') {
+    report.comparisonScope =
+      'Every completed input/timer operation hashes time, visible RGBA, SGS variable descriptors/data and resource descriptors, VM PC, stack index and used stack bytes, syscalls, timers, held keys and serialized saves. Checkpoints locate drift within 100 operations. Raw allocated heap, resource payload bytes and all ARM RAM are not compared by this tool; native helper register/stack/clock coverage is in rom-accelerators.test.mjs.';
+    report.comparisons = entries.map(({ id }) => {
+      const exact = report.results.find((r) => r.id === id && r.execution === 'exact'),
+        guarded = report.results.find((r) => r.id === id && r.execution === 'guarded');
+      return {
+        id,
+        matches:
+          ['idle', 'exited'].includes(exact.status) &&
+          exact.status === guarded.status &&
+          exact.events === guarded.events &&
+          exact.virtualMs === guarded.virtualMs &&
+          typeof exact.stateTrailSha256 === 'string' &&
+          exact.stateTrailSha256 === guarded.stateTrailSha256,
+      };
+    });
+    fs.writeFileSync(options.output, JSON.stringify(report, null, 2) + '\n');
+    if (report.comparisons.some((r) => !r.matches)) process.exitCode = 1;
+  }
   if (report.results.some((r) => !['idle', 'exited'].includes(r.status))) process.exitCode = 1;
 } else {
   const { GnexRuntime } = await import('../web/engine/gnex.js');
   const { TimerScheduler } = await import('../web/engine/timers.js');
-  const { entry, options, prelude } = workerData;
+  const { entry, options, prelude, execution } = workerData;
   const romEntry = JSON.parse(
     fs.readFileSync(path.join(root, 'web/data/catalog.json')),
   ).firmwares.find((r) => r.id === 'kingston-2.12');
@@ -130,7 +174,8 @@ if (isMainThread) {
   const started = performance.now(),
     timers = new TimerScheduler(),
     lastActions = [],
-    trail = [];
+    trail = [],
+    stateTrail = options.execution === 'both' ? createHash('sha256') : null;
   const result = { id: entry.id, gameSha256: entry.sha256, romSha256: romEntry.sha256, trail };
   function event(type, value) {
     parentPort.postMessage({ progress: true, ms, type, value, events });
@@ -150,11 +195,40 @@ if (isMainThread) {
         vmPc: r.diagnostics.bytecode_pc,
       });
     timers.sync(r.timerStates, ms, type === 'TIMEOUT' ? value : null);
+    if (stateTrail) {
+      const top = r.cpu.read32(0x20b3ed28) | 0;
+      stateTrail.update(
+        JSON.stringify({
+          ms,
+          type,
+          value: value ?? null,
+          status: r.status,
+          error: r.error,
+          events: r.eventCount,
+          pc: r.cpu.read32(0x20b3eb84),
+          stackIndex: top,
+          usedStack: top >= -1 && top < 1024 ? hash(r.cpu.read(0x20b3f5a0, (top + 1) * 4)) : null,
+          variablesAndDescriptors: hash(r.cpu.read(0x21000000 + r.sgs.a, r.sgs.d - r.sgs.a)),
+          framebuffer: hash(r.framebufferRGBA),
+          syscalls: r.syscalls,
+          timers: r.timerStates,
+          held: [...r.heldKeys].sort((a, b) => a - b),
+          saves: r.vfs.serialize(),
+        }) + '\n',
+      );
+      if (events % 100 === 0)
+        (result.stateCheckpoints ??= []).push({
+          ms,
+          events,
+          sha256: stateTrail.copy().digest('hex'),
+        });
+    }
     return r.status === 'idle';
   }
   try {
     r = await GnexRuntime.create(original(romEntry), original(entry), {
       ...entry.runtime,
+      fastExecution: execution !== 'exact',
       nowMs: () => ms,
       clock: () => new Date(Date.UTC(2026, 10, 6) + ms),
     });
@@ -227,6 +301,7 @@ if (isMainThread) {
       lastActions,
     });
   } finally {
+    if (stateTrail) result.stateTrailSha256 = stateTrail.digest('hex');
     r?.close();
   }
   parentPort.postMessage(result);

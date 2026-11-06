@@ -46,6 +46,7 @@ export function installRomAccelerators(
     onSkippedInstructions = () => {},
     minRectanglePixels = 4096,
     minPaletteRowPixels = 128,
+    minPaletteBatchPixels = 4096,
   } = {},
 ) {
   if (romHash !== KINGSTON_212_SHA256)
@@ -218,22 +219,41 @@ export function installRomAccelerators(
       stats.paletteFallbacks++;
       return;
     }
+    const count = cpu.regRead('r6');
+    const narrow = count < minPaletteRowPixels;
+    if (count < 1 || (narrow && count < 32) || count > 512) {
+      stats.paletteFallbacks++;
+      return;
+    }
+    const stack = cpu.regRead('sp');
+    const inRam = (first, length) => first >= 0x20000000 && first + length <= 0x24000000;
+    if (stack & 3 || !inRam(stack, 0x34)) {
+      stats.paletteFallbacks++;
+      return;
+    }
+    // Short rows are worthwhile only as a large, verified image batch. Reject
+    // small sprites before reading their palette and pixel buffers.
+    if (narrow) {
+      const image = cpu.read32(stack + 0x30),
+        row = cpu.read32(stack);
+      if (
+        !inRam(image, 0x260) ||
+        row >= 512 ||
+        (((cpu.read32(image + 0x4c) | 0) >> 16) - row) * count < minPaletteBatchPixels
+      ) {
+        stats.paletteFallbacks++;
+        return;
+      }
+    }
     if (cpu.regRead('r9') !== 0 || cpu.regRead('r3') !== 0) {
       stats.paletteFallbacks++;
       return;
     }
-    const count = cpu.regRead('r6');
-    if (count < 1 || count < minPaletteRowPixels || count > 512) {
-      stats.paletteFallbacks++;
-      return;
-    }
     const flags = cpu.regRead('cpsr'),
-      stack = cpu.regRead('sp'),
       source = cpu.regRead('r2'),
       bitOffset = cpu.regRead('r1'),
       palette = cpu.regRead('r5');
-    const inRam = (first, length) => first >= 0x20000000 && first + length <= 0x24000000;
-    if (flags & 0x20 || stack & 3 || !inRam(stack, 0x34)) {
+    if (flags & 0x20) {
       stats.paletteFallbacks++;
       return;
     }
@@ -319,6 +339,10 @@ export function installRomAccelerators(
     }
     const inputLength = Math.ceil((bitOffset + (rows - 1) * sourceStepBits + count * bits) / 8),
       outputLength = (rows - 1) * destinationStride + outputBytes;
+    if (narrow && (rows < 2 || rows * count < minPaletteBatchPixels)) {
+      stats.paletteFallbacks++;
+      return;
+    }
     const input = cpu.read(source, inputLength),
       colors = cpu.read(palette, paletteBytes),
       output = cpu.read(destination, outputLength);

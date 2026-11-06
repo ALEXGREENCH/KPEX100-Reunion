@@ -948,6 +948,21 @@
       "repositoryPath": "research/archives/Sinjisoft-Korean-Authored-Columns-and-Corpus-Pass6.zip",
       "bytes": 2263082,
       "sha256": "d3c42c355e961e6a7f3b01850cc7d25d4acdf9e6915beb847e3804919c920df4"
+    },
+    {
+      "id": "battle-armor-narrow-palette",
+      "title": "Battle Armor: палитровые изображения и проверка гаража",
+      "category": "Производительность и проверки",
+      "description": "Пакетный вывод строк 32–127 пикселей. Три чередующиеся пары замеров, два десятиминутных сравнения состояния и прогон Chrome. Случайное зависание не объявляется исправленным.",
+      "sources": [
+        {
+          "label": "Изменение и методика",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/narrow-palette-performance.md"
+        }
+      ],
+      "repositoryPath": "research/archives/Battle-Armor-Narrow-Palette-Batches-and-Verification.zip",
+      "bytes": 199030,
+      "sha256": "018935c5ce2f80a88b63c6a9c77307b0617f24f611428613acc827d497b541bb"
     }
   ],
   "reports": [
@@ -1126,6 +1141,10 @@
     {
       "title": "Sinjisoft: корейские авторские публикации и Wayback Pass 6",
       "repositoryPath": "doc/sinjisoft-korean-authored-columns.md"
+    },
+    {
+      "title": "Высокие палитровые изображения, гараж и сравнение состояния Battle Armor",
+      "repositoryPath": "doc/narrow-palette-performance.md"
     }
   ]
 }

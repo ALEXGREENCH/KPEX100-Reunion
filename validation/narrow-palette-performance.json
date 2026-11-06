@@ -1,0 +1,1675 @@
+{
+  "schema": 1,
+  "verifiedUtc": "2026-11-06T23:27:00.458876+00:00",
+  "archive": "Battle-Armor-Narrow-Palette-Batches-and-Verification.zip",
+  "archiveBytes": 199030,
+  "archiveSha256": "018935c5ce2f80a88b63c6a9c77307b0617f24f611428613acc827d497b541bb",
+  "members": 30,
+  "manifestMembersVerified": 29,
+  "crcPassed": true,
+  "benchmark": {
+    "ok": true,
+    "baselineCommit": "357ec3567af43df237802286687938e59a280c98",
+    "methodology": "One Node process, two actual source roots. Three alternating pairs of the same original Battle Armor prelude + 180 explicit benchmark frames; initial paired warmup excluded. Result fingerprints match across all six measured runs. Guest-call host work only, not browser FPS. Other heavy test processes completed before this pass; network collector remained active.",
+    "runs": [
+      {
+        "label": "baseline",
+        "round": 0,
+        "report": "alternating-0-baseline.json",
+        "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "guestMs": 9051.516900000011,
+        "nativeHelpers": {
+          "fills": 346,
+          "pixels": 13397120,
+          "skippedInstructions": 159471073,
+          "fallbacks": 0,
+          "rectangles": 959,
+          "rectanglePixels": 11184928,
+          "rectangleFallbacks": 0,
+          "rectangleSmall": 11924,
+          "paletteRows": 10951,
+          "paletteBatches": 395,
+          "palettePixels": 2387894,
+          "paletteWrites": 2104052,
+          "paletteFallbacks": 193510
+        },
+        "resultSha256": "f15ccacd7a889a113f04872b17a2cf3a7baa9aec08ad8dcc11c2f38b2d1bfaf3"
+      },
+      {
+        "label": "candidate",
+        "round": 0,
+        "report": "alternating-0-candidate.json",
+        "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "guestMs": 8398.678599999963,
+        "nativeHelpers": {
+          "fills": 346,
+          "pixels": 13397120,
+          "skippedInstructions": 206912499,
+          "fallbacks": 0,
+          "rectangles": 959,
+          "rectanglePixels": 11184928,
+          "rectangleFallbacks": 0,
+          "rectangleSmall": 11924,
+          "paletteRows": 39611,
+          "paletteBatches": 655,
+          "palettePixels": 4273789,
+          "paletteWrites": 3636695,
+          "paletteFallbacks": 164850
+        },
+        "resultSha256": "f15ccacd7a889a113f04872b17a2cf3a7baa9aec08ad8dcc11c2f38b2d1bfaf3"
+      },
+      {
+        "label": "candidate",
+        "round": 1,
+        "report": "alternating-1-candidate.json",
+        "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "guestMs": 8622.96459999997,
+        "nativeHelpers": {
+          "fills": 346,
+          "pixels": 13397120,
+          "skippedInstructions": 206912499,
+          "fallbacks": 0,
+          "rectangles": 959,
+          "rectanglePixels": 11184928,
+          "rectangleFallbacks": 0,
+          "rectangleSmall": 11924,
+          "paletteRows": 39611,
+          "paletteBatches": 655,
+          "palettePixels": 4273789,
+          "paletteWrites": 3636695,
+          "paletteFallbacks": 164850
+        },
+        "resultSha256": "f15ccacd7a889a113f04872b17a2cf3a7baa9aec08ad8dcc11c2f38b2d1bfaf3"
+      },
+      {
+        "label": "baseline",
+        "round": 1,
+        "report": "alternating-1-baseline.json",
+        "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "guestMs": 9124.699300000088,
+        "nativeHelpers": {
+          "fills": 346,
+          "pixels": 13397120,
+          "skippedInstructions": 159471073,
+          "fallbacks": 0,
+          "rectangles": 959,
+          "rectanglePixels": 11184928,
+          "rectangleFallbacks": 0,
+          "rectangleSmall": 11924,
+          "paletteRows": 10951,
+          "paletteBatches": 395,
+          "palettePixels": 2387894,
+          "paletteWrites": 2104052,
+          "paletteFallbacks": 193510
+        },
+        "resultSha256": "f15ccacd7a889a113f04872b17a2cf3a7baa9aec08ad8dcc11c2f38b2d1bfaf3"
+      },
+      {
+        "label": "baseline",
+        "round": 2,
+        "report": "alternating-2-baseline.json",
+        "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "guestMs": 8935.295099999908,
+        "nativeHelpers": {
+          "fills": 346,
+          "pixels": 13397120,
+          "skippedInstructions": 159471073,
+          "fallbacks": 0,
+          "rectangles": 959,
+          "rectanglePixels": 11184928,
+          "rectangleFallbacks": 0,
+          "rectangleSmall": 11924,
+          "paletteRows": 10951,
+          "paletteBatches": 395,
+          "palettePixels": 2387894,
+          "paletteWrites": 2104052,
+          "paletteFallbacks": 193510
+        },
+        "resultSha256": "f15ccacd7a889a113f04872b17a2cf3a7baa9aec08ad8dcc11c2f38b2d1bfaf3"
+      },
+      {
+        "label": "candidate",
+        "round": 2,
+        "report": "alternating-2-candidate.json",
+        "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+        "guestMs": 8662.050099999979,
+        "nativeHelpers": {
+          "fills": 346,
+          "pixels": 13397120,
+          "skippedInstructions": 206912499,
+          "fallbacks": 0,
+          "rectangles": 959,
+          "rectanglePixels": 11184928,
+          "rectangleFallbacks": 0,
+          "rectangleSmall": 11924,
+          "paletteRows": 39611,
+          "paletteBatches": 655,
+          "palettePixels": 4273789,
+          "paletteWrites": 3636695,
+          "paletteFallbacks": 164850
+        },
+        "resultSha256": "f15ccacd7a889a113f04872b17a2cf3a7baa9aec08ad8dcc11c2f38b2d1bfaf3"
+      }
+    ],
+    "baselineMedianMs": 9051.516900000011,
+    "candidateMedianMs": 8622.96459999997,
+    "speedup": 1.0496989515647603,
+    "workReductionPercent": 4.734590950164841,
+    "runtimeSourceSha256": "f303eb947f74229424cfc6f3a0ba1f541c0b3a9e4f712ae3f03089d120e57eb8"
+  },
+  "differentialRuns": [
+    {
+      "seed": 12345,
+      "preludeSha256": "828ae7183a19541c3e591a6531d335ccc2642b62564ff5439385efca808f7c20",
+      "scope": "Every completed input/timer operation hashes time, visible RGBA, SGS variable descriptors/data and resource descriptors, VM PC, stack index and used stack bytes, syscalls, timers, held keys and serialized saves. Checkpoints locate drift within 100 operations. Raw allocated heap, resource payload bytes and all ARM RAM are not compared by this tool; native helper register/stack/clock coverage is in rom-accelerators.test.mjs.",
+      "results": [
+        {
+          "id": "battle-armor",
+          "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+          "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+          "trail": [
+            {
+              "ms": 121750,
+              "events": 1000,
+              "rgbaSha256": "d9c5f91601aedd0c56d6301f4b975d2169bb95bfad781a7315e3adfdadec9c44",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "rgbaSha256": "f239e60dc649ee85262c731c260db922251107c816936185eb29e01b5256ac1d",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 361325,
+              "events": 3000,
+              "rgbaSha256": "be245d2cf4ea0a093baf1f3e4c3bac4088c89616d98bcf21c41130e0ffce3e7a",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 479799,
+              "events": 4000,
+              "rgbaSha256": "e8914a4e3ae4dd741720452697055fd9c0cb719cf0c6014f521a50d375b96402",
+              "vmPc": "0x00000c88"
+            },
+            {
+              "ms": 597750,
+              "events": 5000,
+              "rgbaSha256": "38722f18ac88d43be1a62ebeb19dbc6c6f0df8950924097e980b69b7c1cf5938",
+              "vmPc": "0x00000d6e"
+            }
+          ],
+          "stateCheckpoints": [
+            {
+              "ms": 9900,
+              "events": 100,
+              "sha256": "22d5cdd2224ae610b748653ef84239c983432b5938e66c1c6d535c11d27a79ce"
+            },
+            {
+              "ms": 19700,
+              "events": 200,
+              "sha256": "87d7815db271cbd9267b99da4ed912db76439e0faf6b381170c3d2d1848e2a7b"
+            },
+            {
+              "ms": 29200,
+              "events": 300,
+              "sha256": "d97deddfd561cfff144836f99ff38ebad0c3905815acf16a488cd92877886327"
+            },
+            {
+              "ms": 42125,
+              "events": 400,
+              "sha256": "5109d26d0ceb44f2696396bbd11546c2f5882e0d7531c7390c476bcf043a620c"
+            },
+            {
+              "ms": 57350,
+              "events": 500,
+              "sha256": "bebee881db8fdd801ebd955f7c88964480be4357f1d4a5a149502c5f81cf3318"
+            },
+            {
+              "ms": 73293,
+              "events": 600,
+              "sha256": "546887824b12bc7db739a76c05b507a23985208358184d2102042aabdc556c5f"
+            },
+            {
+              "ms": 85525,
+              "events": 700,
+              "sha256": "eadf0d381379cb72fd66bfc74ebf3c181de1cbee4c41196d2bca0f7a04a658bd"
+            },
+            {
+              "ms": 97775,
+              "events": 800,
+              "sha256": "284107ae01d423e842e070ebb8629c1ab3ae30564da4b83fd6f41c91de4ac2d2"
+            },
+            {
+              "ms": 110025,
+              "events": 900,
+              "sha256": "dfd95ebe1c27c3fb3d3a5c7a87b645274b2993b99dfddf534194cac0fdee23c2"
+            },
+            {
+              "ms": 121750,
+              "events": 1000,
+              "sha256": "62a5c0f276297d8a1f3b36953e8a70058533709f109ce5ecab83d3d9743a4ac2"
+            },
+            {
+              "ms": 133654,
+              "events": 1100,
+              "sha256": "dc2130fa4e9faf179a273c4bab484688cff86152b5ec0b1e9bcfe2251a65c86a"
+            },
+            {
+              "ms": 145674,
+              "events": 1200,
+              "sha256": "28dbf323c20d2b4612489b18e1903d338cdf3a60213c72df403f24cb3072b080"
+            },
+            {
+              "ms": 157534,
+              "events": 1300,
+              "sha256": "3dc33d054b4cc14d4d8090d0ab2ad0aae0c509d565255a5cce3728b78ecc141a"
+            },
+            {
+              "ms": 169700,
+              "events": 1400,
+              "sha256": "a6e73af8d56a41b4c2fb6f5e8226c530ac9361e5ac86a638b09ebd0a2777c548"
+            },
+            {
+              "ms": 181771,
+              "events": 1500,
+              "sha256": "5676111f8928cb95d295c1776c068b43f6e36041d6be9a1340e0e133b1260854"
+            },
+            {
+              "ms": 193675,
+              "events": 1600,
+              "sha256": "24048e0df2cc6933b9ce15b4e904674681bdad1a388fe9aad0d5dcbdb7289c6f"
+            },
+            {
+              "ms": 205750,
+              "events": 1700,
+              "sha256": "a06197c749143023eba6705a828e537d794df809f2ad9ca8bc878ff2aaed9c17"
+            },
+            {
+              "ms": 217146,
+              "events": 1800,
+              "sha256": "a47b51b6aa6b6629d940ba8703fda61ec736b8e473a90be3d0effc925309da6e"
+            },
+            {
+              "ms": 229025,
+              "events": 1900,
+              "sha256": "4ac32576013a65a3c9fbf6d657acdd895d385aa1f9e8b00e739168d4361bd6cd"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "sha256": "42b97848fc1124fda23f3283f934af84e360a52c7297d5aa5ee04c42dbc2755e"
+            },
+            {
+              "ms": 253371,
+              "events": 2100,
+              "sha256": "7d443e96684e79ae8b47910858e4e0cc47a66762d8a982424b3c3aae12acf9ee"
+            },
+            {
+              "ms": 265255,
+              "events": 2200,
+              "sha256": "4359c1b5cacfabc3a520fbef01b94f7f981bf761f9be4f97fdf71383a78d8af7"
+            },
+            {
+              "ms": 277500,
+              "events": 2300,
+              "sha256": "81741f2e71e50ad2e80739d9eddaf5fc817506184103f4524b7abb7068966d5c"
+            },
+            {
+              "ms": 289750,
+              "events": 2400,
+              "sha256": "e58bcfa5b776f987b24ce3e350185507bc0c589698405a5e662c83632113dda5"
+            },
+            {
+              "ms": 301825,
+              "events": 2500,
+              "sha256": "8e3e86ae5ba325fb129d1a596f0e471b556c342b7f506e5fbd4b612cc43d6a9e"
+            },
+            {
+              "ms": 313900,
+              "events": 2600,
+              "sha256": "fb0e5be2944557e89f061e909c5dca585d94f0451b933957629536136b46eb2a"
+            },
+            {
+              "ms": 326065,
+              "events": 2700,
+              "sha256": "b54193956931498ee8441a096cef59bca70a4be7bef8f02111ab9b7902dc858b"
+            },
+            {
+              "ms": 337875,
+              "events": 2800,
+              "sha256": "92db14d62f8fdcedbe219d981ef47640a6387f6ce96e42aa157a5906fcadf0c7"
+            },
+            {
+              "ms": 349560,
+              "events": 2900,
+              "sha256": "260d48cd648afa6c102ba074f01ad73b7d33b1f8d982e420d71988e238135571"
+            },
+            {
+              "ms": 361325,
+              "events": 3000,
+              "sha256": "fdf0b0bc4d5f9a78d7ed5e18367a1b17b02f7a16203cbf5a7752d6ec6ce6032b"
+            },
+            {
+              "ms": 372990,
+              "events": 3100,
+              "sha256": "b7a1935c987a9539563ca95870d2904c39f832b42ac93b5239574de8648140a1"
+            },
+            {
+              "ms": 385056,
+              "events": 3200,
+              "sha256": "7b7c87a9b13cf02dfd8f190d1e22351255f6e2772f4a2defbfe3f916df1d692a"
+            },
+            {
+              "ms": 396948,
+              "events": 3300,
+              "sha256": "6c51f798e3e825ac5dbaedf704f813e95e4c06a3696c6b162e8b2f7474569a5a"
+            },
+            {
+              "ms": 408925,
+              "events": 3400,
+              "sha256": "545fad1971350c88da7ece2b8840b7320482b4f57744c285c46c46afc610aa6d"
+            },
+            {
+              "ms": 420378,
+              "events": 3500,
+              "sha256": "b99530021595c86ed58f5657f803d2616950b44ee8034b981954a6d90afdd4f6"
+            },
+            {
+              "ms": 432025,
+              "events": 3600,
+              "sha256": "691e50b967b77d4b800466d4e00fda61b15b6e588a4bb29fce0df4ee1456936f"
+            },
+            {
+              "ms": 443925,
+              "events": 3700,
+              "sha256": "e3a572bcf80df037681dc18a4518abd88cbc552a2a6af8a7605443a5e32b6b83"
+            },
+            {
+              "ms": 455825,
+              "events": 3800,
+              "sha256": "8a978fc96525863e1d6b97268d026068f570f8aa2a5a1aacab9b796f53f80326"
+            },
+            {
+              "ms": 467651,
+              "events": 3900,
+              "sha256": "f2ecf1ead9659fa3240ecac2d70b82c84d825aac8c919462bc1bbcd6cb940b1e"
+            },
+            {
+              "ms": 479799,
+              "events": 4000,
+              "sha256": "8236fab012593aa8aaf1f44e61393cce1da4e3172991a762188848fb30f039f4"
+            },
+            {
+              "ms": 491794,
+              "events": 4100,
+              "sha256": "af045ec352231d75065cc927988acd64106c50a8ae8bce4cb09eef80f49096f6"
+            },
+            {
+              "ms": 503425,
+              "events": 4200,
+              "sha256": "63a3d16be5b03ac40a0cc6b1606293dc7f352d7c4c0a28285c1a15e18848a729"
+            },
+            {
+              "ms": 515630,
+              "events": 4300,
+              "sha256": "8e4f12361e5adace7e75d3cc9e856647244853b3622d4364407659f0153f4e72"
+            },
+            {
+              "ms": 527506,
+              "events": 4400,
+              "sha256": "6f55121dc912426e0f3246f7b369449234187dcf9f86f5c7b2357368318017c2"
+            },
+            {
+              "ms": 539251,
+              "events": 4500,
+              "sha256": "d976b6d8199b67d77a98430b39ef5fdbc2c0dfecba7c55a7c150c8477d1b33f0"
+            },
+            {
+              "ms": 551025,
+              "events": 4600,
+              "sha256": "e431400446800919d8e8296374efcae57f1753e2632d91b7042defa84237d96a"
+            },
+            {
+              "ms": 562925,
+              "events": 4700,
+              "sha256": "e40621390413fd25a94d038b8e2117b7ca10efaeba1d45be935470eaf71eda73"
+            },
+            {
+              "ms": 574451,
+              "events": 4800,
+              "sha256": "0e205819704075a23e54c6b5a7544193b309f119e6f8adf6560aa5ad72cbfac3"
+            },
+            {
+              "ms": 586025,
+              "events": 4900,
+              "sha256": "d0182c0afb1c88d5ac8c55bb68aa73dc72d2b4a4176d7ef7c10de6d82abb18c4"
+            },
+            {
+              "ms": 597750,
+              "events": 5000,
+              "sha256": "6d3d9d1bb88e98a459476d7ed8cfa6572dd97d93f1e197f901000deeb6c72a6f"
+            },
+            {
+              "ms": 609825,
+              "events": 5100,
+              "sha256": "ae211ca767dbef47ffb1e7d7da02f742364f84641a9a959eeba97744fa06fa0e"
+            },
+            {
+              "ms": 621822,
+              "events": 5200,
+              "sha256": "30eac3f0c793d396d226e7f6298c680a8ea5e9ec2843afbc00170ab838dfa3c2"
+            },
+            {
+              "ms": 633975,
+              "events": 5300,
+              "sha256": "d10eb85b37496ed3068feb0465f7cf23f154476c330846cabf6a7de57543f514"
+            },
+            {
+              "ms": 645719,
+              "events": 5400,
+              "sha256": "82bae32e8aedd9b7ef2b34de6c31cebbaf836889e23ae2997bcd16076ca4247a"
+            },
+            {
+              "ms": 657425,
+              "events": 5500,
+              "sha256": "e39b2ff24faec2bb330c9e1d5c38f815f841e666a520291c3a5505cfbab5f34d"
+            },
+            {
+              "ms": 669695,
+              "events": 5600,
+              "sha256": "5ee52a3da0646a5e89428e8addbf1344da3e33f8a8b49f972fca91e3013736ab"
+            }
+          ],
+          "preludeEndMs": 72925,
+          "preludeFrameSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+          "status": "idle",
+          "error": null,
+          "virtualMs": 672925,
+          "events": 5626,
+          "longestEventMs": 167.45,
+          "wallMs": 26605,
+          "rgbaSha256": "45dc81def54f634a1e420cd6a9fd994e877f767fcd69ae103edbc89f88e94ab5",
+          "timerStates": [
+            {
+              "channel": 0,
+              "delay": 175,
+              "repeat": false,
+              "revision": 3982,
+              "armedAt": 672825
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ],
+          "externalRequest": null,
+          "stateTrailSha256": "cc724ddf3a36bb551f9c3f79431a78f700b7db0c1c91dd1d41174a1823084cb0",
+          "execution": "guarded"
+        },
+        {
+          "id": "battle-armor",
+          "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+          "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+          "trail": [
+            {
+              "ms": 121750,
+              "events": 1000,
+              "rgbaSha256": "d9c5f91601aedd0c56d6301f4b975d2169bb95bfad781a7315e3adfdadec9c44",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "rgbaSha256": "f239e60dc649ee85262c731c260db922251107c816936185eb29e01b5256ac1d",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 361325,
+              "events": 3000,
+              "rgbaSha256": "be245d2cf4ea0a093baf1f3e4c3bac4088c89616d98bcf21c41130e0ffce3e7a",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 479799,
+              "events": 4000,
+              "rgbaSha256": "e8914a4e3ae4dd741720452697055fd9c0cb719cf0c6014f521a50d375b96402",
+              "vmPc": "0x00000c88"
+            },
+            {
+              "ms": 597750,
+              "events": 5000,
+              "rgbaSha256": "38722f18ac88d43be1a62ebeb19dbc6c6f0df8950924097e980b69b7c1cf5938",
+              "vmPc": "0x00000d6e"
+            }
+          ],
+          "stateCheckpoints": [
+            {
+              "ms": 9900,
+              "events": 100,
+              "sha256": "22d5cdd2224ae610b748653ef84239c983432b5938e66c1c6d535c11d27a79ce"
+            },
+            {
+              "ms": 19700,
+              "events": 200,
+              "sha256": "87d7815db271cbd9267b99da4ed912db76439e0faf6b381170c3d2d1848e2a7b"
+            },
+            {
+              "ms": 29200,
+              "events": 300,
+              "sha256": "d97deddfd561cfff144836f99ff38ebad0c3905815acf16a488cd92877886327"
+            },
+            {
+              "ms": 42125,
+              "events": 400,
+              "sha256": "5109d26d0ceb44f2696396bbd11546c2f5882e0d7531c7390c476bcf043a620c"
+            },
+            {
+              "ms": 57350,
+              "events": 500,
+              "sha256": "bebee881db8fdd801ebd955f7c88964480be4357f1d4a5a149502c5f81cf3318"
+            },
+            {
+              "ms": 73293,
+              "events": 600,
+              "sha256": "546887824b12bc7db739a76c05b507a23985208358184d2102042aabdc556c5f"
+            },
+            {
+              "ms": 85525,
+              "events": 700,
+              "sha256": "eadf0d381379cb72fd66bfc74ebf3c181de1cbee4c41196d2bca0f7a04a658bd"
+            },
+            {
+              "ms": 97775,
+              "events": 800,
+              "sha256": "284107ae01d423e842e070ebb8629c1ab3ae30564da4b83fd6f41c91de4ac2d2"
+            },
+            {
+              "ms": 110025,
+              "events": 900,
+              "sha256": "dfd95ebe1c27c3fb3d3a5c7a87b645274b2993b99dfddf534194cac0fdee23c2"
+            },
+            {
+              "ms": 121750,
+              "events": 1000,
+              "sha256": "62a5c0f276297d8a1f3b36953e8a70058533709f109ce5ecab83d3d9743a4ac2"
+            },
+            {
+              "ms": 133654,
+              "events": 1100,
+              "sha256": "dc2130fa4e9faf179a273c4bab484688cff86152b5ec0b1e9bcfe2251a65c86a"
+            },
+            {
+              "ms": 145674,
+              "events": 1200,
+              "sha256": "28dbf323c20d2b4612489b18e1903d338cdf3a60213c72df403f24cb3072b080"
+            },
+            {
+              "ms": 157534,
+              "events": 1300,
+              "sha256": "3dc33d054b4cc14d4d8090d0ab2ad0aae0c509d565255a5cce3728b78ecc141a"
+            },
+            {
+              "ms": 169700,
+              "events": 1400,
+              "sha256": "a6e73af8d56a41b4c2fb6f5e8226c530ac9361e5ac86a638b09ebd0a2777c548"
+            },
+            {
+              "ms": 181771,
+              "events": 1500,
+              "sha256": "5676111f8928cb95d295c1776c068b43f6e36041d6be9a1340e0e133b1260854"
+            },
+            {
+              "ms": 193675,
+              "events": 1600,
+              "sha256": "24048e0df2cc6933b9ce15b4e904674681bdad1a388fe9aad0d5dcbdb7289c6f"
+            },
+            {
+              "ms": 205750,
+              "events": 1700,
+              "sha256": "a06197c749143023eba6705a828e537d794df809f2ad9ca8bc878ff2aaed9c17"
+            },
+            {
+              "ms": 217146,
+              "events": 1800,
+              "sha256": "a47b51b6aa6b6629d940ba8703fda61ec736b8e473a90be3d0effc925309da6e"
+            },
+            {
+              "ms": 229025,
+              "events": 1900,
+              "sha256": "4ac32576013a65a3c9fbf6d657acdd895d385aa1f9e8b00e739168d4361bd6cd"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "sha256": "42b97848fc1124fda23f3283f934af84e360a52c7297d5aa5ee04c42dbc2755e"
+            },
+            {
+              "ms": 253371,
+              "events": 2100,
+              "sha256": "7d443e96684e79ae8b47910858e4e0cc47a66762d8a982424b3c3aae12acf9ee"
+            },
+            {
+              "ms": 265255,
+              "events": 2200,
+              "sha256": "4359c1b5cacfabc3a520fbef01b94f7f981bf761f9be4f97fdf71383a78d8af7"
+            },
+            {
+              "ms": 277500,
+              "events": 2300,
+              "sha256": "81741f2e71e50ad2e80739d9eddaf5fc817506184103f4524b7abb7068966d5c"
+            },
+            {
+              "ms": 289750,
+              "events": 2400,
+              "sha256": "e58bcfa5b776f987b24ce3e350185507bc0c589698405a5e662c83632113dda5"
+            },
+            {
+              "ms": 301825,
+              "events": 2500,
+              "sha256": "8e3e86ae5ba325fb129d1a596f0e471b556c342b7f506e5fbd4b612cc43d6a9e"
+            },
+            {
+              "ms": 313900,
+              "events": 2600,
+              "sha256": "fb0e5be2944557e89f061e909c5dca585d94f0451b933957629536136b46eb2a"
+            },
+            {
+              "ms": 326065,
+              "events": 2700,
+              "sha256": "b54193956931498ee8441a096cef59bca70a4be7bef8f02111ab9b7902dc858b"
+            },
+            {
+              "ms": 337875,
+              "events": 2800,
+              "sha256": "92db14d62f8fdcedbe219d981ef47640a6387f6ce96e42aa157a5906fcadf0c7"
+            },
+            {
+              "ms": 349560,
+              "events": 2900,
+              "sha256": "260d48cd648afa6c102ba074f01ad73b7d33b1f8d982e420d71988e238135571"
+            },
+            {
+              "ms": 361325,
+              "events": 3000,
+              "sha256": "fdf0b0bc4d5f9a78d7ed5e18367a1b17b02f7a16203cbf5a7752d6ec6ce6032b"
+            },
+            {
+              "ms": 372990,
+              "events": 3100,
+              "sha256": "b7a1935c987a9539563ca95870d2904c39f832b42ac93b5239574de8648140a1"
+            },
+            {
+              "ms": 385056,
+              "events": 3200,
+              "sha256": "7b7c87a9b13cf02dfd8f190d1e22351255f6e2772f4a2defbfe3f916df1d692a"
+            },
+            {
+              "ms": 396948,
+              "events": 3300,
+              "sha256": "6c51f798e3e825ac5dbaedf704f813e95e4c06a3696c6b162e8b2f7474569a5a"
+            },
+            {
+              "ms": 408925,
+              "events": 3400,
+              "sha256": "545fad1971350c88da7ece2b8840b7320482b4f57744c285c46c46afc610aa6d"
+            },
+            {
+              "ms": 420378,
+              "events": 3500,
+              "sha256": "b99530021595c86ed58f5657f803d2616950b44ee8034b981954a6d90afdd4f6"
+            },
+            {
+              "ms": 432025,
+              "events": 3600,
+              "sha256": "691e50b967b77d4b800466d4e00fda61b15b6e588a4bb29fce0df4ee1456936f"
+            },
+            {
+              "ms": 443925,
+              "events": 3700,
+              "sha256": "e3a572bcf80df037681dc18a4518abd88cbc552a2a6af8a7605443a5e32b6b83"
+            },
+            {
+              "ms": 455825,
+              "events": 3800,
+              "sha256": "8a978fc96525863e1d6b97268d026068f570f8aa2a5a1aacab9b796f53f80326"
+            },
+            {
+              "ms": 467651,
+              "events": 3900,
+              "sha256": "f2ecf1ead9659fa3240ecac2d70b82c84d825aac8c919462bc1bbcd6cb940b1e"
+            },
+            {
+              "ms": 479799,
+              "events": 4000,
+              "sha256": "8236fab012593aa8aaf1f44e61393cce1da4e3172991a762188848fb30f039f4"
+            },
+            {
+              "ms": 491794,
+              "events": 4100,
+              "sha256": "af045ec352231d75065cc927988acd64106c50a8ae8bce4cb09eef80f49096f6"
+            },
+            {
+              "ms": 503425,
+              "events": 4200,
+              "sha256": "63a3d16be5b03ac40a0cc6b1606293dc7f352d7c4c0a28285c1a15e18848a729"
+            },
+            {
+              "ms": 515630,
+              "events": 4300,
+              "sha256": "8e4f12361e5adace7e75d3cc9e856647244853b3622d4364407659f0153f4e72"
+            },
+            {
+              "ms": 527506,
+              "events": 4400,
+              "sha256": "6f55121dc912426e0f3246f7b369449234187dcf9f86f5c7b2357368318017c2"
+            },
+            {
+              "ms": 539251,
+              "events": 4500,
+              "sha256": "d976b6d8199b67d77a98430b39ef5fdbc2c0dfecba7c55a7c150c8477d1b33f0"
+            },
+            {
+              "ms": 551025,
+              "events": 4600,
+              "sha256": "e431400446800919d8e8296374efcae57f1753e2632d91b7042defa84237d96a"
+            },
+            {
+              "ms": 562925,
+              "events": 4700,
+              "sha256": "e40621390413fd25a94d038b8e2117b7ca10efaeba1d45be935470eaf71eda73"
+            },
+            {
+              "ms": 574451,
+              "events": 4800,
+              "sha256": "0e205819704075a23e54c6b5a7544193b309f119e6f8adf6560aa5ad72cbfac3"
+            },
+            {
+              "ms": 586025,
+              "events": 4900,
+              "sha256": "d0182c0afb1c88d5ac8c55bb68aa73dc72d2b4a4176d7ef7c10de6d82abb18c4"
+            },
+            {
+              "ms": 597750,
+              "events": 5000,
+              "sha256": "6d3d9d1bb88e98a459476d7ed8cfa6572dd97d93f1e197f901000deeb6c72a6f"
+            },
+            {
+              "ms": 609825,
+              "events": 5100,
+              "sha256": "ae211ca767dbef47ffb1e7d7da02f742364f84641a9a959eeba97744fa06fa0e"
+            },
+            {
+              "ms": 621822,
+              "events": 5200,
+              "sha256": "30eac3f0c793d396d226e7f6298c680a8ea5e9ec2843afbc00170ab838dfa3c2"
+            },
+            {
+              "ms": 633975,
+              "events": 5300,
+              "sha256": "d10eb85b37496ed3068feb0465f7cf23f154476c330846cabf6a7de57543f514"
+            },
+            {
+              "ms": 645719,
+              "events": 5400,
+              "sha256": "82bae32e8aedd9b7ef2b34de6c31cebbaf836889e23ae2997bcd16076ca4247a"
+            },
+            {
+              "ms": 657425,
+              "events": 5500,
+              "sha256": "e39b2ff24faec2bb330c9e1d5c38f815f841e666a520291c3a5505cfbab5f34d"
+            },
+            {
+              "ms": 669695,
+              "events": 5600,
+              "sha256": "5ee52a3da0646a5e89428e8addbf1344da3e33f8a8b49f972fca91e3013736ab"
+            }
+          ],
+          "preludeEndMs": 72925,
+          "preludeFrameSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+          "status": "idle",
+          "error": null,
+          "virtualMs": 672925,
+          "events": 5626,
+          "longestEventMs": 389.21,
+          "wallMs": 72144,
+          "rgbaSha256": "45dc81def54f634a1e420cd6a9fd994e877f767fcd69ae103edbc89f88e94ab5",
+          "timerStates": [
+            {
+              "channel": 0,
+              "delay": 175,
+              "repeat": false,
+              "revision": 3982,
+              "armedAt": 672825
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ],
+          "externalRequest": null,
+          "stateTrailSha256": "cc724ddf3a36bb551f9c3f79431a78f700b7db0c1c91dd1d41174a1823084cb0",
+          "execution": "exact"
+        }
+      ],
+      "comparisons": [
+        {
+          "id": "battle-armor",
+          "matches": true
+        }
+      ]
+    },
+    {
+      "seed": 67890,
+      "preludeSha256": "55697b1f2fad66bbca6063ecde0116217ac8d7d1a59b53ffcdfae52f571f3bb4",
+      "scope": "Every completed input/timer operation hashes time, visible RGBA, SGS variable descriptors/data and resource descriptors, VM PC, stack index and used stack bytes, syscalls, timers, held keys and serialized saves. Checkpoints locate drift within 100 operations. Raw allocated heap, resource payload bytes and all ARM RAM are not compared by this tool; native helper register/stack/clock coverage is in rom-accelerators.test.mjs.",
+      "results": [
+        {
+          "id": "battle-armor",
+          "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+          "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+          "trail": [
+            {
+              "ms": 120875,
+              "events": 1000,
+              "rgbaSha256": "9b948c9f6a21a0cac2538e8e145d38f5aa6d63e556f46979c50dc15cd1498093",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "rgbaSha256": "bfd75b82301f612ab68760a48d762d3e3793cab7e123a7ae435b735b510a427e",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 360800,
+              "events": 3000,
+              "rgbaSha256": "182de235b3cabd0b20b9564653665c08d098222022c368a3c45f6a98e1b83a68",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 480325,
+              "events": 4000,
+              "rgbaSha256": "ffc5572e469ca21acd7341e3ca4ae58317eb960574d8b06b07daf4f96a7f0eb6",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 600602,
+              "events": 5000,
+              "rgbaSha256": "9bcb8f702f6e9872cf8edab210fe1863df75b931f58d97da1a40ced0ff0dc91f",
+              "vmPc": "0x00000c88"
+            }
+          ],
+          "stateCheckpoints": [
+            {
+              "ms": 9900,
+              "events": 100,
+              "sha256": "22d5cdd2224ae610b748653ef84239c983432b5938e66c1c6d535c11d27a79ce"
+            },
+            {
+              "ms": 19700,
+              "events": 200,
+              "sha256": "87d7815db271cbd9267b99da4ed912db76439e0faf6b381170c3d2d1848e2a7b"
+            },
+            {
+              "ms": 29200,
+              "events": 300,
+              "sha256": "d97deddfd561cfff144836f99ff38ebad0c3905815acf16a488cd92877886327"
+            },
+            {
+              "ms": 42125,
+              "events": 400,
+              "sha256": "5109d26d0ceb44f2696396bbd11546c2f5882e0d7531c7390c476bcf043a620c"
+            },
+            {
+              "ms": 57350,
+              "events": 500,
+              "sha256": "bebee881db8fdd801ebd955f7c88964480be4357f1d4a5a149502c5f81cf3318"
+            },
+            {
+              "ms": 73275,
+              "events": 600,
+              "sha256": "6f0afec8b3fe055b352ca3309b490ccdc0afa72096919da9b77cfa3e7ba11870"
+            },
+            {
+              "ms": 85175,
+              "events": 700,
+              "sha256": "b2519f84f1dd93f6aecf323c89a1a4295ef193788e8d09360923fd7d7138630a"
+            },
+            {
+              "ms": 97131,
+              "events": 800,
+              "sha256": "ba1a6cef8fb0abb8cffdb310a9a6890c8ac45efd04b2a281b8f896fd8e2ec1f8"
+            },
+            {
+              "ms": 108975,
+              "events": 900,
+              "sha256": "cc5240d626145ed0e27690d8e9208752b26dff57802eac48529b6b33e09ff922"
+            },
+            {
+              "ms": 120875,
+              "events": 1000,
+              "sha256": "5916c4642a66e801fa623b7fb5e4eef6a3e15a2aa152911c15769568c9081139"
+            },
+            {
+              "ms": 132775,
+              "events": 1100,
+              "sha256": "075a0b9a6abed42cfacce9827c27bb44b8b1b91e6aea47ac93a9650e4d5ebe85"
+            },
+            {
+              "ms": 144603,
+              "events": 1200,
+              "sha256": "b43d49d7d356ce21305bab665cf7df1ad3ee1618dfd64ebb75e2330ded0a9153"
+            },
+            {
+              "ms": 156575,
+              "events": 1300,
+              "sha256": "ded27817087af8a438447d07b6941734ccb8a842d2c752f67e193f448e8e733f"
+            },
+            {
+              "ms": 168650,
+              "events": 1400,
+              "sha256": "93abece9dac9bf6e6f8454aa0b47a2449c959689dc66397c3bdf70a685136969"
+            },
+            {
+              "ms": 180900,
+              "events": 1500,
+              "sha256": "3d13e2131bcea59f77e3d3a2bfa5494e4ea88613d0abfbb75eafb1fc89ece6a4"
+            },
+            {
+              "ms": 192975,
+              "events": 1600,
+              "sha256": "cb5545c5a2b976f08c0cca351137b94a9add2edd8dad08c4195329925e15bc68"
+            },
+            {
+              "ms": 205046,
+              "events": 1700,
+              "sha256": "ba0450f0f69fe9179bdabf19b7db20563a54376829fd0c63c70ba65af65f8a5b"
+            },
+            {
+              "ms": 217042,
+              "events": 1800,
+              "sha256": "e9d9782bbdc1ef91fd65443b2b3c47702de75d1a847475295a882fc321d500f8"
+            },
+            {
+              "ms": 229025,
+              "events": 1900,
+              "sha256": "e7074768c19060a7a308de1c9508786b36b890cb0fa6fffbdb7c319a57980874"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "sha256": "6050591fc451906b192651383df404286c27c521705db7b4016ffd6af3633836"
+            },
+            {
+              "ms": 252825,
+              "events": 2100,
+              "sha256": "03feddf0525eb0039b41ef005aca1f3f72c07adb9a544f1be4b3a2e857fba3f7"
+            },
+            {
+              "ms": 264725,
+              "events": 2200,
+              "sha256": "99d31c1660d073f1d9af3b1f2712902a711c87b3365a79b3fcf99af376ba523d"
+            },
+            {
+              "ms": 276742,
+              "events": 2300,
+              "sha256": "e74cd440cc4c645a4f9a641c16c83aa124f221d384c8433db3dadf7a06cee0ea"
+            },
+            {
+              "ms": 288525,
+              "events": 2400,
+              "sha256": "b50e9fe342e83fbbc0271e44ae643a374e6a4ec6d438f9724115c4adfed4340f"
+            },
+            {
+              "ms": 300600,
+              "events": 2500,
+              "sha256": "d7874ee0219395884f0a47a26bef7e547ec593cf10e16f67339c5f3afeb30bc3"
+            },
+            {
+              "ms": 312675,
+              "events": 2600,
+              "sha256": "eb5260afba671321fb50dfdb4ace9e5dd63884ad91bcd4929ed9e1b7a69189aa"
+            },
+            {
+              "ms": 324843,
+              "events": 2700,
+              "sha256": "82ef67f456676683d3dea4ca353a9569394b6c83832a1092672330cec8ae59ad"
+            },
+            {
+              "ms": 336825,
+              "events": 2800,
+              "sha256": "a979e98af77289ddb6f5c06a00db3aba9c08039f3eaef899f83ed1d1e23ba04b"
+            },
+            {
+              "ms": 349075,
+              "events": 2900,
+              "sha256": "f232e8e94c3174d017442926b1cf23319d6da173503640b5dafebd8151041378"
+            },
+            {
+              "ms": 360800,
+              "events": 3000,
+              "sha256": "5c778814db149f00e5be3ce99190504feddb84ce5fea7c3ab0cfa55e5a4c9f44"
+            },
+            {
+              "ms": 373016,
+              "events": 3100,
+              "sha256": "0844e12cf33996e7a5e7090a9e68173644d22dedff96a4eb02b2ef8e048696ee"
+            },
+            {
+              "ms": 384950,
+              "events": 3200,
+              "sha256": "37c3af16340b6a4062ce4850b5b9172e8c78d0abba2256d3b9cac11b61b37387"
+            },
+            {
+              "ms": 396708,
+              "events": 3300,
+              "sha256": "5ff356f674be157750fa616e85fd3ee48c6136ebd7a7f39b954ffcd31ebda2a7"
+            },
+            {
+              "ms": 408575,
+              "events": 3400,
+              "sha256": "46732c0a5504eaa98afd6f0d6dac16e46ca7995cba64b626e055b3685491f94a"
+            },
+            {
+              "ms": 420650,
+              "events": 3500,
+              "sha256": "2541ff8e44bc17b0d4e4550cdce24d539a3fa5fea837d4420b7112b0b7d9a7a9"
+            },
+            {
+              "ms": 432550,
+              "events": 3600,
+              "sha256": "2cbd93da7d02ed4a391ed20c4dcdb930039638f1cd51b1f696814bc6b7105a53"
+            },
+            {
+              "ms": 444275,
+              "events": 3700,
+              "sha256": "50dda97f97e856230e4061617951cf451c0c406f940abc1536dd58e8a00c0097"
+            },
+            {
+              "ms": 456175,
+              "events": 3800,
+              "sha256": "2d4af0d0b1aa6903aad909f8a4c245684a2150da123fd7a286260e2d8f6c8ee8"
+            },
+            {
+              "ms": 468250,
+              "events": 3900,
+              "sha256": "becc722faa9c63bd09109544fbbed78cdb8db3647759e3f8fbe3b244b098e26a"
+            },
+            {
+              "ms": 480325,
+              "events": 4000,
+              "sha256": "8291558fe40054155b403623b5e3b8799d6fd0f682e33e33d8e128323e3c53c3"
+            },
+            {
+              "ms": 492225,
+              "events": 4100,
+              "sha256": "3adb32e20ea520b8c96a152d94b4b2a54a448534c32683d7f0b4409f992cf9a7"
+            },
+            {
+              "ms": 504125,
+              "events": 4200,
+              "sha256": "cd74b59d8be3a9a836b2c2f28b346e1cd3514bfc11f4e733df3b21604f4dae4b"
+            },
+            {
+              "ms": 516363,
+              "events": 4300,
+              "sha256": "d83693380cc45ea06b326777113b8f3c795d6786c2bae939c82901e16ce29627"
+            },
+            {
+              "ms": 528450,
+              "events": 4400,
+              "sha256": "f1d6943de3415498c95fa7ce6d4ce9dbee4a5116ac8074df215163fb6d954ee4"
+            },
+            {
+              "ms": 540597,
+              "events": 4500,
+              "sha256": "f06971eb962f6aef14e3efcd6cafa77fa770fd0f3bd42635427c9c3da84cba0a"
+            },
+            {
+              "ms": 552600,
+              "events": 4600,
+              "sha256": "57c8ffac665678f189ef620a7bf5019356cc055b642a8b067674bf00175e266a"
+            },
+            {
+              "ms": 564638,
+              "events": 4700,
+              "sha256": "b7753748887f4abadccc35d9e3f2f3f3a3bcec3517ef88b71feec414333fbf58"
+            },
+            {
+              "ms": 576610,
+              "events": 4800,
+              "sha256": "0908ce39dc1068300be582bbcb528845ab8ae3f1835f864c830540c1c6d27231"
+            },
+            {
+              "ms": 588475,
+              "events": 4900,
+              "sha256": "eae7b19f08f105013bb3c3a4eece7640d38ef0323ba2c0d13f77d1b651d4432e"
+            },
+            {
+              "ms": 600602,
+              "events": 5000,
+              "sha256": "51087cf1f838df8c5a2060b9624c154f3591954522839c7a766b9d657282bea2"
+            },
+            {
+              "ms": 612625,
+              "events": 5100,
+              "sha256": "435e519e118ea26019e303b9c914a5eeaf8791c1a16908ffcf2e323006bbcf06"
+            },
+            {
+              "ms": 624700,
+              "events": 5200,
+              "sha256": "ffa8fa8050cfee6aa79c7732629319a5b992bbb03d3beb072705a6299c7ea324"
+            },
+            {
+              "ms": 636542,
+              "events": 5300,
+              "sha256": "c584ca302d2d89a29891a1428c8206995995c991e21eaf970e4b075531c5cdc0"
+            },
+            {
+              "ms": 648325,
+              "events": 5400,
+              "sha256": "a84588340bf9fe0e3a6db77bc9adf01ed19168ec507b1340a58456dd9ff2428c"
+            },
+            {
+              "ms": 660481,
+              "events": 5500,
+              "sha256": "6c3c23868a0794fade006a4d179a50f65417bd80219d1acd55f5b0e2d44b6e9c"
+            },
+            {
+              "ms": 672650,
+              "events": 5600,
+              "sha256": "d030999a5cdd2bb6f5fa976831cd81896089a8ce65ec229a7315341020c566e5"
+            }
+          ],
+          "preludeEndMs": 76425,
+          "preludeFrameSha256": "0e5c5f8d23bd9e125e78cf459b45132e30b7c2bab0d8dc2a9502ce79e72205e2",
+          "status": "idle",
+          "error": null,
+          "virtualMs": 676425,
+          "events": 5632,
+          "longestEventMs": 92.95,
+          "wallMs": 25769,
+          "rgbaSha256": "45dc81def54f634a1e420cd6a9fd994e877f767fcd69ae103edbc89f88e94ab5",
+          "timerStates": [
+            {
+              "channel": 0,
+              "delay": 175,
+              "repeat": false,
+              "revision": 4002,
+              "armedAt": 676325
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ],
+          "externalRequest": null,
+          "stateTrailSha256": "a44ab2b97a9e760a89fa36dfcd7838028b44dd28c869a36324d055d83da96a43",
+          "execution": "guarded"
+        },
+        {
+          "id": "battle-armor",
+          "gameSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+          "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+          "trail": [
+            {
+              "ms": 120875,
+              "events": 1000,
+              "rgbaSha256": "9b948c9f6a21a0cac2538e8e145d38f5aa6d63e556f46979c50dc15cd1498093",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "rgbaSha256": "bfd75b82301f612ab68760a48d762d3e3793cab7e123a7ae435b735b510a427e",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 360800,
+              "events": 3000,
+              "rgbaSha256": "182de235b3cabd0b20b9564653665c08d098222022c368a3c45f6a98e1b83a68",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 480325,
+              "events": 4000,
+              "rgbaSha256": "ffc5572e469ca21acd7341e3ca4ae58317eb960574d8b06b07daf4f96a7f0eb6",
+              "vmPc": "0x00000d6e"
+            },
+            {
+              "ms": 600602,
+              "events": 5000,
+              "rgbaSha256": "9bcb8f702f6e9872cf8edab210fe1863df75b931f58d97da1a40ced0ff0dc91f",
+              "vmPc": "0x00000c88"
+            }
+          ],
+          "stateCheckpoints": [
+            {
+              "ms": 9900,
+              "events": 100,
+              "sha256": "22d5cdd2224ae610b748653ef84239c983432b5938e66c1c6d535c11d27a79ce"
+            },
+            {
+              "ms": 19700,
+              "events": 200,
+              "sha256": "87d7815db271cbd9267b99da4ed912db76439e0faf6b381170c3d2d1848e2a7b"
+            },
+            {
+              "ms": 29200,
+              "events": 300,
+              "sha256": "d97deddfd561cfff144836f99ff38ebad0c3905815acf16a488cd92877886327"
+            },
+            {
+              "ms": 42125,
+              "events": 400,
+              "sha256": "5109d26d0ceb44f2696396bbd11546c2f5882e0d7531c7390c476bcf043a620c"
+            },
+            {
+              "ms": 57350,
+              "events": 500,
+              "sha256": "bebee881db8fdd801ebd955f7c88964480be4357f1d4a5a149502c5f81cf3318"
+            },
+            {
+              "ms": 73275,
+              "events": 600,
+              "sha256": "6f0afec8b3fe055b352ca3309b490ccdc0afa72096919da9b77cfa3e7ba11870"
+            },
+            {
+              "ms": 85175,
+              "events": 700,
+              "sha256": "b2519f84f1dd93f6aecf323c89a1a4295ef193788e8d09360923fd7d7138630a"
+            },
+            {
+              "ms": 97131,
+              "events": 800,
+              "sha256": "ba1a6cef8fb0abb8cffdb310a9a6890c8ac45efd04b2a281b8f896fd8e2ec1f8"
+            },
+            {
+              "ms": 108975,
+              "events": 900,
+              "sha256": "cc5240d626145ed0e27690d8e9208752b26dff57802eac48529b6b33e09ff922"
+            },
+            {
+              "ms": 120875,
+              "events": 1000,
+              "sha256": "5916c4642a66e801fa623b7fb5e4eef6a3e15a2aa152911c15769568c9081139"
+            },
+            {
+              "ms": 132775,
+              "events": 1100,
+              "sha256": "075a0b9a6abed42cfacce9827c27bb44b8b1b91e6aea47ac93a9650e4d5ebe85"
+            },
+            {
+              "ms": 144603,
+              "events": 1200,
+              "sha256": "b43d49d7d356ce21305bab665cf7df1ad3ee1618dfd64ebb75e2330ded0a9153"
+            },
+            {
+              "ms": 156575,
+              "events": 1300,
+              "sha256": "ded27817087af8a438447d07b6941734ccb8a842d2c752f67e193f448e8e733f"
+            },
+            {
+              "ms": 168650,
+              "events": 1400,
+              "sha256": "93abece9dac9bf6e6f8454aa0b47a2449c959689dc66397c3bdf70a685136969"
+            },
+            {
+              "ms": 180900,
+              "events": 1500,
+              "sha256": "3d13e2131bcea59f77e3d3a2bfa5494e4ea88613d0abfbb75eafb1fc89ece6a4"
+            },
+            {
+              "ms": 192975,
+              "events": 1600,
+              "sha256": "cb5545c5a2b976f08c0cca351137b94a9add2edd8dad08c4195329925e15bc68"
+            },
+            {
+              "ms": 205046,
+              "events": 1700,
+              "sha256": "ba0450f0f69fe9179bdabf19b7db20563a54376829fd0c63c70ba65af65f8a5b"
+            },
+            {
+              "ms": 217042,
+              "events": 1800,
+              "sha256": "e9d9782bbdc1ef91fd65443b2b3c47702de75d1a847475295a882fc321d500f8"
+            },
+            {
+              "ms": 229025,
+              "events": 1900,
+              "sha256": "e7074768c19060a7a308de1c9508786b36b890cb0fa6fffbdb7c319a57980874"
+            },
+            {
+              "ms": 241100,
+              "events": 2000,
+              "sha256": "6050591fc451906b192651383df404286c27c521705db7b4016ffd6af3633836"
+            },
+            {
+              "ms": 252825,
+              "events": 2100,
+              "sha256": "03feddf0525eb0039b41ef005aca1f3f72c07adb9a544f1be4b3a2e857fba3f7"
+            },
+            {
+              "ms": 264725,
+              "events": 2200,
+              "sha256": "99d31c1660d073f1d9af3b1f2712902a711c87b3365a79b3fcf99af376ba523d"
+            },
+            {
+              "ms": 276742,
+              "events": 2300,
+              "sha256": "e74cd440cc4c645a4f9a641c16c83aa124f221d384c8433db3dadf7a06cee0ea"
+            },
+            {
+              "ms": 288525,
+              "events": 2400,
+              "sha256": "b50e9fe342e83fbbc0271e44ae643a374e6a4ec6d438f9724115c4adfed4340f"
+            },
+            {
+              "ms": 300600,
+              "events": 2500,
+              "sha256": "d7874ee0219395884f0a47a26bef7e547ec593cf10e16f67339c5f3afeb30bc3"
+            },
+            {
+              "ms": 312675,
+              "events": 2600,
+              "sha256": "eb5260afba671321fb50dfdb4ace9e5dd63884ad91bcd4929ed9e1b7a69189aa"
+            },
+            {
+              "ms": 324843,
+              "events": 2700,
+              "sha256": "82ef67f456676683d3dea4ca353a9569394b6c83832a1092672330cec8ae59ad"
+            },
+            {
+              "ms": 336825,
+              "events": 2800,
+              "sha256": "a979e98af77289ddb6f5c06a00db3aba9c08039f3eaef899f83ed1d1e23ba04b"
+            },
+            {
+              "ms": 349075,
+              "events": 2900,
+              "sha256": "f232e8e94c3174d017442926b1cf23319d6da173503640b5dafebd8151041378"
+            },
+            {
+              "ms": 360800,
+              "events": 3000,
+              "sha256": "5c778814db149f00e5be3ce99190504feddb84ce5fea7c3ab0cfa55e5a4c9f44"
+            },
+            {
+              "ms": 373016,
+              "events": 3100,
+              "sha256": "0844e12cf33996e7a5e7090a9e68173644d22dedff96a4eb02b2ef8e048696ee"
+            },
+            {
+              "ms": 384950,
+              "events": 3200,
+              "sha256": "37c3af16340b6a4062ce4850b5b9172e8c78d0abba2256d3b9cac11b61b37387"
+            },
+            {
+              "ms": 396708,
+              "events": 3300,
+              "sha256": "5ff356f674be157750fa616e85fd3ee48c6136ebd7a7f39b954ffcd31ebda2a7"
+            },
+            {
+              "ms": 408575,
+              "events": 3400,
+              "sha256": "46732c0a5504eaa98afd6f0d6dac16e46ca7995cba64b626e055b3685491f94a"
+            },
+            {
+              "ms": 420650,
+              "events": 3500,
+              "sha256": "2541ff8e44bc17b0d4e4550cdce24d539a3fa5fea837d4420b7112b0b7d9a7a9"
+            },
+            {
+              "ms": 432550,
+              "events": 3600,
+              "sha256": "2cbd93da7d02ed4a391ed20c4dcdb930039638f1cd51b1f696814bc6b7105a53"
+            },
+            {
+              "ms": 444275,
+              "events": 3700,
+              "sha256": "50dda97f97e856230e4061617951cf451c0c406f940abc1536dd58e8a00c0097"
+            },
+            {
+              "ms": 456175,
+              "events": 3800,
+              "sha256": "2d4af0d0b1aa6903aad909f8a4c245684a2150da123fd7a286260e2d8f6c8ee8"
+            },
+            {
+              "ms": 468250,
+              "events": 3900,
+              "sha256": "becc722faa9c63bd09109544fbbed78cdb8db3647759e3f8fbe3b244b098e26a"
+            },
+            {
+              "ms": 480325,
+              "events": 4000,
+              "sha256": "8291558fe40054155b403623b5e3b8799d6fd0f682e33e33d8e128323e3c53c3"
+            },
+            {
+              "ms": 492225,
+              "events": 4100,
+              "sha256": "3adb32e20ea520b8c96a152d94b4b2a54a448534c32683d7f0b4409f992cf9a7"
+            },
+            {
+              "ms": 504125,
+              "events": 4200,
+              "sha256": "cd74b59d8be3a9a836b2c2f28b346e1cd3514bfc11f4e733df3b21604f4dae4b"
+            },
+            {
+              "ms": 516363,
+              "events": 4300,
+              "sha256": "d83693380cc45ea06b326777113b8f3c795d6786c2bae939c82901e16ce29627"
+            },
+            {
+              "ms": 528450,
+              "events": 4400,
+              "sha256": "f1d6943de3415498c95fa7ce6d4ce9dbee4a5116ac8074df215163fb6d954ee4"
+            },
+            {
+              "ms": 540597,
+              "events": 4500,
+              "sha256": "f06971eb962f6aef14e3efcd6cafa77fa770fd0f3bd42635427c9c3da84cba0a"
+            },
+            {
+              "ms": 552600,
+              "events": 4600,
+              "sha256": "57c8ffac665678f189ef620a7bf5019356cc055b642a8b067674bf00175e266a"
+            },
+            {
+              "ms": 564638,
+              "events": 4700,
+              "sha256": "b7753748887f4abadccc35d9e3f2f3f3a3bcec3517ef88b71feec414333fbf58"
+            },
+            {
+              "ms": 576610,
+              "events": 4800,
+              "sha256": "0908ce39dc1068300be582bbcb528845ab8ae3f1835f864c830540c1c6d27231"
+            },
+            {
+              "ms": 588475,
+              "events": 4900,
+              "sha256": "eae7b19f08f105013bb3c3a4eece7640d38ef0323ba2c0d13f77d1b651d4432e"
+            },
+            {
+              "ms": 600602,
+              "events": 5000,
+              "sha256": "51087cf1f838df8c5a2060b9624c154f3591954522839c7a766b9d657282bea2"
+            },
+            {
+              "ms": 612625,
+              "events": 5100,
+              "sha256": "435e519e118ea26019e303b9c914a5eeaf8791c1a16908ffcf2e323006bbcf06"
+            },
+            {
+              "ms": 624700,
+              "events": 5200,
+              "sha256": "ffa8fa8050cfee6aa79c7732629319a5b992bbb03d3beb072705a6299c7ea324"
+            },
+            {
+              "ms": 636542,
+              "events": 5300,
+              "sha256": "c584ca302d2d89a29891a1428c8206995995c991e21eaf970e4b075531c5cdc0"
+            },
+            {
+              "ms": 648325,
+              "events": 5400,
+              "sha256": "a84588340bf9fe0e3a6db77bc9adf01ed19168ec507b1340a58456dd9ff2428c"
+            },
+            {
+              "ms": 660481,
+              "events": 5500,
+              "sha256": "6c3c23868a0794fade006a4d179a50f65417bd80219d1acd55f5b0e2d44b6e9c"
+            },
+            {
+              "ms": 672650,
+              "events": 5600,
+              "sha256": "d030999a5cdd2bb6f5fa976831cd81896089a8ce65ec229a7315341020c566e5"
+            }
+          ],
+          "preludeEndMs": 76425,
+          "preludeFrameSha256": "0e5c5f8d23bd9e125e78cf459b45132e30b7c2bab0d8dc2a9502ce79e72205e2",
+          "status": "idle",
+          "error": null,
+          "virtualMs": 676425,
+          "events": 5632,
+          "longestEventMs": 210.53,
+          "wallMs": 67739,
+          "rgbaSha256": "45dc81def54f634a1e420cd6a9fd994e877f767fcd69ae103edbc89f88e94ab5",
+          "timerStates": [
+            {
+              "channel": 0,
+              "delay": 175,
+              "repeat": false,
+              "revision": 4002,
+              "armedAt": 676325
+            },
+            {
+              "channel": 1,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            },
+            {
+              "channel": 2,
+              "delay": null,
+              "repeat": false,
+              "revision": 0
+            }
+          ],
+          "externalRequest": null,
+          "stateTrailSha256": "a44ab2b97a9e760a89fa36dfcd7838028b44dd28c869a36324d055d83da96a43",
+          "execution": "exact"
+        }
+      ],
+      "comparisons": [
+        {
+          "id": "battle-armor",
+          "matches": true
+        }
+      ]
+    }
+  ],
+  "reviewedScenes": [
+    {
+      "path": "garage-exit-v2-replay/battle-armor-52-tick5.png",
+      "review": "Original action plan ends in Garage",
+      "pngSha256": "01b0d2f89b97e3a1e7ed2a5fab8eb38deedaed0226521c4b1e80be49984a2a0e",
+      "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+      "size": [
+        220,
+        176
+      ]
+    },
+    {
+      "path": "garage-exit-v2-replay/battle-armor-62-tick12.png",
+      "review": "New action plan exits Garage into the base; not combat",
+      "pngSha256": "483341852bc4cadcbd766c7153d88a3701922315db37c6a83e5518b88f12980c",
+      "rgbaSha256": "0e5c5f8d23bd9e125e78cf459b45132e30b7c2bab0d8dc2a9502ce79e72205e2",
+      "size": [
+        220,
+        176
+      ]
+    }
+  ],
+  "browser": {
+    "utc": "2026-11-06T23:16:53.480Z",
+    "url": "http://127.0.0.1:5493/KPEX100-Reunion/",
+    "scope": "Original browser Worker, ROM and SGS, actual host timers and UI keyboard input. Scripted smoke, not a physical controller or full mission/freeze reproduction.",
+    "wallMs": 125506,
+    "lcd": {
+      "x": 500,
+      "y": 288,
+      "width": 440,
+      "height": 352
+    },
+    "errors": [],
+    "fetchedSources": {
+      "app.js": {
+        "bytes": 43490,
+        "sha256": "bc70675c3fd138fc74dae53f3edd157ae0d86fc62a7997c40c1db227c7c9207a"
+      },
+      "worker.js": {
+        "bytes": 11343,
+        "sha256": "804ed8970ac0183e08e9f2c643c7a0512fe986f57914608a3d6cd604ea55a009"
+      },
+      "engine/gnex.js": {
+        "bytes": 29532,
+        "sha256": "30810446b8fbeca1a269e9a960b6a12ae6aa5b44c740ecff0fda5c137c133bd8"
+      },
+      "engine/cpu.js": {
+        "bytes": 9590,
+        "sha256": "410ae5897ad28519e9e50ead9476df4396103735d349c4346eeee6718480ac4d"
+      },
+      "engine/rom-accelerators.js": {
+        "bytes": 16087,
+        "sha256": "f303eb947f74229424cfc6f3a0ba1f541c0b3a9e4f712ae3f03089d120e57eb8"
+      },
+      "data/games/battle-armor.sgs": {
+        "bytes": 756382,
+        "sha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60"
+      },
+      "data/firmware/Kingston-2.12.rom": {
+        "bytes": 6149632,
+        "sha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a"
+      }
+    },
+    "sourceErrors": [],
+    "frames": 1051,
+    "ok": true
+  },
+  "browserKeyOperations": 384,
+  "eightGameFingerprintsMatch": true,
+  "unitTests": 60,
+  "integrationTests": 88,
+  "limits": "No random freeze reproduced or claimed fixed; reviewed preludes are garage/base, not verified active combat. Host guest-work benchmark, not browser FPS."
+}

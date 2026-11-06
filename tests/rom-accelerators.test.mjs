@@ -516,3 +516,50 @@ test('production palette threshold leaves short rows native and batches wide ima
     fast.cpu.close();
   }
 });
+
+test('production palette batching accelerates tall narrow images at the exact pixel threshold', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    for (const input of [
+      { count: 31, height: 256, stride: 32 },
+      { count: 32, height: 127, stride: 32 },
+      { count: 127, height: 33, firstRow: 1, stride: 128 },
+      { count: 32, height: 128, stride: 31 },
+      { count: 32, height: 128, stride: 32, stopInside: true },
+      { count: 32, height: 128, stride: 32, mode: 1 },
+    ])
+      assert.deepEqual(paletteRow(fast, input), paletteRow(native, input), JSON.stringify(input));
+    assert.equal(fast.accelerator.stats.paletteRows, 0);
+    for (const input of [
+      { count: 32, height: 128, stride: 32 },
+      { count: 64, height: 65, firstRow: 1, stride: 64, bits: 1, offset: 3, paddingBits: 5 },
+      { count: 127, height: 33, stride: 128, bits: 8, transparent: 0xffffffff },
+      { count: 64, height: 64, stride: 64, fill: 0, transparent: 0 },
+    ]) {
+      const before = fast.accelerator.stats.paletteBatches;
+      assert.deepEqual(paletteRow(fast, input), paletteRow(native, input), JSON.stringify(input));
+      assert.deepEqual(
+        paletteRow(fast, input, 10_000_000),
+        paletteRow(native, input, 10_000_000),
+        'guarded ' + JSON.stringify(input),
+      );
+      assert.equal(fast.accelerator.stats.paletteBatches, before + 2);
+    }
+    for (const budget of [1, 1000, 10000])
+      assert.deepEqual(
+        paletteRow(fast, { count: 32, height: 128, stride: 32 }, budget),
+        paletteRow(native, { count: 32, height: 128, stride: 32 }, budget),
+        'budget ' + budget,
+      );
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
