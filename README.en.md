@@ -132,3 +132,7 @@ Volume is adjustable in 5% steps and remembered locally. Photographic shells are
 cosmetic and never change VM compatibility settings. [Interface, photo sources
 and browser checks](doc/web-interface.md). The SD1020 photo is preserved but is
 not enabled as an overlay because it only shows the closed device.
+
+Menu → Controls supports replacement bindings, alternatives and per-game overrides
+for keyboard, mouse buttons/wheel and Gamepad API buttons/axes. Preferences stay
+in this browser. [Binding behavior and browser limits](doc/input-controls.md).

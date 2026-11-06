@@ -229,7 +229,28 @@
           <button data-close="help" aria-label="Закрыть подсказки">×</button>
         </div>
         <p id="keyboardHelp"></p>
-        <p>Space — пауза. Одновременно можно удерживать несколько кнопок.</p>
+        <div class="binding-scope">
+          <label for="bindingProfile">Раскладка</label
+          ><select id="bindingProfile">
+            <option value="player">Плеер</option>
+            <option value="phone">Телефон</option></select
+          ><label><input id="bindingGame" type="checkbox" /> Только для этой игры</label
+          ><button id="bindingReset">Сбросить раскладку</button>
+        </div>
+        <p id="gamepadStatus" class="fine-print"></p>
+        <div id="bindingCapture" hidden>
+          <strong id="captureTitle"></strong>
+          <div id="capturePad" tabindex="0">
+            Нажмите клавишу или кнопку геймпада. Для мыши нажмите здесь или прокрутите колесо.
+          </div>
+          <button id="captureCancel">Отмена · Esc</button>
+        </div>
+        <div id="bindingConflict" hidden>
+          <p id="bindingConflictText"></p>
+          <button id="conflictConfirm">Переназначить</button
+          ><button id="conflictCancel">Отмена</button>
+        </div>
+        <div id="bindingList"></div>
       </dialog>
       <dialog id="errorDetails" aria-labelledby="errorDetailsTitle">
         <div class="dialog-header">

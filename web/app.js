@@ -1,3 +1,4 @@
+import { createInputControls } from './input-controls.js';
 import { devices, deviceFor, fitFrame } from './presentation.js';
 import { SmafDecoder } from './smaf-decoder.js';
 import { SWERVE, MAX_ASSET_BYTES, assetCatalog, identifyAsset, sha256 } from './local-assets.js';
@@ -8,6 +9,7 @@ const canvas = $('screen');
 const context = canvas.getContext('2d', { alpha: false });
 context.imageSmoothingEnabled = false;
 
+let inputControls = null;
 let catalog = { firmwares: [], games: [], states: [] };
 let libraryTab = 'games';
 let swerve = { ...SWERVE, available: false };
@@ -174,10 +176,7 @@ function applyDevice() {
   $('skinCredit').textContent = skin
     ? skin.credit
     : 'Универсальное оформление. Фотография модели не используется.';
-  $('keyboardHelp').textContent =
-    device.type === 'phone'
-      ? 'Стрелки — движение; Z — OK; X / Backspace — CLR; Q / E — F1 / F2; цифры 0–9, * и # — клавиатура телефона; Enter — ENTER.'
-      : 'Стрелки — движение; Z — SELECT; X / Escape — ESC; Enter — PLAY; Tab на экране — MENU; C — MODE; V — REC.';
+  inputControls?.refreshHints();
   updateTransport();
 }
 function renderShell(skin) {
@@ -261,6 +260,7 @@ for (const [id, dialog] of [
 $('importAssets').addEventListener('click', () => $('assetFile').click());
 $('showHelp').addEventListener('click', () => {
   $('settings').close();
+  inputControls.refresh();
   showDialog('help');
 });
 document
@@ -755,9 +755,9 @@ function sendKey(key, pressed, source, repeat = false) {
 }
 
 function releaseAll() {
+  inputControls?.release();
   for (const key of held.keys()) if (workerReady) post({ type: 'key', key, pressed: false });
   held.clear();
-  keyboardHolds.clear();
   document.querySelectorAll('.held').forEach((button) => button.classList.remove('held'));
 }
 
@@ -772,78 +772,6 @@ function togglePlayback() {
   updateTransport();
 }
 
-const keyMap = {
-  ArrowUp: 'up',
-  ArrowDown: 'down',
-  ArrowLeft: 'left',
-  ArrowRight: 'right',
-  KeyZ: 'a',
-  KeyX: 'b',
-  Enter: 'start',
-  Tab: 'menu',
-  Escape: 'b',
-  KeyC: 'mode',
-  KeyV: 'rec',
-};
-const phoneKeyMap = {
-  ...keyMap,
-  KeyX: 'clear',
-  Escape: 'clear',
-  Backspace: 'clear',
-  KeyQ: 'f1',
-  KeyE: 'f2',
-  NumpadMultiply: 'star',
-  Digit0: 'digit0',
-  Numpad0: 'digit0',
-};
-for (let digit = 1; digit <= 9; digit++) {
-  phoneKeyMap['Digit' + digit] = 'digit' + digit;
-  phoneKeyMap['Numpad' + digit] = 'digit' + digit;
-}
-const keyboardHolds = new Map();
-function mappedKey(event) {
-  if (current?.platform !== 'mobile') return keyMap[event.code];
-  if (event.key === '*') return 'star';
-  if (event.key === '#') return 'hash';
-  return phoneKeyMap[event.code];
-}
-const editable = (target) =>
-  target instanceof Element &&
-  (target.matches('input,select,textarea') || target.isContentEditable);
-document.addEventListener('keydown', (event) => {
-  if (
-    event.ctrlKey ||
-    event.metaKey ||
-    event.altKey ||
-    editable(event.target) ||
-    !current ||
-    document.querySelector('dialog[open]')
-  )
-    return;
-  if (['Enter', 'Space'].includes(event.code) && event.target.closest('button,a,summary')) return;
-  if (event.code === 'Space' && !event.repeat) {
-    event.preventDefault();
-    togglePlayback();
-    return;
-  }
-  const key = mappedKey(event);
-  if (!key) return;
-  // Tab retains normal browser navigation outside the LCD/controls; Menu also has a touch button.
-  if (event.code === 'Tab' && (event.target !== canvas || event.shiftKey)) return;
-  event.preventDefault();
-  audio.unlock();
-  keyboardHolds.set(event.code, key);
-  if (!event.repeat || ['up', 'down', 'left', 'right'].includes(key))
-    sendKey(key, true, 'keyboard', event.repeat);
-});
-document.addEventListener('keyup', (event) => {
-  const key = keyboardHolds.get(event.code);
-  keyboardHolds.delete(event.code);
-  if (key && held.get(key)?.has('keyboard')) {
-    event.preventDefault();
-    sendKey(key, false, 'keyboard');
-  }
-});
 window.addEventListener('blur', releaseAll);
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) releaseAll();
@@ -1054,6 +982,13 @@ class BrowserAudioMixer {
   }
 }
 const audio = new BrowserAudioMixer();
+inputControls = createInputControls({
+  getSession: () => current,
+  sendKey,
+  togglePause: togglePlayback,
+  unlock: () => audio.unlock(),
+  releaseAll,
+});
 
 async function addUpload(file, persist = true) {
   if (file.size > MAX_ASSET_BYTES) throw Error(`${file.name}: файл больше 32 МиБ.`);

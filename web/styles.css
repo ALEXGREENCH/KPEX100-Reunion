@@ -785,3 +785,99 @@ body > footer {
     --lcd: min(440px, calc(100vw - 36px));
   }
 }
+
+#help {
+  width: min(760px, calc(100vw - 24px));
+}
+.binding-scope {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+.binding-scope select {
+  width: 150px;
+}
+.binding-scope label {
+  margin: 0;
+}
+.binding-row {
+  display: grid;
+  grid-template-columns: 105px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #33332e;
+}
+.binding-action {
+  font-size: 12px;
+}
+.binding-tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.binding-chip {
+  display: inline-flex;
+  border: 1px solid #44443b;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.binding-chip button {
+  border: 0;
+  border-radius: 0;
+  font-size: 11px;
+  padding: 6px 8px;
+  background: #242421;
+}
+.binding-chip button + button {
+  border-left: 1px solid #44443b;
+}
+.binding-actions {
+  display: flex;
+  gap: 4px;
+}
+.binding-actions button {
+  padding: 6px 8px;
+  font-size: 11px;
+}
+#bindingCapture,
+#bindingConflict {
+  padding: 14px;
+  border: 1px solid #827b65;
+  background: #26251f;
+  margin: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+#capturePad {
+  padding: 20px 8px;
+  margin: 10px 0;
+  border: 1px dashed #77715d;
+  font-size: 13px;
+  line-height: 1.6;
+  cursor: crosshair;
+}
+#gamepadStatus {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .binding-row {
+    grid-template-columns: 78px 1fr;
+    gap: 8px;
+  }
+  .binding-actions {
+    grid-column: 2;
+  }
+  .binding-scope {
+    gap: 8px;
+  }
+  .binding-chip button {
+    padding: 8px;
+  }
+  .binding-actions button {
+    padding: 8px;
+  }
+}
