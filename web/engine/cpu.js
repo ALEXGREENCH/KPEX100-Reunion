@@ -220,11 +220,17 @@ export class ArmCPU {
   }
   run(start, stop, budget) {
     const previousStart = this.runStart;
+    const previousStop = this.runStop;
+    const previousCounted = this.runCounted;
     this.runStart = (start & ~1) >>> 0;
+    this.runStop = stop >>> 0;
+    this.runCounted = budget > 0;
     try {
       this.engine.emu_start(start >>> 0, stop >>> 0, 0, budget);
     } finally {
       this.runStart = previousStart;
+      this.runStop = previousStop;
+      this.runCounted = previousCounted;
     }
   }
   runGuarded(start, stop, workBudget) {
@@ -234,7 +240,11 @@ export class ArmCPU {
     this._ensureBlockMonitor();
     this.blockBudget = workBudget;
     const previousStart = this.runStart;
+    const previousStop = this.runStop;
+    const previousCounted = this.runCounted;
     this.runStart = (start & ~1) >>> 0;
+    this.runStop = stop >>> 0;
+    this.runCounted = false;
     try {
       // Unicorn's count hook instruments every instruction. A persistent
       // block watchdog keeps ordinary event calls bounded without that cost.
@@ -242,6 +252,8 @@ export class ArmCPU {
     } finally {
       this.blockBudget = null;
       this.runStart = previousStart;
+      this.runStop = previousStop;
+      this.runCounted = previousCounted;
     }
   }
   stop() {

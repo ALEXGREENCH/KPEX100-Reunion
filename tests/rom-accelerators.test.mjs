@@ -13,7 +13,12 @@ const BUFFER = 0x23010000;
 const CALLER = 0x200ff000;
 const registers = [...Array.from({ length: 16 }, (_, i) => 'r' + i), 'cpsr', 'spsr'];
 
-async function machine(accelerated, enabled = () => true, minRectanglePixels = 0) {
+async function machine(
+  accelerated,
+  enabled = () => true,
+  minRectanglePixels = 0,
+  minPaletteRowPixels = 32,
+) {
   const cpu = await createARM();
   cpu.map(0x20000000, 0x4000000);
   cpu.write(0x20010000, rom.subarray(0x724));
@@ -26,6 +31,7 @@ async function machine(accelerated, enabled = () => true, minRectanglePixels = 0
       romHash,
       enabled,
       minRectanglePixels,
+      minPaletteRowPixels,
       onSkippedInstructions: (count) => {
         result.instructions += count;
       },
@@ -266,6 +272,245 @@ test('production rectangle threshold leaves tiny fills native and batches large 
     assert.equal(fast.accelerator.stats.rectangleSmall, 1);
     assert.deepEqual(rectangle(fast, {}), rectangle(native, {}));
     assert.equal(fast.accelerator.stats.rectangles, 1);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+const PALETTE_ROW = 0x2004e4c4;
+const PALETTE_END = 0x2004e74c;
+const PALETTE_STACK = 0x23fe0000;
+const PALETTE_INPUT = 0x21010000;
+const PALETTE_COLORS = 0x21020000;
+
+function paletteRow(
+  machine,
+  {
+    bits = 4,
+    offset = 0,
+    count = 64,
+    transparent = 0x100,
+    mode = 0,
+    scale = 0,
+    step = 1,
+    fill = null,
+    source = PALETTE_INPUT,
+    palette = PALETTE_COLORS,
+    destination = BUFFER + 2048,
+    flags = 0xf8000013,
+    height = 0,
+    firstRow = 0,
+    stride = 220,
+    paddingBytes = 0,
+    paddingBits = 0,
+    stopInside = false,
+    stopAt = null,
+  } = {},
+  budget = null,
+) {
+  const { cpu } = machine;
+  cpu.write(BUFFER, new Uint8Array(65536).fill(0xa7));
+  cpu.write(PALETTE_STACK, new Uint8Array(256).fill(0xc3));
+  const input = Uint8Array.from(
+    { length: 32768 },
+    (_, i) => fill ?? ((i * 53 + 11) ^ (i * 7)) & 255,
+  );
+  cpu.write(source, input);
+  cpu.write(
+    palette,
+    Uint8Array.from({ length: 512 }, (_, i) => (i * 71 + 13) & 255),
+  );
+  for (let i = 0; i < 15; i++) cpu.regWrite('r' + i, 0x10100000 + i * 0x101);
+  cpu.regWrite('cpsr', flags);
+  cpu.regWrite('sp', PALETTE_STACK);
+  cpu.regWrite('r1', offset);
+  cpu.regWrite('r2', source);
+  cpu.regWrite('r3', scale);
+  cpu.regWrite('r4', 1);
+  cpu.regWrite('r5', palette);
+  cpu.regWrite('r6', count);
+  cpu.regWrite('r9', mode);
+  for (const [offset, value] of [
+    [0x0c, destination],
+    [0x10, (1 << bits) - 1],
+    [0x14, bits],
+    [0x18, 8 - bits],
+    [0x1c, transparent],
+    [0x2c, step],
+    [0x30, 0x21030000],
+  ])
+    cpu.write32(PALETTE_STACK + offset, value);
+  // Only needed by unsupported doubled rows; a valid original image stride.
+  cpu.write(0x2103025e, Uint8Array.of(stride & 255, (stride >>> 8) & 255));
+  cpu.write(0x2103004e, Uint8Array.of(height & 255, (height >>> 8) & 255));
+  if (height) {
+    cpu.write32(PALETTE_STACK, firstRow);
+    cpu.write32(PALETTE_STACK + 4, paddingBits);
+    cpu.write32(PALETTE_STACK + 8, paddingBytes);
+    // The original epilogue restores eight callee-saved registers and PC.
+    for (let i = 0; i < 9; i++)
+      cpu.write32(PALETTE_STACK + 0x34 + i * 4, i === 8 ? STOP : 0x10203040 + i * 0x101);
+  }
+  const code = new Uint8Array(4);
+  new DataView(code.buffer).setUint32(
+    0,
+    0xeb000000 | (((PALETTE_ROW - CALLER - 8) >> 2) & 0xffffff),
+    true,
+  );
+  cpu.write(CALLER, code);
+  machine.instructions = 0;
+  const end = stopAt ?? (height ? (stopInside ? 0x2004e7b4 : STOP) : PALETTE_END);
+  if (budget === null) cpu.run(CALLER, end, 5_000_000);
+  else cpu.runGuarded(CALLER, end, budget);
+  return {
+    registers: Object.fromEntries(registers.map((r) => [r, cpu.regRead(r)])),
+    destination: cpu.read(BUFFER, 65536),
+    source: cpu.read(source, 32768),
+    palette: cpu.read(palette, 512),
+    stack: cpu.read(PALETTE_STACK, 256),
+    instructions: machine.instructions,
+  };
+}
+
+test('packed palette rows preserve native ARM pixels, all registers, flags, stack and clock', async () => {
+  const native = await machine(false),
+    fast = await machine(true, () => true, 0, 0);
+  try {
+    const cases = [];
+    for (const bits of [1, 2, 4, 8])
+      for (let offset = 0; offset < 8; offset += bits)
+        for (const transparent of [0, (1 << bits) - 1, 0xffffffff])
+          cases.push({ bits, offset, transparent, count: offset % 3 === 0 ? 220 : 33 });
+    cases.push({ bits: 1, fill: 0, transparent: 0, count: 512 });
+    cases.push({ bits: 8, fill: 255, transparent: 255, count: 32, flags: 0x18000013 });
+    cases.push({ bits: 8, count: 511, transparent: 0xffffffff, flags: 0x98000013 });
+    cases.push({ count: 0 });
+    for (const input of cases) {
+      assert.deepEqual(paletteRow(fast, input), paletteRow(native, input), JSON.stringify(input));
+      assert.deepEqual(
+        paletteRow(fast, input, 1_000_000),
+        paletteRow(native, input, 1_000_000),
+        'guarded ' + JSON.stringify(input),
+      );
+    }
+    assert.equal(fast.accelerator.stats.paletteRows, (cases.length - 1) * 2);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('palette row guards retain original behavior for small, overlapping and nonstandard draws', async () => {
+  const native = await machine(false),
+    fast = await machine(true);
+  try {
+    for (const input of [
+      { count: 0 },
+      { count: 1 },
+      { count: 31 },
+      { mode: 1 },
+      { scale: 1 },
+      { step: 0xffffffff },
+      { source: BUFFER + 2048 },
+      { palette: BUFFER + 2048 },
+      { bits: 3 },
+      { offset: 1 },
+    ])
+      assert.deepEqual(paletteRow(fast, input), paletteRow(native, input), JSON.stringify(input));
+    assert.equal(fast.accelerator.stats.paletteRows, 0);
+    for (const budget of [1, 10, 30, 100, 1000, 2000])
+      assert.deepEqual(
+        paletteRow(fast, {}, budget),
+        paletteRow(native, {}, budget),
+        'budget ' + budget,
+      );
+    assert.equal(fast.accelerator.stats.paletteRows, 0);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('modified palette row instructions are rejected before installing shortcuts', async () => {
+  const { cpu } = await machine(false);
+  try {
+    cpu.write32(PALETTE_ROW, 0xe1a00000);
+    assert.throws(
+      () => installRomAccelerators(cpu, { romHash }),
+      /palette row kernel does not match/,
+    );
+  } finally {
+    cpu.close();
+  }
+});
+
+test('multiple native image rows preserve padding, clipping offsets, stack, registers and virtual clock', async () => {
+  const native = await machine(false),
+    fast = await machine(true);
+  try {
+    const cases = [
+      { bits: 1, offset: 3, count: 39, height: 7, paddingBits: 2, paddingBytes: 3 },
+      { bits: 2, offset: 6, count: 33, height: 9, firstRow: 2, paddingBits: 2, paddingBytes: 5 },
+      { bits: 4, offset: 4, count: 220, height: 32, stride: 240, paddingBits: 4 },
+      { bits: 8, count: 512, height: 4, stride: 512, transparent: 0xffffffff },
+      { bits: 8, count: 32, height: 512, stride: 32, transparent: 1 },
+      { bits: 4, count: 64, height: 4, fill: 0, transparent: 0 },
+      { bits: 8, count: 64, height: 4, fill: 255, transparent: 255, flags: 0x18000013 },
+    ];
+    for (const input of cases) {
+      assert.deepEqual(paletteRow(fast, input), paletteRow(native, input), JSON.stringify(input));
+      assert.deepEqual(
+        paletteRow(fast, input, 10_000_000),
+        paletteRow(native, input, 10_000_000),
+        'guarded ' + JSON.stringify(input),
+      );
+    }
+    assert.equal(fast.accelerator.stats.paletteBatches, cases.length * 2);
+    for (const budget of [1, 100, 1000, 5000, 10000])
+      assert.deepEqual(
+        paletteRow(fast, { height: 8, paddingBytes: 2 }, budget),
+        paletteRow(native, { height: 8, paddingBytes: 2 }, budget),
+        'budget ' + budget,
+      );
+    for (const input of [
+      { height: 4, stopInside: true, paddingBytes: 3 },
+      { height: 4, stopAt: 0x2004e4e0 },
+      { height: 4, paddingBits: 1 }, // Native packed-row reset differs from a linear bit stream.
+      { height: 4, stride: 32 }, // Overlapping output rows remain row-by-row.
+      { height: 4, paddingBytes: -1 },
+    ])
+      assert.deepEqual(
+        paletteRow(fast, input),
+        paletteRow(native, input),
+        'fallback ' + JSON.stringify(input),
+      );
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('production palette threshold leaves short rows native and batches wide images', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    assert.deepEqual(
+      paletteRow(fast, { count: 64, height: 4 }),
+      paletteRow(native, { count: 64, height: 4 }),
+    );
+    assert.equal(fast.accelerator.stats.paletteRows, 0);
+    assert.deepEqual(
+      paletteRow(fast, { count: 128, height: 4 }),
+      paletteRow(native, { count: 128, height: 4 }),
+    );
+    assert.equal(fast.accelerator.stats.paletteRows, 4);
+    assert.equal(fast.accelerator.stats.paletteBatches, 1);
   } finally {
     native.cpu.close();
     fast.cpu.close();

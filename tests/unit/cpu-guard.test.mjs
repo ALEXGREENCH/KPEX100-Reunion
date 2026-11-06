@@ -23,6 +23,8 @@ test('block watchdog stops endless ARM and Thumb code and permits later exact ex
       assert.ok(blocks > before && blocks - before <= 20);
       assert.notEqual(cpu.regRead('pc'), 0x1800);
       assert.equal(cpu.blockBudget, null);
+      assert.equal(cpu.runStop, undefined);
+      assert.equal(cpu.runCounted, undefined);
     }
     cpu.regWrite('cpsr', 0x10);
     cpu.regWrite('r0', 0);
@@ -45,6 +47,8 @@ test('guard state is cleared after a guest exception', async () => {
     cpu.regWrite('r1', 0x3000);
     assert.throws(() => cpu.runGuarded(0x1000, 0x1800, 100));
     assert.equal(cpu.blockBudget, null);
+    assert.equal(cpu.runStop, undefined);
+    assert.equal(cpu.runCounted, undefined);
     cpu.write(0x1100, Uint8Array.of(7, 0, 160, 227, 30, 255, 47, 225));
     cpu.regWrite('lr', 0x1800);
     cpu.runGuarded(0x1100, 0x1800, 100);
