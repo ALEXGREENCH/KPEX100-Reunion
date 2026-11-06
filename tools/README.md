@@ -46,3 +46,6 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `browser-presentation-check.mjs`: optional isolated Chromium/Chrome checks for the fixed LCD, device controls, touch cancellation and volume persistence. See [setup](../doc/web-interface.md).
 
 - `browser-gameplay-check.mjs`: 65-second actual Worker/ROM/SGS smoke with keyboard input and host timers; [scope and results](../doc/kpex-key-release.md).
+- `wayback-harvest.py`: resumable uncollapsed CDX indexes and exact replay bodies with digest checks; [configuration, status and commands](../doc/wayback-collection.md).
+- `package-wayback.py`: consistent SQLite snapshot, immutable response objects and a verified ZIP manifest, including while a collector is running.
+- `preserve-sinjisoft-newswire.py`: save the publicly listed Korean Sinjisoft press releases and their directly linked photographs; [coverage](../doc/sinjisoft-press-preservation.md).

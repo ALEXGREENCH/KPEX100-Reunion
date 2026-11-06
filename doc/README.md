@@ -63,6 +63,9 @@
 
 ## История и источники
 
+- [Корейские пресс-релизы Sinjisoft](sinjisoft-press-preservation.md): все 30 публикаций доступного списка Newswire и 17 JPEG с происхождением.
+- [Сбор GNEX Club, GVM Club и Sinjisoft](wayback-collection.md): полные доступные индексы, возобновляемая очередь и проверка исходных байтов.
+
 - [SCH-S390 и загружаемый GNEX-проигрыватель](samsung-s390-wipi-player.md): новый BIN, официальные PDF и первичный отчёт SK Telecom о WIPI-приложении GNEX.
 - [Samsung SCH-S250 и SCH-S380](samsung-s250-s380.md): новые код и сегменты памяти, маршруты GNEX, две встроенные игры и оригинальные документы/PC Link.
 - [Innocom, Китай и Super GNEX](innocom-super-gnex.md): меморандум, исходные релизы ICOLS, OEM-направления и границы подтверждения устройств.

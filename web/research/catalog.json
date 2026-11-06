@@ -595,6 +595,44 @@
           "url": "https://www.icmu.org/icmu2005/ICMU2005FinalProgram.pdf"
         }
       ]
+    },
+    {
+      "repositoryPath": "research/archives/Sinjisoft-Korean-Press-Releases-Newsroom.zip",
+      "bytes": 2545410,
+      "sha256": "374f85b4e15929feb1caf90fd9bd95fb8aa2c51d91144da09f0c5a77dbeb9d14",
+      "id": "sinjisoft-korean-press-newsroom",
+      "category": "Корейские первоисточники Sinjisoft",
+      "title": "Sinjisoft: 30 пресс-релизов и фотографии",
+      "description": "Все 30 HTML публикаций из доступного корейского списка Newswire и 17 прямо указанных JPEG (8 исходных изображений и 9 миниатюр), 2004–2008. Оригинальные ответы, заголовки, даты и SHA-256. Это полный доступный список одного источника, а не все релизы компании в интернете.",
+      "sources": [
+        {
+          "label": "Корейский раздел Sinjisoft на Newswire",
+          "url": "https://www.newswire.co.kr/?act=article&md=A10&no=2845"
+        }
+      ]
+    },
+    {
+      "id": "gnex-gvm-wayback-partial-20261106",
+      "repositoryPath": "research/archives/GNEX-GVM-Wayback-Partial-20261106.zip",
+      "bytes": 13756833,
+      "sha256": "02f8e0f834d17b44359ecd2dbaa9c9250623ea4e68e147b8310a950d6d117dc2",
+      "category": "Возобновляемое сохранение Wayback",
+      "title": "GNEX / GVM / Sinjisoft: частичный снимок очереди",
+      "description": "24,698 записей CDX; 80 тел сверены с digest, остальные сохранены с точным статусом или ожидают загрузки. Включены исходные ответы, согласованная SQLite-очередь, хеши и скрипт продолжения. Это частичный комплект, не полная копия сайтов и не новый SDK.",
+      "sources": [
+        {
+          "label": "Первичная документация API Internet Archive",
+          "url": "https://raw.githubusercontent.com/internetarchive/wayback/master/wayback-cdx-server/README.md"
+        },
+        {
+          "label": "GNEX Club: Wayback",
+          "url": "https://web.archive.org/web/*/http://www.gnexclub.com/"
+        },
+        {
+          "label": "GVM Club: Wayback",
+          "url": "https://web.archive.org/web/*/http://www.gvmclub.com/"
+        }
+      ]
     }
   ],
   "reports": [
@@ -697,6 +735,18 @@
     {
       "title": "GVM/MobileC: первичный доклад ICMU 2005 и ссылки на ранние руководства",
       "repositoryPath": "doc/gvm-icmu2005.md"
+    },
+    {
+      "title": "Корейские пресс-релизы Sinjisoft: оригиналы, фотографии и проверка",
+      "repositoryPath": "doc/sinjisoft-press-preservation.md"
+    },
+    {
+      "title": "Внутренняя VM Windows SDK: загрузка, ввод, очередь и таймеры",
+      "repositoryPath": "doc/sdk-emulator-internals.md"
+    },
+    {
+      "title": "Сохранение GNEX Club, GVM Club и Sinjisoft через Wayback",
+      "repositoryPath": "doc/wayback-collection.md"
     }
   ]
 }
