@@ -633,6 +633,78 @@
           "url": "https://web.archive.org/web/*/http://www.gvmclub.com/"
         }
       ]
+    },
+    {
+      "id": "sinjisoft-sil-patents-platform-documents",
+      "category": "Документация и первичные источники",
+      "title": "Sinjisoft: патенты SIL и технические документы",
+      "description": "Три исходных корейских PDF патентов, страницы публикаций и японский отчёт KDDI. 43 страницы PDF; два недоступных запроса SEC отмечены как HTTP403. Без нового SDK или подтверждения совместимости SIL с SGS.",
+      "sources": [
+        {
+          "label": "Sinjisoft: SIL, публикация B1",
+          "url": "https://patents.google.com/patent/KR100771057B1/ko"
+        },
+        {
+          "label": "KDDI Research, 2008",
+          "url": "https://rp.kddi-research.jp/download/report/RA2008028"
+        }
+      ],
+      "repositoryPath": "research/archives/Sinjisoft-SIL-Patents-and-Platform-Documents.zip",
+      "bytes": 1163916,
+      "sha256": "d316111f054bb2fe196509f3a79840f21e82dd06e6e8e061434f83589fc37310"
+    },
+    {
+      "id": "sinjisoft-korean-url-recovery",
+      "category": "Документация и первичные источники",
+      "title": "Корейские адреса GVM Club: восстановленные ответы",
+      "description": "28 снимков, 19 разных тел с совпадением CDX: корейская кодировка, исходные документы, объявления и служебные страницы. Отдельно официальный релиз Daum и статическая проверка MODIO/IndexFinder. Новые игры или ранние SDK не подтверждены.",
+      "sources": [
+        {
+          "label": "GVM Club: API2X, исходный снимок",
+          "url": "https://web.archive.org/web/20040402033235id_/http://www.gvmclub.com:80/education/gvm_api.php"
+        },
+        {
+          "label": "Daum: GNEX/GVM, 26 июня 2003",
+          "url": "https://www.kakaocorp.com/page/detail/5567"
+        }
+      ],
+      "repositoryPath": "research/archives/Sinjisoft-Korean-URL-Recovery-and-Source-Followup.zip",
+      "bytes": 1846808,
+      "sha256": "49b9daa26125717ac0d36dc505a77f35ee98abbfd30e734f35bacbf928b6949f"
+    },
+    {
+      "id": "gnex-gvm-wayback-partial-pass2",
+      "title": "GNEX Club, GVM Club и Sinjisoft: второй частичный снимок",
+      "category": "Исходные страницы и возобновляемые коллекции",
+      "description": "43 696 задач CDX, 423 ответа совпали с исходным digest. SQLite, 566 точных объектов HTTP, заголовки и состояния очереди. Это частичный снимок, не полный WARC; ошибки и ожидающие задачи отмечены отдельно.",
+      "sources": [
+        {
+          "label": "Wayback Machine",
+          "url": "https://web.archive.org/"
+        }
+      ],
+      "repositoryPath": "research/archives/GNEX-GVM-Wayback-Partial-Pass2-20261106.zip",
+      "bytes": 23519993,
+      "sha256": "17a38062c8983b6398198a672fe55d61baabd6f93add60b6584641335606b390"
+    },
+    {
+      "id": "gvm-api2x-early-patents",
+      "title": "GVM API 2X и ранние патенты Sinjisoft",
+      "category": "Документация и первичные источники",
+      "description": "108 ответов API-раздела совпали с CDX, отдельно восстановлено корейское приложение A. Исходные HTML, изображения, меню, ошибки и два корейских PDF одной ранней патентной семьи. Полнота руководства не заявляется.",
+      "sources": [
+        {
+          "label": "GVM Club: исходное меню API2X",
+          "url": "https://web.archive.org/web/20040118232037id_/http://www.gvmclub.com:80/education/API2x_lecture_left.php?no=1"
+        },
+        {
+          "label": "Sinjisoft: ранняя патентная публикация",
+          "url": "https://patents.google.com/patent/KR20010095607A/ko"
+        }
+      ],
+      "repositoryPath": "research/archives/GVM-API2X-and-Early-Sinjisoft-Patents.zip",
+      "bytes": 788659,
+      "sha256": "f76dea1860bb8ee1f07566e6d2baabae01c13ee0cc1f819a208dd81affc3b37c"
     }
   ],
   "reports": [
@@ -747,6 +819,18 @@
     {
       "title": "Сохранение GNEX Club, GVM Club и Sinjisoft через Wayback",
       "repositoryPath": "doc/wayback-collection.md"
+    },
+    {
+      "title": "Sinjisoft: SIL, патенты и материалы WIPI",
+      "repositoryPath": "doc/sinjisoft-sil-and-platform-documents.md"
+    },
+    {
+      "title": "Корейские URL GVM Club: проверенные ответы и новые зацепки",
+      "repositoryPath": "doc/gvm-korean-url-recovery.md"
+    },
+    {
+      "title": "Сохранение GVM API 2X и ранних публикаций Sinjisoft",
+      "repositoryPath": "doc/gvm-api2x-preservation.md"
     }
   ]
 }

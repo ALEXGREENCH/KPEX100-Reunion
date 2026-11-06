@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T16:52:59.795143+00:00",
+  "scope": "One selected API2X record per original CDX entry in the available full-domain queue. No index completeness claimed. Original frames and two Korean early patent publications are separate.",
+  "selectedCdxRecords": 109,
+  "states": {
+    "mismatch": 1,
+    "verified": 108
+  },
+  "verifiedHtmlResponses": 89,
+  "allVerifiedBodiesIndependentlyMatchCdx": true,
+  "menuFrameCaptures": 3,
+  "separateVerifiedAppendixCaptures": 1,
+  "patentPublications": [
+    "KR20010095607A",
+    "KR100357663B1"
+  ],
+  "patentFamilies": 1,
+  "patentPdfPages": 31,
+  "patentPdfStructuralChecks": [
+    {
+      "file": "KR100357663B1.pdf",
+      "pages": 14,
+      "allPagesParsed": true,
+      "headerPdf": true,
+      "encrypted": false,
+      "contentUse": "Preservation and structural parsing only; no SGS-format or legal-status conclusions."
+    },
+    {
+      "file": "KR20010095607A.pdf",
+      "pages": 17,
+      "allPagesParsed": true,
+      "headerPdf": true,
+      "encrypted": false,
+      "contentUse": "Preservation and structural parsing only; no SGS-format or legal-status conclusions."
+    }
+  ],
+  "archive": {
+    "repositoryPath": "research/archives/GVM-API2X-and-Early-Sinjisoft-Patents.zip",
+    "bytes": 788659,
+    "sha256": "f76dea1860bb8ee1f07566e6d2baabae01c13ee0cc1f819a208dd81affc3b37c"
+  },
+  "zipMembers": 115,
+  "manifestMembersVerified": 114,
+  "zipCrcPassed": true,
+  "limits": [
+    "No new SGS or standalone phone runtime/early SDK found.",
+    "Verified means exact original CDX body, not all API links recovered.",
+    "Failed requests and error bodies explicitly separate.",
+    "A and B1 are one patent family, not two architectures."
+  ]
+}

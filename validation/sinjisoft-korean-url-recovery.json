@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "scope": "Two bounded retries of previously failed captures; the pending queue was untouched. Every accepted body rechecked independently against original CDX SHA1 and stored SHA256.",
+  "recordsUnchanged": true,
+  "recordsSha256": "4c3fa8d46a08b231aa0c517ae78dc2c3d6e9c7b075a2f87d569f42ea2e4de083",
+  "before": {
+    "counts": {
+      "mismatch": 56,
+      "pending": 32261,
+      "retry": 1,
+      "verified": 380
+    },
+    "captures": 32698,
+    "recordsSha256": "4c3fa8d46a08b231aa0c517ae78dc2c3d6e9c7b075a2f87d569f42ea2e4de083"
+  },
+  "afterStates": {
+    "mismatch": 28,
+    "pending": 32261,
+    "retry": 1,
+    "verified": 408
+  },
+  "recoveredCaptureCount": 28,
+  "cp949Captures": 12,
+  "archiveRedirectCaptures": 9,
+  "literalDirectCaptures": 7,
+  "uniqueRecoveredPayloads": 19,
+  "archive": {
+    "repositoryPath": "research/archives/Sinjisoft-Korean-URL-Recovery-and-Source-Followup.zip",
+    "bytes": 1846808,
+    "sha256": "49b9daa26125717ac0d36dc505a77f35ee98abbfd30e734f35bacbf928b6949f"
+  },
+  "zipMembers": 60,
+  "manifestMembersVerified": 59,
+  "zipCrcPassed": true,
+  "modio": {
+    "exeBytes": 590368,
+    "sha256": "814343ab66ac6d077331a2f23fb9f658427805af877a4de15ebd6b7c4c67c534",
+    "type": "DOS MZ self-extracting ZIP, NOT a verified Windows emulator; no host execution",
+    "zipOffset": 28928,
+    "members": [
+      {
+        "zipName": "╕≡╡≡┐└ - II.jpg",
+        "cp949Name": "모디오 - II.jpg",
+        "bytes": 322105,
+        "crc32": "fd67eee8",
+        "sha256": "723440265ca5eee56679af5f571945820919c15b20268bffd787b021adee886e",
+        "savedAs": "modio-original-1.jpg"
+      },
+      {
+        "zipName": "╕≡╡≡┐└ - I.jpg",
+        "cp949Name": "모디오 - I.jpg",
+        "bytes": 288907,
+        "crc32": "d4a62867",
+        "sha256": "6e1b94343e952b1a67808b7991a4fb8537a509b61d64bda05569ba956bbb029d",
+        "savedAs": "modio-original-2.jpg"
+      }
+    ],
+    "crcPassed": true
+  },
+  "indexFinder": {
+    "bytes": 36864,
+    "sha256": "2f6692237b90c18f659a0fd7964e309b70280d8367789e720f970a255db7e153",
+    "signature": "50450000",
+    "machine": "0x14c",
+    "sections": 3,
+    "coffTimestampRaw": 1053150387,
+    "classification": "PE32 x86 palette-index utility, based on original console strings; not a recovered GNEX runtime. No execution. Timestamp is an untrusted header field.",
+    "originalCp949Strings": [
+      "없는 팔래트입니다.",
+      "%d,%d,%d의 인덱스 넘버는.. %d입니다. ",
+      "RGB값을  입력하시오 (R,G,B 스타일): ",
+      "//                      인덱스 파이더                       //"
+    ]
+  },
+  "officialPress": {
+    "url": "https://www.kakaocorp.com/page/detail/5567",
+    "finalUrl": "https://www.kakaocorp.com/page/detail/5567",
+    "utc": "2026-11-06T16:40:33.321568+00:00",
+    "status": 200,
+    "headers": [
+      ["Date", "Fri, 06 Nov 2026 16:40:32 GMT"],
+      ["Content-Type", "text/html; charset=utf-8"],
+      ["Content-Length", "59085"],
+      ["Connection", "close"],
+      ["Set-Cookie", "isEnglish=false; Path=/"],
+      ["ETag", "\"e6cd-PEaK0ASnp60G9CK90Y0tqC2eJGk\""],
+      ["Accept-Ranges", "none"],
+      ["Vary", "Accept-Encoding"],
+      ["Strict-Transport-Security", "max-age=31536000"],
+      ["X-Frame-Options", "DENY"]
+    ],
+    "bytes": 59085,
+    "sha256": "30e84438c0d22fc3a1f8d84a477ccf3ca3e688fe55429e4e4c860fb2c8493552"
+  },
+  "apiFrameCaptures": 3,
+  "limits": [
+    "Selected delta, not full-domain crawl or WARC.",
+    "Some recovered bytes duplicate previously preserved direct ZIP members.",
+    "No new SGS, SDK 1.20/1.40, GVM1.52 or standalone phone GNEX player confirmed.",
+    "Live collector continued after this immutable audit."
+  ]
+}

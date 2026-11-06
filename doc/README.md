@@ -107,3 +107,8 @@ SGS на любом устройстве. SDK и руководства опис
 - [GVM в Samsung E110/X350 и поиск проигрывателя](gvm-gnex-firmware-player-followup.md): два исходных 7z, зеркало GVM2X и точные статусы ранних SDK.
 - [Доклад GVM/MobileC ICMU 2005](gvm-icmu2005.md): исходные PDF и зацепки MCC-PRG-152-200 / SVR-SRG-120.
 - [Следующий проход производительности](web-performance-pass2.md): копирование памяти и проверенные большие заливки.
+
+- [Sinjisoft: SIL, патенты и WIPI](sinjisoft-sil-and-platform-documents.md): исходные корейские PDF, технические границы и отчёт KDDI.
+- [Корейские адреса GVM Club](gvm-korean-url-recovery.md): 28 восстановленных снимков, CP949, API2X и официальный релиз Daum.
+
+- [GVM API 2X и ранние патенты](gvm-api2x-preservation.md): оригинальные корейские HTML, приложение A и два PDF одной ранней патентной семьи.

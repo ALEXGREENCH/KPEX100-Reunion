@@ -77,3 +77,9 @@ python tools/preserve-sinjisoft-newswire.py ../sinjisoft-newswire
 Он не обходит соседние разделы Newswire, не входит в аккаунт и не исполняет
 страничный JavaScript. Оригинальные права издателей сохраняются;
 MIT Reunion относится к новому инструменту.
+
+## Другие первичные источники
+
+[Оригинальный релиз Daum и восстановленные страницы GVM Club](gvm-korean-url-recovery.md)
+сохранены отдельным комплектом; [патенты Sinjisoft и материалы WIPI](sinjisoft-sil-and-platform-documents.md)
+отделены от пресс-релизов. Корейские оригиналы не заменены переводом.
