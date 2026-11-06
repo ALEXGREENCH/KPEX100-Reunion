@@ -61,3 +61,6 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `inspect-gvm-legacy-chat.py`: hash-locked x86 GVM dispatcher and chat callbacks. Optional `--reference` emulates only the verified 25-byte LockChatMode callback in isolated Unicorn memory and records independent stack/state vectors; [method, dependencies and limits](../doc/witop-hellfire-legacy.md).
 
 - `inspect-gvm-buzzer.py`: record note, rest and timing events from the isolated native SDK tone loop. Windows sound/wait calls are intercepted; [reproduction and waveform limits](../doc/gvm-buzzer-audio.md).
+
+- `inspect-gvm-ma1.py`: trace the preserved SDK MA1 initialization, packed score fields, MIDI and WinMM timer requests in isolated Unicorn; [inputs, reproduction and hardware limits](../doc/gvm-ma1-native-reference.md).
+- `ma1-info.mjs`: inspect standalone raw MA1 or a selected legacy SGS resource as JSON; no audio synthesis.

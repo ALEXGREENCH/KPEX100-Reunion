@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T21:58:56.630720+00:00",
+  "archive": "GVM-MA1-Native-Reference-and-Register-Research.zip",
+  "archiveBytes": 1166911,
+  "archiveSha256": "5dd90fce29aad084dc82247db91b4abc049fb4b99f78cf88b1617d6caa0730ee",
+  "members": 23,
+  "manifestMembersVerified": 22,
+  "crcPassed": true,
+  "existingInputs": [
+    {
+      "previousArchive": "GNEX-Early-SDK-Pages-and-GVM2X-Original.zip",
+      "previousArchiveSha256": "fc58dd1acbe55c7476a5e168c46481d27c489431b225e9a46746673676b15019",
+      "member": "originals/emulator/2x_Cr256_Magic.exe",
+      "bytes": 1056768,
+      "sha256": "2bcc2554605bc277a99ff1220db1a509f875c207221647f806d0fff3efd66f88",
+      "scope": "Exact reuse of previously preserved bytes, not a new recovered binary or PDF."
+    },
+    {
+      "previousArchive": "GVM-Buzzer-and-MA1-Source-Research.zip",
+      "previousArchiveSha256": "20e14fd05e26d53bb4b2f7d8834608ca4a818380b604b218aeea66078c86a601",
+      "member": "originals/downloads/YMU757B-MA1C-Yamaha-200004-mirror.pdf",
+      "bytes": 703749,
+      "sha256": "2af21285ed813eaed4b056b97ce9d4b8e09c133bf2c40d9bbb4a2fa8b115c623",
+      "scope": "Exact reuse of previously preserved bytes, not a new recovered binary or PDF."
+    }
+  ],
+  "nativeVectors": 8,
+  "nativeScoreWords": 820,
+  "nativeMidiCommands": 1015,
+  "nativeTimerRequests": 1278,
+  "scope": "New native SDK reference, tools and analysis of already preserved inputs. Exact phone FM synthesis and rawMA1 playback remain unsupported. No new rare SDK or player recovered."
+}

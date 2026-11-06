@@ -880,6 +880,25 @@
           "url": "https://www.etnews.com/200809090112"
         }
       ]
+    },
+    {
+      "id": "gvm-ma1-native-reference",
+      "category": "Исследование звукового формата",
+      "title": "GVM MA1: эталон SDK и регистры Yamaha",
+      "description": "Разбор 820 слов из оригинальных и синтетических потоков; MIDI и таймеры штатного SDK в изолированном Unicorn, инструменты и проверки. Входные EXE/PDF уже сохранялись ранее. Raw MA1 пока не воспроизводится.",
+      "repositoryPath": "research/archives/GVM-MA1-Native-Reference-and-Register-Research.zip",
+      "bytes": 1166911,
+      "sha256": "5dd90fce29aad084dc82247db91b4abc049fb4b99f78cf88b1617d6caa0730ee",
+      "sources": [
+        {
+          "label": "Сохранённый GVM2X",
+          "url": "https://archive.org/details/gvm2xemu"
+        },
+        {
+          "label": "Yamaha YMU757B",
+          "url": "https://www.datasheetarchive.com/datasheet/YMU757B/Yamaha?term=YMU757B"
+        }
+      ]
     }
   ],
   "reports": [
@@ -1046,6 +1065,10 @@
     {
       "title": "Sinjisoft: инструкции Mobile C, корейская пресса и Wayback Pass 5",
       "repositoryPath": "doc/sinjisoft-korean-programming-and-press.md"
+    },
+    {
+      "title": "Raw MA1: разборщик SDK, MIDI, таймеры и регистры Yamaha",
+      "repositoryPath": "doc/gvm-ma1-native-reference.md"
     }
   ]
 }
