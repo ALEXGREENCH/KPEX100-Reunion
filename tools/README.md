@@ -59,3 +59,5 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `benchmark-rgb565.mjs`: compare the original GNEX host color conversion and the compact channel lookup, including output allocation and exact pixel checks. `benchmark-web.mjs --compare display` alternates the two display methods on one guarded runtime; [measurements and limits](../doc/rgb565-display-performance.md).
 
 - `inspect-gvm-legacy-chat.py`: hash-locked x86 GVM dispatcher and chat callbacks. Optional `--reference` emulates only the verified 25-byte LockChatMode callback in isolated Unicorn memory and records independent stack/state vectors; [method, dependencies and limits](../doc/witop-hellfire-legacy.md).
+
+- `inspect-gvm-buzzer.py`: record note, rest and timing events from the isolated native SDK tone loop. Windows sound/wait calls are intercepted; [reproduction and waveform limits](../doc/gvm-buzzer-audio.md).

@@ -493,7 +493,10 @@ export class GnexRuntime {
       type = this.profile === 'phone' ? rawType & 0x7fff : rawType,
       loop = this.profile === 'phone' && !!(rawType & 0x8000);
     try {
-      if (type === 8) {
+      if (this.profile === 'phone' && type === 0) {
+        this.audioDiagnostics.lastFormat = 'GVM buzzer';
+        this._audio('play', payload.slice(), 'audio/x-gvm-buzzer', loop, channel);
+      } else if (type === 8) {
         this.audioDiagnostics.lastFormat = 'MP3';
         this._audio('play', extractMp3(payload), 'audio/mpeg', loop, channel);
       } else if (

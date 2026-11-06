@@ -1,0 +1,1578 @@
+{
+  "schema": 1,
+  "sourceSha256": "2bcc2554605bc277a99ff1220db1a509f875c207221647f806d0fff3efd66f88",
+  "loopVA": "0x401030",
+  "loopEndExclusive": "0x4010f7",
+  "instructions": [
+    {
+      "va": "0x401030",
+      "bytes": "53",
+      "mnemonic": "push",
+      "operands": "ebx"
+    },
+    {
+      "va": "0x401031",
+      "bytes": "55",
+      "mnemonic": "push",
+      "operands": "ebp"
+    },
+    {
+      "va": "0x401032",
+      "bytes": "8b2d0cd24600",
+      "mnemonic": "mov",
+      "operands": "ebp, dword ptr [0x46d20c]"
+    },
+    {
+      "va": "0x401038",
+      "bytes": "56",
+      "mnemonic": "push",
+      "operands": "esi"
+    },
+    {
+      "va": "0x401039",
+      "bytes": "57",
+      "mnemonic": "push",
+      "operands": "edi"
+    },
+    {
+      "va": "0x40103a",
+      "bytes": "8b7c2414",
+      "mnemonic": "mov",
+      "operands": "edi, dword ptr [esp + 0x14]"
+    },
+    {
+      "va": "0x40103e",
+      "bytes": "33db",
+      "mnemonic": "xor",
+      "operands": "ebx, ebx"
+    },
+    {
+      "va": "0x401040",
+      "bytes": "33f6",
+      "mnemonic": "xor",
+      "operands": "esi, esi"
+    },
+    {
+      "va": "0x401042",
+      "bytes": "837f0c01",
+      "mnemonic": "cmp",
+      "operands": "dword ptr [edi + 0xc], 1"
+    },
+    {
+      "va": "0x401046",
+      "bytes": "7511",
+      "mnemonic": "jne",
+      "operands": "0x401059"
+    },
+    {
+      "va": "0x401048",
+      "bytes": "8bcf",
+      "mnemonic": "mov",
+      "operands": "ecx, edi"
+    },
+    {
+      "va": "0x40104a",
+      "bytes": "895f0c",
+      "mnemonic": "mov",
+      "operands": "dword ptr [edi + 0xc], ebx"
+    },
+    {
+      "va": "0x40104d",
+      "bytes": "e84e020000",
+      "mnemonic": "call",
+      "operands": "0x4012a0"
+    },
+    {
+      "va": "0x401052",
+      "bytes": "e8b9020000",
+      "mnemonic": "call",
+      "operands": "0x401310"
+    },
+    {
+      "va": "0x401057",
+      "bytes": "33f6",
+      "mnemonic": "xor",
+      "operands": "esi, esi"
+    },
+    {
+      "va": "0x401059",
+      "bytes": "8b4708",
+      "mnemonic": "mov",
+      "operands": "eax, dword ptr [edi + 8]"
+    },
+    {
+      "va": "0x40105c",
+      "bytes": "3bc3",
+      "mnemonic": "cmp",
+      "operands": "eax, ebx"
+    },
+    {
+      "va": "0x40105e",
+      "bytes": "7405",
+      "mnemonic": "je",
+      "operands": "0x401065"
+    },
+    {
+      "va": "0x401060",
+      "bytes": "8bf0",
+      "mnemonic": "mov",
+      "operands": "esi, eax"
+    },
+    {
+      "va": "0x401062",
+      "bytes": "895f08",
+      "mnemonic": "mov",
+      "operands": "dword ptr [edi + 8], ebx"
+    },
+    {
+      "va": "0x401065",
+      "bytes": "3bf3",
+      "mnemonic": "cmp",
+      "operands": "esi, ebx"
+    },
+    {
+      "va": "0x401067",
+      "bytes": "750a",
+      "mnemonic": "jne",
+      "operands": "0x401073"
+    },
+    {
+      "va": "0x401069",
+      "bytes": "6a64",
+      "mnemonic": "push",
+      "operands": "0x64"
+    },
+    {
+      "va": "0x40106b",
+      "bytes": "ff1510d24600",
+      "mnemonic": "call",
+      "operands": "dword ptr [0x46d210]"
+    },
+    {
+      "va": "0x401071",
+      "bytes": "ebcf",
+      "mnemonic": "jmp",
+      "operands": "0x401042"
+    },
+    {
+      "va": "0x401073",
+      "bytes": "8a06",
+      "mnemonic": "mov",
+      "operands": "al, byte ptr [esi]"
+    },
+    {
+      "va": "0x401075",
+      "bytes": "3c24",
+      "mnemonic": "cmp",
+      "operands": "al, 0x24"
+    },
+    {
+      "va": "0x401077",
+      "bytes": "7751",
+      "mnemonic": "ja",
+      "operands": "0x4010ca"
+    },
+    {
+      "va": "0x401079",
+      "bytes": "e882ffffff",
+      "mnemonic": "call",
+      "operands": "0x401000"
+    },
+    {
+      "va": "0x40107e",
+      "bytes": "85c0",
+      "mnemonic": "test",
+      "operands": "eax, eax"
+    },
+    {
+      "va": "0x401080",
+      "bytes": "741c",
+      "mnemonic": "je",
+      "operands": "0x40109e"
+    },
+    {
+      "va": "0x401082",
+      "bytes": "33c0",
+      "mnemonic": "xor",
+      "operands": "eax, eax"
+    },
+    {
+      "va": "0x401084",
+      "bytes": "33c9",
+      "mnemonic": "xor",
+      "operands": "ecx, ecx"
+    },
+    {
+      "va": "0x401086",
+      "bytes": "8a4601",
+      "mnemonic": "mov",
+      "operands": "al, byte ptr [esi + 1]"
+    },
+    {
+      "va": "0x401089",
+      "bytes": "8a0e",
+      "mnemonic": "mov",
+      "operands": "cl, byte ptr [esi]"
+    },
+    {
+      "va": "0x40108b",
+      "bytes": "8b148d6cc14800",
+      "mnemonic": "mov",
+      "operands": "edx, dword ptr [ecx*4 + 0x48c16c]"
+    },
+    {
+      "va": "0x401092",
+      "bytes": "8d0440",
+      "mnemonic": "lea",
+      "operands": "eax, [eax + eax*2]"
+    },
+    {
+      "va": "0x401095",
+      "bytes": "50",
+      "mnemonic": "push",
+      "operands": "eax"
+    },
+    {
+      "va": "0x401096",
+      "bytes": "52",
+      "mnemonic": "push",
+      "operands": "edx"
+    },
+    {
+      "va": "0x401097",
+      "bytes": "ffd5",
+      "mnemonic": "call",
+      "operands": "ebp"
+    },
+    {
+      "va": "0x401099",
+      "bytes": "83c602",
+      "mnemonic": "add",
+      "operands": "esi, 2"
+    },
+    {
+      "va": "0x40109c",
+      "bytes": "eba4",
+      "mnemonic": "jmp",
+      "operands": "0x401042"
+    },
+    {
+      "va": "0x40109e",
+      "bytes": "33c0",
+      "mnemonic": "xor",
+      "operands": "eax, eax"
+    },
+    {
+      "va": "0x4010a0",
+      "bytes": "8a06",
+      "mnemonic": "mov",
+      "operands": "al, byte ptr [esi]"
+    },
+    {
+      "va": "0x4010a2",
+      "bytes": "8b0c856cc14800",
+      "mnemonic": "mov",
+      "operands": "ecx, dword ptr [eax*4 + 0x48c16c]"
+    },
+    {
+      "va": "0x4010a9",
+      "bytes": "51",
+      "mnemonic": "push",
+      "operands": "ecx"
+    },
+    {
+      "va": "0x4010aa",
+      "bytes": "e801020000",
+      "mnemonic": "call",
+      "operands": "0x4012b0"
+    },
+    {
+      "va": "0x4010af",
+      "bytes": "33c0",
+      "mnemonic": "xor",
+      "operands": "eax, eax"
+    },
+    {
+      "va": "0x4010b1",
+      "bytes": "83c404",
+      "mnemonic": "add",
+      "operands": "esp, 4"
+    },
+    {
+      "va": "0x4010b4",
+      "bytes": "8a4601",
+      "mnemonic": "mov",
+      "operands": "al, byte ptr [esi + 1]"
+    },
+    {
+      "va": "0x4010b7",
+      "bytes": "8bcf",
+      "mnemonic": "mov",
+      "operands": "ecx, edi"
+    },
+    {
+      "va": "0x4010b9",
+      "bytes": "8d1440",
+      "mnemonic": "lea",
+      "operands": "edx, [eax + eax*2]"
+    },
+    {
+      "va": "0x4010bc",
+      "bytes": "52",
+      "mnemonic": "push",
+      "operands": "edx"
+    },
+    {
+      "va": "0x4010bd",
+      "bytes": "e82e010000",
+      "mnemonic": "call",
+      "operands": "0x4011f0"
+    },
+    {
+      "va": "0x4010c2",
+      "bytes": "83c602",
+      "mnemonic": "add",
+      "operands": "esi, 2"
+    },
+    {
+      "va": "0x4010c5",
+      "bytes": "e978ffffff",
+      "mnemonic": "jmp",
+      "operands": "0x401042"
+    },
+    {
+      "va": "0x4010ca",
+      "bytes": "3c25",
+      "mnemonic": "cmp",
+      "operands": "al, 0x25"
+    },
+    {
+      "va": "0x4010cc",
+      "bytes": "751d",
+      "mnemonic": "jne",
+      "operands": "0x4010eb"
+    },
+    {
+      "va": "0x4010ce",
+      "bytes": "e83d020000",
+      "mnemonic": "call",
+      "operands": "0x401310"
+    },
+    {
+      "va": "0x4010d3",
+      "bytes": "33c0",
+      "mnemonic": "xor",
+      "operands": "eax, eax"
+    },
+    {
+      "va": "0x4010d5",
+      "bytes": "8bcf",
+      "mnemonic": "mov",
+      "operands": "ecx, edi"
+    },
+    {
+      "va": "0x4010d7",
+      "bytes": "8a4601",
+      "mnemonic": "mov",
+      "operands": "al, byte ptr [esi + 1]"
+    },
+    {
+      "va": "0x4010da",
+      "bytes": "8d0440",
+      "mnemonic": "lea",
+      "operands": "eax, [eax + eax*2]"
+    },
+    {
+      "va": "0x4010dd",
+      "bytes": "50",
+      "mnemonic": "push",
+      "operands": "eax"
+    },
+    {
+      "va": "0x4010de",
+      "bytes": "e80d010000",
+      "mnemonic": "call",
+      "operands": "0x4011f0"
+    },
+    {
+      "va": "0x4010e3",
+      "bytes": "83c602",
+      "mnemonic": "add",
+      "operands": "esi, 2"
+    },
+    {
+      "va": "0x4010e6",
+      "bytes": "e957ffffff",
+      "mnemonic": "jmp",
+      "operands": "0x401042"
+    },
+    {
+      "va": "0x4010eb",
+      "bytes": "e820020000",
+      "mnemonic": "call",
+      "operands": "0x401310"
+    },
+    {
+      "va": "0x4010f0",
+      "bytes": "33f6",
+      "mnemonic": "xor",
+      "operands": "esi, esi"
+    },
+    {
+      "va": "0x4010f2",
+      "bytes": "e94bffffff",
+      "mnemonic": "jmp",
+      "operands": "0x401042"
+    }
+  ],
+  "frequencyTableVA": "0x48c16c",
+  "frequencies": [
+    392,
+    415,
+    440,
+    466,
+    494,
+    523,
+    554,
+    587,
+    622,
+    659,
+    698,
+    740,
+    784,
+    831,
+    880,
+    923,
+    988,
+    1047,
+    1109,
+    1175,
+    1245,
+    1319,
+    1397,
+    1475,
+    1568,
+    1661,
+    1760,
+    1865,
+    1976,
+    2093,
+    2217,
+    2349,
+    2489,
+    2637,
+    2794,
+    2960,
+    3136
+  ],
+  "vectors": [
+    {
+      "name": "resource40",
+      "payloadHex": "0000062812280b280e28082814280b280e28092815280d280e280d281928102815282600",
+      "payloadSha256": "bdf3fb8556578130cb2ea548cd120fd4d7a585d96fdf1d9652b441ca5a08add0",
+      "events": [
+        {
+          "atMs": 0,
+          "frequency": 554,
+          "durationMs": 120
+        },
+        {
+          "atMs": 120,
+          "frequency": 1109,
+          "durationMs": 120
+        },
+        {
+          "atMs": 240,
+          "frequency": 740,
+          "durationMs": 120
+        },
+        {
+          "atMs": 360,
+          "frequency": 880,
+          "durationMs": 120
+        },
+        {
+          "atMs": 480,
+          "frequency": 622,
+          "durationMs": 120
+        },
+        {
+          "atMs": 600,
+          "frequency": 1245,
+          "durationMs": 120
+        },
+        {
+          "atMs": 720,
+          "frequency": 740,
+          "durationMs": 120
+        },
+        {
+          "atMs": 840,
+          "frequency": 880,
+          "durationMs": 120
+        },
+        {
+          "atMs": 960,
+          "frequency": 659,
+          "durationMs": 120
+        },
+        {
+          "atMs": 1080,
+          "frequency": 1319,
+          "durationMs": 120
+        },
+        {
+          "atMs": 1200,
+          "frequency": 831,
+          "durationMs": 120
+        },
+        {
+          "atMs": 1320,
+          "frequency": 880,
+          "durationMs": 120
+        },
+        {
+          "atMs": 1440,
+          "frequency": 831,
+          "durationMs": 120
+        },
+        {
+          "atMs": 1560,
+          "frequency": 1661,
+          "durationMs": 120
+        },
+        {
+          "atMs": 1680,
+          "frequency": 988,
+          "durationMs": 120
+        },
+        {
+          "atMs": 1800,
+          "frequency": 1319,
+          "durationMs": 120
+        }
+      ],
+      "durationMs": 1920
+    },
+    {
+      "name": "resource41",
+      "payloadHex": "000000070a070b071407150716071e071f07200721072600",
+      "payloadSha256": "c62b1ef37a19b7e8c946b530885da9b950180429e1be0be890fdcc84356e6cbe",
+      "events": [
+        {
+          "atMs": 0,
+          "frequency": 392,
+          "durationMs": 21
+        },
+        {
+          "atMs": 21,
+          "frequency": 698,
+          "durationMs": 21
+        },
+        {
+          "atMs": 42,
+          "frequency": 740,
+          "durationMs": 21
+        },
+        {
+          "atMs": 63,
+          "frequency": 1245,
+          "durationMs": 21
+        },
+        {
+          "atMs": 84,
+          "frequency": 1319,
+          "durationMs": 21
+        },
+        {
+          "atMs": 105,
+          "frequency": 1397,
+          "durationMs": 21
+        },
+        {
+          "atMs": 126,
+          "frequency": 2217,
+          "durationMs": 21
+        },
+        {
+          "atMs": 147,
+          "frequency": 2349,
+          "durationMs": 21
+        },
+        {
+          "atMs": 168,
+          "frequency": 2489,
+          "durationMs": 21
+        },
+        {
+          "atMs": 189,
+          "frequency": 2637,
+          "durationMs": 21
+        }
+      ],
+      "durationMs": 210
+    },
+    {
+      "name": "resource42",
+      "payloadHex": "0000020a030a160a010a150a0c0a010a020a160a020a040a160a010a0d0a0a0a0b0a0c0a160a0a0a0b0a0c0a000a160a030a020a170a000a020a030a170a2600",
+      "payloadSha256": "ed2088fd46005a2b9d293c9e55c61b7593a6ffa640795c9980e6dc397f534768",
+      "events": [
+        {
+          "atMs": 0,
+          "frequency": 440,
+          "durationMs": 30
+        },
+        {
+          "atMs": 30,
+          "frequency": 466,
+          "durationMs": 30
+        },
+        {
+          "atMs": 60,
+          "frequency": 1397,
+          "durationMs": 30
+        },
+        {
+          "atMs": 90,
+          "frequency": 415,
+          "durationMs": 30
+        },
+        {
+          "atMs": 120,
+          "frequency": 1319,
+          "durationMs": 30
+        },
+        {
+          "atMs": 150,
+          "frequency": 784,
+          "durationMs": 30
+        },
+        {
+          "atMs": 180,
+          "frequency": 415,
+          "durationMs": 30
+        },
+        {
+          "atMs": 210,
+          "frequency": 440,
+          "durationMs": 30
+        },
+        {
+          "atMs": 240,
+          "frequency": 1397,
+          "durationMs": 30
+        },
+        {
+          "atMs": 270,
+          "frequency": 440,
+          "durationMs": 30
+        },
+        {
+          "atMs": 300,
+          "frequency": 494,
+          "durationMs": 30
+        },
+        {
+          "atMs": 330,
+          "frequency": 1397,
+          "durationMs": 30
+        },
+        {
+          "atMs": 360,
+          "frequency": 415,
+          "durationMs": 30
+        },
+        {
+          "atMs": 390,
+          "frequency": 831,
+          "durationMs": 30
+        },
+        {
+          "atMs": 420,
+          "frequency": 698,
+          "durationMs": 30
+        },
+        {
+          "atMs": 450,
+          "frequency": 740,
+          "durationMs": 30
+        },
+        {
+          "atMs": 480,
+          "frequency": 784,
+          "durationMs": 30
+        },
+        {
+          "atMs": 510,
+          "frequency": 1397,
+          "durationMs": 30
+        },
+        {
+          "atMs": 540,
+          "frequency": 698,
+          "durationMs": 30
+        },
+        {
+          "atMs": 570,
+          "frequency": 740,
+          "durationMs": 30
+        },
+        {
+          "atMs": 600,
+          "frequency": 784,
+          "durationMs": 30
+        },
+        {
+          "atMs": 630,
+          "frequency": 392,
+          "durationMs": 30
+        },
+        {
+          "atMs": 660,
+          "frequency": 1397,
+          "durationMs": 30
+        },
+        {
+          "atMs": 690,
+          "frequency": 466,
+          "durationMs": 30
+        },
+        {
+          "atMs": 720,
+          "frequency": 440,
+          "durationMs": 30
+        },
+        {
+          "atMs": 750,
+          "frequency": 1475,
+          "durationMs": 30
+        },
+        {
+          "atMs": 780,
+          "frequency": 392,
+          "durationMs": 30
+        },
+        {
+          "atMs": 810,
+          "frequency": 440,
+          "durationMs": 30
+        },
+        {
+          "atMs": 840,
+          "frequency": 466,
+          "durationMs": 30
+        },
+        {
+          "atMs": 870,
+          "frequency": 1475,
+          "durationMs": 30
+        }
+      ],
+      "durationMs": 900
+    },
+    {
+      "name": "resource43",
+      "payloadHex": "000024031e031e031e031c03140314031403120312030a03090300032600",
+      "payloadSha256": "30fbc47718fd51358e5d0b964615053f3cc9a5dd44f9c3f88ca0a45f4210a6fe",
+      "events": [
+        {
+          "atMs": 0,
+          "frequency": 3136,
+          "durationMs": 9
+        },
+        {
+          "atMs": 9,
+          "frequency": 2217,
+          "durationMs": 9
+        },
+        {
+          "atMs": 18,
+          "frequency": 2217,
+          "durationMs": 9
+        },
+        {
+          "atMs": 27,
+          "frequency": 2217,
+          "durationMs": 9
+        },
+        {
+          "atMs": 36,
+          "frequency": 1976,
+          "durationMs": 9
+        },
+        {
+          "atMs": 45,
+          "frequency": 1245,
+          "durationMs": 9
+        },
+        {
+          "atMs": 54,
+          "frequency": 1245,
+          "durationMs": 9
+        },
+        {
+          "atMs": 63,
+          "frequency": 1245,
+          "durationMs": 9
+        },
+        {
+          "atMs": 72,
+          "frequency": 1109,
+          "durationMs": 9
+        },
+        {
+          "atMs": 81,
+          "frequency": 1109,
+          "durationMs": 9
+        },
+        {
+          "atMs": 90,
+          "frequency": 698,
+          "durationMs": 9
+        },
+        {
+          "atMs": 99,
+          "frequency": 659,
+          "durationMs": 9
+        },
+        {
+          "atMs": 108,
+          "frequency": 392,
+          "durationMs": 9
+        }
+      ],
+      "durationMs": 117
+    },
+    {
+      "name": "resource44",
+      "payloadHex": "00001e071407250715070a070b0725070c07000701072507020703071e071407250715070a070b0725070c07000701072507020703072600",
+      "payloadSha256": "67cd55c6d330e48549726159234a47eb4f2ec6c87e0cc5f57848937eb84a452a",
+      "events": [
+        {
+          "atMs": 0,
+          "frequency": 2217,
+          "durationMs": 21
+        },
+        {
+          "atMs": 21,
+          "frequency": 1245,
+          "durationMs": 21
+        },
+        {
+          "atMs": 42,
+          "frequency": 0,
+          "durationMs": 21
+        },
+        {
+          "atMs": 63,
+          "frequency": 1319,
+          "durationMs": 21
+        },
+        {
+          "atMs": 84,
+          "frequency": 698,
+          "durationMs": 21
+        },
+        {
+          "atMs": 105,
+          "frequency": 740,
+          "durationMs": 21
+        },
+        {
+          "atMs": 126,
+          "frequency": 0,
+          "durationMs": 21
+        },
+        {
+          "atMs": 147,
+          "frequency": 784,
+          "durationMs": 21
+        },
+        {
+          "atMs": 168,
+          "frequency": 392,
+          "durationMs": 21
+        },
+        {
+          "atMs": 189,
+          "frequency": 415,
+          "durationMs": 21
+        },
+        {
+          "atMs": 210,
+          "frequency": 0,
+          "durationMs": 21
+        },
+        {
+          "atMs": 231,
+          "frequency": 440,
+          "durationMs": 21
+        },
+        {
+          "atMs": 252,
+          "frequency": 466,
+          "durationMs": 21
+        },
+        {
+          "atMs": 273,
+          "frequency": 2217,
+          "durationMs": 21
+        },
+        {
+          "atMs": 294,
+          "frequency": 1245,
+          "durationMs": 21
+        },
+        {
+          "atMs": 315,
+          "frequency": 0,
+          "durationMs": 21
+        },
+        {
+          "atMs": 336,
+          "frequency": 1319,
+          "durationMs": 21
+        },
+        {
+          "atMs": 357,
+          "frequency": 698,
+          "durationMs": 21
+        },
+        {
+          "atMs": 378,
+          "frequency": 740,
+          "durationMs": 21
+        },
+        {
+          "atMs": 399,
+          "frequency": 0,
+          "durationMs": 21
+        },
+        {
+          "atMs": 420,
+          "frequency": 784,
+          "durationMs": 21
+        },
+        {
+          "atMs": 441,
+          "frequency": 392,
+          "durationMs": 21
+        },
+        {
+          "atMs": 462,
+          "frequency": 415,
+          "durationMs": 21
+        },
+        {
+          "atMs": 483,
+          "frequency": 0,
+          "durationMs": 21
+        },
+        {
+          "atMs": 504,
+          "frequency": 440,
+          "durationMs": 21
+        },
+        {
+          "atMs": 525,
+          "frequency": 466,
+          "durationMs": 21
+        }
+      ],
+      "durationMs": 546
+    },
+    {
+      "name": "all-notes-rest-zero-and-byte-extremes",
+      "payloadHex": "00000000000100ff0100010101ff0200020102ff0300030103ff0400040104ff0500050105ff0600060106ff0700070107ff0800080108ff0900090109ff0a000a010aff0b000b010bff0c000c010cff0d000d010dff0e000e010eff0f000f010fff1000100110ff1100110111ff1200120112ff1300130113ff1400140114ff1500150115ff1600160116ff1700170117ff1800180118ff1900190119ff1a001a011aff1b001b011bff1c001c011cff1d001d011dff1e001e011eff1f001f011fff2000200120ff2100210121ff2200220122ff2300230123ff2400240124ff2500250125ff2600",
+      "payloadSha256": "652047b7b3f719d98236914149b30a0ae22e0ed4dcfc9769b2e64097797e9228",
+      "events": [
+        {
+          "atMs": 0,
+          "frequency": 392,
+          "durationMs": 0
+        },
+        {
+          "atMs": 0,
+          "frequency": 392,
+          "durationMs": 3
+        },
+        {
+          "atMs": 3,
+          "frequency": 392,
+          "durationMs": 765
+        },
+        {
+          "atMs": 768,
+          "frequency": 415,
+          "durationMs": 0
+        },
+        {
+          "atMs": 768,
+          "frequency": 415,
+          "durationMs": 3
+        },
+        {
+          "atMs": 771,
+          "frequency": 415,
+          "durationMs": 765
+        },
+        {
+          "atMs": 1536,
+          "frequency": 440,
+          "durationMs": 0
+        },
+        {
+          "atMs": 1536,
+          "frequency": 440,
+          "durationMs": 3
+        },
+        {
+          "atMs": 1539,
+          "frequency": 440,
+          "durationMs": 765
+        },
+        {
+          "atMs": 2304,
+          "frequency": 466,
+          "durationMs": 0
+        },
+        {
+          "atMs": 2304,
+          "frequency": 466,
+          "durationMs": 3
+        },
+        {
+          "atMs": 2307,
+          "frequency": 466,
+          "durationMs": 765
+        },
+        {
+          "atMs": 3072,
+          "frequency": 494,
+          "durationMs": 0
+        },
+        {
+          "atMs": 3072,
+          "frequency": 494,
+          "durationMs": 3
+        },
+        {
+          "atMs": 3075,
+          "frequency": 494,
+          "durationMs": 765
+        },
+        {
+          "atMs": 3840,
+          "frequency": 523,
+          "durationMs": 0
+        },
+        {
+          "atMs": 3840,
+          "frequency": 523,
+          "durationMs": 3
+        },
+        {
+          "atMs": 3843,
+          "frequency": 523,
+          "durationMs": 765
+        },
+        {
+          "atMs": 4608,
+          "frequency": 554,
+          "durationMs": 0
+        },
+        {
+          "atMs": 4608,
+          "frequency": 554,
+          "durationMs": 3
+        },
+        {
+          "atMs": 4611,
+          "frequency": 554,
+          "durationMs": 765
+        },
+        {
+          "atMs": 5376,
+          "frequency": 587,
+          "durationMs": 0
+        },
+        {
+          "atMs": 5376,
+          "frequency": 587,
+          "durationMs": 3
+        },
+        {
+          "atMs": 5379,
+          "frequency": 587,
+          "durationMs": 765
+        },
+        {
+          "atMs": 6144,
+          "frequency": 622,
+          "durationMs": 0
+        },
+        {
+          "atMs": 6144,
+          "frequency": 622,
+          "durationMs": 3
+        },
+        {
+          "atMs": 6147,
+          "frequency": 622,
+          "durationMs": 765
+        },
+        {
+          "atMs": 6912,
+          "frequency": 659,
+          "durationMs": 0
+        },
+        {
+          "atMs": 6912,
+          "frequency": 659,
+          "durationMs": 3
+        },
+        {
+          "atMs": 6915,
+          "frequency": 659,
+          "durationMs": 765
+        },
+        {
+          "atMs": 7680,
+          "frequency": 698,
+          "durationMs": 0
+        },
+        {
+          "atMs": 7680,
+          "frequency": 698,
+          "durationMs": 3
+        },
+        {
+          "atMs": 7683,
+          "frequency": 698,
+          "durationMs": 765
+        },
+        {
+          "atMs": 8448,
+          "frequency": 740,
+          "durationMs": 0
+        },
+        {
+          "atMs": 8448,
+          "frequency": 740,
+          "durationMs": 3
+        },
+        {
+          "atMs": 8451,
+          "frequency": 740,
+          "durationMs": 765
+        },
+        {
+          "atMs": 9216,
+          "frequency": 784,
+          "durationMs": 0
+        },
+        {
+          "atMs": 9216,
+          "frequency": 784,
+          "durationMs": 3
+        },
+        {
+          "atMs": 9219,
+          "frequency": 784,
+          "durationMs": 765
+        },
+        {
+          "atMs": 9984,
+          "frequency": 831,
+          "durationMs": 0
+        },
+        {
+          "atMs": 9984,
+          "frequency": 831,
+          "durationMs": 3
+        },
+        {
+          "atMs": 9987,
+          "frequency": 831,
+          "durationMs": 765
+        },
+        {
+          "atMs": 10752,
+          "frequency": 880,
+          "durationMs": 0
+        },
+        {
+          "atMs": 10752,
+          "frequency": 880,
+          "durationMs": 3
+        },
+        {
+          "atMs": 10755,
+          "frequency": 880,
+          "durationMs": 765
+        },
+        {
+          "atMs": 11520,
+          "frequency": 923,
+          "durationMs": 0
+        },
+        {
+          "atMs": 11520,
+          "frequency": 923,
+          "durationMs": 3
+        },
+        {
+          "atMs": 11523,
+          "frequency": 923,
+          "durationMs": 765
+        },
+        {
+          "atMs": 12288,
+          "frequency": 988,
+          "durationMs": 0
+        },
+        {
+          "atMs": 12288,
+          "frequency": 988,
+          "durationMs": 3
+        },
+        {
+          "atMs": 12291,
+          "frequency": 988,
+          "durationMs": 765
+        },
+        {
+          "atMs": 13056,
+          "frequency": 1047,
+          "durationMs": 0
+        },
+        {
+          "atMs": 13056,
+          "frequency": 1047,
+          "durationMs": 3
+        },
+        {
+          "atMs": 13059,
+          "frequency": 1047,
+          "durationMs": 765
+        },
+        {
+          "atMs": 13824,
+          "frequency": 1109,
+          "durationMs": 0
+        },
+        {
+          "atMs": 13824,
+          "frequency": 1109,
+          "durationMs": 3
+        },
+        {
+          "atMs": 13827,
+          "frequency": 1109,
+          "durationMs": 765
+        },
+        {
+          "atMs": 14592,
+          "frequency": 1175,
+          "durationMs": 0
+        },
+        {
+          "atMs": 14592,
+          "frequency": 1175,
+          "durationMs": 3
+        },
+        {
+          "atMs": 14595,
+          "frequency": 1175,
+          "durationMs": 765
+        },
+        {
+          "atMs": 15360,
+          "frequency": 1245,
+          "durationMs": 0
+        },
+        {
+          "atMs": 15360,
+          "frequency": 1245,
+          "durationMs": 3
+        },
+        {
+          "atMs": 15363,
+          "frequency": 1245,
+          "durationMs": 765
+        },
+        {
+          "atMs": 16128,
+          "frequency": 1319,
+          "durationMs": 0
+        },
+        {
+          "atMs": 16128,
+          "frequency": 1319,
+          "durationMs": 3
+        },
+        {
+          "atMs": 16131,
+          "frequency": 1319,
+          "durationMs": 765
+        },
+        {
+          "atMs": 16896,
+          "frequency": 1397,
+          "durationMs": 0
+        },
+        {
+          "atMs": 16896,
+          "frequency": 1397,
+          "durationMs": 3
+        },
+        {
+          "atMs": 16899,
+          "frequency": 1397,
+          "durationMs": 765
+        },
+        {
+          "atMs": 17664,
+          "frequency": 1475,
+          "durationMs": 0
+        },
+        {
+          "atMs": 17664,
+          "frequency": 1475,
+          "durationMs": 3
+        },
+        {
+          "atMs": 17667,
+          "frequency": 1475,
+          "durationMs": 765
+        },
+        {
+          "atMs": 18432,
+          "frequency": 1568,
+          "durationMs": 0
+        },
+        {
+          "atMs": 18432,
+          "frequency": 1568,
+          "durationMs": 3
+        },
+        {
+          "atMs": 18435,
+          "frequency": 1568,
+          "durationMs": 765
+        },
+        {
+          "atMs": 19200,
+          "frequency": 1661,
+          "durationMs": 0
+        },
+        {
+          "atMs": 19200,
+          "frequency": 1661,
+          "durationMs": 3
+        },
+        {
+          "atMs": 19203,
+          "frequency": 1661,
+          "durationMs": 765
+        },
+        {
+          "atMs": 19968,
+          "frequency": 1760,
+          "durationMs": 0
+        },
+        {
+          "atMs": 19968,
+          "frequency": 1760,
+          "durationMs": 3
+        },
+        {
+          "atMs": 19971,
+          "frequency": 1760,
+          "durationMs": 765
+        },
+        {
+          "atMs": 20736,
+          "frequency": 1865,
+          "durationMs": 0
+        },
+        {
+          "atMs": 20736,
+          "frequency": 1865,
+          "durationMs": 3
+        },
+        {
+          "atMs": 20739,
+          "frequency": 1865,
+          "durationMs": 765
+        },
+        {
+          "atMs": 21504,
+          "frequency": 1976,
+          "durationMs": 0
+        },
+        {
+          "atMs": 21504,
+          "frequency": 1976,
+          "durationMs": 3
+        },
+        {
+          "atMs": 21507,
+          "frequency": 1976,
+          "durationMs": 765
+        },
+        {
+          "atMs": 22272,
+          "frequency": 2093,
+          "durationMs": 0
+        },
+        {
+          "atMs": 22272,
+          "frequency": 2093,
+          "durationMs": 3
+        },
+        {
+          "atMs": 22275,
+          "frequency": 2093,
+          "durationMs": 765
+        },
+        {
+          "atMs": 23040,
+          "frequency": 2217,
+          "durationMs": 0
+        },
+        {
+          "atMs": 23040,
+          "frequency": 2217,
+          "durationMs": 3
+        },
+        {
+          "atMs": 23043,
+          "frequency": 2217,
+          "durationMs": 765
+        },
+        {
+          "atMs": 23808,
+          "frequency": 2349,
+          "durationMs": 0
+        },
+        {
+          "atMs": 23808,
+          "frequency": 2349,
+          "durationMs": 3
+        },
+        {
+          "atMs": 23811,
+          "frequency": 2349,
+          "durationMs": 765
+        },
+        {
+          "atMs": 24576,
+          "frequency": 2489,
+          "durationMs": 0
+        },
+        {
+          "atMs": 24576,
+          "frequency": 2489,
+          "durationMs": 3
+        },
+        {
+          "atMs": 24579,
+          "frequency": 2489,
+          "durationMs": 765
+        },
+        {
+          "atMs": 25344,
+          "frequency": 2637,
+          "durationMs": 0
+        },
+        {
+          "atMs": 25344,
+          "frequency": 2637,
+          "durationMs": 3
+        },
+        {
+          "atMs": 25347,
+          "frequency": 2637,
+          "durationMs": 765
+        },
+        {
+          "atMs": 26112,
+          "frequency": 2794,
+          "durationMs": 0
+        },
+        {
+          "atMs": 26112,
+          "frequency": 2794,
+          "durationMs": 3
+        },
+        {
+          "atMs": 26115,
+          "frequency": 2794,
+          "durationMs": 765
+        },
+        {
+          "atMs": 26880,
+          "frequency": 2960,
+          "durationMs": 0
+        },
+        {
+          "atMs": 26880,
+          "frequency": 2960,
+          "durationMs": 3
+        },
+        {
+          "atMs": 26883,
+          "frequency": 2960,
+          "durationMs": 765
+        },
+        {
+          "atMs": 27648,
+          "frequency": 3136,
+          "durationMs": 0
+        },
+        {
+          "atMs": 27648,
+          "frequency": 3136,
+          "durationMs": 3
+        },
+        {
+          "atMs": 27651,
+          "frequency": 3136,
+          "durationMs": 765
+        },
+        {
+          "atMs": 28416,
+          "frequency": 0,
+          "durationMs": 0
+        },
+        {
+          "atMs": 28416,
+          "frequency": 0,
+          "durationMs": 3
+        },
+        {
+          "atMs": 28419,
+          "frequency": 0,
+          "durationMs": 765
+        }
+      ],
+      "durationMs": 29184
+    },
+    {
+      "name": "empty",
+      "payloadHex": "00002600",
+      "payloadSha256": "ddd29d68179452f424637b2df5df263b3bd066c7f7b341dd266c106ad60b1ae7",
+      "events": [],
+      "durationMs": 0
+    },
+    {
+      "name": "native-high-byte-terminator",
+      "payloadHex": "0000ff",
+      "payloadSha256": "ae974d4a74c2371d8cfe842b7aa4f6698de8570526eeb3db1941b0b72311d470",
+      "events": [],
+      "durationMs": 0
+    }
+  ],
+  "scope": "The hash-locked native loop selects frequency, multiplies duration and distinguishes notes, rest and terminator. Beep, waits and stop calls are intercepted; no Windows or speaker runs. This verifies events, not an exact physical speaker waveform or MA1 synthesis."
+}

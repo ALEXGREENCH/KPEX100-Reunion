@@ -827,6 +827,21 @@
       ],
       "repositoryPath": "research/archives/Sinjisoft-Korean-Corporate-Notices-and-GVM-Seminar-2000.zip",
       "bytes": 2033306
+    },
+    {
+      "id": "gvm-buzzer-ma1-source-research",
+      "sha256": "20e14fd05e26d53bb4b2f7d8834608ca4a818380b604b218aeea66078c86a601",
+      "category": "Исходные звуковые форматы",
+      "title": "GVM: зуммер, raw MA1 и руководство Yamaha",
+      "description": "Сверка пяти звуков зуммера с SDK, точное соответствие десяти исходных массивов ресурсам SGS и руководство YMU757B 2000 года. Raw MA1 исследован статически, синтез ещё не реализован.",
+      "sources": [
+        {
+          "label": "Полученная редакция Yamaha YMU757B",
+          "url": "https://www.datasheetarchive.com/datasheet/YMU757B/Yamaha?term=YMU757B"
+        }
+      ],
+      "repositoryPath": "research/archives/GVM-Buzzer-and-MA1-Source-Research.zip",
+      "bytes": 879755
     }
   ],
   "reports": [
@@ -985,6 +1000,10 @@
     {
       "title": "WI-TOP Hellfire: исходный SGS, LockChatMode и управление",
       "repositoryPath": "doc/witop-hellfire-legacy.md"
+    },
+    {
+      "title": "Зуммер GVM: эталон SDK, звук в браузере и разбор MA1",
+      "repositoryPath": "doc/gvm-buzzer-audio.md"
     }
   ]
 }

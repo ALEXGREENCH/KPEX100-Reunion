@@ -851,13 +851,15 @@ class BrowserAudio {
         message.bytes instanceof ArrayBuffer
           ? message.bytes.slice(0)
           : new Uint8Array(message.bytes).buffer;
-      if (message.mime === 'audio/x-smaf') {
+      if (['audio/x-smaf', 'audio/x-gvm-buzzer'].includes(message.mime)) {
         this.smaf ||= new SmafDecoder();
-        const decoded = await this.smaf.decode(bytes);
+        const decoded = await this.smaf.decode(bytes, message.mime);
         if (generation !== this.generation) return;
+        if (decoded.frames === 0) return;
         bytes = decoded.wave.buffer;
-        message.format = 'SMAF · FM синтез';
-        if (decoded.truncated) log('Длинная SMAF-дорожка ограничена тремя минутами.');
+        message.format =
+          message.mime === 'audio/x-gvm-buzzer' ? 'GVM · зуммер' : 'SMAF · FM синтез';
+        if (decoded.truncated) log('Длинная звуковая дорожка ограничена тремя минутами.');
       }
       const buffer = await this.context.decodeAudioData(bytes);
       if (generation !== this.generation) return;

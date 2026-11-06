@@ -5,7 +5,7 @@ export class SmafDecoder {
     this.sequence = 0;
     this.pending = new Map();
   }
-  decode(bytes) {
+  decode(bytes, format = 'audio/x-smaf') {
     if (!this.worker) {
       this.worker = new Worker(new URL('./smaf-worker.js', import.meta.url), { type: 'module' });
       this.worker.onmessage = ({ data }) => {
@@ -26,7 +26,7 @@ export class SmafDecoder {
       copy = new Uint8Array(bytes).slice();
     return new Promise((resolve, reject) => {
       this.pending.set(id, { resolve, reject });
-      this.worker.postMessage({ id, bytes: copy }, [copy.buffer]);
+      this.worker.postMessage({ id, bytes: copy, format }, [copy.buffer]);
     });
   }
   cancel() {

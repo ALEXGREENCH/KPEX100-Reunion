@@ -128,3 +128,5 @@ SGS на любом устройстве. SDK и руководства опис
 - [Wayback Pass 4](wayback-partial-pass4.md): согласованный частичный снимок, сравнение с предыдущим и ограничения.
 
 - [Hellfire из WI-TOP](witop-hellfire-legacy.md): исходный SGS v1, независимый эталон LockChatMode, управление и проверки.
+
+- [Зуммер GVM и MA1](gvm-buzzer-audio.md): точные события SDK, отдельный аудиопоток и сохранённая документация Yamaha.

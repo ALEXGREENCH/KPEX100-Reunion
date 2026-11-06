@@ -105,3 +105,26 @@ assert.ok(mixer.track(1).node);
 mixer.stop();
 assert.equal(mixer.node, false);
 assert.equal(mixer.buffer, false);
+
+let forwardedFormat;
+sandbox.SmafDecoder = class {
+  async decode(bytes, format) {
+    forwardedFormat = format;
+    return { frames: 0, wave: new Uint8Array(44), truncated: false };
+  }
+  cancel() {}
+};
+const pendingBeforeEmpty = pending.length;
+await audio.receive({
+  action: 'play',
+  mime: 'audio/x-gvm-buzzer',
+  bytes: new Uint8Array([0, 0, 38]),
+});
+assert.equal(forwardedFormat, 'audio/x-gvm-buzzer');
+assert.equal(
+  pending.length,
+  pendingBeforeEmpty,
+  'An empty native stream must not enter Web Audio decoding',
+);
+assert.equal(audio.node, null);
+assert.equal(audio.buffer, null);
