@@ -480,6 +480,29 @@
           "url": "https://www.samsungsvc.co.kr/download/view?code=SCH-S250"
         }
       ]
+    },
+    {
+      "id": "samsung-s390-wipi-player-sources",
+      "title": "Samsung SCH-S390 и загружаемый WIPI GNEX-проигрыватель",
+      "category": "Прошивки и средства сопровождения телефонов",
+      "description": "Исходный архив ZI15, два официальных PDF Samsung и полный HTML отчёта SK Telecom с описанием загружаемого GNEX-приложения. В BIN есть GNEX/SGS-маркеры; рабочий интерпретатор и самостоятельные игры не восстановлены. AC06 — PDF с изменениями, не новая прошивка.",
+      "repositoryPath": "research/archives/Samsung-SCH-S390-and-WIPI-Player-Sources.zip",
+      "bytes": 25105041,
+      "sha256": "5b1406815cb24a14d958faf16efc8f87e71d179ebcd9b6990d247264b57dbdd6",
+      "sources": [
+        {
+          "label": "Исходный модельный образ",
+          "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S390/SCH-S390_ZI15.7z"
+        },
+        {
+          "label": "Официальная поддержка Samsung",
+          "url": "https://www.samsungsvc.co.kr/download/view?code=SCH-S390"
+        },
+        {
+          "label": "SK Telecom: отчёт за 2003 год",
+          "url": "https://kind.krx.co.kr/external/2004/03/30/000507/20040330002797/2004033000279704.htm"
+        }
+      ]
     }
   ],
   "reports": [
@@ -562,6 +585,10 @@
     {
       "title": "Samsung SCH-S250 и SCH-S380: новые образы, GNEX-маршрут и официальные файлы",
       "repositoryPath": "doc/samsung-s250-s380.md"
+    },
+    {
+      "title": "SCH-S390 и первичное описание загружаемого WIPI GNEX",
+      "repositoryPath": "doc/samsung-s390-wipi-player.md"
     }
   ]
 }

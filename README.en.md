@@ -21,7 +21,7 @@ research inputs; Reunion does not claim to run them.
 
 [Platform preservation](doc/preservation.md) provides the complete SDK 2.10/2.12
 installers, emulators, the exact original Mobile C Reference 311 and early GVM
-documents. Twenty-six downloadable ZIPs retain actual files, with a complete
+documents. Twenty-seven downloadable ZIPs retain actual files, with a complete
 direct-member hash inventory and an offline verification tool.
 
 ## Run locally

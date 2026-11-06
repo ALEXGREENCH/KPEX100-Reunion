@@ -1,0 +1,1663 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-11-06T00:02:51.701703+00:00",
+  "scope": "One newly acquired SCH-S390 model-labelled image, two official Samsung PDF bodies, and a primary SK Telecom deployment source. No vendor program executed.",
+  "firmware": {
+    "schema": 1,
+    "checkedUtc": "2026-11-05T23:54:35.987517+00:00",
+    "input": {
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S390/SCH-S390_ZI15.7z",
+      "checkedUtc": "2026-11-05T23:54:32.695200+00:00",
+      "status": 200,
+      "bytes": 11036471,
+      "sha256": "d079f274383e281aff6f1a05247268d597f0d577f88f8b14294e661109388f97",
+      "transport": "curl.exe; default TLS validation; directory link followed; previous IA download timeout remains a separate record"
+    },
+    "rawFile": {
+      "name": "SCH-S390_ZI15.bin",
+      "bytes": 23068672,
+      "sha256": "fcb68e71edea2e07e464f2ad41c805c01108d09cdb0ab3b6b0965b9c0fff29b2",
+      "crc32": "d19fbad9",
+      "archiveCrcMatches": true
+    },
+    "scannerSha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e",
+    "positiveControls": {
+      "files": 68,
+      "passed": 68,
+      "records": [
+        {
+          "id": "godori",
+          "sha256": "0f9b70d38c86ccb32fbd2b24d6e28eaf9328a1eacbf578a3c19baace36b90e93",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bfd63bf0a4be12882b9340df162b4a83817c013223b8728f73dd97848b91f257",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "hellfire",
+          "sha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "3940f46d723cee7057094083e02e93a0e1febefad3ade8c49b670bd6b3a3989d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "ikaria",
+          "sha256": "c04204a6eec21188c4e499a8e2baa0ebb2d8d2007802e579085288edfdf5a5de",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e0c43e910ebd9cb9f33dbb8c70dda5389912d00250d6198a4710a708c8454c4f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "kpetris",
+          "sha256": "f4584767eac0ba15c568fc89687f9aed38b484811e3b2658ef45dec0fc392792",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "97c0cde3d631d5c3a0948361fba57e49c663799ba5efead5e60370cb077d93df",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "battle-armor",
+          "sha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "145a2613699935234b1828c17a6f82cdeafc556428da8df5515202b0460945c9",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "soul-sword",
+          "sha256": "9827804cd97c394a949a37f0b45a0d73d8a417ae31d52ff13575230c3936bd50",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "090247628ccc5a3cb74ee83721762a87badddedbdcca28a27dfd4c28e4ffa84b",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "treasure-hunter",
+          "sha256": "a5c0445c7440342cc0fc6d17a7a72c0482d561df2511931177f243dd64b888a1",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e6bcc8488f87fb37fc8af4d1e0eff631db3198a603cb417cb743d69794a0ef4c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "the-man-jong",
+          "sha256": "7d4708b39cbb54ea1b5e2e3156a0717747d20d553193e16c4e18dc0ac4023aa1",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "7ea258b9d72b2e07f7f8f7e2b24a9d52dfbdff8c2f464f1061fbb715b5e0de8d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "star-fighter",
+          "sha256": "277ee7a3dc4d5732cbfede82c19599ef23969558facfce37c65777f0b8cb74cf",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5a23ffc591b5e558e5fdfc0a4811dc2ed14ede2204371d81267320ae0965da86",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "aiolos-kpex",
+          "sha256": "2ce5dc39657ee2327f6ef1829f663b8742b11a02f8360ea31fc129b3d5eb7264",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e8c1e0c2629560aa60ae84a452cd9e195737db8a448982f8755ae7135d22a56c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "blocks",
+          "sha256": "c91564487df14d7db4ae3fed009a447bcd5c4151541fa8d6e2ba05b7c25da191",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "725c7ef3a127a7253213a134cc36f15142e4eda48dc6d81c303578d1c85f3621",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "exciting-drop",
+          "sha256": "5f4dc8afec8bc3f581b7566b124bc78cc4c1d0a10a38b14999aed3af1ec3c016",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5ecc022abf098f9348d191c49bf94ce693d8baff64899bd98a556fb8253ee213",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "blue-swallow",
+          "sha256": "993aed5426fe214c84d47bb4b376c37fe43db3d150207a39f492fcaeb79c4d6f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "2a2ee9d8011dc117eb26b90f237b0edcd6d8e91c8c148281dcdb2c4daef6e28a",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex1_1zimae",
+          "sha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "6f008e13c5a35c58970d4c64596c4aa326e7e8c0bbb44ae9cd629fbf7b4d1c21",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex2_2007_pro_baseball",
+          "sha256": "8ea81140fc5586667cee4376c4dcc1a3e98e63b3477eabebe734fd50d0cec296",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "026b944a9cd58a6cf0cdc901abb15eac0b868a9f406e764116b4e77c36bb9250",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex6_alchemist",
+          "sha256": "863e4f02bc166acaeb935701c7456f76e9eb4a5174200b6c6c219ad627bbd72a",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "e4e594954360967711656584fc9a997b40bcd4074473cff051f6529cb4afb56b",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "galaga-lg-sd1000",
+          "sha256": "bd85fa7948d98b4248605178e1e9f74929ba93518093974554864247a84b1fca",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bd85fa7948d98b4248605178e1e9f74929ba93518093974554864247a84b1fca",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "vocabulary-quiz-lg-sv130",
+          "sha256": "bf769132b1076d24b55d618b14b4bb3ebb11139fbbfae05edbbac6088ecdd69f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bf769132b1076d24b55d618b14b4bb3ebb11139fbbfae05edbbac6088ecdd69f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "bubble-bobble-lg-sd1020",
+          "sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e8da5f5865175e78e7fbbf2ba07acd2481570611cbb0b9f6b0e3d3eb4b4acbd4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "zzayo-zzayo-tycoon-lg-sd810",
+          "sha256": "bb03033013802f75f4d6ac3e77ec24374a3b3c785e89a27226ab964bad6c82d6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "bb03033013802f75f4d6ac3e77ec24374a3b3c785e89a27226ab964bad6c82d6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sword-master-chronicle-lg-sd810",
+          "sha256": "cc2b82b45258f0a201eace8bd2e286cbbbf7e73cfec3a6be212747954c176fc3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "cc2b82b45258f0a201eace8bd2e286cbbbf7e73cfec3a6be212747954c176fc3",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "tetris-classic-lg-sd810",
+          "sha256": "18084691a98d209b5bd355b1117a05220618acd4845e8277109532d97a0b4d8f",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "18084691a98d209b5bd355b1117a05220618acd4845e8277109532d97a0b4d8f",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "rolling-fry-lg-sd810",
+          "sha256": "edb640fde26e85f566f9a4f59c14ae679115a491897110877409c0ec425e3cb4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "edb640fde26e85f566f9a4f59c14ae679115a491897110877409c0ec425e3cb4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "shrek-2-lg-sd810",
+          "sha256": "ee44fe104dab3f36d14779d1aae416d1a19405abc56d0db013b7e893bc936fd3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "ee44fe104dab3f36d14779d1aae416d1a19405abc56d0db013b7e893bc936fd3",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex16_bubble_bubble",
+          "sha256": "0c2d18a5d5260fb784d0ad1169f683e290a3d5ddc02b46647eb7c8d6eee3ae45",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "3e7f230063b846b5ad951d9962d027a371478c271ad575ecfcb4665af88a6e4d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex31_com2us_soccer_2006",
+          "sha256": "0e39f2dabc95ff71f7999b1495644f48f1c3bbb8cb890c89309f8a6aaa483e71",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "61eb6c65810c2a3d4ca2e15ad63bd34c0ccab36955402be361680fb139a0f115",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex29_crow2",
+          "sha256": "c64d9fb3e08c81448c727ee47f2733c8e46a46fed8dc2ab409b34e7b9eccb952",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "02226de4dbb85ee2e1158bc704998b7a332c192cfc425e0a180790156e2defd2",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex36_dungeon_fighter",
+          "sha256": "883c4c6fb9398ec1ceb6dfe8b102c12ac7c79aa5cfb6ed021316d7aacb17c3dd",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "9fc168d3cf2337a23502bd37f0ebcc96c3672f3cd9b12e2c7e83e4dc6f696324",
+          "bytes_after_declared_end": 47176
+        },
+        {
+          "id": "gnex21_eska2",
+          "sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e41708c61732d707e0b5bf2fe2ec5f8b87e4992887848ca2b99bd57c00eb13a4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex3_fist_of_fury2",
+          "sha256": "9012fa4fc75063f1cf3fdb009506a08d83bbd42c84dd10e9d9f47b94ff094e13",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "224216863e7fbf368d8e9ad334f3b03c646a641d15b91fa0fe0cdefcfd1deeb8",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex35_gostop_w_",
+          "sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "aac8b2c50103bfa7eda82ce5c08662d870f3173c2a533b98a6b7b55d9713cacc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex37_hero",
+          "sha256": "ecb024bdef451d0b7bd60f08cf54862682b6a4c7e7dc7d3843d786ed8ea338a2",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "96d52ff35cf63c5c4961d5a16b40d4595f7acc7a9bac6c8670b65e6847696c87",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex26_independence_day_3d",
+          "sha256": "9b43a709d504589fcc85b6f73f280218acb2f1284c414bd90425f7b2834ecd70",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "665abf9b97b0c2223124c1ee5a7b08225d3240bedf543f503d36e0fe139cacc9",
+          "bytes_after_declared_end": 139811
+        },
+        {
+          "id": "gnex34_major2007",
+          "sha256": "4aad29e41dbfc435bdb89306b44f03bd60e70b6e7205e77c443dc9b622f93af5",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "c2ab0c97e25b30b39a0c6646cc953521416e8e3429fe19096d32e38c1b05d520",
+          "bytes_after_declared_end": 27108
+        },
+        {
+          "id": "gnex10_marineblues",
+          "sha256": "fd0453b481c960d3b1b45c26a98e64f04f018c65962fcf532717a4b672174637",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "dd389437910a3920a9c2134e6d93bbef40707fac81a96c9dea49407a1916802a",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex14_mini_game2-_qvga_",
+          "sha256": "c6f99479dd49a139f67d2ee68386a7bb578fe361a28d51ab42d25bd540a9e5a9",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "fb4f1b85faea92523982558f5a57ef574ed7b7812b67f33b5fbad628a1d0b3a2",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex12_mosquito",
+          "sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "62b0bfa412c47c9f08c73d25674761fae13496dcec48e03748a9b41c6670c8c6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex13_mu_-_fairy",
+          "sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "289783773a9e9912ebb6aeac8df76b8d4021bcdec7a4e3c6d3948a3564bcbacc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex8_nom",
+          "sha256": "c3697ab331f0906ddf9bf4a81c1163c0e01e99adacfc1595a90fa97a58508fc3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "33607f1bd94792e638a7dbce13afd6e137f9b3ea83c6439eff777d1d8c98ef4d",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex9_nom2",
+          "sha256": "386525ab6e1c8aa89c5c89aa3605fdf20a19e1d9ce0973780c920f7d73918769",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "f10177fcd976fdcd793355dd6612fa12857db11990074fc0a2c7b3e7dfb48fea",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex33_pocket_pro_baseball3",
+          "sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "9eb64ffce891d5a58c127dba1821c6a30fc30669d185ee34c8e464a95bd603d4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex17_samgugji_hero5",
+          "sha256": "85fb4fd27aefba5d7bd7bceb4f86ef7812aba2999bce55237ecc1acc7ae5e6fa",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "0c832a7151787578aeb0d76c8e2f4a4daaaffcfa505c469644d3fdeb00aa6213",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex18_shing_stone",
+          "sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "ef543c91e7cc3992e7cd0b656125d7dfc3d64c7a4c85752c0419713ccf1dfc09",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex28_sketcher",
+          "sha256": "4dfd9f37daeb872a388ea5901c84e6e82a25659094c227ed693bd4ef3c811dee",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "89e7cd5d8afef1b69d823c2a85ff5580e1ab240e1393591f3b60b28f64cdd245",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex27_sketcher_.2inch",
+          "sha256": "4fe8a18069eb1b17d4a762b6430d609b020c47b789fd27a764a9eb928d12ba98",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "a98de037d298f6ca6053b6e18c8e757670276d9743fdfadb7bf8b5a36d2edc84",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex7_squash",
+          "sha256": "84ac7797e6cac8fac693f0fe6479d6a83a9880b681fb5dbbca8bfcbeb00c9d58",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "8c19f989408c3901c7d10c23747f65bf35e7dc0cae8ccb7d295a2a8522613702",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex19_super_action_hero",
+          "sha256": "d285b30564daf4d28e5d704919ac9e952d7e3066fbc934b7b52f6aa4a001fde4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "e2b348238cddbff7dbf324f527403beb2d8cdd95f8fc172c3459dc3d45bef70c",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex30_susi_man3",
+          "sha256": "0016eb7d2c7ea888f4792d9f18a20161fadda922be236960cddb100d552c2db3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "0eee2ccc15f7306610811df12879031a65a9749a88e47757827898764579e9dc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex32_traffic",
+          "sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "980b1169280e788a9c2a4e59945301dce5f37c68ca56e4462d63e87505e977db",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex15_virus",
+          "sha256": "53cdbe01aa0cd6a203f687ce78a0fcdd6b9e1eca80696d77486a2c65953dd68a",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "a18f06fd8b6362569e6d290477f615308c4135ef390850f0d6ff6f4f4e06dee9",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex5_viva_soccer2006",
+          "sha256": "a9c672d2f9ec3bec98370795c1f3983cab2a966e97a88e3b6abe99bc470a7ee8",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 32,
+          "decoded_body_sha256": "c90caa2c4d04841c67c88e963e0aab8386440f9ddec0a30b9a7c83df0f785d49",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex25_ys3_the_oath_in_felghana",
+          "sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "b55e67227ceb2730f089f10522299203c5dc239ac9c0c487865b4939deab253e",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "gnex22_yulgang2_-_1",
+          "sha256": "0a88d3ffc132df9735762ab8e63a16e7a4e486ff1c4ddddbd667b2b9f4a108d3",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "314de9d89fe38b9035ab0322916408706737c7c981a8cc060b8bc7f0c6dd90cd",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex23_yulgang2_-_2",
+          "sha256": "e8e4a83f65db80b5f1fd7f21156cd3aa085dd59ae09b011c2d15f8d28e07f2ed",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "6a32c81552865061f883faa003a779febc50fff94776301bd4836a4e168325b5",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "gnex24_yulgang2_-_3",
+          "sha256": "3ff584e6d5686e7d975d67d63006c4a695a2eba6a2b99f858599e9da0e837ffa",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "5606d1eb982db971fc23188db9786b82872d0bf41cf88559b0f2a51901fe0574",
+          "bytes_after_declared_end": 1
+        },
+        {
+          "id": "zola",
+          "sha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "0cb4c5ecfeba32aae3055fcffc8f7dd32b0ddc13da18e221585fa53916d348fc",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "zzayo-zzayo-tycoon-naver-2004",
+          "sha256": "9acc6477607d7724f79a58a3b89279e56f395dba32ba7d9bd2c307b5c9a361f6",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "9acc6477607d7724f79a58a3b89279e56f395dba32ba7d9bd2c307b5c9a361f6",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "fighting-five-part1",
+          "sha256": "c6f582bbfcc7ed9efc6cb64d4ad3ae880b5bbe8f0e2301d88e33c11c09335337",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "c6f582bbfcc7ed9efc6cb64d4ad3ae880b5bbe8f0e2301d88e33c11c09335337",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "fighting-five-part2",
+          "sha256": "dceb8317edeabab5e0109d902ed5c4d877852e938d82f951e1c3383f04e2b5c0",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "dceb8317edeabab5e0109d902ed5c4d877852e938d82f951e1c3383f04e2b5c0",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "matgo-jjang",
+          "sha256": "12b5da94ab883681be91420e4013a7f8773ca1ed3e90049b48e1866de6ea2917",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "12b5da94ab883681be91420e4013a7f8773ca1ed3e90049b48e1866de6ea2917",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "storm-of-silence-demo-s60",
+          "sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "2ba38cd1dca989be5791807f2464f3b5256147b1008e06db75f8aee17eaeb88e",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "waterski-s60",
+          "sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e063fdb1cbae9ece9f4fcee2f111cfa2c3cf6ed73e2486de4825590d8b586207",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-gvm-ranking",
+          "sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-character-scroll",
+          "sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "e12d10b234b4f7342835666bcfac25f5d8922fe40740976a29de36a206424de4",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "sample-character-movement",
+          "sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "d0c96e768c82b3de1cd3eeb14ac7a676daebc7a1e20c8717e074c65ba4a25b05",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "aiolos-fighter-s60",
+          "sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "c635f8989ac112a3b1c10aef06e57d5c5b8e3d527fda87caba612798778f006b",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "pocket-baseball2-s60",
+          "sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "a95c38d561423821bb4f14aec90011ec0deed11015b432731646ff6820719726",
+          "bytes_after_declared_end": 0
+        },
+        {
+          "id": "pocket-golf-s60",
+          "sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+          "passed": true,
+          "containers_found": 1,
+          "body_offset": 0,
+          "decoded_body_sha256": "38bab3117c4a3f4a9086173ef00427ecef10c0f9f94b6c6101138f396d32010b",
+          "bytes_after_declared_end": 0
+        }
+      ]
+    },
+    "markers": {
+      "SCH-S390": {
+        "count": 12,
+        "offsets": [
+          2744838,
+          3840128,
+          4275895,
+          4735752,
+          7571360,
+          7959048,
+          9657423,
+          9669512,
+          11028413,
+          11516272,
+          15336204,
+          21615148
+        ]
+      },
+      "S390": {
+        "count": 14,
+        "offsets": [
+          66793,
+          2744842,
+          3840132,
+          4275899,
+          4735756,
+          7571364,
+          7959052,
+          9657427,
+          9669516,
+          11028417,
+          11516276,
+          13576172,
+          15336208,
+          21615152
+        ]
+      },
+      "GNEX": {
+        "count": 2,
+        "offsets": [
+          12222520,
+          17284370
+        ]
+      },
+      "gnex": {
+        "count": 10,
+        "offsets": [
+          1275090,
+          9996838,
+          10613631,
+          10613749,
+          11920050,
+          12222510,
+          12735210,
+          17284390,
+          17284448,
+          18705586
+        ]
+      },
+      "GVM": {
+        "count": 4,
+        "offsets": [
+          3856597,
+          13831356,
+          21099817,
+          21232211
+        ]
+      },
+      "gvm": {
+        "count": 1,
+        "offsets": [
+          15808540
+        ]
+      },
+      "Sinjisoft": {
+        "count": 1,
+        "offsets": [
+          2838650
+        ]
+      },
+      "application/x-gnex-sgs": {
+        "count": 4,
+        "offsets": [
+          1275076,
+          11920036,
+          12222496,
+          17284434
+        ]
+      },
+      "NATEAIR": {
+        "count": 47,
+        "offsets": [
+          1545980,
+          1547666,
+          2838639,
+          3901636,
+          4443172,
+          4443188,
+          4443216,
+          4443248,
+          4443276,
+          4443308,
+          4443332,
+          4443360,
+          4887580,
+          4887588,
+          5160376,
+          7994344,
+          8071172,
+          8071200,
+          8617300,
+          8618436,
+          8619476,
+          8619576,
+          8620636,
+          10013394,
+          10013486,
+          12104136,
+          12786540,
+          15078380,
+          15799352,
+          15992032,
+          15994780,
+          15994932,
+          15994968,
+          18129912,
+          18432260,
+          18532904,
+          18754756,
+          18754784,
+          18754816,
+          18754844,
+          18754876,
+          18754904,
+          18755552,
+          18755576,
+          18933396,
+          19004300,
+          21183184
+        ]
+      },
+      "WIPI": {
+        "count": 78,
+        "offsets": [
+          358348,
+          358365,
+          1077100,
+          1256704,
+          2838979,
+          2967591,
+          2967769,
+          5000104,
+          5000128,
+          5079084,
+          5535689,
+          5538468,
+          5542436,
+          5543212,
+          5543629,
+          5561250,
+          5562160,
+          5562242,
+          5562327,
+          5562425,
+          5562520,
+          5565318,
+          7421444,
+          7849609,
+          8073272,
+          8074496,
+          8074520,
+          8074540,
+          8074560,
+          8074584,
+          8150076,
+          8150224,
+          8150236,
+          8150248,
+          8150260,
+          8150920,
+          8522604,
+          9832673,
+          10021960,
+          10226839,
+          10344027,
+          10546744,
+          10613064,
+          10613086,
+          10613112,
+          10613145,
+          10613180,
+          10613217,
+          10613240,
+          10613270,
+          10613302,
+          11239600,
+          11595604,
+          11938048,
+          12802096,
+          13656353,
+          13656386,
+          14471808,
+          14472112,
+          15098131,
+          15098139,
+          15098169,
+          15098177,
+          15098189,
+          15419499,
+          16386093,
+          16386135,
+          16387678,
+          16987375,
+          17284145,
+          18695541,
+          18720192,
+          18736885,
+          18736896,
+          18736908,
+          18737713,
+          19001217,
+          21100169
+        ]
+      },
+      "Bomb": {
+        "count": 1,
+        "offsets": [
+          8131272
+        ]
+      },
+      "Push": {
+        "count": 12,
+        "offsets": [
+          416852,
+          420220,
+          421692,
+          3994920,
+          4002760,
+          10338335,
+          13070842,
+          13070870,
+          13070898,
+          13874734,
+          17348465,
+          17348494
+        ]
+      }
+    },
+    "scan": {
+      "bytes": 23068672,
+      "sha256": "fcb68e71edea2e07e464f2ad41c805c01108d09cdb0ab3b6b0965b9c0fff29b2",
+      "candidate_offsets_tested": 1479220,
+      "containers": []
+    },
+    "embeddedZipAudits": [
+      {
+        "offset": 5523408,
+        "bytes": 42011,
+        "sha256": "e988c36b5a71c20824e3d07ce949d85325144aa6c034eba7a4adaaae9317553c",
+        "entries": 57,
+        "allCrcsPassed": true,
+        "payloads": [
+          {
+            "path": "com/samsung/lcdui/Automata.class",
+            "bytes": 5549,
+            "sha256": "963041bb4f3c083bc621bb90df33ced2fa06526b2af7e3898a5c9777ce050c65",
+            "crc32": "9847dc38",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/SymbolTable.class",
+            "bytes": 6833,
+            "sha256": "446703aa94cd17aae69ff8a7814be8107163860306a4017e5fa42ddc262bc4e2",
+            "crc32": "f9d7d391",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/TCHandler$NumTimerClient.class",
+            "bytes": 1354,
+            "sha256": "f1b705fb330e2db96abb735bc10c6a40f1774c68cdfc35b81c440eb05670e185",
+            "crc32": "894c7119",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/TCHandler$TimerClient.class",
+            "bytes": 654,
+            "sha256": "f02e07b15b5da54b054a1707260589d39c2fb5922bddb78169a59c08c21df983",
+            "crc32": "30b52a66",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/TCHandler.class",
+            "bytes": 8348,
+            "sha256": "68cc0b591a7eeb32b0b742965885b169e6eafa4982a29b6e7d48e24a164246d5",
+            "crc32": "bfc69bb8",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/WIPIAutomata.class",
+            "bytes": 5612,
+            "sha256": "d647d891bc5f15e8345f97c8075916bd9b1d1701e5d60b9a4574f1d4efe6c72b",
+            "crc32": "e00922eb",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/WIPISymbolTable.class",
+            "bytes": 9338,
+            "sha256": "23d442f73a7cdc00c8561f197d64c5b8abe8371293ad843621b0720d6fcdd75a",
+            "crc32": "a63dd177",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/WIPITCHandler$NumTimerClient.class",
+            "bytes": 1168,
+            "sha256": "3642f51566f7293370c2d86a8df6107f13a09c181d5015ce920cffb18ef32c8d",
+            "crc32": "7a4164d7",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/WIPITCHandler$TimerClient.class",
+            "bytes": 519,
+            "sha256": "b175db50aba639fce7383f0c5e252c7a07d0d485b6bf8425ad6e493dce6b3248",
+            "crc32": "244745ec",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "com/samsung/lcdui/WIPITCHandler.class",
+            "bytes": 7977,
+            "sha256": "1dfa356b4183a8f02e7406cfe1eafbc0bacc3930e6746116cb6a38214d35d511",
+            "crc32": "fd222faf",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/app.lbm",
+            "bytes": 192,
+            "sha256": "464fd7ba350c76460f4759e911869098a1936814e09bdc7bb539cd83643583e8",
+            "crc32": "2fb571f7",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/app_open.lbm",
+            "bytes": 17574,
+            "sha256": "cc48ab7969e03bd3df830497fa5fd3a7b921e5729bb52741400a8f8df7affabf",
+            "crc32": "a3dd2251",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/app_prog.lbm",
+            "bytes": 2214,
+            "sha256": "d05d275dcdcf0eab8436d59a40694ebad1968d85217807307254dca4fc28886f",
+            "crc32": "11dc6a29",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/button_back_l.lbm",
+            "bytes": 1590,
+            "sha256": "3489170cd90e21676688fccbe8adf3006f6943df2483765b0da4c2c4b4965acc",
+            "crc32": "f71a9d07",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/button_back_r.lbm",
+            "bytes": 1590,
+            "sha256": "14739690ed44feb9d3ad811b34fea41dfee1b55a7a31a9b45caea5f14fca9934",
+            "crc32": "0b27a5b2",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/circle-1.lbm",
+            "bytes": 144,
+            "sha256": "0ba14933da8b52145537f256d482d7ab7e806e44c4692da8e16a282fe9a198ce",
+            "crc32": "367b4084",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/circle-11.lbm",
+            "bytes": 144,
+            "sha256": "27db67d914607b8c21735d7afb66bb60f5b07d1f63355aad580fe5ac3bee8a0b",
+            "crc32": "6155602b",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/closing.lbm",
+            "bytes": 18456,
+            "sha256": "7ae73ddcf9aef6b18f1c85b98e3a111e1e866999305a862d37f2efc5d8973e9a",
+            "crc32": "0cfab15d",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/Font6x12.bmp",
+            "bytes": 10295,
+            "sha256": "539858b63e5514b15cd3f40c6f205dea3ae6dba809a3a864e22aa71fbf04bb0c",
+            "crc32": "d399bf97",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/g-1.lbm",
+            "bytes": 1441,
+            "sha256": "aad142e44cabd1d2ca265f6658f1e21b227920c104e12a6a2f8797b0cec82ce9",
+            "crc32": "38801386",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/g-11.lbm",
+            "bytes": 1441,
+            "sha256": "60a333f888aafa02e8a7eafb1b2a56916340cbf30ee4d727805b90a12a4aeb08",
+            "crc32": "df40f9ae",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_back.lbm",
+            "bytes": 206,
+            "sha256": "befe99e9f13203fa31d9b6aeeac6e8945d9e6cf0dca22babb6b8dc6cd172c6d8",
+            "crc32": "6c5fbdbd",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_cancel.lbm",
+            "bytes": 206,
+            "sha256": "5857245ad20b0c0d8d39d2702e1e255697c6fdc24c88cc38122de5b45655a48c",
+            "crc32": "34edcacf",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_exit.lbm",
+            "bytes": 206,
+            "sha256": "1406f341420efd1db4c290ac46cc888c451f1ab819b98b6a0f9ff76a07fc8426",
+            "crc32": "ebcc56c0",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_help.lbm",
+            "bytes": 206,
+            "sha256": "58238112073d3c70976c21bf0ab86f39bcf01ffe12c92df0e9ce928488eb6e61",
+            "crc32": "ba9361a9",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_item.lbm",
+            "bytes": 206,
+            "sha256": "8a9e77e8836dd44a05e8646ae3f38331b047d22b1251cf4a3761e9efc3762667",
+            "crc32": "d0181025",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_menu.lbm",
+            "bytes": 206,
+            "sha256": "7aa60ac305fd9ddf2b585945088462d78726332c9f3e028015604358ef706847",
+            "crc32": "06b8b554",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_ok.lbm",
+            "bytes": 206,
+            "sha256": "c0ddf18536f179c09530d26804720dd4974941c6012dda2fb437d1f7891313da",
+            "crc32": "48b0123d",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_screen.lbm",
+            "bytes": 192,
+            "sha256": "22a65d8dd5b0c7bf91c5aedda40fcfb3b80587915ff51509d09537abceec1430",
+            "crc32": "532d2737",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/icon_stop.lbm",
+            "bytes": 206,
+            "sha256": "532110ab256477bfcdb8378a7576c073ae7c6c2371cc3686454d73f7befabb17",
+            "crc32": "bfa84a03",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/im_hint.lbm",
+            "bytes": 294,
+            "sha256": "a6ce22d9eadd025ee99176307fa8514fd66120def6e93e90e7e42113b707e363",
+            "crc32": "8bf8acfc",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/im_k.lbm",
+            "bytes": 312,
+            "sha256": "05281974b9cc9a12d433888ad58e3792e96bfaa54ab1efc82b516b7f1447f823",
+            "crc32": "1a0af7eb",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/im_le.lbm",
+            "bytes": 312,
+            "sha256": "ec9f290c8d5d34396aa1b5a3dcf3e6a9be6905f5214c63ad57440ebc6807db6d",
+            "crc32": "ee243ea1",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/im_n.lbm",
+            "bytes": 312,
+            "sha256": "7deaff37f07107f18e75e38fa2acb5051d4d51a5fc705a093af78abe17d858cc",
+            "crc32": "95c6e9f4",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/im_s.lbm",
+            "bytes": 312,
+            "sha256": "57f961d9dcbe09d211c63bf7307417f3dace272559b2d6febf01703931790d54",
+            "crc32": "029ef552",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/im_ue.lbm",
+            "bytes": 312,
+            "sha256": "9bb9d0dbeb397ec8515659bdd5b37be754cb5ec2978f8c891a5801a315f9e782",
+            "crc32": "e36c25c8",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/number.lbm",
+            "bytes": 824,
+            "sha256": "04141f14bc32778b21e9b7ebf2a4a2b991c91f44cf50cec553d55886e59968e2",
+            "crc32": "94a0ca43",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/rectangle-1.lbm",
+            "bytes": 144,
+            "sha256": "bcc1d42dce0938cbdb1896df70d650c4f95faf1ee105cc528a0e398a5ad9bc95",
+            "crc32": "5fa2248b",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/rectangle-11.lbm",
+            "bytes": 144,
+            "sha256": "a0a4061a0e926112e675fbde947d54cc3bc8d8f486b5d54e30fd21f23767c29c",
+            "crc32": "52117e09",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/s-back.lbm",
+            "bytes": 4760,
+            "sha256": "5976c655835765421574e68ab900cc37961c1e29e58ffc0a350dfe8dfce1a05c",
+            "crc32": "295c3001",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/s-back_big.lbm",
+            "bytes": 12668,
+            "sha256": "82e43b4749349f596d9672cb45067c711f70b84318ca45836defef381df675a1",
+            "crc32": "b1d85da9",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/scrollbar.lbm",
+            "bytes": 348,
+            "sha256": "d5039ad4f92c4ee02d4543e669e0ca4aa2a247a7886c514059fbe313285c2ba3",
+            "crc32": "6c001aa2",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/symbol_mode0.lbm",
+            "bytes": 369,
+            "sha256": "b1f9f1b80e024a44459dca1d15274866f4b35b10fc51c57ecfc6036bd9963e03",
+            "crc32": "dfa85717",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/symbol_mode1.lbm",
+            "bytes": 354,
+            "sha256": "fe3bcae2e220729aa3537e16602b05d0826884feffddf9e14238a3ce1af66e75",
+            "crc32": "93ca28e1",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/symbol_mode2.lbm",
+            "bytes": 354,
+            "sha256": "6dd3c751c9b4ac380341ed120ad093664c244554e941dcb7d182f50eb90b7d75",
+            "crc32": "083975dd",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/symbol_mode3.lbm",
+            "bytes": 369,
+            "sha256": "617fdb877e8d8238193caf8441676dff0e20e607edcb00e6e2f1b1e6ba42d5f4",
+            "crc32": "73b91002",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/symbol_mode4.lbm",
+            "bytes": 354,
+            "sha256": "100bda4f1baa45056b65a5921658562d4d64196223a67f0a43fb41ba028a7c0b",
+            "crc32": "25fecfef",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/symbol_mode5.lbm",
+            "bytes": 369,
+            "sha256": "712adf1975d624c6c8f2f356003cf10c4cb307df2624967f34bd353d5d5479a8",
+            "crc32": "93bdc19d",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/symbol_title.lbm",
+            "bytes": 1572,
+            "sha256": "50128bb85ff302ee181cc578beb39d10fd883cdccac0b78b88e3c8b52493083f",
+            "crc32": "1f8d8600",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "iconsm/title.lbm",
+            "bytes": 3192,
+            "sha256": "abb015a45b86328d059544ce0682d717ac48e8dab044c86cd9939c88c22fa030",
+            "crc32": "a4a85b86",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "TCHandler.class",
+            "bytes": 203,
+            "sha256": "72289c0472ee713fae14d0a268b9d79df413dade2236eca609bad2e8e9f86d7f",
+            "crc32": "04c09b37",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "WIPITCHandler.class",
+            "bytes": 215,
+            "sha256": "ec149b819f14062646e366ddf8b471b7e9364654b836efefd4a0b59f4a0238ff",
+            "crc32": "ee1bc554",
+            "sgsOccurrences": 0
+          },
+          {
+            "path": "__xvmrom__.lst",
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "crc32": "00000000",
+            "sgsOccurrences": 0
+          }
+        ]
+      }
+    ],
+    "limits": [
+      "Model/source-labelled image; no full phone-flash completeness or boot claimed.",
+      "Plain/XOR-A5 structural SGS v1/v2/v4/v36 scan; unknown compression/native games/fragmentation not excluded.",
+      "Strings alone are not a callable interpreter or tested compatibility. No vendor code executed."
+    ]
+  },
+  "directory": {
+    "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S390/",
+    "checkedUtc": "2026-11-05T23:52:00.702430+00:00",
+    "status": 200,
+    "bytes": 1879,
+    "sha256": "a64604c40b3c69ba6906b3a35f3a2849c1538f7a56542f3f46eba6cf278c90bc",
+    "links": [
+      "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S390/SCH-S390_ZI15.7z"
+    ],
+    "transport": "curl.exe default TLS verification; bounded35s"
+  },
+  "priorTransportFailure": {
+    "url": "https://archive.org/download/gt-b-7722_20250528/SCH-S390.zip",
+    "retrievedUtc": "2026-11-05T23:49:17.667876+00:00",
+    "sourceMetadata": "work/pass11-publication/next-samsung-mirror-leads.json",
+    "expectedBytes": 11036785,
+    "expectedSha1": "14091d150fc3b5a582efdea760ad9a86b6d60170",
+    "error": "<urlopen error _ssl.c:989: The handshake operation timed out>"
+  },
+  "officialSupport": {
+    "url": "https://www.samsungsvc.co.kr/download/view?code=SCH-S390",
+    "checkedUtc": "2026-11-05T23:53:00.921422+00:00",
+    "status": 200,
+    "bytes": 403956,
+    "sha256": "6b2176b7a251278ffb17e88fec2051f0810b09e6a82fac092907202833433647",
+    "method": "Static string extraction from serialized Nuxt data; no JS execution",
+    "records": [
+      {
+        "CTTVersion": "1.2",
+        "DTUpdate": "2006-06-19",
+        "description": "User Manual ",
+        "CTTFileSize": 15094103,
+        "VPath": "UM/200606/20060615103924843_SCH-S390_1.2.pdf",
+        "NMFILE": "20060615103924843_SCH-S390_1.2.pdf",
+        "CTTFileID": 705474
+      },
+      {
+        "CTTVersion": "1.0",
+        "DTUpdate": "2004-11-06",
+        "description": "PC Link",
+        "CTTFileSize": 20886079,
+        "VPath": "SW/200411/20041105154319859_PCLink2000kor_040831.exe",
+        "NMFILE": "20041105154319859_PCLink2000kor_040831.exe",
+        "CTTFileID": 214530
+      },
+      {
+        "CTTVersion": "AC06",
+        "DTUpdate": "2011-11-03",
+        "description": "Upgrade",
+        "CTTFileSize": 44288,
+        "VPath": "SW/201111/20111102205656665/SCH-S390_AC06.pdf",
+        "NMFILE": "SCH-S390_AC06.pdf",
+        "CTTFileID": 4694908
+      }
+    ]
+  },
+  "officialPdfDownloads": [
+    {
+      "fileId": 705474,
+      "sourceUrl": "https://downloadcenter.samsung.com/content/UM/200606/20060615103924843_SCH-S390_1.2.pdf",
+      "checkedUtc": "2026-11-06T00:02:51.661445+00:00",
+      "httpStatusChain": [
+        200
+      ],
+      "localFile": "SCH-S390_1.2.pdf",
+      "sourceFilename": "20060615103924843_SCH-S390_1.2.pdf",
+      "bytes": 15094103,
+      "sha256": "cfd9dde5b33b6fb36febebde37f791240c01dba63542c01498b0423d69f2102b",
+      "sizeMatchesOfficialSupport": true,
+      "format": "PDF document, not a firmware image"
+    },
+    {
+      "fileId": 4694908,
+      "sourceUrl": "https://downloadcenter.samsung.com/content/SW/201111/20111102205656665/SCH-S390_AC06.pdf",
+      "checkedUtc": "2026-11-06T00:02:51.676413+00:00",
+      "httpStatusChain": [
+        200
+      ],
+      "localFile": "SCH-S390_AC06.pdf",
+      "sourceFilename": "SCH-S390_AC06.pdf",
+      "bytes": 44288,
+      "sha256": "938f38a9be316b0d6d8bbacf2420a5686e29db27fe1f35bdb67691a6ca67ca35",
+      "sizeMatchesOfficialSupport": true,
+      "format": "PDF document, not a firmware image"
+    }
+  ],
+  "previousPcLinkCapture": {
+    "fileId": 214530,
+    "sourceUrl": "https://downloadcenter.samsung.com/content/SW/200411/20041105154319859_PCLink2000kor_040831.exe",
+    "bytes": 20886079,
+    "sha256": "931d6d522dff61df08bb0ed7f6340c104048c3cfabbfab9dcca068ebce7aeea8",
+    "preservedArchive": "research/archives/Samsung-PC-Link-2000-Originals.zip",
+    "sameMetadataIdentity": true,
+    "previousCapturedBodyRehashed": true,
+    "currentRemoteBodyRedownloaded": false,
+    "assessment": "Same file ID, URL and listed length as an already preserved official capture. This is not a new software distribution or a fresh byte-for-byte remote comparison."
+  },
+  "manual": {
+    "bytes": 15094103,
+    "sha256": "cfd9dde5b33b6fb36febebde37f791240c01dba63542c01498b0423d69f2102b",
+    "pages": 110,
+    "metadata": {
+      "format": "PDF 1.6",
+      "title": "00-표지_S390.indd",
+      "author": "",
+      "subject": "",
+      "keywords": "",
+      "creator": "Adobe InDesign CS (3.0.1)",
+      "producer": "Adobe PDF Library 6.0",
+      "creationDate": "D:20050906094614Z",
+      "modDate": "D:20060615090628+09'00'",
+      "trapped": "",
+      "encryption": null
+    },
+    "matches": [
+      {
+        "physicalPage": 5,
+        "terms": [
+          "게임",
+          "ⓜPlayon"
+        ]
+      },
+      {
+        "physicalPage": 36,
+        "terms": [
+          "ⓜPlayon"
+        ]
+      },
+      {
+        "physicalPage": 38,
+        "terms": [
+          "ⓜPlayon"
+        ]
+      },
+      {
+        "physicalPage": 39,
+        "terms": [
+          "ⓜPlayon"
+        ]
+      },
+      {
+        "physicalPage": 52,
+        "terms": [
+          "게임"
+        ]
+      },
+      {
+        "physicalPage": 54,
+        "terms": [
+          "게임"
+        ]
+      },
+      {
+        "physicalPage": 87,
+        "terms": [
+          "ⓜPlayon"
+        ]
+      },
+      {
+        "physicalPage": 88,
+        "terms": [
+          "ⓜPlayon"
+        ]
+      },
+      {
+        "physicalPage": 92,
+        "terms": [
+          "게임"
+        ]
+      },
+      {
+        "physicalPage": 95,
+        "terms": [
+          "게임"
+        ]
+      },
+      {
+        "physicalPage": 96,
+        "terms": [
+          "게임"
+        ]
+      },
+      {
+        "physicalPage": 100,
+        "terms": [
+          "게임"
+        ]
+      },
+      {
+        "physicalPage": 105,
+        "terms": [
+          "ⓜPlayon"
+        ]
+      }
+    ]
+  },
+  "manualReview": {
+    "visuallyReviewedPhysicalPages": [
+      1,
+      52,
+      54,
+      105
+    ],
+    "printedPages": [
+      "cover",
+      50,
+      52,
+      103
+    ],
+    "assessment": "The model and Anycall World > Game menu are shown. Those reviewed pages do not name the two games; Bomb Link and Bejeweled names are independently present in the BIN. NATE Air appears separately in SKT Service.",
+    "limits": "Selected complete rendered pages reviewed, not every page of the110-page manual. Whole-document text search was also run and is not proof of absence."
+  },
+  "upgradeDocument": {
+    "bytes": 44288,
+    "sha256": "938f38a9be316b0d6d8bbacf2420a5686e29db27fe1f35bdb67691a6ca67ca35",
+    "pages": 1,
+    "metadata": {
+      "format": "PDF 1.5",
+      "title": "",
+      "author": "jolieahn",
+      "subject": "",
+      "keywords": "",
+      "creator": "Microsoft® Office PowerPoint® 2007",
+      "producer": "Microsoft® Office PowerPoint® 2007",
+      "creationDate": "D:20111026152512",
+      "modDate": "D:20111026152512",
+      "trapped": "",
+      "encryption": null
+    },
+    "contents": [
+      {
+        "physicalPage": 1,
+        "links": [],
+        "text": "1. SPAM 메시지함에서 LONG KEY동작시 이상동작현상 수정하였습니다.  \n2. 최근통화목록 삭제 중 특정상황에서 이상동작하던 현상 수정하였습니다.  \n \n[주의사항] \n◆ 업그레이드가 진행되는 동안에는 휴대폰에 연결된 케이블이 빠지지 않도록 주의하세요.  \n"
+      }
+    ],
+    "visuallyReviewedPhysicalPages": [
+      1
+    ],
+    "assessment": "Official catalog labels this PDF AC06. Its one page describes fixes for long-key handling in the spam-message folder and deleting recent-call entries, plus an upgrade cable warning. It is release information, not a recovered AC06 executable/firmware package."
+  },
+  "binaryInterpretation": {
+    "modelLiterals": 12,
+    "sourceBuildLabel": "ZI15 in filename only; literal not independently found inside image",
+    "gnexMimeOffset": 12222496,
+    "gnexLabelOffset": 12222520,
+    "sinjisoftOffset": 2838650,
+    "sinjisoftApplicationName": "NATEAIR",
+    "sinjisoftApplicationVersion": "001.001.008",
+    "nativeOrSgsGameAbi": "Not established",
+    "gameNames": [
+      {
+        "name": "Bomb Link",
+        "offset": 8131272
+      },
+      {
+        "name": "Bejeweled",
+        "offset": 8131284
+      }
+    ],
+    "callableGnexInterpreter": "Not established from routing labels or the separate NATEAIR metadata",
+    "excerpts": [
+      {
+        "path": "gnex-route.bin",
+        "sourceOffset": 12222464,
+        "bytes": 128,
+        "sha256": "4d5199cc4512eac880645d082c216d3ad6c805cdafe63abd90185fc87b49555e",
+        "kind": "Bounded literal evidence excerpt, not a complete application, game or function"
+      },
+      {
+        "path": "nateair-metadata.bin",
+        "sourceOffset": 2838544,
+        "bytes": 288,
+        "sha256": "55b359480bc54629cfc3456b72ab226bcb1c21505899566d19e766684ee816c0",
+        "kind": "Bounded literal evidence excerpt, not a complete application, game or function"
+      },
+      {
+        "path": "game-menu.bin",
+        "sourceOffset": 8131248,
+        "bytes": 112,
+        "sha256": "195f2a13ac5bdc40b6ec88bc1a21d6593a93123e81cd92ce4e8bd71b8debe2b8",
+        "kind": "Bounded literal evidence excerpt, not a complete application, game or function"
+      }
+    ]
+  },
+  "swfHeaderProbes": {
+    "scope": "Header-only probes at five literal FWS/CWS matches. No full SWF decoder or exhaustive encoded SWF search.",
+    "matches": [
+      {
+        "offset": 6691600,
+        "signature": "FWS",
+        "version": 0,
+        "declaredLength": 4607300,
+        "accepted": false,
+        "reason": "zero version"
+      },
+      {
+        "offset": 6735160,
+        "signature": "FWS",
+        "version": 0,
+        "declaredLength": 587229314,
+        "accepted": false,
+        "reason": "zero version"
+      },
+      {
+        "offset": 12025188,
+        "signature": "FWS",
+        "version": 0,
+        "declaredLength": 3800919874,
+        "accepted": false,
+        "reason": "zero version"
+      },
+      {
+        "offset": 15230912,
+        "signature": "FWS",
+        "version": 4,
+        "declaredLength": 0,
+        "accepted": false,
+        "reason": "declared length outside finite 8..64MiB SWF bound"
+      },
+      {
+        "offset": 5743113,
+        "signature": "CWS",
+        "version": 88,
+        "declaredLength": 743193691,
+        "accepted": false,
+        "reason": "declared length outside finite 8..64MiB SWF bound"
+      }
+    ],
+    "exported": 0
+  },
+  "recoveryMethodChecks": {
+    "exactSourceReproduced": true,
+    "bytes": 42011,
+    "sha256": "e988c36b5a71c20824e3d07ce949d85325144aa6c034eba7a4adaaae9317553c",
+    "existingOutputRefusedAndUnchanged": true,
+    "differentModelRejectedBeforeOutput": true,
+    "originalInputsUnmodified": true
+  },
+  "sktPrimarySource": {
+    "sourceUrl": "https://kind.krx.co.kr/external/2004/03/30/000507/20040330002797/2004033000279704.htm",
+    "checkedUtc": "2026-11-05T23:59:32.500013+00:00",
+    "httpStatus": 200,
+    "sourceBytes": 2612890,
+    "sourceSha256": "88e1576711feea0c4a9070e9141b46b27f28e4ee6b023e0b4cebcd9929ef5aa5",
+    "issuer": "SK Telecom Co., Ltd. / 에스케이텔레콤 주식회사",
+    "fiscalYear": "2003-01-01 to 2003-12-31",
+    "filingDate": "2004-03-30",
+    "preservedOriginalHtml": true,
+    "rowCells": [
+      "WIPI 1.2 GNEX개발",
+      "2003.06~\n2003.12",
+      "□ 기존의 GVM을 WIPI플랫폼을 이용한 변환개발 및 기능개선\n□ Downloadable 형태의 WIPI application으로 game player의 기능을 가지고 있음"
+    ],
+    "assessment": "The operator report describes development of a downloadable WIPI application that acts as a GNEX game player. This supports a deployment architecture; it neither supplies the player binary nor establishes installation on every WIPI handset or on SCH-S390.",
+    "limits": "Only the cover identity and relevant development row/context were specifically reviewed. The full original HTML is preserved, not every financial section re-audited."
+  },
+  "summary": {
+    "newModelLabelledImages": 1,
+    "rawBytesScanned": 23068672,
+    "sgsCandidateOffsets": 1479220,
+    "positiveControlsPassed": 68,
+    "newStandaloneSgs": 0,
+    "newVerifiedInterpreters": 0,
+    "embeddedZipEntries": 57,
+    "embeddedZipFilePayloads": 53,
+    "embeddedPayloadBytesScanned": 132366,
+    "newOfficialPdfBodies": 2,
+    "newAc06FirmwareBytes": 0
+  },
+  "limits": [
+    "A model-labelled BIN is not proof of a complete flash dump, bootable phone or working interpreter. No phone code or downloaded software executed.",
+    "SGS v1/v2/v4/v36 plain/XOR-A5 scans cover the input and all53 embedded ZIP file payloads. Unknown compression, fragmentation, encrypted/ROMized/native games remain unresolved.",
+    "The exact embedded ZIP is Samsung input-method/UI material, not identified as Bomb Link or Bejeweled. Only its real bytes and bounded excerpts are exported separately.",
+    "The SKT filing supports the downloadable WIPI-player architecture, not installation on all WIPI devices or specifically this SCH-S390 image.",
+    "Original support/filing HTML bodies are retained; dependent website assets are not a complete offline website capture.",
+    "No current remote body equality is inferred merely from a matching catalog filename, fileID or size.",
+    "Original source notices and rights remain separate from Reunion MIT."
+  ]
+}
