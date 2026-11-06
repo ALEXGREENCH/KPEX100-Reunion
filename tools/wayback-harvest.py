@@ -237,6 +237,8 @@ class Collector:
         self.root = Path(root)
         self.root.mkdir(parents=True, exist_ok=True)
         self.db = sqlite3.connect(self.root / "queue.sqlite3")
+        # Offline readers may hold snapshots while HTTP receipts commit.
+        self.db.execute("PRAGMA journal_mode=WAL").fetchone()
         self.db.row_factory = sqlite3.Row
         self.db.executescript(
             """

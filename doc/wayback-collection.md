@@ -20,6 +20,11 @@
 
 ## Как работает сборщик
 
+База очереди использует SQLite WAL: чтение архивных записей отдельным
+процессом не блокирует сохранение новых HTTP-квитанций. Для снимка во время
+работы используется `package-wayback.py` с SQLite backup; он учитывает
+зафиксированные данные WAL и создаёт самостоятельную копию базы.
+
 [wayback-harvest.py](../tools/wayback-harvest.py) использует
 [первичный API CDX Internet Archive](https://raw.githubusercontent.com/internetarchive/wayback/master/wayback-cdx-server/README.md).
 Запрашиваются все даты, MIME и статусы, все поддомены выбранных доменов.

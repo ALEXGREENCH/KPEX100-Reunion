@@ -15,6 +15,51 @@ harvest = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(harvest)
 
 
+def test_receipt_commit_survives_a_concurrent_reader_and_reopens(tmp_path):
+    import io
+    import sqlite3
+
+    path = tmp_path / "queue.sqlite3"
+    # An existing collection initially uses SQLite's rollback journal.
+    with sqlite3.connect(path) as legacy:
+        legacy.execute("CREATE TABLE responses(id INTEGER PRIMARY KEY, receipt TEXT)")
+        legacy.execute("INSERT INTO responses(receipt) VALUES ('{}')")
+    legacy.close()
+    collector = harvest.Collector(tmp_path, delay=0)
+    reader = sqlite3.connect(path)
+    try:
+        reader.execute("BEGIN")
+        assert reader.execute("SELECT count(*) FROM responses").fetchone()[0] == 1
+        collector.db.execute("PRAGMA busy_timeout=30")
+        response = io.BytesIO(b"original")
+        response.code = 200
+        response.headers = {"Content-Type": "application/octet-stream"}
+        response.url = (
+            "https://web.archive.org/web/20040215031403id_/http://gnexclub.com/download"
+        )
+        collector.opener.open = lambda request, timeout: response
+        receipt, body = collector.request(response.url, "regression:reader-lock")
+        assert body == b"original" and receipt["response_id"] == 2
+        assert reader.execute("SELECT count(*) FROM responses").fetchone()[0] == 1
+        assert collector.db.execute("SELECT count(*) FROM responses").fetchone()[0] == 2
+        reader.rollback()
+        assert reader.execute("SELECT count(*) FROM responses").fetchone()[0] == 2
+    finally:
+        reader.close()
+        collector.db.close()
+    reopened = harvest.Collector(tmp_path, delay=0)
+    try:
+        receipt = json.loads(
+            reopened.db.execute("SELECT receipt FROM responses WHERE id=2").fetchone()[
+                0
+            ]
+        )
+        digest = receipt["object"]
+        assert (tmp_path / "objects" / digest[:2] / digest).read_bytes() == b"original"
+    finally:
+        reopened.db.close()
+
+
 def record(body=b"original", timestamp="20040215031403"):
     return [
         "com,gnexclub)/download",
