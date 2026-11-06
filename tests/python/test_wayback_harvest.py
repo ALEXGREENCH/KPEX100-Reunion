@@ -166,3 +166,255 @@ def test_cached_http200_error_cannot_poison_index_retries(tmp_path):
     assert len(called) == 2
     assert collector.db.execute("SELECT complete FROM scopes").fetchone()[0]
     collector.db.close()
+
+
+def korean_record(body=b"original", digest=True):
+    row = record(body)
+    name = "20021130_단말기별_개발가이드.pdf"
+    row[2] = "http://www.gnexclub.com:80/" + name.encode("utf8").decode("latin1")
+    if not digest:
+        row[5] = "-"
+    return row
+
+
+def test_korean_candidates_keep_host_syntax_and_existing_escapes():
+    original = korean_record()[2]
+    variants = harvest.korean_replay_variants(original)
+    assert [method for method, _ in variants] == ["latin1-utf8-bytes", "korean-cp949"]
+    assert all(
+        url.startswith("http://www.gnexclub.com:80/20021130_") for _, url in variants
+    )
+    assert "%EB%8B%A8" in variants[0][1]
+    assert "%B4%DC" in variants[1][1]
+    query = "?literal=%2f%25&name=" + "게임".encode("utf8").decode("latin1")
+    assert (
+        "literal=%2f%25&name=%B0%D4%C0%D3"
+        in harvest.korean_replay_variants(original + query)[1][1]
+    )
+    assert harvest.korean_replay_variants("http://gnexclub.com/%b4%dc/file.pdf") == []
+    assert harvest.korean_replay_variants("http://gnexclub.com/café.pdf") == []
+    assert harvest.korean_replay_variants("http://gnexclub.com/資料.pdf") == []
+    assert len(harvest.korean_replay_variants("http://gnexclub.com/게임.pdf")) == 1
+
+
+def test_korean_recovery_requires_digest_and_keeps_original_cdx(tmp_path):
+    collector = harvest.Collector(tmp_path, delay=0)
+    original = korean_record()
+    collector.request = lambda *_: ({"status": 200}, page([original]))
+    collector.index({"id": "gnexclub", "url": "gnexclub.com", "matchType": "domain"})
+    before = collector.db.execute("SELECT id,record FROM captures").fetchone()
+    calls = []
+
+    def fetch(url, _):
+        calls.append(url)
+        body = b"original" if "%B4%DC" in url else b"not the archived document"
+        return {
+            "status": 200 if body == b"original" else 404,
+            "object": collector.blob(body),
+            "response_id": len(calls),
+        }, body
+
+    collector.request = fetch
+    collector.download(repair_urls=True)
+    after = collector.db.execute("SELECT * FROM captures").fetchone()
+    assert after["id"] == before["id"] and after["record"] == before["record"]
+    assert after["state"] == "verified" and after["payload"] == harvest.sha(b"original")
+    resolution = json.loads(after["resolution"])
+    assert resolution["acceptedMethod"] == "korean-cp949"
+    assert len(calls) == len(resolution["attempts"]) == after["attempts"] == 3
+    assert [item["responseId"] for item in resolution["attempts"]] == [1, 2, 3]
+    collector.db.close()
+
+
+@pytest.mark.parametrize("status", [0, 401, 403, 429, 500, 502, 503, 504])
+def test_korean_repair_does_not_work_around_access_or_temporary_errors(
+    tmp_path, status
+):
+    collector = harvest.Collector(tmp_path, delay=0)
+    collector.request = lambda *_: ({"status": 200}, page([korean_record()]))
+    collector.index({"id": "gnexclub", "url": "gnexclub.com", "matchType": "domain"})
+    calls = []
+
+    def fetch(url, _):
+        calls.append(url)
+        return {"status": status, "object": collector.blob(b"error")}, (
+            None if status == 0 else b"error"
+        )
+
+    collector.request = fetch
+    collector.download(repair_urls=True)
+    assert len(calls) == 1
+    assert (
+        collector.db.execute("SELECT state FROM captures").fetchone()[0] != "verified"
+    )
+    collector.db.close()
+
+
+def test_unknown_digest_and_bad_variants_stay_unverified(tmp_path):
+    collector = harvest.Collector(tmp_path, delay=0)
+    collector.request = lambda *_: (
+        {"status": 200},
+        page([korean_record(digest=False), korean_record(body=b"different")]),
+    )
+    collector.index({"id": "gnexclub", "url": "gnexclub.com", "matchType": "domain"})
+    calls = []
+
+    def fetch(url, _):
+        calls.append(url)
+        return {
+            "status": 200,
+            "object": collector.blob(b"a successful error page"),
+        }, b"a successful error page"
+
+    collector.request = fetch
+    collector.download(repair_urls=True)
+    assert len(calls) == 4  # One unknown-digest literal plus three checked candidates.
+    assert dict(
+        collector.db.execute("SELECT state,count(*) FROM captures GROUP BY state")
+    ) == {"mismatch": 1, "unverified": 1}
+    collector.db.close()
+
+
+def test_stop_marker_does_not_start_requests_and_failed_only_excludes_pending(tmp_path):
+    collector = harvest.Collector(tmp_path, delay=0)
+    collector.request = lambda *_: (
+        {"status": 200},
+        page([record(), record(timestamp="20050215031403")]),
+    )
+    scope = {"id": "gnexclub", "url": "gnexclub.com", "matchType": "domain"}
+    (tmp_path / "STOP").write_bytes(b"")
+    collector.index(scope)
+    assert collector.db.execute("SELECT count(*) FROM captures").fetchone()[0] == 0
+    (tmp_path / "STOP").unlink()
+    collector.index(scope)
+    with collector.db:
+        identity = collector.db.execute(
+            "SELECT id FROM captures ORDER BY id LIMIT 1"
+        ).fetchone()[0]
+        collector.db.execute(
+            "UPDATE captures SET state='mismatch' WHERE id=?", (identity,)
+        )
+    calls = []
+
+    def fetch(url, _):
+        calls.append(url)
+        (tmp_path / "STOP").write_bytes(b"")
+        return {"status": 200, "object": collector.blob(b"original")}, b"original"
+
+    collector.request = fetch
+    collector.download(failed_only=True)
+    assert len(calls) == 1
+    assert dict(
+        collector.db.execute("SELECT state,count(*) FROM captures GROUP BY state")
+    ) == {"pending": 1, "verified": 1}
+    collector.download()
+    assert len(calls) == 1 and collector.export()["stopRequested"]
+    collector.db.close()
+
+
+def test_archive_redirect_accepts_only_same_raw_resource():
+    original = "http://www.gnexclub.com:80/File.h?q=%2F"
+    source = harvest.REPLAY + "20040215031403id_/" + original
+    target = (
+        "https://web.archive.org/web/20030117084521id_/http://gnexclub.com/File.h?q=%2f"
+    )
+    receipt = {"url": source, "status": 302, "headers": [("Location", target)]}
+    assert harvest.archive_redirect_url(receipt, original) == target
+    for bad in [
+        "https://gnexclub.com/File.h?q=%2f",
+        target.replace("web.archive.org", "web.archive.org.evil.test"),
+        target.replace("File.h", "Login.h"),
+        target.replace("gnexclub.com/File", "other.gnexclub.com/File"),
+        target.replace("id_/", "/"),
+        target.replace("q=%2f", "q=other"),
+        target.replace("https://web.archive.org/", "http://web.archive.org/"),
+        target.replace("web.archive.org/", "web.archive.org:444/"),
+        target + "#fragment",
+    ]:
+        assert (
+            harvest.archive_redirect_url(
+                {**receipt, "headers": [("location", bad)]}, original
+            )
+            is None
+        )
+    assert (
+        harvest.archive_redirect_url(
+            {
+                **receipt,
+                "headers": receipt["headers"]
+                + [("X-Archive-Orig-Location", "/File.h")],
+            },
+            original,
+        )
+        is None
+    )
+
+
+@pytest.mark.parametrize("matches", [True, False])
+def test_nearest_capture_body_still_requires_requested_digest(tmp_path, matches):
+    collector = harvest.Collector(tmp_path, delay=0)
+    item = record()
+    collector.request = lambda *_: ({"status": 200}, page([item]))
+    collector.index({"id": "gnexclub", "url": "gnexclub.com", "matchType": "domain"})
+    calls = []
+
+    def fetch(url, _):
+        calls.append(url)
+        body = b"original" if matches else b"different archived capture"
+        if len(calls) == 1:
+            return {
+                "url": url,
+                "status": 302,
+                "headers": [
+                    (
+                        "Location",
+                        "https://web.archive.org/web/20030117084521id_/http://gnexclub.com/download",
+                    )
+                ],
+            }, b"redirect"
+        return {"url": url, "status": 200, "object": collector.blob(body)}, body
+
+    collector.request = fetch
+    collector.download(archive_redirects=True)
+    row = collector.db.execute("SELECT * FROM captures").fetchone()
+    assert json.loads(row["record"])["timestamp"] == item[1]
+    assert len(calls) == 2 and "20030117084521id_" in calls[-1]
+    resolution = json.loads(row["resolution"])
+    assert resolution["acceptedViaArchiveRedirect"] is matches
+    assert row["state"] == ("verified" if matches else "mismatch")
+    collector.db.close()
+
+
+@pytest.mark.parametrize("historical_redirect", [True, False])
+def test_redirect_chain_is_bounded_and_captured_redirects_are_not_followed(
+    tmp_path, historical_redirect
+):
+    collector = harvest.Collector(tmp_path, delay=0)
+    item = record()
+    if historical_redirect:
+        item[4] = "302"
+    collector.request = lambda *_: ({"status": 200}, page([item]))
+    collector.index({"id": "gnexclub", "url": "gnexclub.com", "matchType": "domain"})
+    calls = []
+
+    def fetch(url, _):
+        calls.append(url)
+        stamp = str(20030117084520 + len(calls))
+        return {
+            "url": url,
+            "status": 302,
+            "headers": [
+                (
+                    "Location",
+                    harvest.REPLAY + stamp + "id_/http://gnexclub.com/download",
+                )
+            ],
+        }, b"redirect"
+
+    collector.request = fetch
+    collector.download(archive_redirects=True)
+    assert len(calls) == (1 if historical_redirect else 3)
+    assert (
+        collector.db.execute("SELECT state FROM captures").fetchone()[0] == "mismatch"
+    )
+    collector.db.close()

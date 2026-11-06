@@ -81,7 +81,11 @@ def parse_cdx(data):
         raise ValueError("Unexpected CDX field order or error response")
     records = []
     for row in rows[1:]:
-        if len(row) != len(FIELDS) or not all(isinstance(x, str) for x in row):
+        if (
+            not isinstance(row, list)
+            or len(row) != len(FIELDS)
+            or not all(isinstance(x, str) for x in row)
+        ):
             raise ValueError("Malformed CDX record")
         item = dict(zip(FIELDS, row))
         if not re.fullmatch(r"\d{14}", item["timestamp"]):
@@ -103,6 +107,120 @@ def in_scope(original, scope):
     if host != wanted:
         return False
     return scope["matchType"] == "host" or parsed.path.startswith(target.path)
+
+
+def korean_replay_variants(original):
+    """Derive at most two Korean transport alternatives, without changing the host.
+
+    Literal CDX strings remain untouched. These are candidates, not assertions
+    about a filename: only the original CDX payload digest can accept a result.
+    Existing percent escapes and URL syntax are retained, not decoded twice.
+    """
+    parsed = urllib.parse.urlsplit(original)
+    if parsed.scheme not in ("http", "https") or not parsed.hostname:
+        return []
+    target = urllib.parse.urlunsplit(
+        ("", "", parsed.path, parsed.query, parsed.fragment)
+    )
+    if not any(ord(char) > 127 for char in target):
+        return []
+    repaired = target
+    mojibake = False
+    try:
+        decoded = target.encode("latin1").decode("utf8")
+        if re.search(r"[\uac00-\ud7a3]", decoded):
+            repaired, mojibake = decoded, decoded != target
+    except UnicodeError:
+        pass
+    if not re.search(r"[\uac00-\ud7a3]", repaired):
+        return []
+    safe = ":/?&=;%+@!$'()*,-._~[]#"
+    prefix = parsed.scheme + "://" + parsed.netloc
+    variants = []
+    if mojibake:
+        variants.append(
+            (
+                "latin1-utf8-bytes",
+                prefix
+                + urllib.parse.quote_from_bytes(target.encode("latin1"), safe=safe),
+            )
+        )
+    try:
+        variants.append(
+            (
+                "korean-cp949",
+                prefix
+                + urllib.parse.quote_from_bytes(repaired.encode("cp949"), safe=safe),
+            )
+        )
+    except UnicodeError:
+        pass
+    literal_wire = urllib.parse.quote(original, safe=safe)
+    seen = {literal_wire}
+    result = []
+    for method, url in variants:
+        if url not in seen:
+            seen.add(url)
+            result.append((method, url))
+    return result
+
+
+def archive_redirect_url(receipt, original):
+    """Accept only raw Wayback redirects for the same original resource.
+
+    Nearest-capture redirects may change timestamp and www/default port. Final
+    bytes still need the requested CDX digest. Live redirects stay as data.
+    """
+    headers = {name.lower(): value for name, value in receipt.get("headers", [])}
+    if (
+        receipt["status"] not in (301, 302, 303, 307, 308)
+        or "x-archive-orig-location" in headers
+        or "location" not in headers
+    ):
+        return None
+    try:
+        url = urllib.parse.urljoin(receipt["url"], headers["location"])
+        replay = urllib.parse.urlsplit(url)
+        if (
+            replay.scheme != "https"
+            or replay.hostname != "web.archive.org"
+            or replay.port not in (None, 443)
+            or replay.username
+            or replay.password
+            or replay.fragment
+        ):
+            return None
+        match = re.fullmatch(r"/web/\d{14}id_/(https?://.+)", replay.path)
+        if not match:
+            return None
+        candidate = urllib.parse.urlsplit(
+            match[1] + ("?" + replay.query if replay.query else "")
+        )
+        expected = urllib.parse.urlsplit(original)
+        for parsed in (candidate, expected):
+            if (
+                parsed.scheme not in ("http", "https")
+                or not parsed.hostname
+                or parsed.username
+                or parsed.password
+                or parsed.port not in (None, 80 if parsed.scheme == "http" else 443)
+            ):
+                return None
+        if candidate.hostname.lower().removeprefix(
+            "www."
+        ) != expected.hostname.lower().removeprefix("www."):
+            return None
+
+        def target(parsed):
+            value = urllib.parse.quote(
+                parsed.path + ("?" + parsed.query if parsed.query else ""),
+                safe=":/?&=;%+@!$'()*,-._~[]#",
+            )
+            return re.sub(r"%[a-fA-F0-9]{2}", lambda match: match[0].lower(), value)
+
+        return url if target(candidate) == target(expected) else None
+    except ValueError:
+        return None
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -133,8 +251,15 @@ class Collector:
               id INTEGER PRIMARY KEY, receipt TEXT NOT NULL);
             """
         )
+        columns = {row[1] for row in self.db.execute("PRAGMA table_info(captures)")}
+        if "resolution" not in columns:
+            with self.db:
+                self.db.execute("ALTER TABLE captures ADD COLUMN resolution TEXT")
         self.delay, self.timeout, self.last = delay, timeout, 0
         self.opener = urllib.request.build_opener(NoRedirect())
+
+    def stopping(self):
+        return (self.root / "STOP").is_file()
 
     def blob(self, data):
         digest = sha(data)
@@ -216,7 +341,11 @@ class Collector:
                 "Scope changed; use a new scope ID or collection directory"
             )
         pages = 0
-        while not state["complete"] and (not max_pages or pages < max_pages):
+        while (
+            not state["complete"]
+            and (not max_pages or pages < max_pages)
+            and not self.stopping()
+        ):
             query = dict(
                 url=scope["url"],
                 matchType=scope["matchType"],
@@ -303,9 +432,23 @@ class Collector:
                 "SELECT * FROM scopes WHERE id=?", (scope["id"],)
             ).fetchone()
 
-    def download(self, limit=0, retry=False, scopes=None):
+    def download(
+        self,
+        limit=0,
+        retry=False,
+        scopes=None,
+        repair_urls=False,
+        failed_only=False,
+        archive_redirects=False,
+    ):
         states = (
-            ("pending", "retry", "mismatch", "unverified") if retry else ("pending",)
+            ("retry", "mismatch", "unverified")
+            if failed_only
+            else (
+                ("pending", "retry", "mismatch", "unverified")
+                if retry
+                else ("pending",)
+            )
         )
         placeholders = ",".join("?" for _ in states)
         # Snapshot the queue: a failed item is attempted once per invocation.
@@ -335,16 +478,73 @@ class Collector:
         if limit:
             rows = rows[:limit]
         for task in rows:
+            if self.stopping():
+                break
             record = json.loads(task["record"])
-            url = REPLAY + record["timestamp"] + "id_/" + record["original"]
-            receipt, body = self.request(url, "capture:" + task["id"])
-            actual = (
-                base64.b32encode(hashlib.sha1(body).digest()).decode().rstrip("=")
-                if body is not None
-                else None
-            )
             expected = record["digest"].removeprefix("sha1:").upper()
             known_digest = bool(re.fullmatch(r"[A-Z2-7]{32}", expected))
+            candidates = [("literal", record["original"])]
+            if repair_urls and known_digest:
+                candidates.extend(korean_replay_variants(record["original"]))
+            tried = []
+            seen = set()
+            matched = blocked = False
+            for method, original in candidates:
+                if self.stopping():
+                    break
+                url = REPLAY + record["timestamp"] + "id_/" + original
+                for hop in range(3):
+                    if self.stopping() or url in seen or len(tried) >= 6:
+                        break
+                    seen.add(url)
+                    receipt, body = self.request(
+                        url, "capture:" + task["id"] + ":" + method + ":hop" + str(hop)
+                    )
+                    actual = (
+                        base64.b32encode(hashlib.sha1(body).digest())
+                        .decode()
+                        .rstrip("=")
+                        if body is not None
+                        else None
+                    )
+                    tried.append(
+                        {
+                            "method": method,
+                            "archiveRedirectDepth": hop,
+                            "url": url,
+                            "responseId": receipt.get("response_id"),
+                            "status": receipt["status"],
+                            "payload": receipt.get("object"),
+                            "sha1Base32": actual,
+                        }
+                    )
+                    matched = known_digest and actual == expected
+                    blocked = receipt["status"] in (
+                        0,
+                        401,
+                        403,
+                        429,
+                        500,
+                        502,
+                        503,
+                        504,
+                    )
+                    if matched or blocked:
+                        break
+                    next_url = (
+                        archive_redirect_url(receipt, original)
+                        if archive_redirects
+                        and known_digest
+                        and record["statuscode"].startswith("2")
+                        else None
+                    )
+                    if not next_url:
+                        break
+                    url = next_url
+                if matched or blocked:
+                    break
+            if not tried:
+                break
             # A Wayback error page cannot become a recovered original just by returning HTTP 200.
             state = "verified" if known_digest and actual == expected else "mismatch"
             error = (
@@ -352,18 +552,44 @@ class Collector:
                 if state == "verified"
                 else f"CDX digest {expected}; received {actual}; HTTP {receipt['status']}"
             )
-            if body is None or receipt["status"] in (429, 500, 502, 503, 504):
+            if (
+                body is None
+                or receipt["status"] in (429, 500, 502, 503, 504)
+                or (self.stopping() and state != "verified")
+            ):
                 state = "retry"
             if not known_digest and body is not None and state != "retry":
                 state = "unverified"
             with self.db:
                 self.db.execute(
-                    "UPDATE captures SET state=?,payload=?,attempts=attempts+1,last_error=? WHERE id=?",
-                    (state, receipt.get("object"), error, task["id"]),
+                    "UPDATE captures SET state=?,payload=?,attempts=attempts+?,last_error=?,resolution=? WHERE id=?",
+                    (
+                        state,
+                        receipt.get("object"),
+                        len(tried),
+                        error,
+                        json.dumps(
+                            {
+                                "originalUnchanged": True,
+                                "attempts": tried,
+                                "acceptedMethod": (
+                                    tried[-1]["method"] if state == "verified" else None
+                                ),
+                                "acceptedViaArchiveRedirect": state == "verified"
+                                and tried[-1]["archiveRedirectDepth"] > 0,
+                            }
+                        ),
+                        task["id"],
+                    ),
                 )
             print(
                 json.dumps(
-                    {"capture": task["id"], "state": state, "status": receipt["status"]}
+                    {
+                        "capture": task["id"],
+                        "state": state,
+                        "status": receipt["status"],
+                        "method": tried[-1]["method"],
+                    }
                 ),
                 flush=True,
             )
@@ -384,10 +610,11 @@ class Collector:
             "scopes": scopes,
             "captures": sum(counts.values()),
             "states": counts,
+            "stopRequested": self.stopping(),
             "complete": bool(scopes)
             and all(row["complete"] for row in scopes)
             and counts.get("verified", 0) == sum(counts.values()),
-            "limits": "Public CDX and exact id_ replay only. Not a WARC export; missing captures/private files/live sites are not reconstructed. Unverified responses are retained separately by status, never called recovered originals.",
+            "limits": "Public CDX and raw id_ replay only. Optional Korean URL variants and same-resource nearest-capture replay redirects are explicitly recorded; verified means payload digest equals the requested CDX, not that redirected HTTP metadata belongs to its timestamp. Not a WARC export; missing/private/live resources are not reconstructed. Unverified responses remain separate, never called recovered originals.",
         }
         # Regenerable views; the immutable object store and SQLite receipts are authoritative.
         (self.root / "summary.json").write_text(
@@ -417,6 +644,21 @@ def main():
     parser.add_argument("--download", action="store_true")
     parser.add_argument("--retry", action="store_true")
     parser.add_argument(
+        "--repair-urls",
+        action="store_true",
+        help="Try bounded Korean transport variants; require an exact CDX digest",
+    )
+    parser.add_argument(
+        "--failed-only",
+        action="store_true",
+        help="Download previously unsuccessful captures without the pending queue",
+    )
+    parser.add_argument(
+        "--archive-redirects",
+        action="store_true",
+        help="Follow at most two raw replay redirects for the same original resource; require its CDX digest",
+    )
+    parser.add_argument(
         "--scope", action="append", help="Scope ID from configuration; repeatable"
     )
     parser.add_argument("--page-size", type=int, default=1000)
@@ -445,9 +687,18 @@ def main():
     try:
         if args.index:
             for scope in scopes:
+                if collector.stopping():
+                    break
                 collector.index(scope, args.page_size, args.max_pages)
         if args.download:
-            collector.download(args.max_downloads, args.retry, args.scope)
+            collector.download(
+                args.max_downloads,
+                args.retry,
+                args.scope,
+                args.repair_urls,
+                args.failed_only,
+                args.archive_redirects,
+            )
     finally:
         collector.export()
         collector.db.close()

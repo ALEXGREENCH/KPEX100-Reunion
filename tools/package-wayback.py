@@ -78,8 +78,8 @@ def package(collection, output):
             "Resumable public Wayback collection, PARTIAL snapshot.\n"
             "collection/summary.json states which CDX scopes reached the end and which captures were verified. An indexed capture is NOT a recovered payload.\n"
             "Original response bytes are in collection/objects/<SHA256-prefix>/<SHA256>. responses.jsonl records URL, UTC, status and headers. captures.jsonl records original CDX rows, digest checks and pending/mismatch/error states. membership.jsonl preserves the scope relation.\n"
-            "queue.sqlite3 is a consistent SQLite backup and can resume with: python tools/wayback-harvest.py collection --index --download --retry\n"
-            "No domain/date/status/MIME collapse was requested. Duplicate identical CDX rows share a queue task; their original raw CDX response remains intact. UTF-8 URL quoting is recorded separately from the literal CDX original. Mojibake URL variants are not silently rewritten. Redirects are preserved, never followed into today's live websites.\n"
+            "queue.sqlite3 is a consistent SQLite backup and can resume with: python tools/wayback-harvest.py collection --index --download --retry --repair-urls --archive-redirects\n"
+            "No domain/date/status/MIME collapse was requested. Duplicate identical CDX rows share a queue task; their original raw CDX response remains intact. UTF-8 URL quoting is recorded separately from the literal CDX original. Optional Korean transport variants and at most two same-resource raw replay redirects are explicitly recorded in resolution; they require the requested CDX payload digest. Actual redirected timestamps/headers are not metadata for the original requested timestamp. Redirects never lead into today's live websites.\n"
             "This is NOT a complete WARC export or proof that missing/private files were archived. Error pages and unknown digests remain unverified. No historical code is executed. Original third-party content retains its existing rights; the MIT license covers Reunion tools only.\n"
             "manifest.json covers all other members, excluding itself.\n"
         ).encode()
