@@ -728,6 +728,48 @@
       "repositoryPath": "research/archives/GVM-Technical-Library-and-Early-SDK-Leads.zip",
       "bytes": 532972,
       "sha256": "8891a1e997df154dce963346e097bbde6ea1bb6e2dec14c9261f30e8c2c0864b"
+    },
+    {
+      "id": "wayback-partial-pass3",
+      "category": "Сохранение исторических сайтов",
+      "title": "Wayback: снимок очереди, проход 3",
+      "description": "43 877 записей CDX, 1 715 совпавших ответов и 1 854 объекта HTTP. Исходные тела, квитанции и возобновляемая SQLite-очередь. Сбор ещё не завершён; ошибки, формы и форумный спам сохранены с исходными статусами.",
+      "sources": [
+        {
+          "label": "Internet Archive: GNEX Club",
+          "url": "https://web.archive.org/web/*/gnexclub.com/*"
+        },
+        {
+          "label": "Internet Archive: GVM Club",
+          "url": "https://web.archive.org/web/*/gvmclub.com/*"
+        },
+        {
+          "label": "Internet Archive: Sinjisoft",
+          "url": "https://web.archive.org/web/*/sinjisoft.com/*"
+        }
+      ],
+      "repositoryPath": "research/archives/GNEX-GVM-Wayback-Partial-Pass3-20261106.zip",
+      "bytes": 29014805,
+      "sha256": "bebe1e1a6f9f02c3ee0dc5c0ccaa726b582228d4ad6c9d5a27c4090d1a988548"
+    },
+    {
+      "id": "sinjisoft-early-notices-search-index",
+      "category": "Корейские первоисточники и исследовательские инструменты",
+      "title": "Sinjisoft: ранние SDK и офлайн-поиск",
+      "description": "Семь оригинальных объявлений GVM/SWAP 2001–2002 годов: руководства 1.51, компоненты SDK 1.52, patch3 и GVM IDE. Поисковый индекс 1 488 совпавших HTML-снимков с исходными адресами; текст шести тел декодирован с отмеченной потерей символов. Новых SDK-бинарников и SGS нет.",
+      "sources": [
+        {
+          "label": "Sinjisoft: SDK 1.52",
+          "url": "https://web.archive.org/web/20020306231923id_/http://sinjisoft.com:80/board/bbs.cgi?db=board2&mode=read&num=164&page=6&ftype=6&fval=&backdepth=3"
+        },
+        {
+          "label": "Sinjisoft: SWAP 1.51 manuals",
+          "url": "https://web.archive.org/web/20020714052716id_/http://www.sinjisoft.com:80/board/bbs.cgi?db=board2&mode=read&num=77&page=18&ftype=6&fval=&backdepth=3"
+        }
+      ],
+      "repositoryPath": "research/archives/Sinjisoft-Early-SDK-Notices-and-Search-Index.zip",
+      "bytes": 1067313,
+      "sha256": "3537e428ba24d87edd975cf048cd0751dbbd8736871a3bc0ec9fea8bc5172cf7"
     }
   ],
   "reports": [
@@ -862,6 +904,10 @@
     {
       "title": "GVM Club: Word-документы, 26 имён и уточнение SDK 1.40",
       "repositoryPath": "doc/gvm-technical-library-pass.md"
+    },
+    {
+      "title": "Ранние объявления Sinjisoft, снимок очереди и поиск по корейским страницам",
+      "repositoryPath": "doc/sinjisoft-early-sdk-notices.md"
     }
   ]
 }

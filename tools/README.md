@@ -53,3 +53,5 @@ The shared original collection is in `web/data/`; SDK installers are external in
 Сборщик Wayback также приоритизирует ALZ/HWP/CHM/DOC/MSI и учитывает
 обычный `www`-алиас хостового CDX без соседних блогов;
 [проверенный пример](../doc/gvm-technical-library-pass.md).
+
+- `wayback-text-index.py`: build a static Korean/English search index from a frozen Wayback ZIP, verifying HTML bodies against both SHA-256 and CDX SHA-1. Search NFC-normalized text without executing pages or fetching links; [coverage and decoding limits](../doc/sinjisoft-early-sdk-notices.md).
