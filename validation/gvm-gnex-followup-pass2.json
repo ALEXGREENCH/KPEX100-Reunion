@@ -1,0 +1,620 @@
+{
+  "schema": 1,
+  "createdUtc": "2026-11-06T13:47:42.995218+00:00",
+  "scope": "GVM1X/GVM2X and GNEX. Original inbound downloads and page/error bodies, no vendor execution. Derived reports are separate.",
+  "targets": {
+    "GNEX_SDK_V1.20.exe": "not-recovered",
+    "GNEX_SDK_v1.40.exe": "not-recovered",
+    "GVM_SDK_v152_031222.zip": "not-recovered",
+    "standalonePhoneGnexPlayer": "not-recovered",
+    "newRunnableSgs": 0
+  },
+  "gvm2xMirror": {
+    "sha256": "c2c170b3c47cd99dc55fdadad31dd1927473b4362868205c5eb49eff96c60719",
+    "bytes": 1056768,
+    "format": "PE32 x86",
+    "sections": [
+      {
+        "name": ".text",
+        "rawOffset": 4096,
+        "rawBytes": 442368
+      },
+      {
+        "name": ".rdata",
+        "rawOffset": 446464,
+        "rawBytes": 126976
+      },
+      {
+        "name": ".data",
+        "rawOffset": 573440,
+        "rawBytes": 57344
+      },
+      {
+        "name": ".rsrc",
+        "rawOffset": 630784,
+        "rawBytes": 425984
+      }
+    ],
+    "matchesExistingModifiedCopy": true,
+    "classification": "New source route, byte-identical to previously preserved expired_remove build; not a newly recovered release or a telephone player."
+  },
+  "nestedArchives": [
+    {
+      "archivePath": "original-downloads/Samsung/SCH-E110_memdump.7z",
+      "archiveSha256": "86b0d86b1a7020a8e85d6b9c6d6f6b760f2f3d114a569531ed56f8dc8dd3b3de",
+      "sevenZipTestExit": 0,
+      "members": [
+        {
+          "path": "SCH-E110.bin",
+          "bytes": 6480894,
+          "sha256": "f5a5bbe928bc0d3f553ac9605c087c43f39543019ba30281e340b9b68a70478f",
+          "crc32": "44437c5c"
+        }
+      ],
+      "interpretation": "Member validated as original binary data. A valid archive does not establish complete phone-memory coverage or standalone emulation."
+    },
+    {
+      "archivePath": "original-downloads/Samsung/x350eng.7z",
+      "archiveSha256": "cdf9416079965baaf5fb9c43838079faa1ef9f961f520ef5468094a9caf971f5",
+      "sevenZipTestExit": 0,
+      "members": [
+        {
+          "path": "x350eng.bin",
+          "bytes": 3014656,
+          "sha256": "031f159b94a095ec263f931fd88e37856bbf51c46a8108bb1327bed515887e35",
+          "crc32": "ee4c92c4"
+        }
+      ],
+      "interpretation": "Member validated as original binary data. A valid archive does not establish complete phone-memory coverage or standalone emulation."
+    }
+  ],
+  "sourceCount": 39,
+  "sourceIndex": "source-index.json",
+  "limits": [
+    "CDX queries are bounded by their exact URLs/filters; empty results do not inventory the whole Internet.",
+    "Cafe HTTP 200 wrappers are not preserved article bodies or recovered attachments.",
+    "A first-person MS500 GNEX-download prompt supplies a lead, not an installer.",
+    "E110 nvm/gvm/gvm_0000..0039 is a consecutive string table, not proof of 40 installed games.",
+    "Plain/XOR-A5 structural SGS scan does not exclude packed, split or native applications.",
+    "Firmware and altered emulator files are not covered by the Reunion MIT license."
+  ],
+  "archive": {
+    "id": "gvm-gnex-firmware-player-followup",
+    "bytes": 5272791,
+    "sha256": "ffddd5bb021401255cc83725f1843f0b7f125c3450e09c084a93fdc5975ccee2",
+    "repositoryPath": "research/archives/GVM-GNEX-Firmware-and-Player-Followup.zip",
+    "category": "GVM/GNEX: прошивки и поиск проигрывателя",
+    "title": "Samsung E110 / X350 и зеркало GVM2X",
+    "description": "Два исходных 7z прошивок Samsung с признаками GVM, зеркало уже сохранённого изменённого GVM2X EXE и 39 receipts страниц/загрузок. Включены исходные ответы и отдельные статические отчёты. Новых целых SGS, ранних SDK и телефонного проигрывателя в этом проходе не получено.",
+    "sources": [
+      {
+        "label": "Samsung SCH-E110 — исходный архив",
+        "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-E110/SCH-E110_memdump.7z"
+      },
+      {
+        "label": "Samsung SCH-X350 — исходный архив",
+        "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X350/x350eng.7z"
+      },
+      {
+        "label": "Зеркало GVM2X: публичный пост",
+        "url": "https://m.blog.naver.com/brewgames/223979291847"
+      },
+      {
+        "label": "MS500: сообщение о запросе GNEX",
+        "url": "https://m.blog.naver.com/sendei333/224136602713"
+      }
+    ]
+  },
+  "originals": [
+    {
+      "id": "brew-emulator-post",
+      "url": "https://m.blog.naver.com/brewgames/223979291847",
+      "utc": "2026-11-06T13:32:14.723044+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 51518,
+      "sha256": "2851aeaab607c692566e7797cd87d2febcca96f7f03c13f8c5f6c8f2a6a5bb14",
+      "body": "brew-emulator-post.body",
+      "savedAs": "original-responses/brew-emulator-post.body",
+      "receiptAs": "receipts/brew-emulator-post.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "corp-old-software",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.sinjisoft.co.kr%2F%2A&output=json&filter=mimetype%3Aapplication%2F.%2A&collapse=urlkey",
+      "utc": "2026-11-06T13:10:07.455373+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 5542,
+      "sha256": "eec7e9510327d5d9d8ae3389f0b1d49155edbd43a83d612ebeffad4dff41dc20",
+      "body": "corp-old-software.body",
+      "savedAs": "original-responses/corp-old-software.body",
+      "receiptAs": "receipts/corp-old-software.receipt.json",
+      "classification": "bounded-CDX-index-response"
+    },
+    {
+      "id": "corp-software",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.sinjisoft.com%2F%2A&output=json&filter=mimetype%3Aapplication%2F.%2A&collapse=urlkey",
+      "utc": "2026-11-06T13:10:07.904919+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 2144,
+      "sha256": "f28fa994a0c99710540ebbd5ef824b2f65f26544c50aead22edce2fedbe484fc",
+      "body": "corp-software.body",
+      "savedAs": "original-responses/corp-software.body",
+      "receiptAs": "receipts/corp-software.receipt.json",
+      "classification": "bounded-CDX-index-response"
+    },
+    {
+      "id": "curitel-pgs1200-index",
+      "url": "https://archive.sunderland93.ru/Firmwares/Curitel/PG-S1200/",
+      "utc": "2026-11-06T13:22:24.302640+00:00",
+      "status": "404",
+      "error": "",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+      "body": "curitel-pgs1200-index.body",
+      "savedAs": "original-responses/curitel-pgs1200-index.body",
+      "receiptAs": "receipts/curitel-pgs1200-index.receipt.json",
+      "classification": "http-error-response"
+    },
+    {
+      "id": "dubigame-skt",
+      "url": "https://dubigame.tistory.com/category/SKT",
+      "utc": "2026-11-06T13:32:16.110919+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 50419,
+      "sha256": "e3bfb44021e7cd3b73e1ff1d5ee343338700e91da0cb60b8ae5e83c41407c805",
+      "body": "dubigame-skt.body",
+      "savedAs": "original-responses/dubigame-skt.body",
+      "receiptAs": "receipts/dubigame-skt.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "dubigame",
+      "url": "https://dubigame.tistory.com/",
+      "utc": "2026-11-06T13:13:39.956861+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 46788,
+      "sha256": "43d97e5f669cc221f2e62c96a41f3e5df20f8ea52e7f0314047e070cba4efc8b",
+      "body": "dubigame.body",
+      "savedAs": "original-responses/dubigame.body",
+      "receiptAs": "receipts/dubigame.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "file-directory",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.gnexclub.com%2Ffile%2F%2A&output=json&filter=statuscode%3A200&collapse=urlkey",
+      "utc": "2026-11-06T13:10:07.136689+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "body": "file-directory.body",
+      "savedAs": "original-responses/file-directory.body",
+      "receiptAs": "receipts/file-directory.receipt.json",
+      "classification": "bounded-CDX-index-response"
+    },
+    {
+      "id": "galaga-developer-memoir",
+      "url": "https://note.com/starmirage/n/nf941da1d1e50",
+      "utc": "2026-11-06T13:28:17.963329+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 310346,
+      "sha256": "89f7fc1d962a4078dbcfa6f2fafe68638d9a51b3277d20e1d61b25f426c38aec",
+      "body": "galaga-developer-memoir.body",
+      "savedAs": "original-responses/galaga-developer-memoir.body",
+      "receiptAs": "receipts/galaga-developer-memoir.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "gvm-cafe-public",
+      "url": "https://cafe.daum.net/GVM",
+      "utc": "2026-11-06T13:10:08.533705+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1609,
+      "sha256": "2c5e0c262ba737aca155ed3289e29e5e8c8200a645a0d615b8811f6375d98c70",
+      "body": "gvm-cafe-public.body",
+      "savedAs": "original-responses/gvm-cafe-public.body",
+      "receiptAs": "receipts/gvm-cafe-public.receipt.json",
+      "classification": "site-wrapper-not-article"
+    },
+    {
+      "id": "gvm-dothack-post",
+      "url": "https://rhmvy.tistory.com/entry/SKT-NATE-DotHackSIGN",
+      "utc": "2026-11-06T13:28:20.320727+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 322000,
+      "sha256": "2e94c8a0ed3f3c0a04818ba186ce8832621f280ea7c7f945cfd00505f7ea7c21",
+      "body": "gvm-dothack-post.body",
+      "savedAs": "original-responses/gvm-dothack-post.body",
+      "receiptAs": "receipts/gvm-dothack-post.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "gvm2x-naver-mirror",
+      "url": "https://download.blog.naver.com/open/6aff76c6d58f8e527f91fac1f2106e13b4e21ff8e4/EFsQaLdCxr3O9ttdLuoSggWaFwbSq_dufloQNWY31l12Ho3RU3oj6fe9DINhhi0joyT2CFnZxVY-1ANR74qkyn2YDlIUujmB40K71A/2x_Cr256_Magic_expired_remove.exe",
+      "utc": "2026-11-06T13:32:50.140905+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1056768,
+      "sha256": "c2c170b3c47cd99dc55fdadad31dd1927473b4362868205c5eb49eff96c60719",
+      "body": "gvm2x-naver-mirror.body",
+      "savedAs": "original-downloads/GVM2X/2x_Cr256_Magic_expired_remove.exe",
+      "receiptAs": "receipts/gvm2x-naver-mirror.receipt.json",
+      "classification": "preserved-binary"
+    },
+    {
+      "id": "herolore-118248",
+      "url": "https://cafe.naver.com/herolore5/118248",
+      "utc": "2026-11-06T13:13:41.996564+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 190012,
+      "sha256": "ea6ded83ef32d9084d3e6fe92517e3e43fa5085ab23e15830d06eea798c0d88b",
+      "body": "herolore-118248.body",
+      "savedAs": "original-responses/herolore-118248.body",
+      "receiptAs": "receipts/herolore-118248.receipt.json",
+      "classification": "site-wrapper-not-article"
+    },
+    {
+      "id": "herolore-118410",
+      "url": "https://cafe.naver.com/herolore5/118410",
+      "utc": "2026-11-06T13:13:42.092320+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 190012,
+      "sha256": "8a1296227f5587e6e41e194a8ed862ac392b536db5d9da5e7fdafe1c39a97ec0",
+      "body": "herolore-118410.body",
+      "savedAs": "original-responses/herolore-118410.body",
+      "receiptAs": "receipts/herolore-118410.receipt.json",
+      "classification": "site-wrapper-not-article"
+    },
+    {
+      "id": "herolore-123862",
+      "url": "https://cafe.naver.com/herolore5/123862",
+      "utc": "2026-11-06T13:13:42.080172+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 190012,
+      "sha256": "ba23555c24086d71f7a1fa0e7badddda7fabea003ad3b31dd3314773377aaf63",
+      "body": "herolore-123862.body",
+      "savedAs": "original-responses/herolore-123862.body",
+      "receiptAs": "receipts/herolore-123862.receipt.json",
+      "classification": "site-wrapper-not-article"
+    },
+    {
+      "id": "herolore-article-118248",
+      "url": "https://cafe.naver.com/ArticleRead.nhn?articleid=118248&clubid=22298430",
+      "utc": "2026-11-06T13:28:16.632484+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1019,
+      "sha256": "15b6fefc2de3167aaf380a65785c598f22c4acdc610a51aea9157381798eaa38",
+      "body": "herolore-article-118248.body",
+      "savedAs": "original-responses/herolore-article-118248.body",
+      "receiptAs": "receipts/herolore-article-118248.receipt.json",
+      "classification": "site-wrapper-not-article"
+    },
+    {
+      "id": "herolore-article-118410",
+      "url": "https://cafe.naver.com/ArticleRead.nhn?articleid=118410&clubid=22298430",
+      "utc": "2026-11-06T13:28:16.650682+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1019,
+      "sha256": "15b6fefc2de3167aaf380a65785c598f22c4acdc610a51aea9157381798eaa38",
+      "body": "herolore-article-118410.body",
+      "savedAs": "original-responses/herolore-article-118410.body",
+      "receiptAs": "receipts/herolore-article-118410.receipt.json",
+      "classification": "site-wrapper-not-article"
+    },
+    {
+      "id": "herolore-article-123862",
+      "url": "https://cafe.naver.com/ArticleRead.nhn?articleid=123862&clubid=22298430",
+      "utc": "2026-11-06T13:28:16.608586+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1019,
+      "sha256": "15b6fefc2de3167aaf380a65785c598f22c4acdc610a51aea9157381798eaa38",
+      "body": "herolore-article-123862.body",
+      "savedAs": "original-responses/herolore-article-123862.body",
+      "receiptAs": "receipts/herolore-article-123862.receipt.json",
+      "classification": "site-wrapper-not-article"
+    },
+    {
+      "id": "imaka-player-post",
+      "url": "https://m.blog.naver.com/imaka/223788838259",
+      "utc": "2026-11-06T13:12:49.509960+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 257334,
+      "sha256": "98be7fdf123cd68e19cb6ce71171060af62ebf38c8d905d49ea077c434c9337d",
+      "body": "imaka-player-post.body",
+      "savedAs": "original-responses/imaka-player-post.body",
+      "receiptAs": "receipts/imaka-player-post.receipt.json",
+      "classification": "unrelated-GNEX-headset-review"
+    },
+    {
+      "id": "lg-sd230-index",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SD230/",
+      "utc": "2026-11-06T13:22:44.962300+00:00",
+      "status": "000",
+      "error": "curl: (28) Failed to connect to archive.sunderland93.ru:443 after 21230 ms: Could not connect to server\n",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "body": "lg-sd230-index.body",
+      "savedAs": null,
+      "receiptAs": "receipts/lg-sd230-index.receipt.json",
+      "classification": "connection-failed-no-body"
+    },
+    {
+      "id": "motorola-ms500-index",
+      "url": "https://archive.sunderland93.ru/Firmwares/Motorola/MS500/",
+      "utc": "2026-11-06T13:22:24.303287+00:00",
+      "status": "404",
+      "error": "",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+      "body": "motorola-ms500-index.body",
+      "savedAs": "original-responses/motorola-ms500-index.body",
+      "receiptAs": "receipts/motorola-ms500-index.receipt.json",
+      "classification": "http-error-response"
+    },
+    {
+      "id": "naver-early-sdk",
+      "url": "https://search.naver.com/search.naver?where=blog&query=%22GNEX%22+%22SDK%22&nso=so%3Ar%2Cp%3Afrom20030101to20061231%2Ca%3Aall",
+      "utc": "2026-11-06T13:12:51.171170+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 103839,
+      "sha256": "c6aa668e57ffeb59f3c8f1a0a17e0cde893fb6bb2eca63a8f472ae87da83b310",
+      "body": "naver-early-sdk.body",
+      "savedAs": "original-responses/naver-early-sdk.body",
+      "receiptAs": "receipts/naver-early-sdk.receipt.json",
+      "classification": "search-page-not-download"
+    },
+    {
+      "id": "naver-gnex-release",
+      "url": "https://search.naver.com/search.naver?where=blog&query=%EC%A7%80%EB%84%A5%EC%8A%A4+%EA%B0%9C%EB%B0%9C+SDK+%EC%9E%90%EB%A3%8C%EC%8B%A4",
+      "utc": "2026-11-06T13:12:52.258546+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 411975,
+      "sha256": "86b7ebe8548dc93d6128121f3be01d7bdba9f503ef2d5b5fbc1b6dd6768775e9",
+      "body": "naver-gnex-release.body",
+      "savedAs": "original-responses/naver-gnex-release.body",
+      "receiptAs": "receipts/naver-gnex-release.receipt.json",
+      "classification": "search-page-not-download"
+    },
+    {
+      "id": "naver-gvm-player",
+      "url": "https://search.naver.com/search.naver?where=blog&query=GVM+%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0+%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C",
+      "utc": "2026-11-06T13:28:20.001728+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 513468,
+      "sha256": "232a28954be29dfacc583b536523c362126c5447fab77a47a294c044c388a2ab",
+      "body": "naver-gvm-player.body",
+      "savedAs": "original-responses/naver-gvm-player.body",
+      "receiptAs": "receipts/naver-gvm-player.receipt.json",
+      "classification": "search-page-not-download"
+    },
+    {
+      "id": "naver-gvm-sdk",
+      "url": "https://search.naver.com/search.naver?where=blog&query=GVM+SDK+%EC%9E%90%EB%A3%8C%EC%8B%A4+%EC%8B%A0%EC%A7%80",
+      "utc": "2026-11-06T13:28:19.954729+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 410540,
+      "sha256": "f2d5b57b86fc2ac737a30fd4a257c7a6c3290751983e4df0f98511e20067241c",
+      "body": "naver-gvm-sdk.body",
+      "savedAs": "original-responses/naver-gvm-sdk.body",
+      "receiptAs": "receipts/naver-gvm-sdk.receipt.json",
+      "classification": "search-page-not-download"
+    },
+    {
+      "id": "naver-mobilec-sdk",
+      "url": "https://search.naver.com/search.naver?where=blog&query=GNEX_SDK_v1.40",
+      "utc": "2026-11-06T13:12:50.966501+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 74492,
+      "sha256": "cc5fac7ec72d957b97b6faa555658946644ea1e8e74a78992d45a8df9214ca58",
+      "body": "naver-mobilec-sdk.body",
+      "savedAs": "original-responses/naver-mobilec-sdk.body",
+      "receiptAs": "receipts/naver-mobilec-sdk.receipt.json",
+      "classification": "search-page-not-download"
+    },
+    {
+      "id": "naver-player",
+      "url": "https://search.naver.com/search.naver?where=blog&query=GNEX+%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4+%EC%84%A4%EC%B9%98",
+      "utc": "2026-11-06T13:10:10.444126+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 604682,
+      "sha256": "470cf8b53ea04033682f03d3f9cc52047270db9a0c4bd04fe8a6fc9ed3fedd44",
+      "body": "naver-player.body",
+      "savedAs": "original-responses/naver-player.body",
+      "receiptAs": "receipts/naver-player.receipt.json",
+      "classification": "search-page-not-download"
+    },
+    {
+      "id": "naver-sdk",
+      "url": "https://search.naver.com/search.naver?where=blog&query=GNEX+SDK+%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C",
+      "utc": "2026-11-06T13:10:10.138186+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 523648,
+      "sha256": "a3e2ca291d8a1fb4ec4d52324e95277bb2be0dded6e9716f2ffa067186c72b8f",
+      "body": "naver-sdk.body",
+      "savedAs": "original-responses/naver-sdk.body",
+      "receiptAs": "receipts/naver-sdk.receipt.json",
+      "classification": "search-page-not-download"
+    },
+    {
+      "id": "release-board",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.gnexclub.com%2Fdownload%2Frelease%2Fstart.jsp%2A&output=json&filter=statuscode%3A200&collapse=digest",
+      "utc": "2026-11-06T13:10:08.770115+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "body": "release-board.body",
+      "savedAs": "original-responses/release-board.body",
+      "receiptAs": "receipts/release-board.receipt.json",
+      "classification": "bounded-CDX-index-response"
+    },
+    {
+      "id": "rhmvy-naver-post",
+      "url": "https://m.blog.naver.com/rhmvy/223840716227",
+      "utc": "2026-11-06T13:32:15.250081+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 418458,
+      "sha256": "f54f724cfaa77dc08c9a2fb0f50c953e5a9ae8c0c269adec11a083ff13f458e2",
+      "body": "rhmvy-naver-post.body",
+      "savedAs": "original-responses/rhmvy-naver-post.body",
+      "receiptAs": "receipts/rhmvy-naver-post.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "samsung-e110-archive",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-E110/SCH-E110_memdump.7z",
+      "utc": "2026-11-06T13:32:47.638671+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 2767422,
+      "sha256": "86b0d86b1a7020a8e85d6b9c6d6f6b760f2f3d114a569531ed56f8dc8dd3b3de",
+      "body": "samsung-e110-archive.body",
+      "savedAs": "original-downloads/Samsung/SCH-E110_memdump.7z",
+      "receiptAs": "receipts/samsung-e110-archive.receipt.json",
+      "classification": "preserved-binary"
+    },
+    {
+      "id": "samsung-e110-index",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-E110/",
+      "utc": "2026-11-06T13:32:14.038890+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1884,
+      "sha256": "5cd7bf392b55c615428e4fa42d50a294e9e4575221358c88ccc55f887b937c4d",
+      "body": "samsung-e110-index.body",
+      "savedAs": "original-responses/samsung-e110-index.body",
+      "receiptAs": "receipts/samsung-e110-index.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "samsung-s350-index",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S350/",
+      "utc": "2026-11-06T13:22:24.302640+00:00",
+      "status": "404",
+      "error": "",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+      "body": "samsung-s350-index.body",
+      "savedAs": "original-responses/samsung-s350-index.body",
+      "receiptAs": "receipts/samsung-s350-index.receipt.json",
+      "classification": "http-error-response"
+    },
+    {
+      "id": "samsung-x350-archive",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X350/x350eng.7z",
+      "utc": "2026-11-06T13:32:47.702126+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1284847,
+      "sha256": "cdf9416079965baaf5fb9c43838079faa1ef9f961f520ef5468094a9caf971f5",
+      "body": "samsung-x350-archive.body",
+      "savedAs": "original-downloads/Samsung/x350eng.7z",
+      "receiptAs": "receipts/samsung-x350-archive.receipt.json",
+      "classification": "preserved-binary"
+    },
+    {
+      "id": "samsung-x350-index",
+      "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X350/",
+      "utc": "2026-11-06T13:32:14.069319+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 1866,
+      "sha256": "5d08f7270e3b858fc5d58a4ac1eced396fa6f36280ffd2cbbd51134cf5f40937",
+      "body": "samsung-x350-index.body",
+      "savedAs": "original-responses/samsung-x350-index.body",
+      "receiptAs": "receipts/samsung-x350-index.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "sendei-player-post",
+      "url": "https://m.blog.naver.com/sendei333/224136602713",
+      "utc": "2026-11-06T13:12:49.236530+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 114845,
+      "sha256": "504a75cfab079d9118fd951386dff214df21be3132002e87efd69540d7d3d0e4",
+      "body": "sendei-player-post.body",
+      "savedAs": "original-responses/sendei-player-post.body",
+      "receiptAs": "receipts/sendei-player-post.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "sendei-related",
+      "url": "https://m.blog.naver.com/sendei333/223949856224",
+      "utc": "2026-11-06T13:13:38.606347+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 86347,
+      "sha256": "54bbe0f910a43608ae9a493294f48996682ab410181fa0edfb41105ad5897305",
+      "body": "sendei-related.body",
+      "savedAs": "original-responses/sendei-related.body",
+      "receiptAs": "receipts/sendei-related.receipt.json",
+      "classification": "public-page-evidence-not-executable"
+    },
+    {
+      "id": "sky-u130-index",
+      "url": "https://archive.sunderland93.ru/Firmwares/SKY/IM-U130/",
+      "utc": "2026-11-06T13:22:24.295501+00:00",
+      "status": "404",
+      "error": "",
+      "bytes": 146,
+      "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+      "body": "sky-u130-index.body",
+      "savedAs": "original-responses/sky-u130-index.body",
+      "receiptAs": "receipts/sky-u130-index.receipt.json",
+      "classification": "http-error-response"
+    },
+    {
+      "id": "technical-board",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.gnexclub.com%2Fdownload%2Ftech%2Fstart.jsp%2A&output=json&filter=statuscode%3A200&collapse=urlkey",
+      "utc": "2026-11-06T13:10:07.676962+00:00",
+      "status": "200",
+      "error": "",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "body": "technical-board.body",
+      "savedAs": "original-responses/technical-board.body",
+      "receiptAs": "receipts/technical-board.receipt.json",
+      "classification": "bounded-CDX-index-response"
+    },
+    {
+      "id": "tistory-sdk-tag",
+      "url": "https://www.tistory.com/tag/GNEX",
+      "utc": "2026-11-06T13:10:09.376496+00:00",
+      "status": "404",
+      "error": "",
+      "bytes": 23726,
+      "sha256": "b74f80150382374e7b26364df0a6ab82b13f1148e10d15005c96e351e108abd5",
+      "body": "tistory-sdk-tag.body",
+      "savedAs": "original-responses/tistory-sdk-tag.body",
+      "receiptAs": "receipts/tistory-sdk-tag.receipt.json",
+      "classification": "http-error-response"
+    }
+  ],
+  "manifestFiles": 138,
+  "zipMembers": 139,
+  "outerCrcPassed": true
+}

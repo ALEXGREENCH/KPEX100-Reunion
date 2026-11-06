@@ -549,6 +549,33 @@
       "repositoryPath": "research/archives/Reunion-Device-Photo-Original-Sources.zip",
       "bytes": 6706806,
       "sha256": "6b878c32e8f7c48308bb3ac232df92b855777f2fb17f5b077a13a8d8e9b2ca0f"
+    },
+    {
+      "id": "gvm-gnex-firmware-player-followup",
+      "bytes": 5272791,
+      "sha256": "ffddd5bb021401255cc83725f1843f0b7f125c3450e09c084a93fdc5975ccee2",
+      "repositoryPath": "research/archives/GVM-GNEX-Firmware-and-Player-Followup.zip",
+      "category": "GVM/GNEX: прошивки и поиск проигрывателя",
+      "title": "Samsung E110 / X350 и зеркало GVM2X",
+      "description": "Два исходных 7z прошивок Samsung с признаками GVM, зеркало уже сохранённого изменённого GVM2X EXE и 39 receipts страниц/загрузок. Включены исходные ответы и отдельные статические отчёты. Новых целых SGS, ранних SDK и телефонного проигрывателя в этом проходе не получено.",
+      "sources": [
+        {
+          "label": "Samsung SCH-E110 — исходный архив",
+          "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-E110/SCH-E110_memdump.7z"
+        },
+        {
+          "label": "Samsung SCH-X350 — исходный архив",
+          "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-X350/x350eng.7z"
+        },
+        {
+          "label": "Зеркало GVM2X: публичный пост",
+          "url": "https://m.blog.naver.com/brewgames/223979291847"
+        },
+        {
+          "label": "MS500: сообщение о запросе GNEX",
+          "url": "https://m.blog.naver.com/sendei333/224136602713"
+        }
+      ]
     }
   ],
   "reports": [
@@ -643,6 +670,10 @@
     {
       "title": "Фотокорпуса и неподвижный LCD",
       "repositoryPath": "doc/web-interface.md"
+    },
+    {
+      "title": "GVM в Samsung E110/X350 и новые источники проигрывателя",
+      "repositoryPath": "doc/gvm-gnex-firmware-player-followup.md"
     }
   ]
 }
