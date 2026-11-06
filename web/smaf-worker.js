@@ -1,5 +1,6 @@
 import { renderSmaf } from './engine/smaf.js';
 import { renderBuzzer } from './engine/buzzer.js';
+import { renderMa1 } from './engine/ma1-render.js';
 
 let queue = Promise.resolve(),
   cacheBytes = 0,
@@ -9,7 +10,7 @@ const cancelled = new Set(),
 const cacheLimit = 32 * 1024 * 1024;
 async function decode({ id, bytes, format = 'audio/x-smaf' }) {
   try {
-    if (!['audio/x-smaf', 'audio/x-gvm-buzzer'].includes(format))
+    if (!['audio/x-smaf', 'audio/x-gvm-buzzer', 'audio/x-gvm-ma1'].includes(format))
       throw Error('Unsupported phone audio format');
     if (cancelled.has(id)) return;
     const hash =
@@ -23,7 +24,12 @@ async function decode({ id, bytes, format = 'audio/x-smaf' }) {
       cache.delete(hash);
       cache.set(hash, result);
     } else {
-      const render = format === 'audio/x-gvm-buzzer' ? renderBuzzer : renderSmaf;
+      const render =
+        format === 'audio/x-gvm-ma1'
+          ? renderMa1
+          : format === 'audio/x-gvm-buzzer'
+            ? renderBuzzer
+            : renderSmaf;
       result = await render(bytes, { cancelled: () => cancelled.has(id) });
       if (result.wave.length <= cacheLimit) {
         while (cacheBytes + result.wave.length > cacheLimit) {

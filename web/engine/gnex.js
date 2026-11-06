@@ -105,6 +105,7 @@ export class GnexRuntime {
       startData = 0,
       keyReleaseEvent = true,
       audio = null,
+      nativeSoundType = null,
       saveKey = null,
       storage = null,
       saveData = null,
@@ -130,6 +131,9 @@ export class GnexRuntime {
     if (!Number.isInteger(startData) || startData < 0 || startData > 0xffffffff)
       throw new GnexError('START data must be an unsigned 32-bit integer');
     this.startData = startData;
+    if (![null, 0, 1].includes(nativeSoundType))
+      throw new GnexError('Native sound type must be null, 0 or 1');
+    this.nativeSoundType = nativeSoundType;
     this.sgs = new SgsFile(sgs);
     this.title = this.sgs.title;
     this.profile = profile || (this.sgs.xorMask === 165 ? 'kpex' : 'phone');
@@ -182,6 +186,7 @@ export class GnexRuntime {
     this.audioDiagnostics = {
       requests: 0,
       ignoredNativeSubtypes: [],
+      filteredNativeSubtypes: [],
       lastError: null,
       lastFormat: null,
     };
@@ -493,9 +498,17 @@ export class GnexRuntime {
       type = this.profile === 'phone' ? rawType & 0x7fff : rawType,
       loop = this.profile === 'phone' && !!(rawType & 0x8000);
     try {
-      if (this.profile === 'phone' && type === 0) {
+      if ([0, 1].includes(type) && this.nativeSoundType != null && type !== this.nativeSoundType) {
+        const filtered = (this.audioDiagnostics.filteredNativeSubtypes ||= []);
+        if (!filtered.includes(type)) filtered.push(type);
+        return;
+      }
+      if (type === 0) {
         this.audioDiagnostics.lastFormat = 'GVM buzzer';
-        this._audio('play', payload.slice(), 'audio/x-gvm-buzzer', loop, channel);
+        this._audio('play', new Uint8Array(payload), 'audio/x-gvm-buzzer', loop, channel);
+      } else if (type === 1) {
+        this.audioDiagnostics.lastFormat = 'GVM MA1';
+        this._audio('play', new Uint8Array(payload), 'audio/x-gvm-ma1', loop, channel);
       } else if (type === 8) {
         this.audioDiagnostics.lastFormat = 'MP3';
         this._audio('play', extractMp3(payload), 'audio/mpeg', loop, channel);

@@ -1,0 +1,1237 @@
+{
+  "schema": 1,
+  "utc": "2026-11-06T22:34:27.789125+00:00",
+  "archive": "GVM-MA1-Playback-and-Verification.zip",
+  "archiveBytes": 902890,
+  "archiveSha256": "b06b9355632b82bbafbbdf5814d7407533f7d757ffcb0e2d45c84c36120661c7",
+  "members": 41,
+  "manifestMembersVerified": 40,
+  "crcPassed": true,
+  "originalResources": 5,
+  "derivedWaves": 5,
+  "samples": {
+    "samples": [
+      {
+        "sourceSha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+        "payloadSha256": "1a1aff36ad684dd4bf725e56a9764826bc7f6bf56c75b1c13087bac49df57a2c",
+        "outputSha256": "84cc77767ded7db0f644cfc66ff5e97b264f6b8415c92b23322971647b138dc4",
+        "outputBytes": 521142,
+        "frames": 260549,
+        "rate": 44100,
+        "durationSeconds": 5.908140589569161,
+        "peak": 0.4948901213108972,
+        "truncated": false,
+        "wallMs": 509.0542,
+        "scope": "Nominal four-part MA1 synthesis with the resource patches. FM arithmetic and speaker response are approximate.",
+        "resource": 45,
+        "file": "original-45.wav"
+      },
+      {
+        "sourceSha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+        "payloadSha256": "7a74fe8459179734bd49b70f5236d24104aaf7a13174514d7334cc8ac7d3c281",
+        "outputSha256": "f260d80c4242272eba5744f203fb317ca0ffce1e709a5e37452faf5cec7a38b6",
+        "outputBytes": 51366,
+        "frames": 25661,
+        "rate": 44100,
+        "durationSeconds": 0.5818820861678005,
+        "peak": 0.200282014093951,
+        "truncated": false,
+        "wallMs": 48.246500000000005,
+        "scope": "Nominal four-part MA1 synthesis with the resource patches. FM arithmetic and speaker response are approximate.",
+        "resource": 46,
+        "file": "original-46.wav"
+      },
+      {
+        "sourceSha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+        "payloadSha256": "9e6f1cbea65ca44d8c02c21caa40ab4be830772cfef4f4ba85aade61e1d3834c",
+        "outputSha256": "43f81e1524ffcd7f3e7c5fcbfb9d33cbb3f9ab942a688c8160488d6896122f3f",
+        "outputBytes": 103058,
+        "frames": 51507,
+        "rate": 44100,
+        "durationSeconds": 1.1679591836734693,
+        "peak": 0.38682592942735355,
+        "truncated": false,
+        "wallMs": 97.9685,
+        "scope": "Nominal four-part MA1 synthesis with the resource patches. FM arithmetic and speaker response are approximate.",
+        "resource": 47,
+        "file": "original-47.wav"
+      },
+      {
+        "sourceSha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+        "payloadSha256": "dcf4928a2019a996ff6bca16a47dfa1d2314507f953db2b1d20fe00cd8374644",
+        "outputSha256": "9c8032d66b92ec8a7abe8e8b52baac369d00f151531eda75e63fb516def1d2a7",
+        "outputBytes": 31730,
+        "frames": 15843,
+        "rate": 44100,
+        "durationSeconds": 0.3592517006802721,
+        "peak": 0.19156755113095242,
+        "truncated": false,
+        "wallMs": 14.421399999999998,
+        "scope": "Nominal four-part MA1 synthesis with the resource patches. FM arithmetic and speaker response are approximate.",
+        "resource": 48,
+        "file": "original-48.wav"
+      },
+      {
+        "sourceSha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+        "payloadSha256": "0d0bd18596cb212e68ed7c3ebb03e65297eb1d5ca140d14109e2dd04c0f9a167",
+        "outputSha256": "397b42dbe8452ea206fc77e6682eb267ce80316ae58478848d40cf2238a9f596",
+        "outputBytes": 61914,
+        "frames": 30935,
+        "rate": 44100,
+        "durationSeconds": 0.7014739229024943,
+        "peak": 0.3842695895036316,
+        "truncated": false,
+        "wallMs": 49.480000000000004,
+        "scope": "Nominal four-part MA1 synthesis with the resource patches. FM arithmetic and speaker response are approximate.",
+        "resource": 49,
+        "file": "original-49.wav"
+      }
+    ],
+    "scope": "Derived WAVs from unchanged original MA1 payloads. No new original audio files recovered. Wall time includes rendering and writing the output, on this machine only."
+  },
+  "frameComparison": {
+    "ok": true,
+    "baselineCommit": "89be1a799bc8034f863e1a363d9baed0b331b8ab",
+    "sourceSgsSha256": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+    "events": 215,
+    "frames": [
+      {
+        "name": "hellfire-witop-v1-0-tick40.png",
+        "sha256": "7ff1ffc2e51110001dbf4e01db5c8f36cc1329bc57e542d0d6bdb396a72b7ded"
+      },
+      {
+        "name": "hellfire-witop-v1-1-key20.png",
+        "sha256": "7ff1ffc2e51110001dbf4e01db5c8f36cc1329bc57e542d0d6bdb396a72b7ded"
+      },
+      {
+        "name": "hellfire-witop-v1-2-tick40.png",
+        "sha256": "202bdd5a306da225f5b52075ed9634bf33e012b18d520034227310e2d9d0c7ef"
+      },
+      {
+        "name": "hellfire-witop-v1-3-key20.png",
+        "sha256": "202bdd5a306da225f5b52075ed9634bf33e012b18d520034227310e2d9d0c7ef"
+      },
+      {
+        "name": "hellfire-witop-v1-4-tick40.png",
+        "sha256": "be5286698ce70c3912b526a5ce0ab97e6e89390c2a25c38dd66b17b86525fbac"
+      },
+      {
+        "name": "hellfire-witop-v1-5-key5.png",
+        "sha256": "be5286698ce70c3912b526a5ce0ab97e6e89390c2a25c38dd66b17b86525fbac"
+      },
+      {
+        "name": "hellfire-witop-v1-6-tick50.png",
+        "sha256": "bc531cebfbe9d6e02193e12eb58952b82d05ad17db75dee19cf6f823f5f50d4e"
+      },
+      {
+        "name": "hellfire-witop-v1-7-key17.png",
+        "sha256": "bc531cebfbe9d6e02193e12eb58952b82d05ad17db75dee19cf6f823f5f50d4e"
+      },
+      {
+        "name": "hellfire-witop-v1-8-tick40.png",
+        "sha256": "54923f346935196ea07702d04bd457ef0f92ee5411b6f4d70c53cce3ba7269e4"
+      },
+      {
+        "name": "hellfire-witop-v1-start.png",
+        "sha256": "71f939b01c662286eb2e667960efc7c8b673e289b7802d438f6a288602fd3246"
+      }
+    ],
+    "scope": "Identical scheduled inputs and virtual clock. All replay PNG bytes match the pre-MA1 checkout. This checks game images and does not prove physical audio accuracy or every freeze scenario."
+  },
+  "browserProofs": [
+    {
+      "url": "http://127.0.0.1:5493/KPEX100-Reunion/",
+      "wallMs": 25527,
+      "frames": 164,
+      "lcd": {
+        "x": 500,
+        "y": 288,
+        "width": 440,
+        "height": 352
+      },
+      "audioProof": {
+        "decodes": [
+          {
+            "frames": 283590,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 5.908125,
+            "peak": 0.499198853969574
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 27930,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.581875,
+            "peak": 0.2000095546245575
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          }
+        ],
+        "starts": 18,
+        "peak": 0.46631550788879395
+      },
+      "levels": [
+        {
+          "value": 100,
+          "rms": 0.13674005111982845,
+          "gain": 1
+        },
+        {
+          "value": 50,
+          "rms": 0.08464694514866376,
+          "gain": 0.5
+        },
+        {
+          "value": 0,
+          "rms": 0,
+          "gain": 0
+        },
+        {
+          "value": 40,
+          "rms": 0.06357909200948052,
+          "gain": 0.4000000059604645
+        }
+      ],
+      "keys": [
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit4",
+          "pressed": true
+        },
+        {
+          "key": "digit4",
+          "pressed": false
+        },
+        {
+          "key": "digit5",
+          "pressed": true
+        },
+        {
+          "key": "digit5",
+          "pressed": false
+        },
+        {
+          "key": "digit1",
+          "pressed": true
+        },
+        {
+          "key": "digit1",
+          "pressed": false
+        },
+        {
+          "key": "digit7",
+          "pressed": true
+        },
+        {
+          "key": "digit7",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit4",
+          "pressed": true
+        },
+        {
+          "key": "digit4",
+          "pressed": false
+        },
+        {
+          "key": "digit5",
+          "pressed": true
+        },
+        {
+          "key": "digit5",
+          "pressed": false
+        },
+        {
+          "key": "digit1",
+          "pressed": true
+        },
+        {
+          "key": "digit1",
+          "pressed": false
+        },
+        {
+          "key": "digit7",
+          "pressed": true
+        },
+        {
+          "key": "digit7",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit4",
+          "pressed": true
+        },
+        {
+          "key": "digit4",
+          "pressed": false
+        },
+        {
+          "key": "digit5",
+          "pressed": true
+        },
+        {
+          "key": "digit5",
+          "pressed": false
+        },
+        {
+          "key": "digit1",
+          "pressed": true
+        },
+        {
+          "key": "digit1",
+          "pressed": false
+        },
+        {
+          "key": "digit7",
+          "pressed": true
+        },
+        {
+          "key": "digit7",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit4",
+          "pressed": true
+        },
+        {
+          "key": "digit4",
+          "pressed": false
+        },
+        {
+          "key": "digit5",
+          "pressed": true
+        },
+        {
+          "key": "digit5",
+          "pressed": false
+        },
+        {
+          "key": "digit1",
+          "pressed": true
+        },
+        {
+          "key": "digit1",
+          "pressed": false
+        },
+        {
+          "key": "digit7",
+          "pressed": true
+        },
+        {
+          "key": "digit7",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit4",
+          "pressed": true
+        },
+        {
+          "key": "digit4",
+          "pressed": false
+        },
+        {
+          "key": "digit5",
+          "pressed": true
+        },
+        {
+          "key": "digit5",
+          "pressed": false
+        },
+        {
+          "key": "digit1",
+          "pressed": true
+        },
+        {
+          "key": "digit1",
+          "pressed": false
+        },
+        {
+          "key": "digit7",
+          "pressed": true
+        },
+        {
+          "key": "digit7",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit4",
+          "pressed": true
+        },
+        {
+          "key": "digit4",
+          "pressed": false
+        },
+        {
+          "key": "digit5",
+          "pressed": true
+        },
+        {
+          "key": "digit5",
+          "pressed": false
+        },
+        {
+          "key": "digit1",
+          "pressed": true
+        },
+        {
+          "key": "digit1",
+          "pressed": false
+        },
+        {
+          "key": "digit7",
+          "pressed": true
+        },
+        {
+          "key": "digit7",
+          "pressed": false
+        },
+        {
+          "key": "digit3",
+          "pressed": true
+        },
+        {
+          "key": "digit3",
+          "pressed": false
+        },
+        {
+          "key": "digit4",
+          "pressed": true
+        },
+        {
+          "key": "digit4",
+          "pressed": false
+        },
+        {
+          "key": "digit5",
+          "pressed": true
+        },
+        {
+          "key": "digit5",
+          "pressed": false
+        },
+        {
+          "key": "digit1",
+          "pressed": true
+        },
+        {
+          "key": "digit1",
+          "pressed": false
+        },
+        {
+          "key": "digit7",
+          "pressed": true
+        },
+        {
+          "key": "digit7",
+          "pressed": false
+        }
+      ],
+      "audioRequests": [
+        {
+          "id": 1,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 2,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 3,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 4,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 5,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 6,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 7,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 8,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 9,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 10,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 11,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 12,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 13,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 14,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 15,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 16,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 17,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 18,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 19,
+          "format": "audio/x-gvm-ma1"
+        }
+      ],
+      "fetchedSourceHashes": {
+        "app.js": "bc70675c3fd138fc74dae53f3edd157ae0d86fc62a7997c40c1db227c7c9207a",
+        "smaf-decoder.js": "52f88ad682e49649194e2eebc0bc68b2020ebc79e462e90ee5df3862fdab5480",
+        "input-bindings.js": "134b695d05347ca2fb49b925f49027afb4ccca9eb83a2ff9dd2cf21d6cb52dfe",
+        "worker.js": "804ed8970ac0183e08e9f2c643c7a0512fe986f57914608a3d6cd604ea55a009",
+        "engine/gnex.js": "30810446b8fbeca1a269e9a960b6a12ae6aa5b44c740ecff0fda5c137c133bd8",
+        "engine/legacy.js": "baad2b96dbd37f0f12a495d1590b5724e5c9f7a7ab7d5e78745597570c127494",
+        "engine/cpu.js": "410ae5897ad28519e9e50ead9476df4396103735d349c4346eeee6718480ac4d",
+        "engine/rom-accelerators.js": "0b9cf224bcc7e69a660b474e0434bf4180ef980d70bc4f2d7d665a6b43bde179",
+        "engine/rgb565.js": "65154882681ff5c9d83889ab1f1d76318a25f03f9a5d31320ef7dbe1d7a2d4c2",
+        "data/games/hellfire-witop-v1.sgs": "37a3310b683e47b90e070e8772ac3ad267be172d11799f1168a2350fe448eec8",
+        "data/firmware/Kingston-2.12.rom": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "smaf-worker.js": "e88f149cdaa080902173307bae492c28ce268f88fe59be81e243d32ccefe7393",
+        "engine/buzzer.js": "44ef49f57dd3dfc605e7099110beb8a7207c70317e2564df02e6c0f4067bec70",
+        "engine/ma1-render.js": "74d00ed207678710a1c3ad38882f12c564bb86d778b08b67fc1829b356e98810",
+        "engine/ma1.js": "8d8d7c2b93061c9a8a8776a80da7488c9f61a0c132db4d204b1ad38c8b0048ee"
+      },
+      "errors": [],
+      "ok": true
+    },
+    {
+      "url": "http://127.0.0.1:5493/KPEX100-Reunion/",
+      "wallMs": 25450,
+      "frames": 164,
+      "lcd": {
+        "x": 500,
+        "y": 288,
+        "width": 440,
+        "height": 352
+      },
+      "audioProof": {
+        "decodes": [
+          {
+            "frames": 283590,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 5.908125,
+            "peak": 0.499198853969574
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 56062,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 1.1679583333333334,
+            "peak": 0.3872072100639343
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          },
+          {
+            "frames": 17244,
+            "rate": 48000,
+            "channels": 1,
+            "duration": 0.35925,
+            "peak": 0.1915574073791504
+          }
+        ],
+        "starts": 13,
+        "peak": 0.44919222593307495
+      },
+      "levels": [
+        {
+          "value": 100,
+          "rms": 0.13274387937739798,
+          "gain": 1
+        },
+        {
+          "value": 50,
+          "rms": 0.07981165562369978,
+          "gain": 0.5
+        },
+        {
+          "value": 0,
+          "rms": 0,
+          "gain": 0
+        },
+        {
+          "value": 40,
+          "rms": 0.06383348285742572,
+          "gain": 0.4000000059604645
+        }
+      ],
+      "keys": [
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "left",
+          "pressed": true
+        },
+        {
+          "key": "left",
+          "pressed": false
+        },
+        {
+          "key": "right",
+          "pressed": true
+        },
+        {
+          "key": "right",
+          "pressed": false
+        },
+        {
+          "key": "up",
+          "pressed": true
+        },
+        {
+          "key": "up",
+          "pressed": false
+        },
+        {
+          "key": "down",
+          "pressed": true
+        },
+        {
+          "key": "down",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "left",
+          "pressed": true
+        },
+        {
+          "key": "left",
+          "pressed": false
+        },
+        {
+          "key": "right",
+          "pressed": true
+        },
+        {
+          "key": "right",
+          "pressed": false
+        },
+        {
+          "key": "up",
+          "pressed": true
+        },
+        {
+          "key": "up",
+          "pressed": false
+        },
+        {
+          "key": "down",
+          "pressed": true
+        },
+        {
+          "key": "down",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "left",
+          "pressed": true
+        },
+        {
+          "key": "left",
+          "pressed": false
+        },
+        {
+          "key": "right",
+          "pressed": true
+        },
+        {
+          "key": "right",
+          "pressed": false
+        },
+        {
+          "key": "up",
+          "pressed": true
+        },
+        {
+          "key": "up",
+          "pressed": false
+        },
+        {
+          "key": "down",
+          "pressed": true
+        },
+        {
+          "key": "down",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "left",
+          "pressed": true
+        },
+        {
+          "key": "left",
+          "pressed": false
+        },
+        {
+          "key": "right",
+          "pressed": true
+        },
+        {
+          "key": "right",
+          "pressed": false
+        },
+        {
+          "key": "up",
+          "pressed": true
+        },
+        {
+          "key": "up",
+          "pressed": false
+        },
+        {
+          "key": "down",
+          "pressed": true
+        },
+        {
+          "key": "down",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "left",
+          "pressed": true
+        },
+        {
+          "key": "left",
+          "pressed": false
+        },
+        {
+          "key": "right",
+          "pressed": true
+        },
+        {
+          "key": "right",
+          "pressed": false
+        },
+        {
+          "key": "up",
+          "pressed": true
+        },
+        {
+          "key": "up",
+          "pressed": false
+        },
+        {
+          "key": "down",
+          "pressed": true
+        },
+        {
+          "key": "down",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "left",
+          "pressed": true
+        },
+        {
+          "key": "left",
+          "pressed": false
+        },
+        {
+          "key": "right",
+          "pressed": true
+        },
+        {
+          "key": "right",
+          "pressed": false
+        },
+        {
+          "key": "up",
+          "pressed": true
+        },
+        {
+          "key": "up",
+          "pressed": false
+        },
+        {
+          "key": "down",
+          "pressed": true
+        },
+        {
+          "key": "down",
+          "pressed": false
+        },
+        {
+          "key": "start",
+          "pressed": true
+        },
+        {
+          "key": "start",
+          "pressed": false
+        },
+        {
+          "key": "left",
+          "pressed": true
+        },
+        {
+          "key": "left",
+          "pressed": false
+        },
+        {
+          "key": "right",
+          "pressed": true
+        },
+        {
+          "key": "right",
+          "pressed": false
+        },
+        {
+          "key": "up",
+          "pressed": true
+        },
+        {
+          "key": "up",
+          "pressed": false
+        },
+        {
+          "key": "down",
+          "pressed": true
+        },
+        {
+          "key": "down",
+          "pressed": false
+        }
+      ],
+      "audioRequests": [
+        {
+          "id": 1,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 2,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 3,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 4,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 5,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 6,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 7,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 8,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 9,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 10,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 11,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 12,
+          "format": "audio/x-gvm-ma1"
+        },
+        {
+          "id": 13,
+          "format": "audio/x-gvm-ma1"
+        }
+      ],
+      "fetchedSourceHashes": {
+        "app.js": "bc70675c3fd138fc74dae53f3edd157ae0d86fc62a7997c40c1db227c7c9207a",
+        "smaf-decoder.js": "52f88ad682e49649194e2eebc0bc68b2020ebc79e462e90ee5df3862fdab5480",
+        "input-bindings.js": "134b695d05347ca2fb49b925f49027afb4ccca9eb83a2ff9dd2cf21d6cb52dfe",
+        "worker.js": "804ed8970ac0183e08e9f2c643c7a0512fe986f57914608a3d6cd604ea55a009",
+        "engine/gnex.js": "30810446b8fbeca1a269e9a960b6a12ae6aa5b44c740ecff0fda5c137c133bd8",
+        "engine/legacy.js": "baad2b96dbd37f0f12a495d1590b5724e5c9f7a7ab7d5e78745597570c127494",
+        "engine/cpu.js": "410ae5897ad28519e9e50ead9476df4396103735d349c4346eeee6718480ac4d",
+        "engine/rom-accelerators.js": "0b9cf224bcc7e69a660b474e0434bf4180ef980d70bc4f2d7d665a6b43bde179",
+        "engine/rgb565.js": "65154882681ff5c9d83889ab1f1d76318a25f03f9a5d31320ef7dbe1d7a2d4c2",
+        "data/games/hellfire.sgs": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+        "data/firmware/Kingston-2.12.rom": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+        "smaf-worker.js": "e88f149cdaa080902173307bae492c28ce268f88fe59be81e243d32ccefe7393",
+        "engine/buzzer.js": "44ef49f57dd3dfc605e7099110beb8a7207c70317e2564df02e6c0f4067bec70",
+        "engine/ma1-render.js": "74d00ed207678710a1c3ad38882f12c564bb86d778b08b67fc1829b356e98810",
+        "engine/ma1.js": "8d8d7c2b93061c9a8a8776a80da7488c9f61a0c132db4d204b1ad38c8b0048ee"
+      },
+      "errors": [],
+      "ok": true
+    }
+  ],
+  "scope": "Raw MA1 standalone playback with original patches. Nominal clock and envelopes; FM arithmetic,retrigger and speaker path approximate. Full-firmware audio,exacthandset andallrandomfreezes not claimed. No new rare SDK or phone player recovered."
+}

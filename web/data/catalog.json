@@ -106,9 +106,11 @@
       "resources": 50,
       "platform": "kpex",
       "runtime": {
-        "profile": "kpex"
+        "profile": "kpex",
+        "nativeSoundType": 1
       },
-      "startHint": "Начать игру — Enter / PLAY. Движение — стрелки."
+      "startHint": "Начать игру — Enter / PLAY. Движение — стрелки.",
+      "provenance": "The five raw MA1 payloads match the preserved WI-TOP Hellfire sounds byte-for-byte. Native sound type 1 selects MA1 over paired buzzer calls. The browser renders its original patches and score; physical chip arithmetic and speaker response remain approximate. See doc/gvm-ma1-playback.md."
     },
     {
       "id": "ikaria",
@@ -1452,11 +1454,12 @@
       "runtime": {
         "profile": "phone",
         "width": 120,
-        "height": 100
+        "height": 100,
+        "nativeSoundType": 1
       },
       "sourceName": "Sample File/GVM/0007501FFFFFFFF.sgs",
       "sourceUrl": "https://web.archive.org/web/20020623052620id_/http://www.gvmclub.com:80/boardcomm/board.cgi?bd=no&j=dl&i=53&c=14",
-      "provenance": "Unchanged SGS shared by both preserved WI-TOP distributions. Header/layout and 120x100 runtime checked against accompanying INS; no exact handset attribution. Standalone LockChatMode bridge; network/chat UI not implemented. See doc/witop-hellfire-legacy.md. Buzzer subtype 0 is playable; raw MA1 subtype 1 remains unsupported. See doc/gvm-buzzer-audio.md.",
+      "provenance": "Unchanged SGS shared by both preserved WI-TOP distributions. Header/layout and 120x100 runtime checked against accompanying INS; no exact handset attribution. Standalone LockChatMode bridge; network/chat UI not implemented. See doc/witop-hellfire-legacy.md. Raw MA1 uses its original two-operator patches in a separate audio Worker. Native sound type 1 filters the paired buzzer alternative. FM arithmetic and speaker response are approximate. See doc/gvm-ma1-playback.md.",
       "startHint": "Любая клавиша — начать. Движение: 1/7/4/5; огонь: 3. Стрелки и Z на клавиатуре, направления и первая кнопка геймпада — альтернативы."
     }
   ],

@@ -833,7 +833,7 @@
       "sha256": "20e14fd05e26d53bb4b2f7d8834608ca4a818380b604b218aeea66078c86a601",
       "category": "Исходные звуковые форматы",
       "title": "GVM: зуммер, raw MA1 и руководство Yamaha",
-      "description": "Сверка пяти звуков зуммера с SDK, точное соответствие десяти исходных массивов ресурсам SGS и руководство YMU757B 2000 года. Raw MA1 исследован статически, синтез ещё не реализован.",
+      "description": "Сверка пяти звуков зуммера с SDK, точное соответствие десяти исходных массивов ресурсам SGS и руководство YMU757B 2000 года. Исторический комплект этапа восстановления зуммера и статического разбора MA1.",
       "sources": [
         {
           "label": "Полученная редакция Yamaha YMU757B",
@@ -885,7 +885,7 @@
       "id": "gvm-ma1-native-reference",
       "category": "Исследование звукового формата",
       "title": "GVM MA1: эталон SDK и регистры Yamaha",
-      "description": "Разбор 820 слов из оригинальных и синтетических потоков; MIDI и таймеры штатного SDK в изолированном Unicorn, инструменты и проверки. Входные EXE/PDF уже сохранялись ранее. Raw MA1 пока не воспроизводится.",
+      "description": "Разбор 820 слов из оригинальных и синтетических потоков; MIDI и таймеры штатного SDK в изолированном Unicorn, инструменты и проверки. Входные EXE/PDF уже сохранялись ранее. Эталон SDK сохранён отдельно от последующего FM-рендерера.",
       "repositoryPath": "research/archives/GVM-MA1-Native-Reference-and-Register-Research.zip",
       "bytes": 1166911,
       "sha256": "5dd90fce29aad084dc82247db91b4abc049fb4b99f78cf88b1617d6caa0730ee",
@@ -897,6 +897,25 @@
         {
           "label": "Yamaha YMU757B",
           "url": "https://www.datasheetarchive.com/datasheet/YMU757B/Yamaha?term=YMU757B"
+        }
+      ]
+    },
+    {
+      "id": "gvm-ma1-playback",
+      "category": "Музыка и звуковые эффекты",
+      "title": "Hellfire: воспроизведение MA1",
+      "description": "Музыка и эффекты Kingston/WI-TOP из исходных MA1: четыре партии, тембры, отдельный Worker. Пять производных WAVE, тесты и два прогона Chrome. FM и тракт динамика приближены; оригинальные SGS не изменены.",
+      "repositoryPath": "research/archives/GVM-MA1-Playback-and-Verification.zip",
+      "bytes": 902890,
+      "sha256": "b06b9355632b82bbafbbdf5814d7407533f7d757ffcb0e2d45c84c36120661c7",
+      "sources": [
+        {
+          "label": "Происхождение WI-TOP Hellfire",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/witop-hellfire-legacy.md"
+        },
+        {
+          "label": "Нативный эталон SDK",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/gvm-ma1-native-reference.md"
         }
       ]
     }
@@ -1069,6 +1088,10 @@
     {
       "title": "Raw MA1: разборщик SDK, MIDI, таймеры и регистры Yamaha",
       "repositoryPath": "doc/gvm-ma1-native-reference.md"
+    },
+    {
+      "title": "MA1: музыка и эффекты Kingston/WI-TOP Hellfire",
+      "repositoryPath": "doc/gvm-ma1-playback.md"
     }
   ]
 }

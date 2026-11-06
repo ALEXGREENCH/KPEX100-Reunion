@@ -32,20 +32,20 @@ test('original WI-TOP sound resources match native fixtures and reach the phone 
     assert.equal(g.status, 'idle', g.error);
     assert.ok(played.length > 0);
     for (const call of played) {
-      assert.equal(call.mime, 'audio/x-gvm-buzzer');
+      assert.equal(call.mime, call.bytes[0] === 0 ? 'audio/x-gvm-buzzer' : 'audio/x-gvm-ma1');
       assert.ok(sgs.resources.some((r) => Buffer.from(r.data).equals(Buffer.from(call.bytes))));
     }
     assert.ok(!g.audioDiagnostics.ignoredNativeSubtypes.includes(0));
     assert.ok(
-      g.audioDiagnostics.ignoredNativeSubtypes.includes(1),
-      'MA1 remains a separate unsupported format',
+      !g.audioDiagnostics.ignoredNativeSubtypes.includes(1),
+      'MA1 reaches its own decoder rather than the buzzer renderer',
     );
   } finally {
     g.close();
   }
 });
 
-test('phone buzzer copies its payload and preserves loop/channel; K-PEX subtype routing stays unchanged', () => {
+test('buzzer payloads are owned and loop flags stay specific to phone containers', () => {
   const calls = [],
     host = {
       profile: 'phone',
@@ -62,6 +62,7 @@ test('phone buzzer copies its payload and preserves loop/channel; K-PEX subtype 
   assert.equal(calls[0][1][2], 1);
   host.profile = 'kpex';
   GnexRuntime.prototype._playAudio.call(host, Uint8Array.of(0, 0, 38, 0));
-  assert.equal(calls.length, 1);
-  assert.deepEqual(host.audioDiagnostics.ignoredNativeSubtypes, [0]);
+  assert.equal(calls.length, 2);
+  assert.deepEqual(calls[1].slice(2), ['audio/x-gvm-buzzer', false, 0]);
+  assert.deepEqual(host.audioDiagnostics.ignoredNativeSubtypes, []);
 });

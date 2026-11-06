@@ -64,3 +64,5 @@ The shared original collection is in `web/data/`; SDK installers are external in
 
 - `inspect-gvm-ma1.py`: trace the preserved SDK MA1 initialization, packed score fields, MIDI and WinMM timer requests in isolated Unicorn; [inputs, reproduction and hardware limits](../doc/gvm-ma1-native-reference.md).
 - `ma1-info.mjs`: inspect standalone raw MA1 or a selected legacy SGS resource as JSON; no audio synthesis.
+
+- `render-ma1.mjs`: render raw MA1 or a selected legacy SGS resource to a new mono WAVE; [model, bounds and validation](../doc/gvm-ma1-playback.md).
