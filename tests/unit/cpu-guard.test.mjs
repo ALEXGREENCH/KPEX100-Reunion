@@ -58,3 +58,30 @@ test('guard state is cleared after a guest exception', async () => {
     cpu.close();
   }
 });
+
+test('native block clock charges the same accepted ARM and Thumb blocks as observers', async () => {
+  const cpu = await createARM({ isolated: true });
+  try {
+    cpu.map(0x1000, 0x1000);
+    cpu.write(0x1000, Uint8Array.of(1, 0, 128, 226, 253, 255, 255, 234));
+    cpu.write(0x1100, Uint8Array.of(1, 48, 253, 231));
+    const clock = cpu.startBlockClock();
+    let counted = 0;
+    cpu.setBlockObserver((_, size) => (counted += Math.ceil(size / 4)));
+    for (const [start, cpsr] of [
+      [0x1000, 0x10],
+      [0x1101, 0x30],
+    ]) {
+      cpu.regWrite('cpsr', cpsr);
+      cpu.runGuarded(start, 0x1800, 21);
+      assert.equal(clock(), counted);
+    }
+    assert.ok(counted > 0);
+    cpu.setBlockObserver(null);
+    cpu.regWrite('cpsr', 0x10);
+    cpu.runGuarded(0x1000, 0x1800, 21);
+    assert.ok(clock() > counted);
+  } finally {
+    cpu.close();
+  }
+});

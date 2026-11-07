@@ -41,9 +41,11 @@ for (const file of [
   'index.html',
   'worker.js',
   'smaf-worker.js',
+  'engine/block-monitor.wasm',
   'engine/vendor/unicorn_arm.wasm',
   'engine/vendor/smaf.wasm',
   'licenses/index.html',
+  'sources/vendor/unicorn-sources/block-monitor.wat',
 ])
   assert.ok(files.includes(file), `Missing ${file}`);
 console.log(

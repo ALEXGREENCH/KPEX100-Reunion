@@ -11,6 +11,7 @@ const RELOC = 0x2000f8dc,
   TOP = 0x20b3ed28,
   STACK = 0x20b3f5a0,
   VM_PC = 0x20b3eb84;
+const EVENT_WORK_BUDGET = 20_000_000;
 const hex = (n) => '0x' + (n >>> 0).toString(16).padStart(8, '0');
 const boundedPush = (list, item, n) => {
   list.push(item);
@@ -116,10 +117,18 @@ export class GnexRuntime {
       deviceMin = '01000000000',
       deviceUserId = 'Sinji',
       fastExecution = true,
+      timeoutWorkBudget = EVENT_WORK_BUDGET,
     } = {},
   ) {
     if (!cpu) throw new GnexError('Use await GnexRuntime.create(), or provide an initialized CPU');
     if (romHash !== ROM_SHA256) throw new GnexError('Verified Kingston 2.12 ROM digest required');
+    if (
+      !Number.isSafeInteger(timeoutWorkBudget) ||
+      timeoutWorkBudget < EVENT_WORK_BUDGET ||
+      timeoutWorkBudget > 40_000_000
+    )
+      throw new GnexError('Invalid timer work budget');
+    this.timeoutWorkBudget = timeoutWorkBudget;
     if (
       !Number.isInteger(width) ||
       !Number.isInteger(height) ||
@@ -156,7 +165,7 @@ export class GnexRuntime {
     this.nowMs = nowMs;
     this.tickEpoch = nowMs();
     this.civilEpoch = clock().getTime();
-    this.armInstructions = 0;
+    this.softwareInstructions = 0;
     this.tickResets = Array(10).fill(0);
     this.deviceMin = deviceMin;
     this.width = width;
@@ -250,23 +259,29 @@ export class GnexRuntime {
     if (this.exception || cpu.regRead('pc') !== STOP)
       throw new GnexError(`Native display init failed: ${this.exception || 'instruction budget'}`);
     if (this.profile === 'phone' && cpu.onBlock) {
-      const observer = (address, size) => {
-        this.armInstructions += Math.ceil(size / 4);
-      };
-      if (cpu.setBlockObserver) cpu.setBlockObserver(observer);
-      else cpu.onBlock(observer);
+      this.blockClock = cpu.startBlockClock?.();
+      if (!this.blockClock) {
+        const observer = (address, size) => {
+          this.softwareInstructions += Math.ceil(size / 4);
+        };
+        if (cpu.setBlockObserver) cpu.setBlockObserver(observer);
+        else cpu.onBlock(observer);
+      }
     }
     if (this.fastVmExecution) {
       this.romAccelerators = installRomAccelerators(cpu, {
         romHash,
         enabled: () => this._fastEventActive,
         onSkippedInstructions: (count) => {
-          if (this.profile === 'phone') this.armInstructions += count;
+          if (this.profile === 'phone') this.softwareInstructions += count;
         },
       });
     }
     this._refreshLCD();
     if (this.profile === 'phone') this.presentedLCD = this.lcdPixels.slice();
+  }
+  get armInstructions() {
+    return this.softwareInstructions + (this.blockClock?.() ?? 0);
   }
   get timerMs() {
     return this.timers[0].delay;
@@ -718,9 +733,10 @@ export class GnexRuntime {
     } else throw new GnexError(`Unsupported syscall ${hex(n)}; stopped without invented behavior`);
     return true;
   }
-  event(name, value, instructionBudget = 20_000_000) {
+  event(name, value, instructionBudget = EVENT_WORK_BUDGET) {
     const guarded = this.fastVmExecution && arguments.length < 3 && this.cpu.runGuarded;
     name = String(name).toUpperCase();
+    if (guarded && name === 'TIMEOUT') instructionBudget = this.timeoutWorkBudget;
     if (value === undefined) value = name === 'START' ? this.startData : 0;
     if (!(name in this.sgs.entries)) throw new GnexError(`Unknown event ${name}`);
     if (['error', 'exited', 'closed'].includes(this.status)) return this.diagnostics;

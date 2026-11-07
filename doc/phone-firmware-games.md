@@ -1072,8 +1072,9 @@ python tools/unpack-myracer-xgn.py game.xgn game.sgs
 
 При 320×240 в Reunion проверены управление в Mini Game Paradise,
 курсор в Ppunyu Ppunyu Pong Remix, удар на тренировке Super Action Hero
-и ходьба по карте Penoa Chronicles 2. Com2uS Soccer доходит до настройки
-матча, загрузка матча достигает лимита исполнения.
+и ходьба по карте Penoa Chronicles 2. В Com2uS Soccer проверены
+товарищеский матч и движение игрока. Для загрузки поля у этой сборки
+увеличен предел обработки таймера.
 [Игры, проверенные сцены и архив](myracer-game-disc.md),
 [хеши и смещения](../validation/myracer-mf101-xgn-decoded.json).
 

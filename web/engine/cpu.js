@@ -2,6 +2,8 @@
 // Upstream: https://github.com/AlexAltea/unicorn.js
 // The published 2.1.4 TCI build faults on long ARM translation blocks; the
 // official 1.0.3 ARM release passes the real firmware/GNEX differential suite.
+import { installBlockMonitor, loadBlockMonitor } from './block-monitor.js';
+
 let modulePromise, loadedModule;
 export async function createCpuModule() {
   const m = await import('./vendor/unicorn_arm_legacy.js');
@@ -20,8 +22,9 @@ export function getCpuModule() {
 }
 export const initLegacyCpu = initCpu;
 export class ArmCPU {
-  constructor(uc) {
+  constructor(uc, blockModule = null) {
     this.uc = uc;
+    this.blockModule = blockModule;
     this.engine = new uc.Unicorn(uc.ARCH_ARM, uc.MODE_ARM);
     this.sizeArgument = uc.VERSION_MAJOR >= 2 ? BigInt : Number;
     this.handle = uc.getValue(this.engine.handle_ptr, '*');
@@ -147,29 +150,72 @@ export class ArmCPU {
     this.hooks.push(h);
     return h;
   }
+  get blockBudget() {
+    const remaining = this.nativeBlockMonitor?.budget.value ?? this.jsBlockBudget;
+    return remaining < 0 ? null : (remaining ?? null);
+  }
+  set blockBudget(value) {
+    if (this.nativeBlockMonitor) this.nativeBlockMonitor.budget.value = value ?? -1;
+    else this.jsBlockBudget = value;
+  }
+  get runStart() {
+    return this.currentRunStart;
+  }
+  set runStart(value) {
+    this.currentRunStart = value;
+    if (this.nativeBlockMonitor) this.nativeBlockMonitor.start.value = value ?? -1;
+  }
+  _observeBlock(address, size) {
+    this.blockObserver?.(address, size);
+    // Keep direct emu_start entries native, including duplicated initial TBs.
+    if (
+      address >= this.blockShortcutLow &&
+      address <= this.blockShortcutHigh &&
+      address !== this.runStart
+    )
+      this.blockShortcuts.get(address)?.(address, size);
+  }
   _ensureBlockMonitor() {
     if (this.blockMonitor) return;
+    if (this.blockModule) {
+      const { native, hook } = installBlockMonitor(
+        this.blockModule,
+        this.uc,
+        this.handle,
+        (address, size) => this._observeBlock(address >>> 0, size),
+      );
+      this.nativeBlockMonitor = native;
+      this.blockMonitor = hook;
+      native.start.value = this.runStart ?? -1;
+      this.hooks.push(hook);
+      this._syncBlockShortcuts();
+      return;
+    }
     this.blockMonitor = this.onBlock((address, size) => {
-      if (this.blockBudget !== null && this.blockBudget !== undefined) {
+      if (this.jsBlockBudget != null) {
         // Two bytes per instruction is conservative for both ARM and Thumb.
         // Refuse the next block before its work could exceed the watchdog.
         const cost = Math.max(1, Math.ceil(size / 2));
-        if (cost > this.blockBudget) {
+        if (cost > this.jsBlockBudget) {
           this.stop();
           return;
         }
-        this.blockBudget -= cost;
+        this.jsBlockBudget -= cost;
       }
-      this.blockObserver?.(address, size);
-      // Unicorn can announce the initial TB twice when count instrumentation
-      // changes. Keep direct emu_start entries native; accelerate ARM calls only.
-      if (
-        address >= this.blockShortcutLow &&
-        address <= this.blockShortcutHigh &&
-        address !== this.runStart
-      )
-        this.blockShortcuts.get(address)?.(address, size);
+      this._observeBlock(address, size);
     });
+  }
+  _syncBlockShortcuts() {
+    const native = this.nativeBlockMonitor;
+    if (!native) return;
+    const addresses = new Uint32Array(native.shortcuts.buffer);
+    const count = this.blockShortcuts?.size ?? 0;
+    const fits = count <= addresses.length;
+    native.notify.value = this.blockObserver || !fits ? 1 : 0;
+    native.count.value = fits ? count : 0;
+    native.low.value = this.blockShortcutLow;
+    native.high.value = this.blockShortcutHigh;
+    if (fits && count) addresses.set([...this.blockShortcuts.keys()]);
   }
   addBlockShortcut(address, callback) {
     if (
@@ -185,15 +231,25 @@ export class ArmCPU {
     this.blockShortcuts.set(address, callback);
     this.blockShortcutLow = Math.min(this.blockShortcutLow, address);
     this.blockShortcutHigh = Math.max(this.blockShortcutHigh, address);
+    this._syncBlockShortcuts();
     return () => {
       this.blockShortcuts?.delete(address);
       this.blockShortcutLow = Math.min(...(this.blockShortcuts?.keys() || []));
       this.blockShortcutHigh = Math.max(...(this.blockShortcuts?.keys() || []));
+      this._syncBlockShortcuts();
     };
   }
   setBlockObserver(callback) {
     this.blockObserver = callback;
     this._ensureBlockMonitor();
+    this._syncBlockShortcuts();
+  }
+  startBlockClock() {
+    this._ensureBlockMonitor();
+    const clock = this.nativeBlockMonitor?.clock;
+    if (!clock) return null;
+    const origin = clock.value;
+    return () => Number(clock.value - origin);
   }
   onMemory(callback, { begin = 1, end = 0, invalid = false } = {}) {
     const types = invalid
@@ -271,6 +327,10 @@ export class ArmCPU {
     this.uc._free(this.scratch);
   }
 }
-export async function createARM({ isolated = false } = {}) {
-  return new ArmCPU(await (isolated ? createCpuModule() : initCpu()));
+export async function createARM({ isolated = false, nativeMonitor = true } = {}) {
+  const [uc, blockModule] = await Promise.all([
+    isolated ? createCpuModule() : initCpu(),
+    nativeMonitor ? loadBlockMonitor() : null,
+  ]);
+  return new ArmCPU(uc, blockModule);
 }
