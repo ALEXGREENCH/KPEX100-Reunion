@@ -4,6 +4,33 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "korean-game-portals-pass20",
+      "category": "Источники игр GVM и GNEX",
+      "title": "Daum, HandyGame и GVM Club: поиск игровых файлов",
+      "description": "Карточки игр Daum с идентификаторами покупки, 60 ссылок на бета-темы HandyGame, оригинальная заставка Ddangguri и GVM_phone.xls от 3 января 2002 года. В единственном SGS из проверенных ответов опознан уже сохранённый WI-TOP Hellfire.",
+      "sources": [
+        {
+          "label": "Daum: запуск магазина",
+          "url": "https://www.kakaocorp.com/page/detail/5601"
+        },
+        {
+          "label": "HandyGame: список бета-тестов",
+          "url": "https://web.archive.org/web/20041212212551id_/http://handygame.co.kr/Mobilebeta_list.html?Bid=betanotice"
+        },
+        {
+          "label": "Ddangguri: оригинальный Movie1.swf",
+          "url": "https://web.archive.org/web/20041013162906id_/http://www.ddanguri.com/Movie1.swf"
+        },
+        {
+          "label": "GVM Club: таблица телефонов",
+          "url": "https://web.archive.org/web/20020215151927id_/http://www.gvmclub.com:80/boardno/board.cgi?bd=&j=dl&i=46&c=0"
+        }
+      ],
+      "repositoryPath": "research/archives/Korean-Game-Portals-and-GVM-Handsets.zip",
+      "bytes": 6842304,
+      "sha256": "4efe22a9473ff6b6309d00f6ab57666f6ae1db71628afa7b33597772ba1b6647"
+    },
+    {
       "id": "s60-library-games-and-daum-pass19",
       "category": "Игры S60: оригиналы и проверка управления",
       "title": "World League и Bounce: три сборки для библиотеки",
@@ -1335,6 +1362,10 @@
     {
       "title": "World League и Bounce в библиотеке; результаты поиска в Daum",
       "repositoryPath": "doc/s60-library-completion.md"
+    },
+    {
+      "title": "Daum, HandyGame и GVM Club: поиск игровых файлов",
+      "repositoryPath": "doc/korean-game-portals-pass20.md"
     }
   ]
 }
