@@ -27,11 +27,14 @@ research inputs; Reunion does not claim to run them.
 
 [Platform preservation](doc/preservation.md) provides the complete SDK 2.10/2.12
 installers, emulators, the exact original Mobile C Reference 311 and early GVM
-documents. Sixty-two downloadable ZIPs retain actual files, with a complete
+documents. Sixty-three downloadable ZIPs retain actual files, with a complete
 direct-member hash inventory and an offline verification tool.
 
 The [Daum and HandyGame archive](doc/korean-game-portals-pass20.md) adds game
 listings, beta topics and a January 2002 GVM handset table.
+
+The [Softmax and m4leaf archive](doc/softmax-mobile-and-symbian.md) covers the first Crow,
+the original KTF BREW Magna Carta M archive and the Symbian 6/7 corpus audit.
 
 [Acquisition pass 18](doc/game-hunt-pass18.md) preserves 73 SKT game archives
 containing Java classes and two GVM developer source attachments. This pass

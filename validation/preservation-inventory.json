@@ -3,6 +3,291 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "softmax-mobile-s60-audit",
+      "repositoryPath": "research/archives/Softmax-Mobile-and-Symbian-6-7-Game-Search.zip",
+      "bytes": 529332,
+      "sha256": "3d4ce5bbad52c5552b204dc2647428e7699e2290a08af4dfbd6a1bf45ce010f6",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "README.txt",
+          "bytes": 817,
+          "crc32": "e2e34d03",
+          "sha256": "007d48a250cb5810168766f3a984a3cff1c2c02965e3482359efb505285de9dd"
+        },
+        {
+          "path": "doc/softmax-mobile-and-symbian.md",
+          "bytes": 5145,
+          "crc32": "fc37844c",
+          "sha256": "7b4b527cfd6d3e157ff44725ff3431cafe733216e2fe52afe8a6ce8ac91545eb"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 10224,
+          "crc32": "6e3faf2d",
+          "sha256": "58e3980259043396700d895b343114fd5e7a12ea95d6fdd86da5c7f10cac7479"
+        },
+        {
+          "path": "original-games/Magna-Carta-M-KTF-BREW.zip",
+          "bytes": 142836,
+          "crc32": "f2c20982",
+          "sha256": "2c65a358f371028f6af03d2dadfc273d0973c5c00051b1d9e9f058413ec2bd7a"
+        },
+        {
+          "path": "reproduce/audit-s60-collection.py",
+          "bytes": 16102,
+          "crc32": "3fe9dcd8",
+          "sha256": "bb8bf3914a29a7b03460c535c8c02713601123f3ff8eef1839d36d069ec9ff5a"
+        },
+        {
+          "path": "reproduce/audit-s60-rar.py",
+          "bytes": 3843,
+          "crc32": "0b5cbcb6",
+          "sha256": "6bc81c67009cf00becca0e091ad74a998bd49ca7ef96d5d9158bd3f2e0982482"
+        },
+        {
+          "path": "reproduce/s60-archive-header.json",
+          "bytes": 192789,
+          "crc32": "48e5bcfb",
+          "sha256": "75969ac56165b34959b296051db4f6ace307d9e1a60f74516287606571379d19"
+        },
+        {
+          "path": "reproduce/s60-item-metadata.json",
+          "bytes": 2770,
+          "crc32": "22fe29ce",
+          "sha256": "06c2b17347b6bfd01a06eb14b825cbf279ad1ffc52c0ec21242423d5182a6c4f"
+        },
+        {
+          "path": "s60/7z-extract.log",
+          "bytes": 599,
+          "crc32": "7bbd2caa",
+          "sha256": "4ae7a96e48f37191882f3aaf4857a7fa6548a49e0eb86b150786932cc19647e5"
+        },
+        {
+          "path": "s60/7z-test.log",
+          "bytes": 596,
+          "crc32": "f9c839ae",
+          "sha256": "71ea0ae9e799c2840c6e781c56f987550629c416966d1b0f36c2585094070307"
+        },
+        {
+          "path": "s60/member-audit.jsonl",
+          "bytes": 277451,
+          "crc32": "59146be6",
+          "sha256": "5b22312d6428e707023891f91372a2396f9985f0bca18e6a73592ba1ea176a34"
+        },
+        {
+          "path": "s60/rar-audit.json",
+          "bytes": 129599,
+          "crc32": "bb54fdc1",
+          "sha256": "651f7598aedc40d9fb9ef32b7990d6d4b43ae110f765922a37b570f4dad34f56"
+        },
+        {
+          "path": "s60/verified-range-receipts.json",
+          "bytes": 15096,
+          "crc32": "b51b312f",
+          "sha256": "73370e0ce47281a0d7d82c18b3ab5bcbcc96f4234ae2e8e16a292d2dc0ee2e5d"
+        },
+        {
+          "path": "sources/objects/007842b7848ae7464a63c437e54b822d091def1789e041e4f7cf73941cccb8ca",
+          "bytes": 9084,
+          "crc32": "f4df7a90",
+          "sha256": "007842b7848ae7464a63c437e54b822d091def1789e041e4f7cf73941cccb8ca"
+        },
+        {
+          "path": "sources/objects/056d9cc3e1f8e42ce6a681faa5e82881f904f8372c362c79351f8ebd1b76bb28",
+          "bytes": 1384,
+          "crc32": "3b455340",
+          "sha256": "056d9cc3e1f8e42ce6a681faa5e82881f904f8372c362c79351f8ebd1b76bb28"
+        },
+        {
+          "path": "sources/objects/19fedd01fc6932f9372c820682baafa8bcf6bcbf3cef5afbea9b6ac22716e3d2",
+          "bytes": 1827,
+          "crc32": "98fcab9d",
+          "sha256": "19fedd01fc6932f9372c820682baafa8bcf6bcbf3cef5afbea9b6ac22716e3d2"
+        },
+        {
+          "path": "sources/objects/35187acfa2130fa9791dfa82b23cd5cd945a9c4a08f476dd87696e8131a513f6",
+          "bytes": 501,
+          "crc32": "5878c780",
+          "sha256": "35187acfa2130fa9791dfa82b23cd5cd945a9c4a08f476dd87696e8131a513f6"
+        },
+        {
+          "path": "sources/objects/37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "sources/objects/3b09ea89f6ddab5803de83dd556222d68f27d447df7277958ad9eef32f5227cb",
+          "bytes": 9229,
+          "crc32": "4bef0ce1",
+          "sha256": "3b09ea89f6ddab5803de83dd556222d68f27d447df7277958ad9eef32f5227cb"
+        },
+        {
+          "path": "sources/objects/40cd5e10e154ae6f80ae26b2dc1c2f3c84add0cf9f4f5e50f03d79a716884dc0",
+          "bytes": 30045,
+          "crc32": "0da881a0",
+          "sha256": "40cd5e10e154ae6f80ae26b2dc1c2f3c84add0cf9f4f5e50f03d79a716884dc0"
+        },
+        {
+          "path": "sources/objects/4acf3fa6218e2432d98b584a60b2d7860987ef1a56c6a45a7d4e10815c5b1909",
+          "bytes": 101569,
+          "crc32": "191cead6",
+          "sha256": "4acf3fa6218e2432d98b584a60b2d7860987ef1a56c6a45a7d4e10815c5b1909"
+        },
+        {
+          "path": "sources/objects/6880d1b71522ac3575cc9e3df2b6922272989ec520df49b76fbde71da647a62b",
+          "bytes": 4601,
+          "crc32": "ea5f0785",
+          "sha256": "6880d1b71522ac3575cc9e3df2b6922272989ec520df49b76fbde71da647a62b"
+        },
+        {
+          "path": "sources/objects/6d2ad49e2dfeab8a5a5820d0791325c27f66252963c24b205daeafec4f1f031a",
+          "bytes": 19129,
+          "crc32": "68a505f2",
+          "sha256": "6d2ad49e2dfeab8a5a5820d0791325c27f66252963c24b205daeafec4f1f031a"
+        },
+        {
+          "path": "sources/objects/7a9f43b8dbd710505825c4e0d39943d8267807364f2709eaff69b474824d6321",
+          "bytes": 30234,
+          "crc32": "37f6676d",
+          "sha256": "7a9f43b8dbd710505825c4e0d39943d8267807364f2709eaff69b474824d6321"
+        },
+        {
+          "path": "sources/objects/7b623b27a18028cf6d5b664af570a178e92b694c8ea67e6cc69a21f49d68c3c3",
+          "bytes": 1004,
+          "crc32": "9b783b01",
+          "sha256": "7b623b27a18028cf6d5b664af570a178e92b694c8ea67e6cc69a21f49d68c3c3"
+        },
+        {
+          "path": "sources/objects/7e4e57c5e1bc32a915dc04cb269be1bb5a0440af93a20db1727c2e7042c16910",
+          "bytes": 4607,
+          "crc32": "922ea26e",
+          "sha256": "7e4e57c5e1bc32a915dc04cb269be1bb5a0440af93a20db1727c2e7042c16910"
+        },
+        {
+          "path": "sources/objects/82b6303b4efc0486d728ef1a12b5141eafae0cf3a073972eeff53daff3ebe1fa",
+          "bytes": 18076,
+          "crc32": "670e9ad2",
+          "sha256": "82b6303b4efc0486d728ef1a12b5141eafae0cf3a073972eeff53daff3ebe1fa"
+        },
+        {
+          "path": "sources/objects/8c9b030f6e84f571aedf706e9fb79e27f266cc9d66ac5ee5c171ee102aab51f7",
+          "bytes": 51575,
+          "crc32": "e28cde90",
+          "sha256": "8c9b030f6e84f571aedf706e9fb79e27f266cc9d66ac5ee5c171ee102aab51f7"
+        },
+        {
+          "path": "sources/objects/988f59bdc62cf1e65db3db728866ce0c4316a8336f6c76ed1ca00c98ee19da14",
+          "bytes": 73418,
+          "crc32": "b32f46a7",
+          "sha256": "988f59bdc62cf1e65db3db728866ce0c4316a8336f6c76ed1ca00c98ee19da14"
+        },
+        {
+          "path": "sources/objects/9eb114fbfe62a699096919b9a354b6d088c78da02cfd36a363827bb54175c0b2",
+          "bytes": 2495,
+          "crc32": "553fe9db",
+          "sha256": "9eb114fbfe62a699096919b9a354b6d088c78da02cfd36a363827bb54175c0b2"
+        },
+        {
+          "path": "sources/objects/9f3e05561748c5342be8febf63a5e003656afdc3947bea839d7ba8ba1dddb192",
+          "bytes": 73422,
+          "crc32": "ad880ea2",
+          "sha256": "9f3e05561748c5342be8febf63a5e003656afdc3947bea839d7ba8ba1dddb192"
+        },
+        {
+          "path": "sources/objects/b163ea41ba1721737362ceabd67879c04e555793a7b85d725d643ddc420a5fca",
+          "bytes": 299282,
+          "crc32": "9d352519",
+          "sha256": "b163ea41ba1721737362ceabd67879c04e555793a7b85d725d643ddc420a5fca"
+        },
+        {
+          "path": "sources/objects/b8e9ce341e4547964b07d529d0a8bf8b4c8c8fa27a435abe7a4f811b28b738c8",
+          "bytes": 19778,
+          "crc32": "8224789d",
+          "sha256": "b8e9ce341e4547964b07d529d0a8bf8b4c8c8fa27a435abe7a4f811b28b738c8"
+        },
+        {
+          "path": "sources/objects/bd2e56080ec2b100bfa81f0240f4d25f70a8f71c915e628ce4b212c234306670",
+          "bytes": 4641,
+          "crc32": "954d15b9",
+          "sha256": "bd2e56080ec2b100bfa81f0240f4d25f70a8f71c915e628ce4b212c234306670"
+        },
+        {
+          "path": "sources/objects/cac54280cc472f007d94260a8664321cb067bc35bf8a0c3a3e314998c994513d",
+          "bytes": 4640,
+          "crc32": "0f138aff",
+          "sha256": "cac54280cc472f007d94260a8664321cb067bc35bf8a0c3a3e314998c994513d"
+        },
+        {
+          "path": "sources/objects/d737f48587c70926aa8b6e18cd02c97c3f115cfe4dcf2eef12f60c6ae98838be",
+          "bytes": 1382,
+          "crc32": "79ae84c8",
+          "sha256": "d737f48587c70926aa8b6e18cd02c97c3f115cfe4dcf2eef12f60c6ae98838be"
+        },
+        {
+          "path": "sources/objects/dbd927648f714e55046bb1c9dab6b34f3b5e0fe02105d577a2a509bee79dc378",
+          "bytes": 33158,
+          "crc32": "58b146e5",
+          "sha256": "dbd927648f714e55046bb1c9dab6b34f3b5e0fe02105d577a2a509bee79dc378"
+        },
+        {
+          "path": "sources/objects/e084d527921708642a79724e9f0210da659bbc0905c6ce9a3a1f416e4628091c",
+          "bytes": 11832,
+          "crc32": "337e1951",
+          "sha256": "e084d527921708642a79724e9f0210da659bbc0905c6ce9a3a1f416e4628091c"
+        },
+        {
+          "path": "sources/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "sources/objects/e43de9fec3c3bbed7f0374c07a81ddbc29aee4141ec28c3a05a1a298a3b1e879",
+          "bytes": 33551,
+          "crc32": "9674a796",
+          "sha256": "e43de9fec3c3bbed7f0374c07a81ddbc29aee4141ec28c3a05a1a298a3b1e879"
+        },
+        {
+          "path": "sources/objects/e97de014cfca049f5be6dca14829884592162cd210f132cb09249783a89ac032",
+          "bytes": 28752,
+          "crc32": "a3d6febe",
+          "sha256": "e97de014cfca049f5be6dca14829884592162cd210f132cb09249783a89ac032"
+        },
+        {
+          "path": "sources/objects/f4b0c102f5c88693769153cdf28c2482b931bb6b90a25c950a189e8590523b96",
+          "bytes": 54897,
+          "crc32": "e59605ed",
+          "sha256": "f4b0c102f5c88693769153cdf28c2482b931bb6b90a25c950a189e8590523b96"
+        },
+        {
+          "path": "sources/objects/fbbffc7f9d959a400e46dae74e46e1be997e457d824de6ed9c5378c3cb8b4a49",
+          "bytes": 62002,
+          "crc32": "6c76c2ab",
+          "sha256": "fbbffc7f9d959a400e46dae74e46e1be997e457d824de6ed9c5378c3cb8b4a49"
+        },
+        {
+          "path": "sources/objects/feab069fae46ddbb80e48599547b419498031cf344925fd474bbbe125d430112",
+          "bytes": 82542,
+          "crc32": "8a2539c0",
+          "sha256": "feab069fae46ddbb80e48599547b419498031cf344925fd474bbbe125d430112"
+        },
+        {
+          "path": "sources/receipts.json",
+          "bytes": 47875,
+          "crc32": "4ac19ef6",
+          "sha256": "e5073bfbbbd5310e5961a4bff893cdc649fedfa84c6adbf3dedcac3787df47d1"
+        },
+        {
+          "path": "validation/softmax-mobile-s60-audit.json",
+          "bytes": 37044,
+          "crc32": "c365e2af",
+          "sha256": "1743e01343720c65467a10ff99012910ab1fafb39e887ae1036ae11a1ad1a529"
+        }
+      ]
+    },
+    {
       "id": "korean-game-portals-pass20",
       "repositoryPath": "research/archives/Korean-Game-Portals-and-GVM-Handsets.zip",
       "bytes": 6842304,
@@ -100438,9 +100723,9 @@
     }
   ],
   "counts": {
-    "archives": 62,
-    "archiveBytes": 1052810214,
-    "fileMembers": 16646,
-    "uniqueMemberHashes": 7502
+    "archives": 63,
+    "archiveBytes": 1053339546,
+    "fileMembers": 16692,
+    "uniqueMemberHashes": 7545
   }
 }

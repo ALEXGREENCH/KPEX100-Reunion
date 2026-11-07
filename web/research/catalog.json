@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "softmax-mobile-s60-audit",
+      "title": "Softmax и m4leaf: ранняя Crow, Magna Carta M и аудит Symbian 6/7",
+      "category": "Игры и источники Softmax",
+      "description": "Оригинальный пакет Magna Carta M для KTF/BREW, источники о GVM-версии первой Crow и проверка 1 026 файлов Symbian 6/7. Найденные SGS совпали с Aiolos Fighter, Pocket Baseball 2 и Pocket Golf из библиотеки.",
+      "sources": [
+        {
+          "label": "Softmax: семинар о первой Crow",
+          "url": "https://4leafmemorial.tistory.com/1014"
+        },
+        {
+          "label": "Brewgames: Magna Carta M для KTF",
+          "url": "https://m.blog.naver.com/brewgames/223944569645"
+        },
+        {
+          "label": "Коллекция Symbian 6/7",
+          "url": "https://archive.org/details/symbian-6-7-games.-7z"
+        }
+      ],
+      "repositoryPath": "research/archives/Softmax-Mobile-and-Symbian-6-7-Game-Search.zip",
+      "bytes": 529332,
+      "sha256": "3d4ce5bbad52c5552b204dc2647428e7699e2290a08af4dfbd6a1bf45ce010f6"
+    },
+    {
       "id": "korean-game-portals-pass20",
       "category": "Источники игр GVM и GNEX",
       "title": "Daum, HandyGame и GVM Club: поиск игровых файлов",
@@ -1366,6 +1389,10 @@
     {
       "title": "Daum, HandyGame и GVM Club: поиск игровых файлов",
       "repositoryPath": "doc/korean-game-portals-pass20.md"
+    },
+    {
+      "title": "Softmax и m4leaf: ранняя Crow, Magna Carta M и аудит Symbian 6/7",
+      "repositoryPath": "doc/softmax-mobile-and-symbian.md"
     }
   ]
 }
