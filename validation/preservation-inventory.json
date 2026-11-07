@@ -3,6 +3,69 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "lg-sd1020-compressed-gvm",
+      "repositoryPath": "research/archives/LG-SD1020-Compressed-GVM.zip",
+      "bytes": 57977,
+      "sha256": "7784f4e22e19216729c099d45b926b266f87e03e469b676c2e628269682bb517",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/hiphop-spirit-lg-sd1020.sgs",
+          "bytes": 61156,
+          "crc32": "cba86436",
+          "sha256": "7999353b5492c58ffdabeba5bc4b4ba26052e31a4f21acdab66061403836ccbf"
+        },
+        {
+          "path": "evidence.json",
+          "bytes": 21357,
+          "crc32": "e6688259",
+          "sha256": "1176aad2a19c4b0d117bfcfe7b941e75846c170dd38c69b266f881dd090dc625"
+        },
+        {
+          "path": "frames/local-hiphop-spirit-lg-sd1020-2-advance2000.png",
+          "bytes": 1562,
+          "crc32": "3f0c4474",
+          "sha256": "54561803fa3f916783113c63a2ed7d2e502bbd78473b50303afa329163bab022"
+        },
+        {
+          "path": "frames/local-hiphop-spirit-lg-sd1020-4-advance2000.png",
+          "bytes": 1598,
+          "crc32": "e81dc283",
+          "sha256": "74e26acc7fd2f4a35d4b37f3fe9af3749aa0542625d2fd981f67999f62a57155"
+        },
+        {
+          "path": "frames/local-hiphop-spirit-lg-sd1020-start.png",
+          "bytes": 1716,
+          "crc32": "ee2e30fa",
+          "sha256": "a402d6b52fac226606a08cb2480aba3d635a7b76a0f0944228cdf6241210b8c2"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1602,
+          "crc32": "cea79081",
+          "sha256": "31a193bb1b8185ee777534012726a7d12213ec46ebb4f52826946b04664f3215"
+        },
+        {
+          "path": "original/gvm2x_000.bin",
+          "bytes": 36423,
+          "crc32": "5499f5c6",
+          "sha256": "1ee6f07ace3f23e9214fcbe960a74de3f9a907843539d3312e901cad6f666a56"
+        },
+        {
+          "path": "replay.json",
+          "bytes": 4516,
+          "crc32": "f70ecb39",
+          "sha256": "84ab427b71f636a26bfd5f004d91f34b05ab963ff91075efcfb86571ad6fab5c"
+        },
+        {
+          "path": "scan.json",
+          "bytes": 7778,
+          "crc32": "feefb466",
+          "sha256": "240ca86b627e338412ae81fe10a2b1ba85eda5c0d7edbbc77f63b630fe8576e2"
+        }
+      ]
+    },
+    {
       "id": "samsung-yp-t8-regional-firmware",
       "repositoryPath": "research/archives/Samsung-YP-T8-1.38-EU-US.zip",
       "bytes": 4406359,
@@ -157585,9 +157648,9 @@
     }
   ],
   "counts": {
-    "archives": 69,
-    "archiveBytes": 1157556763,
-    "fileMembers": 26160,
-    "uniqueMemberHashes": 13250
+    "archives": 70,
+    "archiveBytes": 1157614740,
+    "fileMembers": 26169,
+    "uniqueMemberHashes": 13259
   }
 }

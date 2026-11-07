@@ -4,6 +4,21 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "lg-sd1020-compressed-gvm",
+      "title": "LG SD1020: сжатый GVM «힙합정신»",
+      "category": "Игры и приложения корейских телефонов",
+      "description": "Оригинальная запись EFS, распакованный SGS приложения рингтонов, контрольные кадры и сверка с нативным декодером Kingston.",
+      "repositoryPath": "research/archives/LG-SD1020-Compressed-GVM.zip",
+      "bytes": 57977,
+      "sha256": "7784f4e22e19216729c099d45b926b266f87e03e469b676c2e628269682bb517",
+      "sources": [
+        {
+          "label": "Дамп LG SD1020",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1020/SD43CI23_memory.7z"
+        }
+      ]
+    },
+    {
       "id": "samsung-yp-t8-regional-firmware",
       "title": "Samsung YP-T8: прошивки 1.38EU и 1.38US",
       "category": "Прошивки плееров",
@@ -1535,6 +1550,10 @@
     {
       "title": "Samsung YP-T8: загрузчик XOV и региональные прошивки",
       "repositoryPath": "doc/yepp-xov-runtime.md"
+    },
+    {
+      "title": "LG SD1020 и SD1250: сжатый GVM и Ladder",
+      "repositoryPath": "doc/lg-legacy-compressed.md"
     }
   ]
 }
