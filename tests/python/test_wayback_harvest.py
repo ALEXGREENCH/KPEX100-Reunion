@@ -171,6 +171,12 @@ def test_download_scope_and_frozen_snapshot_manifest(tmp_path):
     assert dict(
         collector.db.execute("SELECT state,count(*) FROM captures GROUP BY state")
     ) == {"pending": 1, "verified": 1}
+    headers = [["X-Archive-Orig-Set-Cookie", "sample"], ["Content-Type", "text/plain"]]
+    with collector.db:
+        collector.db.execute(
+            "INSERT INTO responses(receipt) VALUES (?)",
+            (json.dumps({"object": digest, "headers": headers}),),
+        )
     # A concurrent reader/writer connection can stay open during the backup.
     spec = importlib.util.spec_from_file_location(
         "package_wayback",
@@ -181,6 +187,13 @@ def test_download_scope_and_frozen_snapshot_manifest(tmp_path):
     output = tmp_path / "snapshot.zip"
     result = package.package(tmp_path / "collection", output)
     assert result["objects"] == 1 and result["crcPassed"]
+    assert result["redactedHeaders"] == 1
+    assert (
+        json.loads(collector.db.execute("SELECT receipt FROM responses").fetchone()[0])[
+            "headers"
+        ]
+        == headers
+    )
     import zipfile
 
     with zipfile.ZipFile(output) as archive:
@@ -188,12 +201,49 @@ def test_download_scope_and_frozen_snapshot_manifest(tmp_path):
             archive.read("collection/objects/" + digest[:2] + "/" + digest)
             == b"original"
         )
+        receipt = json.loads(
+            json.loads(archive.read("collection/responses.jsonl"))["receipt"]
+        )
+        assert receipt["headers"] == [
+            ["X-Archive-Orig-Set-Cookie", "[redacted]"],
+            ["Content-Type", "text/plain"],
+        ]
         manifest = json.loads(archive.read("manifest.json"))
         assert all(
             hashlib.sha256(archive.read(item["path"])).hexdigest() == item["sha256"]
             for item in manifest["files"]
         )
     collector.db.close()
+
+
+def test_download_prioritizes_extensionless_binary_attachments(tmp_path):
+    collector = harvest.Collector(tmp_path, delay=0)
+    try:
+        attachment = record()
+        attachment[2] = "http://www.gvmclub.com/boardcomm/board.cgi?j=dl&i=56"
+        attachment[3] = "application/octet-stream"
+        html = record()
+        html[2] = "http://www.gvmclub.com/index.html"
+        rows = [
+            ("0-html", dict(zip(harvest.FIELDS, html))),
+            ("1-attachment", dict(zip(harvest.FIELDS, attachment))),
+        ]
+        with collector.db:
+            collector.db.executemany(
+                "INSERT INTO captures (id,record) VALUES (?,?)",
+                [(key, json.dumps(item)) for key, item in rows],
+            )
+        collector.request = lambda *_: (
+            {"status": 200, "object": collector.blob(b"original")},
+            b"original",
+        )
+        collector.download(limit=1)
+        assert dict(collector.db.execute("SELECT id,state FROM captures")) == {
+            "0-html": "pending",
+            "1-attachment": "verified",
+        }
+    finally:
+        collector.db.close()
 
 
 def test_cached_http200_error_cannot_poison_index_retries(tmp_path):

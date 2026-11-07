@@ -468,19 +468,18 @@ class Collector:
             )
             parameters.extend(scopes)
         rows = self.db.execute(query + " ORDER BY id", parameters).fetchall()
-        # Rescue vulnerable downloads first; no records are removed from the queue.
-        rows.sort(
-            key=lambda row: (
-                not bool(
-                    re.search(
-                        r"\.(exe|msi|zip|rar|alz|7z|sgs|sis|cab|pdf|hwp|chm|doc|xls|ppt|mc|ssl|o|c|h)(?:[?]|$)",
-                        json.loads(row["record"])["original"],
-                        re.I,
-                    )
-                ),
-                row["id"],
+
+        # Some club attachments use extensionless CGI URLs and only advertise a MIME type.
+        def download_order(row):
+            record = json.loads(row["record"])
+            binary = record["mimetype"] == "application/octet-stream" or re.search(
+                r"\.(exe|msi|zip|rar|alz|7z|sgs|sis|cab|pdf|hwp|chm|doc|xls|ppt|mc|ssl|o|c|h)(?:[?]|$)",
+                record["original"],
+                re.I,
             )
-        )
+            return not binary, row["id"]
+
+        rows.sort(key=download_order)
         if limit:
             rows = rows[:limit]
         for task in rows:
