@@ -3,6 +3,213 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "crow2-ktf-and-nexon",
+      "repositoryPath": "research/archives/Softmax-Crow-2-KTF-and-Nexon-Catalogue.zip",
+      "bytes": 2781323,
+      "sha256": "23f342c0a0e73027e126b46da1971aec3f192ba1b10c68b2af71fd8965a79d75",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "README.md",
+          "bytes": 5013,
+          "crc32": "31322b60",
+          "sha256": "f5a1b9521c053601927f12ade0c10bbd6a4f854205e5439105fade41047e44ec"
+        },
+        {
+          "path": "aram/README.txt",
+          "bytes": 644,
+          "crc32": "27d9f212",
+          "sha256": "1a94367cd3e8ad3dc8cc158a1d5e9d8f883a90e39176c9151d9020c24347eb0a"
+        },
+        {
+          "path": "aram/aram-crow2-later.jsonl",
+          "bytes": 138785,
+          "crc32": "fe66ac66",
+          "sha256": "b5e6c27ae1833364256cb56b1c10a0f0a52ac4a44e4817c7380606a77c94e60e"
+        },
+        {
+          "path": "aram/aram-crow2-later.lua",
+          "bytes": 817,
+          "crc32": "72413710",
+          "sha256": "abbcc1f37a7beb2d27966cccaf3aeca553282a31110b54ee0a4b6d96e2467b28"
+        },
+        {
+          "path": "aram/crow2-later-08.png",
+          "bytes": 39168,
+          "crc32": "5c506866",
+          "sha256": "78d290ca78bf18fb3d5878d9dc430358cc6203686b094ace4422649e2b5d2dbd"
+        },
+        {
+          "path": "aram/crow2-later-16.png",
+          "bytes": 39265,
+          "crc32": "a3b30f36",
+          "sha256": "376609fa07fd902b4bc47bca898b306afd4bdcd7ccfb22f9952d7a10f4a99dee"
+        },
+        {
+          "path": "aram/crow2-later-24.png",
+          "bytes": 39170,
+          "crc32": "53fa4fac",
+          "sha256": "a330901eb8800241caa00797a04754d85881f482b283f22e9778e8eed43f8cc9"
+        },
+        {
+          "path": "aram/crow2-later-32.png",
+          "bytes": 43405,
+          "crc32": "10bce0e7",
+          "sha256": "647420769a3884fa463bceee1ed9dd76c749cb2a275aabbab8ff78d28907417e"
+        },
+        {
+          "path": "aram/crow2-later-40.png",
+          "bytes": 43405,
+          "crc32": "10bce0e7",
+          "sha256": "647420769a3884fa463bceee1ed9dd76c749cb2a275aabbab8ff78d28907417e"
+        },
+        {
+          "path": "aram/crow2-later-48.png",
+          "bytes": 43405,
+          "crc32": "10bce0e7",
+          "sha256": "647420769a3884fa463bceee1ed9dd76c749cb2a275aabbab8ff78d28907417e"
+        },
+        {
+          "path": "aram/crow2-later-after-down.png",
+          "bytes": 43530,
+          "crc32": "dc04fb7f",
+          "sha256": "026e81305ceaebec9224bd8157157612f5dc2a2e471ed74459df8eafa7fbe99a"
+        },
+        {
+          "path": "aram/crow2-later-after-right.png",
+          "bytes": 43570,
+          "crc32": "fc7d6b58",
+          "sha256": "9c36fe1834afdba4983d9988bf8c5212a9167cf094098245b55bdc0dadf1dafc"
+        },
+        {
+          "path": "aram/crow2-later-before-move.png",
+          "bytes": 43405,
+          "crc32": "10bce0e7",
+          "sha256": "647420769a3884fa463bceee1ed9dd76c749cb2a275aabbab8ff78d28907417e"
+        },
+        {
+          "path": "aram/crow2-long-dialogue-next.png",
+          "bytes": 39263,
+          "crc32": "25d21aa0",
+          "sha256": "3513339e2ad1f271f69aa0678bb2102bb4ce4bde7c788c56c9ae89e3c915c7ca"
+        },
+        {
+          "path": "aram/crow2-long-dialogue.png",
+          "bytes": 38947,
+          "crc32": "e501a804",
+          "sha256": "fd5b5851a027ce2b7762110c62f4708e7ddd0199efd0985cbe66286e3eb09f9a"
+        },
+        {
+          "path": "aram/crow2-long-menu.png",
+          "bytes": 7930,
+          "crc32": "c617b3bd",
+          "sha256": "14a41918df6c34afae6904af23acfbc3a6f789bec6ea388af6f73e5b07635a69"
+        },
+        {
+          "path": "aram/crow2-long-new-game-selected.png",
+          "bytes": 7915,
+          "crc32": "2ff21092",
+          "sha256": "20e3947e0abb0e8cdd6ed3c8ff798b284724b337812b1ea1a838765baf216242"
+        },
+        {
+          "path": "aram/crow2-long-new-game.png",
+          "bytes": 39339,
+          "crc32": "bb15503d",
+          "sha256": "4b04e32c811561c4d9784aed4fb8510c1356a76f7e5531693acbdd48ac840eb7"
+        },
+        {
+          "path": "aram/crow2-long-title.png",
+          "bytes": 1841,
+          "crc32": "10627c54",
+          "sha256": "c534718dba8de983c4904c3166147e7cb27e4ad0ff0bd9502b6db891bdf4860c"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 6136,
+          "crc32": "6cc4309f",
+          "sha256": "392a0359c6fd8d2f0042c594d4c4fcad02f13d3bb817a556312cc031a5b0f9d9"
+        },
+        {
+          "path": "nexon/availability-1.json",
+          "bytes": 140,
+          "crc32": "ed4be06b",
+          "sha256": "ddac657f95e4142e8c104190b011986f86dea489211bfbdee50051c7d4d89bb7"
+        },
+        {
+          "path": "nexon/availability-2.json",
+          "bytes": 142,
+          "crc32": "0bc2ffbe",
+          "sha256": "f085934061d5cf28c9283a016ca51b0ac41efed68186e8eefe7aceff4b750d5d"
+        },
+        {
+          "path": "nexon/availability-3.json",
+          "bytes": 287,
+          "crc32": "1b1462a8",
+          "sha256": "ed7637f8f9804a74deaa3b955a7d2d9552acfee008b3741eae429ece2ae8b958"
+        },
+        {
+          "path": "nexon/nexon-list-20060718.html",
+          "bytes": 50048,
+          "crc32": "c62b1c36",
+          "sha256": "7b60921558a443a27e5f2f2394472136157a4f674a716e082e03983bc5917c97"
+        },
+        {
+          "path": "nexon/nexon-main-20060703.html",
+          "bytes": 30215,
+          "crc32": "b731137f",
+          "sha256": "0dfbaae53797d06a6d032e6a5465943414dde9ec0c5f575696493aee5a5ae97d"
+        },
+        {
+          "path": "nexon/nexon-root-20060614.html",
+          "bytes": 427,
+          "crc32": "5c4c6edb",
+          "sha256": "fe67a0538debe0d672336e395bb4d58bf9f03f7973656a9ecf2850b9200a1fd7"
+        },
+        {
+          "path": "original-games/Crow-2-KTF.zip",
+          "bytes": 686040,
+          "crc32": "88605c8c",
+          "sha256": "ea35907b22a4b36d841bf355a8c0f8a8b125ad11c2c6dbfd9364bb39a9b052d3"
+        },
+        {
+          "path": "sources/crow2-ktf.json",
+          "bytes": 832,
+          "crc32": "e8373646",
+          "sha256": "dddc0b9e1773582c6ff51a35d904ba21a3c719e2a5e24a2ae8dba3ff90829ace"
+        },
+        {
+          "path": "sources/nexon.json",
+          "bytes": 10913,
+          "crc32": "35e53cc2",
+          "sha256": "3e277df399d8c40660d95507b8dadd226e38779f106a6b165c5a44d5ca850ba6"
+        },
+        {
+          "path": "validation/crow2-ktf-evidence.json",
+          "bytes": 31414,
+          "crc32": "89a2840c",
+          "sha256": "949e6b892c3f330a3948dfd5be3af0a2f8a5d42a82cb7540e871afe07b0d68e3"
+        },
+        {
+          "path": "validation/symbian-member-audit.jsonl",
+          "bytes": 6984499,
+          "crc32": "ea7d555e",
+          "sha256": "b938003e837c902ca241144bd043214ed190184a73da8cae148229c74ec8f80b"
+        },
+        {
+          "path": "validation/symbian-nested-and-duplicate-audit.json",
+          "bytes": 161004,
+          "crc32": "55c55ea0",
+          "sha256": "7275fa5d5eeff1773dfe4f9ff92ac517acd8850a6a93c5ef2a56c4143393263a"
+        },
+        {
+          "path": "validation/symbian-packs-audit.json",
+          "bytes": 42236,
+          "crc32": "82978198",
+          "sha256": "0a9b2944959274366f707d29ce265993214ea8154aae6cd86b0fd8c5e4196a98"
+        }
+      ]
+    },
+    {
       "id": "wayback-pass7",
       "repositoryPath": "research/archives/GNEX-GVM-Wayback-Partial-Pass7-20261107.zip",
       "bytes": 72491822,
@@ -156340,9 +156547,9 @@
     }
   ],
   "counts": {
-    "archives": 64,
-    "archiveBytes": 1125831368,
-    "fileMembers": 25960,
-    "uniqueMemberHashes": 13060
+    "archives": 65,
+    "archiveBytes": 1128612691,
+    "fileMembers": 25993,
+    "uniqueMemberHashes": 13090
   }
 }

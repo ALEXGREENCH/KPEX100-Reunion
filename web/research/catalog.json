@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "crow2-ktf-and-nexon",
+      "title": "Crow 2 для KTF и каталог Nexon 2006 года",
+      "category": "Игры и источники Softmax",
+      "description": "Оригинальная Crow 2 версии 01.00.06 для KTF/WIPI. В комплекте сценарий запуска в ARAM, кадры первой игровой сцены и снимки каталога Nexon.",
+      "repositoryPath": "research/archives/Softmax-Crow-2-KTF-and-Nexon-Catalogue.zip",
+      "bytes": 2781323,
+      "sha256": "23f342c0a0e73027e126b46da1971aec3f192ba1b10c68b2af71fd8965a79d75",
+      "sources": [
+        {
+          "label": "Исходное вложение KTF",
+          "url": "https://dubigame.tistory.com/431"
+        },
+        {
+          "label": "Релиз Softmax",
+          "url": "https://www.newswire.co.kr/newsRead.php?no=65491"
+        },
+        {
+          "label": "Каталог Nexon",
+          "url": "https://web.archive.org/web/20060703014630id_/http://mobile.nexon.com:80/main.asp?"
+        }
+      ]
+    },
+    {
       "id": "wayback-pass7",
       "title": "GNEX/GVM Wayback: частичный снимок Pass 7",
       "category": "Документы и история платформы",
@@ -1201,6 +1224,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Crow 2 для KTF и каталог Nexon 2006 года",
+      "repositoryPath": "doc/crow2-ktf-and-nexon.md"
+    },
     {
       "title": "Поиск игр в GVM Club, Dubigame и архиве Symbian",
       "repositoryPath": "doc/wayback-game-search-pass22.md"
