@@ -4,6 +4,68 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "dubigame-maplestory-asphalt4-wipi",
+      "title": "Dubigame: MapleStory, Asphalt 4 и ещё семь игр",
+      "category": "Игры и игровые сборки",
+      "description": "Семь исходных сборок KTF WIPI и две LGT Raptor. В ARAM проверены гонка Asphalt 4, первая мини-игра Mini Game Heaven 3, диалоги MapleStory и комната Mission 1 в Devil May Cry.",
+      "sources": [
+        {
+          "label": "MapleStory, лучник",
+          "url": "https://dubigame.tistory.com/410"
+        },
+        {
+          "label": "MapleStory, вор",
+          "url": "https://dubigame.tistory.com/411"
+        },
+        {
+          "label": "Asphalt 4",
+          "url": "https://dubigame.tistory.com/413"
+        },
+        {
+          "label": "Zenonia",
+          "url": "https://dubigame.tistory.com/418"
+        },
+        {
+          "label": "Demon Hunter",
+          "url": "https://dubigame.tistory.com/436"
+        },
+        {
+          "label": "정무문3",
+          "url": "https://dubigame.tistory.com/441"
+        },
+        {
+          "label": "Labyrinth",
+          "url": "https://dubigame.tistory.com/445"
+        },
+        {
+          "label": "Mini Game Heaven 3",
+          "url": "https://dubigame.tistory.com/451"
+        },
+        {
+          "label": "Devil May Cry",
+          "url": "https://dubigame.tistory.com/453"
+        }
+      ],
+      "repositoryPath": "research/archives/Dubigame-MapleStory-Asphalt4-WIPI.zip",
+      "bytes": 16073004,
+      "sha256": "471980813ab55face73f6d93eb653bb65344677ba16499a9d87abe800242f656"
+    },
+    {
+      "id": "lg-sd9220-sx601318-memory",
+      "title": "LG SD9220: неполный дамп SX601318",
+      "category": "Прошивки телефонов",
+      "description": "Исходный 7z, карта меток GVM и отчёт сканера. В этом фрагменте SGS не извлечены.",
+      "sources": [
+        {
+          "label": "Исходная папка Sunderland",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD9220/"
+        }
+      ],
+      "repositoryPath": "research/archives/LG-SD9220-SX601318-Memory.zip",
+      "bytes": 1791525,
+      "sha256": "2226770fedde5fa5f61387942e7510088e18a1e2097e99d2e000ca32ff6e0de5"
+    },
+    {
       "id": "dubigame-skvm-ktf-four-games",
       "title": "Dubigame: Sketcher 2, Welusia и ещё две игры",
       "category": "Игры и игровые сборки",
@@ -1634,6 +1696,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Девять игр Dubigame и неполный дамп LG SD9220",
+      "repositoryPath": "doc/dubigame-wipi-and-sd9220.md"
+    },
     {
       "title": "Dubigame и NiVer: игры KTF, SK‑VM и результаты запуска",
       "repositoryPath": "doc/dubigame-skvm-ktf-and-portable.md"
