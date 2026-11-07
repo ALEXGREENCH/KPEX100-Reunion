@@ -84,7 +84,7 @@ test('Original Swerve loader parses the unmodified appended gnex.m3g world', asy
       bytes = m.alloc(data.length),
       out = m.alloc(4);
     m.cpu.write(bytes, data);
-    assert.equal(m.method(loader, 3, data.length, bytes), 0);
+    assert.equal(m.loadScene(loader, data.length, bytes), 0);
     m.method(loader, 5, out);
     assert.equal(m.cpu.read32(out), 1);
     assert.equal(m.method(loader, 6, 0, out), 0);
@@ -171,5 +171,37 @@ test('Unmodified Independence SGS calls the isolated native renderer through the
     assert.ok(values.size > 10, 'Original animated logo contains real rendered geometry');
   } finally {
     r.close();
+  }
+});
+
+test('guarded Swerve loads the Independence Day 3D city after the title world', async () => {
+  const rom = fs.readFileSync(new URL('../web/data/firmware/Kingston-2.12.rom', import.meta.url));
+  const sgs = fs.readFileSync(
+    new URL('../web/data/games/gnex26_independence_day_3d.sgs', import.meta.url),
+  );
+  let now = 0;
+  const game = await GnexRuntime.create(rom, sgs, {
+    profile: 'phone',
+    width: 176,
+    height: 220,
+    fastExecution: true,
+    nowMs: () => now,
+    clock: () => new Date('2026-01-01T12:00:00Z'),
+    swerve: { binary },
+  });
+  try {
+    game.event('START');
+    for (let i = 0; i < 4; i++) {
+      assert.equal(game.status, 'idle', game.error);
+      now += 10000;
+      game.event('TIMEOUT');
+    }
+    assert.equal(game.status, 'idle', game.error);
+    const loads = game.swerve.log.filter((entry) => entry.id === '312');
+    assert.equal(loads.length, 2);
+    assert.ok(loads[1].result >>> 31, 'City load returns an encoded GNEX root array');
+    assert.ok(game.vfs.intPointer(game, loads[1].result, 4) > 0);
+  } finally {
+    game.close();
   }
 });

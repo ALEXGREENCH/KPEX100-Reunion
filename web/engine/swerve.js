@@ -71,7 +71,7 @@ export class SwerveBridge {
       const loader = m.createObject(14),
         p = m.alloc(data.length);
       c.write(p, data);
-      rc = m.method(loader, 3, data.length, p);
+      rc = m.loadScene(loader, data.length, p);
       m.free(p);
       if (!rc) {
         const out = this.params;

@@ -290,7 +290,7 @@ export class ArmCPU {
     }
   }
   runGuarded(start, stop, workBudget) {
-    if (!Number.isSafeInteger(workBudget) || workBudget < 1 || workBudget > 100_000_000)
+    if (!Number.isSafeInteger(workBudget) || workBudget < 1 || workBudget > 200_000_000)
       throw new Error('Invalid ARM block work budget');
     if (this.blockBudget != null) throw new Error('Nested execution on the same ARM CPU');
     this._ensureBlockMonitor();

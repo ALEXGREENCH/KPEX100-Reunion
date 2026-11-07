@@ -4,7 +4,8 @@ const BASE = 0x04000000,
   HEAP = 0x06000000,
   TRAP = 0x08000000,
   STACK = 0x09ff0000,
-  STOP = 0x09fff000;
+  STOP = 0x09fff000,
+  INSTRUCTION_LIMIT = 100_000_000;
 export class SwerveMachine {
   static async create(binary, helperNames, options = {}) {
     const cpu = await createARM({ isolated: true });
@@ -260,6 +261,9 @@ export class SwerveMachine {
     return p;
   }
   call(p, ...args) {
+    return this.#call(p, args, INSTRUCTION_LIMIT);
+  }
+  #call(p, args, workBudget) {
     const c = this.cpu;
     this.error = null;
     c.regWrite('sp', STACK);
@@ -270,8 +274,8 @@ export class SwerveMachine {
     });
     this.nativeCalls++;
     try {
-      if (this.fastExecution) c.runGuarded(p, STOP, 100_000_000);
-      else c.run(p, STOP, 100_000_000);
+      if (this.fastExecution) c.runGuarded(p, STOP, workBudget);
+      else c.run(p, STOP, INSTRUCTION_LIMIT);
     } catch (e) {
       throw Error((e.message || String(e)) + ' at Swerve ARM ' + c.regRead('pc').toString(16));
     }
@@ -310,6 +314,12 @@ export class SwerveMachine {
   }
   method(object, slot, ...args) {
     return this.call(this.cpu.read32(this.cpu.read32(object) + slot * 4), object, ...args);
+  }
+  loadScene(loader, length, bytes) {
+    const entry = this.cpu.read32(this.cpu.read32(loader) + 3 * 4);
+    // The watchdog charges 32-bit ARM instructions as two units to bound Thumb too.
+    // Give the scene loader room for the same ARM work as the exact instruction limit.
+    return this.#call(entry, [loader, length, bytes], 2 * INSTRUCTION_LIMIT);
   }
   close() {
     if (!this.cpu) return;
