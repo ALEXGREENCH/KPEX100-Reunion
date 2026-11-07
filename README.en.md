@@ -7,12 +7,12 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-**The collection is included:** 9 firmware images, 68 SGS applications,
+**The collection is included:** 9 firmware images, 69 SGS applications,
 3 quick-start snapshots and the original Swerve 2.1 module. Both the repository
 and the default GitHub Pages build are ready to launch games. Original bytes
 are unchanged; the catalogue records SHA-256 hashes and tested runtime profiles.
 
-The Games tab contains 64 game builds and the Mosquito utility. The Examples tab
+The Games tab contains 65 game builds and the Mosquito utility. The Examples tab
 contains three separately tested developer SGS samples. Preserved attachments,
 source projects and research downloads are available on the
 [archive page](https://alexgreench.github.io/KPEX100-Reunion/research/), with

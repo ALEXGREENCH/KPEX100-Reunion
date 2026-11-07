@@ -178,3 +178,13 @@ relicense them. The exact JPEGs, origin URLs, hashes, cosmetic transforms and
 limitations are listed in [the interface report](doc/web-interface.md) and
 [photo provenance](validation/device-photo-sources.json). Source-only builds
 exclude these historical JPEG files.
+
+The separately preserved [GLib source tree and complete received Git history](doc/sinjisoft-glib-source-and-namu.md)
+retain all upstream notices, including SINJISOFT and Sonivox. No root licence is
+present in that tree; Reunion MIT does not relicense its source or bundled Yamaha
+libraries. It is not part of Reunion's runtime. The [new Korean phone research](doc/korean-phone-preservation-pass16.md)
+preserves eleven unchanged Samsung/LG archives and original native game files.
+Firmware and games retain their original rights. The separate portable layer
+decoder and upstream LZO source/library are GPL-2.0-or-later; the unchanged legacy
+KDZ helper retains its MIT licence. All corresponding source and notices are in
+the tools/evidence download, separate from the MIT emulator.

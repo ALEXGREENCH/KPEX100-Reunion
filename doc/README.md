@@ -142,3 +142,6 @@ SGS на любом устройстве. SDK и руководства опис
 - [Sinjisoft: корейские авторские публикации и Pass 6](sinjisoft-korean-authored-columns.md): девять оригиналов ETNews, частичный снимок и поиск по корейским HTML.
 
 - [Высокие узкие изображения и Battle Armor](narrow-palette-performance.md): пакетные строки 32–127 пикселей, чередующиеся замеры и сравнение состояния гаража/базы.
+
+- [Samsung/LG: 11 оригинальных архивов и игровые PXO](korean-phone-preservation-pass16.md): распаковка, регистрация GNEX в SH110 и точные границы поиска SGS.
+- [GLib и указатель NamuWiki](sinjisoft-glib-source-and-namu.md): 169 сырых Git blob, история проекта и восемь записей нативных игр.

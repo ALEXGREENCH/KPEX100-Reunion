@@ -963,6 +963,111 @@
       "repositoryPath": "research/archives/Battle-Armor-Narrow-Palette-Batches-and-Verification.zip",
       "bytes": 199030,
       "sha256": "018935c5ce2f80a88b63c6a9c77307b0617f24f611428613acc827d497b541bb"
+    },
+    {
+      "repositoryPath": "research/archives/Samsung-Korean-Phone-Originals-Pass16.zip",
+      "bytes": 85480918,
+      "sha256": "96d51cba65417a2b5f7825e7a5b9cb2addf17e1f4a886ff3da46489bde7d787a",
+      "id": "samsung-korean-originals-pass16",
+      "category": "Прошивки и исходные дампы",
+      "title": "Samsung: E170, E250, V450, V600 и два V740",
+      "description": "Шесть неизменённых 7z с квитанциями, CRC и SHA-256. Проверены целые BIN; SGS не подтверждены. Для v600-test.bin внутренняя модель не установлена.",
+      "sources": [
+        {
+          "label": "Оригинальный источник",
+          "url": "https://archive.sunderland93.ru/Firmwares/Samsung/"
+        }
+      ]
+    },
+    {
+      "repositoryPath": "research/archives/LG-SH100-Original-and-Games.zip",
+      "bytes": 76924653,
+      "sha256": "8ae71f3fae7a99cc1d69ee819cf81ae9cee1df816aa1b3a73b50cce649ec306a",
+      "id": "lg-sh100-original-games",
+      "category": "Прошивки и встроенные игры",
+      "title": "LG SH100: оригинал, Racing Time и Sudoku",
+      "description": "SW100617, все 905 файлов WDB в манифесте; оригинальные игровые PXO и ресурсы. Нативный телефонный API ещё не реализован.",
+      "sources": [
+        {
+          "label": "Оригинальный источник",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SH100/"
+        }
+      ]
+    },
+    {
+      "repositoryPath": "research/archives/LG-SH110-Originals-and-Games.zip",
+      "bytes": 96813355,
+      "sha256": "a3a1f61f53b18671e7872d0b127f6313c545d1f564c9e57be411be01eeba07c1",
+      "id": "lg-sh110-originals-games",
+      "category": "Прошивки и встроенные игры",
+      "title": "LG SH110: два образа и запись GNEX PLAYER",
+      "description": "SW110612_memory и SW110617; 1084 файла WDB. Racing Time, Sudoku и подтверждённый фрагмент регистрации GNEX 036.016.000. Отдельного установщика плеера нет.",
+      "sources": [
+        {
+          "label": "Оригинальный источник",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SH110/"
+        }
+      ]
+    },
+    {
+      "repositoryPath": "research/archives/LG-SH210-Original-and-Games.zip",
+      "bytes": 98815552,
+      "sha256": "8ace1187003b6233bd8c33f546a4476633043e09ae07f843487d45f33a43befc",
+      "id": "lg-sh210-original-games",
+      "category": "Прошивки и встроенные игры",
+      "title": "LG SH210: Eye Shot и Mini Mini",
+      "description": "Оригинальный SW210721, манифест 2181 файлов, исходные и распакованные PXO. Первый MAIN декодирован отдельно; работа игр в Reunion не заявляется.",
+      "sources": [
+        {
+          "label": "Оригинальный источник",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SH210/"
+        }
+      ]
+    },
+    {
+      "repositoryPath": "research/archives/LG-SH240-Original-and-Games.zip",
+      "bytes": 96653983,
+      "sha256": "f902a51d50818817394d1f4de141f2ee4429c4cf02a5d657abdc53fb6582f614",
+      "id": "lg-sh240-original-games",
+      "category": "Прошивки и встроенные игры",
+      "title": "LG SH240: четыре игровых PXO",
+      "description": "SW240814, 1919 файлов WDB, Grand Golf, JjangiV, Sudoku, ZooZoo Club и LKZ с 435 проверенными ресурсами. Нативные модули, не SGS.",
+      "sources": [
+        {
+          "label": "Оригинальный источник",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SH240/"
+        }
+      ]
+    },
+    {
+      "repositoryPath": "research/archives/Korean-Phone-Layer-Tools-and-Evidence.zip",
+      "bytes": 2001114,
+      "sha256": "26160dbdf323bf2729beadadd4a42831bd95e4d53285695a0485b0e2d944b613",
+      "id": "korean-phone-layer-tools-pass16",
+      "category": "Инструменты и проверки",
+      "title": "Разбор KDZ, WDB, MAIN и PXO",
+      "description": "Переносимый декодер, полный исходник LZO, проверенная самостоятельная сборка и отчёты по 11 оригиналам. Известные SGS не найдены; границы поиска указаны точно.",
+      "sources": [
+        {
+          "label": "Оригинальный источник",
+          "url": "https://github.com/michaelwright235/kdz_decrypt_encrypt"
+        }
+      ]
+    },
+    {
+      "repositoryPath": "research/archives/Sinjisoft-GLib-Source-History-and-Research.zip",
+      "bytes": 7645896,
+      "sha256": "953653c081066340cf519c14557ec58e27ab489baff5a8b5e9703b2350013c88",
+      "id": "sinjisoft-glib-source-history",
+      "category": "Исторические исходники",
+      "title": "Sinjisoft GLib: 169 файлов и история Git",
+      "description": "Точная копия дерева ed4049f и пяти коммитов, Git bundle, массивы ресурсов, сохранённый корейский указатель Namu и квитанции. Восемь игр в таблице C; сборка и запуск не проверены.",
+      "sources": [
+        {
+          "label": "Оригинальный источник",
+          "url": "https://git.fifo-f.eu/raulmario28/sinjisoft"
+        }
+      ]
     }
   ],
   "reports": [
@@ -1145,6 +1250,14 @@
     {
       "title": "Высокие палитровые изображения, гараж и сравнение состояния Battle Armor",
       "repositoryPath": "doc/narrow-palette-performance.md"
+    },
+    {
+      "title": "Samsung/LG: 11 оригиналов, игровые PXO и регистрация GNEX в SH110",
+      "repositoryPath": "doc/korean-phone-preservation-pass16.md"
+    },
+    {
+      "title": "GLib: исходники, восемь записей игр и зацепки NamuWiki",
+      "repositoryPath": "doc/sinjisoft-glib-source-and-namu.md"
     }
   ]
 }

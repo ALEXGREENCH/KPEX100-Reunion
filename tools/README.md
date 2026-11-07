@@ -66,3 +66,5 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `ma1-info.mjs`: inspect standalone raw MA1 or a selected legacy SGS resource as JSON; no audio synthesis.
 
 - `render-ma1.mjs`: render raw MA1 or a selected legacy SGS resource to a new mono WAVE; [model, bounds and validation](../doc/gvm-ma1-playback.md).
+
+- `preserve-firmware-files.py`: download an explicit HTTPS JSON list into immutable SHA-256 objects with HTTP receipts. Rehash successful cached bodies; retain short/error responses separately, enforce download bounds and never run firmware. [Eleven original Samsung/LG archives and extraction checks](../doc/korean-phone-preservation-pass16.md).
