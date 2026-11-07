@@ -1,0 +1,208 @@
+{
+  "download": {
+    "source": "https://archive.sunderland93.ru/Firmwares/LG/KH1800/KW180713.7z",
+    "response": "200 https://archive.sunderland93.ru/Firmwares/LG/KH1800/KW180713.7z",
+    "utc": "2026-11-07T19:50:22.6919237Z",
+    "file": "KW180713.7z",
+    "bytes": 65228410,
+    "sha256": "dd6403c18a16c5d54e8b2ba240967dfd4666c34022b0226dc555b056e9c0431d"
+  },
+  "kdzCrc32": "D844011C",
+  "layers": [
+    {
+      "path": "KW180713_00.kdz",
+      "bytes": 65224233,
+      "sha256": "b53dfd8b192d5572ff3e0765a3264c9e94c30e414a404d83250493027a5d4172",
+      "crc32": "D844011C"
+    },
+    {
+      "path": "decoded.cab",
+      "bytes": 65224233,
+      "sha256": "90381d7b76d94bb6271af4eec887bdc260827368bcb0752ac401cb4248d30180",
+      "crc32": "8C056749"
+    },
+    {
+      "path": "KW180713.wdb",
+      "bytes": 65326709,
+      "sha256": "dcc5ff39df84ac00125862c8c4f289a70eaeb8e9709b72e99d39660a9fb40f80",
+      "crc32": "20D8E493"
+    },
+    {
+      "path": "LGKH1800_1.0.0.1.dll",
+      "bytes": 413696,
+      "sha256": "49b42f6a162b6009456e9b75ec6f7c363ad3c7610f290d3c3e8febff9098b2ad",
+      "crc32": "70E2BEC4"
+    }
+  ],
+  "wdbFiles": 1669,
+  "modules": [
+    {
+      "sourcePath": "MODULE/C/Game.pxo",
+      "title": null,
+      "titleOffset": null,
+      "titleFromModule": false,
+      "original": {
+        "bytes": 1673,
+        "sha256": "09cbc6bf3a486e39e82fedaf63b86afb829b6b17c480fdc2c7bbfc15e9d44fc9",
+        "crc32": "FD44345D"
+      },
+      "decoded": {
+        "bytes": 2225,
+        "sha256": "e20e5a84b487ce7cdd653feabc12bf8a22106bef2c07eb98c2cd32aa2a954d36",
+        "crc32": "5FF56E22"
+      },
+      "thumbOffset": 120,
+      "thumbHex": "10b5ef4c2068c030006a416eed484068",
+      "thumbDisassembly": [
+        "push {r4, lr}",
+        "ldr r4, [pc, #0x3bc]",
+        "ldr r0, [r4]",
+        "adds r0, #0xc0"
+      ]
+    },
+    {
+      "sourcePath": "MODULE/C/Game_Baduk.pxo",
+      "title": "Baduk",
+      "titleOffset": 1139,
+      "titleFromModule": false,
+      "original": {
+        "bytes": 539778,
+        "sha256": "2ed1d093743739fd65ab39890c937fcb02f4d3ce0d9a14c709393964cefe483f",
+        "crc32": "53E00D12"
+      },
+      "decoded": {
+        "bytes": 1453245,
+        "sha256": "a242abed25377a4920b03b43cc2b911c31e1131a872c8b17fa92bc32a4aa3bd4",
+        "crc32": "77620BA2"
+      },
+      "thumbOffset": 1092,
+      "thumbHex": "10b50e49041c09684000896e03d5c96a",
+      "thumbDisassembly": [
+        "push {r4, lr}",
+        "ldr r1, [pc, #0x38]",
+        "adds r4, r0, #0",
+        "ldr r1, [r1]"
+      ]
+    },
+    {
+      "sourcePath": "MODULE/C/Game_Cooking.pxo",
+      "title": "Rhythm cooking",
+      "titleOffset": 2022,
+      "titleFromModule": false,
+      "original": {
+        "bytes": 777623,
+        "sha256": "c10e540f7ceb3535d2341758c7610af9a678451b26bd40a46102ac9ff3862207",
+        "crc32": "5AF19877"
+      },
+      "decoded": {
+        "bytes": 2085813,
+        "sha256": "57be17d7c57613baed6ce08a305fa6f049f986ffb8c0dd42af23a6371f443af8",
+        "crc32": "AD8EB4BD"
+      },
+      "thumbOffset": 992,
+      "thumbHex": "10b50e49041c09684000896e03d5c96a",
+      "thumbDisassembly": [
+        "push {r4, lr}",
+        "ldr r1, [pc, #0x38]",
+        "adds r4, r0, #0",
+        "ldr r1, [r1]"
+      ]
+    },
+    {
+      "sourcePath": "MODULE/C/Game_GrandGolf.pxo",
+      "title": "Grand golf",
+      "titleOffset": 2051,
+      "titleFromModule": false,
+      "original": {
+        "bytes": 290770,
+        "sha256": "e04306fc70b19f8a5de961fd0af8d243bf04ef0a1e80db601a0787a29209383f",
+        "crc32": "06C532A3"
+      },
+      "decoded": {
+        "bytes": 561257,
+        "sha256": "4db91aac384bd08c2de1a94696b835bbda24ca563311001242a0b6f53360801a",
+        "crc32": "EF5A5EDF"
+      },
+      "thumbOffset": 1160,
+      "thumbHex": "10b50e49041c09684000896e03d5c96a",
+      "thumbDisassembly": [
+        "push {r4, lr}",
+        "ldr r1, [pc, #0x38]",
+        "adds r4, r0, #0",
+        "ldr r1, [r1]"
+      ]
+    },
+    {
+      "sourcePath": "MODULE/C/Game_JjangiV.pxo",
+      "title": "Mobile Jjangi",
+      "titleOffset": 63432,
+      "titleFromModule": true,
+      "original": {
+        "bytes": 699230,
+        "sha256": "128dc437046769fbbee6a63e14b96324684f9aba7abb5b93e2b346c0787c9cb9",
+        "crc32": "4B5433B8"
+      },
+      "decoded": {
+        "bytes": 1511281,
+        "sha256": "5ff6adba7f657d121ae850dc78dba9e4400e9fdfbdd2d12fa56e2479d7c94e0d",
+        "crc32": "89AACCCB"
+      },
+      "thumbOffset": 1196,
+      "thumbHex": "10b50e49041c09684000896e03d5c96a",
+      "thumbDisassembly": [
+        "push {r4, lr}",
+        "ldr r1, [pc, #0x38]",
+        "adds r4, r0, #0",
+        "ldr r1, [r1]"
+      ]
+    },
+    {
+      "sourcePath": "MODULE/C/Game_Sudoku.pxo",
+      "title": "Sudoku puzzle",
+      "titleOffset": 2037,
+      "titleFromModule": false,
+      "original": {
+        "bytes": 103334,
+        "sha256": "038414117ccc2d11fb8bf383b57a38d8a30197271f57421ee9c826319054dd1d",
+        "crc32": "4A15CF8F"
+      },
+      "decoded": {
+        "bytes": 398757,
+        "sha256": "fdf0ffc0722e3e2fcd964c314c7379736b8ed93f672865b942440d70b94b57f6",
+        "crc32": "60675DD3"
+      },
+      "thumbOffset": 496,
+      "thumbHex": "10b50e49041c09684000896e03d5c96a",
+      "thumbDisassembly": [
+        "push {r4, lr}",
+        "ldr r1, [pc, #0x38]",
+        "adds r4, r0, #0",
+        "ldr r1, [r1]"
+      ]
+    }
+  ],
+  "main": {
+    "bytes": 28681076,
+    "sha256": "2b20e6ef728fd4ff9710bf4b4a4e5b45b75a3a48d31c002c66862e6d2daeda13",
+    "crc32": "2BA2C007",
+    "markers": {
+      "application/x-gnex-sgs": [],
+      "A000200001": [],
+      "GIGAVERSION": [],
+      "036.016.000": []
+    }
+  },
+  "sgsScan": {
+    "files": 1676,
+    "bytes": 107554013,
+    "hits": 0
+  },
+  "sharedLkzSha256": "bacf297a7ce85d710b6195fba479643caf629187b22459ae668f0f7709078ab5",
+  "mobileJjangiSh240DecodedSha256": "5f24584672ea6794b6c94848b34a292f68985f30a8fd5c79e2d10e1e0bcc4506",
+  "archive": {
+    "repositoryPath": "research/archives/LG-KH1800-Original-and-Games.zip",
+    "bytes": 73777640,
+    "sha256": "c76f00eaf2476782405a0fbb445a1ce4cccfd9d620f23d3eedf8c133fa3a9b93",
+    "crc32": "CE31FBB1"
+  }
+}

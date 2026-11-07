@@ -3,6 +3,213 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "lg-kh1800-original-and-games",
+      "repositoryPath": "research/archives/LG-KH1800-Original-and-Games.zip",
+      "bytes": 73777640,
+      "sha256": "c76f00eaf2476782405a0fbb445a1ce4cccfd9d620f23d3eedf8c133fa3a9b93",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "source/KW180713.7z",
+          "bytes": 65228410,
+          "crc32": "830d2d45",
+          "sha256": "dd6403c18a16c5d54e8b2ba240967dfd4666c34022b0226dc555b056e9c0431d"
+        },
+        {
+          "path": "source/index.html",
+          "bytes": 1862,
+          "crc32": "ed0aa38f",
+          "sha256": "4dada3b5ff79b05844a2f6a7d4f75b8a3f817d6ba8b00c6bca5ecac7f53a71ab"
+        },
+        {
+          "path": "evidence/kdz.json",
+          "bytes": 312,
+          "crc32": "01b02210",
+          "sha256": "cbbc3408d4759c128ca5bacf4c44607653f7fb1c93f5408f904055a28ddda5b3"
+        },
+        {
+          "path": "evidence/main-lzo.json",
+          "bytes": 221879,
+          "crc32": "c46bb369",
+          "sha256": "98498bd504c3b9c373d031758e70ffb619d48745a88a38a07c304a2970495472"
+        },
+        {
+          "path": "evidence/7z-list.txt",
+          "bytes": 496,
+          "crc32": "a7696dea",
+          "sha256": "faf6ada427fb520e26617ca9df7019855351274d7711284f652bd019a795a299"
+        },
+        {
+          "path": "evidence/7z-test.txt",
+          "bytes": 362,
+          "crc32": "b4711a3b",
+          "sha256": "6aa5412dc30ad6bb285b0acb472623cc10f13f0a767f29d542ca414f9a2f23dd"
+        },
+        {
+          "path": "evidence/cab-list.txt",
+          "bytes": 579,
+          "crc32": "cc13294e",
+          "sha256": "d29471f60a8763416168d77bcb4b621bfeb353ec1f9ebb53d0f7e5181d8d90fe"
+        },
+        {
+          "path": "evidence/cab-test.txt",
+          "bytes": 403,
+          "crc32": "bfa4266f",
+          "sha256": "ba7a49b788003ccbe847c79be9b2740f9bdd7a02d933027b39b2d600c0e8d27f"
+        },
+        {
+          "path": "resources/campaign.lks",
+          "bytes": 997,
+          "crc32": "194c2654",
+          "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+        },
+        {
+          "path": "resources/data.lkz",
+          "bytes": 4041324,
+          "crc32": "946bd003",
+          "sha256": "bacf297a7ce85d710b6195fba479643caf629187b22459ae668f0f7709078ab5"
+        },
+        {
+          "path": "resources/options.lks",
+          "bytes": 1076,
+          "crc32": "ab36136b",
+          "sha256": "763291e38c90ef21e22504edef7293da98fcb5ff458e65f22bdad3f8401206a7"
+        },
+        {
+          "path": "evidence/lkz-members.json",
+          "bytes": 78083,
+          "crc32": "ba4a7da9",
+          "sha256": "7c9394efdfbe57d61924a101903d114c385b79a25be60a9de6c26452d37cbcf3"
+        },
+        {
+          "path": "pxo/original/Game.pxo",
+          "bytes": 1673,
+          "crc32": "fd44345d",
+          "sha256": "09cbc6bf3a486e39e82fedaf63b86afb829b6b17c480fdc2c7bbfc15e9d44fc9"
+        },
+        {
+          "path": "pxo/decoded/Game.pxo",
+          "bytes": 2225,
+          "crc32": "5ff56e22",
+          "sha256": "e20e5a84b487ce7cdd653feabc12bf8a22106bef2c07eb98c2cd32aa2a954d36"
+        },
+        {
+          "path": "evidence/pxo/Game.json",
+          "bytes": 401,
+          "crc32": "9d63275c",
+          "sha256": "ead1ef4e39a23fe36b454634cd82a24c1edb0dfd3a58ae0bf98f3fd24135b552"
+        },
+        {
+          "path": "pxo/original/Game_Baduk.pxo",
+          "bytes": 539778,
+          "crc32": "53e00d12",
+          "sha256": "2ed1d093743739fd65ab39890c937fcb02f4d3ce0d9a14c709393964cefe483f"
+        },
+        {
+          "path": "pxo/decoded/Game_Baduk.pxo",
+          "bytes": 1453245,
+          "crc32": "77620ba2",
+          "sha256": "a242abed25377a4920b03b43cc2b911c31e1131a872c8b17fa92bc32a4aa3bd4"
+        },
+        {
+          "path": "evidence/pxo/Game_Baduk.json",
+          "bytes": 406,
+          "crc32": "0b612a3e",
+          "sha256": "0d895f70f3264b7c44aebb30a19bdb6c9278c69074aae11cee4a7548c4fed343"
+        },
+        {
+          "path": "pxo/original/Game_Cooking.pxo",
+          "bytes": 777623,
+          "crc32": "5af19877",
+          "sha256": "c10e540f7ceb3535d2341758c7610af9a678451b26bd40a46102ac9ff3862207"
+        },
+        {
+          "path": "pxo/decoded/Game_Cooking.pxo",
+          "bytes": 2085813,
+          "crc32": "ad8eb4bd",
+          "sha256": "57be17d7c57613baed6ce08a305fa6f049f986ffb8c0dd42af23a6371f443af8"
+        },
+        {
+          "path": "evidence/pxo/Game_Cooking.json",
+          "bytes": 406,
+          "crc32": "5d3ac6af",
+          "sha256": "c458466cf7403600e33de495cfd45b9ad91cc406eb1dec204e69752b2c411866"
+        },
+        {
+          "path": "pxo/original/Game_GrandGolf.pxo",
+          "bytes": 290770,
+          "crc32": "06c532a3",
+          "sha256": "e04306fc70b19f8a5de961fd0af8d243bf04ef0a1e80db601a0787a29209383f"
+        },
+        {
+          "path": "pxo/decoded/Game_GrandGolf.pxo",
+          "bytes": 561257,
+          "crc32": "ef5a5edf",
+          "sha256": "4db91aac384bd08c2de1a94696b835bbda24ca563311001242a0b6f53360801a"
+        },
+        {
+          "path": "evidence/pxo/Game_GrandGolf.json",
+          "bytes": 405,
+          "crc32": "431fa05c",
+          "sha256": "b5afa36d86a1311eb63bd06d39a931b130d96f19772c3f7ca9ce721b4274e7a4"
+        },
+        {
+          "path": "pxo/original/Game_JjangiV.pxo",
+          "bytes": 699230,
+          "crc32": "4b5433b8",
+          "sha256": "128dc437046769fbbee6a63e14b96324684f9aba7abb5b93e2b346c0787c9cb9"
+        },
+        {
+          "path": "pxo/decoded/Game_JjangiV.pxo",
+          "bytes": 1511281,
+          "crc32": "89aacccb",
+          "sha256": "5ff6adba7f657d121ae850dc78dba9e4400e9fdfbdd2d12fa56e2479d7c94e0d"
+        },
+        {
+          "path": "evidence/pxo/Game_JjangiV.json",
+          "bytes": 406,
+          "crc32": "b8f20f55",
+          "sha256": "e9a78af8cd81ee5b23fd56b5fa8fbd7c462e990322a8160672211b55a431e277"
+        },
+        {
+          "path": "pxo/original/Game_Sudoku.pxo",
+          "bytes": 103334,
+          "crc32": "4a15cf8f",
+          "sha256": "038414117ccc2d11fb8bf383b57a38d8a30197271f57421ee9c826319054dd1d"
+        },
+        {
+          "path": "pxo/decoded/Game_Sudoku.pxo",
+          "bytes": 398757,
+          "crc32": "60675dd3",
+          "sha256": "fdf0ffc0722e3e2fcd964c314c7379736b8ed93f672865b942440d70b94b57f6"
+        },
+        {
+          "path": "evidence/pxo/Game_Sudoku.json",
+          "bytes": 405,
+          "crc32": "4f86a807",
+          "sha256": "5a5909fff4749b3b3d4a66e900676aded8bf536f7c408e29be5b6321af6b2758"
+        },
+        {
+          "path": "evidence/sgs-scan.json",
+          "bytes": 353418,
+          "crc32": "f1c94b12",
+          "sha256": "460af2389be4f2493736b3cb1c8714124ddd372fb6d616925c0f2f98511e1ca4"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 5950,
+          "crc32": "d5f091f7",
+          "sha256": "6518fa8d5ce11f3abe1e8545303e928a5f310551f6da15aac9900a0e3baf4563"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 5606,
+          "crc32": "7214fa41",
+          "sha256": "aa4f8a233353f7fca7779abc270068828c337a961a83d802967aa22ef83dff38"
+        }
+      ]
+    },
+    {
       "id": "lg-sh170-original-and-games",
       "repositoryPath": "research/archives/LG-SH170-Original-and-Games.zip",
       "bytes": 95437779,
@@ -167908,9 +168115,9 @@
     }
   ],
   "counts": {
-    "archives": 80,
-    "archiveBytes": 1403851103,
-    "fileMembers": 27864,
-    "uniqueMemberHashes": 14914
+    "archives": 81,
+    "archiveBytes": 1477628743,
+    "fileMembers": 27897,
+    "uniqueMemberHashes": 14943
   }
 }

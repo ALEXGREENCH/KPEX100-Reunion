@@ -4,6 +4,21 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "lg-kh1800-original-and-games",
+      "title": "LG KH1800: Mobile Jjangi и четыре заводские игры",
+      "category": "Прошивки телефонов",
+      "description": "Прошивка KW180713, пять игровых PXO и меню в исходном и распакованном виде. Сборка Mobile Jjangi отличается от версии SH240.",
+      "repositoryPath": "research/archives/LG-KH1800-Original-and-Games.zip",
+      "bytes": 73777640,
+      "sha256": "c76f00eaf2476782405a0fbb445a1ce4cccfd9d620f23d3eedf8c133fa3a9b93",
+      "sources": [
+        {
+          "label": "Образ KW180713",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/KH1800/KW180713.7z"
+        }
+      ]
+    },
+    {
       "id": "lg-sh170-original-and-games",
       "title": "LG SH170: пять заводских игр",
       "category": "Прошивки телефонов",
@@ -1497,6 +1512,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "LG KH1800: Mobile Jjangi и проверка заводских игр",
+      "repositoryPath": "doc/lg-kh1800-games.md"
+    },
     {
       "title": "LG SH170 и KH1600: игровые PXO и распаковка MAIN",
       "repositoryPath": "doc/lg-sh170-games.md"
