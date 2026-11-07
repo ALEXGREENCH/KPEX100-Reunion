@@ -19,7 +19,7 @@ const create = (id) =>
 
 test('all catalogue legacy containers have consistent native 16-bit layouts', () => {
   const games = catalog.games.filter((g) => [1, 2].includes(g.format));
-  assert.equal(games.length, 33);
+  assert.equal(games.length, 34);
   for (const g of games) {
     const raw = game(g.id),
       s = parseLegacy(raw);

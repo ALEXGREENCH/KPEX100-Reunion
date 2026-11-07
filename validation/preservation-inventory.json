@@ -3,6 +3,309 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "milkclub-gvm-originals",
+      "repositoryPath": "research/archives/Milkclub-GVM-Originals.zip",
+      "bytes": 1798487,
+      "sha256": "eb5b5b4777bb1ffe70b75c2cb305d443af1dcf320824839efa9de5f1afdef12d",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "manifest.json",
+          "bytes": 38581,
+          "crc32": "a15959c9",
+          "sha256": "5bd6b210bced247fc29d3a0c9738cd087af92ff9adac5e8a7828dc22ae58c58e"
+        },
+        {
+          "path": "original/attachments/182color.aco",
+          "bytes": 7288,
+          "crc32": "23115a50",
+          "sha256": "46e32b7db894481a792d435c8dda38ac2885edd95d977f39e6f7f093c7ca2fac"
+        },
+        {
+          "path": "original/attachments/GVM_MapEditor.exe",
+          "bytes": 180298,
+          "crc32": "4b3e461c",
+          "sha256": "8126ceaa41bcf792e34475ca773ef9e008fc8507999ade3c6af032d698ad11bf"
+        },
+        {
+          "path": "original/attachments/HwlloGVM.zip",
+          "bytes": 6498,
+          "crc32": "6c74e586",
+          "sha256": "123ce94d5545355ecef0cd0255b60081d5212df373433902ad7791f9e0575ed0"
+        },
+        {
+          "path": "original/attachments/[VC]ECHO_Server.zip",
+          "bytes": 38206,
+          "crc32": "6947d14d",
+          "sha256": "cf46058243cfb1137e9a094140b1e6730fbb4fbd3e6799d4332a8f7f17c4ccdd"
+        },
+        {
+          "path": "original/attachments/network.mc",
+          "bytes": 3211,
+          "crc32": "826af2f1",
+          "sha256": "9ed5ec84b23be906f45dfde4b9b1a4a7cb79343527dbb21ac1c6274fc77c638d"
+        },
+        {
+          "path": "original/posts/60004691696.html",
+          "bytes": 166334,
+          "crc32": "140a1240",
+          "sha256": "4b81065b2509c6b83bc75e79143bfba5be0a99a3293c6aa54db5e371c46bdaba"
+        },
+        {
+          "path": "original/posts/60004691717.html",
+          "bytes": 165893,
+          "crc32": "fe33d548",
+          "sha256": "92cce70f8df5f459cc28e9106f561b93a05355cca529844e91617a80ccfb1aa1"
+        },
+        {
+          "path": "original/posts/60004691725.html",
+          "bytes": 166524,
+          "crc32": "8b61a7c9",
+          "sha256": "7f51c8d57d70689266df72fa3cd3d3f823a79c8ae52f9f138308f9548b93766c"
+        },
+        {
+          "path": "original/posts/60004691732.html",
+          "bytes": 166056,
+          "crc32": "efc6277e",
+          "sha256": "a2cf48bd96043a50d8697f73361dbd06051edb1400eba7f859b8d3f8afc33108"
+        },
+        {
+          "path": "original/posts/60004691740.html",
+          "bytes": 167100,
+          "crc32": "ea2a5b7d",
+          "sha256": "53cbbb16c7457f710d8961e6f11e512030ca946404193bcf4a2341196895f0ec"
+        },
+        {
+          "path": "original/posts/60004691748.html",
+          "bytes": 166658,
+          "crc32": "814ed54b",
+          "sha256": "a0cef5752de295872b3d82ce954e4ec4a4dbbb29ae30ce13ce37dc71d946c2ba"
+        },
+        {
+          "path": "original/posts/60004691778.html",
+          "bytes": 168240,
+          "crc32": "54990944",
+          "sha256": "ab0b3f86585d01e5e45c7a2c1059fd9b5752ca1fc438bdede97f0e8705f2973c"
+        },
+        {
+          "path": "original/posts/60004691792.html",
+          "bytes": 166119,
+          "crc32": "f9f4b688",
+          "sha256": "6216880ef6c37eeb4f30c2aa70a0d5c3e2992333e6444f1115395fd2c2dc97d4"
+        },
+        {
+          "path": "original/posts/60004691797.html",
+          "bytes": 165952,
+          "crc32": "a2aae029",
+          "sha256": "430ab7e4a5f9d4f1005056787be20346f9b1e862ae8b8ffcb037ca62d24c68f0"
+        },
+        {
+          "path": "original/posts/60004691839.html",
+          "bytes": 166912,
+          "crc32": "ab3258e7",
+          "sha256": "d827661e9fde4d8791cd527b8069e43453bd85ecd84339514185fdbeb9628923"
+        },
+        {
+          "path": "original/posts/60004691856.html",
+          "bytes": 170290,
+          "crc32": "b54e9106",
+          "sha256": "ac8b9a1b95360e917c708faec837ca031ed30aec1de5aaf38358d222fddf2e3b"
+        },
+        {
+          "path": "original/posts/60004691905.html",
+          "bytes": 187661,
+          "crc32": "f3b59336",
+          "sha256": "60e274ad51a167f19a4722d70707d12ecc8c38ca94f1b0c7e949b4d800537cc1"
+        },
+        {
+          "path": "original/posts/60004691925.html",
+          "bytes": 167757,
+          "crc32": "e955830c",
+          "sha256": "19aaa85206a339bae6422f0cf35b36d7a2ed472e8de1ed53a34e862e938bace3"
+        },
+        {
+          "path": "original/posts/60004691939.html",
+          "bytes": 165759,
+          "crc32": "021c72e2",
+          "sha256": "180a033fb2f5e8794a2f338298d59cc7455175bb80acd6eeb93ce6a7a990aac2"
+        },
+        {
+          "path": "original/posts/60004691947.html",
+          "bytes": 167050,
+          "crc32": "d70e89b8",
+          "sha256": "288795b20f62c6b160df961c09efd422bb00d1dabcf08fed6fbc445591b1cb86"
+        },
+        {
+          "path": "original/posts/60004691967.html",
+          "bytes": 168394,
+          "crc32": "d3f71a19",
+          "sha256": "8fa23dd6c02bc4f8fdea20c9388acf886da8a642d75a0269fa2d7d755db7de63"
+        },
+        {
+          "path": "original/posts/60004691979.html",
+          "bytes": 169283,
+          "crc32": "220b3fab",
+          "sha256": "0d73ebb33d696584a4d7ad64fbc4fc05c0f0c946236a095394fc9b65d5683cac"
+        },
+        {
+          "path": "original/posts/60004691988.html",
+          "bytes": 167226,
+          "crc32": "ad117cb9",
+          "sha256": "8385b3ae815880759dbe7ac34ebf15127d1757902eabd54c5eed8fb1e81b32eb"
+        },
+        {
+          "path": "original/posts/60004691991.html",
+          "bytes": 169499,
+          "crc32": "8bc68986",
+          "sha256": "d90837cc979869e35a11775666dbc6d82099bc2333e0c60d1f21160fd90d26b9"
+        },
+        {
+          "path": "original/posts/60004692003.html",
+          "bytes": 166264,
+          "crc32": "3c05a6a6",
+          "sha256": "b810450af3b17c89e58693fdf5c7eb00fc63c71625bdbf2a0ed398fb79ed26e5"
+        },
+        {
+          "path": "original/posts/60004692008.html",
+          "bytes": 166389,
+          "crc32": "2af0f76e",
+          "sha256": "a1736bae8cd5609007ad32a9c50ad90d7ad2cb84dd8fd0bfd661475366fccc8d"
+        },
+        {
+          "path": "original/posts/60004692021.html",
+          "bytes": 171119,
+          "crc32": "fff54c67",
+          "sha256": "abef3a5a17a4deec43566953f6ca57f993f88eed1b349109b609ef645c8b7ad9"
+        },
+        {
+          "path": "original/posts/60004692030.html",
+          "bytes": 171003,
+          "crc32": "ccc82441",
+          "sha256": "2fbdb062ae5cb28c61d82db8241bb2bdcfb72fec022d28958628ee09d4988994"
+        },
+        {
+          "path": "original/posts/60004692037.html",
+          "bytes": 166977,
+          "crc32": "00b89f29",
+          "sha256": "41da1ebf2ba75b20d4dbb2757bc2c5877c17cecb6ea61a28818e7e8072e0d074"
+        },
+        {
+          "path": "original/posts/60004692059.html",
+          "bytes": 171839,
+          "crc32": "1e31a6a3",
+          "sha256": "5f1d84e24652bc82881ad99afd179a09aae05709843a64ed2d2b318ff14f0fcf"
+        },
+        {
+          "path": "original/posts/60004697735.html",
+          "bytes": 170023,
+          "crc32": "b1bbd985",
+          "sha256": "9ba239f65e984a560af2f974b9a72206c4def3ca4f4eaf7a095fc84b2d446941"
+        },
+        {
+          "path": "original/posts/60004697780.html",
+          "bytes": 168743,
+          "crc32": "42f602f5",
+          "sha256": "e3deffac1aba4458bcea449ea304bf208cb0693577c65cceb3e1e6c6c82f4692"
+        },
+        {
+          "path": "original/posts/60004697872.html",
+          "bytes": 172472,
+          "crc32": "cae16ca8",
+          "sha256": "5910cbdc227679b20f4d7610395d52288363e4c42866850a0b31874199a0b507"
+        },
+        {
+          "path": "original/posts/60004698266.html",
+          "bytes": 178417,
+          "crc32": "b5edf261",
+          "sha256": "89b65543462e2018e1b9563001b791e89f20caa4005a7578d5bd9098d3f8e56f"
+        },
+        {
+          "path": "original/posts/60004698333.html",
+          "bytes": 168831,
+          "crc32": "bc8a733f",
+          "sha256": "4d6f919c85bb33b89e03950bac8eacf45bd0245c638160652909b61933836c4a"
+        },
+        {
+          "path": "original/posts/60004698358.html",
+          "bytes": 172420,
+          "crc32": "95ffcab2",
+          "sha256": "be523f90a0f230388a477555b259f3c33045a3be60e96632b7cc6036e8c8129f"
+        },
+        {
+          "path": "original/posts/60004709568.html",
+          "bytes": 167148,
+          "crc32": "4b3cecf9",
+          "sha256": "21dbd9430f5b995dcd3afc6a2010485e361ef24e415af3fd1f95343b7a969848"
+        },
+        {
+          "path": "original/posts/60004709595.html",
+          "bytes": 166078,
+          "crc32": "f4507f6a",
+          "sha256": "269928160855fdbb7ae291ecdeaefb3e0c09f6bc8a33ea81c444a2d93c2ed56b"
+        },
+        {
+          "path": "original/posts/60004718396.html",
+          "bytes": 166198,
+          "crc32": "4be35b06",
+          "sha256": "0302ca6a2d59bf5ee8d585d0440255bf63ce930276bb0de4d3e8d14d7cc219cd"
+        },
+        {
+          "path": "original/posts/60005213078.html",
+          "bytes": 167561,
+          "crc32": "d3dbf28d",
+          "sha256": "950d2a8f9fe62e77064a098cc1f73b210f7cd8a35ffbeedf82dffebfbe6f0058"
+        },
+        {
+          "path": "original/posts/60005272722.html",
+          "bytes": 168768,
+          "crc32": "2c9d3a24",
+          "sha256": "c1bcaa0a395b9502a5a4266a466d7fd0f0bdcf0ac0d3d3219b3913ff53b4e835"
+        },
+        {
+          "path": "original/posts/60005272922.html",
+          "bytes": 165876,
+          "crc32": "0426b8ab",
+          "sha256": "1ddb73502c6a28df31369441e3065b04bedb46826dd548da3a2dcd970a981d56"
+        },
+        {
+          "path": "original/posts/60005453573.html",
+          "bytes": 166172,
+          "crc32": "06d4a95e",
+          "sha256": "e2c6ace0d3f747ae6d0b29622ce3281c02b891c3d5959be3c45423ef4e48cdc7"
+        },
+        {
+          "path": "original/posts/60012070116.html",
+          "bytes": 165408,
+          "crc32": "cd9067c3",
+          "sha256": "85c8f306ed2235aab8b0fb9ff75df8c40465a47b2babeabca7e22295777676e2"
+        },
+        {
+          "path": "original/posts/60012485935.html",
+          "bytes": 167917,
+          "crc32": "ee490a8b",
+          "sha256": "9661a98b73dd3f8619f62b1bbda9abda56abb24378ad47ef8914d263ccab5d87"
+        },
+        {
+          "path": "original/posts/60012489049.html",
+          "bytes": 165742,
+          "crc32": "0767d7dd",
+          "sha256": "fcfbf51d43c95e47f6386b9cd5addbe391f45491ee53352a48fc081a1a8ee9b7"
+        },
+        {
+          "path": "original/posts/70013263906.html",
+          "bytes": 246115,
+          "crc32": "bc641bc8",
+          "sha256": "081931d466d35b8e593a2670f56c7c0dabd0fb47b10f8bf6c9084be53191ed4e"
+        },
+        {
+          "path": "original/posts/70013263982.html",
+          "bytes": 193812,
+          "crc32": "737be06d",
+          "sha256": "016eab439b4e52502b25a82e0021ef96d1f6537e4071f9fee73b28d3cc2a093d"
+        }
+      ]
+    },
+    {
       "id": "gvmclub-2003-game-attachments",
       "repositoryPath": "research/archives/GVM-Club-2003-Game-Attachment-Links.zip",
       "bytes": 47209,
@@ -167023,9 +167326,9 @@
     }
   ],
   "counts": {
-    "archives": 75,
-    "archiveBytes": 1225439555,
-    "fileMembers": 27724,
-    "uniqueMemberHashes": 14780
+    "archives": 76,
+    "archiveBytes": 1227238042,
+    "fileMembers": 27773,
+    "uniqueMemberHashes": 14829
   }
 }
