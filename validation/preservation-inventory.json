@@ -3,6 +3,465 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "webeng-nate-gvm-game-catalogues",
+      "repositoryPath": "research/archives/WebENG-NATE-GVM-Game-Catalogues.zip",
+      "bytes": 255222,
+      "sha256": "eb490925cee25ee1d217148c90427b365f10a30c46978124877326960454cd69",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "context/com2us-gtp-2001.html",
+          "bytes": 43026,
+          "crc32": "44727e1f",
+          "sha256": "773668b96a932f6c24c2dbf9c863f595963527e56e89b8371a6b4d58a42c1936"
+        },
+        {
+          "path": "context/com2us-history.html",
+          "bytes": 67771,
+          "crc32": "df63e500",
+          "sha256": "6f35e761b50ae24b5aa3056a46c50e37e6beff79be6a98393c188a238e11f7f7"
+        },
+        {
+          "path": "context/com2us-phonegame-2002.html",
+          "bytes": 14238,
+          "crc32": "abc092b6",
+          "sha256": "04439173cf82a9e5b87c22c15216214e9e727c1f40427e9f108c2533fac9eb29"
+        },
+        {
+          "path": "evidence/gametop-0.json",
+          "bytes": 111,
+          "crc32": "ca5df30a",
+          "sha256": "f433801bc83949a578e2334c9e3e0b57bc7ec021a74ed09a5c5f765fccee5b40"
+        },
+        {
+          "path": "evidence/gametop-2.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "evidence/nate-asset-availability-0.json",
+          "bytes": 320,
+          "crc32": "e210ab3d",
+          "sha256": "7170d38a84db1bf9d2de8afc2b74f36ae562f18508a8ba8e7b53e9629d8f9ad4"
+        },
+        {
+          "path": "evidence/nate-asset-availability-1.json",
+          "bytes": 133,
+          "crc32": "6e706203",
+          "sha256": "b05b56480c166d3f8ab005488debc3775a77b06a39fc955ef8f4208c8dd7ae82"
+        },
+        {
+          "path": "evidence/nate-asset-availability-2.json",
+          "bytes": 320,
+          "crc32": "958f6df0",
+          "sha256": "0d7723f01b187d63beb300fd1d12293822133122c61bbb79ee5ab9f06522580f"
+        },
+        {
+          "path": "evidence/nate-asset-availability-3.json",
+          "bytes": 332,
+          "crc32": "3b77fa32",
+          "sha256": "1365e951fda44faa1490978bdc334875b9d7bfb75fe88de603a96ad5851485a3"
+        },
+        {
+          "path": "evidence/nate-index-0.json",
+          "bytes": 35597,
+          "crc32": "a6bee327",
+          "sha256": "f255afa6cd42ca26831d991c347b29edd5508822dddfe30d81f92286ec654fae"
+        },
+        {
+          "path": "evidence/nate-index-1.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "evidence/nate-index-2.json",
+          "bytes": 271,
+          "crc32": "44f18864",
+          "sha256": "c78354a92feecc852b2bfe59c727548950f2e82de31d6f33b8e05ed34ea20162"
+        },
+        {
+          "path": "evidence/nate-index-3.json",
+          "bytes": 246,
+          "crc32": "8b81e049",
+          "sha256": "215667d43c4e5742d35bcd8f1c703ce993e655499bf606fe6a277a1130cd2195"
+        },
+        {
+          "path": "evidence/nate-replay-attempts.json",
+          "bytes": 23775,
+          "crc32": "d5aaa695",
+          "sha256": "0cec7de761602a57898f036f24ef743b8a35817c3fbde8ca0facf654d95cc403"
+        },
+        {
+          "path": "evidence/report.json",
+          "bytes": 24290,
+          "crc32": "002ba934",
+          "sha256": "27f8a0027cfa969d051124ba29663d8ec85ead59bfba8729c1a712ddc73393c4"
+        },
+        {
+          "path": "evidence/webeng-gateway-0.json",
+          "bytes": 101,
+          "crc32": "564beda2",
+          "sha256": "bbc86b0e449f9466e5e45beb59f594ba29149ac92d741d3406bac40b6d586ae5"
+        },
+        {
+          "path": "evidence/webeng-gateway-1.json",
+          "bytes": 102,
+          "crc32": "87ff7baa",
+          "sha256": "867a2c98dd024eb86497dd410f7628601cfe8bce29cae4cfd4fd0aec2f4bfd34"
+        },
+        {
+          "path": "evidence/webeng-gateway-2.json",
+          "bytes": 115,
+          "crc32": "f08efdc6",
+          "sha256": "7a908c6ebe013d8d1675cd45e290fbac0e79f2922ed992c06b2978b277badffc"
+        },
+        {
+          "path": "evidence/webeng-gateway-3.json",
+          "bytes": 115,
+          "crc32": "2ab40ae7",
+          "sha256": "7c1241769ff2f50af901c68a780a266a619bfeae7cdbae5b2967d20c51c7ccac"
+        },
+        {
+          "path": "nate/nate-replay-00.html",
+          "bytes": 15694,
+          "crc32": "e48c7959",
+          "sha256": "93d9b3a07803a850824e2a73e107dd2f45e8421c2e2fa0d92a2703f99e84aca9"
+        },
+        {
+          "path": "nate/nate-replay-01.html",
+          "bytes": 6983,
+          "crc32": "803c8413",
+          "sha256": "e680e5755c120f5d721d7ab86c5ac255bf18dbfb9d32bd30fdf571fc79bb11b7"
+        },
+        {
+          "path": "nate/nate-replay-02.html",
+          "bytes": 6991,
+          "crc32": "d69af543",
+          "sha256": "d290e47b60095532be972b5d8c57e9eae8123b64f8b5136364e282cbd7b07ce0"
+        },
+        {
+          "path": "nate/nate-replay-03.html",
+          "bytes": 6977,
+          "crc32": "1cf65341",
+          "sha256": "9b9836e184fabab08582d0489b5856f9a378575ac3f4fcdb10e62c3e9652bcbe"
+        },
+        {
+          "path": "nate/nate-replay-04.html",
+          "bytes": 6985,
+          "crc32": "28970922",
+          "sha256": "b6d230ec1929458e6d3b4c7020fc84f0d1e5f122c5e394b11ab7ddb8873ae0f5"
+        },
+        {
+          "path": "nate/nate-replay-05.html",
+          "bytes": 6995,
+          "crc32": "42800c26",
+          "sha256": "7259e543dcdd042b5b08bc5e434a5124c3b43848f7826b40e356d6cfa579148b"
+        },
+        {
+          "path": "nate/nate-replay-06.html",
+          "bytes": 6991,
+          "crc32": "18e60fa7",
+          "sha256": "57a7f3c9d40c41a9ea53be0f65391d9565bf4ceddc03e0895af8d523421ecbc5"
+        },
+        {
+          "path": "nate/nate-replay-07.html",
+          "bytes": 6991,
+          "crc32": "68ec2939",
+          "sha256": "5e11e188bd9006f8e33b9236e032ebdcbbaeb4acef8b2b2bb3095e09c0537b1d"
+        },
+        {
+          "path": "nate/nate-replay-14.html",
+          "bytes": 7040,
+          "crc32": "755ccb50",
+          "sha256": "6b9f2214fdc5b7e85f45f9fbd7f6a89b5324f278f3f78d51e693d367f56f0dcc"
+        },
+        {
+          "path": "nate/nate-replay-16.html",
+          "bytes": 18429,
+          "crc32": "57b608e7",
+          "sha256": "bdcd8ff14c9dccbd84028be2457f9e39f059d95467e1fe71305f3bedb1548366"
+        },
+        {
+          "path": "nate/nate-replay-18.html",
+          "bytes": 2419,
+          "crc32": "7d32c8e3",
+          "sha256": "5f6774f21afe387bd46558fd2ec59226933cc201d78e44128afd87b712525475"
+        },
+        {
+          "path": "nate/nate-replay-19.html",
+          "bytes": 2350,
+          "crc32": "6b8a1afc",
+          "sha256": "3f87249e05f1cdd0886a9b5315f00ebb4da50ef836465491fb59776c6a084edc"
+        },
+        {
+          "path": "providers/ex.himobi.co.kr/07-top-index-1.htm",
+          "bytes": 5269,
+          "crc32": "9822e431",
+          "sha256": "de90f65f0a535037f703b7de6739168a4e88b9a796404881179b5f69b573ab47"
+        },
+        {
+          "path": "providers/www.m-dream.com/00-galaga.swf",
+          "bytes": 82290,
+          "crc32": "592514e3",
+          "sha256": "b8cff6e60e71ab90b1a713a2f60b5cea1e5be79b7996d69e2f8b5129373272ad"
+        },
+        {
+          "path": "providers/www.m-dream.com/00-game.html",
+          "bytes": 11152,
+          "crc32": "8f0175f2",
+          "sha256": "1b96da9712f3681f4e02071ccc02fca78b2be9cd5b50f4e17f7b612e24b9f830"
+        },
+        {
+          "path": "providers/www.m-dream.com/01-game.html",
+          "bytes": 10270,
+          "crc32": "d0f77fbb",
+          "sha256": "4064a65a1bd5aa4e68f8d4949c98dc46363a06fbe454c4abb25c65f861d32b31"
+        },
+        {
+          "path": "providers/www.m-dream.com/02-game_infor.html",
+          "bytes": 7873,
+          "crc32": "98869234",
+          "sha256": "5d17788900247996f3a163f88210a546b1c36497e0823b8d31861fd5a04de9bf"
+        },
+        {
+          "path": "providers/www.m-dream.com/02-hidden.swf",
+          "bytes": 30301,
+          "crc32": "a6eb6e2b",
+          "sha256": "6abbefdadd69bc4022b1ff7bf2681d26e6826b48cefb36f9412894c72dcdb695"
+        },
+        {
+          "path": "providers/www.m-dream.com/03-demo1.swf",
+          "bytes": 9984,
+          "crc32": "d605a808",
+          "sha256": "5611be2de6372750289efa9828cbd6cdb4cef39fc39ebabeb0a8353d1d175d5f"
+        },
+        {
+          "path": "providers/www.m-dream.com/03-game.html",
+          "bytes": 9667,
+          "crc32": "9fc9eb91",
+          "sha256": "f926a3b2d380085e5dc02881cf25e4db331b0b90848ce2a1adbb60ed6cec1cd9"
+        },
+        {
+          "path": "providers/www.m-dream.com/04-game.html",
+          "bytes": 10041,
+          "crc32": "72420eaf",
+          "sha256": "5d9775044aff8dca4f05979cf187cf7e0ec5c0b85833a7b8a77104d641177228"
+        },
+        {
+          "path": "providers/www.m-dream.com/04-game_connect.html",
+          "bytes": 42743,
+          "crc32": "d533e09d",
+          "sha256": "9a609312aa827e8c1e5fcbb7ecca886f6ccec88b61bb87f576616b99881594d1"
+        },
+        {
+          "path": "providers/www.m-dream.com/05-game_connect.html",
+          "bytes": 23097,
+          "crc32": "5df5977c",
+          "sha256": "e9236016ee0b59ef99fa6831f62d99c6e28b22ab72519a12dd6b244b37036836"
+        },
+        {
+          "path": "providers/www.m-dream.com/06-game_connect.html",
+          "bytes": 18785,
+          "crc32": "79dd7319",
+          "sha256": "d2e03df209b85f5988acc95749cbd6fe55430fcb748d7274122f80c9e96c55f4"
+        },
+        {
+          "path": "providers/www.manastone.com/06-mosam.htm",
+          "bytes": 9954,
+          "crc32": "0e0643f1",
+          "sha256": "d0059d5027383fec7e468613d3323510629f0e0cb97e6547c83a7a675a602e55"
+        },
+        {
+          "path": "providers/www.phonegame.net/05-lover_intro.html",
+          "bytes": 17169,
+          "crc32": "1b8f4a4f",
+          "sha256": "3363e8be5280bb02c16cdd68a777910918c598b6ab3c3d8ef7a2c1e41ec510a4"
+        },
+        {
+          "path": "providers/www.phonegame.net/07-stones_intro.html",
+          "bytes": 16743,
+          "crc32": "6494acd4",
+          "sha256": "40997d20aa3e37ca6299ab4f3579533de6cafe0e92e52c0659e6a6525d71ce84"
+        },
+        {
+          "path": "webeng/gvmbrick1-download-n.html",
+          "bytes": 11293,
+          "crc32": "1cbdfee0",
+          "sha256": "0e26406725655e05e3ef60519ec0e12ca94fe153845dc53fb0d7c839182f10e5"
+        },
+        {
+          "path": "webeng/gvmbrick1-home.html",
+          "bytes": 14284,
+          "crc32": "9926cd60",
+          "sha256": "fe9dd6ffefd3d9282fcadb6a6e4c6be8c33d905ac30e5eeeba14e73bd0af594d"
+        },
+        {
+          "path": "webeng/gvmbrick1-sub06-download.htm",
+          "bytes": 459,
+          "crc32": "281a1cc8",
+          "sha256": "d6bafa43517a2dfd7e5d48fa2de33c9b271d454b77160706144d8006eb1f3982"
+        },
+        {
+          "path": "webeng/gvmbricklover1-download-n.html",
+          "bytes": 11236,
+          "crc32": "388eecfd",
+          "sha256": "7a4331fdd199f838794665055b490421e481d0265b2c59c2d9b102a43668052f"
+        },
+        {
+          "path": "webeng/gvmbricklover1-home.html",
+          "bytes": 12127,
+          "crc32": "89dff530",
+          "sha256": "4f194758ff2955da53d565c8eac1f0ff40214693f87d48a59ad825f3eef1dc42"
+        },
+        {
+          "path": "webeng/gvmddr1-download-n.html",
+          "bytes": 97460,
+          "crc32": "3d11bee1",
+          "sha256": "04aabb6124e554f1cd285526a06dc5bc294a4acd85e2e9ddf1983f509437cb72"
+        },
+        {
+          "path": "webeng/gvmddr1-home.html",
+          "bytes": 12156,
+          "crc32": "24f13a48",
+          "sha256": "62fac71175d25bb9401c9ec460a828c1db54ef4598ebb975d7e6a59551ab98d6"
+        },
+        {
+          "path": "webeng/gvmdownunder1-home.html",
+          "bytes": 12906,
+          "crc32": "88156819",
+          "sha256": "ff79bf9f4aa41e4842b4a7a9da34d6d1e8763f16d9b7ce11a3e2089581e8dd4e"
+        },
+        {
+          "path": "webeng/gvmfishing1-home.html",
+          "bytes": 13128,
+          "crc32": "d1955e45",
+          "sha256": "e715aa9227c08fc29ac84cdacdd2d74ccf1e23a8cc14c72abb56a199d004cb04"
+        },
+        {
+          "path": "webeng/gvmfishing1-sub06-download.htm",
+          "bytes": 459,
+          "crc32": "281a1cc8",
+          "sha256": "d6bafa43517a2dfd7e5d48fa2de33c9b271d454b77160706144d8006eb1f3982"
+        },
+        {
+          "path": "webeng/gvmpuzzle1-download-n.html",
+          "bytes": 17070,
+          "crc32": "69ce60f7",
+          "sha256": "a755b65bf83fa1b97f7b33767907701642741f4843745e9ba719eeb75f11c3b7"
+        },
+        {
+          "path": "webeng/gvmpuzzle1-home.html",
+          "bytes": 12809,
+          "crc32": "6e19ba12",
+          "sha256": "51073be847575dc5879dc4970c46d46f14f787ea65cd418b46911525bb5cfc15"
+        },
+        {
+          "path": "webeng/gvmsupersoccer1-download-n.html",
+          "bytes": 11970,
+          "crc32": "39efd2c8",
+          "sha256": "0dfc59d55b4cf5c3e395e95d2144213d9f069542a8a62ddfa71ed0f0534d310e"
+        },
+        {
+          "path": "webeng/gvmsupersoccer1-home.html",
+          "bytes": 12830,
+          "crc32": "8ec49460",
+          "sha256": "b1b7a8d870eb3506ba93789a67566920dfec2a800db882261522e44b33e6a302"
+        },
+        {
+          "path": "webeng/gvmsupersoccer1-sub06-download.htm",
+          "bytes": 453,
+          "crc32": "1d73dd41",
+          "sha256": "dc4ccbc59b5692e6736c62dd0a39b505ea4ff790279811f29b40cd41511a39a0"
+        },
+        {
+          "path": "webeng/gvmsupervolleyball1-download-n.html",
+          "bytes": 12136,
+          "crc32": "58b7d0d1",
+          "sha256": "72370bf6e48480ab2d30fc269f204432a6fe87a869ad6e9f161b3b2b3849bc36"
+        },
+        {
+          "path": "webeng/home.html",
+          "bytes": 622,
+          "crc32": "e9ffd7ad",
+          "sha256": "5ed6c9fbb85395eaa1b4b13afec72b95ee201958a9b76fbbc288180d71d66f14"
+        },
+        {
+          "path": "webeng/main_all.htm",
+          "bytes": 603,
+          "crc32": "ec346ee7",
+          "sha256": "c05e71b4b52ec089286fc4620fecbf8a72ebda2336c9a05577a2dda53efefa95"
+        },
+        {
+          "path": "webeng/main_index.htm",
+          "bytes": 559,
+          "crc32": "f31253dd",
+          "sha256": "f7b8c3066d22b4a54d7f7c3139722962a5ca4e1e23db285ac58f60473afaff5e"
+        },
+        {
+          "path": "webeng/mobile_all_02_GVM.htm",
+          "bytes": 714,
+          "crc32": "318524e3",
+          "sha256": "e2a9d83dc30b21064c47d03a46b4506f790015966b2673e02b19c5083ce1dc59"
+        },
+        {
+          "path": "webeng/mobile_sub_02_GVM.htm",
+          "bytes": 6663,
+          "crc32": "deafe38e",
+          "sha256": "c4ec6120e39dd0fb535873b16a12df749232ed7d7cfa79a12049e4c3a68c6447"
+        },
+        {
+          "path": "webeng/portfolio_all_01_mobile.htm",
+          "bytes": 725,
+          "crc32": "7a213e05",
+          "sha256": "df01603163f8b16575623abef735cbc4c17c0781436568f2bfb1a5e44dc36839"
+        },
+        {
+          "path": "webeng/portfolio_sub_01_mobile.htm",
+          "bytes": 23002,
+          "crc32": "863e2e65",
+          "sha256": "ac994a4d6d4fd8a98ef47fc930a291c7085fdccff01447157e7a9dcc4d561acc"
+        },
+        {
+          "path": "webeng/product_all_01_GVM.htm",
+          "bytes": 716,
+          "crc32": "cbb01235",
+          "sha256": "3745f6ad17557217698212ba06b2d84fa08f8c297e03a95aac6cd466eae2ccd9"
+        },
+        {
+          "path": "webeng/product_sub_01_GVM.htm",
+          "bytes": 90822,
+          "crc32": "b2d6022b",
+          "sha256": "af422fb34c383244997ca44fc87f389cff1374d6b8b71bd74e1f56bef5365fa4"
+        },
+        {
+          "path": "webeng/service_all_02_game.htm",
+          "bytes": 718,
+          "crc32": "27da9b5e",
+          "sha256": "e42f2ab09f7c3915a0996357cdcfaf11ed42be2919a248af3d8660b825ddbfbe"
+        },
+        {
+          "path": "webeng/service_sub_02_game.htm",
+          "bytes": 5481,
+          "crc32": "4f84e2b2",
+          "sha256": "dd5d6e681caef252d804cc3aa57176d755ec453c22e020b3f19cfdae7c770778"
+        },
+        {
+          "path": "webeng/top.htm",
+          "bytes": 24990,
+          "crc32": "90ed36b5",
+          "sha256": "4ecaa63764d77ead24b870c3f76fbdafa21ae53ecf10c913cb739f72f0b01f20"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 13431,
+          "crc32": "0c148758",
+          "sha256": "096bf7b0f0046051ea5c6bbf0d9b4769c7a368825ceac9023708269b219f435a"
+        }
+      ]
+    },
+    {
       "id": "dubigame-maplestory-asphalt4-wipi",
       "repositoryPath": "research/archives/Dubigame-MapleStory-Asphalt4-WIPI.zip",
       "bytes": 16073004,
@@ -172033,9 +172492,9 @@
     }
   ],
   "counts": {
-    "archives": 89,
-    "archiveBytes": 1699148684,
-    "fileMembers": 28538,
-    "uniqueMemberHashes": 15385
+    "archives": 90,
+    "archiveBytes": 1699403906,
+    "fileMembers": 28613,
+    "uniqueMemberHashes": 15457
   }
 }

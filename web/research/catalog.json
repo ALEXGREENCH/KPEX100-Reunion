@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "webeng-nate-gvm-game-catalogues",
+      "title": "WebENG и NATE: каталоги GVM-игр и три SWF",
+      "category": "Wayback и форумы",
+      "description": "Каталог WebENG на 19 позиций, подтверждённые ответы NATE, страницы загрузки M-Dream и три демонстрационных ролика, включая Galaga.",
+      "repositoryPath": "research/archives/WebENG-NATE-GVM-Game-Catalogues.zip",
+      "bytes": 255222,
+      "sha256": "eb490925cee25ee1d217148c90427b365f10a30c46978124877326960454cd69",
+      "sources": [
+        {
+          "label": "Каталог WebENG",
+          "url": "https://web.archive.org/web/20021018235628id_/http://www.webengkr.com:80/product_sub_01_GVM.htm"
+        },
+        {
+          "label": "Каталог NATE",
+          "url": "https://web.archive.org/web/20020806000727id_/http://www.nate.com:80/servlets/com/nate/www/gvm/servlet/GVMManageServlet?nate_cmd=Game_iframe&pGvmNo=2000200&pageNo=1"
+        },
+        {
+          "label": "Страница загрузки Galaga",
+          "url": "https://web.archive.org/web/20020602101823id_/http://www.m-dream.com/service/vm_galaga/011/game_connect.html"
+        }
+      ]
+    },
+    {
       "id": "dubigame-maplestory-asphalt4-wipi",
       "title": "Dubigame: MapleStory, Asphalt 4 и ещё семь игр",
       "category": "Игры и игровые сборки",
@@ -1696,6 +1719,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Игры GVM в каталогах WebENG, NATE и M-Dream",
+      "repositoryPath": "doc/webeng-nate-gvm-game-catalogues.md"
+    },
     {
       "title": "Девять игр Dubigame и неполный дамп LG SD9220",
       "repositoryPath": "doc/dubigame-wipi-and-sd9220.md"
