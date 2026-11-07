@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "lionlogics-gvm-game-search",
+      "title": "Lionlogics: Eternal Ranger для GVM и сайт Pirate King",
+      "category": "Источники игр GVM и GNEX",
+      "description": "Карточка Eternal Ranger с пометкой SKT GVM, объявления о релизах и оригинальные Flash-файлы сайта Pirate King. Сохранены ссылки, квитанции и результаты проверки.",
+      "repositoryPath": "research/archives/Lionlogics-Eternal-Ranger-and-Pirate-King.zip",
+      "bytes": 530452,
+      "sha256": "7e79728d8656cfedd593f3b63afce343c93f50b7d6b9b7cd7b8ba477b42d5198",
+      "sources": [
+        {
+          "label": "Eternal Ranger в каталоге Lionlogics",
+          "url": "https://web.archive.org/web/20051026014705id_/http://www.lionlogics.com/03_mobile/game1_01.asp"
+        },
+        {
+          "label": "Lionlogics: Pirate King",
+          "url": "https://web.archive.org/web/20041206052858id_/http://www.lionlogics.com/pking/index.asp"
+        }
+      ]
+    },
+    {
       "id": "crow2-ktf-and-nexon",
       "title": "Crow 2 для KTF и каталог Nexon 2006 года",
       "category": "Игры и источники Softmax",
@@ -1224,6 +1243,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Lionlogics: Eternal Ranger для GVM и сайт Pirate King",
+      "repositoryPath": "doc/lionlogics-gvm-game-search.md"
+    },
     {
       "title": "Crow 2 для KTF и каталог Nexon 2006 года",
       "repositoryPath": "doc/crow2-ktf-and-nexon.md"

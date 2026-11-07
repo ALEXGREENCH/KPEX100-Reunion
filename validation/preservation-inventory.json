@@ -3,6 +3,207 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "lionlogics-gvm-game-search",
+      "repositoryPath": "research/archives/Lionlogics-Eternal-Ranger-and-Pirate-King.zip",
+      "bytes": 530452,
+      "sha256": "7e79728d8656cfedd593f3b63afce343c93f50b7d6b9b7cd7b8ba477b42d5198",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "README.txt",
+          "bytes": 573,
+          "crc32": "e664ccb8",
+          "sha256": "539182ad6c951ec138a88e2e02d386de6a74f0e3775610f4cd8146e1ad1d0fcc"
+        },
+        {
+          "path": "availability/043c8442cedb92923f86f39885e4df2e6672b5c4b604d17ef582f70b620b90a5.json",
+          "bytes": 248,
+          "crc32": "aed265e7",
+          "sha256": "043c8442cedb92923f86f39885e4df2e6672b5c4b604d17ef582f70b620b90a5"
+        },
+        {
+          "path": "availability/2db9d71a6ae2df82604daa74c2ce799a659d122e7023d06d3fdcf10764ad67ef.json",
+          "bytes": 248,
+          "crc32": "0c033e3f",
+          "sha256": "2db9d71a6ae2df82604daa74c2ce799a659d122e7023d06d3fdcf10764ad67ef"
+        },
+        {
+          "path": "availability/3e938fb05da7b0af564f8db0a9b07427d903012f64eb48e9db5ccae73f56976e.json",
+          "bytes": 331,
+          "crc32": "488a1114",
+          "sha256": "3e938fb05da7b0af564f8db0a9b07427d903012f64eb48e9db5ccae73f56976e"
+        },
+        {
+          "path": "availability/474259cc8f790b9ab8b86528ddcf5ae49d424942dfa656a2e240967e2019c5fc.json",
+          "bytes": 273,
+          "crc32": "cd103558",
+          "sha256": "474259cc8f790b9ab8b86528ddcf5ae49d424942dfa656a2e240967e2019c5fc"
+        },
+        {
+          "path": "availability/50fc05df4efa6cf0f95a0bdf43450fc74349c12c722fd5e1febec1242851041a.json",
+          "bytes": 248,
+          "crc32": "8604dfa6",
+          "sha256": "50fc05df4efa6cf0f95a0bdf43450fc74349c12c722fd5e1febec1242851041a"
+        },
+        {
+          "path": "availability/9a1fc405a204cf74eba6f6fe5e5d40cabebdad54c195deef38279ca5630ed2ef.json",
+          "bytes": 287,
+          "crc32": "88c58200",
+          "sha256": "9a1fc405a204cf74eba6f6fe5e5d40cabebdad54c195deef38279ca5630ed2ef"
+        },
+        {
+          "path": "availability/aecef80655833db27459337ce534dee71c5080cce752e3fcaddbe0a7028420d0.json",
+          "bytes": 136,
+          "crc32": "b173736d",
+          "sha256": "aecef80655833db27459337ce534dee71c5080cce752e3fcaddbe0a7028420d0"
+        },
+        {
+          "path": "availability/b57894c3677e373753fec0f98127443b4a0be13b359e67bb406c2f2fac4289b3.json",
+          "bytes": 283,
+          "crc32": "589b944e",
+          "sha256": "b57894c3677e373753fec0f98127443b4a0be13b359e67bb406c2f2fac4289b3"
+        },
+        {
+          "path": "availability/bac52dac7c008fd5c9554d4031dcae70049d6888044a5938594780070d5edcf7.json",
+          "bytes": 331,
+          "crc32": "166e3886",
+          "sha256": "bac52dac7c008fd5c9554d4031dcae70049d6888044a5938594780070d5edcf7"
+        },
+        {
+          "path": "availability/d0ea4570ac2f7cade43021d5636e6c9e3a4f633c067db0b825dd3ec4dd33b805.json",
+          "bytes": 283,
+          "crc32": "c7305684",
+          "sha256": "d0ea4570ac2f7cade43021d5636e6c9e3a4f633c067db0b825dd3ec4dd33b805"
+        },
+        {
+          "path": "availability/d566872c31ed8089ef26ebe0eb83eb553681a2b66735686846cb1a0985babe34.json",
+          "bytes": 287,
+          "crc32": "e2c2e76b",
+          "sha256": "d566872c31ed8089ef26ebe0eb83eb553681a2b66735686846cb1a0985babe34"
+        },
+        {
+          "path": "availability/e744867c4dcc63a4c3365f457be007b958a703bac01035e0e9b5163b205451cf.json",
+          "bytes": 106,
+          "crc32": "d3bdf04f",
+          "sha256": "e744867c4dcc63a4c3365f457be007b958a703bac01035e0e9b5163b205451cf"
+        },
+        {
+          "path": "availability/ec75cbd3051b864c3be48db153ca2654a0555c2f15cd2e88510465d15ec7151e.json",
+          "bytes": 331,
+          "crc32": "01922b8d",
+          "sha256": "ec75cbd3051b864c3be48db153ca2654a0555c2f15cd2e88510465d15ec7151e"
+        },
+        {
+          "path": "availability/f5172c42720807be412cbb1f170ab1f66b5382e24d2228648456db75847dcd3a.json",
+          "bytes": 287,
+          "crc32": "73fa5516",
+          "sha256": "f5172c42720807be412cbb1f170ab1f66b5382e24d2228648456db75847dcd3a"
+        },
+        {
+          "path": "captures/20030409192045-game1.html",
+          "bytes": 1088,
+          "crc32": "5c103e9a",
+          "sha256": "ae2517eb16d135126625c022a7a7e7e9c5d1cb8cc8ef151e1f7e0f641766ea5f"
+        },
+        {
+          "path": "captures/20030409192447-gift1.html",
+          "bytes": 976,
+          "crc32": "4e83c194",
+          "sha256": "4715520d802d746b1c05d6435ada7112446ddf3c0f30419cfde807145b79f328"
+        },
+        {
+          "path": "captures/20030409194625-infor1.html",
+          "bytes": 947,
+          "crc32": "1ffa5357",
+          "sha256": "4a3b3f4ad6b9f3bf2084fa6fc3428c8a9c8b14dda17949a2e16273709b220459"
+        },
+        {
+          "path": "captures/20030410165210-index.html",
+          "bytes": 838,
+          "crc32": "36fc351c",
+          "sha256": "943a164ec4787e6bfc7db2d90752bdb6c33833f397afc2bcfdbb7531c3a81b42"
+        },
+        {
+          "path": "captures/20041110024741-index.swf",
+          "bytes": 396793,
+          "crc32": "6ddbe148",
+          "sha256": "fde5899f3c56f0e5420acabd38257384ac9b5377b551f0ed067c8f22c6bb34b8"
+        },
+        {
+          "path": "captures/20041110030453-menu.swf",
+          "bytes": 73227,
+          "crc32": "9a5c92f9",
+          "sha256": "1a03e3446815891ac6b6709a6808bd2fb33dca2430fd028e178a031b9c9d6f25"
+        },
+        {
+          "path": "captures/20041206052016-main.asp",
+          "bytes": 14454,
+          "crc32": "3df3ff8d",
+          "sha256": "43adcdefd4ec84978425ae834b62ee36ceca66d0be9b839fd63b075fca1e82da"
+        },
+        {
+          "path": "captures/20041206052858-index.asp",
+          "bytes": 5474,
+          "crc32": "4592d1e0",
+          "sha256": "a5c4586a975f4fe9594c416f3d4c6c49489593af8eb31ade04a8ce83b8e54c7d"
+        },
+        {
+          "path": "captures/20050206181234-news01_read-18.asp",
+          "bytes": 13793,
+          "crc32": "3243453d",
+          "sha256": "d502351ba645b37206ff7b86d4675805a0ef8e37d41a21ec631e161314a19796"
+        },
+        {
+          "path": "captures/20050206182632-news01_read-20.asp",
+          "bytes": 13713,
+          "crc32": "72a1cac6",
+          "sha256": "2c2ff3d5872ff52616888800e8350d8bc87669c845183243abb2dcc8662c9e70"
+        },
+        {
+          "path": "captures/20050206184839-news01_read-23.asp",
+          "bytes": 15101,
+          "crc32": "f868005f",
+          "sha256": "9da082ed936d119b36cd9967ef1a0d6e4396f9f44da9ecfc016769ddc0e0e982"
+        },
+        {
+          "path": "captures/20050519004617-topmenu.swf",
+          "bytes": 18692,
+          "crc32": "487b98f2",
+          "sha256": "cb9cde01846f44244b18d7ff52f6db812d79861373ea54f349dc7030905eff57"
+        },
+        {
+          "path": "captures/20050525054959-index.html",
+          "bytes": 18552,
+          "crc32": "3334cf0a",
+          "sha256": "129b833d373174e4cbaa0758c13d0fa717583dce6f1d6d910709696ecc8db122"
+        },
+        {
+          "path": "captures/20051026014705-game1_01.asp",
+          "bytes": 35245,
+          "crc32": "62c0606c",
+          "sha256": "9a40cd952e554b7e8220a8ef936c1e50bc48b1ab4a46efe6eee9d84d2619860d"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 6775,
+          "crc32": "0182c5d4",
+          "sha256": "afc3287e3651945504ea033ee7a7b1fbc4cb50db7def9f20c3437b5e5285bb24"
+        },
+        {
+          "path": "sources/receipts.json",
+          "bytes": 36926,
+          "crc32": "0f17324e",
+          "sha256": "b82bff732550d01cedbed977526d668106b673bdfd2928275ebb9bfbf65efd44"
+        },
+        {
+          "path": "validation/captures.json",
+          "bytes": 4482,
+          "crc32": "753d2ad9",
+          "sha256": "d602e820ff21ff1b2f6e921f1e74a4f0e64196feb40f8eaeb9c04e44fe6ca4af"
+        }
+      ]
+    },
+    {
       "id": "crow2-ktf-and-nexon",
       "repositoryPath": "research/archives/Softmax-Crow-2-KTF-and-Nexon-Catalogue.zip",
       "bytes": 2781323,
@@ -156547,9 +156748,9 @@
     }
   ],
   "counts": {
-    "archives": 65,
-    "archiveBytes": 1128612691,
-    "fileMembers": 25993,
-    "uniqueMemberHashes": 13090
+    "archives": 66,
+    "archiveBytes": 1129143143,
+    "fileMembers": 26025,
+    "uniqueMemberHashes": 13122
   }
 }
