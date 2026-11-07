@@ -70,3 +70,5 @@ The shared original collection is in `web/data/`; SDK installers are external in
 - `preserve-firmware-files.py`: download an explicit HTTPS JSON list into immutable SHA-256 objects with HTTP receipts. Rehash successful cached bodies; retain short/error responses separately, enforce download bounds and never run firmware. [Eleven original Samsung/LG archives and extraction checks](../doc/korean-phone-preservation-pass16.md).
 
 - `verify-legacy-suffix.mjs`: reproduce four hash-locked native ARM runs of the original Ragnarok CRLF file and a separately labelled prefix control, exact/guarded; [source and comparison scope](../doc/brewgames-gvm-games.md#ragnarok-два-байта-после-ресурсов).
+
+- `verify-s60-library.py`: freshly decode three preserved SIS, compare all 39 payloads and verify the three library SGS against exact original APP slices. [Provenance and scene checks](../doc/s60-library-completion.md).

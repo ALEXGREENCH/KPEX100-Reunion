@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "checkedUtc": "2026-11-07T02:29:31.324917+00:00",
+  "scope": "Previously preserved SIS originals; three SGS newly exposed in the library after fresh decode/slice and scene tests. No new Internet binary recovery, no native Symbian app/installer executed.",
+  "newInternetRecoveries": 0,
+  "previousSgsUnchanged": 76,
+  "packages": [
+    {
+      "id": "world-league-2005-soccer-s60",
+      "sourceArchive": {
+        "repositoryPath": "research/archives/Sinjisoft-S60-Runtimes-Recovered.zip",
+        "bytes": 6083797,
+        "sha256": "88a1623a040968a4838ab3b7a58101ed2833293cc6be4ffb91228967f5605e0d"
+      },
+      "originalSource": {
+        "sourcePage": "https://archive.org/details/dertz-part-5-s-z",
+        "archiveUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%205%2C%20S-Z%29.rar",
+        "member": "World League 2005 Soccer-1.sis",
+        "memberUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%205%2C%20S-Z%29.rar/World%20League%202005%20Soccer-1.sis"
+      },
+      "installer": {
+        "archiveMember": "Sinjisoft-S60-Runtimes-Recovered/original-sis/world-league-2005-soccer-s60/World League 2005 Soccer-1.sis",
+        "bytes": 339008,
+        "sha256": "2ee7726ab8d76b57b8de9737f31631d242f18468e88b22be22e8e8ee12e4d9ae",
+        "parsedUid": "10272e3e",
+        "freshUidAndBodyCrcPassed": true
+      },
+      "freshDecodedFiles": 12,
+      "allArchivedPayloadsEqualFreshDecode": true,
+      "application": {
+        "path": "extracted/world-league-2005-soccer-s60/10-WorldLeague.app",
+        "bytes": 473976,
+        "sha256": "02021af3a611cc9482033d9e2433d5e3d0a83fc4642270187f7fafe0f61e368f",
+        "sgsSourceOffset": 274872
+      },
+      "sgs": {
+        "bytes": 172604,
+        "sha256": "439c7c59850dd58b265512a157ae65e67602055e01b2891dc0b3743046a38e08",
+        "exactSliceOfFreshDecodedApp": true
+      }
+    },
+    {
+      "id": "bounce-rubberball-story-s60",
+      "sourceArchive": {
+        "repositoryPath": "research/archives/Sinjisoft-S60-Runtimes-Recovered.zip",
+        "bytes": 6083797,
+        "sha256": "88a1623a040968a4838ab3b7a58101ed2833293cc6be4ffb91228967f5605e0d"
+      },
+      "originalSource": {
+        "sourcePage": "https://archive.org/details/dertz-part-5-s-z",
+        "archiveUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%201%2C%201-B%29.rar",
+        "member": "Bounce Rubberball Story s60-1.sis",
+        "memberUrl": "https://archive.org/download/dertz-part-5-s-z/dertz%20%28part%201%2C%201-B%29.rar/Bounce%20Rubberball%20Story%20s60-1.sis"
+      },
+      "installer": {
+        "archiveMember": "Sinjisoft-S60-Runtimes-Recovered/original-sis/bounce-rubberball-story-s60/Bounce Rubberball Story s60-1.sis",
+        "bytes": 345338,
+        "sha256": "dddf3ec9212cc48a615c0f6813061fc03900df06d88d3d8aebe8de5a3feea396",
+        "parsedUid": "10272e3f",
+        "freshUidAndBodyCrcPassed": true
+      },
+      "freshDecodedFiles": 16,
+      "allArchivedPayloadsEqualFreshDecode": true,
+      "application": {
+        "path": "extracted/bounce-rubberball-story-s60/14-Bounce.app",
+        "bytes": 470744,
+        "sha256": "91bc6ae343fa72a3351b4c6bcb89a00b0cf60c0d4917bf2152aa6762a861b270",
+        "sgsSourceOffset": 274848
+      },
+      "sgs": {
+        "bytes": 169388,
+        "sha256": "e646fa49a6cef04971dad124c55bc9506a152a9d1f457e39db9b239c6ed06594",
+        "exactSliceOfFreshDecodedApp": true
+      }
+    },
+    {
+      "id": "world-league-2005-soccer-demo-s60",
+      "sourceArchive": {
+        "repositoryPath": "research/archives/Sinjisoft-S60-World-League-Demo-Recovered.zip",
+        "bytes": 2880324,
+        "sha256": "03424b2a0a173a6a88c5f910fb08a0059b4b775db7a35cd8b1951e077b1b0f54"
+      },
+      "originalSource": {
+        "sourcePage": "https://archive.org/details/largest-j2me-and-symbian-collection",
+        "archiveUrl": "https://archive.org/download/largest-j2me-and-symbian-collection/s60v2%2826684%29.7z",
+        "member": "s60v2/worldleaguedemo.sis"
+      },
+      "installer": {
+        "archiveMember": "Sinjisoft-S60-World-League-Demo-Recovered/original-sis/world-league-2005-soccer-demo-s60.sis",
+        "bytes": 338491,
+        "sha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe",
+        "parsedUid": "10272e41",
+        "freshUidAndBodyCrcPassed": true
+      },
+      "freshDecodedFiles": 11,
+      "allArchivedPayloadsEqualFreshDecode": true,
+      "application": {
+        "path": "extracted/world-league-2005-soccer-demo-s60/10-WorldLeagueDemo.app",
+        "bytes": 473560,
+        "sha256": "b966767e51bed4eca8f0760cda7a28cdb6e07aa36637a5966fd225e3268b6313",
+        "sgsSourceOffset": 274480
+      },
+      "sgs": {
+        "bytes": 172632,
+        "sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0",
+        "exactSliceOfFreshDecodedApp": true
+      }
+    }
+  ],
+  "limits": "Original archive labels, component names and UID are evidence about these packages, not an official untampered release signature or factory handset provenance."
+}

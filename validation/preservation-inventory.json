@@ -3,6 +3,1353 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "s60-library-games-and-daum-pass19",
+      "repositoryPath": "research/archives/S60-Library-Games-and-Daum-Game-Search.zip",
+      "bytes": 2939341,
+      "sha256": "d08fed12833a335b1b5ace8c5add35c9f42c2a48be1d726b8fc91228edc17127",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "LICENSE",
+          "bytes": 1322,
+          "crc32": "0b58bb3d",
+          "sha256": "cbcde66970a982cd93407d852ac3579ca4de0f4410802deb7e58aa44e7835134"
+        },
+        {
+          "path": "README.txt",
+          "bytes": 2537,
+          "crc32": "429a2d32",
+          "sha256": "287abac5faa1f41ab9709e44330a596dda0ca49c57eaac7e889f3d34ae701d9f"
+        },
+        {
+          "path": "analysis/archived-article-frame-inspection-partial.json",
+          "bytes": 11914,
+          "crc32": "17567196",
+          "sha256": "38d45df245dbdf49fc36fdc399d302f24252b553628d608647bed0f89cc8701a"
+        },
+        {
+          "path": "analysis/daum-first-page-post-metadata.json",
+          "bytes": 34080,
+          "crc32": "c8976b4b",
+          "sha256": "bb5040fc86c8646f7224207c1df5f88f39d9e0aa79fe8bbbea26f2f14b87f89c"
+        },
+        {
+          "path": "analysis/daum-menu-board-links.json",
+          "bytes": 5390,
+          "crc32": "5d6ff341",
+          "sha256": "5a477b3bbf16406952d40781b33a3f811211675483c29e79ccc9c16a90354e31"
+        },
+        {
+          "path": "analysis/library-additions.json",
+          "bytes": 2544,
+          "crc32": "f06ebfe3",
+          "sha256": "954ffc7abe4f5dc6005b785df268dd63256b4ee4ebcb9b1ac8a84c243adfe7ad"
+        },
+        {
+          "path": "analysis/parsed-naver-searches.json",
+          "bytes": 11865,
+          "crc32": "34fd6c72",
+          "sha256": "de491141428adb3504e751d20dbd041a168485acca0e3c312debfdfddc12fb5a"
+        },
+        {
+          "path": "analysis/prepare-library.py",
+          "bytes": 9820,
+          "crc32": "d480f6b7",
+          "sha256": "321cf81d2908f990a07c44c0003384d9d90fb0c0ff5cd82ff86c71f2cb0a7ef6"
+        },
+        {
+          "path": "analysis/production-sis-verification.json",
+          "bytes": 906,
+          "crc32": "2900cd4e",
+          "sha256": "980f0caf9a8e152ad7888da10f7a7b3bbf6d6c3f8d58e63cdc197144df0d6b85"
+        },
+        {
+          "path": "analysis/wayback-game-forums.json",
+          "bytes": 566,
+          "crc32": "95213530",
+          "sha256": "6a6e73fd45d55133cd6cbe19747866f2a031740001081bf6a0dd08ecd3fd9684"
+        },
+        {
+          "path": "derived-sgs/bounce-rubberball-story-s60.sgs",
+          "bytes": 169388,
+          "crc32": "520f1188",
+          "sha256": "e646fa49a6cef04971dad124c55bc9506a152a9d1f457e39db9b239c6ed06594"
+        },
+        {
+          "path": "derived-sgs/world-league-2005-soccer-demo-s60.sgs",
+          "bytes": 172632,
+          "crc32": "189ec8a3",
+          "sha256": "c3ec24942285cb181e6243efef73c3450d2916d8feaf2e7cf1e2ad96bc55adf0"
+        },
+        {
+          "path": "derived-sgs/world-league-2005-soccer-s60.sgs",
+          "bytes": 172604,
+          "crc32": "7efcde66",
+          "sha256": "439c7c59850dd58b265512a157ae65e67602055e01b2891dc0b3743046a38e08"
+        },
+        {
+          "path": "doc/s60-library-completion.md",
+          "bytes": 9745,
+          "crc32": "df4bfd4e",
+          "sha256": "bfaa1f5ae655332fd422bf0c7bf8392779c0e1ee1d181b20c6fc751f23670939"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/00-title.wav",
+          "bytes": 106054,
+          "crc32": "59d492e6",
+          "sha256": "148c799311e6b6a3882882307ed1a94cbd722f46cdbd174c154e76700a0fdaff"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/01-per.wav",
+          "bytes": 18118,
+          "crc32": "17a7da10",
+          "sha256": "af9e4046596b3560c8b07326fbed4b77f7a18aba5e9d6586fad89f1d2e966c59"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/02-menu.wav",
+          "bytes": 19598,
+          "crc32": "d78b274d",
+          "sha256": "442b8644a62c11139dfa4ba1fdc3522959ac6b83925130a4b693e9b9a6a27bd9"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/03-itemget.wav",
+          "bytes": 18634,
+          "crc32": "d9af76a8",
+          "sha256": "ed1cbc4bb69ca56b5b3b5febddc92048517805c806764b19b83f1bbd7aa5f858"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/04-idiot.wav",
+          "bytes": 16820,
+          "crc32": "3c14bc14",
+          "sha256": "46ae9520df48094e75786eacc36a6b1a5c62930a10731fc96f3a28c23ccdd601"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/05-go.wav",
+          "bytes": 17712,
+          "crc32": "60df72af",
+          "sha256": "525efbb7faa246cda2dc9274a00b2dc8ce3fee92be6c99d751f6d8f93fa5cfeb"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/06-gameover.wav",
+          "bytes": 51780,
+          "crc32": "60df974b",
+          "sha256": "04afe38a5fcf4579032de56907d58d63a852f3af52893e78e5562e4677b09ce8"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/07-exel.wav",
+          "bytes": 11248,
+          "crc32": "c828fe56",
+          "sha256": "ebf87e73c06163731fd1aa5caf24fb988b3aab01334a9b48d213d5f5b8dc9df0"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/08-ending.wav",
+          "bytes": 102558,
+          "crc32": "03de6259",
+          "sha256": "c609b1ebe7a95a5aea3b61e7f2ee08692836469cfd4efdb08d5509bdfb58cc09"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/09-airjump.wav",
+          "bytes": 18070,
+          "crc32": "aa3fa57f",
+          "sha256": "428a0aa2ea295eff416ad12acef2b0874a40475a1da160ab4ebfc5391d26eb25"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/10-action.wav",
+          "bytes": 16066,
+          "crc32": "0c2cddda",
+          "sha256": "511bde2564d42fb8873d1e17e29b8c6817d6c408ae4065dbc0464f8abda3d958"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/11-Bounce.aif",
+          "bytes": 3121,
+          "crc32": "21f662f6",
+          "sha256": "9631762e7fd88ecc434bfd8ec3f4eb564b958254aa1e5343510d9f8f4a08e76a"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/12-Bounce_caption.rsc",
+          "bytes": 36,
+          "crc32": "19b7b48d",
+          "sha256": "d915329e56b0c25967b3bbf2dce71d7aeb6de1e29cd7571584d108c638aa0ade"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/13-Bounce.rsc",
+          "bytes": 515,
+          "crc32": "9dc7a387",
+          "sha256": "8518d094f323b7c0e9b7eac5545836304ee8c9eba460dfaeab2bc8531fd0ba8a"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/14-Bounce.app",
+          "bytes": 470744,
+          "crc32": "5d9cabb3",
+          "sha256": "91bc6ae343fa72a3351b4c6bcb89a00b0cf60c0d4917bf2152aa6762a861b270"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/15-team_SMPDA0.txt",
+          "bytes": 420,
+          "crc32": "ae81c7f9",
+          "sha256": "7b49c54041431e2285634988005999c91a632dccb584bc31573f887bd2293b62"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/manifest.json",
+          "bytes": 12390,
+          "crc32": "a5bb9726",
+          "sha256": "e2bc775882ac221139ae507745e1210181fa4fa1e35dadf4ea9c70f24f2118b5"
+        },
+        {
+          "path": "fresh-sis/bounce-rubberball-story-s60/original.sis",
+          "bytes": 345338,
+          "crc32": "68c61b69",
+          "sha256": "dddf3ec9212cc48a615c0f6813061fc03900df06d88d3d8aebe8de5a3feea396"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/00-whistle.wav",
+          "bytes": 20064,
+          "crc32": "19400264",
+          "sha256": "f91dcfe4cf37c76641132922ea5e75846c45c90f6328d7a3ed848184663331a0"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/01-title.wav",
+          "bytes": 181060,
+          "crc32": "1ab65f61",
+          "sha256": "d58d87becd200e2f42e8ad66aa3be03ece7c15332fe2be7d4e944550e81c77fa"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/02-shoot.wav",
+          "bytes": 20406,
+          "crc32": "c2836bac",
+          "sha256": "bbccaad5c915c49979c0dc639481dc7302e9e924799247e5db1d579ee0ab4c06"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/03-pass.wav",
+          "bytes": 17578,
+          "crc32": "5c16d22d",
+          "sha256": "753662efffc96c916e7c71dbd5bd4cd37043eee5bf08d6240f542e48b4189126"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/04-menu.wav",
+          "bytes": 18872,
+          "crc32": "1ec764e2",
+          "sha256": "38868bd75c8e32235a8e336ec017e7bc240524c21984f0b2237596edce799139"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/05-cheers.wav",
+          "bytes": 22284,
+          "crc32": "d24f7af7",
+          "sha256": "e344eb41a6d5619a6614db158c90c6d64aeb467299b06c96ee981f0b0c54e7b1"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/06-bgm1.wav",
+          "bytes": 109890,
+          "crc32": "79d885fd",
+          "sha256": "77d541b4d83e10443fddb3397b95eb6ddf0a9a104006d58272f13f1861c43e80"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/07-WorldLeagueDemo.aif",
+          "bytes": 3775,
+          "crc32": "599e4f93",
+          "sha256": "029a4bd7100ff4e77895330a19ca035d6a37b0009087b8502feeef12ff74b0ab"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/08-WorldLeagueDemo_caption.rsc",
+          "bytes": 72,
+          "crc32": "45ecf6f3",
+          "sha256": "d1c58a2367d3b05d8e314b29f91e54eb1d0953dd8031a90cb573dc3d410071ce"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/09-WorldLeagueDemo.rsc",
+          "bytes": 533,
+          "crc32": "a423fbf4",
+          "sha256": "788860f9129e86b156b92a89ceaaf3e74eed79b6afb1e8ad50d6bdd26779274e"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/10-WorldLeagueDemo.app",
+          "bytes": 473560,
+          "crc32": "2aff824f",
+          "sha256": "b966767e51bed4eca8f0760cda7a28cdb6e07aa36637a5966fd225e3268b6313"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/manifest.json",
+          "bytes": 8909,
+          "crc32": "2198fb12",
+          "sha256": "1f4d765655666300040babc7635beb8bd3b6e64d33afa023af55ef3833506a9a"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-demo-s60/original.sis",
+          "bytes": 338491,
+          "crc32": "3588ca59",
+          "sha256": "b63ee8b2fccb513d45a71c3e697fa11f1b6682addbad2d10fe19826fb3ec03fe"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/00-whistle.wav",
+          "bytes": 20064,
+          "crc32": "19400264",
+          "sha256": "f91dcfe4cf37c76641132922ea5e75846c45c90f6328d7a3ed848184663331a0"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/01-title.wav",
+          "bytes": 181060,
+          "crc32": "1ab65f61",
+          "sha256": "d58d87becd200e2f42e8ad66aa3be03ece7c15332fe2be7d4e944550e81c77fa"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/02-shoot.wav",
+          "bytes": 20406,
+          "crc32": "c2836bac",
+          "sha256": "bbccaad5c915c49979c0dc639481dc7302e9e924799247e5db1d579ee0ab4c06"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/03-pass.wav",
+          "bytes": 17578,
+          "crc32": "5c16d22d",
+          "sha256": "753662efffc96c916e7c71dbd5bd4cd37043eee5bf08d6240f542e48b4189126"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/04-menu.wav",
+          "bytes": 18872,
+          "crc32": "1ec764e2",
+          "sha256": "38868bd75c8e32235a8e336ec017e7bc240524c21984f0b2237596edce799139"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/05-cheers.wav",
+          "bytes": 22284,
+          "crc32": "d24f7af7",
+          "sha256": "e344eb41a6d5619a6614db158c90c6d64aeb467299b06c96ee981f0b0c54e7b1"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/06-bgm1.wav",
+          "bytes": 109890,
+          "crc32": "79d885fd",
+          "sha256": "77d541b4d83e10443fddb3397b95eb6ddf0a9a104006d58272f13f1861c43e80"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/07-WorldLeague.aif",
+          "bytes": 3775,
+          "crc32": "14011185",
+          "sha256": "19e06769e50cea0818b6ff86489564fab0ddb65a9f4efbce47cd9c013409f8af"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/08-WorldLeague_caption.rsc",
+          "bytes": 56,
+          "crc32": "b87af4fe",
+          "sha256": "fb90ce275720c164e4a39ee60144627bd0468f8e697193deda2d0c6e5a2a0b8d"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/09-WorldLeague.rsc",
+          "bytes": 525,
+          "crc32": "881a828f",
+          "sha256": "45da6fdbab1b9cbe4014b56de472f7072e1debe4489fdbc1d29a4850a962c2a4"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/10-WorldLeague.app",
+          "bytes": 473976,
+          "crc32": "3ba918b0",
+          "sha256": "02021af3a611cc9482033d9e2433d5e3d0a83fc4642270187f7fafe0f61e368f"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/11-team_SMPDA0.txt",
+          "bytes": 420,
+          "crc32": "ae81c7f9",
+          "sha256": "7b49c54041431e2285634988005999c91a632dccb584bc31573f887bd2293b62"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/manifest.json",
+          "bytes": 9558,
+          "crc32": "0747b914",
+          "sha256": "2223cc8c0d759dab169be26e1c8693d98c9e58d4737dff0064ed8f2815221255"
+        },
+        {
+          "path": "fresh-sis/world-league-2005-soccer-s60/original.sis",
+          "bytes": 339008,
+          "crc32": "ef9f8786",
+          "sha256": "2ee7726ab8d76b57b8de9737f31631d242f18468e88b22be22e8e8ee12e4d9ae"
+        },
+        {
+          "path": "full-replay-traces/bounce-rubberball-story-s60/control.json",
+          "bytes": 26035,
+          "crc32": "41654bac",
+          "sha256": "8b10a3a8acd1357b0aafe44054f74ce3667fc46b5a0d6a2e961684d1ccc9f380"
+        },
+        {
+          "path": "full-replay-traces/bounce-rubberball-story-s60/input.json",
+          "bytes": 26032,
+          "crc32": "bddff45f",
+          "sha256": "36d8ef7b13418c42d777cd3d31f857fbfd08b85ba8ea1167f5600157eb2172ba"
+        },
+        {
+          "path": "full-replay-traces/world-league-2005-soccer-demo-s60/control.json",
+          "bytes": 43620,
+          "crc32": "20930f1c",
+          "sha256": "721f6da0f0f4e3c092321703ad059b6859a81cb49928abb87c382941feee9316"
+        },
+        {
+          "path": "full-replay-traces/world-league-2005-soccer-demo-s60/input.json",
+          "bytes": 43593,
+          "crc32": "d2e3559a",
+          "sha256": "9ae1bfd4f64b04f5850653034aef3836c0c57ed0a4a191b5a995a95bb19dfbb9"
+        },
+        {
+          "path": "full-replay-traces/world-league-2005-soccer-s60/control.json",
+          "bytes": 43644,
+          "crc32": "7002f904",
+          "sha256": "110853b4cf922c1fec83806bdcf451a2fb0044287c38a94b19c46fcf6ad87ba6"
+        },
+        {
+          "path": "full-replay-traces/world-league-2005-soccer-s60/input.json",
+          "bytes": 43617,
+          "crc32": "d5aa6840",
+          "sha256": "7960dfdb76221aeeba591b1d60cfb3373af45f18c5c18b60474accb2b1bd9640"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 51425,
+          "crc32": "a2524927",
+          "sha256": "8232f9b928b3813b4b76bd67d5a02615339c5634164ee02900cd637a46dbf62e"
+        },
+        {
+          "path": "reviewed-frames/bounce-rubberball-story-s60/control.png",
+          "bytes": 4139,
+          "crc32": "00bc8a8b",
+          "sha256": "9d4c5894e3f425aaba4bebbed94ca68821ea53555b5fe53f07a4a5e9107faa6e"
+        },
+        {
+          "path": "reviewed-frames/bounce-rubberball-story-s60/input.png",
+          "bytes": 4155,
+          "crc32": "69e9fb07",
+          "sha256": "2e86272328594f521a15f27c449c741e36a180ed490c2077923d844ffba6e532"
+        },
+        {
+          "path": "reviewed-frames/world-league-2005-soccer-demo-s60/control.png",
+          "bytes": 5114,
+          "crc32": "05234f9f",
+          "sha256": "b03eb2166bf86a61ff6df41bea29e94431292502a3e806b2c0f7c32bc77441cc"
+        },
+        {
+          "path": "reviewed-frames/world-league-2005-soccer-demo-s60/input.png",
+          "bytes": 5133,
+          "crc32": "bf6028c6",
+          "sha256": "55b682b2c1e47d738a762fd93ab5532fd1e50731ffbbd3b0da464f76fc54ac58"
+        },
+        {
+          "path": "reviewed-frames/world-league-2005-soccer-s60/control.png",
+          "bytes": 5480,
+          "crc32": "d65eb141",
+          "sha256": "3889bff70f6ca2397e3c783056a66f2401fcdaca8fb86f22a650c9eb7327a00f"
+        },
+        {
+          "path": "reviewed-frames/world-league-2005-soccer-s60/input.png",
+          "bytes": 5116,
+          "crc32": "9effc280",
+          "sha256": "8fa9f51420e41da2e33e0efd7fcfab306b5e8b7b53672de0dfdff981115bcda8"
+        },
+        {
+          "path": "source-research/daum-alias-seeds.json",
+          "bytes": 127,
+          "crc32": "583a3a96",
+          "sha256": "ffe3ce97c15704495fd242e0e044da89ebffe3f9c2eb1524987b1e193fe74dbe"
+        },
+        {
+          "path": "source-research/daum-alias/derived/f9767b652c13f8b8ab77bf967fe51de254a88ce510cb2699b59f440d40fcf07e.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/daum-alias/originals/f9767b652c13f8b8ab77bf967fe51de254a88ce510cb2699b59f440d40fcf07e",
+          "bytes": 1609,
+          "crc32": "6eeec4bd",
+          "sha256": "f9767b652c13f8b8ab77bf967fe51de254a88ce510cb2699b59f440d40fcf07e"
+        },
+        {
+          "path": "source-research/daum-alias/receipts.jsonl",
+          "bytes": 570,
+          "crc32": "244d3388",
+          "sha256": "f2521cc0f66c007af614f9e51499cfa31430705be886179b041f1a5eb2dfc355"
+        },
+        {
+          "path": "source-research/daum-alias/sources.json",
+          "bytes": 1274,
+          "crc32": "4cb78939",
+          "sha256": "efde384b27f19a8f9e3d2c3d864d152f3af3fb3f4490b8176374c8fa84d1870d"
+        },
+        {
+          "path": "source-research/daum-archived-article-seeds.json",
+          "bytes": 11603,
+          "crc32": "094336d2",
+          "sha256": "88d2b773d66a9750848abee07d2a14b54d6745e29561eef6c8d356027930cb6a"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/0e8589ffc6ae9152279c747c45d3652c84b0ee8573a6feb2d5a459cd95790635",
+          "bytes": 2061,
+          "crc32": "a7a44e1c",
+          "sha256": "0e8589ffc6ae9152279c747c45d3652c84b0ee8573a6feb2d5a459cd95790635"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/24b0ad206bb38a5927af4aa06c2ce9697ed52438993d1125b37c92c5e0714a93",
+          "bytes": 1614,
+          "crc32": "a0dad1bd",
+          "sha256": "24b0ad206bb38a5927af4aa06c2ce9697ed52438993d1125b37c92c5e0714a93"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/25da7cb5cfeef367ff431751ff14563402efc910af02fa6c09ada81021f3b8d0",
+          "bytes": 2885,
+          "crc32": "5b2a2cbd",
+          "sha256": "25da7cb5cfeef367ff431751ff14563402efc910af02fa6c09ada81021f3b8d0"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/2a5da22265cfd0b0322e5eab8a0fc4967426871befc3d0913933657804086098",
+          "bytes": 1878,
+          "crc32": "88de857f",
+          "sha256": "2a5da22265cfd0b0322e5eab8a0fc4967426871befc3d0913933657804086098"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/2f6e4aed27f9c4123d6bec9d08f6312b81db755f1d7167c012257a53b2ca7614",
+          "bytes": 2873,
+          "crc32": "2c27af5c",
+          "sha256": "2f6e4aed27f9c4123d6bec9d08f6312b81db755f1d7167c012257a53b2ca7614"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/32357d9eec54fc126ee13f4527045a63c7a716409a5dc8fe2d62ebca352c1e93",
+          "bytes": 2713,
+          "crc32": "fec1cb6f",
+          "sha256": "32357d9eec54fc126ee13f4527045a63c7a716409a5dc8fe2d62ebca352c1e93"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/444127656c9d8c9e3519f36636897286c9e99f78a45d6d262dfc71620636f2fd",
+          "bytes": 1614,
+          "crc32": "43daca2d",
+          "sha256": "444127656c9d8c9e3519f36636897286c9e99f78a45d6d262dfc71620636f2fd"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/b6836407a17912d4acb991bbb75c96cccf9070ea0004006aef57af276f933a84",
+          "bytes": 1731,
+          "crc32": "a36f85a4",
+          "sha256": "b6836407a17912d4acb991bbb75c96cccf9070ea0004006aef57af276f933a84"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/bd5672cde6c67269939db390ed6f07e4682fef82acb6f4a41f24bcc8dcc94cf8",
+          "bytes": 1892,
+          "crc32": "8a6d0582",
+          "sha256": "bd5672cde6c67269939db390ed6f07e4682fef82acb6f4a41f24bcc8dcc94cf8"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/bf53504bd440257fb4f4efa1cda445ebb54de6dba97be3fc5ed539ff1ff1dd4b",
+          "bytes": 1614,
+          "crc32": "1ce83535",
+          "sha256": "bf53504bd440257fb4f4efa1cda445ebb54de6dba97be3fc5ed539ff1ff1dd4b"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/d55dca7046092d3e3c7573a7e07e6cb6dbc835bfd043d1824fe19dab20b4720a",
+          "bytes": 4639,
+          "crc32": "3afd9235",
+          "sha256": "d55dca7046092d3e3c7573a7e07e6cb6dbc835bfd043d1824fe19dab20b4720a"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/dcd009503f56246e2510b010dea202a9c73ae330a951d2328c906718d2570dac",
+          "bytes": 1663,
+          "crc32": "beb2addf",
+          "sha256": "dcd009503f56246e2510b010dea202a9c73ae330a951d2328c906718d2570dac"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/fbfebb748433c74d306cf00d33d796f53f3cc6ec73769b37ec66ab99702891e7",
+          "bytes": 2115,
+          "crc32": "e41415dd",
+          "sha256": "fbfebb748433c74d306cf00d33d796f53f3cc6ec73769b37ec66ab99702891e7"
+        },
+        {
+          "path": "source-research/daum-archived-articles/objects/fc56a381123dd0c4f7bfd37784521f02848a7ce9df2e9715d9fb8252be25842d",
+          "bytes": 2808,
+          "crc32": "82c3c5f4",
+          "sha256": "fc56a381123dd0c4f7bfd37784521f02848a7ce9df2e9715d9fb8252be25842d"
+        },
+        {
+          "path": "source-research/daum-archived-articles/receipts.jsonl",
+          "bytes": 47960,
+          "crc32": "cfa5b734",
+          "sha256": "d5884ac2fe37ea4ff2161f7a88442c0124a6c22c74cb77f99ec3049973a171b3"
+        },
+        {
+          "path": "source-research/daum-archived-articles/sources.json",
+          "bytes": 81569,
+          "crc32": "117886d8",
+          "sha256": "5f069d706e863e01d80756db9385b90b668178a3b7911635caa47fb61470c96d"
+        },
+        {
+          "path": "source-research/daum-article-frame-seeds.json",
+          "bytes": 953,
+          "crc32": "24700793",
+          "sha256": "99d32aef4a692d20a2e5bcc06033db460fe409769e6b5f2973d56fb06fd0026c"
+        },
+        {
+          "path": "source-research/daum-article-frames/derived/76d9f1bba58a6dfc7dab64b8cbff820d05fe894fc4ec7ef166cc08042228946d.txt",
+          "bytes": 1284,
+          "crc32": "fe190c67",
+          "sha256": "7a4d162867a44c21ae74d4d19b5af794c770ea37789da398e80deec2f7b6297e"
+        },
+        {
+          "path": "source-research/daum-article-frames/derived/eab451f82ac462f2260c55d099b114cdbfd71c1d77984a76a6cc70bbc80973a5.txt",
+          "bytes": 1281,
+          "crc32": "50b342da",
+          "sha256": "d532d7976bc482b08982db26de8b97814389f3cf5066666b331f8187785e385b"
+        },
+        {
+          "path": "source-research/daum-article-frames/originals/76d9f1bba58a6dfc7dab64b8cbff820d05fe894fc4ec7ef166cc08042228946d",
+          "bytes": 35737,
+          "crc32": "b504bde5",
+          "sha256": "76d9f1bba58a6dfc7dab64b8cbff820d05fe894fc4ec7ef166cc08042228946d"
+        },
+        {
+          "path": "source-research/daum-article-frames/originals/eab451f82ac462f2260c55d099b114cdbfd71c1d77984a76a6cc70bbc80973a5",
+          "bytes": 35736,
+          "crc32": "43162cb7",
+          "sha256": "eab451f82ac462f2260c55d099b114cdbfd71c1d77984a76a6cc70bbc80973a5"
+        },
+        {
+          "path": "source-research/daum-article-frames/receipts.jsonl",
+          "bytes": 3142,
+          "crc32": "14dd28bc",
+          "sha256": "76a402c62d9a4a39dc3d7280a2423a837a92bb62f5e83c0b7f6419ac484e73b9"
+        },
+        {
+          "path": "source-research/daum-article-frames/sources.json",
+          "bytes": 12041,
+          "crc32": "f412e6f6",
+          "sha256": "cf79434855d480dda80c5c4aa7c8a873eae71ea333205fea4606a180fcbff11c"
+        },
+        {
+          "path": "source-research/daum-board-seeds.json",
+          "bytes": 1516,
+          "crc32": "0d583978",
+          "sha256": "c68aaf1b832604ae10ad7696f2b5b40b82f5ba4e79694650f7c54ab247221b13"
+        },
+        {
+          "path": "source-research/daum-boards/derived/3bf37f961854261f56115b2ef2bdb9ccf2535eb21363f4092c991a040d944386.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-boards/derived/48f0f7775559d9c21b4718be9cac8091f5a06e4763fe544ddf7bcf854a490049.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-boards/derived/7690594fd016cce37e79e6bbdef5ed9026192a6aa617370dc13f39f1f3b9f027.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-boards/derived/c234d653e32b9d6b7ec53026d26191b61cb458a06e4c76bfe7f677efe52b5d50.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-boards/derived/dc4db6c5e345e89fb6d3114731242410868afacc40b7244dc6083eafc5187f4b.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-boards/derived/ef6a79cbb894d4ea91f8a9a33fcea9027db5d8255722e6d777492e5d0767c071.txt",
+          "bytes": 1284,
+          "crc32": "bf1c0173",
+          "sha256": "b1dc6cfdcc2893a9b15acb3cd16ef2e04ea57c6bfe154eba2cc3412cb024fe34"
+        },
+        {
+          "path": "source-research/daum-boards/originals/3bf37f961854261f56115b2ef2bdb9ccf2535eb21363f4092c991a040d944386",
+          "bytes": 71241,
+          "crc32": "4908af26",
+          "sha256": "3bf37f961854261f56115b2ef2bdb9ccf2535eb21363f4092c991a040d944386"
+        },
+        {
+          "path": "source-research/daum-boards/originals/48f0f7775559d9c21b4718be9cac8091f5a06e4763fe544ddf7bcf854a490049",
+          "bytes": 70211,
+          "crc32": "daccd3b8",
+          "sha256": "48f0f7775559d9c21b4718be9cac8091f5a06e4763fe544ddf7bcf854a490049"
+        },
+        {
+          "path": "source-research/daum-boards/originals/7690594fd016cce37e79e6bbdef5ed9026192a6aa617370dc13f39f1f3b9f027",
+          "bytes": 72792,
+          "crc32": "a93fea1b",
+          "sha256": "7690594fd016cce37e79e6bbdef5ed9026192a6aa617370dc13f39f1f3b9f027"
+        },
+        {
+          "path": "source-research/daum-boards/originals/c234d653e32b9d6b7ec53026d26191b61cb458a06e4c76bfe7f677efe52b5d50",
+          "bytes": 69763,
+          "crc32": "afddb383",
+          "sha256": "c234d653e32b9d6b7ec53026d26191b61cb458a06e4c76bfe7f677efe52b5d50"
+        },
+        {
+          "path": "source-research/daum-boards/originals/dc4db6c5e345e89fb6d3114731242410868afacc40b7244dc6083eafc5187f4b",
+          "bytes": 70800,
+          "crc32": "4e47ba1b",
+          "sha256": "dc4db6c5e345e89fb6d3114731242410868afacc40b7244dc6083eafc5187f4b"
+        },
+        {
+          "path": "source-research/daum-boards/originals/ef6a79cbb894d4ea91f8a9a33fcea9027db5d8255722e6d777492e5d0767c071",
+          "bytes": 35841,
+          "crc32": "640fb53a",
+          "sha256": "ef6a79cbb894d4ea91f8a9a33fcea9027db5d8255722e6d777492e5d0767c071"
+        },
+        {
+          "path": "source-research/daum-boards/receipts.jsonl",
+          "bytes": 3910,
+          "crc32": "2a4e39e3",
+          "sha256": "95a2aad8c6edefcb398bf9a5a4137693c6d91427b8b0b222d660835c48b39f90"
+        },
+        {
+          "path": "source-research/daum-boards/sources.json",
+          "bytes": 15488,
+          "crc32": "88c978d1",
+          "sha256": "3bde3af81afcc4f185d59e20dedb4b29a15b78553300a8683db36f62439fb83c"
+        },
+        {
+          "path": "source-research/daum-home-seeds.json",
+          "bytes": 162,
+          "crc32": "3e7ce352",
+          "sha256": "99197202eac6567f22887d5550ce817bbba4acc80e3184f2de7d10622e1d2419"
+        },
+        {
+          "path": "source-research/daum-home/derived/4fe4784c6742c747fec27dd9cdcbbcf6a954f8afd512205bd3c645e07780c8ef.txt",
+          "bytes": 2296,
+          "crc32": "d2978b25",
+          "sha256": "5c5c92162f4d0e5f79b484f10afe344353c983bb90fae607ebe2a003b5285ed4"
+        },
+        {
+          "path": "source-research/daum-home/originals/4fe4784c6742c747fec27dd9cdcbbcf6a954f8afd512205bd3c645e07780c8ef",
+          "bytes": 57160,
+          "crc32": "7e58bdd7",
+          "sha256": "4fe4784c6742c747fec27dd9cdcbbcf6a954f8afd512205bd3c645e07780c8ef"
+        },
+        {
+          "path": "source-research/daum-home/receipts.jsonl",
+          "bytes": 622,
+          "crc32": "937e331a",
+          "sha256": "f2d4ec5fb7cf3c629f89e4d9b7dc6c50aa2db2ed781b772295f90afce85a0dfe"
+        },
+        {
+          "path": "source-research/daum-home/sources.json",
+          "bytes": 4724,
+          "crc32": "f33b7142",
+          "sha256": "b4c82f2bcc34793a53c6a401272345ae1f65cc61efcbfa4845afdb0a5d45d968"
+        },
+        {
+          "path": "source-research/daum-menu-seeds.json",
+          "bytes": 250,
+          "crc32": "3b82396b",
+          "sha256": "ad93c9f4008f7d6e6e0f6c7d8263f1b8c8570b300e688f9d64a994a8284455ac"
+        },
+        {
+          "path": "source-research/daum-menu/derived/df07b5c1130523d0161ba7cf4f4a2790830c0d38d222c080b5d48286226d1aaf.txt",
+          "bytes": 1329,
+          "crc32": "e9daac43",
+          "sha256": "6fba6f449b34a44e748c8be7a02e5fbb33f1b2911fba4169df16464b336e923d"
+        },
+        {
+          "path": "source-research/daum-menu/originals/df07b5c1130523d0161ba7cf4f4a2790830c0d38d222c080b5d48286226d1aaf",
+          "bytes": 18448,
+          "crc32": "9c8ca58d",
+          "sha256": "df07b5c1130523d0161ba7cf4f4a2790830c0d38d222c080b5d48286226d1aaf"
+        },
+        {
+          "path": "source-research/daum-menu/receipts.jsonl",
+          "bytes": 780,
+          "crc32": "d3ee0432",
+          "sha256": "722befff13457b6c1dcd4cea09b3a8b93714579aaa19bdb850efe8246e9b261a"
+        },
+        {
+          "path": "source-research/daum-menu/sources.json",
+          "bytes": 3874,
+          "crc32": "ef2827c7",
+          "sha256": "3b20d096b7071e3b0a64d17eee4db5dd3cb3f86c5ca1b219d01f264cb416ee26"
+        },
+        {
+          "path": "source-research/daum-root-seeds.json",
+          "bytes": 289,
+          "crc32": "06ff5447",
+          "sha256": "fc716972d0ff48e26227f9dea6125f13b7c9749f764a9cd8a010d52bfcb52d14"
+        },
+        {
+          "path": "source-research/daum-roots/derived/0863936c66cce4007a9343286c08f119463293fc9f4431d32ef8cdea0648b397.txt",
+          "bytes": 840,
+          "crc32": "775e0399",
+          "sha256": "4e3b847de86fa8e5e39956047d1f6888999e368cef9fc216b6bb4cbaff1a3aca"
+        },
+        {
+          "path": "source-research/daum-roots/derived/2c5e0c262ba737aca155ed3289e29e5e8c8200a645a0d615b8811f6375d98c70.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/daum-roots/originals/0863936c66cce4007a9343286c08f119463293fc9f4431d32ef8cdea0648b397",
+          "bytes": 24452,
+          "crc32": "411ef2f3",
+          "sha256": "0863936c66cce4007a9343286c08f119463293fc9f4431d32ef8cdea0648b397"
+        },
+        {
+          "path": "source-research/daum-roots/originals/2c5e0c262ba737aca155ed3289e29e5e8c8200a645a0d615b8811f6375d98c70",
+          "bytes": 1609,
+          "crc32": "fb4c83c0",
+          "sha256": "2c5e0c262ba737aca155ed3289e29e5e8c8200a645a0d615b8811f6375d98c70"
+        },
+        {
+          "path": "source-research/daum-roots/receipts.jsonl",
+          "bytes": 1165,
+          "crc32": "4407b1c3",
+          "sha256": "8845a3a1a43c25ffd448d88abb06c959a2ac3aea72cd2a1e2fe2241d49662be5"
+        },
+        {
+          "path": "source-research/daum-roots/sources.json",
+          "bytes": 3387,
+          "crc32": "e6524dc4",
+          "sha256": "6914738563c3cb2a9ae9d01eaab3ebf04e681fee75c579a8ff48b00d0a86ba74"
+        },
+        {
+          "path": "source-research/daum-search-seeds.json",
+          "bytes": 972,
+          "crc32": "603e6c98",
+          "sha256": "fd1dadfef495dd8e6d704787d990dbadd0d005d656d51a688a4c06819f4a7346"
+        },
+        {
+          "path": "source-research/daum-searches/objects/1c90b153db2cced7e62e7f8b2a2a685050dbf42d41cf6bf32cb5003073dfbf00",
+          "bytes": 119,
+          "crc32": "5522b9d2",
+          "sha256": "1c90b153db2cced7e62e7f8b2a2a685050dbf42d41cf6bf32cb5003073dfbf00"
+        },
+        {
+          "path": "source-research/daum-searches/objects/4326dadf82884e2fd2613d066a7d4af9f3cfa00952c1f300b662858d949f4bbd",
+          "bytes": 143,
+          "crc32": "387c97cb",
+          "sha256": "4326dadf82884e2fd2613d066a7d4af9f3cfa00952c1f300b662858d949f4bbd"
+        },
+        {
+          "path": "source-research/daum-searches/objects/60796db98dfb7e5ca58a3068b17aec97d7f097fe8641097ff7d83d371a9e3e3d",
+          "bytes": 152,
+          "crc32": "83e95e41",
+          "sha256": "60796db98dfb7e5ca58a3068b17aec97d7f097fe8641097ff7d83d371a9e3e3d"
+        },
+        {
+          "path": "source-research/daum-searches/objects/6608ca7d1841dc9044e3cdb79d558ae409b0734cdc9099d9d920b526390c9340",
+          "bytes": 121,
+          "crc32": "165632be",
+          "sha256": "6608ca7d1841dc9044e3cdb79d558ae409b0734cdc9099d9d920b526390c9340"
+        },
+        {
+          "path": "source-research/daum-searches/objects/aa53152842bbd09601448687303fe73d3935636667e77988935b9533f16af0c3",
+          "bytes": 86,
+          "crc32": "b0acb1aa",
+          "sha256": "aa53152842bbd09601448687303fe73d3935636667e77988935b9533f16af0c3"
+        },
+        {
+          "path": "source-research/daum-searches/receipts.jsonl",
+          "bytes": 7415,
+          "crc32": "028f91c7",
+          "sha256": "81a5746fa246c997c7b225074caabb8453420d33ef333aa67bec2fd9d25269d9"
+        },
+        {
+          "path": "source-research/daum-searches/sources.json",
+          "bytes": 11809,
+          "crc32": "473707a1",
+          "sha256": "76a8184d4dae157fbb082e2ca09c8c0ffdc639c1a50c3e33b774ebbc581d93ff"
+        },
+        {
+          "path": "source-research/daum-selected-seeds.json",
+          "bytes": 2083,
+          "crc32": "c9688ee1",
+          "sha256": "4c77a0170c22a0253742dce8173e68edbd3a8554d033553cd1b68795a49be1cc"
+        },
+        {
+          "path": "source-research/daum-selected/derived/30d1d49901d2bec5ad741732e7dcf09151e28b0465639f4d41b5f5a87f16f8f3.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-selected/derived/580b29dcd3ae3aecb88bb50fb490f4c1f20c819c271871c221e69c76dcab9d29.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/daum-selected/derived/69f35a62f9e14bcff6488e291718b00763e901b4910c3896c07f8f4b67fed156.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/daum-selected/derived/76fcb19b1b588fcdf89648c582d118fb8ae64c87c02b1b3147a9516fa4b487ef.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-selected/derived/7ed35cb0f82aa941e566a99d01bb20069852ccd2b392890b5eb39c523c4f5937.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/daum-selected/derived/9b2fda1c97b693598c5a809af96e7b5d190ec0817563b364027dcf7d139a1f39.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-selected/derived/a2f8cf8541bdaa39d39c880f0d81574ac16d53dc8ff6e0c76c7e78036894e12b.txt",
+          "bytes": 848,
+          "crc32": "46e366a8",
+          "sha256": "094fb0c0176b039ece811c1b18e7d171962e8e5f3f7eb848e8f82ae1504acf12"
+        },
+        {
+          "path": "source-research/daum-selected/derived/d8fe7fc3f485cf82b6022e5eede09c73de3b75c46f9b1129c1aff58d3892cd28.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/daum-selected/originals/30d1d49901d2bec5ad741732e7dcf09151e28b0465639f4d41b5f5a87f16f8f3",
+          "bytes": 69763,
+          "crc32": "1b20b398",
+          "sha256": "30d1d49901d2bec5ad741732e7dcf09151e28b0465639f4d41b5f5a87f16f8f3"
+        },
+        {
+          "path": "source-research/daum-selected/originals/580b29dcd3ae3aecb88bb50fb490f4c1f20c819c271871c221e69c76dcab9d29",
+          "bytes": 1661,
+          "crc32": "6ae5a4be",
+          "sha256": "580b29dcd3ae3aecb88bb50fb490f4c1f20c819c271871c221e69c76dcab9d29"
+        },
+        {
+          "path": "source-research/daum-selected/originals/69f35a62f9e14bcff6488e291718b00763e901b4910c3896c07f8f4b67fed156",
+          "bytes": 1661,
+          "crc32": "a07764bf",
+          "sha256": "69f35a62f9e14bcff6488e291718b00763e901b4910c3896c07f8f4b67fed156"
+        },
+        {
+          "path": "source-research/daum-selected/originals/76fcb19b1b588fcdf89648c582d118fb8ae64c87c02b1b3147a9516fa4b487ef",
+          "bytes": 70209,
+          "crc32": "d49ce3f5",
+          "sha256": "76fcb19b1b588fcdf89648c582d118fb8ae64c87c02b1b3147a9516fa4b487ef"
+        },
+        {
+          "path": "source-research/daum-selected/originals/7ed35cb0f82aa941e566a99d01bb20069852ccd2b392890b5eb39c523c4f5937",
+          "bytes": 1661,
+          "crc32": "ad4c966f",
+          "sha256": "7ed35cb0f82aa941e566a99d01bb20069852ccd2b392890b5eb39c523c4f5937"
+        },
+        {
+          "path": "source-research/daum-selected/originals/9b2fda1c97b693598c5a809af96e7b5d190ec0817563b364027dcf7d139a1f39",
+          "bytes": 71243,
+          "crc32": "a2538ac4",
+          "sha256": "9b2fda1c97b693598c5a809af96e7b5d190ec0817563b364027dcf7d139a1f39"
+        },
+        {
+          "path": "source-research/daum-selected/originals/a2f8cf8541bdaa39d39c880f0d81574ac16d53dc8ff6e0c76c7e78036894e12b",
+          "bytes": 70799,
+          "crc32": "1eef4972",
+          "sha256": "a2f8cf8541bdaa39d39c880f0d81574ac16d53dc8ff6e0c76c7e78036894e12b"
+        },
+        {
+          "path": "source-research/daum-selected/originals/d8fe7fc3f485cf82b6022e5eede09c73de3b75c46f9b1129c1aff58d3892cd28",
+          "bytes": 1667,
+          "crc32": "2232fa82",
+          "sha256": "d8fe7fc3f485cf82b6022e5eede09c73de3b75c46f9b1129c1aff58d3892cd28"
+        },
+        {
+          "path": "source-research/daum-selected/receipts.jsonl",
+          "bytes": 5024,
+          "crc32": "f7956e73",
+          "sha256": "a58079581cb461632abbaef9af46c439041b83c89d65f5430bae21b513296cc6"
+        },
+        {
+          "path": "source-research/daum-selected/sources.json",
+          "bytes": 15969,
+          "crc32": "40ffbc46",
+          "sha256": "468b39d2992f7e8cf3618c546ac11511c1d63bb0142a6ec47144c4216bbf433f"
+        },
+        {
+          "path": "source-research/frame-cdx-seeds.json",
+          "bytes": 5720,
+          "crc32": "6fc9f368",
+          "sha256": "79b100e1edb0a01bc8d9374ce85cfb57a4500aba78cb6b9e1385599301a8aec8"
+        },
+        {
+          "path": "source-research/frame-cdx/objects/37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "source-research/frame-cdx/receipts.jsonl",
+          "bytes": 8697,
+          "crc32": "aa07cae1",
+          "sha256": "804c6c640310c562915ec8414c8428b996705e7b4a004c67905313b13fe0ba94"
+        },
+        {
+          "path": "source-research/frame-cdx/sources.json",
+          "bytes": 19368,
+          "crc32": "21bac5ce",
+          "sha256": "0ff4da2d09775b7440813c75b13e2df89cf21c42d03c241eac8a24f53594a1e0"
+        },
+        {
+          "path": "source-research/naver-player-and-game-search-seeds.json",
+          "bytes": 2047,
+          "crc32": "cea1aafc",
+          "sha256": "2c923e57a103d9f686172ffcb5a0b18dd830a2f2bae9f96045398f225c3627a6"
+        },
+        {
+          "path": "source-research/naver-searches/objects/4f489d0733232a1fb86fe4d05a1afa730844527e05f9851d7cd9a36b930bffd1",
+          "bytes": 73900,
+          "crc32": "76b37d7d",
+          "sha256": "4f489d0733232a1fb86fe4d05a1afa730844527e05f9851d7cd9a36b930bffd1"
+        },
+        {
+          "path": "source-research/naver-searches/objects/5de4b5c3b72052a401a76fa5c4112202701aac31b6a34fc4d48d357a1d482af5",
+          "bytes": 100706,
+          "crc32": "059af4ad",
+          "sha256": "5de4b5c3b72052a401a76fa5c4112202701aac31b6a34fc4d48d357a1d482af5"
+        },
+        {
+          "path": "source-research/naver-searches/objects/784f31a7d100767af3e1a992f6b7fef64526c7d6e5a3fc9d900544092eff20c0",
+          "bytes": 115777,
+          "crc32": "861976a5",
+          "sha256": "784f31a7d100767af3e1a992f6b7fef64526c7d6e5a3fc9d900544092eff20c0"
+        },
+        {
+          "path": "source-research/naver-searches/objects/93b343551273a77f6ab868f530e26699cafd0bb63ed04cf90f257b9bfd754d19",
+          "bytes": 71494,
+          "crc32": "003e9e03",
+          "sha256": "93b343551273a77f6ab868f530e26699cafd0bb63ed04cf90f257b9bfd754d19"
+        },
+        {
+          "path": "source-research/naver-searches/objects/9d6c2a2e66416c766a34a23e44b076e68b28bc360bb1721cc7b4ab41cc81d975",
+          "bytes": 91756,
+          "crc32": "19457063",
+          "sha256": "9d6c2a2e66416c766a34a23e44b076e68b28bc360bb1721cc7b4ab41cc81d975"
+        },
+        {
+          "path": "source-research/naver-searches/objects/b9e30285e2ca9c45c61379af498ce6a0fec1f5dcfe5f9212abf9697113960f95",
+          "bytes": 211795,
+          "crc32": "7df3685e",
+          "sha256": "b9e30285e2ca9c45c61379af498ce6a0fec1f5dcfe5f9212abf9697113960f95"
+        },
+        {
+          "path": "source-research/naver-searches/objects/dff58a9c2cdcc848170ef73e81a2f9544017dbe184cf5a61e01e6c11c3712755",
+          "bytes": 99538,
+          "crc32": "9341b6fb",
+          "sha256": "dff58a9c2cdcc848170ef73e81a2f9544017dbe184cf5a61e01e6c11c3712755"
+        },
+        {
+          "path": "source-research/naver-searches/objects/e6e92566505b3f576047d683bb479366f3d07990e61e3e7c4f765a825633cc77",
+          "bytes": 71449,
+          "crc32": "90a0b769",
+          "sha256": "e6e92566505b3f576047d683bb479366f3d07990e61e3e7c4f765a825633cc77"
+        },
+        {
+          "path": "source-research/naver-searches/receipts.jsonl",
+          "bytes": 11927,
+          "crc32": "2c403b6b",
+          "sha256": "51a8159a3001c64eee6c3303dea2c507a2a8ef41902a3af3ef3119f88d502e6f"
+        },
+        {
+          "path": "source-research/naver-searches/sources.json",
+          "bytes": 20456,
+          "crc32": "461329ff",
+          "sha256": "5fc565af0b2e1d58fa0e0fba588dc0585c37f38a9ce9dc4267c5f079a83a6901"
+        },
+        {
+          "path": "source-research/other-daum-home-seeds.json",
+          "bytes": 440,
+          "crc32": "4c5613c0",
+          "sha256": "355542c3fd0bdc1de1b0a53fe664d4d5b2cd945ff1d477f12d66a008db50319d"
+        },
+        {
+          "path": "source-research/other-daum-homes/derived/1596dbc7de96b424f7c0c7d16f504aef7215e00874df7efcba79392dec191d21.txt",
+          "bytes": 2701,
+          "crc32": "128750b1",
+          "sha256": "c9960f9492f8a624a608a5bf29e830eca5829175ae9d731ed434e11c953059e1"
+        },
+        {
+          "path": "source-research/other-daum-homes/derived/86bfbe299cf3c00544821fe0e3157844241e54cb2523b060042aa6bbbf638c49.txt",
+          "bytes": 2911,
+          "crc32": "68049827",
+          "sha256": "1ba3a7604f849f03b164ee6ded39e3892dfd5d64b33fe9d3272ec6962ee94494"
+        },
+        {
+          "path": "source-research/other-daum-homes/originals/1596dbc7de96b424f7c0c7d16f504aef7215e00874df7efcba79392dec191d21",
+          "bytes": 50682,
+          "crc32": "65f6fbd7",
+          "sha256": "1596dbc7de96b424f7c0c7d16f504aef7215e00874df7efcba79392dec191d21"
+        },
+        {
+          "path": "source-research/other-daum-homes/originals/86bfbe299cf3c00544821fe0e3157844241e54cb2523b060042aa6bbbf638c49",
+          "bytes": 81448,
+          "crc32": "04afc75f",
+          "sha256": "86bfbe299cf3c00544821fe0e3157844241e54cb2523b060042aa6bbbf638c49"
+        },
+        {
+          "path": "source-research/other-daum-homes/receipts.jsonl",
+          "bytes": 1246,
+          "crc32": "3341481c",
+          "sha256": "42094c036199947b3fc81bf464a7708054950544472ba5e4d5d81d3934e388ad"
+        },
+        {
+          "path": "source-research/other-daum-homes/sources.json",
+          "bytes": 11950,
+          "crc32": "0d015116",
+          "sha256": "bd40f2b5d94958f62de8c7d4cd82d5cac7b9e1f09178e50896baa7b8ef61fc9f"
+        },
+        {
+          "path": "source-research/other-daum-root-seeds.json",
+          "bytes": 564,
+          "crc32": "2938c382",
+          "sha256": "df37f7ecad0a852dad53c1ec983532b30bd843e1fd69571499fbb87da84729a1"
+        },
+        {
+          "path": "source-research/other-daum-roots/derived/0983c0bc3d1720b234397a515b81a6486a828f295179fad376ba0d2e190d0c6d.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/other-daum-roots/derived/2020cd7e69d7e5b7ef87b199a8f6dddf2a010b2f75c70c5b32b121055fc86241.txt",
+          "bytes": 683,
+          "crc32": "138dc748",
+          "sha256": "1f46b34a5b4c5e1956cd88b6de1e6886b79f30181223372939605f20d7d6605a"
+        },
+        {
+          "path": "source-research/other-daum-roots/derived/6572eddc9b4472183f1a607575806bb6af473086b7540ab7193d5a76f312446d.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/other-daum-roots/originals/0983c0bc3d1720b234397a515b81a6486a828f295179fad376ba0d2e190d0c6d",
+          "bytes": 1609,
+          "crc32": "9d49a32c",
+          "sha256": "0983c0bc3d1720b234397a515b81a6486a828f295179fad376ba0d2e190d0c6d"
+        },
+        {
+          "path": "source-research/other-daum-roots/originals/2020cd7e69d7e5b7ef87b199a8f6dddf2a010b2f75c70c5b32b121055fc86241",
+          "bytes": 8356,
+          "crc32": "2f8bca14",
+          "sha256": "2020cd7e69d7e5b7ef87b199a8f6dddf2a010b2f75c70c5b32b121055fc86241"
+        },
+        {
+          "path": "source-research/other-daum-roots/originals/6572eddc9b4472183f1a607575806bb6af473086b7540ab7193d5a76f312446d",
+          "bytes": 1612,
+          "crc32": "32ffab05",
+          "sha256": "6572eddc9b4472183f1a607575806bb6af473086b7540ab7193d5a76f312446d"
+        },
+        {
+          "path": "source-research/other-daum-roots/receipts.jsonl",
+          "bytes": 2373,
+          "crc32": "191c7b46",
+          "sha256": "594f82fc444923939b56f2f9fd7420a39589f340ed0e8e263a09b9fa0d930de9"
+        },
+        {
+          "path": "source-research/other-daum-roots/sources.json",
+          "bytes": 6617,
+          "crc32": "70e2574b",
+          "sha256": "170898659c40976c714557f45eab6795a049a76c2ef454872e46d45de2eb1746"
+        },
+        {
+          "path": "source-research/programming-board-seeds.json",
+          "bytes": 220,
+          "crc32": "4fb59d02",
+          "sha256": "a8ccbde2c20e0625e52e8e88b12725d7b268679733335e8bc721e96acf78d975"
+        },
+        {
+          "path": "source-research/programming-board/derived/4076811e9eedd8a9b6d0d658cc86f09951e1f5d2df33b2ba30de7638a60e32eb.txt",
+          "bytes": 837,
+          "crc32": "47b6680d",
+          "sha256": "53c2bac2d66926d1620f0887541f42e13e41d38b2ff5a314504bd6d73147dd4e"
+        },
+        {
+          "path": "source-research/programming-board/originals/4076811e9eedd8a9b6d0d658cc86f09951e1f5d2df33b2ba30de7638a60e32eb",
+          "bytes": 46553,
+          "crc32": "4e462b8a",
+          "sha256": "4076811e9eedd8a9b6d0d658cc86f09951e1f5d2df33b2ba30de7638a60e32eb"
+        },
+        {
+          "path": "source-research/programming-board/receipts.jsonl",
+          "bytes": 652,
+          "crc32": "f998f08c",
+          "sha256": "e6450e40c9f78dfa934aa5efd4f3b31ca54b1773108cf0f9928bf1c69eae7852"
+        },
+        {
+          "path": "source-research/programming-board/sources.json",
+          "bytes": 2470,
+          "crc32": "13113cfa",
+          "sha256": "4bb93f142330d156d615df6e55c5bd45d7f20dc9f9639a086b64f44a446bc70d"
+        },
+        {
+          "path": "source-research/programming-menu-seeds.json",
+          "bytes": 228,
+          "crc32": "02c3a0cf",
+          "sha256": "ea8c770af30b6756f417a6212bc783af82929ad9914396cb7a6e4d12e42b2d49"
+        },
+        {
+          "path": "source-research/programming-menu/derived/5eae1aabe14f53a5eedb20dd8ebce82afc7ad49e0fdb6b90cbcfc06b80757dce.txt",
+          "bytes": 233,
+          "crc32": "e93092ed",
+          "sha256": "d0645788f5c77e60cb63db74f9950fa903eafce979c8db1f447491b99e0b2567"
+        },
+        {
+          "path": "source-research/programming-menu/originals/5eae1aabe14f53a5eedb20dd8ebce82afc7ad49e0fdb6b90cbcfc06b80757dce",
+          "bytes": 5797,
+          "crc32": "aae3fbf3",
+          "sha256": "5eae1aabe14f53a5eedb20dd8ebce82afc7ad49e0fdb6b90cbcfc06b80757dce"
+        },
+        {
+          "path": "source-research/programming-menu/receipts.jsonl",
+          "bytes": 795,
+          "crc32": "f1f087f5",
+          "sha256": "bb01a9579df77d09fed4f6aea35ab3d5b51c1c94b798d110ee4e072b0b4c2d56"
+        },
+        {
+          "path": "source-research/programming-menu/sources.json",
+          "bytes": 2325,
+          "crc32": "8b10a2f9",
+          "sha256": "0bf95f76a2fe59e5dabffb7111c8c348b830aa4e3eb256ad061b7304865c5d56"
+        },
+        {
+          "path": "source-research/wayback-forums/captures.jsonl",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/wayback-forums/membership.jsonl",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "source-research/wayback-forums/objects/36/36820f510ebc4544ebc3a2c8b1193a9940d5b604e2978ee189f603b0a6f87bd9",
+          "bytes": 50601,
+          "crc32": "9dc3e5bf",
+          "sha256": "36820f510ebc4544ebc3a2c8b1193a9940d5b604e2978ee189f603b0a6f87bd9"
+        },
+        {
+          "path": "source-research/wayback-forums/queue.sqlite3",
+          "bytes": 32768,
+          "crc32": "605dd93a",
+          "sha256": "b541b8f5f8e06a0feade3f5992e376ec5db3ab227ddd044feb8e622b08b86b87"
+        },
+        {
+          "path": "source-research/wayback-forums/responses.jsonl",
+          "bytes": 2400,
+          "crc32": "653f959a",
+          "sha256": "2b121786fe5eaaec69e84122460cc45e922d2591dd4ea8c80aae3cbecce9c3a1"
+        },
+        {
+          "path": "source-research/wayback-forums/summary.json",
+          "bytes": 1436,
+          "crc32": "76e69e44",
+          "sha256": "55d14113cce7139cb845f0b38d0a551e1584da66002987df0d60ef13f4319f50"
+        },
+        {
+          "path": "tests/s60-library-games.test.mjs",
+          "bytes": 3489,
+          "crc32": "5d1deb83",
+          "sha256": "ef28f65f5aaa33b01d054ba7c3598ee6562b747bb15017325d4f53ec2a571657"
+        },
+        {
+          "path": "tools/extract-old-sis.py",
+          "bytes": 15685,
+          "crc32": "4ded3935",
+          "sha256": "7e668e233b0d2d3ff5d64dceb0caa9cd9326b8b69226f8a503ca92b5ee2d751a"
+        },
+        {
+          "path": "tools/replay-sgs.mjs",
+          "bytes": 8635,
+          "crc32": "f64b62de",
+          "sha256": "8362adc4228ee6d111f9b9a4801798d7ae641761c74657f1c31b30ccccfa1901"
+        },
+        {
+          "path": "tools/scan-firmware-games.py",
+          "bytes": 11506,
+          "crc32": "41b13678",
+          "sha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e"
+        },
+        {
+          "path": "tools/sgs-info.mjs",
+          "bytes": 3398,
+          "crc32": "1786cb6c",
+          "sha256": "9afd4901a2dc3b87d32b61bfb622453869d139a47bfac96de0d854bed140cec0"
+        },
+        {
+          "path": "tools/update-catalog.py",
+          "bytes": 9070,
+          "crc32": "258e417d",
+          "sha256": "0f031c6dab54181d5ec1fe34d23264f9e1e776144e965bcf110a6abdee0828f8"
+        },
+        {
+          "path": "tools/verify-s60-library.py",
+          "bytes": 4974,
+          "crc32": "c50d2f0d",
+          "sha256": "6daf2d69feb2bfcc8852173d1a601505b00b99c26fff0c955c1e2ce18d2b865a"
+        },
+        {
+          "path": "validation/game-hunt-pass19.json",
+          "bytes": 43994,
+          "crc32": "a92f3c6f",
+          "sha256": "59a270ccbde611e2ee22fcd19a142182e8e3046c79da45d5243177ae3150eab4"
+        },
+        {
+          "path": "validation/replay-bounce-rubberball-story-s60-control.json",
+          "bytes": 728,
+          "crc32": "070b77b8",
+          "sha256": "0acb98941d05c1589eb0981d5e13b50ccf66e2efa58859ba3888c596483b9eea"
+        },
+        {
+          "path": "validation/replay-bounce-rubberball-story-s60.json",
+          "bytes": 722,
+          "crc32": "fbe73acf",
+          "sha256": "20017e78ca673bd741b4ef4ffbe2983ad8b25db62e9c9c7a3a0a1e1c6e531684"
+        },
+        {
+          "path": "validation/replay-world-league-2005-soccer-demo-s60-control.json",
+          "bytes": 1244,
+          "crc32": "7bcba726",
+          "sha256": "91ed132e5bf9971f6acb9372f8076b82d9539b29ce90de6fbd6d43fb4527bf45"
+        },
+        {
+          "path": "validation/replay-world-league-2005-soccer-demo-s60.json",
+          "bytes": 1235,
+          "crc32": "5ccb41cd",
+          "sha256": "1be2feea768eb8a63dff9411369b0c63d2919e78251bcd7b274b9c9f75f2be52"
+        },
+        {
+          "path": "validation/replay-world-league-2005-soccer-s60-control.json",
+          "bytes": 1244,
+          "crc32": "7bcba726",
+          "sha256": "91ed132e5bf9971f6acb9372f8076b82d9539b29ce90de6fbd6d43fb4527bf45"
+        },
+        {
+          "path": "validation/replay-world-league-2005-soccer-s60.json",
+          "bytes": 1235,
+          "crc32": "5ccb41cd",
+          "sha256": "1be2feea768eb8a63dff9411369b0c63d2919e78251bcd7b274b9c9f75f2be52"
+        },
+        {
+          "path": "validation/s60-library-gameplay.json",
+          "bytes": 58546,
+          "crc32": "bcffd6c5",
+          "sha256": "c9bfa8658350d93a9cf7b9f6a461be7cca5c1bd66b931ca403b8ca60adef2ac8"
+        },
+        {
+          "path": "validation/s60-library-provenance.json",
+          "bytes": 5192,
+          "crc32": "29e00ac6",
+          "sha256": "7182afc1c85de2e3aa6eea410177dcce74a2c9c407fee038ce47e38634096215"
+        }
+      ]
+    },
+    {
       "id": "korean-game-hunt-pass18",
       "repositoryPath": "research/archives/Korean-Game-Hunt-Pass18-SKT-and-GVM-Sources.zip",
       "bytes": 35135481,
@@ -98458,9 +99805,9 @@
     }
   ],
   "counts": {
-    "archives": 60,
-    "archiveBytes": 1043028569,
-    "fileMembers": 16319,
-    "uniqueMemberHashes": 7259
+    "archives": 61,
+    "archiveBytes": 1045967910,
+    "fileMembers": 16542,
+    "uniqueMemberHashes": 7409
   }
 }

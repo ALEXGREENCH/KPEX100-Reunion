@@ -76,6 +76,7 @@ def main():
         "s60-extra-gameplay.json",
         "developer-sample-gameplay.json",
         "brewgames-gameplay.json",
+        "s60-library-gameplay.json",
     ):
         path = VALIDATION / name
         if not path.exists():

@@ -7,16 +7,18 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-**The collection is included:** 9 firmware images, 76 SGS applications,
+**The collection is included:** 9 firmware images, 79 SGS applications,
 3 quick-start snapshots and the original Swerve 2.1 module. Both the repository
 and the default GitHub Pages build are ready to launch games. Original bytes
 are unchanged; the catalogue records SHA-256 hashes and tested runtime profiles.
+
+[World League and Bounce from S60](doc/s60-library-completion.md): three previously preserved SGS builds are now in the launch library, with fresh paired scene/control checks. Menu rendering and external-audio limits remain documented.
 
 [Seven additional GVM builds](doc/brewgames-gvm-games.md) include .hack//SIGN,
 Ragnarok Gaiden, Mashimaro, Bukbeol, Fruit Tycoon, Fantasy Blue and a Zzayo
 variant, with original archives and paired input/control checks.
 
-The Games tab contains 72 game builds and the Mosquito utility. The Examples tab
+The Games tab contains 75 game builds and the Mosquito utility. The Examples tab
 contains three separately tested developer SGS samples. Preserved attachments,
 source projects and research downloads are available on the
 [archive page](https://alexgreench.github.io/KPEX100-Reunion/research/), with
@@ -25,7 +27,7 @@ research inputs; Reunion does not claim to run them.
 
 [Platform preservation](doc/preservation.md) provides the complete SDK 2.10/2.12
 installers, emulators, the exact original Mobile C Reference 311 and early GVM
-documents. Sixty downloadable ZIPs retain actual files, with a complete
+documents. Sixty-one downloadable ZIPs retain actual files, with a complete
 direct-member hash inventory and an offline verification tool.
 
 [Acquisition pass 18](doc/game-hunt-pass18.md) preserves 73 SKT game archives

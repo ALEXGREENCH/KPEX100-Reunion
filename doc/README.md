@@ -149,3 +149,5 @@ SGS на любом устройстве. SDK и руководства опис
 - [Brewgames: семь SGS и парные проверки управления](brewgames-gvm-games.md): .hack//SIGN, Ragnarok, Mashimaro, Bukbeol, Fruit Tycoon, вариант Zzayo и Fantasy Blue.
 
 - [Игровой проход 18](game-hunt-pass18.md): 73 оригинальных архива SKT с Java-классами, два исходника GVM и проверка поисковых зацепок.
+
+- [World League и Bounce в библиотеке](s60-library-completion.md): три ранее сохранённые SGS, управление, проверки и результаты поиска в Daum.
