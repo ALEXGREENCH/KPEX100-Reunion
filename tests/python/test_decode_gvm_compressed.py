@@ -1,5 +1,9 @@
+import json
+import os
 from pathlib import Path
 import runpy
+import subprocess
+import sys
 from zipfile import ZipFile
 
 import pytest
@@ -37,3 +41,25 @@ def test_rejects_truncated_and_bad_history_tokens(sample):
     # A match at history index 63 with length four would cross the window.
     with pytest.raises(ValueError, match="outside the 64-byte history"):
         decode(source[:100] + b"\xfe\x40")
+
+
+def test_cli_report_preserves_korean_on_ascii_stdout(sample, tmp_path):
+    source, expected = sample
+    path = tmp_path / "original.bin"
+    path.write_bytes(bytes(176) + source)
+    output = tmp_path / "decoded.sgs"
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "tools/decode-gvm-compressed.py"),
+            str(path),
+            str(output),
+            "--offset",
+            "176",
+        ],
+        check=True,
+        capture_output=True,
+        env={**os.environ, "PYTHONIOENCODING": "ascii"},
+    )
+    assert json.loads(result.stdout)["layout"]["title"] == "힙합정신"
+    assert output.read_bytes() == expected

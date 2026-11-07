@@ -116,7 +116,6 @@ def main():
                 "sgsSha256": sha256(result).hexdigest(),
                 **report,
             },
-            ensure_ascii=False,
             indent=2,
         )
     )
