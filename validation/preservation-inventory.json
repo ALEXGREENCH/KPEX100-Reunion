@@ -3,6 +3,459 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "lg-kh1000-original-and-games",
+      "repositoryPath": "research/archives/LG-KH1000-Original-and-Games.zip",
+      "bytes": 63343776,
+      "sha256": "4b3f551c97657c80865ccc12450675c2ccdde3b42be6841929b44c7b6d8b8d21",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "source/KW100616.7z",
+          "bytes": 63033853,
+          "crc32": "777e0824",
+          "sha256": "3072dfdb2834a53b4a23de0746c48a8ec48bc4ccb67f4cbb9386d60788e051ca"
+        },
+        {
+          "path": "source/index.html",
+          "bytes": 1862,
+          "crc32": "a66a3c9d",
+          "sha256": "7197463d6021c733b81bae512cb3139188941dc1e8c19f1c19a53d6f339f160d"
+        },
+        {
+          "path": "evidence/kdz.json",
+          "bytes": 312,
+          "crc32": "7ed1ab7e",
+          "sha256": "86f3089a0ffe4a6ab94e3c289abf14011fe1aa9d63dc44291eb0faeb2b20d9e1"
+        },
+        {
+          "path": "evidence/scan.json",
+          "bytes": 202144,
+          "crc32": "7ce45461",
+          "sha256": "9fdb26857d9306caa0877712b2d5ffa4d16c814f16b7805f22c08d9f49852a89"
+        },
+        {
+          "path": "tools/scan-model.py",
+          "bytes": 4568,
+          "crc32": "fb79ebf1",
+          "sha256": "150fd64ee0e5f4bebad976e33d23c6c0d961da344ded913103cbe66a777169af"
+        },
+        {
+          "path": "evidence/7z-list.txt",
+          "bytes": 496,
+          "crc32": "484e0104",
+          "sha256": "90ca76c114e70b1fa79d6d0ce1ccef5c4fe100c6eb1153ec0ba010e6f91a2164"
+        },
+        {
+          "path": "evidence/7z-test.txt",
+          "bytes": 362,
+          "crc32": "8f36595f",
+          "sha256": "87e9c6e55dd15a6e25198733275493b528627b62830031b96013cd7a472a11dd"
+        },
+        {
+          "path": "evidence/cab-list.txt",
+          "bytes": 577,
+          "crc32": "44be3e19",
+          "sha256": "5aefe71282e347ab97d5818bfd3e45a83d8bcc438cbb021e69a49762d5440088"
+        },
+        {
+          "path": "evidence/cab-test.txt",
+          "bytes": 403,
+          "crc32": "344c5021",
+          "sha256": "d61dca248491a1a95322d29f82edd30e61ee51a436dbf844e6bc0f5bdba92515"
+        },
+        {
+          "path": "pxo/original/Game.pxo",
+          "bytes": 1617,
+          "crc32": "28b73201",
+          "sha256": "2e037adeb24757765903df1a9ef31598f385a396fa96625d9f034fb5d2226089"
+        },
+        {
+          "path": "evidence/pxo/Game.json",
+          "bytes": 401,
+          "crc32": "4a650e3f",
+          "sha256": "33188eb90f90b866dde079128ac4ed50a04cfb52ddfb1de85a50049902c0d239"
+        },
+        {
+          "path": "pxo/original/Game_RT.pxo",
+          "bytes": 271217,
+          "crc32": "9ed61f74",
+          "sha256": "8947469884c95eba83daa933573ca7b7cc27926c33e1373111c379ad69d7b714"
+        },
+        {
+          "path": "evidence/pxo/Game_RT.json",
+          "bytes": 405,
+          "crc32": "00508f77",
+          "sha256": "d3d2d837cee6b2b14b91684e61fea6455e77823f28af18fcd0f1c9e89cab7991"
+        },
+        {
+          "path": "pxo/original/Game_Sudoku.pxo",
+          "bytes": 389437,
+          "crc32": "82e18f4a",
+          "sha256": "03be05353289c42516f362b0e1af99beac3610a557105b1baad649c2774d5c79"
+        },
+        {
+          "path": "evidence/pxo/Game_Sudoku.json",
+          "bytes": 405,
+          "crc32": "d96b48d9",
+          "sha256": "8d989ddf483cc0966e031ebaaff3d12c827748d9f32df5f9b258dfa9fe3b2e5d"
+        },
+        {
+          "path": "platform/KWipi.pxo",
+          "bytes": 19933,
+          "crc32": "4aa19ecd",
+          "sha256": "fbc8da6bc1ef76395c5eedc8e1890b29b5bc91c45910871d80cf8b9226784819"
+        },
+        {
+          "path": "platform/KWipiAgent.pxo",
+          "bytes": 8661,
+          "crc32": "f6c18ddc",
+          "sha256": "17d4813dd8171252cb048142036bd0aa4c478dd2e4f5e2c600ce31815fbf2c6c"
+        },
+        {
+          "path": "platform/KWipiEventMgr.pxo",
+          "bytes": 1641,
+          "crc32": "2096e188",
+          "sha256": "61cba5e702247ab163a02728caf6460b6bfe6fc6000741263dba241964439786"
+        },
+        {
+          "path": "platform/KWipiMessage.pxo",
+          "bytes": 2185,
+          "crc32": "cc5d8c1f",
+          "sha256": "e738981a1d82f7cce00a17e79cd6b121ce245b2c7ca3f66ee97291f9818ec8e1"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 4082,
+          "crc32": "d3182dff",
+          "sha256": "7d2829a68f87bb7b7a79cbb129cd0d0d827eaadab0ff9e3b814cad90958fe8db"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 3439,
+          "crc32": "c12b259f",
+          "sha256": "96cc1d37fe00db6a0bdaca24befb47cf1e19f5722adcc39fe23e119191f39f31"
+        }
+      ]
+    },
+    {
+      "id": "lg-kh1800m-original-and-games",
+      "repositoryPath": "research/archives/LG-KH1800M-Original-and-Games.zip",
+      "bytes": 79780452,
+      "sha256": "e21b18ee720a8300ea68e58c7cd16cda16bbba7b6417eac06b84ea87faa6d30a",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "source/KW18M809.7z",
+          "bytes": 72799046,
+          "crc32": "06917e9c",
+          "sha256": "2a1ad30358e4043bfb800f690507e2583157a94d2f6615283c545edb17647946"
+        },
+        {
+          "path": "source/index.html",
+          "bytes": 1863,
+          "crc32": "681223d2",
+          "sha256": "af6e2b4ca0e8eaf16e49813fa349244624b735227e468196bcbbbeb981c7ef6f"
+        },
+        {
+          "path": "evidence/kdz.json",
+          "bytes": 312,
+          "crc32": "d626dd3e",
+          "sha256": "72bfac4bec8bda7f2c143c6c7160a8466b5e7f3cb92b200383338a546e090738"
+        },
+        {
+          "path": "evidence/scan.json",
+          "bytes": 527780,
+          "crc32": "68054d7a",
+          "sha256": "9f32b38d40a96f1d2621fc954ff7ba107c906879c5aa243b89d3a30b67835f94"
+        },
+        {
+          "path": "tools/scan-model.py",
+          "bytes": 4568,
+          "crc32": "fb79ebf1",
+          "sha256": "150fd64ee0e5f4bebad976e33d23c6c0d961da344ded913103cbe66a777169af"
+        },
+        {
+          "path": "evidence/7z-list.txt",
+          "bytes": 496,
+          "crc32": "91398e47",
+          "sha256": "7ca37d305d1a557cac1a07c299a1f69875d6bb5fccd40e7eb990f66929918d87"
+        },
+        {
+          "path": "evidence/7z-test.txt",
+          "bytes": 362,
+          "crc32": "1fc06057",
+          "sha256": "925d1ace42c8a88f825212135ae44e0c7862dce87c8cb13da6502f8021182930"
+        },
+        {
+          "path": "evidence/cab-list.txt",
+          "bytes": 572,
+          "crc32": "2452c98a",
+          "sha256": "507d0e9054aa1f45b3527cbaaa76ff90b718fd6ca34cf7a4bfdb84141f08814c"
+        },
+        {
+          "path": "evidence/cab-test.txt",
+          "bytes": 405,
+          "crc32": "2e522da0",
+          "sha256": "346282189b46b9408b482cb9d1334ee4530cefa57c62c8c1dd306c41dd859ff6"
+        },
+        {
+          "path": "pxo/original/Game.pxo",
+          "bytes": 1596,
+          "crc32": "9c46fe52",
+          "sha256": "1075a4ec4729ab6f056b76ffe95f05afff2f74d0a11d146b2ac4a007954e4432"
+        },
+        {
+          "path": "pxo/decoded/Game.pxo",
+          "bytes": 2053,
+          "crc32": "77247e94",
+          "sha256": "c3ed205e88eabede217426300c0f43d4066810f7928d8bfaf0225cbecef49118"
+        },
+        {
+          "path": "evidence/pxo/Game.json",
+          "bytes": 401,
+          "crc32": "f590386a",
+          "sha256": "4066d277fd1a6ebc3eb070ef8242d70a50002582b90177490ea501b04cbd3580"
+        },
+        {
+          "path": "pxo/original/Game_GrandGolf.pxo",
+          "bytes": 290784,
+          "crc32": "f2b6a5f1",
+          "sha256": "173772653bf544db2d3ed58df2f0b5b4288c884766ba8b67729bf70c0db198d0"
+        },
+        {
+          "path": "pxo/decoded/Game_GrandGolf.pxo",
+          "bytes": 559341,
+          "crc32": "4d50e35a",
+          "sha256": "3ea2cbb7b1073fdd87630aaa51180add1c8219b48f4fc77ad40b990770cdef6d"
+        },
+        {
+          "path": "evidence/pxo/Game_GrandGolf.json",
+          "bytes": 405,
+          "crc32": "c932e3a2",
+          "sha256": "5d5e26a6b42b5d161397d36c73d8599f3fff71585f1dc225311b6bbc4e7d1410"
+        },
+        {
+          "path": "pxo/original/Game_JjangiV.pxo",
+          "bytes": 698975,
+          "crc32": "85437af5",
+          "sha256": "2fb3862c2ce0c2b4f2fbcdbbdf97ef7c9f466060ee856f2c0f3029abb5aa8318"
+        },
+        {
+          "path": "pxo/decoded/Game_JjangiV.pxo",
+          "bytes": 1515745,
+          "crc32": "a6dbefa9",
+          "sha256": "c252be6c8149fb1c866ae561c767a6ae4deef41638f2409da830f1d9fcd71cd4"
+        },
+        {
+          "path": "evidence/pxo/Game_JjangiV.json",
+          "bytes": 406,
+          "crc32": "df169220",
+          "sha256": "1f885ba26f69c2598006bacf1ebe2a059e53c02cdd4d9ace73acdfedd54bd463"
+        },
+        {
+          "path": "pxo/original/Game_Sudoku.pxo",
+          "bytes": 103297,
+          "crc32": "b2d489d9",
+          "sha256": "7bd23fb8d59286ee91a02062c920687c302f3e670638783a0e2619f5078fc39b"
+        },
+        {
+          "path": "pxo/decoded/Game_Sudoku.pxo",
+          "bytes": 398693,
+          "crc32": "ce972531",
+          "sha256": "d8adb42cf1118a98da855fc0e20369bdf9c7760b6245477d792c284107c0d325"
+        },
+        {
+          "path": "evidence/pxo/Game_Sudoku.json",
+          "bytes": 405,
+          "crc32": "e3a6a74a",
+          "sha256": "476e65dbbab587e54b3719929a4ce422828199556ed21de40bdefddd23be04bb"
+        },
+        {
+          "path": "pxo/original/Game_ZooZooClub.pxo",
+          "bytes": 128913,
+          "crc32": "14858c4a",
+          "sha256": "57ee7f06c11d733c2ee9eece9674a545a777a49c5e953f76d20442bfe2e73be4"
+        },
+        {
+          "path": "pxo/decoded/Game_ZooZooClub.pxo",
+          "bytes": 307557,
+          "crc32": "1d00542e",
+          "sha256": "2eae6d671580398aab44931bed7a2e3a7500d42e4b4ec46741b546eb7231dcfb"
+        },
+        {
+          "path": "evidence/pxo/Game_ZooZooClub.json",
+          "bytes": 405,
+          "crc32": "e1b1f12e",
+          "sha256": "18bd488624a712775f55344387138783858e8e06c750f35b7ec3c6689c7c6b6d"
+        },
+        {
+          "path": "resources/campaign.lks",
+          "bytes": 997,
+          "crc32": "194c2654",
+          "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+        },
+        {
+          "path": "resources/data.lkz",
+          "bytes": 4382268,
+          "crc32": "c814baa1",
+          "sha256": "f2be4c024a9f948b34f829d0df18f92caf8fd36f353e3edba747bb9f21e935ca"
+        },
+        {
+          "path": "resources/options.lks",
+          "bytes": 1076,
+          "crc32": "ab36136b",
+          "sha256": "763291e38c90ef21e22504edef7293da98fcb5ff458e65f22bdad3f8401206a7"
+        },
+        {
+          "path": "evidence/lkz-members.json",
+          "bytes": 78842,
+          "crc32": "678dd921",
+          "sha256": "20f57c1c8a681d0e226d1217439a1d2e2f04105870e681e15b2c9486a06506e7"
+        },
+        {
+          "path": "flash/Ladder.swf",
+          "bytes": 226887,
+          "crc32": "35c6dec2",
+          "sha256": "d8c4d3f4f9d1c41965467d9e5899144f01575b32bc0cb86ba52e69333d278ad0"
+        },
+        {
+          "path": "evidence/main-lzo.json",
+          "bytes": 41515,
+          "crc32": "b2315cef",
+          "sha256": "e0ecca5f0fdeb58527ab920954800b73ce983de776b0a61540dbb7d39d3c4f05"
+        },
+        {
+          "path": "tools/unpack-lg-flat-main.py",
+          "bytes": 4708,
+          "crc32": "6dd4b1a6",
+          "sha256": "b7e1e5b746954c4f219ffbe24c3819a0ec04f9d1f953f77d0bbc8be135ccc99f"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 7671,
+          "crc32": "05607a78",
+          "sha256": "73aa8eb3542d69fcd8a4967636bf182c3a9d8dc99c6c59b9d20269493f18fb59"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 5589,
+          "crc32": "d27f22a5",
+          "sha256": "1f758f2b036d0f4a0b8e7bc1631ae4e92793bf33ea9352a5a2121058140b2d40"
+        }
+      ]
+    },
+    {
+      "id": "lg-kh1200-java-platform-modules",
+      "repositoryPath": "research/archives/LG-KH1200-Original-and-Java-Modules.zip",
+      "bytes": 22026746,
+      "sha256": "bf4fc00b9f538370cb0daafa8d5290cb831890124b8588d445b618956132d083",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "source/KW120615.7z",
+          "bytes": 21938004,
+          "crc32": "99fcf13a",
+          "sha256": "3e9bb82b2a31343e25a6109497788d783247f4f56237c17e3e30b43d3a51290c"
+        },
+        {
+          "path": "source/index.html",
+          "bytes": 1862,
+          "crc32": "0dc943f5",
+          "sha256": "37278fdfbd759d2a34e248ce2f8968c8ba58ceaf4102bc68e8b606e5e1b444c7"
+        },
+        {
+          "path": "evidence/kdz.json",
+          "bytes": 312,
+          "crc32": "83837de9",
+          "sha256": "10e9a2f3929fc2bde5dcc29ac5c8e791da1103f406764857fc9dd0362d9604ef"
+        },
+        {
+          "path": "evidence/scan.json",
+          "bytes": 146156,
+          "crc32": "1d0d2135",
+          "sha256": "b2e1bbe458ea5638c5f036c1f7748b542f806243c10d496c78f6d4c39fdd3947"
+        },
+        {
+          "path": "tools/scan-model.py",
+          "bytes": 4568,
+          "crc32": "fb79ebf1",
+          "sha256": "150fd64ee0e5f4bebad976e33d23c6c0d961da344ded913103cbe66a777169af"
+        },
+        {
+          "path": "evidence/7z-list.txt",
+          "bytes": 496,
+          "crc32": "29388304",
+          "sha256": "4b6092fb22a8def9df86dec15d3cbe314e57251d1e36889825cd6aee1d75f082"
+        },
+        {
+          "path": "evidence/7z-test.txt",
+          "bytes": 362,
+          "crc32": "4f8dbe12",
+          "sha256": "7c75d3a7dcfce6020d5c398695c9bdab31aaaf44141c99bdc7d668439d5e7699"
+        },
+        {
+          "path": "evidence/cab-list.txt",
+          "bytes": 575,
+          "crc32": "5693f841",
+          "sha256": "31f050e0c984b0fb750d2a505c072b203be05af72cd746927fce7335e82f5869"
+        },
+        {
+          "path": "evidence/cab-test.txt",
+          "bytes": 403,
+          "crc32": "c1d8915c",
+          "sha256": "02fe7866ae27c0343c3a7fc1c10a37dad915891f4e0727ad40f4fcfa3a169e63"
+        },
+        {
+          "path": "platform/Java.pxo",
+          "bytes": 15918,
+          "crc32": "27fd059f",
+          "sha256": "fc1478d7c8bf94b11d0649bbd0a01b787b2aab10e345adeab7bb5094a3697e18"
+        },
+        {
+          "path": "evidence/pxo/Java.json",
+          "bytes": 403,
+          "crc32": "0ba730f8",
+          "sha256": "3ed6fbb93a3968f2816fcab3fc3076cd8eea96c76a9dcf812b514801add5eccc"
+        },
+        {
+          "path": "platform/JavaBg.pxo",
+          "bytes": 29518,
+          "crc32": "033e4007",
+          "sha256": "be2a872c884bec1fcc7ad940efa111fb9cd97289d050ea30a8f5d97d7ea93120"
+        },
+        {
+          "path": "evidence/pxo/JavaBg.json",
+          "bytes": 403,
+          "crc32": "de3ed911",
+          "sha256": "6b1c323626c484947b2ef30846add8ff19d23c1745c1ada29057ebfac3a548f4"
+        },
+        {
+          "path": "platform/JavaSv.pxo",
+          "bytes": 22002,
+          "crc32": "a4466ad8",
+          "sha256": "10077045f3b631782484556fcc03ea3457253a57110c46d7a27e30af60c2bfb6"
+        },
+        {
+          "path": "evidence/pxo/JavaSv.json",
+          "bytes": 403,
+          "crc32": "ae8479c7",
+          "sha256": "e480a02ca18e6cc956bb9fa475d5e1584642332ef88c20957dc9a7eb9b5e6573"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 2230,
+          "crc32": "b890d931",
+          "sha256": "9673d91eedc55fb17c9f3598004f653e0945d7e53865f295cf981d681217f52b"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 2721,
+          "crc32": "7b5c2bc9",
+          "sha256": "09ccbf713dc7f110690959dfdb46cad303a3b0ec695fd2e540f70af536e5acc7"
+        }
+      ]
+    },
+    {
       "id": "lg-kh1800-original-and-games",
       "repositoryPath": "research/archives/LG-KH1800-Original-and-Games.zip",
       "bytes": 73777640,
@@ -168115,9 +168568,9 @@
     }
   ],
   "counts": {
-    "archives": 81,
-    "archiveBytes": 1477628743,
-    "fileMembers": 27897,
-    "uniqueMemberHashes": 14943
+    "archives": 84,
+    "archiveBytes": 1642779717,
+    "fileMembers": 27968,
+    "uniqueMemberHashes": 15009
   }
 }

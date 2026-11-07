@@ -4,6 +4,63 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "lg-kh1000-original-and-games",
+      "title": "LG KH1000: Racing Time и Sudoku Puzzle",
+      "category": "Прошивки телефонов",
+      "description": "Прошивка KW100616, два заводских PXO, игровое меню и четыре модуля K-WIPI. Обе игровые сборки отличаются от ранее сохранённых.",
+      "repositoryPath": "research/archives/LG-KH1000-Original-and-Games.zip",
+      "bytes": 63343776,
+      "sha256": "4b3f551c97657c80865ccc12450675c2ccdde3b42be6841929b44c7b6d8b8d21",
+      "sources": [
+        {
+          "label": "Образ KW100616",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/KH1000/KW100616.7z"
+        },
+        {
+          "label": "Поддержка LG KH1000",
+          "url": "https://www.lge.co.kr/support/product-LGKH1000"
+        }
+      ]
+    },
+    {
+      "id": "lg-kh1800m-original-and-games",
+      "title": "LG KH1800M: ZooZoo Club и ещё три игры",
+      "category": "Прошивки телефонов",
+      "description": "Прошивка KW18M809, четыре игровых PXO, ресурсы, Flash-жеребьёвка Ladder и карта распаковки ARM ELF.",
+      "repositoryPath": "research/archives/LG-KH1800M-Original-and-Games.zip",
+      "bytes": 79780452,
+      "sha256": "e21b18ee720a8300ea68e58c7cd16cda16bbba7b6417eac06b84ea87faa6d30a",
+      "sources": [
+        {
+          "label": "Образ KW18M809",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/KH1800M/KW18M809.7z"
+        },
+        {
+          "label": "Поддержка LG KH1800M",
+          "url": "https://www.lge.co.kr/support/product-LGKH1800M"
+        }
+      ]
+    },
+    {
+      "id": "lg-kh1200-java-platform-modules",
+      "title": "LG KH1200: прошивка и Java-модули",
+      "category": "Прошивки телефонов",
+      "description": "Оригинальный образ KW120615 и три нативных PXO интерфейса Java. В проверенных слоях не найдены MIDlet или SGS.",
+      "repositoryPath": "research/archives/LG-KH1200-Original-and-Java-Modules.zip",
+      "bytes": 22026746,
+      "sha256": "bf4fc00b9f538370cb0daafa8d5290cb831890124b8588d445b618956132d083",
+      "sources": [
+        {
+          "label": "Образ KW120615",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/KH1200/KW120615.7z"
+        },
+        {
+          "label": "Поддержка LG KH1200",
+          "url": "https://www.lge.co.kr/support/product-LGKH1200"
+        }
+      ]
+    },
+    {
       "id": "lg-kh1800-original-and-games",
       "title": "LG KH1800: Mobile Jjangi и четыре заводские игры",
       "category": "Прошивки телефонов",
@@ -1512,6 +1569,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "LG KH1000, KH1200 и KH1800M: игры и Java-модули",
+      "repositoryPath": "doc/lg-kh1000-kh1200-kh1800m.md"
+    },
     {
       "title": "LG KH1800: Mobile Jjangi и проверка заводских игр",
       "repositoryPath": "doc/lg-kh1800-games.md"

@@ -1,0 +1,574 @@
+{
+  "models": [
+    {
+      "download": {
+        "source": "https://archive.sunderland93.ru/Firmwares/LG/KH1000/KW100616.7z",
+        "response": "200 https://archive.sunderland93.ru/Firmwares/LG/KH1000/KW100616.7z",
+        "utc": "2026-11-07T20:02:31.8431781Z",
+        "file": "KW100616.7z",
+        "bytes": 63033853,
+        "sha256": "3072dfdb2834a53b4a23de0746c48a8ec48bc4ccb67f4cbb9386d60788e051ca"
+      },
+      "wdb": {
+        "model": "KH1000",
+        "cabinetCrcPassed": true,
+        "prefix": false,
+        "fileCount": 937
+      },
+      "layers": [
+        {
+          "path": "KW100616_00.kdz",
+          "bytes": 63029811,
+          "sha256": "dac8dc7385733adec03f207fb62362f2998cf9507cab6f5b097f97862a19e227",
+          "crc32": "81500B18"
+        },
+        {
+          "path": "decoded.cab",
+          "bytes": 63029811,
+          "sha256": "8bc5af31868d5de7625c5e4b9eb2b64fd7e59cfd0edadf0f7a4b8019e39d9563",
+          "crc32": "7B6420F6"
+        },
+        {
+          "path": "KH1000_1.0.0.8.dll",
+          "bytes": 425984,
+          "sha256": "03731eebe852600b615a739b60c43ddd50ba559f66f8b425cc354a5ad13796ba",
+          "crc32": "2AA5C3F8"
+        },
+        {
+          "path": "KW100616.wdb",
+          "bytes": 62962959,
+          "sha256": "1e0c629290e740068d7e824139f1de81564d4b32081bb1f1b436b63ef94a83fd",
+          "crc32": "3C746E20"
+        }
+      ],
+      "sgsScan": {
+        "files": 940,
+        "bytes": 122221691,
+        "candidates": 5787636,
+        "hits": 0,
+        "validatedMidlets": 0
+      },
+      "markers": [],
+      "gameModules": [
+        {
+          "path": "MODULE/C/Game.pxo",
+          "title": null,
+          "original": {
+            "bytes": 1617,
+            "sha256": "2e037adeb24757765903df1a9ef31598f385a396fa96625d9f034fb5d2226089",
+            "crc32": "28B73201"
+          },
+          "decoded": {
+            "bytes": 1617,
+            "sha256": "2e037adeb24757765903df1a9ef31598f385a396fa96625d9f034fb5d2226089",
+            "crc32": "28B73201"
+          },
+          "thumbOffset": 112,
+          "thumbBytes": "10b5b54c2068c030006a416db3484068",
+          "thumbDisassembly": [
+            "push {r4, lr}",
+            "ldr r4, [pc, #0x2d4]",
+            "ldr r0, [r4]",
+            "adds r0, #0xc0"
+          ]
+        },
+        {
+          "path": "MODULE/C/Game_RT.pxo",
+          "title": "Racing Time",
+          "original": {
+            "bytes": 271217,
+            "sha256": "8947469884c95eba83daa933573ca7b7cc27926c33e1373111c379ad69d7b714",
+            "crc32": "9ED61F74"
+          },
+          "decoded": {
+            "bytes": 271217,
+            "sha256": "8947469884c95eba83daa933573ca7b7cc27926c33e1373111c379ad69d7b714",
+            "crc32": "9ED61F74"
+          },
+          "thumbOffset": 944,
+          "thumbBytes": "f8b5b14c2068806b806a8047051c2068",
+          "thumbDisassembly": [
+            "push {r3, r4, r5, r6, r7, lr}",
+            "ldr r4, [pc, #0x2c4]",
+            "ldr r0, [r4]",
+            "ldr r0, [r0, #0x38]"
+          ]
+        },
+        {
+          "path": "MODULE/C/Game_Sudoku.pxo",
+          "title": "Sudoku Puzzle",
+          "original": {
+            "bytes": 389437,
+            "sha256": "03be05353289c42516f362b0e1af99beac3610a557105b1baad649c2774d5c79",
+            "crc32": "82E18F4A"
+          },
+          "decoded": {
+            "bytes": 389437,
+            "sha256": "03be05353289c42516f362b0e1af99beac3610a557105b1baad649c2774d5c79",
+            "crc32": "82E18F4A"
+          },
+          "thumbOffset": 480,
+          "thumbBytes": "10b50e49041c09684000896e03d5896a",
+          "thumbDisassembly": [
+            "push {r4, lr}",
+            "ldr r1, [pc, #0x38]",
+            "adds r4, r0, #0",
+            "ldr r1, [r1]"
+          ]
+        }
+      ],
+      "platformModules": [
+        {
+          "path": "MODULE/C/KWipi.pxo",
+          "bytes": 19933,
+          "sha256": "fbc8da6bc1ef76395c5eedc8e1890b29b5bc91c45910871d80cf8b9226784819",
+          "crc32": "4AA19ECD"
+        },
+        {
+          "path": "MODULE/C/KWipiAgent.pxo",
+          "bytes": 8661,
+          "sha256": "17d4813dd8171252cb048142036bd0aa4c478dd2e4f5e2c600ce31815fbf2c6c",
+          "crc32": "F6C18DDC"
+        },
+        {
+          "path": "MODULE/C/KWipiEventMgr.pxo",
+          "bytes": 1641,
+          "sha256": "61cba5e702247ab163a02728caf6460b6bfe6fc6000741263dba241964439786",
+          "crc32": "2096E188"
+        },
+        {
+          "path": "MODULE/C/KWipiMessage.pxo",
+          "bytes": 2185,
+          "sha256": "e738981a1d82f7cce00a17e79cd6b121ce245b2c7ca3f66ee97291f9818ec8e1",
+          "crc32": "CC5D8C1F"
+        }
+      ],
+      "archive": {
+        "repositoryPath": "research/archives/LG-KH1000-Original-and-Games.zip",
+        "bytes": 63343776,
+        "sha256": "4b3f551c97657c80865ccc12450675c2ccdde3b42be6841929b44c7b6d8b8d21",
+        "crc32": "4CD12461"
+      }
+    },
+    {
+      "download": {
+        "source": "https://archive.sunderland93.ru/Firmwares/LG/KH1200/KW120615.7z",
+        "response": "200 https://archive.sunderland93.ru/Firmwares/LG/KH1200/KW120615.7z",
+        "utc": "2026-11-07T20:02:14.6241950Z",
+        "file": "KW120615.7z",
+        "bytes": 21938004,
+        "sha256": "3e9bb82b2a31343e25a6109497788d783247f4f56237c17e3e30b43d3a51290c"
+      },
+      "wdb": {
+        "model": "KH1200",
+        "cabinetCrcPassed": true,
+        "prefix": false,
+        "fileCount": 697
+      },
+      "layers": [
+        {
+          "path": "KW120615_00.kdz",
+          "bytes": 21936506,
+          "sha256": "1c4fca45833f854a1384dbe058f6f7d86b500c942023d4b30715604fc86efd87",
+          "crc32": "9D54DECD"
+        },
+        {
+          "path": "decoded.cab",
+          "bytes": 21936506,
+          "sha256": "435b010cffa07cbf2473a3316682733152a943515253a7ac7924322db8a97bb9",
+          "crc32": "F02CCA80"
+        },
+        {
+          "path": "KH1200_1_1_4.dll",
+          "bytes": 405504,
+          "sha256": "b3d3e0bab7bf463b2682d733cfff7378a80cc137ab0eb05a9912339f64e329b8",
+          "crc32": "13FAD9F9"
+        },
+        {
+          "path": "KW120615.wdb",
+          "bytes": 21801480,
+          "sha256": "bcee067eb633d79ae1b64bebab6ef1557d0bf655982c65cc339e190b8db5597b",
+          "crc32": "A8E50034"
+        }
+      ],
+      "sgsScan": {
+        "files": 703,
+        "bytes": 45431392,
+        "candidates": 2195220,
+        "hits": 0,
+        "validatedMidlets": 0
+      },
+      "markers": [
+        {
+          "path": "BIN/AMSS_KH1200.bin",
+          "matches": {
+            "MIDlet-Name": [
+              593252,
+              20140576,
+              23094356
+            ],
+            "com.aroma.ams.jam.Main": [
+              593284,
+              11799480,
+              17176076
+            ]
+          }
+        }
+      ],
+      "gameModules": [],
+      "platformModules": [
+        {
+          "path": "MODULE/Pxo/Java.pxo",
+          "bytes": 15918,
+          "sha256": "fc1478d7c8bf94b11d0649bbd0a01b787b2aab10e345adeab7bb5094a3697e18",
+          "crc32": "27FD059F"
+        },
+        {
+          "path": "MODULE/Pxo/JavaBg.pxo",
+          "bytes": 29518,
+          "sha256": "be2a872c884bec1fcc7ad940efa111fb9cd97289d050ea30a8f5d97d7ea93120",
+          "crc32": "033E4007"
+        },
+        {
+          "path": "MODULE/Pxo/JavaSv.pxo",
+          "bytes": 22002,
+          "sha256": "10077045f3b631782484556fcc03ea3457253a57110c46d7a27e30af60c2bfb6",
+          "crc32": "A4466AD8"
+        }
+      ],
+      "archive": {
+        "repositoryPath": "research/archives/LG-KH1200-Original-and-Java-Modules.zip",
+        "bytes": 22026746,
+        "sha256": "bf4fc00b9f538370cb0daafa8d5290cb831890124b8588d445b618956132d083",
+        "crc32": "ED82FE72"
+      }
+    },
+    {
+      "download": {
+        "source": "https://archive.sunderland93.ru/Firmwares/LG/KH1800M/KW18M809.7z",
+        "response": "200 https://archive.sunderland93.ru/Firmwares/LG/KH1800M/KW18M809.7z",
+        "utc": "2026-11-07T20:02:33.5824927Z",
+        "file": "KW18M809.7z",
+        "bytes": 72799046,
+        "sha256": "2a1ad30358e4043bfb800f690507e2583157a94d2f6615283c545edb17647946"
+      },
+      "wdb": {
+        "model": "KH1800M",
+        "cabinetCrcPassed": true,
+        "prefix": false,
+        "fileCount": 1945
+      },
+      "layers": [
+        {
+          "path": "KW18M809_00.kdz",
+          "bytes": 72794398,
+          "sha256": "f25bf0b9c6d70c617631edd855b76dd54ceba6e7e2e9b5da33cadf816f767805",
+          "crc32": "205AC3FA"
+        },
+        {
+          "path": "decoded.cab",
+          "bytes": 72794398,
+          "sha256": "6ac4f9af3ac4a1e48cfd7506efa313fb1f7528371dcd8c0a7d15514a0aa7918d",
+          "crc32": "5B7154C9"
+        },
+        {
+          "path": "KH180M.dll",
+          "bytes": 438272,
+          "sha256": "36868f3e053bf29d7ea9d22da6a956ba41456ada3280efc735bbcc797bab8578",
+          "crc32": "1CDB2F3C"
+        },
+        {
+          "path": "KW18M809.wdb",
+          "bytes": 72833509,
+          "sha256": "f32b1bfdd07b58eea24ad1bb2a5a0d5b769f5316e439b8d9270f35d367f434a3",
+          "crc32": "A7631F3C"
+        }
+      ],
+      "sgsScan": {
+        "files": 2400,
+        "bytes": 134555995,
+        "candidates": 7559169,
+        "hits": 0,
+        "validatedMidlets": 0
+      },
+      "markers": [],
+      "gameModules": [
+        {
+          "path": "MODULE/C/Game.pxo",
+          "title": null,
+          "original": {
+            "bytes": 1596,
+            "sha256": "1075a4ec4729ab6f056b76ffe95f05afff2f74d0a11d146b2ac4a007954e4432",
+            "crc32": "9C46FE52"
+          },
+          "decoded": {
+            "bytes": 2053,
+            "sha256": "c3ed205e88eabede217426300c0f43d4066810f7928d8bfaf0225cbecef49118",
+            "crc32": "77247E94"
+          },
+          "thumbOffset": 116,
+          "thumbBytes": "10b5e64c2068c030406a416ee4484068",
+          "thumbDisassembly": [
+            "push {r4, lr}",
+            "ldr r4, [pc, #0x398]",
+            "ldr r0, [r4]",
+            "adds r0, #0xc0"
+          ]
+        },
+        {
+          "path": "MODULE/C/Game_GrandGolf.pxo",
+          "title": "Grand Golf",
+          "original": {
+            "bytes": 290784,
+            "sha256": "173772653bf544db2d3ed58df2f0b5b4288c884766ba8b67729bf70c0db198d0",
+            "crc32": "F2B6A5F1"
+          },
+          "decoded": {
+            "bytes": 559341,
+            "sha256": "3ea2cbb7b1073fdd87630aaa51180add1c8219b48f4fc77ad40b990770cdef6d",
+            "crc32": "4D50E35A"
+          },
+          "thumbOffset": 1148,
+          "thumbBytes": "10b50e49041c09684000c96e03d5c96a",
+          "thumbDisassembly": [
+            "push {r4, lr}",
+            "ldr r1, [pc, #0x38]",
+            "adds r4, r0, #0",
+            "ldr r1, [r1]"
+          ]
+        },
+        {
+          "path": "MODULE/C/Game_JjangiV.pxo",
+          "title": "Mobile Jjangi",
+          "original": {
+            "bytes": 698975,
+            "sha256": "2fb3862c2ce0c2b4f2fbcdbbdf97ef7c9f466060ee856f2c0f3029abb5aa8318",
+            "crc32": "85437AF5"
+          },
+          "decoded": {
+            "bytes": 1515745,
+            "sha256": "c252be6c8149fb1c866ae561c767a6ae4deef41638f2409da830f1d9fcd71cd4",
+            "crc32": "A6DBEFA9"
+          },
+          "thumbOffset": 1184,
+          "thumbBytes": "10b50e49041c09684000c96e03d5c96a",
+          "thumbDisassembly": [
+            "push {r4, lr}",
+            "ldr r1, [pc, #0x38]",
+            "adds r4, r0, #0",
+            "ldr r1, [r1]"
+          ]
+        },
+        {
+          "path": "MODULE/C/Game_Sudoku.pxo",
+          "title": "Sudoku Puzzle",
+          "original": {
+            "bytes": 103297,
+            "sha256": "7bd23fb8d59286ee91a02062c920687c302f3e670638783a0e2619f5078fc39b",
+            "crc32": "B2D489D9"
+          },
+          "decoded": {
+            "bytes": 398693,
+            "sha256": "d8adb42cf1118a98da855fc0e20369bdf9c7760b6245477d792c284107c0d325",
+            "crc32": "CE972531"
+          },
+          "thumbOffset": 496,
+          "thumbBytes": "10b50e49041c09684000c96e03d5c96a",
+          "thumbDisassembly": [
+            "push {r4, lr}",
+            "ldr r1, [pc, #0x38]",
+            "adds r4, r0, #0",
+            "ldr r1, [r1]"
+          ]
+        },
+        {
+          "path": "MODULE/C/Game_ZooZooClub.pxo",
+          "title": "ZooZoo Club",
+          "original": {
+            "bytes": 128913,
+            "sha256": "57ee7f06c11d733c2ee9eece9674a545a777a49c5e953f76d20442bfe2e73be4",
+            "crc32": "14858C4A"
+          },
+          "decoded": {
+            "bytes": 307557,
+            "sha256": "2eae6d671580398aab44931bed7a2e3a7500d42e4b4ec46741b546eb7231dcfb",
+            "crc32": "1D00542E"
+          },
+          "thumbOffset": 484,
+          "thumbBytes": "10b50e49041c09684000c96e03d5c96a",
+          "thumbDisassembly": [
+            "push {r4, lr}",
+            "ldr r1, [pc, #0x38]",
+            "adds r4, r0, #0",
+            "ldr r1, [r1]"
+          ]
+        }
+      ],
+      "resourcesMatchSh240": {
+        "path": "extracted/SH240/MODULE/BUILTIN/GAME/data.lkz",
+        "bytes": 4382268,
+        "crc32": "c814baa1",
+        "sha256": "f2be4c024a9f948b34f829d0df18f92caf8fd36f353e3edba747bb9f21e935ca"
+      },
+      "flash": {
+        "path": "MODULE/BUILTIN/Flash/ui/dutchpay/Ladder.swf",
+        "bytes": 226887,
+        "sha256": "d8c4d3f4f9d1c41965467d9e5899144f01575b32bc0cb86ba52e69333d278ad0",
+        "crc32": "35C6DEC2",
+        "format": "CWS",
+        "swfVersion": 7,
+        "expandedBytes": 269160,
+        "topLevelActionTags": [
+          {
+            "tag": 12,
+            "offset": 10967,
+            "bytes": 5312
+          },
+          {
+            "tag": 12,
+            "offset": 16285,
+            "bytes": 3433
+          },
+          {
+            "tag": 12,
+            "offset": 19724,
+            "bytes": 6224
+          },
+          {
+            "tag": 12,
+            "offset": 25956,
+            "bytes": 57
+          },
+          {
+            "tag": 12,
+            "offset": 53347,
+            "bytes": 31
+          },
+          {
+            "tag": 12,
+            "offset": 82684,
+            "bytes": 58
+          },
+          {
+            "tag": 12,
+            "offset": 90136,
+            "bytes": 57
+          },
+          {
+            "tag": 12,
+            "offset": 98543,
+            "bytes": 31
+          },
+          {
+            "tag": 12,
+            "offset": 130118,
+            "bytes": 58
+          },
+          {
+            "tag": 12,
+            "offset": 138437,
+            "bytes": 58
+          },
+          {
+            "tag": 12,
+            "offset": 165081,
+            "bytes": 58
+          },
+          {
+            "tag": 12,
+            "offset": 182273,
+            "bytes": 58
+          },
+          {
+            "tag": 12,
+            "offset": 200953,
+            "bytes": 58
+          },
+          {
+            "tag": 12,
+            "offset": 205924,
+            "bytes": 163
+          },
+          {
+            "tag": 12,
+            "offset": 214226,
+            "bytes": 163
+          },
+          {
+            "tag": 12,
+            "offset": 223128,
+            "bytes": 100
+          },
+          {
+            "tag": 12,
+            "offset": 223273,
+            "bytes": 146
+          },
+          {
+            "tag": 12,
+            "offset": 223431,
+            "bytes": 100
+          },
+          {
+            "tag": 12,
+            "offset": 223576,
+            "bytes": 146
+          },
+          {
+            "tag": 12,
+            "offset": 223734,
+            "bytes": 55
+          },
+          {
+            "tag": 12,
+            "offset": 232315,
+            "bytes": 55
+          },
+          {
+            "tag": 12,
+            "offset": 242495,
+            "bytes": 55
+          },
+          {
+            "tag": 12,
+            "offset": 268839,
+            "bytes": 55
+          },
+          {
+            "tag": 12,
+            "offset": 269002,
+            "bytes": 55
+          },
+          {
+            "tag": 12,
+            "offset": 269080,
+            "bytes": 55
+          }
+        ],
+        "actionStrings": {
+          "makeLadder": 19847,
+          "drawLadder": 19996,
+          "getResult": 11361,
+          "Random distribution": 199873
+        }
+      },
+      "main": {
+        "sourceBytes": 21638316,
+        "sourceSha256": "d87ab126eae7259cc261820d17028313ecbe8444ab6cef76dbf7ec05a774be43",
+        "slotBytes": 131072,
+        "outputBytes": 37051164,
+        "outputSha256": "5871010b625b9374ecd660108175a16433e67007eef1edf5842bcdccc74df2e5",
+        "elfOffset": 544,
+        "elfPrefixBytes": 8192,
+        "blockCount": 166
+      },
+      "archive": {
+        "repositoryPath": "research/archives/LG-KH1800M-Original-and-Games.zip",
+        "bytes": 79780452,
+        "sha256": "e21b18ee720a8300ea68e58c7cd16cda16bbba7b6417eac06b84ea87faa6d30a",
+        "crc32": "84E815B7"
+      }
+    }
+  ],
+  "sgsPositiveControls": 94
+}
