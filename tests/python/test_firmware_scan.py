@@ -3,6 +3,7 @@
 import importlib.util
 from pathlib import Path
 import struct
+import zlib
 
 import pytest
 
@@ -78,6 +79,26 @@ def test_rejects_inconsistent_variable_or_resource_tables():
     body = bytearray(game())
     struct.pack_into("<I", body, c + 4, 5)
     assert scanner.scan_bytes(body)["containers"] == []
+
+
+def test_type2_extracts_stored_stream_and_rejects_a_bad_checksum(tmp_path):
+    source = bytearray(game())
+    c, d = struct.unpack_from("<2I", source, 80)
+    del source[d:]
+    payload = b"A" * 256
+    source[26] = 2
+    struct.pack_into("<I", source, c + 4, len(payload))
+    struct.pack_into("<I", source, 108, d + len(payload))
+    source.extend(payload[:18] + zlib.compress(payload[18:]) + b"\xff")
+    struct.pack_into("<I", source, 120, len(source))
+    image = b"prefix" + source + b"trailer"
+    (hit,) = scanner.scan_bytes(image)["containers"]
+    assert hit["expanded_body_bytes"] == d + len(payload)
+    assert hit["declared_body_bytes"] == len(source)
+    (file,) = scanner.extract_hits(image, [hit], tmp_path)
+    assert (tmp_path / file).read_bytes() == source
+    source[-2] ^= 1
+    assert scanner.scan_bytes(source)["containers"] == []
 
 
 def test_extracts_unchanged_representation_once_and_refuses_overwrite(tmp_path):

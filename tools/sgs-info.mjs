@@ -30,7 +30,7 @@ try {
       throw Error('--resource and --out must be used together');
     const raw = fs.readFileSync(file),
       version = detectVersion(raw);
-    const parsed = version < 4 ? parseLegacy(raw) : new SgsFile(raw);
+    const parsed = version < 4 ? parseLegacy(raw) : await SgsFile.open(raw);
     const sha256 = (data) => createHash('sha256').update(data).digest('hex');
     const resourceTypes = {};
     for (const resource of parsed.resources)

@@ -96,7 +96,7 @@ try {
     const format = detectVersion(raw);
     if (![1, 2, 4, 36].includes(format)) throw Error('Unsupported SGS version: ' + format);
     // Reject damaged layouts before creating output files or initializing the interpreter.
-    const parsed = format < 4 ? parseLegacy(raw) : new SgsFile(raw);
+    const parsed = format < 4 ? parseLegacy(raw) : await SgsFile.open(raw);
     if (parsed.body.length > 0xc00000) throw Error('SGS exceeds 12 MiB guest content region');
     entry = { id: outputStem('local-' + path.basename(input).replace(/\.sgs$/i, '')), format };
     source = {

@@ -1,8 +1,8 @@
 """Find structurally validated SGS games in binary images without executing them.
 
-No decoder for proprietary packing or native ARM games is implied. Extraction
-retains original bytes through the declared resource end; unknown trailers are
-not guessed. Python 3.11+, standard library only.
+Extraction retains the original stored SGS, including supported compressed
+v4 bodies. Unknown packing, native ARM games and trailers are outside its scope.
+Python 3.11+, standard library only.
 """
 
 import argparse
@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import struct
 import sys
+import zlib
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSIONS = (1, 2, 4, 36)
@@ -20,6 +21,27 @@ XOR_TABLE = bytes.maketrans(bytes(range(256)), bytes(n ^ 165 for n in range(256)
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def valid_type2_stream(data, offset, media, stored, expanded):
+    # The observed SKT WIPI layout leaves 18 media bytes before zlib.
+    start = media + 18
+    if (
+        start + 6 >= stored
+        or stored >= expanded
+        or expanded > 0xC00000
+        or data[offset + stored - 1] != 0xFF
+    ):
+        return False
+    size = expanded - start
+    inflater = zlib.decompressobj()
+    try:
+        payload = inflater.decompress(
+            data[offset + start : offset + stored - 1], size + 1
+        )
+    except zlib.error:
+        return False
+    return inflater.eof and not inflater.unused_data and len(payload) == size
 
 
 def parse_candidate(decoded, offset):
@@ -33,6 +55,7 @@ def parse_candidate(decoded, offset):
     header = 128 if version >= 4 else (52 if version == 1 else 100)
     if remaining < header:
         return None
+    expanded = None
     if version >= 4:
         a, b, c, d = struct.unpack_from("<4I", decoded, offset + 72)
         size = struct.unpack_from("<I", decoded, offset + 120)[0]
@@ -55,8 +78,15 @@ def parse_candidate(decoded, offset):
             struct.unpack_from("<I", decoded, offset + p + 4)[0]
             for p in range(c, d, 12)
         )
-        if d + resource_bytes != size:
-            return None
+        resource_end = d + resource_bytes
+        if resource_end != size:
+            if version != 4 or decoded[offset + 26] != 2:
+                return None
+            expanded = struct.unpack_from("<I", decoded, offset + 108)[0]
+            if expanded != resource_end or not valid_type2_stream(
+                decoded, offset, d, size, expanded
+            ):
+                return None
     else:
         a, b, c, d = struct.unpack_from("<4H", decoded, offset + 44)
         if not (header <= a <= b <= c <= d <= remaining):
@@ -84,7 +114,7 @@ def parse_candidate(decoded, offset):
         if size > remaining:
             return None
     title_bytes = decoded[offset + 10 : offset + 26].split(b"\0", 1)[0]
-    return {
+    candidate = {
         "version": version,
         "title": title_bytes.decode("euc-kr", errors="replace"),
         "title_bytes_hex": title_bytes.hex(),
@@ -95,6 +125,9 @@ def parse_candidate(decoded, offset):
         "resources": resources,
         "compression_type": decoded[offset + 26],
     }
+    if expanded is not None:
+        candidate["expanded_body_bytes"] = expanded
+    return candidate
 
 
 def scan_bytes(raw):
@@ -257,7 +290,7 @@ def main():
         "limits": [
             "Candidate requires nonzero START, at least one variable and resource, and at least 16 bytecode bytes; this is a conservative game scan.",
             "Unknown proprietary packing and native ARM games are not ruled out.",
-            "Extraction preserves original bytes through the declared resource end, with a recognized 32-byte wrapper; unknown appended data is not guessed.",
+            "Extraction preserves the original stored SGS, including an observed v4 type 2 zlib layout and a recognized 32-byte wrapper; unknown appended data is not guessed.",
             "A structurally valid extraction is not proof that the game is playable.",
         ],
         "scans": scans,

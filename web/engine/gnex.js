@@ -66,9 +66,10 @@ export class GnexRuntime {
     sgs = bytes(sgs);
     const [romHash, gameHash] = await Promise.all([sha256(rom), sha256(sgs)]);
     if (romHash !== ROM_SHA256) throw new GnexError('GNEX requires unmodified Kingston 2.12 ROM');
+    const script = await SgsFile.open(sgs);
     const cpu = options.cpu || (await createARM());
     try {
-      const runtime = new GnexRuntime(rom, sgs, {
+      const runtime = new GnexRuntime(rom, script, {
         ...options,
         cpu,
         romHash,
@@ -134,7 +135,7 @@ export class GnexRuntime {
     if (![null, 0, 1].includes(nativeSoundType))
       throw new GnexError('Native sound type must be null, 0 or 1');
     this.nativeSoundType = nativeSoundType;
-    this.sgs = new SgsFile(sgs);
+    this.sgs = sgs instanceof SgsFile ? sgs : new SgsFile(sgs);
     this.title = this.sgs.title;
     this.profile = profile || (this.sgs.xorMask === 165 ? 'kpex' : 'phone');
     this.keyReleaseEvent = this.profile === 'phone' || keyReleaseEvent === true;

@@ -14,9 +14,11 @@ export const EVENTS = [
   'GENERAL',
 ];
 export const bytes = (value) => (value instanceof Uint8Array ? value : new Uint8Array(value));
+const wrapperOffset = (raw) =>
+  raw[0] === 32 && raw[1] === 0 && raw[2] === 0 && raw[3] === 0 ? 32 : 0;
 export function detectVersion(input) {
   const raw = bytes(input),
-    offset = raw[0] === 32 && raw[1] === 0 && raw[2] === 0 && raw[3] === 0 ? 32 : 0,
+    offset = wrapperOffset(raw),
     n = raw[offset];
   return [1, 2, 4, 36].includes(n) ? n : [1, 2, 4, 36].includes(n ^ 165) ? n ^ 165 : n;
 }
@@ -25,18 +27,76 @@ export function decodeKorean(value, fatal = false) {
     end = data.indexOf(0);
   return new TextDecoder('euc-kr', { fatal }).decode(end < 0 ? data : data.subarray(0, end));
 }
-export class SgsFile {
-  constructor(input) {
-    const raw = bytes(input);
-    if (raw.length < 128) throw new SgsError('SGS header is truncated');
-    this.wrapperBytes = raw[0] === 32 && raw[1] === 0 && raw[2] === 0 && raw[3] === 0 ? 32 : 0;
-    let body = raw.slice(this.wrapperBytes);
-    if (body.length < 128) throw new SgsError('SGS body header is truncated after wrapper');
-    this.xorMask = 0;
-    if (![1, 2, 4, 36].includes(body[0]) && [1, 2, 4, 36].includes(body[0] ^ 165)) {
-      body = body.map((x) => x ^ 165);
-      this.xorMask = 165;
+function readBody(input) {
+  const raw = bytes(input);
+  if (raw.length < 128) throw new SgsError('SGS header is truncated');
+  const wrapperBytes = wrapperOffset(raw);
+  let body = raw.slice(wrapperBytes);
+  if (body.length < 128) throw new SgsError('SGS body header is truncated after wrapper');
+  let xorMask = 0;
+  if (![1, 2, 4, 36].includes(body[0]) && [1, 2, 4, 36].includes(body[0] ^ 165)) {
+    body = body.map((x) => x ^ 165);
+    xorMask = 165;
+  }
+  return { body, wrapperBytes, xorMask };
+}
+
+async function expandType2(body) {
+  if (body[0] !== 4 || body[26] !== 2) return body;
+  const header = new DataView(body.buffer, body.byteOffset, body.byteLength);
+  const storedSize = header.getUint32(120, true);
+  const expandedSize = header.getUint32(108, true);
+  if (expandedSize <= storedSize) return body;
+  // The observed SKT WIPI layout leaves 18 bytes of media data before zlib.
+  const media = header.getUint32(84, true);
+  const streamOffset = media + 18;
+  if (
+    media < 128 ||
+    storedSize !== body.length ||
+    streamOffset + 6 >= storedSize ||
+    body[storedSize - 1] !== 0xff ||
+    expandedSize > 0xc00000
+  )
+    throw new SgsError('Invalid SGS type 2 compression layout');
+
+  const expanded = new Uint8Array(expandedSize);
+  expanded.set(body.subarray(0, streamOffset));
+  new DataView(expanded.buffer).setUint32(120, expandedSize, true);
+  const input = new Blob([body.subarray(streamOffset, -1)]);
+  try {
+    const reader = input.stream().pipeThrough(new DecompressionStream('deflate')).getReader();
+    let offset = streamOffset;
+    try {
+      for (;;) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        if (value.length > expanded.length - offset) {
+          await reader.cancel();
+          throw new SgsError('Inflated SGS exceeds its declared size');
+        }
+        expanded.set(value, offset);
+        offset += value.length;
+      }
+      if (offset !== expanded.length) throw new SgsError('Inflated SGS size disagrees with header');
+    } finally {
+      reader.releaseLock();
     }
+  } catch (error) {
+    if (error instanceof SgsError) throw error;
+    throw new SgsError('Invalid SGS type 2 zlib stream', { cause: error });
+  }
+  return expanded;
+}
+
+export class SgsFile {
+  static async open(input) {
+    const original = readBody(input);
+    const body = await expandType2(original.body);
+    return new SgsFile(input, { ...original, body });
+  }
+  constructor(input, { body, wrapperBytes, xorMask } = readBody(input)) {
+    this.wrapperBytes = wrapperBytes;
+    this.xorMask = xorMask;
     this.version = body[0];
     if (![4, 36].includes(this.version))
       throw new SgsError(`SGS version ${this.version} is unsupported; v4/v36 required`);
