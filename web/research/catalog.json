@@ -4,6 +4,72 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "dubigame-k1-dungeon-fighter-baseball",
+      "title": "Dubigame: K-1 WGP, Dungeon & Fighter и ещё шесть игр",
+      "category": "Игры и игровые сборки",
+      "description": "Четыре сборки KTF WIPI и четыре LGT Raptor. В ARAM проверены удар в K-1 WGP, диалоги и меню. Для Rhythm Festival сохранён сценарий сбоя.",
+      "repositoryPath": "research/archives/Dubigame-K1-Dungeon-Fighter-EA-Baseball.zip",
+      "bytes": 18078906,
+      "sha256": "ab9ac7ada1d5bb47304082bf505e677b561e804ca33076ad3682d9a93d3dcdc0",
+      "sources": [
+        {
+          "label": "K1 WGP뉴챌린저",
+          "url": "https://dubigame.tistory.com/405"
+        },
+        {
+          "label": "PushPush 삼국지",
+          "url": "https://dubigame.tistory.com/407"
+        },
+        {
+          "label": "KOEI 삼국지 영걸전",
+          "url": "https://dubigame.tistory.com/408"
+        },
+        {
+          "label": "밀실탈출-검은방3",
+          "url": "https://dubigame.tistory.com/421"
+        },
+        {
+          "label": "던전앤파이터 귀검사",
+          "url": "https://dubigame.tistory.com/433"
+        },
+        {
+          "label": "리듬페스티발",
+          "url": "https://dubigame.tistory.com/444"
+        },
+        {
+          "label": "EA프로야구2010",
+          "url": "https://dubigame.tistory.com/452"
+        },
+        {
+          "label": "랩업만이살길",
+          "url": "https://dubigame.tistory.com/454"
+        }
+      ]
+    },
+    {
+      "id": "gametop-nate-puzzle-bobble-hidden-wap",
+      "title": "GameTop и NATE: WAP для Puzzle Bobble и Hidden",
+      "category": "Wayback и форумы",
+      "description": "Три исходных WML с совпавшими CDX-дайджестами. Найден ID 0000384353 в переходе Puzzle Bobble на mPlayOn.",
+      "repositoryPath": "research/archives/GameTop-NATE-Puzzle-Bobble-Hidden-WAP.zip",
+      "bytes": 90292,
+      "sha256": "cb6ad6428600aa9863ddc47b64ecdfa98b018080e94122a4a7656ac07f62ecda",
+      "sources": [
+        {
+          "label": "Puzzle Bobble, май 2005",
+          "url": "https://web.archive.org/web/20050507175151id_/http://www.game-top.co.kr:80/vm/011/gamephone/bubble/main.php?SU=0000111519_1234567890_1234567890&SM=0000000"
+        },
+        {
+          "label": "Puzzle Bobble, август 2005",
+          "url": "https://web.archive.org/web/20050819114949id_/http://www.game-top.co.kr:80/vm/011/gamephone/bubble/main.php?SU=0000111519_1234567890_1234567890&SM=0000000"
+        },
+        {
+          "label": "Hidden, февраль 2003",
+          "url": "https://web.archive.org/web/20030213231041id_/http://www.game-top.co.kr:80/vm/011/gvm/hidden/hidden_ya.php"
+        }
+      ]
+    },
+    {
       "id": "webeng-nate-gvm-game-catalogues",
       "title": "WebENG и NATE: каталоги GVM-игр и три SWF",
       "category": "Wayback и форумы",
@@ -1719,6 +1785,14 @@
     }
   ],
   "reports": [
+    {
+      "title": "Восемь игр KTF и LGT из Dubigame",
+      "repositoryPath": "doc/dubigame-k1-dungeon-fighter-baseball.md"
+    },
+    {
+      "title": "WAP-ответы GameTop для Puzzle Bobble и Hidden",
+      "repositoryPath": "doc/gametop-nate-puzzle-bobble-hidden.md"
+    },
     {
       "title": "Игры GVM в каталогах WebENG, NATE и M-Dream",
       "repositoryPath": "doc/webeng-nate-gvm-game-catalogues.md"

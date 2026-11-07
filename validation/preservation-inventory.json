@@ -3,6 +3,2226 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "dubigame-k1-dungeon-fighter-baseball",
+      "repositoryPath": "research/archives/Dubigame-K1-Dungeon-Fighter-EA-Baseball.zip",
+      "bytes": 18078906,
+      "sha256": "ab9ac7ada1d5bb47304082bf505e677b561e804ca33076ad3682d9a93d3dcdc0",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/games.json",
+          "bytes": 1574379,
+          "crc32": "06dde79c",
+          "sha256": "8eee232de6d845e8c92dfefcad4ff371babf63bda12c9cd50e24ec5554e41bbd"
+        },
+        {
+          "path": "originals/405/K1 WGP뉴챌린저.zip",
+          "bytes": 567141,
+          "crc32": "0df9dd0c",
+          "sha256": "08b8688093668f31a484322ac5738cee2511508b5ab02b56cdb51a2810432b3f"
+        },
+        {
+          "path": "originals/407/푸시푸시삼국지.zip",
+          "bytes": 341485,
+          "crc32": "f0939951",
+          "sha256": "86132b2ed76fa9130a79e90b55ad90e9f710bca530ca50ae89c4edf4fa72d42f"
+        },
+        {
+          "path": "originals/408/코에이 삼국지 영걸전.zip",
+          "bytes": 322938,
+          "crc32": "821ac922",
+          "sha256": "c4b90400f9fe231a62685d00f439542682efd2b3468688033833d7b1da3748e0"
+        },
+        {
+          "path": "originals/421/검은방3.zip",
+          "bytes": 2369977,
+          "crc32": "939485f6",
+          "sha256": "580a66c32fff91cfd16b89ebd641dd003164ff73a4afa5009ed162db75683ec2"
+        },
+        {
+          "path": "originals/433/던파귀검사편.zip",
+          "bytes": 3232894,
+          "crc32": "2a167f7b",
+          "sha256": "870cd071b4dcfb3123f6909bc8829b4d27df6f8b906bd043bd2706673028fb0f"
+        },
+        {
+          "path": "originals/444/리듬페스티발.zip",
+          "bytes": 1202199,
+          "crc32": "f9fa2c59",
+          "sha256": "863b8ab6a21df2c05e0d9ad085a5068fdf37433940093efe289b6459b7c1e7e9"
+        },
+        {
+          "path": "originals/452/ea프로야구2010.zip",
+          "bytes": 2275389,
+          "crc32": "c7b75cb7",
+          "sha256": "e0aa3cc2463f73b2879ad99583bcde7188129833f6f544e9dda01396782cae50"
+        },
+        {
+          "path": "originals/454/렙업만이살길1.zip",
+          "bytes": 382114,
+          "crc32": "d458ccd2",
+          "sha256": "902466ac7e9e2da0f954531b50481dc6eb70661bceb3ea0b4aa7225f3da3eea8"
+        },
+        {
+          "path": "replays/405/last2/after-ok.png",
+          "bytes": 45963,
+          "crc32": "00e0924e",
+          "sha256": "5cc980a46735fef6a15b05476d3253f692519f0627c60e4f89038d3f10215203"
+        },
+        {
+          "path": "replays/405/last2/after-one.png",
+          "bytes": 44749,
+          "crc32": "96a07164",
+          "sha256": "6a42e01320d55fd8d11b29c353834790c3a4588a69b531cebb56ddee2886036f"
+        },
+        {
+          "path": "replays/405/last2/after-right.png",
+          "bytes": 44749,
+          "crc32": "96a07164",
+          "sha256": "6a42e01320d55fd8d11b29c353834790c3a4588a69b531cebb56ddee2886036f"
+        },
+        {
+          "path": "replays/405/last2/after-second-ok.png",
+          "bytes": 44755,
+          "crc32": "4b6a3028",
+          "sha256": "942c3f641d1fb106ead15ce76f691fa8e4991451131002d2b2d97677f951f9bc"
+        },
+        {
+          "path": "replays/405/last2/extra-0.png",
+          "bytes": 44923,
+          "crc32": "d0fbb347",
+          "sha256": "34850f8de6a8f024ad5c1ee0aec5741d50308823c23f01226b72732db9fceb98"
+        },
+        {
+          "path": "replays/405/last2/extra-1.png",
+          "bytes": 52406,
+          "crc32": "89e085e4",
+          "sha256": "d23699ae64a2950304f163e5059a8dfcf7a4c15bb81c434828ef9f78d4bc04f2"
+        },
+        {
+          "path": "replays/405/last2/extra-2.png",
+          "bytes": 53804,
+          "crc32": "cde95117",
+          "sha256": "094f0c7b31ca2611776b2399599f675ee7974f29845becfbf736384e651e3598"
+        },
+        {
+          "path": "replays/405/last2/extra-3.png",
+          "bytes": 50748,
+          "crc32": "b2d42541",
+          "sha256": "bcc67c540853510e93ef6cd98dc0dfcd39554b5d4e7dac5cda7c6f23878d4958"
+        },
+        {
+          "path": "replays/405/last2/frame-base.png",
+          "bytes": 50748,
+          "crc32": "b2d42541",
+          "sha256": "bcc67c540853510e93ef6cd98dc0dfcd39554b5d4e7dac5cda7c6f23878d4958"
+        },
+        {
+          "path": "replays/405/last2/frame-end.png",
+          "bytes": 50922,
+          "crc32": "57cd0cba",
+          "sha256": "94c3a3a184c336eca7db250dfa7cdd2904ecb46159d1377e293d2ac1e2099b92"
+        },
+        {
+          "path": "replays/405/last2/opening.png",
+          "bytes": 72931,
+          "crc32": "efbccc00",
+          "sha256": "e4d2fe258800cba60055589cb03aa2ec43b8c2045204a30dca5268e2a94b6308"
+        },
+        {
+          "path": "replays/405/last2/replay.log",
+          "bytes": 24114,
+          "crc32": "f5611500",
+          "sha256": "b32068a6a8c144683893e3570e905fb918953bc98ae8dde132f70e370f704c88"
+        },
+        {
+          "path": "replays/405/last2/replay.lua",
+          "bytes": 725,
+          "crc32": "435cd7a9",
+          "sha256": "09f2a348298cd7fb6e62d09bb8c93175b19e1479bed7b0398b0daeca71c42796"
+        },
+        {
+          "path": "replays/405/last3/after-ok.png",
+          "bytes": 45963,
+          "crc32": "00e0924e",
+          "sha256": "5cc980a46735fef6a15b05476d3253f692519f0627c60e4f89038d3f10215203"
+        },
+        {
+          "path": "replays/405/last3/after-one.png",
+          "bytes": 44749,
+          "crc32": "96a07164",
+          "sha256": "6a42e01320d55fd8d11b29c353834790c3a4588a69b531cebb56ddee2886036f"
+        },
+        {
+          "path": "replays/405/last3/after-right.png",
+          "bytes": 44749,
+          "crc32": "96a07164",
+          "sha256": "6a42e01320d55fd8d11b29c353834790c3a4588a69b531cebb56ddee2886036f"
+        },
+        {
+          "path": "replays/405/last3/after-second-ok.png",
+          "bytes": 44755,
+          "crc32": "4b6a3028",
+          "sha256": "942c3f641d1fb106ead15ce76f691fa8e4991451131002d2b2d97677f951f9bc"
+        },
+        {
+          "path": "replays/405/last3/extra-0.png",
+          "bytes": 44923,
+          "crc32": "d0fbb347",
+          "sha256": "34850f8de6a8f024ad5c1ee0aec5741d50308823c23f01226b72732db9fceb98"
+        },
+        {
+          "path": "replays/405/last3/extra-1.png",
+          "bytes": 52406,
+          "crc32": "89e085e4",
+          "sha256": "d23699ae64a2950304f163e5059a8dfcf7a4c15bb81c434828ef9f78d4bc04f2"
+        },
+        {
+          "path": "replays/405/last3/extra-2.png",
+          "bytes": 53804,
+          "crc32": "cde95117",
+          "sha256": "094f0c7b31ca2611776b2399599f675ee7974f29845becfbf736384e651e3598"
+        },
+        {
+          "path": "replays/405/last3/extra-3.png",
+          "bytes": 50748,
+          "crc32": "b2d42541",
+          "sha256": "bcc67c540853510e93ef6cd98dc0dfcd39554b5d4e7dac5cda7c6f23878d4958"
+        },
+        {
+          "path": "replays/405/last3/frame-base.png",
+          "bytes": 50748,
+          "crc32": "b2d42541",
+          "sha256": "bcc67c540853510e93ef6cd98dc0dfcd39554b5d4e7dac5cda7c6f23878d4958"
+        },
+        {
+          "path": "replays/405/last3/frame-end.png",
+          "bytes": 51163,
+          "crc32": "86ad3bd6",
+          "sha256": "d50c8034f507572cb33ccdf50fe1a72c98c2eae33dd649f3b96518fb7c729464"
+        },
+        {
+          "path": "replays/405/last3/opening.png",
+          "bytes": 72931,
+          "crc32": "efbccc00",
+          "sha256": "e4d2fe258800cba60055589cb03aa2ec43b8c2045204a30dca5268e2a94b6308"
+        },
+        {
+          "path": "replays/405/last3/replay.log",
+          "bytes": 24133,
+          "crc32": "deb31575",
+          "sha256": "83e82c4ac7ccb8206991e69de34e4875aed6fb61720c5171761fb3afa87a8a98"
+        },
+        {
+          "path": "replays/405/last3/replay.lua",
+          "bytes": 722,
+          "crc32": "527ccad3",
+          "sha256": "f06cc60bae3b0cc38fda6d1777438f48f2b38f972bd5bc0ef8355beea1f09587"
+        },
+        {
+          "path": "replays/407/key/after-ok.png",
+          "bytes": 8709,
+          "crc32": "4773e323",
+          "sha256": "334a2966f0ec9a747462ab73ae1fdef209b36807ad1b696ba6c60e97ee4138c2"
+        },
+        {
+          "path": "replays/407/key/after-one.png",
+          "bytes": 13262,
+          "crc32": "209ca890",
+          "sha256": "8bf1479986bab1a35f18fa5457f76b8cef1c4129b0a432d842615df4a3767ce9"
+        },
+        {
+          "path": "replays/407/key/after-right.png",
+          "bytes": 13262,
+          "crc32": "209ca890",
+          "sha256": "8bf1479986bab1a35f18fa5457f76b8cef1c4129b0a432d842615df4a3767ce9"
+        },
+        {
+          "path": "replays/407/key/after-second-ok.png",
+          "bytes": 13262,
+          "crc32": "209ca890",
+          "sha256": "8bf1479986bab1a35f18fa5457f76b8cef1c4129b0a432d842615df4a3767ce9"
+        },
+        {
+          "path": "replays/407/key/before.png",
+          "bytes": 6281,
+          "crc32": "bbc70632",
+          "sha256": "1dc1cabfabc856c8a1686fcbd93452e51a4d16149d9d4c83754d82dd826371ef"
+        },
+        {
+          "path": "replays/407/key/end.png",
+          "bytes": 5359,
+          "crc32": "3aa244fd",
+          "sha256": "72824445644cb7d7a24ac020c4e5e12a68910989e081bc7f55b0803ac0e4176f"
+        },
+        {
+          "path": "replays/407/key/extra-0.png",
+          "bytes": 13441,
+          "crc32": "745b7b7f",
+          "sha256": "159a533056ce68b8a877427a39f2b6c0eda47e03770085397e87925ce14a5369"
+        },
+        {
+          "path": "replays/407/key/extra-1.png",
+          "bytes": 14323,
+          "crc32": "68eb61aa",
+          "sha256": "4763b9d4d97385766af38860be88502bd48c323c0456944048e7a28a604c44f8"
+        },
+        {
+          "path": "replays/407/key/extra-2.png",
+          "bytes": 6330,
+          "crc32": "b88d8fe5",
+          "sha256": "f687d2862d763b66a26c7568239bd8fedf7368b4eeba2c5d2944f086a72d58a7"
+        },
+        {
+          "path": "replays/407/key/extra-3.png",
+          "bytes": 6561,
+          "crc32": "71ffe963",
+          "sha256": "815ddff7405a13ae075afdbf0170f0e75a5d495fa5e017225dd2191b28897dd5"
+        },
+        {
+          "path": "replays/407/key/extra-4.png",
+          "bytes": 6590,
+          "crc32": "5e74db7d",
+          "sha256": "80447f269b2927b46678f8bbf6f31e209b576f76468ec6c98f0dd08a69617963"
+        },
+        {
+          "path": "replays/407/key/extra-5.png",
+          "bytes": 6613,
+          "crc32": "0e1b5418",
+          "sha256": "68bb2ab961895b1119f4de0a07ca024450067596c74b886fc64930d51db5c6e3"
+        },
+        {
+          "path": "replays/407/key/extra-6.png",
+          "bytes": 6281,
+          "crc32": "bbc70632",
+          "sha256": "1dc1cabfabc856c8a1686fcbd93452e51a4d16149d9d4c83754d82dd826371ef"
+        },
+        {
+          "path": "replays/407/key/opening.png",
+          "bytes": 17886,
+          "crc32": "c33ea316",
+          "sha256": "0111f5d02229dcd317cde8bb3256f5b4f290b5a35aa9464a0a95650bf51e165b"
+        },
+        {
+          "path": "replays/407/key/replay.log",
+          "bytes": 31441,
+          "crc32": "9f245855",
+          "sha256": "4e927bad49e8ae6c7c40669001a0b393d07711d76c59fa24f15d8607f42dbc6d"
+        },
+        {
+          "path": "replays/407/key/replay.lua",
+          "bytes": 918,
+          "crc32": "1adefa51",
+          "sha256": "db98dab67cd583bcbc71b298059c17dc9c5017918ebc16efe17cc7de2d1197f8"
+        },
+        {
+          "path": "replays/407/neutral/after-ok.png",
+          "bytes": 8709,
+          "crc32": "4773e323",
+          "sha256": "334a2966f0ec9a747462ab73ae1fdef209b36807ad1b696ba6c60e97ee4138c2"
+        },
+        {
+          "path": "replays/407/neutral/after-one.png",
+          "bytes": 13262,
+          "crc32": "209ca890",
+          "sha256": "8bf1479986bab1a35f18fa5457f76b8cef1c4129b0a432d842615df4a3767ce9"
+        },
+        {
+          "path": "replays/407/neutral/after-right.png",
+          "bytes": 13262,
+          "crc32": "209ca890",
+          "sha256": "8bf1479986bab1a35f18fa5457f76b8cef1c4129b0a432d842615df4a3767ce9"
+        },
+        {
+          "path": "replays/407/neutral/after-second-ok.png",
+          "bytes": 13262,
+          "crc32": "209ca890",
+          "sha256": "8bf1479986bab1a35f18fa5457f76b8cef1c4129b0a432d842615df4a3767ce9"
+        },
+        {
+          "path": "replays/407/neutral/before.png",
+          "bytes": 6281,
+          "crc32": "bbc70632",
+          "sha256": "1dc1cabfabc856c8a1686fcbd93452e51a4d16149d9d4c83754d82dd826371ef"
+        },
+        {
+          "path": "replays/407/neutral/end.png",
+          "bytes": 6281,
+          "crc32": "bbc70632",
+          "sha256": "1dc1cabfabc856c8a1686fcbd93452e51a4d16149d9d4c83754d82dd826371ef"
+        },
+        {
+          "path": "replays/407/neutral/extra-0.png",
+          "bytes": 13441,
+          "crc32": "745b7b7f",
+          "sha256": "159a533056ce68b8a877427a39f2b6c0eda47e03770085397e87925ce14a5369"
+        },
+        {
+          "path": "replays/407/neutral/extra-1.png",
+          "bytes": 14323,
+          "crc32": "68eb61aa",
+          "sha256": "4763b9d4d97385766af38860be88502bd48c323c0456944048e7a28a604c44f8"
+        },
+        {
+          "path": "replays/407/neutral/extra-2.png",
+          "bytes": 6330,
+          "crc32": "b88d8fe5",
+          "sha256": "f687d2862d763b66a26c7568239bd8fedf7368b4eeba2c5d2944f086a72d58a7"
+        },
+        {
+          "path": "replays/407/neutral/extra-3.png",
+          "bytes": 6561,
+          "crc32": "71ffe963",
+          "sha256": "815ddff7405a13ae075afdbf0170f0e75a5d495fa5e017225dd2191b28897dd5"
+        },
+        {
+          "path": "replays/407/neutral/extra-4.png",
+          "bytes": 6590,
+          "crc32": "5e74db7d",
+          "sha256": "80447f269b2927b46678f8bbf6f31e209b576f76468ec6c98f0dd08a69617963"
+        },
+        {
+          "path": "replays/407/neutral/extra-5.png",
+          "bytes": 6613,
+          "crc32": "0e1b5418",
+          "sha256": "68bb2ab961895b1119f4de0a07ca024450067596c74b886fc64930d51db5c6e3"
+        },
+        {
+          "path": "replays/407/neutral/extra-6.png",
+          "bytes": 6281,
+          "crc32": "bbc70632",
+          "sha256": "1dc1cabfabc856c8a1686fcbd93452e51a4d16149d9d4c83754d82dd826371ef"
+        },
+        {
+          "path": "replays/407/neutral/opening.png",
+          "bytes": 17886,
+          "crc32": "c33ea316",
+          "sha256": "0111f5d02229dcd317cde8bb3256f5b4f290b5a35aa9464a0a95650bf51e165b"
+        },
+        {
+          "path": "replays/407/neutral/replay.log",
+          "bytes": 31442,
+          "crc32": "3401009c",
+          "sha256": "3de434e467740eb18ae6d7165afcc6ff646a2f2ea9e5c0cbcfb86fed0e96bebb"
+        },
+        {
+          "path": "replays/407/neutral/replay.lua",
+          "bytes": 914,
+          "crc32": "dcdeed83",
+          "sha256": "ffa3c599631ec557551f1b50dd885d751590ce1128e36964fd5c78b93e5c2b0a"
+        },
+        {
+          "path": "replays/408/key/after-ok.png",
+          "bytes": 5926,
+          "crc32": "5e64ec5e",
+          "sha256": "73ee41cea8eaf83d096f9b5af80ca6e155ffdfc670c8320b4c8e74edc79411df"
+        },
+        {
+          "path": "replays/408/key/after-one.png",
+          "bytes": 2406,
+          "crc32": "ddfb44c9",
+          "sha256": "f4cbf302d9d7ffc57383c275c47bda8e37fe34cc65cf52bed65d477e0d2e43cc"
+        },
+        {
+          "path": "replays/408/key/after-right.png",
+          "bytes": 2435,
+          "crc32": "e39cc2e1",
+          "sha256": "b24f2ddf9bf109b121eb20978eb1e52f7bd3606ecc3d0ce6a4ba45171be73270"
+        },
+        {
+          "path": "replays/408/key/after-second-ok.png",
+          "bytes": 1987,
+          "crc32": "e1fbdd10",
+          "sha256": "42a7a182c980a422a65a8cb9b06c5e4de4adc855dd7d5e6b1ff88a8809ef6021"
+        },
+        {
+          "path": "replays/408/key/before.png",
+          "bytes": 36369,
+          "crc32": "99b40041",
+          "sha256": "60e163aeca912a3159d1b69b1e4df36528be306acb94d25313e4fecf9a83512b"
+        },
+        {
+          "path": "replays/408/key/end.png",
+          "bytes": 35975,
+          "crc32": "fc00b5e7",
+          "sha256": "ec2440f46e9ebc2d27700084cb39b40f637d7d544913cdd81ee3cf254bc5bc87"
+        },
+        {
+          "path": "replays/408/key/extra-0.png",
+          "bytes": 2283,
+          "crc32": "6b6b84d1",
+          "sha256": "5fcc4f8110ae630400999a10c4dacece96efb78b591031a195e99fc703fe4bc4"
+        },
+        {
+          "path": "replays/408/key/extra-1.png",
+          "bytes": 2334,
+          "crc32": "28d707ac",
+          "sha256": "6b0471f944912d257b5e8a85a9e61dd06f4bcb439d6b78295399fcedb28a49fc"
+        },
+        {
+          "path": "replays/408/key/extra-2.png",
+          "bytes": 2484,
+          "crc32": "146b8a9a",
+          "sha256": "1818120e711063869f0911df0f36a3e1b467a616dbeb2b4b2598f73f9aa42a23"
+        },
+        {
+          "path": "replays/408/key/extra-3.png",
+          "bytes": 41262,
+          "crc32": "36fd8cc2",
+          "sha256": "81fba27e8f4dd47a9e16b5c7d4af2f587c3925b2a2d31b29f18f27b6575f0153"
+        },
+        {
+          "path": "replays/408/key/extra-4.png",
+          "bytes": 36479,
+          "crc32": "7b14868e",
+          "sha256": "19ffc4c5c66f9d8acd1f403ff1ba64f9f419c1e54f79420861647835d6bdb285"
+        },
+        {
+          "path": "replays/408/key/extra-5.png",
+          "bytes": 36122,
+          "crc32": "459b02e4",
+          "sha256": "ad1289ba5e03cc4340c4cf3a5e16219c28a35a8f3b2e8e6013b1421bc7ec4bd8"
+        },
+        {
+          "path": "replays/408/key/extra-6.png",
+          "bytes": 36369,
+          "crc32": "99b40041",
+          "sha256": "60e163aeca912a3159d1b69b1e4df36528be306acb94d25313e4fecf9a83512b"
+        },
+        {
+          "path": "replays/408/key/opening.png",
+          "bytes": 44674,
+          "crc32": "2c83a86b",
+          "sha256": "a6262c39fc1edfc23e5f77163d25e497af290e5cacce17e322c27ae0dd28eff9"
+        },
+        {
+          "path": "replays/408/key/replay.log",
+          "bytes": 30905,
+          "crc32": "a5f63517",
+          "sha256": "db1b68d42b66c3e82874939e194ddb0370903ccb4194ea0a62592d8e921504ac"
+        },
+        {
+          "path": "replays/408/key/replay.lua",
+          "bytes": 916,
+          "crc32": "f008db88",
+          "sha256": "6c199b08874317999a9d1f1a09336dff7e8b620ce76f3ceae6faf79ad400e425"
+        },
+        {
+          "path": "replays/408/neutral/after-ok.png",
+          "bytes": 5926,
+          "crc32": "5e64ec5e",
+          "sha256": "73ee41cea8eaf83d096f9b5af80ca6e155ffdfc670c8320b4c8e74edc79411df"
+        },
+        {
+          "path": "replays/408/neutral/after-one.png",
+          "bytes": 2406,
+          "crc32": "ddfb44c9",
+          "sha256": "f4cbf302d9d7ffc57383c275c47bda8e37fe34cc65cf52bed65d477e0d2e43cc"
+        },
+        {
+          "path": "replays/408/neutral/after-right.png",
+          "bytes": 2435,
+          "crc32": "e39cc2e1",
+          "sha256": "b24f2ddf9bf109b121eb20978eb1e52f7bd3606ecc3d0ce6a4ba45171be73270"
+        },
+        {
+          "path": "replays/408/neutral/after-second-ok.png",
+          "bytes": 1987,
+          "crc32": "e1fbdd10",
+          "sha256": "42a7a182c980a422a65a8cb9b06c5e4de4adc855dd7d5e6b1ff88a8809ef6021"
+        },
+        {
+          "path": "replays/408/neutral/before.png",
+          "bytes": 36369,
+          "crc32": "99b40041",
+          "sha256": "60e163aeca912a3159d1b69b1e4df36528be306acb94d25313e4fecf9a83512b"
+        },
+        {
+          "path": "replays/408/neutral/end.png",
+          "bytes": 36369,
+          "crc32": "99b40041",
+          "sha256": "60e163aeca912a3159d1b69b1e4df36528be306acb94d25313e4fecf9a83512b"
+        },
+        {
+          "path": "replays/408/neutral/extra-0.png",
+          "bytes": 2283,
+          "crc32": "6b6b84d1",
+          "sha256": "5fcc4f8110ae630400999a10c4dacece96efb78b591031a195e99fc703fe4bc4"
+        },
+        {
+          "path": "replays/408/neutral/extra-1.png",
+          "bytes": 2334,
+          "crc32": "28d707ac",
+          "sha256": "6b0471f944912d257b5e8a85a9e61dd06f4bcb439d6b78295399fcedb28a49fc"
+        },
+        {
+          "path": "replays/408/neutral/extra-2.png",
+          "bytes": 2484,
+          "crc32": "146b8a9a",
+          "sha256": "1818120e711063869f0911df0f36a3e1b467a616dbeb2b4b2598f73f9aa42a23"
+        },
+        {
+          "path": "replays/408/neutral/extra-3.png",
+          "bytes": 41262,
+          "crc32": "36fd8cc2",
+          "sha256": "81fba27e8f4dd47a9e16b5c7d4af2f587c3925b2a2d31b29f18f27b6575f0153"
+        },
+        {
+          "path": "replays/408/neutral/extra-4.png",
+          "bytes": 36479,
+          "crc32": "7b14868e",
+          "sha256": "19ffc4c5c66f9d8acd1f403ff1ba64f9f419c1e54f79420861647835d6bdb285"
+        },
+        {
+          "path": "replays/408/neutral/extra-5.png",
+          "bytes": 36122,
+          "crc32": "459b02e4",
+          "sha256": "ad1289ba5e03cc4340c4cf3a5e16219c28a35a8f3b2e8e6013b1421bc7ec4bd8"
+        },
+        {
+          "path": "replays/408/neutral/extra-6.png",
+          "bytes": 36369,
+          "crc32": "99b40041",
+          "sha256": "60e163aeca912a3159d1b69b1e4df36528be306acb94d25313e4fecf9a83512b"
+        },
+        {
+          "path": "replays/408/neutral/opening.png",
+          "bytes": 44674,
+          "crc32": "2c83a86b",
+          "sha256": "a6262c39fc1edfc23e5f77163d25e497af290e5cacce17e322c27ae0dd28eff9"
+        },
+        {
+          "path": "replays/408/neutral/replay.log",
+          "bytes": 30900,
+          "crc32": "866992f2",
+          "sha256": "adbb2931c5a5486194b99b79181fec70f3cea043d1561e32cade9985f3c605d2"
+        },
+        {
+          "path": "replays/408/neutral/replay.lua",
+          "bytes": 912,
+          "crc32": "9fb6d7df",
+          "sha256": "231f9e44e6b9154681a5b883b81d264f816e5379a2d9e85e29387f7c22a98274"
+        },
+        {
+          "path": "replays/421/more-key/after-ok.png",
+          "bytes": 3183,
+          "crc32": "c921dddd",
+          "sha256": "cf2c02955a8bc695e51297c42beb044cc50e2e59a95bbf039f152e55775a8f8f"
+        },
+        {
+          "path": "replays/421/more-key/after-one.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-key/after-right.png",
+          "bytes": 4519,
+          "crc32": "6e5a7cbe",
+          "sha256": "bece82913b10988838aa241cd1be121dd1c9a2746abd3817c544109642c5cb90"
+        },
+        {
+          "path": "replays/421/more-key/after-second-ok.png",
+          "bytes": 5753,
+          "crc32": "eb52a2fe",
+          "sha256": "75900ae68cd434dfbac4dc5c75b47de21c9a794f3f15ae636d7239b3e9817719"
+        },
+        {
+          "path": "replays/421/more-key/base.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-key/before-last.png",
+          "bytes": 2338,
+          "crc32": "1b01da4f",
+          "sha256": "f6809dd210c4e1aa10957c694ff429ac1d9c578fdbefae11d6e68b4dac510631"
+        },
+        {
+          "path": "replays/421/more-key/extra-0.png",
+          "bytes": 32382,
+          "crc32": "b7c0f638",
+          "sha256": "bac0bd1336539cb558ded6cf60ab4aedf446839db984de117d8ce3406141bd9b"
+        },
+        {
+          "path": "replays/421/more-key/extra-1.png",
+          "bytes": 29547,
+          "crc32": "01908b83",
+          "sha256": "c766558fa2167eb9520a2094168367ce14758cab0ba339a7ba0611c43b1ef282"
+        },
+        {
+          "path": "replays/421/more-key/extra-2.png",
+          "bytes": 39019,
+          "crc32": "2fd9c3a9",
+          "sha256": "3ac7d4a031f0aa5961b8e744f3f8edb67336539dce50fd5f7b0119d9fc56129a"
+        },
+        {
+          "path": "replays/421/more-key/extra-3.png",
+          "bytes": 37034,
+          "crc32": "eb24e888",
+          "sha256": "f1f92f57273066313a7c5c2596b306f90c7e28952439ed206c7d441481cf9a02"
+        },
+        {
+          "path": "replays/421/more-key/extra-4.png",
+          "bytes": 34152,
+          "crc32": "f9e78b24",
+          "sha256": "e9ce0bf77b2bb2bbe7b9c74b76a30ff7268e8e674be17ce3dce74b67b42be952"
+        },
+        {
+          "path": "replays/421/more-key/extra-5.png",
+          "bytes": 39011,
+          "crc32": "77a61b80",
+          "sha256": "62cd801bd5b055ebe38cf2778277c4daebbff68b8297f237a06ff1b723665f9c"
+        },
+        {
+          "path": "replays/421/more-key/extra-6.png",
+          "bytes": 1573,
+          "crc32": "fd32d5ab",
+          "sha256": "d188317105c63219ca4c247ab159d1bd9f2251805b455574247e03f246e2e935"
+        },
+        {
+          "path": "replays/421/more-key/final.png",
+          "bytes": 2721,
+          "crc32": "bdedf0ec",
+          "sha256": "1223214304714b5ea579be8b67f0068f992be9c2557b8894222e8bfc3fdc16d9"
+        },
+        {
+          "path": "replays/421/more-key/finish.png",
+          "bytes": 2901,
+          "crc32": "e98a630e",
+          "sha256": "ffb28bce4c29b2797ef0be339ba7d70de8bae5264660b5c36eeb476a130c3dca"
+        },
+        {
+          "path": "replays/421/more-key/opening.png",
+          "bytes": 3290,
+          "crc32": "17e238de",
+          "sha256": "0816ae69ab22d89a0d07234f0afb3d5f596ba5994721c15b4e63f7274d516d9a"
+        },
+        {
+          "path": "replays/421/more-key/replay.log",
+          "bytes": 55939,
+          "crc32": "33b2f831",
+          "sha256": "fc6895c8fff0c4201427c33a654aac46b872977adceb1f9c2f389a0f0a6a038b"
+        },
+        {
+          "path": "replays/421/more-key/replay.lua",
+          "bytes": 1601,
+          "crc32": "0cad385b",
+          "sha256": "e94242b30e97c5ff5a6d307654167b5caf1a3f0b523728e0a6e6fae1def51801"
+        },
+        {
+          "path": "replays/421/more-key/series-0.png",
+          "bytes": 2305,
+          "crc32": "fc342f0f",
+          "sha256": "312af5123c1e5127025e66dd42f99e0d0a5325b4d8484321f6429fd05ce0859d"
+        },
+        {
+          "path": "replays/421/more-key/series-1.png",
+          "bytes": 3294,
+          "crc32": "672e1fba",
+          "sha256": "db8066424515914ebd7ea0fe7704f15734c3dc9abd273ca844dbe56eb585a877"
+        },
+        {
+          "path": "replays/421/more-key/series-2.png",
+          "bytes": 2338,
+          "crc32": "1b01da4f",
+          "sha256": "f6809dd210c4e1aa10957c694ff429ac1d9c578fdbefae11d6e68b4dac510631"
+        },
+        {
+          "path": "replays/421/more-key/step-0.png",
+          "bytes": 1573,
+          "crc32": "fd32d5ab",
+          "sha256": "d188317105c63219ca4c247ab159d1bd9f2251805b455574247e03f246e2e935"
+        },
+        {
+          "path": "replays/421/more-key/step-1.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-key/step-2.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-key/step-3.png",
+          "bytes": 1205,
+          "crc32": "b5e911ac",
+          "sha256": "99ece5827f0c22c3f32d9b490c8c03c2feeb0e32340aab4765c96b6195e446d2"
+        },
+        {
+          "path": "replays/421/more-key/step-4.png",
+          "bytes": 1208,
+          "crc32": "80d1a56c",
+          "sha256": "76b917255cbe288b93c8b94e54d3961023f79ac5e1e8124a028b66792408df9b"
+        },
+        {
+          "path": "replays/421/more-key/step-5.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-neutral/after-ok.png",
+          "bytes": 3183,
+          "crc32": "c921dddd",
+          "sha256": "cf2c02955a8bc695e51297c42beb044cc50e2e59a95bbf039f152e55775a8f8f"
+        },
+        {
+          "path": "replays/421/more-neutral/after-one.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-neutral/after-right.png",
+          "bytes": 4519,
+          "crc32": "6e5a7cbe",
+          "sha256": "bece82913b10988838aa241cd1be121dd1c9a2746abd3817c544109642c5cb90"
+        },
+        {
+          "path": "replays/421/more-neutral/after-second-ok.png",
+          "bytes": 5753,
+          "crc32": "eb52a2fe",
+          "sha256": "75900ae68cd434dfbac4dc5c75b47de21c9a794f3f15ae636d7239b3e9817719"
+        },
+        {
+          "path": "replays/421/more-neutral/base.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-neutral/before-last.png",
+          "bytes": 2338,
+          "crc32": "1b01da4f",
+          "sha256": "f6809dd210c4e1aa10957c694ff429ac1d9c578fdbefae11d6e68b4dac510631"
+        },
+        {
+          "path": "replays/421/more-neutral/extra-0.png",
+          "bytes": 32382,
+          "crc32": "b7c0f638",
+          "sha256": "bac0bd1336539cb558ded6cf60ab4aedf446839db984de117d8ce3406141bd9b"
+        },
+        {
+          "path": "replays/421/more-neutral/extra-1.png",
+          "bytes": 29547,
+          "crc32": "01908b83",
+          "sha256": "c766558fa2167eb9520a2094168367ce14758cab0ba339a7ba0611c43b1ef282"
+        },
+        {
+          "path": "replays/421/more-neutral/extra-2.png",
+          "bytes": 39019,
+          "crc32": "2fd9c3a9",
+          "sha256": "3ac7d4a031f0aa5961b8e744f3f8edb67336539dce50fd5f7b0119d9fc56129a"
+        },
+        {
+          "path": "replays/421/more-neutral/extra-3.png",
+          "bytes": 37034,
+          "crc32": "eb24e888",
+          "sha256": "f1f92f57273066313a7c5c2596b306f90c7e28952439ed206c7d441481cf9a02"
+        },
+        {
+          "path": "replays/421/more-neutral/extra-4.png",
+          "bytes": 34152,
+          "crc32": "f9e78b24",
+          "sha256": "e9ce0bf77b2bb2bbe7b9c74b76a30ff7268e8e674be17ce3dce74b67b42be952"
+        },
+        {
+          "path": "replays/421/more-neutral/extra-5.png",
+          "bytes": 39011,
+          "crc32": "77a61b80",
+          "sha256": "62cd801bd5b055ebe38cf2778277c4daebbff68b8297f237a06ff1b723665f9c"
+        },
+        {
+          "path": "replays/421/more-neutral/extra-6.png",
+          "bytes": 1573,
+          "crc32": "fd32d5ab",
+          "sha256": "d188317105c63219ca4c247ab159d1bd9f2251805b455574247e03f246e2e935"
+        },
+        {
+          "path": "replays/421/more-neutral/final.png",
+          "bytes": 2130,
+          "crc32": "dc856644",
+          "sha256": "e8af66c40ef2e315ae65cae914bf96ec7c25c1d29b12f331547b353d91bd60f2"
+        },
+        {
+          "path": "replays/421/more-neutral/finish.png",
+          "bytes": 2901,
+          "crc32": "e98a630e",
+          "sha256": "ffb28bce4c29b2797ef0be339ba7d70de8bae5264660b5c36eeb476a130c3dca"
+        },
+        {
+          "path": "replays/421/more-neutral/opening.png",
+          "bytes": 3290,
+          "crc32": "17e238de",
+          "sha256": "0816ae69ab22d89a0d07234f0afb3d5f596ba5994721c15b4e63f7274d516d9a"
+        },
+        {
+          "path": "replays/421/more-neutral/replay.log",
+          "bytes": 55908,
+          "crc32": "a5d5ff78",
+          "sha256": "72deb90d4d042dd40d0538cdb611f77b6677e4b314cf04ebe45783a3fc12b86e"
+        },
+        {
+          "path": "replays/421/more-neutral/replay.lua",
+          "bytes": 1597,
+          "crc32": "b1805aad",
+          "sha256": "a07c74829bd2b2b04e4ada133e8c1994f0325508d039660fb721a53ad433e546"
+        },
+        {
+          "path": "replays/421/more-neutral/series-0.png",
+          "bytes": 2305,
+          "crc32": "fc342f0f",
+          "sha256": "312af5123c1e5127025e66dd42f99e0d0a5325b4d8484321f6429fd05ce0859d"
+        },
+        {
+          "path": "replays/421/more-neutral/series-1.png",
+          "bytes": 3294,
+          "crc32": "672e1fba",
+          "sha256": "db8066424515914ebd7ea0fe7704f15734c3dc9abd273ca844dbe56eb585a877"
+        },
+        {
+          "path": "replays/421/more-neutral/series-2.png",
+          "bytes": 2338,
+          "crc32": "1b01da4f",
+          "sha256": "f6809dd210c4e1aa10957c694ff429ac1d9c578fdbefae11d6e68b4dac510631"
+        },
+        {
+          "path": "replays/421/more-neutral/step-0.png",
+          "bytes": 1573,
+          "crc32": "fd32d5ab",
+          "sha256": "d188317105c63219ca4c247ab159d1bd9f2251805b455574247e03f246e2e935"
+        },
+        {
+          "path": "replays/421/more-neutral/step-1.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-neutral/step-2.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/421/more-neutral/step-3.png",
+          "bytes": 1205,
+          "crc32": "b5e911ac",
+          "sha256": "99ece5827f0c22c3f32d9b490c8c03c2feeb0e32340aab4765c96b6195e446d2"
+        },
+        {
+          "path": "replays/421/more-neutral/step-4.png",
+          "bytes": 1208,
+          "crc32": "80d1a56c",
+          "sha256": "76b917255cbe288b93c8b94e54d3961023f79ac5e1e8124a028b66792408df9b"
+        },
+        {
+          "path": "replays/421/more-neutral/step-5.png",
+          "bytes": 885,
+          "crc32": "3eb20ec9",
+          "sha256": "2682a99e4089d63d450980eb2ebc8e352c6345e8164457a2fd058b393a93f9c9"
+        },
+        {
+          "path": "replays/433/last1/advance-0.png",
+          "bytes": 15292,
+          "crc32": "17f63c74",
+          "sha256": "c84a96346af4f57989376909a8be68c1ea00f82e31c03653d74f793d7f69998c"
+        },
+        {
+          "path": "replays/433/last1/advance-1.png",
+          "bytes": 2998,
+          "crc32": "100dee4a",
+          "sha256": "b56241fff1a0dbad59ce5e59aa2b051b251dac63a956991886a573f23a483d64"
+        },
+        {
+          "path": "replays/433/last1/advance-2.png",
+          "bytes": 2962,
+          "crc32": "caa7e224",
+          "sha256": "0e9b8dc0b128cb42a3446446be4ca566e906807a06cdcdbfa28d53c67cfacfe4"
+        },
+        {
+          "path": "replays/433/last1/advance-3.png",
+          "bytes": 39329,
+          "crc32": "9a991d56",
+          "sha256": "6bafd89f47f58884eec69e68af6051699cd30eb12e621087a471e5cd15235480"
+        },
+        {
+          "path": "replays/433/last1/advance-4.png",
+          "bytes": 42272,
+          "crc32": "b64b3da0",
+          "sha256": "35b88ee030e189c1e6a6f786757d628c2af08685b73931dc8678b87dee32fe04"
+        },
+        {
+          "path": "replays/433/last1/after-ok.png",
+          "bytes": 3130,
+          "crc32": "72a75675",
+          "sha256": "e211175554afec11487ff6b05e852c93c2fb26ad0958b3b50710ae20f539b12b"
+        },
+        {
+          "path": "replays/433/last1/after-one.png",
+          "bytes": 3123,
+          "crc32": "7e5b171d",
+          "sha256": "f498b7788c8eaabfba4224be0c1a0e62c9810215836033c2cd43c8136cbdb813"
+        },
+        {
+          "path": "replays/433/last1/after-right.png",
+          "bytes": 5130,
+          "crc32": "1422d427",
+          "sha256": "1fe6b99d66be9bd86b5b9f86cfbf5186285cf5b6497b0baeb08d4f0b3495f93c"
+        },
+        {
+          "path": "replays/433/last1/after-second-ok.png",
+          "bytes": 5927,
+          "crc32": "87cc09aa",
+          "sha256": "b793ec2fa2af7300b12b2f575ae7dadc61354fe18e03d75c6c66edc3b3c7249b"
+        },
+        {
+          "path": "replays/433/last1/base.png",
+          "bytes": 81564,
+          "crc32": "87c69039",
+          "sha256": "6cbc5dc18282a8c934c2b63e931f1a44779d467b95328033fb1dd2e18ead8ff1"
+        },
+        {
+          "path": "replays/433/last1/before-last-2.png",
+          "bytes": 42272,
+          "crc32": "b64b3da0",
+          "sha256": "35b88ee030e189c1e6a6f786757d628c2af08685b73931dc8678b87dee32fe04"
+        },
+        {
+          "path": "replays/433/last1/before-last.png",
+          "bytes": 15185,
+          "crc32": "41c51dec",
+          "sha256": "efc383bcc2daed896dea99e09502089448f4c2ea295ef67fd6617d30ff1f1bc2"
+        },
+        {
+          "path": "replays/433/last1/extra-0.png",
+          "bytes": 100917,
+          "crc32": "ebff4a9b",
+          "sha256": "bd8fe393f984209a79d7e53fcb899bd6647eb66f47b396dfa7dcd83248f9f768"
+        },
+        {
+          "path": "replays/433/last1/extra-1.png",
+          "bytes": 100917,
+          "crc32": "ebff4a9b",
+          "sha256": "bd8fe393f984209a79d7e53fcb899bd6647eb66f47b396dfa7dcd83248f9f768"
+        },
+        {
+          "path": "replays/433/last1/extra-2.png",
+          "bytes": 100917,
+          "crc32": "ebff4a9b",
+          "sha256": "bd8fe393f984209a79d7e53fcb899bd6647eb66f47b396dfa7dcd83248f9f768"
+        },
+        {
+          "path": "replays/433/last1/final-2.png",
+          "bytes": 38980,
+          "crc32": "ac796bc4",
+          "sha256": "c88ead93188c7e8fc00865677fcbe36fd069d1bec63a149ddfa85381e7ec1a74"
+        },
+        {
+          "path": "replays/433/last1/final.png",
+          "bytes": 15185,
+          "crc32": "41c51dec",
+          "sha256": "efc383bcc2daed896dea99e09502089448f4c2ea295ef67fd6617d30ff1f1bc2"
+        },
+        {
+          "path": "replays/433/last1/finish.png",
+          "bytes": 81244,
+          "crc32": "c0d2374e",
+          "sha256": "ebce1e1737647af21746a989444f3f894a7513032f58c816b81bb6f60e4b307e"
+        },
+        {
+          "path": "replays/433/last1/frame-base.png",
+          "bytes": 27065,
+          "crc32": "7cbc0b90",
+          "sha256": "62f6fc80e9d5119295b1c2dcbf6f548ae5a805cd391cd922d3d210391416bd37"
+        },
+        {
+          "path": "replays/433/last1/frame-end.png",
+          "bytes": 26938,
+          "crc32": "88147594",
+          "sha256": "980e6927b55785239186ccdc6823ce72f697057d32eaa7b8e9736b1fc947a4d7"
+        },
+        {
+          "path": "replays/433/last1/opening.png",
+          "bytes": 4307,
+          "crc32": "5a088449",
+          "sha256": "7e6859f615ac5d09890fb383c92ca45ccac2a2bae8b29a1cc8c0e235740f7303"
+        },
+        {
+          "path": "replays/433/last1/replay.log",
+          "bytes": 76803,
+          "crc32": "1ff003dd",
+          "sha256": "bc0fc687d3dde64dc24f4a7587befd5ebe59257542c55da7820c52533ec2e9cf"
+        },
+        {
+          "path": "replays/433/last1/replay.lua",
+          "bytes": 2173,
+          "crc32": "972b0ac3",
+          "sha256": "e90ff8f75eb3d5a112cc278b92b117ff7ccf3fdc2fcd06027201e566bf766f8a"
+        },
+        {
+          "path": "replays/433/last1/series-0.png",
+          "bytes": 80514,
+          "crc32": "48de71f0",
+          "sha256": "a1a9164a193db1ee617e3301d9211a38696eb60662035b5f5de8229889194b7b"
+        },
+        {
+          "path": "replays/433/last1/series-1.png",
+          "bytes": 77409,
+          "crc32": "ce2ba581",
+          "sha256": "c10797c7f177ede53549aa32f96b6902800845728294b2a299d6c63b0d8df411"
+        },
+        {
+          "path": "replays/433/last1/series-2.png",
+          "bytes": 64317,
+          "crc32": "fe68f700",
+          "sha256": "c0af8df1c63562d92fd94f0f9d889d87e5ee2616707bb91d1e0497e167264b88"
+        },
+        {
+          "path": "replays/433/last1/series-3.png",
+          "bytes": 116374,
+          "crc32": "b91bbd21",
+          "sha256": "ab90c91669be35c31c337f069821f6fc0720b274f20d317f1e38b28d59958d25"
+        },
+        {
+          "path": "replays/433/last1/series-4.png",
+          "bytes": 14947,
+          "crc32": "3ed021d4",
+          "sha256": "322ab23070abf5f9117a612c01406d1cb8337590f6ee5e5ab63b564d30cb756a"
+        },
+        {
+          "path": "replays/433/last1/series-5.png",
+          "bytes": 15185,
+          "crc32": "41c51dec",
+          "sha256": "efc383bcc2daed896dea99e09502089448f4c2ea295ef67fd6617d30ff1f1bc2"
+        },
+        {
+          "path": "replays/433/last1/step-0.png",
+          "bytes": 4307,
+          "crc32": "5a088449",
+          "sha256": "7e6859f615ac5d09890fb383c92ca45ccac2a2bae8b29a1cc8c0e235740f7303"
+        },
+        {
+          "path": "replays/433/last1/step-1.png",
+          "bytes": 3130,
+          "crc32": "72a75675",
+          "sha256": "e211175554afec11487ff6b05e852c93c2fb26ad0958b3b50710ae20f539b12b"
+        },
+        {
+          "path": "replays/433/last1/step-2.png",
+          "bytes": 9782,
+          "crc32": "a8b6cf21",
+          "sha256": "37b088bb35658026ac3c569e1202884ae7c6284a1e9c6e604981f3624231ea5e"
+        },
+        {
+          "path": "replays/433/last1/step-3.png",
+          "bytes": 3123,
+          "crc32": "7e5b171d",
+          "sha256": "f498b7788c8eaabfba4224be0c1a0e62c9810215836033c2cd43c8136cbdb813"
+        },
+        {
+          "path": "replays/433/last1/step-4.png",
+          "bytes": 2813,
+          "crc32": "692cb6b3",
+          "sha256": "9d58755213291df055fdc17d9f304d4a8b255987c20be491da1709997336f3da"
+        },
+        {
+          "path": "replays/433/last1/step-5.png",
+          "bytes": 81564,
+          "crc32": "87c69039",
+          "sha256": "6cbc5dc18282a8c934c2b63e931f1a44779d467b95328033fb1dd2e18ead8ff1"
+        },
+        {
+          "path": "replays/433/last3/advance-0.png",
+          "bytes": 15292,
+          "crc32": "17f63c74",
+          "sha256": "c84a96346af4f57989376909a8be68c1ea00f82e31c03653d74f793d7f69998c"
+        },
+        {
+          "path": "replays/433/last3/advance-1.png",
+          "bytes": 2998,
+          "crc32": "100dee4a",
+          "sha256": "b56241fff1a0dbad59ce5e59aa2b051b251dac63a956991886a573f23a483d64"
+        },
+        {
+          "path": "replays/433/last3/advance-2.png",
+          "bytes": 2962,
+          "crc32": "caa7e224",
+          "sha256": "0e9b8dc0b128cb42a3446446be4ca566e906807a06cdcdbfa28d53c67cfacfe4"
+        },
+        {
+          "path": "replays/433/last3/advance-3.png",
+          "bytes": 39329,
+          "crc32": "9a991d56",
+          "sha256": "6bafd89f47f58884eec69e68af6051699cd30eb12e621087a471e5cd15235480"
+        },
+        {
+          "path": "replays/433/last3/advance-4.png",
+          "bytes": 42272,
+          "crc32": "b64b3da0",
+          "sha256": "35b88ee030e189c1e6a6f786757d628c2af08685b73931dc8678b87dee32fe04"
+        },
+        {
+          "path": "replays/433/last3/after-ok.png",
+          "bytes": 3130,
+          "crc32": "72a75675",
+          "sha256": "e211175554afec11487ff6b05e852c93c2fb26ad0958b3b50710ae20f539b12b"
+        },
+        {
+          "path": "replays/433/last3/after-one.png",
+          "bytes": 3123,
+          "crc32": "7e5b171d",
+          "sha256": "f498b7788c8eaabfba4224be0c1a0e62c9810215836033c2cd43c8136cbdb813"
+        },
+        {
+          "path": "replays/433/last3/after-right.png",
+          "bytes": 5130,
+          "crc32": "1422d427",
+          "sha256": "1fe6b99d66be9bd86b5b9f86cfbf5186285cf5b6497b0baeb08d4f0b3495f93c"
+        },
+        {
+          "path": "replays/433/last3/after-second-ok.png",
+          "bytes": 5927,
+          "crc32": "87cc09aa",
+          "sha256": "b793ec2fa2af7300b12b2f575ae7dadc61354fe18e03d75c6c66edc3b3c7249b"
+        },
+        {
+          "path": "replays/433/last3/base.png",
+          "bytes": 81564,
+          "crc32": "87c69039",
+          "sha256": "6cbc5dc18282a8c934c2b63e931f1a44779d467b95328033fb1dd2e18ead8ff1"
+        },
+        {
+          "path": "replays/433/last3/before-last-2.png",
+          "bytes": 42272,
+          "crc32": "b64b3da0",
+          "sha256": "35b88ee030e189c1e6a6f786757d628c2af08685b73931dc8678b87dee32fe04"
+        },
+        {
+          "path": "replays/433/last3/before-last.png",
+          "bytes": 15185,
+          "crc32": "41c51dec",
+          "sha256": "efc383bcc2daed896dea99e09502089448f4c2ea295ef67fd6617d30ff1f1bc2"
+        },
+        {
+          "path": "replays/433/last3/extra-0.png",
+          "bytes": 100917,
+          "crc32": "ebff4a9b",
+          "sha256": "bd8fe393f984209a79d7e53fcb899bd6647eb66f47b396dfa7dcd83248f9f768"
+        },
+        {
+          "path": "replays/433/last3/extra-1.png",
+          "bytes": 100917,
+          "crc32": "ebff4a9b",
+          "sha256": "bd8fe393f984209a79d7e53fcb899bd6647eb66f47b396dfa7dcd83248f9f768"
+        },
+        {
+          "path": "replays/433/last3/extra-2.png",
+          "bytes": 100917,
+          "crc32": "ebff4a9b",
+          "sha256": "bd8fe393f984209a79d7e53fcb899bd6647eb66f47b396dfa7dcd83248f9f768"
+        },
+        {
+          "path": "replays/433/last3/final-2.png",
+          "bytes": 38980,
+          "crc32": "ac796bc4",
+          "sha256": "c88ead93188c7e8fc00865677fcbe36fd069d1bec63a149ddfa85381e7ec1a74"
+        },
+        {
+          "path": "replays/433/last3/final.png",
+          "bytes": 15185,
+          "crc32": "41c51dec",
+          "sha256": "efc383bcc2daed896dea99e09502089448f4c2ea295ef67fd6617d30ff1f1bc2"
+        },
+        {
+          "path": "replays/433/last3/finish.png",
+          "bytes": 81244,
+          "crc32": "c0d2374e",
+          "sha256": "ebce1e1737647af21746a989444f3f894a7513032f58c816b81bb6f60e4b307e"
+        },
+        {
+          "path": "replays/433/last3/frame-base.png",
+          "bytes": 27065,
+          "crc32": "7cbc0b90",
+          "sha256": "62f6fc80e9d5119295b1c2dcbf6f548ae5a805cd391cd922d3d210391416bd37"
+        },
+        {
+          "path": "replays/433/last3/frame-end.png",
+          "bytes": 26938,
+          "crc32": "88147594",
+          "sha256": "980e6927b55785239186ccdc6823ce72f697057d32eaa7b8e9736b1fc947a4d7"
+        },
+        {
+          "path": "replays/433/last3/opening.png",
+          "bytes": 4307,
+          "crc32": "5a088449",
+          "sha256": "7e6859f615ac5d09890fb383c92ca45ccac2a2bae8b29a1cc8c0e235740f7303"
+        },
+        {
+          "path": "replays/433/last3/replay.log",
+          "bytes": 76802,
+          "crc32": "5ed03bf1",
+          "sha256": "cd9c7fb35f1be92bb5f9a0d967984664b37a47b96c04f09dda1e2bd6de2af24a"
+        },
+        {
+          "path": "replays/433/last3/replay.lua",
+          "bytes": 2170,
+          "crc32": "0068711e",
+          "sha256": "e73005f5bfb0384bde8bf0424c998e52cdff142093334a7b5c995f576d1879d0"
+        },
+        {
+          "path": "replays/433/last3/series-0.png",
+          "bytes": 80514,
+          "crc32": "48de71f0",
+          "sha256": "a1a9164a193db1ee617e3301d9211a38696eb60662035b5f5de8229889194b7b"
+        },
+        {
+          "path": "replays/433/last3/series-1.png",
+          "bytes": 77409,
+          "crc32": "ce2ba581",
+          "sha256": "c10797c7f177ede53549aa32f96b6902800845728294b2a299d6c63b0d8df411"
+        },
+        {
+          "path": "replays/433/last3/series-2.png",
+          "bytes": 64317,
+          "crc32": "fe68f700",
+          "sha256": "c0af8df1c63562d92fd94f0f9d889d87e5ee2616707bb91d1e0497e167264b88"
+        },
+        {
+          "path": "replays/433/last3/series-3.png",
+          "bytes": 116374,
+          "crc32": "b91bbd21",
+          "sha256": "ab90c91669be35c31c337f069821f6fc0720b274f20d317f1e38b28d59958d25"
+        },
+        {
+          "path": "replays/433/last3/series-4.png",
+          "bytes": 14947,
+          "crc32": "3ed021d4",
+          "sha256": "322ab23070abf5f9117a612c01406d1cb8337590f6ee5e5ab63b564d30cb756a"
+        },
+        {
+          "path": "replays/433/last3/series-5.png",
+          "bytes": 15185,
+          "crc32": "41c51dec",
+          "sha256": "efc383bcc2daed896dea99e09502089448f4c2ea295ef67fd6617d30ff1f1bc2"
+        },
+        {
+          "path": "replays/433/last3/step-0.png",
+          "bytes": 4307,
+          "crc32": "5a088449",
+          "sha256": "7e6859f615ac5d09890fb383c92ca45ccac2a2bae8b29a1cc8c0e235740f7303"
+        },
+        {
+          "path": "replays/433/last3/step-1.png",
+          "bytes": 3130,
+          "crc32": "72a75675",
+          "sha256": "e211175554afec11487ff6b05e852c93c2fb26ad0958b3b50710ae20f539b12b"
+        },
+        {
+          "path": "replays/433/last3/step-2.png",
+          "bytes": 9782,
+          "crc32": "a8b6cf21",
+          "sha256": "37b088bb35658026ac3c569e1202884ae7c6284a1e9c6e604981f3624231ea5e"
+        },
+        {
+          "path": "replays/433/last3/step-3.png",
+          "bytes": 3123,
+          "crc32": "7e5b171d",
+          "sha256": "f498b7788c8eaabfba4224be0c1a0e62c9810215836033c2cd43c8136cbdb813"
+        },
+        {
+          "path": "replays/433/last3/step-4.png",
+          "bytes": 2813,
+          "crc32": "692cb6b3",
+          "sha256": "9d58755213291df055fdc17d9f304d4a8b255987c20be491da1709997336f3da"
+        },
+        {
+          "path": "replays/433/last3/step-5.png",
+          "bytes": 81564,
+          "crc32": "87c69039",
+          "sha256": "6cbc5dc18282a8c934c2b63e931f1a44779d467b95328033fb1dd2e18ead8ff1"
+        },
+        {
+          "path": "replays/444/key/after-ok.png",
+          "bytes": 2740,
+          "crc32": "0ee3efa2",
+          "sha256": "25af69c4ab972787eb059b0fa0e7702c06a89eb622b0c274150e62670ef058f5"
+        },
+        {
+          "path": "replays/444/key/after-one.png",
+          "bytes": 6493,
+          "crc32": "4bdab6b8",
+          "sha256": "8fa25fddfbd6422ab6fe2741025bcc7aaa8b0da6e304b23501b9f0f3fe7316e8"
+        },
+        {
+          "path": "replays/444/key/after-right.png",
+          "bytes": 6330,
+          "crc32": "215cc581",
+          "sha256": "618cd6aa56c111ce2c09f108bf83f18ea29850af466e4e282bb5d09e5ef45c2a"
+        },
+        {
+          "path": "replays/444/key/after-second-ok.png",
+          "bytes": 1443,
+          "crc32": "e5f5b238",
+          "sha256": "173e201fbfb03b5b45363c8b5bb12a459801f6c50f0e1b3a8cbf880bcced30cb"
+        },
+        {
+          "path": "replays/444/key/before.png",
+          "bytes": 10237,
+          "crc32": "37901611",
+          "sha256": "f6938d4980c0b25b5b9d42c345f590fea47453071676051f0f68f14725f1fcf5"
+        },
+        {
+          "path": "replays/444/key/extra-0.png",
+          "bytes": 4606,
+          "crc32": "cc47956e",
+          "sha256": "83909681a64abf96ce8d4295c3b77c718a95f8e999f751533b3509edec42b2fb"
+        },
+        {
+          "path": "replays/444/key/extra-1.png",
+          "bytes": 5281,
+          "crc32": "9700f5ef",
+          "sha256": "fba576eca975d746e1ee7b012b28a76d5317064391516e1f894551688df444cd"
+        },
+        {
+          "path": "replays/444/key/extra-2.png",
+          "bytes": 5550,
+          "crc32": "5d5d65fe",
+          "sha256": "7677b0c4dee36ae07abfc30340eb0e9ea8ffa3188142d3b1ef949b5dfb98ae01"
+        },
+        {
+          "path": "replays/444/key/opening.png",
+          "bytes": 2881,
+          "crc32": "087744a8",
+          "sha256": "0ee37933dff3a91192f639b428421868fec38215e782f605e87a879044a91e4d"
+        },
+        {
+          "path": "replays/444/key/replay.err",
+          "bytes": 226,
+          "crc32": "baba2044",
+          "sha256": "ebabf0d4a3e4d6a52f0e22ccce973ff9e219a6110de31f3a3841071eb9722852"
+        },
+        {
+          "path": "replays/444/key/replay.log",
+          "bytes": 32865,
+          "crc32": "c527ed3e",
+          "sha256": "854f8de648a32683a4a20aedb3d2d8c75bb751dc7d381ea68e72d8db5d7e9470"
+        },
+        {
+          "path": "replays/444/key/replay.lua",
+          "bytes": 1018,
+          "crc32": "32cfc561",
+          "sha256": "a9d53dc7c70a9d363476ebdfdfa003fd0e14beb1bf31faa9fbd9c94cbe594113"
+        },
+        {
+          "path": "replays/444/key/step-0.png",
+          "bytes": 5277,
+          "crc32": "88a4be4f",
+          "sha256": "1c11c7916c458b42a1e4299df4c0dbccf1ea4274291d123330b156d020fcb391"
+        },
+        {
+          "path": "replays/444/key/step-1.png",
+          "bytes": 2690,
+          "crc32": "e9dfcbd3",
+          "sha256": "460620cc2153a204fc7b6adb9fe0b8aa90fe0e1e081edd9488208dc677a7ad6f"
+        },
+        {
+          "path": "replays/444/key/step-2.png",
+          "bytes": 59355,
+          "crc32": "9ab8c516",
+          "sha256": "b597db4717ccf215b7366b7d1e9d98ae2ccf4b2550e101a182be59ffbd5468f0"
+        },
+        {
+          "path": "replays/444/key/step-3.png",
+          "bytes": 76476,
+          "crc32": "7dea881e",
+          "sha256": "ad7672179cc5d6ffd6ca2ce1b90684d724f2847c967c2c2713b9778a1b7d2047"
+        },
+        {
+          "path": "replays/444/key/step-4.png",
+          "bytes": 32292,
+          "crc32": "de2a8a41",
+          "sha256": "5bb6639c88874d6b687203a191e86cf0d8424177b9c1846ce093c2826211397a"
+        },
+        {
+          "path": "replays/444/key/step-5.png",
+          "bytes": 10237,
+          "crc32": "37901611",
+          "sha256": "f6938d4980c0b25b5b9d42c345f590fea47453071676051f0f68f14725f1fcf5"
+        },
+        {
+          "path": "replays/444/neutral/after-ok.png",
+          "bytes": 2740,
+          "crc32": "0ee3efa2",
+          "sha256": "25af69c4ab972787eb059b0fa0e7702c06a89eb622b0c274150e62670ef058f5"
+        },
+        {
+          "path": "replays/444/neutral/after-one.png",
+          "bytes": 6493,
+          "crc32": "4bdab6b8",
+          "sha256": "8fa25fddfbd6422ab6fe2741025bcc7aaa8b0da6e304b23501b9f0f3fe7316e8"
+        },
+        {
+          "path": "replays/444/neutral/after-right.png",
+          "bytes": 6330,
+          "crc32": "215cc581",
+          "sha256": "618cd6aa56c111ce2c09f108bf83f18ea29850af466e4e282bb5d09e5ef45c2a"
+        },
+        {
+          "path": "replays/444/neutral/after-second-ok.png",
+          "bytes": 1443,
+          "crc32": "e5f5b238",
+          "sha256": "173e201fbfb03b5b45363c8b5bb12a459801f6c50f0e1b3a8cbf880bcced30cb"
+        },
+        {
+          "path": "replays/444/neutral/before.png",
+          "bytes": 10237,
+          "crc32": "37901611",
+          "sha256": "f6938d4980c0b25b5b9d42c345f590fea47453071676051f0f68f14725f1fcf5"
+        },
+        {
+          "path": "replays/444/neutral/end.png",
+          "bytes": 10246,
+          "crc32": "64c122b2",
+          "sha256": "32f9561f58372500f49f0db07e5ac565640c939bd9f50767253506742a64ec12"
+        },
+        {
+          "path": "replays/444/neutral/extra-0.png",
+          "bytes": 4606,
+          "crc32": "cc47956e",
+          "sha256": "83909681a64abf96ce8d4295c3b77c718a95f8e999f751533b3509edec42b2fb"
+        },
+        {
+          "path": "replays/444/neutral/extra-1.png",
+          "bytes": 5281,
+          "crc32": "9700f5ef",
+          "sha256": "fba576eca975d746e1ee7b012b28a76d5317064391516e1f894551688df444cd"
+        },
+        {
+          "path": "replays/444/neutral/extra-2.png",
+          "bytes": 5550,
+          "crc32": "5d5d65fe",
+          "sha256": "7677b0c4dee36ae07abfc30340eb0e9ea8ffa3188142d3b1ef949b5dfb98ae01"
+        },
+        {
+          "path": "replays/444/neutral/opening.png",
+          "bytes": 2881,
+          "crc32": "087744a8",
+          "sha256": "0ee37933dff3a91192f639b428421868fec38215e782f605e87a879044a91e4d"
+        },
+        {
+          "path": "replays/444/neutral/replay.log",
+          "bytes": 35336,
+          "crc32": "6709ad63",
+          "sha256": "b5b31a6994557e6f1fdb01dae13f4b15b34d01264655b382a3a677cb97d8f0c9"
+        },
+        {
+          "path": "replays/444/neutral/replay.lua",
+          "bytes": 1015,
+          "crc32": "9c6dbb65",
+          "sha256": "7ee9c96db63ff5625c064e292c3cb1bef1aab010a5bfaa1f93d1e9d976dfc00b"
+        },
+        {
+          "path": "replays/444/neutral/step-0.png",
+          "bytes": 5277,
+          "crc32": "88a4be4f",
+          "sha256": "1c11c7916c458b42a1e4299df4c0dbccf1ea4274291d123330b156d020fcb391"
+        },
+        {
+          "path": "replays/444/neutral/step-1.png",
+          "bytes": 2690,
+          "crc32": "e9dfcbd3",
+          "sha256": "460620cc2153a204fc7b6adb9fe0b8aa90fe0e1e081edd9488208dc677a7ad6f"
+        },
+        {
+          "path": "replays/444/neutral/step-2.png",
+          "bytes": 59355,
+          "crc32": "9ab8c516",
+          "sha256": "b597db4717ccf215b7366b7d1e9d98ae2ccf4b2550e101a182be59ffbd5468f0"
+        },
+        {
+          "path": "replays/444/neutral/step-3.png",
+          "bytes": 76476,
+          "crc32": "7dea881e",
+          "sha256": "ad7672179cc5d6ffd6ca2ce1b90684d724f2847c967c2c2713b9778a1b7d2047"
+        },
+        {
+          "path": "replays/444/neutral/step-4.png",
+          "bytes": 32292,
+          "crc32": "de2a8a41",
+          "sha256": "5bb6639c88874d6b687203a191e86cf0d8424177b9c1846ce093c2826211397a"
+        },
+        {
+          "path": "replays/444/neutral/step-5.png",
+          "bytes": 10237,
+          "crc32": "37901611",
+          "sha256": "f6938d4980c0b25b5b9d42c345f590fea47453071676051f0f68f14725f1fcf5"
+        },
+        {
+          "path": "replays/452/late-key/advance-0.png",
+          "bytes": 30843,
+          "crc32": "02ccafd9",
+          "sha256": "7390a96c3a17da91d047821af97558f35438b750406d4c7061793a80bfe2e472"
+        },
+        {
+          "path": "replays/452/late-key/advance-1.png",
+          "bytes": 30840,
+          "crc32": "44225b1f",
+          "sha256": "f6bbc80b178e3d19dcce7e2ed8cfbedd638ada1860bbadfae8c3f6f334252f0d"
+        },
+        {
+          "path": "replays/452/late-key/advance-2.png",
+          "bytes": 30893,
+          "crc32": "1b25b220",
+          "sha256": "4f1a26f99a295e7606b2b8f3ed6ab064a0e1af6e8ac1701a987595239a6c2e85"
+        },
+        {
+          "path": "replays/452/late-key/advance-3.png",
+          "bytes": 30826,
+          "crc32": "210d0629",
+          "sha256": "2217545929bffc57172aeea2e0e64649b7b2191b2152da167568e4c73f9f840c"
+        },
+        {
+          "path": "replays/452/late-key/advance-4.png",
+          "bytes": 30815,
+          "crc32": "093e4a09",
+          "sha256": "1e40fa47067953a5cff0c428f2851b067547c4f01d1cbbd7cc591ce957466cea"
+        },
+        {
+          "path": "replays/452/late-key/advance-5.png",
+          "bytes": 28086,
+          "crc32": "2b052375",
+          "sha256": "34eeb076b12d3be8a8e074fc947ecc850b277bbd967b39007f3be0ad259fe1ba"
+        },
+        {
+          "path": "replays/452/late-key/advance-6.png",
+          "bytes": 28058,
+          "crc32": "dc72e3a5",
+          "sha256": "39c9e86575c5a376cf2fef1bbc51eb03bf6d2ebe5d441a65dc50ae0bb4b76b99"
+        },
+        {
+          "path": "replays/452/late-key/advance-7.png",
+          "bytes": 26992,
+          "crc32": "9f14c3bc",
+          "sha256": "c6d190516e4ef6841091cb093ec9be74ffdd55b9ad7a1740152652ba5efe5fe6"
+        },
+        {
+          "path": "replays/452/late-key/advance-8.png",
+          "bytes": 41868,
+          "crc32": "98149657",
+          "sha256": "b1a9b2cdb10fd0406839eedca161a9fc0c177301c29219a9aef5c5b9df97d9f7"
+        },
+        {
+          "path": "replays/452/late-key/after-ok.png",
+          "bytes": 2155,
+          "crc32": "7ad41e8c",
+          "sha256": "1cbf3229202ddf71359a165ee0f42a216e4e824d223d0dfdf67e2239b5279504"
+        },
+        {
+          "path": "replays/452/late-key/after-one.png",
+          "bytes": 42580,
+          "crc32": "57d75396",
+          "sha256": "55ec349b56c255dc9866ac6b052ad510765dea756d4aa744ffca6c32c5e12bb2"
+        },
+        {
+          "path": "replays/452/late-key/after-right.png",
+          "bytes": 5629,
+          "crc32": "8f577c1e",
+          "sha256": "c6e15f549bd96bfd74548d56e81a48e65f080e392c8d18335a9c2b588d824c3f"
+        },
+        {
+          "path": "replays/452/late-key/after-second-ok.png",
+          "bytes": 5274,
+          "crc32": "1eea361b",
+          "sha256": "24a5e69d6d0fe704b8e1051762a19010e37b248b1a27b7a3837e2551441451d7"
+        },
+        {
+          "path": "replays/452/late-key/before-last-2.png",
+          "bytes": 41868,
+          "crc32": "98149657",
+          "sha256": "b1a9b2cdb10fd0406839eedca161a9fc0c177301c29219a9aef5c5b9df97d9f7"
+        },
+        {
+          "path": "replays/452/late-key/extra-0.png",
+          "bytes": 39834,
+          "crc32": "36361f94",
+          "sha256": "cbe21677390512e3f8ec19df4732b96af8b14ff6fb1cd71d2a12b6a6ce5a8acc"
+        },
+        {
+          "path": "replays/452/late-key/extra-1.png",
+          "bytes": 34858,
+          "crc32": "af73a7d4",
+          "sha256": "270615a68ba2391b6019e18d7425ba52906fcf3144749878859233a436bf603b"
+        },
+        {
+          "path": "replays/452/late-key/extra-2.png",
+          "bytes": 72195,
+          "crc32": "55d47e24",
+          "sha256": "3e22c394944f4986af22acd4837f5f8eaa8d4f8248aafba8bcff0e722beab1da"
+        },
+        {
+          "path": "replays/452/late-key/extra-3.png",
+          "bytes": 17114,
+          "crc32": "0190c7c0",
+          "sha256": "424380b3a671293403d19ba1bc81efe9c87c1b0c94cc5530f98558aaa0b81b19"
+        },
+        {
+          "path": "replays/452/late-key/extra-4.png",
+          "bytes": 30815,
+          "crc32": "88cabae7",
+          "sha256": "788937131c939f00a0ed45985592b0029fe4987aad28c06768aa84e38f55817c"
+        },
+        {
+          "path": "replays/452/late-key/extra-5.png",
+          "bytes": 31035,
+          "crc32": "53f3f9e3",
+          "sha256": "91cb96256e62b454d122a467442d1a68b5b23bbf0604811c0d1154acd8badc29"
+        },
+        {
+          "path": "replays/452/late-key/final-2.png",
+          "bytes": 41948,
+          "crc32": "0f7bf4e7",
+          "sha256": "00933240f387c59b5beab3034f1ed4f44de5c16736172ffc19ff31fb75aefd2d"
+        },
+        {
+          "path": "replays/452/late-key/opening.png",
+          "bytes": 2757,
+          "crc32": "65ed8b90",
+          "sha256": "0a10b0a0ce50c5e1c3dad3bcff9aff5dff974b22812fb98aa710bbabb0aee844"
+        },
+        {
+          "path": "replays/452/late-key/replay.log",
+          "bytes": 52237,
+          "crc32": "f81455be",
+          "sha256": "1f1b94f859dceba2d00ada4f9098b9e219e12e2bcc9598d59e67ba919aa23b06"
+        },
+        {
+          "path": "replays/452/late-key/replay.lua",
+          "bytes": 1502,
+          "crc32": "7a0665cb",
+          "sha256": "5a39c8644bfa56920b078bca1488172e8f9edc4b07c88e87511ea7a994939e69"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-0.png",
+          "bytes": 30843,
+          "crc32": "02ccafd9",
+          "sha256": "7390a96c3a17da91d047821af97558f35438b750406d4c7061793a80bfe2e472"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-1.png",
+          "bytes": 30840,
+          "crc32": "44225b1f",
+          "sha256": "f6bbc80b178e3d19dcce7e2ed8cfbedd638ada1860bbadfae8c3f6f334252f0d"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-2.png",
+          "bytes": 30893,
+          "crc32": "1b25b220",
+          "sha256": "4f1a26f99a295e7606b2b8f3ed6ab064a0e1af6e8ac1701a987595239a6c2e85"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-3.png",
+          "bytes": 30826,
+          "crc32": "210d0629",
+          "sha256": "2217545929bffc57172aeea2e0e64649b7b2191b2152da167568e4c73f9f840c"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-4.png",
+          "bytes": 30815,
+          "crc32": "093e4a09",
+          "sha256": "1e40fa47067953a5cff0c428f2851b067547c4f01d1cbbd7cc591ce957466cea"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-5.png",
+          "bytes": 28086,
+          "crc32": "2b052375",
+          "sha256": "34eeb076b12d3be8a8e074fc947ecc850b277bbd967b39007f3be0ad259fe1ba"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-6.png",
+          "bytes": 28058,
+          "crc32": "dc72e3a5",
+          "sha256": "39c9e86575c5a376cf2fef1bbc51eb03bf6d2ebe5d441a65dc50ae0bb4b76b99"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-7.png",
+          "bytes": 26992,
+          "crc32": "9f14c3bc",
+          "sha256": "c6d190516e4ef6841091cb093ec9be74ffdd55b9ad7a1740152652ba5efe5fe6"
+        },
+        {
+          "path": "replays/452/late-neutral/advance-8.png",
+          "bytes": 41868,
+          "crc32": "98149657",
+          "sha256": "b1a9b2cdb10fd0406839eedca161a9fc0c177301c29219a9aef5c5b9df97d9f7"
+        },
+        {
+          "path": "replays/452/late-neutral/after-ok.png",
+          "bytes": 2155,
+          "crc32": "7ad41e8c",
+          "sha256": "1cbf3229202ddf71359a165ee0f42a216e4e824d223d0dfdf67e2239b5279504"
+        },
+        {
+          "path": "replays/452/late-neutral/after-one.png",
+          "bytes": 42580,
+          "crc32": "57d75396",
+          "sha256": "55ec349b56c255dc9866ac6b052ad510765dea756d4aa744ffca6c32c5e12bb2"
+        },
+        {
+          "path": "replays/452/late-neutral/after-right.png",
+          "bytes": 5629,
+          "crc32": "8f577c1e",
+          "sha256": "c6e15f549bd96bfd74548d56e81a48e65f080e392c8d18335a9c2b588d824c3f"
+        },
+        {
+          "path": "replays/452/late-neutral/after-second-ok.png",
+          "bytes": 5274,
+          "crc32": "1eea361b",
+          "sha256": "24a5e69d6d0fe704b8e1051762a19010e37b248b1a27b7a3837e2551441451d7"
+        },
+        {
+          "path": "replays/452/late-neutral/before-last-2.png",
+          "bytes": 41868,
+          "crc32": "98149657",
+          "sha256": "b1a9b2cdb10fd0406839eedca161a9fc0c177301c29219a9aef5c5b9df97d9f7"
+        },
+        {
+          "path": "replays/452/late-neutral/extra-0.png",
+          "bytes": 39834,
+          "crc32": "36361f94",
+          "sha256": "cbe21677390512e3f8ec19df4732b96af8b14ff6fb1cd71d2a12b6a6ce5a8acc"
+        },
+        {
+          "path": "replays/452/late-neutral/extra-1.png",
+          "bytes": 34858,
+          "crc32": "af73a7d4",
+          "sha256": "270615a68ba2391b6019e18d7425ba52906fcf3144749878859233a436bf603b"
+        },
+        {
+          "path": "replays/452/late-neutral/extra-2.png",
+          "bytes": 72195,
+          "crc32": "55d47e24",
+          "sha256": "3e22c394944f4986af22acd4837f5f8eaa8d4f8248aafba8bcff0e722beab1da"
+        },
+        {
+          "path": "replays/452/late-neutral/extra-3.png",
+          "bytes": 17114,
+          "crc32": "0190c7c0",
+          "sha256": "424380b3a671293403d19ba1bc81efe9c87c1b0c94cc5530f98558aaa0b81b19"
+        },
+        {
+          "path": "replays/452/late-neutral/extra-4.png",
+          "bytes": 30815,
+          "crc32": "88cabae7",
+          "sha256": "788937131c939f00a0ed45985592b0029fe4987aad28c06768aa84e38f55817c"
+        },
+        {
+          "path": "replays/452/late-neutral/extra-5.png",
+          "bytes": 31035,
+          "crc32": "53f3f9e3",
+          "sha256": "91cb96256e62b454d122a467442d1a68b5b23bbf0604811c0d1154acd8badc29"
+        },
+        {
+          "path": "replays/452/late-neutral/final-2.png",
+          "bytes": 41855,
+          "crc32": "58a6a764",
+          "sha256": "32d4a51fb6f43a270549f455045493f84dfc1b1053352915ac8e72437d15f162"
+        },
+        {
+          "path": "replays/452/late-neutral/opening.png",
+          "bytes": 2757,
+          "crc32": "65ed8b90",
+          "sha256": "0a10b0a0ce50c5e1c3dad3bcff9aff5dff974b22812fb98aa710bbabb0aee844"
+        },
+        {
+          "path": "replays/452/late-neutral/replay.log",
+          "bytes": 52239,
+          "crc32": "0bf1d89b",
+          "sha256": "430d36417f31e6c5d416317821acf3111a096488042592a3e5181cd3a59df449"
+        },
+        {
+          "path": "replays/452/late-neutral/replay.lua",
+          "bytes": 1498,
+          "crc32": "cc24cc05",
+          "sha256": "6b131b70132f9ce780f5ab9dd2c16c2daecc7a2e0e136e6604e9cf6e9a5c7554"
+        },
+        {
+          "path": "replays/454/key/after-ok.png",
+          "bytes": 5759,
+          "crc32": "b891bf38",
+          "sha256": "9b5517828e8684ea699dc668b43c6a4f0acd732e17a6da2e5eb75b548fb3fa5b"
+        },
+        {
+          "path": "replays/454/key/after-one.png",
+          "bytes": 5663,
+          "crc32": "3ad65368",
+          "sha256": "ff3104fc87fd88effe2829bcfd054233da5c8add56c43df9ab810485e69ea3ae"
+        },
+        {
+          "path": "replays/454/key/after-right.png",
+          "bytes": 5624,
+          "crc32": "ff721edb",
+          "sha256": "7d08cf058a8abe8d73349ea7a1eb45d1ad85188b44e696c1d4ed778922a292a5"
+        },
+        {
+          "path": "replays/454/key/after-second-ok.png",
+          "bytes": 5646,
+          "crc32": "e18bf594",
+          "sha256": "b133ee2bcea9f78cb7be9422796c1068d3575c0ba8c6ab7a749a3b8c0775d787"
+        },
+        {
+          "path": "replays/454/key/before.png",
+          "bytes": 7610,
+          "crc32": "b2c96ac0",
+          "sha256": "34c56a1e83a24744de6d1d9f0963c939652106ec8d5044896d05d56660c30426"
+        },
+        {
+          "path": "replays/454/key/end.png",
+          "bytes": 7308,
+          "crc32": "b7c0f2d6",
+          "sha256": "7f0304eec4fc399966a3a50d4a2f1f61cb6d29d78a1707e73dc0ea255e0867bd"
+        },
+        {
+          "path": "replays/454/key/extra-0.png",
+          "bytes": 5380,
+          "crc32": "0d3b706b",
+          "sha256": "8be63f0e5b7bf5e7772600e8b9c925229e5bdcadf41a3bcddf947b52b4527089"
+        },
+        {
+          "path": "replays/454/key/extra-1.png",
+          "bytes": 5059,
+          "crc32": "f54621c3",
+          "sha256": "571fe5d4b1173766d868846100b4acaf0f1ab4e00a7411dddd984e21b59150b6"
+        },
+        {
+          "path": "replays/454/key/extra-2.png",
+          "bytes": 4026,
+          "crc32": "d56cc4e0",
+          "sha256": "27a7aa467540b23a5330094b208addd6c3ca04d6666a9d5512207fd62e563f83"
+        },
+        {
+          "path": "replays/454/key/extra-3.png",
+          "bytes": 5234,
+          "crc32": "6e84eb5a",
+          "sha256": "2e74a7897f53f805aed4632c2b315b99464025ae3d5a5160efff9df1b26c83e1"
+        },
+        {
+          "path": "replays/454/key/extra-4.png",
+          "bytes": 5575,
+          "crc32": "c3da725b",
+          "sha256": "0476a48f63cbba4e67db3758dc7e611a1af11778b8539a6fd1d5b621557e8b93"
+        },
+        {
+          "path": "replays/454/key/extra-5.png",
+          "bytes": 5598,
+          "crc32": "5e55b6f5",
+          "sha256": "e3ca705e7841335a814fda89169ccd45ee1f7105fa29e86aa7668ce90eab9d80"
+        },
+        {
+          "path": "replays/454/key/extra-6.png",
+          "bytes": 4752,
+          "crc32": "7f15d276",
+          "sha256": "872de128ae3462658f5b95170dcbba3e5536b0f1bb0d65d6a166bb121bb15719"
+        },
+        {
+          "path": "replays/454/key/extra-7.png",
+          "bytes": 6858,
+          "crc32": "6712062b",
+          "sha256": "55aaddc9286882b6203a733406d3f5fdcddca175fd77113053b84698466458d0"
+        },
+        {
+          "path": "replays/454/key/opening.png",
+          "bytes": 7633,
+          "crc32": "6dd0155a",
+          "sha256": "39de8df60f849d6594e2c8640927569449d73031aba3cbe7ef0eb0213352153a"
+        },
+        {
+          "path": "replays/454/key/replay.log",
+          "bytes": 41141,
+          "crc32": "2d6b1c44",
+          "sha256": "1b66058039d6ba7f9c73a0bec60860673e9a136deb2371d4ff74f2e58b6fb14f"
+        },
+        {
+          "path": "replays/454/key/replay.lua",
+          "bytes": 1178,
+          "crc32": "8c80089b",
+          "sha256": "55c997afa91403683367e77921dae6ffbd55f78a260011cfcba90b4e804e99c0"
+        },
+        {
+          "path": "replays/454/key/step-0.png",
+          "bytes": 5975,
+          "crc32": "aa6b1036",
+          "sha256": "61c0fd53f00ae3a02a066cf241b481f39616e06a5163d2d51b46c3585c62d596"
+        },
+        {
+          "path": "replays/454/key/step-1.png",
+          "bytes": 7407,
+          "crc32": "fe7caafa",
+          "sha256": "85f52527cf04b29aa03956baa705d798d6edf218ea2b84aadb315da8aec475be"
+        },
+        {
+          "path": "replays/454/key/step-2.png",
+          "bytes": 7610,
+          "crc32": "b2c96ac0",
+          "sha256": "34c56a1e83a24744de6d1d9f0963c939652106ec8d5044896d05d56660c30426"
+        },
+        {
+          "path": "replays/454/neutral/after-ok.png",
+          "bytes": 5759,
+          "crc32": "b891bf38",
+          "sha256": "9b5517828e8684ea699dc668b43c6a4f0acd732e17a6da2e5eb75b548fb3fa5b"
+        },
+        {
+          "path": "replays/454/neutral/after-one.png",
+          "bytes": 5663,
+          "crc32": "3ad65368",
+          "sha256": "ff3104fc87fd88effe2829bcfd054233da5c8add56c43df9ab810485e69ea3ae"
+        },
+        {
+          "path": "replays/454/neutral/after-right.png",
+          "bytes": 5624,
+          "crc32": "ff721edb",
+          "sha256": "7d08cf058a8abe8d73349ea7a1eb45d1ad85188b44e696c1d4ed778922a292a5"
+        },
+        {
+          "path": "replays/454/neutral/after-second-ok.png",
+          "bytes": 5646,
+          "crc32": "e18bf594",
+          "sha256": "b133ee2bcea9f78cb7be9422796c1068d3575c0ba8c6ab7a749a3b8c0775d787"
+        },
+        {
+          "path": "replays/454/neutral/before.png",
+          "bytes": 7610,
+          "crc32": "b2c96ac0",
+          "sha256": "34c56a1e83a24744de6d1d9f0963c939652106ec8d5044896d05d56660c30426"
+        },
+        {
+          "path": "replays/454/neutral/end.png",
+          "bytes": 7103,
+          "crc32": "bb344afc",
+          "sha256": "6b4c2e257fece013eb6502dc1b9838e07dc57787794735d8c4bd00aea6e16f01"
+        },
+        {
+          "path": "replays/454/neutral/extra-0.png",
+          "bytes": 5380,
+          "crc32": "0d3b706b",
+          "sha256": "8be63f0e5b7bf5e7772600e8b9c925229e5bdcadf41a3bcddf947b52b4527089"
+        },
+        {
+          "path": "replays/454/neutral/extra-1.png",
+          "bytes": 5059,
+          "crc32": "f54621c3",
+          "sha256": "571fe5d4b1173766d868846100b4acaf0f1ab4e00a7411dddd984e21b59150b6"
+        },
+        {
+          "path": "replays/454/neutral/extra-2.png",
+          "bytes": 4026,
+          "crc32": "d56cc4e0",
+          "sha256": "27a7aa467540b23a5330094b208addd6c3ca04d6666a9d5512207fd62e563f83"
+        },
+        {
+          "path": "replays/454/neutral/extra-3.png",
+          "bytes": 5234,
+          "crc32": "6e84eb5a",
+          "sha256": "2e74a7897f53f805aed4632c2b315b99464025ae3d5a5160efff9df1b26c83e1"
+        },
+        {
+          "path": "replays/454/neutral/extra-4.png",
+          "bytes": 5575,
+          "crc32": "c3da725b",
+          "sha256": "0476a48f63cbba4e67db3758dc7e611a1af11778b8539a6fd1d5b621557e8b93"
+        },
+        {
+          "path": "replays/454/neutral/extra-5.png",
+          "bytes": 5598,
+          "crc32": "5e55b6f5",
+          "sha256": "e3ca705e7841335a814fda89169ccd45ee1f7105fa29e86aa7668ce90eab9d80"
+        },
+        {
+          "path": "replays/454/neutral/extra-6.png",
+          "bytes": 4752,
+          "crc32": "7f15d276",
+          "sha256": "872de128ae3462658f5b95170dcbba3e5536b0f1bb0d65d6a166bb121bb15719"
+        },
+        {
+          "path": "replays/454/neutral/extra-7.png",
+          "bytes": 6858,
+          "crc32": "6712062b",
+          "sha256": "55aaddc9286882b6203a733406d3f5fdcddca175fd77113053b84698466458d0"
+        },
+        {
+          "path": "replays/454/neutral/opening.png",
+          "bytes": 7633,
+          "crc32": "6dd0155a",
+          "sha256": "39de8df60f849d6594e2c8640927569449d73031aba3cbe7ef0eb0213352153a"
+        },
+        {
+          "path": "replays/454/neutral/replay.log",
+          "bytes": 41161,
+          "crc32": "e55e64bb",
+          "sha256": "058f02ce29e569ad99d44cb10df922ebc742fbbf5b05428c2e0dd026d8b477fd"
+        },
+        {
+          "path": "replays/454/neutral/replay.lua",
+          "bytes": 1175,
+          "crc32": "0cf0f418",
+          "sha256": "9454e35c50bc3b9808e3c8a1f6d1a4d596e3a6f7454d67c4e6b1a9dec94939e1"
+        },
+        {
+          "path": "replays/454/neutral/step-0.png",
+          "bytes": 5975,
+          "crc32": "aa6b1036",
+          "sha256": "61c0fd53f00ae3a02a066cf241b481f39616e06a5163d2d51b46c3585c62d596"
+        },
+        {
+          "path": "replays/454/neutral/step-1.png",
+          "bytes": 7407,
+          "crc32": "fe7caafa",
+          "sha256": "85f52527cf04b29aa03956baa705d798d6edf218ea2b84aadb315da8aec475be"
+        },
+        {
+          "path": "replays/454/neutral/step-2.png",
+          "bytes": 7610,
+          "crc32": "b2c96ac0",
+          "sha256": "34c56a1e83a24744de6d1d9f0963c939652106ec8d5044896d05d56660c30426"
+        },
+        {
+          "path": "sources/dubigame-405.html",
+          "bytes": 45825,
+          "crc32": "2fd2254e",
+          "sha256": "1e0a804f19e57d5ddbed2fbc9f7e48f3c545f81211ae36158dde11a6800b7f0a"
+        },
+        {
+          "path": "sources/dubigame-407.html",
+          "bytes": 51117,
+          "crc32": "f567b204",
+          "sha256": "110090403e0da291d2624d3d6ae23818d71e82f5793b1c9b21cc454f4e729e12"
+        },
+        {
+          "path": "sources/dubigame-408.html",
+          "bytes": 47023,
+          "crc32": "256f8ff2",
+          "sha256": "218fed4e4d30f15038a413cd6f8770b1350c8f5f9b6f5ab592f72b24b2ef495c"
+        },
+        {
+          "path": "sources/dubigame-421.html",
+          "bytes": 45848,
+          "crc32": "9ee9b471",
+          "sha256": "9817007793fb7ef1d8d6cb9a02db7a2c2974a96b003f02dc4d571f14a70cd948"
+        },
+        {
+          "path": "sources/dubigame-433.html",
+          "bytes": 48960,
+          "crc32": "aab18670",
+          "sha256": "325d72602b2e75ac716d2318e108777ee3bd76228b87064d03dedee412171f77"
+        },
+        {
+          "path": "sources/dubigame-444.html",
+          "bytes": 47312,
+          "crc32": "8e803ff3",
+          "sha256": "ecaac870573cb575fa32f9e4b45ca37012bee36a3a32799614041b1389825de2"
+        },
+        {
+          "path": "sources/dubigame-452.html",
+          "bytes": 47829,
+          "crc32": "455872da",
+          "sha256": "2fd7c444693cfbe7bd97e79cd9f3c8de67813c94a2f0e1cb08dd5231d41be404"
+        },
+        {
+          "path": "sources/dubigame-454.html",
+          "bytes": 45753,
+          "crc32": "dc24c34d",
+          "sha256": "36066bf66ba7953402ef7240c027e9634982bb823efb35a6b2e0175f6fc0e6b5"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 64505,
+          "crc32": "3cdd3c78",
+          "sha256": "698829a2c6153beeb4596253f865d77bfb1779ad55c2f4b0f28f36f791304786"
+        }
+      ]
+    },
+    {
+      "id": "gametop-nate-puzzle-bobble-hidden-wap",
+      "repositoryPath": "research/archives/GameTop-NATE-Puzzle-Bobble-Hidden-WAP.zip",
+      "bytes": 90292,
+      "sha256": "cb6ad6428600aa9863ddc47b64ecdfa98b018080e94122a4a7656ac07f62ecda",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/gametop-index.json",
+          "bytes": 843,
+          "crc32": "bec341c1",
+          "sha256": "39990ff98e3c85a1cfa6ac9d2bc758fb53bfabd06018cacb3fd787bbdcf6c373"
+        },
+        {
+          "path": "evidence/mplayon-index-0.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "evidence/mplayon-index-2.json",
+          "bytes": 1494,
+          "crc32": "081db2f5",
+          "sha256": "981f3951a0253c7c620180e8e6b75deae4d8b8cb1ebcd1eb7e1390d3eb3c3dce"
+        },
+        {
+          "path": "evidence/mplayon-index-3.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "evidence/related-wayback-audit.json",
+          "bytes": 404511,
+          "crc32": "769feeb5",
+          "sha256": "57843185e84a4fd6fd8d7bcaaacc8bd873dc3a0775c43b148e192d2a44db161e"
+        },
+        {
+          "path": "evidence/report.json",
+          "bytes": 3324,
+          "crc32": "3c18c2e8",
+          "sha256": "ad3c825951f290bb49ba2f957a7c24c46efc5a48b89a057aceb2422fa9442620"
+        },
+        {
+          "path": "evidence/sgs-scan.json",
+          "bytes": 35313,
+          "crc32": "01519795",
+          "sha256": "ec5066f5c38912e2f47361197de017271f6e4ef45382cff78d7c10d4caa00213"
+        },
+        {
+          "path": "originals/hidden-20030213.wml",
+          "bytes": 657,
+          "crc32": "aa28108e",
+          "sha256": "73e4865eebc90d2ccd45820e1b895035d8c10eb8d15844356931e854cdd0c8a3"
+        },
+        {
+          "path": "originals/puzzle-bobble-20050507.wml",
+          "bytes": 478,
+          "crc32": "ec598ef3",
+          "sha256": "380ccb464fe69258deea3ecceeb6f0b680865881cadbfe9ced6ab3b8b8af7a9b"
+        },
+        {
+          "path": "originals/puzzle-bobble-20050819.wml",
+          "bytes": 529,
+          "crc32": "cea1613a",
+          "sha256": "2e293e6dfdfbb2ab51bb1b07619726c0120efb80a1723b18eae37267173562eb"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1788,
+          "crc32": "93f6e358",
+          "sha256": "afb4c32fc76f0c6a414eb51f678b4d6bcab7461fa84de0953ba181689dc11156"
+        }
+      ]
+    },
+    {
       "id": "webeng-nate-gvm-game-catalogues",
       "repositoryPath": "research/archives/WebENG-NATE-GVM-Game-Catalogues.zip",
       "bytes": 255222,
@@ -172492,9 +174712,9 @@
     }
   ],
   "counts": {
-    "archives": 90,
-    "archiveBytes": 1699403906,
-    "fileMembers": 28613,
-    "uniqueMemberHashes": 15457
+    "archives": 92,
+    "archiveBytes": 1717573104,
+    "fileMembers": 28980,
+    "uniqueMemberHashes": 15649
   }
 }
