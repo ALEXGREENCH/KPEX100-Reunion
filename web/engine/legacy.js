@@ -56,7 +56,15 @@ export function parseLegacy(input) {
     resources.push({ type, offset: pos, data: body.subarray(pos, pos + length) });
     pos += length;
   }
-  if (pos !== body.length) throw new SgsError('Legacy resource sizes do not cover file');
+  // The preserved Ragnarok v2 copy has CRLF after its complete resource data.
+  // Native ARM loading/execution matches the covered-prefix control; preserve
+  // the original bytes and admit only this bounded suffix, not arbitrary data.
+  const trailingBytes = body.length - pos;
+  if (
+    trailingBytes !== 0 &&
+    !(version === 2 && trailingBytes === 2 && body[pos] === 13 && body[pos + 1] === 10)
+  )
+    throw new SgsError('Legacy resource sizes do not cover file');
   return {
     body,
     version,
@@ -67,7 +75,8 @@ export function parseLegacy(input) {
     b,
     c,
     d,
-    declaredSize: body.length,
+    declaredSize: pos,
+    trailingBytes,
     title: decodeKorean(body.subarray(10, 26)),
     entries,
     variables,

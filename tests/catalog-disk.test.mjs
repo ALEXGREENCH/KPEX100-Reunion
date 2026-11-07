@@ -7,9 +7,9 @@ const asset = (path) => new Uint8Array(readFileSync(new URL('../web/' + path, im
 const catalog = JSON.parse(new TextDecoder().decode(asset('data/catalog.json')));
 const digest = (data) => createHash('sha256').update(data).digest('hex');
 
-test('all nine ROMs, 69 SGS and three reached states retain original bytes', () => {
+test('all nine ROMs, 76 SGS and three reached states retain original bytes', () => {
   assert.equal(catalog.firmwares.length, 9);
-  assert.equal(catalog.games.length, 69);
+  assert.equal(catalog.games.length, 76);
   assert.equal(catalog.states.length, 3);
   for (const group of [catalog.firmwares, catalog.games, catalog.states]) {
     assert.equal(new Set(group.map((x) => x.id)).size, group.length);

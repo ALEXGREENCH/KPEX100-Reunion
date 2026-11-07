@@ -44,6 +44,7 @@ try {
       wrapperBytes: parsed.wrapperBytes,
       xorMask: parsed.xorMask,
       declaredSize: parsed.declaredSize,
+      trailingBytes: parsed.body.length - parsed.declaredSize,
       sections: {
         variables: parsed.a,
         initialValues: parsed.b,

@@ -145,3 +145,5 @@ SGS на любом устройстве. SDK и руководства опис
 
 - [Samsung/LG: 11 оригинальных архивов и игровые PXO](korean-phone-preservation-pass16.md): распаковка, регистрация GNEX в SH110 и точные границы поиска SGS.
 - [GLib и указатель NamuWiki](sinjisoft-glib-source-and-namu.md): 169 сырых Git blob, история проекта и восемь записей нативных игр.
+
+- [Brewgames: семь SGS и парные проверки управления](brewgames-gvm-games.md): .hack//SIGN, Ragnarok, Mashimaro, Bukbeol, Fruit Tycoon, вариант Zzayo и Fantasy Blue.

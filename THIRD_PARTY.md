@@ -188,3 +188,9 @@ Firmware and games retain their original rights. The separate portable layer
 decoder and upstream LZO source/library are GPL-2.0-or-later; the unchanged legacy
 KDZ helper retains its MIT licence. All corresponding source and notices are in
 the tools/evidence download, separate from the MIT emulator.
+
+The [Brewgames GVM attachments](doc/brewgames-gvm-games.md) retain their original
+notices and rights. Nine received ZIPs and all sidecars are preserved unchanged;
+seven original SGS are also in the playable web collection. An eight-byte
+Tycoon variant and Ragnarok trailing CRLF are explicitly documented. Reunion
+MIT does not authenticate or relicense these historical game copies.

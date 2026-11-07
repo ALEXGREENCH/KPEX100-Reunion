@@ -8,6 +8,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 VALIDATION = ROOT / "validation"
 CATALOG = ROOT / "web/data/catalog.json"
+SCENARIO_TESTS = {
+    "hellfire-witop-v1": {
+        "record": "tests/hellfire-witop.test.mjs",
+        "note": "Original legacy ARM interpreter, recorded movement/fire and exact/guarded comparison",
+    }
+}
 
 HINTS = {
     "hellfire": "Начать игру — Enter / PLAY. Движение — стрелки.",
@@ -69,6 +75,7 @@ def main():
         "s60-catalog-gameplay.json",
         "s60-extra-gameplay.json",
         "developer-sample-gameplay.json",
+        "brewgames-gameplay.json",
     ):
         path = VALIDATION / name
         if not path.exists():
@@ -112,7 +119,7 @@ def main():
         has_native_golden = game["sourceName"] in native_names
         if has_native_golden:
             game["compatibility"] = "verified"
-        elif proof:
+        elif proof or game["id"] in SCENARIO_TESTS:
             game["compatibility"] = (
                 "sample"
                 if game.get("applicationType") == "sample"
@@ -142,11 +149,12 @@ def main():
                 "compatibility": game["compatibility"],
                 "evidence": (
                     proof
+                    or SCENARIO_TESTS.get(game["id"])
                     or {
                         "record": "tests/gnex.test.mjs",
                         "note": "Native desktop pixel, event and syscall goldens",
                     }
-                    if proof or has_native_golden
+                    if proof or has_native_golden or game["id"] in SCENARIO_TESTS
                     else None
                 ),
             }
