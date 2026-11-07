@@ -4,6 +4,21 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "motorola-v730-aone-ruim",
+      "title": "Motorola V730 AOne R-UIM: пять образов",
+      "category": "Прошивки телефонов",
+      "description": "Оригинальные 7z четырёх версий, включая 8-МиБ 19.03.19. В хвосте этого образа есть проверенные записи Java MIDlet.",
+      "repositoryPath": "research/archives/Motorola-V730-AOne-RUIM-Firmware.zip",
+      "bytes": 12358147,
+      "sha256": "7748669c038158b2c34e320f99ed735908dee76b65b183204e5e1fad046f4863",
+      "sources": [
+        {
+          "label": "Каталог прошивок V730",
+          "url": "https://firmware.center/firmware/Motorola/V730%20(AOne_RUIM)/Flash%20Files/"
+        }
+      ]
+    },
+    {
       "id": "wayback-delta-pass8",
       "title": "Wayback Pass 8: дополнение к архиву GVM и GNEX",
       "category": "Wayback и форумы",
@@ -1620,6 +1635,10 @@
     {
       "title": "GVM Club: Tetris, 묵!찌!빠! и дополнение Wayback Pass 8",
       "repositoryPath": "doc/gvmclub-2003-games-wayback.md"
+    },
+    {
+      "title": "Motorola V730 AOne R-UIM: образы и фрагменты MIDlet",
+      "repositoryPath": "doc/motorola-v730-firmware.md"
     }
   ]
 }

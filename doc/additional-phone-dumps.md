@@ -5,6 +5,9 @@
 распаковке 7-Zip. Новых SGS в проверенных представлениях не извлечено.
 [URL, хеши, смещения и границы проверки](../validation/additional-phone-dumps-20261105.json).
 
+Отдельно сохранены [пять образов V730 AOne R-UIM](motorola-v730-firmware.md).
+В 8-МиБ файле 19.03.19 обнаружены отдельные Java MIDlet-записи.
+
 ## Motorola V740: получены два сегмента
 
 В [V740_memdump.7z](https://archive.sunderland93.ru/Firmwares/Motorola/V740/V740_memdump.7z)

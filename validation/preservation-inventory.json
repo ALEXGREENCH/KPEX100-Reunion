@@ -3,6 +3,129 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "motorola-v730-aone-ruim",
+      "repositoryPath": "research/archives/Motorola-V730-AOne-RUIM-Firmware.zip",
+      "bytes": 12358147,
+      "sha256": "7748669c038158b2c34e320f99ed735908dee76b65b183204e5e1fad046f4863",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/java-local-records/006e6427/MANIFEST.MF",
+          "bytes": 249,
+          "crc32": "72f38e43",
+          "sha256": "bea18d476e2b0059b83c32fd7da534678dd941dd4e192fa7dc1daa01bbe2ff38"
+        },
+        {
+          "path": "derived/java-local-records/006e650b/Kara.class",
+          "bytes": 808,
+          "crc32": "7f5e5fd4",
+          "sha256": "eb0fd42cc9073613093297dec6efc54e712a3012efc805b08c85e8f9feb77618"
+        },
+        {
+          "path": "derived/java-local-records/00707827/MANIFEST.MF",
+          "bytes": 251,
+          "crc32": "a074d921",
+          "sha256": "859f85ddd4cba62d9d0b2dcaaa9c00f887da68ed6e22708ef0d505a60201ce95"
+        },
+        {
+          "path": "derived/java-local-records/0070790e/Kara.class",
+          "bytes": 808,
+          "crc32": "7f5e5fd4",
+          "sha256": "eb0fd42cc9073613093297dec6efc54e712a3012efc805b08c85e8f9feb77618"
+        },
+        {
+          "path": "derived/java-local-records/0072a427/MANIFEST.MF",
+          "bytes": 251,
+          "crc32": "a074d921",
+          "sha256": "859f85ddd4cba62d9d0b2dcaaa9c00f887da68ed6e22708ef0d505a60201ce95"
+        },
+        {
+          "path": "derived/java-local-records/0072a50e/Kara.class",
+          "bytes": 808,
+          "crc32": "7f5e5fd4",
+          "sha256": "eb0fd42cc9073613093297dec6efc54e712a3012efc805b08c85e8f9feb77618"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 3631,
+          "crc32": "98fd2745",
+          "sha256": "c21000d42519bf29ee26316f61a1f1aba3458fa07e04daf90bb067c68494864d"
+        },
+        {
+          "path": "original/AOne_RUIM_8M_Ver_19.03.19.bin.7z",
+          "bytes": 2629597,
+          "crc32": "9d14dd83",
+          "sha256": "56e3f86b32efef8e3bddd1ff83a33e1677b25583ca43d90e8e74160eb21a03a7"
+        },
+        {
+          "path": "original/AOne_RUIM_Ver_19.03.12.bin.7z",
+          "bytes": 2422908,
+          "crc32": "0342a05d",
+          "sha256": "a2f83c77cea1dc5250aa0a923ecd120974ecdcceaa6e31bceaf55cde2d8c78fb"
+        },
+        {
+          "path": "original/AOne_RUIM_Ver_19.03.13.bin.7z",
+          "bytes": 2423885,
+          "crc32": "92edbd0f",
+          "sha256": "250f93689cebd85d8d855c7e16d5a803a33be3cc3579fd59e1303fb7f9480a8d"
+        },
+        {
+          "path": "original/AOne_RUIM_Ver_19.03.17.bin.7z",
+          "bytes": 2428847,
+          "crc32": "18cd5b72",
+          "sha256": "fd53e50b5df3a0d746b47e10f9c11403b6367295601dd6ef8d12e6eab57d0a5a"
+        },
+        {
+          "path": "original/AOne_RUIM_Ver_19.03.19.bin.7z",
+          "bytes": 2429451,
+          "crc32": "fd46c61e",
+          "sha256": "eddd263faed0056eca8386b5cea59ad8dfd0cd97f688662d928fb7196b183b60"
+        },
+        {
+          "path": "sources/downloads.json",
+          "bytes": 4698,
+          "crc32": "c20e6c24",
+          "sha256": "ddfa6e91db40e94daab637c25ec873699d3426b9e2fb761bb6ea322944c4c421"
+        },
+        {
+          "path": "sources/pages/19.03.12.html",
+          "bytes": 2579,
+          "crc32": "e0239af9",
+          "sha256": "d791e436de517e11f036ef7eba68c94a0a8436af32e5e72acff75d66ef7ac7eb"
+        },
+        {
+          "path": "sources/pages/19.03.13.html",
+          "bytes": 2579,
+          "crc32": "1de99b36",
+          "sha256": "e2501ffc9788d3e8bbb31903ec3d23b9fc0ecf807fe9a0719299488688eae7c7"
+        },
+        {
+          "path": "sources/pages/19.03.17.html",
+          "bytes": 2579,
+          "crc32": "9fa51c9b",
+          "sha256": "7a4aeedb52ec8513aafd0e7833a56dad9697f0b3088dda34e02da8877ad97fb6"
+        },
+        {
+          "path": "sources/pages/19.03.19.html",
+          "bytes": 2919,
+          "crc32": "2158078f",
+          "sha256": "fde627589883c3edf385b759b0aec73badeb8f5fb4d13cb083bc1fdbd081e7df"
+        },
+        {
+          "path": "sources/pages/index.html",
+          "bytes": 3425,
+          "crc32": "f906a1c3",
+          "sha256": "65294aba06d83779abe04ae23965ab35f816741b99c1c02c853737029d36d7a2"
+        },
+        {
+          "path": "validation/v730.json",
+          "bytes": 73204,
+          "crc32": "0ab245fb",
+          "sha256": "0b94acb8c89f6d7fb8a609474f01edb17f7449cb8219fb76be84af513f459722"
+        }
+      ]
+    },
+    {
       "id": "wayback-delta-pass8",
       "repositoryPath": "research/archives/GNEX-GVM-Wayback-Delta-Pass8-20261107.zip",
       "bytes": 35978593,
@@ -166774,9 +166897,9 @@
     }
   ],
   "counts": {
-    "archives": 72,
-    "archiveBytes": 1212837367,
-    "fileMembers": 27687,
-    "uniqueMemberHashes": 14757
+    "archives": 73,
+    "archiveBytes": 1225195514,
+    "fileMembers": 27706,
+    "uniqueMemberHashes": 14773
   }
 }
