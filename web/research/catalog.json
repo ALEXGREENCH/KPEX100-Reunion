@@ -4,6 +4,36 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "gvmclub-2003-game-attachments",
+      "title": "GVM Club: семь вложений к играм и сетевому примеру",
+      "category": "Wayback и форумы",
+      "description": "11 исходных страниц за 2003–2004 годы, точные адреса семи ZIP и результаты проверки. Бинарники остаются в поиске.",
+      "repositoryPath": "research/archives/GVM-Club-2003-Game-Attachment-Links.zip",
+      "bytes": 47209,
+      "sha256": "edb8262dcf22fc36175216d47911b0c9ee1215a25f183d45ebdeceb943380f56",
+      "sources": [
+        {
+          "label": "Раздел обмена исходниками GVM Club",
+          "url": "https://web.archive.org/web/20031011041933id_/http://gvmclub.com:80/data/source/list.php3?table=tbl_pds_source"
+        }
+      ]
+    },
+    {
+      "id": "motorola-v730-recovered-midlets",
+      "title": "Motorola V730: два восстановленных Java MIDlet",
+      "category": "Прошивки телефонов",
+      "description": "LianQu90 и XiangYue98. Исходные байты двух JAR и JAD из 8-МиБ образа 19.03.19, извлекатель и манифест с CRC.",
+      "repositoryPath": "research/archives/Motorola-V730-Recovered-MIDlets.zip",
+      "bytes": 196832,
+      "sha256": "0e6a9911f56063963b8756bfe075f8824fbf599e780cf1e4b219c5bfb6e0d355",
+      "sources": [
+        {
+          "label": "Оригинальный 8-МиБ образ",
+          "url": "https://firmware.center/firmware/Motorola/V730%20(AOne_RUIM)/Flash%20Files/AOne_RUIM_Ver_19.03.19/AOne_RUIM_8M_Ver_19.03.19.bin.7z"
+        }
+      ]
+    },
+    {
       "id": "motorola-v730-aone-ruim",
       "title": "Motorola V730 AOne R-UIM: пять образов",
       "category": "Прошивки телефонов",
@@ -1637,8 +1667,12 @@
       "repositoryPath": "doc/gvmclub-2003-games-wayback.md"
     },
     {
-      "title": "Motorola V730 AOne R-UIM: образы и фрагменты MIDlet",
+      "title": "Motorola V730 AOne R-UIM: образы и восстановление MIDlet",
       "repositoryPath": "doc/motorola-v730-firmware.md"
+    },
+    {
+      "title": "GVM Club: поиск семи ZIP по публикациям 2003 года",
+      "repositoryPath": "doc/gvmclub-2003-game-attachments.md"
     }
   ]
 }

@@ -3,6 +3,132 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "gvmclub-2003-game-attachments",
+      "repositoryPath": "research/archives/GVM-Club-2003-Game-Attachment-Links.zip",
+      "bytes": 47209,
+      "sha256": "edb8262dcf22fc36175216d47911b0c9ee1215a25f183d45ebdeceb943380f56",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "original/gvmclub-20030514064717-56ee7d7be351.html",
+          "bytes": 21081,
+          "crc32": "90d8ed64",
+          "sha256": "56ee7d7be351ec5bdd32b263913111e329993914294c7bf470c545c749609e5a"
+        },
+        {
+          "path": "original/gvmclub-20030726025754-cc57b6b716cd.html",
+          "bytes": 14147,
+          "crc32": "7acae61b",
+          "sha256": "cc57b6b716cd40fd90d5ca6128b1a07a69fff98df965deffa028dc8197cc8eac"
+        },
+        {
+          "path": "original/gvmclub-20031011041933-860532b6aaa2.html",
+          "bytes": 21047,
+          "crc32": "931a88c9",
+          "sha256": "860532b6aaa2a460f77e0c3530e02b74017000f828a9bdb0e7dc8faef88757a8"
+        },
+        {
+          "path": "original/gvmclub-20031021120135-2ece075274c4.html",
+          "bytes": 14195,
+          "crc32": "4f901b7f",
+          "sha256": "2ece075274c46db35a6a9240db6a03a58acbc275e6ebc9a95b936c9a40544baa"
+        },
+        {
+          "path": "original/gvmclub-20031021121407-1e75ce53efdd.html",
+          "bytes": 14380,
+          "crc32": "f3253dc2",
+          "sha256": "1e75ce53efddb2676d1ce014eb8ba27c1048b71397b8fcb2778dc3e67510f1a1"
+        },
+        {
+          "path": "original/gvmclub-20040123181033-4b3dfdcf13e1.html",
+          "bytes": 14654,
+          "crc32": "6262a02a",
+          "sha256": "4b3dfdcf13e136a92e708ecd45620f7f7a80bf5c12da49dd724179eae415befe"
+        },
+        {
+          "path": "original/gvmclub-20040214182154-669c80ac19a8.html",
+          "bytes": 21108,
+          "crc32": "e545f258",
+          "sha256": "669c80ac19a8278ef0a8aa12797dc9b43769ce04654a6139499669afeeefb75e"
+        },
+        {
+          "path": "original/gvmclub-20040815051738-12d1db47f31d.html",
+          "bytes": 14525,
+          "crc32": "77985890",
+          "sha256": "12d1db47f31d640a8871c6aa503c57a18f9ab3ae6997011f2e6518a7f47f3a9f"
+        },
+        {
+          "path": "original/gvmclub-20040902235142-8a4bfdaad3cf.html",
+          "bytes": 14525,
+          "crc32": "7ac79516",
+          "sha256": "8a4bfdaad3cff42002e0b07f057a09f1c143e816f580ab35d787a0d006397097"
+        },
+        {
+          "path": "original/gvmclub-20040903000959-7cb30092ddd7.html",
+          "bytes": 14701,
+          "crc32": "964e146a",
+          "sha256": "7cb30092ddd7e8b9f78acc0eda8af8cb8c77e7d708139ca11ecdace53e2f2987"
+        },
+        {
+          "path": "original/gvmclub-20041117194435-4a01fd03aab6.html",
+          "bytes": 21108,
+          "crc32": "e118c0b6",
+          "sha256": "4a01fd03aab611f349fc5887bff9c3acf4bab748976fadef70e9c7d483413f01"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 26630,
+          "crc32": "af63e8e4",
+          "sha256": "ab336ff0fa21209a6447b95caa8cd01ba492e52a615c6bebac3543a1aaf16f94"
+        }
+      ]
+    },
+    {
+      "id": "motorola-v730-recovered-midlets",
+      "repositoryPath": "research/archives/Motorola-V730-Recovered-MIDlets.zip",
+      "bytes": 196832,
+      "sha256": "0e6a9911f56063963b8756bfe075f8824fbf599e780cf1e4b219c5bfb6e0d355",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/I/0/0.jar",
+          "bytes": 94712,
+          "crc32": "a6a68708",
+          "sha256": "99798c9ac709add8d76b5e3eacb200f45025c49296daf53f488a89a51fac6524"
+        },
+        {
+          "path": "derived/I/0/DESC.jad",
+          "bytes": 281,
+          "crc32": "7346e8bd",
+          "sha256": "67ed4950f27aebd9685078385c4dd02f584c96cdf73b39a30ae2e9993364d0e0"
+        },
+        {
+          "path": "derived/I/1/1.jar",
+          "bytes": 97078,
+          "crc32": "7f26541d",
+          "sha256": "c6c2f716df996b4730c1c1e59884d2ee8b2867cd73164ef9b3a7c96ecc8d147f"
+        },
+        {
+          "path": "derived/I/1/DESC.jad",
+          "bytes": 284,
+          "crc32": "b644b86c",
+          "sha256": "155c8e55cb893f5591367b9cb8dd2eda00c4f20b05ebc756eaa3fee021ed7e58"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 35676,
+          "crc32": "e3177c24",
+          "sha256": "4cd4c84bc053d3faae050cf4fbf2c00e6bd5f166baa1b62c75391c4aa9948da8"
+        },
+        {
+          "path": "tools/extract-v730-jar.py",
+          "bytes": 5267,
+          "crc32": "e50d6630",
+          "sha256": "6696afb767a305ac3fdad4fc096937e9f19feaac98312526fad0dcb56010044c"
+        }
+      ]
+    },
+    {
       "id": "motorola-v730-aone-ruim",
       "repositoryPath": "research/archives/Motorola-V730-AOne-RUIM-Firmware.zip",
       "bytes": 12358147,
@@ -166897,9 +167023,9 @@
     }
   ],
   "counts": {
-    "archives": 73,
-    "archiveBytes": 1225195514,
-    "fileMembers": 27706,
-    "uniqueMemberHashes": 14773
+    "archives": 75,
+    "archiveBytes": 1225439555,
+    "fileMembers": 27724,
+    "uniqueMemberHashes": 14780
   }
 }
