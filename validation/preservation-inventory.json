@@ -3,6 +3,741 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "clubzio-2003-2004-game-catalogue",
+      "repositoryPath": "research/archives/ClubZio-2003-2004-Game-Catalogue.zip",
+      "bytes": 372386,
+      "sha256": "ca25df1c1ea87b84ab2b1aa0ddbd2fee786a58561bccf15266a7a0abea0e8b74",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/cdx/catalog-error.html",
+          "bytes": 11832,
+          "crc32": "337e1951",
+          "sha256": "e084d527921708642a79724e9f0210da659bbc0905c6ce9a3a1f416e4628091c"
+        },
+        {
+          "path": "evidence/cdx/catalog-headers.txt",
+          "bytes": 357,
+          "crc32": "6ee90b24",
+          "sha256": "fb5f2baa3c51ef56a6b2cf7b091b36435b9cf51e272224d5300e16e5715dcbc7"
+        },
+        {
+          "path": "evidence/cdx/files-error.html",
+          "bytes": 11832,
+          "crc32": "337e1951",
+          "sha256": "e084d527921708642a79724e9f0210da659bbc0905c6ce9a3a1f416e4628091c"
+        },
+        {
+          "path": "evidence/cdx/files-headers.txt",
+          "bytes": 357,
+          "crc32": "6ee90b24",
+          "sha256": "fb5f2baa3c51ef56a6b2cf7b091b36435b9cf51e272224d5300e16e5715dcbc7"
+        },
+        {
+          "path": "evidence/cdx/old-host-error.html",
+          "bytes": 11832,
+          "crc32": "337e1951",
+          "sha256": "e084d527921708642a79724e9f0210da659bbc0905c6ce9a3a1f416e4628091c"
+        },
+        {
+          "path": "evidence/cdx/old-host-headers.txt",
+          "bytes": 357,
+          "crc32": "6ee90b24",
+          "sha256": "fb5f2baa3c51ef56a6b2cf7b091b36435b9cf51e272224d5300e16e5715dcbc7"
+        },
+        {
+          "path": "evidence/clubzio.json",
+          "bytes": 72736,
+          "crc32": "380316e9",
+          "sha256": "5a52d9b5b80898b82e9ce06d50bb2670cc18b0ac892490fe3eceee6595abd428"
+        },
+        {
+          "path": "evidence/headers/aladdin-way.txt",
+          "bytes": 2831,
+          "crc32": "c4ebb796",
+          "sha256": "97c37b9021910a7c1c2eb80acad6852a57147608304fe6061f58596dbebb6db8"
+        },
+        {
+          "path": "evidence/headers/blue-rescue-way.txt",
+          "bytes": 2839,
+          "crc32": "576a1f38",
+          "sha256": "4e87d8e839e5086baf9bba150bc7fd254189e82ec92b09efe755683c9a3be052"
+        },
+        {
+          "path": "evidence/headers/clubzio-20031212.txt",
+          "bytes": 1843,
+          "crc32": "a65ff453",
+          "sha256": "6dfc264e36b60639f77cb5e523516e15cca90db80d7d258a7e6ba4967784747f"
+        },
+        {
+          "path": "evidence/headers/clubzio-kr-early.txt",
+          "bytes": 5352,
+          "crc32": "ce1d2ccb",
+          "sha256": "fad5e79e9a7850c76a2a22749165b6750a2279fb35e4406c7b4c41bf8098a374"
+        },
+        {
+          "path": "evidence/headers/clubzio-map.txt",
+          "bytes": 2870,
+          "crc32": "cec76678",
+          "sha256": "bf35dd5206206ed52cb0be4cd6739ce3039014723b398be41e94817932ba47ac"
+        },
+        {
+          "path": "evidence/headers/detail-10.txt",
+          "bytes": 2919,
+          "crc32": "7bb5b818",
+          "sha256": "e4213cfe83450a7219335f0b471d158fe96e6f23c8c1b6f5997e6840c5c4f6df"
+        },
+        {
+          "path": "evidence/headers/detail-11.txt",
+          "bytes": 2918,
+          "crc32": "7e202ea9",
+          "sha256": "a8b8b6315184b4a4fd9f3658574a14b2de4752dcf7f8200cfd46a4e4c05999b5"
+        },
+        {
+          "path": "evidence/headers/detail-12.txt",
+          "bytes": 2918,
+          "crc32": "a8e98a3d",
+          "sha256": "e213ac264c203086c997645e8d24ec920c5c69789e921cb859801c3608b4cc59"
+        },
+        {
+          "path": "evidence/headers/detail-13.txt",
+          "bytes": 2917,
+          "crc32": "66de216f",
+          "sha256": "c4f6f99644d92a328d75e3279dfd5064a09afeadcc91f549426552e835115495"
+        },
+        {
+          "path": "evidence/headers/detail-14.txt",
+          "bytes": 2918,
+          "crc32": "fc7c502d",
+          "sha256": "3502027b37d9dabb2ea3d04e487cbc4905e6da3a5a45746b201507c2afb370b6"
+        },
+        {
+          "path": "evidence/headers/detail-17.txt",
+          "bytes": 2921,
+          "crc32": "11ddf884",
+          "sha256": "26baa11f52109ed27afc6ce67e35fd06dbb08cf23d82bac7deb7b2ddabb96555"
+        },
+        {
+          "path": "evidence/headers/detail-23.txt",
+          "bytes": 2884,
+          "crc32": "5810a98a",
+          "sha256": "b1b7499dbb2bf60e52d9a161fa823a79c0445e1f836f9ea0d01e888bc159436e"
+        },
+        {
+          "path": "evidence/headers/detail-30-retry.txt",
+          "bytes": 1956,
+          "crc32": "050fa9e0",
+          "sha256": "7ca56419f1d5cfd3c6db0234bd5cda7cac5ccb00e6488b3f7d10a48baeeb491d"
+        },
+        {
+          "path": "evidence/headers/detail-30.txt",
+          "bytes": 2917,
+          "crc32": "b0c4cea5",
+          "sha256": "cbd02128ae8b69ed1743dc3651c9733743eabbbbef55567d6fa27829573cdaa4"
+        },
+        {
+          "path": "evidence/headers/detail-34-no-genre.txt",
+          "bytes": 2903,
+          "crc32": "d7aef146",
+          "sha256": "2839292abbb4fb8e8fbc4bb710ee125b9674758c40de7c98e256c86c634b3706"
+        },
+        {
+          "path": "evidence/headers/detail-35.txt",
+          "bytes": 2919,
+          "crc32": "09ba8693",
+          "sha256": "9a356e2aff4a24764d074dc74be26f6dfbafc1f55b8d7bb34915e78270d5e6b1"
+        },
+        {
+          "path": "evidence/headers/detail-36.txt",
+          "bytes": 2919,
+          "crc32": "984c6357",
+          "sha256": "40a5535366f46268cb70dea1a6b61b4e4b02286fb0466e9aa05f7330dfc76aef"
+        },
+        {
+          "path": "evidence/headers/detail-38-no-genre.txt",
+          "bytes": 2902,
+          "crc32": "baeda484",
+          "sha256": "6fe6310f62eef038f26ebe9cd4340d217cc7abf6cc4774ca5d279dc964eafbd4"
+        },
+        {
+          "path": "evidence/headers/detail-41.txt",
+          "bytes": 3913,
+          "crc32": "745306a4",
+          "sha256": "9eb7c189e6200b6b59130da4c826445bf808df2b62ce1b792a385e7d4f105b87"
+        },
+        {
+          "path": "evidence/headers/detail-44.txt",
+          "bytes": 2920,
+          "crc32": "81fa0d49",
+          "sha256": "566ddb2f809dbcef097d9fb7419d0b39ff3dd8a62625cbe3c467055b22a7c75a"
+        },
+        {
+          "path": "evidence/headers/detail-45.txt",
+          "bytes": 2917,
+          "crc32": "ae994747",
+          "sha256": "bb60255e2eb24eb2d009e108586661cae3d2592df495024525c20132189880c7"
+        },
+        {
+          "path": "evidence/headers/detail-46.txt",
+          "bytes": 2920,
+          "crc32": "374dd2a3",
+          "sha256": "c3feb21b5bc96945411f790296536c5516650d22ad7bf80824df44c81535db81"
+        },
+        {
+          "path": "evidence/headers/detail-48.txt",
+          "bytes": 2920,
+          "crc32": "e36e4f74",
+          "sha256": "00b1eedf0b2b1d473d2db18cda017a132bf83a8977b7fc0bc702a60032809d1f"
+        },
+        {
+          "path": "evidence/headers/detail-52.txt",
+          "bytes": 2920,
+          "crc32": "b90ac3c1",
+          "sha256": "7c40a024df740b9abba8e8d185607d2117a5f540cc8d2f85a9c539bae01098d8"
+        },
+        {
+          "path": "evidence/headers/detail-6.txt",
+          "bytes": 2913,
+          "crc32": "6638bf1e",
+          "sha256": "5019f0540fa9354e339c696cb7396d4cbd60bc8f3bd2104ba5488f11164e4962"
+        },
+        {
+          "path": "evidence/headers/detail-7.txt",
+          "bytes": 2919,
+          "crc32": "1f441147",
+          "sha256": "6151aae73097b2dfb5ff24b643f228c85a5158c021e6fb21094becfa6606699b"
+        },
+        {
+          "path": "evidence/headers/developer-kr.txt",
+          "bytes": 2621,
+          "crc32": "fe7a14df",
+          "sha256": "82218a14f72edf8632c0c4d3e86f15f2d7978e4f7b476d932723b156fbbb6881"
+        },
+        {
+          "path": "evidence/headers/game-index.txt",
+          "bytes": 2819,
+          "crc32": "535cedcd",
+          "sha256": "4bf20eb38a5bddaef33db49fa3d08de7a49fdbd7cc359abd76d4eae6272de2d0"
+        },
+        {
+          "path": "evidence/headers/gunner-controls-image-retry.txt",
+          "bytes": 760,
+          "crc32": "fcd755f2",
+          "sha256": "2413619b81aabb6e9f76a27f971de615713677c7f4b93bd7b9cce9389411573f"
+        },
+        {
+          "path": "evidence/headers/gunner-detail.txt",
+          "bytes": 2912,
+          "crc32": "162a7b29",
+          "sha256": "6701d4a689b932e1c8a30c40c8c739ade88a81c3d720b8b374fe09c54391e9a3"
+        },
+        {
+          "path": "evidence/headers/gunner-gameshot-01.txt",
+          "bytes": 2818,
+          "crc32": "26c48212",
+          "sha256": "86e15deeb0d5e749d6c8491449ed874c0e4a523b474658930b8bd566b4f60df8"
+        },
+        {
+          "path": "evidence/headers/gunner-gameshot-02.txt",
+          "bytes": 2857,
+          "crc32": "0861c477",
+          "sha256": "d177f7607279243014c2ede96a2ab52790ec7389669d0451145a6ac7f8797432"
+        },
+        {
+          "path": "evidence/headers/gunner-how.txt",
+          "bytes": 2837,
+          "crc32": "e097901a",
+          "sha256": "f0976f45386d7ad8cb072f9559e0f64bedc0890fbebf484dac2f40447c950989"
+        },
+        {
+          "path": "evidence/headers/gunner-list-image.txt",
+          "bytes": 2810,
+          "crc32": "c1c83cfb",
+          "sha256": "1fdacd68263e79d0356ff19bdfbae1b880384087039f7a12407d659d06b7a924"
+        },
+        {
+          "path": "evidence/headers/gunner-review-retry.txt",
+          "bytes": 2850,
+          "crc32": "462b87c0",
+          "sha256": "cf30a284acfcdce5df696d7397ebcf1debb6f840f632815c7f2741bf00ca14f8"
+        },
+        {
+          "path": "evidence/headers/gunner-screenshot-01.txt",
+          "bytes": 2861,
+          "crc32": "ebe60488",
+          "sha256": "460b9893802f6ff017f13e70de898d8c4291e2a6cf7689c8c061475b993186c3"
+        },
+        {
+          "path": "evidence/headers/gunner-screenshot-02.txt",
+          "bytes": 2866,
+          "crc32": "826b7e79",
+          "sha256": "500b5286548ee30008c6dd6d18ecef73ea576c8f01c1f4938d3598a4939a58a4"
+        },
+        {
+          "path": "evidence/headers/gunner-screenshot-03.txt",
+          "bytes": 2865,
+          "crc32": "3d1c6fad",
+          "sha256": "339830ab750d424bb855e7563c143e0709e1e0d86133ab9a0997d823bf7e9d53"
+        },
+        {
+          "path": "evidence/headers/gunner-screenshot-04.txt",
+          "bytes": 2865,
+          "crc32": "e1b6690f",
+          "sha256": "83ecac608fa92ab31dc87620778abae68ca920a793f2180b499953c52523cef3"
+        },
+        {
+          "path": "evidence/headers/gunner-screenshot-05.txt",
+          "bytes": 2864,
+          "crc32": "ac94367d",
+          "sha256": "0b9e9694322a6cee48c044b3303b25b2017f0d0a81c7c770c7588d4f368f748b"
+        },
+        {
+          "path": "evidence/headers/gunner-screenshot-06.txt",
+          "bytes": 1760,
+          "crc32": "f8dbae94",
+          "sha256": "ca49298bcd6a65cfab1a000d3ec22d87fb456592a348ac11710e83420529867b"
+        },
+        {
+          "path": "evidence/headers/gunner-way.txt",
+          "bytes": 2800,
+          "crc32": "167dc989",
+          "sha256": "1dfe01e3090b0b364bb2b3430613659354362c73a4c9d0c4b443a50a2e8549b5"
+        },
+        {
+          "path": "evidence/headers/journey-west-way.txt",
+          "bytes": 2837,
+          "crc32": "f2b54ad0",
+          "sha256": "96b6e6e14816a20f47ceb4273de58d39ccb62247b69255993860af4c2c95d07a"
+        },
+        {
+          "path": "evidence/headers/menu-swf-exact.txt",
+          "bytes": 1829,
+          "crc32": "7ec9b8f7",
+          "sha256": "e8714dc9464468a75aaae5330286badcc33c09eddf2a49fd6266774337670d87"
+        },
+        {
+          "path": "evidence/headers/metalion-way.txt",
+          "bytes": 2829,
+          "crc32": "46fe619c",
+          "sha256": "e739fd60b37762e3338b913f62b6c12dbc85c253800548d9e7c2b68db975cb22"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-how.txt",
+          "bytes": 2836,
+          "crc32": "6a4c65f7",
+          "sha256": "b5bec84027ab303e757018d2415dd208281914698ee3011e886ace72954754ca"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-image.txt",
+          "bytes": 3023,
+          "crc32": "ffad99c7",
+          "sha256": "b8457014689c9503300ba216ddd22dd055aa153b6f274fe61e5708942febd27f"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-shot-01.txt",
+          "bytes": 721,
+          "crc32": "ea6a8186",
+          "sha256": "7a84612cee1490d5e77a2b91b911391dd025869944760888d6be49af4f0c9fe5"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-shot-02.txt",
+          "bytes": 758,
+          "crc32": "97f1c567",
+          "sha256": "1c296f08c911040887bd31d4e393fbe7594807abec43c4031d1cd10f3af4d0e8"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-shot-03.txt",
+          "bytes": 759,
+          "crc32": "005da0a1",
+          "sha256": "21e5036f40d737d6a2c1298bf4e2dd7e7824cb441cdda10ef5da36009bc9ab83"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-shot-04.txt",
+          "bytes": 759,
+          "crc32": "94769ecd",
+          "sha256": "2304c76caf657835544f2f9e8d85b0275f92e0e675e60492ff1d5b9bffa862cb"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-shot-05.txt",
+          "bytes": 756,
+          "crc32": "f73fb96b",
+          "sha256": "830830d95febbca5b11d52c51820997494240b201e08ce1f9591a42be36eb625"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-shot-06.txt",
+          "bytes": 758,
+          "crc32": "24599025",
+          "sha256": "b3e371f6b169e473f8d2ac97bea6e426e220c0ed472c934afa68170e8689637c"
+        },
+        {
+          "path": "evidence/headers/wwe-gnex-way-retry.txt",
+          "bytes": 2840,
+          "crc32": "a64177a9",
+          "sha256": "0fc6ea1a311b3602dec14f4cf40a3b0c2bb7c620a4f69d0a086341f02fe71feb"
+        },
+        {
+          "path": "evidence/headers/wwe-madness-how.txt",
+          "bytes": 2836,
+          "crc32": "d43070f2",
+          "sha256": "e19d34dd54b69892bbaa553c1eb7664eaa317b419e4ceefe45ff070ecaf04533"
+        },
+        {
+          "path": "evidence/headers/wwe-madness-way.txt",
+          "bytes": 2838,
+          "crc32": "98aad9fb",
+          "sha256": "88c5c00d550e65124cac1cd45271f3b18b774056e2b847e9d97ce08896ce9cb9"
+        },
+        {
+          "path": "evidence/links.json",
+          "bytes": 23231,
+          "crc32": "ac324f25",
+          "sha256": "453bcb94c22f59f78715d152589aaf2f4628afd6668cd89ad314c5b092fb33db"
+        },
+        {
+          "path": "evidence/unverified/clubzio-kr-early.bin",
+          "bytes": 30929,
+          "crc32": "79128069",
+          "sha256": "224d0baecd13d9891e72b95823c97077a5720e17ff4c4f55d3a486de3a0c6b52"
+        },
+        {
+          "path": "evidence/unverified/detail-30.bin",
+          "bytes": 14429,
+          "crc32": "ff820c34",
+          "sha256": "0e88b241a5d1f34fc1f23e1ab716aea7471dfb05ce0b0347353ebf9672033d3b"
+        },
+        {
+          "path": "evidence/unverified/developer-kr.bin",
+          "bytes": 3937,
+          "crc32": "700b7214",
+          "sha256": "0a756019ffe35ec838c47d0b1a7d25e115a6c76a9ae6edb05fd8055fdaea7c8f"
+        },
+        {
+          "path": "evidence/unverified/gunner-controls-image-retry.bin",
+          "bytes": 4669,
+          "crc32": "3e8f66e1",
+          "sha256": "594cbe3e43faea1dcf75b0a467110070a8feb7e703494320e0b52daa692c34a9"
+        },
+        {
+          "path": "evidence/unverified/gunner-screenshot-06.bin",
+          "bytes": 4655,
+          "crc32": "516dcbe7",
+          "sha256": "2fb0e33de6d42edd63ff1747666caf818eba132ad487ccc4c9afe7d13f19ba4a"
+        },
+        {
+          "path": "evidence/unverified/wwe-gnex-image.bin",
+          "bytes": 272,
+          "crc32": "f9dcbbbc",
+          "sha256": "830ccfda8e14bcfa22868e415da594d4d272ffa9d083792a1a038ea5e9ee8630"
+        },
+        {
+          "path": "evidence/unverified/wwe-gnex-shot-01.bin",
+          "bytes": 4665,
+          "crc32": "1485c74b",
+          "sha256": "638177ddc34b4c8eb1ecdc98cf5d5a171ec2de3a42539039eb9e1715a673e7d2"
+        },
+        {
+          "path": "evidence/unverified/wwe-gnex-shot-02.bin",
+          "bytes": 4665,
+          "crc32": "9f53e284",
+          "sha256": "a6478aabcddbd15e9ca78ee47f42662bb405cec820ade48fd678d4ff8ce3cfc7"
+        },
+        {
+          "path": "evidence/unverified/wwe-gnex-shot-03.bin",
+          "bytes": 4665,
+          "crc32": "5a7e654c",
+          "sha256": "c3d072491a33af567b975f728576e56ec51627a8dba1941c5b7d12fa7c6a15d6"
+        },
+        {
+          "path": "evidence/unverified/wwe-gnex-shot-04.bin",
+          "bytes": 4665,
+          "crc32": "822ebd5e",
+          "sha256": "eced8d9a618fc74233ffc0e7674caba6a0eada24906805a352c182472d68442e"
+        },
+        {
+          "path": "evidence/unverified/wwe-gnex-shot-05.bin",
+          "bytes": 4665,
+          "crc32": "2090faa5",
+          "sha256": "8086792756dece2d64e640c3caf428676cd4b3baea0887abcaba695665aee854"
+        },
+        {
+          "path": "evidence/unverified/wwe-gnex-shot-06.bin",
+          "bytes": 4665,
+          "crc32": "d5c313d3",
+          "sha256": "b16fa2d362e9920bf27a9b6504eead3e099bab31b71736b294afb8b5bcc86d8e"
+        },
+        {
+          "path": "originals/aladdin-way.html",
+          "bytes": 3291,
+          "crc32": "efc21d3f",
+          "sha256": "c4f89f75a1197254bf337e445e4852fbd70aba0e941fce31e9a735a5302f4b50"
+        },
+        {
+          "path": "originals/blue-rescue-way.html",
+          "bytes": 1682,
+          "crc32": "22f9c9a5",
+          "sha256": "824ca4538e20b5b380e0a79d98617ae83e5e8e5c5126ec366e537c15d47608df"
+        },
+        {
+          "path": "originals/clubzio-20031212.html",
+          "bytes": 46702,
+          "crc32": "5f52f19a",
+          "sha256": "8bc3397d5df9a7cec3df093fc3873c0cf327a1538df947dd636cf1c3780d0ac1"
+        },
+        {
+          "path": "originals/clubzio-map.html",
+          "bytes": 31535,
+          "crc32": "a90c271f",
+          "sha256": "dbd4912cd46ae13ad261ec3c9a7caff90228b1cc6596375eb38d6b333bf0d87b"
+        },
+        {
+          "path": "originals/detail-10.html",
+          "bytes": 39461,
+          "crc32": "12ec7690",
+          "sha256": "aab8f7fa067655ae36dafa404f6e853d8f12cef6c9299690cea38241c7a00e28"
+        },
+        {
+          "path": "originals/detail-11.html",
+          "bytes": 38780,
+          "crc32": "9e387f5e",
+          "sha256": "b3948d7256d0b3386fa1149aad685b87ff9f4c1ffbd7f049e278cd19b85fad09"
+        },
+        {
+          "path": "originals/detail-12.html",
+          "bytes": 39009,
+          "crc32": "b69f520b",
+          "sha256": "87bebcc0fbd3bc49161da54f0622c42a5ea8aa7458ba39aaaf513c39b9d5fa37"
+        },
+        {
+          "path": "originals/detail-13.html",
+          "bytes": 38781,
+          "crc32": "49bf3790",
+          "sha256": "bc98c298a11bc7b6cd9593eb66a7224d1b7652c303edac04b5466292e0f6d919"
+        },
+        {
+          "path": "originals/detail-14.html",
+          "bytes": 39351,
+          "crc32": "8a32f3b7",
+          "sha256": "8617d75fccf1d9a6424f1e35e94d2f4a5121d21587b185b49c42d5b407b2e86c"
+        },
+        {
+          "path": "originals/detail-17.html",
+          "bytes": 38765,
+          "crc32": "006615c7",
+          "sha256": "d1ccc65748448af4fad75a7da567879026e3f9fcb8883ffb36d627584e90e3a4"
+        },
+        {
+          "path": "originals/detail-23.html",
+          "bytes": 39393,
+          "crc32": "fa8b92d7",
+          "sha256": "8e1963def6449659a0991fcc7c38fd1269654ea877135442c2c0d5f49066f342"
+        },
+        {
+          "path": "originals/detail-30-retry.html",
+          "bytes": 39315,
+          "crc32": "b3c17d9b",
+          "sha256": "fde4856dfd0bd3c2e0c1490f1337364fb60a0e64d3a9bb813a112fc63c9f6b04"
+        },
+        {
+          "path": "originals/detail-34-no-genre.html",
+          "bytes": 38743,
+          "crc32": "2070582e",
+          "sha256": "c955a85502750f2ca09c5bbd66cf861b713217770f30458032dafb947deade13"
+        },
+        {
+          "path": "originals/detail-35.html",
+          "bytes": 39095,
+          "crc32": "9b348bc7",
+          "sha256": "9408f9a625511361588dfc6db0cad7f14e6f56c6d4018d2891a87740fffd7187"
+        },
+        {
+          "path": "originals/detail-36.html",
+          "bytes": 39201,
+          "crc32": "41b1dd69",
+          "sha256": "b7fb6a80d423e07b8fe69ee14f6f531e47ea4cb281cb97500e019f592a5ff353"
+        },
+        {
+          "path": "originals/detail-38-no-genre.html",
+          "bytes": 39595,
+          "crc32": "f78fef47",
+          "sha256": "51111edb407ef2d443fc3faa10c4a8c897b5b7d8dcdd4ee42dc62a69d9d2e3c4"
+        },
+        {
+          "path": "originals/detail-41.html",
+          "bytes": 39794,
+          "crc32": "60466e8a",
+          "sha256": "60b3aa7c84f160b4f6b18946e0e5d5abcbd5f636982a5b623d8c34194eb7be68"
+        },
+        {
+          "path": "originals/detail-44.html",
+          "bytes": 38884,
+          "crc32": "e83ceee4",
+          "sha256": "c54b4c9aee0ee50bfb4720551d83257b30ec2a4ab55d341ed1d2a3e3b7605e90"
+        },
+        {
+          "path": "originals/detail-45.html",
+          "bytes": 39477,
+          "crc32": "14e2ba59",
+          "sha256": "7a464aec42b157b726c344f43ade74df4252146d6ac1efc05bc1476c9e77d23b"
+        },
+        {
+          "path": "originals/detail-46.html",
+          "bytes": 39512,
+          "crc32": "433160f9",
+          "sha256": "fb88b82b29484a360dde5ecdd4ffc39a1d6c10d0565de58eaeb2ef28f0fe620d"
+        },
+        {
+          "path": "originals/detail-48.html",
+          "bytes": 39463,
+          "crc32": "b883a714",
+          "sha256": "88cebc47367ae6c625cac6e30680695f63a5f2994de4b03919e97b35c1b9379d"
+        },
+        {
+          "path": "originals/detail-52.html",
+          "bytes": 38949,
+          "crc32": "2a602464",
+          "sha256": "afd172fae487bc1b0ef604ee2ea42a83baf91c0a8b83ba33ffec50726b74bb1b"
+        },
+        {
+          "path": "originals/detail-6.html",
+          "bytes": 39245,
+          "crc32": "edbfc146",
+          "sha256": "dfe55ee5b154163cd052e5139c380c0c2e253f91584c02a72dbeec6b458226db"
+        },
+        {
+          "path": "originals/detail-7.html",
+          "bytes": 38978,
+          "crc32": "0739df4f",
+          "sha256": "5282e1c36d7c4cb39b585eef90e162c9e036b427a8cfda0e93dfcd1e0ed31d9b"
+        },
+        {
+          "path": "originals/game-index.html",
+          "bytes": 69747,
+          "crc32": "aa349a35",
+          "sha256": "94ee5f3c36ee01cf0a7fc824440c8c33fa2fac9f2632ccaa74a48f6126dfe7b3"
+        },
+        {
+          "path": "originals/gunner-detail.html",
+          "bytes": 38948,
+          "crc32": "049942d7",
+          "sha256": "5bafcedc52011b38b6a0cf91ba44d84c7db9d236c56a404a8b2d4fe926ec7488"
+        },
+        {
+          "path": "originals/gunner-how.html",
+          "bytes": 9154,
+          "crc32": "4fefc7cd",
+          "sha256": "cf636020110b9f0f40ff4cecc4d1000e27800f27d457ed1f09d50e5b7747ce58"
+        },
+        {
+          "path": "originals/gunner-review-retry.html",
+          "bytes": 14214,
+          "crc32": "1889e9bd",
+          "sha256": "760f6d625e618af9be201edd9f036f08c765025451a3f722bc10887911f547e9"
+        },
+        {
+          "path": "originals/gunner-way.html",
+          "bytes": 1706,
+          "crc32": "65c6dc66",
+          "sha256": "4e1f9618db8d01e32cad41f578861d8dcb83dcd72e6eac0081a8289692ca2500"
+        },
+        {
+          "path": "originals/images/gunner-gameshot-01.gif",
+          "bytes": 3440,
+          "crc32": "48cea29e",
+          "sha256": "11beeeffce820f6520c8c64b54700f44976f76dd25e6c34a3cccc44a7d827cb3"
+        },
+        {
+          "path": "originals/images/gunner-gameshot-02.gif",
+          "bytes": 3121,
+          "crc32": "91016244",
+          "sha256": "187df8e8bf2a14b2a7a90d54f3e1192682c53b857a57050a6b8eff1efea39861"
+        },
+        {
+          "path": "originals/images/gunner-list-image.gif",
+          "bytes": 2638,
+          "crc32": "d93718b8",
+          "sha256": "bae03b09e824684558f6125f61e3fa70b97a57c57e828b7aaa42607e06ef263b"
+        },
+        {
+          "path": "originals/images/gunner-screenshot-01.gif",
+          "bytes": 5202,
+          "crc32": "998e7022",
+          "sha256": "4742b6aac26999443fa723a6f45bd6bb655cc1ddb90e15de371ca202d6862eef"
+        },
+        {
+          "path": "originals/images/gunner-screenshot-02.gif",
+          "bytes": 6376,
+          "crc32": "d25cfa20",
+          "sha256": "6970f0a9bf332192998ce0ef63abcee52dfdbd873d91a1f372d06a563759b203"
+        },
+        {
+          "path": "originals/images/gunner-screenshot-03.gif",
+          "bytes": 5389,
+          "crc32": "ef5caf11",
+          "sha256": "25a9045065166aa1ae43ca9b7fcd339b1bab01cc46ecb954df95e5d6b342a5b0"
+        },
+        {
+          "path": "originals/images/gunner-screenshot-04.gif",
+          "bytes": 5259,
+          "crc32": "2642ac86",
+          "sha256": "63271415ef19262e42775064d01a618d0ad0c76ca0bc7f8a904134298a9a4d82"
+        },
+        {
+          "path": "originals/images/gunner-screenshot-05.gif",
+          "bytes": 4903,
+          "crc32": "3427e91e",
+          "sha256": "036af35ba985dc47c12a7aab2710ac256924e9b2446602498d4b3f33c3e70c3f"
+        },
+        {
+          "path": "originals/journey-west-way.html",
+          "bytes": 1703,
+          "crc32": "48e87ee0",
+          "sha256": "9aeedae1abf5c2a05db4d5ab9fbf4eba26832552e17909b11aae9ad6548d55fc"
+        },
+        {
+          "path": "originals/menu.swf",
+          "bytes": 45324,
+          "crc32": "2e36e720",
+          "sha256": "308cf180db416ad62a3d0e4a107048c338080f384ae7b4bcbd7849ac08ff2702"
+        },
+        {
+          "path": "originals/metalion-way.html",
+          "bytes": 693,
+          "crc32": "bf960ebb",
+          "sha256": "f155e79eebadcb95e2efe7e1939c22407f10f7142373cd14d81621708f19abd2"
+        },
+        {
+          "path": "originals/wwe-gnex-how.html",
+          "bytes": 9706,
+          "crc32": "8c1a031e",
+          "sha256": "f3a213c4f91a68f72244fcf9ccaf30130289f6be53c33b9f22f235f91554d275"
+        },
+        {
+          "path": "originals/wwe-gnex-way-retry.html",
+          "bytes": 1738,
+          "crc32": "b3f37109",
+          "sha256": "28bc3c5614186b2a729d6f53a438512ec284727b4b42efd1fa233000245ebca1"
+        },
+        {
+          "path": "originals/wwe-madness-how.html",
+          "bytes": 9745,
+          "crc32": "cf6295c2",
+          "sha256": "765a4a71ad105666b468246ab9f912660840fb21ed49ce0904b76711c81f841f"
+        },
+        {
+          "path": "originals/wwe-madness-way.html",
+          "bytes": 3303,
+          "crc32": "fceb8fe5",
+          "sha256": "ab5c4ce3bc5feace41192daec0ad08d0308922cc0c66bd86ecea2b26bea1a802"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 21944,
+          "crc32": "f3b0f924",
+          "sha256": "656d29514c3c127c1b4dad3a078390492e9048eee7dd9abd46778599e4099d5c"
+        }
+      ]
+    },
+    {
       "id": "lg-kh1000-original-and-games",
       "repositoryPath": "research/archives/LG-KH1000-Original-and-Games.zip",
       "bytes": 63343776,
@@ -168568,9 +169303,9 @@
     }
   ],
   "counts": {
-    "archives": 84,
-    "archiveBytes": 1642779717,
-    "fileMembers": 27968,
-    "uniqueMemberHashes": 15009
+    "archives": 85,
+    "archiveBytes": 1643152103,
+    "fileMembers": 28089,
+    "uniqueMemberHashes": 15123
   }
 }
