@@ -6,6 +6,22 @@ const RECT_ENTRY = 0x2004f9c4;
 const RECT_EXIT = 0x2004f9f8;
 const PALETTE_ROW_ENTRY = 0x2004e4c4;
 const PALETTE_ROW_EXIT = 0x2004e74c;
+const COLOR_MATCH_ENTRY = 0x20055a7c;
+const COLOR_PALETTE_POINTER = 0x20b41bc4;
+const COLOR_MATCH_SIGNATURES = [
+  [
+    COLOR_MATCH_ENTRY,
+    '0700a0e1a40401eb840080e0b000d0e104308de208208de20c108de2c2ffffeb0c009de5080040e0900001e008009de5090040e0901021e004009de50a0040e0901031e00200001a0400a0e110d08de2f087bde8050051e10460a0b1014084e20150a0b18b0054e3e4ffffda0600a0e1f5ffffea',
+  ],
+  [
+    0x200559a8,
+    '10402de9f840a0e320c404e000c081e580001ce307c08c1300c08115fcc0a0e3a0c10ce000c082e540001ce303c08c1300c08215800104e0000083e5000091e5800010e307008013000081151080bde8',
+  ],
+  [0x20096d18, '0010d0e50120d0e50230d0e50300d0e5021481e1031881e1000c81e11eff2fe1'],
+].map(([address, hex]) => [
+  address,
+  Uint8Array.from(hex.match(/../g).map((value) => Number.parseInt(value, 16))),
+]);
 const PALETTE_ROW_SIGNATURES = [
   [0x2004e4c4, '0080a0e30c009de59c0000ea'],
   [0x2004e4d0, '00c0d2e518e09de501e04ee03ccea0e110e09de50ec00ce01ce09de50e005ce18b00000a'],
@@ -67,6 +83,11 @@ export function installRomAccelerators(
     if (!signature.every((value, index) => actual[index] === value))
       throw new Error('Kingston palette row kernel does not match verified ROM');
   }
+  for (const [address, signature] of COLOR_MATCH_SIGNATURES) {
+    const actual = cpu.read(address, signature.length);
+    if (!signature.every((value, index) => actual[index] === value))
+      throw new Error('Kingston RGB565 palette search does not match verified ROM');
+  }
 
   const stats = {
     fills: 0,
@@ -82,6 +103,7 @@ export function installRomAccelerators(
     palettePixels: 0,
     paletteWrites: 0,
     paletteFallbacks: 0,
+    colorSearches: 0,
   };
   // The shared block monitor charges the entry block and updates the clock first.
   // Extra per-instruction CODE hooks would slow unrelated ARM interpreter paths.
@@ -396,12 +418,71 @@ export function installRomAccelerators(
     stats.paletteWrites += writes;
     stats.skippedInstructions += skipped;
   });
+  // The native search already checked indices 0..3 and 16. Scan 17..138 in one RAM
+  // read, then execute the terminating iteration on ARM, including its writes
+  // to the scratch stack and its register/flag results.
+  const removeColorMatch = cpu.addBlockShortcut(COLOR_MATCH_ENTRY, (address, size) => {
+    if (!enabled() || cpu.regRead('r4') !== 17 || size !== 8) return;
+    if (cpu.runStop !== 0x23fff000) return;
+    if (cpu.regRead('r7') !== COLOR_PALETTE_POINTER || cpu.regRead('cpsr') & 0x20) return;
+    const red = cpu.regRead('r8'),
+      green = cpu.regRead('r9'),
+      blue = cpu.regRead('r10'),
+      palette = cpu.read32(COLOR_PALETTE_POINTER),
+      stack = cpu.regRead('sp');
+    if (
+      red > 255 ||
+      green > 255 ||
+      blue > 255 ||
+      palette & 1 ||
+      palette < 0x20000000 ||
+      palette + 280 > 0x24000000 ||
+      (palette < stack + 16 && stack < palette + 280)
+    )
+      return;
+
+    let nearest = cpu.regRead('r6'),
+      best = cpu.regRead('r5'),
+      index = 17;
+    if (nearest > 16 || best > 0x30000) return;
+    const raw = cpu.read(palette + 34, 244);
+    for (; index < 139; index++) {
+      const p = (index - 17) * 2,
+        color = raw[p] | (raw[p + 1] << 8),
+        r = (color >>> 8) & 0xf8,
+        g = (color >>> 3) & 0xfc,
+        b = (color << 3) & 0xf8;
+      const dr = (r | (r & 0x80 ? 7 : 0)) - red,
+        dg = (g | (g & 0x40 ? 3 : 0)) - green,
+        db = b - blue;
+      const distance = dr * dr + dg * dg + db * db;
+      if (distance === 0) break;
+      if (distance < best) {
+        best = distance;
+        nearest = index;
+      }
+    }
+    if (index === 17) return;
+    const skipped = 52 * (index - 17);
+    // The accelerated search is a bounded host loop. Charge its work
+    // separately from the original ARM instruction count used by the clock.
+    const work = 64 + 8 * (index - 17);
+    if (cpu.blockBudget != null && work > cpu.blockBudget) return;
+    cpu.regWrite('r4', index);
+    cpu.regWrite('r5', best);
+    cpu.regWrite('r6', nearest);
+    if (cpu.blockBudget != null) cpu.blockBudget -= work;
+    onSkippedInstructions(skipped);
+    stats.colorSearches++;
+    stats.skippedInstructions += skipped;
+  });
   return {
     stats,
     dispose() {
       removeFill();
       removeRectangle();
       removePaletteRow();
+      removeColorMatch();
     },
   };
 }

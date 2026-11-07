@@ -168,6 +168,68 @@ test('insufficient block budget falls back at the same original ARM boundary', a
   }
 });
 
+test('RGB565 color search preserves native results, registers, stack and clock', async () => {
+  const native = await machine(false);
+  const fast = await machine(true);
+  const stack = 0x23fe0000;
+  function executeColor(machine, rgb, entries) {
+    const { cpu } = machine;
+    const palette = new Uint8Array(280);
+    const view = new DataView(palette.buffer);
+    for (const [index, value] of entries) view.setUint16(index * 2, value, true);
+    cpu.write(BUFFER, palette);
+    cpu.write32(0x20b41bc4, BUFFER);
+    cpu.write(stack - 128, new Uint8Array(128).fill(0xa7));
+    cpu.regWrite('cpsr', 0x98000013);
+    for (let i = 0; i < 15; i++) cpu.regWrite('r' + i, (0x10010000 + i * 0x10101) >>> 0);
+    cpu.regWrite('sp', stack);
+    rgb.forEach((value, index) => cpu.regWrite('r' + index, value));
+    machine.instructions = 0;
+    callHelper(cpu, 0x20055af0, true, 100_000);
+    return {
+      registers: registers.map((reg) => cpu.regRead(reg)),
+      color: cpu.read(0x20b41bc8, 4),
+      stack: cpu.read(stack - 128, 128),
+      instructions: machine.instructions,
+    };
+  }
+  try {
+    const colors = [
+      [[0, 0, 0], []],
+      [[135, 67, 248], [[16, 0x821f]]],
+      [
+        [135, 67, 248],
+        [
+          [55, 0x821f],
+          [139, 0x821f],
+        ],
+      ],
+      [
+        [11, 252, 255],
+        [
+          [16, 0x07ff],
+          [17, 0x07ff],
+          [139, 0xffff],
+        ],
+      ],
+      [
+        [255, 3, 203],
+        [
+          [0, 0x1234],
+          [138, 0xc11a],
+          [139, 0xf819],
+        ],
+      ],
+    ];
+    for (const [rgb, entries] of colors)
+      assert.deepEqual(executeColor(fast, rgb, entries), executeColor(native, rgb, entries));
+    assert.equal(fast.accelerator.stats.colorSearches, 3);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
 function rectangle(
   machine,
   {
