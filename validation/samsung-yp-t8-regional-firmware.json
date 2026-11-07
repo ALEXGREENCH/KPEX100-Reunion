@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "model": "Samsung YP-T8",
+  "originalArchives": [
+    {
+      "version": "1.38EU",
+      "path": "original/20061114161749984_YP_T8_ROM_20060609_138EU.zip",
+      "source": "https://downloadcenter.samsung.com/content/FM/200611/20061114161749984_YP_T8_ROM_20060609_138EU.zip",
+      "retrievedUtc": "2026-11-07T14:41:51.618216+00:00",
+      "httpStatus": 200,
+      "bytes": 2199489,
+      "sha256": "3584e0c975aef1327a8e59e8215589af1ec01af9336b2067d1b21ffc4c990f29",
+      "crc32": "4f1aaa27",
+      "members": [
+        {
+          "path": "YP_T8.rom",
+          "bytes": 944020,
+          "sha256": "4e46522936d1d91056af6c77a009a77fe56f67c0017045c63485a9cb58132300",
+          "crc32": "f52b8f0c",
+          "identicalTo138FR": false,
+          "xovScan": {
+            "sectionCandidates": 17,
+            "matches": []
+          },
+          "loaderMarkers": {
+            "GameExt.bin": 32904,
+            "AppInfo.sys": 358256,
+            "%s.xov": 358020,
+            "%s.sys": 358012
+          },
+          "routinePrefixes": {
+            "events": {
+              "offset": 300136,
+              "first32": "000050e30ef0a00138402de9044b1fe50010e0e3041084e50c1084e5081084e5"
+            },
+            "sections": {
+              "offset": 300504,
+              "first32": "f0472de96cac1fe518009ae5b0008ae5581090e5005081e05c1090e5007081e0"
+            },
+            "appInfo": {
+              "offset": 357248,
+              "first32": "70402de90160a0e10050a0e10100a0e344101fe50140a0e30120a0e3f64f00eb"
+            },
+            "externalRead": {
+              "offset": 361584,
+              "first32": "7c402de914431fe5000050e33000000a18511fe5010050e35300000a020050e3"
+            }
+          },
+          "bootstrapSource": 1879050396,
+          "bootstrapTarget": 536936448,
+          "bootstrapBytes": 866384
+        },
+        {
+          "path": "YP_T8D1.FNT",
+          "bytes": 1486488,
+          "sha256": "6048be2f5fbe1e6a7022da212adbf7991771b7354068efdedabd1258ebd3c1fb",
+          "crc32": "6dc34bf7",
+          "identicalTo138FR": true,
+          "xovScan": {
+            "sectionCandidates": 0,
+            "matches": []
+          }
+        },
+        {
+          "path": "YP_T8.img",
+          "bytes": 2738020,
+          "sha256": "fe2bf7531a8e05a8a4107e359d295abfca5cfcb52222fc7e5ba1838442625e90",
+          "crc32": "57ef0cd2",
+          "identicalTo138FR": true,
+          "xovScan": {
+            "sectionCandidates": 0,
+            "matches": []
+          }
+        }
+      ]
+    },
+    {
+      "version": "1.38US",
+      "path": "original/20061107201844343_YP_T8_ROM_20060609_138US.zip",
+      "source": "https://downloadcenter.samsung.com/content/FM/200611/20061107201844343_YP_T8_ROM_20060609_138US.zip",
+      "retrievedUtc": "2026-11-07T14:41:51.937452+00:00",
+      "httpStatus": 200,
+      "bytes": 2199581,
+      "sha256": "c30eaf4eab22a2ae7559b9244e0899bb2245ce92b374fa6885547065c7c6f8b6",
+      "crc32": "89ab2ce3",
+      "members": [
+        {
+          "path": "YP_T8.rom",
+          "bytes": 944108,
+          "sha256": "b0f0cb04ae0538528c3b91266317a62646bb72fa1ed4c81b1c8e40b9af0bed1e",
+          "crc32": "318fdb10",
+          "identicalTo138FR": false,
+          "xovScan": {
+            "sectionCandidates": 17,
+            "matches": []
+          },
+          "loaderMarkers": {
+            "GameExt.bin": 32904,
+            "AppInfo.sys": 358324,
+            "%s.xov": 358088,
+            "%s.sys": 358080
+          },
+          "routinePrefixes": {
+            "events": {
+              "offset": 300204,
+              "first32": "000050e30ef0a00138402de9044b1fe50010e0e3041084e50c1084e5081084e5"
+            },
+            "sections": {
+              "offset": 300572,
+              "first32": "f0472de96cac1fe518009ae5b0008ae5581090e5005081e05c1090e5007081e0"
+            },
+            "appInfo": {
+              "offset": 357316,
+              "first32": "70402de90160a0e10050a0e10100a0e344101fe50140a0e30120a0e3f64f00eb"
+            },
+            "externalRead": {
+              "offset": 361652,
+              "first32": "7c402de914431fe5000050e33000000a18511fe5010050e35300000a020050e3"
+            }
+          },
+          "bootstrapSource": 1879050396,
+          "bootstrapTarget": 536936448,
+          "bootstrapBytes": 866472
+        },
+        {
+          "path": "YP_T8D1.FNT",
+          "bytes": 1486488,
+          "sha256": "6048be2f5fbe1e6a7022da212adbf7991771b7354068efdedabd1258ebd3c1fb",
+          "crc32": "6dc34bf7",
+          "identicalTo138FR": true,
+          "xovScan": {
+            "sectionCandidates": 0,
+            "matches": []
+          }
+        },
+        {
+          "path": "YP_T8.img",
+          "bytes": 2738020,
+          "sha256": "fe2bf7531a8e05a8a4107e359d295abfca5cfcb52222fc7e5ba1838442625e90",
+          "crc32": "57ef0cd2",
+          "identicalTo138FR": true,
+          "xovScan": {
+            "sectionCandidates": 0,
+            "matches": []
+          }
+        }
+      ]
+    }
+  ],
+  "referenceRomSha256": "36dd184a8d3a71f78e1348ac46387c4854092475f0d57ce89e4f09c1823b597d",
+  "uniqueFilesScanned": 4,
+  "testedLayout": "Five 16-bit-aligned entry points, four section offsets, 8-byte variable and 12-byte resource records, minimum 18 variables. Direct bytes only.",
+  "t8GameZip": "Original separate game ZIP remains unrecovered.",
+  "installationCd": {
+    "partNumber": "AH80-00105E",
+    "source": "https://www.manualslib.com/manual/145128/Samsung-Yp-T8.html?page=6",
+    "status": "Named as installation CD. No disc image or confirmed game files."
+  }
+}

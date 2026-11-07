@@ -3,6 +3,45 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "samsung-yp-t8-regional-firmware",
+      "repositoryPath": "research/archives/Samsung-YP-T8-1.38-EU-US.zip",
+      "bytes": 4406359,
+      "sha256": "e6a8155c9fd059619698092f041f4a275a917c586ec742adbba60a61cabbbba5",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "README.txt",
+          "bytes": 170,
+          "crc32": "011bcef5",
+          "sha256": "fae53b1b469b62f0f502db76646a509a8176f22f78b439762a5a87f9c493fdb0"
+        },
+        {
+          "path": "evidence.json",
+          "bytes": 5580,
+          "crc32": "8122a1ec",
+          "sha256": "63d498c4747d91d7133bb07b92ebc9f29aa60673424879032b1f53c971b63c50"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 845,
+          "crc32": "f449edf0",
+          "sha256": "71dde46be19f57a40d8a83469d54ac579b6ec1d0fc45ac24e99f315df446aa64"
+        },
+        {
+          "path": "original/20061107201844343_YP_T8_ROM_20060609_138US.zip",
+          "bytes": 2199581,
+          "crc32": "89ab2ce3",
+          "sha256": "c30eaf4eab22a2ae7559b9244e0899bb2245ce92b374fa6885547065c7c6f8b6"
+        },
+        {
+          "path": "original/20061114161749984_YP_T8_ROM_20060609_138EU.zip",
+          "bytes": 2199489,
+          "crc32": "4f1aaa27",
+          "sha256": "3584e0c975aef1327a8e59e8215589af1ec01af9336b2067d1b21ffc4c990f29"
+        }
+      ]
+    },
+    {
       "id": "samsung-anycall-ads-mbin",
       "repositoryPath": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
       "bytes": 19776992,
@@ -157546,9 +157585,9 @@
     }
   ],
   "counts": {
-    "archives": 68,
-    "archiveBytes": 1153150404,
-    "fileMembers": 26155,
-    "uniqueMemberHashes": 13245
+    "archives": 69,
+    "archiveBytes": 1157556763,
+    "fileMembers": 26160,
+    "uniqueMemberHashes": 13250
   }
 }

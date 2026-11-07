@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "actions": [
+    [
+      "advance",
+      4000
+    ],
+    [
+      "key",
+      17
+    ],
+    [
+      "advance",
+      1100
+    ],
+    [
+      "key",
+      21
+    ],
+    [
+      "advance",
+      1100
+    ],
+    [
+      "advance",
+      10000
+    ],
+    [
+      "key",
+      21
+    ],
+    [
+      "advance",
+      1100
+    ],
+    [
+      "advance",
+      5000
+    ],
+    [
+      "hold",
+      21
+    ],
+    [
+      "hold",
+      16
+    ],
+    [
+      "advance",
+      1500
+    ],
+    [
+      "release",
+      16
+    ],
+    [
+      "advance",
+      4550
+    ],
+    [
+      "release",
+      21
+    ],
+    [
+      "advance",
+      1500
+    ]
+  ],
+  "scope": "Original SGS gameplay in the Reunion phone compatibility runtime, not an emulation of Oracom firmware or full completion.",
+  "builds": [
+    {
+      "id": "aiolos-oracom-ub880",
+      "sha256": "d0ffb7b65e65e6c4b10f81d970ee1aba313c5261e8ed22206b2aa25ea7094874",
+      "runtime": {
+        "profile": "phone",
+        "width": 220,
+        "height": 176
+      },
+      "framesMatchedInFastAndReference": 17,
+      "checkpoints": [
+        {
+          "action": "start",
+          "timeMs": 0,
+          "events": 1,
+          "pngSha256": "28e40e06ceb89574d3f3576209d4d9146adc44debaf667127f78c6001adc7e5b"
+        },
+        {
+          "action": "0-advance4000",
+          "timeMs": 4000,
+          "events": 81,
+          "pngSha256": "c3ea20e75daa8820865b5dabcbf7414033d5678ace9dd049cf22e8fed0768e23"
+        },
+        {
+          "action": "1-key17",
+          "timeMs": 4000,
+          "events": 83,
+          "pngSha256": "c3ea20e75daa8820865b5dabcbf7414033d5678ace9dd049cf22e8fed0768e23"
+        },
+        {
+          "action": "2-advance1100",
+          "timeMs": 5100,
+          "events": 105,
+          "pngSha256": "4aab5be6e9bec50e87a0349aaa394d93835648c81b84c07dbc952d61877d5996"
+        },
+        {
+          "action": "3-key21",
+          "timeMs": 5100,
+          "events": 107,
+          "pngSha256": "4aab5be6e9bec50e87a0349aaa394d93835648c81b84c07dbc952d61877d5996"
+        },
+        {
+          "action": "4-advance1100",
+          "timeMs": 6200,
+          "events": 129,
+          "pngSha256": "1349e9df9c97a55afed5001185e159eb8c59eca7f5ea332072b3ccde5427038a"
+        },
+        {
+          "action": "5-advance10000",
+          "timeMs": 16200,
+          "events": 329,
+          "pngSha256": "2e16d27a26be98bdbe19ccdbc7f9382060efc17a5d2066a6c8e271ce6067bed3"
+        },
+        {
+          "action": "6-key21",
+          "timeMs": 16200,
+          "events": 331,
+          "pngSha256": "2e16d27a26be98bdbe19ccdbc7f9382060efc17a5d2066a6c8e271ce6067bed3"
+        },
+        {
+          "action": "7-advance1100",
+          "timeMs": 17300,
+          "events": 353,
+          "pngSha256": "49d440d0ac9d3021420dd5743a7aaba1223b7402dc67c6865ce97a2b3e069fee"
+        },
+        {
+          "action": "8-advance5000",
+          "timeMs": 22300,
+          "events": 453,
+          "pngSha256": "3da5e36995ccd1c579fa5aaf1f3d7c8b713bcadbdf2c2a887fd26099386158a7"
+        },
+        {
+          "action": "9-hold21",
+          "timeMs": 22300,
+          "events": 454,
+          "pngSha256": "3da5e36995ccd1c579fa5aaf1f3d7c8b713bcadbdf2c2a887fd26099386158a7"
+        },
+        {
+          "action": "10-hold16",
+          "timeMs": 22300,
+          "events": 455,
+          "pngSha256": "3da5e36995ccd1c579fa5aaf1f3d7c8b713bcadbdf2c2a887fd26099386158a7"
+        },
+        {
+          "action": "11-advance1500",
+          "timeMs": 23800,
+          "events": 485,
+          "pngSha256": "792ea196e90cd532254184411d431505b77570b2ceca7ac14b59e5e061604613"
+        },
+        {
+          "action": "12-release16",
+          "timeMs": 23800,
+          "events": 486,
+          "pngSha256": "792ea196e90cd532254184411d431505b77570b2ceca7ac14b59e5e061604613"
+        },
+        {
+          "action": "13-advance4550",
+          "timeMs": 28350,
+          "events": 578,
+          "pngSha256": "0f9fdb6edc804a24b29ec21a60478e274efebc5413da76ac176ea1177c5f2ece"
+        },
+        {
+          "action": "14-release21",
+          "timeMs": 28350,
+          "events": 579,
+          "pngSha256": "0f9fdb6edc804a24b29ec21a60478e274efebc5413da76ac176ea1177c5f2ece"
+        },
+        {
+          "action": "15-advance1500",
+          "timeMs": 29850,
+          "events": 609,
+          "pngSha256": "b1926fd039ca4733caf5df434bb07f8470ef44a2eb7d4fa78d487e742d76d2e3"
+        }
+      ]
+    },
+    {
+      "id": "aiolos-oracom-ub890-ub950",
+      "sha256": "817b41c7aaabe8a1a704388c800e76bfda17b9ff303be0de15392f460b175ede",
+      "runtime": {
+        "profile": "phone",
+        "width": 220,
+        "height": 176
+      },
+      "framesMatchedInFastAndReference": 17,
+      "checkpoints": [
+        {
+          "action": "start",
+          "timeMs": 0,
+          "events": 1,
+          "pngSha256": "28e40e06ceb89574d3f3576209d4d9146adc44debaf667127f78c6001adc7e5b"
+        },
+        {
+          "action": "0-advance4000",
+          "timeMs": 4000,
+          "events": 81,
+          "pngSha256": "c3ea20e75daa8820865b5dabcbf7414033d5678ace9dd049cf22e8fed0768e23"
+        },
+        {
+          "action": "1-key17",
+          "timeMs": 4000,
+          "events": 83,
+          "pngSha256": "c3ea20e75daa8820865b5dabcbf7414033d5678ace9dd049cf22e8fed0768e23"
+        },
+        {
+          "action": "2-advance1100",
+          "timeMs": 5100,
+          "events": 105,
+          "pngSha256": "4aab5be6e9bec50e87a0349aaa394d93835648c81b84c07dbc952d61877d5996"
+        },
+        {
+          "action": "3-key21",
+          "timeMs": 5100,
+          "events": 107,
+          "pngSha256": "4aab5be6e9bec50e87a0349aaa394d93835648c81b84c07dbc952d61877d5996"
+        },
+        {
+          "action": "4-advance1100",
+          "timeMs": 6200,
+          "events": 129,
+          "pngSha256": "1349e9df9c97a55afed5001185e159eb8c59eca7f5ea332072b3ccde5427038a"
+        },
+        {
+          "action": "5-advance10000",
+          "timeMs": 16200,
+          "events": 329,
+          "pngSha256": "2e16d27a26be98bdbe19ccdbc7f9382060efc17a5d2066a6c8e271ce6067bed3"
+        },
+        {
+          "action": "6-key21",
+          "timeMs": 16200,
+          "events": 331,
+          "pngSha256": "2e16d27a26be98bdbe19ccdbc7f9382060efc17a5d2066a6c8e271ce6067bed3"
+        },
+        {
+          "action": "7-advance1100",
+          "timeMs": 17300,
+          "events": 353,
+          "pngSha256": "49d440d0ac9d3021420dd5743a7aaba1223b7402dc67c6865ce97a2b3e069fee"
+        },
+        {
+          "action": "8-advance5000",
+          "timeMs": 22300,
+          "events": 453,
+          "pngSha256": "3da5e36995ccd1c579fa5aaf1f3d7c8b713bcadbdf2c2a887fd26099386158a7"
+        },
+        {
+          "action": "9-hold21",
+          "timeMs": 22300,
+          "events": 454,
+          "pngSha256": "3da5e36995ccd1c579fa5aaf1f3d7c8b713bcadbdf2c2a887fd26099386158a7"
+        },
+        {
+          "action": "10-hold16",
+          "timeMs": 22300,
+          "events": 455,
+          "pngSha256": "3da5e36995ccd1c579fa5aaf1f3d7c8b713bcadbdf2c2a887fd26099386158a7"
+        },
+        {
+          "action": "11-advance1500",
+          "timeMs": 23800,
+          "events": 485,
+          "pngSha256": "792ea196e90cd532254184411d431505b77570b2ceca7ac14b59e5e061604613"
+        },
+        {
+          "action": "12-release16",
+          "timeMs": 23800,
+          "events": 486,
+          "pngSha256": "792ea196e90cd532254184411d431505b77570b2ceca7ac14b59e5e061604613"
+        },
+        {
+          "action": "13-advance4550",
+          "timeMs": 28350,
+          "events": 578,
+          "pngSha256": "0f9fdb6edc804a24b29ec21a60478e274efebc5413da76ac176ea1177c5f2ece"
+        },
+        {
+          "action": "14-release21",
+          "timeMs": 28350,
+          "events": 579,
+          "pngSha256": "0f9fdb6edc804a24b29ec21a60478e274efebc5413da76ac176ea1177c5f2ece"
+        },
+        {
+          "action": "15-advance1500",
+          "timeMs": 29850,
+          "events": 609,
+          "pngSha256": "b1926fd039ca4733caf5df434bb07f8470ef44a2eb7d4fa78d487e742d76d2e3"
+        }
+      ]
+    }
+  ]
+}

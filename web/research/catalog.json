@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "samsung-yp-t8-regional-firmware",
+      "title": "Samsung YP-T8: прошивки 1.38EU и 1.38US",
+      "category": "Прошивки плееров",
+      "description": "Два оригинальных обновления с сайта Samsung, проверка загрузчика XEOVIA и поиск вложенных XOV. Отдельный комплект игр ещё не найден.",
+      "repositoryPath": "research/archives/Samsung-YP-T8-1.38-EU-US.zip",
+      "bytes": 4406359,
+      "sha256": "e6a8155c9fd059619698092f041f4a275a917c586ec742adbba60a61cabbbba5",
+      "sources": [
+        {
+          "label": "1.38EU",
+          "url": "https://downloadcenter.samsung.com/content/FM/200611/20061114161749984_YP_T8_ROM_20060609_138EU.zip"
+        },
+        {
+          "label": "1.38US",
+          "url": "https://downloadcenter.samsung.com/content/FM/200611/20061107201844343_YP_T8_ROM_20060609_138US.zip"
+        }
+      ]
+    },
+    {
       "id": "samsung-anycall-ads-mbin",
       "title": "Samsung Anycall Land: игры ADS и ADSLoader",
       "category": "Игры корейских телефонов",
@@ -1512,6 +1531,10 @@
     {
       "title": "Softmax и m4leaf: ранняя Crow, Magna Carta M и аудит Symbian 6/7",
       "repositoryPath": "doc/softmax-mobile-and-symbian.md"
+    },
+    {
+      "title": "Samsung YP-T8: загрузчик XOV и региональные прошивки",
+      "repositoryPath": "doc/yepp-xov-runtime.md"
     }
   ]
 }
