@@ -4,6 +4,48 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "dubigame-skvm-ktf-four-games",
+      "title": "Dubigame: Sketcher 2, Welusia и ещё две игры",
+      "category": "Игры и игровые сборки",
+      "description": "Четыре исходных ZIP KTF WIPI и SKT SK‑VM. В ARAM проверены трасса Sketcher 2, мини-игра Game Pack 25 и бой Welusia. У Three Kingdoms 2 зафиксирован отказ проверки подлинности.",
+      "repositoryPath": "research/archives/Dubigame-SKVM-KTF-Four-Games.zip",
+      "bytes": 4805525,
+      "sha256": "2e6908cdfb616f05918bba36aab0178e194494ea06d089a5f6c5d8aeb005ac1c",
+      "sources": [
+        {
+          "label": "Sketcher 2 для KTF",
+          "url": "https://dubigame.tistory.com/438"
+        },
+        {
+          "label": "Welusia для SKT",
+          "url": "https://dubigame.tistory.com/448"
+        },
+        {
+          "label": "Game Pack 25 для KTF",
+          "url": "https://dubigame.tistory.com/430"
+        },
+        {
+          "label": "Three Kingdoms 2 для SKT",
+          "url": "https://dubigame.tistory.com/446"
+        }
+      ]
+    },
+    {
+      "id": "niver-skvm-ezi-portable",
+      "title": "NiVer / 123fu: портативный SK‑VM и ez‑i",
+      "category": "Эмуляторы и SDK",
+      "description": "Все четыре исходных тома портативной сборки KEmulator, проверка CRC, манифесты JAR и данные о 135 файлах.",
+      "repositoryPath": "research/archives/SKVM-EZI-Portable-Niver-Originals.zip",
+      "bytes": 33326527,
+      "sha256": "49833f18a77037275fdf6afc635df3a26cf5ae277bf6635e41f7dfce0680b1c7",
+      "sources": [
+        {
+          "label": "Публикация портативной сборки",
+          "url": "https://123fu.tistory.com/6"
+        }
+      ]
+    },
+    {
       "id": "clubzio-2003-2004-game-catalogue",
       "title": "ClubZio: каталог ZIO, WWE GNEX и 3D Gunner",
       "category": "Wayback и форумы",
@@ -1592,6 +1634,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Dubigame и NiVer: игры KTF, SK‑VM и результаты запуска",
+      "repositoryPath": "doc/dubigame-skvm-ktf-and-portable.md"
+    },
     {
       "title": "ClubZio: материалы WWE GNEX, 3D Gunner и поиск игровых файлов",
       "repositoryPath": "doc/clubzio-2003-2004-games.md"

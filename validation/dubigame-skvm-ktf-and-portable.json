@@ -1,0 +1,1404 @@
+{
+  "gameCollection": {
+    "aram": {
+      "revision": "fea299cba15696ed1460f965b76626d6edab5e03",
+      "bytes": 20314112,
+      "sha256": "edf1ce03b9329ac843353b7db768f946214866d2c033b395fb6f5d99d7853db1",
+      "crc32": "EE5A3709",
+      "runBudget": 200000,
+      "frameDurationMs": 16,
+      "width": 240,
+      "height": 320
+    },
+    "games": [
+      {
+        "source": {
+          "post": 430,
+          "page": "https://dubigame.tistory.com/430",
+          "url": "https://blog.kakaocdn.net/dna/bWdluF/btrf1i6OZzz/AAAAAAAAAAAAAAAAAAAAAA1uOGRpSPQE5KceWh6m_L64vt6qCUNs9JGbTBqcmaE9/%EA%B2%8C%EC%9E%84%ED%8C%A925.zip",
+          "filename": "게임팩25.zip",
+          "text": "게임팩25.zip 0.45MB",
+          "finalUrl": "https://blog.kakaocdn.net/dna/bWdluF/btrf1i6OZzz/AAAAAAAAAAAAAAAAAAAAAA1uOGRpSPQE5KceWh6m_L64vt6qCUNs9JGbTBqcmaE9/%EA%B2%8C%EC%9E%84%ED%8C%A925.zip",
+          "utc": "2026-11-07T20:41:13.737508+00:00",
+          "status": 200,
+          "complete": true,
+          "bodyPath": "dubi-430-1.payload",
+          "headers": "dubi-430-1.headers.txt",
+          "bytes": 470131,
+          "sha256": "ab3d0020d7bcc23ef31ff17145efe70425b29f740d99fe235343d1c57e5cfd11",
+          "firstBytesHex": "504b0304140002000800347e4136e7e9",
+          "error": "",
+          "archivePath": "originals/430/게임팩25.zip"
+        },
+        "metadata": {
+          "PID": "PD004762",
+          "AID": "0103608D",
+          "Name": "게임팩25",
+          "Ver": "01.00.02",
+          "Vdr": "(주)퍼니빌",
+          "MClass": "Clet",
+          "DisplaySize": "240*320"
+        },
+        "files": [
+          {
+            "path": "__class__",
+            "bytes": 296,
+            "sha256": "14d604a1710a34bb6f564ef4532b0f8bc4fbde3f95be8d20323821a01f7ea170",
+            "crc32": "37A8E9E7"
+          },
+          {
+            "path": "big.icon",
+            "bytes": 3829,
+            "sha256": "b2176dbd81021795e2c57b7992c51719882b3449707bf48ff65e062d2e3cd6a7",
+            "crc32": "FD9E7B13"
+          },
+          {
+            "path": "middle.icon",
+            "bytes": 288,
+            "sha256": "dbbd9c4a09c858a7aa229fd16e73ea1b8ee145af159903bfcfd024560c697c74",
+            "crc32": "C76D58A1"
+          },
+          {
+            "path": "small.icon",
+            "bytes": 229,
+            "sha256": "52c680b795d49e8e4181f7f62dadb1f51d09f12c22596c455ca1c932f46652c2",
+            "crc32": "8FD1A6D1"
+          },
+          {
+            "path": "0103608D.jar",
+            "bytes": 570633,
+            "sha256": "fbc9097a6292fbc0b3b563e9eeba90dbcbd08790578e44a98a669775ea635c44",
+            "crc32": "814F6604"
+          },
+          {
+            "path": "__adf__",
+            "bytes": 701,
+            "sha256": "f63370a10cf532661eabaa74ef12d4d49744e11bc3c97a1ee183944fd33a1171",
+            "crc32": "3C3533BA"
+          }
+        ],
+        "jar": {
+          "path": "0103608D.jar",
+          "prefixBytes": 0,
+          "bytes": 570633,
+          "sha256": "fbc9097a6292fbc0b3b563e9eeba90dbcbd08790578e44a98a669775ea635c44",
+          "crc32": "814F6604",
+          "javaClasses": 0,
+          "xceClassReferences": 0,
+          "nativeCode": [
+            {
+              "path": "client.bin41860",
+              "bytes": 381868,
+              "sha256": "4c4ce680fe1c2b11a5b69d51c420aa62a8cbaf4e9b1500c05811d3211fabc129",
+              "crc32": "B677B649"
+            }
+          ],
+          "memberCount": 695
+        },
+        "sgsHits": 0,
+        "seenInPreviousSurvey": false,
+        "replay": {
+          "milestone": "first coin-counting minigame; digit 5 changes the amount",
+          "paired": {
+            "input": [
+              {
+                "path": "replays/430/input/opening.png",
+                "frame": 600,
+                "elapsedMs": 9600,
+                "rgbaSha256": "f31d1ef2f1d31b970dd667bf903b85bbdace9685c6f0bed3e8bf5daa9edeaf48",
+                "bytes": 4847,
+                "sha256": "dd0605ada29d988b3c9e4311ab034876856566b74a832d75653652e3be743a07",
+                "crc32": "FF814064"
+              },
+              {
+                "path": "replays/430/input/after-ok.png",
+                "frame": 784,
+                "elapsedMs": 12544,
+                "rgbaSha256": "5e8c7867dfdf9cda081c4e38bbee96a0ff94f58c6703c39c4364060188abe3a3",
+                "bytes": 12715,
+                "sha256": "87356999f917cb1fbb26bd2ff662b800e546c8175887bc0b2f07405054a9d386",
+                "crc32": "A1CB747A"
+              },
+              {
+                "path": "replays/430/input/after-second-ok.png",
+                "frame": 1148,
+                "elapsedMs": 18368,
+                "rgbaSha256": "b95005bd654e02bd3062ddb65ec72f08ec1648dd6248f4422e32c1ef56c72769",
+                "bytes": 9190,
+                "sha256": "dda162e65e6552fe5c1fa52d2bf57e259f054dcf7a3fe05da41ed2da731cf602",
+                "crc32": "72F6E149"
+              },
+              {
+                "path": "replays/430/input/after-right.png",
+                "frame": 1281,
+                "elapsedMs": 20496,
+                "rgbaSha256": "de0b7c9735494f94102e4e977caca1fdab4baec3a3ec98a52c0db50b3ea63888",
+                "bytes": 9582,
+                "sha256": "6e1ddb7b02741d60565b4e33911473145941fd7822d1fc1332199537d08d4af8",
+                "crc32": "8FD352FD"
+              },
+              {
+                "path": "replays/430/input/after-one.png",
+                "frame": 1465,
+                "elapsedMs": 23440,
+                "rgbaSha256": "c751e2c87f22d0ba00b7820550fd6507f533020a1469f1586cbc678a4900390b",
+                "bytes": 4400,
+                "sha256": "b5676eb1e89e6147474a4a229b304755f4bf8ab4d6f8e5323a6f3ed3ad03939c",
+                "crc32": "FCC322C5"
+              },
+              {
+                "path": "replays/430/input/extra-1-hash.png",
+                "frame": 1769,
+                "elapsedMs": 28304,
+                "rgbaSha256": "beb89d026d75478e6b93a856d9012d13a22c839b78c0f11f40d095756b0bd686",
+                "bytes": 12129,
+                "sha256": "98fb14c0951613f6b171b869edad87b072ef55f87302b6ec960051e8acb90f35",
+                "crc32": "80FEA9EB"
+              },
+              {
+                "path": "replays/430/input/extra-2-ok.png",
+                "frame": 2073,
+                "elapsedMs": 33168,
+                "rgbaSha256": "64368b393682972cbcc61a5186aca1c52e8f4cda0be07c8c998d6c32d4144ee6",
+                "bytes": 12219,
+                "sha256": "996c5e1bfc8ef9c4cefe2a932663e565c671484b41b52e568a72c0e77d656c68",
+                "crc32": "B0B6A7C1"
+              },
+              {
+                "path": "replays/430/input/extra-3-ok.png",
+                "frame": 2377,
+                "elapsedMs": 38032,
+                "rgbaSha256": "70571fa158befb704f6bdbe2ff3e38fda141f8742a593f0026cd6fe123f5db0b",
+                "bytes": 12110,
+                "sha256": "4659383c0d36f8b8c255a0d887e60bc86a6e7451905b5748641a47c737f59698",
+                "crc32": "E33EA08E"
+              },
+              {
+                "path": "replays/430/input/extra-4-right.png",
+                "frame": 2690,
+                "elapsedMs": 43040,
+                "rgbaSha256": "41d5d4d7d010db93f72667f61efea3482c1b523d9e355d9c223e0bd5663951d0",
+                "bytes": 11544,
+                "sha256": "ad5e1e589912ccdb514f580739698558724494ab2aad8c6b0f3500b11cf3cf37",
+                "crc32": "FF092E6F"
+              },
+              {
+                "path": "replays/430/input/extra-5-ok.png",
+                "frame": 2994,
+                "elapsedMs": 47904,
+                "rgbaSha256": "7183835871a73e88ea8ebdc23bb1d5ff26874f91765bda71d61f77b3262d3538",
+                "bytes": 7112,
+                "sha256": "7b88cba7cb08c805877893098f6df7663257b492761c4c90a765f363c336211d",
+                "crc32": "EA1ADA2F"
+              },
+              {
+                "path": "replays/430/input/play-1-ok.png",
+                "frame": 3418,
+                "elapsedMs": 54688,
+                "rgbaSha256": "c6adb11cc562a90fd740bdba6de8a4530a33ef0a0db0e92f9906ab26894296bf",
+                "bytes": 7090,
+                "sha256": "a45e5761482d8a908917e618a89ffcecee2423958c20547d1905a9b9d11a3581",
+                "crc32": "83C31692"
+              },
+              {
+                "path": "replays/430/input/play-2-ok.png",
+                "frame": 3842,
+                "elapsedMs": 61472,
+                "rgbaSha256": "95f5225b191d7904b8be640f36ca0ffb07b0ebe25afdad00ccf46fc5bb0cd17b",
+                "bytes": 7725,
+                "sha256": "a4b6d9a3cf1fd27b371d3db9939be46587a4bb5c03b962411cc8abb4a51e138f",
+                "crc32": "81195732"
+              },
+              {
+                "path": "replays/430/input/play-3-ok.png",
+                "frame": 4266,
+                "elapsedMs": 68256,
+                "rgbaSha256": "ff7fdf77e31756972d1f2cdec749731a1f492b9453748af3b4d1ee2068511912",
+                "bytes": 7862,
+                "sha256": "8f34e0e19cdd0c48edd1c2c93eb40b91a73d7232461e2bc531d1e301d0a6a6b8",
+                "crc32": "79ADDC46"
+              },
+              {
+                "path": "replays/430/input/play-4-right.png",
+                "frame": 4699,
+                "elapsedMs": 75184,
+                "rgbaSha256": "4cfe50b9ab3ebe67d4352fca79cf51562af256a370fbca29b87735f5fb9942ad",
+                "bytes": 7904,
+                "sha256": "c3ea6f1a62ae6f05a848583779bbabe9727fef73e480432728eee4bf9fe201a8",
+                "crc32": "C7AA94FF"
+              },
+              {
+                "path": "replays/430/input/run-1-5.png",
+                "frame": 4883,
+                "elapsedMs": 78128,
+                "rgbaSha256": "07afbde734f810158c67ff08ff51077d9d1b7899673d560ba534b8551386c3fe",
+                "bytes": 8734,
+                "sha256": "9a457347898fb744854f89e5df0858f817a3fa9c0ac72811e63f0b9eec6ff852",
+                "crc32": "FD08451E"
+              },
+              {
+                "path": "replays/430/input/run-2-ok.png",
+                "frame": 5067,
+                "elapsedMs": 81072,
+                "rgbaSha256": "e41f5fef2a14436f88441e0533d3c49ccb33c6a66915809820ffafd4f91d9191",
+                "bytes": 7125,
+                "sha256": "94ee468c110d3531a20f5ebcd11e6b3ba7b558482d8fe68d050798ec801901e3",
+                "crc32": "4A07A5B0"
+              },
+              {
+                "path": "replays/430/input/run-3-hash.png",
+                "frame": 5251,
+                "elapsedMs": 84016,
+                "rgbaSha256": "6c88538c3887dd75bd0b2c87586f0f420993bab6b8e11ad7d69eb59710e281f6",
+                "bytes": 5764,
+                "sha256": "6d0aaf475557e71077125b5c4e81eb0809fc61a650afdaee89af68d5f96a90d1",
+                "crc32": "8EAB176E"
+              },
+              {
+                "path": "replays/430/input/run-4-1.png",
+                "frame": 5435,
+                "elapsedMs": 86960,
+                "rgbaSha256": "3bb7ce6626ba8a96bf3a9a7314dd6b604b2ff2a252318582e80299d0f9ce7753",
+                "bytes": 7126,
+                "sha256": "8f6bece70a2a2ff8436f1d01266b958f673819b67c1ad9fa22a282f4a2aa8a4d",
+                "crc32": "F35D455A"
+              },
+              {
+                "path": "replays/430/input/run-5-5.png",
+                "frame": 5619,
+                "elapsedMs": 89904,
+                "rgbaSha256": "1ae5a03f8205f942c45c800385bbb6da2d739fec8faf85a60f628bd90af3b012",
+                "bytes": 7124,
+                "sha256": "bc3f45e579d2cc6c958354647ae94e5816c4f7738e01b61ca582e7f6de7c69ab",
+                "crc32": "EDA630BE"
+              }
+            ],
+            "control": [
+              {
+                "path": "replays/430/control/opening.png",
+                "frame": 600,
+                "elapsedMs": 9600,
+                "rgbaSha256": "f31d1ef2f1d31b970dd667bf903b85bbdace9685c6f0bed3e8bf5daa9edeaf48",
+                "bytes": 4847,
+                "sha256": "dd0605ada29d988b3c9e4311ab034876856566b74a832d75653652e3be743a07",
+                "crc32": "FF814064"
+              },
+              {
+                "path": "replays/430/control/after-ok.png",
+                "frame": 784,
+                "elapsedMs": 12544,
+                "rgbaSha256": "5e8c7867dfdf9cda081c4e38bbee96a0ff94f58c6703c39c4364060188abe3a3",
+                "bytes": 12715,
+                "sha256": "87356999f917cb1fbb26bd2ff662b800e546c8175887bc0b2f07405054a9d386",
+                "crc32": "A1CB747A"
+              },
+              {
+                "path": "replays/430/control/after-second-ok.png",
+                "frame": 1148,
+                "elapsedMs": 18368,
+                "rgbaSha256": "b95005bd654e02bd3062ddb65ec72f08ec1648dd6248f4422e32c1ef56c72769",
+                "bytes": 9190,
+                "sha256": "dda162e65e6552fe5c1fa52d2bf57e259f054dcf7a3fe05da41ed2da731cf602",
+                "crc32": "72F6E149"
+              },
+              {
+                "path": "replays/430/control/after-right.png",
+                "frame": 1281,
+                "elapsedMs": 20496,
+                "rgbaSha256": "de0b7c9735494f94102e4e977caca1fdab4baec3a3ec98a52c0db50b3ea63888",
+                "bytes": 9582,
+                "sha256": "6e1ddb7b02741d60565b4e33911473145941fd7822d1fc1332199537d08d4af8",
+                "crc32": "8FD352FD"
+              },
+              {
+                "path": "replays/430/control/after-one.png",
+                "frame": 1465,
+                "elapsedMs": 23440,
+                "rgbaSha256": "c751e2c87f22d0ba00b7820550fd6507f533020a1469f1586cbc678a4900390b",
+                "bytes": 4400,
+                "sha256": "b5676eb1e89e6147474a4a229b304755f4bf8ab4d6f8e5323a6f3ed3ad03939c",
+                "crc32": "FCC322C5"
+              },
+              {
+                "path": "replays/430/control/extra-1-hash.png",
+                "frame": 1769,
+                "elapsedMs": 28304,
+                "rgbaSha256": "beb89d026d75478e6b93a856d9012d13a22c839b78c0f11f40d095756b0bd686",
+                "bytes": 12129,
+                "sha256": "98fb14c0951613f6b171b869edad87b072ef55f87302b6ec960051e8acb90f35",
+                "crc32": "80FEA9EB"
+              },
+              {
+                "path": "replays/430/control/extra-2-ok.png",
+                "frame": 2073,
+                "elapsedMs": 33168,
+                "rgbaSha256": "64368b393682972cbcc61a5186aca1c52e8f4cda0be07c8c998d6c32d4144ee6",
+                "bytes": 12219,
+                "sha256": "996c5e1bfc8ef9c4cefe2a932663e565c671484b41b52e568a72c0e77d656c68",
+                "crc32": "B0B6A7C1"
+              },
+              {
+                "path": "replays/430/control/extra-3-ok.png",
+                "frame": 2377,
+                "elapsedMs": 38032,
+                "rgbaSha256": "70571fa158befb704f6bdbe2ff3e38fda141f8742a593f0026cd6fe123f5db0b",
+                "bytes": 12110,
+                "sha256": "4659383c0d36f8b8c255a0d887e60bc86a6e7451905b5748641a47c737f59698",
+                "crc32": "E33EA08E"
+              },
+              {
+                "path": "replays/430/control/extra-4-right.png",
+                "frame": 2690,
+                "elapsedMs": 43040,
+                "rgbaSha256": "41d5d4d7d010db93f72667f61efea3482c1b523d9e355d9c223e0bd5663951d0",
+                "bytes": 11544,
+                "sha256": "ad5e1e589912ccdb514f580739698558724494ab2aad8c6b0f3500b11cf3cf37",
+                "crc32": "FF092E6F"
+              },
+              {
+                "path": "replays/430/control/extra-5-ok.png",
+                "frame": 2994,
+                "elapsedMs": 47904,
+                "rgbaSha256": "7183835871a73e88ea8ebdc23bb1d5ff26874f91765bda71d61f77b3262d3538",
+                "bytes": 7112,
+                "sha256": "7b88cba7cb08c805877893098f6df7663257b492761c4c90a765f363c336211d",
+                "crc32": "EA1ADA2F"
+              },
+              {
+                "path": "replays/430/control/play-1-ok.png",
+                "frame": 3418,
+                "elapsedMs": 54688,
+                "rgbaSha256": "c6adb11cc562a90fd740bdba6de8a4530a33ef0a0db0e92f9906ab26894296bf",
+                "bytes": 7090,
+                "sha256": "a45e5761482d8a908917e618a89ffcecee2423958c20547d1905a9b9d11a3581",
+                "crc32": "83C31692"
+              },
+              {
+                "path": "replays/430/control/play-2-ok.png",
+                "frame": 3842,
+                "elapsedMs": 61472,
+                "rgbaSha256": "95f5225b191d7904b8be640f36ca0ffb07b0ebe25afdad00ccf46fc5bb0cd17b",
+                "bytes": 7725,
+                "sha256": "a4b6d9a3cf1fd27b371d3db9939be46587a4bb5c03b962411cc8abb4a51e138f",
+                "crc32": "81195732"
+              },
+              {
+                "path": "replays/430/control/play-3-ok.png",
+                "frame": 4266,
+                "elapsedMs": 68256,
+                "rgbaSha256": "ff7fdf77e31756972d1f2cdec749731a1f492b9453748af3b4d1ee2068511912",
+                "bytes": 7862,
+                "sha256": "8f34e0e19cdd0c48edd1c2c93eb40b91a73d7232461e2bc531d1e301d0a6a6b8",
+                "crc32": "79ADDC46"
+              },
+              {
+                "path": "replays/430/control/play-4-right.png",
+                "frame": 4699,
+                "elapsedMs": 75184,
+                "rgbaSha256": "4cfe50b9ab3ebe67d4352fca79cf51562af256a370fbca29b87735f5fb9942ad",
+                "bytes": 7904,
+                "sha256": "c3ea6f1a62ae6f05a848583779bbabe9727fef73e480432728eee4bf9fe201a8",
+                "crc32": "C7AA94FF"
+              },
+              {
+                "path": "replays/430/control/run-1-5.png",
+                "frame": 4883,
+                "elapsedMs": 78128,
+                "rgbaSha256": "07afbde734f810158c67ff08ff51077d9d1b7899673d560ba534b8551386c3fe",
+                "bytes": 8734,
+                "sha256": "9a457347898fb744854f89e5df0858f817a3fa9c0ac72811e63f0b9eec6ff852",
+                "crc32": "FD08451E"
+              },
+              {
+                "path": "replays/430/control/run-2-ok.png",
+                "frame": 5067,
+                "elapsedMs": 81072,
+                "rgbaSha256": "e41f5fef2a14436f88441e0533d3c49ccb33c6a66915809820ffafd4f91d9191",
+                "bytes": 7125,
+                "sha256": "94ee468c110d3531a20f5ebcd11e6b3ba7b558482d8fe68d050798ec801901e3",
+                "crc32": "4A07A5B0"
+              },
+              {
+                "path": "replays/430/control/run-3-hash.png",
+                "frame": 5251,
+                "elapsedMs": 84016,
+                "rgbaSha256": "6c88538c3887dd75bd0b2c87586f0f420993bab6b8e11ad7d69eb59710e281f6",
+                "bytes": 5764,
+                "sha256": "6d0aaf475557e71077125b5c4e81eb0809fc61a650afdaee89af68d5f96a90d1",
+                "crc32": "8EAB176E"
+              },
+              {
+                "path": "replays/430/control/run-4-1.png",
+                "frame": 5435,
+                "elapsedMs": 86960,
+                "rgbaSha256": "3bb7ce6626ba8a96bf3a9a7314dd6b604b2ff2a252318582e80299d0f9ce7753",
+                "bytes": 7126,
+                "sha256": "8f6bece70a2a2ff8436f1d01266b958f673819b67c1ad9fa22a282f4a2aa8a4d",
+                "crc32": "F35D455A"
+              },
+              {
+                "path": "replays/430/control/run-5-5.png",
+                "frame": 5619,
+                "elapsedMs": 89904,
+                "rgbaSha256": "433f1183eaec6b81bc1400e29a763410765ef81ab71e28d2d677fee7e56b94f3",
+                "bytes": 7124,
+                "sha256": "3c282304d8f7f0dc50386ac5fde5da3687e84f4f74e1d07a71a0efdae08e5eb6",
+                "crc32": "78FCB49A"
+              }
+            ],
+            "changedPixels": 260,
+            "firstDifferenceElapsedMs": 89904
+          }
+        }
+      },
+      {
+        "source": {
+          "post": 438,
+          "page": "https://dubigame.tistory.com/438",
+          "url": "https://blog.kakaocdn.net/dna/6He35/btrU0uzsGyJ/AAAAAAAAAAAAAAAAAAAAAAWEM8J-0bru0BouAi1WMb8TKzxPzEC52thfLcXQ9F-f/%EC%A7%88%EC%A3%BC%EC%BE%8C%EA%B0%90%EC%8A%A4%EC%BC%80%EC%B3%902.zip",
+          "filename": "질주쾌감스케쳐2.zip",
+          "text": "질주쾌감스케쳐2.zip 0.81MB",
+          "finalUrl": "https://blog.kakaocdn.net/dna/6He35/btrU0uzsGyJ/AAAAAAAAAAAAAAAAAAAAAAWEM8J-0bru0BouAi1WMb8TKzxPzEC52thfLcXQ9F-f/%EC%A7%88%EC%A3%BC%EC%BE%8C%EA%B0%90%EC%8A%A4%EC%BC%80%EC%B3%902.zip",
+          "utc": "2026-11-07T20:41:13.737508+00:00",
+          "status": 200,
+          "complete": true,
+          "bodyPath": "dubi-438-1.payload",
+          "headers": "dubi-438-1.headers.txt",
+          "bytes": 848935,
+          "sha256": "04159045a7eaf257328ac1b2fb9e83fc5aadf5fbc2aba19cabaf24438a390c3c",
+          "firstBytesHex": "504b0304140000000800dbb61439c10a",
+          "error": "",
+          "archivePath": "originals/438/질주쾌감스케쳐2.zip"
+        },
+        "metadata": {
+          "PID": "PD006714",
+          "AID": "010100D5",
+          "Name": "질주쾌감 스케쳐2",
+          "Ver": "01.00.00",
+          "Vdr": "(주)한국통신하이텔",
+          "MClass": "Clet",
+          "DisplaySize": "240*320"
+        },
+        "files": [
+          {
+            "path": "010100D5.jar",
+            "bytes": 882470,
+            "sha256": "11ad39df874377ccaeb793439fea3b10a98528bd5070a7b4beb93d074061c50d",
+            "crc32": "99F80AC1"
+          },
+          {
+            "path": "__adf__",
+            "bytes": 632,
+            "sha256": "fb3b0854255d42ebf8c4172e237dafa07dcc294d121c2b3a3604e51e2856a5c7",
+            "crc32": "FCE23CFD"
+          },
+          {
+            "path": "__class__",
+            "bytes": 262,
+            "sha256": "f07f473109efde7217fa1ce0c612273351861ad1a69051d85e18acd97bbd1297",
+            "crc32": "10C203ED"
+          },
+          {
+            "path": "big.icon",
+            "bytes": 15656,
+            "sha256": "6347f62f036be208364900f4976ecbd6e665a18a28b64a23ff90bc2e86b76683",
+            "crc32": "6E8D8D27"
+          },
+          {
+            "path": "middle.icon",
+            "bytes": 798,
+            "sha256": "08a1038743c2c939b88a37cfdc7f8b27c58a93b45827a9b5f8a932f350b64e46",
+            "crc32": "9355BD6C"
+          },
+          {
+            "path": "P/GameRecord.sav",
+            "bytes": 1120,
+            "sha256": "21ac07c87eea0c83da8a958aa2f4b10990ab6f28071d99096d027912b1a76142",
+            "crc32": "DCE7B535"
+          },
+          {
+            "path": "P/HaveData.sav",
+            "bytes": 408,
+            "sha256": "15aa54d08d5b8814532f6d1b32d025f8296e0625f43ad79fdee50df8fb404d2f",
+            "crc32": "221FAF11"
+          },
+          {
+            "path": "P/LastDate.sav",
+            "bytes": 24,
+            "sha256": "e3aeb7c16092e03b953d4844da1790cacdf80d438f3fdad17abd4c9d9d81a640",
+            "crc32": "A0E75271"
+          },
+          {
+            "path": "P/nv.dat",
+            "bytes": 80,
+            "sha256": "4fcc99e6c4ebe39448f7949d8d3ffda8224c160c6bfa033a5a9d71ae6f11a6c0",
+            "crc32": "F37B9E67"
+          },
+          {
+            "path": "small.icon",
+            "bytes": 430,
+            "sha256": "173eb79ca0d9cf3e11172c4593a0cec28f8c241404aaff9aacc8e54ab9f01a34",
+            "crc32": "DC814BB9"
+          }
+        ],
+        "jar": {
+          "path": "010100D5.jar",
+          "prefixBytes": 0,
+          "bytes": 882470,
+          "sha256": "11ad39df874377ccaeb793439fea3b10a98528bd5070a7b4beb93d074061c50d",
+          "crc32": "99F80AC1",
+          "javaClasses": 0,
+          "xceClassReferences": 0,
+          "nativeCode": [
+            {
+              "path": "client.bin164000",
+              "bytes": 743236,
+              "sha256": "662accf1a31cc9a5dfec13afcb516461b6de3a45dc63f4899950345e13d2e08a",
+              "crc32": "CC728F3C"
+            }
+          ],
+          "memberCount": 535
+        },
+        "sgsHits": 0,
+        "seenInPreviousSurvey": false,
+        "replay": {
+          "milestone": "story, equipment selection and running on the stage 01 track",
+          "frames": [
+            {
+              "path": "replays/438/stage/opening.png",
+              "frame": 600,
+              "elapsedMs": 9600,
+              "rgbaSha256": "ad269cc4c789ac643488a2ea2080efe47cbaa250c11f63db445242a1b3e7703e",
+              "bytes": 19652,
+              "sha256": "4d4c50f4fbf349467e4adb9f0c6eff1b149cda3124049795a8d6c4355d56d4cd",
+              "crc32": "B05E42E4"
+            },
+            {
+              "path": "replays/438/stage/after-ok.png",
+              "frame": 784,
+              "elapsedMs": 12544,
+              "rgbaSha256": "227caeb42e35aa7ca41b15aff28514b0eb67fbefa94a6479ad598a88046273ea",
+              "bytes": 15547,
+              "sha256": "8d1af0ace21eca852770597098141f84137e4ef372df5495cf874f88999e0e45",
+              "crc32": "962D7402"
+            },
+            {
+              "path": "replays/438/stage/after-second-ok.png",
+              "frame": 1148,
+              "elapsedMs": 18368,
+              "rgbaSha256": "382d3ef99ec0fa4db8c2a6c82154b3dc5eafecdff2aa3816b9ca32a465dea202",
+              "bytes": 19571,
+              "sha256": "649693b63310bfaf5347cbf26d0192f78c45de8c00e1a9b1c182092bfe80f22c",
+              "crc32": "246A711A"
+            },
+            {
+              "path": "replays/438/stage/after-right.png",
+              "frame": 1281,
+              "elapsedMs": 20496,
+              "rgbaSha256": "3a402ea28a44493cd57dd901da5e328806f5f00d9b6d604c323a7db166af28e2",
+              "bytes": 19551,
+              "sha256": "a0a0912c43a016e8d89cb2578d5701fb9b2db120c0e39439aa75574fb7ae2918",
+              "crc32": "53BAB2A6"
+            },
+            {
+              "path": "replays/438/stage/after-one.png",
+              "frame": 1465,
+              "elapsedMs": 23440,
+              "rgbaSha256": "1be0845e34cdb2245e8838a6102062556f52d5ade664b01c30e1dbc8f0c62e64",
+              "bytes": 19663,
+              "sha256": "2b6ad884c297512f1dd729ad7713f8c8274c968769a1fc4110f7f947db17d95a",
+              "crc32": "C8572EE8"
+            },
+            {
+              "path": "replays/438/stage/lesson-1-ok.png",
+              "frame": 1679,
+              "elapsedMs": 26864,
+              "rgbaSha256": "8c371cc5a3ac084bde5c7ee8db1e6b14f97acdf499c42e4b0b4607e5b06c7993",
+              "bytes": 20944,
+              "sha256": "d1dc05c63e9041166f5a67afbda81897af25b0adb3be93871837dd9a912e3a55",
+              "crc32": "C7343238"
+            },
+            {
+              "path": "replays/438/stage/lesson-2-ok.png",
+              "frame": 1893,
+              "elapsedMs": 30288,
+              "rgbaSha256": "2aeb7907298d96aa105d6f8be5b27b17962365579692efe85c5db90a7ebccb0b",
+              "bytes": 5622,
+              "sha256": "3967b2ce4e065704800b80b1fa5d6b9231462b8203cd97fd352222ca40c48e6e",
+              "crc32": "37F60BD3"
+            },
+            {
+              "path": "replays/438/stage/lesson-3-up.png",
+              "frame": 2107,
+              "elapsedMs": 33712,
+              "rgbaSha256": "d62df92b85a3c6ee45662b5df15ab993cbfc68cc86cd4c6852cded4b47c3fc80",
+              "bytes": 5426,
+              "sha256": "4867d7e9623ca253699faf8ef7d30448ad409aa482dfe5603f31ec0a52935e17",
+              "crc32": "4094D814"
+            },
+            {
+              "path": "replays/438/stage/lesson-4-ok.png",
+              "frame": 2321,
+              "elapsedMs": 37136,
+              "rgbaSha256": "63e74c40fd1b6619921072ffd0b56de7f8863f6767741a3ec07cd7fd5983316a",
+              "bytes": 5307,
+              "sha256": "e0bf1046489eb6c021fa789d0d2e598dabbe59d0490ececb03a4d3ed15febb12",
+              "crc32": "3B05FABD"
+            },
+            {
+              "path": "replays/438/stage/lesson-5-hash.png",
+              "frame": 2975,
+              "elapsedMs": 47600,
+              "rgbaSha256": "15a082754ba8a642ad32ccf6c32d2d7efa8e12ff5729a6a1705c73fcf50563d1",
+              "bytes": 5319,
+              "sha256": "85ff58c4150814e3fb18ae61ada62b3bdeb2da7368e2f068fcdd5c2d4eb4b58d",
+              "crc32": "FD1D280F"
+            },
+            {
+              "path": "replays/438/stage/lesson-6-ok.png",
+              "frame": 3189,
+              "elapsedMs": 51024,
+              "rgbaSha256": "4bec5e83fa7eacf14a262945b87013a29936d48f2871f666e68b52f3561882dd",
+              "bytes": 2224,
+              "sha256": "4b4cb7528eaf3d981eed09e21e2148f899bd9afb5f0ae469e35669205246f950",
+              "crc32": "92F8EE79"
+            },
+            {
+              "path": "replays/438/stage/lesson-7-hash.png",
+              "frame": 3403,
+              "elapsedMs": 54448,
+              "rgbaSha256": "f8ac33c2b4b72ffcbaee8e6f07e8806c2f66f716eca49286b26c00845bf57fac",
+              "bytes": 14454,
+              "sha256": "e4cc4e8da9019096cecb2dc093fcb8fd9678039a6ec4d7c6f1fb158b2d2984fa",
+              "crc32": "2034DBCA"
+            },
+            {
+              "path": "replays/438/stage/lesson-8-ok.png",
+              "frame": 3617,
+              "elapsedMs": 57872,
+              "rgbaSha256": "b9ef82cceb6109bad2dfe360ff7f080b6858feedf458e80d8a5c37b2402be7e7",
+              "bytes": 14362,
+              "sha256": "c954bc6aba2c8d1582d991a73865ae88aea6c142aa0440f799fa0b1037f2c273",
+              "crc32": "0DF1F4D7"
+            },
+            {
+              "path": "replays/438/stage/lesson-9-right.png",
+              "frame": 3840,
+              "elapsedMs": 61440,
+              "rgbaSha256": "696a32852c6d449b1c4952f2e3a26d0359b29555254ee88720bdb87a3c98032e",
+              "bytes": 14313,
+              "sha256": "6d363a4a52e711cf0a743ddfadc8987c8ea051691f3d7f6badaa0000b83c9b1c",
+              "crc32": "B43B98E1"
+            },
+            {
+              "path": "replays/438/stage/lesson-wait.png",
+              "frame": 5040,
+              "elapsedMs": 80640,
+              "rgbaSha256": "5106b76936f539e3690de05bb26f38e05d53212a52ef3a4f77e6b9d2d63a7473",
+              "bytes": 14321,
+              "sha256": "7048c2e922b9d403bdd716192e25fb198494d0881b3e165d9be5e4d4c8ad2330",
+              "crc32": "2B5E61AD"
+            },
+            {
+              "path": "replays/438/stage/lesson-skip.png",
+              "frame": 5344,
+              "elapsedMs": 85504,
+              "rgbaSha256": "87e525ca57277b6665e46cd7c1b2264f1edf337415a107bf1e2cef5447ecd684",
+              "bytes": 7279,
+              "sha256": "75a70d6e6ce38049dad65a98ccdf5771a07bf1a018d860d2dbfdd8a5b0d93382",
+              "crc32": "2CB5CD54"
+            },
+            {
+              "path": "replays/438/stage/lesson-play.png",
+              "frame": 5548,
+              "elapsedMs": 88768,
+              "rgbaSha256": "c42d3623d12e4a91356fa20a7a6c3801bef1b3fad72b2dd1ee5327d35f93cab2",
+              "bytes": 12812,
+              "sha256": "536c2530a3d245d4a9704b8efa41f4f9094d5f2c64919888ce42520553f70893",
+              "crc32": "45280160"
+            },
+            {
+              "path": "replays/438/stage/lesson-move.png",
+              "frame": 5661,
+              "elapsedMs": 90576,
+              "rgbaSha256": "8a57d598ac57d9763974da008f96cbafa40f6ba40b20368dd01d6ef554d8ff79",
+              "bytes": 13342,
+              "sha256": "0674ced31fb036a39882522b405e83183ab5dd752e66bb9229ebf5f3186319ad",
+              "crc32": "F13D92E6"
+            },
+            {
+              "path": "replays/438/stage/stage-ready.png",
+              "frame": 5901,
+              "elapsedMs": 94416,
+              "rgbaSha256": "66c484009935add0e8d33cd78ad940d2719eb70872f25f90592651382f2df667",
+              "bytes": 12380,
+              "sha256": "b40d7439c3455934cf27a674a31a302f685ce6706c2cc4ab1349c6acb810b29a",
+              "crc32": "12E3B5B0"
+            },
+            {
+              "path": "replays/438/stage/stage-1.png",
+              "frame": 6205,
+              "elapsedMs": 99280,
+              "rgbaSha256": "9e19b0fd110de179ce206129726629de8728578112389c987ef88991b20e58d0",
+              "bytes": 12814,
+              "sha256": "499bba3f29956a129b692cb8525fc2330cc29378ae037d3ecc2280f4904084ea",
+              "crc32": "40013F03"
+            },
+            {
+              "path": "replays/438/stage/stage-2.png",
+              "frame": 6369,
+              "elapsedMs": 101904,
+              "rgbaSha256": "a45cf80f30c3fddec31d8e9be91645ce903db5d75190b1078e9a1a0631029fb4",
+              "bytes": 3740,
+              "sha256": "87a6f5727acf936a87d6263e911ac3f2db6a25b98e1a820582f2cee4e1c6a8f1",
+              "crc32": "C320025F"
+            },
+            {
+              "path": "replays/438/stage/stage-3.png",
+              "frame": 6482,
+              "elapsedMs": 103712,
+              "rgbaSha256": "9153225c8674fecc10f977b2a27bd0448e42667b7e2a2c7366aff404f1b7dfb4",
+              "bytes": 5111,
+              "sha256": "8f50b2efeb780f4e9a68f893eb7d4468b9615ebe13ce74ae9d12017b6256e440",
+              "crc32": "D243E8B9"
+            }
+          ]
+        }
+      },
+      {
+        "source": {
+          "post": 446,
+          "page": "https://dubigame.tistory.com/446",
+          "url": "https://blog.kakaocdn.net/dna/evabB9/btsBo8G6KVv/AAAAAAAAAAAAAAAAAAAAAPiS-ojVfZ3R9mOWGuM8glXDqOITiCPay7kP0AblFTkp/%EC%82%BC%EA%B5%AD%EC%A7%80%EC%97%B0%EC%9D%982.zip",
+          "filename": "삼국지연의2.zip",
+          "text": "삼국지연의2.zip 1.11MB",
+          "finalUrl": "https://blog.kakaocdn.net/dna/evabB9/btsBo8G6KVv/AAAAAAAAAAAAAAAAAAAAAPiS-ojVfZ3R9mOWGuM8glXDqOITiCPay7kP0AblFTkp/%EC%82%BC%EA%B5%AD%EC%A7%80%EC%97%B0%EC%9D%982.zip",
+          "utc": "2026-11-07T20:41:13.738028+00:00",
+          "status": 200,
+          "complete": true,
+          "bodyPath": "dubi-446-1.payload",
+          "headers": "dubi-446-1.headers.txt",
+          "bytes": 1162964,
+          "sha256": "a42f77f4495565e57a0a1592dc92ac3ce44c8c462657f69df5984933cf4ecdfa",
+          "firstBytesHex": "504b0304140000000800026fe250ad37",
+          "error": "",
+          "archivePath": "originals/446/삼국지연의2.zip"
+        },
+        "metadata": {
+          "MIDlet-Name": "삼국지연의2",
+          "MIDlet-Version": "1.0.0",
+          "MIDlet-Vendor": "잼버거",
+          "MIDlet-1": ",,Kingdoms2",
+          "MIDlet-Jar-URL": "http://wipi.nate.com:9100/EXE/00283/71271_0069758226_1/0069758226.smf?PT=/skvm/O00267/0000035025/&SERVICE_ID=002830028371271",
+          "MicroEdition-Profile": "M_Profile-1.0, SKTP-1.0",
+          "DD-ProgName": "0069758226",
+          "DD-MIME-Type": "application/x-wipi-jar"
+        },
+        "files": [
+          {
+            "path": "0069758227.jar",
+            "bytes": 1320104,
+            "sha256": "87e25f5afa0c6bda86419ce7961a491dd409d406d2503500447f35511057fbe4",
+            "crc32": "9EBB37AD"
+          },
+          {
+            "path": "0069758227.mod",
+            "bytes": 488,
+            "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0",
+            "crc32": "96C91F92"
+          },
+          {
+            "path": "0069758227.msd",
+            "bytes": 1020,
+            "sha256": "1c8d1adb78946bf191676e1d40775a48adb0aaef2a45dd2391e214c9f915956f",
+            "crc32": "CBB55ED0"
+          },
+          {
+            "path": "0069758227.wmr",
+            "bytes": 13450,
+            "sha256": "660014d7476dff23deacb8aa2cc9469c8639a620a27840c6d4d28effdec8ca6a",
+            "crc32": "0EE553E4"
+          },
+          {
+            "path": "cert.app",
+            "bytes": 2,
+            "sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+            "crc32": "D736D92D"
+          },
+          {
+            "path": "env",
+            "bytes": 6,
+            "sha256": "d1e53b2d65f6e7d7ba13fd4ff0cdae1aebd538f74ae669c78394513ddc066a09",
+            "crc32": "65733778"
+          },
+          {
+            "path": "G0",
+            "bytes": 1632,
+            "sha256": "7e8ea0503c7e19e9692f0230b65b2070acd28abbf98effb085150eb2fac12484",
+            "crc32": "277960F6"
+          },
+          {
+            "path": "G1",
+            "bytes": 1632,
+            "sha256": "2e49e08835c638f87b9cf138991c357883d2593a69551dbf9ebfb12209b64093",
+            "crc32": "EB017D27"
+          },
+          {
+            "path": "G2",
+            "bytes": 1632,
+            "sha256": "90abd561190e9b22f1903f53d95d38645e27cb54af06c5fe0cc820cf03ef1c99",
+            "crc32": "C672FAC9"
+          },
+          {
+            "path": "L0",
+            "bytes": 4222,
+            "sha256": "9393fc9ce6f0526e6a145827f9dfe2e1f29aadfbc4157549bbffdda51e410b62",
+            "crc32": "08D24A48"
+          },
+          {
+            "path": "L0.avail",
+            "bytes": 2,
+            "sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+            "crc32": "D736D92D"
+          },
+          {
+            "path": "L1",
+            "bytes": 3870,
+            "sha256": "f8a41545cc2c77593418d9965ad443d0709f735268aedcf7fa46eddbf54b35a7",
+            "crc32": "9B830395"
+          },
+          {
+            "path": "L1.avail",
+            "bytes": 2,
+            "sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+            "crc32": "D736D92D"
+          },
+          {
+            "path": "L2",
+            "bytes": 3821,
+            "sha256": "d992842a0f31f78cd0ce2d72f53012bb81854e901977320d756c0bb8141e167a",
+            "crc32": "6664610F"
+          },
+          {
+            "path": "L2.avail",
+            "bytes": 2,
+            "sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+            "crc32": "D736D92D"
+          },
+          {
+            "path": "U0",
+            "bytes": 63,
+            "sha256": "abc75603e4a2df84f4b92e83a43bf22062d7b53f1114acf9cedc2ee982d392ad",
+            "crc32": "9A38A7E3"
+          },
+          {
+            "path": "U1",
+            "bytes": 63,
+            "sha256": "d81ba68b628d1783b5bcc5cc7caf5fbf858dd4633ff4d722dedde548963ca7ad",
+            "crc32": "D8227BE2"
+          },
+          {
+            "path": "U2",
+            "bytes": 63,
+            "sha256": "ccf40520d95aaed2d0dc0aa5f8b46d1def2bbaf3dde4e76180559f906cf2c3cf",
+            "crc32": "685ACDFB"
+          }
+        ],
+        "jar": {
+          "path": "0069758227.jar",
+          "prefixBytes": 32,
+          "bytes": 1320104,
+          "sha256": "87e25f5afa0c6bda86419ce7961a491dd409d406d2503500447f35511057fbe4",
+          "crc32": "9EBB37AD",
+          "javaClasses": 27,
+          "xceClassReferences": 5,
+          "nativeCode": [],
+          "memberCount": 2313
+        },
+        "sgsHits": 0,
+        "seenInPreviousSurvey": true,
+        "replay": {
+          "milestone": "startup displays content authentication rejection",
+          "frames": [
+            {
+              "path": "replays/446/startup/opening.png",
+              "frame": 600,
+              "elapsedMs": 9600,
+              "rgbaSha256": "a700bd964ee4e6c30d1a3decb767665ee7872ded35d46c1883db5d9494d4257b",
+              "bytes": 1699,
+              "sha256": "ca9a3aa5b25dbd4d8b20265a303088309ef75578b36bfdf30c1c381a93054bd9",
+              "crc32": "E98A4727"
+            },
+            {
+              "path": "replays/446/startup/after-ok.png",
+              "frame": 784,
+              "elapsedMs": 12544,
+              "rgbaSha256": "a700bd964ee4e6c30d1a3decb767665ee7872ded35d46c1883db5d9494d4257b",
+              "bytes": 1699,
+              "sha256": "ca9a3aa5b25dbd4d8b20265a303088309ef75578b36bfdf30c1c381a93054bd9",
+              "crc32": "E98A4727"
+            },
+            {
+              "path": "replays/446/startup/after-second-ok.png",
+              "frame": 1148,
+              "elapsedMs": 18368,
+              "rgbaSha256": "a700bd964ee4e6c30d1a3decb767665ee7872ded35d46c1883db5d9494d4257b",
+              "bytes": 1699,
+              "sha256": "ca9a3aa5b25dbd4d8b20265a303088309ef75578b36bfdf30c1c381a93054bd9",
+              "crc32": "E98A4727"
+            },
+            {
+              "path": "replays/446/startup/after-right.png",
+              "frame": 1281,
+              "elapsedMs": 20496,
+              "rgbaSha256": "a700bd964ee4e6c30d1a3decb767665ee7872ded35d46c1883db5d9494d4257b",
+              "bytes": 1699,
+              "sha256": "ca9a3aa5b25dbd4d8b20265a303088309ef75578b36bfdf30c1c381a93054bd9",
+              "crc32": "E98A4727"
+            },
+            {
+              "path": "replays/446/startup/after-one.png",
+              "frame": 1465,
+              "elapsedMs": 23440,
+              "rgbaSha256": "a700bd964ee4e6c30d1a3decb767665ee7872ded35d46c1883db5d9494d4257b",
+              "bytes": 1699,
+              "sha256": "ca9a3aa5b25dbd4d8b20265a303088309ef75578b36bfdf30c1c381a93054bd9",
+              "crc32": "E98A4727"
+            }
+          ]
+        }
+      },
+      {
+        "source": {
+          "post": 448,
+          "page": "https://dubigame.tistory.com/448",
+          "url": "https://blog.kakaocdn.net/dna/qQX4Q/btsBgJbPsRO/AAAAAAAAAAAAAAAAAAAAAIyDpjkdiagYk8PiyHws7BV0Zk4IUvBfxD-EcUdfTnKw/%EC%9B%B0%EB%A3%A8%EC%8B%9C%EC%95%84.zip",
+          "filename": "웰루시아.zip",
+          "text": "웰루시아.zip 0.80MB",
+          "finalUrl": "https://blog.kakaocdn.net/dna/qQX4Q/btsBgJbPsRO/AAAAAAAAAAAAAAAAAAAAAIyDpjkdiagYk8PiyHws7BV0Zk4IUvBfxD-EcUdfTnKw/%EC%9B%B0%EB%A3%A8%EC%8B%9C%EC%95%84.zip",
+          "utc": "2026-11-07T20:41:13.738028+00:00",
+          "status": 200,
+          "complete": true,
+          "bodyPath": "dubi-448-1.payload",
+          "headers": "dubi-448-1.headers.txt",
+          "bytes": 837135,
+          "sha256": "d6abd6258d08284eb8c39b8ee92c883d36f5f9d034349662b2a1907ac643e08e",
+          "firstBytesHex": "504b03041400000008006a1255021490",
+          "error": "",
+          "archivePath": "originals/448/웰루시아.zip"
+        },
+        "metadata": {
+          "MIDlet-Name": "웰루시아",
+          "MIDlet-Version": "1.7.0",
+          "MIDlet-Vendor": "(주)웰러스",
+          "MIDlet-1": "웰루시아,,exceptGame.Midlet",
+          "MIDlet-Jar-URL": "http://wipi.nate.com:9100/EXE/00259/64068_0049663477/0049663477.smf?PT=/skvm/O00A1A/0000035161/&Z=0&SERVICE_ID=002590025964068",
+          "MicroEdition-Profile": "M_Profile-1.0, SKTP-1.1",
+          "DD-ProgName": "0049663477",
+          "DD-MIME-Type": "application/x-wipi-jar"
+        },
+        "files": [
+          {
+            "path": "0049663477.jar",
+            "bytes": 953377,
+            "sha256": "d4c7e4c096f1c7c054f6245d47913914f56f0f063e1baf8eb72325777b6e5c66",
+            "crc32": "3A9C9014"
+          },
+          {
+            "path": "0049663477.mod",
+            "bytes": 524,
+            "sha256": "710fbe46afef840e3f5155224501da574d2b2d819fa2362db1ab89ce8fb2319d",
+            "crc32": "FABBCE10"
+          },
+          {
+            "path": "0049663477.msd",
+            "bytes": 1050,
+            "sha256": "265dca668ab6d5988ef0b6d19d362388cf2a3d424a2448aa127597a70fc281bb",
+            "crc32": "1977FC5D"
+          },
+          {
+            "path": "0049663477.wmr",
+            "bytes": 13452,
+            "sha256": "129fbc07469f971ce6a2ea93434be5e7237baecaae16450be395884912909750",
+            "crc32": "6ADC609E"
+          },
+          {
+            "path": "option.dat",
+            "bytes": 19,
+            "sha256": "4ec68d92484924426e2c7b1885a5043d629ae5622a09846bbd55031c63ab4e19",
+            "crc32": "29E31F7B"
+          },
+          {
+            "path": "playerData.dat",
+            "bytes": 889,
+            "sha256": "bf59656cd0b72e179b66b22c567bb75faf0f431cb31baffb012cfaa182044f00",
+            "crc32": "3AF5BC53"
+          }
+        ],
+        "jar": {
+          "path": "0049663477.jar",
+          "prefixBytes": 32,
+          "bytes": 953377,
+          "sha256": "d4c7e4c096f1c7c054f6245d47913914f56f0f063e1baf8eb72325777b6e5c66",
+          "crc32": "3A9C9014",
+          "javaClasses": 91,
+          "xceClassReferences": 13,
+          "nativeCode": [],
+          "memberCount": 1023
+        },
+        "sgsHits": 0,
+        "seenInPreviousSurvey": true,
+        "replay": {
+          "milestone": "dungeon and combat; key 5 changes the battle frame",
+          "paired": {
+            "input": [
+              {
+                "path": "replays/448/input/opening.png",
+                "frame": 600,
+                "elapsedMs": 9600,
+                "rgbaSha256": "0eeee2edd30d2b5ebcbdd6ff91b50781cb72c62ef99e489b01a4d72653fa7ea5",
+                "bytes": 12636,
+                "sha256": "f04c8a5670fffc6e8197fae1258a110f2f97f91123c920152b27fefc8a37d19d",
+                "crc32": "A61CC40C"
+              },
+              {
+                "path": "replays/448/input/after-ok.png",
+                "frame": 784,
+                "elapsedMs": 12544,
+                "rgbaSha256": "6ae59d0f1e4eef0b9fd0257bfd5cb6e0134425d3b6add2cf47c0af9794e9a46c",
+                "bytes": 12905,
+                "sha256": "a9b7e72ec449eee0466e34741c0c8c3e889c8057d2ccb5f384c9e1d9f65af348",
+                "crc32": "B237E6BA"
+              },
+              {
+                "path": "replays/448/input/after-second-ok.png",
+                "frame": 1148,
+                "elapsedMs": 18368,
+                "rgbaSha256": "f315bed95877055bb6eca254b92fe3a8ab5c73179ee411aa8d6efb907bac49c9",
+                "bytes": 15263,
+                "sha256": "07115be2f3afba83bff9321337bcf0e672fe8385cd75c031981b605d793fd77c",
+                "crc32": "59F3F3AC"
+              },
+              {
+                "path": "replays/448/input/after-right.png",
+                "frame": 1281,
+                "elapsedMs": 20496,
+                "rgbaSha256": "94cdbbd86aa64d66695596c009b03a5db1c0594dcca5a130b7a080231d92aaab",
+                "bytes": 16468,
+                "sha256": "af22bb139b9bc82d3c7fb6509feb4d8550f48234602bc7738e65115145f54d87",
+                "crc32": "41E5604E"
+              },
+              {
+                "path": "replays/448/input/after-one.png",
+                "frame": 1465,
+                "elapsedMs": 23440,
+                "rgbaSha256": "440d0cce80d8be548c68423c96950283614acb2eb8703c347cb05177fb805eb8",
+                "bytes": 16285,
+                "sha256": "b7ff98ddd4e46996c29db4b0081abe7efe68b0e3ad17f20184090e7e640937ce",
+                "crc32": "D57B0755"
+              },
+              {
+                "path": "replays/448/input/extra-1-hash.png",
+                "frame": 1769,
+                "elapsedMs": 28304,
+                "rgbaSha256": "44474aad732c8be430a568c3a0c9c172f860815bf235c3fe6a86ecbb4391993b",
+                "bytes": 40019,
+                "sha256": "2481b945b5f3206abedd188e1ed076a1cf84818756be2faffc882a1a3a9d5a77",
+                "crc32": "FD7F001E"
+              },
+              {
+                "path": "replays/448/input/extra-2-ok.png",
+                "frame": 2073,
+                "elapsedMs": 33168,
+                "rgbaSha256": "9f3db28ffa69dedf9126d528567242d57d372dd063b007839a44f6ce0bee6e28",
+                "bytes": 38162,
+                "sha256": "54ecc6565ea0efbe95a6966de05469ec91c6fcdd65ffc11d1becb08170034315",
+                "crc32": "C147E029"
+              },
+              {
+                "path": "replays/448/input/extra-3-ok.png",
+                "frame": 2377,
+                "elapsedMs": 38032,
+                "rgbaSha256": "31ea05ff37315c16814527798545dc572354f70165fbd0248e724bdf0d881cca",
+                "bytes": 29296,
+                "sha256": "08a4bb639c0ffdb3f2463cccc87d48bf1b703d3bd14ec24e1177dfc698ecdcc8",
+                "crc32": "3118E472"
+              },
+              {
+                "path": "replays/448/input/extra-4-ok.png",
+                "frame": 2681,
+                "elapsedMs": 42896,
+                "rgbaSha256": "b658b41cd8f3e5c4a202f677b702dbee983a3f5fa37df4b5a9850ee5b90b28da",
+                "bytes": 25845,
+                "sha256": "f48ffcf9b9479436a4d1b4dc024f95d52862f5d32bcecf03f663b0102547d170",
+                "crc32": "F78B7E0A"
+              },
+              {
+                "path": "replays/448/input/extra-5-right.png",
+                "frame": 2994,
+                "elapsedMs": 47904,
+                "rgbaSha256": "d1e1e68ea105028be984f6e8c9a6056c0c83af9e4c45747d713c38fd6932446b",
+                "bytes": 27590,
+                "sha256": "f68807336ceaeaa3646142f107178d011c48c68bac5bc0929b1d2b4a41fbb7e2",
+                "crc32": "FF0E1C52"
+              },
+              {
+                "path": "replays/448/input/after.png",
+                "frame": 3108,
+                "elapsedMs": 49728,
+                "rgbaSha256": "492739d5ecdab12747f0e6acbbd2167327d5b46e09271138f7f04d977798ee31",
+                "bytes": 27849,
+                "sha256": "f4ba4b263c544ec4000645af6e83fc0b24d23d9a3f49288f10e3e2b94b365671",
+                "crc32": "839F2B2A"
+              }
+            ],
+            "control": [
+              {
+                "path": "replays/448/control/opening.png",
+                "frame": 600,
+                "elapsedMs": 9600,
+                "rgbaSha256": "0eeee2edd30d2b5ebcbdd6ff91b50781cb72c62ef99e489b01a4d72653fa7ea5",
+                "bytes": 12636,
+                "sha256": "f04c8a5670fffc6e8197fae1258a110f2f97f91123c920152b27fefc8a37d19d",
+                "crc32": "A61CC40C"
+              },
+              {
+                "path": "replays/448/control/after-ok.png",
+                "frame": 784,
+                "elapsedMs": 12544,
+                "rgbaSha256": "6ae59d0f1e4eef0b9fd0257bfd5cb6e0134425d3b6add2cf47c0af9794e9a46c",
+                "bytes": 12905,
+                "sha256": "a9b7e72ec449eee0466e34741c0c8c3e889c8057d2ccb5f384c9e1d9f65af348",
+                "crc32": "B237E6BA"
+              },
+              {
+                "path": "replays/448/control/after-second-ok.png",
+                "frame": 1148,
+                "elapsedMs": 18368,
+                "rgbaSha256": "f315bed95877055bb6eca254b92fe3a8ab5c73179ee411aa8d6efb907bac49c9",
+                "bytes": 15263,
+                "sha256": "07115be2f3afba83bff9321337bcf0e672fe8385cd75c031981b605d793fd77c",
+                "crc32": "59F3F3AC"
+              },
+              {
+                "path": "replays/448/control/after-right.png",
+                "frame": 1281,
+                "elapsedMs": 20496,
+                "rgbaSha256": "94cdbbd86aa64d66695596c009b03a5db1c0594dcca5a130b7a080231d92aaab",
+                "bytes": 16468,
+                "sha256": "af22bb139b9bc82d3c7fb6509feb4d8550f48234602bc7738e65115145f54d87",
+                "crc32": "41E5604E"
+              },
+              {
+                "path": "replays/448/control/after-one.png",
+                "frame": 1465,
+                "elapsedMs": 23440,
+                "rgbaSha256": "440d0cce80d8be548c68423c96950283614acb2eb8703c347cb05177fb805eb8",
+                "bytes": 16285,
+                "sha256": "b7ff98ddd4e46996c29db4b0081abe7efe68b0e3ad17f20184090e7e640937ce",
+                "crc32": "D57B0755"
+              },
+              {
+                "path": "replays/448/control/extra-1-hash.png",
+                "frame": 1769,
+                "elapsedMs": 28304,
+                "rgbaSha256": "44474aad732c8be430a568c3a0c9c172f860815bf235c3fe6a86ecbb4391993b",
+                "bytes": 40019,
+                "sha256": "2481b945b5f3206abedd188e1ed076a1cf84818756be2faffc882a1a3a9d5a77",
+                "crc32": "FD7F001E"
+              },
+              {
+                "path": "replays/448/control/extra-2-ok.png",
+                "frame": 2073,
+                "elapsedMs": 33168,
+                "rgbaSha256": "9f3db28ffa69dedf9126d528567242d57d372dd063b007839a44f6ce0bee6e28",
+                "bytes": 38162,
+                "sha256": "54ecc6565ea0efbe95a6966de05469ec91c6fcdd65ffc11d1becb08170034315",
+                "crc32": "C147E029"
+              },
+              {
+                "path": "replays/448/control/extra-3-ok.png",
+                "frame": 2377,
+                "elapsedMs": 38032,
+                "rgbaSha256": "31ea05ff37315c16814527798545dc572354f70165fbd0248e724bdf0d881cca",
+                "bytes": 29296,
+                "sha256": "08a4bb639c0ffdb3f2463cccc87d48bf1b703d3bd14ec24e1177dfc698ecdcc8",
+                "crc32": "3118E472"
+              },
+              {
+                "path": "replays/448/control/extra-4-ok.png",
+                "frame": 2681,
+                "elapsedMs": 42896,
+                "rgbaSha256": "b658b41cd8f3e5c4a202f677b702dbee983a3f5fa37df4b5a9850ee5b90b28da",
+                "bytes": 25845,
+                "sha256": "f48ffcf9b9479436a4d1b4dc024f95d52862f5d32bcecf03f663b0102547d170",
+                "crc32": "F78B7E0A"
+              },
+              {
+                "path": "replays/448/control/extra-5-right.png",
+                "frame": 2994,
+                "elapsedMs": 47904,
+                "rgbaSha256": "d1e1e68ea105028be984f6e8c9a6056c0c83af9e4c45747d713c38fd6932446b",
+                "bytes": 27590,
+                "sha256": "f68807336ceaeaa3646142f107178d011c48c68bac5bc0929b1d2b4a41fbb7e2",
+                "crc32": "FF0E1C52"
+              },
+              {
+                "path": "replays/448/control/after.png",
+                "frame": 3108,
+                "elapsedMs": 49728,
+                "rgbaSha256": "2e99e975c0b02255b18ecfd459604f6bdf15b8460c0150995d39300c20629de6",
+                "bytes": 27850,
+                "sha256": "7baf47287c9b4448be86b4e13191188430f736d2441e76e2142818828f993652",
+                "crc32": "BCDBD77F"
+              }
+            ],
+            "changedPixels": 3463,
+            "firstDifferenceElapsedMs": 49728
+          }
+        }
+      }
+    ],
+    "unattachedPost": "https://dubigame.tistory.com/447",
+    "positiveControls": 94
+  },
+  "portableEmulator": {
+    "physicalVolumes": 4,
+    "parts": [
+      {
+        "post": "niver",
+        "page": "https://dubigame.tistory.com/niver",
+        "url": "https://blog.kakaocdn.net/dna/bhtRBu/dJMb80A1zcM/AAAAAAAAAAAAAAAAAAAAALvxByeehTkW9V7KukLd5bm3zfjJENiLy_2rKYm1fjQq/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.zip",
+        "filename": "SK-VM, ez-i 에뮬레이터.zip",
+        "text": "SK-VM, ez-i 에뮬레이터.zip 1.75MB",
+        "finalUrl": "https://blog.kakaocdn.net/dna/bhtRBu/dJMb80A1zcM/AAAAAAAAAAAAAAAAAAAAALvxByeehTkW9V7KukLd5bm3zfjJENiLy_2rKYm1fjQq/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.zip",
+        "utc": "2026-11-07T20:44:47.393589+00:00",
+        "status": 200,
+        "complete": true,
+        "bodyPath": "dubi-niver-1.payload",
+        "headers": "dubi-niver-1.headers.txt",
+        "bytes": 1837522,
+        "sha256": "787e2de453f9f367baabb6ee29fed576c92704c2f2a44d198e6efac488ead4cc",
+        "firstBytesHex": "dd59cda30036d12aa18814629306b429",
+        "error": ""
+      },
+      {
+        "post": "niver",
+        "page": "https://dubigame.tistory.com/niver",
+        "url": "https://blog.kakaocdn.net/dna/bSpxIN/dJMb9Nho3xz/AAAAAAAAAAAAAAAAAAAAALLbCJ4GNNDTmJB-_2ZEx8SqkF0PNjVJLQC7wt_5iCPV/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.z03",
+        "filename": "SK-VM, ez-i 에뮬레이터.z03",
+        "text": "SK-VM, ez-i 에뮬레이터.z03 10.00MB",
+        "finalUrl": "https://blog.kakaocdn.net/dna/bSpxIN/dJMb9Nho3xz/AAAAAAAAAAAAAAAAAAAAALLbCJ4GNNDTmJB-_2ZEx8SqkF0PNjVJLQC7wt_5iCPV/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.z03",
+        "utc": "2026-11-07T20:44:47.394592+00:00",
+        "status": 200,
+        "complete": true,
+        "bodyPath": "dubi-niver-2.payload",
+        "headers": "dubi-niver-2.headers.txt",
+        "bytes": 10485760,
+        "sha256": "8abc489e0955cef5809802954185ab1e344ef1570479b6f6bbe6e9073c9812c0",
+        "firstBytesHex": "6e12abe8dabb5ef0951f615e394bcc99",
+        "error": ""
+      },
+      {
+        "post": "niver",
+        "page": "https://dubigame.tistory.com/niver",
+        "url": "https://blog.kakaocdn.net/dna/bYZWk4/dJMb87tnLkA/AAAAAAAAAAAAAAAAAAAAAJW-b4o50DAdGuObJjLc03NA2VqdRKnmXe1MdyhJnZTR/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.z02",
+        "filename": "SK-VM, ez-i 에뮬레이터.z02",
+        "text": "SK-VM, ez-i 에뮬레이터.z02 10.00MB",
+        "finalUrl": "https://blog.kakaocdn.net/dna/bYZWk4/dJMb87tnLkA/AAAAAAAAAAAAAAAAAAAAAJW-b4o50DAdGuObJjLc03NA2VqdRKnmXe1MdyhJnZTR/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.z02",
+        "utc": "2026-11-07T20:44:47.394592+00:00",
+        "status": 200,
+        "complete": true,
+        "bodyPath": "dubi-niver-3.payload",
+        "headers": "dubi-niver-3.headers.txt",
+        "bytes": 10485760,
+        "sha256": "4320719115b5094e25883ffe2a7e87e82c1db0c218d499a0d0caea96a64a73e8",
+        "firstBytesHex": "ccedf30c2c0d41f15bef963d05fdfdd3",
+        "error": ""
+      },
+      {
+        "post": "niver",
+        "page": "https://dubigame.tistory.com/niver",
+        "url": "https://blog.kakaocdn.net/dna/cqb6uR/dJMb87tnLkB/AAAAAAAAAAAAAAAAAAAAADxBEp8SgN1T-esTN_clk14iSwy0wcf13np8tNlWGd_N/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.z01",
+        "filename": "SK-VM, ez-i 에뮬레이터.z01",
+        "text": "SK-VM, ez-i 에뮬레이터.z01 10.00MB",
+        "finalUrl": "https://blog.kakaocdn.net/dna/cqb6uR/dJMb87tnLkB/AAAAAAAAAAAAAAAAAAAAADxBEp8SgN1T-esTN_clk14iSwy0wcf13np8tNlWGd_N/SK-VM,%20ez-i%20%EC%97%90%EB%AE%AC%EB%A0%88%EC%9D%B4%ED%84%B0.z01",
+        "utc": "2026-11-07T20:44:51.448647+00:00",
+        "status": 200,
+        "complete": true,
+        "bodyPath": "dubi-niver-4.payload",
+        "headers": "dubi-niver-4.headers.txt",
+        "bytes": 10485760,
+        "sha256": "452e36273af11aa972ebf60c979037fce8a9be3d533e0e965d79af5406adeb77",
+        "firstBytesHex": "504b0708504b03041400000000009261",
+        "error": ""
+      }
+    ],
+    "javaArchives": [
+      {
+        "path": "SK-VM, ez-i 에뮬레이터/eclipse/KEmulator_base/agent.jar",
+        "bytes": 1496,
+        "sha256": "953aa24f00b415d04774b230ebd182fdc97b1fa1a553af802fc89468af642cac",
+        "crc32": "28435195",
+        "manifest": "Manifest-Version: 1.0\r\nMain-Class: emulator.Emulator\r\nPremain-Class: emulator.Agent\r\nLauncher-Agent-Class: emulator.Agent\r\n\r\n",
+        "members": 2,
+        "classFiles": 1,
+        "apiPrefixes": {
+          "com/xce/": 0,
+          "org/xce/": 0,
+          "com/lge/": 0,
+          "org/kwis/": 0,
+          "javax/microedition/": 0
+        }
+      },
+      {
+        "path": "SK-VM, ez-i 에뮬레이터/home/kemulator-debug.jar",
+        "bytes": 1737383,
+        "sha256": "d080f5c94bd7d42f9916cfe199dafc34c93372417f8d6bd5d3400c08e2842780",
+        "crc32": "F1D31222",
+        "manifest": "Manifest-Version: 1.0\r\nMain-Class: emulator.Emulator\r\nPremain-Class: emulator.Agent\r\nLauncher-Agent-Class: emulator.Agent\r\n\r\n",
+        "members": 1239,
+        "classFiles": 1234,
+        "apiPrefixes": {
+          "com/xce/": 14,
+          "org/xce/": 0,
+          "com/lge/": 0,
+          "org/kwis/": 3,
+          "javax/microedition/": 311
+        }
+      },
+      {
+        "path": "SK-VM, ez-i 에뮬레이터/home/KEmulator-mmpp.jar",
+        "bytes": 14774275,
+        "sha256": "e9b570bcc94d2fb074d09131751bd90b285bd153b585255af83fae497c5c7736",
+        "crc32": "10E6A3F1",
+        "manifest": "Manifest-Version: 1.0\r\nMain-Class: emulator.Emulator\r\n\r\n",
+        "members": 5932,
+        "classFiles": 5743,
+        "apiPrefixes": {
+          "com/xce/": 14,
+          "org/xce/": 0,
+          "com/lge/": 0,
+          "org/kwis/": 3,
+          "javax/microedition/": 314
+        }
+      }
+    ],
+    "confirmedSgs": 0,
+    "fileCount": 135
+  },
+  "archives": [
+    {
+      "repositoryPath": "research/archives/Dubigame-SKVM-KTF-Four-Games.zip",
+      "bytes": 4805525,
+      "sha256": "2e6908cdfb616f05918bba36aab0178e194494ea06d089a5f6c5d8aeb005ac1c",
+      "crc32": "E0A59E10"
+    },
+    {
+      "repositoryPath": "research/archives/SKVM-EZI-Portable-Niver-Originals.zip",
+      "bytes": 33326527,
+      "sha256": "49833f18a77037275fdf6afc635df3a26cf5ae277bf6635e41f7dfce0680b1c7",
+      "crc32": "1765C531"
+    }
+  ]
+}
