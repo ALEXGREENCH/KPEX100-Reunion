@@ -7,10 +7,9 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-**The collection is included:** 9 firmware images, 92 SGS applications,
-3 quick-start snapshots and the original Swerve 2.1 module. Both the repository
-and the default GitHub Pages build are ready to launch games. Original bytes
-are unchanged; the catalogue records SHA-256 hashes and tested runtime profiles.
+The collection includes 9 firmware images, 94 SGS applications, 3 quick-start
+snapshots and the original Swerve 2.1 module. The catalogue records SHA-256
+hashes and tested runtime profiles.
 
 [World League and Bounce from S60](doc/s60-library-completion.md): three previously preserved SGS builds are now in the launch library, with fresh paired scene/control checks. Menu rendering and external-audio limits remain documented.
 
@@ -18,8 +17,9 @@ are unchanged; the catalogue records SHA-256 hashes and tested runtime profiles.
 Ragnarok Gaiden, Mashimaro, Bukbeol, Fruit Tycoon, Fantasy Blue and a Zzayo
 variant, with original archives and paired input/control checks.
 
-The Games tab contains 88 game builds and the Mosquito utility. The Examples tab
-contains three separately tested developer SGS samples. Preserved attachments,
+The Games tab contains 88 original game builds, a playable
+[Fortress Tournament reconstruction](doc/fortress-tournament.md), and the
+Mosquito utility. The Examples tab contains four developer SGS samples. Preserved attachments,
 source projects and research downloads are available on the
 [archive page](https://alexgreench.github.io/KPEX100-Reunion/research/), with
 provenance, sizes and SHA-256 hashes. Native PXO and Flash finds are preserved

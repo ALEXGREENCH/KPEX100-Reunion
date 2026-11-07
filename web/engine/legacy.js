@@ -344,6 +344,7 @@ export class LegacyRuntime extends GnexRuntime {
   event(name, value, instructionBudget = 20000000) {
     const guarded = this.fastVmExecution && arguments.length < 3 && this.cpu.runGuarded;
     name = String(name).toUpperCase();
+    if (guarded && name === 'TIMEOUT') instructionBudget = this.timeoutWorkBudget;
     if (value === undefined) value = name === 'START' ? this.startData : 0;
     if (!(name in this.sgs.entries)) throw new GnexError('Unknown legacy event');
     if (['error', 'exited', 'closed'].includes(this.status)) return this.diagnostics;

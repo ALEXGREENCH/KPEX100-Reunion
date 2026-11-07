@@ -3,6 +3,57 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "lg-sd1000-fortress-tournament",
+      "repositoryPath": "research/archives/LG-SD1000-Fortress-Tournament.zip",
+      "bytes": 92213,
+      "sha256": "4bbff2c48f62718eee9519ef445d69fac97d426ef188176eb36578a1376809b6",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/fortress-tournament-reconstruction.sgs",
+          "bytes": 103228,
+          "crc32": "3c6d0e50",
+          "sha256": "7f5b8d3b9f5a5a2b6d6915172e3d841180b13ce34f5535fb49b7e4582f6fda78"
+        },
+        {
+          "path": "evidence/gameplay.json",
+          "bytes": 13194,
+          "crc32": "9fd65c07",
+          "sha256": "1ba89fcb10f8e04e6b14620391ac88070a3faae5ebbaaf6815e32a6f574ee08d"
+        },
+        {
+          "path": "evidence/page-map.json",
+          "bytes": 78761,
+          "crc32": "0f59a52d",
+          "sha256": "7fe774618ae1e95d20bf25b75aa74ca406173aa3456c94c84a80ce7ac5182e93"
+        },
+        {
+          "path": "evidence/replay.json",
+          "bytes": 264,
+          "crc32": "4f6edbd5",
+          "sha256": "377b2ee68bf4c52d7598d7dd18b88dd4a58065525c1cc1368c80c67c13ccd91f"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 5147,
+          "crc32": "ab2e19e1",
+          "sha256": "cc1825ee600c7967486f0e129924847569b3e0f4faa3db2e276b21cf8e9d636e"
+        },
+        {
+          "path": "original/gvm2x_001.fragments",
+          "bytes": 103392,
+          "crc32": "c8891093",
+          "sha256": "1ca7546cae5b18bbc895d899daddea0f216076cb39681fd3cdc7d05f01024e50"
+        },
+        {
+          "path": "tools/restore-fortress-tournament.py",
+          "bytes": 2414,
+          "crc32": "bd186270",
+          "sha256": "1c878a48add69b4170b2268206af6abe6e7c4957741e9d4548e3ad111629c530"
+        }
+      ]
+    },
+    {
       "id": "milkclub-gvm-originals",
       "repositoryPath": "research/archives/Milkclub-GVM-Originals.zip",
       "bytes": 1798487,
@@ -167326,9 +167377,9 @@
     }
   ],
   "counts": {
-    "archives": 76,
-    "archiveBytes": 1227238042,
-    "fileMembers": 27773,
-    "uniqueMemberHashes": 14829
+    "archives": 77,
+    "archiveBytes": 1227330255,
+    "fileMembers": 27780,
+    "uniqueMemberHashes": 14836
   }
 }

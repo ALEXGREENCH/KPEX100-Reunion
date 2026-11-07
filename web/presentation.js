@@ -50,6 +50,7 @@ export const devices = [
 // Explicit provenance identities. A skin never changes the runtime handset profile.
 const gameDevices = {
   'galaga-lg-sd1000': 'sd1000',
+  'fortress-tournament-lg-sd1000': 'sd1000',
   'bubble-bobble-lg-sd1020': 'sd1020',
   'vocabulary-quiz-lg-sv130': 'sv130',
   ...Object.fromEntries(

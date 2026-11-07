@@ -5,6 +5,7 @@ import { automaticDevice, deviceFor, fitFrame, devices } from '../../web/present
 test('photographic devices follow explicit provenance, never framebuffer dimensions', () => {
   const expected = {
     'galaga-lg-sd1000': 'sd1000',
+    'fortress-tournament-lg-sd1000': 'sd1000',
     'bubble-bobble-lg-sd1020': 'sd1020',
     'vocabulary-quiz-lg-sv130': 'sv130',
     'shrek-2-lg-sd810': 'sd810',

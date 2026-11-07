@@ -4,6 +4,21 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "lg-sd1000-fortress-tournament",
+      "title": "LG SD1000: Fortress Tournament",
+      "category": "Игры и игровые сборки",
+      "description": "Фрагменты SGS из образа SD430I13, карта страниц и запускаемая копия. В одном звуковом эффекте 12 недостающих байт заполнены нулями.",
+      "repositoryPath": "research/archives/LG-SD1000-Fortress-Tournament.zip",
+      "bytes": 92213,
+      "sha256": "4bbff2c48f62718eee9519ef445d69fac97d426ef188176eb36578a1376809b6",
+      "sources": [
+        {
+          "label": "Образ SD430I13",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD1000/SD430I13.7z"
+        }
+      ]
+    },
+    {
       "id": "milkclub-gvm-originals",
       "title": "Milkclub: Hello GVM и инструменты",
       "category": "Wayback и форумы",
@@ -1696,6 +1711,10 @@
     {
       "title": "Milkclub: материалы GVM и проверка Hello",
       "repositoryPath": "doc/milkclub-gvm-materials.md"
+    },
+    {
+      "title": "Fortress Tournament: восстановление SGS и первый матч",
+      "repositoryPath": "doc/fortress-tournament.md"
     }
   ]
 }

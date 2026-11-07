@@ -125,7 +125,7 @@ export class GnexRuntime {
     if (
       !Number.isSafeInteger(timeoutWorkBudget) ||
       timeoutWorkBudget < EVENT_WORK_BUDGET ||
-      timeoutWorkBudget > 40_000_000
+      timeoutWorkBudget > 60_000_000
     )
       throw new GnexError('Invalid timer work budget');
     this.timeoutWorkBudget = timeoutWorkBudget;

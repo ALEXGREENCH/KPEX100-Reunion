@@ -383,6 +383,28 @@
       "startHint": "После заставки нажмите Z / OK, затем 1. Движение — стрелки, стрельба — 5."
     },
     {
+      "id": "fortress-tournament-lg-sd1000",
+      "title": "Fortress Tournament (LG SD1000, восстановление)",
+      "nativeTitle": "포트토너먼트",
+      "url": "data/games/fortress-tournament-lg-sd1000.sgs",
+      "sha256": "7f5b8d3b9f5a5a2b6d6915172e3d841180b13ce34f5535fb49b7e4582f6fda78",
+      "bytes": 103228,
+      "format": 2,
+      "compatibility": "playable",
+      "sourceName": "gvm2x/gvm2x_001",
+      "sourceUrl": "https://archive.sunderland93.ru/Firmwares/LG/SD1000/SD430I13.7z",
+      "resources": 416,
+      "platform": "mobile",
+      "runtime": {
+        "profile": "phone",
+        "width": 120,
+        "height": 119,
+        "timeoutWorkBudget": 60000000
+      },
+      "startHint": "1 открывает выбор турнира. Z / OK начинает бой и стреляет, 4 и 6 перемещают танк. В одном звуковом эффекте 12 недостающих байт заполнены нулями.",
+      "provenance": "From the SD430I13 GVM2X store. This playable reconstruction inserts 12 placeholder bytes in SMAF resource 397. All recovered bytes, including the game code, retain their original values. See doc/fortress-tournament.md."
+    },
+    {
       "id": "vocabulary-quiz-lg-sv130",
       "title": "English Vocabulary Quiz King (LG SV130)",
       "url": "data/games/vocabulary-quiz-lg-sv130.sgs",

@@ -1,8 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import { LegacyRuntime, parseLegacy } from '../web/engine/legacy.js';
 import { detectVersion } from '../web/engine/sgs.js';
+import { TimerScheduler } from '../web/engine/timers.js';
 const root = new URL('../web/', import.meta.url),
   rom = fs.readFileSync(new URL('data/firmware/Kingston-2.12.rom', root));
 const catalog = JSON.parse(fs.readFileSync(new URL('data/catalog.json', root))),
@@ -19,7 +21,7 @@ const create = (id) =>
 
 test('all catalogue legacy containers have consistent native 16-bit layouts', () => {
   const games = catalog.games.filter((g) => [1, 2].includes(g.format));
-  assert.equal(games.length, 34);
+  assert.equal(games.length, 35);
   for (const g of games) {
     const raw = game(g.id),
       s = parseLegacy(raw);
@@ -150,6 +152,58 @@ test('legacy explicit instruction budgets cannot disable the execution limit', a
     assert.match(g.error, /instruction budget/);
   } finally {
     g.close();
+  }
+});
+
+test('Fortress Tournament loads the map with its timer budget and responds to movement and fire', async () => {
+  const entry = catalog.games.find((item) => item.id === 'fortress-tournament-lg-sd1000');
+  const { actions } = JSON.parse(
+    fs.readFileSync(new URL('../validation/replay-fortress-tournament.json', import.meta.url)),
+  );
+  for (const budget of [20_000_000, entry.runtime.timeoutWorkBudget]) {
+    let now = 0;
+    const g = await LegacyRuntime.create(rom, game(entry.id), {
+      ...entry.runtime,
+      timeoutWorkBudget: budget,
+      nowMs: () => now,
+      clock: () => new Date(2026, 0, 1, 12),
+    });
+    const timers = new TimerScheduler(),
+      frames = [];
+    try {
+      g.event('START');
+      timers.sync(g.timerStates, now);
+      for (const [kind, value] of actions) {
+        if (kind === 'key') {
+          g.setKey(value, true);
+          g.setKey(value, false);
+          timers.sync(g.timerStates, now);
+        } else {
+          const until = now + value;
+          for (let timer = timers.next(); timer && timer.at <= until; timer = timers.next()) {
+            now = timer.at;
+            g.event('TIMEOUT', timer.channel);
+            if (g.status !== 'idle') break;
+            timers.sync(g.timerStates, now, timer.channel);
+          }
+          now = until;
+        }
+        frames.push(createHash('sha256').update(g.framebufferRGBA).digest('hex'));
+        if (g.status !== 'idle') break;
+      }
+      if (budget === 20_000_000) {
+        assert.equal(frames.length, 7);
+        assert.match(g.error, /block work budget/);
+        continue;
+      }
+      assert.equal(g.status, 'idle', g.error);
+      assert.equal(g.heldKeys.size, 0);
+      assert.equal(frames[6], 'd361a8ad84911cd5069ba3181ab62923913e2a61265fb181466b8e2b9ba803f4');
+      assert.equal(frames[8], '8204d590405483f012fefc1f240fda86afc57a74286f7725e2048ee6443597ff');
+      assert.equal(frames[11], 'ebf2d56b3751b69c4f2dd4da45f42e01a16c79bee6d444059a51f4c07e1f88de');
+    } finally {
+      g.close();
+    }
   }
 });
 
