@@ -1,0 +1,1838 @@
+{
+  "schema": 1,
+  "scope": "Original game disc and Sketcher VGN, tested against the Reunion compatibility runtime.",
+  "games": [
+    {
+      "id": "mini-game-paradise-myracer",
+      "title": "Mini Game Paradise",
+      "nativeTitle": "미니게임천국",
+      "sourceUrl": "https://archive.org/details/MyRacerMF101",
+      "original": {
+        "path": "original/game-files/미니게임천국.xgn",
+        "bytes": 896116,
+        "sha256": "5bd13e9c0d2a82c7bcd6e7d528008f5402c8f4a969d0433986962fd150182fdc",
+        "crc32": "5e9f9bd7"
+      },
+      "derived": {
+        "path": "derived/minigame.sgs",
+        "bytes": 896100,
+        "sha256": "7d4c28a7be89f4ced9f583295fd341c8cbe14ed195104211cfbb257e5dc1fabc",
+        "crc32": "c55acc6f"
+      },
+      "resources": 747,
+      "native": {
+        "romEntry": "0x0809c0c4",
+        "acceptedReturn": 2,
+        "identical": true
+      },
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "actions": [
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          25
+        ],
+        [
+          "key",
+          1
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          21
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ]
+      ],
+      "status": "idle",
+      "error": null,
+      "events": 254,
+      "observation": "Reached the first minigame. The input run scored 47 and differed from the idle run at four matched times.",
+      "webLibrary": true,
+      "frame": {
+        "timeMs": 23500,
+        "pngSha256": "f8361bf479a13bec9d0b9c0ed976aa002b4eac9e007a0501c04e230eeb868517"
+      },
+      "control": {
+        "actions": [
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            21
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "tick",
+            15
+          ]
+        ],
+        "events": 246,
+        "matchedTimes": [
+          {
+            "timeMs": 19000,
+            "input": "b69fce9e7185f1ada653ec09d454aff240833186f0ebe6bab072698e975fbe3c",
+            "control": "220fceeb08ff68cbce37cbe48717b90cd1259d9fb3ba8d440da296e32e1c79b0"
+          },
+          {
+            "timeMs": 20500,
+            "input": "b1afe744637a1e174efa6bb191e417ce71f0a0ce44566fd0b9b081c3f2240e68",
+            "control": "3e344c56af9c3e40ea7a23d07ba449fbd7d293ee9b3b37d41d2d35039af976e0"
+          },
+          {
+            "timeMs": 22000,
+            "input": "8df0092926ad0a9a7bf382aaa7ac66ed1cb5b50a3c5dc094640a23afac17c4be",
+            "control": "fdb1ecad1da32990be5bc9e054de92729e2aa4e25fe61fd4fb17aa63710958c7"
+          },
+          {
+            "timeMs": 23500,
+            "input": "f8361bf479a13bec9d0b9c0ed976aa002b4eac9e007a0501c04e230eeb868517",
+            "control": "213adc40a59da31f15f5e5988e188f0e1af2fc297dc5989ea06bcd7f47ba298c"
+          }
+        ],
+        "changedFrames": 4
+      }
+    },
+    {
+      "id": "ppunyu-ppunyu-pong-myracer",
+      "title": "Ppunyu Ppunyu Pong Remix",
+      "nativeTitle": "뿌뉴뿌뉴퐁Remix",
+      "sourceUrl": "https://archive.org/details/MyRacerMF101",
+      "original": {
+        "path": "original/game-files/뿌뉴뿌뉴퐁Remix.xgn",
+        "bytes": 490366,
+        "sha256": "3b548868f754247143cf89e8110b7932ea5af38e4f68c46f3d15939f1887b335",
+        "crc32": "a4640d9b"
+      },
+      "derived": {
+        "path": "derived/ppony.sgs",
+        "bytes": 490350,
+        "sha256": "e1b11840c57b7c2ac54c79f909493b324b8fab670529246761515f93412d6eae",
+        "crc32": "3c006a8c"
+      },
+      "resources": 598,
+      "native": {
+        "romEntry": "0x0809c0c4",
+        "acceptedReturn": 2,
+        "identical": true
+      },
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "actions": [
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          25
+        ],
+        [
+          "key",
+          1
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          21
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "key",
+          17
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          18
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ]
+      ],
+      "status": "idle",
+      "error": null,
+      "events": 212,
+      "observation": "Entered a puzzle and moved its cursor with directional input. Five matched times differed from the idle run.",
+      "webLibrary": true,
+      "frame": {
+        "timeMs": 19100,
+        "pngSha256": "64b027b0c2da503b2bb34a012be0b3b1d6011eab8706dc969f57f372dcb82123"
+      },
+      "control": {
+        "actions": [
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            21
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "tick",
+            15
+          ]
+        ],
+        "events": 202,
+        "matchedTimes": [
+          {
+            "timeMs": 13100,
+            "input": "860aba50dceadd6e8378bbeebe97ba8b27e687abe43beb348cfbe81644d4cdc4",
+            "control": "42c6b1e2bc03a3a224738bbaedd51801cdfa13929564fbd12fe8d1bf01f2656b"
+          },
+          {
+            "timeMs": 14600,
+            "input": "6ba664b6e14a7b9fe5744be0764d1e30ecd64e7b41aa085590b300399697511e",
+            "control": "217eb844b7a3d7ec09585c24ace663c14357d8d8a0480fa6352da32361049c15"
+          },
+          {
+            "timeMs": 16100,
+            "input": "027beeaac91b7a7cbd67f5233f06fa5f7e30aed542060bce0931b2818c0cb156",
+            "control": "454cd14ef3c0bac998c294c6688d262ba75cbd289c9611088c8f2be19623b851"
+          },
+          {
+            "timeMs": 17600,
+            "input": "7435390a751b618e5af31a422f474f7dfb75cc1b18d2347a7cd6c2980160b7a9",
+            "control": "597826a1e32dc8ae57affeb26aaa91322fd7fb6c76b772dcf24a539bb7562224"
+          },
+          {
+            "timeMs": 19100,
+            "input": "64b027b0c2da503b2bb34a012be0b3b1d6011eab8706dc969f57f372dcb82123",
+            "control": "65fa8a28ecf7623b1d22f59005abdac7e92f3717640531e20fe43c5c02726ee9"
+          }
+        ],
+        "changedFrames": 5
+      }
+    },
+    {
+      "id": "super-action-hero-myracer",
+      "title": "Super Action Hero",
+      "nativeTitle": "슈퍼액션히어로",
+      "sourceUrl": "https://archive.org/details/MyRacerMF101",
+      "original": {
+        "path": "original/game-files/슈퍼액션히어로.xgn",
+        "bytes": 954334,
+        "sha256": "f24b176c82020ff1a951fd9596d73488298d326bf7ffb749378cf4b47128156f",
+        "crc32": "cf326dc1"
+      },
+      "derived": {
+        "path": "derived/hero.sgs",
+        "bytes": 954318,
+        "sha256": "32ea3045c394f66559ce87637a1dd7f143a10f937bf34dba66a47bd20960c3c9",
+        "crc32": "7f6083a8"
+      },
+      "resources": 999,
+      "native": {
+        "romEntry": "0x0809c0c4",
+        "acceptedReturn": 2,
+        "identical": true
+      },
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "actions": [
+        [
+          "tick",
+          120
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          180
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          50
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          50
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          180
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          60
+        ],
+        [
+          "hold",
+          17
+        ],
+        [
+          "tick",
+          10
+        ],
+        [
+          "release",
+          17
+        ],
+        [
+          "hold",
+          5
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "release",
+          5
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "hold",
+          18
+        ],
+        [
+          "hold",
+          20
+        ],
+        [
+          "advance",
+          220
+        ],
+        [
+          "release",
+          20
+        ],
+        [
+          "release",
+          18
+        ],
+        [
+          "advance",
+          450
+        ],
+        [
+          "advance",
+          600
+        ],
+        [
+          "advance",
+          700
+        ]
+      ],
+      "status": "idle",
+      "error": null,
+      "events": 882,
+      "observation": "During training, holding Up + OK struck the opponent, with an impact and an 8-point damage indicator absent in the matched idle replay.",
+      "webLibrary": true,
+      "frame": {
+        "timeMs": 143470,
+        "pngSha256": "c12914590cf01b0c705f8964bc349298cf1f642f48f0e24ee703be92d1ddcf8e"
+      },
+      "control": {
+        "actions": [
+          [
+            "tick",
+            120
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            180
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            180
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            60
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            10
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "hold",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "release",
+            5
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "advance",
+            220
+          ],
+          [
+            "advance",
+            450
+          ],
+          [
+            "advance",
+            600
+          ],
+          [
+            "advance",
+            700
+          ]
+        ],
+        "events": 876,
+        "matchedTimes": [
+          {
+            "timeMs": 143470,
+            "input": "c12914590cf01b0c705f8964bc349298cf1f642f48f0e24ee703be92d1ddcf8e",
+            "control": "05c704640d223ce988ba88ca4b1a0f38b20d96ffdb3c567506dbe17bab48b5e4"
+          },
+          {
+            "timeMs": 143920,
+            "input": "49a67c4be7459ceeec3919b90814897c6e14ca0232f5458133de10b619cd7c6e",
+            "control": "04993f369e36f671e2c86e502a291db027c75830a6cdb5b9ca30b6efb288d01e"
+          },
+          {
+            "timeMs": 144520,
+            "input": "275d002df3759a06ca95f327d3131efcb7d56eebb8d51501af858cf3e4dd1ac1",
+            "control": "04993f369e36f671e2c86e502a291db027c75830a6cdb5b9ca30b6efb288d01e"
+          },
+          {
+            "timeMs": 145220,
+            "input": "275d002df3759a06ca95f327d3131efcb7d56eebb8d51501af858cf3e4dd1ac1",
+            "control": "04993f369e36f671e2c86e502a291db027c75830a6cdb5b9ca30b6efb288d01e"
+          }
+        ],
+        "changedFrames": 4
+      }
+    },
+    {
+      "id": "com2us-soccer-myracer",
+      "title": "Com2uS Soccer",
+      "nativeTitle": "컴투스사커",
+      "sourceUrl": "https://archive.org/details/MyRacerMF101",
+      "original": {
+        "path": "original/game-files/컴투스사커.xgn",
+        "bytes": 1905240,
+        "sha256": "706013570c84e37c6e5a9a3c7e1cf95360d72f041ecc999607bcac15a48567a1",
+        "crc32": "e10e1742"
+      },
+      "derived": {
+        "path": "derived/soccer.sgs",
+        "bytes": 1905224,
+        "sha256": "cc04e435541c0a412ed036af0b1fe38683f35ded1362178ae2cc87685816307e",
+        "crc32": "dc1142ad"
+      },
+      "resources": 1470,
+      "native": {
+        "romEntry": "0x0809c0c4",
+        "acceptedReturn": 2,
+        "identical": true
+      },
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "actions": [
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          25
+        ],
+        [
+          "key",
+          1
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          21
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          21
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "hold",
+          18
+        ],
+        [
+          "tick",
+          22
+        ],
+        [
+          "release",
+          18
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          25
+        ]
+      ],
+      "status": "error",
+      "error": "Event TIMEOUT exceeded 20000000 ARM block work units",
+      "events": 290,
+      "observation": "Reached match setup and the loading screen. The event timed out before gameplay.",
+      "webLibrary": false,
+      "frame": {
+        "timeMs": 923800,
+        "pngSha256": "5b1caefa96ce21e46698a8ecfbcbca965cd975ae4aa3f0706cd4635300adb2f2"
+      }
+    },
+    {
+      "id": "penoa-chronicles-2-myracer",
+      "title": "Penoa Chronicles 2",
+      "nativeTitle": "페노아전기2",
+      "sourceUrl": "https://archive.org/details/MyRacerMF101",
+      "original": {
+        "path": "original/game-files/페노아전기2.xgn",
+        "bytes": 2659312,
+        "sha256": "b22121d6be3c66eb859e1a605d6f5da6dd69ab1418c02b78bd36e44a85b75c72",
+        "crc32": "ef46bf9f"
+      },
+      "derived": {
+        "path": "derived/penoa.sgs",
+        "bytes": 2659296,
+        "sha256": "1edf9320a6c0b51c0ca1c4242b7dbd5f3d29178918a7b4603af13fcc90e7af0c",
+        "crc32": "e7de0903"
+      },
+      "resources": 1749,
+      "native": {
+        "romEntry": "0x0809c0c4",
+        "acceptedReturn": 2,
+        "identical": true
+      },
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "actions": [
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          25
+        ],
+        [
+          "key",
+          1
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          21
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          15
+        ],
+        [
+          "hold",
+          17
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "release",
+          17
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "key",
+          22
+        ],
+        [
+          "tick",
+          35
+        ],
+        [
+          "key",
+          13
+        ],
+        [
+          "tick",
+          35
+        ],
+        [
+          "hold",
+          19
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "release",
+          19
+        ],
+        [
+          "hold",
+          17
+        ],
+        [
+          "tick",
+          18
+        ],
+        [
+          "release",
+          17
+        ],
+        [
+          "hold",
+          19
+        ],
+        [
+          "tick",
+          20
+        ],
+        [
+          "release",
+          19
+        ]
+      ],
+      "status": "idle",
+      "error": null,
+      "events": 565,
+      "observation": "Skipped the opening and walked on the map. Directional input changed the character position at three matched times.",
+      "webLibrary": true,
+      "frame": {
+        "timeMs": 61053,
+        "pngSha256": "7a8b954bc3d3bdebe29850073d2f7bbb2e5286bee50a1ae18ea33310a18771f3"
+      },
+      "control": {
+        "actions": [
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            25
+          ],
+          [
+            "key",
+            1
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            21
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            15
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "key",
+            22
+          ],
+          [
+            "tick",
+            35
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            35
+          ],
+          [
+            "tick",
+            20
+          ],
+          [
+            "tick",
+            18
+          ],
+          [
+            "tick",
+            20
+          ]
+        ],
+        "events": 559,
+        "matchedTimes": [
+          {
+            "timeMs": 55657,
+            "input": "e0d1c3b051e086f9ecc6da12d911698c899589fb38b8e96cb528b2da6dda9954",
+            "control": "dffbfdac7c30b594d24ac634baa622172552e8dd271897f141cc1a5b52d68928"
+          },
+          {
+            "timeMs": 58213,
+            "input": "cde40f4fde86fd04d9448db4084a04acc24d03989c35407d5c43137d9af91976",
+            "control": "dffbfdac7c30b594d24ac634baa622172552e8dd271897f141cc1a5b52d68928"
+          },
+          {
+            "timeMs": 61053,
+            "input": "7a8b954bc3d3bdebe29850073d2f7bbb2e5286bee50a1ae18ea33310a18771f3",
+            "control": "dffbfdac7c30b594d24ac634baa622172552e8dd271897f141cc1a5b52d68928"
+          }
+        ],
+        "changedFrames": 3
+      }
+    },
+    {
+      "id": "sketcher-myracer",
+      "title": "Sketcher",
+      "nativeTitle": "스케쳐",
+      "sourceUrl": "https://cafe.naver.com/halfstudy/1949",
+      "original": {
+        "path": "original/game-files/clubzio_sketcher.vgn",
+        "bytes": 939698,
+        "sha256": "ced8ba4961e2c57b9af644a06577adfedf3918852f1a3d446514f85812bd0318",
+        "crc32": "d58c7495"
+      },
+      "derived": {
+        "path": "derived/sketcher.sgs",
+        "bytes": 939682,
+        "sha256": "d24629799963cca70ef53ce8678c9ad49856edb992bc8a1ebd4cfefa386bc39e",
+        "crc32": "0fe7b10c"
+      },
+      "resources": 1370,
+      "native": {
+        "romEntry": "0x0809c034",
+        "acceptedReturn": 2,
+        "fixedXgnReturn": -1,
+        "configBytes": "27700000",
+        "footerType": "sgs",
+        "identical": true
+      },
+      "runtime": {
+        "profile": "phone",
+        "width": 320,
+        "height": 240
+      },
+      "actions": [
+        [
+          "tick",
+          90
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          21
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          17
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          5
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          12
+        ],
+        [
+          "tick",
+          40
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          50
+        ],
+        [
+          "hold",
+          17
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "release",
+          17
+        ],
+        [
+          "key",
+          20
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "key",
+          13
+        ],
+        [
+          "tick",
+          30
+        ],
+        [
+          "hold",
+          14
+        ],
+        [
+          "advance",
+          220
+        ],
+        [
+          "release",
+          14
+        ],
+        [
+          "advance",
+          450
+        ],
+        [
+          "advance",
+          600
+        ],
+        [
+          "advance",
+          700
+        ]
+      ],
+      "status": "idle",
+      "error": null,
+      "events": 724,
+      "observation": "Reached stage 1. Pressing Send opened the stage menu, while the matched control continued the race.",
+      "webLibrary": true,
+      "frame": {
+        "timeMs": 66590,
+        "pngSha256": "81619d09c4e0321005498597e5d413e14e83830cb8239651289dc449f76c1e98"
+      },
+      "control": {
+        "actions": [
+          [
+            "tick",
+            90
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            21
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            17
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            5
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            12
+          ],
+          [
+            "tick",
+            40
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            50
+          ],
+          [
+            "hold",
+            17
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "release",
+            17
+          ],
+          [
+            "key",
+            20
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "key",
+            13
+          ],
+          [
+            "tick",
+            30
+          ],
+          [
+            "advance",
+            220
+          ],
+          [
+            "advance",
+            450
+          ],
+          [
+            "advance",
+            600
+          ],
+          [
+            "advance",
+            700
+          ]
+        ],
+        "events": 724,
+        "matchedTimes": [
+          {
+            "timeMs": 66370,
+            "input": "3a04f0db75d70283ca5c232b6f06493af8528ed4d46f8a240425227e33a06fc2",
+            "control": "94d0da69facd8eff836f5464a44e3be68ce4caf679910ff2bf45092ae49eacdb"
+          },
+          {
+            "timeMs": 66590,
+            "input": "81619d09c4e0321005498597e5d413e14e83830cb8239651289dc449f76c1e98",
+            "control": "a9f001f0a1229ba95f604d03b2254b433b4f78c03241b3bcc8070cfbefc4c50c"
+          },
+          {
+            "timeMs": 67040,
+            "input": "cdff1389889d1e84f6365b782c37664e9a4951cc6024b762a48052fe4e63d537",
+            "control": "d5a7edaff32d23485697e1c5a9674b1fefa8f19547c3802025199b61d0826663"
+          },
+          {
+            "timeMs": 67640,
+            "input": "81619d09c4e0321005498597e5d413e14e83830cb8239651289dc449f76c1e98",
+            "control": "419dbe0dc307f31083f0061e252cf9f332bb4094700a02230db08788a2e05d9c"
+          },
+          {
+            "timeMs": 68340,
+            "input": "cdff1389889d1e84f6365b782c37664e9a4951cc6024b762a48052fe4e63d537",
+            "control": "87f6b89d044cae397acd932905d02c7edac488b9d30cd73ca02fd946e31d7da9"
+          }
+        ],
+        "changedFrames": 5
+      }
+    }
+  ]
+}

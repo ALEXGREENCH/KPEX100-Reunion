@@ -3,6 +3,201 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "myracer-mf101-game-disc-and-sketcher",
+      "repositoryPath": "research/archives/MyRacer-MF101-Game-Disc-and-Sketcher.zip",
+      "bytes": 19244034,
+      "sha256": "ca55bc3be08a5351ed498254b84232d4754e075fdfedd05aefc67ac861c6b9f2",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/hero.sgs",
+          "bytes": 954318,
+          "crc32": "7f6083a8",
+          "sha256": "32ea3045c394f66559ce87637a1dd7f143a10f937bf34dba66a47bd20960c3c9"
+        },
+        {
+          "path": "derived/minigame.sgs",
+          "bytes": 896100,
+          "crc32": "c55acc6f",
+          "sha256": "7d4c28a7be89f4ced9f583295fd341c8cbe14ed195104211cfbb257e5dc1fabc"
+        },
+        {
+          "path": "derived/penoa.sgs",
+          "bytes": 2659296,
+          "crc32": "e7de0903",
+          "sha256": "1edf9320a6c0b51c0ca1c4242b7dbd5f3d29178918a7b4603af13fcc90e7af0c"
+        },
+        {
+          "path": "derived/ppony.sgs",
+          "bytes": 490350,
+          "crc32": "3c006a8c",
+          "sha256": "e1b11840c57b7c2ac54c79f909493b324b8fab670529246761515f93412d6eae"
+        },
+        {
+          "path": "derived/sketcher.sgs",
+          "bytes": 939682,
+          "crc32": "0fe7b10c",
+          "sha256": "d24629799963cca70ef53ce8678c9ad49856edb992bc8a1ebd4cfefa386bc39e"
+        },
+        {
+          "path": "derived/soccer.sgs",
+          "bytes": 1905224,
+          "crc32": "dc1142ad",
+          "sha256": "cc04e435541c0a412ed036af0b1fe38683f35ded1362178ae2cc87685816307e"
+        },
+        {
+          "path": "frames/hero.png",
+          "bytes": 3173,
+          "crc32": "4e970402",
+          "sha256": "c12914590cf01b0c705f8964bc349298cf1f642f48f0e24ee703be92d1ddcf8e"
+        },
+        {
+          "path": "frames/minigame.png",
+          "bytes": 11910,
+          "crc32": "7e402403",
+          "sha256": "f8361bf479a13bec9d0b9c0ed976aa002b4eac9e007a0501c04e230eeb868517"
+        },
+        {
+          "path": "frames/penoa.png",
+          "bytes": 9103,
+          "crc32": "bf01aca1",
+          "sha256": "7a8b954bc3d3bdebe29850073d2f7bbb2e5286bee50a1ae18ea33310a18771f3"
+        },
+        {
+          "path": "frames/ppony.png",
+          "bytes": 8501,
+          "crc32": "1226d927",
+          "sha256": "64b027b0c2da503b2bb34a012be0b3b1d6011eab8706dc969f57f372dcb82123"
+        },
+        {
+          "path": "frames/sketcher.png",
+          "bytes": 4714,
+          "crc32": "e55628dc",
+          "sha256": "81619d09c4e0321005498597e5d413e14e83830cb8239651289dc449f76c1e98"
+        },
+        {
+          "path": "frames/soccer.png",
+          "bytes": 16726,
+          "crc32": "568b2e6c",
+          "sha256": "5b1caefa96ce21e46698a8ecfbcbca965cd975ae4aa3f0706cd4635300adb2f2"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 5753,
+          "crc32": "40fca13a",
+          "sha256": "84cd07cf135835f2d2392cfdf148c9faf80e1edaa8f0e5ed0ce5ca4dcc5f67d3"
+        },
+        {
+          "path": "original/2008-05-27/_update_.zip",
+          "bytes": 1398626,
+          "crc32": "384cbca2",
+          "sha256": "03ef5a844d0953ffbdb4468d12f0064835f4a5f71cebe0a82e56c44c055a0fa9"
+        },
+        {
+          "path": "original/MYRACER GAME.ISO",
+          "bytes": 7280640,
+          "crc32": "e17787f2",
+          "sha256": "b2f455a75ef7f45e43b8f381768d43ea2e070e5385c8d097ca95f0b7046c687e"
+        },
+        {
+          "path": "original/game-files/clubzio_sketcher.vgn",
+          "bytes": 939698,
+          "crc32": "d58c7495",
+          "sha256": "ced8ba4961e2c57b9af644a06577adfedf3918852f1a3d446514f85812bd0318"
+        },
+        {
+          "path": "original/game-files/미니게임천국.xgn",
+          "bytes": 896116,
+          "crc32": "5e9f9bd7",
+          "sha256": "5bd13e9c0d2a82c7bcd6e7d528008f5402c8f4a969d0433986962fd150182fdc"
+        },
+        {
+          "path": "original/game-files/뿌뉴뿌뉴퐁Remix.xgn",
+          "bytes": 490366,
+          "crc32": "a4640d9b",
+          "sha256": "3b548868f754247143cf89e8110b7932ea5af38e4f68c46f3d15939f1887b335"
+        },
+        {
+          "path": "original/game-files/슈퍼액션히어로.xgn",
+          "bytes": 954334,
+          "crc32": "cf326dc1",
+          "sha256": "f24b176c82020ff1a951fd9596d73488298d326bf7ffb749378cf4b47128156f"
+        },
+        {
+          "path": "original/game-files/컴투스사커.xgn",
+          "bytes": 1905240,
+          "crc32": "e10e1742",
+          "sha256": "706013570c84e37c6e5a9a3c7e1cf95360d72f041ecc999607bcac15a48567a1"
+        },
+        {
+          "path": "original/game-files/페노아전기2.xgn",
+          "bytes": 2659312,
+          "crc32": "ef46bf9f",
+          "sha256": "b22121d6be3c66eb859e1a605d6f5da6dd69ab1418c02b78bd36e44a85b75c72"
+        },
+        {
+          "path": "sources/firmware.json",
+          "bytes": 863,
+          "crc32": "efe051bb",
+          "sha256": "dee40019d549f10ed4ab9748fa21d634a9ed2903a88ddbdcbb027d161eb1c567"
+        },
+        {
+          "path": "sources/halfstudy-1949.json",
+          "bytes": 7251,
+          "crc32": "a2bc6834",
+          "sha256": "24e1d2e09e33af530f9c2f93ccd0e1a51d6f1e01d24c5a8fd1554888047768cb"
+        },
+        {
+          "path": "sources/internet-archive-metadata.json",
+          "bytes": 4772,
+          "crc32": "35b6f63b",
+          "sha256": "4b21b294b31bc81df8e6879ad94bf5a7765ba6afe15f13dda8f73ed3e6b9d83d"
+        },
+        {
+          "path": "sources/iso.json",
+          "bytes": 288,
+          "crc32": "65882b04",
+          "sha256": "7f91c8ca007d13d8ab2186937f834f20b42477ce657ec9c4221284c16aea233a"
+        },
+        {
+          "path": "sources/myracer-4921.json",
+          "bytes": 24671,
+          "crc32": "1485e03f",
+          "sha256": "1218ed36b6918fda9997698e17b2710c85e5de6d4a46c22f80b74f51b418f3aa"
+        },
+        {
+          "path": "sources/previous-xgn-native-comparison.json",
+          "bytes": 6385,
+          "crc32": "a479befd",
+          "sha256": "eb81d17b5f3c8e08eb71e614f31f90a8f9185083bc2ed343800c70969bbde9ea"
+        },
+        {
+          "path": "sources/vgn.json",
+          "bytes": 1222,
+          "crc32": "4471e1bc",
+          "sha256": "87844289524a412306b5e71ce397514bfa214f467e352f25de62798277228929"
+        },
+        {
+          "path": "tools/scan-firmware-games.py",
+          "bytes": 11506,
+          "crc32": "41b13678",
+          "sha256": "f481437207836129146db95644ca8230cf00061925fb6751d71fde9c6f7a626e"
+        },
+        {
+          "path": "tools/unpack-myracer-xgn.py",
+          "bytes": 2468,
+          "crc32": "934594cd",
+          "sha256": "7b6f0bf5bfe7ef69ca45f88a8f0e2d7a03c1e86365793c415ca0e4bb9dc7858e"
+        },
+        {
+          "path": "validation/myracer-library-replays.json",
+          "bytes": 33377,
+          "crc32": "14d98cc4",
+          "sha256": "4cbe25a84eb4a05bfa1b86e8b62a58d5f5a3230cb6c712fb15f35e999137b75e"
+        }
+      ]
+    },
+    {
       "id": "lg-sd1020-compressed-gvm",
       "repositoryPath": "research/archives/LG-SD1020-Compressed-GVM.zip",
       "bytes": 57977,
@@ -157648,9 +157843,9 @@
     }
   ],
   "counts": {
-    "archives": 70,
-    "archiveBytes": 1157614740,
-    "fileMembers": 26169,
-    "uniqueMemberHashes": 13259
+    "archives": 71,
+    "archiveBytes": 1176858774,
+    "fileMembers": 26200,
+    "uniqueMemberHashes": 13289
   }
 }

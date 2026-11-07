@@ -1070,19 +1070,22 @@ python -m pip install pycryptodome
 python tools/unpack-myracer-xgn.py game.xgn game.sgs
 ```
 
-При 320×240 в Reunion проверены управление в Mini Game Paradise и
-курсор головоломки Ppunyu Ppunyu Pong Remix. Super Action Hero
-дошёл до диалогов тренировки. Com2uS Soccer доходит до настройки
-матча, загрузка матча достигает лимита исполнения. Penoa Chronicles 2
-принимает ввод в меню, часть графики отображается неверно.
-[Хеши, смещения и результаты](../validation/myracer-mf101-xgn-decoded.json).
+При 320×240 в Reunion проверены управление в Mini Game Paradise,
+курсор в Ppunyu Ppunyu Pong Remix, удар на тренировке Super Action Hero
+и ходьба по карте Penoa Chronicles 2. Com2uS Soccer доходит до настройки
+матча, загрузка матча достигает лимита исполнения.
+[Игры, проверенные сцены и архив](myracer-game-disc.md),
+[хеши и смещения](../validation/myracer-mf101-xgn-decoded.json).
 
 В другом корейском клубе сохранился отдельный `clubzio_sketcher.vgn`
 на 939 698 байт. Для `.vgn` тот же ROM выбирает другую ветку.
 Она получает дополнительные четыре байта ключа через конфигурацию,
 читаемую при старте. Проверка хвоста ключом XGN для этого файла не
-прошла. Внутри сохранились строки `2008.03.19` и `V 1.0.1`.
-[Публичное вложение Sketcher](https://cafe.naver.com/halfstudy/1949).
+прошла. По контрольному хвосту восстановлены четыре байта конфигурации
+`27 70 00 00`. С ними оригинальная ARM-ветка и независимая распаковка
+выдали одинаковый SGS v4. В Reunion проверены первая трасса и меню на
+трассе. [Публичное вложение Sketcher](https://cafe.naver.com/halfstudy/1949),
+[распаковка и хеши](myracer-game-disc.md#sketcher-vgn).
 
 Пост в корейском клубе разработчиков от 3 апреля 2009 года связывает
 MyRacer и витрину Play4U с GNEX и называет игру ZIO `질주쾌감 스케쳐`.

@@ -55,10 +55,10 @@ export const defaults = {
     pause: ['key:Space'],
   },
 };
-// This original WI-TOP build uses 1/7/4/5/3 rather than navigation key codes.
 // Host alternatives stay here so every source shares the normal held-action
 // accounting, and user profile/game overrides retain priority.
 const gameDefaults = {
+  // This WI-TOP build uses 1/7/4/5/3 for navigation.
   'hellfire-witop-v1': {
     profile: 'phone',
     bindings: {
@@ -68,6 +68,10 @@ const gameDefaults = {
       digit5: [...defaults.phone.digit5, ...directions.right],
       digit3: [...defaults.phone.digit3, ...defaults.phone.a],
     },
+  },
+  'sketcher-myracer': {
+    profile: 'phone',
+    bindings: { send: [...defaults.phone.send, 'key:KeyA'] },
   },
 };
 export const validToken = (token) =>

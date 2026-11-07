@@ -1,6 +1,6 @@
-"""Decode a MyRacer MF101 .xgn file into a validated SGS v4 body.
+"""Decode a MyRacer XGN or VGN game into a validated SGS v4 body.
 
-Based on the XGN path in the recovered ROM_EXEC (ARM 0x0809c0c4).
+Based on the two game-loading paths in the recovered MyRacer ROM_EXEC.
 Requires PyCryptodome. No firmware or game code executes during decoding.
 """
 
@@ -10,17 +10,20 @@ import runpy
 import sys
 
 
-def decode_xgn(raw, des):
+def decode_xgn(raw, des, config=None):
     edge = 256
     footer_size = 16
     if len(raw) < 2 * edge + footer_size:
-        raise ValueError("truncated XGN envelope")
-    # The MF101 loader derives its fixed DES key from the TPSP prefix
-    # and the four bytes passed by the .xgn-specific entry point.
-    cipher = des.new(b"TPSP$RA$", des.MODE_ECB)
+        raise ValueError("truncated MyRacer game envelope")
+    # XGN supplies the fixed suffix. The VGN path receives four config bytes.
+    suffix = b"$RA$" if config is None else config
+    if len(suffix) != 4:
+        raise ValueError("VGN configuration must be exactly four bytes")
+    key = b"TPSP" + suffix
+    cipher = des.new(key, des.MODE_ECB)
     footer = cipher.decrypt(raw[-footer_size:])
-    if footer[:11] != b"TPSP$RA$sgs":
-        raise ValueError("invalid MF101 XGN footer")
+    if footer[:11] != key + b"sgs":
+        raise ValueError("invalid MyRacer SGS footer")
     tail = len(raw) - edge - footer_size
     decoded = (
         cipher.decrypt(raw[:edge])
@@ -34,6 +37,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument(
+        "--vgn-config", metavar="HEX", help="four VGN configuration bytes in file order"
+    )
     args = parser.parse_args()
     try:
         from Crypto.Cipher import DES
@@ -42,10 +48,11 @@ def main():
             str(Path(__file__).with_name("scan-firmware-games.py"))
         )
         raw = scanner["read_input"](args.input)
-        decoded = decode_xgn(raw, DES)
+        config = bytes.fromhex(args.vgn_config) if args.vgn_config is not None else None
+        decoded = decode_xgn(raw, DES, config)
         sgs = scanner["parse_candidate"](decoded, 0)
         if not sgs or sgs["version"] != 4 or sgs["declared_body_bytes"] != len(decoded):
-            raise ValueError("decoded XGN does not contain one complete SGS v4 body")
+            raise ValueError("decoded file does not contain one complete SGS v4 body")
         with args.output.open("xb") as output:
             output.write(decoded)
         print(f"{len(decoded)} bytes, SHA-256 {scanner['digest'](decoded)}")
