@@ -50,3 +50,6 @@ SWF также проверены развёрнутые данные. Прим�
 Снимки подтверждены HTTP-квитанциями Wayback с датами захвата.
 Совпадение с CDX digest для этих файлов не проверялось.
 [Отчёт о проверке](../validation/lionlogics-gvm-game-search.json).
+
+Отдельный релиз Entaz **Pirate King 2007: Second Ocean** сохранён
+в [комплекте Dubigame](dubigame-mirror-ktf-skt.md).
