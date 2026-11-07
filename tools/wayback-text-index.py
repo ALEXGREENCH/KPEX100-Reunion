@@ -10,6 +10,7 @@ import argparse
 import base64
 import codecs
 from collections import Counter
+from contextlib import nullcontext
 from datetime import datetime, timezone
 import hashlib
 from html.parser import HTMLParser
@@ -114,10 +115,30 @@ def extract(body):
     }
 
 
-def build(path):
+def build(path, base=None):
     documents = {}
     counts = Counter()
-    with zipfile.ZipFile(path) as archive:
+    with (
+        zipfile.ZipFile(path) as archive,
+        zipfile.ZipFile(base) if base is not None else nullcontext() as original,
+    ):
+        members = set(archive.namelist())
+        required = (
+            json.loads(archive.read("manifest.json")).get("base")
+            if "manifest.json" in members
+            else None
+        )
+        if required is not None:
+            if base is None:
+                raise ValueError(
+                    "Delta archive requires --base " + required["filename"]
+                )
+            with base.open("rb") as source:
+                identity = hashlib.file_digest(source, "sha256").hexdigest()
+            if identity != required["sha256"]:
+                raise ValueError("Base archive SHA256 mismatch")
+        elif base is not None:
+            raise ValueError("A standalone archive does not require --base")
         for line in (
             archive.read("collection/captures.jsonl").decode("utf8").splitlines()
         ):
@@ -137,9 +158,10 @@ def build(path):
             if not isinstance(digest, str) or not re.fullmatch("[0-9a-f]{64}", digest):
                 raise ValueError("Invalid object hash")
             name = f"collection/objects/{digest[:2]}/{digest}"
-            if archive.getinfo(name).file_size > 16 * 1024 * 1024:
+            objects = archive if original is None or name in members else original
+            if objects.getinfo(name).file_size > 16 * 1024 * 1024:
                 raise ValueError("HTML object exceeds 16MiB bound")
-            body = archive.read(name)
+            body = objects.read(name)
             if hashlib.sha256(body).hexdigest() != digest:
                 raise ValueError("Object SHA256 mismatch")
             cdx = base64.b32encode(hashlib.sha1(body).digest()).decode().rstrip("=")
@@ -173,6 +195,7 @@ def build(path):
             "bytes": path.stat().st_size,
             "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
         },
+        **({"baseArchive": required} if required is not None else {}),
         "scope": "Verified HTTP200 HTML only, grouped by exact body hash. Multiple captures are retained. Includes corporate notices, copied news, forum posts, forms, spam and historic error bodies with HTTP200; a text match is not a recovered binary or an endorsement. Links are literal, not fetched. Raw archive remains authoritative; lossy decoding is explicit.",
         "counts": dict(counts),
         "documents": sorted(documents.values(), key=lambda doc: doc["sha256"]),
@@ -206,6 +229,7 @@ def main():
     create = actions.add_parser("build")
     create.add_argument("archive", type=Path)
     create.add_argument("--output", type=Path, required=True)
+    create.add_argument("--base", type=Path)
     find = actions.add_parser("search")
     find.add_argument("index", type=Path)
     find.add_argument("query")
@@ -213,7 +237,7 @@ def main():
     if args.action == "build":
         if args.output.exists():
             parser.error("Output must be new")
-        result = build(args.archive)
+        result = build(args.archive, args.base)
         with args.output.open("x", encoding="utf8") as stream:
             stream.write(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
         print(json.dumps(result["counts"]))

@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "wayback-delta-pass8",
+      "title": "Wayback Pass 8: дополнение к архиву GVM и GNEX",
+      "category": "Wayback и форумы",
+      "description": "1 476 новых объектов, 10 987 проверенных ответов в восстановленной очереди. Для восстановления нужен базовый снимок Pass 7.",
+      "repositoryPath": "research/archives/GNEX-GVM-Wayback-Delta-Pass8-20261107.zip",
+      "bytes": 35978593,
+      "sha256": "08ea2eb157229f32687e370fa588c7cecba26b310633ef3e8d28395e1482438d",
+      "sources": [
+        {
+          "label": "Базовый снимок Pass 7",
+          "url": "https://raw.githubusercontent.com/ALEXGREENCH/KPEX100-Reunion/main/research/archives/GNEX-GVM-Wayback-Partial-Pass7-20261107.zip"
+        },
+        {
+          "label": "Раздел исходников GVM Club",
+          "url": "https://web.archive.org/web/20040423023742id_/http://www.gvmclub.com:80/data/source/list.php3?table=tbl_pds_source&page=4"
+        }
+      ]
+    },
+    {
       "id": "myracer-mf101-game-disc-and-sketcher",
       "title": "MyRacer MF101: игровой диск, обновление и Sketcher",
       "category": "Игры портативных плееров",
@@ -1597,6 +1616,10 @@
     {
       "title": "Com2uS Soccer MyRacer и подсчёт ARM-блоков в WebAssembly",
       "repositoryPath": "doc/myracer-soccer.md"
+    },
+    {
+      "title": "GVM Club: Tetris, 묵!찌!빠! и дополнение Wayback Pass 8",
+      "repositoryPath": "doc/gvmclub-2003-games-wayback.md"
     }
   ]
 }

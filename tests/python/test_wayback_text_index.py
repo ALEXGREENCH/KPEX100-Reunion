@@ -114,6 +114,27 @@ def test_grouping_keeps_each_capture_and_excludes_pending(tmp_path):
     assert list(indexer.search(result, "없음")) == []
 
 
+def test_delta_index_requires_exact_base(tmp_path):
+    base = fixture(tmp_path)
+    delta = tmp_path / "delta.zip"
+    dependency = {
+        "filename": base.name,
+        "sha256": hashlib.sha256(base.read_bytes()).hexdigest(),
+    }
+    with zipfile.ZipFile(base) as original, zipfile.ZipFile(delta, "w") as archive:
+        archive.writestr("manifest.json", json.dumps({"base": dependency}))
+        archive.writestr(
+            "collection/captures.jsonl", original.read("collection/captures.jsonl")
+        )
+    with pytest.raises(ValueError, match="requires --base"):
+        indexer.build(delta)
+    with pytest.raises(ValueError, match="Base archive SHA256 mismatch"):
+        indexer.build(delta, delta)
+    result = indexer.build(delta, base)
+    assert result["baseArchive"] == dependency
+    assert result["documents"] == indexer.build(base)["documents"]
+
+
 @pytest.mark.parametrize(
     "kwargs",
     [{"status": "404"}, {"mime": "application/pdf"}, {"states": ("mismatch",)}],

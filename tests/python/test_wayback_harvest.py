@@ -5,6 +5,8 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import runpy
+from zipfile import ZipFile
 
 import pytest
 
@@ -58,6 +60,40 @@ def test_receipt_commit_survives_a_concurrent_reader_and_reopens(tmp_path):
         assert (tmp_path / "objects" / digest[:2] / digest).read_bytes() == b"original"
     finally:
         reopened.db.close()
+
+
+def test_delta_keeps_new_objects_and_the_current_queue(tmp_path):
+    package = runpy.run_path(str(Path(SPEC.origin).with_name("package-wayback.py")))[
+        "package"
+    ]
+    collection = tmp_path / "collection"
+    collector = harvest.Collector(collection, delay=0)
+
+    def add(body):
+        digest = collector.blob(body)
+        with collector.db:
+            collector.db.execute(
+                "INSERT INTO responses(receipt) VALUES (?)",
+                (json.dumps({"object": digest, "headers": []}),),
+            )
+        return f"collection/objects/{digest[:2]}/{digest}"
+
+    base, delta = tmp_path / "base.zip", tmp_path / "delta.zip"
+    try:
+        old = add(b"old")
+        package(collection, base)
+        new = add(b"new")
+        result = package(collection, delta, base)
+    finally:
+        collector.db.close()
+    with ZipFile(delta) as archive:
+        assert old not in archive.namelist()
+        assert archive.read(new) == b"new"
+        assert len(archive.read("collection/responses.jsonl").splitlines()) == 2
+        assert json.loads(archive.read("manifest.json"))["base"] == result["base"]
+    assert result["objectsReusedFromBase"] == result["objectsIncluded"] == 1
+    with pytest.raises(ValueError, match="standalone"):
+        package(collection, tmp_path / "invalid.zip", delta)
 
 
 def record(body=b"original", timestamp="20040215031403"):

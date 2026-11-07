@@ -6,6 +6,7 @@ HTML, JavaScript, installers or other historical programs are executed.
 """
 
 import argparse
+from contextlib import ExitStack
 import hashlib
 import importlib.util
 import json
@@ -23,7 +24,7 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def package(collection, output):
+def package(collection, output, base=None):
     if output.exists():
         raise ValueError("Archive must be new")
     spec = importlib.util.spec_from_file_location(
@@ -31,7 +32,26 @@ def package(collection, output):
     )
     harvest = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(harvest)
-    with tempfile.TemporaryDirectory(prefix="reunion-wayback-") as temporary:
+    with (
+        tempfile.TemporaryDirectory(prefix="reunion-wayback-") as temporary,
+        ExitStack() as resources,
+    ):
+        base_zip = None
+        base_info = None
+        base_names = set()
+        if base is not None:
+            base_zip = resources.enter_context(zipfile.ZipFile(base))
+            base_manifest = json.loads(base_zip.read("manifest.json"))
+            if (
+                base_manifest.get("schema") != 1
+                or base_manifest.get("base") is not None
+            ):
+                raise ValueError("Base must be a standalone Wayback snapshot")
+            base_zip.getinfo("collection/queue.sqlite3")
+            base_names = set(base_zip.namelist())
+            with base.open("rb") as source:
+                base_hash = hashlib.file_digest(source, "sha256").hexdigest()
+            base_info = {"filename": base.name, "sha256": base_hash}
         snapshot = Path(temporary)
         source = sqlite3.connect(
             collection.resolve().as_uri() + "/queue.sqlite3?mode=ro", uri=True
@@ -81,6 +101,7 @@ def package(collection, output):
             for item in snapshot.iterdir()
             if item.is_file()
         }
+        reused = 0
         for digest in sorted(objects):
             if len(digest) != 64 or any(
                 char not in "0123456789abcdef" for char in digest
@@ -90,10 +111,16 @@ def package(collection, output):
             data = (collection / name).read_bytes()
             if sha(data) != digest:
                 raise ValueError("Changed object: " + digest)
-            entries["collection/" + name] = data
+            member = "collection/" + name
+            if member in base_names:
+                if base_zip.read(member) != data:
+                    raise ValueError("Base object mismatch: " + digest)
+                reused += 1
+            else:
+                entries[member] = data
         for name in ("tools/wayback-harvest.py", "tools/wayback-sites.json", "LICENSE"):
             entries[name] = (ROOT / name).read_bytes()
-        entries["README.txt"] = (
+        readme = (
             "Resumable public Wayback collection, PARTIAL snapshot.\n"
             "collection/summary.json states which CDX scopes reached the end and which captures were verified. An indexed capture is NOT a recovered payload.\n"
             "Original response bytes are in collection/objects/<SHA256-prefix>/<SHA256>. responses.jsonl records URL, UTC, status and headers. captures.jsonl records original CDX rows, digest checks and pending/mismatch/error states. membership.jsonl preserves the scope relation.\n"
@@ -102,7 +129,20 @@ def package(collection, output):
             "No domain/date/status/MIME collapse was requested. Duplicate identical CDX rows share a queue task; their original raw CDX response remains intact. UTF-8 URL quoting is recorded separately from the literal CDX original. Optional Korean transport variants and at most two same-resource raw replay redirects are explicitly recorded in resolution; they require the requested CDX payload digest. Actual redirected timestamps/headers are not metadata for the original requested timestamp. Redirects never lead into today's live websites.\n"
             "This is NOT a complete WARC export or proof that missing/private files were archived. Error pages and unknown digests remain unverified. No historical code is executed. Original third-party content retains its existing rights; the MIT license covers Reunion tools only.\n"
             "manifest.json covers all other members, excluding itself.\n"
-        ).encode()
+        )
+        if base_info is not None:
+            entries["tools/package-wayback.py"] = Path(__file__).read_bytes()
+            readme += (
+                "\nThis delta requires the standalone snapshot "
+                + base_info["filename"]
+                + "\nSHA-256 "
+                + base_info["sha256"]
+                + "\nVerify that SHA-256, extract the base to an empty directory, "
+                "then extract this delta into the same directory. The delta supplies "
+                "the current queue, manifests and every referenced object missing from "
+                "the base. The manifest below covers only this ZIP's members.\n"
+            )
+        entries["README.txt"] = readme.encode()
         manifest = [
             {
                 "path": name,
@@ -112,9 +152,11 @@ def package(collection, output):
             }
             for name, data in sorted(entries.items())
         ]
+        manifest_record = {"schema": 1, "selfExcluded": True, "files": manifest}
+        if base_info is not None:
+            manifest_record["base"] = base_info
         entries["manifest.json"] = (
-            json.dumps({"schema": 1, "selfExcluded": True, "files": manifest}, indent=2)
-            + "\n"
+            json.dumps(manifest_record, indent=2) + "\n"
         ).encode()
         with zipfile.ZipFile(
             output, "x", zipfile.ZIP_DEFLATED, compresslevel=9
@@ -130,7 +172,7 @@ def package(collection, output):
             for member in manifest:
                 if sha(archive.read(member["path"])) != member["sha256"]:
                     raise ValueError("ZIP member identity mismatch")
-        return {
+        result = {
             "archiveBytes": output.stat().st_size,
             "archiveSha256": sha(output.read_bytes()),
             "members": len(entries),
@@ -140,6 +182,11 @@ def package(collection, output):
             "manifestMembersVerified": len(manifest),
             "collection": report,
         }
+        if base_info is not None:
+            result["base"] = base_info
+            result["objectsReusedFromBase"] = reused
+            result["objectsIncluded"] = len(objects) - reused
+        return result
 
 
 def main():
@@ -147,10 +194,11 @@ def main():
     parser.add_argument("collection", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
+    parser.add_argument("--base", type=Path, help="omit objects in this standalone ZIP")
     args = parser.parse_args()
     if args.output.exists() or args.report.exists():
         parser.error("Both outputs must be new")
-    result = package(args.collection, args.output)
+    result = package(args.collection, args.output, args.base)
     with args.report.open("x", encoding="utf8") as stream:
         stream.write(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
     print(
