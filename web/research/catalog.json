@@ -4,6 +4,63 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "lg-sh170-original-and-games",
+      "title": "LG SH170: пять заводских игр",
+      "category": "Прошивки телефонов",
+      "description": "Прошивка SW170710, исходные и распакованные PXO пяти игр, 431 файл игровых ресурсов и карта блоков MAIN. Играм нужна среда LG.",
+      "repositoryPath": "research/archives/LG-SH170-Original-and-Games.zip",
+      "bytes": 95437779,
+      "sha256": "7d761338589024980c3fc7894cf2d0afc31f1796d8ddd91bb4404ce391756ea4",
+      "sources": [
+        {
+          "label": "Образ SW170710",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SH170/SW170710.7z"
+        },
+        {
+          "label": "Анонс LG Electronics",
+          "url": "https://www.newswire.co.kr/newsRead.php?no=289752"
+        }
+      ]
+    },
+    {
+      "id": "lg-kh1600-original-and-games",
+      "title": "LG KH1600: пять игр из начала WDB",
+      "category": "Прошивки телефонов",
+      "description": "Прошивка KW160716 и пять вариантов PXO для KH1600. Игры и ресурсы извлечены из 590 полных записей до ошибки CAB.",
+      "repositoryPath": "research/archives/LG-KH1600-Original-and-Games.zip",
+      "bytes": 76881876,
+      "sha256": "09faec16b192b49eafe7a1fae60a8fd45c9f70bd68c700d330445e8d017a72e7",
+      "sources": [
+        {
+          "label": "Образ KW160716",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/KH1600/KW160716.7z"
+        },
+        {
+          "label": "MD5 KDZ на втором зеркале",
+          "url": "https://lg-firmwares.com/downloads-file/2250/KW160716_00"
+        }
+      ]
+    },
+    {
+      "id": "lg-sfone-service-images",
+      "title": "LG S-Fone: сервисные сборки SD350F03 и SD353F04",
+      "category": "Прошивки телефонов",
+      "description": "Два оригинальных архива с признаками S-Fone и BREW, манифесты и результаты проверки. В основных BIN SGS не найдены.",
+      "repositoryPath": "research/archives/LG-S-Fone-SD3500-SD3530-Originals.zip",
+      "bytes": 4201193,
+      "sha256": "f05c4ed55d9f22007d39a982304162e4a216d52ad41241cf09ed18f62a3b9bac",
+      "sources": [
+        {
+          "label": "Образ SD350F03",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD3500/SD350F03.7z"
+        },
+        {
+          "label": "Образ SD353F04",
+          "url": "https://archive.sunderland93.ru/Firmwares/LG/SD3530/SD353F04.7z"
+        }
+      ]
+    },
+    {
       "id": "lg-sd1000-fortress-tournament",
       "title": "LG SD1000: Fortress Tournament",
       "category": "Игры и игровые сборки",
@@ -1440,6 +1497,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "LG SH170 и KH1600: игровые PXO и распаковка MAIN",
+      "repositoryPath": "doc/lg-sh170-games.md"
+    },
     {
       "title": "Samsung Anycall Land: игры ADS и ADSLoader",
       "repositoryPath": "doc/samsung-anycall-ads-mbin.md"

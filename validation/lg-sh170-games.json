@@ -1,0 +1,1568 @@
+{
+  "sh170": {
+    "download": {
+      "model": "SH170",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/SH170/SW170710.7z",
+      "utc": "2026-11-07T19:23:26.167987+00:00",
+      "status": 200,
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SH170/SW170710.7z",
+      "bytes": 86886802,
+      "sha256": "1146c1935d49b38e1987e94b05c7f32cba3a81db717d93ea1f32555802c3075b",
+      "file": "SW170710.7z"
+    },
+    "indexes": [
+      {
+        "name": "LG/SH170/",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SH170/",
+        "utc": "2026-11-07T19:22:13.205959+00:00",
+        "status": 200,
+        "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SH170/",
+        "file": "LG-SH170.html",
+        "bytes": 2097,
+        "sha256": "e01400a3b4f842730239dd7ef8887469cd3869bd600189e765bb862396fd2100",
+        "archives": [
+          "https://archive.sunderland93.ru/Firmwares/LG/SH170/SW170710.7z"
+        ],
+        "directories": []
+      }
+    ],
+    "layers": [
+      {
+        "path": "SH170-original/SW170710_00.kdz",
+        "bytes": 86881284,
+        "sha256": "0556fc14d726797b0d386a67a13263d90c9ce00582a24bf613be360127a951c8",
+        "crc32": "7ACB483F"
+      },
+      {
+        "path": "SH170-kdz/decoded.cab",
+        "bytes": 86881284,
+        "sha256": "7da0613cbc61d73939ddf98a0ff9ff635c7147846161a83e8203cf03130af98b",
+        "crc32": "61A6F5A8"
+      },
+      {
+        "path": "SH170-cab/SH170_0.0.1.5.dll",
+        "bytes": 417792,
+        "sha256": "797ee4bf555883a7e707e7def23c1c1feb58ac11ac54886508d219cd0aae9086",
+        "crc32": "07FD66BB"
+      },
+      {
+        "path": "SH170-cab/SW170710.wdb",
+        "bytes": 86831904,
+        "sha256": "ba9456891ebbd1756de4da8534767609f7691880f60f09b2c80c8421bd3c96b0",
+        "crc32": "566FB59C"
+      }
+    ],
+    "wdbFiles": 1668,
+    "lkzFiles": 431,
+    "modules": [
+      {
+        "sourcePath": "MODULE/C/Game.pxo",
+        "title": null,
+        "menuTitleOffset": null,
+        "original": "pxo/original/Game.pxo",
+        "decoded": "pxo/decoded/Game.pxo",
+        "thumbCodeOffset": 120,
+        "thumbCodeHex": "10b5ee4c2068c030006a416eec484068",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r4, [pc, #0x3b8]",
+          "ldr r0, [r4]",
+          "adds r0, #0xc0"
+        ],
+        "originalIdentity": {
+          "bytes": 1657,
+          "sha256": "43fae43af701477bd00095e4c91f5bf8d2051a24ec793ba0f760102d8706b679",
+          "crc32": "9C87FDD6"
+        },
+        "decodedIdentity": {
+          "bytes": 2217,
+          "sha256": "e9302da96d81609bedaa4e0198f71fba9387b50effeb59f02435e3a42d659659",
+          "crc32": "C4D0BEA7"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_Baduk.pxo",
+        "title": "Baduk",
+        "menuTitleOffset": 1135,
+        "original": "pxo/original/Game_Baduk.pxo",
+        "decoded": "pxo/decoded/Game_Baduk.pxo",
+        "thumbCodeOffset": 1092,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 539777,
+          "sha256": "ba25b6f28820bf86eac32f15c3d02a1de024cf4b5d1b8e1e867f3461b178a696",
+          "crc32": "BD7AE3C3"
+        },
+        "decodedIdentity": {
+          "bytes": 1453185,
+          "sha256": "b970c9a8506cce7162d9488c7de276568251ba5911284ad6997ecf3acd0af1a0",
+          "crc32": "8F9845BA"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_Cooking.pxo",
+        "title": "Rhythm cooking",
+        "menuTitleOffset": 2014,
+        "original": "pxo/original/Game_Cooking.pxo",
+        "decoded": "pxo/decoded/Game_Cooking.pxo",
+        "thumbCodeOffset": 1020,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 797096,
+          "sha256": "87b0f674a63f966a82b5f9b866177ff7f1af1f1ca518e25b7df3ced9fcd0b540",
+          "crc32": "B9F739E6"
+        },
+        "decodedIdentity": {
+          "bytes": 2123121,
+          "sha256": "2d65b91422f3dd25b6c43f06c527edad5659ed9f1e4575bb6de0f9341f827455",
+          "crc32": "4A08E00D"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_GrandGolf.pxo",
+        "title": "Grand golf",
+        "menuTitleOffset": 2043,
+        "original": "pxo/original/Game_GrandGolf.pxo",
+        "decoded": "pxo/decoded/Game_GrandGolf.pxo",
+        "thumbCodeOffset": 1156,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 290770,
+          "sha256": "3c0cbaab390a8dd3230209c37e63ca54330f7e074f51ac504dffa2d59c6e4b33",
+          "crc32": "382F4BA0"
+        },
+        "decodedIdentity": {
+          "bytes": 559017,
+          "sha256": "625831fd2ff58b78ccdc11b8953f1c1fd49986eb67d8b4acf1c8d543efb12950",
+          "crc32": "11636E4F"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_RainbowStriker.pxo",
+        "title": "Rainbow striker",
+        "menuTitleOffset": 2054,
+        "original": "pxo/original/Game_RainbowStriker.pxo",
+        "decoded": "pxo/decoded/Game_RainbowStriker.pxo",
+        "thumbCodeOffset": 3588,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 640986,
+          "sha256": "2edbd027b65adc8a12f1a423cf546b216de167446f76972d00d385ad11da076c",
+          "crc32": "59C608F8"
+        },
+        "decodedIdentity": {
+          "bytes": 1243405,
+          "sha256": "658bf643220c6ed9831510f1cf608732b1818a3edc9dbfcac3d53bef520cbbc9",
+          "crc32": "095EF4F7"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_Sudoku.pxo",
+        "title": "Sudoku puzzle",
+        "menuTitleOffset": 2029,
+        "original": "pxo/original/Game_Sudoku.pxo",
+        "decoded": "pxo/decoded/Game_Sudoku.pxo",
+        "thumbCodeOffset": 496,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 103534,
+          "sha256": "fcd01f7624d9f7dae8c0a4c91062eec5591e893265717cc00083999845d742f4",
+          "crc32": "86509B85"
+        },
+        "decodedIdentity": {
+          "bytes": 399121,
+          "sha256": "3e2e20632e05baf9da48be151e1e259f20ea6319759474105145e8f9aeb5f573",
+          "crc32": "AE5F759B"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/WIPISKT.pxo",
+        "title": null,
+        "menuTitleOffset": null,
+        "original": "pxo/original/WIPISKT.pxo",
+        "decoded": "pxo/decoded/WIPISKT.pxo",
+        "thumbCodeOffset": 160,
+        "thumbCodeHex": "b0b5f44d2868406c4069804700f0edfd",
+        "thumbDisassembly": [
+          "push {r4, r5, r7, lr}",
+          "ldr r5, [pc, #0x3d0]",
+          "ldr r0, [r5]",
+          "ldr r0, [r0, #0x44]"
+        ],
+        "originalIdentity": {
+          "bytes": 4860,
+          "sha256": "04becec71ea967992eb5bc48fbb26738a15d6a3af40142c94a5ecb05508621a1",
+          "crc32": "9E4A0299"
+        },
+        "decodedIdentity": {
+          "bytes": 7025,
+          "sha256": "e908ed42420deb5b016bee34ad7fbbce52786e9df2d2fd829dd5fb18238078c7",
+          "crc32": "41585F23"
+        }
+      }
+    ],
+    "main": {
+      "bytes": 47811680,
+      "sha256": "58f909874b0930734778140fd9a190049e20b6cb3c0845277a14a78206ca9120",
+      "crc32": "18EFD7F1",
+      "slots": 1731,
+      "startBytes": "122e00eae82c00eaef2c00eaf62c00eacf2c00eafe2c00ead7fa03ea49fb03ea",
+      "snippets": [
+        {
+          "path": "evidence/main/sgs-route-1.bin",
+          "offset": 11014200,
+          "bytes": 66,
+          "sha256": "838be1cbd9f678889fee9e1b4828e092ca74f2ca4d1dee2223db059ef1facdef",
+          "crc32": "9F7A5021"
+        },
+        {
+          "path": "evidence/main/sgs-route-2.bin",
+          "offset": 19049300,
+          "bytes": 66,
+          "sha256": "838be1cbd9f678889fee9e1b4828e092ca74f2ca4d1dee2223db059ef1facdef",
+          "crc32": "9F7A5021"
+        },
+        {
+          "path": "evidence/main/sinjisoft-photoon2.bin",
+          "offset": 43333513,
+          "bytes": 128,
+          "sha256": "9a851cc80a7b356f5dc460b105f4d61d1506b3b8c8838859a992d8307ebf1fc2",
+          "crc32": "DED4AC51"
+        },
+        {
+          "path": "evidence/main/oem-game-menu.bin",
+          "offset": 43334738,
+          "bytes": 177,
+          "sha256": "d787a8738243843fbd476a8d5cf4045844249f548e7e83e32635ce20e34447df",
+          "crc32": "E094C640"
+        }
+      ],
+      "markers": {
+        "application/x-gnex-sgs": [
+          3050192,
+          3195964,
+          11014200,
+          14460343,
+          19049300,
+          27881336,
+          31057492,
+          32627796,
+          33430638
+        ],
+        "A000200001": [
+          3026912,
+          11014228,
+          19049328,
+          22958892,
+          32611316,
+          42767312
+        ],
+        "GIGAVERSION": [
+          3026960,
+          32611364,
+          43332255
+        ],
+        "036.016.000": []
+      },
+      "registeredGnexContentOffsets": []
+    },
+    "sgs": {
+      "wdbPxoLkzBytes": 112213049,
+      "mainBytes": 47811680,
+      "matches": 0,
+      "positiveControls": 94
+    }
+  },
+  "kh1600": {
+    "download": {
+      "model": "KH1600",
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/KH1600/KW160716.7z",
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/KH1600/KW160716.7z",
+      "utc": "2026-11-07T19:33:30.343295+00:00",
+      "status": 200,
+      "bytes": 68500720,
+      "sha256": "cae92c9f228827d98184a0e80dfa126ad54194b4fb67db6994dc8598d80e5c9c",
+      "file": "KW160716.7z"
+    },
+    "index": {
+      "url": "https://archive.sunderland93.ru/Firmwares/LG/KH1600/",
+      "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/KH1600/",
+      "utc": "2026-11-07T19:31:46.274961+00:00",
+      "status": 200,
+      "bytes": 2098,
+      "sha256": "74615e6711e331a69a91ac7eba73422f1ed4a5bda03af935e118cdb886ca4408",
+      "file": "LG-KH1600.html",
+      "archives": [
+        "https://archive.sunderland93.ru/Firmwares/LG/KH1600/KW160716.7z"
+      ]
+    },
+    "archiveCrcPassed": true,
+    "kdzCrc32": "F7364F46",
+    "layers": [
+      {
+        "path": "KH1600-original/KW160716_00.kdz",
+        "bytes": 68496339,
+        "sha256": "021a23ec205a2a2a28c8236d2103ac726926912baf007986e34cd8394b4e64ee",
+        "crc32": "F7364F46"
+      },
+      {
+        "path": "KH1600-kdz/decoded.cab",
+        "bytes": 68496339,
+        "sha256": "2e2bb16c5d4b7069abbdfb696427c6a4f7bd5c8b3ec0417d83cd19fe345dc7b4",
+        "crc32": "CD0189FC"
+      },
+      {
+        "path": "KH1600-cab/KH160_0.2.0.0.dll",
+        "bytes": 413696,
+        "sha256": "272b6d693efc37d91e79b4cd65ec3548246c53b78a1faeba4c3b2fb945a8449f",
+        "crc32": "756A78AB"
+      }
+    ],
+    "wdbDeclaredBytes": 68556313,
+    "wdb7zipOutputBeforeFailure": 45907968,
+    "firstBadMSZIPChecksum": {
+      "block": 1401,
+      "cabOffset": 45801512,
+      "outputOffset": 45907968,
+      "bytes": 32768,
+      "checksumMismatch": true
+    },
+    "status": "WDB CAB member failed integrity checks; verified prefix extracted separately",
+    "sgsScan": {
+      "files": 597,
+      "bytes": 84852173,
+      "candidateOffsets": 4554377,
+      "hits": [],
+      "mainMarkersHex": {
+        "6170706c69636174696f6e2f782d676e65782d736773": [],
+        "41303030323030303031": [],
+        "4749474156455253494f4e": [],
+        "3033362e3031362e303030": [],
+        "07000000434f4e54454e540a00000041303030323030303031": []
+      }
+    },
+    "mirror": {
+      "url": "https://lg-firmwares.com/downloads-file/2250/KW160716_00",
+      "listedMd5": "d437ecb903020ec7bb692031fa4591b5",
+      "localKdzMd5": "d437ecb903020ec7bb692031fa4591b5",
+      "downloaded": false,
+      "status": "page requires reCAPTCHA"
+    },
+    "historicalVendorUrl": {
+      "url": "https://csmgdl.lgmobile.com/swdata/WDLSW/LGKH1600/AKTFBK/KW160716_00/CSE/KW160716_00.kdz",
+      "status": "DNS resolution failed",
+      "reference": "https://forum.gsmhosting.com/vbb/f177/lg-kdz-cab-firmware-1634479/"
+    },
+    "lkzMatchesSh170": true,
+    "modules": [
+      {
+        "sourcePath": "MODULE/C/Game.pxo",
+        "title": null,
+        "menuTitleOffset": null,
+        "original": "pxo/original/Game.pxo",
+        "decoded": "pxo/decoded/Game.pxo",
+        "thumbCodeOffset": 120,
+        "thumbCodeHex": "10b5ee4c2068c030006a416eec484068",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r4, [pc, #0x3b8]",
+          "ldr r0, [r4]",
+          "adds r0, #0xc0"
+        ],
+        "originalIdentity": {
+          "bytes": 1661,
+          "sha256": "74ab1e10dc7a28e8f8b8ae764accb40c03cc497a5279a53ffe8a54a43dc4e1f8",
+          "crc32": "A3F7481D"
+        },
+        "decodedIdentity": {
+          "bytes": 2213,
+          "sha256": "31dcb54a29054c050a0e76d99e1cbb345230c1c5747e280a3d72a6b0567771c2",
+          "crc32": "A1961DDD"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_Baduk.pxo",
+        "title": "Baduk",
+        "menuTitleOffset": 1135,
+        "original": "pxo/original/Game_Baduk.pxo",
+        "decoded": "pxo/decoded/Game_Baduk.pxo",
+        "thumbCodeOffset": 1084,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 539008,
+          "sha256": "12f24b5eb39ec407d89764c4ad768b898846635bacbbc4411bfe4f5f317c3212",
+          "crc32": "83F19F98"
+        },
+        "decodedIdentity": {
+          "bytes": 1450801,
+          "sha256": "68be8c1828fbc5058189b91defc0192d8eba0c3b14c595174b06c9e0ccc97801",
+          "crc32": "DADECCA3"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_Cooking.pxo",
+        "title": "Rhythm cooking",
+        "menuTitleOffset": 2010,
+        "original": "pxo/original/Game_Cooking.pxo",
+        "decoded": "pxo/decoded/Game_Cooking.pxo",
+        "thumbCodeOffset": 1020,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 797102,
+          "sha256": "05d0e9d88d8516f9a09f2077938d214eb190d24a17af30c47c5cff695c1064ce",
+          "crc32": "68004544"
+        },
+        "decodedIdentity": {
+          "bytes": 2122953,
+          "sha256": "5d048eb42382ed5931145f36cdd71d164e6e3caa6bd26bc8d953a818eec59e04",
+          "crc32": "27A9AD50"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_GrandGolf.pxo",
+        "title": "Grand golf",
+        "menuTitleOffset": 2039,
+        "original": "pxo/original/Game_GrandGolf.pxo",
+        "decoded": "pxo/decoded/Game_GrandGolf.pxo",
+        "thumbCodeOffset": 1156,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 290777,
+          "sha256": "e4d8ef8adfdcd92c1d5627cdba494eef3e69998cb64c936979f9d495da187e0b",
+          "crc32": "09BA79A2"
+        },
+        "decodedIdentity": {
+          "bytes": 559021,
+          "sha256": "8e95b3465fd34e7c3035654fb63ab87743099a557f67f190dde68ca667818ecc",
+          "crc32": "CC220DD6"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_RainbowStriker.pxo",
+        "title": "Rainbow striker",
+        "menuTitleOffset": 2050,
+        "original": "pxo/original/Game_RainbowStriker.pxo",
+        "decoded": "pxo/decoded/Game_RainbowStriker.pxo",
+        "thumbCodeOffset": 3588,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 640986,
+          "sha256": "c3a1fc57e99e3dd9a575ec58c87f4e714fc6441866d5481b19b8f11540b12870",
+          "crc32": "2AAADB63"
+        },
+        "decodedIdentity": {
+          "bytes": 1243405,
+          "sha256": "dd18e20f3ea8631e26fad603ad4ea9ecb4acc6859b5fc5504503cc9977738fb4",
+          "crc32": "096C2D67"
+        }
+      },
+      {
+        "sourcePath": "MODULE/C/Game_Sudoku.pxo",
+        "title": "Sudoku puzzle",
+        "menuTitleOffset": 2025,
+        "original": "pxo/original/Game_Sudoku.pxo",
+        "decoded": "pxo/decoded/Game_Sudoku.pxo",
+        "thumbCodeOffset": 496,
+        "thumbCodeHex": "10b50e49041c09684000896e03d5c96a",
+        "thumbDisassembly": [
+          "push {r4, lr}",
+          "ldr r1, [pc, #0x38]",
+          "adds r4, r0, #0",
+          "ldr r1, [r1]"
+        ],
+        "originalIdentity": {
+          "bytes": 103341,
+          "sha256": "54ea25dc714259020f235a0f0c0a78366a42a8a5608bad7e8d4ac10dbff2c5a2",
+          "crc32": "B7E7829E"
+        },
+        "decodedIdentity": {
+          "bytes": 398745,
+          "sha256": "bfaa3cda5f3176e25e10743579369fd7d94bbabcc788a46b8ad33be0e2272ead",
+          "crc32": "42085A97"
+        }
+      }
+    ],
+    "gameVariants": [
+      {
+        "title": "Baduk",
+        "originalMatchesSh170": false,
+        "decodedMatchesSh170": false
+      },
+      {
+        "title": "Rhythm cooking",
+        "originalMatchesSh170": false,
+        "decodedMatchesSh170": false
+      },
+      {
+        "title": "Grand golf",
+        "originalMatchesSh170": false,
+        "decodedMatchesSh170": false
+      },
+      {
+        "title": "Rainbow striker",
+        "originalMatchesSh170": false,
+        "decodedMatchesSh170": false
+      },
+      {
+        "title": "Sudoku puzzle",
+        "originalMatchesSh170": false,
+        "decodedMatchesSh170": false
+      }
+    ]
+  },
+  "sFone": {
+    "downloads": [
+      {
+        "model": "SD3500",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD3500/SD350F03.7z",
+        "utc": "2026-11-07T19:23:26.165685+00:00",
+        "status": 200,
+        "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SD3500/SD350F03.7z",
+        "bytes": 1757380,
+        "sha256": "b077e876f68a2d7a8e730e7e4b8839d76812e7f782aaa0e502d2380f45ed401d",
+        "file": "SD350F03.7z"
+      },
+      {
+        "model": "SD3530",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD3530/SD353F04.7z",
+        "utc": "2026-11-07T19:23:26.166684+00:00",
+        "status": 200,
+        "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SD3530/SD353F04.7z",
+        "bytes": 2429611,
+        "sha256": "6d8b328ecd693123ecc881ceb1d7b44c5d57d125de14e6ddc7c7c688b473bce9",
+        "file": "SD353F04.7z"
+      }
+    ],
+    "indexes": [
+      {
+        "name": "LG/SD3500/",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD3500/",
+        "utc": "2026-11-07T19:22:13.204961+00:00",
+        "status": 200,
+        "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SD3500/",
+        "file": "LG-SD3500.html",
+        "bytes": 2097,
+        "sha256": "1afcdbbfc95aa03d43a73bf4030c63e9f1fe49e97143adc6ede26d6728ad64e7",
+        "archives": [
+          "https://archive.sunderland93.ru/Firmwares/LG/SD3500/SD350F03.7z"
+        ],
+        "directories": []
+      },
+      {
+        "name": "LG/SD3530/",
+        "url": "https://archive.sunderland93.ru/Firmwares/LG/SD3530/",
+        "utc": "2026-11-07T19:22:13.205959+00:00",
+        "status": 200,
+        "finalUrl": "https://archive.sunderland93.ru/Firmwares/LG/SD3530/",
+        "file": "LG-SD3530.html",
+        "bytes": 2097,
+        "sha256": "c6dff15858ade77fe82bceff9bfd373ee3d6cc4584a0aca5a328fbd418253ac7",
+        "archives": [
+          "https://archive.sunderland93.ru/Firmwares/LG/SD3530/SD353F04.7z"
+        ],
+        "directories": []
+      }
+    ],
+    "serviceImages": [
+      {
+        "file": "extracted/SD350F03/SD350F03_01.bin",
+        "bytes": 3145728,
+        "sha256": "78c7eef9edf769c4d012126ddc214623541bbbf6bccb7872c579655a3fa66b9d",
+        "markers": {
+          "SD350F03": {
+            "count": 1,
+            "offsets": [
+              1799097
+            ]
+          },
+          "EFSSuper": {
+            "count": 1,
+            "offsets": [
+              937048
+            ]
+          },
+          "BREW": {
+            "count": 1,
+            "offsets": [
+              1164766
+            ]
+          },
+          "S-Fone": {
+            "count": 4,
+            "offsets": [
+              1073084,
+              1861318,
+              1861395,
+              2876344
+            ]
+          }
+        },
+        "gameMetadata": [],
+        "scan": {
+          "bytes": 3145728,
+          "sha256": "78c7eef9edf769c4d012126ddc214623541bbbf6bccb7872c579655a3fa66b9d",
+          "candidate_offsets_tested": 197399,
+          "containers": []
+        }
+      },
+      {
+        "file": "extracted/SD353F04/SD353F04_01.bin",
+        "bytes": 4718592,
+        "sha256": "79e873ab4378c03aa602d284fa4899c84e0ea6153ec453133a3d8834e682156f",
+        "markers": {
+          "LG-SD3530": {
+            "count": 1,
+            "offsets": [
+              941028
+            ]
+          },
+          "SD353F04": {
+            "count": 1,
+            "offsets": [
+              2714089
+            ]
+          },
+          "EFSSuper": {
+            "count": 1,
+            "offsets": [
+              1195584
+            ]
+          },
+          "BREW": {
+            "count": 53,
+            "offsets": [
+              928131,
+              932475,
+              941095,
+              952311,
+              955147,
+              968743,
+              976515,
+              977939,
+              980675,
+              984351,
+              992347,
+              998044,
+              1005467,
+              1008119,
+              1009379,
+              1012650,
+              1012750,
+              1014410,
+              1014458,
+              1014514,
+              1014578,
+              1015326,
+              1042647,
+              1048087,
+              1051883,
+              1055751,
+              1088772,
+              1088788,
+              1089800,
+              1091120,
+              1429262,
+              2648581
+            ]
+          },
+          "S-Fone": {
+            "count": 4,
+            "offsets": [
+              1335660,
+              3144056,
+              3144133,
+              4460432
+            ]
+          }
+        },
+        "gameMetadata": [],
+        "scan": {
+          "bytes": 4718592,
+          "sha256": "79e873ab4378c03aa602d284fa4899c84e0ea6153ec453133a3d8834e682156f",
+          "candidate_offsets_tested": 291054,
+          "containers": []
+        }
+      }
+    ],
+    "members": [
+      {
+        "path": "SD350F03/EFS_SCR/image/2nd_header.paf",
+        "bytes": 819,
+        "sha256": "0338a9ffbb39722908456640c66fdc9bb6d5b98a386853b7317167996f4bc883",
+        "crc32": "82F6CB9B"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/Alarm.paf",
+        "bytes": 1597,
+        "sha256": "f0febe135b85648494f9647e7b9e7bc2c1dbd67dd44f0520ed7876de9a5db649",
+        "crc32": "4E6F43B1"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/calendar_bg.paf",
+        "bytes": 2624,
+        "sha256": "e3c40c505fbacb039d0baef9396dedf542af66c5e591addc0e2340cb165cd821",
+        "crc32": "0CCC95E2"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/check.paf",
+        "bytes": 827,
+        "sha256": "36e614765aa4d7d63d4d9173f29eeb4b5fde48e6f1a88d41c38e9f562f09eb44",
+        "crc32": "82F94D34"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/Incoming.paf",
+        "bytes": 3124,
+        "sha256": "bf54ceb887bdb910c85a2aca41af976bf563d663f976fb3e0502d347f9fe5dbe",
+        "crc32": "6EEB15B5"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/main_bg.paf",
+        "bytes": 2862,
+        "sha256": "c2fa0d312c4e49c026fa6a6cb7570243a295300f01c19b3d2c8a818925227fdd",
+        "crc32": "5B206936"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/Mainmenu_title.paf",
+        "bytes": 1375,
+        "sha256": "a13629fcdd2c5cf8f57a452eed4decfb84194cf743fb557feebdab5f618a106b",
+        "crc32": "C47D86EB"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/MathOperator.paf",
+        "bytes": 2012,
+        "sha256": "23ce5973ae60fcc7ebeae3ad9d328e720e27cd77ac8117eb8d6d87227016cf92",
+        "crc32": "5EAFF646"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/option_list_t.paf",
+        "bytes": 64,
+        "sha256": "e0807c9892b02eaa3f66e0446ff934c81a9ccb5a0fb493aa7331aca43a9c6cbb",
+        "crc32": "9A551AA3"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/Originate.paf",
+        "bytes": 3124,
+        "sha256": "bf54ceb887bdb910c85a2aca41af976bf563d663f976fb3e0502d347f9fe5dbe",
+        "crc32": "6EEB15B5"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/pb_speeddial_bg.paf",
+        "bytes": 3735,
+        "sha256": "58b274fa6b05e8f3cbddbbab987af9831fc16b47b5418120f9c187964f3fff99",
+        "crc32": "91629208"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/popup_bg.paf",
+        "bytes": 953,
+        "sha256": "175932d7437e2b6f7c8f02645895aa5e995d112841585f4ba5a1a2d025e128ae",
+        "crc32": "651C9496"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/progress_Bg.paf",
+        "bytes": 486,
+        "sha256": "ab6f042a5886b3022c42cfa3204e657054ec08534430081e8d932ed498c28091",
+        "crc32": "0D5E9695"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/Schedule.paf",
+        "bytes": 1477,
+        "sha256": "a88ab58f6b5950923209e544ce9b5ed4beb5b27d527d729fd6eba35f2ee3a96c",
+        "crc32": "D885C1B8"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/SFone.paf",
+        "bytes": 3439,
+        "sha256": "849fb3fb01e5c9b6405af54ae4c88054fe96ce28a7a1506167e8ab93791af5d2",
+        "crc32": "A0B3423E"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/sms_sending.paf",
+        "bytes": 8535,
+        "sha256": "4b77d363fff7876bb1fddb8719449cf1610123de4ecc4e94776b977c1ed96988",
+        "crc32": "C0C95381"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/theme1.paf",
+        "bytes": 26339,
+        "sha256": "ec313356453deda3633d47c65f2bcac83d410a7229512df5a1c36c30f10e4a75",
+        "crc32": "EF8CFC5B"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/theme2.paf",
+        "bytes": 31881,
+        "sha256": "850c64e93dd59f76059dec3e04938c463251ccf0e6b6ded3296a43b002b9a1cd",
+        "crc32": "D5DABAF3"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/theme3.paf",
+        "bytes": 17975,
+        "sha256": "235edab392a578aa9f8e26f2eb9da4544791963fc5e9ff67b5e0225518e2784c",
+        "crc32": "2609C5C4"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/theme4.paf",
+        "bytes": 34009,
+        "sha256": "ab55fca9b1cb22c407c163506e68436138c5dd94de82144f5debd28da0d9c322",
+        "crc32": "9C78FC47"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/theme5.paf",
+        "bytes": 17558,
+        "sha256": "fe335164b27f6d8dadf0226ec331d9d1df83582d7a927642f3e0059b4766735a",
+        "crc32": "5EC32D73"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/theme6.paf",
+        "bytes": 35977,
+        "sha256": "3a17bcaae26d4c96aef57b37b7c1c5bdaff4549fbb47e4fc14599941b1544064",
+        "crc32": "7269A302"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/theme7.paf",
+        "bytes": 30468,
+        "sha256": "96081284f73e23b844496c63fca90f177f78222ce68b4b8731c41440bacf6f6f",
+        "crc32": "4A062146"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg.paf",
+        "bytes": 12183,
+        "sha256": "0595e1195d72bc4ee06b93955e796aabe32a992a74e5f662e8dcbd91787230cb",
+        "crc32": "9789EE27"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_00.paf",
+        "bytes": 4468,
+        "sha256": "2ab868750fc3457f4c106f2bd993a74b48f796106667a2ec69a9b7d68cb95940",
+        "crc32": "410362F0"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_01.paf",
+        "bytes": 4344,
+        "sha256": "23e2869b45137092c0ff3f4574443bc525644bf6990e6d73def0002e87440dab",
+        "crc32": "CE28E971"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_02.paf",
+        "bytes": 4754,
+        "sha256": "e2b498de57eedc64c097f24c04b82eab7c72bc0e9bfb33b6f5e29007c99a7674",
+        "crc32": "C63680DB"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_03.paf",
+        "bytes": 4559,
+        "sha256": "f466495181b9587d53d72db101a04a2c772cc2bcef000601863c46956cbcc189",
+        "crc32": "D0FFF4DC"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_04.paf",
+        "bytes": 4723,
+        "sha256": "612a3843ad1b878051311a2cc09bc0b0dc1acf2a9701a027a8a9218468d1625a",
+        "crc32": "BDFFD879"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_05.paf",
+        "bytes": 4015,
+        "sha256": "33220b6337a543146fa37718d49f630175cfd3683db53a9ee1dc107097288390",
+        "crc32": "9519F934"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_06.paf",
+        "bytes": 4074,
+        "sha256": "4e8025eb67ee2347db096172f1c17a4e58a0cc98204244f9af104a2a18311953",
+        "crc32": "25877B60"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_07.paf",
+        "bytes": 4813,
+        "sha256": "3b41bf1459c32a768ac16bb33c58ac0505d396d76bfe96dcd57cce0d6efaa996",
+        "crc32": "CA6B40C2"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_grid_bg_sel_08.paf",
+        "bytes": 4566,
+        "sha256": "1496a29c6445eaaa761a34f4db23e2eff4a7c6716526cdba62883fdccc7c0b18",
+        "crc32": "D82517BA"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/top_list_bg.paf",
+        "bytes": 1489,
+        "sha256": "c5ffb1a0ff511415565781b6eeb64a4a6f8e596d7415651cc2b37c0b1021eaf3",
+        "crc32": "FB542166"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/warning.paf",
+        "bytes": 603,
+        "sha256": "f132359d8b40327cd814449a61c481846610583bc235cacb960da7510537e685",
+        "crc32": "2BB17058"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/image/worldmap.paf",
+        "bytes": 3455,
+        "sha256": "cf4e5ef81474ebf64bacb6a2201dcb8623854c6ac27a488011db0be8bb6bd3bb",
+        "crc32": "5B7D2E3C"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/01 Ring.mid",
+        "bytes": 868,
+        "sha256": "b3baf36028607b87b486c17426bc00271178003dd746fc4f5d8bcc245dca2a51",
+        "crc32": "DC33C196"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/02 Ring.mid",
+        "bytes": 2352,
+        "sha256": "ea5237a55aa7750ee454c340559857168749bae19f9729a30523b75cbbfbc912",
+        "crc32": "2DF7DF71"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/03 Ring.mid",
+        "bytes": 3792,
+        "sha256": "d6690e81b6497d167c427e74187e2094a35adc2504654ba5df32b1bcdafac32c",
+        "crc32": "C1223520"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/04 Ring.mid",
+        "bytes": 2690,
+        "sha256": "346d97a5feac2a89a4a82556d27bb144cfb38dc2d11812835e62114bef883ee3",
+        "crc32": "29429293"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/05 Ring.mid",
+        "bytes": 3250,
+        "sha256": "b8d4c8d6ac7d7c0c74648537370e8962afa11226c04cb25d6eae4118662b65cf",
+        "crc32": "64737D9E"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/06 Wake Me up.MID",
+        "bytes": 3872,
+        "sha256": "66db45f4502ee242aaf3fed7502eca629fecc1b004be06ba92a545e3ee6fbc44",
+        "crc32": "1B1867EE"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/07 Pocket Watch.MID",
+        "bytes": 7033,
+        "sha256": "a26c1b23e53becfdfa5e3db2e29fa6f918e6cbefe1de56d26cbe85ee24c4d133",
+        "crc32": "93A0BBF5"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/08 Moody House.MID",
+        "bytes": 6569,
+        "sha256": "0b7a389a80688ce86605d4b1ab2454f41a9b6e1447b54eb6e9240de4d3f44359",
+        "crc32": "12CD3A1E"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/09 Shine.MID",
+        "bytes": 8007,
+        "sha256": "960ccfba994e2bb3f6124368af3d573e189252aefb0a6a813c490e8fdf239d1a",
+        "crc32": "A190CB29"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/10 Ichiban.MID",
+        "bytes": 5649,
+        "sha256": "11be195c24919342337908f3e6881f0c1cf9823179e139b2be6e458fdd1a4733",
+        "crc32": "4CDF0063"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/11 Cigar and Wine.mid",
+        "bytes": 7937,
+        "sha256": "6bb884d8c24832150c6bff2f98ca2e80b01778ac351248d78e2896fe47e5cd48",
+        "crc32": "90F53051"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/12 Brass Fever.mid",
+        "bytes": 6066,
+        "sha256": "a10389ba09acc622aabe15b3ad79a87310878106366484c77374d5101ef74925",
+        "crc32": "ADD283D5"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/13 a Mystique.mid",
+        "bytes": 8191,
+        "sha256": "7cd89d944ef7fe91829715cc232b5f57152a3500bcf17da0e14707a6198ca0a1",
+        "crc32": "0E01EC29"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/14 Next Time.mid",
+        "bytes": 9239,
+        "sha256": "a86c218deb2ef0c072b96f6ed153a133f7161450b06292ece69818fd2ddfcdb0",
+        "crc32": "64EC6282"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/15 Alone.MID",
+        "bytes": 11765,
+        "sha256": "3f4f8198ae3f41255bf1f4e9bd3840351e2746518bd8f06d49fad866199416d2",
+        "crc32": "67E8E36F"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/16 Green day.mid",
+        "bytes": 4070,
+        "sha256": "37db9b284efcb95fd2589924df072fac533a8d005bd114f451d11e5d35475e05",
+        "crc32": "BB85C4FF"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/17 Chicken Soup.MID",
+        "bytes": 6552,
+        "sha256": "6ec24bfb4ca673c380d51dd9bb2a050d0af4c37aab62bf7b58596bb3d1ec84b4",
+        "crc32": "CD02CEF5"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/18 Csardas.MID",
+        "bytes": 9320,
+        "sha256": "20e1c353d55bfe24a79f8ee34ebadad8b959ac77495ffb2be6794f34b4a5cb5c",
+        "crc32": "EC807836"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/19 Donau Waltz.MID",
+        "bytes": 8590,
+        "sha256": "f80c0b143319530b63b2fec7c37b5571780a18f7460bb1bf6e42253706e6520e",
+        "crc32": "B8DDB433"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/20 Canon.mid",
+        "bytes": 6057,
+        "sha256": "46054a55b902e34fdca4142dd81745d2ea99ac04f6f51d5eed54329fa0487099",
+        "crc32": "0678661A"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/msg_mel01.mid",
+        "bytes": 127,
+        "sha256": "2d5ad70584ff20785cc11cb70ab59d9302e7a4f030402ed774b835ee744aba7d",
+        "crc32": "BD2D18FD"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/msg_mel02.mid",
+        "bytes": 329,
+        "sha256": "ef0a1799008ae1fcc374c4e52d8daab91a5a02113acca5a80a3a645277724a92",
+        "crc32": "42B605C0"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/msg_mel03.mid",
+        "bytes": 932,
+        "sha256": "c5436d8c16e772445db6d67c2e6747c4b9b37791af662959dea95986ce63e16d",
+        "crc32": "EF37BAFF"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/msg_mel04.mid",
+        "bytes": 1111,
+        "sha256": "eea1c56bda40d4e6d7278e7c0f80d8298b29310704d3fff9fb5734a28ae74f4a",
+        "crc32": "5FB928BC"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/testmode01.mid",
+        "bytes": 83,
+        "sha256": "86c52b170edb82a0c4856e9d060deadd9dfc08424cc42e087734e9bc1e910cae",
+        "crc32": "DF364DD0"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/testmode02.mid",
+        "bytes": 83,
+        "sha256": "2bff7f10a2a2fd0f46209cade4724aeaa28ceb7609b7f15d2abea71cadee413e",
+        "crc32": "04CA0C3A"
+      },
+      {
+        "path": "SD350F03/EFS_SCR/ringtone/testmode03.mid",
+        "bytes": 83,
+        "sha256": "ac96dc9857e05c4e3d9218001bc6e84e3aa3cdd61a1afa56b19e83d9ec897f9f",
+        "crc32": "74E0E4D3"
+      },
+      {
+        "path": "SD350F03/SD3500.dll",
+        "bytes": 544768,
+        "sha256": "3ee852bb943f41cadf8ae9a841e862189a9bb4e131e2dd6bed96d896501950d2",
+        "crc32": "D11F0623"
+      },
+      {
+        "path": "SD350F03/SD350F03_01.bin",
+        "bytes": 3145728,
+        "sha256": "78c7eef9edf769c4d012126ddc214623541bbbf6bccb7872c579655a3fa66b9d",
+        "crc32": "4CECEE56"
+      },
+      {
+        "path": "SD350F03/SD350F03_01.scr",
+        "bytes": 8386,
+        "sha256": "cd532c100b3e709f91adb3c25525deecc27e7b334468176dc5a553c48e7a0c31",
+        "crc32": "387C3A5A"
+      },
+      {
+        "path": "SD353F04/brew_script/brew/version.txt",
+        "bytes": 100,
+        "sha256": "8fb98bc602d51f2ef64f5b646637631618316fd3db555741e123681a8fafbbbd",
+        "crc32": "4520378E"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/2nd_header.paf",
+        "bytes": 819,
+        "sha256": "0338a9ffbb39722908456640c66fdc9bb6d5b98a386853b7317167996f4bc883",
+        "crc32": "82F6CB9B"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/Alarm.paf",
+        "bytes": 1597,
+        "sha256": "f0febe135b85648494f9647e7b9e7bc2c1dbd67dd44f0520ed7876de9a5db649",
+        "crc32": "4E6F43B1"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/calendar_bg.paf",
+        "bytes": 2624,
+        "sha256": "e3c40c505fbacb039d0baef9396dedf542af66c5e591addc0e2340cb165cd821",
+        "crc32": "0CCC95E2"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/calendar_bg_viet.paf",
+        "bytes": 2668,
+        "sha256": "dec99ad2716201b189b3a37cff529870dbf718d36561f4889c4f501a04588ec0",
+        "crc32": "9C65A105"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/check.paf",
+        "bytes": 827,
+        "sha256": "36e614765aa4d7d63d4d9173f29eeb4b5fde48e6f1a88d41c38e9f562f09eb44",
+        "crc32": "82F94D34"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/Incoming.paf",
+        "bytes": 3124,
+        "sha256": "bf54ceb887bdb910c85a2aca41af976bf563d663f976fb3e0502d347f9fe5dbe",
+        "crc32": "6EEB15B5"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/main_bg.paf",
+        "bytes": 2862,
+        "sha256": "c2fa0d312c4e49c026fa6a6cb7570243a295300f01c19b3d2c8a818925227fdd",
+        "crc32": "5B206936"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/Mainmenu_title.paf",
+        "bytes": 1375,
+        "sha256": "a13629fcdd2c5cf8f57a452eed4decfb84194cf743fb557feebdab5f618a106b",
+        "crc32": "C47D86EB"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/MathOperator.paf",
+        "bytes": 2012,
+        "sha256": "23ce5973ae60fcc7ebeae3ad9d328e720e27cd77ac8117eb8d6d87227016cf92",
+        "crc32": "5EAFF646"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/option_list_t.paf",
+        "bytes": 64,
+        "sha256": "e0807c9892b02eaa3f66e0446ff934c81a9ccb5a0fb493aa7331aca43a9c6cbb",
+        "crc32": "9A551AA3"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/Originate.paf",
+        "bytes": 3124,
+        "sha256": "bf54ceb887bdb910c85a2aca41af976bf563d663f976fb3e0502d347f9fe5dbe",
+        "crc32": "6EEB15B5"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/pb_speeddial_bg.paf",
+        "bytes": 3735,
+        "sha256": "58b274fa6b05e8f3cbddbbab987af9831fc16b47b5418120f9c187964f3fff99",
+        "crc32": "91629208"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/popup_bg.paf",
+        "bytes": 953,
+        "sha256": "175932d7437e2b6f7c8f02645895aa5e995d112841585f4ba5a1a2d025e128ae",
+        "crc32": "651C9496"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/progress_Bg.paf",
+        "bytes": 486,
+        "sha256": "ab6f042a5886b3022c42cfa3204e657054ec08534430081e8d932ed498c28091",
+        "crc32": "0D5E9695"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/Schedule.paf",
+        "bytes": 1477,
+        "sha256": "a88ab58f6b5950923209e544ce9b5ed4beb5b27d527d729fd6eba35f2ee3a96c",
+        "crc32": "D885C1B8"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/SFone.paf",
+        "bytes": 3439,
+        "sha256": "849fb3fb01e5c9b6405af54ae4c88054fe96ce28a7a1506167e8ab93791af5d2",
+        "crc32": "A0B3423E"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/sms_sending.paf",
+        "bytes": 8535,
+        "sha256": "4b77d363fff7876bb1fddb8719449cf1610123de4ecc4e94776b977c1ed96988",
+        "crc32": "C0C95381"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/theme1.paf",
+        "bytes": 26339,
+        "sha256": "ec313356453deda3633d47c65f2bcac83d410a7229512df5a1c36c30f10e4a75",
+        "crc32": "EF8CFC5B"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/theme2.paf",
+        "bytes": 31881,
+        "sha256": "850c64e93dd59f76059dec3e04938c463251ccf0e6b6ded3296a43b002b9a1cd",
+        "crc32": "D5DABAF3"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/theme3.paf",
+        "bytes": 17975,
+        "sha256": "235edab392a578aa9f8e26f2eb9da4544791963fc5e9ff67b5e0225518e2784c",
+        "crc32": "2609C5C4"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/theme4.paf",
+        "bytes": 34009,
+        "sha256": "ab55fca9b1cb22c407c163506e68436138c5dd94de82144f5debd28da0d9c322",
+        "crc32": "9C78FC47"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/theme5.paf",
+        "bytes": 17558,
+        "sha256": "fe335164b27f6d8dadf0226ec331d9d1df83582d7a927642f3e0059b4766735a",
+        "crc32": "5EC32D73"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/theme6.paf",
+        "bytes": 35977,
+        "sha256": "3a17bcaae26d4c96aef57b37b7c1c5bdaff4549fbb47e4fc14599941b1544064",
+        "crc32": "7269A302"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/theme7.paf",
+        "bytes": 30468,
+        "sha256": "96081284f73e23b844496c63fca90f177f78222ce68b4b8731c41440bacf6f6f",
+        "crc32": "4A062146"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg.paf",
+        "bytes": 12012,
+        "sha256": "dbd978916f432822472aff8b1fcd8ed20cfd7b058064100153d47c122ca674da",
+        "crc32": "C02F00C2"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_00.paf",
+        "bytes": 4573,
+        "sha256": "2d4707b5bc4826b07630f27fb9ae3178da28767b2382eea55e18a849e9b7100c",
+        "crc32": "A34DBD75"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_01.paf",
+        "bytes": 4383,
+        "sha256": "866c30a97f68d989316b5a20e77d23130812aa4b94b8f8ac594592c708e1d5fb",
+        "crc32": "F435A757"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_02.paf",
+        "bytes": 4847,
+        "sha256": "759f255cfe3389b08d7ac8b516f9c61f32d2e6d9a35362f8e3d0407cb402eccc",
+        "crc32": "A125CEEB"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_03.paf",
+        "bytes": 4530,
+        "sha256": "dd12d3cd4397b27df68495a17a7550d47f9b8ac732fe53e79bf81846eba8b076",
+        "crc32": "08BD4E3F"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_04.paf",
+        "bytes": 4598,
+        "sha256": "95dd100e19be467ffdef6cb07b684c0976a2b03be85eb42a3f929c4a47844020",
+        "crc32": "8194F208"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_05.paf",
+        "bytes": 4897,
+        "sha256": "fb75b43f85d789667ff49b816f77bfb534556a12541c78dfb58a8ed71c447e3d",
+        "crc32": "26A05F41"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_06.paf",
+        "bytes": 4213,
+        "sha256": "95399f258606a35afed185136277928912746c48ce9915dc407be49a33adef2d",
+        "crc32": "55D9DA62"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_07.paf",
+        "bytes": 4107,
+        "sha256": "c51d45ebf1edb98fafe8b81f4a8e13e0c4a366da005c6bcdea9b0fd43db23a71",
+        "crc32": "FE5DDC30"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_grid_bg_sel_08.paf",
+        "bytes": 4800,
+        "sha256": "72b254c16584ce0c51784b772b78f8be02bedc43660e5b9aa6bd304c3f895db4",
+        "crc32": "3B38735F"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/top_list_bg.paf",
+        "bytes": 1489,
+        "sha256": "c5ffb1a0ff511415565781b6eeb64a4a6f8e596d7415651cc2b37c0b1021eaf3",
+        "crc32": "FB542166"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/warning.paf",
+        "bytes": 603,
+        "sha256": "f132359d8b40327cd814449a61c481846610583bc235cacb960da7510537e685",
+        "crc32": "2BB17058"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/image/worldmap.paf",
+        "bytes": 3455,
+        "sha256": "cf4e5ef81474ebf64bacb6a2201dcb8623854c6ac27a488011db0be8bb6bd3bb",
+        "crc32": "5B7D2E3C"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/01 Ring.mid",
+        "bytes": 868,
+        "sha256": "b3baf36028607b87b486c17426bc00271178003dd746fc4f5d8bcc245dca2a51",
+        "crc32": "DC33C196"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/02 Ring.mid",
+        "bytes": 2352,
+        "sha256": "ea5237a55aa7750ee454c340559857168749bae19f9729a30523b75cbbfbc912",
+        "crc32": "2DF7DF71"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/03 Ring.mid",
+        "bytes": 3792,
+        "sha256": "d6690e81b6497d167c427e74187e2094a35adc2504654ba5df32b1bcdafac32c",
+        "crc32": "C1223520"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/04 Ring.mid",
+        "bytes": 2690,
+        "sha256": "346d97a5feac2a89a4a82556d27bb144cfb38dc2d11812835e62114bef883ee3",
+        "crc32": "29429293"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/05 Ring.mid",
+        "bytes": 3250,
+        "sha256": "b8d4c8d6ac7d7c0c74648537370e8962afa11226c04cb25d6eae4118662b65cf",
+        "crc32": "64737D9E"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/06 Wake Me up.MID",
+        "bytes": 3872,
+        "sha256": "66db45f4502ee242aaf3fed7502eca629fecc1b004be06ba92a545e3ee6fbc44",
+        "crc32": "1B1867EE"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/07 Pocket Watch.MID",
+        "bytes": 7033,
+        "sha256": "a26c1b23e53becfdfa5e3db2e29fa6f918e6cbefe1de56d26cbe85ee24c4d133",
+        "crc32": "93A0BBF5"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/08 Moody House.MID",
+        "bytes": 6569,
+        "sha256": "0b7a389a80688ce86605d4b1ab2454f41a9b6e1447b54eb6e9240de4d3f44359",
+        "crc32": "12CD3A1E"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/09 Shine.MID",
+        "bytes": 8007,
+        "sha256": "960ccfba994e2bb3f6124368af3d573e189252aefb0a6a813c490e8fdf239d1a",
+        "crc32": "A190CB29"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/10 Ichiban.MID",
+        "bytes": 5649,
+        "sha256": "11be195c24919342337908f3e6881f0c1cf9823179e139b2be6e458fdd1a4733",
+        "crc32": "4CDF0063"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/11 Cigar and Wine.mid",
+        "bytes": 7937,
+        "sha256": "6bb884d8c24832150c6bff2f98ca2e80b01778ac351248d78e2896fe47e5cd48",
+        "crc32": "90F53051"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/12 Brass Fever.mid",
+        "bytes": 6066,
+        "sha256": "a10389ba09acc622aabe15b3ad79a87310878106366484c77374d5101ef74925",
+        "crc32": "ADD283D5"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/13 a Mystique.mid",
+        "bytes": 8191,
+        "sha256": "7cd89d944ef7fe91829715cc232b5f57152a3500bcf17da0e14707a6198ca0a1",
+        "crc32": "0E01EC29"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/14 Next Time.mid",
+        "bytes": 9239,
+        "sha256": "a86c218deb2ef0c072b96f6ed153a133f7161450b06292ece69818fd2ddfcdb0",
+        "crc32": "64EC6282"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/15 Alone.MID",
+        "bytes": 11765,
+        "sha256": "3f4f8198ae3f41255bf1f4e9bd3840351e2746518bd8f06d49fad866199416d2",
+        "crc32": "67E8E36F"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/16 Green day.mid",
+        "bytes": 4070,
+        "sha256": "37db9b284efcb95fd2589924df072fac533a8d005bd114f451d11e5d35475e05",
+        "crc32": "BB85C4FF"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/17 Chicken Soup.MID",
+        "bytes": 6552,
+        "sha256": "6ec24bfb4ca673c380d51dd9bb2a050d0af4c37aab62bf7b58596bb3d1ec84b4",
+        "crc32": "CD02CEF5"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/18 Csardas.MID",
+        "bytes": 9320,
+        "sha256": "20e1c353d55bfe24a79f8ee34ebadad8b959ac77495ffb2be6794f34b4a5cb5c",
+        "crc32": "EC807836"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/19 Donau Waltz.MID",
+        "bytes": 8590,
+        "sha256": "f80c0b143319530b63b2fec7c37b5571780a18f7460bb1bf6e42253706e6520e",
+        "crc32": "B8DDB433"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/20 Canon.mid",
+        "bytes": 6057,
+        "sha256": "46054a55b902e34fdca4142dd81745d2ea99ac04f6f51d5eed54329fa0487099",
+        "crc32": "0678661A"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/msg_mel01.mid",
+        "bytes": 127,
+        "sha256": "2d5ad70584ff20785cc11cb70ab59d9302e7a4f030402ed774b835ee744aba7d",
+        "crc32": "BD2D18FD"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/msg_mel02.mid",
+        "bytes": 329,
+        "sha256": "ef0a1799008ae1fcc374c4e52d8daab91a5a02113acca5a80a3a645277724a92",
+        "crc32": "42B605C0"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/msg_mel03.mid",
+        "bytes": 932,
+        "sha256": "c5436d8c16e772445db6d67c2e6747c4b9b37791af662959dea95986ce63e16d",
+        "crc32": "EF37BAFF"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/msg_mel04.mid",
+        "bytes": 1111,
+        "sha256": "eea1c56bda40d4e6d7278e7c0f80d8298b29310704d3fff9fb5734a28ae74f4a",
+        "crc32": "5FB928BC"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/testmode01.mid",
+        "bytes": 83,
+        "sha256": "86c52b170edb82a0c4856e9d060deadd9dfc08424cc42e087734e9bc1e910cae",
+        "crc32": "DF364DD0"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/testmode02.mid",
+        "bytes": 83,
+        "sha256": "2bff7f10a2a2fd0f46209cade4724aeaa28ceb7609b7f15d2abea71cadee413e",
+        "crc32": "04CA0C3A"
+      },
+      {
+        "path": "SD353F04/EFS_SCR/ringtone/testmode03.mid",
+        "bytes": 83,
+        "sha256": "ac96dc9857e05c4e3d9218001bc6e84e3aa3cdd61a1afa56b19e83d9ec897f9f",
+        "crc32": "74E0E4D3"
+      },
+      {
+        "path": "SD353F04/SD3530B.dll",
+        "bytes": 548864,
+        "sha256": "4e9720c63e4d58d933f21cc242e4de9f9ff6fe760032ff79994d0462efa8b95f",
+        "crc32": "579B586D"
+      },
+      {
+        "path": "SD353F04/SD353F04_01.bin",
+        "bytes": 4718592,
+        "sha256": "79e873ab4378c03aa602d284fa4899c84e0ea6153ec453133a3d8834e682156f",
+        "crc32": "53DEFF40"
+      },
+      {
+        "path": "SD353F04/SD353F04_01.scr",
+        "bytes": 9500,
+        "sha256": "a9af044428e464f8a3e29e404acd1612a40191fc982274d8e4a854e1f61d05ee",
+        "crc32": "A41DE8F2"
+      }
+    ]
+  },
+  "archives": [
+    {
+      "repositoryPath": "research/archives/LG-SH170-Original-and-Games.zip",
+      "bytes": 95437779,
+      "sha256": "7d761338589024980c3fc7894cf2d0afc31f1796d8ddd91bb4404ce391756ea4",
+      "crc32": "492BFF74"
+    },
+    {
+      "repositoryPath": "research/archives/LG-KH1600-Original-and-Games.zip",
+      "bytes": 76881876,
+      "sha256": "09faec16b192b49eafe7a1fae60a8fd45c9f70bd68c700d330445e8d017a72e7",
+      "crc32": "4C86E3DD"
+    },
+    {
+      "repositoryPath": "research/archives/LG-S-Fone-SD3500-SD3530-Originals.zip",
+      "bytes": 4201193,
+      "sha256": "f05c4ed55d9f22007d39a982304162e4a216d52ad41241cf09ed18f62a3b9bac",
+      "crc32": "AB932D61"
+    }
+  ]
+}

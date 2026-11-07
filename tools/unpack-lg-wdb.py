@@ -22,7 +22,35 @@ def u32(data, offset=0):
     return struct.unpack_from("<I", data, offset)[0]
 
 
-def read_records(data, decrypt):
+def indexed_ranges(data, decrypt, header_end, count):
+    footer_size = u32(data, len(data) - 4)
+    footer_start = len(data) - 4 - footer_size
+    if footer_size < 4 + count * 4 or footer_start <= header_end:
+        raise ValueError("invalid WDB index length")
+    footer = decrypt(data[footer_start:-4])
+    if u32(footer) != count:
+        raise ValueError("WDB index count differs from the header")
+    offsets = struct.unpack_from(f"<{count}I", footer, 4)
+    if offsets[0] != header_end or offsets[-1] >= footer_start:
+        raise ValueError("invalid WDB index bounds")
+    return zip(offsets, (*offsets[1:], footer_start))
+
+
+def prefix_ranges(data, start, count):
+    for _ in range(count):
+        if start + 8 > len(data):
+            break
+        header_size, compressed_size = struct.unpack_from("<2I", data, start)
+        if not 16 <= header_size <= 8192 or not compressed_size:
+            raise ValueError(f"invalid WDB prefix record at {start:#x}")
+        end = start + 8 + header_size + compressed_size
+        if end > len(data):
+            break
+        yield start, end
+        start = end
+
+
+def read_records(data, decrypt, *, prefix=False):
     header_size = u32(data)
     header_end = 4 + header_size
     if not 16 <= header_size <= min(4096, len(data) - 8):
@@ -37,22 +65,16 @@ def read_records(data, decrypt):
         raise ValueError("invalid WDB header, check the companion DLL")
     version = header[16 + name_size :].decode("ascii")
 
-    footer_size = u32(data, len(data) - 4)
-    footer_start = len(data) - 4 - footer_size
-    if footer_size < 4 + count * 4 or footer_start <= header_end:
-        raise ValueError("invalid WDB index length")
-    footer = decrypt(data[footer_start:-4])
-    if u32(footer) != count:
-        raise ValueError("WDB index count differs from the header")
-    offsets = struct.unpack_from(f"<{count}I", footer, 4)
-    if offsets[0] != header_end or offsets[-1] >= footer_start:
-        raise ValueError("invalid WDB index bounds")
-
+    ranges = (
+        prefix_ranges(data, header_end, count)
+        if prefix
+        else indexed_ranges(data, decrypt, header_end, count)
+    )
     records = []
     names = set()
     directories = set()
     total = 0
-    for start, end in zip(offsets, (*offsets[1:], footer_start)):
+    for start, end in ranges:
         if start + 8 > end:
             raise ValueError("WDB index is unordered or overlaps a record")
         record_header_size, compressed_size = struct.unpack_from("<2I", data, start)
@@ -84,10 +106,12 @@ def read_records(data, decrypt):
         if expected > MAX_FILE_BYTES or total > MAX_OUTPUT_BYTES:
             raise ValueError("declared output exceeds the extraction limit")
         records.append((path, payload, end, expected))
+    if not records:
+        raise ValueError("WDB prefix contains no complete records")
     return version, records
 
 
-def unpack(wdb, dll, output):
+def unpack(wdb, dll, output, *, prefix=False):
     from Crypto.Cipher import ARC4
 
     if not 24 <= wdb.stat().st_size <= MAX_CONTAINER_BYTES:
@@ -106,7 +130,7 @@ def unpack(wdb, dll, output):
         return ARC4.new(key).decrypt(data)
 
     data = wdb.read_bytes()
-    version, records = read_records(data, decrypt)
+    version, records = read_records(data, decrypt, prefix=prefix)
     with TemporaryDirectory(prefix="lg-wdb-", dir=output.parent) as scratch:
         staging = Path(scratch) / "files"
         staging.mkdir()
@@ -135,9 +159,16 @@ def main():
     parser.add_argument("wdb", type=Path)
     parser.add_argument("companion_dll", type=Path)
     parser.add_argument("output", type=Path, help="new directory in an existing parent")
+    parser.add_argument(
+        "--prefix",
+        action="store_true",
+        help="extract complete records from a verified contiguous prefix without an index",
+    )
     args = parser.parse_args()
     try:
-        version, count = unpack(args.wdb, args.companion_dll, args.output)
+        version, count = unpack(
+            args.wdb, args.companion_dll, args.output, prefix=args.prefix
+        )
     except ModuleNotFoundError:
         parser.exit(
             1,
@@ -145,7 +176,8 @@ def main():
         )
     except (OSError, ValueError, struct.error, zlib.error) as error:
         parser.exit(1, f"{error}\n")
-    print(f"{version}: extracted {count} files")
+    scope = " from the WDB prefix" if args.prefix else ""
+    print(f"{version}: extracted {count} files{scope}")
 
 
 if __name__ == "__main__":

@@ -8,7 +8,8 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 - `sgs-info.mjs`: inspect a local SGS container and optionally extract one resource.
 - `scan-firmware-games.py`: find and optionally extract structurally validated SGS containers from ROMs; see the [scan report and limits](../doc/firmware-games.md).
 - `extract-samsung-push-push.py` extracts verified Push Push I–III level tables as XSB or original bytes. See [sources and usage](../doc/phone-firmware-games.md#samsung-push-push-i-ii-и-iii).
-- `unpack-lg-wdb.py` extracts legacy LG CYON WDB files using the companion DLL size. See the [verified models and commands](../doc/phone-firmware-games.md#игры-из-заводских-kdz).
+- `unpack-lg-wdb.py` extracts legacy LG CYON WDB files using the companion DLL size. See the [verified models and commands](../doc/phone-firmware-games.md#игры-из-заводских-kdz) and the [partial KH1600 recovery](../doc/lg-sh170-games.md#извлечение-игр-kh1600-из-начала-wdb).
+- `unpack-lg-flat-main.py` decodes the 16 KiB LZO1F slots in the [LG SH170 MAIN](../doc/lg-sh170-games.md) using a trusted LZO2 library and records per-block SHA-256.
 - `unpack-myracer-xgn.py` decodes MyRacer MF101 XGN games and VGN files with a known four-byte configuration. It checks the footer, SGS header and resource layout. See the [original files and format evidence](../doc/myracer-game-disc.md).
 - `unpack-sky-binx.py` decodes SKY BINX updates into PDL with per-block ZIP CRC checks. See the [format and three verified firmware sources](../doc/phone-firmware-games.md#декодирование-sky-binx).
 - `extract-sky-rsc.py` validates the observed leading and trailing resource tables in SKY updates and extracts explicitly selected original records. See the [Cube Cube and Rhythm Station examples](../doc/phone-firmware-games.md#ресурсы-sky-и-cube-cube).

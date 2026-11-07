@@ -3,6 +3,537 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "lg-sh170-original-and-games",
+      "repositoryPath": "research/archives/LG-SH170-Original-and-Games.zip",
+      "bytes": 95437779,
+      "sha256": "7d761338589024980c3fc7894cf2d0afc31f1796d8ddd91bb4404ce391756ea4",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "source/SW170710.7z",
+          "bytes": 86886802,
+          "crc32": "6b54d441",
+          "sha256": "1146c1935d49b38e1987e94b05c7f32cba3a81db717d93ea1f32555802c3075b"
+        },
+        {
+          "path": "source/index.html",
+          "bytes": 2097,
+          "crc32": "30c5434d",
+          "sha256": "e01400a3b4f842730239dd7ef8887469cd3869bd600189e765bb862396fd2100"
+        },
+        {
+          "path": "resources/data.lkz",
+          "bytes": 4041324,
+          "crc32": "946bd003",
+          "sha256": "bacf297a7ce85d710b6195fba479643caf629187b22459ae668f0f7709078ab5"
+        },
+        {
+          "path": "tools/unpack-lg-flat-main.py",
+          "bytes": 2793,
+          "crc32": "9c73627a",
+          "sha256": "2b1d46c91d7c3fb4c6619e83875d982c060362da38905563e6f60babd0d8cd3b"
+        },
+        {
+          "path": "resources/campaign.lks",
+          "bytes": 997,
+          "crc32": "194c2654",
+          "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+        },
+        {
+          "path": "resources/options.lks",
+          "bytes": 1076,
+          "crc32": "ab36136b",
+          "sha256": "763291e38c90ef21e22504edef7293da98fcb5ff458e65f22bdad3f8401206a7"
+        },
+        {
+          "path": "evidence/7z-list.txt",
+          "bytes": 184,
+          "crc32": "5accb1cd",
+          "sha256": "5eae0bab9fe69f2861765d59e08072d2570703690ad6cfe9e9022e66cb8b76dd"
+        },
+        {
+          "path": "evidence/7z-test.txt",
+          "bytes": 424,
+          "crc32": "9ff86370",
+          "sha256": "b882b49683be13c31d5b712fc9805a611d5260e1b11cfc192556374519884c95"
+        },
+        {
+          "path": "evidence/cab-list.txt",
+          "bytes": 574,
+          "crc32": "3e97666b",
+          "sha256": "6ffb4be1f90a2cafe1fb0b6ac73812d2bd9f5010294e840596019d930643dc0b"
+        },
+        {
+          "path": "evidence/cab-test.txt",
+          "bytes": 401,
+          "crc32": "8fee6284",
+          "sha256": "a1d626b9f659b9aeb8ca5bc80b34caae6e9ef55ea9040128111cac37d413b6d0"
+        },
+        {
+          "path": "evidence/static-scan.json",
+          "bytes": 410938,
+          "crc32": "66fecc2b",
+          "sha256": "b406d58e2e65dddfd7a8441aaab14953a1fc886315f3dc49e44ad2501ed8c7d2"
+        },
+        {
+          "path": "evidence/main-sgs.json",
+          "bytes": 34836,
+          "crc32": "0779027f",
+          "sha256": "076682bab716c64d639b58fbe62ea0b8a5e6416841e69150c8ddb87831c5530b"
+        },
+        {
+          "path": "evidence/main-lzo.json",
+          "bytes": 425007,
+          "crc32": "fa2ba9c1",
+          "sha256": "58939872f1c5bb72cf8c99bdce494682b714f2130f52cc861317e6e8d5948e57"
+        },
+        {
+          "path": "evidence/kdz.json",
+          "bytes": 312,
+          "crc32": "ae6fe24c",
+          "sha256": "7a45f620c62adb3ddbf01b7a34931ae7cdd83d2b01f67bcf967dc03b2f79105e"
+        },
+        {
+          "path": "pxo/original/Game.pxo",
+          "bytes": 1657,
+          "crc32": "9c87fdd6",
+          "sha256": "43fae43af701477bd00095e4c91f5bf8d2051a24ec793ba0f760102d8706b679"
+        },
+        {
+          "path": "pxo/decoded/Game.pxo",
+          "bytes": 2217,
+          "crc32": "c4d0bea7",
+          "sha256": "e9302da96d81609bedaa4e0198f71fba9387b50effeb59f02435e3a42d659659"
+        },
+        {
+          "path": "evidence/pxo/Game.json",
+          "bytes": 401,
+          "crc32": "12d2a6d2",
+          "sha256": "5b61f485f022afe2e4af4bf2bc79ad364c0294dd4f3a79a9d3a53fc9118060f0"
+        },
+        {
+          "path": "pxo/original/Game_Baduk.pxo",
+          "bytes": 539777,
+          "crc32": "bd7ae3c3",
+          "sha256": "ba25b6f28820bf86eac32f15c3d02a1de024cf4b5d1b8e1e867f3461b178a696"
+        },
+        {
+          "path": "pxo/decoded/Game_Baduk.pxo",
+          "bytes": 1453185,
+          "crc32": "8f9845ba",
+          "sha256": "b970c9a8506cce7162d9488c7de276568251ba5911284ad6997ecf3acd0af1a0"
+        },
+        {
+          "path": "evidence/pxo/Game_Baduk.json",
+          "bytes": 406,
+          "crc32": "c55bc308",
+          "sha256": "8f2cc3542c9393926be6f09034281601d0f65062bc2f79658c1483d7ae4e32aa"
+        },
+        {
+          "path": "pxo/original/Game_Cooking.pxo",
+          "bytes": 797096,
+          "crc32": "b9f739e6",
+          "sha256": "87b0f674a63f966a82b5f9b866177ff7f1af1f1ca518e25b7df3ced9fcd0b540"
+        },
+        {
+          "path": "pxo/decoded/Game_Cooking.pxo",
+          "bytes": 2123121,
+          "crc32": "4a08e00d",
+          "sha256": "2d65b91422f3dd25b6c43f06c527edad5659ed9f1e4575bb6de0f9341f827455"
+        },
+        {
+          "path": "evidence/pxo/Game_Cooking.json",
+          "bytes": 406,
+          "crc32": "ef4bc51a",
+          "sha256": "fd489975f0638dfa655215ca1a1c3666e0b0089822d397950893995d46849ea8"
+        },
+        {
+          "path": "pxo/original/Game_GrandGolf.pxo",
+          "bytes": 290770,
+          "crc32": "382f4ba0",
+          "sha256": "3c0cbaab390a8dd3230209c37e63ca54330f7e074f51ac504dffa2d59c6e4b33"
+        },
+        {
+          "path": "pxo/decoded/Game_GrandGolf.pxo",
+          "bytes": 559017,
+          "crc32": "11636e4f",
+          "sha256": "625831fd2ff58b78ccdc11b8953f1c1fd49986eb67d8b4acf1c8d543efb12950"
+        },
+        {
+          "path": "evidence/pxo/Game_GrandGolf.json",
+          "bytes": 405,
+          "crc32": "21a6ff60",
+          "sha256": "0d97e703c18592b4f2b819ed8c4a6456ec8df7a949dc2a0e11141ed3151bc368"
+        },
+        {
+          "path": "pxo/original/Game_RainbowStriker.pxo",
+          "bytes": 640986,
+          "crc32": "59c608f8",
+          "sha256": "2edbd027b65adc8a12f1a423cf546b216de167446f76972d00d385ad11da076c"
+        },
+        {
+          "path": "pxo/decoded/Game_RainbowStriker.pxo",
+          "bytes": 1243405,
+          "crc32": "095ef4f7",
+          "sha256": "658bf643220c6ed9831510f1cf608732b1818a3edc9dbfcac3d53bef520cbbc9"
+        },
+        {
+          "path": "evidence/pxo/Game_RainbowStriker.json",
+          "bytes": 406,
+          "crc32": "a0cf3191",
+          "sha256": "59e28f843d48baeca963da9ef8768884651ddf6e1fbd998c867ffef2bb36b516"
+        },
+        {
+          "path": "pxo/original/Game_Sudoku.pxo",
+          "bytes": 103534,
+          "crc32": "86509b85",
+          "sha256": "fcd01f7624d9f7dae8c0a4c91062eec5591e893265717cc00083999845d742f4"
+        },
+        {
+          "path": "pxo/decoded/Game_Sudoku.pxo",
+          "bytes": 399121,
+          "crc32": "ae5f759b",
+          "sha256": "3e2e20632e05baf9da48be151e1e259f20ea6319759474105145e8f9aeb5f573"
+        },
+        {
+          "path": "evidence/pxo/Game_Sudoku.json",
+          "bytes": 405,
+          "crc32": "987e519a",
+          "sha256": "9668799ea05822f8c6e74d819c0e6981288b6337ef28cd150136ca081f712213"
+        },
+        {
+          "path": "pxo/original/WIPISKT.pxo",
+          "bytes": 4860,
+          "crc32": "9e4a0299",
+          "sha256": "04becec71ea967992eb5bc48fbb26738a15d6a3af40142c94a5ecb05508621a1"
+        },
+        {
+          "path": "pxo/decoded/WIPISKT.pxo",
+          "bytes": 7025,
+          "crc32": "41585f23",
+          "sha256": "e908ed42420deb5b016bee34ad7fbbce52786e9df2d2fd829dd5fb18238078c7"
+        },
+        {
+          "path": "evidence/pxo/WIPISKT.json",
+          "bytes": 401,
+          "crc32": "33c7c835",
+          "sha256": "590228df5245ac4052684bf59d50e0572dbc5d02a8590389a29d2301d44d5436"
+        },
+        {
+          "path": "evidence/lkz-members.json",
+          "bytes": 78083,
+          "crc32": "ba4a7da9",
+          "sha256": "7c9394efdfbe57d61924a101903d114c385b79a25be60a9de6c26452d37cbcf3"
+        },
+        {
+          "path": "evidence/main/sgs-route-1.bin",
+          "bytes": 66,
+          "crc32": "9f7a5021",
+          "sha256": "838be1cbd9f678889fee9e1b4828e092ca74f2ca4d1dee2223db059ef1facdef"
+        },
+        {
+          "path": "evidence/main/sgs-route-2.bin",
+          "bytes": 66,
+          "crc32": "9f7a5021",
+          "sha256": "838be1cbd9f678889fee9e1b4828e092ca74f2ca4d1dee2223db059ef1facdef"
+        },
+        {
+          "path": "evidence/main/sinjisoft-photoon2.bin",
+          "bytes": 128,
+          "crc32": "ded4ac51",
+          "sha256": "9a851cc80a7b356f5dc460b105f4d61d1506b3b8c8838859a992d8307ebf1fc2"
+        },
+        {
+          "path": "evidence/main/oem-game-menu.bin",
+          "bytes": 177,
+          "crc32": "e094c640",
+          "sha256": "d787a8738243843fbd476a8d5cf4045844249f548e7e83e32635ce20e34447df"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 9209,
+          "crc32": "14bfa8bb",
+          "sha256": "58b542769e1145b38293fe3dc0edc462a90080cd06131549be00493b8671f7c0"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 7221,
+          "crc32": "b532bada",
+          "sha256": "e7eadf71d904e6ad5c66c0c771245bab69dd7ba84d9a1709c6ba1e923162074e"
+        }
+      ]
+    },
+    {
+      "id": "lg-kh1600-original-and-games",
+      "repositoryPath": "research/archives/LG-KH1600-Original-and-Games.zip",
+      "bytes": 76881876,
+      "sha256": "09faec16b192b49eafe7a1fae60a8fd45c9f70bd68c700d330445e8d017a72e7",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "source/KW160716.7z",
+          "bytes": 68500720,
+          "crc32": "964c9145",
+          "sha256": "cae92c9f228827d98184a0e80dfa126ad54194b4fb67db6994dc8598d80e5c9c"
+        },
+        {
+          "path": "source/index.html",
+          "bytes": 2098,
+          "crc32": "53ac14b4",
+          "sha256": "74615e6711e331a69a91ac7eba73422f1ed4a5bda03af935e118cdb886ca4408"
+        },
+        {
+          "path": "evidence/kdz.json",
+          "bytes": 312,
+          "crc32": "45d292af",
+          "sha256": "aa619455eaff438720795aaf71151eeaf1934b9b6264b4c92ffbb703feb63de6"
+        },
+        {
+          "path": "evidence/wdb-prefix.json",
+          "bytes": 139821,
+          "crc32": "a1ffe5d0",
+          "sha256": "4850beefc8767d31820d6a6968ec080a369522961efec37358d68abbb259dc04"
+        },
+        {
+          "path": "evidence/main-lzo.json",
+          "bytes": 223342,
+          "crc32": "0a1fcf3b",
+          "sha256": "92c1f7d99a1ce48d76baefb184c233b38b0a2d40cabfae5dfc94f14d39a0cb78"
+        },
+        {
+          "path": "evidence/7z-list.txt",
+          "bytes": 496,
+          "crc32": "37b25d3f",
+          "sha256": "5d1d66b25aa9f3c0030797a4062d50bb19f6e35da4354f7d50d7fbefc169f522"
+        },
+        {
+          "path": "evidence/7z-test.txt",
+          "bytes": 362,
+          "crc32": "dc616c33",
+          "sha256": "fc48d2f2da86f39481644d645d5869fb7516905aef39724f59c23eea8468c17d"
+        },
+        {
+          "path": "evidence/cab-test.txt",
+          "bytes": 402,
+          "crc32": "66e1f989",
+          "sha256": "ba26c54be8352fb0ec0002531b4755a048b8b9ec05c220a8dc8a48e85c53a2e6"
+        },
+        {
+          "path": "evidence/cab-list.txt",
+          "bytes": 576,
+          "crc32": "b6dbb568",
+          "sha256": "1967ae805271b2a1f7e124ea9231f024ec60cad1e93713e49bf6d033e4b10cdd"
+        },
+        {
+          "path": "resources/campaign.lks",
+          "bytes": 997,
+          "crc32": "194c2654",
+          "sha256": "d32f37586b2d07a05a1f0926bbbd4e691484541f4e9098b3475da84b8cfa840a"
+        },
+        {
+          "path": "resources/data.lkz",
+          "bytes": 4041324,
+          "crc32": "946bd003",
+          "sha256": "bacf297a7ce85d710b6195fba479643caf629187b22459ae668f0f7709078ab5"
+        },
+        {
+          "path": "resources/options.lks",
+          "bytes": 1076,
+          "crc32": "ab36136b",
+          "sha256": "763291e38c90ef21e22504edef7293da98fcb5ff458e65f22bdad3f8401206a7"
+        },
+        {
+          "path": "pxo/original/Game.pxo",
+          "bytes": 1661,
+          "crc32": "a3f7481d",
+          "sha256": "74ab1e10dc7a28e8f8b8ae764accb40c03cc497a5279a53ffe8a54a43dc4e1f8"
+        },
+        {
+          "path": "pxo/decoded/Game.pxo",
+          "bytes": 2213,
+          "crc32": "a1961ddd",
+          "sha256": "31dcb54a29054c050a0e76d99e1cbb345230c1c5747e280a3d72a6b0567771c2"
+        },
+        {
+          "path": "evidence/pxo/Game.json",
+          "bytes": 401,
+          "crc32": "49b8e925",
+          "sha256": "7dba7b557824eb7c63a7ab07eae51ba94095a293a01f6a27bc4090ba2e14746c"
+        },
+        {
+          "path": "pxo/original/Game_Baduk.pxo",
+          "bytes": 539008,
+          "crc32": "83f19f98",
+          "sha256": "12f24b5eb39ec407d89764c4ad768b898846635bacbbc4411bfe4f5f317c3212"
+        },
+        {
+          "path": "pxo/decoded/Game_Baduk.pxo",
+          "bytes": 1450801,
+          "crc32": "dadecca3",
+          "sha256": "68be8c1828fbc5058189b91defc0192d8eba0c3b14c595174b06c9e0ccc97801"
+        },
+        {
+          "path": "evidence/pxo/Game_Baduk.json",
+          "bytes": 406,
+          "crc32": "e4a2b290",
+          "sha256": "9e174d17b272ceeb3473718f4b0fa930b38a0d9a403c050fecd2e2660e3498ce"
+        },
+        {
+          "path": "pxo/original/Game_Cooking.pxo",
+          "bytes": 797102,
+          "crc32": "68004544",
+          "sha256": "05d0e9d88d8516f9a09f2077938d214eb190d24a17af30c47c5cff695c1064ce"
+        },
+        {
+          "path": "pxo/decoded/Game_Cooking.pxo",
+          "bytes": 2122953,
+          "crc32": "27a9ad50",
+          "sha256": "5d048eb42382ed5931145f36cdd71d164e6e3caa6bd26bc8d953a818eec59e04"
+        },
+        {
+          "path": "evidence/pxo/Game_Cooking.json",
+          "bytes": 406,
+          "crc32": "0d7709bf",
+          "sha256": "c246bbd2124f45f8310aad5c117874d96ec58fb58236e7650fa792848ba231ac"
+        },
+        {
+          "path": "pxo/original/Game_GrandGolf.pxo",
+          "bytes": 290777,
+          "crc32": "09ba79a2",
+          "sha256": "e4d8ef8adfdcd92c1d5627cdba494eef3e69998cb64c936979f9d495da187e0b"
+        },
+        {
+          "path": "pxo/decoded/Game_GrandGolf.pxo",
+          "bytes": 559021,
+          "crc32": "cc220dd6",
+          "sha256": "8e95b3465fd34e7c3035654fb63ab87743099a557f67f190dde68ca667818ecc"
+        },
+        {
+          "path": "evidence/pxo/Game_GrandGolf.json",
+          "bytes": 405,
+          "crc32": "d5b60959",
+          "sha256": "afa89b6496b1a55d1d5daad60dbb5d5455699dcc63bf73b1dcd341b2b82a3d71"
+        },
+        {
+          "path": "pxo/original/Game_RainbowStriker.pxo",
+          "bytes": 640986,
+          "crc32": "2aaadb63",
+          "sha256": "c3a1fc57e99e3dd9a575ec58c87f4e714fc6441866d5481b19b8f11540b12870"
+        },
+        {
+          "path": "pxo/decoded/Game_RainbowStriker.pxo",
+          "bytes": 1243405,
+          "crc32": "096c2d67",
+          "sha256": "dd18e20f3ea8631e26fad603ad4ea9ecb4acc6859b5fc5504503cc9977738fb4"
+        },
+        {
+          "path": "evidence/pxo/Game_RainbowStriker.json",
+          "bytes": 406,
+          "crc32": "5029fba6",
+          "sha256": "b17ca74db5a9a5fc512481e92aec838c7c76441f3c6d9379a9f361cf2c3f7a29"
+        },
+        {
+          "path": "pxo/original/Game_Sudoku.pxo",
+          "bytes": 103341,
+          "crc32": "b7e7829e",
+          "sha256": "54ea25dc714259020f235a0f0c0a78366a42a8a5608bad7e8d4ac10dbff2c5a2"
+        },
+        {
+          "path": "pxo/decoded/Game_Sudoku.pxo",
+          "bytes": 398745,
+          "crc32": "42085a97",
+          "sha256": "bfaa3cda5f3176e25e10743579369fd7d94bbabcc788a46b8ad33be0e2272ead"
+        },
+        {
+          "path": "evidence/pxo/Game_Sudoku.json",
+          "bytes": 405,
+          "crc32": "df9fbed5",
+          "sha256": "e86300064f7e94f35faa5638fd2acd3247037b665db85077df9fa8374489b915"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 8180,
+          "crc32": "0524bf55",
+          "sha256": "6147f00c21745f08656710164e524c6284c076b571e0aca660601891b11b5c0e"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 5453,
+          "crc32": "c9bab477",
+          "sha256": "25aac3f6915ab9910d36811fab3752b5f884190906ed32964d6a0e14151e965a"
+        }
+      ]
+    },
+    {
+      "id": "lg-sfone-service-images",
+      "repositoryPath": "research/archives/LG-S-Fone-SD3500-SD3530-Originals.zip",
+      "bytes": 4201193,
+      "sha256": "f05c4ed55d9f22007d39a982304162e4a216d52ad41241cf09ed18f62a3b9bac",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "source/SD350F03.7z",
+          "bytes": 1757380,
+          "crc32": "c48240a6",
+          "sha256": "b077e876f68a2d7a8e730e7e4b8839d76812e7f782aaa0e502d2380f45ed401d"
+        },
+        {
+          "path": "source/SD3500-index.html",
+          "bytes": 2097,
+          "crc32": "d22cc5d8",
+          "sha256": "1afcdbbfc95aa03d43a73bf4030c63e9f1fe49e97143adc6ede26d6728ad64e7"
+        },
+        {
+          "path": "evidence/SD350F03-7z-test.txt",
+          "bytes": 388,
+          "crc32": "935713a7",
+          "sha256": "aab6f020247a703f53d0973ff5e2f545c4f4f098b73c92d26fd1a0a3f9b64f7f"
+        },
+        {
+          "path": "evidence/SD350F03-7z-list.txt",
+          "bytes": 13138,
+          "crc32": "595a665c",
+          "sha256": "5ba8c46c82e8968cd2f113de5d84a6ce3db18b3c0abe2c697f12a59dcfd01cdc"
+        },
+        {
+          "path": "source/SD353F04.7z",
+          "bytes": 2429611,
+          "crc32": "719f8ad8",
+          "sha256": "6d8b328ecd693123ecc881ceb1d7b44c5d57d125de14e6ddc7c7c688b473bce9"
+        },
+        {
+          "path": "source/SD3530-index.html",
+          "bytes": 2097,
+          "crc32": "be46d701",
+          "sha256": "c6dff15858ade77fe82bceff9bfd373ee3d6cc4584a0aca5a328fbd418253ac7"
+        },
+        {
+          "path": "evidence/SD353F04-7z-test.txt",
+          "bytes": 388,
+          "crc32": "180442cf",
+          "sha256": "05ac2fc86fe2c8bf335e621f01ade00a77ecdd751176799102bbe2a8290f72a6"
+        },
+        {
+          "path": "evidence/SD353F04-7z-list.txt",
+          "bytes": 14297,
+          "crc32": "2b5056aa",
+          "sha256": "6c783e0710284706891a83b28db7645496701999b2be895af8a839648d11adf9"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 31380,
+          "crc32": "6797340a",
+          "sha256": "c96009c5c8e5115ac06c0415ca9824c3610d9e6d247e4a618cb5eedbd6ce8b09"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1581,
+          "crc32": "65f25be0",
+          "sha256": "b2620720f537457b1f08e6a01559be42b3ab1a21cd1e34caacef7a9f6cac7ea0"
+        }
+      ]
+    },
+    {
       "id": "lg-sd1000-fortress-tournament",
       "repositoryPath": "research/archives/LG-SD1000-Fortress-Tournament.zip",
       "bytes": 92213,
@@ -167377,9 +167908,9 @@
     }
   ],
   "counts": {
-    "archives": 77,
-    "archiveBytes": 1227330255,
-    "fileMembers": 27780,
-    "uniqueMemberHashes": 14836
+    "archives": 80,
+    "archiveBytes": 1403851103,
+    "fileMembers": 27864,
+    "uniqueMemberHashes": 14914
   }
 }
