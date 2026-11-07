@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "korean-game-hunt-pass18",
+      "category": "Игровые архивы и исходники GVM",
+      "title": "73 архива SKT и два примера GVM",
+      "description": "Оригинальные ZIP из 72 игровых публикаций SKT: во всех обнаружены Java-классы, SGS не найден. Также сохранены исходники Milkclub, четыре SWF Wayback и ответы по поиску эпилога .hack и телефонного GNEX. Запускаемых игр в Reunion этот проход не добавляет.",
+      "sources": [
+        {
+          "label": "Palletshipping: игровой каталог",
+          "url": "https://blog.naver.com/palletshipping"
+        },
+        {
+          "label": "Milkclub: ограничение символов GVM",
+          "url": "https://blog.naver.com/milkclub/60004692059"
+        },
+        {
+          "label": "Milkclub: палитра GVM",
+          "url": "https://blog.naver.com/milkclub/60004691991"
+        }
+      ],
+      "repositoryPath": "research/archives/Korean-Game-Hunt-Pass18-SKT-and-GVM-Sources.zip",
+      "bytes": 35135481,
+      "sha256": "d9d430254c3826df4f2ca1acef9c9677a390a05ad8af2ec3444e60d6463eeb25"
+    },
+    {
       "id": "korean-developer-samples-round2",
       "sha256": "c4fbacd628977e23c35a437b2fb6fb029e5f1ec79d14e0d2d67e0b2da0200e4a",
       "category": "Учебные SGS, исходники и проверки",
@@ -1281,6 +1304,10 @@
     {
       "title": "Brewgames: семь сборок GVM, управление и исходный Ragnarok с CRLF",
       "repositoryPath": "doc/brewgames-gvm-games.md"
+    },
+    {
+      "title": "Проход 18: 73 архива SKT, исходники GVM и проверенные зацепки",
+      "repositoryPath": "doc/game-hunt-pass18.md"
     }
   ]
 }

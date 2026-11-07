@@ -29,7 +29,11 @@ def preserve(sources, root, delay=1.5, timeout=35, refresh=False):
     root.mkdir(parents=True, exist_ok=True)
     receipt_path = root / "receipts.jsonl"
     receipts = (
-        [json.loads(line) for line in receipt_path.read_text("utf8").splitlines()]
+        [
+            json.loads(line)
+            for line in receipt_path.read_text("utf8").split("\n")
+            if line
+        ]
         if receipt_path.exists()
         else []
     )

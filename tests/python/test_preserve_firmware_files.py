@@ -68,6 +68,25 @@ class FirmwarePreservationTests(unittest.TestCase):
                 self.acquire(root, Response(b"found"))["receipt"]["status"], 200
             )
 
+    def test_unicode_separators_in_receipt_headers_survive_cached_resume(self):
+        # HTTP header bytes decoded as Latin-1 can contain U+0085; JSON permits
+        # it literally. Only LF separates JSONL records, unlike splitlines().
+        header = 'attachment; filename="\u0085\u2028\u2029.zip"'
+        response = Response(b"PK\x03\x04original")
+        response.headers = {"Content-Disposition": header}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            original = self.acquire(root, response)
+            with patch.object(FILES.urllib.request, "urlopen") as request:
+                resumed = FILES.preserve([self.source], root, delay=0)[0]
+                request.assert_not_called()
+            self.assertEqual(
+                resumed["receipt"], json.loads(json.dumps(original["receipt"]))
+            )
+            self.assertEqual(
+                dict(resumed["receipt"]["headers"])["Content-Disposition"], header
+            )
+
     def test_short_declared_body_is_not_cached(self):
         response = Response(b"short")
         response.headers = {"Content-Length": "15"}

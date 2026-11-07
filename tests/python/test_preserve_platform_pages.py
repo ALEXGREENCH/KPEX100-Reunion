@@ -70,6 +70,26 @@ class PreservationTests(unittest.TestCase):
             receipt = json.loads((root / "receipts.jsonl").read_text())
             self.assertEqual(receipt["status"], 404)
 
+    def test_unicode_separators_in_receipt_headers_survive_cached_resume(self):
+        body = "<meta charset='utf-8'><p>신지소프트 GVM</p>".encode()
+        response = Response(body)
+        header = "original\u0085\u2028\u2029page"
+        response.headers = {"X-Original-Name": header}
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with patch.object(PAGES.urllib.request, "urlopen", return_value=response):
+                original = PAGES.preserve([self.source], root, delay=0)[0]
+            with patch.object(PAGES.urllib.request, "urlopen") as request:
+                resumed = PAGES.preserve([self.source], root, delay=0)[0]
+                request.assert_not_called()
+            self.assertTrue(resumed["verified"])
+            self.assertEqual(
+                resumed["receipt"], json.loads(json.dumps(original["receipt"]))
+            )
+            self.assertEqual(
+                dict(resumed["receipt"]["headers"])["X-Original-Name"], header
+            )
+
     def test_success_status_and_script_text_are_not_enough(self):
         body = (
             "<title>Error</title><script>신지소프트 GVM</script><p>Missing</p>".encode()
