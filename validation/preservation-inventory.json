@@ -3,6 +3,321 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "samsung-anycall-ads-mbin",
+      "repositoryPath": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+      "bytes": 19776992,
+      "sha256": "a3d0b13b64199ce6e4eb04285d1a7e9324d29fce90a2cd6d65e3a3399fb8ff20",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "README.txt",
+          "bytes": 597,
+          "crc32": "4c9c2cd0",
+          "sha256": "2d385c8056f2e32046e94bf304e03452c747eedb2d5a4f025b44d526364123ea"
+        },
+        {
+          "path": "derived/ADSLoader.chm",
+          "bytes": 292572,
+          "crc32": "a10625cc",
+          "sha256": "dda62ccf5a9c123261fc20a103d295380260df6ed24b0ecc98a8d325b0dcbae3"
+        },
+        {
+          "path": "derived/help/html/adsl04tt.htm",
+          "bytes": 673,
+          "crc32": "bc2f2716",
+          "sha256": "538d728c3e255835fd9ee729d48d516764eef2182ae948eb404e2a5b55a25d02"
+        },
+        {
+          "path": "derived/help/html/adsl04tu.htm",
+          "bytes": 542,
+          "crc32": "6d25e086",
+          "sha256": "827f431de87fb2755ae80ca9765c3c74533683563da0f23a4b922a63c97d3cc9"
+        },
+        {
+          "path": "derived/help/html/adsl04tv.htm",
+          "bytes": 395,
+          "crc32": "b480d392",
+          "sha256": "d4f246b227cdec4e355410e137ee2c2c1482ef6fdd07fa9751fab960eaabaeda"
+        },
+        {
+          "path": "derived/help/html/adsl04tw.htm",
+          "bytes": 498,
+          "crc32": "84a07e62",
+          "sha256": "0e61589d9a8f58077b1a667a6c0b246f789483bc1d1bee3ecb1ec82ed95c2311"
+        },
+        {
+          "path": "derived/help/html/adsl04tx.htm",
+          "bytes": 496,
+          "crc32": "ec7e2ca9",
+          "sha256": "7a1abac57da16c68040f481975c0bb2368279e11102b3f4c59ea13aa0608e036"
+        },
+        {
+          "path": "derived/help/html/adsl04ty.htm",
+          "bytes": 481,
+          "crc32": "d18df067",
+          "sha256": "464c9728a7a15a283915e315d1aa1e10d4856915fc47247ac8393f9c81396362"
+        },
+        {
+          "path": "derived/help/html/adsl04tz.htm",
+          "bytes": 640,
+          "crc32": "7c5eee71",
+          "sha256": "d50ea14ebbdee2c4e29dece77c015ab8b21261d7aeb9ea11fe429e1e3a971326"
+        },
+        {
+          "path": "derived/help/html/adsl04u0.htm",
+          "bytes": 1123,
+          "crc32": "8803b64a",
+          "sha256": "7fb7952ea6ca1f3bc11025b232a162c0bc889ba018c35d51c2a4eb2e3e2ed80d"
+        },
+        {
+          "path": "derived/help/html/adsl04u1.htm",
+          "bytes": 614,
+          "crc32": "7f232feb",
+          "sha256": "275c43c04e572d025b6a2989bfdd773ad1fb5dfe10809cf2bf74fe7fc097cb8a"
+        },
+        {
+          "path": "derived/help/html/adsl8l0w.htm",
+          "bytes": 898,
+          "crc32": "3b744761",
+          "sha256": "82390b7d5da24be0d039ddcdb6c6941eae8af157e2380d9d19e1e7c4de305da2"
+        },
+        {
+          "path": "derived/help/html/adsl8l0x.htm",
+          "bytes": 841,
+          "crc32": "068eb047",
+          "sha256": "87b67d56d183c23c0c6a88acfc9bf246544f39c9d552d0b0367353cd6c2b43e8"
+        },
+        {
+          "path": "derived/help/html/adsl8l0y.htm",
+          "bytes": 614,
+          "crc32": "07e5718a",
+          "sha256": "0cb5ee56a0047ec46944f0a9f38c79483c9892d8a51aaa2665efbf5f51687939"
+        },
+        {
+          "path": "derived/help/html/adsl8l0z.htm",
+          "bytes": 500,
+          "crc32": "80b89ab4",
+          "sha256": "40e74c3aba9b7fff2c5871b034d91e7d2c5e811259552906c33f55cfdee17d7f"
+        },
+        {
+          "path": "derived/help/html/adsl8l10.htm",
+          "bytes": 506,
+          "crc32": "b0d6008a",
+          "sha256": "f84de4886fea49d0c28e52521ae307dc822d255548a46bb98730e052894f674c"
+        },
+        {
+          "path": "derived/help/html/adsl8l11.htm",
+          "bytes": 452,
+          "crc32": "0d86d3db",
+          "sha256": "f5b378dcd178b74965aadcfe55c58d5c0b99ee39b84e9dd6707d51f73894ecff"
+        },
+        {
+          "path": "derived/help/html/adsl8l12.htm",
+          "bytes": 494,
+          "crc32": "530fb951",
+          "sha256": "34b391b8cd2352c999e1d21a1d381c678b321120035d36212291f603473910db"
+        },
+        {
+          "path": "derived/help/html/adsl8l13.htm",
+          "bytes": 496,
+          "crc32": "aa712a6d",
+          "sha256": "7a2e9e9e3a222193c19d862c32d738890473053790600b2c41125aeeef41a47c"
+        },
+        {
+          "path": "derived/help/html/adsl8l14.htm",
+          "bytes": 1848,
+          "crc32": "24e78a24",
+          "sha256": "a50082dfc04b0c26cc88a585dbde4cd3a134736fe0a669e4b8cee22815ef15dc"
+        },
+        {
+          "path": "derived/help/html/adsl8l15.htm",
+          "bytes": 934,
+          "crc32": "a95fdd1d",
+          "sha256": "77cf53f09a54fdbd769fee5f71c746b299544ccec45c0eb4650dafbfb01aa63b"
+        },
+        {
+          "path": "derived/help/html/adsl8l2o.htm",
+          "bytes": 669,
+          "crc32": "e29a43da",
+          "sha256": "d00a936f2f3d6cd4544814aabdc7ab8a1e51848b432f2996994e60cb82dedf32"
+        },
+        {
+          "path": "derived/help/html/adsl8l2p.htm",
+          "bytes": 569,
+          "crc32": "b7924b7b",
+          "sha256": "427147cfd0d423bbcab9b4104209550e6380ee4ef0556e769bb47ed0c2fa1042"
+        },
+        {
+          "path": "derived/help/html/adsl8l2q.htm",
+          "bytes": 596,
+          "crc32": "a639c264",
+          "sha256": "85d125c8f44a2164f31fca836cb75ce3ae31485ba622f5f8b17d9599028c9dc4"
+        },
+        {
+          "path": "derived/help/html/adsl8l2r.htm",
+          "bytes": 570,
+          "crc32": "74fbd354",
+          "sha256": "5a27b061c0deb2519b2b3f31d259ab9626d4e9a0511f66d0da596e3eab04b3f6"
+        },
+        {
+          "path": "derived/help/html/adsl8l2s.htm",
+          "bytes": 623,
+          "crc32": "7cfe1ab0",
+          "sha256": "4695fbf1fcabab976c5dd86ad55a5539c26dfeafcdfcda31bd1bd0c141b7eed9"
+        },
+        {
+          "path": "derived/help/html/adsl8l2t.htm",
+          "bytes": 656,
+          "crc32": "3156b2f0",
+          "sha256": "465865189f16cd621733888f7ab3188f3f4f744811a237de2c2fea6e12439d96"
+        },
+        {
+          "path": "derived/help/images/image002.gif",
+          "bytes": 76296,
+          "crc32": "7324a10c",
+          "sha256": "a40e6321ae568e697f5bcc275b265b8411a741f12267f1f43ffdc1a0f3efd32a"
+        },
+        {
+          "path": "derived/help/images/image003.gif",
+          "bytes": 3259,
+          "crc32": "538b9c38",
+          "sha256": "2d337fe6ac4106308e3bb77d40e8a500eb3aa3f9243aa4a2f4dba6c0c7e6f5ed"
+        },
+        {
+          "path": "derived/help/images/image004.gif",
+          "bytes": 5928,
+          "crc32": "842b557c",
+          "sha256": "5b07817c06358c47e0471e834bbf3cb4713e5d51a71e8d4a04cc98e1f7d53d42"
+        },
+        {
+          "path": "derived/help/images/image006.gif",
+          "bytes": 5944,
+          "crc32": "5e081acc",
+          "sha256": "f481300fad993b4f5f84059da0bb46f456323dd5f43fe05d8f8b69e48f741af4"
+        },
+        {
+          "path": "derived/help/images/image009.gif",
+          "bytes": 68578,
+          "crc32": "70ef545f",
+          "sha256": "7c09f3efc56eff56228a774d6024cb1e85bbae84dd57f7d83277d32b0253a4d2"
+        },
+        {
+          "path": "derived/help/images/image010.gif",
+          "bytes": 522,
+          "crc32": "ad1a4ba2",
+          "sha256": "b3a9d6031cc031c54f98e4dcf289923b8468001ada91182051d46a5ba370b57e"
+        },
+        {
+          "path": "derived/help/images/image012.gif",
+          "bytes": 7527,
+          "crc32": "ee8e741c",
+          "sha256": "fef3ccfd29fbbc5886633dcdc0d8d3493afdb36f93d6895581299960bee15a79"
+        },
+        {
+          "path": "derived/help/images/image015.gif",
+          "bytes": 22862,
+          "crc32": "86494b2c",
+          "sha256": "45eee5b9666c94b764cdcd146d1eb37eecd6b9a022ab8d42500e981f7e98f9ae"
+        },
+        {
+          "path": "derived/help/images/image018.gif",
+          "bytes": 27144,
+          "crc32": "ffc8f5d0",
+          "sha256": "9f6bf58ce9bd216f7e7485d0372d6230c7872e6783bef3bdbf60855fda9135a5"
+        },
+        {
+          "path": "derived/help/images/image020.gif",
+          "bytes": 21370,
+          "crc32": "2134b7bc",
+          "sha256": "ee57f4d50f142a995bae5caeb6b2ba5667e3e64dde832be94b545cfbb2230718"
+        },
+        {
+          "path": "derived/help/images/image022.gif",
+          "bytes": 25310,
+          "crc32": "594fd41b",
+          "sha256": "79c106d68ce9c6aa008df1445c261450394f42e9e52afc4f0d580757a4808698"
+        },
+        {
+          "path": "derived/help/images/image023.gif",
+          "bytes": 5914,
+          "crc32": "6dc31075",
+          "sha256": "cb06286766ac1ee1f18658e119b80dcedeb87acfc078a0d3ad7fa88a1c7d2969"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 9689,
+          "crc32": "ccb73514",
+          "sha256": "fc2b12b4a61d28df2e738dba383c2584d88ca06978b0721f931e919aaff9c307"
+        },
+        {
+          "path": "original/ADSLoader-V1.0-20020520.exe",
+          "bytes": 6015192,
+          "crc32": "436e918b",
+          "sha256": "394a59e3c610ced610f43411643bec44ba482a52c8a595596749f1b246998a35"
+        },
+        {
+          "path": "original/ADS_ROM_Converter.exe",
+          "bytes": 626688,
+          "crc32": "b1663a82",
+          "sha256": "585daebe0e44aa78fa381696009a84f310698fcb0d5e062976938249418c8d43"
+        },
+        {
+          "path": "original/Anycall-Land-games.zip",
+          "bytes": 6442822,
+          "crc32": "e847b876",
+          "sha256": "2b2a05fa72c0215f413cedca20afba23052ec6b2ef15c451420ef156831caee2"
+        },
+        {
+          "path": "original/Anycall-model-DLL-patch.zip",
+          "bytes": 6304429,
+          "crc32": "fad40c93",
+          "sha256": "5eeac6f5f4329ed9c50632dcdaba696b0867262c29175389c71877336b23eb33"
+        },
+        {
+          "path": "sources/original-downloads.json",
+          "bytes": 1497,
+          "crc32": "a03d8c9d",
+          "sha256": "50166a44e05ee78e21d0bf82037c2e5f8cb5206230fefa25e7e413e860187f69"
+        },
+        {
+          "path": "tools/inspect-anycall-mbin.py",
+          "bytes": 4632,
+          "crc32": "833670ef",
+          "sha256": "814f90fa3571bef0d911b7b6000a8a1ddf097923f87147db6db09b081792aef4"
+        },
+        {
+          "path": "validation/adsloader-contents.json",
+          "bytes": 6874,
+          "crc32": "18c47ab4",
+          "sha256": "28880662f78b874e2c1c32768b885c70ad17ac624439cc02b381d0fe62571ee0"
+        },
+        {
+          "path": "validation/early-firmware-comparison.json",
+          "bytes": 3958,
+          "crc32": "4514bb2d",
+          "sha256": "2940abde2aacdbf9a0b406b1fb9e619da94f88be27c3fbcce1d728b235ede043"
+        },
+        {
+          "path": "validation/mbin-inspection.json",
+          "bytes": 50359,
+          "crc32": "fbcba555",
+          "sha256": "8d755a3133ad96481f2cf76946ffc919023c74e1f298f2235d39950ed69193b7"
+        },
+        {
+          "path": "validation/source-zip-and-sgs-audit.json",
+          "bytes": 58710,
+          "crc32": "6c91215b",
+          "sha256": "fe46059e5e1674279ee4624c87d9f0a25ee1424c0c08abe76e090ccb1417c620"
+        },
+        {
+          "path": "validation/thumb-prefixes.json",
+          "bytes": 4627,
+          "crc32": "1d0b57ef",
+          "sha256": "e26b497f36e6596e6e95d69330ec6cc0eb866192b53da04271923ee4ff7d8066"
+        }
+      ]
+    },
+    {
       "id": "dubigame-mirror-ktf-skt",
       "repositoryPath": "research/archives/Dubigame-Astonishia-Wonders-KTF-SKT.zip",
       "bytes": 4230269,
@@ -157231,9 +157546,9 @@
     }
   ],
   "counts": {
-    "archives": 67,
-    "archiveBytes": 1133373412,
-    "fileMembers": 26104,
-    "uniqueMemberHashes": 13194
+    "archives": 68,
+    "archiveBytes": 1153150404,
+    "fileMembers": 26155,
+    "uniqueMemberHashes": 13245
   }
 }

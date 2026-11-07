@@ -119,6 +119,9 @@ python tools/carve-gzip-jars.py research-input/nhm2_mcu0546.exe --output researc
 
 ## Samsung Anycall: конкретные встроенные EADS-игры
 
+Ранние загрузки Anycall Land формата MBIN и руководство ADSLoader
+сохранены в [отдельном архиве](samsung-anycall-ads-mbin.md).
+
 [ARAM Core](https://github.com/mirusu400/aram-core) содержит реальный разбор
 Samsung firmware и тесты извлечённых игр. Проверена ревизия
 `fea299cba15696ed1460f965b76626d6edab5e03`.

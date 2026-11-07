@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "samsung-anycall-ads-mbin",
+      "title": "Samsung Anycall Land: игры ADS и ADSLoader",
+      "category": "Игры корейских телефонов",
+      "description": "82 записи MBIN, 69 разных тел, инструменты ADSLoader и архивное руководство. Манифест отделяет варианты заголовков от разных сборок.",
+      "repositoryPath": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+      "bytes": 19776992,
+      "sha256": "a3d0b13b64199ce6e4eb04285d1a7e9324d29fce90a2cd6d65e3a3399fb8ff20",
+      "sources": [
+        {
+          "label": "Публикация Anycall Land с файлами",
+          "url": "https://m.blog.naver.com/sendei333/222605737137"
+        },
+        {
+          "label": "Отчёт Mobiletop об ADS и MAP",
+          "url": "https://download.kiwoom.com/notice/mb_20090623.pdf"
+        }
+      ]
+    },
+    {
       "id": "dubigame-mirror-ktf-skt",
       "title": "Dubigame: Astonishia Story, Wonders и игры KTF/SKT",
       "category": "Игры корейских телефонов",
@@ -1266,6 +1285,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Samsung Anycall Land: игры ADS и ADSLoader",
+      "repositoryPath": "doc/samsung-anycall-ads-mbin.md"
+    },
     {
       "title": "Dubigame: Astonishia Story, Wonders и игры KTF/SKT",
       "repositoryPath": "doc/dubigame-mirror-ktf-skt.md"
