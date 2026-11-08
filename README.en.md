@@ -7,7 +7,7 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-The collection includes 9 firmware images, 102 SGS applications, 18 Anycall ADS games, 3 quick-start
+The collection includes 9 firmware images, 102 SGS applications, 19 Anycall ADS games, 3 quick-start
 snapshots and the original Swerve 2.1 module. The catalogue records SHA-256
 hashes and tested runtime profiles.
 

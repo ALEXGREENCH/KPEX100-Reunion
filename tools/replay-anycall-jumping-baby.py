@@ -85,6 +85,10 @@ ADDITIONAL_GAMES = {
         "보글보글동자승2.mbin",
         "3ae1e04708000af39f87482c7d34e4e6ce8717f2c72eff2da7b044827cd72407",
     ),
+    "bubble-monk": (
+        "버전 다름/보글보글_동자승.mbin",
+        "b41b0723fc2c929f24ed2203afaab1109333b8ddbb95a2b571ebd9e0cac26c89",
+    ),
     "badger": (
         "오소리.mbin",
         "007800b1ce6fb69b09ec70811bf04c2f2f69a3da5e7c7676dfca8e670434a6a4",
@@ -117,6 +121,7 @@ DRAWING_TIMERS = {
     "cheombangjichuk-othello": 1,
     "couple-bowling": 1,
     "bubble-monk-2": 1,
+    "bubble-monk": 1,
     "badger": 1,
     "push-push-ice-world": 1,
     **dict.fromkeys(ACTION_GAMES, 1),
@@ -126,6 +131,7 @@ RANDOM_GAMES = (
     "mobile-gostop",
     "couple-bowling",
     "bubble-monk-2",
+    "bubble-monk",
     "badger",
     "push-push-ice-world",
     *ACTION_GAMES,
@@ -145,6 +151,14 @@ MQ_PADDING = {
         0x1307C: (BSS + 0x14BC, 0x11011, 0xE3, TEXT + 0x202D, 306),
         0x130ED: (BSS + 0x14C8, 0x11011, 0xE3, TEXT + 0x202D, 306),
     },
+}
+BUBBLE_MONK_CLEARS = {
+    TEXT + 0x1AB5: 255,
+    TEXT + 0x1F8B: 255,
+    TEXT + 0x455B: 0,
+    TEXT + 0x460B: 0,
+    TEXT + 0x4741: 0,
+    TEXT + 0x496F: 0,
 }
 RGB332 = [
     bytes(
@@ -341,6 +355,8 @@ class DrawingReplay(Replay):
             self.stub_slots = (self.stub_slots | {0x08}) - {0x48}
         if game_id in RANDOM_GAMES:
             self.stub_slots -= {0x40}
+        if game_id == "bubble-monk":
+            self.stub_slots.remove(0x9C)
         if game_id == "udon-time":
             self.stub_slots.add(0x0C)
 
@@ -402,6 +418,13 @@ class DrawingReplay(Replay):
                     slot, segment=[x, y, end_x, end_y], color=self.color
                 )
             self.draw_line(x, y, end_x, end_y)
+        elif slot == 0x9C and self.game_id == "bubble-monk":
+            color = cpu.reg_read(UC_ARM_REG_R0)
+            caller = cpu.reg_read(UC_ARM_REG_LR)
+            if BUBBLE_MONK_CLEARS.get(caller) != color:
+                raise ValueError("unexpected ADS slot 0x9c screen clear")
+            cpu.mem_write(FRAMEBUFFER, bytes([color]) * WIDTH * self.height)
+            cpu.reg_write(UC_ARM_REG_R0, 0)
         elif slot == 0x9C and self.game_id == "cheombangjichuk-othello":
             if (
                 cpu.reg_read(UC_ARM_REG_LR) != TEXT + 0x42EB
@@ -754,6 +777,7 @@ def replay_mobile_gostop(original, output):
 def replay_paired_boards(original, output, game_id):
     start_ticks = 100
     setup_ticks = 20
+    move_to_center = game_id == "bubble-monk"
     if game_id == "cheombangjichuk-othello":
         setup_keys = [19, 19, 19, 19, 11, 11, 11, 11, 13, 13]
         intervals = [21, 80]
@@ -779,7 +803,7 @@ def replay_paired_boards(original, output, game_id):
                 "confirm": "Opens the power meter early. The first shot scores 6.",
             },
         }
-    elif game_id in ("badger", "push-push-ice-world"):
+    elif game_id in ("badger", "push-push-ice-world", "bubble-monk"):
         start_ticks = 165
         setup_ticks = 18
         setup_keys = [19, 19]
@@ -787,9 +811,12 @@ def replay_paired_boards(original, output, game_id):
         if game_id == "badger":
             keys = (1, 3, 4, 6, 7, 9, 10, 11)
             direction_pairs = [[10, 4], [11, 6]]
-        else:
+        elif game_id == "push-push-ice-world":
             keys = (2, 4, 6, 8, 10, 11, 12, 13)
             direction_pairs = [[10, 4], [11, 6], [12, 2], [13, 8]]
+        else:
+            keys = (10, 11, 12, 15)
+            direction_pairs = []
         inputs = [(None, "idle")] + [(key, f"key-{key:02d}") for key in keys]
         details = {
             "randomSeed": 0x12345678,
@@ -797,6 +824,10 @@ def replay_paired_boards(original, output, game_id):
             "inputEveryTicks": 4,
             "directionPairs": direction_pairs,
         }
+        if move_to_center:
+            details["clearCallers"] = {
+                f"{caller:#010x}": color for caller, color in BUBBLE_MONK_CLEARS.items()
+            }
     else:
         start_ticks = 140
         setup_keys = [19, 19]
@@ -806,22 +837,47 @@ def replay_paired_boards(original, output, game_id):
             "randomSeed": 0x12345678,
             "clock": "synthetic count of presented frames",
         }
-    sequence = [(None, start_ticks)] + [(key, setup_ticks) for key in setup_keys]
+    sequence = [(None, start_ticks, None)] + [
+        (key, setup_ticks, None) for key in setup_keys
+    ]
     input_every = details.get("inputEveryTicks")
+    if move_to_center:
+        sequence.append((11, 48, input_every))
+        controls_sequence = [(None, 165), (19, 18), (13, 18), (19, 50)]
+        controls_game = DrawingReplay(original, game_id)
+        for key, ticks in controls_sequence:
+            if key is not None:
+                controls_game.key(key)
+            controls_game.tick(ticks)
+        details["controlsMenu"] = {
+            "sequence": [
+                {"key": key, "ticks": ticks} for key, ticks in controls_sequence
+            ],
+            "capture": {
+                **save_frame(output, "key-control", controls_game),
+                "eventCount": controls_game.events,
+            },
+        }
     common = []
     branches = []
     idle_frames = []
     for key, label in inputs:
         game = DrawingReplay(original, game_id)
-        for index, (button, ticks) in enumerate(sequence):
-            if button is not None:
-                game.key(button)
-            game.tick(ticks)
+        for index, (button, ticks, repeat) in enumerate(sequence):
+            if repeat is None:
+                if button is not None:
+                    game.key(button)
+                game.tick(ticks)
+            else:
+                for _ in range(0, ticks, repeat):
+                    game.key(button)
+                    game.tick(repeat)
             if key is None:
                 common.append(
                     {
                         "key": button,
                         "ticks": ticks,
+                        **({"inputEveryTicks": repeat} if repeat is not None else {}),
                         "capture": {
                             **save_frame(output, f"setup-{index:02d}", game),
                             "eventCount": game.events,
@@ -1026,6 +1082,7 @@ def main():
             "couple-bowling",
             "badger",
             "push-push-ice-world",
+            "bubble-monk",
             *ACTION_GAMES,
         ):
             replay_paired_boards(original, args.output, args.game)

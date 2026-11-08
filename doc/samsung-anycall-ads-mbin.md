@@ -42,7 +42,7 @@ Mobiletop поставляла эту ветку технологии Samsung к
 
 ## Запуск в браузере
 
-Восемнадцать игр доступны во вкладке «Игры». Профиль Anycall выбирается
+Девятнадцать игр доступны во вкладке «Игры». Профиль Anycall выбирается
 автоматически, Enter и Z соответствуют экранной кнопке OK. Для запуска
 без готовой коллекции импортируйте соответствующий оригинальный MBIN.
 [Открыть библиотеку](https://alexgreench.github.io/KPEX100-Reunion/) ·
@@ -59,6 +59,7 @@ Mobiletop поставляла эту ветку технологии Samsung к
 | [Mobile GoStop](anycall-mobile-gostop.md)                            | OK открывает стол, кнопки 1, 5 и 7 разыгрывают карты                 |
 | [Cheombangjichuk Othello](anycall-cheombangjichuk-othello.md)        | Стрелки двигают курсор, OK ставит фишку                              |
 | [Couple Bowling](anycall-couple-bowling.md)                          | Стрелки меняют прицел, OK управляет силой броска                     |
+| [Bubble Monk](anycall-bubble-monk.md)                                | Стрелки двигают героя, вверх — прыжок, `#` выпускает пузырь          |
 | [Bubble Monk 2](anycall-bubble-monk-2.md)                            | OK выбирает персонажа, стрелки и цифры 2, 4, 5, 6 двигают героя      |
 | [Hysteric Girl](anycall-hysteric-dalma-independence.md)              | Стрелка вправо или 6 двигает курсор, OK или 5 открывает карточку     |
 | [Dalma, Let's Play](anycall-hysteric-dalma-independence.md)          | Стрелки двигают молоток, OK — удар                                   |
@@ -66,8 +67,8 @@ Mobiletop поставляла эту ветку технологии Samsung к
 | [Badger](anycall-badger-push-push.md)                                | Стрелки влево и вправо или цифры 4 и 6 двигают героя                 |
 | [Push Push Ice World](anycall-badger-push-push.md)                   | Стрелки или цифры 2, 4, 6 и 8 двигают героя и толкают блоки          |
 
-Pocket Billiards, Othello, Couple Bowling, Hysteric Girl, Independence Day
-и Push Push Ice World выводят кадр 120 × 144, остальные двенадцать —
+Pocket Billiards, Mr. 라면왕, Othello, Couple Bowling, Hysteric Girl,
+Independence Day и Push Push Ice World выводят кадр 120 × 144, остальные двенадцать —
 120 × 128. Палитра RGB332 и таймеры приближённые.
 Сохранение между запусками и часть системных надписей пока недоступны.
 
@@ -91,7 +92,7 @@ ADS-воркер передаёт готовый RGBA-буфер напряму�
 
 ## Звук ADS
 
-В восемнадцати оригиналах есть 159 клипов SMAF. Смещения в MBIN, размеры,
+В девятнадцати оригиналах есть 169 клипов SMAF. Смещения в MBIN, размеры,
 SHA‑256 и CRC16 зафиксированы в [инвентаре](../validation/anycall-smaf-inventory.json).
 По всем 82 записям исходного ZIP инспектор подтвердил 789 вхождений
 и 366 разных клипов по SHA‑256.

@@ -14,7 +14,8 @@ function harness(onEvent = () => {}) {
   let now = 1000;
   const messages = [],
     tasks = [],
-    events = [];
+    events = [],
+    keys = [];
   const guest = {
     status: 'idle',
     timerStates: [],
@@ -27,7 +28,8 @@ function harness(onEvent = () => {}) {
       this.eventCount++;
       onEvent(this, name, channel, (milliseconds) => (now += milliseconds));
     },
-    setKey() {
+    setKey(code, pressed) {
+      keys.push([code, pressed]);
       this.event('KEYPRESS');
     },
     tick() {
@@ -62,12 +64,13 @@ function harness(onEvent = () => {}) {
     messages,
     tasks,
     events,
+    keys,
     ...sandbox.control,
     now: () => now,
     advance(milliseconds) {
       now += milliseconds;
     },
-    load(engine) {
+    load(engine, gameId) {
       if (engine === 'ads') {
         guest.framebuffer = {
           takePixels: () => new Uint8ClampedArray(guest.framebufferRGBA),
@@ -76,6 +79,7 @@ function harness(onEvent = () => {}) {
       return sandbox.control.command({
         type: 'loadGame',
         engine,
+        gameId,
         sessionId: 1,
         romUrl: 'rom',
         gameUrl: 'game',
@@ -83,6 +87,24 @@ function harness(onEvent = () => {}) {
     },
   };
 }
+
+test('ADS routes # press and release only for the two confirmed games', async () => {
+  for (const id of ['mr-ramen', 'bubble-monk', 'udon-time']) {
+    const h = harness();
+    await h.load('ads', id);
+    await h.command({ type: 'key', key: 'hash', pressed: true, sessionId: 1 });
+    await h.command({ type: 'key', key: 'hash', pressed: false, sessionId: 1 });
+    assert.deepEqual(
+      h.keys,
+      id === 'udon-time'
+        ? []
+        : [
+            [15, true],
+            [15, false],
+          ],
+    );
+  }
+});
 
 test('ADS timer retains its phase after wake-up jitter and rebases after a missed period', async () => {
   const h = harness();

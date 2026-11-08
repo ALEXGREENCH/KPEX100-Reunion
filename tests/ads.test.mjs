@@ -33,11 +33,12 @@ function advance(game, ticks) {
   for (let i = 0; i < ticks; i++) game.tick();
 }
 
-function assertCapture(game, expected, [width, height]) {
+function assertCapture(game, expected, [width, captureHeight], height = captureHeight) {
   assert.equal(game.presentations, expected.presentation, expected.file);
   if (expected.eventCount !== undefined)
     assert.equal(game.eventCount, expected.eventCount, expected.file);
-  assert.equal(hash(game.readIndexedFrame()), expected.indexedSha256, expected.file);
+  const pixels = game.readIndexedFrame().subarray(0, width * captureHeight);
+  assert.equal(hash(pixels), expected.indexedSha256, expected.file);
   assert.deepEqual([game.width, game.height], [width, height], expected.file);
   assert.equal(game.framebuffer.data.length, width * height * 4, expected.file);
 }
@@ -78,6 +79,8 @@ test('ADS can transfer its RGBA buffer and regenerate the same frame on request'
 for (const record of evidence.games) {
   test(`ADS: ${record.game} matches archived controls on ARM/WASM`, async () => {
     const baseline = record.captures.find(({ file }) => file === '05-no-input.png');
+    // The earlier Ramen capture records only the top 128 rows of the 144-row LCD.
+    const height = record.game === 'mr-ramen' ? 144 : record.size[1];
     for (const [key, expected] of [
       [null, baseline],
       ...record.inputs.map(({ key, capture }) => [key, capture]),
@@ -89,7 +92,30 @@ for (const record of evidence.games) {
         }
         press(game, key);
         advance(game, record.pairedTimerEvents);
-        assertCapture(game, expected, record.size);
+        assertCapture(game, expected, record.size, height);
+      });
+    }
+  });
+}
+
+for (const record of json('../validation/anycall-extended-play.json').games) {
+  test(`ADS: ${record.game} matches extended gameplay on ARM/WASM`, async () => {
+    for (const { name, inputs, checkpoints } of record.runs) {
+      await replay(record, (game) => {
+        assert.deepEqual([game.width, game.height], record.size);
+        const keys = new Map(inputs);
+        const frames = new Map(checkpoints);
+        const end = checkpoints.at(-1)[0];
+        for (let tick = 0; tick <= end; tick++) {
+          if (frames.has(tick))
+            assert.equal(
+              hash(game.readIndexedFrame()),
+              frames.get(tick),
+              `${name} at tick ${tick}`,
+            );
+          press(game, keys.get(tick) ?? null);
+          if (tick < end) game.tick();
+        }
       });
     }
   });
@@ -174,12 +200,14 @@ for (const [gameId, keys] of [
   ['independence-day-anycall', [11, 19]],
   ['badger', [1, 3, 4, 6, 7, 9, 10, 11]],
   ['push-push-ice-world', [2, 4, 6, 8, 10, 11, 12, 13]],
+  ['bubble-monk', [10, 11, 12, 15]],
 ]) {
   test(`ADS: ${gameId} matches the independent idle and keypad replays on ARM/WASM`, async () => {
     const record = json(`../validation/anycall-${gameId}.json`);
     const {
       branches,
       commonSequence,
+      controlsMenu,
       directionPairs = [],
       inputEveryTicks,
       size,
@@ -191,25 +219,25 @@ for (const [gameId, keys] of [
     );
     const idle = [];
     const finalFrames = new Map();
+    const advanceWithTaps = (game, key, ticks, every, start = 0) => {
+      if (!every || key === null) return advance(game, ticks);
+      for (let tick = start; tick < start + ticks; tick++) {
+        if (tick % every === 0) press(game, key);
+        game.tick();
+      }
+    };
     for (const { key, checkpoints } of branches) {
       assert.equal(checkpoints.length, timerIntervals.length);
       await replay(record, (game) => {
         for (const step of commonSequence) {
-          press(game, step.key);
-          advance(game, step.ticks);
+          if (!step.inputEveryTicks) press(game, step.key);
+          advanceWithTaps(game, step.key, step.ticks, step.inputEveryTicks);
           assertCapture(game, step.capture, size);
         }
         if (!inputEveryTicks) press(game, key);
         let elapsed = 0;
         for (const [index, ticks] of timerIntervals.entries()) {
-          if (inputEveryTicks && key !== null) {
-            for (let tick = elapsed; tick < elapsed + ticks; tick++) {
-              if (tick % inputEveryTicks === 0) press(game, key);
-              game.tick();
-            }
-          } else {
-            advance(game, ticks);
-          }
+          advanceWithTaps(game, key, ticks, inputEveryTicks, elapsed);
           elapsed += ticks;
           const expected = checkpoints[index];
           assertCapture(game, expected, size);
@@ -236,6 +264,15 @@ for (const [gameId, keys] of [
         finalFrames.get(number),
         `${direction} and ${number}`,
       );
+    }
+    if (controlsMenu) {
+      await replay(record, (game) => {
+        for (const { key, ticks } of controlsMenu.sequence) {
+          press(game, key);
+          advance(game, ticks);
+        }
+        assertCapture(game, controlsMenu.capture, size);
+      });
     }
   });
 }

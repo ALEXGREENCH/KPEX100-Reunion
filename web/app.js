@@ -155,7 +155,8 @@ function applyDevice() {
           mode: [425, 66],
           rec: [535, 66],
         };
-        const cell = device.id === 'anycall' && key === 'digit0' ? index + 1 : index;
+        const cell =
+          device.id === 'anycall' && ['digit0', 'hash'].includes(key) ? index + 1 : index;
         const [x, y, width, height] =
           skin?.buttonZones?.[key] ||
           (device.type === 'phone'

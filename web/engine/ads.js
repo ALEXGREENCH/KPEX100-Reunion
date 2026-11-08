@@ -80,7 +80,9 @@ const PROFILES = [
     bytes: 129976,
     sha256: '6b13f774d53bbf641e778a069b013cfd31555d84ec4af45504596a748629f0af',
     timerArgument: 2,
+    height: 144,
     stubs: DRAWING_STUBS,
+    sessionSave: { address: BSS + 0x5f48, caller: TEXT + 0x5d19 },
   },
   {
     id: 'udon-time',
@@ -155,6 +157,7 @@ const PROFILES = [
     height: 144,
     stubs: STANDARD_STUBS.filter((slot) => slot !== 0x9c),
     emptyMqDescriptor: true,
+    displayClear: { [TEXT + 0x42eb]: 0xff },
   },
   {
     id: 'couple-bowling',
@@ -175,6 +178,22 @@ const PROFILES = [
     timerArgument: 1,
     stubs: RANDOM_DRAWING_STUBS,
     eventBudget: 75000,
+  },
+  {
+    id: 'bubble-monk',
+    title: 'Bubble Monk',
+    bytes: 79644,
+    sha256: 'b41b0723fc2c929f24ed2203afaab1109333b8ddbb95a2b571ebd9e0cac26c89',
+    timerArgument: 1,
+    stubs: RANDOM_DRAWING_STUBS.filter((slot) => slot !== 0x9c),
+    displayClear: {
+      [TEXT + 0x1ab5]: 0xff,
+      [TEXT + 0x1f8b]: 0xff,
+      [TEXT + 0x455b]: 0,
+      [TEXT + 0x460b]: 0,
+      [TEXT + 0x4741]: 0,
+      [TEXT + 0x496f]: 0,
+    },
   },
   {
     id: 'hysteric-girl',
@@ -508,9 +527,9 @@ export class AdsRuntime {
     } else if (slot === 0x48) {
       // The archived replay advances this synthetic clock by presentations.
       this.#writeOutput(this.#outputAddress() + 12, this.presentations);
-    } else if (slot === 0x9c && this.#profile.id === 'cheombangjichuk-othello') {
-      // The board redraw leaves its white background to this call.
-      if (a !== 0xff || cpu.regRead('lr') !== TEXT + 0x42eb)
+    } else if (slot === 0x9c && this.#profile.displayClear) {
+      // These callers leave the full LCD background to this service.
+      if (this.#profile.displayClear[cpu.regRead('lr')] !== a)
         throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
       this.#display().fill(a);
     } else if (slot === 0xa0) {

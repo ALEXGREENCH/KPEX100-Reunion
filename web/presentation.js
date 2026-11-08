@@ -90,8 +90,15 @@ export function automaticDevice(session) {
 }
 
 export function deviceFor(session, override = 'auto') {
-  return (
+  const device =
     devices.find((device) => device.id === override) ||
-    devices.find((device) => device.id === automaticDevice(session))
-  );
+    devices.find((device) => device.id === automaticDevice(session));
+  if (
+    device.id === 'anycall' &&
+    session?.engine === 'ads' &&
+    ['mr-ramen', 'bubble-monk'].includes(session.id)
+  ) {
+    return { ...device, keys: [...device.keys, ['hash', '#']] };
+  }
+  return device;
 }

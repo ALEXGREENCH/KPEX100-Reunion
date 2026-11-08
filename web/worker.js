@@ -181,7 +181,7 @@ function fireTimer(channel, scheduledAt = null) {
   syncTimer(channel, anchor);
 }
 function setAdsKey(key, pressed, repeat) {
-  const code = adsKeys[key];
+  const code = key === 'hash' && ['mr-ramen', 'bubble-monk'].includes(gameId) ? 15 : adsKeys[key];
   if (!Number.isInteger(code)) return;
   // Multiple confirmation actions can address the same guest key.
   const aliases = adsHeld.get(code);
