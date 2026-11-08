@@ -3,6 +3,57 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "anycall-jumping-baby-replay",
+      "repositoryPath": "research/archives/Samsung-Anycall-Jumping-Baby-Replay.zip",
+      "bytes": 23182,
+      "sha256": "9a7827724af1fde345d5a720e7db82db3a107e2004b45868ff5bdb2fae6ad946",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "01-title.png",
+          "bytes": 3226,
+          "crc32": "e39a24ce",
+          "sha256": "2deee79ce43079ecdcc7a94e8a51d97123d571bf6aed9e894761b2c197963ee4"
+        },
+        {
+          "path": "02-menu.png",
+          "bytes": 2687,
+          "crc32": "ac00e630",
+          "sha256": "1d799545bc1b4b735706284cfea4bb4061f5edbcfbf2418aa24a7e6f7b20a2d9"
+        },
+        {
+          "path": "03-key-control.png",
+          "bytes": 2405,
+          "crc32": "515b0f1d",
+          "sha256": "6f9576f43e8a0b67ec07bb99c0c99e5cd1c6d0be6435fb50a184ac13db52912e"
+        },
+        {
+          "path": "04-stage.png",
+          "bytes": 2900,
+          "crc32": "4b1afbb8",
+          "sha256": "cccd6442ab305cf0f13651530e2ae9c8e1e2d2f827fe9b2a406113d71aed2143"
+        },
+        {
+          "path": "05-no-input.png",
+          "bytes": 2896,
+          "crc32": "3dffd03e",
+          "sha256": "3ee83210876b86a8420d098cde006f4bd8dd9a2ec99f9d514a1967052e6cdb3c"
+        },
+        {
+          "path": "06-jump.png",
+          "bytes": 2952,
+          "crc32": "3b3c9e1b",
+          "sha256": "22484c627c2b40d38fb94283c6c7443104310f1540a781db4da26bab698ba8ef"
+        },
+        {
+          "path": "replay.json",
+          "bytes": 21640,
+          "crc32": "8d930937",
+          "sha256": "26820b197e6a01e6444d611c5aa6eacc2d1aa75b3aff33192d10c02a09200acf"
+        }
+      ]
+    },
+    {
       "id": "ktf-real-soccer-match-replays",
       "repositoryPath": "research/archives/Real-Soccer-KTF-Match-and-Install-Replays.zip",
       "bytes": 331576,
@@ -227494,9 +227545,9 @@
     }
   ],
   "counts": {
-    "archives": 136,
-    "archiveBytes": 2543699885,
-    "fileMembers": 37711,
-    "uniqueMemberHashes": 22826
+    "archives": 137,
+    "archiveBytes": 2543723067,
+    "fileMembers": 37718,
+    "uniqueMemberHashes": 22833
   }
 }
