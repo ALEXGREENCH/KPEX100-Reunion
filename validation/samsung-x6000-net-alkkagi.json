@@ -3,10 +3,10 @@
   "archive": {
     "id": "samsung-x6000-net-alkkagi",
     "repositoryPath": "research/archives/Samsung-SPH-X6000-Net-Alkkagi.zip",
-    "manifestMembers": 12,
-    "bytes": 54216,
-    "sha256": "3d923a455036689103a50163a4546adeca3e569e66d594bd41d7f691c2836091",
-    "crc32": "6193cc3e"
+    "manifestMembers": 22,
+    "bytes": 69477,
+    "sha256": "30e8c0cae8155396432a2ecf2aac6b06f6cb6090118f2b2d808368ed6af413bb",
+    "crc32": "40ec2a68"
   },
   "game": {
     "appId": 1351,
@@ -28,7 +28,22 @@
   },
   "runtime": {
     "aramRevision": "fea299cba15696ed1460f965b76626d6edab5e03",
-    "status": "recognized-only"
+    "status": "recognized-only",
+    "localProbe": {
+      "mode": "local ARAM build with Factory.AllowUntrustedBREW enabled",
+      "archiveSha256": "9a442146a8342622ace443936ed23ce0bef7c65cf3e8fc75d8ee13657ddf13d0",
+      "width": 176,
+      "height": 220,
+      "runBudget": 200000,
+      "verified": [
+        "title",
+        "menu",
+        "down selects settings",
+        "settings opens"
+      ],
+      "networkMatchReached": false,
+      "settingsReplayPngByteIdentical": true
+    }
   },
   "pushPushMatches": [
     {
