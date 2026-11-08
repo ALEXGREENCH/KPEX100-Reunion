@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "brewgames-88-ktf-brew",
+      "title": "Brewgames и 88 игровых сборок KTF BREW",
+      "category": "Игры и игровые сборки",
+      "description": "Metal Slug, Bubble Bobble Premium, Fullmetal Alchemist и другие сборки. Исходные ZIP и ALZ, страницы и проверка CRC.",
+      "repositoryPath": "research/archives/Brewgames-88-KTF-BREW-Packages.zip",
+      "bytes": 17794054,
+      "sha256": "6f0cd367ca27cc33464cbbd2dbf10619fdeebcdb8d207bd96135b259300b9fae",
+      "sources": [
+        {
+          "label": "Metal Slug",
+          "url": "https://m.blog.naver.com/brewgames/223957522926"
+        },
+        {
+          "label": "Bubble Bobble Premium",
+          "url": "https://m.blog.naver.com/brewgames/223953486567"
+        },
+        {
+          "label": "Fullmetal Alchemist",
+          "url": "https://m.blog.naver.com/brewgames/223956029360"
+        }
+      ]
+    },
+    {
       "id": "motorola-ms500-heathrow",
       "title": "Motorola MS500 Heathrow и Turbo Downloader",
       "category": "Инструменты и SDK",
@@ -2243,6 +2266,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "88 игр KTF BREW из Brewgames",
+      "repositoryPath": "doc/brewgames-88-ktf-brew.md"
+    },
     {
       "title": "Motorola MS500 Heathrow",
       "repositoryPath": "doc/motorola-ms500-heathrow.md"
