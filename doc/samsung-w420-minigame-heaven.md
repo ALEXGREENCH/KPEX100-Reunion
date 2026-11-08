@@ -10,6 +10,8 @@
 
 Все три EADS совпали с точными диапазонами DAT CD16. У всех 59 звуков совпала внутренняя CRC16 SMAF. Декодер Reunion вернул PCM для всех файлов, из них 55 содержат ненулевые отсчёты. Оригинальные MMF и два образца WAV лежат отдельно. [Прошивка CD16](https://archive.org/download/gt-b-7722_20250528/SCH-W420.zip) · [Сведения о прошивках и EADS](phone-firmware-games.md#samsung-sch-w420-cd16)
 
+В следующем проходе извлечено 635 спрайтов и получен фрагмент заставки из оригинального ARM-кода. [Спрайты и пробный запуск](samsung-w420-minigame-heaven-graphics.md)
+
 ```sh
 python tools/extract-samsung-w420-games.py SCH-W420_CD16_18C0000.dat w420-games
 ```

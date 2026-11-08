@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "firmwareSource": "https://archive.org/download/gt-b-7722_20250528/SCH-W420.zip",
+  "firmware": {
+    "bytes": 61472768,
+    "sha256": "c72e381ab9a29313c9e52876db314dd0285cdf438f5f57aa9b33c12cc959e706",
+    "crc32": "1621e517"
+  },
+  "eads": {
+    "bytes": 298328,
+    "sha256": "ce0b74b65888f24aa0cd55e3cd4d9a4409145a0442017258b0f78d381f14f0d4",
+    "crc32": "52bdea01"
+  },
+  "rgbRequests": {
+    "eadsOffset": 285852,
+    "firmwareOffset": 20109016,
+    "entries": 190,
+    "bytes": 2280,
+    "sha256": "06075ffdf697c8faae3038c124fe3536eb9d2565ae7a21eb3d8cf9f9706fa9b1",
+    "crc32": "0a153640"
+  },
+  "descriptorTable": {
+    "observedBeforePresentCounts": [
+      2,
+      55
+    ],
+    "address": 4110439432,
+    "bssOffset": 21512,
+    "entries": 670,
+    "stride": 20,
+    "bytes": 13400,
+    "sha256": "1154f24035b9c568173d534da968d6c06b20d7cfe27d70c2752b12aef86032d4",
+    "crc32": "0a3f8d3a"
+  },
+  "mqRecords": 635,
+  "emptyDescriptors": 35,
+  "compressedBytes": 153496,
+  "decodedBytes": 610502,
+  "runtime": {
+    "source": "https://github.com/mirusu400/aram-core/tree/fea299cba15696ed1460f965b76626d6edab5e03",
+    "profile": "experimental local Samsung OEM overlay",
+    "width": 240,
+    "height": 297,
+    "frameDurationMs": 16,
+    "runBudget": 200000,
+    "palette": "provisional RGB332",
+    "screens": {
+      "input": {
+        "510": {
+          "min_x": 0,
+          "min_y": 0,
+          "width": 240,
+          "height": 297,
+          "rgba_sha256": "c1df2083d228cd2af1a44f6dc709ab154d298fc2055b6ccc3787abb22866bd51",
+          "non_black_pixels": 3402,
+          "visible_pixels": 71280
+        },
+        "513": {
+          "min_x": 0,
+          "min_y": 0,
+          "width": 240,
+          "height": 297,
+          "rgba_sha256": "3603d4153ebfd5d6402e7bdb4511bb3f77dd4fbd5e87a9d66c58ef227ad2786b",
+          "non_black_pixels": 0,
+          "visible_pixels": 71280
+        },
+        "519": {
+          "min_x": 0,
+          "min_y": 0,
+          "width": 240,
+          "height": 297,
+          "rgba_sha256": "3603d4153ebfd5d6402e7bdb4511bb3f77dd4fbd5e87a9d66c58ef227ad2786b",
+          "non_black_pixels": 0,
+          "visible_pixels": 71280
+        }
+      },
+      "control": {
+        "510": {
+          "min_x": 0,
+          "min_y": 0,
+          "width": 240,
+          "height": 297,
+          "rgba_sha256": "c1df2083d228cd2af1a44f6dc709ab154d298fc2055b6ccc3787abb22866bd51",
+          "non_black_pixels": 3402,
+          "visible_pixels": 71280
+        },
+        "513": {
+          "min_x": 0,
+          "min_y": 0,
+          "width": 240,
+          "height": 297,
+          "rgba_sha256": "c1df2083d228cd2af1a44f6dc709ab154d298fc2055b6ccc3787abb22866bd51",
+          "non_black_pixels": 3402,
+          "visible_pixels": 71280
+        },
+        "519": {
+          "min_x": 0,
+          "min_y": 0,
+          "width": 240,
+          "height": 297,
+          "rgba_sha256": "a99672c4ba43359639e499aa1205e0d4f1596af1f85e6f0fe9c0dc1ec538731f",
+          "non_black_pixels": 3695,
+          "visible_pixels": 71280
+        }
+      }
+    },
+    "status": "partial animated opening and differentiated SELECT response; no confirmed playable scene"
+  },
+  "archive": {
+    "id": "samsung-w420-minigame-heaven-mq",
+    "title": "Mini Game Heaven Anycall · спрайты и заставка SCH-W420",
+    "category": "Игры и игровые сборки",
+    "description": "635 оригинальных MQ и декодированные индексные карты. Кадры частично восстановленной заставки и сравнение двух запусков с SELECT и без ввода.",
+    "repositoryPath": "research/archives/Samsung-SCH-W420-Mini-Game-Heaven-MQ.zip",
+    "bytes": 950007,
+    "sha256": "0b6f6e1bf9119857d150d891ba0296c6433bd3741ee03c8a08354013ddf0b5a8",
+    "sources": [
+      {
+        "label": "Образ Samsung SCH-W420 CD16",
+        "url": "https://archive.org/download/gt-b-7722_20250528/SCH-W420.zip"
+      },
+      {
+        "label": "Ревизия ARAM",
+        "url": "https://github.com/mirusu400/aram-core/tree/fea299cba15696ed1460f965b76626d6edab5e03"
+      }
+    ]
+  }
+}

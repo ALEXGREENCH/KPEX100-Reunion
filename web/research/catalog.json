@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "samsung-w420-minigame-heaven-mq",
+      "title": "Mini Game Heaven Anycall · спрайты и заставка SCH-W420",
+      "category": "Игры и игровые сборки",
+      "description": "635 оригинальных MQ и декодированные индексные карты. Кадры частично восстановленной заставки и сравнение двух запусков с SELECT и без ввода.",
+      "repositoryPath": "research/archives/Samsung-SCH-W420-Mini-Game-Heaven-MQ.zip",
+      "bytes": 950007,
+      "sha256": "0b6f6e1bf9119857d150d891ba0296c6433bd3741ee03c8a08354013ddf0b5a8",
+      "sources": [
+        {
+          "label": "Образ Samsung SCH-W420 CD16",
+          "url": "https://archive.org/download/gt-b-7722_20250528/SCH-W420.zip"
+        },
+        {
+          "label": "Ревизия ARAM",
+          "url": "https://github.com/mirusu400/aram-core/tree/fea299cba15696ed1460f965b76626d6edab5e03"
+        }
+      ]
+    },
+    {
       "id": "samsung-w420-anycall-games",
       "title": "Samsung SCH-W420 · Mini Game Heaven Anycall, Nom 2 и Janggi",
       "category": "Игры и игровые сборки",
@@ -2608,6 +2627,10 @@
     }
   ],
   "reports": [
+    {
+      "repositoryPath": "doc/samsung-w420-minigame-heaven-graphics.md",
+      "title": "Спрайты и заставка Mini Game Heaven Anycall"
+    },
     {
       "repositoryPath": "doc/samsung-w420-minigame-heaven.md",
       "title": "Игры и звуки Anycall из Samsung SCH-W420"
