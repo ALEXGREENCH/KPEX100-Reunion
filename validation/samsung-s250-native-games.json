@@ -1,0 +1,174 @@
+{
+  "archive": {
+    "id": "samsung-s250-native-games",
+    "repositoryPath": "research/archives/Samsung-SCH-S250-Haunted-School-and-Lost-Planet-II.zip",
+    "manifestMembers": 22,
+    "bytes": 3158224,
+    "sha256": "d48406f7f6dfe998e87402dd5a501f5f7cdff4d90f3307fbb9d39dc520663fc7",
+    "crc32": "0ac8dc12"
+  },
+  "schema": 1,
+  "source": {
+    "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z",
+    "archive": {
+      "bytes": 8227944,
+      "sha256": "bf64c6cbc992df21003cc050e0127bb927f92345b4bcd62195abe33f67a10808",
+      "crc32": "e0d8df20"
+    },
+    "rom": {
+      "bytes": 19300352,
+      "sha256": "ea94aac903d463a943423d4b1e682da4de0c9010f41e06a9aaa0dedefa6fad7b",
+      "crc32": "26209baf"
+    }
+  },
+  "resources": {
+    "packs": [
+      {
+        "game": "lost-planet-ii",
+        "group": "world",
+        "path": "original/lost-planet-ii-world.amos",
+        "offset": 7437812,
+        "bytes": 270364,
+        "sha256": "d16ac650da72033ca2e6e55a15b9f34b54c14584cdb406bf5f393b6ffc965f97",
+        "crc32": "2348ad5c",
+        "members": 66,
+        "maps": 11
+      },
+      {
+        "game": "lost-planet-ii",
+        "group": "graphics",
+        "path": "original/lost-planet-ii-graphics.amos",
+        "offset": 7708176,
+        "bytes": 333500,
+        "sha256": "c5546a6dfdf9371b23cafc1051240738427fdc9fdf6961ec3c21fc17ab881b71",
+        "crc32": "cb75b010",
+        "members": 61,
+        "maps": 0
+      },
+      {
+        "game": "haunted-school",
+        "group": "graphics",
+        "path": "original/haunted-school-graphics.amos",
+        "offset": 8049176,
+        "bytes": 396008,
+        "sha256": "915ffe33bfb6e3d02a6a17b97e26c92655388783b9058cd4b779317dcf191fba",
+        "crc32": "b65f357b",
+        "members": 49,
+        "maps": 0
+      },
+      {
+        "game": "haunted-school",
+        "group": "world",
+        "path": "original/haunted-school-world.amos",
+        "offset": 8445184,
+        "bytes": 249336,
+        "sha256": "b344dceb64ae5db3a5312de8dc12a5f68b25e81a36615453031a21ae84df6316",
+        "crc32": "04d0fea9",
+        "members": 50,
+        "maps": 8
+      }
+    ],
+    "members": 226,
+    "bytes": 2349060,
+    "sha256": "a252fa54db0dec62623082947784d7699d6cd9fa5a80fb19c1a199f3eb53ea27",
+    "crc32": "b1cdc7a1"
+  },
+  "nativeDecoder": {
+    "fileOffset": 3065660,
+    "identicalMembers": 226,
+    "engine": "Unicorn 2.1.4",
+    "hostAllocationOnly": true
+  },
+  "replay": {
+    "engine": "Unicorn 2.1.4",
+    "frames": {
+      "haunted-school": {
+        "title": {
+          "png": "title.png",
+          "pngSha256": "c8cef02a968e3336e92baf11b985dde105d7cab150e89942ecc2817581fe95c1",
+          "rgb565Sha256": "4cc6600bf404e256679bf3f3c2ddc500fe2603cc27338c25b89b09fd7a69a58b",
+          "colors": 1612,
+          "scene": [
+            1,
+            1
+          ]
+        },
+        "level": {
+          "png": "level.png",
+          "pngSha256": "b2d1764446454357e5cb83a18a7009f7ebcc9dc9b641349352f567985e3007a4",
+          "rgb565Sha256": "18a9db90762fcbb2ef4feb00e65b46a80f1dee71e5bb41ad2e4d2438fc61c79e",
+          "colors": 782,
+          "scene": [
+            10,
+            10
+          ]
+        },
+        "forward": {
+          "png": "after.png",
+          "pngSha256": "598a9099771b1fef9902f2f42b460fb0a3bf96d34ace2b554d044e013d253f9f",
+          "rgb565Sha256": "2b1570493448a3761702e0f88debab1e91e56ead6acf5f2a6e18eb6864740303",
+          "colors": 779,
+          "scene": [
+            10,
+            10
+          ]
+        },
+        "noInput": {
+          "png": "after.png",
+          "pngSha256": "b2d1764446454357e5cb83a18a7009f7ebcc9dc9b641349352f567985e3007a4",
+          "rgb565Sha256": "18a9db90762fcbb2ef4feb00e65b46a80f1dee71e5bb41ad2e4d2438fc61c79e",
+          "colors": 782,
+          "scene": [
+            10,
+            10
+          ]
+        },
+        "deterministicRepeat": true
+      },
+      "lost-planet-ii": {
+        "title": {
+          "png": "title.png",
+          "pngSha256": "2e305eac0c6232e1c2439acd90cd9be33d42d7be8a8341c461eb47bca0ef56e1",
+          "rgb565Sha256": "4c212dfedd95c57d6d17d86d529148ff8830360bb12d617f8192c397ea3d2716",
+          "colors": 2260,
+          "scene": [
+            1,
+            1
+          ]
+        },
+        "level": {
+          "png": "level.png",
+          "pngSha256": "3a972905c2da25070fc0cbf63bd3902e847c715f6dbb3a20e41480111b34afa6",
+          "rgb565Sha256": "ee25d85a42af651365c061ca423be31dbdbf85f83342f66ceb043fafa4cec1da",
+          "colors": 2111,
+          "scene": [
+            9,
+            9
+          ]
+        },
+        "forward": {
+          "png": "after.png",
+          "pngSha256": "9854df17b892baef498ef3e83a304d1b1d37196ed7bfae8ee941698bba4f1281",
+          "rgb565Sha256": "a262dd69cdbefaed0c13a63a751e336d19ee75126b09220954c7a9db843e6659",
+          "colors": 2124,
+          "scene": [
+            9,
+            9
+          ]
+        },
+        "noInput": {
+          "png": "after.png",
+          "pngSha256": "c030e4ac3c91e93f0da62254ac8c7a6a7673727d919a9324855fe4c0dde002f0",
+          "rgb565Sha256": "37c154f55db9bef525fa1370b253b86c730bf472e1ab47c42646005c57161b2e",
+          "colors": 2188,
+          "scene": [
+            9,
+            9
+          ]
+        },
+        "deterministicRepeat": true
+      }
+    },
+    "nativeRom": true
+  }
+}

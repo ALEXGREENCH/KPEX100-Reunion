@@ -4,6 +4,21 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "samsung-s250-native-games",
+      "title": "Haunted School и Lost Planet II · Samsung SCH-S250",
+      "category": "Игры и игровые сборки",
+      "description": "Четыре исходных контейнера Amos, 226 ресурсов и кадры первого уровня обеих игр из прогона ARM-кода в Unicorn.",
+      "repositoryPath": "research/archives/Samsung-SCH-S250-Haunted-School-and-Lost-Planet-II.zip",
+      "bytes": 3158224,
+      "sha256": "d48406f7f6dfe998e87402dd5a501f5f7cdff4d90f3307fbb9d39dc520663fc7",
+      "sources": [
+        {
+          "label": "Прошивка SCH-S250 YD01",
+          "url": "https://archive.sunderland93.ru/Firmwares/Samsung/SCH-S250/S250MSM_CODE_YD01.7z"
+        }
+      ]
+    },
+    {
       "id": "reakosys-m3d-archive",
       "title": "Reakosys M3D · документация и демонстрации",
       "category": "Документация и инструменты",
@@ -2502,6 +2517,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Haunted School и Lost Planet II из прошивки Samsung SCH-S250",
+      "repositoryPath": "doc/samsung-s250-native-games.md"
+    },
     {
       "title": "Reakosys M3D · API, демонстрации и ссылки на инструменты",
       "repositoryPath": "doc/reakosys-m3d-archive.md"
