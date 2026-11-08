@@ -4,6 +4,48 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "ktf-real-soccer-and-master-of-sword",
+      "title": "Real Soccer 2007 и 2009, Master of Sword 3 · KTF",
+      "category": "Игры и игровые сборки",
+      "description": "Три исходных пакета, проверенные запуски в ARAM и WIE, установочные данные Real Soccer 2009.",
+      "sources": [
+        {
+          "label": "리얼사커2007",
+          "url": "https://dubigame.tistory.com/46"
+        },
+        {
+          "label": "리얼사커2009",
+          "url": "https://dubigame.tistory.com/47"
+        },
+        {
+          "label": "마스터오브소드3",
+          "url": "https://dubigame.tistory.com/51"
+        }
+      ],
+      "repositoryPath": "research/archives/Dubigame-Real-Soccer-and-Master-of-Sword.zip",
+      "bytes": 3800039,
+      "sha256": "42b7da18987011b8bcf1b7551ab4e7be282836339f425f3a201a06db96ca8c9a"
+    },
+    {
+      "id": "samsung-b3200-factory-games",
+      "title": "Samsung SPH-B3200 · заводские игры и каталоги GPANG/GXG",
+      "category": "Документация и инструменты",
+      "description": "12 кадров с аппарата, включая Nom 2 и Skipping Stone 2, обзор Cetizen и исходные снимки игровых порталов.",
+      "sources": [
+        {
+          "label": "Обзор Cetizen",
+          "url": "https://review.cetizen.com/review.php?pid=1207&pno=1207&q=view&qv=rview&rno=4251&vcat=5"
+        },
+        {
+          "label": "Отчёт KDDI",
+          "url": "https://rp.kddi-research.jp/download/report/RA2006112"
+        }
+      ],
+      "repositoryPath": "research/archives/Samsung-SPH-B3200-Factory-Game-Evidence.zip",
+      "bytes": 2832899,
+      "sha256": "33c97e47e3dd98d169709dc2aa71642b1e1931d75f6460b64cb6749cab792da1"
+    },
+    {
       "id": "dubigame-maplestory-and-skipping-stone",
       "title": "MapleStory, My Princess 2 и Skipping Stone 3 · пять сборок KTF",
       "category": "Игры и игровые сборки",
@@ -2681,6 +2723,14 @@
     }
   ],
   "reports": [
+    {
+      "repositoryPath": "doc/ktf-real-soccer-and-master-of-sword.md",
+      "title": "Real Soccer и Master of Sword 3 для KTF"
+    },
+    {
+      "repositoryPath": "doc/samsung-b3200-factory-games.md",
+      "title": "Заводские игры Samsung SPH-B3200"
+    },
     {
       "repositoryPath": "doc/dubigame-maplestory-and-skipping-stone.md",
       "title": "MapleStory, My Princess 2 и Skipping Stone 3 для KTF"

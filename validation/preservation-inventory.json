@@ -3,6 +3,444 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "ktf-real-soccer-and-master-of-sword",
+      "repositoryPath": "research/archives/Dubigame-Real-Soccer-and-Master-of-Sword.zip",
+      "bytes": 3800039,
+      "sha256": "42b7da18987011b8bcf1b7551ab4e7be282836339f425f3a201a06db96ca8c9a",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derivatives/real-soccer-2009-install.zip",
+          "bytes": 1758425,
+          "crc32": "363219b1",
+          "sha256": "fde94c6de2f658789cd81686164c31070ecf1a30e140d027292731c16da3f508"
+        },
+        {
+          "path": "evidence/master-of-sword-3/control/after.png",
+          "bytes": 26339,
+          "crc32": "97dc68f4",
+          "sha256": "78a3d3b7b729b86de69bff37abe5ca0bdb01065e1ff27351204c8d774381710e"
+        },
+        {
+          "path": "evidence/master-of-sword-3/control/before.png",
+          "bytes": 26342,
+          "crc32": "e1118ff8",
+          "sha256": "ceec5ea411c4c69c51a10f9bc58b36c41b0a262c440c194bc0ef303a91546c19"
+        },
+        {
+          "path": "evidence/master-of-sword-3/control/replay.lua",
+          "bytes": 121,
+          "crc32": "d9d22bb5",
+          "sha256": "82ae323dad36ba3d789cb86f5e77da9d26fd7bcadf12beb565ef6dbdd6b00ba2"
+        },
+        {
+          "path": "evidence/master-of-sword-3/control/trace.ndjson",
+          "bytes": 4702,
+          "crc32": "9024f120",
+          "sha256": "e77f534fce96fe971893f4d321fc2c866feaa17acdd4330e207761fe8ca49bc9"
+        },
+        {
+          "path": "evidence/master-of-sword-3/input/after.png",
+          "bytes": 26509,
+          "crc32": "a6e6ff47",
+          "sha256": "163babeb0d6e923c7a8bce31d36c0600290022d60759300fceaec11a8be2ed06"
+        },
+        {
+          "path": "evidence/master-of-sword-3/input/before.png",
+          "bytes": 26342,
+          "crc32": "e1118ff8",
+          "sha256": "ceec5ea411c4c69c51a10f9bc58b36c41b0a262c440c194bc0ef303a91546c19"
+        },
+        {
+          "path": "evidence/master-of-sword-3/input/replay.lua",
+          "bytes": 125,
+          "crc32": "31396945",
+          "sha256": "6d4690464cc25cab2b3e22e1cbaeea5d2e9577e8b150f5b7db9abb9588230833"
+        },
+        {
+          "path": "evidence/master-of-sword-3/input/trace.ndjson",
+          "bytes": 4701,
+          "crc32": "c4ff2a61",
+          "sha256": "6bda534e7c0e184842e80a862a55fbf9106c0409d81b77d50629fbb589b599b3"
+        },
+        {
+          "path": "evidence/real-soccer-2007/control/after.png",
+          "bytes": 9792,
+          "crc32": "ea847092",
+          "sha256": "f908379b19d4753385f47fce9eaf43c35e34b9181d8a9e675608be727b477d9f"
+        },
+        {
+          "path": "evidence/real-soccer-2007/control/before.png",
+          "bytes": 9894,
+          "crc32": "79a2988c",
+          "sha256": "e94b7223c4c6182366f03c973589050daebd0d758e0a6584711865dd0af57a61"
+        },
+        {
+          "path": "evidence/real-soccer-2007/control/later.png",
+          "bytes": 9764,
+          "crc32": "9b6802e1",
+          "sha256": "10b6e643b0837a7be0387060bf70df333868435e2cb50cb4708a3fbfb3fdc130"
+        },
+        {
+          "path": "evidence/real-soccer-2007/control/replay.lua",
+          "bytes": 722,
+          "crc32": "16105aca",
+          "sha256": "bb54c38ec6cb345356a112ae0b6283bc144e32e9f64fee480d7f94caa5c14010"
+        },
+        {
+          "path": "evidence/real-soccer-2007/control/trace.ndjson",
+          "bytes": 26360,
+          "crc32": "ae1a0a33",
+          "sha256": "153c43401a25f996110e2f377e3f2ef515696989c685837eeaa1495ebe9b71d0"
+        },
+        {
+          "path": "evidence/real-soccer-2007/input/after.png",
+          "bytes": 2074,
+          "crc32": "69174cf1",
+          "sha256": "7ab5603da0535dfd6fe880b54afb2c46281a553fc174a242006dcf2d240c92cb"
+        },
+        {
+          "path": "evidence/real-soccer-2007/input/before.png",
+          "bytes": 9894,
+          "crc32": "79a2988c",
+          "sha256": "e94b7223c4c6182366f03c973589050daebd0d758e0a6584711865dd0af57a61"
+        },
+        {
+          "path": "evidence/real-soccer-2007/input/later.png",
+          "bytes": 2105,
+          "crc32": "5133b950",
+          "sha256": "7fcb55c2ef3621d9879c406fc68505bd08dd8b4c4360acdc7d1f49634bf54052"
+        },
+        {
+          "path": "evidence/real-soccer-2007/input/replay.lua",
+          "bytes": 734,
+          "crc32": "0be0f22d",
+          "sha256": "5233ea1c661ddf605a60f2e4cd2c4982cca50358309e48e1d641d130deff42c5"
+        },
+        {
+          "path": "evidence/real-soccer-2007/input/trace.ndjson",
+          "bytes": 26342,
+          "crc32": "a3294cc6",
+          "sha256": "984a507c5083e4585f8e04eebadc087051408b4733748959ebd307bb98113f41"
+        },
+        {
+          "path": "evidence/real-soccer-2009/aram/install.png",
+          "bytes": 1907,
+          "crc32": "c933582d",
+          "sha256": "141a4642da21e2e97ea53ed8c884eff5b8c83f735c91c6a80bd0b27757519898"
+        },
+        {
+          "path": "evidence/real-soccer-2009/aram/replay.lua",
+          "bytes": 124,
+          "crc32": "7fef8311",
+          "sha256": "1d548700629a8bd40bb8821482233b4c52c0e3e5435ef597081276d3179522d8"
+        },
+        {
+          "path": "evidence/real-soccer-2009/aram/stderr.txt",
+          "bytes": 228,
+          "crc32": "e2f684cd",
+          "sha256": "4c628e5421635fb38c0fecf6fb5a67082d0625e1c03cbe57de9ff8a668937383"
+        },
+        {
+          "path": "evidence/real-soccer-2009/aram/terminal.png",
+          "bytes": 1907,
+          "crc32": "c933582d",
+          "sha256": "141a4642da21e2e97ea53ed8c884eff5b8c83f735c91c6a80bd0b27757519898"
+        },
+        {
+          "path": "evidence/real-soccer-2009/aram/trace.ndjson",
+          "bytes": 3764,
+          "crc32": "7facab22",
+          "sha256": "156643d02e8a9e0954ac362236a613b28d3726ceed58346454cae7ef2c2e8b9e"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/engine-manifest.json",
+          "bytes": 756,
+          "crc32": "f44c304d",
+          "sha256": "0b290085d28ff61edfe2847189de3a2beb72e856318e98d9fa994c55ee4c57d3"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/match-key-4.png",
+          "bytes": 26364,
+          "crc32": "191173ef",
+          "sha256": "0aa24cc4337635a368099d0d5d57ffc718e37c557eeae24d7b4c1502df7cf7bb"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/ok-11.png",
+          "bytes": 27677,
+          "crc32": "4fbac689",
+          "sha256": "4a1cd5bb8fe7be9d89760da398a7c5015b9580c107c20688f57f2e58655d81c0"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/ok-2.png",
+          "bytes": 80173,
+          "crc32": "b7057838",
+          "sha256": "9b769192c5bb3b322cccda6229f4ed3dca4fdb484afadd2085415b1ee085b9d7"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/ok-5.png",
+          "bytes": 22849,
+          "crc32": "143f55b7",
+          "sha256": "101c50bca1ec5603ee71a2c3940557bcc347218d2b7d4884ffc2c55015a3b07f"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/post-lineup-3.png",
+          "bytes": 2414,
+          "crc32": "d350938f",
+          "sha256": "de41abe8e3aa4cbbd964b48cbc7e98735b33fea0e0a03c64402b8669066e0253"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/replay.mjs",
+          "bytes": 3386,
+          "crc32": "c5b87517",
+          "sha256": "02fad5deb3466edcdeaa5ec820fa9e69469bf981e782a2bfe4fe7218f0f983dd"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/verification.json",
+          "bytes": 5243,
+          "crc32": "e849cf85",
+          "sha256": "1f67d11863b0c78a3260810c8aae4ab0f49216871e35bf2eb03877ba70af9e7f"
+        },
+        {
+          "path": "evidence/real-soccer-2009/wie/wait-5.png",
+          "bytes": 2181,
+          "crc32": "eab9a151",
+          "sha256": "4d82c906fbfd152ef7cca51eebf1939a8daaece468b541043dab341a2d746a8d"
+        },
+        {
+          "path": "evidence/verification.json",
+          "bytes": 135552,
+          "crc32": "5c2533fa",
+          "sha256": "476bfdbbc627815d8b0c2884308a3795a955242b60f865481d4f37a5f0ab8142"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 7630,
+          "crc32": "6e2017c0",
+          "sha256": "a12fb7e518f74caf9f225ca741c616fa75de9740cbe04841fbf2307130b3fbce"
+        },
+        {
+          "path": "originals/리얼사커2007.zip",
+          "bytes": 538685,
+          "crc32": "60907d56",
+          "sha256": "bd1098707ce4e00901d5a0c72a52a22beaacda34d0ee6390e7982ba78477788d"
+        },
+        {
+          "path": "originals/리얼싸커2009.zip",
+          "bytes": 1131934,
+          "crc32": "0c045df3",
+          "sha256": "36353252b311c1aa5ec8fcece5830bd48f545b5d301d454bdb59ac53835dfc1e"
+        },
+        {
+          "path": "originals/마스터오브소드3.zip",
+          "bytes": 679250,
+          "crc32": "7146ec98",
+          "sha256": "3b72d4676d5dcc988cf3c0bf35ee963af0df4a59583af8d9ba2da6aed755784d"
+        },
+        {
+          "path": "source/dubigame-46.html",
+          "bytes": 50729,
+          "crc32": "ba86d3ba",
+          "sha256": "21a069f551589c2a91e10a408a4584c6a7cfe635077c06c750c626f1d73f758e"
+        },
+        {
+          "path": "source/dubigame-47.html",
+          "bytes": 46719,
+          "crc32": "9484121e",
+          "sha256": "fdfe6cd9c445d77e19a9000b51b0c853d188ae583390c26cd0c056766dc6cb87"
+        },
+        {
+          "path": "source/dubigame-51.html",
+          "bytes": 50216,
+          "crc32": "ff714ba6",
+          "sha256": "97913a09ffef6046b48fcea25d9d6ec27a38151f70fb9568d778ce34712962fb"
+        }
+      ]
+    },
+    {
+      "id": "samsung-b3200-factory-games",
+      "repositoryPath": "research/archives/Samsung-SPH-B3200-Factory-Game-Evidence.zip",
+      "bytes": 2832899,
+      "sha256": "33c97e47e3dd98d169709dc2aa71642b1e1931d75f6460b64cb6749cab792da1",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derivatives/lcd-contact.png",
+          "bytes": 659235,
+          "crc32": "69b1180a",
+          "sha256": "a1253799559c3ffde8a18a45c87abd19350f7cf240e226e0209a2e7e1fb4f1bb"
+        },
+        {
+          "path": "evidence/provenance.json",
+          "bytes": 17149,
+          "crc32": "6ecb095b",
+          "sha256": "1f58948b681cd4c11e690f1227899f9e6e47e530eccc82ef62fe14bc2536e35a"
+        },
+        {
+          "path": "http/gpang-main.html",
+          "bytes": 620,
+          "crc32": "462ea78e",
+          "sha256": "e859c18f0c0cc71ffed35c4e7ebc87cbb4f136116156f2de1588aeb71449533e"
+        },
+        {
+          "path": "http/gxg-main.html",
+          "bytes": 620,
+          "crc32": "462ea78e",
+          "sha256": "e859c18f0c0cc71ffed35c4e7ebc87cbb4f136116156f2de1588aeb71449533e"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4974,
+          "crc32": "a47a853e",
+          "sha256": "4cb13239f5ecda054c3e9ed3c83751cad57d80b3b02a4e2284d339b7e1ff83bd"
+        },
+        {
+          "path": "originals/b3200-ia.json",
+          "bytes": 375,
+          "crc32": "4134300c",
+          "sha256": "25bcbaebbe4a9d0bfef0f9c9bc6c52eaa3c3743067512fec354d5c3be465a2df"
+        },
+        {
+          "path": "originals/b3200_lcd_152.jpg",
+          "bytes": 53727,
+          "crc32": "8b50aacb",
+          "sha256": "3a5145f42c4415fc4b8807b2eb66fdc3745225779341503750ae6c319d45abb7"
+        },
+        {
+          "path": "originals/b3200_lcd_153.jpg",
+          "bytes": 47476,
+          "crc32": "6e4b286b",
+          "sha256": "50e18d426ddd8ddd37ba40cee17385241514fb8bdc70816e2ca1918c4e071988"
+        },
+        {
+          "path": "originals/b3200_lcd_154.jpg",
+          "bytes": 42097,
+          "crc32": "b37d0c28",
+          "sha256": "1ebe333089972b19b3ea53753597713f669387c14444bd0ee505e22c80697c6a"
+        },
+        {
+          "path": "originals/b3200_lcd_157.jpg",
+          "bytes": 50621,
+          "crc32": "19f504b4",
+          "sha256": "f623febd757a38f1bf1537d0ccd890c974ed479a14cd3c35e2ff7f55ac9deb53"
+        },
+        {
+          "path": "originals/b3200_lcd_164.jpg",
+          "bytes": 53051,
+          "crc32": "585dedb1",
+          "sha256": "5fe472d40c1db3a0de2937c1bf8f5c9f6f0b451bfb2a08b372c97d532336d278"
+        },
+        {
+          "path": "originals/b3200_lcd_165.jpg",
+          "bytes": 53992,
+          "crc32": "75a83121",
+          "sha256": "bc2de28045f308df13ed3da39135a3877681987ac05918aedf9f1d81ab7aed80"
+        },
+        {
+          "path": "originals/b3200_lcd_167.jpg",
+          "bytes": 37175,
+          "crc32": "c0c55a10",
+          "sha256": "c117682e963486f75b7badc4f3e1c046d2cd77dcdf4847d57a4712289c04112c"
+        },
+        {
+          "path": "originals/b3200_lcd_169.jpg",
+          "bytes": 42884,
+          "crc32": "55866ea3",
+          "sha256": "03f9dd48a17770809d8506854604b6c2a46bd86a68bba33066340b3a28b9d1be"
+        },
+        {
+          "path": "originals/b3200_lcd_172.jpg",
+          "bytes": 33267,
+          "crc32": "38055eec",
+          "sha256": "1742728abe0d13d1a0ad11ae1b8db1afba808d784ebc3e374e12c5f7b5303f62"
+        },
+        {
+          "path": "originals/b3200_lcd_183.jpg",
+          "bytes": 57140,
+          "crc32": "d6733463",
+          "sha256": "2126952d75dd4da74e8c5b1231b7ff1dfe512a64f26ad3c7934778b56b51961f"
+        },
+        {
+          "path": "originals/b3200_lcd_192.jpg",
+          "bytes": 51648,
+          "crc32": "7c1c55bd",
+          "sha256": "6605231899601c401c026450738186105fcae6ab3a85040a71f15a9d7d1733c5"
+        },
+        {
+          "path": "originals/b3200_lcd_197.jpg",
+          "bytes": 43580,
+          "crc32": "ddbe5c60",
+          "sha256": "203f140571862ce06260a5d782822a7bd275207fec89a9d65df2a215d49df395"
+        },
+        {
+          "path": "originals/cetizen-anycall-1207.html",
+          "bytes": 225841,
+          "crc32": "b52c5934",
+          "sha256": "80c243297f5fa8a9fa677778206ba4a72f5ac718c4a12a87647d60f848fbbfab"
+        },
+        {
+          "path": "originals/gpang-co-kr-2006.json",
+          "bytes": 242,
+          "crc32": "4afadd9f",
+          "sha256": "d23a439141aa25847621f4b970af424a0e4cba6c6ea1fd47574c2ce425666e25"
+        },
+        {
+          "path": "originals/gpang-co-kr-home.html",
+          "bytes": 95,
+          "crc32": "c874ede1",
+          "sha256": "3a56b05268c371eea8e4b31a8281228e65559bfdff1c78361332675cc3e8d0db"
+        },
+        {
+          "path": "originals/gpang-com-2006.json",
+          "bytes": 234,
+          "crc32": "c619323f",
+          "sha256": "b081603729ca2e6dfe6a0561bbaff511b504e692431abfde328ca0e3c477e14b"
+        },
+        {
+          "path": "originals/gpang-com-home.html",
+          "bytes": 86,
+          "crc32": "40b2fba4",
+          "sha256": "7e0e64d8f8f5707da6732c442915d92aa659a416be1132e9b8e2ed010989525e"
+        },
+        {
+          "path": "originals/gpang-magicn-2006.json",
+          "bytes": 244,
+          "crc32": "f00c103f",
+          "sha256": "3a03a9e3edd2ccd2fa49f011a64b60fb0d604d75ee88a9258173d81bf7e479e9"
+        },
+        {
+          "path": "originals/gpang-magicn-root.html",
+          "bytes": 526,
+          "crc32": "0cf2d807",
+          "sha256": "fa80c2e18c8608f73e077be8b63324c253b3a1892c9fcf48d63662e303e644ad"
+        },
+        {
+          "path": "originals/gxg-com-2006.json",
+          "bytes": 234,
+          "crc32": "27a3fd90",
+          "sha256": "c7a74f8eefeb63fab1dc3e1213e62b04a5594874ff6a955e2c1afe5549fdb488"
+        },
+        {
+          "path": "originals/gxg-com-home.html",
+          "bytes": 117,
+          "crc32": "43ff3aff",
+          "sha256": "26a289702adaf84a1152c94eebf6cad987c27a0bc57eb83399c6462272023b47"
+        },
+        {
+          "path": "originals/gxg-main-2006.json",
+          "bytes": 268,
+          "crc32": "84161645",
+          "sha256": "162e627feae6d8dfdc6c0f5221de54ed5ca0da60ee8ac8d6628029622848c376"
+        },
+        {
+          "path": "originals/kddi-gpang-gxg.pdf",
+          "bytes": 1935500,
+          "crc32": "458f77fe",
+          "sha256": "74be91740508d2413febeb49bb12ac20bcf233202efe5c4f2e5ba789c05dc92a"
+        }
+      ]
+    },
+    {
       "id": "dubigame-maplestory-and-skipping-stone",
       "repositoryPath": "research/archives/Dubigame-MapleStory-My-Princess-Skipping-Stone.zip",
       "bytes": 3792039,
@@ -226678,9 +227116,9 @@
     }
   ],
   "counts": {
-    "archives": 132,
-    "archiveBytes": 2532952417,
-    "fileMembers": 37581,
-    "uniqueMemberHashes": 22715
+    "archives": 134,
+    "archiveBytes": 2539585355,
+    "fileMembers": 37651,
+    "uniqueMemberHashes": 22779
   }
 }

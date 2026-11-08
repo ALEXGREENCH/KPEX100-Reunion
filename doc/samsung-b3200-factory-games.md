@@ -1,0 +1,7 @@
+# Заводские игры Samsung SPH-B3200
+
+В обзоре Cetizen от августа 2006 года показаны экран выбора и игровые сцены двух игр с датчиком движения, **Screamer** и **Gunship**. В том же обзоре видны меню заводских демоверсий и кадры **Nom 2** и **Skipping Stone 2**. У последней на снимке есть реплика про телефон Anycall. Сохранены 12 исходных JPEG, страница обзора, URL и хеши. [Обзор Cetizen](https://review.cetizen.com/review.php?pid=1207&pno=1207&q=view&qv=rview&rno=4251&vcat=5) · [Архив снимков и источников](../research/archives/Samsung-SPH-B3200-Factory-Game-Evidence.zip)
+
+В обзоре также перечислены Bomb Link, Bejeweled и игры по Bluetooth Stony и Janggi. Поиск по точному номеру модели в Internet Archive вернул руководство SPH-B3200. Образ прошивки и исполняемые файлы заводских игр в этом проходе не найдены. [Руководство Samsung](https://manualzilla.com/doc/6842479/samsung-sph-b3200-user-manual)
+
+Исторические адреса `gpang.com` и `www.gpang.co.kr` ведут на `gpang.magicn.com`, где сохранилась страница с фреймом `/main.asp`. Снимок главной GXG ведёт на `/Main/GXGMain.aspx`. Запросы обеих страниц внутри фреймов вернули HTTP 429. KDDI в отчёте 2006 года описывает GPANG и GXG как два отдельных сервиса. Снимки, ответы архива и отчёт KDDI включены в комплект. [Главная GPANG](https://web.archive.org/web/20060228075457id_/http://gpang.magicn.com:80/) · [Отчёт KDDI](https://rp.kddi-research.jp/download/report/RA2006112)
