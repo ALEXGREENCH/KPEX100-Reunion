@@ -3,6 +3,273 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "palletshipping-fullmetal-inuyasha",
+      "repositoryPath": "research/archives/Palletshipping-Fullmetal-Alchemist-and-Inuyasha-KTF.zip",
+      "bytes": 1525753,
+      "sha256": "85af389e2d60ba31380d7e29eb1825cb664b1709e38740ff4f693e21e08028a8",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/fullmetal-alchemist-ktf.sgs",
+          "bytes": 701560,
+          "crc32": "436afac8",
+          "sha256": "8a5b58ff1f5435681cd90c44360adc489cf134f9ee7aff126c34cc8e7f525a32"
+        },
+        {
+          "path": "derived/inuyasha-ktf.sgs",
+          "bytes": 621610,
+          "crc32": "63ceebbe",
+          "sha256": "c9191868f2f5923c86ef61bd77d4065ae8c358f29439472604f51613b0b8570d"
+        },
+        {
+          "path": "evidence/extraction-and-replays.json",
+          "bytes": 17391,
+          "crc32": "e28a255a",
+          "sha256": "5552617846e4de821531d3f925f2d15e58b0fd2b7cb52316b1817ab02c5f9dcc"
+        },
+        {
+          "path": "evidence/survey.json",
+          "bytes": 128497,
+          "crc32": "d8e6ef7c",
+          "sha256": "b7bff6cad58d18aede4c7a2e2bbe21503a550576c2e8c109b2fd86ce09cabee3"
+        },
+        {
+          "path": "originals/222268432266/강철의_연금술사.zip",
+          "bytes": 371439,
+          "crc32": "df25aece",
+          "sha256": "5a0fa312a793aee59d7a9cbda9f9671046e950e7b99e0c77b12f941fac28ef6e"
+        },
+        {
+          "path": "originals/222268432617/이누야샤.zip",
+          "bytes": 352178,
+          "crc32": "c3df80cc",
+          "sha256": "d5e996a531183929161da88c311dded208208dabb871b74a007c2dd9ffa415da"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-control/actions.json",
+          "bytes": 832,
+          "crc32": "8390de9f",
+          "sha256": "f2a0ef92bc266bc8b8b08682e0469cc4dd0d65dfb166f123ba82291356524707"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-control/local-fullmetal-alchemist-ktf-16-tick24.png",
+          "bytes": 8155,
+          "crc32": "63bdf460",
+          "sha256": "27d8256f6ef5ec20c998283695f8bfb20152c06e9044de91c293a6b0b731ffd6"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-control/local-fullmetal-alchemist-ktf-17-advance1200.png",
+          "bytes": 8283,
+          "crc32": "03a1287d",
+          "sha256": "f3f8e2c376b90ae4276a0169a559a1abc1fd2af25671435e06e4bef128c6f4b1"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-control/trace.json",
+          "bytes": 17683,
+          "crc32": "ec82ffe3",
+          "sha256": "3ebad15d505b6547e902286177235ab48e47e9260cad64ca6d99ea1308d3e00c"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-right/actions.json",
+          "bytes": 915,
+          "crc32": "7037fb67",
+          "sha256": "9c886457c463794d9704695e54848ae06c45b73f637768fcdd4644ad02966201"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-right/local-fullmetal-alchemist-ktf-16-tick24.png",
+          "bytes": 8155,
+          "crc32": "63bdf460",
+          "sha256": "27d8256f6ef5ec20c998283695f8bfb20152c06e9044de91c293a6b0b731ffd6"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-right/local-fullmetal-alchemist-ktf-19-release17.png",
+          "bytes": 7418,
+          "crc32": "99adf050",
+          "sha256": "86bf0c9c63a9e34ed63fdf15d8262ba480c9e0e3d23911c813478af2e4134830"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-right/trace.json",
+          "bytes": 19030,
+          "crc32": "31b030e6",
+          "sha256": "f4cbfdd04c52bc38458b12acd8cd981adcbb10e5a1b1e1a6bdbd4fe9f23e4b55"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-six/actions.json",
+          "bytes": 913,
+          "crc32": "df0c8dcb",
+          "sha256": "dfaf673981ee203d2464c117ddc4f636e4622be644c0c837cf141c52fed377a2"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-six/local-fullmetal-alchemist-ktf-16-tick24.png",
+          "bytes": 8155,
+          "crc32": "63bdf460",
+          "sha256": "27d8256f6ef5ec20c998283695f8bfb20152c06e9044de91c293a6b0b731ffd6"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-six/local-fullmetal-alchemist-ktf-19-release6.png",
+          "bytes": 7418,
+          "crc32": "99adf050",
+          "sha256": "86bf0c9c63a9e34ed63fdf15d8262ba480c9e0e3d23911c813478af2e4134830"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/battle-six/trace.json",
+          "bytes": 19024,
+          "crc32": "084e777b",
+          "sha256": "64f8243094411e7a76c72e5a37a6dc36005a8075881ea13006ebe11bef160f55"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/world/actions.json",
+          "bytes": 1735,
+          "crc32": "1b683a33",
+          "sha256": "d3045af9147900c90d42d63fb0a9170b6683ca8b261edabbcb83a66042aa4d93"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/world/local-fullmetal-alchemist-ktf-12-tick18.png",
+          "bytes": 6049,
+          "crc32": "8b1fb30e",
+          "sha256": "8fe50c391f512c73ebf3f7c8d5337eb0c806095f0fc0ced6d529d9d376044f22"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/world/local-fullmetal-alchemist-ktf-16-tick24.png",
+          "bytes": 8155,
+          "crc32": "63bdf460",
+          "sha256": "27d8256f6ef5ec20c998283695f8bfb20152c06e9044de91c293a6b0b731ffd6"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/world/local-fullmetal-alchemist-ktf-40-tick14.png",
+          "bytes": 8373,
+          "crc32": "4779b364",
+          "sha256": "ffe7d654aa9b94a32e974a8504cf64690fa087e9fbd7997cd3a51ba6a2ad20e7"
+        },
+        {
+          "path": "replays/fullmetal-alchemist-ktf/world/trace.json",
+          "bytes": 32518,
+          "crc32": "11580b94",
+          "sha256": "3843c92201c36b1ab6e34646ccd8003601008aacfa35681a6e53f0606cb86923"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-control/actions.json",
+          "bytes": 1422,
+          "crc32": "91313302",
+          "sha256": "62e1e39a3ce28ea678f3d95f008d1d8cfb34224223f7e1ce9abcb191f1bdddb9"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-control/local-inuyasha-ktf-31-tick32.png",
+          "bytes": 18546,
+          "crc32": "890774e5",
+          "sha256": "c9732418627877495567af9b73dc91b8b510b9134cdfbc6c2cff0c668e399ebe"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-control/local-inuyasha-ktf-32-advance1800.png",
+          "bytes": 18558,
+          "crc32": "0ff85410",
+          "sha256": "28bf940b7ae744f74048eddfba570e4a57aa523d709e0910156dcd79b1c21639"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-control/trace.json",
+          "bytes": 27115,
+          "crc32": "1850bd8d",
+          "sha256": "7910a93d9ed5a00971f8c9f0d6db26267bfaa55790bf5d68b186d2925f903bfb"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-input/actions.json",
+          "bytes": 1543,
+          "crc32": "e8ea285f",
+          "sha256": "add880d2e733ab6d82d5c2c4b3d3033983c902a8091ac7d2647f01efa40ac58b"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-input/local-inuyasha-ktf-31-tick32.png",
+          "bytes": 18546,
+          "crc32": "890774e5",
+          "sha256": "c9732418627877495567af9b73dc91b8b510b9134cdfbc6c2cff0c668e399ebe"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-input/local-inuyasha-ktf-35-advance900.png",
+          "bytes": 10238,
+          "crc32": "bb0ad726",
+          "sha256": "8266625733f2bd7b5f8195c773421eaf6f05a8fb1604c926ebf27fdbed68b8be"
+        },
+        {
+          "path": "replays/inuyasha-ktf/map-input/trace.json",
+          "bytes": 29025,
+          "crc32": "168137a3",
+          "sha256": "edb135af961f69fa9bfe11f6630a98b61884b507f1e6e46fa402cb3470e6421d"
+        },
+        {
+          "path": "replays/inuyasha-ktf/world/actions.json",
+          "bytes": 2009,
+          "crc32": "4dff29f2",
+          "sha256": "719b4eeb1811f0922a08d00be55d42a07420b234e4f26b0e2f8fac3edad19e4a"
+        },
+        {
+          "path": "replays/inuyasha-ktf/world/local-inuyasha-ktf-20-tick18.png",
+          "bytes": 13956,
+          "crc32": "4cdb4e7e",
+          "sha256": "e34edf1df28bd5e5fcf14063327a8fa7452a4cfe6745c29b196db711b178d2de"
+        },
+        {
+          "path": "replays/inuyasha-ktf/world/local-inuyasha-ktf-31-tick32.png",
+          "bytes": 18546,
+          "crc32": "890774e5",
+          "sha256": "c9732418627877495567af9b73dc91b8b510b9134cdfbc6c2cff0c668e399ebe"
+        },
+        {
+          "path": "replays/inuyasha-ktf/world/local-inuyasha-ktf-47-tick18.png",
+          "bytes": 10238,
+          "crc32": "bb0ad726",
+          "sha256": "8266625733f2bd7b5f8195c773421eaf6f05a8fb1604c926ebf27fdbed68b8be"
+        },
+        {
+          "path": "replays/inuyasha-ktf/world/trace.json",
+          "bytes": 36610,
+          "crc32": "215131fd",
+          "sha256": "d168aafca1449e42af19265c7255989eb5d80f519206f505e4a182fd74a2d754"
+        },
+        {
+          "path": "sources/222268432266/attachment.headers.txt",
+          "bytes": 324,
+          "crc32": "e15c0c26",
+          "sha256": "d77c358d9493b9dfa90246a2b3db4b8e4aeedd25b4e15f072b93f9b7ae14f359"
+        },
+        {
+          "path": "sources/222268432266/page.headers.txt",
+          "bytes": 362,
+          "crc32": "62d11ccd",
+          "sha256": "54f9b76aed555d6b2c52c6fcb85562e60e41a69314554fb7e504943bebc95ae1"
+        },
+        {
+          "path": "sources/222268432266/page.html",
+          "bytes": 48655,
+          "crc32": "d4bc6b62",
+          "sha256": "8289e233d5cc86c9f8c0dece34d367b53819776056ed68e31999e459a06cd11b"
+        },
+        {
+          "path": "sources/222268432617/attachment.headers.txt",
+          "bytes": 286,
+          "crc32": "a9a07f36",
+          "sha256": "1182e6e5adef8835d38257b66b7f43e9e4528781775935cd73978535ce6ad2aa"
+        },
+        {
+          "path": "sources/222268432617/page.headers.txt",
+          "bytes": 362,
+          "crc32": "6efb3183",
+          "sha256": "f674a1f1e61da9c11193fbf6140bd18f54d3a9158837afe6b67db1bf1a42ec25"
+        },
+        {
+          "path": "sources/222268432617/page.html",
+          "bytes": 48274,
+          "crc32": "fe9d7be0",
+          "sha256": "4d77915994028bfd64943607fde2a0622acf10b710b4deb6fd68e7247ecb056d"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 8651,
+          "crc32": "f841ad8f",
+          "sha256": "08f28788e9ac25ba9ab4074c845410ce39f04f6905c9cec093cf87f53336b2b0"
+        }
+      ]
+    },
+    {
       "id": "wipix-30-and-sketcher-qvga",
       "repositoryPath": "research/archives/WIPI-X-30-Games-and-Sketcher-QVGA.zip",
       "bytes": 45580462,
@@ -183547,9 +183814,9 @@
     }
   ],
   "counts": {
-    "archives": 97,
-    "archiveBytes": 1821872008,
-    "fileMembers": 30445,
-    "uniqueMemberHashes": 16675
+    "archives": 98,
+    "archiveBytes": 1823397761,
+    "fileMembers": 30488,
+    "uniqueMemberHashes": 16711
   }
 }
