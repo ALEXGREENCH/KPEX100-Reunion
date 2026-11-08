@@ -355,6 +355,13 @@ async function loadGame(game) {
     $('assetFile').click();
     return;
   }
+  const source = game.cartridgeTemplate
+    ? catalog.games.find((item) => item.id === game.cartridgeTemplate)
+    : game;
+  if (!source?.available || (game.cartridgeTemplate && !source.cartridge?.sidecar)) {
+    toast(`Для картриджа добавьте SGS «${source?.title || game.cartridgeFolder}».`);
+    return;
+  }
   audio.unlock();
   const sequence = ++loadSequence;
   const ads = game.engine === 'ads';
@@ -401,10 +408,13 @@ async function loadGame(game) {
       engine: game.engine,
       romUrl: rom?.url,
       romTitle: rom?.title,
-      gameUrl: game.url,
+      gameUrl: source.url,
       gameTitle: game.title,
       gameId: game.id,
       runtime: game.runtime,
+      cartridge: game.cartridgeTemplate
+        ? { url: game.url, filename: source.cartridge.sidecar }
+        : undefined,
       swerveUrl: game.format === 36 ? swerve.url : undefined,
       saveData,
     },

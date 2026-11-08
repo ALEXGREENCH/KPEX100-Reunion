@@ -197,24 +197,33 @@ test('cold boot fetches ROM and all supplied local/hosted games concurrently and
     diskGames: [
       { id: 'hellfire', url: 'data/hellfire.sgs' },
       { id: 'local-game', url: 'blob:local-game' },
+      { id: 'local-cart', url: 'blob:local-cart', cartridgeFolder: 'GBC' },
     ],
   });
-  assert.deepEqual(h.fetched, ['blob:rom', 'data/hellfire.sgs', 'blob:local-game']);
+  assert.deepEqual(h.fetched, [
+    'blob:rom',
+    'data/hellfire.sgs',
+    'blob:local-game',
+    'blob:local-cart',
+  ]);
   assert.equal(h.created.length, 0, 'No machine or disk is allocated before its inputs arrive');
   h.reply('data/hellfire.sgs', [10, 11]);
   h.reply('blob:local-game', [20, 21, 22]);
+  h.reply('blob:local-cart', [40, 41]);
   h.reply('blob:rom', [30, 31]);
   await loading;
   assert.deepEqual(
     Array.from(h.disks[0].files, (file) => file.name),
-    ['HELLFIRE.SGS', 'R0000001.SGS'],
+    ['HELLFIRE.SGS', 'R0000001.SGS', 'R0000002.GBC'],
   );
   assert.deepEqual(Array.from(h.disks[0].files[1].data), [20, 21, 22]);
+  assert.equal(h.disks[0].files[2].folder, 'GBC');
+  assert.deepEqual(Array.from(h.disks[0].files[2].data), [40, 41]);
   assert.equal(h.created[0].options.diskImage, h.disks[0].disk);
   assert.equal(h.created[0].options.adoptDiskImage, true);
   assert.equal(h.created[0].options.traceInstructions, false);
   await h.command({ type: 'reset', sessionId: 1 });
-  assert.equal(h.fetched.length, 3, 'Reset must reuse the downloaded originals');
+  assert.equal(h.fetched.length, 4, 'Reset must reuse the downloaded originals');
   assert.equal(h.disks.length, 2, 'Reset builds fresh writable media');
   assert.notEqual(h.disks[0].disk, h.disks[1].disk);
 });

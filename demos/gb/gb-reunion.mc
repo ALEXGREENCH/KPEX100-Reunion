@@ -164,15 +164,18 @@ void Color(int index, int attr) {
     if (index == 3) SetColorRGB(23, 57, 42);
 }
 
-void Tile(int x, int y, int offset, int attr) {
-    int row, end, bit, lo, hi, index, start, last, at, first, step, base, stride;
+void TileRun(int x, int y, int key, int count) {
+    int row, end, bit, lo, hi, index, start, last, at, first, step, base, stride, attr, tile, dx;
+    attr = key >> 10;
+    tile = key & 1023;
     first = 7;
     step = -1;
     if (attr & 32) {
         first = 0;
         step = 1;
     }
-    base = offset;
+    base = tile * 16;
+    if (tile >= 384) base += 2048;
     stride = 2;
     if (attr & 64) {
         base += 14;
@@ -192,7 +195,7 @@ void Tile(int x, int y, int offset, int attr) {
         }
         if ((lo == 0 || lo == 255) && (hi == 0 || hi == 255)) {
             Color((lo & 1) | ((hi & 1) << 1), attr);
-            FillRect(x, y + row, x + 7, y + end - 1);
+            FillRect(x, y + row, x + count * 8 - 1, y + end - 1);
             continue;
         }
         start = 0;
@@ -205,6 +208,8 @@ void Tile(int x, int y, int offset, int attr) {
             if (index != last) {
                 Color(last, attr);
                 FillRect(x + start, y + row, x + bit - 1, y + end - 1);
+                for (dx = 8; dx < count * 8; dx += 8)
+                    FillRect(x + dx + start, y + row, x + dx + bit - 1, y + end - 1);
                 start = bit;
                 last = index;
             }
@@ -257,7 +262,7 @@ void main() {
 }
 
 void EVENT_TIMEOUT() {
-    int i, x, y, tile, n, updated, map, attr, offset, version, key;
+    int i, x, y, tile, n, updated, map, attr, offset, version, key, first, count, runKey;
     if (!ready) return;
     buttons = pendingButtons;
     pendingButtons = 0;
@@ -278,6 +283,7 @@ void EVENT_TIMEOUT() {
     map = 6144;
     if (lcd & 8) map = 7168;
     for (y = paintRow; y < paintRow + 3; y++) {
+        count = 0;
         for (x = 0; x < 20; x++) {
             n = y * 20 + x;
             offset = map + y * 32 + x;
@@ -289,20 +295,28 @@ void EVENT_TIMEOUT() {
                 version = paletteVersion[attr & 7];
             }
             if (!(lcd & 16) && tile < 128) tile += 256;
-            offset = tile * 16;
-            if (attr & 8) {
-                offset += 8192;
-                tile += 384;
-            }
+            if (attr & 8) tile += 384;
             key = (attr << 10) | tile;
             version += tileVersion[tile];
-            if (seen[n] != key || seenVersion[n] != version) {
-                Tile(ox + x * 8, oy + y * 8, offset, attr);
-                seen[n] = key;
-                seenVersion[n] = version;
-                updated = 1;
+            if (seen[n] == key && seenVersion[n] == version) {
+                if (count) TileRun(ox + first * 8, oy + y * 8, runKey, count);
+                count = 0;
+                continue;
             }
+            if (count && runKey != key) {
+                TileRun(ox + first * 8, oy + y * 8, runKey, count);
+                count = 0;
+            }
+            if (!count) {
+                first = x;
+                runKey = key;
+            }
+            count++;
+            seen[n] = key;
+            seenVersion[n] = version;
+            updated = 1;
         }
+        if (count) TileRun(ox + first * 8, oy + y * 8, runKey, count);
     }
     paintRow = (paintRow + 3) % 18;
     if (updated) Flush();

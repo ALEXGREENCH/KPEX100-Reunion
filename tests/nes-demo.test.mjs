@@ -7,6 +7,7 @@ import { SgsFile } from '../web/engine/sgs.js';
 const data = (path) => readFileSync(new URL(`../web/data/${path}`, import.meta.url));
 const rom = data('firmware/Kingston-2.12.rom');
 const sgs = data('games/demo-orbital-courier.sgs');
+const neon = data('games/demo-neon-ranger.sgs');
 const NES_HEADER_LENGTH = 16;
 const NROM_128_PRG_LENGTH = 16384;
 const CHR_LENGTH = 8192;
@@ -103,6 +104,66 @@ test('Orbital Courier closes an unsupported mapper cartridge without starting a 
     assert.equal(game.vfs.diagnostics.operations, 3);
     assert.equal(game.vfs.diagnostics.openHandles, 0);
     assert.equal(game.timerStates[0].delay, null);
+  } finally {
+    game.close();
+  }
+});
+
+test('Neon Ranger boots the unmodified independent cartridge, walks, jumps and lands', async () => {
+  const cartridge = readFileSync(new URL('../demos/nes/neon-ranger/NEON.NES', import.meta.url));
+  assert.deepEqual(
+    neon.subarray(-cartridge.length).map((byte) => byte ^ 0xa5),
+    cartridge,
+  );
+  const game = await GnexRuntime.create(rom, neon, { profile: 'kpex' });
+  const ticks = (count) => {
+    for (let i = 0; i < count; i++) {
+      game.event('TIMEOUT', 0);
+      assert.equal(game.status, 'idle', game.diagnostics.error);
+      assert.equal(game.timerStates[0].delay, 20);
+    }
+  };
+  const changedBounds = (before, after) => {
+    const bounds = [220, 176, -1, -1];
+    for (let i = 0; i < 220 * 176; i++) {
+      const p = i * 4;
+      if (
+        before[p] === after[p] &&
+        before[p + 1] === after[p + 1] &&
+        before[p + 2] === after[p + 2]
+      )
+        continue;
+      const x = i % 220;
+      const y = Math.floor(i / 220);
+      bounds[0] = Math.min(bounds[0], x);
+      bounds[1] = Math.min(bounds[1], y);
+      bounds[2] = Math.max(bounds[2], x);
+      bounds[3] = Math.max(bounds[3], y);
+    }
+    return bounds;
+  };
+  try {
+    game.event('START');
+    assert.deepEqual(game.vfs.diagnostics.files, ['neon.nes']);
+    assert.equal(game.vfs.diagnostics.operations, 3);
+    assert.equal(game.vfs.diagnostics.openHandles, 0);
+    ticks(130);
+    const start = game.framebufferRGBA.slice();
+
+    game.setKey(17, true);
+    ticks(20);
+    game.setKey(17, false);
+    ticks(2);
+    const walk = game.framebufferRGBA.slice();
+    assert.deepEqual(changedBounds(start, walk), [105, 124, 129, 135]);
+
+    game.setKey(20, true);
+    ticks(5);
+    const jump = game.framebufferRGBA.slice();
+    assert.deepEqual(changedBounds(walk, jump), [120, 112, 130, 135]);
+    game.setKey(20, false);
+    ticks(45);
+    assert.deepEqual(game.framebufferRGBA, walk);
   } finally {
     game.close();
   }

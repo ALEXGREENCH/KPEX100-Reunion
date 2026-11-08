@@ -5,7 +5,7 @@ import { detectVersion } from './engine/sgs.js';
 import { TimerScheduler } from './engine/timers.js';
 import { FirmwareMachine } from './engine/firmware.js';
 import { createDisk } from './engine/disk.js';
-import { cartridgeDiskFiles } from './engine/cartridge-disk.js';
+import { cartridgeDiskFiles, replaceCartridge } from './engine/cartridge-disk.js';
 import { AdsRuntime } from './engine/ads.js';
 
 const keys = {
@@ -259,6 +259,10 @@ async function diskFiles(entries = null) {
   const groups = await Promise.all(
     jobs.map(async ({ entry, name }) => {
       const data = await fetchBytes(entry.url);
+      if (entry.cartridgeFolder)
+        return [
+          { folder: entry.cartridgeFolder, name: name.slice(0, -3) + entry.cartridgeFolder, data },
+        ];
       const files = entry.cartridge ? await cartridgeDiskFiles(entry.cartridge, data) : [];
       return [{ name, data }, ...files];
     }),
@@ -298,7 +302,7 @@ async function load(message) {
   });
   // ROM, disk files and quickstate downloads are independent. Start them
   // together, including blob URLs for originals imported in the main thread.
-  const [rom, content, swerveBinary] = await Promise.all([
+  const [rom, content, swerveBinary, cartridge] = await Promise.all([
     isAds ? undefined : fetchBytes(message.romUrl),
     mode === 'game'
       ? fetchBytes(message.gameUrl)
@@ -306,6 +310,7 @@ async function load(message) {
         ? diskFiles(message.diskGames ?? null)
         : fetchBytes(message.stateUrl),
     !isAds && message.swerveUrl ? fetchBytes(message.swerveUrl) : undefined,
+    mode === 'game' && message.cartridge ? fetchBytes(message.cartridge.url) : undefined,
   ]);
   if (isAds) {
     try {
@@ -318,7 +323,9 @@ async function load(message) {
     gameTitle = message.gameTitle || machine.title;
     syncTimer();
   } else if (mode === 'game') {
-    const game = content;
+    const game = cartridge
+      ? replaceCartridge(content, message.cartridge.filename, cartridge)
+      : content;
     const Runtime = detectVersion(game) < 4 ? LegacyRuntime : GnexRuntime;
     machine = await Runtime.create(rom, game, {
       ...message.runtime,

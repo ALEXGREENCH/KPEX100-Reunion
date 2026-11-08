@@ -5,20 +5,22 @@
 #DEFINE AUDIOTYPE 255
 #DEFINE APPTYPE 1
 #DEFINE APPCPID 100
-#DEFINE APPID 993
+#DEFINE APPID $app_id
 #DEFINE APPVER 256
-#DEFINE APPNAME "Orbital Courier"
+#DEFINE APPNAME "$title"
 #DEFINE VALIDCOUNT 255
 #DEFINE VALIDTERM 255
 %}
 
 // RP2A03/NROM and a frame-stepped PPU for the original cartridge.
 int rom[10245], ram[2048], names[2048], palettes[32], oam[256];
-int seen[520], hue[16], solid[512];
-int prgSize, chrStart, vertical, pc, sp, a, x, y, carry, nz;
+int seen[896], hue[16], solid[512], lastSprites[64];
+int prgSize, chrStart, vertical, pc, sp, a, x, y, carry, nz, overflow, irqOff, decimal, nmiPending;
 int ctrl, mask, vramAddr, addrHigh, addrLatch, oamAddr, vblank, ppuBuffer, pollPc, guestYield;
 int buttons, pending, strobe, shift;
-int ready, failed, originX, originY, paintAt, painted, paletteEpoch, lastSprite, currentColor;
+int ready, failed, originX, originY, paintAt, painted, paletteEpoch, currentColor;
+int backgroundEpoch, scannedEpoch, scanLeft;
+int viewCol, viewRow, viewCols, viewRows, tileSize, lastSpriteMode;
 
 int ROM(int offset) {
     return (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
@@ -45,12 +47,20 @@ int PpuRead(int addr) {
 }
 
 void PpuWrite(int addr, int value) {
+    int index;
     addr &= 16383;
     if (addr < 8192) return;
-    if (addr < 16128) names[NameIndex(addr)] = value;
+    if (addr < 16128) {
+        index = NameIndex(addr);
+        if (names[index] != value) {
+            names[index] = value;
+            backgroundEpoch++;
+        }
+    }
     else if (palettes[PaletteIndex(addr)] != (value & 63)) {
         palettes[PaletteIndex(addr)] = value & 63;
         paletteEpoch++;
+        backgroundEpoch++;
     }
 }
 
@@ -88,7 +98,7 @@ int CpuRead(int addr) {
 }
 
 void CpuWrite(int addr, int value) {
-    int i;
+    int i, source;
     value &= 255;
     if (addr < 8192) { ram[addr & 2047] = value; return; }
     if (addr == 16406) {
@@ -97,12 +107,26 @@ void CpuWrite(int addr, int value) {
         return;
     }
     if (addr == 16404) {
-        for (i = 0; i < 256; i++) oam[(oamAddr + i) & 255] = CpuRead(value * 256 + i);
+        source = value << 8;
+        if (source < 8192) {
+            source &= 2047;
+            if (oamAddr == 0) {
+                for (i = 0; i < 256; i++) oam[i] = ram[source + i];
+            } else {
+                for (i = 0; i < 256; i++) oam[(oamAddr + i) & 255] = ram[source + i];
+            }
+        } else {
+            for (i = 0; i < 256; i++) oam[(oamAddr + i) & 255] = CpuRead(source + i);
+        }
         return;
     }
     if (addr >= 16384) return;
     switch (addr & 7) {
-        case 0: ctrl = value; break;
+        case 0:
+            if ((value & 128) && !(ctrl & 128) && vblank) nmiPending = 1;
+            if ((value ^ ctrl) & 19) backgroundEpoch++;
+            ctrl = value;
+            break;
         case 1: mask = value; break;
         case 3: oamAddr = value; break;
         case 4: oam[oamAddr] = value; oamAddr = (oamAddr + 1) & 255; break;
@@ -148,6 +172,7 @@ void Compare(int left, int right) {
 void Add(int value) {
     int sum;
     sum = a + value + carry;
+    overflow = ((a ^ value ^ 255) & (a ^ sum) & 128) != 0;
     carry = sum > 255;
     a = sum & 255;
     nz = a;
@@ -163,8 +188,47 @@ int Pull() {
     return ram[256 + sp];
 }
 
+int IsZero() {
+    return !nz || (nz & 256);
+}
+
+int Flags() {
+    return (nz & 128) | (overflow << 6) | 32 | (decimal << 3) | (irqOff << 2) |
+           (IsZero() ? 2 : 0) | carry;
+}
+
+void RestoreFlags(int status) {
+    nz = status & 128;
+    if (status & 2) nz |= 256;
+    else nz |= 1;
+    overflow = (status >> 6) & 1;
+    decimal = (status >> 3) & 1;
+    irqOff = (status >> 2) & 1;
+    carry = status & 1;
+}
+
+void Nmi() {
+    nmiPending = 0;
+    Push(pc >> 8);
+    Push(pc);
+    Push(Flags());
+    irqOff = 1;
+    pc = CpuRead(65530) | (CpuRead(65531) << 8);
+}
+
+void Bit(int value) {
+    nz = value & 128;
+    if (!(value & a)) nz |= 256;
+    else nz |= 1;
+    overflow = (value >> 6) & 1;
+}
+
+int StatusAddress(int address) {
+    return address >= 8192 && address < 16384 && (address & 7) == 2;
+}
+
 void Step() {
-    int op, addr, value;
+    int op, addr, value, destination;
     op = Fetch();
     switch (op) {
         case 5: a |= ram[Fetch()]; nz = a; break;
@@ -177,18 +241,36 @@ void Step() {
             break;
         case 24: carry = 0; break;
         case 32: addr = Word(); value = pc - 1; Push(value >> 8); Push(value); pc = addr; break;
-        case 36: value = ram[Fetch()]; nz = (value & 128) | ((value & a) != 0); break;
+        case 36: Bit(ram[Fetch()]); break;
+        case 37: a &= ram[Fetch()]; nz = a; break;
         case 41: a &= Fetch(); nz = a; break;
+        case 44:
+            addr = Word();
+            if (StatusAddress(addr)) pollPc = pc - 3;
+            else pollPc = -1;
+            Bit(CpuRead(addr));
+            break;
         case 48: Branch(nz & 128); break;
         case 56: carry = 1; break;
+        case 64: RestoreFlags(Pull()); value = Pull(); pc = value | (Pull() << 8); break;
         case 69: a ^= ram[Fetch()]; nz = a; break;
+        case 72: Push(a); break;
         case 73: a ^= Fetch(); nz = a; break;
         case 74: carry = a & 1; a >>= 1; nz = a; break;
         case 76: pc = Word(); break;
         case 96: value = Pull(); pc = ((value | (Pull() << 8)) + 1) & 65535; break;
+        case 101: Add(ram[Fetch()]); break;
+        case 102:
+            addr = Fetch();
+            value = ram[addr] & 1;
+            ram[addr] = (ram[addr] >> 1) | (carry << 7);
+            carry = value;
+            nz = ram[addr];
+            break;
+        case 104: a = Pull(); nz = a; break;
         case 105: Add(Fetch()); break;
         case 106: value = a & 1; a = (a >> 1) | (carry << 7); carry = value; nz = a; break;
-        case 120: break;
+        case 120: irqOff = 1; break;
         case 132: ram[Fetch()] = y; break;
         case 133: ram[Fetch()] = a; break;
         case 134: ram[Fetch()] = x; break;
@@ -196,6 +278,7 @@ void Step() {
         case 138: a = x; nz = a; break;
         case 141: addr = Word(); CpuWrite(addr, a); break;
         case 144: Branch(!carry); break;
+        case 149: addr = Fetch(); ram[(addr + x) & 255] = a; break;
         case 152: a = y; nz = a; break;
         case 154: sp = x; break;
         case 157: addr = Word(); CpuWrite((addr + x) & 65535, a); break;
@@ -209,7 +292,7 @@ void Step() {
         case 170: x = a; nz = x; break;
         case 173:
             addr = Word();
-            if (addr >= 8192 && addr < 16384 && (addr & 7) == 2) pollPc = pc - 3;
+            if (StatusAddress(addr)) pollPc = pc - 3;
             else pollPc = -1;
             a = CpuRead(addr);
             nz = a;
@@ -224,15 +307,22 @@ void Step() {
         case 200: y = (y + 1) & 255; nz = y; break;
         case 201: Compare(a, Fetch()); break;
         case 202: x = (x - 1) & 255; nz = x; break;
-        case 208: Branch(nz != 0); break;
-        case 216: break;
+        case 208: Branch(!IsZero()); break;
+        case 216: decimal = 0; break;
         case 221: addr = Word(); Compare(a, CpuRead((addr + x) & 65535)); break;
         case 224: Compare(x, Fetch()); break;
         case 230: addr = Fetch(); ram[addr] = (ram[addr] + 1) & 255; nz = ram[addr]; break;
         case 232: x = (x + 1) & 255; nz = x; break;
         case 233: Add(Fetch() ^ 255); break;
         case 234: break;
-        case 240: Branch(nz == 0); break;
+        case 238: addr = Word(); nz = (CpuRead(addr) + 1) & 255; CpuWrite(addr, nz); break;
+        case 240:
+            destination = pc - 5;
+            Branch(IsZero());
+            // LDA zp / CMP zp / BEQ back has no effects until a new NMI changes RAM.
+            if ((ctrl & 128) && pc == destination &&
+                CpuRead(destination) == 165 && CpuRead(destination + 2) == 197) guestYield = 1;
+            break;
         default: failed = 1; break;
     }
 }
@@ -276,23 +366,25 @@ void DrawTile(int sx, int sy, int pattern, int pal, int flags, int sprite) {
         if (index >= 0) {
             if (index == 0) Color(palettes[0]);
             else Color(palettes[pal + index]);
-            FillRect(sx, sy, sx + 7, sy + 7);
+            FillRect(sx, sy, sx + tileSize - 1, sy + tileSize - 1);
             return;
         }
     }
-    for (row = 0; row < 8; row++) {
-        if (sy + row < originY || sy + row >= originY + 160) continue;
+    for (row = 0; row < tileSize; row++) {
+        if (sy + row < originY || sy + row >= originY + viewRows * tileSize) continue;
         scan = row;
-        if (flags & 128) scan = 7 - row;
+        if (tileSize == 6) scan += row / 3;
+        if (flags & 128) scan = 7 - scan;
         lo = ROM(chrStart + pattern + scan);
         hi = ROM(chrStart + pattern + scan + 8);
         start = 0;
         last = -1;
-        for (px = 0; px <= 8; px++) {
+        for (px = 0; px <= tileSize; px++) {
             index = -1;
-            if (px < 8 && sx + px >= originX && sx + px < originX + 208) {
-                bit = 7 - px;
-                if (flags & 64) bit = px;
+            if (px < tileSize && sx + px >= originX && sx + px < originX + viewCols * tileSize) {
+                bit = px;
+                if (tileSize == 6) bit += px / 3;
+                if (!(flags & 64)) bit = 7 - bit;
                 index = ((lo >> bit) & 1) | (((hi >> bit) & 1) << 1);
                 if (sprite && index == 0) index = -1;
             }
@@ -310,46 +402,92 @@ void DrawTile(int sx, int sy, int pattern, int pal, int flags, int sprite) {
 
 int PaintCell(int col, int row, int force) {
     int base, attr, tile, pal, key, cell;
-    if (col < 3 || col > 28 || row < 5 || row > 24) return 0;
+    if (col < viewCol || col >= viewCol + viewCols || row < viewRow || row >= viewRow + viewRows) return 0;
     base = 8192 + (ctrl & 3) * 1024;
     tile = PpuRead(base + row * 32 + col);
     attr = PpuRead(base + 960 + (row >> 2) * 8 + (col >> 2));
     pal = ((attr >> ((row & 2) * 2 + (col & 2))) & 3) * 4;
     key = (paletteEpoch << 13) | ((ctrl & 16) << 8) | (pal << 8) | tile;
-    cell = (row - 5) * 26 + col - 3;
+    cell = (row - viewRow) * viewCols + col - viewCol;
     if (!force && seen[cell] == key) return 0;
     seen[cell] = key;
-    DrawTile(originX + (col - 3) * 8, originY + (row - 5) * 8,
+    DrawTile(originX + (col - viewCol) * tileSize, originY + (row - viewRow) * tileSize,
              ((ctrl & 16) << 8) + tile * 16, pal, 0, 0);
     return 1;
 }
 
-int RestoreSprite(int signature) {
-    int col, row, sx, sy, changed;
+int RestoreSprite(int signature, int mode) {
+    int col, row, sx, sy, changed, height;
     if (signature == -1) return 0;
     sx = signature & 255;
     sy = ((signature >> 8) & 255) + 1;
+    height = 8;
+    if (mode & 32) height = 16;
     changed = 0;
-    for (row = sy >> 3; row <= (sy + 7) >> 3; row++)
+    for (row = sy >> 3; row <= (sy + height - 1) >> 3; row++)
         for (col = sx >> 3; col <= (sx + 7) >> 3; col++) changed |= PaintCell(col, row, 1);
     return changed;
 }
 
+int SpriteSignature(int offset) {
+    int sy, sx, height;
+    if (!(mask & 16)) return -1;
+    sy = oam[offset] + 1;
+    sx = oam[offset + 3];
+    height = 8;
+    if (ctrl & 32) height = 16;
+    if (sy >= 240 || sy >= (viewRow + viewRows) * 8 || sy + height <= viewRow * 8 ||
+        sx >= (viewCol + viewCols) * 8 || sx + 8 <= viewCol * 8) return -1;
+    return (oam[offset + 2] << 24) | (oam[offset + 1] << 16) | ((sy - 1) << 8) | sx;
+}
+
+void PaintSprite(int signature) {
+    int sx, sy, tile, flags, pal, pattern, top, bottom;
+    if (signature == -1) return;
+    sx = originX + (((signature & 255) - viewCol * 8) * tileSize >> 3);
+    sy = originY + ((((signature >> 8) & 255) + 1 - viewRow * 8) * tileSize >> 3);
+    tile = (signature >> 16) & 255;
+    flags = (signature >> 24) & 255;
+    pal = 16 + (flags & 3) * 4;
+    if (!(ctrl & 32)) {
+        DrawTile(sx, sy, ((ctrl & 8) << 9) + tile * 16, pal, flags, 1);
+        return;
+    }
+    pattern = ((tile & 1) << 12) + (tile & 254) * 16;
+    top = pattern;
+    bottom = pattern + 16;
+    if (flags & 128) { top = pattern + 16; bottom = pattern; }
+    DrawTile(sx, sy, top, pal, flags, 1);
+    DrawTile(sx, sy + tileSize, bottom, pal, flags, 1);
+}
+
 void Paint() {
-    int row, col, changed, signature, scanned, drawn;
+    int row, col, changed, signature, scanned, drawn, i, mode;
     if (!(mask & 8)) return;
-    signature = -1;
-    if (mask & 16) signature = oam[0] * 256 + oam[3] + (oam[1] << 16) + (oam[2] << 24);
-    changed = signature != lastSprite;
-    if (painted && changed) changed |= RestoreSprite(lastSprite);
-    lastSprite = signature;
+    mode = ctrl & 40;
+    changed = 0;
+    for (i = 0; i < 64; i++) {
+        if (oam[i * 4] >= 239 && lastSprites[i] == -1) continue;
+        signature = SpriteSignature(i * 4);
+        if (signature != lastSprites[i] || (signature != -1 && mode != lastSpriteMode)) {
+            changed = 1;
+            if (painted) changed |= RestoreSprite(lastSprites[i], lastSpriteMode);
+            lastSprites[i] = signature;
+        }
+    }
+    lastSpriteMode = mode;
+    if (scannedEpoch != backgroundEpoch) {
+        scannedEpoch = backgroundEpoch;
+        scanLeft = viewRows * viewCols;
+    }
     drawn = 0;
-    for (scanned = 0; scanned < 52 && drawn < 12; scanned++) {
-        row = 5 + paintAt / 26;
-        col = 3 + paintAt % 26;
+    for (scanned = 0; scanLeft > 0 && scanned < 52 && drawn < 12; scanned++) {
+        row = viewRow + paintAt / viewCols;
+        col = viewCol + paintAt % viewCols;
         drawn += PaintCell(col, row, 0);
         paintAt++;
-        if (paintAt == 520) {
+        scanLeft--;
+        if (paintAt == viewRows * viewCols) {
             paintAt = 0;
             if (!painted) {
                 painted = 1;
@@ -359,9 +497,8 @@ void Paint() {
     }
     changed |= drawn;
     if (!painted || !changed) return;
-    if (signature != -1)
-        DrawTile(originX + oam[3] - 24, originY + oam[0] + 1 - 40,
-                 ((ctrl & 8) << 9) + oam[1] * 16, 16 + (oam[2] & 3) * 4, oam[2], 1);
+    // Lower OAM indexes appear in front when sprites overlap.
+    for (i = 63; i >= 0; i--) if (lastSprites[i] != -1) PaintSprite(lastSprites[i]);
     Flush();
 }
 
@@ -371,6 +508,9 @@ int Key(int code) {
     if (code == 19) return 32;
     if (code == 18) return 16;
     if (code == 20) return 1;
+    if (code == 10) return 2;
+    if (code == 21) return 8;
+    if (code == 11) return 4;
     return 0;
 }
 
@@ -379,14 +519,14 @@ void Status(int error) {
     FillRect(0, 0, swWidth - 1, swHeight - 1);
     SetColorRGB(98, 193, 245);
     if (error) DrawStr(8, 6, "NES: unsupported cartridge");
-    else DrawStr(26, 64, "ORBITAL COURIER / LOADING");
+    else DrawStr(26, 64, "$loading");
     Flush();
 }
 
 void main() {
     int file, count, i;
     Status(0);
-    file = FileOpen("ORBITAL.NES", 3);
+    file = FileOpen("$cart_name", 3);
     count = 0;
     if (file >= 0) {
         count = FileReadInt(file, &rom[0], 10245);
@@ -394,23 +534,30 @@ void main() {
     }
     prgSize = ROM(4) * 16384;
     chrStart = 16 + prgSize;
-    if (swWidth < 208 || swHeight < 160 || ROM(0) != 78 || ROM(1) != 69 ||
+    viewCol = $view_col;
+    viewRow = $view_row;
+    viewCols = $view_cols;
+    viewRows = $view_rows;
+    tileSize = $tile_size;
+    if (swWidth < viewCols * tileSize || swHeight < viewRows * tileSize || ROM(0) != 78 || ROM(1) != 69 ||
         ROM(2) != 83 || ROM(3) != 26 || (ROM(4) != 1 && ROM(4) != 2) || ROM(5) != 1 ||
         (ROM(6) & 254) || ROM(7) || count != chrStart + 8192) {
         Status(1);
         return;
     }
     vertical = ROM(6) & 1;
-    originX = (swWidth - 208) / 2;
-    originY = (swHeight - 160) / 2;
-    for (i = 0; i < 520; i++) seen[i] = -1;
+    originX = (swWidth - viewCols * tileSize) / 2;
+    originY = (swHeight - viewRows * tileSize) / 2;
+    for (i = 0; i < viewCols * viewRows; i++) seen[i] = -1;
+    scannedEpoch = -1;
+    for (i = 0; i < 64; i++) lastSprites[i] = -1;
     hue[0] = 0xe5f0ff; hue[1] = 0x528fff; hue[2] = 0x7d6cff; hue[3] = 0xb24aff;
     hue[4] = 0xdf5eda; hue[5] = 0xff658e; hue[6] = 0xff704f; hue[7] = 0xffcb4f;
     hue[8] = 0xd9ca52; hue[9] = 0x87d351; hue[10] = 0x55df99; hue[11] = 0x3adcc9;
     hue[12] = 0x42c2f2;
     pc = CpuRead(65532) | (CpuRead(65533) << 8);
     sp = 253;
-    lastSprite = -1;
+    irqOff = 1;
     pollPc = -1;
     currentColor = -1;
     ready = 1;
@@ -422,11 +569,17 @@ void EVENT_TIMEOUT() {
     if (!ready) return;
     held = GetKeyState();
     buttons = pending;
-    for (i = 16; i <= 20; i++) if (held & (1 << i)) buttons |= Key(i);
+    if (held & (1 << 10)) buttons |= 2;
+    if (held & (1 << 11)) buttons |= 4;
+    for (i = 16; i <= 21; i++) if (held & (1 << i)) buttons |= Key(i);
     pending = 0;
     vblank = 128;
+    if (ctrl & 128) nmiPending = 1;
     guestYield = 0;
-    for (i = 0; i < 384 && !failed && !guestYield; i++) Step();
+    for (i = 0; i < 384 && !failed && !guestYield; i++) {
+        if (nmiPending) Nmi();
+        Step();
+    }
     if (failed) {
         ResetTimer();
         Status(1);

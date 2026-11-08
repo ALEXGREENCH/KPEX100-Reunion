@@ -26,6 +26,37 @@ export function assetCatalog(data, availableIds = []) {
   );
 }
 
+function cartridgeFormat(name, bytes) {
+  const raw = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
+  if (/\.gbc?$/i.test(name)) {
+    if (raw.length !== 32768 || raw[0x147] !== 0 || raw[0x148] !== 0)
+      throw Error(`${name}: нужен 32-КиБ картридж Game Boy без контроллера банков.`);
+    return raw[0x143] & 128 ? 'GBC' : 'GB';
+  }
+  if (/\.nes$/i.test(name)) {
+    if (
+      raw[0] !== 78 ||
+      raw[1] !== 69 ||
+      raw[2] !== 83 ||
+      raw[3] !== 26 ||
+      ![1, 2].includes(raw[4]) ||
+      raw[5] !== 1 ||
+      raw[6] & 254 ||
+      raw[7] !== 0 ||
+      raw.length !== 16 + raw[4] * 16384 + 8192
+    )
+      throw Error(`${name}: нужен iNES mapper 0 с PRG 16/32 КиБ и CHR 8 КиБ.`);
+    return 'NES';
+  }
+  if (
+    raw.length !== 32768 ||
+    new TextDecoder().decode(raw.subarray(0x7ff0, 0x7ff8)) !== 'TMR SEGA' ||
+    ![0x5c, 0x6c, 0x7c].includes(raw[0x7fff])
+  )
+    throw Error(`${name}: нужен 32-КиБ картридж Game Gear с заголовком TMR SEGA.`);
+  return 'GG';
+}
+
 // Match bytes before filenames. Renaming an original must never lose its device profile.
 export function identifyAsset(catalog, name, bytes, digest) {
   if (bytes.byteLength === 0 || bytes.byteLength > MAX_ASSET_BYTES)
@@ -37,11 +68,32 @@ export function identifyAsset(catalog, name, bytes, digest) {
   if (digest === SWERVE.sha256) return { kind: 'swerve', entry: { ...SWERVE } };
   const entry = {
     id: `local-${digest}`,
-    title: name.replace(/\.(sgs|rom|bin)$/i, ''),
+    title: name.replace(/\.(sgs|rom|bin|gbc?|nes|gg)$/i, ''),
     sha256: digest,
     bytes: bytes.byteLength,
     compatibility: 'research',
   };
+  if (/\.(gbc?|nes|gg)$/i.test(name)) {
+    const folder = cartridgeFormat(name, bytes);
+    const templates = {
+      GB: 'demo-pocket-lab',
+      GBC: 'demo-prism-relay',
+      NES: 'demo-orbital-courier',
+      GG: 'demo-prism-vault',
+    };
+    return {
+      kind: 'games',
+      entry: {
+        ...entry,
+        format: 4,
+        platform: 'kpex',
+        runtime: { profile: 'kpex' },
+        cartridgeTemplate: templates[folder],
+        cartridgeFolder: folder,
+        startHint: 'Локальный картридж. Поддержка зависит от его команд и видеорежима.',
+      },
+    };
+  }
   if (/\.sgs$/i.test(name)) {
     const raw = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
     const format = detectVersion(raw);
@@ -67,5 +119,5 @@ export function identifyAsset(catalog, name, bytes, digest) {
     throw Error(`${name}: это состояние не входит в проверенный каталог Kingston 2.12.`);
   if (/\.mbin$/i.test(name))
     throw Error(`${name}: эта версия игры Anycall отсутствует в проверенном каталоге.`);
-  throw Error(`${name}: выберите ROM, SGS, проверенный MBIN, swv21brew.mod или состояние Reunion.`);
+  throw Error(`${name}: выберите SGS, ROM, GB/GBC/NES/GG, проверенный MBIN или состояние Reunion.`);
 }

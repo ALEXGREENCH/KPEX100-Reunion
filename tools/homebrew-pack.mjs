@@ -15,7 +15,8 @@ export async function buildHomebrewPack(webRoot) {
       'Reunion homebrew for Kingston K-PEX 100\r\n' +
         'Merge the GAME folder into the player storage. Keep the SGS launchers and their flat\r\n' +
         'cartridges together. The NES, GB, GBC and GG folders hold separate cartridge copies.\r\n' +
-        'Use a launcher from the GAME menu. Compatibility and build sources:\r\n' +
+        'Use a launcher from the GAME menu. LICENSE.txt covers Reunion; see LICENSES for\r\n' +
+        'third-party ROMs. Compatibility and build sources:\r\n' +
         'https://github.com/ALEXGREENCH/KPEX100-Reunion/tree/main/demos/kpex\r\n',
     ),
     'LICENSE.txt': new Uint8Array(fs.readFileSync(path.join(root, 'LICENSE'))),
@@ -31,6 +32,15 @@ export async function buildHomebrewPack(webRoot) {
     add('GAME/' + entry.cartridge.launcher, bytes);
     for (const file of cartridgeFiles)
       add('GAME/' + (file.folder ? file.folder + '/' : '') + file.name, file.data);
+    if (entry.cartridge.licenseFile) {
+      const license = path.resolve(root, entry.cartridge.licenseFile);
+      if (!license.startsWith(path.join(root, 'demos') + path.sep))
+        throw Error('Invalid homebrew license path: ' + entry.id);
+      add(
+        'LICENSES/' + entry.cartridge.launcher.replace(/\.SGS$/, '.txt'),
+        fs.readFileSync(license),
+      );
+    }
   }
   return zipSync(files, { mtime: new Date(2026, 10, 8) });
 }

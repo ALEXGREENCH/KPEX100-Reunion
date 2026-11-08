@@ -1,15 +1,18 @@
-"""Build Orbital Courier, an original NROM-128 NES game inside an SGS."""
+"""Build Reunion's NES NROM SGS demos."""
 
 import argparse
 from pathlib import Path
+from string import Template
 from struct import pack
 import sys
+from tempfile import TemporaryDirectory
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from sgs_build import build_sgs, encode_kpex, pack_vfs  # noqa: E402
 
 
-SOURCE = Path(__file__).with_name("orbital-courier.mc")
+HERE = Path(__file__).resolve().parent
+SOURCE = HERE / "nrom.mc.in"
 NAME = b"NES\x1a"
 MAP = 0x8800
 PALETTE = 0x8C00
@@ -438,26 +441,67 @@ def check_cartridge(rom):
         )
 
 
+def build_container(sdk, cart, neon_ranger, plain=False):
+    if neon_ranger:
+        title, app_id, filename, viewport = (
+            "Neon Ranger",
+            996,
+            "NEON.NES",
+            (0, 2, 32, 28, 6),
+        )
+    else:
+        title, app_id, filename, viewport = (
+            "Orbital Courier",
+            993,
+            "ORBITAL.NES",
+            (3, 5, 26, 20, 8),
+        )
+    col, row, cols, rows, size = viewport
+    script = Template(SOURCE.read_text(encoding="ascii")).substitute(
+        title=title,
+        app_id=app_id,
+        loading=f"{title.upper()} / LOADING",
+        cart_name=filename,
+        view_col=col,
+        view_row=row,
+        view_cols=cols,
+        view_rows=rows,
+        tile_size=size,
+    )
+    with TemporaryDirectory(prefix="reunion-nes-") as directory:
+        source = Path(directory) / "nrom.mc"
+        source.write_text(script, encoding="ascii")
+        packaged = pack_vfs(build_sgs(sdk, source), {filename: cart})
+    return packaged if plain else encode_kpex(packaged)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sdk", type=Path, help="extracted Sinjisoft SDK 2.12 tools")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
+    parser.add_argument("--neon-ranger", action="store_true", help="build Neon Ranger")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--cart", type=Path, help="optional iNES mapper-0 test cartridge")
     mode.add_argument(
         "--rom-only", action="store_true", help="write the original NES cartridge"
     )
     args = parser.parse_args()
-    rom = args.cart.read_bytes() if args.cart else demo_cartridge()
+    if args.cart:
+        rom = args.cart.read_bytes()
+    elif args.neon_ranger:
+        rom = (HERE / "neon-ranger" / "NEON.NES").read_bytes()
+    else:
+        rom = demo_cartridge()
     check_cartridge(rom)
     if args.rom_only:
         args.output.write_bytes(rom)
     else:
         if not args.sdk:
             parser.error("--sdk is required to build an SGS")
-        packaged = pack_vfs(build_sgs(args.sdk, SOURCE), {"ORBITAL.NES": rom})
-        args.output.write_bytes(packaged if args.plain else encode_kpex(packaged))
+        args.output.write_bytes(
+            build_container(args.sdk, rom, args.neon_ranger, args.plain)
+        )
 
 
 if __name__ == "__main__":

@@ -86,3 +86,39 @@ test('upload digest uses the actual byte view, including offset and length', asy
     'ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',
   );
 });
+
+test('raw cartridges choose the matching GNEX interpreter and reject incompatible headers', () => {
+  const catalog = assetCatalog(source);
+  const gb = new Uint8Array(32768);
+  const nes = new Uint8Array(16 + 16384 + 8192);
+  const gg = new Uint8Array(32768);
+  nes.set([78, 69, 83, 26, 1, 1, 1, 0]);
+  gg.set(new TextEncoder().encode('TMR SEGA'), 0x7ff0);
+  gg[0x7fff] = 0x6c;
+  for (const [file, bytes, folder, template] of [
+    ['custom.gb', gb, 'GB', 'demo-pocket-lab'],
+    ['custom.nes', nes, 'NES', 'demo-orbital-courier'],
+    ['custom.gg', gg, 'GG', 'demo-prism-vault'],
+  ]) {
+    const { kind, entry } = identifyAsset(catalog, file, bytes, 'a'.repeat(64));
+    assert.equal(kind, 'games');
+    assert.equal(entry.title, 'custom');
+    assert.equal(entry.cartridgeFolder, folder);
+    assert.equal(entry.cartridgeTemplate, template);
+    assert.equal(entry.runtime.profile, 'kpex');
+  }
+  gb[0x143] = 0x80;
+  assert.equal(
+    identifyAsset(catalog, 'dual.gb', gb, 'a'.repeat(64)).entry.cartridgeTemplate,
+    'demo-prism-relay',
+  );
+  gb[0x147] = 1;
+  nes[6] = 0x10;
+  gg[0x7fff] = 0;
+  for (const [file, bytes] of [
+    ['custom.gbc', gb],
+    ['custom.nes', nes],
+    ['custom.gg', gg],
+  ])
+    assert.throws(() => identifyAsset(catalog, file, bytes, 'a'.repeat(64)));
+});
