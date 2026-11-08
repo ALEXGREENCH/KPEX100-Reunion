@@ -3,6 +3,159 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "kraze-emule-ktf-brew",
+      "repositoryPath": "research/archives/Kraze-eMule-KTF-BREW-Original-Collection.zip",
+      "bytes": 49349060,
+      "sha256": "03c633e7a891ac55b6bea649045907d175f27bc6637033417a04c0f29cccfd46",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/comparison.json",
+          "bytes": 18962,
+          "crc32": "94d9f8a7",
+          "sha256": "34055c0da2b35ae7eb9465e0ffa3e499984dbc6a24e6ec51300a5702e55071eb"
+        },
+        {
+          "path": "evidence/damaged-archives.json",
+          "bytes": 4778,
+          "crc32": "9e4cc34e",
+          "sha256": "d194b24f9434241f9c08550e79d9fde98490e7d2d41439199424a3351884e46a"
+        },
+        {
+          "path": "evidence/http-ranges.json",
+          "bytes": 8095,
+          "crc32": "bcfcde71",
+          "sha256": "a5651c2f315ce5c3d4d2d2ef61404c84704620255c5a2b19ef85c0f29ae3e1be"
+        },
+        {
+          "path": "evidence/inspection.json",
+          "bytes": 556302,
+          "crc32": "967ea203",
+          "sha256": "c454c8aa5565c29b6a433f69147d7b300834ec485b35e2aafc42bf128f4b05b5"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 584,
+          "crc32": "ebf2a8d5",
+          "sha256": "6205b657b33d6824e1cbf9fa3a88b6759d3e59efd8b35bd37096f9359ba04556"
+        },
+        {
+          "path": "evidence/upstream-identity.json",
+          "bytes": 985,
+          "crc32": "0e17501d",
+          "sha256": "7bdc3068757dfc53fb1b533dced9d6ef8085aed96966e7fbfef486b22eaaf0c8"
+        },
+        {
+          "path": "originals/ktf.모바일.핸드폰.휴대폰.게임.game.멀티팩.qpst.게임설명서포함.zip",
+          "bytes": 49081055,
+          "crc32": "deae8992",
+          "sha256": "6526ae924553884c0b3a2aea52f8195771a6aca4aba3afec8d971c0d7ead2ab4"
+        },
+        {
+          "path": "references/Super-Robot-Tactics-3-Dubigame.zip",
+          "bytes": 132684,
+          "crc32": "8b9c8520",
+          "sha256": "4673aab7e9a7543d8196d9ed25f419d3b37ac0b22f712f93c8bbb97b5be747eb"
+        },
+        {
+          "path": "sources/archive-metadata.json",
+          "bytes": 2058,
+          "crc32": "fca859d9",
+          "sha256": "3de997e48390b328ea3d2f479131d4bc5c647656fbfe3207a0a26cfc0e4902a9"
+        },
+        {
+          "path": "sources/initial-transfer.headers.txt",
+          "bytes": 1108,
+          "crc32": "7de997a9",
+          "sha256": "9df46858c023e7cfbca89fbeddab3f0cb8449d8bb12c45b97cd7041f539b93ee"
+        },
+        {
+          "path": "sources/kraze-0-6999999.headers.txt",
+          "bytes": 229,
+          "crc32": "35534f3b",
+          "sha256": "88133eee2653d886a65bfd6c7e0cd074a8db3d5d6fac3eac2c9e26133c370314"
+        },
+        {
+          "path": "sources/kraze-14000000-20999999.headers.txt",
+          "bytes": 237,
+          "crc32": "a74fa269",
+          "sha256": "8991b545b1e95a60c5a2521d094e6bfb8eba74f647112bc41498434856db797b"
+        },
+        {
+          "path": "sources/kraze-21000000-27999999.headers.txt",
+          "bytes": 237,
+          "crc32": "f9c0c3a8",
+          "sha256": "50782321ee3466e4e00f1dcdc68201f6dfd8ddc7314cf4f059d9f8ed0f1e0731"
+        },
+        {
+          "path": "sources/kraze-28000000-34999999.headers.txt",
+          "bytes": 237,
+          "crc32": "b0f2bcbb",
+          "sha256": "7d45f03abd6a5c1d2317f195a640a2499ddd3ffae30469edcee2cefb1c2a15a3"
+        },
+        {
+          "path": "sources/kraze-35000000-36999999.headers.txt",
+          "bytes": 237,
+          "crc32": "b430e200",
+          "sha256": "e20d29a4e21dc7c3045cf0b4cead53c80fcc262e8a76e71a5e035e9ddb6897b7"
+        },
+        {
+          "path": "sources/kraze-37000000-38999999.headers.txt",
+          "bytes": 237,
+          "crc32": "e05e51f9",
+          "sha256": "77dd44ae07c438085475d1899a6cf0d32f21a0f88809672969ab9931ee596438"
+        },
+        {
+          "path": "sources/kraze-39000000-40999999.headers.txt",
+          "bytes": 237,
+          "crc32": "8d97e40e",
+          "sha256": "529054dd6e954b8f73f2bd12e188c224fbb433d50988c55aae6637264190e399"
+        },
+        {
+          "path": "sources/kraze-41000000-42999999.headers.txt",
+          "bytes": 237,
+          "crc32": "de571ff3",
+          "sha256": "9f810df0386a1b7861b685b39970bab8a21236a4fad05b2bd6d16861bbfe02e1"
+        },
+        {
+          "path": "sources/kraze-43000000-44999999.headers.txt",
+          "bytes": 237,
+          "crc32": "6c29e394",
+          "sha256": "29372ab09c83f9b1c3ce5c9b4510463aba6c2c6466ec01da244b6cafa623ead1"
+        },
+        {
+          "path": "sources/kraze-45000000-46999999.headers.txt",
+          "bytes": 237,
+          "crc32": "87cbaee2",
+          "sha256": "716054fe10059e9cc8bc089cd006e1f071a1e0b3182c216eb72b87d2d6b136ca"
+        },
+        {
+          "path": "sources/kraze-47000000-48999999.headers.txt",
+          "bytes": 237,
+          "crc32": "d3a51d1b",
+          "sha256": "341026114849274c4cf750e80499e91f2cd667b3238e302235fd2942d98ce054"
+        },
+        {
+          "path": "sources/kraze-49000000-49081054.headers.txt",
+          "bytes": 235,
+          "crc32": "864463f5",
+          "sha256": "9cef8b1c95c3efe0a6e918e0e5a968e5f8c2db3298cbcbd64890e1f340257d86"
+        },
+        {
+          "path": "sources/kraze-7000000-13999999.headers.txt",
+          "bytes": 236,
+          "crc32": "305f9378",
+          "sha256": "a4e61f8bff14c7b7db46064dd0ea9982e6be75e574419eb8a28e9dc5bd1b89de"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4358,
+          "crc32": "ed493689",
+          "sha256": "cdc984f9d805585061e1462924eb772c33cbb650bdffe3501123480cb29d87a9"
+        }
+      ]
+    },
+    {
       "id": "dubigame-ktf-brew-358",
       "repositoryPath": "research/archives/Dubigame-KTF-BREW-358-Original-Collection.zip",
       "bytes": 96780849,
@@ -212980,9 +213133,9 @@
     }
   ],
   "counts": {
-    "archives": 118,
-    "archiveBytes": 2404424410,
-    "fileMembers": 35319,
-    "uniqueMemberHashes": 20575
+    "archives": 119,
+    "archiveBytes": 2453773470,
+    "fileMembers": 35343,
+    "uniqueMemberHashes": 20599
   }
 }
