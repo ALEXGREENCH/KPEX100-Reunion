@@ -7,11 +7,11 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-The collection includes 9 firmware images, 120 SGS applications, 21 Anycall ADS games, 3 quick-start
+The collection includes 9 firmware images, 121 SGS applications, 21 Anycall ADS games, 3 quick-start
 snapshots and the original Swerve 2.1 module. The catalogue records SHA-256
 hashes and tested runtime profiles.
 
-A Kingston cold boot adds 17 homebrew games to the virtual FAT16 storage, with SGS launchers and ROM collections under `GAME/GB`, `GAME/GBC`, `GAME/NES`, and `GAME/GG`.
+A Kingston cold boot adds 18 homebrew games to the virtual FAT16 storage, with SGS launchers and ROM collections under `GAME/GB`, `GAME/GBC`, `GAME/NES`, and `GAME/GG`.
 [Player pack and instructions](demos/kpex/README.md).
 
 Eighteen Samsung Anycall games launch from the browser library using their original MBIN files and embedded SMAF audio. Each has a gameplay and input check. Timers, palette and synthesized timbres are approximate. ADS saves currently last for the active session. [Anycall controls and source archives](doc/samsung-anycall-ads-mbin.md#запуск-в-браузере)

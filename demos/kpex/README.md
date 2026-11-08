@@ -29,6 +29,7 @@
 | `PULSE.SGS`   | `PULSE.GGR`          | `GG/PULSE.GG`     | [Pulse Relay](../gg/README.md)                          |
 | `COIL.SGS`    | `COIL.GGR`           | `GG/COIL.GG`      | [Coil Runner](../gg/README.md)                          |
 | `FREIGHT.SGS` | `FREIGHT.GGR`        | `GG/FREIGHT.GG`   | [Freight Shift](../gg/README.md)                        |
+| `PETRIS.SGS`  | `PETRIS.GGR`         | `GG/PETRIS.GG`    | [Petris](../gg/petris/README.md)                        |
 
 У оригинальной Kingston 2.12 загрузчик SGS принимает XOR `0xA5`. В полном запуске `FileOpen` ищет плоское имя в `GAME`. Проверка с `GAME/GBC/PRISM.GBC` дала ошибку смены каталога. Короткое расширение `.GB` также не прошло сравнение имени в FAT. Для запуска используется трёхбуквенное `.GBR`. Обе копии каждого картриджа совпадают побайтно.
 

@@ -1885,6 +1885,35 @@
       "provenance": "Original Reunion Z80 crate puzzle with four rooms and a 32-step undo history."
     },
     {
+      "id": "demo-petris",
+      "title": "Petris · Game Gear на GNEX",
+      "nativeTitle": "Petris",
+      "url": "data/games/demo-petris.sgs",
+      "sha256": "5245cacd3885f191a8921136cabf2a9ffa27f1fe1091f94de52eea8970370e78",
+      "bytes": 164251,
+      "format": 4,
+      "resources": 4,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": { "profile": "kpex" },
+      "cartridge": {
+        "path": "GG/PETRIS.GG",
+        "sidecar": "PETRIS.GGR",
+        "launcher": "PETRIS.SGS",
+        "sha256": "2de507b5708cc66020a700e3f4674216cb3374fc5d39369da86221bb34a07ba9",
+        "licenseFile": "demos/gg/petris/LICENSE.txt",
+        "sourceArchive": {
+          "url": "demos/gg/petris/upstream-source.zip",
+          "sha256": "9a33e8900830f03daab3da0e9f6a9dae3279562a101ba142f29a89701829e04a",
+          "bytes": 2250480
+        }
+      },
+      "startHint": "Play открывает настройки, Select выбирает. На поле стрелки двигают фигуру и ускоряют падение, Select поворачивает вправо.",
+      "sourceUrl": "https://bbbbbr.itch.io/petris",
+      "provenance": "Unmodified 32 KiB Game Gear 1.1 beta cartridge by bbbbbr, verified against the pinned upstream source archive. CC BY-NC-SA 4.0."
+    },
+    {
       "id": "demo-gnex-benchmark",
       "title": "GNEX Bench",
       "nativeTitle": "GNEX Bench",

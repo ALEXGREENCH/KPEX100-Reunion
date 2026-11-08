@@ -80,3 +80,7 @@ python demos/gg/build.py --coil-runner --sdk C:/path/to/sdk --output COIL.SGS
 ```
 
 Для Kingston 2.12 скопируйте [COIL.SGS](../../web/data/games/demo-coil-runner.sgs) и картридж под именем `COIL.GGR` в папку `GAME`. В прямом режиме Reunion читает тот же ROM из SGS.
+
+## Petris
+
+Лаунчер исполняет оригинальный картридж Game Gear bbbbbr. [Управление, сборка и исходники](petris/README.md)

@@ -2,6 +2,7 @@
 
 import argparse
 from pathlib import Path
+from hashlib import sha256
 from struct import pack
 import sys
 from tempfile import TemporaryDirectory
@@ -505,7 +506,27 @@ def main():
     examples.add_argument(
         "--coil-runner", action="store_true", help="build Coil Runner"
     )
+    examples.add_argument(
+        "--petris", action="store_true", help="build the Petris launcher"
+    )
     args = parser.parse_args()
+    if args.petris:
+        if args.cart:
+            parser.error("Petris uses the preserved Game Gear cartridge")
+        directory = Path(__file__).with_name("petris")
+        cart = (directory / "PETRIS.GG").read_bytes()
+        if sha256(cart).hexdigest() != (
+            "2de507b5708cc66020a700e3f4674216cb3374fc5d39369da86221bb34a07ba9"
+        ):
+            raise ValueError("Unexpected Petris cartridge")
+        if args.rom_only:
+            args.output.write_bytes(cart)
+        else:
+            if not args.sdk:
+                parser.error("--sdk is required for SGS output")
+            app = build_sgs(args.sdk, directory / "petris.mc")
+            args.output.write_bytes(encode_kpex(pack_vfs(app, {"PETRIS.GGR": cart})))
+        return
     variant = None
     if args.signal_breaker:
         variant = ("Signal Breaker", "BREAKER.GGR", 1002, breaker_cartridge)
