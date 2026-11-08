@@ -25,11 +25,14 @@ const aliases = {
   godori: 'GODORI.SGS',
 };
 let ordinal = 0;
-const games = catalog.games.map((game, index) => ({
-  name:
-    aliases[game.id] || `R${String(mode === 'all-roms' ? index : ++ordinal).padStart(7, '0')}.SGS`,
-  data: asset(game.url),
-}));
+const games = catalog.games
+  .filter((game) => game.engine !== 'ads')
+  .map((game, index) => ({
+    name:
+      aliases[game.id] ||
+      `R${String(mode === 'all-roms' ? index : ++ordinal).padStart(7, '0')}.SGS`,
+    data: asset(game.url),
+  }));
 const hash = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const versions = await Promise.all(
   [path.resolve(reference), root].map(async (dir) => {

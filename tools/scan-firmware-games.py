@@ -200,6 +200,8 @@ def extract_hits(raw, hits, directory):
 def check_controls(catalog):
     records = []
     for game in catalog["games"]:
+        if game.get("engine") == "ads":
+            continue
         raw = read_input(ROOT / "web" / game["url"])
         if digest(raw) != game["sha256"]:
             raise ValueError("Control checksum mismatch: " + game["id"])

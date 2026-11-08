@@ -4,6 +4,7 @@ import { detectVersion } from './engine/sgs.js';
 import { TimerScheduler } from './engine/timers.js';
 import { FirmwareMachine } from './engine/firmware.js';
 import { createDisk } from './engine/disk.js';
+import { AdsRuntime } from './engine/ads.js';
 
 const keys = {
   left: 0x10,
@@ -37,12 +38,25 @@ const phoneKeys = {
   digit0: 0x0a,
 };
 for (let digit = 1; digit <= 9; digit++) phoneKeys['digit' + digit] = digit;
+const adsKeys = {
+  left: 10,
+  right: 11,
+  up: 12,
+  down: 13,
+  a: 19,
+  start: 19,
+  select: 19,
+  play: 19,
+};
+for (let digit = 0; digit <= 9; digit++) adsKeys['digit' + digit] = digit;
 const cache = new Map(),
   saves = new Map(),
   nativeStarts = new Map(),
-  nativeReleases = new Map();
+  nativeReleases = new Map(),
+  adsHeld = new Map();
 let machine = null,
   mode = 'none',
+  isAds = false,
   running = false,
   lastLoad = null,
   gameId = null,
@@ -56,6 +70,7 @@ let timers = new TimerScheduler(),
   lastStatus = 0,
   firmwareBudget = 100000;
 const frameInterval = 1000 / 60;
+const adsTimers = [{ channel: 0, delay: frameInterval, repeat: true, revision: 1 }];
 let queue = Promise.resolve();
 let activeSession = null;
 function emit(message, transfers = []) {
@@ -145,13 +160,35 @@ function fail(error) {
   frame(true);
 }
 function syncTimer(firedChannel = null, now = performance.now()) {
-  if (mode === 'game') timers.sync(machine.timerStates, now, firedChannel);
+  if (mode === 'game') timers.sync(isAds ? adsTimers : machine.timerStates, now, firedChannel);
 }
 function fireTimer(channel) {
   const started = performance.now();
-  machine.event('TIMEOUT', channel);
+  if (isAds) machine.tick();
+  else machine.event('TIMEOUT', channel);
   // Guest execution consumes the interval; do not add another full delay after it.
   syncTimer(channel, started);
+}
+function setAdsKey(key, pressed, repeat) {
+  const code = adsKeys[key];
+  if (!Number.isInteger(code)) return;
+  // Multiple confirmation actions can address the same guest key.
+  const aliases = adsHeld.get(code);
+  if (pressed && running) {
+    if (!aliases) {
+      adsHeld.set(code, new Set([key]));
+      machine.setKey(code, true);
+    } else if (aliases.has(key)) {
+      if (repeat) machine.setKey(code, true, true);
+    } else aliases.add(key);
+  } else if (!pressed && aliases?.delete(key) && !aliases.size) {
+    adsHeld.delete(code);
+    machine.setKey(code, false);
+  }
+}
+function releaseAds() {
+  adsHeld.clear();
+  machine.releaseKeys();
 }
 function checkState() {
   if (['blocked', 'error', 'exited', 'stopped', 'closed', 'off'].includes(machine?.status)) {
@@ -188,10 +225,12 @@ async function diskFiles(entries = null) {
       godori: 'GODORI.SGS',
     };
   let research = 0;
-  const jobs = data.games.map((entry) => ({
-    entry,
-    name: aliases[entry.id] || `R${String(++research).padStart(7, '0')}.SGS`,
-  }));
+  const jobs = data.games
+    .filter((entry) => entry.engine !== 'ads')
+    .map((entry) => ({
+      entry,
+      name: aliases[entry.id] || `R${String(++research).padStart(7, '0')}.SGS`,
+    }));
   return Promise.all(
     jobs.map(async ({ entry, name }) => ({ name, data: await fetchBytes(entry.url) })),
   );
@@ -208,28 +247,44 @@ async function load(message) {
   timers = new TimerScheduler();
   nativeStarts.clear();
   nativeReleases.clear();
+  adsHeld.clear();
   activeSession = message.sessionId ?? null;
   lastLoad = { ...message };
   gameId = message.gameId || message.gameUrl || null;
   romTitle = message.romTitle || message.romUrl?.split('/').pop() || '';
   gameTitle = message.gameTitle || message.title || message.gameUrl?.split('/').pop() || '';
   mode = message.type === 'loadGame' ? 'game' : 'firmware';
+  isAds = mode === 'game' && message.engine === 'ads';
   status({
     status: 'loading',
-    message: mode === 'game' ? 'Загрузка оригинального GNEX…' : 'Подготовка полной машины…',
+    message: isAds
+      ? 'Загрузка игры Samsung Anycall…'
+      : mode === 'game'
+        ? 'Загрузка оригинального GNEX…'
+        : 'Подготовка полной машины…',
   });
   // ROM, disk files and quickstate downloads are independent. Start them
   // together, including blob URLs for originals imported in the main thread.
   const [rom, content, swerveBinary] = await Promise.all([
-    fetchBytes(message.romUrl),
+    isAds ? undefined : fetchBytes(message.romUrl),
     mode === 'game'
       ? fetchBytes(message.gameUrl)
       : message.type === 'boot'
         ? diskFiles(message.diskGames ?? null)
         : fetchBytes(message.stateUrl),
-    message.swerveUrl ? fetchBytes(message.swerveUrl) : undefined,
+    !isAds && message.swerveUrl ? fetchBytes(message.swerveUrl) : undefined,
   ]);
-  if (mode === 'game') {
+  if (isAds) {
+    try {
+      machine = await AdsRuntime.create(content, { id: message.gameId });
+    } catch (error) {
+      // A successful HTTP response can still fail the MBIN integrity check.
+      cache.delete(message.gameUrl);
+      throw error;
+    }
+    gameTitle = message.gameTitle || machine.title;
+    syncTimer();
+  } else if (mode === 'game') {
     const game = content;
     const Runtime = detectVersion(game) < 4 ? LegacyRuntime : GnexRuntime;
     machine = await Runtime.create(rom, game, {
@@ -276,7 +331,8 @@ async function command(message) {
   if (message.type === 'key') {
     const key = message.key,
       pressed = !!message.pressed;
-    if (mode === 'game') {
+    if (isAds) setAdsKey(key, pressed, message.repeat);
+    else if (mode === 'game') {
       const mapping = machine.profile === 'phone' ? phoneKeys : keys;
       const started = performance.now();
       if ((running || !pressed) && mapping[key] !== undefined)
@@ -303,6 +359,7 @@ async function command(message) {
     if (running) pausedAt = performance.now();
     running = false;
     if (mode === 'firmware') releaseNative(true);
+    else if (isAds) releaseAds();
     machine.vfs?.flush();
     audio.pause();
     status();
@@ -317,6 +374,7 @@ async function command(message) {
     running = false;
     if (mode === 'firmware') machine.run(1, { snapshot: false });
     else {
+      if (isAds) releaseAds();
       const timer = timers.next();
       if (timer) fireTimer(timer.channel);
     }
@@ -362,7 +420,15 @@ function tick() {
   } catch (error) {
     fail(error);
   }
-  setTimeout(tick, running ? 1 : 25);
+  let delay = running ? 1 : 25;
+  if (running && isAds) {
+    const due = Math.min(
+      timers.next()?.at ?? Infinity,
+      framePending ? lastFrame + frameInterval : Infinity,
+    );
+    delay = Math.max(1, Math.min(25, due - performance.now()));
+  }
+  setTimeout(tick, delay);
 }
 postMessage({ type: 'ready' });
 tick();

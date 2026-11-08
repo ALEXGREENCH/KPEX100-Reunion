@@ -109,6 +109,8 @@ def main():
         proof["frameSha256"] = frame_hash
     records = []
     for game in catalog["games"]:
+        if game.get("engine") == "ads":
+            continue
         game.setdefault("runtime", {}).update(
             {
                 key: value

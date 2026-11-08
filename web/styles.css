@@ -673,6 +673,9 @@ body > footer {
     font-size: 11px;
     min-height: 31px;
   }
+  [data-device='anycall'] .controls button[data-key='digit0'] {
+    grid-column: 2;
+  }
   .screen-area[data-kind='player'] .controls {
     grid-template-columns: repeat(3, 1fr);
   }

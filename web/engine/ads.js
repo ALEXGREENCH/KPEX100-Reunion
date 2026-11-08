@@ -1,0 +1,396 @@
+/** Verified Samsung Anycall ADS builds hosted on the ARM/Thumb WASM core. */
+import { sha256 } from '../local-assets.js';
+import { createARM } from './cpu.js';
+
+const HEADER_BYTES = 0x109;
+const TEXT = 0xf4000000;
+const BSS = 0xf5000000;
+const BSS_BYTES = 0x80000;
+const DISPLAY_OFFSET = 0x40000;
+const DISPLAY = BSS + DISPLAY_OFFSET;
+const TABLE = 0xf6000000;
+const STUBS = TABLE + 0x1000;
+const RETURN = TABLE + 0x3000;
+const STACK = 0x08000000;
+const STACK_BYTES = 0x10000;
+const WIDTH = 120;
+const HEIGHT = 128;
+const FRAME_BYTES = WIDTH * HEIGHT;
+const EVENT_BUDGET = 25000;
+const PROFILES = [
+  {
+    id: 'merry-christmas',
+    title: 'Merry Christmas',
+    bytes: 92462,
+    sha256: '7114c2494d25d708a3ebda216e090c0039c25f6bcbe0f3a1d83108a1e340895a',
+    timerArgument: 0,
+  },
+  {
+    id: 'mr-ramen',
+    title: 'Mr. 라면왕',
+    bytes: 129976,
+    sha256: '6b13f774d53bbf641e778a069b013cfd31555d84ec4af45504596a748629f0af',
+    timerArgument: 2,
+  },
+  {
+    id: 'udon-time',
+    title: '우동타임',
+    bytes: 102948,
+    sha256: '0d589cca6fc22e01f8e90f5fe7e43150cc2ce09317d5d822c5c438e439407672',
+    timerArgument: 2,
+  },
+];
+// These verified builds start from empty saves and use silent host services.
+const COMMON_STUBS = [0x08, 0x18, 0x24, 0x2c, 0x30, 0x34, 0x3c, 0x5c, 0x68, 0x9c];
+const signed = (value) => (value << 16) >> 16;
+const hex = (value) => '0x' + value.toString(16);
+const palette = new Uint8Array(256 * 4);
+for (let color = 0; color < 256; color++) {
+  const offset = color * 4;
+  palette[offset] = ((color >>> 5) * 255) / 7;
+  palette[offset + 1] = (((color >>> 2) & 7) * 255) / 7;
+  palette[offset + 2] = (color & 3) * 85;
+  palette[offset + 3] = 255;
+}
+
+function displayFrame(indices) {
+  let data;
+  return {
+    width: WIDTH,
+    height: HEIGHT,
+    get data() {
+      if (!data) {
+        data = new Uint8ClampedArray(FRAME_BYTES * 4);
+        for (let i = 0, dst = 0; i < FRAME_BYTES; i++) {
+          const src = indices[i] * 4;
+          data[dst++] = palette[src];
+          data[dst++] = palette[src + 1];
+          data[dst++] = palette[src + 2];
+          data[dst++] = 255;
+        }
+      }
+      return data;
+    },
+  };
+}
+
+function decodeMq(body, offset, count, transparent) {
+  if (offset < 0 || offset + 6 > body.byteLength) throw Error('Некорректный адрес ресурса ADS.');
+  const magic = body.getUint16(offset, true);
+  const pixels = body.getUint16(offset + 2, true);
+  const size = body.getUint16(offset + 4, true);
+  const end = offset + size;
+  if (magic !== 0x514d || !count || pixels !== count || size <= 6 || end > body.byteLength)
+    throw Error('Некорректный заголовок ресурса MQ.');
+
+  const output = new Uint8Array(count);
+  const history = new Uint8Array(4096).fill(transparent);
+  let cursor = offset + 6;
+  let written = 0;
+  const byte = () => {
+    if (cursor >= end) throw Error('Неполный ресурс MQ.');
+    return body.getUint8(cursor++);
+  };
+  const push = (value) => {
+    history[written & 4095] = value;
+    output[written++] = value;
+  };
+  while (written < count) {
+    const flags = byte();
+    for (let bit = 128; bit && written < count; bit >>= 1) {
+      if (flags & bit) push(byte());
+      else {
+        const token = (byte() << 8) | byte();
+        const start = token >>> 4;
+        const length = (token & 15) + 3;
+        for (let i = 0; i < length && written < count; i++) push(history[(start + i) & 4095]);
+      }
+    }
+  }
+  return output;
+}
+
+export class AdsRuntime {
+  #cpu;
+  #profile;
+  #body;
+  #displayPointer;
+  #stubs;
+  #sprites = new Map();
+  #pressed = new Set();
+  #indices = new Uint8Array(FRAME_BYTES);
+  #color = 0;
+  #random = 0x12345678;
+  #fault = null;
+  #closed = false;
+
+  static async create(input, { id } = {}) {
+    const bytes = input instanceof Uint8Array ? input : new Uint8Array(input);
+    if (!PROFILES.some((candidate) => candidate.bytes === bytes.byteLength))
+      throw Error('Этот вариант MBIN пока не поддерживается.');
+    // Hold one owned copy from verification through execution.
+    const original = Uint8Array.from(bytes);
+    const digest = await sha256(original);
+    const profile = PROFILES.find(
+      (candidate) => candidate.sha256 === digest && candidate.bytes === original.byteLength,
+    );
+    if (!profile) throw Error('Контрольная сумма оригинала MBIN не совпадает.');
+    if (id && id !== profile.id) throw Error('Файл MBIN не соответствует выбранной игре.');
+    const cpu = await createARM();
+    try {
+      return new AdsRuntime(cpu, profile, original.subarray(HEADER_BYTES));
+    } catch (error) {
+      cpu.close();
+      throw error;
+    }
+  }
+
+  constructor(cpu, profile, body) {
+    this.#cpu = cpu;
+    this.#profile = profile;
+    this.#body = new DataView(body.buffer, body.byteOffset, body.byteLength);
+    this.#stubs = new Set([...COMMON_STUBS, profile.id === 'udon-time' ? 0x0c : 0x40]);
+    this.width = WIDTH;
+    this.height = HEIGHT;
+    this.title = profile.title;
+    this.status = 'idle';
+    this.eventCount = 0;
+    this.presentations = 0;
+    this.framebuffer = displayFrame(this.#indices);
+
+    cpu.map(TEXT, (body.byteLength + 4095) & ~4095);
+    cpu.write(TEXT, body);
+    // The guest and host use the same display memory. Host drawing can write
+    // rows directly without calling back into Unicorn for every span.
+    this.#displayPointer = cpu.mapAlias([BSS], BSS_BYTES, 3) + DISPLAY_OFFSET;
+    cpu.map(TABLE, 0x4000);
+    cpu.map(STACK, STACK_BYTES, 3);
+    const entries = new Uint8Array(512);
+    const table = new DataView(entries.buffer);
+    const stubs = new Uint8Array(512);
+    for (let i = 0; i < entries.length; i += 4) {
+      table.setUint32(i, STUBS + i + 1, true);
+      stubs.set([0x70, 0x47, 0x00, 0xbf], i);
+    }
+    cpu.write(TABLE, entries);
+    cpu.write(STUBS, stubs);
+    cpu.onCode(
+      (address) => {
+        try {
+          this.#service(address - STUBS);
+        } catch (error) {
+          this.#fault = error;
+          cpu.stop();
+        }
+      },
+      { begin: STUBS, end: STUBS + stubs.length - 1 },
+    );
+    this.#dispatch(0, TABLE);
+  }
+
+  tick() {
+    this.#dispatch(5, this.#profile.timerArgument);
+  }
+
+  setKey(code, pressed, repeat = false) {
+    if (this.#closed || this.status === 'error') return;
+    if (!Number.isInteger(code) || code < 0 || code > 0x1f) return;
+    if (!pressed) {
+      this.#pressed.delete(code);
+      return;
+    }
+    if (this.#pressed.has(code) && !repeat) return;
+    this.#pressed.add(code);
+    this.#dispatch(4, code);
+  }
+
+  releaseKeys() {
+    this.#pressed.clear();
+  }
+
+  readIndexedFrame() {
+    if (this.#closed) return this.#indices.slice();
+    return this.#cpu.uc.readArrayFromMemory(this.#displayPointer, FRAME_BYTES);
+  }
+
+  close() {
+    if (this.#closed) return;
+    this.#closed = true;
+    this.status = 'closed';
+    this.releaseKeys();
+    this.#sprites.clear();
+    this.#cpu.close();
+  }
+
+  #dispatch(event, argument) {
+    if (this.#closed || this.status === 'error') return;
+    const cpu = this.#cpu;
+    const presentations = this.presentations;
+    cpu.regWrite('r0', event);
+    cpu.regWrite('r1', argument);
+    cpu.regWrite('r2', 0);
+    cpu.regWrite('r3', 0);
+    cpu.regWrite('sp', STACK + 0xff00);
+    cpu.regWrite('lr', RETURN + 1);
+    try {
+      // The shared block watchdog bounds Thumb execution without a JS hook
+      // on every guest instruction.
+      cpu.runGuarded(TEXT + 1, RETURN, EVENT_BUDGET);
+      if (this.#fault) throw this.#fault;
+      if (cpu.regRead('pc') !== RETURN) throw Error('Событие ADS превысило лимит инструкций.');
+      this.eventCount++;
+      if (this.presentations !== presentations) this.#captureDisplay();
+    } catch (error) {
+      this.status = 'error';
+      throw error;
+    }
+  }
+
+  #captureDisplay() {
+    const indices = this.readIndexedFrame();
+    const before = new Uint32Array(this.#indices.buffer, this.#indices.byteOffset, FRAME_BYTES / 4);
+    const after = new Uint32Array(indices.buffer, indices.byteOffset, FRAME_BYTES / 4);
+    for (let i = 0; i < after.length; i++) {
+      if (before[i] === after[i]) continue;
+      this.#indices = indices;
+      this.framebuffer = displayFrame(indices);
+      return;
+    }
+  }
+
+  #writeOutput(address, value, bytes = 4) {
+    if (address < BSS || address + bytes > BSS + BSS_BYTES)
+      throw Error('Некорректный адрес результата ADS.');
+    this.#cpu.writeSized(address, value, bytes);
+  }
+
+  #outputAddress() {
+    const sp = this.#cpu.regRead('sp');
+    if (sp < STACK || sp + 4 > STACK + STACK_BYTES) throw Error('Некорректный адрес стека ADS.');
+    return this.#cpu.read32(sp);
+  }
+
+  #service(slot) {
+    const cpu = this.#cpu;
+    if (this.#stubs.has(slot)) {
+      cpu.regWrite('r0', 0);
+      return;
+    }
+    const a = cpu.regRead('r0');
+    if (slot === 0x04) {
+      this.#writeOutput(a, DISPLAY);
+    } else if (slot === 0x40 && this.#profile.id === 'udon-time') {
+      const low = a & 65535;
+      const high = a >>> 16;
+      if (low > high) throw Error('Некорректный диапазон генератора ADS.');
+      this.#random = (Math.imul(1664525, this.#random) + 1013904223) >>> 0;
+      this.#writeOutput(this.#outputAddress(), low + ((this.#random >>> 16) % (high - low + 1)), 2);
+    } else if (slot === 0x48) {
+      // The archived replay advances this synthetic clock by presentations.
+      this.#writeOutput(this.#outputAddress() + 12, this.presentations);
+    } else if (slot === 0xa0) {
+      this.presentations++;
+    } else {
+      this.#draw(slot, a);
+      return;
+    }
+    cpu.regWrite('r0', 0);
+  }
+
+  #draw(slot, a) {
+    const cpu = this.#cpu;
+    if (slot === 0x7c) {
+      this.#color = a & 255;
+      return;
+    }
+    const b = cpu.regRead('r1');
+    const x = signed(a);
+    const y = a >> 16;
+    switch (slot) {
+      case 0x70:
+        this.#blit(x, y, b);
+        break;
+      case 0x74:
+        if (cpu.regRead('r3') !== DISPLAY) throw Error('Неизвестный видеобуфер ADS.');
+        if (x < (b & 65535) && y < b >>> 16) this.#plot(x, y, cpu.regRead('r2') & 255);
+        break;
+      case 0x8c:
+        this.#line(x, y, signed(b), b >> 16);
+        break;
+      case 0x98:
+        this.#fill(x, y, b & 65535, b >>> 16);
+        break;
+      case 0xb0: {
+        const width = b & 255;
+        const height = (b >>> 8) & 255;
+        const key = cpu.regRead('r3') & 255;
+        const pixels = decodeMq(this.#body, cpu.regRead('r2') - TEXT, width * height, key);
+        this.#sprites.set(a, { width, height, key, pixels });
+        break;
+      }
+      default:
+        throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
+    }
+  }
+
+  #blit(x, y, descriptor) {
+    const sprite = this.#sprites.get(descriptor);
+    if (!sprite) throw Error('Вызов отрисовки неизвестного спрайта ADS.');
+    const { width, height, key, pixels } = sprite;
+    const left = Math.max(0, -x);
+    const right = Math.min(width, WIDTH - x);
+    if (left >= right) return;
+    const uc = this.#cpu.uc;
+    for (let row = Math.max(0, -y); row < Math.min(height, HEIGHT - y); row++) {
+      const start = row * width + left;
+      const source = pixels.subarray(start, start + right - left);
+      const destination = this.#displayPointer + (y + row) * WIDTH + x + left;
+      if (source.includes(key)) {
+        const background = uc.readArrayFromMemory(destination, source.length);
+        for (let i = 0; i < source.length; i++) if (source[i] !== key) background[i] = source[i];
+        uc.writeArrayToMemory(background, destination);
+      } else {
+        uc.writeArrayToMemory(source, destination);
+      }
+    }
+  }
+
+  #plot(x, y, color) {
+    if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGHT)
+      this.#cpu.uc.setValue(this.#displayPointer + y * WIDTH + x, color, 'i8');
+  }
+
+  #fill(x, y, width, height) {
+    const left = Math.max(0, x);
+    const right = Math.min(WIDTH, x + width);
+    if (left >= right) return;
+    const row = new Uint8Array(right - left).fill(this.#color);
+    for (let line = Math.max(0, y); line < Math.min(HEIGHT, y + height); line++)
+      this.#cpu.uc.writeArrayToMemory(row, this.#displayPointer + line * WIDTH + left);
+  }
+
+  #line(x, y, endX, endY) {
+    if (y === endY) {
+      this.#fill(Math.min(x, endX), y, Math.abs(endX - x) + 1, 1);
+      return;
+    }
+    const dx = Math.abs(endX - x);
+    const dy = -Math.abs(endY - y);
+    const stepX = x < endX ? 1 : -1;
+    const stepY = y < endY ? 1 : -1;
+    let error = dx + dy;
+    while (true) {
+      this.#plot(x, y, this.#color);
+      if (x === endX && y === endY) return;
+      const twice = 2 * error;
+      if (twice >= dy) {
+        error += dy;
+        x += stepX;
+      }
+      if (twice <= dx) {
+        error += dx;
+        y += stepY;
+      }
+    }
+  }
+}

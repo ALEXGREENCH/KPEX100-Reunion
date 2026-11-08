@@ -25,7 +25,7 @@ for (const entry of manifest.files) {
     !['data/catalog.json', 'data/availability.json'].includes(entry.path)
   )
     assert.ok(allowedAssets.has(entry.path), entry.path);
-  if (/\.(?:rom|sgs|mod|exe|dll|kps|sav|pdf|reunion-state)$/i.test(entry.path))
+  if (/\.(?:rom|sgs|mbin|mod|exe|dll|kps|sav|pdf|reunion-state)$/i.test(entry.path))
     assert.ok(allowedAssets.has(entry.path), entry.path);
   const bytes = fs.readFileSync(path.join(root, entry.path));
   assert.equal(bytes.length, entry.bytes, entry.path);

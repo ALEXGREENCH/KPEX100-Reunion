@@ -20,6 +20,10 @@ test('photographic devices follow explicit provenance, never framebuffer dimensi
     assert.equal(automaticDevice({ kind: 'firmware', rom: { id } }), 'cenix');
   assert.equal(automaticDevice({ kind: 'firmware', rom: { id: 'kingston-2.12' } }), 'kingston');
   assert.equal(automaticDevice({ kind: 'game', platform: 'kpex', id: 'hellfire' }), 'kingston');
+  assert.equal(
+    automaticDevice({ kind: 'game', platform: 'mobile', engine: 'ads', id: 'udon-time' }),
+    'anycall',
+  );
 });
 
 test('manual skin selection is cosmetic and leaves the session untouched', () => {
@@ -33,6 +37,7 @@ test('frame fitting preserves square pixels and bounds at every supported shape'
   for (const [width, height] of [
     [220, 176],
     [128, 128],
+    [120, 128],
     [128, 160],
     [176, 204],
     [176, 220],

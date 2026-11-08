@@ -73,6 +73,7 @@ const stable = (value) =>
   );
 const selected = options.games.split(',').map((id) => {
   const entry = catalog.games.find((item) => item.id === id);
+  if (entry?.engine === 'ads') throw Error(`This benchmark expects SGS: ${id}`);
   if (!entry) throw Error('Unknown game: ' + id);
   return { ...entry, data: fs.readFileSync(path.join(web, entry.url)) };
 });

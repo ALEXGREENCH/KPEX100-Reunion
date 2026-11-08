@@ -7,9 +7,11 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-The collection includes 9 firmware images, 102 SGS applications, 3 quick-start
+The collection includes 9 firmware images, 102 SGS applications, 3 Anycall ADS games, 3 quick-start
 snapshots and the original Swerve 2.1 module. The catalogue records SHA-256
 hashes and tested runtime profiles.
+
+Merry Christmas, Mr. 라면왕 and 우동타임 launch from the browser library using their original MBIN files. The Anycall profiles use an approximate timer and palette. Audio and saved games are unavailable for these profiles. [Anycall controls and source archives](doc/anycall-merry-ramen-udon.md)
 
 [World League and Bounce from S60](doc/s60-library-completion.md): three previously preserved SGS builds are now in the launch library, with fresh paired scene/control checks. Menu rendering and external-audio limits remain documented.
 

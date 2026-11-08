@@ -34,6 +34,16 @@ const phoneKeys = [
   ['clear', 'CLR'],
   ['start', 'ENTER'],
 ];
+const anycallKeys = [
+  ['a', 'OK'],
+  ['up', '▲'],
+  ['start', 'ENTER'],
+  ['left', '◀'],
+  ['down', '▼'],
+  ['right', '▶'],
+  ...phoneKeys.filter(([key]) => /^digit[1-9]$/.test(key)),
+  ['digit0', '0'],
+];
 
 export const devices = [
   { id: 'kingston', title: 'Kingston K-PEX100', type: 'player', keys: playerKeys },
@@ -45,6 +55,12 @@ export const devices = [
     keys: phoneKeys,
   })),
   { id: 'gnex', title: 'GNEX · универсальный телефон', type: 'phone', keys: phoneKeys },
+  {
+    id: 'anycall',
+    title: 'Samsung Anycall · универсальный телефон',
+    type: 'phone',
+    keys: anycallKeys,
+  },
 ];
 
 // Explicit provenance identities. A skin never changes the runtime handset profile.
@@ -66,8 +82,10 @@ const gameDevices = {
 
 export function automaticDevice(session) {
   if (!session) return 'kingston';
-  if (session.kind === 'game')
+  if (session.kind === 'game') {
+    if (session.engine === 'ads') return 'anycall';
     return gameDevices[session.id] || (session.platform === 'mobile' ? 'gnex' : 'kingston');
+  }
   return session.rom?.id?.startsWith('cenix-') ? 'cenix' : 'kingston';
 }
 

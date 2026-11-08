@@ -78,6 +78,7 @@ def forbidden(name):
     if path.suffix.lower() in {
         ".rom",
         ".sgs",
+        ".mbin",
         ".mod",
         ".exe",
         ".dll",

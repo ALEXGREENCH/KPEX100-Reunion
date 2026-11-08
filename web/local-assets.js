@@ -65,5 +65,7 @@ export function identifyAsset(catalog, name, bytes, digest) {
     throw Error(`${name}: нужен неизменённый модуль swv21brew.mod (Swerve 2.1).`);
   if (/\.reunion-state$/i.test(name))
     throw Error(`${name}: это состояние не входит в проверенный каталог Kingston 2.12.`);
-  throw Error(`${name}: выберите ROM, SGS, swv21brew.mod или проверенное состояние Reunion.`);
+  if (/\.mbin$/i.test(name))
+    throw Error(`${name}: эта версия игры Anycall отсутствует в проверенном каталоге.`);
+  throw Error(`${name}: выберите ROM, SGS, проверенный MBIN, swv21brew.mod или состояние Reunion.`);
 }

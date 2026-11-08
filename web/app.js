@@ -155,10 +155,11 @@ function applyDevice() {
           mode: [425, 66],
           rec: [535, 66],
         };
+        const cell = device.id === 'anycall' && key === 'digit0' ? index + 1 : index;
         const [x, y, width, height] =
           skin?.buttonZones?.[key] ||
           (device.type === 'phone'
-            ? [350 + (index % 3) * 103, 510 + Math.floor(index / 3) * 39, 94, 35.7]
+            ? [350 + (cell % 3) * 103, 510 + Math.floor(cell / 3) * 39, 94, 35.7]
             : [...playerPositions[key], 80, 51]);
         Object.assign(button.style, {
           left: `${x / 10}%`,
@@ -340,10 +341,12 @@ async function loadGame(game) {
   }
   audio.unlock();
   const sequence = ++loadSequence;
+  const ads = game.engine === 'ads';
   const rom =
-    catalog.firmwares.find((item) => item.id === 'kingston-2.12') ||
-    catalog.firmwares.find((item) => /kingston.*2[._ -]?12/i.test(`${item.title} ${item.id}`));
-  if (!rom?.available) {
+    !ads &&
+    (catalog.firmwares.find((item) => item.id === 'kingston-2.12') ||
+      catalog.firmwares.find((item) => /kingston.*2[._ -]?12/i.test(`${item.title} ${item.id}`)));
+  if (!ads && !rom?.available) {
     toast('Для SGS добавьте оригинальный ROM Kingston 2.12.');
     $('assetFile').click();
     return;
@@ -353,12 +356,14 @@ async function loadGame(game) {
     $('assetFile').click();
     return;
   }
-  await storageReady;
   let saveData;
-  try {
-    saveData = await storage.loadSave(game.id);
-  } catch (error) {
-    log(`Не удалось прочитать сохранение: ${error.message}`, true);
+  if (!ads) {
+    await storageReady;
+    try {
+      saveData = await storage.loadSave(game.id);
+    } catch (error) {
+      log(`Не удалось прочитать сохранение: ${error.message}`, true);
+    }
   }
   if (sequence !== loadSequence) return;
   beginSession(
@@ -367,6 +372,7 @@ async function loadGame(game) {
       id: game.id,
       title: game.title,
       rom,
+      engine: game.engine,
       platform: game.platform,
       applicationType: game.applicationType,
       research:
@@ -376,8 +382,9 @@ async function loadGame(game) {
     },
     {
       type: 'loadGame',
-      romUrl: rom.url,
-      romTitle: rom.title,
+      engine: game.engine,
+      romUrl: rom?.url,
+      romTitle: rom?.title,
       gameUrl: game.url,
       gameTitle: game.title,
       gameId: game.id,
@@ -398,7 +405,7 @@ function bootFirmware() {
       type: 'boot',
       romUrl: selectedRom.url,
       romTitle: selectedRom.title,
-      diskGames: catalog.games.filter((game) => game.available),
+      diskGames: catalog.games.filter((game) => game.available && game.engine !== 'ads'),
     },
   );
 }
@@ -443,7 +450,7 @@ function updateLibraryHint() {
       ? available === entries.length && available > 0
         ? libraryTab === 'samples'
           ? 'Учебные примеры · Mobile C / GNEX'
-          : 'Оригинальные SGS · GNEX'
+          : 'Оригинальные игры · GNEX и Anycall'
         : `Доступно ${available} из ${entries.length} · добавьте свои файлы`
       : available > 0
         ? 'Выберите ROM для холодного старта'
@@ -521,9 +528,12 @@ function renderLibrary() {
 }
 
 function populateCatalog() {
-  const sgs = catalog.games.filter((entry) => entry.available);
+  const games = catalog.games.filter((entry) => entry.available);
+  const adsCount = games.filter((entry) => entry.engine === 'ads').length;
+  const sgsCount = games.length - adsCount;
   const roms = catalog.firmwares.filter((entry) => entry.available);
   const gnexReady = roms.some((entry) => entry.id === 'kingston-2.12');
+  const canPlay = adsCount > 0 || (gnexReady && sgsCount > 0);
   const counts = libraryCounts(catalog);
   for (const [tab, id] of Object.entries({
     games: 'gamesCount',
@@ -533,18 +543,17 @@ function populateCatalog() {
     const { available, total } = counts[tab];
     $(id).textContent = available === total ? String(total) : `${available} / ${total}`;
   }
-  $('collectionCount').textContent = String(sgs.length + roms.length);
-  $('setupHint').hidden = gnexReady && sgs.length > 0;
+  $('collectionCount').textContent = String(games.length + roms.length);
+  $('setupHint').hidden = canPlay;
   $('assetStatus').textContent =
-    `${sgs.length} SGS · ${roms.length} ROM${swerve.available ? ' · Swerve 2.1' : ''}`;
+    `${sgsCount} SGS · ${roms.length} ROM${adsCount ? ` · ${adsCount} MBIN` : ''}${swerve.available ? ' · Swerve 2.1' : ''}`;
   if (!current) {
-    $('emptyTitle').textContent = gnexReady && sgs.length ? 'Выберите игру' : 'Добавьте ROM и игры';
-    $('emptyHint').textContent =
-      gnexReady && sgs.length
-        ? 'Откройте игру или пример из библиотеки'
-        : 'Kingston 2.12 + ваши SGS';
-    $('nowPlaying').textContent = gnexReady && sgs.length ? 'Выберите игру' : 'Добавьте файлы';
-    $('sourceLabel').textContent = gnexReady && sgs.length ? '' : '';
+    $('emptyTitle').textContent = canPlay ? 'Выберите игру' : 'Добавьте файлы';
+    $('emptyHint').textContent = canPlay
+      ? 'Откройте игру или пример из библиотеки'
+      : 'SGS с ROM Kingston 2.12 или проверенный MBIN';
+    $('nowPlaying').textContent = $('emptyTitle').textContent;
+    $('sourceLabel').textContent = '';
   }
   $('firmwareSelect').replaceChildren(
     ...roms.map((rom) => {
@@ -741,7 +750,7 @@ function sendKey(key, pressed, source, repeat = false) {
     }
     const first = sources.size === 0;
     sources.add(source);
-    if (first || repeat) post({ type: 'key', key, pressed: true });
+    if (first || repeat) post({ type: 'key', key, pressed: true, ...(repeat ? { repeat } : {}) });
   } else if (sources) {
     sources.delete(source);
     if (!sources.size) {
@@ -1188,8 +1197,8 @@ const libraryReady = (async () => {
   const romCount = catalog.firmwares.filter((entry) => entry.available).length;
   log(
     gameCount || romCount
-      ? `Библиотека готова: ${gameCount} SGS и ${romCount} ROM.`
-      : 'Добавьте свои ROM и SGS, чтобы начать игру.',
+      ? `Библиотека готова. Игр и примеров: ${gameCount}. Прошивок: ${romCount}.`
+      : 'Добавьте файлы, чтобы начать игру.',
   );
 })().catch((error) => {
   $('libraryList').textContent = 'Не удалось загрузить каталог.';

@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "scope": "Same complete scripted Anycall input sequence in the two ADS hosts using the same mapped renderer. Counted vs existing conservative ARM block watchdog. Includes guest execution and RGBA conversion on changed frames; excludes construction and frame SHA verification. Node wall time, without browser scheduling.",
+  "environment": {
+    "node": "v24.22.1",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 5 5500",
+    "platform": "win32"
+  },
+  "warmupsPerMode": 1,
+  "pairs": 5,
+  "pairOrder": "counted first in even-numbered pairs from zero, watchdog first in odd-numbered pairs",
+  "eventBudget": 25000,
+  "engineSha256": "9fbe1f708c3edf353fd846cbf9db7cb11da0a965ac0a383e63cd38555fd8351e",
+  "results": [
+    {
+      "game": "merry-christmas",
+      "testKey": 2,
+      "indexedSha256": "d32fe1e76fdf6e63c503728a7d399edc286ae3b336c0054bafc6a2b9b912e01d",
+      "presentations": 411,
+      "changedFrames": 315,
+      "countedMs": [
+        320.6808,
+        313.7772,
+        309.54859999999985,
+        315.7523000000001,
+        313.50660000000016
+      ],
+      "watchdogMs": [
+        221.03110000000004,
+        207.72620000000006,
+        208.57629999999972,
+        199.8796000000002,
+        244.69000000000005
+      ],
+      "countedMedianMs": 313.7772,
+      "watchdogMedianMs": 208.57629999999972,
+      "decreasePct": 33.527260744247926
+    },
+    {
+      "game": "mr-ramen",
+      "testKey": 1,
+      "indexedSha256": "3ba82fc6048ec7a2faf9a0036749609c57996fcd9e8d85442f640d4fd5764b80",
+      "presentations": 723,
+      "changedFrames": 57,
+      "countedMs": [
+        1001.7573000000002,
+        868.3096999999998,
+        842.1072999999997,
+        987.0407000000014,
+        887.6009000000013
+      ],
+      "watchdogMs": [
+        576.9926000000005,
+        602.5693000000001,
+        566.7952999999998,
+        574.6811999999991,
+        568.1823000000004
+      ],
+      "countedMedianMs": 887.6009000000013,
+      "watchdogMedianMs": 574.6811999999991,
+      "decreasePct": 35.25454965176373
+    },
+    {
+      "game": "udon-time",
+      "testKey": 2,
+      "indexedSha256": "63102cb8ecb88e9461c5f898be9fc358d01f9d2ddfc8438aca227e81389f6734",
+      "presentations": 471,
+      "changedFrames": 89,
+      "countedMs": [
+        847.7548999999999,
+        886.9202000000023,
+        849.8365000000013,
+        841.1890999999996,
+        800.490600000001
+      ],
+      "watchdogMs": [
+        528.4573,
+        528.9486000000015,
+        528.1824000000015,
+        491.1857999999993,
+        486.01360000000204
+      ],
+      "countedMedianMs": 847.7548999999999,
+      "watchdogMedianMs": 528.1824000000015,
+      "decreasePct": 37.69633180533648
+    }
+  ]
+}

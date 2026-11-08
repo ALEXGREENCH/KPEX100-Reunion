@@ -110,6 +110,8 @@ try {
     const catalog = JSON.parse(fs.readFileSync(path.join(project, 'web/data/catalog.json')));
     entry = catalog.games.find((game) => game.id === input);
     if (!entry) throw Error('Unknown game id: ' + input);
+    if (entry.engine === 'ads')
+      throw Error('Use tools/replay-anycall-jumping-baby.py for ADS MBIN.');
     raw = fs.readFileSync(path.join(project, 'web', entry.url));
   }
   const id = entry.id,
