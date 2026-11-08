@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "pocketspace-original-game-catalogue",
+      "title": "PocketSpace, Синдбад и New Pocket Baseball 3",
+      "category": "История и документация",
+      "description": "Восемь карточек игр, руководство Синдбада и оригинальный ролик с анонсом GNEX-версии бейсбола.",
+      "repositoryPath": "research/archives/PocketSpace-Game-Catalogue-and-New-Pocket-Baseball-3.zip",
+      "bytes": 6599432,
+      "sha256": "410b55d776f1f3a328d55920b27457a5e7817190c35147c5db152abcb536630a",
+      "sources": [
+        {
+          "label": "Приключения Синдбада",
+          "url": "https://web.archive.org/web/20021210095619id_/http://www.pocketgame.net/dir_pocketgame/sinbad/index.aspx"
+        },
+        {
+          "label": "Pocket Fantasy",
+          "url": "https://web.archive.org/web/20021210094301id_/http://www.pocketgame.net/dir_pocketgame/fantasy/index.aspx"
+        },
+        {
+          "label": "Ролик New Pocket Baseball 3",
+          "url": "https://web.archive.org/web/20050526113912id_/http://www.pocketspace.co.kr:80/ad/pbb3/npb.swf"
+        }
+      ]
+    },
+    {
       "id": "brewgames-105-lgt-downtown",
       "title": "Brewgames и 105 игровых сборок LGT DownTown",
       "category": "Игры и игровые сборки",
@@ -2289,6 +2312,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Игры PocketSpace и New Pocket Baseball 3",
+      "repositoryPath": "doc/pocketspace-original-game-catalogue.md"
+    },
     {
       "title": "105 сборок LGT DownTown из Brewgames",
       "repositoryPath": "doc/brewgames-105-lgt-downtown.md"

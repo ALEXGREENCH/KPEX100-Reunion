@@ -3,6 +3,579 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "pocketspace-original-game-catalogue",
+      "repositoryPath": "research/archives/PocketSpace-Game-Catalogue-and-New-Pocket-Baseball-3.zip",
+      "bytes": 6599432,
+      "sha256": "410b55d776f1f3a328d55920b27457a5e7817190c35147c5db152abcb536630a",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/captures.json",
+          "bytes": 21842,
+          "crc32": "5f1d0516",
+          "sha256": "b29a725f13ba5e6e10525e1df07dc152624d0ba817109bd30cc6df58f723551c"
+        },
+        {
+          "path": "evidence/early-http.json",
+          "bytes": 17124,
+          "crc32": "2b6ada12",
+          "sha256": "5ea10943cca20030d067b4ea128e0c684a3ac87a040dfb690e993a88111e7557"
+        },
+        {
+          "path": "evidence/npb-inspection.json",
+          "bytes": 829,
+          "crc32": "464a53ff",
+          "sha256": "62036e2e680b284a2f9b4d1eb9e196a0f37646a05bc23d49e74df3e55a42dcf6"
+        },
+        {
+          "path": "evidence/pocketgame-art.json",
+          "bytes": 9830,
+          "crc32": "ee4a6e01",
+          "sha256": "d0e33f6f9554b88358cf4ebd98c1f0ac244cfa08e6eec673f5b6add6f9a9f786"
+        },
+        {
+          "path": "evidence/pocketgame-pages.json",
+          "bytes": 4695,
+          "crc32": "f3f9c363",
+          "sha256": "ca8019ec32756734ccc3ba1bc0e81d18c8af70623b7dac336ed34505cda092de"
+        },
+        {
+          "path": "evidence/pocketspace-replays.json",
+          "bytes": 33698,
+          "crc32": "70eb892e",
+          "sha256": "39869f242a383d9f80d1c1aec9a7138e9ee5dc66d84f9c2773912b5046bcf6c5"
+        },
+        {
+          "path": "evidence/route-probes.json",
+          "bytes": 12588,
+          "crc32": "7956c13f",
+          "sha256": "e151d98bffa6f0c221eb0c821900b19571f7661453f846d59e3cfe84d278e9c8"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 196,
+          "crc32": "1e9fa7f3",
+          "sha256": "19027d5d5745049c879754b47785c95148e4c9ce7d16d36e3013128214b47d6b"
+        },
+        {
+          "path": "illustrations/art-sinbad-4.gif",
+          "bytes": 1636,
+          "crc32": "bcfaf992",
+          "sha256": "87f20a7ad787dd0f148629c8b64c7750bd59aba751cd07144188a84eae27eb8e"
+        },
+        {
+          "path": "illustrations/art-sinbad-guide.gif",
+          "bytes": 5196,
+          "crc32": "c27c4d12",
+          "sha256": "5011c86834420644a5837179e41e4cc933cf17c56d6400d6086b19487eb0de20"
+        },
+        {
+          "path": "illustrations/art-sinbad-guide1-1.gif",
+          "bytes": 6309,
+          "crc32": "ef0cd368",
+          "sha256": "78fa6cba7218965d09315c95c126aca9727e632dfe572179a310374e63f888c6"
+        },
+        {
+          "path": "illustrations/art-sinbad-guide1.gif",
+          "bytes": 4857,
+          "crc32": "a14a579b",
+          "sha256": "fd156d65443a492e920ef188212b274ad03e006c87ae6ae403cca507dd77486e"
+        },
+        {
+          "path": "illustrations/art-sinbad-guide2.gif",
+          "bytes": 4584,
+          "crc32": "1d5d2400",
+          "sha256": "c397b64c3c14ac96a7f1c59fbbe63d49669726ffdf424d0d897a4ca219c64017"
+        },
+        {
+          "path": "originals/npb.swf",
+          "bytes": 5794155,
+          "crc32": "6c844fc9",
+          "sha256": "475a5bbca897983390a1867bffcdc577799ffb51f944f4d7367d9a72f2b15b46"
+        },
+        {
+          "path": "pocketgame/pg-boxing-index.html",
+          "bytes": 10032,
+          "crc32": "8e9b35f5",
+          "sha256": "741beffca6ae3a49e79dc7cece30a398f72c9cba8420a6d816ea600afafc38ee"
+        },
+        {
+          "path": "pocketgame/pg-fantasy-index.html",
+          "bytes": 9886,
+          "crc32": "317a330c",
+          "sha256": "796d090a4c3596d4ca47395cfda9852a2c66f4056987b009d259f237afada9e1"
+        },
+        {
+          "path": "pocketgame/pg-lovingyou-index.html",
+          "bytes": 9552,
+          "crc32": "d4a0adb0",
+          "sha256": "4e079e7a0c398e324036544ff95281e293606c33c33bfad1853db4dc55010e06"
+        },
+        {
+          "path": "pocketgame/pg-sinbad-index_faq.html",
+          "bytes": 12986,
+          "crc32": "939c5676",
+          "sha256": "ae2ebf0b4e46a0e540c81dcac5640c4eabb2a99c1df11f24758d018bd577db5e"
+        },
+        {
+          "path": "pocketgame/pg-sinbad-index_manual.html",
+          "bytes": 10399,
+          "crc32": "37b32422",
+          "sha256": "eef9277179d47bd95fd29c014d7e11ed073447e2037e135a342f5f4ab4a6dc34"
+        },
+        {
+          "path": "pocketgame/pg-tennis-index.html",
+          "bytes": 9975,
+          "crc32": "b9098d14",
+          "sha256": "73e98e2162749e1f460369bebd4e43f1a6374b3b4bec9d4d1c8b33e672a7a0de"
+        },
+        {
+          "path": "pocketgame/pocketgame-baseball-path.html",
+          "bytes": 10165,
+          "crc32": "2443db57",
+          "sha256": "b5585a983f03b2d6ac1cae2b14f022601970b2936f5e505b09a3f60d3863a220"
+        },
+        {
+          "path": "pocketgame/pocketgame-sam-path.html",
+          "bytes": 9428,
+          "crc32": "93629fe6",
+          "sha256": "722a68ef5f11d91f87ac695b54c868b297bf7a34ff6cee58dff280dec07c132b"
+        },
+        {
+          "path": "pocketgame/pocketgame-sinbad-path.html",
+          "bytes": 9547,
+          "crc32": "b00052fa",
+          "sha256": "c73ccb8ee5de92c90f8fe6808e8cc94134a7b8677a93952111977ff732cc8d1c"
+        },
+        {
+          "path": "pocketgame/pocketgame-soccer-path.html",
+          "bytes": 10307,
+          "crc32": "8a7e65b8",
+          "sha256": "4a4aaa77542c1b17c98e5beb41b8b8a24b5d1f128822fe0dcb5cae7474873ac6"
+        },
+        {
+          "path": "previews/npb-cover.png",
+          "bytes": 428903,
+          "crc32": "b3fec7c2",
+          "sha256": "c4f8bcaaac58409d8b1536248a02042125cdd0065136f8b560a8a6e5ab512c51"
+        },
+        {
+          "path": "previews/npb-video-03.png",
+          "bytes": 96760,
+          "crc32": "26b109eb",
+          "sha256": "4aa909c9018351d91a4e40019adb8f5509630b4c1e268568c1c8c5193c3e504c"
+        },
+        {
+          "path": "previews/npb-video-04.png",
+          "bytes": 102494,
+          "crc32": "1918bb4b",
+          "sha256": "1ec6801e9b29bdfd02da74bd35626ab8c2fb5f1d2cc618b81c758bde5707ac93"
+        },
+        {
+          "path": "publisher/home-daum-gvm.html",
+          "bytes": 1004,
+          "crc32": "28f0b766",
+          "sha256": "5b6ceed9fc0a22f3a7567a757ea774989a27635b3e5e3095bb0c22edc5804d0c"
+        },
+        {
+          "path": "publisher/home-pocket.html",
+          "bytes": 28965,
+          "crc32": "7e0bf103",
+          "sha256": "2785ffd9f6f27847ca3100d2dc700be0fa4c0dbaea6ccce2963426dd8af91119"
+        },
+        {
+          "path": "publisher/home-wo.html",
+          "bytes": 213,
+          "crc32": "ea23b8f5",
+          "sha256": "fc2af268e3668d0ed997670820addee6b856fd64c53171f29c3faf19fe88c0a6"
+        },
+        {
+          "path": "publisher/pocket-mobile-resolve.html",
+          "bytes": 15165,
+          "crc32": "265fb2ee",
+          "sha256": "e27d775209166b4f962e1408b10b09e1801da31ed4d35e997371db6a540a6221"
+        },
+        {
+          "path": "publisher/pocket-replay-004.html",
+          "bytes": 23154,
+          "crc32": "a318ea65",
+          "sha256": "d23de83774f9563c87a9cae618a661fc3e861c1180c6c7f7ddddc44d689b4e69"
+        },
+        {
+          "path": "publisher/pocket-replay-009.html",
+          "bytes": 532,
+          "crc32": "481a72d3",
+          "sha256": "5852562ed3a70fc12df047ab113997cb6b6a3704dbb155cab75ba4b1b5cd45ef"
+        },
+        {
+          "path": "publisher/pocket-replay-019.html",
+          "bytes": 722,
+          "crc32": "aa2dd447",
+          "sha256": "807a77acf58201efd8df269a0a901eae791fdbcd26e2066be10b2bf67a24f62b"
+        },
+        {
+          "path": "publisher/pocket-replay-028.html",
+          "bytes": 5584,
+          "crc32": "acbcf7c5",
+          "sha256": "aec2b5a7a72308e277950f0a13aaf12c21d2873df9fea92f05997d829cc2565a"
+        },
+        {
+          "path": "publisher/pocket-replay-029.html",
+          "bytes": 6713,
+          "crc32": "4c4fc312",
+          "sha256": "203a3eb16c159414c48d08786f3573b335e6d3dd327d1e3e332f2a5350f647a1"
+        },
+        {
+          "path": "publisher/pocket-replay-030.html",
+          "bytes": 6685,
+          "crc32": "07fafa47",
+          "sha256": "228e360a7b680aa2dca3cb5256d1c465c5b0947fd8411d6dac8c6e2a54b3f22f"
+        },
+        {
+          "path": "publisher/pocket-replay-031.html",
+          "bytes": 6765,
+          "crc32": "bbe02515",
+          "sha256": "ce4b55537c2f67ff7d5f9cdcbf5fbb5aba5a2d9e64afd16bc7f46a1e0fbd05a2"
+        },
+        {
+          "path": "publisher/pocket-replay-032.html",
+          "bytes": 6775,
+          "crc32": "d344facd",
+          "sha256": "a7b68b0ace378e10389bd06a639b69192f5c300927099bb055c2c8125c8d55ae"
+        },
+        {
+          "path": "publisher/pocket-replay-033.html",
+          "bytes": 6855,
+          "crc32": "84f8c0f5",
+          "sha256": "5086a285f028dae9a6363b7d22c404f84f4e52ec75053a0716fd31d428147ce8"
+        },
+        {
+          "path": "publisher/pocket-replay-035.html",
+          "bytes": 15476,
+          "crc32": "7d3edcc5",
+          "sha256": "805b7e91431e8c19c12492437123e2e5381466f1a4dc78a7f3cdf2108471db58"
+        },
+        {
+          "path": "publisher/pocket-replay-250.html",
+          "bytes": 6720,
+          "crc32": "d436d96f",
+          "sha256": "d087cd2f6c307cdf5095ab831d6cc1590b8f98ee8c712119817601df38a86a72"
+        },
+        {
+          "path": "publisher/pocket-replay-251.html",
+          "bytes": 6692,
+          "crc32": "c8ac53d7",
+          "sha256": "5d7d2394dfaecab67e4266779a59b5af073ec94669966b6b064b7b93f8fe55de"
+        },
+        {
+          "path": "publisher/pocket-replay-258.html",
+          "bytes": 58636,
+          "crc32": "58ff44a1",
+          "sha256": "4f9e656f235b76a8396a46482c28cdf93b539fde2bc0e62c0e79444213408d0a"
+        },
+        {
+          "path": "publisher/pocket-replay-259.html",
+          "bytes": 58609,
+          "crc32": "5832f06f",
+          "sha256": "f69afcff414fdbb064f44fc188557c18b4a91ae48c0ab70f16bdd9485c765432"
+        },
+        {
+          "path": "publisher/pocket-replay-266.html",
+          "bytes": 58626,
+          "crc32": "43767da2",
+          "sha256": "6489206c89b0f45b6dc0e920026356fe45611b2e885454a84558e8b9ac6ea318"
+        },
+        {
+          "path": "publisher/pocket-replay-273.html",
+          "bytes": 59398,
+          "crc32": "0d1002d5",
+          "sha256": "1ba5871954bc19dce62054257448a1637c233d13f836550475137058207d091a"
+        },
+        {
+          "path": "publisher/pocket-replay-275.html",
+          "bytes": 59387,
+          "crc32": "baef9e3a",
+          "sha256": "d122c2646c793eeb664b64a00e929066d398461442c7cf81885c75ade04ec36f"
+        },
+        {
+          "path": "publisher/pocket-replay-276.html",
+          "bytes": 59415,
+          "crc32": "fcc846ff",
+          "sha256": "30ba276960451987631446c0414559223758028bd56a3f3632f424303bcf168b"
+        },
+        {
+          "path": "publisher/pocket-replay-277.html",
+          "bytes": 59372,
+          "crc32": "4d6ad095",
+          "sha256": "455e136641eae2e9a0d51f332820f58718f055a54840c257c73d29061dc638a9"
+        },
+        {
+          "path": "sources/art-sinbad-4.headers.txt",
+          "bytes": 813,
+          "crc32": "9c4bcf2a",
+          "sha256": "ce7f561aadbb019029bc6534ba7b8247685a25b983c98c0367bb52dadadbed59"
+        },
+        {
+          "path": "sources/art-sinbad-guide.headers.txt",
+          "bytes": 829,
+          "crc32": "e36b4bff",
+          "sha256": "0dff45b85a5941799f1fd230912285cf4e391a15a92ebc8c16749808fb5eb9c1"
+        },
+        {
+          "path": "sources/art-sinbad-guide1-1.headers.txt",
+          "bytes": 841,
+          "crc32": "1cb12777",
+          "sha256": "62336bdb14651e137cefe7e6f942dc9d2f80bdb7ec57fa3c53dd4eacbe97014b"
+        },
+        {
+          "path": "sources/art-sinbad-guide1.headers.txt",
+          "bytes": 833,
+          "crc32": "dde817a6",
+          "sha256": "7fdeb17deb098da72c1df3dcc1110c4803725dc084414e0c067ff4a3b77f4802"
+        },
+        {
+          "path": "sources/art-sinbad-guide2.headers.txt",
+          "bytes": 833,
+          "crc32": "f017c99c",
+          "sha256": "23d6c10414cca1ffe426fc0bf5188f888fd3c7604db7f9c6361001f6edcc29b4"
+        },
+        {
+          "path": "sources/home-daum-gvm.headers.txt",
+          "bytes": 850,
+          "crc32": "791413e1",
+          "sha256": "929b5959afb2550598f3c1b9b9b59e6f35d253e068ac347d75d52f50ce589465"
+        },
+        {
+          "path": "sources/home-pocket.headers.txt",
+          "bytes": 1555,
+          "crc32": "5023b629",
+          "sha256": "60db9f0ed25531746bcc3be0f1aebc3fbf330153dee2b89e0be29e388b320b98"
+        },
+        {
+          "path": "sources/home-wo.headers.txt",
+          "bytes": 628,
+          "crc32": "8ac9dfe8",
+          "sha256": "f7164a86f452db3a5e8da831f2db6fa48cecceef3ec8a3d8e949ba5857552cc8"
+        },
+        {
+          "path": "sources/npb-end.headers.txt",
+          "bytes": 663,
+          "crc32": "dda3bfb5",
+          "sha256": "0296508fce3e6e1949a0d96de1196083936add10a2f56932b5adef0663ec0609"
+        },
+        {
+          "path": "sources/npb-tail.headers.txt",
+          "bytes": 663,
+          "crc32": "a6beaea8",
+          "sha256": "3f507672f24d80c9d4c777667cef8549a063971352d2ec7e191175e80747af54"
+        },
+        {
+          "path": "sources/pg-boxing-index.headers.txt",
+          "bytes": 851,
+          "crc32": "b4816356",
+          "sha256": "cd42198c5e8d421f69c6a1a707cffeef0346d2b7d6b64e11f19bba7f44acdb74"
+        },
+        {
+          "path": "sources/pg-fantasy-index.headers.txt",
+          "bytes": 853,
+          "crc32": "5111cef6",
+          "sha256": "db061bcca3583b8ea45cb9f3641e253016ffd7f8bc7e033c6719584ae66055ee"
+        },
+        {
+          "path": "sources/pg-lovingyou-index.headers.txt",
+          "bytes": 861,
+          "crc32": "1b1e821c",
+          "sha256": "13b8f56fcef8cf83e6615e0a6e71dbd1b9a638c55d4be5e92587c087afa2b579"
+        },
+        {
+          "path": "sources/pg-sinbad-index_faq.headers.txt",
+          "bytes": 867,
+          "crc32": "dbb79e2d",
+          "sha256": "1a421da406c354a835ac451a15cddcbe46d5da35e1eff097407f5fe6b0fe676c"
+        },
+        {
+          "path": "sources/pg-sinbad-index_manual.headers.txt",
+          "bytes": 879,
+          "crc32": "12957e55",
+          "sha256": "4c7b6baab19d3714cc1f4d619940acadeffb3f7aab99ef4d93c96e02e8f7e10a"
+        },
+        {
+          "path": "sources/pg-tennis-index.headers.txt",
+          "bytes": 849,
+          "crc32": "1f42dfdf",
+          "sha256": "a682ec284b617750134e849c1c002f79aec0f629a5f080fa3e48a19389ce8b2e"
+        },
+        {
+          "path": "sources/pocket-mobile-resolve.headers.txt",
+          "bytes": 969,
+          "crc32": "15b77799",
+          "sha256": "1406b619525ce8620eaf7e56af5be8b2e4f43458d570b7dfd78480b2d92bd936"
+        },
+        {
+          "path": "sources/pocket-npb.headers.txt",
+          "bytes": 605,
+          "crc32": "52e268a6",
+          "sha256": "efb6b8286d1a36c2d577700e0f51119f5b8f8018275cbe5c81757ee459d02d58"
+        },
+        {
+          "path": "sources/pocket-replay-004.headers.txt",
+          "bytes": 668,
+          "crc32": "357b3944",
+          "sha256": "2cf4f5529bb491b1aab9f6e4403857933e418dd4f9bee29c743e905259e89201"
+        },
+        {
+          "path": "sources/pocket-replay-009.headers.txt",
+          "bytes": 538,
+          "crc32": "ce76e553",
+          "sha256": "0218e4b9e7438b0f325bf06a4ad0ca8c72e1fd2d51d800d7fc6df52e42fd57d9"
+        },
+        {
+          "path": "sources/pocket-replay-019.headers.txt",
+          "bytes": 538,
+          "crc32": "daf77337",
+          "sha256": "f246c085ff47c2fdad4ee93f0f4f8dc77c1bd249df65d66c2524f8080209fd8d"
+        },
+        {
+          "path": "sources/pocket-replay-028.headers.txt",
+          "bytes": 549,
+          "crc32": "21c99792",
+          "sha256": "880de43dc0c9fe126166e93e0a58eabf42e34fe49b8fcaa66fd9d457a40e83e4"
+        },
+        {
+          "path": "sources/pocket-replay-029.headers.txt",
+          "bytes": 576,
+          "crc32": "601fcd05",
+          "sha256": "33059b7736249f604aa75950970fa0c773e95e81737d1c876f2962fe3ad1c8a5"
+        },
+        {
+          "path": "sources/pocket-replay-030.headers.txt",
+          "bytes": 576,
+          "crc32": "d5f16840",
+          "sha256": "f3067bcfd5c887d4c8803c169ad054053cac00bc32610ebdb5507804e45a26df"
+        },
+        {
+          "path": "sources/pocket-replay-031.headers.txt",
+          "bytes": 591,
+          "crc32": "50ce9e82",
+          "sha256": "f0c80394edce29f66295e67d1c236d981189b993a3528deeb8fc1ffc532f2f20"
+        },
+        {
+          "path": "sources/pocket-replay-032.headers.txt",
+          "bytes": 582,
+          "crc32": "c6442d55",
+          "sha256": "05ed186b9ecb3de5472cea03e28fbb392b43c35164d78f612bb8c046ce784fc5"
+        },
+        {
+          "path": "sources/pocket-replay-033.headers.txt",
+          "bytes": 570,
+          "crc32": "885ad2ee",
+          "sha256": "d1ea186fe3550b0d733f5b0fced93d027225b150f957295e3d87b399401a1409"
+        },
+        {
+          "path": "sources/pocket-replay-035.headers.txt",
+          "bytes": 551,
+          "crc32": "848bd676",
+          "sha256": "f1f9b133bce5dbe81725441b353ca6d49e53ca8845bea71d4e5951532c12f87c"
+        },
+        {
+          "path": "sources/pocket-replay-250.headers.txt",
+          "bytes": 574,
+          "crc32": "ea5e5307",
+          "sha256": "9790496652f2ba8a44886404d567702c61af482972b594f156bb0a091bfa451c"
+        },
+        {
+          "path": "sources/pocket-replay-251.headers.txt",
+          "bytes": 574,
+          "crc32": "231216f1",
+          "sha256": "d68795b073b3b5d7c33c1938cc2f138da860f405db7fedf22ad32a30fd525382"
+        },
+        {
+          "path": "sources/pocket-replay-258.headers.txt",
+          "bytes": 596,
+          "crc32": "46acf275",
+          "sha256": "6b4a8fe837602368a358264da2ad38088dfcbdff425ef0397a23fc66bcf9b322"
+        },
+        {
+          "path": "sources/pocket-replay-259.headers.txt",
+          "bytes": 598,
+          "crc32": "260aeb27",
+          "sha256": "a3b67801973a57741b47eec210625571dba204baff0af14403ab771355572b9c"
+        },
+        {
+          "path": "sources/pocket-replay-266.headers.txt",
+          "bytes": 598,
+          "crc32": "b9c26b4e",
+          "sha256": "9f18f889be170221f41dec7ab8fc50406dc794a0cf60d949b374efd455db6b99"
+        },
+        {
+          "path": "sources/pocket-replay-273.headers.txt",
+          "bytes": 598,
+          "crc32": "2cfa244d",
+          "sha256": "85e8126dfb16524c423492860e150e21b01900b116654c3abd1402d0a994543e"
+        },
+        {
+          "path": "sources/pocket-replay-275.headers.txt",
+          "bytes": 598,
+          "crc32": "55adb482",
+          "sha256": "154fcff6a31465c954034b68bba9b6eb63b317b866905f79726444a04b7542c8"
+        },
+        {
+          "path": "sources/pocket-replay-276.headers.txt",
+          "bytes": 598,
+          "crc32": "c8a7ae68",
+          "sha256": "c043a8b0ca7b045f8af04ba20286165e8a52cf414e2743e587ecd3710f224d4e"
+        },
+        {
+          "path": "sources/pocket-replay-277.headers.txt",
+          "bytes": 598,
+          "crc32": "7599cc6d",
+          "sha256": "2d113c40c98b00c20f0e53ebf7e6a032646b65544f34467a2395ee76c10ba83c"
+        },
+        {
+          "path": "sources/pocketgame-baseball-path.headers.txt",
+          "bytes": 857,
+          "crc32": "ce9bde49",
+          "sha256": "11827a8cc24b8537cdc3f72415774aa2d106757b921777a5aff0b8e0351a39c2"
+        },
+        {
+          "path": "sources/pocketgame-sam-path.headers.txt",
+          "bytes": 837,
+          "crc32": "96af16b0",
+          "sha256": "48d81509626337ac603ba51182b3479f8f04fa4ee6c6009a854493bec536cf86"
+        },
+        {
+          "path": "sources/pocketgame-sinbad-path.headers.txt",
+          "bytes": 847,
+          "crc32": "2040838f",
+          "sha256": "5c62d8d139f25c117480dd1bbcfa19379a94521606153a4b5359f5cbfe1c931a"
+        },
+        {
+          "path": "sources/pocketgame-soccer-path.headers.txt",
+          "bytes": 851,
+          "crc32": "334f0638",
+          "sha256": "d26cd57d85c14079fae4682bbab166e71a97a8dc9b7952374171c69b5944c2f3"
+        },
+        {
+          "path": "sources/pocketspace-cdx.headers.txt",
+          "bytes": 77,
+          "crc32": "5989b937",
+          "sha256": "700a3cd38813cf714e363313ef6f7cecec9c3540f25d6c70441d1cbdf1e522f5"
+        },
+        {
+          "path": "sources/pocketspace-cdx.txt",
+          "bytes": 34803,
+          "crc32": "6ceb8330",
+          "sha256": "293dffe4e9a07532c5641c2f30232ea89f6885e1c925d9eac3ac8d222e4f7007"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 17034,
+          "crc32": "fb73cc92",
+          "sha256": "7ad99ac4d13f2de083d407d602d28149b8997dc22a66b37f5ff011f22c63450d"
+        }
+      ]
+    },
+    {
       "id": "brewgames-105-lgt-downtown",
       "repositoryPath": "research/archives/Brewgames-105-LGT-DownTown-Game-Packages.zip",
       "bytes": 28459782,
@@ -209572,9 +210145,9 @@
     }
   ],
   "counts": {
-    "archives": 114,
-    "archiveBytes": 2271930994,
-    "fileMembers": 34757,
-    "uniqueMemberHashes": 20084
+    "archives": 115,
+    "archiveBytes": 2278530426,
+    "fileMembers": 34851,
+    "uniqueMemberHashes": 20178
   }
 }
