@@ -3,6 +3,183 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "dubigame-ktf-brew-358",
+      "repositoryPath": "research/archives/Dubigame-KTF-BREW-358-Original-Collection.zip",
+      "bytes": 96780849,
+      "sha256": "f41099f858b6df04f4896896f6736f0fa053e197f00f3230477cb71f48225b3c",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/32/game.zip",
+          "bytes": 343462,
+          "crc32": "5aed5c11",
+          "sha256": "e61217a4b40b5163cce012515e1aa33f50b345f9e001f53ccb3a67c2843bd847"
+        },
+        {
+          "path": "derived/33/game.zip",
+          "bytes": 331933,
+          "crc32": "a9001379",
+          "sha256": "5daa5a9eaa290bfbf9d82fea81692452802c001f6275994c9540a0bc27a63353"
+        },
+        {
+          "path": "derived/358/game.zip",
+          "bytes": 636553,
+          "crc32": "10a7b3d1",
+          "sha256": "b3c95c7fced39e36b5dc1d9994f4ef92814f68f144debe6224478944276a96af"
+        },
+        {
+          "path": "evidence/package-comparison.json",
+          "bytes": 914008,
+          "crc32": "f8426ead",
+          "sha256": "cdcd4b29e3fd52ad33d236cd8b5bec492b8aeae46330032fc9f254d26b7f557a"
+        },
+        {
+          "path": "evidence/range-receipt.json",
+          "bytes": 1326,
+          "crc32": "20b00946",
+          "sha256": "74493600d55e98ad4db08a09aa6f2f3898fc1131b54a67f5365d95e5c81e27a4"
+        },
+        {
+          "path": "evidence/upstream-identity.json",
+          "bytes": 535,
+          "crc32": "3b7a0feb",
+          "sha256": "7934dfc94882802ff7503dd174fa491611fc5e8255539aec0cd5d5a03c3ab22d"
+        },
+        {
+          "path": "evidence/wipi-openings.json",
+          "bytes": 4966,
+          "crc32": "7b461604",
+          "sha256": "c877e9b8939c8a07b412e086e81650c6d9463e9d45ad620692740df997428478"
+        },
+        {
+          "path": "originals/KTF BREW.zip",
+          "bytes": 95235525,
+          "crc32": "02dd5842",
+          "sha256": "a8e15b73b88b45303d28bda11e4f0aa5b7f58cc5b47083a29cf95882a2343e6b"
+        },
+        {
+          "path": "replays/32/error.txt",
+          "bytes": 372,
+          "crc32": "a283ff8a",
+          "sha256": "35573aafe1098cef28d81dd4bb03719ccafb8cf4f703f525d0b24e775dd4eb75"
+        },
+        {
+          "path": "replays/32/opening.lua",
+          "bytes": 155,
+          "crc32": "b5ccff54",
+          "sha256": "1ff0b598cab02b601d5064763a957ac05c3522c04f6b06e5ea5cf0799a89b8a3"
+        },
+        {
+          "path": "replays/32/opening.ndjson",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "replays/33/error.txt",
+          "bytes": 188,
+          "crc32": "e5ebd7cb",
+          "sha256": "ce90b5358c61544dbab4b25a7a32d697ee159c97adb2294141e59507d2881e04"
+        },
+        {
+          "path": "replays/33/opening.lua",
+          "bytes": 155,
+          "crc32": "b5ccff54",
+          "sha256": "1ff0b598cab02b601d5064763a957ac05c3522c04f6b06e5ea5cf0799a89b8a3"
+        },
+        {
+          "path": "replays/33/opening.ndjson",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "replays/358/error.txt",
+          "bytes": 0,
+          "crc32": "00000000",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "replays/358/first.png",
+          "bytes": 2908,
+          "crc32": "b015405d",
+          "sha256": "e52d837553e8a232c487b499dacbbfe8d60231fb5b01cbb0e4bf83ae9ee5d4f6"
+        },
+        {
+          "path": "replays/358/opening.lua",
+          "bytes": 155,
+          "crc32": "b5ccff54",
+          "sha256": "1ff0b598cab02b601d5064763a957ac05c3522c04f6b06e5ea5cf0799a89b8a3"
+        },
+        {
+          "path": "replays/358/opening.ndjson",
+          "bytes": 12235,
+          "crc32": "53e6ef51",
+          "sha256": "082d7d37676dfc6663c2a8ee8f37850b981799017ebf107c4c5f98a22a5ca85e"
+        },
+        {
+          "path": "replays/358/phase-4.png",
+          "bytes": 2935,
+          "crc32": "b062725c",
+          "sha256": "b755674ff314b870a33775ccef070768c556f9db87a1131b4bf937f42200833a"
+        },
+        {
+          "path": "sources/emu-30000000-32999999.headers.txt",
+          "bytes": 237,
+          "crc32": "6dbf72e7",
+          "sha256": "71381ca4754d39283c1db8a9d924796e71d60cb2d0fe89babc1d7261ad1477df"
+        },
+        {
+          "path": "sources/emu-32000000-47999999.headers.txt",
+          "bytes": 238,
+          "crc32": "add3ea19",
+          "sha256": "11804d404b4af13a22d38b920eb0d1a6f2c883183a8418cb6b9bcb22988db2b3"
+        },
+        {
+          "path": "sources/emu-48000000-63999999.headers.txt",
+          "bytes": 238,
+          "crc32": "49b98600",
+          "sha256": "da765105a7600d9476ec72559f99b2fb16861c34ed0d737101b687dbca034caa"
+        },
+        {
+          "path": "sources/emu-64000000-79999999.headers.txt",
+          "bytes": 238,
+          "crc32": "36626258",
+          "sha256": "779d5e555da4c581b5357b9c5f5b25d555c42aeb21a36e6c986cb23d51e83393"
+        },
+        {
+          "path": "sources/emu-80000000-95235524.headers.txt",
+          "bytes": 238,
+          "crc32": "7c98a2c8",
+          "sha256": "a90468ced065def2c9f91ae8b84b335cb8cf024f1931fbad34f359a99a4c21a7"
+        },
+        {
+          "path": "sources/initial-response.headers.txt",
+          "bytes": 345,
+          "crc32": "fe4a0da2",
+          "sha256": "faa17386cd1f1afb0ade1488f5e0352b0ccf2960286803e7dd498acd0bc6c3f3"
+        },
+        {
+          "path": "sources/metadata.headers.txt",
+          "bytes": 83,
+          "crc32": "50db4e9e",
+          "sha256": "58a838aa79b5c91022e0bcb878be5bd7f928919d643b7b9910c8734b2745e554"
+        },
+        {
+          "path": "sources/metadata.json",
+          "bytes": 2071,
+          "crc32": "b6ae6063",
+          "sha256": "b1cb19f747b81696cf0b3ce897ffceb4d2349260e331ade6a4248be5e3f2daea"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4778,
+          "crc32": "7e9540b7",
+          "sha256": "e1d49f2087530aab69f2f7e224dd01b7555c9fd639b329eb595563dd211c27a8"
+        }
+      ]
+    },
+    {
       "id": "kneosoft-new-zealand-story",
       "repositoryPath": "research/archives/NeoSoft-New-Zealand-Story-Publisher-Archive.zip",
       "bytes": 174020,
@@ -212803,9 +212980,9 @@
     }
   ],
   "counts": {
-    "archives": 117,
-    "archiveBytes": 2307643561,
-    "fileMembers": 35291,
-    "uniqueMemberHashes": 20552
+    "archives": 118,
+    "archiveBytes": 2404424410,
+    "fileMembers": 35319,
+    "uniqueMemberHashes": 20575
   }
 }
