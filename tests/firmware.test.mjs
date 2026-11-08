@@ -42,6 +42,26 @@ test('malformed or damaged ROM cannot create a machine', () => {
   assert.throws(() => new FirmwareMachine(broken), /checksum/);
 });
 
+test('nominal FCLK uses the reset bypass and measures clock changes within a slice', async () => {
+  const m = await FirmwareMachine.create(rom);
+  try {
+    assert.equal(m.nominalCpuHz, 12000000);
+    const start = 0x20010000;
+    // STR r1,[r0]; ADD r2,r2,#1. The first instruction writes SCLKmode.
+    m.cpu.write(start, Buffer.from('001080e5012082e2', 'hex'));
+    m.cpu.regWrite('pc', start);
+    m.cpu.regWrite('r0', 0x80000408);
+    m.cpu.regWrite('r1', 32);
+    const elapsed = m.runWithNominalClock(2);
+    assert.equal(m.nominalCpuHz, 6000000);
+    assert.equal(elapsed, 1000 / 12000000 + 1000 / 6000000);
+    assert.equal(m.instructions, 2);
+    assert.equal(m.cpu.regRead('r2'), 1);
+  } finally {
+    m.close();
+  }
+});
+
 test('real guest LCD writes produce the displayed RGB565 pixel', async () => {
   const m = await FirmwareMachine.create(rom);
   try {

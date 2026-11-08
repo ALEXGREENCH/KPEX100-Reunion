@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { GnexRuntime } from '../web/engine/gnex.js';
+import { SgsFile } from '../web/engine/sgs.js';
 
 const data = (path) => readFileSync(new URL(`../web/data/${path}`, import.meta.url));
 const rom = data('firmware/Kingston-2.12.rom');
@@ -20,7 +21,8 @@ test('Pocket Lab reads its cartridge via GNEX VFS and moves the DMG tile on all 
   };
   try {
     game.event('START');
-    assert.deepEqual(game.vfs.diagnostics.files, ['cart.gb']);
+    assert.equal(game.sgs.xorMask, 0xa5);
+    assert.deepEqual(game.vfs.diagnostics.files, ['pocket.gbr']);
     assert.equal(game.vfs.diagnostics.operations, 3);
     assert.equal(game.vfs.diagnostics.openHandles, 0);
     assert.equal(game.vfs.diagnostics.readonlyFiles, 1);
@@ -46,7 +48,7 @@ test('Pocket Lab reads its cartridge via GNEX VFS and moves the DMG tile on all 
 });
 
 test('Pocket Lab stops at the error screen if the VFS cartridge is missing', async () => {
-  const game = await GnexRuntime.create(rom, sgs.subarray(0, sgs.readUInt32LE(120)), {
+  const game = await GnexRuntime.create(rom, sgs.subarray(0, new SgsFile(sgs).declaredSize), {
     profile: 'kpex',
   });
   try {

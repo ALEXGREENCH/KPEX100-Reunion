@@ -28,7 +28,8 @@ test('Prism Relay renders both CGB tile banks and unlocks the exit after three c
   };
   try {
     game.event('START');
-    assert.deepEqual(game.vfs.diagnostics.files, ['cart.gb']);
+    assert.equal(game.sgs.xorMask, 0xa5);
+    assert.deepEqual(game.vfs.diagnostics.files, ['prism.gbc']);
     assert.equal(game.vfs.diagnostics.operations, 3);
     ticks(90);
 

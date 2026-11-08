@@ -7,7 +7,7 @@
 [English quick start](README.en.md) · [Совместимость](doc/compatibility.md) ·
 [Документация](doc/README.md) · [Играть в браузере](https://alexgreench.github.io/KPEX100-Reunion/)
 
-Коллекция включает 9 прошивок, 106 SGS-приложений, 21 игру Anycall ADS, 3 быстрых состояния
+Коллекция включает 9 прошивок, 107 SGS-приложений, 21 игру Anycall ADS, 3 быстрых состояния
 и оригинальный модуль Swerve 2.1. Каталог фиксирует размеры, SHA-256 и
 проверенные профили. Дополнительные файлы можно загрузить в браузере.
 
@@ -15,12 +15,15 @@
 [Fortress Tournament](doc/fortress-tournament.md) и утилита Mosquito.
 Во вкладке «Примеры» — четыре исторических образца и собственные демки
 [Pocket Lab и Prism Relay (GB/GBC)](demos/gb/README.md),
-[Orbital Courier (NES)](demos/nes/README.md) и
+[Orbital Courier (NES)](demos/nes/README.md), [Prism Vault (Game Gear)](demos/gg/README.md) и
 [GNEX Bench](demos/benchmark/README.md). Оригинальные вложения,
 исходники и исследовательские находки доступны на
 [странице архивов](https://alexgreench.github.io/KPEX100-Reunion/research/).
 Для каждого архива сохранены источник, размер и SHA-256; найденные native PXO
 и Flash не объявлены поддерживаемыми играми GNEX.
+
+При холодном старте Kingston 2.12 собственные homebrew и их SGS попадают на виртуальный накопитель.
+[Комплект для плеера и инструкция](demos/kpex/README.md).
 
 [World League и Bounce из S60](doc/s60-library-completion.md): полная World League 2005, её демо и Bounce! Rubberball Story теперь доступны из библиотеки. Это ранее сохранённые SGS с новыми парными проверками; ограничения меню и внешнего звука описаны отдельно.
 

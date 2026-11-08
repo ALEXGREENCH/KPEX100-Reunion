@@ -16,7 +16,7 @@
 int cart[8192], video[16384], ram[8192], colors[64];
 int seen[360], seenVersion[360], tileVersion[768], paletteVersion[8], dmgVersion;
 int a, b, c, d, e, hl, pc, zero, buttons, p1, lcd, bgp;
-int ready, failure, ox, oy, paintRow, pendingButtons;
+int ready, failure, ox, oy, paintRow, pendingButtons, repaintSlices, joypadWait;
 int colorMode, bank, colorIndex, paintColor;
 
 int Read8(int addr) {
@@ -41,15 +41,20 @@ void Write8(int addr, int value) {
         if (video[index] != value) {
             video[index] = value;
             if (offset < 6144) tileVersion[bank * 384 + offset / 16]++;
+            repaintSlices = 6;
         }
         return;
     }
     if (addr >= 49152 && addr < 57344) ram[addr - 49152] = value;
     if (addr == 65280) p1 = value & 48;
-    if (addr == 65344) lcd = value;
+    if (addr == 65344 && lcd != value) {
+        lcd = value;
+        repaintSlices = 6;
+    }
     if (addr == 65351 && bgp != value) {
         bgp = value;
         dmgVersion++;
+        repaintSlices = 6;
     }
     if (!colorMode) return;
     if (addr == 65359) bank = value & 1;
@@ -59,6 +64,7 @@ void Write8(int addr, int value) {
         if (colors[index] != value) {
             colors[index] = value;
             paletteVersion[index / 8]++;
+            repaintSlices = 6;
         }
         if (colorIndex & 128) colorIndex = 128 | ((index + 1) & 63);
     }
@@ -78,10 +84,18 @@ int Fetch16() {
 }
 
 void JumpRelative(int condition) {
-    int delta;
+    int delta, opcode;
     delta = Fetch8();
     if (delta >= 128) delta -= 256;
-    if (condition) pc = (pc + delta) & 65535;
+    if (!condition) return;
+    pc = (pc + delta) & 65535;
+    // LDH A,[JOYP]; CPL; AND 15; JR Z/NZ to itself. Inputs stay
+    // constant for this event, so every further iteration is identical.
+    if (delta == -7 && pc <= 32761 && Read8(pc) == 240 && Read8(pc + 1) == 0 &&
+        Read8(pc + 2) == 47 && Read8(pc + 3) == 230 && Read8(pc + 4) == 15) {
+        opcode = Read8(pc + 5);
+        if (opcode == 32 || opcode == 40) joypadWait = 1;
+    }
 }
 
 void Step() {
@@ -219,7 +233,7 @@ void main() {
     int file, count, i;
     ox = (swWidth - 160) / 2;
     oy = (swHeight - 144) / 2;
-    file = FileOpen("cart.gb", 3);
+    file = FileOpen("POCKET.GBR", 3);
     if (file >= 0) {
         count = FileReadInt(file, &cart[0], 8192);
         if (FileClose(file) < 0) count = 0;
@@ -247,13 +261,19 @@ void EVENT_TIMEOUT() {
     if (!ready) return;
     buttons = pendingButtons;
     pendingButtons = 0;
-    for (i = 0; i < 160 && !failure; i++) Step();
+    joypadWait = 0;
+    for (i = 0; i < 160 && !failure && !joypadWait; i++) Step();
     if (failure) {
         ResetTimer();
         Status(1);
         return;
     }
     if ((lcd & 128) == 0) return;
+    if (!repaintSlices) {
+        paintRow = (paintRow + 3) % 18;
+        return;
+    }
+    repaintSlices--;
     updated = 0;
     map = 6144;
     if (lcd & 8) map = 7168;

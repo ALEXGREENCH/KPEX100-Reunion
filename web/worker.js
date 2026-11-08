@@ -1,9 +1,11 @@
-import { GnexRuntime, ROM_SHA256 } from './engine/gnex.js';
+import { GnexRuntime } from './engine/gnex.js';
+import { hasNominalClock } from './engine/firmware-clock.js';
 import { LegacyRuntime } from './engine/legacy.js';
 import { detectVersion } from './engine/sgs.js';
 import { TimerScheduler } from './engine/timers.js';
 import { FirmwareMachine } from './engine/firmware.js';
 import { createDisk } from './engine/disk.js';
+import { cartridgeDiskFiles } from './engine/cartridge-disk.js';
 import { AdsRuntime } from './engine/ads.js';
 
 const keys = {
@@ -249,11 +251,19 @@ async function diskFiles(entries = null) {
     .filter((entry) => entry.engine !== 'ads')
     .map((entry) => ({
       entry,
-      name: aliases[entry.id] || `R${String(++research).padStart(7, '0')}.SGS`,
+      name:
+        entry.cartridge?.launcher ||
+        aliases[entry.id] ||
+        `R${String(++research).padStart(7, '0')}.SGS`,
     }));
-  return Promise.all(
-    jobs.map(async ({ entry, name }) => ({ name, data: await fetchBytes(entry.url) })),
+  const groups = await Promise.all(
+    jobs.map(async ({ entry, name }) => {
+      const data = await fetchBytes(entry.url);
+      const files = entry.cartridge ? await cartridgeDiskFiles(entry.cartridge, data) : [];
+      return [{ name, data }, ...files];
+    }),
   );
+  return groups.flat();
 }
 async function load(message) {
   running = false;
@@ -332,7 +342,7 @@ async function load(message) {
       fastIdle: true,
       traceInstructions: false,
     });
-    paceFirmware = message.firmwareClock === true && machine.rom_info?.sha256 === ROM_SHA256;
+    paceFirmware = message.firmwareClock === true && hasNominalClock(machine.rom_info?.sha256);
     if (message.type === 'loadState') {
       await machine.loadState(content);
       for (const key of ['up', 'down', 'left', 'right', 'a', 'b', 'menu', 'start', 'mode', 'rec'])
@@ -353,7 +363,7 @@ async function command(message) {
   if (message.sessionId != null && message.sessionId !== activeSession) return;
   if (!machine) return;
   if (message.type === 'firmwareClock' && mode === 'firmware') {
-    paceFirmware = message.enabled === true && machine.rom_info?.sha256 === ROM_SHA256;
+    paceFirmware = message.enabled === true && hasNominalClock(machine.rom_info?.sha256);
     lastLoad.firmwareClock = paceFirmware;
     firmwareDue = 0;
   } else if (message.type === 'key') {
@@ -426,12 +436,15 @@ function tick() {
       if (mode === 'firmware' && started >= firmwareDue) {
         let budget = firmwareBudget;
         const clock = paceFirmware ? machine.nominalCpuHz : 0;
-        const before = machine.instructions;
         if (clock > 0) budget = Math.min(budget, Math.max(1, Math.floor(clock / 50)));
         for (const at of nativeReleases.values())
           budget = Math.min(budget, Math.max(1, at - machine.instructions));
-        machine.run(budget, { snapshot: false });
-        if (clock > 0) firmwareDue = started + ((machine.instructions - before) * 1000) / clock;
+        if (clock > 0) {
+          // Retain sub-millisecond remainder across timer wakeups. Limit catch-up
+          // after the browser suspends the worker or the host falls far behind.
+          const start = firmwareDue ? Math.max(firmwareDue, started - 20) : started;
+          firmwareDue = start + machine.runWithNominalClock(budget);
+        } else machine.run(budget, { snapshot: false });
         releaseNative();
         const elapsed = Math.max(1, performance.now() - started);
         firmwareBudget = Math.max(2000, Math.min(1000000, Math.round((budget * 20) / elapsed)));

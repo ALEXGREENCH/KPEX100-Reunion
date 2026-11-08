@@ -18,6 +18,7 @@ assert.deepEqual(
 );
 for (const entry of assets) verifyAsset(root, entry);
 const files = walkFiles(root);
+assert.equal(files.includes('homebrew.zip'), manifest.historicalAssets);
 assert.equal(files.length, manifest.files.length + 1);
 for (const entry of manifest.files) {
   if (

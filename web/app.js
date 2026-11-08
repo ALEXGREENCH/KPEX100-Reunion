@@ -3,6 +3,7 @@ import { devices, deviceFor, fitFrame } from './presentation.js';
 import { SmafDecoder } from './smaf-decoder.js';
 import { SWERVE, MAX_ASSET_BYTES, assetCatalog, identifyAsset, sha256 } from './local-assets.js';
 import { libraryEntries, libraryCounts } from './library.js';
+import { hasNominalClock } from './engine/firmware-clock.js';
 
 const $ = (id) => document.getElementById(id);
 const canvas = $('screen');
@@ -97,7 +98,8 @@ function setStatus(text, kind = '') {
 }
 
 function updateTransport() {
-  $('firmwareClock').disabled = current?.kind !== 'firmware' || current.rom?.id !== 'kingston-2.12';
+  $('firmwareClock').disabled =
+    current?.kind !== 'firmware' || !hasNominalClock(current.rom?.sha256);
   $('playPause').disabled = !current || !workerReady || machineOff;
   $('reset').disabled = !current || !workerReady;
   $('playPause').querySelector('span').textContent = running ? 'Пауза' : 'Продолжить';

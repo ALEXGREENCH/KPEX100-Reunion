@@ -6,7 +6,7 @@ from struct import pack
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from sgs_build import build_sgs, pack_vfs  # noqa: E402
+from sgs_build import build_sgs, encode_kpex, pack_vfs  # noqa: E402
 
 
 SOURCE = Path(__file__).with_name("orbital-courier.mc")
@@ -442,6 +442,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sdk", type=Path, help="extracted Sinjisoft SDK 2.12 tools")
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--cart", type=Path, help="optional iNES mapper-0 test cartridge")
     mode.add_argument(
@@ -455,9 +456,8 @@ def main():
     else:
         if not args.sdk:
             parser.error("--sdk is required to build an SGS")
-        args.output.write_bytes(
-            pack_vfs(build_sgs(args.sdk, SOURCE), {"cart.nes": rom})
-        )
+        packaged = pack_vfs(build_sgs(args.sdk, SOURCE), {"ORBITAL.NES": rom})
+        args.output.write_bytes(packaged if args.plain else encode_kpex(packaged))
 
 
 if __name__ == "__main__":

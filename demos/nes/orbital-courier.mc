@@ -386,7 +386,7 @@ void Status(int error) {
 void main() {
     int file, count, i;
     Status(0);
-    file = FileOpen("cart.nes", 3);
+    file = FileOpen("ORBITAL.NES", 3);
     count = 0;
     if (file >= 0) {
         count = FileReadInt(file, &rom[0], 10245);

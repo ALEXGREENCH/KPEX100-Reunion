@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { GnexRuntime } from '../web/engine/gnex.js';
+import { SgsFile } from '../web/engine/sgs.js';
 
 const data = (path) => readFileSync(new URL(`../web/data/${path}`, import.meta.url));
 const rom = data('firmware/Kingston-2.12.rom');
@@ -33,7 +34,8 @@ test('Orbital Courier boots its iNES file, blocks debris, links three beacons, a
   };
   try {
     game.event('START');
-    assert.deepEqual(game.vfs.diagnostics.files, ['cart.nes']);
+    assert.equal(game.sgs.xorMask, 0xa5);
+    assert.deepEqual(game.vfs.diagnostics.files, ['orbital.nes']);
     assert.equal(game.vfs.diagnostics.operations, 3);
     assert.equal(game.vfs.diagnostics.openHandles, 0);
     assert.equal(game.vfs.diagnostics.readonlyFiles, 1);
@@ -90,8 +92,10 @@ test('Orbital Courier boots its iNES file, blocks debris, links three beacons, a
 
 test('Orbital Courier closes an unsupported mapper cartridge without starting a timer', async () => {
   const incompatible = Buffer.from(sgs);
-  assert.equal(incompatible.subarray(-CART_LENGTH, -CART_LENGTH + 4).toString(), 'NES\x1a');
-  incompatible[incompatible.length - CART_LENGTH + 6] |= 0x10;
+  const cart = new SgsFile(incompatible).body.subarray(-CART_LENGTH);
+  assert.equal(Buffer.from(cart.subarray(0, 4)).toString(), 'NES\x1a');
+  assert.equal(cart[6] & 0x10, 0);
+  incompatible[incompatible.length - CART_LENGTH + 6] ^= 0x10;
   const game = await GnexRuntime.create(rom, incompatible, { profile: 'kpex' });
   try {
     game.event('START');

@@ -625,3 +625,111 @@ test('production palette batching accelerates tall narrow images at the exact pi
     fast.cpu.close();
   }
 });
+
+const COPY_ENTRY = 0x200967fc;
+const COPY_SRC = 0x22003000;
+const COPY_DST = 0x23010000;
+const COPY_SP = 0x23fe0000;
+
+function copyAligned(
+  machine,
+  {
+    length = 4096,
+    src = COPY_SRC,
+    dst = COPY_DST,
+    sp = COPY_SP,
+    flags = 0xd8000013,
+    budget = 10_000_000,
+    counted = false,
+  } = {},
+) {
+  const { cpu } = machine;
+  const observed = Math.max(length + 16, 32);
+  const stack = new Uint8Array(32).fill(0x4d);
+  const input = Uint8Array.from({ length: observed }, (_, i) => (i * 17 + 97) & 255);
+  cpu.write(dst - 8, new Uint8Array(observed).fill(0xa7));
+  cpu.write(src - 8, input);
+  cpu.write(sp - 16, stack);
+  cpu.regWrite('cpsr', flags);
+  for (let i = 0; i < 15; i++) cpu.regWrite('r' + i, (0x10010000 + i * 0x10101) >>> 0);
+  cpu.regWrite('r0', dst);
+  cpu.regWrite('r1', src);
+  cpu.regWrite('r2', length);
+  cpu.regWrite('sp', sp);
+  cpu.regWrite('lr', STOP);
+  machine.instructions = 0;
+  let error = null;
+  try {
+    callHelper(cpu, COPY_ENTRY, !counted, budget);
+  } catch (e) {
+    error = e.message;
+  }
+  return {
+    error,
+    registers: Object.fromEntries(registers.map((reg) => [reg, cpu.regRead(reg)])),
+    dest: cpu.read(dst - 8, observed),
+    src: cpu.read(src - 8, observed),
+    stack: cpu.read(sp - 16, stack.length),
+    instructions: machine.instructions,
+  };
+}
+
+test('Guarded aligned bulk copies match exact bytes, ARM state and clock', async () => {
+  const native = await machine(false),
+    fast = await machine(true);
+  try {
+    for (const length of [4096, 4097, 4111, 4112, 4127, 4128, 77440, 155648]) {
+      assert.deepEqual(
+        copyAligned(fast, { length }),
+        copyAligned(native, { length }),
+        String(length),
+      );
+    }
+    assert.equal(fast.accelerator.stats.bulkCopies, 8);
+    const reference = copyAligned(native);
+    assert.equal(reference.registers.r15, STOP);
+    const boundary = reference.instructions * 2;
+    for (const budget of [
+      1,
+      12,
+      1000,
+      ...Array.from({ length: 139 }, (_, i) => boundary - 68 + i),
+    ]) {
+      assert.deepEqual(
+        copyAligned(fast, { budget }),
+        copyAligned(native, { budget }),
+        'budget ' + budget,
+      );
+    }
+    assert.ok(fast.accelerator.stats.bulkCopies > 8);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('Short, counted, unaligned and overlapping copies use the ARM routine', async () => {
+  const native = await machine(false),
+    fast = await machine(true);
+  try {
+    for (const options of [
+      { length: 4095 },
+      { counted: true },
+      { src: COPY_SRC + 1 },
+      { dst: COPY_DST + 3 },
+      { src: COPY_DST - 1024 },
+      { src: COPY_SP - 4096 },
+      { dst: COPY_SP - 4096 },
+    ]) {
+      assert.deepEqual(
+        copyAligned(fast, options),
+        copyAligned(native, options),
+        JSON.stringify(options),
+      );
+    }
+    assert.equal(fast.accelerator.stats.bulkCopies, 0);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});

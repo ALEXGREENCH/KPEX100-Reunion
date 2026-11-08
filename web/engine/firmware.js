@@ -568,7 +568,8 @@ export class FirmwareMachine {
       tclk = this.mmio[0x80000424] || 0,
       source = pll & 0x40000 ? pllHz : 12000000,
       f = sys & 63,
-      cpu = div & 1 ? source / (f + 1) : (source * Math.max(f, 1)) / 64,
+      // TCC76x §8: DCO phase zero bypasses the phase divider.
+      cpu = div & 1 ? source / (f + 1) : f === 0 ? source : (source * f) / 64,
       ts = [source, 12000000, 32768, 0][(tclk >>> 8) & 3],
       tp = tclk & 63,
       timer = div & 256 ? ts / (tp + 1) : (ts * tp) / 64;
@@ -632,7 +633,14 @@ export class FirmwareMachine {
         shift = (address & 3) * 8,
         mask = size === 4 ? 0xffffffff : U32(((1 << (size * 8)) - 1) << shift);
       value = U32((old & ~mask) | ((value << shift) & mask));
-      this.mmio[a] = value;
+      const clockRun = this._clockRun;
+      if (clockRun && old !== value && (a === 0x80000404 || a === 0x80000408 || a === 0x80000444)) {
+        // The instruction that writes the register ran at the previous clock.
+        clockRun.ms += ((this.instructions - clockRun.at) * 1000) / clockRun.hz;
+        clockRun.at = this.instructions;
+        this.mmio[a] = value;
+        clockRun.hz = this.nominalCpuHz;
+      } else this.mmio[a] = value;
       if (a === 0x80000040 || a === 0x80000044) {
         value &= a === 0x80000040 ? 65535 : 15;
         this._writeMMIO(a, value);
@@ -936,6 +944,16 @@ export class FirmwareMachine {
     }
     if (this.status === 'running') this.status = 'paused';
     if (snapshot) return this.snapshot();
+  }
+  runWithNominalClock(budget) {
+    const run = { at: this.instructions, hz: this.nominalCpuHz, ms: 0 };
+    this._clockRun = run;
+    try {
+      this.run(budget, { snapshot: false });
+      return run.ms + ((this.instructions - run.at) * 1000) / run.hz;
+    } finally {
+      this._clockRun = null;
+    }
   }
   snapshot() {
     return {

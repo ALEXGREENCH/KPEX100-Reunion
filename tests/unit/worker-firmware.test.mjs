@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import { TimerScheduler } from '../../web/engine/timers.js';
+import { hasNominalClock } from '../../web/engine/firmware-clock.js';
 
 const source = fs
   .readFileSync(new URL('../../web/worker.js', import.meta.url), 'utf8')
@@ -18,7 +19,7 @@ function harness({ deferredFetch = false, firmwareChannel = false } = {}) {
     scheduled = [];
   const sandbox = {
     TimerScheduler,
-    ROM_SHA256: 'kingston',
+    hasNominalClock,
     performance: { now: () => now },
     fetch(url) {
       fetched.push(url);
@@ -45,7 +46,13 @@ function harness({ deferredFetch = false, firmwareChannel = false } = {}) {
           framebufferRGBA: Uint8ClampedArray.of(0, 0, 0, 255),
           lcd_pixel_writes: 0,
           nominalCpuHz: 200000,
-          rom_info: { sha256: rom[0] === 1 ? 'kingston' : 'other' },
+          rom_info: {
+            sha256: [
+              null,
+              '743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a',
+              '4c3a8b1ca0282e23ae7696857a919842732e71d0bbccb093c41a0746435b40c2',
+            ][rom[0]],
+          },
           keys: [],
           budgets: [],
           runOptions: [],
@@ -57,6 +64,10 @@ function harness({ deferredFetch = false, firmwareChannel = false } = {}) {
             this.runOptions.push(options);
             this.instructions += budget;
             now += budget / 10000;
+          },
+          runWithNominalClock(budget) {
+            this.run(budget, { snapshot: false });
+            return this.clockDurationMs ?? (budget * 1000) / this.nominalCpuHz;
           },
           snapshot() {
             return { instructions: this.instructions, status: this.status };
@@ -93,6 +104,9 @@ function harness({ deferredFetch = false, firmwareChannel = false } = {}) {
     disks,
     messages,
     scheduled,
+    elapse(ms) {
+      now += ms;
+    },
     reply(url, bytes) {
       assert.ok(pending.has(url), 'Download started: ' + url);
       pending.get(url)(bytes);
@@ -135,6 +149,43 @@ test('nominal clock pacing caps each supported slice and skips work before its d
   await h.command({ type: 'firmwareClock', sessionId: 1, enabled: false });
   h.tick();
   assert.ok(g.instructions > 8000);
+});
+
+test('nominal pacing carries timer rounding forward and bounds catch-up after a stall', async () => {
+  const h = harness({ firmwareChannel: true });
+  await h.boot();
+  await h.command({ type: 'firmwareClock', sessionId: 1, enabled: true });
+  const g = h.created[0].guest;
+  g.clockDurationMs = 2.6;
+  h.tick();
+  assert.equal(h.scheduled.at(-1), 3);
+  h.elapse(3);
+  h.tick();
+  assert.equal(h.scheduled.at(-1), 2, 'Rounding the first timeout must not slow every slice');
+  h.elapse(2000);
+  for (let i = 0; i < 12; i++) h.tick();
+  assert.equal(typeof h.scheduled.at(-1), 'number', 'The worker returns to timed waits');
+  assert.ok(h.scheduled.at(-1) > 1);
+});
+
+test('the firmware switch accepts a measured Cenix ROM and rejects an unknown hash', async () => {
+  for (const [romByte, budget] of [
+    [2, 4000],
+    [3, 100000],
+  ]) {
+    const h = harness({ deferredFetch: true });
+    const boot = h.command({
+      type: 'boot',
+      sessionId: 1,
+      romUrl: 'rom',
+      diskGames: [],
+      firmwareClock: true,
+    });
+    h.reply('rom', [romByte]);
+    await boot;
+    h.tick();
+    assert.deepEqual(h.created[0].guest.budgets, [budget]);
+  }
 });
 
 test('cold boot fetches ROM and all supplied local/hosted games concurrently and adopts only its new disk', async () => {

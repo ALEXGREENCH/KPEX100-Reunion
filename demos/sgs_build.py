@@ -53,6 +53,11 @@ def build_sgs(sdk: Path, source: Path) -> bytes:
         return (work / f"{stem}.sgs").read_bytes()
 
 
+def encode_kpex(sgs: bytes) -> bytes:
+    """Encode an SGS using the Kingston 2.12 loader's XOR mask."""
+    return bytes(byte ^ 0xA5 for byte in sgs)
+
+
 def pack_vfs(sgs: bytes, files: dict[str, bytes]) -> bytes:
     """Append a table of read-only files to a plain SGS v4 container."""
     if not files:

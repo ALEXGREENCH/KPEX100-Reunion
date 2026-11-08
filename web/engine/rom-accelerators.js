@@ -8,6 +8,12 @@ const PALETTE_ROW_ENTRY = 0x2004e4c4;
 const PALETTE_ROW_EXIT = 0x2004e74c;
 const COLOR_MATCH_ENTRY = 0x20055a7c;
 const COLOR_PALETTE_POINTER = 0x20b41bc4;
+const ALIGNED_COPY_ENTRY = 0x200968b4;
+const ALIGNED_COPY_SIGNATURE = Uint8Array.from([
+  0x10, 0x40, 0x2d, 0xe9, 0x20, 0x20, 0x52, 0xe2, 0x05, 0x00, 0x00, 0x3a, 0x18, 0x50, 0xb1, 0x28,
+  0x18, 0x50, 0xa0, 0x28, 0x18, 0x50, 0xb1, 0x28, 0x18, 0x50, 0xa0, 0x28, 0x20, 0x20, 0x52, 0x22,
+  0xf9, 0xff, 0xff, 0x2a,
+]);
 const COLOR_MATCH_SIGNATURES = [
   [
     COLOR_MATCH_ENTRY,
@@ -88,6 +94,9 @@ export function installRomAccelerators(
     if (!signature.every((value, index) => actual[index] === value))
       throw new Error('Kingston RGB565 palette search does not match verified ROM');
   }
+  const copyCode = cpu.read(ALIGNED_COPY_ENTRY, ALIGNED_COPY_SIGNATURE.length);
+  if (!ALIGNED_COPY_SIGNATURE.every((value, index) => copyCode[index] === value))
+    throw new Error('Kingston aligned copy routine does not match verified ROM');
 
   const stats = {
     fills: 0,
@@ -104,6 +113,8 @@ export function installRomAccelerators(
     paletteWrites: 0,
     paletteFallbacks: 0,
     colorSearches: 0,
+    bulkCopies: 0,
+    copiedBytes: 0,
   };
   // The shared block monitor charges the entry block and updates the clock first.
   // Extra per-instruction CODE hooks would slow unrelated ARM interpreter paths.
@@ -476,6 +487,52 @@ export function installRomAccelerators(
     stats.colorSearches++;
     stats.skippedInstructions += skipped;
   });
+  // SaveLCD/RestoreLCD use this aligned forward-copy path. Leave the original
+  // register save, final 32-byte chunk and tail on ARM.
+  const removeBulkCopy = cpu.addBlockShortcut(ALIGNED_COPY_ENTRY, (address, size) => {
+    if (!enabled() || cpu.runCounted || cpu.runStop !== 0x23fff000 || size !== 12) return;
+    const remaining = cpu.regRead('r2'),
+      budget = cpu.blockBudget;
+    if (budget == null || remaining < 4096 || remaining > 512 * 1024) return;
+    if (cpu.regRead('cpsr') & 0x20) return;
+    const to = cpu.regRead('r0'),
+      from = cpu.regRead('r1');
+    if (
+      (to | from) & 3 ||
+      to < 0x23000000 ||
+      from < 0x20000000 ||
+      to + remaining > 0x23ff0000 ||
+      from + remaining > 0x24000000 ||
+      (to < from + remaining && from < to + remaining)
+    )
+      return;
+    // A copy touching the routine's two saved registers has to follow ARM
+    // read/write order. Reject it before the host performs any writes.
+    const sp = cpu.regRead('sp');
+    if (
+      sp & 3 ||
+      sp < 0x20000008 ||
+      sp > 0x24000000 ||
+      (from < sp && sp - 8 < from + remaining) ||
+      (to < sp && sp - 8 < to + remaining)
+    )
+      return;
+    const bytes = (remaining - 32) & ~31,
+      skipped = (bytes / 32) * 6,
+      work = skipped * 2;
+    // Reserve enough work for the remaining loop iteration and return. A
+    // watchdog must never stop at a shortcut's intermediate register state.
+    if (work + 64 > budget) return;
+    cpu.write(to, cpu.read(from, bytes));
+    cpu.regWrite('r0', to + bytes);
+    cpu.regWrite('r1', from + bytes);
+    cpu.regWrite('r2', remaining - bytes);
+    cpu.blockBudget = budget - work;
+    onSkippedInstructions(skipped);
+    stats.bulkCopies++;
+    stats.copiedBytes += bytes;
+    stats.skippedInstructions += skipped;
+  });
   return {
     stats,
     dispose() {
@@ -483,6 +540,7 @@ export function installRomAccelerators(
       removeRectangle();
       removePaletteRow();
       removeColorMatch();
+      removeBulkCopy();
     },
   };
 }

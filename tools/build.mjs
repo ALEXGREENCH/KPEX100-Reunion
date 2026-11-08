@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto';
 import { isPublicWebFile, walkFiles } from './public-files.mjs';
 import { historicalAssets, verifyAsset } from './catalog-assets.mjs';
 import { verifyResearchAssets } from './research-assets.mjs';
+import { buildHomebrewPack } from './homebrew-pack.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = path.join(root, 'web');
@@ -31,6 +32,8 @@ function copy(from, name) {
 }
 for (const file of walkFiles(source).filter(isPublicWebFile)) copy(path.join(source, file), file);
 for (const entry of assets) copy(path.join(source, entry.url), entry.url);
+if (includeOriginals)
+  fs.writeFileSync(path.join(target, 'homebrew.zip'), await buildHomebrewPack(source));
 fs.writeFileSync(
   path.join(target, 'data/availability.json'),
   JSON.stringify({ version: 1, assets: assets.map((entry) => entry.id) }) + '\n',

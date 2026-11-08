@@ -1,4 +1,4 @@
-"""Build an original ROM-only DMG cartridge and its GNEX SGS test host."""
+"""Build an original ROM-only DMG or CGB cartridge and its GNEX SGS host."""
 
 import argparse
 import sys
@@ -9,7 +9,7 @@ from tempfile import TemporaryDirectory
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
-from sgs_build import build_sgs, pack_vfs
+from sgs_build import build_sgs, encode_kpex, pack_vfs
 
 
 def demo_cartridge(color=False):
@@ -284,10 +284,9 @@ def color_map(rom):
     )
 
 
-def pack_cart(sgs, cart):
+def check_cartridge(cart):
     if len(cart) != 32768 or cart[0x147:0x149] != b"\0\0":
         raise ValueError("Expected a 32 KiB ROM-only Game Boy cartridge")
-    return pack_vfs(sgs, {"cart.gb": cart})
 
 
 def main():
@@ -302,27 +301,34 @@ def main():
         "--rom-only", action="store_true", help="write only the original cartridge"
     )
     parser.add_argument("--color", action="store_true", help="build Prism Relay (CGB)")
+    parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
     args = parser.parse_args()
     cart = args.cart.read_bytes() if args.cart else demo_cartridge(args.color)
+    check_cartridge(cart)
+    color = bool(cart[0x143] & 0x80)
+    if args.color and not color:
+        parser.error("--color requires a CGB cartridge")
     if args.rom_only:
         args.output.write_bytes(cart)
         return
     if args.sdk is None:
         parser.error("--sdk is required when building an SGS")
     source = HERE / "gb-reunion.mc"
-    if args.color:
+    if color:
         with TemporaryDirectory(prefix="reunion-cgb-") as directory:
             variant = Path(directory) / source.name
             variant.write_text(
                 source.read_text(encoding="ascii")
                 .replace("#DEFINE APPID 991", "#DEFINE APPID 992")
-                .replace('"Reunion GB"', '"Reunion CGB"'),
+                .replace('"Reunion GB"', '"Reunion CGB"')
+                .replace('"POCKET.GBR"', '"PRISM.GBC"'),
                 encoding="ascii",
             )
             sgs = build_sgs(args.sdk, variant)
     else:
         sgs = build_sgs(args.sdk, source)
-    args.output.write_bytes(pack_cart(sgs, cart))
+    packaged = pack_vfs(sgs, {"PRISM.GBC" if color else "POCKET.GBR": cart})
+    args.output.write_bytes(packaged if args.plain else encode_kpex(packaged))
 
 
 if __name__ == "__main__":

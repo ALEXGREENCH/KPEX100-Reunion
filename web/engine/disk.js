@@ -1,5 +1,6 @@
 // Reproducible FAT16 media with the ROM's raw resource area at LBA 4096.
 const encoder = new TextEncoder();
+const cartridgeFolders = ['NES', 'GB', 'GBC', 'GG'];
 export function createDisk(files, rom) {
   const total = 131072,
     start = 32768,
@@ -75,25 +76,48 @@ export function createDisk(files, rom) {
     u16(at + 26, cluster);
     u32(at + 28, size);
   }
+  const folders = new Map([['GAME', []], ...cartridgeFolders.map((name) => [name, []])]);
+  for (const file of files) {
+    const group = folders.get(file.folder ?? 'GAME');
+    if (!group) throw new Error('Unknown disk folder: ' + file.folder);
+    group.push(file);
+  }
+  const withCartridges = cartridgeFolders.some((name) => folders.get(name).length > 0);
+  const gameFiles = folders.get('GAME').length + (withCartridges ? cartridgeFolders.length : 0);
+  function addDirectory(at, name, parentCluster, entries) {
+    // Reserve contiguous directory clusters before allocating file data.
+    const cluster = allocate(new Uint8Array(Math.ceil(((entries + 2) * 32) / 2048) * 2048));
+    const first = (dataLba + (cluster - 2) * spc) * 512;
+    entry(first, '.          ', 0x10, cluster);
+    entry(first + 32, '..         ', 0x10, parentCluster);
+    entry(at, name.padEnd(11), 0x10, cluster);
+    return { cluster, first };
+  }
   entry(rootLba * 512, 'KPEX REUNIO', 8);
   const directories = {};
   ['GAME', 'MUSIC', 'PHOTO', 'VIDEO', 'TEXT'].forEach((name, i) => {
-    // Reserve the whole contiguous directory chain before allocating file data.
-    // Small collections retain their original one-cluster layout.
-    const directoryBytes =
-      name === 'GAME' ? Math.ceil(((files.length + 2) * 32) / 2048) * 2048 : 2048;
-    const cluster = allocate(new Uint8Array(directoryBytes));
-    directories[name] = cluster;
-    const at = (dataLba + (cluster - 2) * spc) * 512;
-    entry(at, '.          ', 0x10, cluster);
-    entry(at + 32, '..         ', 0x10);
-    entry(rootLba * 512 + (i + 1) * 32, name.padEnd(11), 0x10, cluster);
+    directories[name] = addDirectory(
+      rootLba * 512 + (i + 1) * 32,
+      name,
+      0,
+      name === 'GAME' ? gameFiles : 0,
+    );
   });
-  const gameOffset = (dataLba + (directories.GAME - 2) * spc) * 512;
-  const used = new Set();
-  [...files]
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .forEach((file, i) => {
+  if (withCartridges) {
+    cartridgeFolders.forEach((name, i) => {
+      const game = directories.GAME;
+      directories[name] = addDirectory(
+        game.first + (folders.get('GAME').length + i + 2) * 32,
+        name,
+        game.cluster,
+        folders.get(name).length,
+      );
+    });
+  }
+  for (const [folder, files] of folders) {
+    const used = new Set();
+    const ordered = files.sort((a, b) => a.name.localeCompare(b.name));
+    ordered.forEach((file, i) => {
       const name = file.name.toUpperCase();
       if (!/^[A-Z0-9_-]{1,8}\.[A-Z0-9_-]{1,3}$/.test(name) || used.has(name))
         throw new Error('Invalid DOS alias: ' + name);
@@ -101,13 +125,14 @@ export function createDisk(files, rom) {
       const [base, ext] = name.split('.'),
         cluster = allocate(file.data);
       entry(
-        gameOffset + (i + 2) * 32,
+        directories[folder].first + (i + 2) * 32,
         base.padEnd(8) + ext.padEnd(3),
         0x20,
         cluster,
         file.data.length,
       );
     });
+  }
   for (let n = 0; n < 2; n++) image.set(fat, (start + reserved + n * fatSectors) * 512);
   if (rom) {
     const rv = new DataView(rom.buffer, rom.byteOffset, rom.byteLength);
