@@ -3,6 +3,93 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "samsung-x6000-net-alkkagi",
+      "repositoryPath": "research/archives/Samsung-SPH-X6000-Net-Alkkagi.zip",
+      "bytes": 54216,
+      "sha256": "3d923a455036689103a50163a4546adeca3e569e66d594bd41d7f691c2836091",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/aram-check.lua",
+          "bytes": 70,
+          "crc32": "80d40b4d",
+          "sha256": "0469ec20ca35a44dd3eb94728e51f4487840afb8710eaa204a6b94fbdafd13f9"
+        },
+        {
+          "path": "evidence/aram-result.txt",
+          "bytes": 144,
+          "crc32": "7cf99c32",
+          "sha256": "0d4cceba9f704b9e529f332c32644fb9aa8d780ca86ce48c4ad84a677f0ec248"
+        },
+        {
+          "path": "evidence/efs-pages.json",
+          "bytes": 77270,
+          "crc32": "a6ca1ddb",
+          "sha256": "ac34f6b65eab3292f0c89d65fe2b4a70fbf50baddd2d19f6af730ff14ceb7abb"
+        },
+        {
+          "path": "evidence/firmware-scan.json",
+          "bytes": 9216,
+          "crc32": "9b3ecbba",
+          "sha256": "0f1e62278887cd64aac7ec16033f3ed533e125f3a53156ab02dedfbad935218b"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 1835,
+          "crc32": "c3305643",
+          "sha256": "c93ce3c85b9686276e77514aa4e33b97dba2d97d0997a86ab9cba71aed3a8545"
+        },
+        {
+          "path": "net-alkkagi.zip",
+          "bytes": 42550,
+          "crc32": "613b9af2",
+          "sha256": "9a442146a8342622ace443936ed23ce0bef7c65cf3e8fc75d8ee13657ddf13d0"
+        },
+        {
+          "path": "sources/SCH-B100.headers.txt",
+          "bytes": 185,
+          "crc32": "f2048094",
+          "sha256": "afffffefeb12e47028c2f6d4d1f5b18de269391068eb646a267bf801264cbf45"
+        },
+        {
+          "path": "sources/SCH-N255.headers.txt",
+          "bytes": 187,
+          "crc32": "f376e234",
+          "sha256": "ea564117524e29318ed2e69101c024cf59005ab7c5ca45344c64b26ce78d0cd7"
+        },
+        {
+          "path": "sources/SCH-N299.headers.txt",
+          "bytes": 186,
+          "crc32": "4a97b551",
+          "sha256": "545805b2c5a90703e05d4d7da09903a4ae4a7f5842c18738fddb8ed1a777aa79"
+        },
+        {
+          "path": "sources/SPH-E1100.headers.txt",
+          "bytes": 187,
+          "crc32": "5ff1f4d8",
+          "sha256": "b0bc9b421f40d23c3417b9e559c86654d3e5739c031f8c5cbef859e2d05bd363"
+        },
+        {
+          "path": "sources/SPH-X5900.headers.txt",
+          "bytes": 187,
+          "crc32": "4a832cce",
+          "sha256": "496c49d2b43f7e7f62b422da07f78cc9ddfc84a91d55df6810c87845e2a153ad"
+        },
+        {
+          "path": "sources/SPH-X6000.headers.txt",
+          "bytes": 187,
+          "crc32": "6fe55b95",
+          "sha256": "ee0a1f4248b85ed45aafbbf1115e1a4e3e7ed9e2d771d0a2d0780d463e9b10e4"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 2100,
+          "crc32": "b2cba392",
+          "sha256": "bf2342f0350c18b32df66c45f2c47cd764f13b607c32ddb68f71591041c82cf2"
+        }
+      ]
+    },
+    {
       "id": "inotia-ktf-original-aid",
       "repositoryPath": "research/archives/Inotia-Chronicles-KTF-Original-AID.zip",
       "bytes": 1375768,
@@ -213463,9 +213550,9 @@
     }
   ],
   "counts": {
-    "archives": 121,
-    "archiveBytes": 2480168180,
-    "fileMembers": 35395,
-    "uniqueMemberHashes": 20651
+    "archives": 122,
+    "archiveBytes": 2480222396,
+    "fileMembers": 35408,
+    "uniqueMemberHashes": 20664
   }
 }
