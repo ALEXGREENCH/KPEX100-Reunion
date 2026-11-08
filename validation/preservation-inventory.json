@@ -3,6 +3,357 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "wipix-ktf-three-gnex",
+      "repositoryPath": "research/archives/WIPI-X-KTF-Three-Recovered-GNEX-Games.zip",
+      "bytes": 4189871,
+      "sha256": "81d8c7a6cfed67d0b0c6c099ce3674fd2ffeeb22ab7117aace99da01f4886859",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/dungeon-fighter-gunner-ktf.sgs",
+          "bytes": 1190828,
+          "crc32": "367feb45",
+          "sha256": "a1d7918caf262f1fe3f93faebb6f2f94ec7d643075caa6567cee12df1a714daf"
+        },
+        {
+          "path": "derived/dungeon-fighter-slayer-ktf.sgs",
+          "bytes": 1137502,
+          "crc32": "845c33fb",
+          "sha256": "fabf96551388e38018f9dbb7fb2cc6c6627609353265f5e178b71c8c0f720e2b"
+        },
+        {
+          "path": "derived/sketcher-ktf.sgs",
+          "bytes": 509934,
+          "crc32": "ce7a13d3",
+          "sha256": "d393a53869182e2111c818be4b96e3e67e81a70822fd27e9058bed2432b594e6"
+        },
+        {
+          "path": "evidence/extraction-and-replays.json",
+          "bytes": 20293,
+          "crc32": "a54dcf0a",
+          "sha256": "3f17803007172e0357656e3b57c61af5466d87358fc17f5a29169f8ac9ab6746"
+        },
+        {
+          "path": "evidence/page-receipts.json",
+          "bytes": 18697,
+          "crc32": "272f7ea2",
+          "sha256": "0a8e0b5c5e7649d0448014fe7b6d3386d197c6f2a14227bf8d7f0930c54dda31"
+        },
+        {
+          "path": "evidence/survey.json",
+          "bytes": 5310993,
+          "crc32": "5a3e0c21",
+          "sha256": "ee2fbb2a0772548cf656540795d8f04573d4e7a495c17d25e3747bf64f039341"
+        },
+        {
+          "path": "originals/17/질주쾌감스케쳐 1_KTF_wipiX호환.zip",
+          "bytes": 288130,
+          "crc32": "789ad49f",
+          "sha256": "e159b9727dbdbfab7d69bea44df52ffc822db0c291a670faa9e5024eddbc09a7"
+        },
+        {
+          "path": "originals/4/던전앤파이터_KTF_wipiX호환.zip",
+          "bytes": 554387,
+          "crc32": "07a1c3a0",
+          "sha256": "8b01d4ae6af4e61306a32288577f503f33ba47b4b84200df73258d065f0b2a23"
+        },
+        {
+          "path": "originals/6/던전앤파이터 거너편_KTF_wipiX호환.zip",
+          "bytes": 637036,
+          "crc32": "44b07f5e",
+          "sha256": "d254cab24501e00938f6bd3a5da1b14f3cd3369124f1bdf3494c336402d6993c"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/final-world/actions.json",
+          "bytes": 4334,
+          "crc32": "70d2e768",
+          "sha256": "530d0246b70eadccbdd568b6b18430f7f4f5605f173c6c444580fea02c63a80d"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/final-world/local-dungeon-fighter-gunner-ktf-104-release20.png",
+          "bytes": 31829,
+          "crc32": "e4652320",
+          "sha256": "34ace867f6f89eed3478950cf143c30c04421a82519916acf49c5ebccde55f3b"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/final-world/local-dungeon-fighter-gunner-ktf-13-tick30.png",
+          "bytes": 9439,
+          "crc32": "2122c279",
+          "sha256": "45a610d31179c676af4a344a0ff78c700b6bec5f17d707ea200b9977e0fcba65"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/final-world/local-dungeon-fighter-gunner-ktf-73-tick4.png",
+          "bytes": 9529,
+          "crc32": "f97e55ad",
+          "sha256": "419a07f502f7f1fd53e0948e25ec106d0c72cbfe7bb7c3920215af1985646ffc"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/final-world/trace.json",
+          "bytes": 73705,
+          "crc32": "3fc53d29",
+          "sha256": "65a6c1f73f0aaa5a0ff7029b389233aa3bad842a35be704fb479e0b6404f93dc"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-control/actions.json",
+          "bytes": 701,
+          "crc32": "c2d873ee",
+          "sha256": "99cf30436e035a0019d320b08a04b0f71ce633b7b46533ce8859aab251b0d689"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-control/local-dungeon-fighter-gunner-ktf-13-tick30.png",
+          "bytes": 9439,
+          "crc32": "2122c279",
+          "sha256": "45a610d31179c676af4a344a0ff78c700b6bec5f17d707ea200b9977e0fcba65"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-control/local-dungeon-fighter-gunner-ktf-14-tick8.png",
+          "bytes": 9439,
+          "crc32": "2122c279",
+          "sha256": "45a610d31179c676af4a344a0ff78c700b6bec5f17d707ea200b9977e0fcba65"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-control/trace.json",
+          "bytes": 15376,
+          "crc32": "2c6ab8c9",
+          "sha256": "2cb408c833ebd560ea6de5b6780e684ba177634ea9712635b63f0e7cb64e596e"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-point/actions.json",
+          "bytes": 784,
+          "crc32": "ea05a6fa",
+          "sha256": "dde713727e875b0a27c4ab65415156b68500a3fd44a1ee6a5b1e81d2a8f85f7f"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-point/local-dungeon-fighter-gunner-ktf-13-tick30.png",
+          "bytes": 9439,
+          "crc32": "2122c279",
+          "sha256": "45a610d31179c676af4a344a0ff78c700b6bec5f17d707ea200b9977e0fcba65"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-point/local-dungeon-fighter-gunner-ktf-16-release20.png",
+          "bytes": 9430,
+          "crc32": "08ff7cc8",
+          "sha256": "2934cb0b78bca12bb8410e042e451f2fce45402753d60930cae2f3097002c720"
+        },
+        {
+          "path": "replays/dungeon-fighter-gunner-ktf/late-point/trace.json",
+          "bytes": 16673,
+          "crc32": "0dcdaa78",
+          "sha256": "a6fd624f16ce090db417c0c543d87f63d416d93bbd54c2c5aa75bbff052c6c8d"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-control/actions.json",
+          "bytes": 2037,
+          "crc32": "473e7a73",
+          "sha256": "1c6bc801f3c0ed33fb18bbcdb74bd96742cf2f0c6f8c6f7af9aa95ccfd2258be"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-control/local-dungeon-fighter-slayer-ktf-46-release5.png",
+          "bytes": 31684,
+          "crc32": "0b9b8d6b",
+          "sha256": "98c44411c87f42a8d22ed1bfeb9cbf69c6421f91e6a63849ef75f06966579572"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-control/local-dungeon-fighter-slayer-ktf-47-tick20.png",
+          "bytes": 31684,
+          "crc32": "0b9b8d6b",
+          "sha256": "98c44411c87f42a8d22ed1bfeb9cbf69c6421f91e6a63849ef75f06966579572"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-control/trace.json",
+          "bytes": 36886,
+          "crc32": "e87c3fb4",
+          "sha256": "f99b8b533ef3a4f5a686e07f6956db2dd733a247e963f8353f69a181be326789"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-right/actions.json",
+          "bytes": 2120,
+          "crc32": "1f27ea3d",
+          "sha256": "a3742e7401ac26fa33ddf3e8a140b5fa33f8ef29384e91fb752f91b9f1528b63"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-right/local-dungeon-fighter-slayer-ktf-46-release5.png",
+          "bytes": 31684,
+          "crc32": "0b9b8d6b",
+          "sha256": "98c44411c87f42a8d22ed1bfeb9cbf69c6421f91e6a63849ef75f06966579572"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-right/local-dungeon-fighter-slayer-ktf-49-release17.png",
+          "bytes": 30574,
+          "crc32": "71855cda",
+          "sha256": "eb9a6e751579ddc76a76c1c04d64a607c66a85e7947e057366b7f9709b3e6af5"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-right/trace.json",
+          "bytes": 38183,
+          "crc32": "ef564a25",
+          "sha256": "c9a100139fbc7f993655e749170c7927e7d811a493f4c327d9166643a2e741a4"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-six/actions.json",
+          "bytes": 2118,
+          "crc32": "ea8b458e",
+          "sha256": "2c6f924d4660819a7167c81cfac3353e5b54ed65581445567aff308b98af44cd"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-six/local-dungeon-fighter-slayer-ktf-46-release5.png",
+          "bytes": 31684,
+          "crc32": "0b9b8d6b",
+          "sha256": "98c44411c87f42a8d22ed1bfeb9cbf69c6421f91e6a63849ef75f06966579572"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-six/local-dungeon-fighter-slayer-ktf-49-release6.png",
+          "bytes": 30574,
+          "crc32": "71855cda",
+          "sha256": "eb9a6e751579ddc76a76c1c04d64a607c66a85e7947e057366b7f9709b3e6af5"
+        },
+        {
+          "path": "replays/dungeon-fighter-slayer-ktf/final-six/trace.json",
+          "bytes": 38177,
+          "crc32": "07df5e2c",
+          "sha256": "e5cef7e3ec1138afc47909a6a4b72f4e4df2eb79117df3d33cde05309f1f6a1f"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-control/actions.json",
+          "bytes": 871,
+          "crc32": "013aab93",
+          "sha256": "68c74ba5f261d07267683fd37dd2a6f21585df181b46ef4d7bab0a7606dbad39"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-control/local-sketcher-ktf-17-release17.png",
+          "bytes": 2108,
+          "crc32": "124969d5",
+          "sha256": "7b41600d19be9d092636417fd90bb1fdfe3c926bd1ceeb899c50e4248ff86d74"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-control/local-sketcher-ktf-18-advance1760.png",
+          "bytes": 2004,
+          "crc32": "dec34cde",
+          "sha256": "06a411123be08f83a2509328aeaad3c65ebed09961655ac92d5be0475942b172"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-control/trace.json",
+          "bytes": 17753,
+          "crc32": "27c0fb8d",
+          "sha256": "8b6e8cb6141d0745be79d1540653da3075046e65288f1e5460acfc70fe895b13"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-ok/actions.json",
+          "bytes": 910,
+          "crc32": "404ebcb5",
+          "sha256": "899a629e3ded350f84076a242cf7f99880a5063524e9630398e2bdc73af0d8a0"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-ok/local-sketcher-ktf-17-release17.png",
+          "bytes": 2108,
+          "crc32": "124969d5",
+          "sha256": "7b41600d19be9d092636417fd90bb1fdfe3c926bd1ceeb899c50e4248ff86d74"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-ok/local-sketcher-ktf-19-advance1760.png",
+          "bytes": 3051,
+          "crc32": "69f26724",
+          "sha256": "1a460cb3f96fcb3632cf1a70b4d13bad37b486922072f43eb318d30e29b1211d"
+        },
+        {
+          "path": "replays/sketcher-ktf/aligned-ok/trace.json",
+          "bytes": 18509,
+          "crc32": "a8d597bb",
+          "sha256": "3319f07dc0df19934b5d0a75f3b4aed8c5e2a66830db93367796d76046f8a59a"
+        },
+        {
+          "path": "replays/sketcher-ktf/gameplay/actions.json",
+          "bytes": 2863,
+          "crc32": "31eef8fb",
+          "sha256": "d66720b3d0506d57491b3d2c7b4c8d694ea12b8b6085989edb67d631fdd25655"
+        },
+        {
+          "path": "replays/sketcher-ktf/gameplay/local-sketcher-ktf-12-tick20.png",
+          "bytes": 2115,
+          "crc32": "626b7afe",
+          "sha256": "40661a41d55fcbfbefbeaf2eca02bae89b4a049f4584a62fae941f9a2eb111c1"
+        },
+        {
+          "path": "replays/sketcher-ktf/gameplay/local-sketcher-ktf-27-key5.png",
+          "bytes": 3188,
+          "crc32": "e36fdcdf",
+          "sha256": "a403a12f851c9974ba1ac7f1d6b93109698c0ed66808c70b577d69cf88953b1d"
+        },
+        {
+          "path": "replays/sketcher-ktf/gameplay/local-sketcher-ktf-68-release19.png",
+          "bytes": 2563,
+          "crc32": "a3b7a8ea",
+          "sha256": "28b1f2d99cacff1add5b873376130d32284742bca34fbdd84d50e2256e7419fb"
+        },
+        {
+          "path": "replays/sketcher-ktf/gameplay/trace.json",
+          "bytes": 50723,
+          "crc32": "ff865cc4",
+          "sha256": "a0b868c85019dd0cdc8d99017bacc682bcbfbfad88ae87e832ab725ab982c8e0"
+        },
+        {
+          "path": "sources/17/attachment.headers.txt",
+          "bytes": 371,
+          "crc32": "1822666c",
+          "sha256": "0026be77a99b4c188fd162762a102ee33bb097fca8b162f1d772f5b9e01727f2"
+        },
+        {
+          "path": "sources/17/page.headers.txt",
+          "bytes": 635,
+          "crc32": "29aca5a2",
+          "sha256": "129634f25ff5bf358b2ef1eaefe455d20e92a983b8a3467a91d8260cc0164263"
+        },
+        {
+          "path": "sources/17/page.html",
+          "bytes": 46823,
+          "crc32": "ba163e32",
+          "sha256": "158b6e379559e21a6602e90f6754c87838443333d9f8a2a44ee44b30090c40d6"
+        },
+        {
+          "path": "sources/4/attachment.headers.txt",
+          "bytes": 370,
+          "crc32": "3f9f681f",
+          "sha256": "59ec923d9e8e934579661c8f7847769a4671dcea28b11e3c9c06d455f7d1bd58"
+        },
+        {
+          "path": "sources/4/page.headers.txt",
+          "bytes": 635,
+          "crc32": "7324a96b",
+          "sha256": "7cba4c07a8a9e6f3d44b71ee00ad6d1e6f7b04e3c29f872fd692ae2f135ee506"
+        },
+        {
+          "path": "sources/4/page.html",
+          "bytes": 46847,
+          "crc32": "eef868be",
+          "sha256": "5c7ca327ea86642f54117e9f889679390399bf70a122339bc64a041887c44b6d"
+        },
+        {
+          "path": "sources/6/attachment.headers.txt",
+          "bytes": 371,
+          "crc32": "cf33dd06",
+          "sha256": "8095a3ed0cb0103cd3d0a7c2c28e45e89c88bb4cb5812621b12d6593b878870d"
+        },
+        {
+          "path": "sources/6/page.headers.txt",
+          "bytes": 635,
+          "crc32": "0c5dc0d4",
+          "sha256": "9a60395e9b9d3e36d8c62217fd0dfa5abb2bcfc6831c1f2f745bb7bdbf809881"
+        },
+        {
+          "path": "sources/6/page.html",
+          "bytes": 46939,
+          "crc32": "86b5525e",
+          "sha256": "c2654c1c6f0e0c0dde01b96a955f2d8f189c2054ce8c1f193e38c7b8982c1816"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 11668,
+          "crc32": "de9ca203",
+          "sha256": "7c33b083d59b39885dd6e3831e8a310a3d1a793b6ae4477f7a55ceb05a9256e3"
+        }
+      ]
+    },
+    {
       "id": "naver-wipix-seven-wipi-games",
       "repositoryPath": "research/archives/Naver-WIPI-X-Seven-Korean-Phone-Games.zip",
       "bytes": 14134192,
@@ -180397,9 +180748,9 @@
     }
   ],
   "counts": {
-    "archives": 95,
-    "archiveBytes": 1772101675,
-    "fileMembers": 29923,
-    "uniqueMemberHashes": 16247
+    "archives": 96,
+    "archiveBytes": 1776291546,
+    "fileMembers": 29980,
+    "uniqueMemberHashes": 16296
   }
 }
