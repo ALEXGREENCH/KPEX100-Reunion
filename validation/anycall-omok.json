@@ -1,0 +1,532 @@
+{
+  "schema": 1,
+  "game": "omok",
+  "originalMember": "버전 다름/오목.mbin",
+  "mbinSha256": "23c37635d5de54bd2cfad95c080ad70487c24feb52997f60d1223c900d568f08",
+  "mbinBytes": 79925,
+  "size": [
+    120,
+    128
+  ],
+  "palette": "provisional RGB332",
+  "hostCallCounts": {
+    "0x04": 1,
+    "0x08": 4,
+    "0x0c": 1,
+    "0x18": 11,
+    "0x24": 20,
+    "0x3c": 1,
+    "0x40": 11,
+    "0x48": 482,
+    "0x68": 1,
+    "0x70": 737,
+    "0x74": 4,
+    "0x7c": 76,
+    "0x8c": 60,
+    "0x98": 16,
+    "0x9c": 477,
+    "0xa0": 696,
+    "0xb0": 79
+  },
+  "stubSlots": [
+    "0x18",
+    "0x2c",
+    "0x30",
+    "0x34",
+    "0x3c",
+    "0x5c",
+    "0x68"
+  ],
+  "sourceArchive": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+  "originalMemberCrc32": "37bc714c",
+  "clock": "whole seconds from fixed 60 Hz replay ticks",
+  "guestTimers": "IDs 1 and 2; guest delays quantized to 60 Hz ticks",
+  "randomSeed": 305419896,
+  "sessionSave": {
+    "bytes": 272,
+    "sha256": "b863dfafafd837649659661c0f865cf227d07545146d4c157a10856afb2d4488",
+    "reads": 3
+  },
+  "modes": {
+    "one": {
+      "commonSequence": [
+        {
+          "key": null,
+          "ticks": 660,
+          "capture": {
+            "file": "one-menu.png",
+            "presentation": 387,
+            "indexedSha256": "90237a5ca86a045eb3a28c4b980a5cb1e09a9004663b0f0cd153c6ca2a5a1c13",
+            "pngSha256": "0f56de92fc4d37837f99db765d620b636e0fe7d291952f75c54db7608de6fa11",
+            "eventCount": 451
+          }
+        },
+        {
+          "key": 19,
+          "ticks": 60,
+          "capture": {
+            "file": "one-board.png",
+            "presentation": 446,
+            "indexedSha256": "526a5de9a351c42e6158db3db059ccb73d4aa730c6eda11f258eea7ef269cddf",
+            "pngSha256": "ce3825fa2dbcd042a5261ea6f6b4e2f0a00c54c2fa942acd36e6b1255a9e0917",
+            "eventCount": 512
+          }
+        }
+      ],
+      "branches": [
+        {
+          "key": null,
+          "ticks": 2,
+          "capture": {
+            "file": "one-idle.png",
+            "presentation": 448,
+            "indexedSha256": "526a5de9a351c42e6158db3db059ccb73d4aa730c6eda11f258eea7ef269cddf",
+            "pngSha256": "ce3825fa2dbcd042a5261ea6f6b4e2f0a00c54c2fa942acd36e6b1255a9e0917",
+            "eventCount": 514,
+            "changedPixels": 0
+          }
+        },
+        {
+          "key": 10,
+          "ticks": 2,
+          "capture": {
+            "file": "one-key-10.png",
+            "presentation": 448,
+            "indexedSha256": "21d4740b8f93693f92c9af781bc4fae0164be52bbc303d3358d16ad240c663e9",
+            "pngSha256": "3c48b52538a8e5f8dbab4319f9d5ad55fdd81b9ca08cf7f6497c862f33d21fcf",
+            "eventCount": 515,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 11,
+          "ticks": 2,
+          "capture": {
+            "file": "one-key-11.png",
+            "presentation": 448,
+            "indexedSha256": "bbaa907ccc4e65593700b5872da94717186d6efee83481240f046d8b617f2132",
+            "pngSha256": "a34462b2581fcfff5163fea9311d9fbdb4c1b5bf373d1faf94fca0fe4da55ab3",
+            "eventCount": 515,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 12,
+          "ticks": 2,
+          "capture": {
+            "file": "one-key-12.png",
+            "presentation": 448,
+            "indexedSha256": "c728b2314b9cfc6c5684880a0a46dea7389439b1a7752041397883f03321363e",
+            "pngSha256": "f6828f502a38398768c23b4a5fc7979decc0da29095a239091a36deef46a1243",
+            "eventCount": 515,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 13,
+          "ticks": 2,
+          "capture": {
+            "file": "one-key-13.png",
+            "presentation": 448,
+            "indexedSha256": "f8953a822ed967921861b86fb1e203bdf11d92e65765dee65053d54b2639ff51",
+            "pngSha256": "8d15365dd12c996f1ccdad1da37957552de2b1b4ad5238927c62f50a381b59f1",
+            "eventCount": 515,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 19,
+          "ticks": 2,
+          "capture": {
+            "file": "one-key-19.png",
+            "presentation": 448,
+            "indexedSha256": "288d997a6fcca27197d70c33cc6d9ec616abc8ac07b82bd0f05025a49c3f8cac",
+            "pngSha256": "0cdcbdd63b43f1bcc33a45c49901de01a3b5322159cb6dbd90d25ef2d6df18de",
+            "eventCount": 515,
+            "changedPixels": 122
+          }
+        },
+        {
+          "key": 20,
+          "ticks": 2,
+          "capture": {
+            "file": "one-key-20.png",
+            "presentation": 448,
+            "indexedSha256": "769ef8872b58875efe6b83e3f6d2195f215336836892813b580da7aabc156a36",
+            "pngSha256": "d91f72899e59d8f6e7da1898dd04c028e455d9c0ca3d4d09fa18e2e4db23df79",
+            "eventCount": 515,
+            "changedPixels": 9304
+          }
+        }
+      ]
+    },
+    "two": {
+      "commonSequence": [
+        {
+          "key": null,
+          "ticks": 660,
+          "capture": {
+            "file": "two-menu.png",
+            "presentation": 387,
+            "indexedSha256": "90237a5ca86a045eb3a28c4b980a5cb1e09a9004663b0f0cd153c6ca2a5a1c13",
+            "pngSha256": "0f56de92fc4d37837f99db765d620b636e0fe7d291952f75c54db7608de6fa11",
+            "eventCount": 451
+          }
+        },
+        {
+          "key": 13,
+          "ticks": 2,
+          "capture": {
+            "file": "two-select-two.png",
+            "presentation": 389,
+            "indexedSha256": "aaef9a6dff686a7eca70557d25d9896b7f0976433c1c3b79d97b98bddebf51d6",
+            "pngSha256": "394d16830e40eb508ee95891a209cccad1a9f1ad827790beea685a87af0f8b61",
+            "eventCount": 454
+          }
+        },
+        {
+          "key": 19,
+          "ticks": 60,
+          "capture": {
+            "file": "two-board.png",
+            "presentation": 448,
+            "indexedSha256": "38f78ca4c8990d7b0d4ead274b09e8a0038423af4433a93455d07d004b3bc24d",
+            "pngSha256": "995e69ae4987893031ee2fefa40d8fd601a33f2aaa71308c1008690ff62273a4",
+            "eventCount": 515
+          }
+        }
+      ],
+      "branches": [
+        {
+          "key": null,
+          "ticks": 2,
+          "capture": {
+            "file": "two-idle.png",
+            "presentation": 450,
+            "indexedSha256": "38f78ca4c8990d7b0d4ead274b09e8a0038423af4433a93455d07d004b3bc24d",
+            "pngSha256": "995e69ae4987893031ee2fefa40d8fd601a33f2aaa71308c1008690ff62273a4",
+            "eventCount": 517,
+            "changedPixels": 0
+          }
+        },
+        {
+          "key": 10,
+          "ticks": 2,
+          "capture": {
+            "file": "two-key-10.png",
+            "presentation": 450,
+            "indexedSha256": "64a5f37452f42e6b48a1c123c12f6fc513701ca8369362863c0fe0a5da09dbf1",
+            "pngSha256": "522c8b45ab9e4dc1747daffd72704ef5bf27bd2a1b1089b9454b85752dc1ce93",
+            "eventCount": 518,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 11,
+          "ticks": 2,
+          "capture": {
+            "file": "two-key-11.png",
+            "presentation": 450,
+            "indexedSha256": "2e75b3f1e7902101e78dcc1633a0548f0259394f6a6d80da1f9e955bede921ec",
+            "pngSha256": "78b7441d60de20e31798cc081dc2a58f4bf6638d02a127daaed73aa65b2d1e65",
+            "eventCount": 518,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 12,
+          "ticks": 2,
+          "capture": {
+            "file": "two-key-12.png",
+            "presentation": 450,
+            "indexedSha256": "d8bd63e95a09f5e375e7d3f24a444b5b307306c650e79848b5e518b8630da808",
+            "pngSha256": "a710dcc126c49949dd9ce8daed6607f0c09236dcafc8684eeded3e07306d460d",
+            "eventCount": 518,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 13,
+          "ticks": 2,
+          "capture": {
+            "file": "two-key-13.png",
+            "presentation": 450,
+            "indexedSha256": "0591cc25ce6822bf486e62d233a0a9d9189e9bebaed88f77923cd343d7caff0b",
+            "pngSha256": "c8d200c47e6df4873dfb77b775dcbc73c1c0a713f80f2891e4f4c99fd1276a90",
+            "eventCount": 518,
+            "changedPixels": 72
+          }
+        },
+        {
+          "key": 19,
+          "ticks": 2,
+          "capture": {
+            "file": "two-key-19.png",
+            "presentation": 450,
+            "indexedSha256": "b192f7cc5a957aff4017aaf461e35fa138b9a4fd4aeeb4fff51d4bf88d41bb7c",
+            "pngSha256": "0a46a4bd279145e71b5e7f34c00674b3be257e0c8f86d9fc2ddcacb906cc8871",
+            "eventCount": 518,
+            "changedPixels": 25
+          }
+        },
+        {
+          "key": 20,
+          "ticks": 2,
+          "capture": {
+            "file": "two-key-20.png",
+            "presentation": 450,
+            "indexedSha256": "73dc81a64a23f9c0982c2af62f0ee19d8dbc793d343778dbf37a0ef5b6237703",
+            "pngSha256": "df26702bdc9277017115b4e233d0390c318539d62b0aa1d1f1bae44f010a4291",
+            "eventCount": 518,
+            "changedPixels": 8163
+          }
+        }
+      ]
+    }
+  },
+  "longPlay": [
+    {
+      "mode": "one",
+      "sequence": [
+        {
+          "key": 19,
+          "ticks": 60,
+          "capture": {
+            "file": "one-cpu-reply.png",
+            "presentation": 506,
+            "indexedSha256": "288d997a6fcca27197d70c33cc6d9ec616abc8ac07b82bd0f05025a49c3f8cac",
+            "pngSha256": "0cdcbdd63b43f1bcc33a45c49901de01a3b5322159cb6dbd90d25ef2d6df18de",
+            "eventCount": 573
+          }
+        },
+        {
+          "key": 20,
+          "ticks": 3
+        },
+        {
+          "key": 13,
+          "ticks": 2
+        },
+        {
+          "key": 13,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2,
+          "capture": {
+            "file": "one-saved.png",
+            "presentation": 515,
+            "indexedSha256": "769ef8872b58875efe6b83e3f6d2195f215336836892813b580da7aabc156a36",
+            "pngSha256": "d91f72899e59d8f6e7da1898dd04c028e455d9c0ca3d4d09fa18e2e4db23df79",
+            "eventCount": 586
+          }
+        },
+        {
+          "key": 13,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 60
+        },
+        {
+          "key": 19,
+          "ticks": 60,
+          "capture": {
+            "file": "one-restore-prompt.png",
+            "presentation": 636,
+            "indexedSha256": "13ad6c2c174bb1e5d09630df48e19eca6cd78a646727997041e441de7d4545d4",
+            "pngSha256": "6a8e1c044490ba5ce108af32b1a239ef6935f3bce1bb50365b42ca3683111191",
+            "eventCount": 711
+          }
+        },
+        {
+          "key": 19,
+          "ticks": 60,
+          "capture": {
+            "file": "one-restored.png",
+            "presentation": 696,
+            "indexedSha256": "288d997a6fcca27197d70c33cc6d9ec616abc8ac07b82bd0f05025a49c3f8cac",
+            "pngSha256": "0cdcbdd63b43f1bcc33a45c49901de01a3b5322159cb6dbd90d25ef2d6df18de",
+            "eventCount": 772
+          }
+        }
+      ]
+    },
+    {
+      "mode": "two",
+      "sequence": [
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 12,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 13,
+          "ticks": 2
+        },
+        {
+          "key": 11,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 12,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 13,
+          "ticks": 2
+        },
+        {
+          "key": 11,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 12,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 13,
+          "ticks": 2
+        },
+        {
+          "key": 11,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 12,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2
+        },
+        {
+          "key": 13,
+          "ticks": 2
+        },
+        {
+          "key": 11,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 2,
+          "capture": {
+            "file": "two-five-in-row.png",
+            "presentation": 490,
+            "indexedSha256": "283bb21c3afeaca899f5b62e3e29b5ddf4dfde2a70a3df449f2621d5959cb284",
+            "pngSha256": "4c5017c3543270b3cbb7a1168c66b67cd6ddbabab5ca566dca60ebd75c091a71",
+            "eventCount": 578
+          }
+        },
+        {
+          "key": null,
+          "ticks": 80,
+          "capture": {
+            "file": "two-winner.png",
+            "presentation": 570,
+            "indexedSha256": "f8733b4749dc47207ae14eff6ddd23d67c4d04ebfc9d0926abf0ffb61b27364b",
+            "pngSha256": "40d94ff2ff57b616fd382b42eabccb88f695b2c1998b1589ae325bcc40dc054b",
+            "eventCount": 658
+          }
+        },
+        {
+          "key": null,
+          "ticks": 360,
+          "capture": {
+            "file": "two-new-menu.png",
+            "presentation": 930,
+            "indexedSha256": "8e20b0e9bf0768c521322c711c0ccf6c74ec704e8f9804802a280d00218c82b9",
+            "pngSha256": "8906e1dc5f546da302cb7ec3987e590a3007b36483e5bdfd870ba7db43067215",
+            "eventCount": 1018
+          }
+        }
+      ]
+    },
+    {
+      "mode": "one",
+      "sequence": [
+        {
+          "key": 19,
+          "ticks": 20
+        },
+        {
+          "key": 11,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 20
+        },
+        {
+          "key": null,
+          "ticks": 20,
+          "capture": {
+            "file": "one-undo-idle.png",
+            "presentation": 508,
+            "indexedSha256": "d25956ce448ecef451203ce69d3b9752b15fba67e5f9d08bd96af5ac0b513319",
+            "pngSha256": "0b4ebe1d21f861539a905bfd5c6910858a407be435f35d787605b6fc3fee2dd8",
+            "eventCount": 577
+          }
+        }
+      ]
+    },
+    {
+      "mode": "one",
+      "sequence": [
+        {
+          "key": 19,
+          "ticks": 20
+        },
+        {
+          "key": 11,
+          "ticks": 2
+        },
+        {
+          "key": 19,
+          "ticks": 20
+        },
+        {
+          "key": 14,
+          "ticks": 20,
+          "capture": {
+            "file": "one-undo-side-key.png",
+            "presentation": 508,
+            "indexedSha256": "2aec089d7e22c2aabb1d109e072e4f5293eb4ba6f9bb4c9611528fb54a862732",
+            "pngSha256": "9a00a34d9c3eba1cad7666eefb6266b3e826078f74c876702cc0eaac7cf04788",
+            "eventCount": 578
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -37,6 +37,10 @@ WIDTH, HEIGHT = 120, 128
 ARGS = (UC_ARM_REG_R0, UC_ARM_REG_R1, UC_ARM_REG_R2, UC_ARM_REG_R3)
 STUB_SLOTS = {0x18, 0x24, 0x3C, 0x40, 0x48, 0x68}
 ADDITIONAL_GAMES = {
+    "omok": (
+        "버전 다름/오목.mbin",
+        "23c37635d5de54bd2cfad95c080ad70487c24feb52997f60d1223c900d568f08",
+    ),
     "hungry-hunter": (
         "Hungry_Hunter.mbin",
         "be7a23f99e205ab13674706ad750cebb01558e6dd65835cfbdc31546b8c5a8be",
@@ -76,6 +80,10 @@ ADDITIONAL_GAMES = {
     "cheombangjichuk-othello": (
         "버전 다름/천방지축_오델로.mbin",
         "30f98f626af9cdbeb2f57180c31040df60153a101f3388926b5a2086dee51bf2",
+    ),
+    "othello-good-evil": (
+        "버전 다름/오델로선악전.mbin",
+        "8bd08b669e95e92cbf6ed36a5b94bdeabb6395d37d86411bb7d63190b6fd46b7",
     ),
     "couple-bowling": (
         "버전 다름/커플볼링.mbin",
@@ -119,6 +127,7 @@ DRAWING_TIMERS = {
     "udon-time": 2,
     "mobile-gostop": 1,
     "cheombangjichuk-othello": 1,
+    "othello-good-evil": 1,
     "couple-bowling": 1,
     "bubble-monk-2": 1,
     "bubble-monk": 1,
@@ -127,8 +136,10 @@ DRAWING_TIMERS = {
     **dict.fromkeys(ACTION_GAMES, 1),
 }
 RANDOM_GAMES = (
+    "omok",
     "udon-time",
     "mobile-gostop",
+    "othello-good-evil",
     "couple-bowling",
     "bubble-monk-2",
     "bubble-monk",
@@ -173,9 +184,11 @@ class Replay:
     def __init__(self, original, *, game_id="jumping-baby"):
         self.game_id = game_id
         self.instruction_budget = {
+            "omok": 500_000,
             "bubble-monk-2": 1_000_000,
             "hysteric-girl": 150_000,
             "badger": 150_000,
+            "othello-good-evil": 8_000_000,
         }.get(game_id, 25_000)
         self.original_sha256 = sha256(original).hexdigest()
         expected = (
@@ -196,6 +209,7 @@ class Replay:
             in (
                 "pocket-billiards",
                 "cheombangjichuk-othello",
+                "othello-good-evil",
                 "couple-bowling",
                 "hysteric-girl",
                 "independence-day-anycall",
@@ -510,6 +524,67 @@ class DrawingReplay(Replay):
                 y += step_y
 
 
+class OmokReplay(DrawingReplay):
+    def __init__(self, original):
+        self.clock = 0
+        self.timer = None
+        self.interval = 0
+        self.deadline = 0
+        self.save_record = None
+        self.save_reads = 0
+        super().__init__(original, "omok")
+        self.stub_slots -= {0x08, 0x24, 0x9C}
+
+    def tick(self, frames=1):
+        for _ in range(frames):
+            self.clock += 1
+            if self.timer is not None and self.clock >= self.deadline:
+                self.deadline = self.clock + self.interval
+                self.dispatch(5, self.timer)
+
+    def host(self, cpu, address, size, data):
+        slot = address - STUBS
+        if slot not in (0x08, 0x0C, 0x24, 0x48, 0x9C):
+            return super().host(cpu, address, size, data)
+        self.calls[slot] += 1
+        a, b = (cpu.reg_read(register) for register in ARGS[:2])
+        caller = cpu.reg_read(UC_ARM_REG_LR)
+        if slot in (0x08, 0x0C):
+            expected = TEXT + (0x4D91 if slot == 0x08 else 0x4DB9)
+            if a != BSS + 0x89C4 or caller != expected:
+                raise ValueError("unexpected Omok save service")
+            if slot == 0x0C:
+                self.save_record = bytes(cpu.mem_read(a, 272))
+            elif self.save_record:
+                cpu.mem_write(a, self.save_record)
+                self.save_reads += 1
+        elif slot == 0x24:
+            channel, operation = a & 65535, a >> 16
+            if (
+                caller not in (TEXT + 0x412D, TEXT + 0x4DE5)
+                or channel not in (1, 2)
+                or operation not in (0, 2)
+            ):
+                raise ValueError("unexpected Omok timer operation")
+            if operation == 2:
+                self.timer = channel
+                self.interval = max(1, ((b & 65535) * 60 + 999) // 1000)
+                self.deadline = self.clock + self.interval
+            elif self.timer == channel:
+                self.timer = None
+        elif slot == 0x48:
+            if caller != TEXT + 0x4CC1:
+                raise ValueError("unexpected Omok clock caller")
+            cpu.mem_write(
+                self.output_address() + 12, struct.pack("<I", self.clock // 60)
+            )
+        else:
+            if (caller, a) != (TEXT + 0x4A7D, 255):
+                raise ValueError("unexpected Omok display clear")
+            cpu.mem_write(FRAMEBUFFER, bytes([a]) * WIDTH * self.height)
+        cpu.reg_write(UC_ARM_REG_R0, 0)
+
+
 def save_frame(output, name, game):
     indices = game.frame()
     rgb = b"".join(RGB332[index] for index in indices)
@@ -546,6 +621,132 @@ def replay_identity(game, original):
         },
         "stubSlots": [f"0x{slot:02x}" for slot in sorted(game.stub_slots)],
     }
+
+
+def replay_omok(original, output):
+    def run(game, sequence, prefix):
+        steps = []
+        for key, ticks, label in sequence:
+            if key is not None:
+                game.key(key)
+            game.tick(ticks)
+            step = {"key": key, "ticks": ticks}
+            if label:
+                step["capture"] = {
+                    **save_frame(output, f"{prefix}-{label}", game),
+                    "eventCount": game.events,
+                }
+            steps.append(step)
+        return steps
+
+    def opening(mode):
+        sequence = [(None, 660, "menu")]
+        if mode == "two":
+            sequence.append((13, 2, "select-two"))
+        return sequence + [(19, 60, "board")]
+
+    modes = {}
+    for mode in ("one", "two"):
+        common = []
+        branches = []
+        for key in (None, 10, 11, 12, 13, 19, 20):
+            game = OmokReplay(original)
+            if key is None:
+                common = run(game, opening(mode), mode)
+            else:
+                run(game, [(key, ticks, None) for key, ticks, _ in opening(mode)], mode)
+                if (
+                    sha256(game.frame()).hexdigest()
+                    != common[-1]["capture"]["indexedSha256"]
+                ):
+                    raise RuntimeError(f"{mode} opening diverged before gameplay input")
+            label = "idle" if key is None else f"key-{key}"
+            result = run(game, [(key, 2, label)], mode)[0]
+            if key is None:
+                idle = game.frame()
+            changed = sum(
+                before != after
+                for before, after in zip(idle, game.frame(), strict=True)
+            )
+            if key is not None and not changed:
+                raise RuntimeError(f"no {mode} gameplay difference after key {key}")
+            result["capture"]["changedPixels"] = changed
+            branches.append(result)
+        modes[mode] = {"commonSequence": common, "branches": branches}
+
+    winner = OmokReplay(original)
+    run(winner, [(key, ticks, None) for key, ticks, _ in opening("two")], "two")
+    # Black gets five in row 7 while white places four stones in row 6.
+    keys = [19] + [12, 19, 13, 11, 19] * 4
+    win_steps = run(
+        winner,
+        [(key, 2, None) for key in keys[:-1]]
+        + [(keys[-1], 2, "five-in-row"), (None, 80, "winner"), (None, 360, "new-menu")],
+        "two",
+    )
+    resume = OmokReplay(original)
+    run(resume, [(key, ticks, None) for key, ticks, _ in opening("one")], "one")
+    resume_steps = run(
+        resume,
+        [
+            (19, 60, "cpu-reply"),
+            (20, 3, None),
+            (13, 2, None),
+            (13, 2, None),
+            (19, 2, "saved"),
+            (13, 2, None),
+            (19, 60, None),
+            (19, 60, "restore-prompt"),
+            (19, 60, "restored"),
+        ],
+        "one",
+    )
+    if resume.save_reads != 3 or resume.save_record is None:
+        raise RuntimeError("Omok resume did not read its in-session save record")
+    if (
+        resume_steps[0]["capture"]["indexedSha256"]
+        != resume_steps[-1]["capture"]["indexedSha256"]
+    ):
+        raise RuntimeError("Omok resumed board differs from saved board")
+    undo_paths = []
+    undo_frames = []
+    for key, label in ((None, "undo-idle"), (14, "undo-side-key")):
+        game = OmokReplay(original)
+        run(game, [(key, ticks, None) for key, ticks, _ in opening("one")], "one")
+        sequence = run(
+            game,
+            [(19, 20, None), (11, 2, None), (19, 20, None), (key, 20, label)],
+            "one",
+        )
+        undo_paths.append({"mode": "one", "sequence": sequence})
+        undo_frames.append(game.frame())
+    if undo_frames[0] == undo_frames[1]:
+        raise RuntimeError("Omok's side key did not undo the previous turns")
+    manifest = {
+        **replay_identity(resume, original),
+        "sourceArchive": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+        "originalMemberCrc32": f"{crc32(original):08x}",
+        "clock": "whole seconds from fixed 60 Hz replay ticks",
+        "guestTimers": "IDs 1 and 2; guest delays quantized to 60 Hz ticks",
+        "randomSeed": 0x12345678,
+        "sessionSave": {
+            "bytes": len(resume.save_record),
+            "sha256": sha256(resume.save_record).hexdigest(),
+            "reads": resume.save_reads,
+        },
+        "modes": modes,
+        "longPlay": [
+            {"mode": "one", "sequence": resume_steps},
+            {"mode": "two", "sequence": win_steps},
+            *undo_paths,
+        ],
+    }
+    (output / "replay.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    print("omok: native one- and two-player controls, save reload and a winning round")
 
 
 def replay_controls(original, output, game_id):
@@ -1060,6 +1261,159 @@ def replay_bubble_monk(original, output):
     )
 
 
+class OthelloGoodEvilReplay(DrawingReplay):
+    def __init__(self, original):
+        self.region_positions = set()
+        self.region_sha256 = None
+        super().__init__(original, "othello-good-evil")
+
+    def host(self, cpu, address, size, data):
+        slot = address - STUBS
+        if slot == 0x9C:
+            if (
+                cpu.reg_read(UC_ARM_REG_LR) not in (TEXT + 0x05C1, TEXT + 0x03D1)
+                or cpu.reg_read(UC_ARM_REG_R0) != 255
+            ):
+                raise ValueError("unexpected Othello Good & Evil screen clear")
+            cpu.mem_write(FRAMEBUFFER, bytes([255]) * WIDTH * self.height)
+            cpu.reg_write(UC_ARM_REG_R0, 0)
+        elif slot == 0xAC:
+            source, mode, position, geometry = (cpu.reg_read(reg) for reg in ARGS)
+            if (
+                source != BSS + 0x4AC
+                or mode != 0
+                or geometry != 0x00100010
+                or cpu.reg_read(UC_ARM_REG_LR) != TEXT + 0x29D5
+            ):
+                raise ValueError("unexpected Othello Good & Evil region")
+            x, y = struct.unpack("<hh", struct.pack("<I", position))
+            self.region_positions.add((x, y))
+            sprite = cpu.mem_read(source, 16 * 16)
+            if self.region_sha256 is None:
+                self.region_sha256 = sha256(sprite).hexdigest()
+            left, right = max(0, -x), min(16, WIDTH - x)
+            if left < right:
+                for row in range(max(0, -y), min(16, self.height - y)):
+                    destination = FRAMEBUFFER + (y + row) * WIDTH + x + left
+                    source_row = sprite[row * 16 + left : row * 16 + right]
+                    background = cpu.mem_read(destination, len(source_row))
+                    cpu.mem_write(
+                        destination,
+                        bytes(src or dst for src, dst in zip(source_row, background)),
+                    )
+        else:
+            super().host(cpu, address, size, data)
+            return
+        self.calls[slot] += 1
+
+
+def replay_othello_good_evil(original, output):
+    game_id = "othello-good-evil"
+    source_name, digest = ADDITIONAL_GAMES[game_id]
+    setup = [[165, 19], [183, 19]]
+    setup_captures = [(165, "mode"), (183, "character"), (201, "board")]
+    directions = (
+        (12, 12),
+        (10, 12, 12),
+        (13,),
+        (11,),
+        (11, 12),
+        (10, 10),
+        (13, 10),
+        (12, 10, 10),
+    )
+    runs = []
+
+    def run(name, inputs, timeline):
+        game = OthelloGoodEvilReplay(original)
+        keys = dict(inputs)
+        times = dict(timeline)
+        last_tick = timeline[-1][0]
+        checkpoints = []
+        for tick in range(last_tick + 1):
+            if tick in times:
+                checkpoints.append(
+                    {
+                        "tick": tick,
+                        "eventCount": game.events,
+                        **save_frame(output, f"{name}-{times[tick]}", game),
+                    }
+                )
+            if tick in keys:
+                game.key(keys[tick])
+            if tick < last_tick:
+                game.tick()
+        runs.append(
+            {
+                "name": name,
+                "inputs": inputs,
+                "checkpoints": checkpoints,
+                "region": {
+                    "sourceSha256": game.region_sha256,
+                    "positions": sorted(game.region_positions),
+                    "calls": game.calls[0xAC],
+                },
+            }
+        )
+
+    for index, keys in enumerate(directions):
+        movement = [[201 + 18 * step, key] for step, key in enumerate(keys)]
+        ready = 201 + 18 * len(keys)
+        timeline = setup_captures + [
+            (ready, "before"),
+            (ready + 18, "after"),
+            (ready + 98, "settled"),
+        ]
+        run(f"p{index}-0", setup + movement, timeline)
+        run(f"p{index}-1", setup + movement + [[ready, 19]], timeline)
+        control, confirm = (x["checkpoints"] for x in runs[-2:])
+        starts_equal = control[-3]["indexedSha256"] == confirm[-3]["indexedSha256"]
+        changed = control[-1]["indexedSha256"] != confirm[-1]["indexedSha256"]
+        if not starts_equal or changed != (index in (0, 4, 5, 6)):
+            raise RuntimeError(f"unexpected Othello branch {index}")
+
+    for name, period, keys in (
+        ("long-player", 12, (11, 12, 19, 13, 10, 19, 19, 11, 11, 12, 19, 13, 13, 19)),
+        ("long-cpu", 17, (13, 10, 12, 19, 11, 19, 12, 19, 13, 10, 10, 19)),
+    ):
+        run(
+            name,
+            setup
+            + [
+                [201 + tick, keys[tick // period % len(keys)]]
+                for tick in range(0, 1800, period)
+            ],
+            setup_captures
+            + [(201 + tick, f"long-{tick}") for tick in range(300, 1801, 300)],
+        )
+
+    manifest = {
+        "schema": 1,
+        "game": game_id,
+        "mbin": source_name,
+        "mbinBytes": len(original),
+        "mbinSha256": digest,
+        "originalMemberCrc32": f"{crc32(original):08x}",
+        "size": [WIDTH, 144],
+        "timerArgument": DRAWING_TIMERS[game_id],
+        "palette": "provisional RGB332",
+        "legalMove": {"column": 4, "row": 2, "coordinates": "zero-based", "key": 19},
+        "delayRoutines": [
+            {"bodyOffset": 0x41EC, "loopCount": 50_000},
+            {"bodyOffset": 0x41FC, "loopCount": 250_000},
+        ],
+        "runs": runs,
+    }
+    (output / "replay.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    print(
+        f"{game_id}: {sum(len(run['checkpoints']) for run in runs)} gameplay captures"
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -1073,8 +1427,12 @@ def main():
     if args.game != "jumping-baby":
         original = read_original(args.source, ADDITIONAL_GAMES[args.game][0])
         args.output.mkdir(parents=True, exist_ok=True)
-        if args.game == "mobile-gostop":
+        if args.game == "omok":
+            replay_omok(original, args.output)
+        elif args.game == "mobile-gostop":
             replay_mobile_gostop(original, args.output)
+        elif args.game == "othello-good-evil":
+            replay_othello_good_evil(original, args.output)
         elif args.game == "bubble-monk-2":
             replay_bubble_monk(original, args.output)
         elif args.game in (

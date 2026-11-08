@@ -16,6 +16,7 @@ const STACK = 0x08000000;
 const STACK_BYTES = 0x10000;
 const WIDTH = 120;
 const DEFAULT_HEIGHT = 128;
+const TICKS_PER_SECOND = 60;
 const EVENT_BUDGET = 25000;
 // The archived replays start from empty saves and use silent host services.
 // Some releases expect the clock service to return zero without writing output.
@@ -25,6 +26,22 @@ const DRAWING_STUBS = [0x08, ...STANDARD_STUBS.filter((slot) => slot !== 0x48)];
 const RANDOM_DRAWING_STUBS = DRAWING_STUBS.filter((slot) => slot !== 0x40);
 const UDON_STUBS = [0x0c, ...RANDOM_DRAWING_STUBS];
 const PROFILES = [
+  {
+    id: 'omok',
+    title: 'Omok',
+    bytes: 79925,
+    sha256: '23c37635d5de54bd2cfad95c080ad70487c24feb52997f60d1223c900d568f08',
+    stubs: RANDOM_DRAWING_STUBS.filter((slot) => ![0x08, 0x24, 0x9c].includes(slot)),
+    timerCallers: [TEXT + 0x412d, TEXT + 0x4de5],
+    displayClear: { [TEXT + 0x4a7d]: 255 },
+    sessionSave: {
+      address: BSS + 0x89c4,
+      caller: TEXT + 0x4db9,
+      loadCaller: TEXT + 0x4d91,
+      bytes: 272,
+    },
+    eventBudget: 500000,
+  },
   {
     id: 'badger',
     title: 'Badger',
@@ -158,6 +175,22 @@ const PROFILES = [
     stubs: STANDARD_STUBS.filter((slot) => slot !== 0x9c),
     emptyMqDescriptor: true,
     displayClear: { [TEXT + 0x42eb]: 0xff },
+  },
+  {
+    id: 'othello-good-evil',
+    title: 'Othello Good & Evil',
+    bytes: 105994,
+    sha256: '8bd08b669e95e92cbf6ed36a5b94bdeabb6395d37d86411bb7d63190b6fd46b7',
+    timerArgument: 1,
+    height: 144,
+    stubs: RANDOM_DRAWING_STUBS.filter((slot) => slot !== 0x9c),
+    displayClear: { [TEXT + 0x05c1]: 0xff, [TEXT + 0x03d1]: 0xff },
+    spriteRegion: { address: BSS + 0x4ac, caller: TEXT + 0x29d5, width: 16, height: 16 },
+    delayLoops: [
+      [0x41ec, 50000],
+      [0x41fc, 250000],
+    ],
+    eventBudget: 8_000_000,
   },
   {
     id: 'couple-bowling',
@@ -333,6 +366,9 @@ export class AdsRuntime {
   #indices;
   #color = 0;
   #random = 0x12345678;
+  #ticks = 0;
+  #guestTimer = null;
+  #saveRecord = null;
   #fault = null;
   #closed = false;
 
@@ -399,11 +435,21 @@ export class AdsRuntime {
       },
       { begin: STUBS, end: STUBS + stubs.length - 1 },
     );
+    if (profile.delayLoops) this.#installDelayLoops();
     this.#dispatch(0, TABLE);
   }
 
   tick() {
-    this.#dispatch(5, this.#profile.timerArgument);
+    if (!this.#profile.timerCallers) {
+      this.#dispatch(5, this.#profile.timerArgument);
+      return;
+    }
+    this.#ticks++;
+    const timer = this.#guestTimer;
+    if (timer && this.#ticks >= timer.deadline) {
+      timer.deadline = this.#ticks + timer.interval;
+      this.#dispatch(5, timer.channel);
+    }
   }
 
   setKey(code, pressed, repeat = false) {
@@ -435,6 +481,44 @@ export class AdsRuntime {
     this.#sprites.clear();
     this.#displayView = undefined;
     this.#cpu.close();
+  }
+
+  #installDelayLoops() {
+    const cpu = this.#cpu;
+    for (const [offset, count] of this.#profile.delayLoops) {
+      if (
+        this.#body.getUint32(offset, true) !== 0x20004902 ||
+        this.#body.getUint32(offset + 4, true) !== 0x42883001 ||
+        this.#body.getUint32(offset + 8, true) !== 0x46f7dbfc ||
+        this.#body.getUint32(offset + 12, true) !== count
+      )
+        throw Error('Цикл задержки ADS не соответствует оригиналу.');
+      const original = new Uint8Array(this.#body.buffer, this.#body.byteOffset + offset, 16);
+      cpu.addBlockShortcut(TEXT + offset, (address, size) => {
+        const caller = cpu.regRead('lr');
+        const cpsr = cpu.regRead('cpsr');
+        const budget = cpu.blockBudget;
+        // The Thumb routine only counts to its literal, compares, and returns.
+        // The watchdog has already charged the entry block.
+        const work = count * 3 + 3 - size / 2;
+        if (
+          size !== 10 ||
+          !(cpsr & 0x20) ||
+          !(caller & 1) ||
+          caller < TEXT ||
+          caller - TEXT >= this.#body.byteLength ||
+          budget === null ||
+          work > budget ||
+          !cpu.read(address, original.length).every((byte, index) => byte === original[index])
+        )
+          return;
+        cpu.regWrite('r0', count);
+        cpu.regWrite('r1', count);
+        cpu.regWrite('cpsr', ((cpsr & 0x0fffffff) | 0x60000000) >>> 0);
+        cpu.regWrite('pc', caller);
+        cpu.blockBudget -= work;
+      });
+    }
   }
 
   #dispatch(event, argument) {
@@ -511,13 +595,35 @@ export class AdsRuntime {
       return;
     }
     const a = cpu.regRead('r0');
+    const save = this.#profile.sessionSave;
     if (slot === 0x04) {
       this.#writeOutput(a, DISPLAY);
-    } else if (slot === 0x0c && this.#profile.sessionSave) {
-      // Acknowledge the save request for state the guest keeps in this session.
-      const { address, caller } = this.#profile.sessionSave;
-      if (a !== address || cpu.regRead('lr') !== caller)
+    } else if (slot === 0x08 && save?.loadCaller) {
+      if (a !== save.address || cpu.regRead('lr') !== save.loadCaller)
         throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
+      if (this.#saveRecord) cpu.write(a, this.#saveRecord);
+    } else if (slot === 0x0c && save) {
+      // Acknowledge the save request for state the guest keeps in this session.
+      if (a !== save.address || cpu.regRead('lr') !== save.caller)
+        throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
+      if (save.bytes) this.#saveRecord = cpu.read(a, save.bytes).slice();
+    } else if (slot === 0x24 && this.#profile.timerCallers) {
+      const channel = a & 65535;
+      const operation = a >>> 16;
+      if (
+        !this.#profile.timerCallers.includes(cpu.regRead('lr')) ||
+        (channel !== 1 && channel !== 2) ||
+        (operation !== 0 && operation !== 2)
+      )
+        throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
+      if (operation === 2) {
+        // Round guest periods up to the worker's fixed 60 Hz callbacks.
+        const milliseconds = cpu.regRead('r1') & 65535;
+        const interval = Math.max(1, Math.ceil((milliseconds * TICKS_PER_SECOND) / 1000));
+        this.#guestTimer = { channel, interval, deadline: this.#ticks + interval };
+      } else if (this.#guestTimer?.channel === channel) {
+        this.#guestTimer = null;
+      }
     } else if (slot === 0x40) {
       const low = a & 65535;
       const high = a >>> 16;
@@ -525,8 +631,11 @@ export class AdsRuntime {
       this.#random = (Math.imul(1664525, this.#random) + 1013904223) >>> 0;
       this.#writeOutput(this.#outputAddress(), low + ((this.#random >>> 16) % (high - low + 1)), 2);
     } else if (slot === 0x48) {
-      // The archived replay advances this synthetic clock by presentations.
-      this.#writeOutput(this.#outputAddress() + 12, this.presentations);
+      // Omok uses this clock for a countdown in seconds.
+      const time = this.#profile.timerCallers
+        ? Math.floor(this.#ticks / TICKS_PER_SECOND)
+        : this.presentations;
+      this.#writeOutput(this.#outputAddress() + 12, time);
     } else if (slot === 0x9c && this.#profile.displayClear) {
       // These callers leave the full LCD background to this service.
       if (this.#profile.displayClear[cpu.regRead('lr')] !== a)
@@ -582,6 +691,23 @@ export class AdsRuntime {
       case 0x98:
         this.#fill(x, y, b & 65535, b >>> 16);
         break;
+      case 0xac: {
+        const region = this.#profile.spriteRegion;
+        const geometry = cpu.regRead('r3');
+        if (
+          !region ||
+          a !== region.address ||
+          b !== 0 ||
+          geometry !== ((region.height << 16) | region.width) ||
+          cpu.regRead('lr') !== region.caller
+        )
+          throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
+        const position = cpu.regRead('r2');
+        const { width, height } = region;
+        const pixels = cpu.read(a, width * height);
+        this.#blitPixels(signed(position), position >> 16, { width, height, key: 0, pixels });
+        break;
+      }
       case 0xb0: {
         const address = cpu.regRead('r2');
         const transparency = cpu.regRead('r3');
@@ -620,7 +746,10 @@ export class AdsRuntime {
   #blit(x, y, descriptor) {
     const sprite = this.#sprites.get(descriptor);
     if (!sprite) throw Error('Вызов отрисовки неизвестного спрайта ADS.');
-    const { width, height, key, pixels } = sprite;
+    this.#blitPixels(x, y, sprite);
+  }
+
+  #blitPixels(x, y, { width, height, key, pixels }) {
     const left = Math.max(0, -x);
     const right = Math.min(width, WIDTH - x);
     if (left >= right) return;

@@ -93,12 +93,13 @@ export function deviceFor(session, override = 'auto') {
   const device =
     devices.find((device) => device.id === override) ||
     devices.find((device) => device.id === automaticDevice(session));
-  if (
-    device.id === 'anycall' &&
-    session?.engine === 'ads' &&
-    ['mr-ramen', 'bubble-monk'].includes(session.id)
-  ) {
+  if (device.id !== 'anycall' || session?.engine !== 'ads') return device;
+  if (['mr-ramen', 'bubble-monk'].includes(session.id))
     return { ...device, keys: [...device.keys, ['hash', '#']] };
-  }
+  if (session.id === 'omok')
+    return {
+      ...device,
+      keys: [...device.keys.slice(0, -1), ['f1', 'MENU'], device.keys.at(-1), ['f2', 'UNDO']],
+    };
   return device;
 }

@@ -49,6 +49,11 @@ const adsKeys = {
   play: 19,
 };
 for (let digit = 0; digit <= 9; digit++) adsKeys['digit' + digit] = digit;
+const adsExtraKeys = {
+  'mr-ramen': { hash: 15 },
+  'bubble-monk': { hash: 15 },
+  omok: { f1: 20, f2: 14 },
+};
 const cache = new Map(),
   saves = new Map(),
   nativeStarts = new Map(),
@@ -181,7 +186,7 @@ function fireTimer(channel, scheduledAt = null) {
   syncTimer(channel, anchor);
 }
 function setAdsKey(key, pressed, repeat) {
-  const code = key === 'hash' && ['mr-ramen', 'bubble-monk'].includes(gameId) ? 15 : adsKeys[key];
+  const code = adsExtraKeys[gameId]?.[key] ?? adsKeys[key];
   if (!Number.isInteger(code)) return;
   // Multiple confirmation actions can address the same guest key.
   const aliases = adsHeld.get(code);

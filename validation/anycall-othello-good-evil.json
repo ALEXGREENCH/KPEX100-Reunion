@@ -1,0 +1,2942 @@
+{
+  "schema": 1,
+  "game": "othello-good-evil",
+  "mbin": "버전 다름/오델로선악전.mbin",
+  "mbinBytes": 105994,
+  "mbinSha256": "8bd08b669e95e92cbf6ed36a5b94bdeabb6395d37d86411bb7d63190b6fd46b7",
+  "originalMemberCrc32": "271a907b",
+  "size": [
+    120,
+    144
+  ],
+  "timerArgument": 1,
+  "palette": "provisional RGB332",
+  "legalMove": {
+    "column": 4,
+    "row": 2,
+    "coordinates": "zero-based",
+    "key": 19
+  },
+  "delayRoutines": [
+    {
+      "bodyOffset": 16876,
+      "loopCount": 50000
+    },
+    {
+      "bodyOffset": 16892,
+      "loopCount": 250000
+    }
+  ],
+  "runs": [
+    {
+      "name": "p0-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          12
+        ],
+        [
+          219,
+          12
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p0-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p0-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p0-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p0-0-before.png",
+          "presentation": 77,
+          "indexedSha256": "dbcf6a52445f280e88374d2b2af996a71fa5291981f92509d18d9553bb79c781",
+          "pngSha256": "d00c833a3d109c75380c96f3fce0adeb82b2d1f0643c56654d65a11d6ac05e54"
+        },
+        {
+          "tick": 255,
+          "eventCount": 260,
+          "file": "p0-0-after.png",
+          "presentation": 82,
+          "indexedSha256": "dbcf6a52445f280e88374d2b2af996a71fa5291981f92509d18d9553bb79c781",
+          "pngSha256": "d00c833a3d109c75380c96f3fce0adeb82b2d1f0643c56654d65a11d6ac05e54"
+        },
+        {
+          "tick": 335,
+          "eventCount": 340,
+          "file": "p0-0-settled.png",
+          "presentation": 102,
+          "indexedSha256": "dbcf6a52445f280e88374d2b2af996a71fa5291981f92509d18d9553bb79c781",
+          "pngSha256": "d00c833a3d109c75380c96f3fce0adeb82b2d1f0643c56654d65a11d6ac05e54"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            31
+          ],
+          [
+            60,
+            45
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 13
+      }
+    },
+    {
+      "name": "p0-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          12
+        ],
+        [
+          219,
+          12
+        ],
+        [
+          237,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p0-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p0-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p0-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p0-1-before.png",
+          "presentation": 77,
+          "indexedSha256": "dbcf6a52445f280e88374d2b2af996a71fa5291981f92509d18d9553bb79c781",
+          "pngSha256": "d00c833a3d109c75380c96f3fce0adeb82b2d1f0643c56654d65a11d6ac05e54"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p0-1-after.png",
+          "presentation": 99,
+          "indexedSha256": "2f87111e1d186de6aabd3c2996cc73eca69fab5d5697b88223f701949b574680",
+          "pngSha256": "6b32886393c9991d1a256713a736e618ea1c23a8d789140c9031ef3b14c31931"
+        },
+        {
+          "tick": 335,
+          "eventCount": 341,
+          "file": "p0-1-settled.png",
+          "presentation": 119,
+          "indexedSha256": "2f87111e1d186de6aabd3c2996cc73eca69fab5d5697b88223f701949b574680",
+          "pngSha256": "6b32886393c9991d1a256713a736e618ea1c23a8d789140c9031ef3b14c31931"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            31
+          ],
+          [
+            60,
+            45
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 14
+      }
+    },
+    {
+      "name": "p1-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          10
+        ],
+        [
+          219,
+          12
+        ],
+        [
+          237,
+          12
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p1-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p1-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p1-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p1-0-before.png",
+          "presentation": 84,
+          "indexedSha256": "3306355cbd177e7dd991cbc06763f676cc8e3ddc086e77e70b1f05b215c613b8",
+          "pngSha256": "ef126d309e30e03fdad413a3d2d25ca340026855b3f3a06914f9b8e50180ac9a"
+        },
+        {
+          "tick": 273,
+          "eventCount": 279,
+          "file": "p1-0-after.png",
+          "presentation": 89,
+          "indexedSha256": "3306355cbd177e7dd991cbc06763f676cc8e3ddc086e77e70b1f05b215c613b8",
+          "pngSha256": "ef126d309e30e03fdad413a3d2d25ca340026855b3f3a06914f9b8e50180ac9a"
+        },
+        {
+          "tick": 353,
+          "eventCount": 359,
+          "file": "p1-0-settled.png",
+          "presentation": 109,
+          "indexedSha256": "3306355cbd177e7dd991cbc06763f676cc8e3ddc086e77e70b1f05b215c613b8",
+          "pngSha256": "ef126d309e30e03fdad413a3d2d25ca340026855b3f3a06914f9b8e50180ac9a"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            46,
+            31
+          ],
+          [
+            46,
+            45
+          ],
+          [
+            46,
+            59
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 15
+      }
+    },
+    {
+      "name": "p1-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          10
+        ],
+        [
+          219,
+          12
+        ],
+        [
+          237,
+          12
+        ],
+        [
+          255,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p1-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p1-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p1-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p1-1-before.png",
+          "presentation": 84,
+          "indexedSha256": "3306355cbd177e7dd991cbc06763f676cc8e3ddc086e77e70b1f05b215c613b8",
+          "pngSha256": "ef126d309e30e03fdad413a3d2d25ca340026855b3f3a06914f9b8e50180ac9a"
+        },
+        {
+          "tick": 273,
+          "eventCount": 280,
+          "file": "p1-1-after.png",
+          "presentation": 91,
+          "indexedSha256": "3306355cbd177e7dd991cbc06763f676cc8e3ddc086e77e70b1f05b215c613b8",
+          "pngSha256": "ef126d309e30e03fdad413a3d2d25ca340026855b3f3a06914f9b8e50180ac9a"
+        },
+        {
+          "tick": 353,
+          "eventCount": 360,
+          "file": "p1-1-settled.png",
+          "presentation": 111,
+          "indexedSha256": "3306355cbd177e7dd991cbc06763f676cc8e3ddc086e77e70b1f05b215c613b8",
+          "pngSha256": "ef126d309e30e03fdad413a3d2d25ca340026855b3f3a06914f9b8e50180ac9a"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            46,
+            31
+          ],
+          [
+            46,
+            45
+          ],
+          [
+            46,
+            59
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 16
+      }
+    },
+    {
+      "name": "p2-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          13
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p2-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p2-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p2-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 219,
+          "eventCount": 223,
+          "file": "p2-0-before.png",
+          "presentation": 70,
+          "indexedSha256": "35c0f1a949018fe9e69ee69c509ca2e43883e90b407faed4b3d8224c1dbdd819",
+          "pngSha256": "559d016f8936c4027356055a4016cf3e0e3b39c8beebb782cbcbb97905b2cab0"
+        },
+        {
+          "tick": 237,
+          "eventCount": 241,
+          "file": "p2-0-after.png",
+          "presentation": 75,
+          "indexedSha256": "35c0f1a949018fe9e69ee69c509ca2e43883e90b407faed4b3d8224c1dbdd819",
+          "pngSha256": "559d016f8936c4027356055a4016cf3e0e3b39c8beebb782cbcbb97905b2cab0"
+        },
+        {
+          "tick": 317,
+          "eventCount": 321,
+          "file": "p2-0-settled.png",
+          "presentation": 96,
+          "indexedSha256": "c9fed8a67d42cb2f9475310ea8996ad44b9cf1191afeae4709a1decd0c0bd807",
+          "pngSha256": "5358f73e198056df2cd4cc5e5be0ecf596d7e99aaa91642edc12899f47d733e0"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            60,
+            73
+          ]
+        ],
+        "calls": 11
+      }
+    },
+    {
+      "name": "p2-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          13
+        ],
+        [
+          219,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p2-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p2-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p2-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 219,
+          "eventCount": 223,
+          "file": "p2-1-before.png",
+          "presentation": 70,
+          "indexedSha256": "35c0f1a949018fe9e69ee69c509ca2e43883e90b407faed4b3d8224c1dbdd819",
+          "pngSha256": "559d016f8936c4027356055a4016cf3e0e3b39c8beebb782cbcbb97905b2cab0"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p2-1-after.png",
+          "presentation": 77,
+          "indexedSha256": "35c0f1a949018fe9e69ee69c509ca2e43883e90b407faed4b3d8224c1dbdd819",
+          "pngSha256": "559d016f8936c4027356055a4016cf3e0e3b39c8beebb782cbcbb97905b2cab0"
+        },
+        {
+          "tick": 317,
+          "eventCount": 322,
+          "file": "p2-1-settled.png",
+          "presentation": 98,
+          "indexedSha256": "c9fed8a67d42cb2f9475310ea8996ad44b9cf1191afeae4709a1decd0c0bd807",
+          "pngSha256": "5358f73e198056df2cd4cc5e5be0ecf596d7e99aaa91642edc12899f47d733e0"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            60,
+            73
+          ]
+        ],
+        "calls": 12
+      }
+    },
+    {
+      "name": "p3-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          11
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p3-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p3-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p3-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 219,
+          "eventCount": 223,
+          "file": "p3-0-before.png",
+          "presentation": 70,
+          "indexedSha256": "c43513344351c6840997d13ea6a6193667ca66208817e51ad0307f3650a2464e",
+          "pngSha256": "e12dc7f5c82832f471e02ca5c88a5ba9f9bb0177f712805e4ed9ac5e1510a7d4"
+        },
+        {
+          "tick": 237,
+          "eventCount": 241,
+          "file": "p3-0-after.png",
+          "presentation": 75,
+          "indexedSha256": "c43513344351c6840997d13ea6a6193667ca66208817e51ad0307f3650a2464e",
+          "pngSha256": "e12dc7f5c82832f471e02ca5c88a5ba9f9bb0177f712805e4ed9ac5e1510a7d4"
+        },
+        {
+          "tick": 317,
+          "eventCount": 321,
+          "file": "p3-0-settled.png",
+          "presentation": 96,
+          "indexedSha256": "c90cd9012e9a847f9404dd78fd46b0bb3826ee6bfbbfb97fbf0c72279b113467",
+          "pngSha256": "33f06f5216a151f81658ddaf6f105f49a56871decebf3d7926e876de9cf78bf1"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            74,
+            59
+          ]
+        ],
+        "calls": 11
+      }
+    },
+    {
+      "name": "p3-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          11
+        ],
+        [
+          219,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p3-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p3-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p3-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 219,
+          "eventCount": 223,
+          "file": "p3-1-before.png",
+          "presentation": 70,
+          "indexedSha256": "c43513344351c6840997d13ea6a6193667ca66208817e51ad0307f3650a2464e",
+          "pngSha256": "e12dc7f5c82832f471e02ca5c88a5ba9f9bb0177f712805e4ed9ac5e1510a7d4"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p3-1-after.png",
+          "presentation": 77,
+          "indexedSha256": "c43513344351c6840997d13ea6a6193667ca66208817e51ad0307f3650a2464e",
+          "pngSha256": "e12dc7f5c82832f471e02ca5c88a5ba9f9bb0177f712805e4ed9ac5e1510a7d4"
+        },
+        {
+          "tick": 317,
+          "eventCount": 322,
+          "file": "p3-1-settled.png",
+          "presentation": 98,
+          "indexedSha256": "c90cd9012e9a847f9404dd78fd46b0bb3826ee6bfbbfb97fbf0c72279b113467",
+          "pngSha256": "33f06f5216a151f81658ddaf6f105f49a56871decebf3d7926e876de9cf78bf1"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            74,
+            59
+          ]
+        ],
+        "calls": 12
+      }
+    },
+    {
+      "name": "p4-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          11
+        ],
+        [
+          219,
+          12
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p4-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p4-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p4-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p4-0-before.png",
+          "presentation": 77,
+          "indexedSha256": "9dbe374184b132a8e833c3a332c0b8cfa76c85445eb2026bf44da96386410902",
+          "pngSha256": "23c2ebc9e0c0d26245c9a9f4345e91983ce5470012b30f16d1769e7bcbaac188"
+        },
+        {
+          "tick": 255,
+          "eventCount": 260,
+          "file": "p4-0-after.png",
+          "presentation": 82,
+          "indexedSha256": "9dbe374184b132a8e833c3a332c0b8cfa76c85445eb2026bf44da96386410902",
+          "pngSha256": "23c2ebc9e0c0d26245c9a9f4345e91983ce5470012b30f16d1769e7bcbaac188"
+        },
+        {
+          "tick": 335,
+          "eventCount": 340,
+          "file": "p4-0-settled.png",
+          "presentation": 102,
+          "indexedSha256": "9dbe374184b132a8e833c3a332c0b8cfa76c85445eb2026bf44da96386410902",
+          "pngSha256": "23c2ebc9e0c0d26245c9a9f4345e91983ce5470012b30f16d1769e7bcbaac188"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            74,
+            45
+          ],
+          [
+            74,
+            59
+          ]
+        ],
+        "calls": 13
+      }
+    },
+    {
+      "name": "p4-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          11
+        ],
+        [
+          219,
+          12
+        ],
+        [
+          237,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p4-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p4-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p4-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p4-1-before.png",
+          "presentation": 77,
+          "indexedSha256": "9dbe374184b132a8e833c3a332c0b8cfa76c85445eb2026bf44da96386410902",
+          "pngSha256": "23c2ebc9e0c0d26245c9a9f4345e91983ce5470012b30f16d1769e7bcbaac188"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p4-1-after.png",
+          "presentation": 99,
+          "indexedSha256": "61ed5b569df0f0a45fffd0e0389fed65a2a63e52a7a4f3d4f0316036bf348c91",
+          "pngSha256": "78f01013029f48939a01af3e2a7906d33f49fd5799c97b258680954b39f77a7f"
+        },
+        {
+          "tick": 335,
+          "eventCount": 341,
+          "file": "p4-1-settled.png",
+          "presentation": 119,
+          "indexedSha256": "61ed5b569df0f0a45fffd0e0389fed65a2a63e52a7a4f3d4f0316036bf348c91",
+          "pngSha256": "78f01013029f48939a01af3e2a7906d33f49fd5799c97b258680954b39f77a7f"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            74,
+            45
+          ],
+          [
+            74,
+            59
+          ]
+        ],
+        "calls": 14
+      }
+    },
+    {
+      "name": "p5-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          10
+        ],
+        [
+          219,
+          10
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p5-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p5-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p5-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p5-0-before.png",
+          "presentation": 77,
+          "indexedSha256": "9e14166fe54a2dd800642e3470014ac71bba398f99964e5e77cd4e65c87c7022",
+          "pngSha256": "f9bfcedadddfe49bcf17f0b9435ffa8d67b1b02b27d5ca9a662d430869ab7fd9"
+        },
+        {
+          "tick": 255,
+          "eventCount": 260,
+          "file": "p5-0-after.png",
+          "presentation": 82,
+          "indexedSha256": "9e14166fe54a2dd800642e3470014ac71bba398f99964e5e77cd4e65c87c7022",
+          "pngSha256": "f9bfcedadddfe49bcf17f0b9435ffa8d67b1b02b27d5ca9a662d430869ab7fd9"
+        },
+        {
+          "tick": 335,
+          "eventCount": 340,
+          "file": "p5-0-settled.png",
+          "presentation": 102,
+          "indexedSha256": "9e14166fe54a2dd800642e3470014ac71bba398f99964e5e77cd4e65c87c7022",
+          "pngSha256": "f9bfcedadddfe49bcf17f0b9435ffa8d67b1b02b27d5ca9a662d430869ab7fd9"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            32,
+            59
+          ],
+          [
+            46,
+            59
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 13
+      }
+    },
+    {
+      "name": "p5-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          10
+        ],
+        [
+          219,
+          10
+        ],
+        [
+          237,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p5-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p5-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p5-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p5-1-before.png",
+          "presentation": 77,
+          "indexedSha256": "9e14166fe54a2dd800642e3470014ac71bba398f99964e5e77cd4e65c87c7022",
+          "pngSha256": "f9bfcedadddfe49bcf17f0b9435ffa8d67b1b02b27d5ca9a662d430869ab7fd9"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p5-1-after.png",
+          "presentation": 99,
+          "indexedSha256": "f7c8983316229aeff97dd63142c4e8ad3859ab7a0f5594a340a4f76a3b4de0b8",
+          "pngSha256": "cae3b0e224f7675b5272f29bda929b23a830cf89c3032537ac5f80f2f8d91c93"
+        },
+        {
+          "tick": 335,
+          "eventCount": 341,
+          "file": "p5-1-settled.png",
+          "presentation": 119,
+          "indexedSha256": "f7c8983316229aeff97dd63142c4e8ad3859ab7a0f5594a340a4f76a3b4de0b8",
+          "pngSha256": "cae3b0e224f7675b5272f29bda929b23a830cf89c3032537ac5f80f2f8d91c93"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            32,
+            59
+          ],
+          [
+            46,
+            59
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 14
+      }
+    },
+    {
+      "name": "p6-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          13
+        ],
+        [
+          219,
+          10
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p6-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p6-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p6-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p6-0-before.png",
+          "presentation": 77,
+          "indexedSha256": "cbadd090d4a8efc680f682576136aa75e974253b607c37edd6ff8741cb72bbc4",
+          "pngSha256": "a3a45fb1b29fd762c12c75ec2b0c1fb22244ccdc51bc602e69f34ee607aa9125"
+        },
+        {
+          "tick": 255,
+          "eventCount": 260,
+          "file": "p6-0-after.png",
+          "presentation": 82,
+          "indexedSha256": "cbadd090d4a8efc680f682576136aa75e974253b607c37edd6ff8741cb72bbc4",
+          "pngSha256": "a3a45fb1b29fd762c12c75ec2b0c1fb22244ccdc51bc602e69f34ee607aa9125"
+        },
+        {
+          "tick": 335,
+          "eventCount": 340,
+          "file": "p6-0-settled.png",
+          "presentation": 102,
+          "indexedSha256": "cbadd090d4a8efc680f682576136aa75e974253b607c37edd6ff8741cb72bbc4",
+          "pngSha256": "a3a45fb1b29fd762c12c75ec2b0c1fb22244ccdc51bc602e69f34ee607aa9125"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            46,
+            73
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            60,
+            73
+          ]
+        ],
+        "calls": 13
+      }
+    },
+    {
+      "name": "p6-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          13
+        ],
+        [
+          219,
+          10
+        ],
+        [
+          237,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p6-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p6-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p6-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 237,
+          "eventCount": 242,
+          "file": "p6-1-before.png",
+          "presentation": 77,
+          "indexedSha256": "cbadd090d4a8efc680f682576136aa75e974253b607c37edd6ff8741cb72bbc4",
+          "pngSha256": "a3a45fb1b29fd762c12c75ec2b0c1fb22244ccdc51bc602e69f34ee607aa9125"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p6-1-after.png",
+          "presentation": 99,
+          "indexedSha256": "f5fa68d116aab53759a40596927c706b22a4b9de3435326bb015b581db861f7d",
+          "pngSha256": "90bd84acb06246b0f3fd1a69812a4b2d0e3fef6c3cf26abc527be275a1187c05"
+        },
+        {
+          "tick": 335,
+          "eventCount": 341,
+          "file": "p6-1-settled.png",
+          "presentation": 119,
+          "indexedSha256": "f5fa68d116aab53759a40596927c706b22a4b9de3435326bb015b581db861f7d",
+          "pngSha256": "90bd84acb06246b0f3fd1a69812a4b2d0e3fef6c3cf26abc527be275a1187c05"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            46,
+            73
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            60,
+            73
+          ]
+        ],
+        "calls": 14
+      }
+    },
+    {
+      "name": "p7-0",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          12
+        ],
+        [
+          219,
+          10
+        ],
+        [
+          237,
+          10
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p7-0-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p7-0-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p7-0-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p7-0-before.png",
+          "presentation": 84,
+          "indexedSha256": "bc66f56cedbf2cd9b0206cac771732c36a111d196ce50e6729fde271828ae0af",
+          "pngSha256": "e228561be1950948df4fc34eb2334f26d3598e184634f8597e3d7df543c422e1"
+        },
+        {
+          "tick": 273,
+          "eventCount": 279,
+          "file": "p7-0-after.png",
+          "presentation": 89,
+          "indexedSha256": "bc66f56cedbf2cd9b0206cac771732c36a111d196ce50e6729fde271828ae0af",
+          "pngSha256": "e228561be1950948df4fc34eb2334f26d3598e184634f8597e3d7df543c422e1"
+        },
+        {
+          "tick": 353,
+          "eventCount": 359,
+          "file": "p7-0-settled.png",
+          "presentation": 109,
+          "indexedSha256": "bc66f56cedbf2cd9b0206cac771732c36a111d196ce50e6729fde271828ae0af",
+          "pngSha256": "e228561be1950948df4fc34eb2334f26d3598e184634f8597e3d7df543c422e1"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            32,
+            45
+          ],
+          [
+            46,
+            45
+          ],
+          [
+            60,
+            45
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 15
+      }
+    },
+    {
+      "name": "p7-1",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          12
+        ],
+        [
+          219,
+          10
+        ],
+        [
+          237,
+          10
+        ],
+        [
+          255,
+          19
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "p7-1-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "p7-1-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "p7-1-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 255,
+          "eventCount": 261,
+          "file": "p7-1-before.png",
+          "presentation": 84,
+          "indexedSha256": "bc66f56cedbf2cd9b0206cac771732c36a111d196ce50e6729fde271828ae0af",
+          "pngSha256": "e228561be1950948df4fc34eb2334f26d3598e184634f8597e3d7df543c422e1"
+        },
+        {
+          "tick": 273,
+          "eventCount": 280,
+          "file": "p7-1-after.png",
+          "presentation": 91,
+          "indexedSha256": "bc66f56cedbf2cd9b0206cac771732c36a111d196ce50e6729fde271828ae0af",
+          "pngSha256": "e228561be1950948df4fc34eb2334f26d3598e184634f8597e3d7df543c422e1"
+        },
+        {
+          "tick": 353,
+          "eventCount": 360,
+          "file": "p7-1-settled.png",
+          "presentation": 111,
+          "indexedSha256": "bc66f56cedbf2cd9b0206cac771732c36a111d196ce50e6729fde271828ae0af",
+          "pngSha256": "e228561be1950948df4fc34eb2334f26d3598e184634f8597e3d7df543c422e1"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            32,
+            45
+          ],
+          [
+            46,
+            45
+          ],
+          [
+            60,
+            45
+          ],
+          [
+            60,
+            59
+          ]
+        ],
+        "calls": 16
+      }
+    },
+    {
+      "name": "long-player",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          11
+        ],
+        [
+          213,
+          12
+        ],
+        [
+          225,
+          19
+        ],
+        [
+          237,
+          13
+        ],
+        [
+          249,
+          10
+        ],
+        [
+          261,
+          19
+        ],
+        [
+          273,
+          19
+        ],
+        [
+          285,
+          11
+        ],
+        [
+          297,
+          11
+        ],
+        [
+          309,
+          12
+        ],
+        [
+          321,
+          19
+        ],
+        [
+          333,
+          13
+        ],
+        [
+          345,
+          13
+        ],
+        [
+          357,
+          19
+        ],
+        [
+          369,
+          11
+        ],
+        [
+          381,
+          12
+        ],
+        [
+          393,
+          19
+        ],
+        [
+          405,
+          13
+        ],
+        [
+          417,
+          10
+        ],
+        [
+          429,
+          19
+        ],
+        [
+          441,
+          19
+        ],
+        [
+          453,
+          11
+        ],
+        [
+          465,
+          11
+        ],
+        [
+          477,
+          12
+        ],
+        [
+          489,
+          19
+        ],
+        [
+          501,
+          13
+        ],
+        [
+          513,
+          13
+        ],
+        [
+          525,
+          19
+        ],
+        [
+          537,
+          11
+        ],
+        [
+          549,
+          12
+        ],
+        [
+          561,
+          19
+        ],
+        [
+          573,
+          13
+        ],
+        [
+          585,
+          10
+        ],
+        [
+          597,
+          19
+        ],
+        [
+          609,
+          19
+        ],
+        [
+          621,
+          11
+        ],
+        [
+          633,
+          11
+        ],
+        [
+          645,
+          12
+        ],
+        [
+          657,
+          19
+        ],
+        [
+          669,
+          13
+        ],
+        [
+          681,
+          13
+        ],
+        [
+          693,
+          19
+        ],
+        [
+          705,
+          11
+        ],
+        [
+          717,
+          12
+        ],
+        [
+          729,
+          19
+        ],
+        [
+          741,
+          13
+        ],
+        [
+          753,
+          10
+        ],
+        [
+          765,
+          19
+        ],
+        [
+          777,
+          19
+        ],
+        [
+          789,
+          11
+        ],
+        [
+          801,
+          11
+        ],
+        [
+          813,
+          12
+        ],
+        [
+          825,
+          19
+        ],
+        [
+          837,
+          13
+        ],
+        [
+          849,
+          13
+        ],
+        [
+          861,
+          19
+        ],
+        [
+          873,
+          11
+        ],
+        [
+          885,
+          12
+        ],
+        [
+          897,
+          19
+        ],
+        [
+          909,
+          13
+        ],
+        [
+          921,
+          10
+        ],
+        [
+          933,
+          19
+        ],
+        [
+          945,
+          19
+        ],
+        [
+          957,
+          11
+        ],
+        [
+          969,
+          11
+        ],
+        [
+          981,
+          12
+        ],
+        [
+          993,
+          19
+        ],
+        [
+          1005,
+          13
+        ],
+        [
+          1017,
+          13
+        ],
+        [
+          1029,
+          19
+        ],
+        [
+          1041,
+          11
+        ],
+        [
+          1053,
+          12
+        ],
+        [
+          1065,
+          19
+        ],
+        [
+          1077,
+          13
+        ],
+        [
+          1089,
+          10
+        ],
+        [
+          1101,
+          19
+        ],
+        [
+          1113,
+          19
+        ],
+        [
+          1125,
+          11
+        ],
+        [
+          1137,
+          11
+        ],
+        [
+          1149,
+          12
+        ],
+        [
+          1161,
+          19
+        ],
+        [
+          1173,
+          13
+        ],
+        [
+          1185,
+          13
+        ],
+        [
+          1197,
+          19
+        ],
+        [
+          1209,
+          11
+        ],
+        [
+          1221,
+          12
+        ],
+        [
+          1233,
+          19
+        ],
+        [
+          1245,
+          13
+        ],
+        [
+          1257,
+          10
+        ],
+        [
+          1269,
+          19
+        ],
+        [
+          1281,
+          19
+        ],
+        [
+          1293,
+          11
+        ],
+        [
+          1305,
+          11
+        ],
+        [
+          1317,
+          12
+        ],
+        [
+          1329,
+          19
+        ],
+        [
+          1341,
+          13
+        ],
+        [
+          1353,
+          13
+        ],
+        [
+          1365,
+          19
+        ],
+        [
+          1377,
+          11
+        ],
+        [
+          1389,
+          12
+        ],
+        [
+          1401,
+          19
+        ],
+        [
+          1413,
+          13
+        ],
+        [
+          1425,
+          10
+        ],
+        [
+          1437,
+          19
+        ],
+        [
+          1449,
+          19
+        ],
+        [
+          1461,
+          11
+        ],
+        [
+          1473,
+          11
+        ],
+        [
+          1485,
+          12
+        ],
+        [
+          1497,
+          19
+        ],
+        [
+          1509,
+          13
+        ],
+        [
+          1521,
+          13
+        ],
+        [
+          1533,
+          19
+        ],
+        [
+          1545,
+          11
+        ],
+        [
+          1557,
+          12
+        ],
+        [
+          1569,
+          19
+        ],
+        [
+          1581,
+          13
+        ],
+        [
+          1593,
+          10
+        ],
+        [
+          1605,
+          19
+        ],
+        [
+          1617,
+          19
+        ],
+        [
+          1629,
+          11
+        ],
+        [
+          1641,
+          11
+        ],
+        [
+          1653,
+          12
+        ],
+        [
+          1665,
+          19
+        ],
+        [
+          1677,
+          13
+        ],
+        [
+          1689,
+          13
+        ],
+        [
+          1701,
+          19
+        ],
+        [
+          1713,
+          11
+        ],
+        [
+          1725,
+          12
+        ],
+        [
+          1737,
+          19
+        ],
+        [
+          1749,
+          13
+        ],
+        [
+          1761,
+          10
+        ],
+        [
+          1773,
+          19
+        ],
+        [
+          1785,
+          19
+        ],
+        [
+          1797,
+          11
+        ],
+        [
+          1809,
+          11
+        ],
+        [
+          1821,
+          12
+        ],
+        [
+          1833,
+          19
+        ],
+        [
+          1845,
+          13
+        ],
+        [
+          1857,
+          13
+        ],
+        [
+          1869,
+          19
+        ],
+        [
+          1881,
+          11
+        ],
+        [
+          1893,
+          12
+        ],
+        [
+          1905,
+          19
+        ],
+        [
+          1917,
+          13
+        ],
+        [
+          1929,
+          10
+        ],
+        [
+          1941,
+          19
+        ],
+        [
+          1953,
+          19
+        ],
+        [
+          1965,
+          11
+        ],
+        [
+          1977,
+          11
+        ],
+        [
+          1989,
+          12
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "long-player-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "long-player-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "long-player-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 501,
+          "eventCount": 529,
+          "file": "long-player-long-300.png",
+          "presentation": 206,
+          "indexedSha256": "9ce145f6fc3a1f92373ccf8e029951db74a1ffeb085f695db5d28b409705fd56",
+          "pngSha256": "40ba716a20facbf9ae1275d16a7207713aef2bc68fb6a1ec1474373cbb52076e"
+        },
+        {
+          "tick": 801,
+          "eventCount": 854,
+          "file": "long-player-long-600.png",
+          "presentation": 334,
+          "indexedSha256": "848d63591dbd591eda4fb1c3d3054b6e91bad14cf949cf739db03496108184cc",
+          "pngSha256": "0cf40efb55ffdda5c8305159e6c7e60f31c315ba28357bd7d4f7ac42dfb39755"
+        },
+        {
+          "tick": 1101,
+          "eventCount": 1179,
+          "file": "long-player-long-900.png",
+          "presentation": 463,
+          "indexedSha256": "848d63591dbd591eda4fb1c3d3054b6e91bad14cf949cf739db03496108184cc",
+          "pngSha256": "0cf40efb55ffdda5c8305159e6c7e60f31c315ba28357bd7d4f7ac42dfb39755"
+        },
+        {
+          "tick": 1401,
+          "eventCount": 1504,
+          "file": "long-player-long-1200.png",
+          "presentation": 592,
+          "indexedSha256": "9056dfaa83a9dba1eb8c10287235f3e97adf8a3b8e5adfbef9b97ba423410261",
+          "pngSha256": "042d7ca4667c6afdc8aec6cc880ad0022cf3facf624f87dfb8647571ac67f4fc"
+        },
+        {
+          "tick": 1701,
+          "eventCount": 1829,
+          "file": "long-player-long-1500.png",
+          "presentation": 721,
+          "indexedSha256": "75286ce61575c7ba1cb50fd24c2f5c334b2a166444330baaefe85aa29c3da0df",
+          "pngSha256": "aa7c5afb3dc8df16034c9d47e418d215c6ce214525fe63ff06564fcde7c493fa"
+        },
+        {
+          "tick": 2001,
+          "eventCount": 2154,
+          "file": "long-player-long-1800.png",
+          "presentation": 851,
+          "indexedSha256": "02805b9c2da2248cd81980ff2ace6a95d7991bb2ebd5af3d29771045c418c193",
+          "pngSha256": "b6ee6bbf06bc478a37c0912e6f33d4b3d2ac9d12fa6e25869f6b3eedc962340c"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            10,
+            78
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            74,
+            45
+          ],
+          [
+            74,
+            59
+          ],
+          [
+            88,
+            45
+          ],
+          [
+            88,
+            59
+          ],
+          [
+            88,
+            73
+          ],
+          [
+            88,
+            87
+          ],
+          [
+            88,
+            101
+          ],
+          [
+            102,
+            59
+          ],
+          [
+            102,
+            73
+          ],
+          [
+            102,
+            87
+          ],
+          [
+            102,
+            101
+          ]
+        ],
+        "calls": 249
+      }
+    },
+    {
+      "name": "long-cpu",
+      "inputs": [
+        [
+          165,
+          19
+        ],
+        [
+          183,
+          19
+        ],
+        [
+          201,
+          13
+        ],
+        [
+          218,
+          10
+        ],
+        [
+          235,
+          12
+        ],
+        [
+          252,
+          19
+        ],
+        [
+          269,
+          11
+        ],
+        [
+          286,
+          19
+        ],
+        [
+          303,
+          12
+        ],
+        [
+          320,
+          19
+        ],
+        [
+          337,
+          13
+        ],
+        [
+          354,
+          10
+        ],
+        [
+          371,
+          10
+        ],
+        [
+          388,
+          19
+        ],
+        [
+          405,
+          13
+        ],
+        [
+          422,
+          10
+        ],
+        [
+          439,
+          12
+        ],
+        [
+          456,
+          19
+        ],
+        [
+          473,
+          11
+        ],
+        [
+          490,
+          19
+        ],
+        [
+          507,
+          12
+        ],
+        [
+          524,
+          19
+        ],
+        [
+          541,
+          13
+        ],
+        [
+          558,
+          10
+        ],
+        [
+          575,
+          10
+        ],
+        [
+          592,
+          19
+        ],
+        [
+          609,
+          13
+        ],
+        [
+          626,
+          10
+        ],
+        [
+          643,
+          12
+        ],
+        [
+          660,
+          19
+        ],
+        [
+          677,
+          11
+        ],
+        [
+          694,
+          19
+        ],
+        [
+          711,
+          12
+        ],
+        [
+          728,
+          19
+        ],
+        [
+          745,
+          13
+        ],
+        [
+          762,
+          10
+        ],
+        [
+          779,
+          10
+        ],
+        [
+          796,
+          19
+        ],
+        [
+          813,
+          13
+        ],
+        [
+          830,
+          10
+        ],
+        [
+          847,
+          12
+        ],
+        [
+          864,
+          19
+        ],
+        [
+          881,
+          11
+        ],
+        [
+          898,
+          19
+        ],
+        [
+          915,
+          12
+        ],
+        [
+          932,
+          19
+        ],
+        [
+          949,
+          13
+        ],
+        [
+          966,
+          10
+        ],
+        [
+          983,
+          10
+        ],
+        [
+          1000,
+          19
+        ],
+        [
+          1017,
+          13
+        ],
+        [
+          1034,
+          10
+        ],
+        [
+          1051,
+          12
+        ],
+        [
+          1068,
+          19
+        ],
+        [
+          1085,
+          11
+        ],
+        [
+          1102,
+          19
+        ],
+        [
+          1119,
+          12
+        ],
+        [
+          1136,
+          19
+        ],
+        [
+          1153,
+          13
+        ],
+        [
+          1170,
+          10
+        ],
+        [
+          1187,
+          10
+        ],
+        [
+          1204,
+          19
+        ],
+        [
+          1221,
+          13
+        ],
+        [
+          1238,
+          10
+        ],
+        [
+          1255,
+          12
+        ],
+        [
+          1272,
+          19
+        ],
+        [
+          1289,
+          11
+        ],
+        [
+          1306,
+          19
+        ],
+        [
+          1323,
+          12
+        ],
+        [
+          1340,
+          19
+        ],
+        [
+          1357,
+          13
+        ],
+        [
+          1374,
+          10
+        ],
+        [
+          1391,
+          10
+        ],
+        [
+          1408,
+          19
+        ],
+        [
+          1425,
+          13
+        ],
+        [
+          1442,
+          10
+        ],
+        [
+          1459,
+          12
+        ],
+        [
+          1476,
+          19
+        ],
+        [
+          1493,
+          11
+        ],
+        [
+          1510,
+          19
+        ],
+        [
+          1527,
+          12
+        ],
+        [
+          1544,
+          19
+        ],
+        [
+          1561,
+          13
+        ],
+        [
+          1578,
+          10
+        ],
+        [
+          1595,
+          10
+        ],
+        [
+          1612,
+          19
+        ],
+        [
+          1629,
+          13
+        ],
+        [
+          1646,
+          10
+        ],
+        [
+          1663,
+          12
+        ],
+        [
+          1680,
+          19
+        ],
+        [
+          1697,
+          11
+        ],
+        [
+          1714,
+          19
+        ],
+        [
+          1731,
+          12
+        ],
+        [
+          1748,
+          19
+        ],
+        [
+          1765,
+          13
+        ],
+        [
+          1782,
+          10
+        ],
+        [
+          1799,
+          10
+        ],
+        [
+          1816,
+          19
+        ],
+        [
+          1833,
+          13
+        ],
+        [
+          1850,
+          10
+        ],
+        [
+          1867,
+          12
+        ],
+        [
+          1884,
+          19
+        ],
+        [
+          1901,
+          11
+        ],
+        [
+          1918,
+          19
+        ],
+        [
+          1935,
+          12
+        ],
+        [
+          1952,
+          19
+        ],
+        [
+          1969,
+          13
+        ],
+        [
+          1986,
+          10
+        ]
+      ],
+      "checkpoints": [
+        {
+          "tick": 165,
+          "eventCount": 166,
+          "file": "long-cpu-mode.png",
+          "presentation": 56,
+          "indexedSha256": "0a34ebff7289a3932b8f1e25dc4a9ee2712835fe3e66f50262618f93c5378c5d",
+          "pngSha256": "c80cef6a0ed57250b74fb2b59231aba492dbcb71d656756067ca8739994a215d"
+        },
+        {
+          "tick": 183,
+          "eventCount": 185,
+          "file": "long-cpu-character.png",
+          "presentation": 57,
+          "indexedSha256": "7b10d6f516b9d6f1bc718d990b235c7d1ede0c921ab81fb1666fa62c36925f85",
+          "pngSha256": "d0e0e888e8ef9563089ca6228e5d5a1f9c4e4e7a52872512a0d68c25966a4b5d"
+        },
+        {
+          "tick": 201,
+          "eventCount": 204,
+          "file": "long-cpu-board.png",
+          "presentation": 63,
+          "indexedSha256": "e6dc9aec29a938ebc97512b0bc38dcf954773d3de8ad9d4ec9547091a29ff728",
+          "pngSha256": "af1297ec8d60e6a81879e45f602053011b3723b98a6185d4774403412b340ade"
+        },
+        {
+          "tick": 501,
+          "eventCount": 522,
+          "file": "long-cpu-long-300.png",
+          "presentation": 190,
+          "indexedSha256": "f7c8983316229aeff97dd63142c4e8ad3859ab7a0f5594a340a4f76a3b4de0b8",
+          "pngSha256": "cae3b0e224f7675b5272f29bda929b23a830cf89c3032537ac5f80f2f8d91c93"
+        },
+        {
+          "tick": 801,
+          "eventCount": 840,
+          "file": "long-cpu-long-600.png",
+          "presentation": 304,
+          "indexedSha256": "89649169e04fb96c5279cb2aa8b6a8e200adaf01ab6baa88430a7038309ec1fe",
+          "pngSha256": "f9d3e10c0b01b2e9937775e3ad0bcc8853a909b73eb28bc8f11375b4f9ffc11a"
+        },
+        {
+          "tick": 1101,
+          "eventCount": 1157,
+          "file": "long-cpu-long-900.png",
+          "presentation": 417,
+          "indexedSha256": "e9459345f659c9c5572edf08009e7254a414799d4379921c08709d0dbf0a4c72",
+          "pngSha256": "8c201461888c1e01f735e82ea96bc7cedce58f68db55cd42dd3da2ccaf5aa516"
+        },
+        {
+          "tick": 1401,
+          "eventCount": 1475,
+          "file": "long-cpu-long-1200.png",
+          "presentation": 532,
+          "indexedSha256": "89649169e04fb96c5279cb2aa8b6a8e200adaf01ab6baa88430a7038309ec1fe",
+          "pngSha256": "f9d3e10c0b01b2e9937775e3ad0bcc8853a909b73eb28bc8f11375b4f9ffc11a"
+        },
+        {
+          "tick": 1701,
+          "eventCount": 1793,
+          "file": "long-cpu-long-1500.png",
+          "presentation": 647,
+          "indexedSha256": "e054ff7496ec84a04450d299bbacd6ebbce221b769c1a9a8917d257dfa86a801",
+          "pngSha256": "4beba9a0ff6b38e4aa966bc18b6303ba84e1248745e053e2155da877afa324b9"
+        },
+        {
+          "tick": 2001,
+          "eventCount": 2110,
+          "file": "long-cpu-long-1800.png",
+          "presentation": 761,
+          "indexedSha256": "5205f4c1bc0e7a3a0398ca8ac087455d3e23e17ea213238964672197915218a5",
+          "pngSha256": "d9da2e5b950a6c5ca4bb3abbf9f59a20f0b77f25282afa140bb9ea2f4a781974"
+        }
+      ],
+      "region": {
+        "sourceSha256": "9628a4ada183b17802907b9f4843ac075a1e36f8f9f1ecc96b8a99533f2fe02f",
+        "positions": [
+          [
+            4,
+            59
+          ],
+          [
+            4,
+            73
+          ],
+          [
+            10,
+            78
+          ],
+          [
+            18,
+            45
+          ],
+          [
+            18,
+            59
+          ],
+          [
+            18,
+            73
+          ],
+          [
+            20,
+            78
+          ],
+          [
+            32,
+            45
+          ],
+          [
+            32,
+            59
+          ],
+          [
+            32,
+            73
+          ],
+          [
+            46,
+            59
+          ],
+          [
+            46,
+            73
+          ],
+          [
+            60,
+            45
+          ],
+          [
+            60,
+            59
+          ],
+          [
+            60,
+            73
+          ]
+        ],
+        "calls": 205
+      }
+    }
+  ]
+}

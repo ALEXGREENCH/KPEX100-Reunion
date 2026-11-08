@@ -88,19 +88,27 @@ function harness(onEvent = () => {}) {
   };
 }
 
-test('ADS routes # press and release only for the two confirmed games', async () => {
-  for (const id of ['mr-ramen', 'bubble-monk', 'udon-time']) {
+test('ADS routes additional presses and releases only for their confirmed games', async () => {
+  for (const [id, key, code] of [
+    ['mr-ramen', 'hash', 15],
+    ['bubble-monk', 'hash', 15],
+    ['omok', 'f1', 20],
+    ['omok', 'f2', 14],
+    ['udon-time', 'hash', null],
+    ['udon-time', 'f1', null],
+    ['udon-time', 'f2', null],
+  ]) {
     const h = harness();
     await h.load('ads', id);
-    await h.command({ type: 'key', key: 'hash', pressed: true, sessionId: 1 });
-    await h.command({ type: 'key', key: 'hash', pressed: false, sessionId: 1 });
+    await h.command({ type: 'key', key, pressed: true, sessionId: 1 });
+    await h.command({ type: 'key', key, pressed: false, sessionId: 1 });
     assert.deepEqual(
       h.keys,
-      id === 'udon-time'
+      code === null
         ? []
         : [
-            [15, true],
-            [15, false],
+            [code, true],
+            [code, false],
           ],
     );
   }

@@ -33,12 +33,20 @@ test('manual skin selection is cosmetic and leaves the session untouched', () =>
   assert.equal(session.sessionId, 12);
 });
 
-test('Anycall exposes the original # key for Ramen and Bubble Monk', () => {
-  for (const id of ['mr-ramen', 'bubble-monk', 'udon-time']) {
+test('Anycall exposes the confirmed additional keys per game', () => {
+  for (const id of ['mr-ramen', 'bubble-monk', 'omok', 'udon-time']) {
     const device = deviceFor({ kind: 'game', engine: 'ads', platform: 'mobile', id });
     assert.equal(
       device.keys.some(([key]) => key === 'hash'),
-      id !== 'udon-time',
+      ['mr-ramen', 'bubble-monk'].includes(id),
+    );
+    assert.equal(
+      device.keys.some(([key]) => key === 'f1'),
+      id === 'omok',
+    );
+    assert.equal(
+      device.keys.some(([key]) => key === 'f2'),
+      id === 'omok',
     );
   }
 });

@@ -364,6 +364,53 @@ test('ADS: mobile-gostop continues through three later-round transitions', async
   });
 });
 
+test('ADS: Othello Good & Evil matches legal moves and continued play', async () => {
+  const record = json('../validation/anycall-othello-good-evil.json');
+  for (const { inputs, checkpoints } of record.runs) {
+    await replay(record, (game) => {
+      const keys = new Map(inputs);
+      const frames = new Map(checkpoints.map((frame) => [frame.tick, frame]));
+      const lastTick = checkpoints.at(-1).tick;
+      for (let tick = 0; tick <= lastTick; tick++) {
+        if (frames.has(tick)) assertCapture(game, frames.get(tick), record.size);
+        press(game, keys.get(tick) ?? null);
+        if (tick < lastTick) game.tick();
+      }
+    });
+  }
+});
+
+test('ADS: Omok plays both modes, reloads a saved board and finishes a round', async () => {
+  const record = json('../validation/anycall-omok.json');
+  const run = (game, steps) => {
+    for (const { key, ticks, capture } of steps) {
+      press(game, key);
+      advance(game, ticks);
+      if (capture) assertCapture(game, capture, record.size);
+    }
+  };
+  for (const { commonSequence, branches } of Object.values(record.modes)) {
+    assert.deepEqual(
+      branches.map(({ key }) => key),
+      [null, 10, 11, 12, 13, 19, 20],
+    );
+    let idle;
+    for (const branch of branches) {
+      await replay(record, (game) => {
+        run(game, [...commonSequence, branch]);
+        const frame = game.readIndexedFrame();
+        if (branch.key === null) idle = frame;
+        const changed = frame.reduce((count, index, i) => count + (index !== idle[i]), 0);
+        assert.equal(changed, branch.capture.changedPixels, branch.capture.file);
+        if (branch.key !== null) assert.ok(changed > 0);
+      });
+    }
+  }
+  for (const { mode, sequence } of record.longPlay) {
+    await replay(record, (game) => run(game, [...record.modes[mode].commonSequence, ...sequence]));
+  }
+});
+
 test('ADS: couple-bowling continues through two late score updates', async () => {
   const record = json('../validation/anycall-couple-bowling.json');
   const inputs = [19, 11, 19, 10, 19, 19, 13, 19, 19, 12, 19, 19];
