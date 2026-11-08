@@ -129,3 +129,37 @@ test('ADS: jumping-baby matches all archived captures on ARM/WASM', async () => 
     });
   }
 });
+
+test('ADS: mobile-gostop matches the independent idle and keypad replays on ARM/WASM', async () => {
+  const record = json('../validation/anycall-mobile-gostop.json');
+  const { branches, commonSequence, size, timerIntervals } = record;
+  assert.deepEqual(
+    branches.map(({ key }) => key),
+    [null, 1, 5, 7],
+  );
+  const idle = [];
+  for (const { key, checkpoints } of branches) {
+    assert.equal(checkpoints.length, timerIntervals.length);
+    await replay(record, (game) => {
+      for (const step of commonSequence) {
+        press(game, step.key);
+        advance(game, step.ticks);
+        assertCapture(game, step.capture, size);
+      }
+      press(game, key);
+      for (const [index, ticks] of timerIntervals.entries()) {
+        advance(game, ticks);
+        const expected = checkpoints[index];
+        assertCapture(game, expected, size);
+        const frame = game.readIndexedFrame();
+        if (key === null) {
+          idle.push(frame);
+        } else {
+          const changed = frame.reduce((count, pixel, i) => count + (pixel !== idle[index][i]), 0);
+          assert.ok(changed > 0, expected.file);
+          assert.equal(changed, expected.changedPixels, expected.file);
+        }
+      }
+    });
+  }
+});

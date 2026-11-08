@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0
-// Reproduce Reunion's two bridge changes from the exact upstream release JS.
+// Reproduce Reunion's bridge changes from the exact upstream release JS.
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 
@@ -15,11 +15,13 @@ if (
 const anchor = 'Module["writeArrayToMemory"]=writeArrayToMemory;';
 const source = original.toString('utf8');
 if (source.split(anchor).length !== 2) throw Error('Ambiguous bridge export');
-// Resolve HEAPU8 at each call: Emscripten replaces it when WASM memory grows.
-// slice returns owned bytes; no host view can alias the reusable transfer buffer.
-const helper =
-  'Module["readArrayFromMemory"]=(pointer,length)=>{if(!Number.isSafeInteger(pointer)||!Number.isSafeInteger(length)||pointer<0||length<0||pointer+length>HEAPU8.length)throw new RangeError("WASM memory copy bounds");return HEAPU8.slice(pointer,pointer+length)};';
+// Emscripten replaces HEAPU8 when memory grows. The view is only for callers
+// that own the underlying allocation and can refresh detached views.
+const memoryViews =
+  'const checkArrayRange=(pointer,length)=>{if(!Number.isSafeInteger(pointer)||!Number.isSafeInteger(length)||pointer<0||length<0||pointer+length>HEAPU8.length)throw new RangeError("WASM memory copy bounds")};' +
+  'Module["viewArrayFromMemory"]=(pointer,length)=>{checkArrayRange(pointer,length);return HEAPU8.subarray(pointer,pointer+length)};' +
+  'Module["readArrayFromMemory"]=(pointer,length)=>{checkArrayRange(pointer,length);return HEAPU8.slice(pointer,pointer+length)};';
 const result =
-  source.replace(anchor, anchor + helper) + '\nglobalThis.MUnicornLegacy = MUnicorn;\n';
+  source.replace(anchor, anchor + memoryViews) + '\nglobalThis.MUnicornLegacy = MUnicorn;\n';
 fs.writeFileSync(output, result, { flag: 'wx' });
 console.log(createHash('sha256').update(result).digest('hex'));

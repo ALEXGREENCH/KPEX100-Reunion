@@ -68,9 +68,19 @@ ADDITIONAL_GAMES = {
         "버전 다름/우동타임.mbin",
         "0d589cca6fc22e01f8e90f5fe7e43150cc2ce09317d5d822c5c438e439407672",
     ),
+    "mobile-gostop": (
+        "버전 다름/모바일 고스톱.mbin",
+        "108f8d823825c936d782e0f0a1d4e090e5812bab5713c92c765cc42fc2a8c197",
+    ),
 }
 ADDITIONAL_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
-DRAWING_TIMERS = {"119-rescue": 1, "merry-christmas": 0, "mr-ramen": 2, "udon-time": 2}
+DRAWING_TIMERS = {
+    "119-rescue": 1,
+    "merry-christmas": 0,
+    "mr-ramen": 2,
+    "udon-time": 2,
+    "mobile-gostop": 1,
+}
 RGB332 = [
     bytes(
         ((value >> 5) * 255 // 7, ((value >> 2) & 7) * 255 // 7, (value & 3) * 255 // 3)
@@ -212,10 +222,13 @@ class DrawingReplay(Replay):
     def __init__(self, original, game_id):
         self.color = 0
         self.random_state = 0x12345678
+        self.empty_descriptor_calls = []
         super().__init__(original, game_id=game_id)
         self.stub_slots = (self.stub_slots | {0x08}) - {0x48}
+        if game_id in ("udon-time", "mobile-gostop"):
+            self.stub_slots -= {0x40}
         if game_id == "udon-time":
-            self.stub_slots = (self.stub_slots | {0x0C}) - {0x40}
+            self.stub_slots.add(0x0C)
 
     def tick(self, frames=1):
         for _ in range(frames):
@@ -231,7 +244,7 @@ class DrawingReplay(Replay):
             # A synthetic clock for this replay, in units of presented frames.
             cpu.mem_write(self.output_address() + 12, struct.pack("<I", self.frames))
             cpu.reg_write(UC_ARM_REG_R0, 0)
-        elif slot == 0x40 and self.game_id == "udon-time":
+        elif slot == 0x40 and self.game_id in ("udon-time", "mobile-gostop"):
             bounds = cpu.reg_read(UC_ARM_REG_R0)
             low, high = bounds & 65535, bounds >> 16
             if low > high:
@@ -253,6 +266,24 @@ class DrawingReplay(Replay):
             else:
                 width, height = struct.unpack("<HH", struct.pack("<I", second))
                 self.fill_rect(x, y, width, height)
+        elif slot == 0xC4 and self.game_id == "mobile-gostop":
+            arguments = [cpu.reg_read(register) for register in ARGS]
+            descriptor = arguments[1]
+            caller = cpu.reg_read(UC_ARM_REG_LR)
+            if descriptor != BSS + 0x132C or caller != TEXT + 0x5755:
+                raise ValueError("unexpected ADS slot 0xc4 call site")
+            descriptor_bytes = cpu.mem_read(descriptor, 12)
+            if any(descriptor_bytes):
+                raise ValueError("unexpected nonempty ADS slot 0xc4 descriptor")
+            self.empty_descriptor_calls.append(
+                {
+                    "presentation": self.frames,
+                    "arguments": [f"0x{value:08x}" for value in arguments],
+                    "linkRegister": f"0x{caller:08x}",
+                    "descriptorHex": descriptor_bytes.hex(),
+                }
+            )
+            cpu.reg_write(UC_ARM_REG_R0, 0)
         else:
             super().host(cpu, address, size, data)
             return
@@ -476,6 +507,79 @@ def replay_game(original, output, game_id):
     )
 
 
+def replay_mobile_gostop(original, output):
+    game_id = "mobile-gostop"
+    sequence = [(100, None)] + [(20, 19)] * 5
+    timer_intervals = [20, 60]
+    common_captures = []
+    branches = []
+    control_frames = []
+    for key in (None, 1, 5, 7):
+        game = DrawingReplay(original, game_id)
+        for step, (ticks, button) in enumerate(sequence):
+            if button is not None:
+                game.key(button)
+            game.tick(ticks)
+            if key is None:
+                common_captures.append(save_frame(output, f"start-{step + 1}", game))
+            elif (
+                sha256(game.frame()).hexdigest()
+                != common_captures[step]["indexedSha256"]
+            ):
+                raise RuntimeError("control diverged before gameplay input")
+
+        if key is not None:
+            game.key(key)
+        checkpoints = []
+        label = "idle" if key is None else f"key-{key}"
+        for index, ticks in enumerate(timer_intervals):
+            game.tick(ticks)
+            frame = game.frame()
+            if key is None:
+                control_frames.append(frame)
+            changed = sum(
+                a != b for a, b in zip(frame, control_frames[index], strict=True)
+            )
+            if key is not None and not changed:
+                raise RuntimeError(f"no gameplay difference after key {key}")
+            checkpoints.append(
+                {
+                    **save_frame(
+                        output, f"{label}-{sum(timer_intervals[:index + 1])}", game
+                    ),
+                    "changedPixels": changed,
+                }
+            )
+        branches.append({"key": key, "checkpoints": checkpoints})
+        if key is None:
+            identity = replay_identity(game, original)
+            empty_descriptor_calls = game.empty_descriptor_calls
+
+    if len(empty_descriptor_calls) != 1:
+        raise RuntimeError("expected exactly one empty ADS slot 0xc4 call")
+    manifest = {
+        **identity,
+        "timerArgument": DRAWING_TIMERS[game_id],
+        "clock": "synthetic count of presented frames",
+        "randomSeed": 0x12345678,
+        "slotC4Calls": empty_descriptor_calls,
+        "commonSequence": [
+            {"ticks": ticks, "key": key, "capture": capture}
+            for (ticks, key), capture in zip(sequence, common_captures, strict=True)
+        ],
+        "timerIntervals": timer_intervals,
+        "branches": branches,
+    }
+    (output / "replay.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    print(
+        f"{game_id}: {len(common_captures)} setup and {len(branches) * len(timer_intervals)} paired captures"
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -489,7 +593,9 @@ def main():
     if args.game != "jumping-baby":
         original = read_original(args.source, ADDITIONAL_GAMES[args.game][0])
         args.output.mkdir(parents=True, exist_ok=True)
-        if args.game in DRAWING_TIMERS and args.game != "119-rescue":
+        if args.game == "mobile-gostop":
+            replay_mobile_gostop(original, args.output)
+        elif args.game in DRAWING_TIMERS and args.game != "119-rescue":
             replay_controls(original, args.output, args.game)
         else:
             replay_game(original, args.output, args.game)

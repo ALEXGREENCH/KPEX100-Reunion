@@ -1,0 +1,204 @@
+{
+  "schema": 1,
+  "game": "mobile-gostop",
+  "originalMember": "버전 다름/모바일 고스톱.mbin",
+  "mbinSha256": "108f8d823825c936d782e0f0a1d4e090e5812bab5713c92c765cc42fc2a8c197",
+  "mbinBytes": 89421,
+  "size": [
+    120,
+    128
+  ],
+  "palette": "provisional RGB332",
+  "hostCallCounts": {
+    "0x04": 1,
+    "0x08": 1,
+    "0x18": 3,
+    "0x24": 16,
+    "0x34": 1,
+    "0x3c": 1,
+    "0x40": 50,
+    "0x48": 1,
+    "0x68": 1,
+    "0x70": 2399,
+    "0x74": 4,
+    "0x7c": 105,
+    "0x8c": 88,
+    "0x98": 17,
+    "0x9c": 2,
+    "0xa0": 280,
+    "0xb0": 127,
+    "0xc4": 1
+  },
+  "stubSlots": [
+    "0x08",
+    "0x18",
+    "0x24",
+    "0x2c",
+    "0x30",
+    "0x34",
+    "0x3c",
+    "0x5c",
+    "0x68",
+    "0x9c"
+  ],
+  "timerArgument": 1,
+  "clock": "synthetic count of presented frames",
+  "randomSeed": 305419896,
+  "slotC4Calls": [
+    {
+      "presentation": 28,
+      "arguments": [
+        "0x002e0049",
+        "0xf500132c",
+        "0xf4000000",
+        "0x000000e3"
+      ],
+      "linkRegister": "0xf4005755",
+      "descriptorHex": "000000000000000000000000"
+    }
+  ],
+  "commonSequence": [
+    {
+      "ticks": 100,
+      "key": null,
+      "capture": {
+        "file": "start-1.png",
+        "presentation": 100,
+        "indexedSha256": "d32b509d44484497106b9c1799d3e0e1898735de43b9eae0b34c7cebb328199d",
+        "pngSha256": "6a0fd14dc3a99c7195f931f1317fdcf202228b7ee7a9c99fa4b030b625c3e289"
+      }
+    },
+    {
+      "ticks": 20,
+      "key": 19,
+      "capture": {
+        "file": "start-2.png",
+        "presentation": 120,
+        "indexedSha256": "c2d6be0fdb2e4f2ca1274adf611ca9790627c114e500167d64e46597342c39c8",
+        "pngSha256": "fe3922f977dc37c30dca55f8068dcea19e4d74404b4b3b508cdadbc1c364395d"
+      }
+    },
+    {
+      "ticks": 20,
+      "key": 19,
+      "capture": {
+        "file": "start-3.png",
+        "presentation": 140,
+        "indexedSha256": "52d8094631791d871af43a7a6e3a831e9d1f94303e1840a1bddf5b055f0777c7",
+        "pngSha256": "3dfebf163ae61e7a11578ac7e33e030a77ed710311fb6ba22db5c6511b830fdd"
+      }
+    },
+    {
+      "ticks": 20,
+      "key": 19,
+      "capture": {
+        "file": "start-4.png",
+        "presentation": 160,
+        "indexedSha256": "3490beb71d0b89516d8285ab844b504e4e89adbe5699f01ddce2af89ff35f6a3",
+        "pngSha256": "bf7df2a1e584a8642f4f51595fd712d1123a68923599b2e39e806645b756eacb"
+      }
+    },
+    {
+      "ticks": 20,
+      "key": 19,
+      "capture": {
+        "file": "start-5.png",
+        "presentation": 180,
+        "indexedSha256": "d4bdaaaae0f0fa270eeeef8ebac51155dbc24e18b07a3c1d1a03d15361cdd6cb",
+        "pngSha256": "5c31950684374476b5823fb2e7c8f1d5c2c1e48cc56912d7c0896d1cb8478ffe"
+      }
+    },
+    {
+      "ticks": 20,
+      "key": 19,
+      "capture": {
+        "file": "start-6.png",
+        "presentation": 200,
+        "indexedSha256": "efcde28f6628c1cdb1e9c71e905cf822a74d03b13278d04355f69c5f3df289a2",
+        "pngSha256": "f09036d89ccced4000ad226cefff28af91bcaa5467da1a6fcef0a981fda96fd9"
+      }
+    }
+  ],
+  "timerIntervals": [
+    20,
+    60
+  ],
+  "branches": [
+    {
+      "key": null,
+      "checkpoints": [
+        {
+          "file": "idle-20.png",
+          "presentation": 220,
+          "indexedSha256": "efcde28f6628c1cdb1e9c71e905cf822a74d03b13278d04355f69c5f3df289a2",
+          "pngSha256": "f09036d89ccced4000ad226cefff28af91bcaa5467da1a6fcef0a981fda96fd9",
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-80.png",
+          "presentation": 280,
+          "indexedSha256": "efcde28f6628c1cdb1e9c71e905cf822a74d03b13278d04355f69c5f3df289a2",
+          "pngSha256": "f09036d89ccced4000ad226cefff28af91bcaa5467da1a6fcef0a981fda96fd9",
+          "changedPixels": 0
+        }
+      ]
+    },
+    {
+      "key": 1,
+      "checkpoints": [
+        {
+          "file": "key-1-20.png",
+          "presentation": 220,
+          "indexedSha256": "9337a2c7465065b6b0d470402799756b17ef8ab9d3e2a3cb09bfa62c86d5e992",
+          "pngSha256": "0c5be390108c45d185e00609efcb924840399aa0ab01289399f3b58a2d1c20f3",
+          "changedPixels": 205
+        },
+        {
+          "file": "key-1-80.png",
+          "presentation": 280,
+          "indexedSha256": "9337a2c7465065b6b0d470402799756b17ef8ab9d3e2a3cb09bfa62c86d5e992",
+          "pngSha256": "0c5be390108c45d185e00609efcb924840399aa0ab01289399f3b58a2d1c20f3",
+          "changedPixels": 205
+        }
+      ]
+    },
+    {
+      "key": 5,
+      "checkpoints": [
+        {
+          "file": "key-5-20.png",
+          "presentation": 220,
+          "indexedSha256": "ec3f014fe347756aaf26715edc7e89ca6c9ace76dfccfa10d106b90cd72f30ce",
+          "pngSha256": "8d9b4c329e0203455acd7e8c4cabf5b883e7997a2b0694d8e18720799edfea49",
+          "changedPixels": 2809
+        },
+        {
+          "file": "key-5-80.png",
+          "presentation": 280,
+          "indexedSha256": "bccf6978790daf62cfc8c5a63cf5532b577b278e7e2c3100567b1f609e7f616c",
+          "pngSha256": "931f514e3c4222c8e9b0d96e9a1720c5979754cb94a99c9204f97c5ecb78bdaf",
+          "changedPixels": 1236
+        }
+      ]
+    },
+    {
+      "key": 7,
+      "checkpoints": [
+        {
+          "file": "key-7-20.png",
+          "presentation": 220,
+          "indexedSha256": "40eb9268df9e5cb494be85c2d052ffff55b0cadc71c895ade356f714ddc8055b",
+          "pngSha256": "a195e8b5a37e1729b8ed19be4936157055992e98c5eb5a1e50f47713119487cb",
+          "changedPixels": 2838
+        },
+        {
+          "file": "key-7-80.png",
+          "presentation": 280,
+          "indexedSha256": "735f49a61b55fd573a73b9937911d9ff2207f771323811c2c491c35ee1e8170c",
+          "pngSha256": "2b88a12f0537e63ea0e1b1d2c710c83393cdaf500198e1eedc2e0ff83f34a531",
+          "changedPixels": 1434
+        }
+      ]
+    }
+  ]
+}

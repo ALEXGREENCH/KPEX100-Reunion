@@ -46,18 +46,25 @@ test('bulk ARM reads preserve arbitrary byte alignment and never alias guest or 
   }
 });
 
-test('bulk copies resolve the current heap after a large WASM allocation', async () => {
+test('bulk copies and mapped views resolve the current heap after WASM growth', async () => {
   const cpu = await createARM({ isolated: true });
   let allocation = 0;
   try {
-    cpu.map(0x1000, 0x1000);
+    const pointer = cpu.mapAlias([0x1000], 0x1000);
     cpu.write(0x1000, Uint8Array.of(1, 127, 128, 255));
     const before = cpu.read(0x1000, 4);
+    const view = cpu.uc.viewArrayFromMemory(pointer, 4);
+    assert.deepEqual(view, before);
     allocation = cpu.uc._malloc(128 * 1024 * 1024);
     assert.ok(allocation);
+    assert.equal(view.byteLength, 0, 'WASM growth detaches previously borrowed views');
     cpu.uc.writeArrayToMemory(Uint8Array.of(0, 255, 128, 1), allocation);
     assert.deepEqual(cpu.uc.readArrayFromMemory(allocation, 4), Uint8Array.of(0, 255, 128, 1));
     assert.deepEqual(cpu.read(0x1000, 4), before);
+    cpu.uc.viewArrayFromMemory(pointer, 4)[1] = 42;
+    assert.equal(cpu.read(0x1000, 4)[1], 42);
+    assert.equal(before[1], 127);
+    assert.throws(() => cpu.uc.viewArrayFromMemory(-1, 4), /WASM memory copy bounds/);
   } finally {
     if (allocation) cpu.uc._free(allocation);
     cpu.close();

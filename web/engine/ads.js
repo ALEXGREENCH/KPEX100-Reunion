@@ -21,7 +21,8 @@ const EVENT_BUDGET = 25000;
 const BASE_STUBS = [0x18, 0x24, 0x3c, 0x40, 0x48, 0x68];
 const STANDARD_STUBS = [...BASE_STUBS, 0x2c, 0x30, 0x34, 0x5c, 0x9c];
 const DRAWING_STUBS = [0x08, ...STANDARD_STUBS.filter((slot) => slot !== 0x48)];
-const UDON_STUBS = [0x0c, ...DRAWING_STUBS.filter((slot) => slot !== 0x40)];
+const RANDOM_DRAWING_STUBS = DRAWING_STUBS.filter((slot) => slot !== 0x40);
+const UDON_STUBS = [0x0c, ...RANDOM_DRAWING_STUBS];
 const PROFILES = [
   {
     id: 'merry-christmas',
@@ -92,6 +93,14 @@ const PROFILES = [
     sha256: '53e0e20bc8e615eee973fae319b40ebbaccb6fdafc3d8a91d8e8c6228031e74f',
     timerArgument: 0,
     emptyMqDescriptor: true,
+  },
+  {
+    id: 'mobile-gostop',
+    title: 'Mobile GoStop',
+    bytes: 89421,
+    sha256: '108f8d823825c936d782e0f0a1d4e090e5812bab5713c92c765cc42fc2a8c197',
+    timerArgument: 1,
+    stubs: RANDOM_DRAWING_STUBS,
   },
 ];
 const signed = (value) => (value << 16) >> 16;
@@ -167,6 +176,7 @@ export class AdsRuntime {
   #profile;
   #body;
   #displayPointer;
+  #displayView;
   #stubs;
   #sprites = new Map();
   #pressed = new Set();
@@ -263,7 +273,7 @@ export class AdsRuntime {
 
   readIndexedFrame() {
     if (this.#closed) return this.#indices.slice();
-    return this.#cpu.uc.readArrayFromMemory(this.#displayPointer, this.#indices.length);
+    return this.#display().slice();
   }
 
   close() {
@@ -272,6 +282,7 @@ export class AdsRuntime {
     this.status = 'closed';
     this.releaseKeys();
     this.#sprites.clear();
+    this.#displayView = undefined;
     this.#cpu.close();
   }
 
@@ -299,15 +310,27 @@ export class AdsRuntime {
     }
   }
 
+  #display() {
+    // This view belongs to the mapped LCD allocation. Reacquire it after WASM
+    // growth detaches the old heap, and keep presented snapshots independent.
+    if (!this.#displayView?.byteLength) {
+      this.#displayView = this.#cpu.uc.viewArrayFromMemory(
+        this.#displayPointer,
+        this.#indices.length,
+      );
+    }
+    return this.#displayView;
+  }
+
   #captureDisplay() {
-    const indices = this.readIndexedFrame();
+    const indices = this.#display();
     const words = indices.length / 4;
     const before = new Uint32Array(this.#indices.buffer, this.#indices.byteOffset, words);
     const after = new Uint32Array(indices.buffer, indices.byteOffset, words);
     for (let i = 0; i < after.length; i++) {
       if (before[i] === after[i]) continue;
-      this.#indices = indices;
-      this.framebuffer = displayFrame(indices, this.height);
+      this.#indices = indices.slice();
+      this.framebuffer = displayFrame(this.#indices, this.height);
       return;
     }
   }
@@ -333,7 +356,7 @@ export class AdsRuntime {
     const a = cpu.regRead('r0');
     if (slot === 0x04) {
       this.#writeOutput(a, DISPLAY);
-    } else if (slot === 0x40 && this.#profile.id === 'udon-time') {
+    } else if (slot === 0x40) {
       const low = a & 65535;
       const high = a >>> 16;
       if (low > high) throw Error('Некорректный диапазон генератора ADS.');
@@ -344,6 +367,16 @@ export class AdsRuntime {
       this.#writeOutput(this.#outputAddress() + 12, this.presentations);
     } else if (slot === 0xa0) {
       this.presentations++;
+    } else if (slot === 0xc4 && this.#profile.id === 'mobile-gostop') {
+      // This build's splash passes an empty descriptor at this call site.
+      // Only that observed call can be skipped without implementing 0xc4.
+      const descriptor = BSS + 0x132c;
+      if (
+        cpu.regRead('lr') !== TEXT + 0x5755 ||
+        cpu.regRead('r1') !== descriptor ||
+        cpu.read(descriptor, 12).some((byte) => byte !== 0)
+      )
+        throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
     } else {
       this.#draw(slot, a);
       return;
@@ -405,33 +438,32 @@ export class AdsRuntime {
     const left = Math.max(0, -x);
     const right = Math.min(width, WIDTH - x);
     if (left >= right) return;
-    const uc = this.#cpu.uc;
+    const display = this.#display();
     for (let row = Math.max(0, -y); row < Math.min(height, this.height - y); row++) {
       const start = row * width + left;
       const source = pixels.subarray(start, start + right - left);
-      const destination = this.#displayPointer + (y + row) * WIDTH + x + left;
+      const destination = (y + row) * WIDTH + x + left;
       if (source.includes(key)) {
-        const background = uc.readArrayFromMemory(destination, source.length);
-        for (let i = 0; i < source.length; i++) if (source[i] !== key) background[i] = source[i];
-        uc.writeArrayToMemory(background, destination);
+        for (let i = 0; i < source.length; i++) {
+          if (source[i] !== key) display[destination + i] = source[i];
+        }
       } else {
-        uc.writeArrayToMemory(source, destination);
+        display.set(source, destination);
       }
     }
   }
 
   #plot(x, y, color) {
-    if (x >= 0 && x < WIDTH && y >= 0 && y < this.height)
-      this.#cpu.uc.setValue(this.#displayPointer + y * WIDTH + x, color, 'i8');
+    if (x >= 0 && x < WIDTH && y >= 0 && y < this.height) this.#display()[y * WIDTH + x] = color;
   }
 
   #fill(x, y, width, height) {
     const left = Math.max(0, x);
     const right = Math.min(WIDTH, x + width);
     if (left >= right) return;
-    const row = new Uint8Array(right - left).fill(this.#color);
+    const display = this.#display();
     for (let line = Math.max(0, y); line < Math.min(this.height, y + height); line++)
-      this.#cpu.uc.writeArrayToMemory(row, this.#displayPointer + line * WIDTH + left);
+      display.fill(this.#color, line * WIDTH + left, line * WIDTH + right);
   }
 
   #line(x, y, endX, endY) {

@@ -39,8 +39,9 @@ relicensed under Reunion's MIT licence.
 
 The upstream JavaScript was renamed and given one global export,
 `globalThis.MUnicornLegacy = MUnicorn`, for module-worker loading. It also exports
-a bounded `readArrayFromMemory` helper that returns an owned byte copy from the
-current WASM heap. The exact changes can be reproduced with
+`readArrayFromMemory` for an owned byte copy and `viewArrayFromMemory` for
+bounded access to a caller-owned allocation. Both use the current WASM heap.
+The exact changes can be reproduced with
 [prepare-reunion-bridge.mjs](vendor/unicorn-sources/prepare-reunion-bridge.mjs)
 from the hash-checked original release JavaScript. This modified bridge remains
 under GPL-2.0. The ARM WASM binary is unchanged. The corresponding source archives include both the
