@@ -9,4 +9,4 @@ python -m pip install unicorn==2.1.4 Pillow==13.0.0
 python tools/replay-anycall-jumping-baby.py research/archives/Samsung-Anycall-ADS-MBIN.zip rescue-replay --game 119-rescue
 ```
 
-Инструмент также принимает исходный MBIN и сверяет SHA‑256 перед исполнением. [Скрипт](../tools/replay-anycall-jumping-baby.py) · [Проверка архива](../validation/anycall-119-rescue.json)
+Инструмент также принимает исходный MBIN и сверяет SHA‑256 перед исполнением. В веб-библиотеке игра запускается из того же MBIN. [Управление в браузере](samsung-anycall-ads-mbin.md#запуск-в-браузере) · [Скрипт](../tools/replay-anycall-jumping-baby.py) · [Проверка архива](../validation/anycall-119-rescue.json)

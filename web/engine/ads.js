@@ -14,9 +14,14 @@ const RETURN = TABLE + 0x3000;
 const STACK = 0x08000000;
 const STACK_BYTES = 0x10000;
 const WIDTH = 120;
-const HEIGHT = 128;
-const FRAME_BYTES = WIDTH * HEIGHT;
+const DEFAULT_HEIGHT = 128;
 const EVENT_BUDGET = 25000;
+// The archived replays start from empty saves and use silent host services.
+// Some releases expect the clock service to return zero without writing output.
+const BASE_STUBS = [0x18, 0x24, 0x3c, 0x40, 0x48, 0x68];
+const STANDARD_STUBS = [...BASE_STUBS, 0x2c, 0x30, 0x34, 0x5c, 0x9c];
+const DRAWING_STUBS = [0x08, ...STANDARD_STUBS.filter((slot) => slot !== 0x48)];
+const UDON_STUBS = [0x0c, ...DRAWING_STUBS.filter((slot) => slot !== 0x40)];
 const PROFILES = [
   {
     id: 'merry-christmas',
@@ -24,6 +29,7 @@ const PROFILES = [
     bytes: 92462,
     sha256: '7114c2494d25d708a3ebda216e090c0039c25f6bcbe0f3a1d83108a1e340895a',
     timerArgument: 0,
+    stubs: DRAWING_STUBS,
   },
   {
     id: 'mr-ramen',
@@ -31,6 +37,7 @@ const PROFILES = [
     bytes: 129976,
     sha256: '6b13f774d53bbf641e778a069b013cfd31555d84ec4af45504596a748629f0af',
     timerArgument: 2,
+    stubs: DRAWING_STUBS,
   },
   {
     id: 'udon-time',
@@ -38,10 +45,55 @@ const PROFILES = [
     bytes: 102948,
     sha256: '0d589cca6fc22e01f8e90f5fe7e43150cc2ce09317d5d822c5c438e439407672',
     timerArgument: 2,
+    stubs: UDON_STUBS,
+  },
+  {
+    id: '119-rescue',
+    title: '119 Rescue',
+    bytes: 84580,
+    sha256: '982b6f0d3b66c8c4d4d9f3b73b16a3233fe71afee4a7b58a8e4e43ba4acdda73',
+    timerArgument: 1,
+    stubs: DRAWING_STUBS,
+  },
+  {
+    id: 'pocket-billiards',
+    title: 'Pocket Billiards',
+    bytes: 80592,
+    sha256: 'ba8019b03d62389edb7c10137023e7a38d0c75fb0e8fa3415bd303e2f58655cc',
+    timerArgument: 0,
+    height: 144,
+  },
+  {
+    id: 'jumping-baby',
+    title: 'Jumping Baby',
+    bytes: 59808,
+    sha256: 'f92939b286d004deff20782d15827c0c4e31a4ce0859239b7594551d741501a7',
+    timerArgument: 0,
+    stubs: BASE_STUBS,
+  },
+  {
+    id: 'hungry-hunter',
+    title: 'Hungry Hunter',
+    bytes: 94920,
+    sha256: 'be7a23f99e205ab13674706ad750cebb01558e6dd65835cfbdc31546b8c5a8be',
+    timerArgument: 0,
+  },
+  {
+    id: 'love-love',
+    title: 'Love Love Ppyong Hammer',
+    bytes: 115037,
+    sha256: 'd976b7800d9ba20ebd726212afcfaa387240eace6a7892de4560c4c82479ceba',
+    timerArgument: 0,
+  },
+  {
+    id: 'oh-my-head',
+    title: 'Oh My Head',
+    bytes: 97672,
+    sha256: '53e0e20bc8e615eee973fae319b40ebbaccb6fdafc3d8a91d8e8c6228031e74f',
+    timerArgument: 0,
+    emptyMqDescriptor: true,
   },
 ];
-// These verified builds start from empty saves and use silent host services.
-const COMMON_STUBS = [0x08, 0x18, 0x24, 0x2c, 0x30, 0x34, 0x3c, 0x5c, 0x68, 0x9c];
 const signed = (value) => (value << 16) >> 16;
 const hex = (value) => '0x' + value.toString(16);
 const palette = new Uint8Array(256 * 4);
@@ -53,15 +105,15 @@ for (let color = 0; color < 256; color++) {
   palette[offset + 3] = 255;
 }
 
-function displayFrame(indices) {
+function displayFrame(indices, height) {
   let data;
   return {
     width: WIDTH,
-    height: HEIGHT,
+    height,
     get data() {
       if (!data) {
-        data = new Uint8ClampedArray(FRAME_BYTES * 4);
-        for (let i = 0, dst = 0; i < FRAME_BYTES; i++) {
+        data = new Uint8ClampedArray(indices.length * 4);
+        for (let i = 0, dst = 0; i < indices.length; i++) {
           const src = indices[i] * 4;
           data[dst++] = palette[src];
           data[dst++] = palette[src + 1];
@@ -118,7 +170,7 @@ export class AdsRuntime {
   #stubs;
   #sprites = new Map();
   #pressed = new Set();
-  #indices = new Uint8Array(FRAME_BYTES);
+  #indices;
   #color = 0;
   #random = 0x12345678;
   #fault = null;
@@ -149,14 +201,15 @@ export class AdsRuntime {
     this.#cpu = cpu;
     this.#profile = profile;
     this.#body = new DataView(body.buffer, body.byteOffset, body.byteLength);
-    this.#stubs = new Set([...COMMON_STUBS, profile.id === 'udon-time' ? 0x0c : 0x40]);
+    this.#stubs = new Set(profile.stubs ?? STANDARD_STUBS);
     this.width = WIDTH;
-    this.height = HEIGHT;
+    this.height = profile.height ?? DEFAULT_HEIGHT;
+    this.#indices = new Uint8Array(WIDTH * this.height);
     this.title = profile.title;
     this.status = 'idle';
     this.eventCount = 0;
     this.presentations = 0;
-    this.framebuffer = displayFrame(this.#indices);
+    this.framebuffer = displayFrame(this.#indices, this.height);
 
     cpu.map(TEXT, (body.byteLength + 4095) & ~4095);
     cpu.write(TEXT, body);
@@ -210,7 +263,7 @@ export class AdsRuntime {
 
   readIndexedFrame() {
     if (this.#closed) return this.#indices.slice();
-    return this.#cpu.uc.readArrayFromMemory(this.#displayPointer, FRAME_BYTES);
+    return this.#cpu.uc.readArrayFromMemory(this.#displayPointer, this.#indices.length);
   }
 
   close() {
@@ -248,12 +301,13 @@ export class AdsRuntime {
 
   #captureDisplay() {
     const indices = this.readIndexedFrame();
-    const before = new Uint32Array(this.#indices.buffer, this.#indices.byteOffset, FRAME_BYTES / 4);
-    const after = new Uint32Array(indices.buffer, indices.byteOffset, FRAME_BYTES / 4);
+    const words = indices.length / 4;
+    const before = new Uint32Array(this.#indices.buffer, this.#indices.byteOffset, words);
+    const after = new Uint32Array(indices.buffer, indices.byteOffset, words);
     for (let i = 0; i < after.length; i++) {
       if (before[i] === after[i]) continue;
       this.#indices = indices;
-      this.framebuffer = displayFrame(indices);
+      this.framebuffer = displayFrame(indices, this.height);
       return;
     }
   }
@@ -321,10 +375,21 @@ export class AdsRuntime {
         this.#fill(x, y, b & 65535, b >>> 16);
         break;
       case 0xb0: {
+        const address = cpu.regRead('r2');
+        const transparency = cpu.regRead('r3');
+        // Oh My Head uses an empty descriptor while loading its resources.
+        if (
+          this.#profile.emptyMqDescriptor &&
+          a === 0 &&
+          b === 0 &&
+          address === 0 &&
+          transparency === 0
+        )
+          break;
         const width = b & 255;
         const height = (b >>> 8) & 255;
-        const key = cpu.regRead('r3') & 255;
-        const pixels = decodeMq(this.#body, cpu.regRead('r2') - TEXT, width * height, key);
+        const key = transparency & 255;
+        const pixels = decodeMq(this.#body, address - TEXT, width * height, key);
         this.#sprites.set(a, { width, height, key, pixels });
         break;
       }
@@ -341,7 +406,7 @@ export class AdsRuntime {
     const right = Math.min(width, WIDTH - x);
     if (left >= right) return;
     const uc = this.#cpu.uc;
-    for (let row = Math.max(0, -y); row < Math.min(height, HEIGHT - y); row++) {
+    for (let row = Math.max(0, -y); row < Math.min(height, this.height - y); row++) {
       const start = row * width + left;
       const source = pixels.subarray(start, start + right - left);
       const destination = this.#displayPointer + (y + row) * WIDTH + x + left;
@@ -356,7 +421,7 @@ export class AdsRuntime {
   }
 
   #plot(x, y, color) {
-    if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGHT)
+    if (x >= 0 && x < WIDTH && y >= 0 && y < this.height)
       this.#cpu.uc.setValue(this.#displayPointer + y * WIDTH + x, color, 'i8');
   }
 
@@ -365,7 +430,7 @@ export class AdsRuntime {
     const right = Math.min(WIDTH, x + width);
     if (left >= right) return;
     const row = new Uint8Array(right - left).fill(this.#color);
-    for (let line = Math.max(0, y); line < Math.min(HEIGHT, y + height); line++)
+    for (let line = Math.max(0, y); line < Math.min(this.height, y + height); line++)
       this.#cpu.uc.writeArrayToMemory(row, this.#displayPointer + line * WIDTH + left);
   }
 

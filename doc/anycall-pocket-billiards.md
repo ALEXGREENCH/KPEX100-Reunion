@@ -9,4 +9,4 @@ python -m pip install unicorn==2.1.4 Pillow==13.0.0
 python tools/replay-anycall-jumping-baby.py research/archives/Samsung-Anycall-ADS-MBIN.zip pocket-billiards-replay --game pocket-billiards
 ```
 
-Скрипт также принимает отдельный MBIN с совпадающей SHA‑256. На Pages доступны архив и отчёт, скрипт воспроизведения работает локально. [Скрипт](../tools/replay-anycall-jumping-baby.py) · [Проверка архива](../validation/anycall-pocket-billiards.json)
+Скрипт также принимает отдельный MBIN с совпадающей SHA‑256. В веб-библиотеке игра запускается из того же MBIN. [Управление в браузере](samsung-anycall-ads-mbin.md#запуск-в-браузере) · [Скрипт](../tools/replay-anycall-jumping-baby.py) · [Проверка архива](../validation/anycall-pocket-billiards.json)

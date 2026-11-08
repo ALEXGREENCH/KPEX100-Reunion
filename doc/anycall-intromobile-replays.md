@@ -15,4 +15,4 @@ python -m pip install unicorn==2.1.4 Pillow==13.0.0
 python tools/replay-anycall-jumping-baby.py research/archives/Samsung-Anycall-ADS-MBIN.zip hungry-hunter-replay --game hungry-hunter
 ```
 
-Для остальных игр укажите `--game love-love` или `--game oh-my-head` и отдельную папку вывода. Можно передать соответствующий MBIN вместо ZIP. Перед исполнением инструмент сверяет SHA‑256. [Скрипт](../tools/replay-anycall-jumping-baby.py) · [Проверка архива](../validation/anycall-intromobile-replays.json)
+Для остальных игр укажите `--game love-love` или `--game oh-my-head` и отдельную папку вывода. Можно передать соответствующий MBIN вместо ZIP. Перед исполнением инструмент сверяет SHA‑256. Все три игры доступны в веб-библиотеке. [Управление в браузере](samsung-anycall-ads-mbin.md#запуск-в-браузере) · [Скрипт](../tools/replay-anycall-jumping-baby.py) · [Проверка архива](../validation/anycall-intromobile-replays.json)
