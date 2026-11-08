@@ -58,11 +58,15 @@ test('cold boot and the player pack contain the same homebrew launchers and cart
     assert.deepEqual(zip['LICENSES/' + name], new Uint8Array(license));
   }
   for (const { id, cartridge } of entries.filter((entry) => entry.cartridge.sha256)) {
-    const folder = cartridge.path;
-    const name = folder.split('/')[1];
-    const path = cartridge.licenseFile.replace(/[^/]+$/, name);
-    const original = readFileSync(new URL('../' + path, import.meta.url));
-    assert.deepEqual(zip['GAME/' + folder], new Uint8Array(original));
+    const name = cartridge.path.split('/')[1];
+    const original = zip['GAME/' + cartridge.path];
+    if (cartridge.licenseFile) {
+      const path = cartridge.licenseFile.replace(/[^/]+$/, name);
+      assert.deepEqual(
+        original,
+        new Uint8Array(readFileSync(new URL('../' + path, import.meta.url))),
+      );
+    }
     const digest = await sha256(original);
     assert.equal(digest, cartridge.sha256);
     const extension = name.slice(name.lastIndexOf('.'));

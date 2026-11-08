@@ -22,3 +22,18 @@ python demos/gg/build.py --sdk C:/path/to/sdk --output prism-vault.sgs
 Для испытаний физической прошивки положите `prism-vault.sgs` в папку `GAME` и скопируйте туда же `prism-vault.gg` под именем `VAULT.GGR`. Контейнер использует XOR-A5 загрузчика Kingston. В Reunion файл уже вложен в [SGS](../../web/data/games/demo-prism-vault.sgs). Параметр `--cart test.gg` заменяет вложение для тестирования поддерживаемого набора команд.
 
 [Интеграционный тест](../../tests/gg-demo.test.mjs) проходит оба фазовых барьера, оба осколка, выход и перезапуск, проверяет восстановление кадров без следов старой позиции и ошибку при неверном заголовке. Самостоятельный `.gg` отдельно прошёл тот же маршрут в [Gearsystem](https://github.com/drhelius/Gearsystem) версии 3.9.24-12-g1be9a12.
+
+## Signal Breaker
+
+Ведите платформу влево и вправо и разбейте восемь узлов отражённым шаром. На старте три попытки. Кнопка 1 Game Gear или A на K-PEX подаёт шар. Start или Play начинает заново.
+
+[Исходник картриджа](signal_breaker.py) задаёт графику, столкновения, счёт, проигрыш и победу. Он собирает самостоятельный [ROM Game Gear](signal-breaker.gg), который исполняется тем же GNEX-интерпретатором, что и Prism Vault. Маршрут до победы и перезапуск проверены в [Gearsystem](https://github.com/drhelius/Gearsystem) и [тесте Reunion](../../tests/gg-signal-breaker.test.mjs).
+
+```powershell
+python demos/gg/build.py --signal-breaker --rom-only --output signal-breaker.gg
+python demos/gg/build.py --signal-breaker --sdk C:/path/to/sdk --output BREAKER.SGS
+```
+
+Для Kingston 2.12 положите [BREAKER.SGS](../../web/data/games/demo-signal-breaker.sgs) и ROM под именем `BREAKER.GGR` в папку `GAME`. В прямом режиме Reunion читает этот же ROM из хвоста SGS.
+
+При проверке оригинальная прошивка Kingston 2.12 прочитала картридж с виртуального диска, отобразила поле, подала шар, убрала первый узел и отработала нажатия в обе стороны. Signal Breaker учитывает события нажатия и отпускания клавиш, чтобы при смене направления не сохранялось предыдущее нажатие.

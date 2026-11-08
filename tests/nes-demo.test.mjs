@@ -219,6 +219,17 @@ test('Lan Master keeps short presses through its three controller reports', asyn
     tap(20);
     ticks(20);
     assert.equal(frameHash(), 'e9dd3fb1a5633dff8236088f5d6ebd2692a8ea2d2a631cb6d38d2dd03a57a395');
+
+    // The NROM host's variable 21 is guest RAM. Shiru's cursor X and remaining
+    // motion live at $e6 and $e2. Kingston can deliver 255 before clearing its
+    // bitmap, so keep the raw held bit set while sending the release event.
+    const ram = (address) => game._read(game.varAddresses[21] + address * 4);
+    assert.deepEqual([ram(0xe6), ram(0xe2)], [128, 0]);
+    game.setKey(17, true);
+    game.event('KEYPRESS', 255);
+    assert.ok(game.heldKeys.has(17));
+    ticks(54);
+    assert.deepEqual([ram(0xe6), ram(0xe2)], [144, 0]);
   } finally {
     game.close();
   }

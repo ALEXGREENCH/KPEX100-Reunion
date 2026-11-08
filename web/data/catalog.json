@@ -1483,8 +1483,8 @@
       "title": "Pocket Lab · Game Boy на GNEX",
       "nativeTitle": "Reunion GB",
       "url": "data/games/demo-pocket-lab.sgs",
-      "sha256": "534fad507270fc91a2a98c9c0eb5755ad56cf7bedd4f21bc4f82045710e17773",
-      "bytes": 193519,
+      "sha256": "aacc0216a33d797c8ed4aeb112c7d2d5ccf53912aae02db2c052a5c4e95e09f4",
+      "bytes": 196007,
       "format": 4,
       "resources": 8,
       "platform": "kpex",
@@ -1500,8 +1500,8 @@
       "title": "Raw Snake · Game Boy на GNEX",
       "nativeTitle": "Raw Snake",
       "url": "data/games/demo-raw-snake.sgs",
-      "sha256": "f2629c7bccb0361d0d9be8910316363bfb570a3ef59301ca5f2e7e50893fecc4",
-      "bytes": 193516,
+      "sha256": "40e46d88cd4f573a545b8621d1bdb83371b67f8f1f7f757ed9287bef55e22e46",
+      "bytes": 196004,
       "format": 4,
       "resources": 8,
       "platform": "kpex",
@@ -1526,8 +1526,8 @@
       "title": "Prism Relay · Game Boy Color на GNEX",
       "nativeTitle": "Reunion CGB",
       "url": "data/games/demo-prism-relay.sgs",
-      "sha256": "bf7e5c9a54bf1c3e233220083bbbfbbc0c904c055003a27c3cdc61cccee810d1",
-      "bytes": 193516,
+      "sha256": "49ec2ab0c0059433aa8914849c614e8fd597d31a85c9cb4e1394ffd7eab4a7ab",
+      "bytes": 196004,
       "format": 4,
       "resources": 8,
       "platform": "kpex",
@@ -1537,6 +1537,32 @@
       "cartridge": { "path": "GBC/PRISM.GBC", "sidecar": "PRISM.GBC", "launcher": "PRISM.SGS" },
       "startHint": "Стрелками собери три светящиеся ячейки и открой выход справа.",
       "provenance": "Original Reunion Mobile C demo with a ROM-only CGB cartridge stored as PRISM.GBC."
+    },
+    {
+      "id": "demo-flooder",
+      "title": "Flooder · Game Boy Color на GNEX",
+      "nativeTitle": "Flooder",
+      "url": "data/games/demo-flooder.sgs",
+      "sha256": "53e6f7d49713b885f371a18f30c283f7d169d72ed3fa6dbdc959be00dd8ac691",
+      "bytes": 196008,
+      "format": 4,
+      "resources": 8,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "cartridge": {
+        "path": "GBC/FLOODER.GBC",
+        "sidecar": "FLOODER.GBC",
+        "launcher": "FLOODER.SGS",
+        "sha256": "2b93dd9e623678e1c5c33b942a9a5621529d9073be854b32c9f59af8b70b5292",
+        "licenseFile": "demos/gb/flooder/LICENSE"
+      },
+      "startHint": "PLAY — начать. Вверх и вниз — выбрать цвет. SELECT — применить цвет.",
+      "sourceUrl": "https://github.com/Obalfour/Flooder/tree/2e62e69ed44a0ef21840df52451d883dbe8e6375",
+      "provenance": "Obalfour's MIT-licensed Flooder, unchanged 32 KiB cartridge from the author's repository."
     },
     {
       "id": "demo-orbital-courier",
@@ -1584,8 +1610,8 @@
       "title": "Lan Master · NES на GNEX",
       "nativeTitle": "Lan Master",
       "url": "data/games/demo-lan-master.sgs",
-      "sha256": "efe60448ad740135366b8ad5855409740141121f9f1d3a119f42698fa9fb1e1f",
-      "bytes": 122790,
+      "sha256": "5803563e590c38cfb74424dc82fcce4278fb759862c77e37912f2a18baebeedb",
+      "bytes": 122874,
       "format": 4,
       "resources": 3,
       "platform": "kpex",
@@ -1621,6 +1647,30 @@
       "cartridge": { "path": "GG/VAULT.GG", "sidecar": "VAULT.GGR", "launcher": "VAULT.SGS" },
       "startHint": "Стрелки — движение. A — сменить фазу ворот, PLAY — начать заново.",
       "provenance": "Original Reunion Mobile C demo with a 32 KiB Game Gear cartridge stored as VAULT.GGR."
+    },
+    {
+      "id": "demo-signal-breaker",
+      "title": "Signal Breaker · Game Gear на GNEX",
+      "nativeTitle": "Signal Breaker",
+      "url": "data/games/demo-signal-breaker.sgs",
+      "sha256": "b6038f5f3194d9ae18d2c033b79c756ec7ad8d398e9352fafced900ba78cbb1d",
+      "bytes": 130956,
+      "format": 4,
+      "resources": 3,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "cartridge": {
+        "path": "GG/BREAKER.GG",
+        "sidecar": "BREAKER.GGR",
+        "launcher": "BREAKER.SGS",
+        "sha256": "4028f458badd094711e01d855debd85cde667227953eb5f8e18b801f3b37d7cb"
+      },
+      "startHint": "Влево и вправо — ракетка, SELECT — подача, PLAY — заново.",
+      "provenance": "Original Reunion Z80 cartridge with a paddle, ball, and eight breakable nodes."
     },
     {
       "id": "demo-gnex-benchmark",

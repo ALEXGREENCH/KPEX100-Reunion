@@ -1,10 +1,11 @@
-# Pocket Lab, Prism Relay и Raw Snake
+# Homebrew для Game Boy и Game Boy Color
 
 В библиотеке Reunion откройте «Примеры».
 
 - **Pocket Lab · Game Boy на GNEX**. Стрелки двигают робота по комнате.
 - **Prism Relay · Game Boy Color на GNEX**. Соберите три светящиеся ячейки в лабиринте и дойдите до выхода справа. После этого на экране появляется `LINKED`.
 - **Raw Snake · Game Boy на GNEX**. Play запускает игру, стрелки поворачивают змейку. Используется [оригинальный картридж Альберта Гонсалеса](raw-snake/README.md).
+- **Flooder · Game Boy Color на GNEX**. Стрелки меняют выбранный цвет, Select перекрашивает связанную область. Используется [оригинальный картридж Обальфура](flooder/README.md).
 
 SGS читает `POCKET.GBR`, `PRISM.GBC` или `SNAKE.GBR` вызовами `FileOpen`, `FileReadInt` и `FileClose`. Картридж заполняет VRAM и работает с регистром кнопок `$FF00`. [Программа Mobile C](gb-reunion.mc) подаёт ввод, исполняет инструкции SM83 и рисует кадр. [Генератор](build.py) содержит программы Pocket Lab и Prism Relay и упаковывает выбранный картридж в SGS как файл VFS.
 
@@ -23,6 +24,8 @@ python demos/gb/build.py --sdk C:/path/to/sdk --color --output PRISM.SGS
 python demos/gb/build.py --rom-only --color --output PRISM.GBC
 python demos/gb/build.py --sdk C:/path/to/sdk --raw-snake --output SNAKE.SGS
 python demos/gb/build.py --rom-only --raw-snake --output SNAKE.GBR
+python demos/gb/build.py --sdk C:/path/to/sdk --flooder --output FLOODER.SGS
+python demos/gb/build.py --rom-only --flooder --output FLOODER.GBC
 ```
 
 В Reunion готовые [Pocket Lab](../../web/data/games/demo-pocket-lab.sgs), [Prism Relay](../../web/data/games/demo-prism-relay.sgs) и [Raw Snake](../../web/data/games/demo-raw-snake.sgs) можно импортировать как обычные SGS. Флаг `--cart` подставляет свой совместимый ROM-only файл в прототип Pocket Lab или Prism Relay. Режим и имя внутри SGS определяются флагом CGB в заголовке картриджа. `--plain` отключает кодирование XOR для другого загрузчика. Для проверки отрисовки и ввода доступны [тест Pocket Lab](../../tests/pocket-lab.test.mjs) и [прохождение Prism Relay](../../tests/prism-relay.test.mjs).

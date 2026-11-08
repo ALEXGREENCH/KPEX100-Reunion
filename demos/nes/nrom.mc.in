@@ -171,10 +171,7 @@ $pad_strobe
 }
 
 int Fetch() {
-    int value;
-    value = CpuRead(pc);
-    pc = (pc + 1) & 65535;
-    return value;
+$fetch_body
 }
 
 int Word() {

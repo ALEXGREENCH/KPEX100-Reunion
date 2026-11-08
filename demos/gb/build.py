@@ -301,15 +301,22 @@ def main():
         "--rom-only", action="store_true", help="write only the original cartridge"
     )
     parser.add_argument("--color", action="store_true", help="build Prism Relay (CGB)")
-    parser.add_argument(
+    releases = parser.add_mutually_exclusive_group()
+    releases.add_argument(
         "--raw-snake", action="store_true", help="build Albert Gonzalez's Raw Snake"
+    )
+    releases.add_argument(
+        "--flooder", action="store_true", help="build Obalfour's Flooder"
     )
     parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
     args = parser.parse_args()
-    if args.raw_snake and (args.color or args.cart):
-        parser.error("--raw-snake selects its own monochrome ROM")
+    expanded = args.raw_snake or args.flooder
+    if expanded and (args.color or args.cart):
+        parser.error("--raw-snake and --flooder each select their own cartridge")
     if args.raw_snake:
         cart = (HERE / "raw-snake/SNAKE.GB").read_bytes()
+    elif args.flooder:
+        cart = (HERE / "flooder/FLOODER.GBC").read_bytes()
     else:
         cart = args.cart.read_bytes() if args.cart else demo_cartridge(args.color)
     check_cartridge(cart)
@@ -323,21 +330,22 @@ def main():
         parser.error("--sdk is required when building an SGS")
     source = HERE / "gb-reunion.mc"
     filename = "POCKET.GBR"
-    if color or args.raw_snake:
+    if color or expanded:
         with TemporaryDirectory(prefix="reunion-gb-") as directory:
             variant = Path(directory) / source.name
-            title, appid, filename = (
-                ("Raw Snake", 998, "SNAKE.GBR")
-                if args.raw_snake
-                else ("Reunion CGB", 992, "PRISM.GBC")
-            )
+            if args.raw_snake:
+                title, appid, filename = "Raw Snake", 998, "SNAKE.GBR"
+            elif args.flooder:
+                title, appid, filename = "Flooder", 1001, "FLOODER.GBC"
+            else:
+                title, appid, filename = "Reunion CGB", 992, "PRISM.GBC"
             text = (
                 source.read_text(encoding="ascii")
                 .replace("#DEFINE APPID 991", f"#DEFINE APPID {appid}")
                 .replace('"Reunion GB"', f'"{title}"')
                 .replace('"POCKET.GBR"', f'"{filename}"')
             )
-            if args.raw_snake:
+            if expanded:
                 text = text.replace("expanded = 0;", "expanded = 1;")
             variant.write_text(text, encoding="ascii")
             sgs = build_sgs(args.sdk, variant)

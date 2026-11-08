@@ -44,11 +44,13 @@ for (const file of [
   'smaf-worker.js',
   'engine/block-monitor.wasm',
   'engine/instruction-monitor.wasm',
+  'engine/legacy-opcode-monitor.wasm',
   'engine/vendor/unicorn_arm.wasm',
   'engine/vendor/smaf.wasm',
   'licenses/index.html',
   'sources/vendor/unicorn-sources/block-monitor.wat',
   'sources/vendor/unicorn-sources/instruction-monitor.wat',
+  'sources/vendor/unicorn-sources/legacy-opcode-monitor.wat',
 ])
   assert.ok(files.includes(file), `Missing ${file}`);
 console.log(

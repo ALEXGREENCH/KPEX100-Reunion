@@ -3,6 +3,7 @@ import { GnexRuntime, GnexError, ROM_SHA256, sha256 } from './gnex.js';
 import { VirtualFileSystem } from './vfs.js';
 import { bytes, decodeKorean, EVENTS, SgsError } from './sgs.js';
 import { createARM } from './cpu.js';
+import { installLegacyOpcodeMonitor, loadLegacyOpcodeMonitor } from './legacy-opcode-monitor.js';
 const RELOC = 0x2000f8dc,
   BASE = 0x21000000,
   STOP = 0x23fff000,
@@ -108,10 +109,16 @@ export class LegacyRuntime extends GnexRuntime {
     sgs = bytes(sgs);
     const [romHash, gameHash] = await Promise.all([sha256(rom), sha256(sgs)]);
     if (romHash !== ROM_SHA256) throw new GnexError('Legacy GNEX requires Kingston 2.12 ROM');
-    const cpu = options.cpu || (await createARM());
+    const [cpu, opcodeModule] = await Promise.all([
+      options.cpu || createARM(),
+      options.fastExecution !== false && options.fastOpcodeMonitor !== false
+        ? loadLegacyOpcodeMonitor()
+        : null,
+    ]);
     try {
       return new LegacyRuntime(rom, sgs, {
         ...options,
+        opcodeModule,
         cpu,
         romHash,
         saveKey: options.saveKey || 'reunion.saves.' + gameHash,
@@ -270,19 +277,22 @@ export class LegacyRuntime extends GnexRuntime {
       },
       { begin: RELOC + 0x4412c, end: RELOC + 0x4412c },
     );
-    this.cpu.onCode(
-      () => {
-        this.legacyOpcode = this.cpu.regRead('r0');
-      },
-      { begin: RELOC + 0x362b0, end: RELOC + 0x362b0 },
-    );
+    this._legacyOpcodeMonitor = installLegacyOpcodeMonitor(options.opcodeModule, this.cpu);
+    if (!this._legacyOpcodeMonitor)
+      this.cpu.onCode(
+        () => {
+          this._legacyOpcode = this.cpu.regRead('r0');
+        },
+        { begin: RELOC + 0x362b0, end: RELOC + 0x362b0 },
+      );
     // Kingston leaves these legacy platform operations at the error15 stub.
     // Preserve their argument/state ABI instead of discarding an unknown opcode.
     this.cpu.onCode(
       () => {
-        if (this.legacyOpcode === 0x52 || this.legacyOpcode === 0xba) {
+        const opcode = this.legacyOpcode;
+        if (opcode === 0x52 || opcode === 0xba) {
           try {
-            if (this.legacyOpcode === 0x52) this._syscall(1);
+            if (opcode === 0x52) this._syscall(1);
             else this.legacyChatLockValue = this._args(1)[0] & 255;
             this._return();
           } catch (e) {
@@ -294,6 +304,10 @@ export class LegacyRuntime extends GnexRuntime {
       { begin: RELOC + 0x33768, end: RELOC + 0x33768 },
     );
     this._refreshLCD();
+  }
+  get legacyOpcode() {
+    const value = this._legacyOpcodeMonitor?.value;
+    return value === undefined || value === -1 ? this._legacyOpcode : value;
   }
   _read(p) {
     return super._read(this.legacyReady && p === 0x20b3eb84 ? OLD_PC : p);

@@ -492,12 +492,14 @@ PAD_TRIPLE_REPORT = {
 }
 """,
     "timeout_vars": "    int i, limit;",
-    "pad_sample": """    buttons = PhysicalButtons();
-    edgeHeld &= buttons | pending | padPulse;""",
-    "pad_keypress": """    int key;
+    "pad_sample": "    buttons = edgeHeld;",
+    "pad_keypress": """    int key, remaining;
     if (!painted) return;
     if (swData == 255) {
-        edgeHeld &= PhysicalButtons();
+        remaining = edgeHeld & PhysicalButtons();
+        // Kingston can report the old bitmap on the unnamed release event.
+        if (remaining == edgeHeld) remaining = 0;
+        edgeHeld = remaining;
         return;
     }
     key = Key(swData);
@@ -523,6 +525,19 @@ def build_container(sdk, cart, profile, plain=False):
         view_cols=cols,
         view_rows=rows,
         tile_size=size,
+        fetch_body=(
+            """    int addr;
+    addr = pc;
+    pc = (pc + 1) & 65535;
+    if (addr < 32768) return CpuRead(addr);
+    addr = 16 + (addr & (prgSize - 1));
+    return (rom[addr >> 2] >> ((addr & 3) * 8)) & 255;"""
+            if center
+            else """    int value;
+    value = CpuRead(pc);
+    pc = (pc + 1) & 65535;
+    return value;"""
+        ),
         sample_scan=(
             "if (tileSize == 6) scan += (row >= 1) + (row >= 4);"
             if center

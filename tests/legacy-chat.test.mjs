@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { createARM } from '../web/engine/cpu.js';
 import { LegacyRuntime } from '../web/engine/legacy.js';
 
 const rom = fs.readFileSync(new URL('../web/data/firmware/Kingston-2.12.rom', import.meta.url));
@@ -106,3 +107,43 @@ for (const version of [1, 2]) {
     }
   });
 }
+
+test('optional opcode monitor preserves the last opcode and error on native and fallback hooks', async () => {
+  const raw = program(2, [6, 0, 7, 0xba, 5, 1, 0xbb, 0xff]);
+  let reference;
+  for (const mode of ['native', 'disabled', 'unavailable']) {
+    let cpu;
+    if (mode === 'unavailable') {
+      cpu = await createARM();
+      cpu.uc = Object.assign(Object.create(cpu.uc), { reunionWasmMemory: () => null });
+    }
+    let g;
+    try {
+      g = await LegacyRuntime.create(rom, raw, {
+        cpu,
+        width: 120,
+        height: 100,
+        nowMs: () => 0,
+        fastOpcodeMonitor: mode !== 'disabled',
+      });
+      assert.equal(Boolean(g._legacyOpcodeMonitor), mode === 'native');
+      assert.equal(g.legacyOpcode, undefined);
+      g.event('START');
+      assert.match(g.error, /exception 15.*opcode0xbb/);
+      assert.equal(g.legacyChatLockValue, 7);
+      assert.equal(g.legacyOpcode, 0xbb);
+      const checkpoint = {
+        diagnostics: g.diagnostics,
+        arm: g.armInstructions,
+        stack: g.cpu.read(STACK, 16),
+        top: g.cpu.read32(TOP),
+        frame: g.framebufferRGBA,
+      };
+      reference ??= checkpoint;
+      assert.deepEqual(checkpoint, reference);
+    } finally {
+      if (g) g.close();
+      else cpu?.close();
+    }
+  }
+});

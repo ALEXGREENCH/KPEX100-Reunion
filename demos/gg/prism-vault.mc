@@ -18,6 +18,9 @@ int queue[360], queued[360], head, tail, count, paintedInitially;
 int a, b, c, d, e, hl, sp, pc, zero, carry, failed;
 int access, address, latch, commandLow, cramLow, vblank, vdpRead, table;
 int pad, pending, yieldGuest, statusPc, lastColor, ox, oy, ready, stepsLeft;
+#ifdef REUNION_BREAKER_INPUT
+int heldPad;
+#endif
 
 int Rom(int offset) {
     return (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
@@ -439,13 +442,21 @@ void main() {
 }
 
 void EVENT_TIMEOUT() {
+#ifndef REUNION_BREAKER_INPUT
     int i, held;
+#endif
     if (!ready) return;
+#ifndef REUNION_BREAKER_INPUT
     held = GetKeyState();
+#endif
     pad = pending;
     pending = 0;
+#ifdef REUNION_BREAKER_INPUT
+    pad |= heldPad;
+#else
     if (held & (1 << 10)) pad |= 32;
     for (i = 16; i <= 21; i++) if (held & (1 << i)) pad |= Key(i);
+#endif
     vblank = 128;
     yieldGuest = 0;
     for (stepsLeft = 512; stepsLeft > 0 && !yieldGuest && !failed; stepsLeft--) Step();
@@ -458,5 +469,21 @@ void EVENT_TIMEOUT() {
 }
 
 void EVENT_KEYPRESS() {
+#ifdef REUNION_BREAKER_INPUT
+    int key, code, physical, remaining;
+    key = Key(swData);
+    if (swData == 255) {
+        // SDK releases clear individual bits. Kingston may return a stale bitmap.
+        physical = GetKeyState();
+        remaining = physical & (1 << 10) ? 32 : 0;
+        for (code = 16; code <= 21; code++) if (physical & (1 << code)) remaining |= Key(code);
+        remaining &= heldPad;
+        heldPad = remaining == heldPad ? 0 : remaining;
+        return;
+    }
+    heldPad |= key;
+    pending |= key;
+#else
     pending |= Key(swData);
+#endif
 }

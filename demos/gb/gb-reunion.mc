@@ -21,11 +21,26 @@ int colorMode, bank, colorIndex, paintColor;
 int expanded, sp, carry, half, subtract, ime, eiDelay, halted, interruptMask, interruptFlags;
 int phase, divider, oam[160], highRam[127], obp0, obp1, spritesDirty, paintedOam[160];
 
+int objColors[64], objIndex, windowX, windowY;
+// Keep a tap through all reads of the selected JOYP group.
+int heldButtons, latchedButtons, polledButtons;
+
+int PpuMode() {
+    int dot;
+    if (!(lcd & 128)) return 0;
+    if (phase >= 65664) return 1;
+    dot = phase % 456;
+    if (dot < 80) return 2;
+    if (dot < 252) return 3;
+    return 0;
+}
+
 int Joypad() {
-    int bits;
+    int bits, state;
     bits = 15;
-    if (!(p1 & 16)) bits &= 15 ^ (buttons & 15);
-    if (!(p1 & 32)) bits &= 15 ^ ((buttons >> 4) & 15);
+    state = buttons | latchedButtons;
+    if (!(p1 & 16)) bits &= 15 ^ (state & 15);
+    if (!(p1 & 32)) bits &= 15 ^ ((state >> 4) & 15);
     return 192 | p1 | bits;
 }
 
@@ -33,7 +48,11 @@ int Read8(int addr) {
     if (addr < 32768) return (cart[addr >> 2] >> ((addr & 3) * 8)) & 255;
     if (addr < 40960) return video[bank * 8192 + addr - 32768];
     if (addr >= 49152 && addr < 57344) return ram[addr - 49152];
-    if (addr == 65280) return Joypad();
+    if (addr == 65280) {
+        if (!(p1 & 16)) polledButtons |= latchedButtons & 15;
+        if (!(p1 & 32)) polledButtons |= latchedButtons & 240;
+        return Joypad();
+    }
     if (expanded) {
         if (addr >= 57344 && addr < 65024) return ram[addr - 57344];
         if (addr >= 65024 && addr < 65184) return oam[addr - 65024];
@@ -42,6 +61,7 @@ int Read8(int addr) {
         if (addr == 65284) return divider >> 8;
         if (addr == 65295) return 224 | interruptFlags;
         if (addr == 65344) return lcd;
+        if (addr == 65345) return 128 | PpuMode();
         if (addr == 65348 && (lcd & 128)) return phase / 456;
         if (addr == 65348) return 0;
         if (addr == 65351) return bgp;
@@ -51,11 +71,17 @@ int Read8(int addr) {
     if (colorMode && addr == 65359) return 254 | bank;
     if (colorMode && addr == 65384) return 64 | colorIndex;
     if (colorMode && addr == 65385) return colors[colorIndex & 63];
+    if (expanded && colorMode) {
+        if (addr == 65354) return windowY;
+        if (addr == 65355) return windowX;
+        if (addr == 65386) return 64 | objIndex;
+        if (addr == 65387) return objColors[objIndex & 63];
+    }
     return 255;
 }
 
 void Write8(int addr, int value) {
-    int offset, index;
+    int offset, index, i;
     if (addr >= 32768 && addr < 40960) {
         offset = addr - 32768;
         index = bank * 8192 + offset;
@@ -77,11 +103,27 @@ void Write8(int addr, int value) {
         if (addr == 65535) interruptMask = value & 31;
         if (addr == 65295) interruptFlags = value & 31;
         if (addr == 65284) divider = 0;
+        if (addr == 65350) {
+            offset = value << 8;
+            for (i = 0; i < 160; i++) {
+                index = Read8(offset + i);
+                if (oam[i] != index) {
+                    oam[i] = index;
+                    spritesDirty = 1;
+                }
+            }
+        }
+        if (addr == 65354) { windowY = value; repaintSlices = 6; }
+        if (addr == 65355) { windowX = value; repaintSlices = 6; }
         if (addr == 65352 && obp0 != value) { obp0 = value; spritesDirty = 1; }
         if (addr == 65353 && obp1 != value) { obp1 = value; spritesDirty = 1; }
     }
     if (addr == 65280) {
         index = Joypad();
+        if (p1 != (value & 48)) {
+            latchedButtons &= 255 ^ polledButtons;
+            polledButtons = 0;
+        }
         p1 = value & 48;
         if (expanded && (index & (Joypad() ^ 255) & 15)) interruptFlags |= 16;
     }
@@ -99,6 +141,15 @@ void Write8(int addr, int value) {
     if (!colorMode) return;
     if (addr == 65359) bank = value & 1;
     if (addr == 65384) colorIndex = value & 191;
+    if (expanded && addr == 65386) objIndex = value & 191;
+    if (expanded && addr == 65387) {
+        index = objIndex & 63;
+        if (objColors[index] != value) {
+            objColors[index] = value;
+            spritesDirty = 1;
+        }
+        if (objIndex & 128) objIndex = 128 | ((index + 1) & 63);
+    }
     if (addr == 65385) {
         index = colorIndex & 63;
         if (colors[index] != value) {
@@ -112,7 +163,8 @@ void Write8(int addr, int value) {
 
 int Fetch8() {
     int value;
-    value = Read8(pc);
+    if (pc < 32768) value = (cart[pc >> 2] >> ((pc & 3) * 8)) & 255;
+    else value = Read8(pc);
     pc = (pc + 1) & 65535;
     return value;
 }
@@ -323,6 +375,16 @@ int StepFull(int budget) {
     // The loop must stay in immutable ROM, and a fused group ends at the
     // same instruction and with the same registers as complete iterations.
     if (!eiDelay && at >= 0 && at <= 32749 && limit >= 36) {
+        if (op == 240 && Read8(pc) == 65 && Read8(pc + 1) == 230 &&
+            Read8(pc + 2) == 2 && Read8(pc + 3) == 32 && Read8(pc + 4) == 250 &&
+            (lcd & 128) && phase < 65664 && phase % 456 < 252) {
+            rounds = (252 - phase % 456 + 31) / 32;
+            if (rounds > limit / 32) rounds = limit / 32;
+            a = 2;
+            Alu(4, 2);
+            pc = at;
+            return rounds * 32;
+        }
         if (op == 11 && limit >= 40 && Read8(pc) == 120 && Read8(pc + 1) == 177 &&
             Read8(pc + 2) == 200 && Read8(pc + 3) == 0 && Read8(pc + 4) == 24 &&
             Read8(pc + 5) == 249 && Pair(0) > 1) {
@@ -492,6 +554,15 @@ int StepFull(int budget) {
     switch (op) {
         case 0: return 4;
         case 8: value = Fetch16(); Write8(value, sp & 255); Write8((value + 1) & 65535, sp >> 8); return 20;
+        case 39:
+            value = 0;
+            if (half || (!subtract && (a & 15) > 9)) value = 6;
+            if (carry || (!subtract && a > 153)) { value |= 96; carry = 1; }
+            if (subtract) a = (a - value) & 255;
+            else a = (a + value) & 255;
+            half = 0;
+            zero = a == 0;
+            return 4;
         case 47: a ^= 255; subtract = 1; half = 1; return 4;
         case 55: subtract = 0; half = 0; carry = 1; return 4;
         case 63: subtract = 0; half = 0; carry = !carry; return 4;
@@ -502,6 +573,17 @@ int StepFull(int budget) {
         case 217: pc = Pop(); ime = 1; return 16;
         case 224: Write8(65280 + Fetch8(), a); return 12;
         case 226: Write8(65280 + c, a); return 8;
+        case 232:
+        case 248:
+            value = Fetch8();
+            half = (sp & 15) + (value & 15) > 15;
+            carry = (sp & 255) + value > 255;
+            zero = 0;
+            subtract = 0;
+            if (value >= 128) value -= 256;
+            if (op == 232) { sp = (sp + value) & 65535; return 16; }
+            hl = (sp + value) & 65535;
+            return 12;
         case 233: pc = hl; return 4;
         case 234: Write8(Fetch16(), a); return 16;
         case 240: a = Read8(65280 + Fetch8()); return 12;
@@ -515,9 +597,11 @@ int StepFull(int budget) {
 }
 
 void TickFull() {
-    int remaining, steps, cost, pending, bit;
+    int remaining, steps, limit, cost, pending, bit;
     remaining = 70224;
-    for (steps = 0; steps < 320 && remaining > 0 && !failure; steps++) {
+    limit = 320;
+    if (colorMode) limit = 600;
+    for (steps = 0; steps < limit && remaining > 0 && !failure; steps++) {
         pending = interruptMask & interruptFlags;
         if (pending) halted = 0;
         if (pending && ime) {
@@ -551,7 +635,8 @@ void Color(int index, int attr) {
     int offset, rgb, r, g, b;
     if (colorMode) {
         offset = (attr & 7) * 8 + index * 2;
-        rgb = colors[offset] | ((colors[offset + 1] & 127) << 8);
+        if (attr & 128) rgb = objColors[offset] | ((objColors[offset + 1] & 127) << 8);
+        else rgb = colors[offset] | ((colors[offset + 1] & 127) << 8);
         if (paintColor == rgb) return;
         paintColor = rgb;
         r = rgb & 31;
@@ -650,18 +735,20 @@ void RestoreSprite(int map, int x, int y) {
 }
 
 void DrawSprite(int x, int y, int tile, int attr) {
-    int row, bit, at, lo, hi, step, shift, start, last, palette, shade, saved;
+    int row, bit, at, base, lo, hi, step, shift, start, last, palette, shade, saved;
     if (x <= -8 || x >= 160 || y <= -8 || y >= 144) return;
     palette = obp0;
     if (attr & 16) palette = obp1;
     saved = bgp;
     bgp = palette;
+    base = tile * 16;
+    if (colorMode && (attr & 8)) base += 8192;
     step = -1;
     if (attr & 32) step = 1;
     for (row = 0; row < 8; row++) {
         if (y + row < 0 || y + row >= 144) continue;
-        at = tile * 16 + row * 2;
-        if (attr & 64) at = tile * 16 + (7 - row) * 2;
+        at = base + row * 2;
+        if (attr & 64) at = base + (7 - row) * 2;
         lo = video[at];
         hi = video[at + 1];
         start = 0;
@@ -674,7 +761,7 @@ void DrawSprite(int x, int y, int tile, int attr) {
                 shade = ((lo >> shift) & 1) | (((hi >> shift) & 1) << 1);
             if (shade != last) {
                 if (last) {
-                    Color(last, 0);
+                    Color(last, 128 | (attr & 7));
                     FillRect(ox + x + start, oy + y + row, ox + x + bit - 1, oy + y + row);
                 }
                 start = bit;
@@ -742,6 +829,14 @@ void main() {
     colorMode = (Read8(323) & 128) != 0;
     Status(0);
     pc = 256;
+    if (expanded && colorMode) {
+        a = 17;
+        d = 255;
+        e = 86;
+        hl = 13;
+        zero = 1;
+        windowX = 7;
+    }
     p1 = 48;
     sp = 65534;
     obp0 = 255;
@@ -751,21 +846,32 @@ void main() {
     SetTimer(20, 1);
 }
 
+int PhysicalButtons() {
+    int held, mask;
+    held = GetKeyState();
+    mask = 0;
+    if (held & (1 << 17)) mask |= 1;
+    if (held & (1 << 16)) mask |= 2;
+    if (held & (1 << 18)) mask |= 4;
+    if (held & (1 << 19)) mask |= 8;
+    if (held & (1 << 20)) mask |= 16;
+    if (held & (1 << 10)) mask |= 32;
+    if (held & (1 << 21)) mask |= 128;
+    return mask;
+}
+
 void EVENT_TIMEOUT() {
-    int i, x, y, tile, n, updated, map, attr, offset, version, key, first, count, runKey, old, held;
+    int i, x, y, tile, n, updated, map, attr, offset, version, key, first, count, runKey, old;
     if (!ready) return;
     if (expanded) old = Joypad();
     buttons = pendingButtons;
+    if (expanded && colorMode) {
+        latchedButtons |= pendingButtons;
+        buttons = heldButtons;
+    }
     pendingButtons = 0;
     if (expanded) {
-        held = GetKeyState();
-        if (held & (1 << 17)) buttons |= 1;
-        if (held & (1 << 16)) buttons |= 2;
-        if (held & (1 << 18)) buttons |= 4;
-        if (held & (1 << 19)) buttons |= 8;
-        if (held & (1 << 20)) buttons |= 16;
-        if (held & (1 << 10)) buttons |= 32;
-        if (held & (1 << 21)) buttons |= 128;
+        if (!colorMode) buttons |= PhysicalButtons();
         if (old & (Joypad() ^ 255) & 15) interruptFlags |= 16;
         TickFull();
     } else {
@@ -783,6 +889,10 @@ void EVENT_TIMEOUT() {
     updated = 0;
     map = 6144;
     if (lcd & 8) map = 7168;
+    if (expanded && (lcd & 32) && windowX == 7 && windowY == 0) {
+        map = 6144;
+        if (lcd & 64) map = 7168;
+    }
     if (repaintSlices) {
       repaintSlices--;
       for (y = paintRow; y < paintRow + 3; y++) {
@@ -831,14 +941,27 @@ void EVENT_TIMEOUT() {
 }
 
 void EVENT_KEYPRESS() {
+    int key;
     if (expanded) {
-        if (swData == 17) pendingButtons |= 1;
-        if (swData == 16) pendingButtons |= 2;
-        if (swData == 18) pendingButtons |= 4;
-        if (swData == 19) pendingButtons |= 8;
-        if (swData == 20) pendingButtons |= 16;
-        if (swData == 10) pendingButtons |= 32;
-        if (swData == 21) pendingButtons |= 128;
+        if (colorMode && swData == 255) {
+            key = heldButtons & PhysicalButtons();
+            // Kingston can report the old held mask after its release event.
+            if (key == heldButtons) key = 0;
+            heldButtons = key;
+            return;
+        }
+        key = 0;
+        if (swData == 17) key = 1;
+        if (swData == 16) key = 2;
+        if (swData == 18) key = 4;
+        if (swData == 19) key = 8;
+        if (swData == 20) key = 16;
+        if (swData == 10) key = 32;
+        if (swData == 21) key = 128;
+        if (colorMode) {
+            if (!(heldButtons & key)) pendingButtons |= key;
+            heldButtons |= key;
+        } else pendingButtons |= key;
         return;
     }
     if (swData == 17) pendingButtons = 1;
