@@ -139,9 +139,13 @@ function frame(force = false) {
   }
   framePending = true;
   if (!force && performance.now() - lastFrame < frameInterval) return;
-  const original = machine.framebufferRGBA || machine.framebuffer?.data;
-  if (!original) return;
-  const pixels = new Uint8ClampedArray(original);
+  let pixels;
+  if (isAds) pixels = machine.framebuffer.takePixels();
+  else {
+    const original = machine.framebufferRGBA || machine.framebuffer?.data;
+    if (!original) return;
+    pixels = new Uint8ClampedArray(original);
+  }
   emit({ type: 'frame', width: machine.width || 220, height: machine.height || 176, pixels }, [
     pixels.buffer,
   ]);

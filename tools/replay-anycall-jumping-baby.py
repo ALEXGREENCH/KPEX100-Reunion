@@ -81,6 +81,10 @@ ADDITIONAL_GAMES = {
         "버전 다름/커플볼링.mbin",
         "166f9c83d77e92b3bbd7ecaba470ebfb1fc1b679f7d89a8a6a7a53809bd96102",
     ),
+    "bubble-monk-2": (
+        "보글보글동자승2.mbin",
+        "3ae1e04708000af39f87482c7d34e4e6ce8717f2c72eff2da7b044827cd72407",
+    ),
 }
 ADDITIONAL_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
 DRAWING_TIMERS = {
@@ -91,8 +95,9 @@ DRAWING_TIMERS = {
     "mobile-gostop": 1,
     "cheombangjichuk-othello": 1,
     "couple-bowling": 1,
+    "bubble-monk-2": 1,
 }
-RANDOM_GAMES = ("udon-time", "mobile-gostop", "couple-bowling")
+RANDOM_GAMES = ("udon-time", "mobile-gostop", "couple-bowling", "bubble-monk-2")
 RGB332 = [
     bytes(
         ((value >> 5) * 255 // 7, ((value >> 2) & 7) * 255 // 7, (value & 3) * 255 // 3)
@@ -105,6 +110,7 @@ MQ = runpy.run_path(str(Path(__file__).with_name("extract-samsung-w420-mq.py")))
 class Replay:
     def __init__(self, original, *, game_id="jumping-baby"):
         self.game_id = game_id
+        self.instruction_budget = 1_000_000 if game_id == "bubble-monk-2" else 25_000
         self.original_sha256 = sha256(original).hexdigest()
         expected = (
             MBIN_SHA256 if game_id == "jumping-baby" else ADDITIONAL_GAMES[game_id][1]
@@ -146,7 +152,7 @@ class Replay:
             self.cpu.reg_write(register, value)
         self.cpu.reg_write(UC_ARM_REG_LR, RETURN | 1)
         self.cpu.reg_write(UC_ARM_REG_SP, STACK + 0xFF00)
-        self.cpu.emu_start(TEXT | 1, RETURN, count=25000)
+        self.cpu.emu_start(TEXT | 1, RETURN, count=self.instruction_budget)
         if self.error is not None:
             raise ValueError(self.error)
         if self.cpu.reg_read(UC_ARM_REG_PC) != RETURN:
@@ -756,6 +762,111 @@ def replay_paired_boards(original, output, game_id):
     )
 
 
+def replay_bubble_monk(original, output):
+    game_id = "bubble-monk-2"
+    sequence = [(None, 140)] + [(key, 20) for key in (19, 19, 19, 14, 19, 5, 19)]
+    input_ticks = 12
+    direction_pairs = [[10, 4], [11, 6], [12, 2], [13, 5]]
+    long_key, tap_every = 12, 10
+    key_cycle = [12, 11, 12, 19, 10, 5]
+    long_checkpoints = []
+    common = []
+    branches = []
+    for key in (None, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 19):
+        game = DrawingReplay(original, game_id)
+        for index, (button, ticks) in enumerate(sequence):
+            if button is not None:
+                game.key(button)
+            game.tick(ticks)
+            if key is None:
+                common.append(
+                    {
+                        "key": button,
+                        "ticks": ticks,
+                        "capture": {
+                            **save_frame(output, f"setup-{index:02d}", game),
+                            "eventCount": game.events,
+                        },
+                    }
+                )
+            elif (
+                sha256(game.frame()).hexdigest()
+                != common[index]["capture"]["indexedSha256"]
+            ):
+                raise RuntimeError("control diverged before gameplay input")
+
+        for _ in range(input_ticks):
+            if key is not None:
+                game.key(key)
+            game.tick()
+        frame = game.frame()
+        if key is None:
+            identity = replay_identity(game, original)
+            idle = frame
+        label = "idle" if key is None else f"key-{key:02d}"
+        changed = sum(a != b for a, b in zip(frame, idle, strict=True))
+        if key is not None and not changed:
+            raise RuntimeError(f"no gameplay difference after key {key}")
+        branches.append(
+            {
+                "key": key,
+                "capture": {
+                    **save_frame(output, label, game),
+                    "eventCount": game.events,
+                    "changedPixels": changed,
+                },
+            }
+        )
+        if key == long_key:
+            for index in range(1800):
+                if index % tap_every == 0:
+                    game.key(key_cycle[index // tap_every % len(key_cycle)])
+                game.tick()
+                if index + 1 in (1450, 1800):
+                    long_checkpoints.append(
+                        {
+                            "ticks": index + 1,
+                            "capture": {
+                                **save_frame(output, f"long-{index + 1}", game),
+                                "eventCount": game.events,
+                            },
+                        }
+                    )
+
+    hashes = {branch["key"]: branch["capture"]["indexedSha256"] for branch in branches}
+    for direction, number in direction_pairs:
+        if hashes[direction] != hashes[number]:
+            raise RuntimeError(
+                f"direction {direction} diverged from numeric key {number}"
+            )
+    manifest = {
+        **identity,
+        "sourceArchive": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+        "originalMemberCrc32": f"{crc32(original):08x}",
+        "timerArgument": DRAWING_TIMERS[game_id],
+        "randomSeed": 0x12345678,
+        "clock": "synthetic count of presented frames",
+        "commonSequence": common,
+        "inputTicks": input_ticks,
+        "directionPairs": direction_pairs,
+        "branches": branches,
+        "longPlay": {
+            "key": long_key,
+            "tapEvery": tap_every,
+            "keyCycle": key_cycle,
+            "checkpoints": long_checkpoints,
+        },
+    }
+    (output / "replay.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    print(
+        f"{game_id}: {len(common)} setup, {len(branches)} paired and 2 long-play captures"
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -771,6 +882,8 @@ def main():
         args.output.mkdir(parents=True, exist_ok=True)
         if args.game == "mobile-gostop":
             replay_mobile_gostop(original, args.output)
+        elif args.game == "bubble-monk-2":
+            replay_bubble_monk(original, args.output)
         elif args.game in ("cheombangjichuk-othello", "couple-bowling"):
             replay_paired_boards(original, args.output, args.game)
         elif args.game in DRAWING_TIMERS and args.game != "119-rescue":

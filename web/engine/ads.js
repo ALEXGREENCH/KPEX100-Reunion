@@ -126,6 +126,15 @@ const PROFILES = [
     sessionSave: { address: BSS + 0x5510, caller: TEXT + 0x644d },
     emptySplashDescriptor: { address: BSS + 0x0cec, caller: TEXT + 0x5a05 },
   },
+  {
+    id: 'bubble-monk-2',
+    title: 'Bubble Monk 2',
+    bytes: 131894,
+    sha256: '3ae1e04708000af39f87482c7d34e4e6ce8717f2c72eff2da7b044827cd72407',
+    timerArgument: 1,
+    stubs: RANDOM_DRAWING_STUBS,
+    eventBudget: 75000,
+  },
 ];
 const signed = (value) => (value << 16) >> 16;
 const hex = (value) => '0x' + value.toString(16);
@@ -155,6 +164,12 @@ function displayFrame(indices, height) {
         }
       }
       return data;
+    },
+    takePixels() {
+      // The indexed snapshot stays available for a later forced repaint.
+      const pixels = this.data;
+      data = undefined;
+      return pixels;
     },
   };
 }
@@ -325,7 +340,7 @@ export class AdsRuntime {
     try {
       // The shared block watchdog bounds Thumb execution without a JS hook
       // on every guest instruction.
-      cpu.runGuarded(TEXT + 1, RETURN, EVENT_BUDGET);
+      cpu.runGuarded(TEXT + 1, RETURN, this.#profile.eventBudget ?? EVENT_BUDGET);
       if (this.#fault) throw this.#fault;
       if (cpu.regRead('pc') !== RETURN) throw Error('Событие ADS превысило лимит инструкций.');
       this.eventCount++;

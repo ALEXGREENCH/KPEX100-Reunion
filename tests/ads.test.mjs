@@ -42,6 +42,29 @@ function assertCapture(game, expected, [width, height]) {
   assert.equal(game.framebuffer.data.length, width * height * 4, expected.file);
 }
 
+test('ADS can transfer its RGBA buffer and regenerate the same frame on request', async () => {
+  for (const file of ['anycall-bubble-monk-2.json', 'anycall-pocket-billiards.json']) {
+    const record = json('../validation/' + file);
+    await replay(record, (game) => {
+      advance(game, 100);
+      const frame = game.framebuffer;
+      const indexedHash = hash(game.readIndexedFrame());
+      const original = frame.data;
+      const expected = hash(original);
+      assert.equal(original.length, record.size[0] * record.size[1] * 4);
+      const pixels = frame.takePixels();
+      assert.equal(pixels, original);
+      const transferred = structuredClone(pixels, { transfer: [pixels.buffer] });
+      assert.equal(pixels.byteLength, 0);
+      assert.equal(hash(transferred), expected);
+      assert.equal(hash(game.readIndexedFrame()), indexedHash);
+      const repaint = frame.takePixels();
+      assert.notEqual(repaint.buffer, transferred.buffer);
+      assert.equal(hash(repaint), expected);
+    });
+  }
+});
+
 for (const record of evidence.games) {
   test(`ADS: ${record.game} matches archived controls on ARM/WASM`, async () => {
     const baseline = record.captures.find(({ file }) => file === '05-no-input.png');
@@ -174,6 +197,62 @@ for (const [gameId, keys] of [
     }
   });
 }
+
+test('ADS: bubble-monk-2 matches keypad and direction pairs through long play', async () => {
+  const record = json('../validation/anycall-bubble-monk-2.json');
+  const { branches, commonSequence, directionPairs, inputTicks, longPlay, size } = record;
+  assert.deepEqual(
+    branches.map(({ key }) => key),
+    [null, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 19],
+  );
+  assert.deepEqual(directionPairs, [
+    [10, 4],
+    [11, 6],
+    [12, 2],
+    [13, 5],
+  ]);
+  assert.equal(longPlay.key, 12);
+  assert.deepEqual(
+    longPlay.checkpoints.map(({ ticks }) => ticks),
+    [1450, 1800],
+  );
+  const paired = new Map();
+  for (const { key, capture } of branches) {
+    await replay(record, (game) => {
+      for (const step of commonSequence) {
+        press(game, step.key);
+        advance(game, step.ticks);
+        assertCapture(game, step.capture, size);
+      }
+      for (let tick = 0; tick < inputTicks; tick++) {
+        press(game, key);
+        game.tick();
+      }
+      assertCapture(game, capture, size);
+      const frame = game.readIndexedFrame();
+      paired.set(key, frame);
+      const idle = paired.get(null);
+      const changed = frame.reduce((count, pixel, i) => count + (pixel !== idle[i]), 0);
+      assert.equal(changed, capture.changedPixels, capture.file);
+      if (key !== null) assert.ok(changed > 0, capture.file);
+
+      if (key === longPlay.key) {
+        const { tapEvery, keyCycle, checkpoints } = longPlay;
+        let ticks = 0;
+        for (const checkpoint of checkpoints) {
+          for (; ticks < checkpoint.ticks; ticks++) {
+            if (ticks % tapEvery === 0) press(game, keyCycle[(ticks / tapEvery) % keyCycle.length]);
+            game.tick();
+          }
+          assertCapture(game, checkpoint.capture, size);
+        }
+      }
+    });
+  }
+  for (const [direction, number] of directionPairs) {
+    assert.deepEqual(paired.get(direction), paired.get(number), `${direction} and ${number}`);
+  }
+});
 
 test('ADS: mobile-gostop continues through three later-round transitions', async () => {
   const record = json('../validation/anycall-mobile-gostop.json');
