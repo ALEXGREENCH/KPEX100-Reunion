@@ -441,23 +441,79 @@ def check_cartridge(rom):
         )
 
 
-def build_container(sdk, cart, neon_ranger, plain=False):
-    if neon_ranger:
-        title, app_id, filename, viewport = (
-            "Neon Ranger",
-            996,
-            "NEON.NES",
-            (0, 2, 32, 28, 6),
-        )
-    else:
-        title, app_id, filename, viewport = (
-            "Orbital Courier",
-            993,
-            "ORBITAL.NES",
-            (3, 5, 26, 20, 8),
-        )
+CONTAINERS = {
+    "orbital-courier": ("Orbital Courier", 993, "ORBITAL.NES", (3, 5, 26, 20, 8)),
+    "neon-ranger": ("Neon Ranger", 996, "NEON.NES", (0, 2, 32, 28, 6)),
+    "lan-master": ("Lan Master", 997, "LAN.NES", (0, 2, 32, 28, 6)),
+}
+
+
+PAD_DEFAULT = {
+    "pad_state": "",
+    "pad_strobe": """        if (strobe || (value & 1)) shift = buttons;
+        strobe = value & 1;""",
+    "pad_helper": "",
+    "timeout_vars": "    int i, held, limit;",
+    "pad_sample": """    held = GetKeyState();
+    buttons = pending;
+    if (held & (1 << 10)) buttons |= 2;
+    if (held & (1 << 11)) buttons |= 4;
+    for (i = 16; i <= 21; i++) if (held & (1 << i)) buttons |= Key(i);
+    pending = 0;""",
+    "pad_keypress": "    pending |= Key(swData);",
+}
+
+
+# Shiru's padPoll validates three serial reports. Replay a released tap
+# for the entire group, then use the current held mask on the next poll.
+PAD_TRIPLE_REPORT = {
+    "pad_state": "\nint edgeHeld, padPulse, padReport;",
+    "pad_strobe": """        if (strobe && !(value & 1)) {
+            if (padReport == 0) {
+                padPulse = pending;
+                pending = 0;
+            }
+            shift = buttons | padPulse;
+            padReport++;
+            if (padReport == 3) {
+                padReport = 0;
+                padPulse = 0;
+            }
+        }
+        strobe = value & 1;""",
+    "pad_helper": """int PhysicalButtons() {
+    int i, held, mask;
+    held = GetKeyState();
+    mask = 0;
+    if (held & (1 << 10)) mask |= 2;
+    if (held & (1 << 11)) mask |= 4;
+    for (i = 16; i <= 21; i++) if (held & (1 << i)) mask |= Key(i);
+    return mask;
+}
+""",
+    "timeout_vars": "    int i, limit;",
+    "pad_sample": """    buttons = PhysicalButtons();
+    edgeHeld &= buttons | pending | padPulse;""",
+    "pad_keypress": """    int key;
+    if (!painted) return;
+    if (swData == 255) {
+        edgeHeld &= PhysicalButtons();
+        return;
+    }
+    key = Key(swData);
+    if (!(edgeHeld & key)) pending |= key;
+    edgeHeld |= key;""",
+}
+
+
+def build_container(sdk, cart, profile, plain=False):
+    title, app_id, filename, viewport = CONTAINERS[profile]
     col, row, cols, rows, size = viewport
+    # Lan Master's grid uses one-pixel tile edges. Sampling the center of
+    # each output pixel keeps both edges visible at six pixels per tile.
+    center = profile == "lan-master"
     script = Template(SOURCE.read_text(encoding="ascii")).substitute(
+        **(PAD_TRIPLE_REPORT if center else PAD_DEFAULT),
         title=title,
         app_id=app_id,
         loading=f"{title.upper()} / LOADING",
@@ -467,6 +523,16 @@ def build_container(sdk, cart, neon_ranger, plain=False):
         view_cols=cols,
         view_rows=rows,
         tile_size=size,
+        sample_scan=(
+            "if (tileSize == 6) scan += (row >= 1) + (row >= 4);"
+            if center
+            else "if (tileSize == 6 && row >= 3) scan++;"
+        ),
+        sample_bit=(
+            "if (tileSize == 6) bit += (px >= 1) + (px >= 4);"
+            if center
+            else "if (tileSize == 6 && px >= 3) bit++;"
+        ),
     )
     with TemporaryDirectory(prefix="reunion-nes-") as directory:
         source = Path(directory) / "nrom.mc"
@@ -480,7 +546,14 @@ def main():
     parser.add_argument("--sdk", type=Path, help="extracted Sinjisoft SDK 2.12 tools")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
-    parser.add_argument("--neon-ranger", action="store_true", help="build Neon Ranger")
+    variant = parser.add_mutually_exclusive_group()
+    variant.add_argument(
+        "--neon-ranger", dest="profile", action="store_const", const="neon-ranger"
+    )
+    variant.add_argument(
+        "--lan-master", dest="profile", action="store_const", const="lan-master"
+    )
+    parser.set_defaults(profile="orbital-courier")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--cart", type=Path, help="optional iNES mapper-0 test cartridge")
     mode.add_argument(
@@ -489,10 +562,10 @@ def main():
     args = parser.parse_args()
     if args.cart:
         rom = args.cart.read_bytes()
-    elif args.neon_ranger:
-        rom = (HERE / "neon-ranger" / "NEON.NES").read_bytes()
-    else:
+    elif args.profile == "orbital-courier":
         rom = demo_cartridge()
+    else:
+        rom = (HERE / args.profile / CONTAINERS[args.profile][2]).read_bytes()
     check_cartridge(rom)
     if args.rom_only:
         args.output.write_bytes(rom)
@@ -500,7 +573,7 @@ def main():
         if not args.sdk:
             parser.error("--sdk is required to build an SGS")
         args.output.write_bytes(
-            build_container(args.sdk, rom, args.neon_ranger, args.plain)
+            build_container(args.sdk, rom, args.profile, args.plain)
         )
 
 

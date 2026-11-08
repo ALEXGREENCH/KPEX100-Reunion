@@ -301,9 +301,17 @@ def main():
         "--rom-only", action="store_true", help="write only the original cartridge"
     )
     parser.add_argument("--color", action="store_true", help="build Prism Relay (CGB)")
+    parser.add_argument(
+        "--raw-snake", action="store_true", help="build Albert Gonzalez's Raw Snake"
+    )
     parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
     args = parser.parse_args()
-    cart = args.cart.read_bytes() if args.cart else demo_cartridge(args.color)
+    if args.raw_snake and (args.color or args.cart):
+        parser.error("--raw-snake selects its own monochrome ROM")
+    if args.raw_snake:
+        cart = (HERE / "raw-snake/SNAKE.GB").read_bytes()
+    else:
+        cart = args.cart.read_bytes() if args.cart else demo_cartridge(args.color)
     check_cartridge(cart)
     color = bool(cart[0x143] & 0x80)
     if args.color and not color:
@@ -314,20 +322,28 @@ def main():
     if args.sdk is None:
         parser.error("--sdk is required when building an SGS")
     source = HERE / "gb-reunion.mc"
-    if color:
-        with TemporaryDirectory(prefix="reunion-cgb-") as directory:
+    filename = "POCKET.GBR"
+    if color or args.raw_snake:
+        with TemporaryDirectory(prefix="reunion-gb-") as directory:
             variant = Path(directory) / source.name
-            variant.write_text(
-                source.read_text(encoding="ascii")
-                .replace("#DEFINE APPID 991", "#DEFINE APPID 992")
-                .replace('"Reunion GB"', '"Reunion CGB"')
-                .replace('"POCKET.GBR"', '"PRISM.GBC"'),
-                encoding="ascii",
+            title, appid, filename = (
+                ("Raw Snake", 998, "SNAKE.GBR")
+                if args.raw_snake
+                else ("Reunion CGB", 992, "PRISM.GBC")
             )
+            text = (
+                source.read_text(encoding="ascii")
+                .replace("#DEFINE APPID 991", f"#DEFINE APPID {appid}")
+                .replace('"Reunion GB"', f'"{title}"')
+                .replace('"POCKET.GBR"', f'"{filename}"')
+            )
+            if args.raw_snake:
+                text = text.replace("expanded = 0;", "expanded = 1;")
+            variant.write_text(text, encoding="ascii")
             sgs = build_sgs(args.sdk, variant)
     else:
         sgs = build_sgs(args.sdk, source)
-    packaged = pack_vfs(sgs, {"PRISM.GBC" if color else "POCKET.GBR": cart})
+    packaged = pack_vfs(sgs, {filename: cart})
     args.output.write_bytes(packaged if args.plain else encode_kpex(packaged))
 
 

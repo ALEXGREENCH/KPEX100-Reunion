@@ -17,7 +17,7 @@ int rom[8193], ram[8192], vram[4096], cram[32], vdpRegs[11], solids[512];
 int queue[360], queued[360], head, tail, count, paintedInitially;
 int a, b, c, d, e, hl, sp, pc, zero, carry, failed;
 int access, address, latch, commandLow, cramLow, vblank, vdpRead, table;
-int pad, pending, yieldGuest, statusPc, lastColor, ox, oy, ready;
+int pad, pending, yieldGuest, statusPc, lastColor, ox, oy, ready, stepsLeft;
 
 int Rom(int offset) {
     return (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
@@ -189,6 +189,51 @@ void AddHL(int value) {
     carry = value > 65535;
 }
 
+// Fuse complete iterations of two immutable VDP copy loops. Account for
+// every guest instruction so a timer slice still ends at the same Z80 state.
+void CopyLoop() {
+    int stride, length, remaining, amount, n, value, target;
+    if (pc > 32754 || Rom(pc) != 126) return;
+    if (Rom(pc + 1) == 211 && Rom(pc + 2) == 190 && Rom(pc + 3) == 35 &&
+        Rom(pc + 4) == 11 && Rom(pc + 5) == 120 && Rom(pc + 6) == 177 &&
+        Rom(pc + 7) == 32 && Rom(pc + 8) == 247) {
+        stride = 7;
+        length = 9;
+    } else if (Rom(pc + 1) == 18 && Rom(pc + 2) == 211 && Rom(pc + 3) == 190 &&
+        Rom(pc + 4) == 175 && Rom(pc + 5) == 211 && Rom(pc + 6) == 190 &&
+        Rom(pc + 7) == 35 && Rom(pc + 8) == 19 && Rom(pc + 9) == 11 &&
+        Rom(pc + 10) == 120 && Rom(pc + 11) == 177 && Rom(pc + 12) == 32 &&
+        Rom(pc + 13) == 242) {
+        stride = 11;
+        length = 14;
+    } else return;
+    amount = (stepsLeft - 1) / stride;
+    if (!amount) return;
+    remaining = (b << 8) | c;
+    if (!remaining) remaining = 65536;
+    if (amount > remaining) amount = remaining;
+    target = (d << 8) | e;
+    for (n = 0; n < amount; n++) {
+        value = Read(hl);
+        if (length == 14) Write(target, value);
+        VdpData(value);
+        if (length == 14) {
+            VdpData(0);
+            target = (target + 1) & 65535;
+        }
+        hl = (hl + 1) & 65535;
+    }
+    if (length == 14) { d = target >> 8; e = target & 255; }
+    remaining -= amount;
+    b = remaining >> 8;
+    c = remaining & 255;
+    a = b | c;
+    zero = remaining == 0;
+    carry = 0;
+    if (zero) pc += length;
+    stepsLeft -= amount * stride;
+}
+
 void Step() {
     int op, value;
     op = Fetch();
@@ -206,7 +251,10 @@ void Step() {
         case 22: d = Fetch(); break;
         case 24: Relative(1); break;
         case 25: AddHL((d << 8) | e); break;
-        case 32: Relative(!zero); break;
+        case 32:
+            Relative(!zero);
+            if (!zero && stepsLeft > 7 && !(vdpRegs[1] & 64)) CopyLoop();
+            break;
         case 33: hl = Word(); break;
         case 35: hl = (hl + 1) & 65535; break;
         case 38: hl = (hl & 255) | (Fetch() << 8); break;
@@ -400,7 +448,7 @@ void EVENT_TIMEOUT() {
     for (i = 16; i <= 21; i++) if (held & (1 << i)) pad |= Key(i);
     vblank = 128;
     yieldGuest = 0;
-    for (i = 0; i < 512 && !yieldGuest && !failed; i++) Step();
+    for (stepsLeft = 512; stepsLeft > 0 && !yieldGuest && !failed; stepsLeft--) Step();
     if (failed) {
         ResetTimer();
         Status(1);

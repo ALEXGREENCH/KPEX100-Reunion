@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { GnexRuntime } from '../web/engine/gnex.js';
@@ -8,6 +9,7 @@ const data = (path) => readFileSync(new URL(`../web/data/${path}`, import.meta.u
 const rom = data('firmware/Kingston-2.12.rom');
 const sgs = data('games/demo-orbital-courier.sgs');
 const neon = data('games/demo-neon-ranger.sgs');
+const lan = data('games/demo-lan-master.sgs');
 const NES_HEADER_LENGTH = 16;
 const NROM_128_PRG_LENGTH = 16384;
 const CHR_LENGTH = 8192;
@@ -164,6 +166,59 @@ test('Neon Ranger boots the unmodified independent cartridge, walks, jumps and l
     game.setKey(20, false);
     ticks(45);
     assert.deepEqual(game.framebufferRGBA, walk);
+  } finally {
+    game.close();
+  }
+});
+
+test('Lan Master keeps short presses through its three controller reports', async () => {
+  const cart = readFileSync(new URL('../demos/nes/lan-master/LAN.NES', import.meta.url));
+  assert.deepEqual(
+    lan.subarray(-cart.length).map((byte) => byte ^ 0xa5),
+    cart,
+  );
+  const game = await GnexRuntime.create(rom, lan, { profile: 'kpex' });
+  const frameHash = () => createHash('sha256').update(game.framebufferRGBA).digest('hex');
+  const ticks = (count) => {
+    for (let i = 0; i < count; i++) {
+      game.event('TIMEOUT', 0);
+      assert.equal(game.status, 'idle', game.diagnostics.error);
+      assert.equal(game.timerStates[0].delay, 20);
+    }
+  };
+  const tap = (key) => {
+    game.setKey(key, true);
+    game.setKey(key, false);
+  };
+  try {
+    game.event('START');
+    assert.deepEqual(game.vfs.diagnostics.files, ['lan.nes']);
+    assert.equal(game.vfs.diagnostics.openHandles, 0);
+    assert.equal(game.vfs.diagnostics.operations, 3);
+    ticks(155);
+    game.setKey(21, true);
+    ticks(3);
+    game.setKey(21, false);
+    ticks(265);
+    assert.equal(frameHash(), '75dcdcded97e5688725d6b252153693b5fd389521354695275c644e5e2c187e2');
+
+    tap(17);
+    ticks(24);
+    assert.equal(frameHash(), '450c0c310f5384878bf7545a6ee8f75bdae3d51d0db6032278b55e4941b274e0');
+    tap(20);
+    ticks(20);
+    assert.equal(frameHash(), '46c481098306b1214b173a2554fd63a383dd87bc268a35979ae03ff0b0a8dc23');
+
+    game.setKey(20, true);
+    ticks(16);
+    game.setKey(20, true);
+    ticks(16);
+    game.setKey(20, false);
+    ticks(20);
+    assert.equal(frameHash(), '4911146b32ee7f635f2bfacfea4117991ea141acc3f613023da5bf86747a9f8e');
+    tap(20);
+    ticks(20);
+    assert.equal(frameHash(), 'e9dd3fb1a5633dff8236088f5d6ebd2692a8ea2d2a631cb6d38d2dd03a57a395');
   } finally {
     game.close();
   }

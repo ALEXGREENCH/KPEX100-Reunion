@@ -81,6 +81,9 @@ export function identifyAsset(catalog, name, bytes, digest) {
       NES: 'demo-orbital-courier',
       GG: 'demo-prism-vault',
     };
+    const known = catalog.games.find(
+      (game) => game.cartridge?.sha256 === digest && game.cartridge.path.startsWith(folder + '/'),
+    );
     return {
       kind: 'games',
       entry: {
@@ -88,9 +91,10 @@ export function identifyAsset(catalog, name, bytes, digest) {
         format: 4,
         platform: 'kpex',
         runtime: { profile: 'kpex' },
-        cartridgeTemplate: templates[folder],
+        cartridgeTemplate: known?.id ?? templates[folder],
         cartridgeFolder: folder,
-        startHint: 'Локальный картридж. Поддержка зависит от его команд и видеорежима.',
+        startHint:
+          known?.startHint ?? 'Локальный картридж. Поддержка зависит от его команд и видеорежима.',
       },
     };
   }

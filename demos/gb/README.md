@@ -1,13 +1,14 @@
-# Pocket Lab и Prism Relay
+# Pocket Lab, Prism Relay и Raw Snake
 
 В библиотеке Reunion откройте «Примеры».
 
 - **Pocket Lab · Game Boy на GNEX**. Стрелки двигают робота по комнате.
 - **Prism Relay · Game Boy Color на GNEX**. Соберите три светящиеся ячейки в лабиринте и дойдите до выхода справа. После этого на экране появляется `LINKED`.
+- **Raw Snake · Game Boy на GNEX**. Play запускает игру, стрелки поворачивают змейку. Используется [оригинальный картридж Альберта Гонсалеса](raw-snake/README.md).
 
-SGS читает `POCKET.GBR` или `PRISM.GBC` вызовами `FileOpen`, `FileReadInt` и `FileClose`. Картридж заполняет VRAM, опрашивает регистр `$FF00` и определяет, можно ли передвинуть робота. [Программа Mobile C](gb-reunion.mc) подаёт ввод, исполняет инструкции SM83 и рисует фон. [Генератор](build.py) содержит обе программы картриджей и упаковывает выбранную в SGS как файл VFS.
+SGS читает `POCKET.GBR`, `PRISM.GBC` или `SNAKE.GBR` вызовами `FileOpen`, `FileReadInt` и `FileClose`. Картридж заполняет VRAM и работает с регистром кнопок `$FF00`. [Программа Mobile C](gb-reunion.mc) подаёт ввод, исполняет инструкции SM83 и рисует кадр. [Генератор](build.py) содержит программы Pocket Lab и Prism Relay и упаковывает выбранный картридж в SGS как файл VFS.
 
-Прототип поддерживает 32-КиБ ROM-only картриджи. Для DMG реализованы 2-битные тайлы и палитра `BGP`. CGB добавляет второй банк VRAM, атрибуты карты, отражение тайлов и фоновые RGB555-палитры через `VBK`, `BGPI` и `BGPD`. При записи картриджем нового тайла или цвета перерисовываются только затронутые ячейки. Экран выводится целиком при размере не менее 160 × 144. Совместимость ограничена реализованными инструкциями и фоновым режимом. Спрайты, звук, прерывания, точное время и контроллеры банков картриджа требуют дальнейшей реализации. Обе демки поставляются со своими картриджами без загрузочного ROM и логотипа Nintendo.
+Прототип поддерживает 32-КиБ ROM-only картриджи. Для DMG реализованы 2-битные тайлы и палитра `BGP`. CGB добавляет второй банк VRAM, атрибуты карты, отражение тайлов и фоновые RGB555-палитры через `VBK`, `BGPI` и `BGPD`. При записи картриджем нового тайла или цвета перерисовываются только затронутые ячейки. Экран выводится целиком при размере не менее 160 × 144. Pocket Lab и Prism Relay работают в фоновом режиме. Вариант Raw Snake добавляет стек, прерывания кнопок и VBlank, а также 8 × 8 DMG-спрайты. Время PPU приближённое. Звук, контроллеры банков и другие режимы PPU требуют отдельной реализации.
 
 [Карты тайлов CGB](https://github.com/gbdev/pandocs/blob/master/src/Tile_Maps.md) · [Палитры CGB](https://github.com/gbdev/pandocs/blob/master/src/Palettes.md)
 
@@ -20,8 +21,10 @@ python demos/gb/build.py --sdk C:/path/to/sdk --output POCKET.SGS
 python demos/gb/build.py --rom-only --output POCKET.GBR
 python demos/gb/build.py --sdk C:/path/to/sdk --color --output PRISM.SGS
 python demos/gb/build.py --rom-only --color --output PRISM.GBC
+python demos/gb/build.py --sdk C:/path/to/sdk --raw-snake --output SNAKE.SGS
+python demos/gb/build.py --rom-only --raw-snake --output SNAKE.GBR
 ```
 
-В Reunion готовые [Pocket Lab](../../web/data/games/demo-pocket-lab.sgs) и [Prism Relay](../../web/data/games/demo-prism-relay.sgs) можно импортировать как обычные SGS. Флаг `--cart` подставляет свой совместимый ROM-only файл. Режим и имя внутри SGS определяются флагом CGB в заголовке картриджа. `--plain` отключает кодирование XOR для другого загрузчика. Для проверки отрисовки и ввода доступны [тест Pocket Lab](../../tests/pocket-lab.test.mjs) и [прохождение Prism Relay](../../tests/prism-relay.test.mjs).
+В Reunion готовые [Pocket Lab](../../web/data/games/demo-pocket-lab.sgs), [Prism Relay](../../web/data/games/demo-prism-relay.sgs) и [Raw Snake](../../web/data/games/demo-raw-snake.sgs) можно импортировать как обычные SGS. Флаг `--cart` подставляет свой совместимый ROM-only файл в прототип Pocket Lab или Prism Relay. Режим и имя внутри SGS определяются флагом CGB в заголовке картриджа. `--plain` отключает кодирование XOR для другого загрузчика. Для проверки отрисовки и ввода доступны [тест Pocket Lab](../../tests/pocket-lab.test.mjs) и [прохождение Prism Relay](../../tests/prism-relay.test.mjs).
 
 Для запуска из меню `GAME` Kingston 2.12 положите SGS и соответствующий картридж рядом в эту папку. Оригинальная прошивка открывает внешний файл через те же вызовы GNEX. В её FAT-пути нужно трёхбуквенное расширение, поэтому картридж DMG имеет имя `POCKET.GBR`. Вложенная папка под `GAME` для этого вызова не подходит. Проверка выполнялась в полной эмуляции Kingston 2.12. Замеры на физическом плеере ещё нужны.

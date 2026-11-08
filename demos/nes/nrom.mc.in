@@ -17,10 +17,13 @@ int rom[10245], ram[2048], names[2048], palettes[32], oam[256];
 int seen[896], hue[16], solid[512], lastSprites[64];
 int prgSize, chrStart, vertical, pc, sp, a, x, y, carry, nz, overflow, irqOff, decimal, nmiPending;
 int ctrl, mask, vramAddr, addrHigh, addrLatch, oamAddr, vblank, ppuBuffer, pollPc, guestYield;
-int buttons, pending, strobe, shift;
+int buttons, pending, strobe, shift;$pad_state
 int ready, failed, originX, originY, paintAt, painted, paletteEpoch, currentColor;
 int backgroundEpoch, scannedEpoch, scanLeft;
 int viewCol, viewRow, viewCols, viewRows, tileSize, lastSpriteMode;
+int viewRight, viewBottom;
+int dirtyCells[64], dirtyHead, dirtyCount;
+int inNmi;
 
 int ROM(int offset) {
     return (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
@@ -46,6 +49,30 @@ int PpuRead(int addr) {
     return palettes[PaletteIndex(addr)];
 }
 
+void QueueCell(int col, int row) {
+    if (col < viewCol || col >= viewCol + viewCols ||
+        row < viewRow || row >= viewRow + viewRows) return;
+    if (dirtyCount == 64) {
+        dirtyCount = 0;
+        backgroundEpoch++;
+    }
+    dirtyCells[(dirtyHead + dirtyCount) & 63] = row * 32 + col;
+    dirtyCount++;
+}
+
+void NameChanged(int index) {
+    int cell, col, row, dx, dy;
+    if (!painted || !(mask & 8)) { backgroundEpoch++; return; }
+    if ((index & 1024) != NameIndex(8192 + (ctrl & 3) * 1024)) return;
+    cell = index & 1023;
+    if (cell < 960) { QueueCell(cell & 31, cell >> 5); return; }
+    cell -= 960;
+    col = (cell & 7) * 4;
+    row = (cell >> 3) * 4;
+    for (dy = 0; dy < 4; dy++)
+        for (dx = 0; dx < 4; dx++) QueueCell(col + dx, row + dy);
+}
+
 void PpuWrite(int addr, int value) {
     int index;
     addr &= 16383;
@@ -54,7 +81,7 @@ void PpuWrite(int addr, int value) {
         index = NameIndex(addr);
         if (names[index] != value) {
             names[index] = value;
-            backgroundEpoch++;
+            NameChanged(index);
         }
     }
     else if (palettes[PaletteIndex(addr)] != (value & 63)) {
@@ -102,8 +129,7 @@ void CpuWrite(int addr, int value) {
     value &= 255;
     if (addr < 8192) { ram[addr & 2047] = value; return; }
     if (addr == 16406) {
-        if (strobe || (value & 1)) shift = buttons;
-        strobe = value & 1;
+$pad_strobe
         return;
     }
     if (addr == 16404) {
@@ -209,6 +235,7 @@ void RestoreFlags(int status) {
 
 void Nmi() {
     nmiPending = 0;
+    inNmi = 1;
     Push(pc >> 8);
     Push(pc);
     Push(Flags());
@@ -232,8 +259,11 @@ void Step() {
     op = Fetch();
     switch (op) {
         case 5: a |= ram[Fetch()]; nz = a; break;
+        case 6: addr = Fetch(); value = ram[addr]; carry = value >> 7;
+                nz = (value << 1) & 255; ram[addr] = nz; break;
         case 9: a |= Fetch(); nz = a; break;
         case 10: carry = a >> 7; a = (a << 1) & 255; nz = a; break;
+        case 13: a |= CpuRead(Word()); nz = a; break;
         case 16:
             Branch((nz & 128) == 0);
             // A tight LDA PPUSTATUS / BPL loop can wait for the next timer slice.
@@ -244,20 +274,29 @@ void Step() {
         case 36: Bit(ram[Fetch()]); break;
         case 37: a &= ram[Fetch()]; nz = a; break;
         case 41: a &= Fetch(); nz = a; break;
+        case 42: value = carry; carry = a >> 7; a = ((a << 1) | value) & 255; nz = a; break;
         case 44:
             addr = Word();
             if (StatusAddress(addr)) pollPc = pc - 3;
             else pollPc = -1;
             Bit(CpuRead(addr));
             break;
+        case 45: a &= CpuRead(Word()); nz = a; break;
         case 48: Branch(nz & 128); break;
         case 56: carry = 1; break;
-        case 64: RestoreFlags(Pull()); value = Pull(); pc = value | (Pull() << 8); break;
+        case 64:
+            RestoreFlags(Pull());
+            value = Pull();
+            pc = value | (Pull() << 8);
+            inNmi = 0;
+            break;
         case 69: a ^= ram[Fetch()]; nz = a; break;
         case 72: Push(a); break;
         case 73: a ^= Fetch(); nz = a; break;
         case 74: carry = a & 1; a >>= 1; nz = a; break;
         case 76: pc = Word(); break;
+        case 77: a ^= CpuRead(Word()); nz = a; break;
+        case 80: Branch(!overflow); break;
         case 96: value = Pull(); pc = ((value | (Pull() << 8)) + 1) & 65535; break;
         case 101: Add(ram[Fetch()]); break;
         case 102:
@@ -270,16 +309,29 @@ void Step() {
         case 104: a = Pull(); nz = a; break;
         case 105: Add(Fetch()); break;
         case 106: value = a & 1; a = (a >> 1) | (carry << 7); carry = value; nz = a; break;
+        case 109: Add(CpuRead(Word())); break;
+        case 112: Branch(overflow); break;
+        case 118:
+            addr = (Fetch() + x) & 255;
+            value = ram[addr] & 1;
+            ram[addr] = (ram[addr] >> 1) | (carry << 7);
+            carry = value;
+            nz = ram[addr];
+            break;
         case 120: irqOff = 1; break;
+        case 125: addr = Word(); Add(CpuRead((addr + x) & 65535)); break;
         case 132: ram[Fetch()] = y; break;
         case 133: ram[Fetch()] = a; break;
         case 134: ram[Fetch()] = x; break;
         case 136: y = (y - 1) & 255; nz = y; break;
         case 138: a = x; nz = a; break;
+        case 140: addr = Word(); CpuWrite(addr, y); break;
         case 141: addr = Word(); CpuWrite(addr, a); break;
+        case 142: addr = Word(); CpuWrite(addr, x); break;
         case 144: Branch(!carry); break;
         case 149: addr = Fetch(); ram[(addr + x) & 255] = a; break;
         case 152: a = y; nz = a; break;
+        case 153: addr = Word(); CpuWrite((addr + y) & 65535, a); break;
         case 154: sp = x; break;
         case 157: addr = Word(); CpuWrite((addr + x) & 65535, a); break;
         case 160: y = Fetch(); nz = y; break;
@@ -290,6 +342,7 @@ void Step() {
         case 168: y = a; nz = y; break;
         case 169: a = Fetch(); nz = a; break;
         case 170: x = a; nz = x; break;
+        case 172: y = CpuRead(Word()); nz = y; break;
         case 173:
             addr = Word();
             if (StatusAddress(addr)) pollPc = pc - 3;
@@ -297,32 +350,50 @@ void Step() {
             a = CpuRead(addr);
             nz = a;
             break;
+        case 174: x = CpuRead(Word()); nz = x; break;
         case 176: Branch(carry); break;
         case 177: addr = Fetch(); a = CpuRead((ram[addr] + (ram[(addr + 1) & 255] << 8) + y) & 65535); nz = a; break;
+        case 180: y = ram[(Fetch() + x) & 255]; nz = y; break;
+        case 181: a = ram[(Fetch() + x) & 255]; nz = a; break;
         case 185: addr = Word(); a = CpuRead((addr + y) & 65535); nz = a; break;
+        case 188: addr = Word(); y = CpuRead((addr + x) & 65535); nz = y; break;
         case 189: addr = Word(); a = CpuRead((addr + x) & 65535); nz = a; break;
         case 192: Compare(y, Fetch()); break;
+        case 196: Compare(y, ram[Fetch()]); break;
         case 197: Compare(a, ram[Fetch()]); break;
         case 198: addr = Fetch(); ram[addr] = (ram[addr] - 1) & 255; nz = ram[addr]; break;
         case 200: y = (y + 1) & 255; nz = y; break;
         case 201: Compare(a, Fetch()); break;
         case 202: x = (x - 1) & 255; nz = x; break;
+        case 204: Compare(y, CpuRead(Word())); break;
+        case 205: Compare(a, CpuRead(Word())); break;
+        case 206: addr = Word(); nz = (CpuRead(addr) - 1) & 255; CpuWrite(addr, nz); break;
         case 208: Branch(!IsZero()); break;
+        case 214: addr = (Fetch() + x) & 255; ram[addr] = (ram[addr] - 1) & 255; nz = ram[addr]; break;
         case 216: decimal = 0; break;
         case 221: addr = Word(); Compare(a, CpuRead((addr + x) & 65535)); break;
+        case 222: addr = (Word() + x) & 65535; nz = (CpuRead(addr) - 1) & 255; CpuWrite(addr, nz); break;
         case 224: Compare(x, Fetch()); break;
+        case 228: Compare(x, ram[Fetch()]); break;
         case 230: addr = Fetch(); ram[addr] = (ram[addr] + 1) & 255; nz = ram[addr]; break;
         case 232: x = (x + 1) & 255; nz = x; break;
         case 233: Add(Fetch() ^ 255); break;
         case 234: break;
+        case 236: Compare(x, CpuRead(Word())); break;
         case 238: addr = Word(); nz = (CpuRead(addr) + 1) & 255; CpuWrite(addr, nz); break;
         case 240:
             destination = pc - 5;
+            addr = pc - 3;
             Branch(IsZero());
-            // LDA zp / CMP zp / BEQ back has no effects until a new NMI changes RAM.
-            if ((ctrl & 128) && pc == destination &&
-                CpuRead(destination) == 165 && CpuRead(destination + 2) == 197) guestYield = 1;
+            // Polling zero-page RAM through CMP/BEQ can wait for the next NMI.
+            if (ctrl & 128) {
+                if (pc == addr && CpuRead(addr) == 197) guestYield = 1;
+                if (pc == destination &&
+                    CpuRead(destination) == 165 && CpuRead(destination + 2) == 197) guestYield = 1;
+            }
             break;
+        case 246: addr = (Fetch() + x) & 255; ram[addr] = (ram[addr] + 1) & 255; nz = ram[addr]; break;
+        case 254: addr = (Word() + x) & 65535; nz = (CpuRead(addr) + 1) & 255; CpuWrite(addr, nz); break;
         default: failed = 1; break;
     }
 }
@@ -361,6 +432,7 @@ int SolidPattern(int pattern) {
 
 void DrawTile(int sx, int sy, int pattern, int pal, int flags, int sprite) {
     int row, scan, lo, hi, px, bit, index, start, last;
+    int firstX, lastX, firstY, lastY;
     if (!sprite) {
         index = SolidPattern(pattern);
         if (index >= 0) {
@@ -370,20 +442,28 @@ void DrawTile(int sx, int sy, int pattern, int pal, int flags, int sprite) {
             return;
         }
     }
-    for (row = 0; row < tileSize; row++) {
-        if (sy + row < originY || sy + row >= originY + viewRows * tileSize) continue;
+    firstX = 0;
+    firstY = 0;
+    lastX = tileSize;
+    lastY = tileSize;
+    if (sx < originX) firstX = originX - sx;
+    if (sy < originY) firstY = originY - sy;
+    if (sx + lastX > viewRight) lastX = viewRight - sx;
+    if (sy + lastY > viewBottom) lastY = viewBottom - sy;
+    if (firstX >= lastX) return;
+    for (row = firstY; row < lastY; row++) {
         scan = row;
-        if (tileSize == 6) scan += row / 3;
+        $sample_scan
         if (flags & 128) scan = 7 - scan;
         lo = ROM(chrStart + pattern + scan);
         hi = ROM(chrStart + pattern + scan + 8);
-        start = 0;
+        start = firstX;
         last = -1;
-        for (px = 0; px <= tileSize; px++) {
+        for (px = firstX; px <= lastX; px++) {
             index = -1;
-            if (px < tileSize && sx + px >= originX && sx + px < originX + viewCols * tileSize) {
+            if (px < lastX) {
                 bit = px;
-                if (tileSize == 6) bit += px / 3;
+                $sample_bit
                 if (!(flags & 64)) bit = 7 - bit;
                 index = ((lo >> bit) & 1) | (((hi >> bit) & 1) << 1);
                 if (sprite && index == 0) index = -1;
@@ -462,7 +542,7 @@ void PaintSprite(int signature) {
 }
 
 void Paint() {
-    int row, col, changed, signature, scanned, drawn, i, mode;
+    int row, col, changed, signature, scanned, drawn, i, mode, cell;
     if (!(mask & 8)) return;
     mode = ctrl & 40;
     changed = 0;
@@ -481,7 +561,15 @@ void Paint() {
         scanLeft = viewRows * viewCols;
     }
     drawn = 0;
-    for (scanned = 0; scanLeft > 0 && scanned < 52 && drawn < 12; scanned++) {
+    scanned = 0;
+    while (dirtyCount > 0 && scanned < 52 && drawn < 12) {
+        cell = dirtyCells[dirtyHead];
+        dirtyHead = (dirtyHead + 1) & 63;
+        dirtyCount--;
+        drawn += PaintCell(cell & 31, cell >> 5, 0);
+        scanned++;
+    }
+    for (; scanLeft > 0 && scanned < 52 && drawn < 12; scanned++) {
         row = viewRow + paintAt / viewCols;
         col = viewCol + paintAt % viewCols;
         drawn += PaintCell(col, row, 0);
@@ -548,6 +636,8 @@ void main() {
     vertical = ROM(6) & 1;
     originX = (swWidth - viewCols * tileSize) / 2;
     originY = (swHeight - viewRows * tileSize) / 2;
+    viewRight = originX + viewCols * tileSize;
+    viewBottom = originY + viewRows * tileSize;
     for (i = 0; i < viewCols * viewRows; i++) seen[i] = -1;
     scannedEpoch = -1;
     for (i = 0; i < 64; i++) lastSprites[i] = -1;
@@ -564,20 +654,17 @@ void main() {
     SetTimer(20, 1);
 }
 
-void EVENT_TIMEOUT() {
-    int i, held;
+${pad_helper}void EVENT_TIMEOUT() {
+$timeout_vars
     if (!ready) return;
-    held = GetKeyState();
-    buttons = pending;
-    if (held & (1 << 10)) buttons |= 2;
-    if (held & (1 << 11)) buttons |= 4;
-    for (i = 16; i <= 21; i++) if (held & (1 << i)) buttons |= Key(i);
-    pending = 0;
+$pad_sample
     vblank = 128;
-    if (ctrl & 128) nmiPending = 1;
+    if ((ctrl & 128) && !inNmi) nmiPending = 1;
     guestYield = 0;
-    for (i = 0; i < 384 && !failed && !guestYield; i++) {
-        if (nmiPending) Nmi();
+    limit = 512;
+    if (!(mask & 24)) limit = 768;
+    for (i = 0; i < limit && !failed && !guestYield; i++) {
+        if (nmiPending && !inNmi) Nmi();
         Step();
     }
     if (failed) {
@@ -589,5 +676,5 @@ void EVENT_TIMEOUT() {
 }
 
 void EVENT_KEYPRESS() {
-    pending |= Key(swData);
+$pad_keypress
 }

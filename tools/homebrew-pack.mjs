@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { cartridgeDiskFiles } from '../web/engine/cartridge-disk.js';
 import { strToU8, zipSync } from '../web/vendor/fflate.js';
@@ -29,6 +30,11 @@ export async function buildHomebrewPack(webRoot) {
     verifyAsset(webRoot, entry);
     const bytes = fs.readFileSync(path.join(webRoot, entry.url));
     const cartridgeFiles = await cartridgeDiskFiles(entry.cartridge, bytes);
+    if (
+      entry.cartridge.sha256 &&
+      createHash('sha256').update(cartridgeFiles[0].data).digest('hex') !== entry.cartridge.sha256
+    )
+      throw Error('Cartridge SHA-256 mismatch: ' + entry.id);
     add('GAME/' + entry.cartridge.launcher, bytes);
     for (const file of cartridgeFiles)
       add('GAME/' + (file.folder ? file.folder + '/' : '') + file.name, file.data);

@@ -88,7 +88,9 @@ function harness({ deferredFetch = false, firmwareChannel = false } = {}) {
     },
     setTimeout(_callback, delay) {
       scheduled.push(delay);
+      return scheduled.length;
     },
+    clearTimeout() {},
   };
   if (firmwareChannel)
     sandbox.MessageChannel = class {

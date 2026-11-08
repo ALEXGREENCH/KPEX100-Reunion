@@ -7,6 +7,7 @@ import { cartridgeDiskFiles, replaceCartridge } from '../web/engine/cartridge-di
 import { createDisk } from '../web/engine/disk.js';
 import { GnexRuntime } from '../web/engine/gnex.js';
 import { SgsFile } from '../web/engine/sgs.js';
+import { identifyAsset, sha256 } from '../web/local-assets.js';
 import { unzipSync } from '../web/vendor/fflate.js';
 
 const web = new URL('../web/', import.meta.url);
@@ -50,8 +51,26 @@ test('cold boot and the player pack contain the same homebrew launchers and cart
     disks.push({ name: entry.cartridge.launcher, data: sgs }, ...files);
   }
   const zip = unzipSync(await buildHomebrewPack(fileURLToPath(web)));
-  const neonLicense = readFileSync(new URL('../demos/nes/neon-ranger/LICENSE', import.meta.url));
-  assert.deepEqual(zip['LICENSES/NEON.txt'], new Uint8Array(neonLicense));
+  for (const { cartridge } of entries) {
+    if (!cartridge.licenseFile) continue;
+    const license = readFileSync(new URL('../' + cartridge.licenseFile, import.meta.url));
+    const name = cartridge.launcher.replace(/\.SGS$/, '.txt');
+    assert.deepEqual(zip['LICENSES/' + name], new Uint8Array(license));
+  }
+  for (const { id, cartridge } of entries.filter((entry) => entry.cartridge.sha256)) {
+    const folder = cartridge.path;
+    const name = folder.split('/')[1];
+    const path = cartridge.licenseFile.replace(/[^/]+$/, name);
+    const original = readFileSync(new URL('../' + path, import.meta.url));
+    assert.deepEqual(zip['GAME/' + folder], new Uint8Array(original));
+    const digest = await sha256(original);
+    assert.equal(digest, cartridge.sha256);
+    const extension = name.slice(name.lastIndexOf('.'));
+    assert.equal(
+      identifyAsset(catalog, 'renamed' + extension, original, digest).entry.cartridgeTemplate,
+      id,
+    );
+  }
   const image = createDisk(disks, read('data/firmware/Kingston-2.12.rom'));
   const view = new DataView(image.buffer);
   const start = view.getUint32(454, true) * 512;

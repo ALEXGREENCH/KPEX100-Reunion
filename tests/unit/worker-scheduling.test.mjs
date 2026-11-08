@@ -51,7 +51,9 @@ function harness(onEvent = () => {}) {
     },
     setTimeout(callback, delay) {
       tasks.push({ callback, delay });
+      return tasks.length;
     },
+    clearTimeout() {},
   };
   vm.createContext(sandbox);
   vm.runInContext(

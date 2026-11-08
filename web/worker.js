@@ -81,9 +81,13 @@ let firmwareChannel;
 let paceFirmware = false,
   firmwareDue = 0;
 const frameInterval = 1000 / 60;
+const statusInterval = 250;
+const gameWakeLead = 8;
 const adsTimers = [{ channel: 0, delay: frameInterval, repeat: true, revision: 1 }];
 let queue = Promise.resolve();
 let activeSession = null;
+let tickTimeout = null;
+let tickDeadline = Infinity;
 function emit(message, transfers = []) {
   postMessage({ ...message, sessionId: activeSession }, transfers);
 }
@@ -181,15 +185,21 @@ function fail(error) {
 function syncTimer(firedChannel = null, now = performance.now()) {
   if (mode === 'game') timers.sync(isAds ? adsTimers : machine.timerStates, now, firedChannel);
 }
-function fireTimer(channel, scheduledAt = null) {
+function fireTimer(channel, scheduled = null) {
   const started = performance.now();
   if (isAds) machine.tick();
   else machine.event('TIMEOUT', channel);
-  // Minor wake-up delays must not accumulate on the fixed ADS timer. Rebase
-  // after a missed period or a manual step instead of dispatching a backlog.
-  const anchor =
-    isAds && scheduledAt !== null && scheduledAt + frameInterval > started ? scheduledAt : started;
-  syncTimer(channel, anchor);
+  // Retain the original phase through a small host delay. A stalled SGS
+  // callback rebases to its actual start instead of dispatching a backlog.
+  // Guest timer reprogramming still uses the new guest registration time.
+  const keepPhase =
+    scheduled &&
+    (isAds
+      ? scheduled.at + frameInterval > started
+      : scheduled.repeat &&
+        started - scheduled.at <= Math.min(16, scheduled.delay) &&
+        performance.now() < scheduled.at + scheduled.delay);
+  syncTimer(channel, keepPhase ? scheduled.at : started);
 }
 function setAdsKey(key, pressed, repeat) {
   const code = adsExtraKeys[gameId]?.[key] ?? adsKeys[key];
@@ -433,10 +443,45 @@ async function command(message) {
     await load({ ...lastLoad, sessionId: message.sessionId ?? lastLoad.sessionId });
   } else if (message.type === 'flush') machine.vfs?.flush();
 }
+function cancelTickTimeout() {
+  if (tickTimeout !== null) clearTimeout(tickTimeout);
+  tickTimeout = null;
+  tickDeadline = Infinity;
+}
+function wakeAfter(delay) {
+  const deadline = performance.now() + delay;
+  if (tickTimeout !== null && tickDeadline <= deadline) return;
+  cancelTickTimeout();
+  tickDeadline = deadline;
+  tickTimeout = setTimeout(tick, delay);
+}
+function scheduleGameWake() {
+  const timerDue = running ? (timers.next()?.at ?? Infinity) : Infinity;
+  const frameDue = framePending ? lastFrame + frameInterval : Infinity;
+  // Wake a little ahead of guest and display deadlines to leave room for
+  // coarse browser timers. The dispatch itself still waits for the deadline.
+  const due = Math.min(
+    timerDue - gameWakeLead,
+    running ? lastStatus + statusInterval : Infinity,
+    frameDue - gameWakeLead,
+  );
+  if (due === Infinity) cancelTickTimeout();
+  else wakeAfter(Math.max(1, Math.ceil(due - performance.now())));
+}
 onmessage = (event) => {
-  queue = queue.then(() => command(event.data)).catch(fail);
+  queue = queue.then(async () => {
+    const wasDirectGame = mode === 'game' && !isAds;
+    try {
+      await command(event.data);
+    } catch (error) {
+      fail(error);
+    }
+    if (mode === 'game' && !isAds) scheduleGameWake();
+    else if (wasDirectGame) wakeAfter(1);
+  });
 };
 function tick() {
+  cancelTickTimeout();
   try {
     if (running && machine) {
       const started = performance.now();
@@ -460,12 +505,12 @@ function tick() {
       } else if (mode === 'game') {
         const timer = timers.next();
         if (timer && performance.now() >= timer.at) {
-          fireTimer(timer.channel, timer.at);
+          fireTimer(timer.channel, timer);
           checkState();
           frame();
         }
       }
-      if (performance.now() - lastStatus > 250) status();
+      if (performance.now() - lastStatus >= statusInterval) status();
     }
     // A short key event may finish before the display deadline and arm no timer.
     // Keep its latest pixels pending instead of waiting for another guest event.
@@ -473,10 +518,14 @@ function tick() {
   } catch (error) {
     fail(error);
   }
+  if (mode === 'game' && !isAds) {
+    scheduleGameWake();
+    return;
+  }
   const clockWait = running && mode === 'firmware' ? firmwareDue - performance.now() : 0;
   if (clockWait > 0) {
     firmwareYields = 0;
-    setTimeout(tick, Math.ceil(clockWait));
+    wakeAfter(Math.ceil(clockWait));
     return;
   }
   if (
@@ -504,7 +553,7 @@ function tick() {
     );
     delay = Math.max(1, Math.min(25, Math.ceil(due - performance.now())));
   }
-  setTimeout(tick, delay);
+  wakeAfter(delay);
 }
 postMessage({ type: 'ready' });
 tick();
