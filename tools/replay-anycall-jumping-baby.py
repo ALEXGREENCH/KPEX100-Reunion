@@ -52,6 +52,10 @@ ADDITIONAL_GAMES = {
         "포켓_빌리어드.mbin",
         "ba8019b03d62389edb7c10137023e7a38d0c75fb0e8fa3415bd303e2f58655cc",
     ),
+    "119-rescue": (
+        "119_구조대.mbin",
+        "982b6f0d3b66c8c4d4d9f3b73b16a3233fe71afee4a7b58a8e4e43ba4acdda73",
+    ),
 }
 ADDITIONAL_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
 RGB332 = [
@@ -191,6 +195,69 @@ class Replay:
         return bytes(self.cpu.mem_read(FRAMEBUFFER, WIDTH * self.height))
 
 
+class RescueReplay(Replay):
+    def __init__(self, original):
+        self.color = 0
+        super().__init__(original, game_id="119-rescue")
+        self.stub_slots = (self.stub_slots | {0x08}) - {0x48}
+
+    def tick(self, frames=1):
+        for _ in range(frames):
+            self.dispatch(5, 1)
+
+    def host(self, cpu, address, size, data):
+        slot = address - STUBS
+        if slot == 0x48:
+            # A synthetic clock for this replay, in units of presented frames.
+            stack = cpu.reg_read(UC_ARM_REG_SP)
+            target = struct.unpack("<I", cpu.mem_read(stack, 4))[0]
+            cpu.mem_write(target + 12, struct.pack("<I", self.frames))
+            cpu.reg_write(UC_ARM_REG_R0, 0)
+        elif slot == 0x74:
+            self.plot_pixel(*(cpu.reg_read(register) for register in ARGS))
+        elif slot == 0x7C:
+            self.color = cpu.reg_read(UC_ARM_REG_R0) & 255
+        elif slot in (0x8C, 0x98):
+            first, second = (cpu.reg_read(register) for register in ARGS[:2])
+            x, y = struct.unpack("<hh", struct.pack("<I", first))
+            if slot == 0x8C:
+                end_x, end_y = struct.unpack("<hh", struct.pack("<I", second))
+                self.draw_line(x, y, end_x, end_y)
+            else:
+                width, height = struct.unpack("<HH", struct.pack("<I", second))
+                self.fill_rect(x, y, width, height)
+        else:
+            super().host(cpu, address, size, data)
+            return
+        self.calls[slot] += 1
+
+    def fill_rect(self, x, y, width, height):
+        left, right = max(0, x), min(WIDTH, x + width)
+        if left >= right:
+            return
+        row = bytes([self.color]) * (right - left)
+        for line in range(max(0, y), min(self.height, y + height)):
+            self.cpu.mem_write(FRAMEBUFFER + line * WIDTH + left, row)
+
+    def draw_line(self, x, y, end_x, end_y):
+        dx, dy = abs(end_x - x), -abs(end_y - y)
+        step_x, step_y = (1 if x < end_x else -1), (1 if y < end_y else -1)
+        error = dx + dy
+        color = bytes([self.color])
+        while True:
+            if 0 <= x < WIDTH and 0 <= y < self.height:
+                self.cpu.mem_write(FRAMEBUFFER + y * WIDTH + x, color)
+            if x == end_x and y == end_y:
+                return
+            twice = 2 * error
+            if twice >= dy:
+                error += dy
+                x += step_x
+            if twice <= dx:
+                error += dx
+                y += step_y
+
+
 def save_frame(output, name, game):
     indices = game.frame()
     rgb = b"".join(RGB332[index] for index in indices)
@@ -214,10 +281,21 @@ def read_original(path, member="점핑!_베이비.mbin"):
 
 
 def replay_game(original, output, game_id):
-    game = Replay(original, game_id=game_id)
-    control = Replay(original, game_id=game_id)
+    if game_id == "119-rescue":
+        game, control = RescueReplay(original), RescueReplay(original)
+    else:
+        game, control = Replay(original, game_id=game_id), Replay(
+            original, game_id=game_id
+        )
     captures = []
-    if game_id == "pocket-billiards":
+    if game_id == "119-rescue":
+        sequence = [
+            (120, None, "01-title"),
+            (60, None, "02-menu"),
+            (20, 19, "04-before-input"),
+        ]
+        input_key, ticks, input_ticks = 6, 10, [0]
+    elif game_id == "pocket-billiards":
         sequence = [
             (100, None, "01-title"),
             (30, 19, "02-menu"),
@@ -272,6 +350,9 @@ def replay_game(original, output, game_id):
         "captures": captures,
         "mqRecords": [game.resources[offset] for offset in sorted(game.resources)],
     }
+    if game_id == "119-rescue":
+        manifest["timerArgument"] = 1
+        manifest["clock"] = "synthetic count of presented frames"
     (output / "replay.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

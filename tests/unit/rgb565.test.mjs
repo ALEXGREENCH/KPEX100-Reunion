@@ -16,11 +16,15 @@ test('all 65536 RGB565 colors preserve exact original GNEX channel scaling', () 
   assert.deepEqual(rgb565ToRGBA(source), expected);
 });
 
-test('little-endian pixels work at an odd input byte offset without reading its neighbors', () => {
-  const storage = Uint8Array.of(0x77, 0x00, 0xf8, 0xe0, 0x07, 0x1f, 0x00, 0x77);
-  const source = storage.subarray(1, 7);
-  assert.deepEqual([...rgb565ToRGBA(source)], [255, 0, 0, 255, 0, 255, 0, 255, 0, 0, 255, 255]);
-  assert.deepEqual([...storage], [0x77, 0x00, 0xf8, 0xe0, 0x07, 0x1f, 0x00, 0x77]);
+test('little-endian pixels respect aligned and unaligned input views', () => {
+  for (const offset of [1, 2]) {
+    const storage = new Uint8Array(offset + 7).fill(0x77);
+    storage.set([0x00, 0xf8, 0xe0, 0x07, 0x1f, 0x00], offset);
+    const before = storage.slice();
+    const source = storage.subarray(offset, offset + 6);
+    assert.deepEqual([...rgb565ToRGBA(source)], [255, 0, 0, 255, 0, 255, 0, 255, 0, 0, 255, 255]);
+    assert.deepEqual(storage, before);
+  }
 });
 
 test('frames own their storage across input changes, later frames and transfer', () => {

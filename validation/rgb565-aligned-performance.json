@@ -1,0 +1,431 @@
+{
+  "schema": 1,
+  "baselineRevision": "54737373554de3ecd6098e084a1d58232c284bff",
+  "methodology": {
+    "converter": "Same deterministic little-endian frames per size/alignment. Allocation included; output equality and per-run checksum verified.",
+    "battleArmor": "Same guarded runtime, ROM and SGS. Before samples substitute only the old compact RGB565 converter; after samples use the production converter. Paired order alternates, one excluded warmup per side.",
+    "scope": "Host event processing under Node. The stored Battle Armor input reaches the garage and is followed by 180 explicit TIMEOUT calls. Browser presentation is outside the measurement."
+  },
+  "profileBefore": {
+    "activeSampleUs": 6192512,
+    "wasmSampleUs": 5252062,
+    "rgb565SampleUs": 108504
+  },
+  "converter": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "inputGenerator": "LCG u32, seed 0, multiplier 1664525, increment 1013904223, top byte",
+    "framesPerRound": 260,
+    "warmupsPerMethod": 100,
+    "rounds": 9,
+    "sourceSha256": [
+      "65154882681ff5c9d83889ab1f1d76318a25f03f9a5d31320ef7dbe1d7a2d4c2",
+      "c7f84ed5d7cefe6513127d4f22ee99091b12e5a92514c27debb2a3d96cc617bf"
+    ],
+    "measurements": [
+      {
+        "width": 160,
+        "height": 128,
+        "offset": 0,
+        "inputSha256": "b2b0f7cfed451bc74c0f0ab02c0577ab665aa6c6fffddc04cdc0bd3b12eb6602",
+        "rgbaSha256": "8714c43deb10941eacad215e4dd3683a0d35ab1b1934c76aab788397c0f8e9c4",
+        "samplesBeforeMs": [
+          18.8485,
+          18.5009,
+          20.32560000000001,
+          18.897899999999993,
+          19.181999999999988,
+          18.494400000000013,
+          23.524,
+          24.187400000000025,
+          18.535199999999975
+        ],
+        "samplesAfterMs": [
+          14.293599999999998,
+          19.056200000000004,
+          20.011600000000016,
+          13.482699999999994,
+          17.7286,
+          14.138000000000005,
+          12.998299999999972,
+          13.379600000000039,
+          13.841000000000008
+        ],
+        "medianBeforeMs": 18.897899999999993,
+        "medianAfterMs": 14.138000000000005
+      },
+      {
+        "width": 160,
+        "height": 128,
+        "offset": 1,
+        "inputSha256": "b2b0f7cfed451bc74c0f0ab02c0577ab665aa6c6fffddc04cdc0bd3b12eb6602",
+        "rgbaSha256": "8714c43deb10941eacad215e4dd3683a0d35ab1b1934c76aab788397c0f8e9c4",
+        "samplesBeforeMs": [
+          22.132000000000005,
+          23.837300000000027,
+          17.86500000000001,
+          18.211599999999976,
+          18.49890000000005,
+          18.129699999999957,
+          19.075199999999995,
+          18.457400000000007,
+          24.611099999999965
+        ],
+        "samplesAfterMs": [
+          16.682500000000005,
+          17.43130000000002,
+          17.143700000000024,
+          22.054400000000044,
+          17.901899999999955,
+          20.698800000000006,
+          22.59559999999999,
+          17.48199999999997,
+          16.70010000000002
+        ],
+        "medianBeforeMs": 18.49890000000005,
+        "medianAfterMs": 17.48199999999997
+      },
+      {
+        "width": 220,
+        "height": 176,
+        "offset": 0,
+        "inputSha256": "d750b3ebda1c4fedcd93631bb8091c1bd322839a892ac2221c24fd68d0f618fb",
+        "rgbaSha256": "c8aa50a74c44fff33682b26812492615c04c840af783aaf7ecfafc4346fa3e43",
+        "samplesBeforeMs": [
+          36.10360000000003,
+          39.322599999999966,
+          38.01389999999992,
+          35.74109999999996,
+          31.355000000000132,
+          31.415499999999838,
+          36.208900000000085,
+          38.4068000000002,
+          36.56380000000013
+        ],
+        "samplesAfterMs": [
+          24.046899999999937,
+          26.23020000000008,
+          27.853200000000015,
+          21.67840000000001,
+          26.95620000000008,
+          26.01649999999995,
+          23.23849999999993,
+          26.72699999999986,
+          28.067000000000007
+        ],
+        "medianBeforeMs": 36.208900000000085,
+        "medianAfterMs": 26.23020000000008
+      },
+      {
+        "width": 220,
+        "height": 176,
+        "offset": 1,
+        "inputSha256": "d750b3ebda1c4fedcd93631bb8091c1bd322839a892ac2221c24fd68d0f618fb",
+        "rgbaSha256": "c8aa50a74c44fff33682b26812492615c04c840af783aaf7ecfafc4346fa3e43",
+        "samplesBeforeMs": [
+          36.004700000000184,
+          31.9366,
+          34.79589999999985,
+          34.037500000000136,
+          34.11070000000018,
+          35.17880000000014,
+          31.058500000000095,
+          35.52070000000003,
+          37.522899999999936
+        ],
+        "samplesAfterMs": [
+          30.026599999999917,
+          34.22569999999996,
+          29.30320000000006,
+          32.37329999999997,
+          33.05860000000007,
+          28.992099999999937,
+          31.907700000000204,
+          28.571500000000015,
+          28.679499999999962
+        ],
+        "medianBeforeMs": 34.79589999999985,
+        "medianAfterMs": 30.026599999999917
+      },
+      {
+        "width": 320,
+        "height": 240,
+        "offset": 0,
+        "inputSha256": "d8b16dbfaf50bb9b81843bd869352d6b5936053b2c40edf59252eb37487a8fd4",
+        "rgbaSha256": "1a41558f4150aa1ae3f6a1172d7259efb6cdc83fb1689ae688b17f92e1f67325",
+        "samplesBeforeMs": [
+          63.91380000000004,
+          68.95690000000013,
+          62.36400000000003,
+          63.68560000000025,
+          62.5302999999999,
+          68.12789999999995,
+          56.65610000000015,
+          53.47490000000016,
+          62.492499999999836
+        ],
+        "samplesAfterMs": [
+          44.24669999999992,
+          44.66090000000031,
+          45.46720000000005,
+          44.478599999999915,
+          45.41879999999992,
+          45.13279999999986,
+          31.28189999999995,
+          40.87350000000015,
+          36.80650000000014
+        ],
+        "medianBeforeMs": 62.5302999999999,
+        "medianAfterMs": 44.478599999999915
+      },
+      {
+        "width": 320,
+        "height": 240,
+        "offset": 1,
+        "inputSha256": "d8b16dbfaf50bb9b81843bd869352d6b5936053b2c40edf59252eb37487a8fd4",
+        "rgbaSha256": "1a41558f4150aa1ae3f6a1172d7259efb6cdc83fb1689ae688b17f92e1f67325",
+        "samplesBeforeMs": [
+          70.02500000000009,
+          52.70010000000002,
+          63.362600000000384,
+          49.91199999999981,
+          49.81489999999985,
+          51.56950000000006,
+          54.589400000000296,
+          49.730299999999716,
+          49.96300000000019
+        ],
+        "samplesAfterMs": [
+          52.766200000000026,
+          46.5346999999997,
+          47.61110000000008,
+          46.48900000000003,
+          47.54780000000028,
+          46.80029999999988,
+          47.36439999999993,
+          48.5938000000001,
+          45.41010000000006
+        ],
+        "medianBeforeMs": 51.56950000000006,
+        "medianAfterMs": 47.36439999999993
+      }
+    ]
+  },
+  "battleArmor": {
+    "environment": {
+      "node": "v24.22.1",
+      "platform": "win32",
+      "arch": "x64",
+      "cpu": "AMD Ryzen 5 5500                               "
+    },
+    "parameters": {
+      "runs": 3,
+      "frames": 180,
+      "warmups": 1,
+      "swerveMode": "auto",
+      "preludeSha256": "828ae7183a19541c3e591a6531d335ccc2642b62564ff5439385efca808f7c20",
+      "execution": "both",
+      "compare": "display",
+      "kpexKeyRelease": "catalogue"
+    },
+    "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+    "sgsSha256": "7e928dd03f26eb838e8936a6353e7eccd0418811df982d44dc0595c7b7dbfc60",
+    "beforeMs": [
+      5625.275299999963,
+      5515.874600000043,
+      5633.522800000028
+    ],
+    "afterMs": [
+      5503.560400000049,
+      5530.457700000003,
+      5516.153200000088
+    ],
+    "medianBeforeMs": 5625.275299999963,
+    "medianAfterMs": 5516.153200000088,
+    "allResultsEqual": true,
+    "result": {
+      "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+      "frameTrailSha256": "fced2e3932c2ea5b572da8be2a3a90a704e6eadf3627c05d0c442033d6a149e2",
+      "width": 220,
+      "height": 176,
+      "status": "idle",
+      "error": null,
+      "events": 812,
+      "syscalls": {
+        "0x0000006b": 2,
+        "0x00000095": 734,
+        "0x0000003b": 321,
+        "0x0000003a": 25,
+        "0x0000005f": 732,
+        "0x00000022": 37,
+        "0x00000023": 48,
+        "0x00000082": 13,
+        "0x00000083": 8,
+        "0x00000027": 13687,
+        "0x00000046": 12883,
+        "0x00000028": 179,
+        "0x00000055": 1402,
+        "0x00000063": 1,
+        "0x00000067": 1,
+        "0x00000064": 1,
+        "0x000000ae": 13,
+        "0x000000a2": 454,
+        "0x000000a0": 455,
+        "0x00000045": 291,
+        "0x00000042": 437,
+        "0x000000a8": 429,
+        "0x000000a7": 441,
+        "0x000000cb": 72
+      },
+      "timerStates": [
+        {
+          "channel": 0,
+          "delay": 175,
+          "repeat": false,
+          "revision": 734,
+          "armedAt": 104425
+        },
+        {
+          "channel": 1,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        },
+        {
+          "channel": 2,
+          "delay": null,
+          "repeat": false,
+          "revision": 0
+        }
+      ],
+      "virtualMs": 104425,
+      "checkpoints": [
+        {
+          "frame": 0,
+          "timeMs": 72925,
+          "rgbaSha256": "e8cc64ce8441cb3a7c88a802d1bd892d2ac4badf2fce520578b91fd00eaf90ac",
+          "events": 596
+        },
+        {
+          "frame": 20,
+          "timeMs": 76425,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 620
+        },
+        {
+          "frame": 40,
+          "timeMs": 79925,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 644
+        },
+        {
+          "frame": 60,
+          "timeMs": 83425,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 668
+        },
+        {
+          "frame": 80,
+          "timeMs": 86925,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 692
+        },
+        {
+          "frame": 100,
+          "timeMs": 90425,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 716
+        },
+        {
+          "frame": 120,
+          "timeMs": 93925,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 740
+        },
+        {
+          "frame": 140,
+          "timeMs": 97425,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 764
+        },
+        {
+          "frame": 160,
+          "timeMs": 100925,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 788
+        },
+        {
+          "frame": 180,
+          "timeMs": 104425,
+          "rgbaSha256": "709e48fcd4d8aefee15e68cc7a909573ceab75fc4d34697a3d02f75582cbfee2",
+          "events": 812
+        }
+      ]
+    }
+  },
+  "guestBlockProfile": {
+    "scope": "Guarded run with a block observer, same output fingerprint. Counts of executed blocks and accumulated instruction bytes, without host timing.",
+    "hottestByExecutedBytes": [
+      {
+        "pc": "0x2004e724",
+        "count": 3070597,
+        "executedBytes": 122823880
+      },
+      {
+        "pc": "0x2004e4d0",
+        "count": 3070597,
+        "executedBytes": 110541492
+      },
+      {
+        "pc": "0x2004e4fc",
+        "count": 2607908,
+        "executedBytes": 52158160
+      },
+      {
+        "pc": "0x2004d054",
+        "count": 1128215,
+        "executedBytes": 49641460
+      },
+      {
+        "pc": "0x200492f8",
+        "count": 1122303,
+        "executedBytes": 22446060
+      },
+      {
+        "pc": "0x2004e4f4",
+        "count": 2607908,
+        "executedBytes": 20863264
+      },
+      {
+        "pc": "0x2004e74c",
+        "count": 165505,
+        "executedBytes": 17212520
+      },
+      {
+        "pc": "0x2004f9d4",
+        "count": 906109,
+        "executedBytes": 14497744
+      },
+      {
+        "pc": "0x200492ec",
+        "count": 1121491,
+        "executedBytes": 13457892
+      },
+      {
+        "pc": "0x20049ba0",
+        "count": 184890,
+        "executedBytes": 8135160
+      },
+      {
+        "pc": "0x20049d50",
+        "count": 172313,
+        "executedBytes": 7581772
+      },
+      {
+        "pc": "0x20049b7c",
+        "count": 184890,
+        "executedBytes": 6656040
+      }
+    ]
+  }
+}

@@ -3,6 +3,51 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "anycall-119-rescue",
+      "repositoryPath": "research/archives/Samsung-Anycall-119-Rescue-Replay.zip",
+      "bytes": 32222,
+      "sha256": "3d0514675782f75415875b7a381325f17999c37ec0d2e939888373a6837d7b66",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "01-title.png",
+          "bytes": 4637,
+          "crc32": "f58d65b7",
+          "sha256": "169aabf6bd7cd3b96d3c0e3983c381285cebec86ad5e4c3b870254fa2cc156fa"
+        },
+        {
+          "path": "02-menu.png",
+          "bytes": 5068,
+          "crc32": "1708fe9d",
+          "sha256": "ca0e97304efdafbbd6fa31499a61b5ae48b47a0062b854a9a3f3b717f7e5d9b0"
+        },
+        {
+          "path": "04-before-input.png",
+          "bytes": 4979,
+          "crc32": "cff15cec",
+          "sha256": "cfcd3fb3750ca9e21d26fe1ab5b148848e590ad912805c2cfac1398485e8c40c"
+        },
+        {
+          "path": "05-no-input.png",
+          "bytes": 5034,
+          "crc32": "13aba984",
+          "sha256": "136946ae453348a0f25b3d64d93c123541708d29ad59be72432b4c91b37999e2"
+        },
+        {
+          "path": "06-input.png",
+          "bytes": 5073,
+          "crc32": "7138a2a2",
+          "sha256": "312e7e7f2466d25d16cd832726b369dca6b0d79a02beb22d88f91bc26c8ecc7c"
+        },
+        {
+          "path": "replay.json",
+          "bytes": 27366,
+          "crc32": "830dddf3",
+          "sha256": "3c56cc3441f71fa897739763664f6b58330184317a72202057e012bd6f8b8c3b"
+        }
+      ]
+    },
+    {
       "id": "intromobile-early-game-catalogues",
       "repositoryPath": "research/archives/IntroMobile-Early-Game-Catalogues.zip",
       "bytes": 492448,
@@ -228064,9 +228109,9 @@
     }
   ],
   "counts": {
-    "archives": 140,
-    "archiveBytes": 2544381984,
-    "fileMembers": 37800,
-    "uniqueMemberHashes": 22913
+    "archives": 141,
+    "archiveBytes": 2544414206,
+    "fileMembers": 37806,
+    "uniqueMemberHashes": 22919
   }
 }

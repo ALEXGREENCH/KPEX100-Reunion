@@ -30,7 +30,8 @@ Hammer и Oh My Head дошли до игрового процесса и дал
 прогонах с вводом и без него.
 [Воспроизведение Jumping Baby](anycall-jumping-baby-replay.md) ·
 [Три игры IntroMobile](anycall-intromobile-replays.md) ·
-[Удар в Pocket Billiards](anycall-pocket-billiards.md).
+[Удар в Pocket Billiards](anycall-pocket-billiards.md) ·
+[Первый уровень 119 Rescue](anycall-119-rescue.md).
 
 Mobiletop поставляла эту ветку технологии Samsung как ADS, а KTF
 предлагала MAP. В инструкции Samsung SCH-V300 ADS и NATE GVM
