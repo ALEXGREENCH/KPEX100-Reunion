@@ -535,6 +535,9 @@ function paletteRow(
     paddingBits = 0,
     stopInside = false,
     stopAt = null,
+    image = 0x21030000,
+    transparentLastRow = false,
+    blendMasks = [0x7bef, 0x39e7, 0x7bef, 0x39e7],
   } = {},
   budget = null,
 ) {
@@ -545,6 +548,15 @@ function paletteRow(
     { length: 32768 },
     (_, i) => fill ?? ((i * 53 + 11) ^ (i * 7)) & 255,
   );
+  if (transparentLastRow) {
+    const last = offset + (height - firstRow - 1) * (count * bits + paddingBytes * 8 + paddingBits);
+    for (let i = 0; i < count; i++) {
+      const bit = last + i * bits,
+        shift = 8 - bits - (bit & 7),
+        mask = (1 << bits) - 1;
+      input[bit >>> 3] = (input[bit >>> 3] & ~(mask << shift)) | ((transparent & mask) << shift);
+    }
+  }
   cpu.write(source, input);
   cpu.write(
     palette,
@@ -567,12 +579,16 @@ function paletteRow(
     [0x18, 8 - bits],
     [0x1c, transparent],
     [0x2c, step],
-    [0x30, 0x21030000],
+    [0x30, image],
   ])
     cpu.write32(PALETTE_STACK + offset, value);
   // Only needed by unsupported doubled rows; a valid original image stride.
-  cpu.write(0x2103025e, Uint8Array.of(stride & 255, (stride >>> 8) & 255));
-  cpu.write(0x2103004e, Uint8Array.of(height & 255, (height >>> 8) & 255));
+  cpu.write(image + 0x25e, Uint8Array.of(stride & 255, (stride >>> 8) & 255));
+  cpu.write(image + 0x4e, Uint8Array.of(height & 255, (height >>> 8) & 255));
+  if (mode >= 1 && mode <= 3) {
+    for (let i = 0; i < blendMasks.length; i++)
+      cpu.write(image + 0x268 + i * 2, Uint8Array.of(blendMasks[i] & 255, blendMasks[i] >>> 8));
+  }
   if (height) {
     cpu.write32(PALETTE_STACK, firstRow);
     cpu.write32(PALETTE_STACK + 4, paddingBits);
@@ -896,6 +912,88 @@ test('Short, counted, unaligned and overlapping copies use the ARM routine', asy
       );
     }
     assert.equal(fast.accelerator.stats.bulkCopies, 0);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('blended palette images preserve packed pixels, native state and watchdog edges', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      minBlendedPalettePixels: 256,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    const cases = [
+      { mode: 1, bits: 1, offset: 3, count: 31, height: 10, transparent: 0, paddingBits: 3 },
+      { mode: 2, bits: 2, offset: 6, count: 44, height: 7, transparent: 2, paddingBytes: 1 },
+      {
+        mode: 3,
+        bits: 4,
+        offset: 4,
+        count: 64,
+        height: 6,
+        transparent: 15,
+        paddingBits: 4,
+        transparentLastRow: true,
+      },
+      {
+        mode: 2,
+        bits: 8,
+        count: 180,
+        height: 4,
+        transparent: 0,
+        blendMasks: [0xffff, 0xffff, 0xffff, 0xffff],
+      },
+      { mode: 1, bits: 8, count: 64, height: 5, fill: 255, transparent: 255 },
+    ];
+    for (const input of cases)
+      assert.deepEqual(
+        paletteRow(fast, input, 1_000_000),
+        paletteRow(native, input, 1_000_000),
+        JSON.stringify(input),
+      );
+    assert.equal(fast.accelerator.stats.blendedPaletteBatches, cases.length);
+    const shape = cases[2];
+    const full = paletteRow(native, shape, 1_000_000).instructions * 2;
+    for (const budget of [
+      1,
+      12,
+      64,
+      1000,
+      full - 16,
+      full - 2,
+      full,
+      full + 2,
+      full + 16,
+      full + 30_000,
+    ])
+      assert.deepEqual(
+        paletteRow(fast, shape, budget),
+        paletteRow(native, shape, budget),
+        'budget ' + budget,
+      );
+    const before = fast.accelerator.stats.blendedPaletteBatches;
+    assert.equal(before, cases.length + 1);
+    for (const input of [
+      { ...shape, height: 3 },
+      { ...shape, mode: 4 },
+      { ...shape, firstRow: 1 },
+      { ...shape, image: BUFFER + 2048 - 0x268 },
+      { ...shape, stopAt: 0x2004e544 },
+    ])
+      assert.deepEqual(
+        paletteRow(fast, input, 1_000_000),
+        paletteRow(native, input, 1_000_000),
+        JSON.stringify(input),
+      );
+    assert.deepEqual(paletteRow(fast, shape), paletteRow(native, shape));
+    assert.equal(fast.accelerator.stats.blendedPaletteBatches, before);
   } finally {
     native.cpu.close();
     fast.cpu.close();

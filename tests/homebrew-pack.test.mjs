@@ -52,10 +52,19 @@ test('cold boot and the player pack contain the same homebrew launchers and cart
   }
   const zip = unzipSync(await buildHomebrewPack(fileURLToPath(web)));
   for (const { cartridge } of entries) {
-    if (!cartridge.licenseFile) continue;
-    const license = readFileSync(new URL('../' + cartridge.licenseFile, import.meta.url));
-    const name = cartridge.launcher.replace(/\.SGS$/, '.txt');
-    assert.deepEqual(zip['LICENSES/' + name], new Uint8Array(license));
+    const name = cartridge.launcher.replace(/\.SGS$/, '');
+    if (cartridge.licenseFile) {
+      const license = readFileSync(new URL('../' + cartridge.licenseFile, import.meta.url));
+      assert.deepEqual(zip['LICENSES/' + name + '.txt'], new Uint8Array(license));
+    }
+    if (cartridge.sourceArchive) {
+      const source = readFileSync(new URL('../' + cartridge.sourceArchive.url, import.meta.url));
+      assert.deepEqual(zip['SOURCES/' + name + '.zip'], new Uint8Array(source));
+      const members = unzipSync(source);
+      assert.ok(
+        members.Makefile && Object.keys(members).some((file) => file.startsWith('source/')),
+      );
+    }
   }
   for (const { id, cartridge } of entries.filter((entry) => entry.cartridge.sha256)) {
     const name = cartridge.path.split('/')[1];

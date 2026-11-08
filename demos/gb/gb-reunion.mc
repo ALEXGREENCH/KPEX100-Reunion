@@ -14,6 +14,7 @@
 
 #define FLOODER_DIVISION 0
 #define DMG_WINDOW 0
+#define CGB_MBC5 0
 
 #if DMG_WINDOW
 #define PAINT_CELLS 380
@@ -24,16 +25,25 @@
 #define MAP_ROW sourceY
 #define DRAW_Y drawY
 #else
+#if CGB_MBC5
+#define PAINT_CELLS 2880
+#define PAINT_SLICES 26
+#else
 #define PAINT_CELLS 360
 #define PAINT_SLICES 6
+#endif
 #define BUFFERED_INPUT colorMode
 #define MAIN_BUTTON 16
+#if CGB_MBC5
+#define TILE_ROWS stripeHeight
+#else
 #define TILE_ROWS 8
+#endif
 #define MAP_ROW y
 #define DRAW_Y y * 8
 #endif
 
-// ROM-only DMG/CGB prototype. The cartridge runs in Mobile C bytecode.
+// The cartridge runs in Mobile C bytecode. CGB_MBC5 enables the Geometrix profile.
 int cart[8192], video[16384], ram[8192], colors[64];
 int seen[PAINT_CELLS], seenVersion[PAINT_CELLS], tileVersion[768], paletteVersion[8], dmgVersion;
 int a, b, c, d, e, hl, pc, zero, buttons, p1, lcd, bgp;
@@ -49,6 +59,114 @@ int layoutEpoch, seenLayout[PAINT_CELLS], tileWritePC;
 #endif
 // Keep a tap through all reads of the selected JOYP group.
 int heldButtons, latchedButtons, polledButtons;
+
+#if CGB_MBC5
+int cartRam[2048], cartRamEnabled, cartRamDirty, romBank;
+int scrollY, lyc, statControl;
+int sampledLine, capturedLayout[144], drawnLayout[144];
+int stripeOffset, stripeHeight;
+int dmaSourceHigh, dmaSourceLow, dmaTargetHigh, dmaTargetLow, dmaRuns, dmaDebt;
+
+int UntilLyc() {
+    int delta;
+    if (!(statControl & 64) || lyc >= 154 || !(lcd & 128)) return 70224;
+    delta = lyc * 456 - phase;
+    if (delta <= 0) delta += 70224;
+    return delta;
+}
+
+int StatAt(int dot) {
+    int mode, line;
+    line = dot / 456;
+    mode = 0;
+    if (lcd & 128) {
+        if (line >= 144) mode = 1;
+        else if (dot % 456 < 80) mode = 2;
+        else if (dot % 456 < 252) mode = 3;
+    }
+    if (lyc == line) mode |= 4;
+    return 128 | statControl | mode;
+}
+
+void CaptureLines(int end) {
+    int layout;
+    if (end > 144) end = 144;
+    layout = scrollY | ((lcd & 24) << 8);
+    while (sampledLine < end) {
+        capturedLayout[sampledLine] = layout;
+        sampledLine++;
+    }
+}
+
+void CapturePriorLines() {
+    int line;
+    if (!(lcd & 128)) return;
+    line = phase / 456;
+    if (phase % 456 >= 80) line++;
+    CaptureLines(line);
+}
+
+void AdvanceLCD(int cost) {
+    int i, differs;
+    if (cost >= UntilLyc()) interruptFlags |= 2;
+    if (cost >= UntilVBlank()) {
+        interruptFlags |= 1;
+        CaptureLines(144);
+        differs = 0;
+        for (i = 0; i < 144; i++) {
+            if (drawnLayout[i] != capturedLayout[i]) {
+                drawnLayout[i] = capturedLayout[i];
+                differs = 1;
+            }
+        }
+        if (differs) {
+            MemSetInt(&seen[0], -1, PAINT_CELLS);
+            paintRow = 0;
+            repaintSlices = PAINT_SLICES;
+            spritesDirty = 1;
+        }
+    }
+    phase += cost;
+    if (phase >= 70224) {
+        phase -= 70224;
+        sampledLine = 0;
+    }
+}
+
+void SaveCartRam() {
+    int file, count, closed;
+    if (!cartRamDirty) return;
+    file = FileOpen("GEOM.SAV", 1);
+    if (file < 0) file = FileOpen("GEOM.SAV", 2);
+    if (file < 0) return;
+    count = FileWriteInt(file, &cartRam[0], 2048);
+    closed = FileClose(file);
+    if (count == 8192 && closed >= 0) cartRamDirty = 0;
+}
+
+void LoadCartRam() {
+    int file, count, i;
+    file = FileOpen("GEOM.SAV", 3);
+    count = 0;
+    if (file >= 0) {
+        count = FileReadInt(file, &cartRam[0], 2048);
+        if (FileClose(file) < 0) count = 0;
+    }
+    if (count != 8192)
+        for (i = 0; i < 2048; i++) cartRam[i] = -1;
+}
+
+void WriteCartRam(int offset, int value) {
+    int slot, shift, old;
+    slot = offset >> 2;
+    shift = (offset & 3) << 3;
+    old = cartRam[slot];
+    if (((old >> shift) & 255) == value) return;
+    cartRam[slot] = (old & ((255 << shift) ^ -1)) | (value << shift);
+    cartRamDirty = 1;
+}
+
+#endif
 
 int PpuMode() {
     int dot;
@@ -70,8 +188,18 @@ int Joypad() {
 }
 
 int Read8(int addr) {
+#if CGB_MBC5
+    if (addr < 32768) {
+        if (addr >= 16384) addr = (addr & 16383) | (romBank << 14);
+        return (cart[addr >> 2] >> ((addr & 3) * 8)) & 255;
+    }
+#else
     if (addr < 32768) return (cart[addr >> 2] >> ((addr & 3) * 8)) & 255;
+#endif
     if (addr < 40960) return video[bank * 8192 + addr - 32768];
+#if CGB_MBC5
+    if (addr < 49152 && cartRamEnabled) return (cartRam[(addr - 40960) >> 2] >> ((addr & 3) << 3)) & 255;
+#endif
     if (addr >= 49152 && addr < 57344) return ram[addr - 49152];
     if (addr == 65280) {
         if (!(p1 & 16)) polledButtons |= latchedButtons & 15;
@@ -86,7 +214,13 @@ int Read8(int addr) {
         if (addr == 65284) return divider >> 8;
         if (addr == 65295) return 224 | interruptFlags;
         if (addr == 65344) return lcd;
+#if CGB_MBC5
+        if (addr == 65346) return scrollY;
+        if (addr == 65345) return StatAt(phase);
+        if (addr == 65349) return lyc;
+#else
         if (addr == 65345) return 128 | PpuMode();
+#endif
         if (addr == 65348 && (lcd & 128)) return phase / 456;
         if (addr == 65348) return 0;
         if (addr == 65351) return bgp;
@@ -110,7 +244,62 @@ int Read8(int addr) {
 }
 
 void Write8(int addr, int value) {
+#if CGB_MBC5
+    int offset, index, i, active, src, dst, count, data;
+    if (colorMode && addr >= 65361 && addr <= 65365) {
+        if (addr == 65361) dmaSourceHigh = value;
+        if (addr == 65362) dmaSourceLow = value & 240;
+        if (addr == 65363) dmaTargetHigh = value & 31;
+        if (addr == 65364) dmaTargetLow = value & 240;
+        if (addr == 65365 && !(value & 128)) {
+            src = (dmaSourceHigh << 8) | dmaSourceLow;
+            dst = (dmaTargetHigh << 8) | dmaTargetLow;
+            count = ((value & 127) + 1) << 4;
+            if (dst + count > 8192) count = 8192 - dst;
+            dmaDebt += count << 1;
+            if (src >= 49152 && src + count <= 57344 && dst >= 6144 && dst + count <= 8192) {
+                MemCpyInt(&video[bank * 8192 + dst], &ram[src - 49152], count);
+                repaintSlices = PAINT_SLICES;
+            } else {
+                for (i = 0; i < count; i++) {
+                    data = Read8((src + i) & 65535);
+                    offset = (dst + i) & 8191;
+                    index = bank * 8192 + offset;
+                    if (video[index] == data) continue;
+                    video[index] = data;
+                    if (offset < 6144) tileVersion[bank * 384 + offset / 16]++;
+                    repaintSlices = PAINT_SLICES;
+                }
+            }
+            dmaRuns++;
+        }
+        return;
+    }
+    if (addr < 32768) {
+        if (addr < 8192) {
+            cartRamEnabled = (value & 15) == 10;
+            if (!cartRamEnabled) SaveCartRam();
+        } else if (addr < 12288) romBank = value & 1;
+        return;
+    }
+    if (addr >= 40960 && addr < 49152) {
+        if (cartRamEnabled) WriteCartRam(addr - 40960, value);
+        return;
+    }
+    if (addr == 65346 && scrollY != value) {
+        CapturePriorLines();
+        scrollY = value;
+    }
+    if (addr == 65345 || addr == 65349) {
+        active = (statControl & 64) && phase / 456 == lyc;
+        if (addr == 65345) statControl = value & 64;
+        else lyc = value;
+        if (!active && (lcd & 128) && (statControl & 64) && phase / 456 == lyc)
+            interruptFlags |= 2;
+    }
+#else
     int offset, index, i;
+#endif
     if (addr >= 32768 && addr < 40960) {
         offset = addr - 32768;
         index = bank * 8192 + offset;
@@ -157,7 +346,16 @@ void Write8(int addr, int value) {
         if (expanded && (index & (Joypad() ^ 255) & 15)) interruptFlags |= 16;
     }
     if (addr == 65344 && lcd != value) {
+#if CGB_MBC5
+        if ((lcd ^ value) & 24) CapturePriorLines();
+        if ((lcd ^ value) & 128) {
+            phase = 0;
+            sampledLine = 0;
+            if ((value & 128) && (statControl & 64) && lyc == 0) interruptFlags |= 2;
+        }
+#else
         if ((lcd ^ value) & 128) phase = 0;
+#endif
         lcd = value;
         repaintSlices = PAINT_SLICES;
         spritesDirty = 1;
@@ -191,9 +389,19 @@ void Write8(int addr, int value) {
 }
 
 int Fetch8() {
+#if CGB_MBC5
+    int value;
+    int addr;
+    addr = pc;
+    if (pc < 32768) {
+        if (pc >= 16384) addr = (pc & 16383) | (romBank << 14);
+        value = (cart[addr >> 2] >> ((addr & 3) << 3)) & 255;
+    } else value = Read8(pc);
+#else
     int value;
     if (pc < 32768) value = (cart[pc >> 2] >> ((pc & 3) * 8)) & 255;
     else value = Read8(pc);
+#endif
     pc = (pc + 1) & 65535;
     return value;
 }
@@ -483,8 +691,66 @@ int WriteTileAndReturn(int budget) {
 }
 #endif
 
+#if CGB_MBC5
+int CopyVramLoop(int at, int limit) {
+    int cost, from, to, rounds, span, index, word, value, dest, i, layer;
+    if (Pair(0) <= 1 || limit < 80 || Read8(at + 6) != 42 ||
+        Read8(at + 7) != 18 || Read8(at + 8) != 19 || Read8(at + 9) != 11 ||
+        Read8(at + 10) != 120 || Read8(at + 11) != 177 ||
+        Read8(at + 12) != 32 || Read8(at + 13) != 242) return 0;
+    from = hl;
+    to = Pair(1);
+    if (from >= 32768 && (from < 49152 || from >= 57344)) return 0;
+    if (to < 32768 || to >= 40960) return 0;
+    cost = 80;
+    rounds = limit / cost;
+    if (rounds > 128) rounds = 128;
+    if (rounds >= Pair(0)) rounds = Pair(0) - 1;
+    if (rounds > 40960 - to) rounds = 40960 - to;
+    if (from < 32768) span = (from & 16384) + 16384 - from;
+    else span = 57344 - from;
+    if (rounds > span) rounds = span;
+    if (lcd & 128) {
+        if (phase < 65664) {
+            span = phase % 456;
+            if (span < 252) return 0;
+            span = 456 - span;
+        } else span = 70224 - phase;
+        span = (span + cost - 1) / cost;
+        if (rounds > span) rounds = span;
+    }
+    index = from;
+    if (from >= 16384 && from < 32768) index = (from & 16383) | (romBank << 14);
+    layer = bank * 8192;
+    dest = to - 32768;
+    for (i = 0; i < rounds; i++) {
+        if (from < 32768) {
+            word = index + i;
+            value = (cart[word >> 2] >> ((word & 3) << 3)) & 255;
+        } else value = ram[from + i - 49152];
+        if (video[layer + dest] != value) {
+            video[layer + dest] = value;
+            if (dest < 6144) tileVersion[bank * 384 + (dest >> 4)]++;
+            repaintSlices = PAINT_SLICES;
+        }
+        dest++;
+    }
+    hl += rounds;
+    SetPair(1, to + rounds);
+    SetPair(0, Pair(0) - rounds);
+    a = b;
+    Alu(6, c);
+    pc = at;
+    return rounds * cost;
+}
+
+#endif
+
 int StepFull(int budget) {
     int op, dst, src, value, pair, delta, at, rounds, limit, i, waitStart, waitCost;
+#if CGB_MBC5
+    int end;
+#endif
     op = Fetch8();
     dst = (op >> 3) & 7;
     src = op & 7;
@@ -493,6 +759,9 @@ int StepFull(int budget) {
     limit = budget;
     if (ime && (interruptMask & 1) && (lcd & 128) && UntilVBlank() < limit)
         limit = UntilVBlank();
+#if CGB_MBC5
+    if (ime && (interruptMask & 2) && UntilLyc() < limit) limit = UntilLyc();
+#endif
 #if FLOODER_DIVISION
     if (colorMode && !eiDelay && op == 245) {
         value = SmallDivideLoop(at, limit);
@@ -508,6 +777,79 @@ int StepFull(int budget) {
     // The loop must stay in immutable ROM, and a fused group ends at the
     // same instruction and with the same registers as complete iterations.
     if (!eiDelay && at >= 0 && at <= 32749 && limit >= 36) {
+#if CGB_MBC5
+        if (op == 240 && Read8(pc) == 65 && Read8(pc + 1) == 203 &&
+            Read8(pc + 2) == 79 && Read8(pc + 3) == 32 && Read8(pc + 4) == 250) {
+            if ((lcd & 128) && phase < 65664 && phase % 456 < 252) {
+                rounds = (252 - phase % 456 + 31) / 32;
+                if (rounds > limit / 32) rounds = limit / 32;
+                a = StatAt(phase + (rounds - 1) * 32);
+                zero = 0;
+                subtract = 0;
+                half = 1;
+                pc = at;
+                return rounds * 32;
+            }
+            value = CopyVramLoop(at, limit);
+            if (value) return value;
+        }
+        if (op == 242 && c == 68 && (lcd & 128) && b < 154 &&
+            Read8(pc) == 184 && Read8(pc + 1) == 32 && Read8(pc + 2) == 252 &&
+            phase / 456 != b) {
+            delta = b * 456 - phase;
+            if (delta <= 0) delta += 70224;
+            rounds = (delta + 23) / 24;
+            if (rounds > limit / 24) rounds = limit / 24;
+            a = ((phase + (rounds - 1) * 24) % 70224) / 456;
+            Alu(7, b);
+            pc = at;
+            return rounds * 24;
+        }
+        if (op == 123 && hl >= 49152 && hl < 57344 && Pair(0) > 1 && limit >= 52 &&
+            Read8(pc) == 134 && Read8(pc + 1) == 95 && Read8(pc + 2) == 35 &&
+            Read8(pc + 3) == 11 && Read8(pc + 4) == 120 && Read8(pc + 5) == 177 &&
+            Read8(pc + 6) == 32 && Read8(pc + 7) == 247) {
+            rounds = limit / 52;
+            if (rounds > 256) rounds = 256;
+            if (rounds >= Pair(0)) rounds = Pair(0) - 1;
+            if (rounds > 57344 - hl) rounds = 57344 - hl;
+            value = e;
+            i = hl - 49152;
+            end = i + rounds;
+            for (; i < end; i++) value += ram[i];
+            e = value & 255;
+            hl += rounds;
+            SetPair(0, Pair(0) - rounds);
+            a = b;
+            Alu(6, c);
+            pc = at;
+            return rounds * 52;
+        }
+        if (op == 122 && hl >= 32768 && hl < 57344 && Pair(0) > 1 &&
+            Read8(pc) == 34 && Read8(pc + 1) == 11 && Read8(pc + 2) == 120 &&
+            Read8(pc + 3) == 177 && Read8(pc + 4) == 32 && Read8(pc + 5) == 249 &&
+            (hl < 40960 || hl >= 49152 || cartRamEnabled) && limit >= 40) {
+            end = (hl & 57344) + 8192;
+            rounds = limit / 40;
+            if (rounds > 256) rounds = 256;
+            if (rounds >= Pair(0)) rounds = Pair(0) - 1;
+            if (rounds > end - hl) rounds = end - hl;
+            if (hl >= 49152) {
+                i = hl - 49152;
+                end = i + rounds;
+                for (; i < end; i++) ram[i] = d;
+            } else {
+                end = hl + rounds;
+                for (i = hl; i < end; i++) Write8(i, d);
+            }
+            hl += rounds;
+            SetPair(0, Pair(0) - rounds);
+            a = b;
+            Alu(6, c);
+            pc = at;
+            return rounds * 40;
+        }
+#endif
         if (op == 240 && Read8(pc) == 65 && Read8(pc + 1) == 230 &&
             Read8(pc + 2) == 2 && Read8(pc + 3) == 32 && Read8(pc + 4) == 250 &&
             (lcd & 128) && phase < 65664 && phase % 456 < 252) {
@@ -755,9 +1097,24 @@ void TickFull() {
     limit = 600;
 #else
     limit = 320;
+#if CGB_MBC5
+    if (colorMode) limit = 300;
+#else
     if (colorMode) limit = 600;
 #endif
+#endif
     for (steps = 0; steps < limit && remaining > 0 && !failure; steps++) {
+#if CGB_MBC5
+        if (dmaDebt) {
+            cost = dmaDebt;
+            if (cost > remaining) cost = remaining;
+            dmaDebt -= cost;
+            divider = (divider + cost) & 65535;
+            if (lcd & 128) AdvanceLCD(cost);
+            remaining -= cost;
+            continue;
+        }
+#endif
         pending = interruptMask & interruptFlags;
         if (pending) halted = 0;
         if (pending && ime) {
@@ -771,6 +1128,9 @@ void TickFull() {
         } else if (halted) {
             cost = remaining;
             if ((interruptMask & 1) && (lcd & 128) && UntilVBlank() < cost) cost = UntilVBlank();
+#if CGB_MBC5
+            if ((interruptMask & 2) && UntilLyc() < cost) cost = UntilLyc();
+#endif
         } else {
             cost = StepFull(remaining);
             if (eiDelay) {
@@ -779,10 +1139,14 @@ void TickFull() {
             }
         }
         divider = (divider + cost) & 65535;
+#if CGB_MBC5
+        if (lcd & 128) AdvanceLCD(cost);
+#else
         if (lcd & 128) {
             if (cost >= UntilVBlank()) interruptFlags |= 1;
             phase = (phase + cost) % 70224;
         }
+#endif
         remaining -= cost;
     }
 }
@@ -812,11 +1176,25 @@ void Color(int index, int attr) {
 
 void TileRun(int x, int y, int key, int count) {
     int row, end, bit, lo, hi, index, start, last, at, first, step, base, stride, attr, tile, dx;
+#if CGB_MBC5
+    int palette;
+#endif
 #if DMG_WINDOW
     int maxRows;
 #endif
     attr = key >> 10;
     tile = key & 1023;
+#if CGB_MBC5
+    palette = (attr & 7) * 8;
+    if (colorMode && colors[palette] == colors[palette + 2] &&
+        colors[palette] == colors[palette + 4] && colors[palette] == colors[palette + 6] &&
+        colors[palette + 1] == colors[palette + 3] && colors[palette + 1] == colors[palette + 5] &&
+        colors[palette + 1] == colors[palette + 7]) {
+        Color(0, attr);
+        FillRect(x, y, x + count * 8 - 1, y + stripeHeight - 1);
+        return;
+    }
+#endif
     first = 7;
     step = -1;
     if (attr & 32) {
@@ -836,6 +1214,17 @@ void TileRun(int x, int y, int key, int count) {
     if (y < oy + splitY) maxRows = oy + splitY - y;
     if (maxRows > 8) maxRows = 8;
 #endif
+#if CGB_MBC5
+    base += stripeOffset * stride;
+    // Fill the backdrop once and draw only the colored runs over it.
+    for (row = 0; row < stripeHeight; row++) {
+        at = base + row * stride;
+        if ((video[at] | video[at + 1]) == 255) continue;
+        Color(0, attr);
+        FillRect(x, y, x + count * 8 - 1, y + stripeHeight - 1);
+        break;
+    }
+#endif
     // Merge adjacent identical rows before drawing their horizontal runs.
     for (row = 0; row < TILE_ROWS; row = end) {
         at = base + row * stride;
@@ -849,8 +1238,16 @@ void TileRun(int x, int y, int key, int count) {
             at += stride;
         }
         if ((lo == 0 || lo == 255) && (hi == 0 || hi == 255)) {
+#if CGB_MBC5
+            index = (lo & 1) | ((hi & 1) << 1);
+            if (index) {
+                Color(index, attr);
+                FillRect(x, y + row, x + count * 8 - 1, y + end - 1);
+            }
+#else
             Color((lo & 1) | ((hi & 1) << 1), attr);
             FillRect(x, y + row, x + count * 8 - 1, y + end - 1);
+#endif
             continue;
         }
         start = 0;
@@ -861,10 +1258,19 @@ void TileRun(int x, int y, int key, int count) {
             if (bit == 8) index = -1;
             else index = ((lo >> at) & 1) | (((hi >> at) & 1) << 1);
             if (index != last) {
+#if CGB_MBC5
+                if (last) {
+                    Color(last, attr);
+                    FillRect(x + start, y + row, x + bit - 1, y + end - 1);
+                    for (dx = 8; dx < count * 8; dx += 8)
+                        FillRect(x + dx + start, y + row, x + dx + bit - 1, y + end - 1);
+                }
+#else
                 Color(last, attr);
                 FillRect(x + start, y + row, x + bit - 1, y + end - 1);
                 for (dx = 8; dx < count * 8; dx += 8)
                     FillRect(x + dx + start, y + row, x + dx + bit - 1, y + end - 1);
+#endif
                 start = bit;
                 last = index;
             }
@@ -874,11 +1280,19 @@ void TileRun(int x, int y, int key, int count) {
 
 int CellKey(int map, int x, int y) {
     int offset, tile, attr;
+#if CGB_MBC5
+    offset = (map & 8191) + y * 32 + x;
+#else
     offset = map + y * 32 + x;
+#endif
     tile = video[offset];
     attr = 0;
     if (colorMode) attr = video[8192 + offset] & 111;
+#if CGB_MBC5
+    if (!(map & 8192) && tile < 128) tile += 256;
+#else
     if (!(lcd & 16) && tile < 128) tile += 256;
+#endif
     if (attr & 8) tile += 384;
     return (attr << 10) | tile;
 }
@@ -918,6 +1332,47 @@ int RowMap(int row) {
 }
 #endif
 
+#if CGB_MBC5
+int SelectStripe(int y) {
+    int layout, end;
+    layout = drawnLayout[y];
+    stripeOffset = (y + layout) & 7;
+    end = y + 8 - stripeOffset;
+    if (end > 144) end = 144;
+    stripeHeight = 1;
+    while (y + stripeHeight < end && drawnLayout[y + stripeHeight] == layout)
+        stripeHeight++;
+    return layout;
+}
+
+int StripeMap(int layout) {
+    int map;
+    map = 6144;
+    if (layout & 2048) map = 7168;
+    if (layout & 4096) map |= 8192;
+    return map;
+}
+
+void RestoreSprite(int x, int y, int height) {
+    int firstX, lastX, row, col, layout, map, sourceY;
+    if (x <= -8 || x >= 160 || y <= -height || y >= 144) return;
+    firstX = 0;
+    if (x > 0) firstX = x / 8;
+    lastX = (x + 7) / 8;
+    if (lastX > 19) lastX = 19;
+    row = y;
+    if (row < 0) row = 0;
+    for (; row < y + height && row < 144; row += stripeHeight) {
+        layout = SelectStripe(row);
+        if (row + stripeHeight > y + height) stripeHeight = y + height - row;
+        map = StripeMap(layout);
+        sourceY = ((row + layout) & 255) >> 3;
+        for (col = firstX; col <= lastX; col++)
+            TileRun(ox + col * 8, oy + row, CellKey(map, col, sourceY), 1);
+    }
+}
+
+#else
 void RestoreSprite(int map, int x, int y) {
 #if DMG_WINDOW
     int firstX, lastX, row, col, top;
@@ -950,7 +1405,12 @@ void RestoreSprite(int map, int x, int y) {
 #endif
 }
 
+#endif
+#if CGB_MBC5
+void DrawSprite(int x, int y, int tile, int attr, int firstRow, int lastRow) {
+#else
 void DrawSprite(int x, int y, int tile, int attr) {
+#endif
     int row, bit, at, base, lo, hi, step, shift, start, last, palette, shade, saved;
     if (x <= -8 || x >= 160 || y <= -8 || y >= 144) return;
     palette = obp0;
@@ -962,7 +1422,11 @@ void DrawSprite(int x, int y, int tile, int attr) {
     step = -1;
     if (attr & 32) step = 1;
     for (row = 0; row < 8; row++) {
+#if CGB_MBC5
+        if (y + row < firstRow || y + row >= lastRow) continue;
+#else
         if (y + row < 0 || y + row >= 144) continue;
+#endif
         at = base + row * 2;
         if (attr & 64) at = base + (7 - row) * 2;
         lo = video[at];
@@ -989,6 +1453,39 @@ void DrawSprite(int x, int y, int tile, int attr) {
     bgp = saved;
 }
 
+#if CGB_MBC5
+void PaintSprites(int firstRow, int lastRow, int dirty) {
+    int index, height, tile, attr, x, y;
+    if (dirty) {
+        for (index = 0; index < 160; index += 4)
+            if (paintedOam[index]) RestoreSprite(paintedOam[index + 1] - 8, paintedOam[index] - 16, paintedOam[index + 2]);
+    }
+    height = 8;
+    if (lcd & 4) height = 16;
+    for (index = 156; index >= 0; index -= 4) {
+        if (dirty) paintedOam[index] = 0;
+        if (!(lcd & 2) || !oam[index] || !oam[index + 1]) continue;
+        x = oam[index + 1] - 8;
+        y = oam[index] - 16;
+        if (dirty) {
+            paintedOam[index] = oam[index];
+            paintedOam[index + 1] = oam[index + 1];
+            paintedOam[index + 2] = height;
+        }
+        if (y >= lastRow || y + height <= firstRow) continue;
+        tile = oam[index + 2];
+        attr = oam[index + 3];
+        if (height == 16) {
+            tile &= 254;
+            if (attr & 64) tile++;
+            DrawSprite(x, y + 8, tile ^ 1, attr, firstRow, lastRow);
+        }
+        DrawSprite(x, y, tile, attr, firstRow, lastRow);
+    }
+    if (dirty) spritesDirty = 0;
+}
+
+#else
 void PaintSprites(int map) {
     int index;
     for (index = 0; index < 160; index += 4)
@@ -1003,6 +1500,8 @@ void PaintSprites(int map) {
     }
     spritesDirty = 0;
 }
+
+#endif
 
 void Status(int failed) {
     paintColor = -1;
@@ -1033,7 +1532,11 @@ void main() {
         count = FileReadInt(file, &cart[0], 8192);
         if (FileClose(file) < 0) count = 0;
     } else count = 0;
+#if CGB_MBC5
+    if (count != 32768 || Read8(327) != 27 || Read8(328) != 0 || Read8(329) != 2) {
+#else
     if (count != 32768 || Read8(327) != 0 || Read8(328) != 0) {
+#endif
         Status(1);
         return;
     }
@@ -1043,6 +1546,10 @@ void main() {
     }
     for (i = 0; i < PAINT_CELLS; i++) seen[i] = -1;
     colorMode = (Read8(323) & 128) != 0;
+#if CGB_MBC5
+    romBank = 1;
+    LoadCartRam();
+#endif
 #if DMG_WINDOW
     BindTileWrite();
 #endif
@@ -1108,6 +1615,49 @@ void EVENT_TIMEOUT() {
     if ((lcd & 128) == 0) return;
     // The firmware can change the current draw color between callbacks.
     if (expanded && (repaintSlices || spritesDirty)) paintColor = -1;
+#if CGB_MBC5
+    updated = 0;
+    y = paintRow;
+    offset = SelectStripe(y);
+    map = StripeMap(offset);
+    old = ((y + offset) & 255) >> 3;
+    if (repaintSlices) {
+        repaintSlices--;
+        count = 0;
+        for (x = 0; x < 20; x++) {
+            n = y * 20 + x;
+            key = CellKey(map, x, old);
+            attr = key >> 10;
+            tile = key & 1023;
+            version = paletteVersion[attr & 7] + tileVersion[tile];
+            if (seen[n] == key && seenVersion[n] == version) {
+                if (count) TileRun(ox + first * 8, oy + y, runKey, count);
+                count = 0;
+                continue;
+            }
+            if (count && runKey != key) {
+                TileRun(ox + first * 8, oy + y, runKey, count);
+                count = 0;
+            }
+            if (!count) {
+                first = x;
+                runKey = key;
+            }
+            count++;
+            seen[n] = key;
+            seenVersion[n] = version;
+            updated = 1;
+        }
+        if (count) TileRun(ox + first * 8, oy + y, runKey, count);
+    }
+    paintRow += stripeHeight;
+    if (paintRow >= 144) paintRow = 0;
+    if (expanded && spritesDirty) {
+        PaintSprites(0, 144, 1);
+        updated = 1;
+    } else if (expanded && updated) PaintSprites(y, y + stripeHeight, 0);
+    if (updated) Flush();
+#else
     updated = 0;
     map = 6144;
     if (lcd & 8) map = 7168;
@@ -1183,6 +1733,7 @@ void EVENT_TIMEOUT() {
         updated = 1;
     }
     if (updated) Flush();
+#endif
 }
 
 void EVENT_KEYPRESS() {

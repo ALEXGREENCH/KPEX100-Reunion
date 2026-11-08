@@ -1,7 +1,8 @@
-"""Build an original ROM-only DMG or CGB cartridge and its GNEX SGS host."""
+"""Build Game Boy and Game Boy Color cartridges and their GNEX SGS hosts."""
 
 import argparse
 import sys
+from hashlib import sha256
 from pathlib import Path
 from struct import pack
 from tempfile import TemporaryDirectory
@@ -10,6 +11,8 @@ from tempfile import TemporaryDirectory
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
 from sgs_build import build_sgs, encode_kpex, pack_vfs
+
+GEOMETRIX_SHA256 = "56efdf82118e5faf22511c18dd1fc2ab8bc0c5e44cd634b8e06050ff08124586"
 
 
 def demo_cartridge(color=False):
@@ -314,9 +317,12 @@ def main():
         action="store_true",
         help="build Wyatt Ferguson's 2048",
     )
+    releases.add_argument(
+        "--geometrix", action="store_true", help="build Antonio Niño Díaz's Geometrix"
+    )
     parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
     args = parser.parse_args()
-    expanded = args.raw_snake or args.flooder or args.twenty48
+    expanded = args.raw_snake or args.flooder or args.twenty48 or args.geometrix
     if expanded and (args.color or args.cart):
         parser.error("The selected release uses its original cartridge")
     if args.raw_snake:
@@ -325,9 +331,15 @@ def main():
         cart = (HERE / "flooder/FLOODER.GBC").read_bytes()
     elif args.twenty48:
         cart = (HERE / "2048/2048.GB").read_bytes()
+    elif args.geometrix:
+        cart = (HERE / "geometrix/GEOM.GBC").read_bytes()
     else:
         cart = args.cart.read_bytes() if args.cart else demo_cartridge(args.color)
-    check_cartridge(cart)
+    if args.geometrix:
+        if sha256(cart).hexdigest() != GEOMETRIX_SHA256:
+            raise ValueError("Geometrix must use the pinned upstream cartridge")
+    else:
+        check_cartridge(cart)
     color = bool(cart[0x143] & 0x80)
     if args.color and not color:
         parser.error("--color requires a CGB cartridge")
@@ -347,6 +359,8 @@ def main():
                 title, appid, filename = "Flooder", 1001, "FLOODER.GBC"
             elif args.twenty48:
                 title, appid, filename = "2048", 1005, "2048.GBR"
+            elif args.geometrix:
+                title, appid, filename = "Geometrix", 1007, "GEOM.GBC"
             else:
                 title, appid, filename = "Reunion CGB", 992, "PRISM.GBC"
             text = (
@@ -363,6 +377,8 @@ def main():
                 )
             if args.twenty48:
                 text = text.replace("#define DMG_WINDOW 0", "#define DMG_WINDOW 1")
+            if args.geometrix:
+                text = text.replace("#define CGB_MBC5 0", "#define CGB_MBC5 1")
             variant.write_text(text, encoding="ascii")
             sgs = build_sgs(args.sdk, variant)
     else:

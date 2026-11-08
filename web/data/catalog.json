@@ -1591,6 +1591,37 @@
       "provenance": "Obalfour's MIT-licensed Flooder, unchanged 32 KiB cartridge from the author's repository."
     },
     {
+      "id": "demo-geometrix",
+      "title": "Geometrix · Game Boy Color на GNEX",
+      "nativeTitle": "Geometrix",
+      "url": "data/games/demo-geometrix.sgs",
+      "sha256": "dc1e518a5e648ffcd37a325eed57979948c77e1d800085b91ddadc3b5afc2b45",
+      "bytes": 233509,
+      "format": 4,
+      "resources": 11,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "cartridge": {
+        "path": "GBC/GEOM.GBC",
+        "sidecar": "GEOM.GBC",
+        "launcher": "GEOM.SGS",
+        "sha256": "56efdf82118e5faf22511c18dd1fc2ab8bc0c5e44cd634b8e06050ff08124586",
+        "licenseFile": "demos/gb/geometrix/LICENSE",
+        "sourceArchive": {
+          "url": "demos/gb/geometrix/geometrix-8f5467e-source.zip",
+          "bytes": 346607,
+          "sha256": "098a255690d216be6c5158d6e00940ea16941fd35f26b13d05cddd8af639775b"
+        }
+      },
+      "startHint": "PLAY — начать или поставить на паузу. Стрелки — курсор, SELECT — обмен фигур, ESC — поворот курсора.",
+      "sourceUrl": "https://github.com/AntonioND/geometrix/tree/8f5467ec225e21d67b2e6621eabede70dc6cc8fa",
+      "provenance": "Antonio Niño Díaz's unmodified 32 KiB Geometrix cartridge from the pinned upstream revision; source archive and GPL notice included."
+    },
+    {
       "id": "demo-orbital-courier",
       "title": "Orbital Courier · NES на GNEX",
       "nativeTitle": "Orbital Courier",

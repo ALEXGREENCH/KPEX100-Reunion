@@ -47,6 +47,12 @@ const PALETTE_ROW_SIGNATURES = [
   address,
   Uint8Array.from(hex.match(/../g).map((value) => Number.parseInt(value, 16))),
 ]);
+const PALETTE_BLEND_ENTRY = 0x2004e53c;
+const PALETTE_BLEND_SIGNATURE = Uint8Array.from(
+  '030059e3550000ca8cc085e0b0e0dce130c09de5010053e36972dce568c2dce507748ce130c09de5ae7007e06ba2dce56ac2dce50aa48ce12ec10ae00ce087e030c09de56da2dce56cc2dce5b070d0e10aa48ce130c09de5a7a00ae06fb2dce56ec2dce50bb48ce127c10be00cc08ae00ec08ce0b0c0c0e15a00001a'
+    .match(/../g)
+    .map((value) => Number.parseInt(value, 16)),
+);
 const RECT_SIGNATURE = Uint8Array.from(
   '0170a0e1080000ea0ec0a0e10010a0e1020051e1b240ccd0011081d2fbffffdab611dbe1017087e281e08ee0030057e1f4ffffda'
     .match(/../g)
@@ -84,6 +90,7 @@ export function installRomAccelerators(
     minPaletteRowPixels = 128,
     minPaletteBatchPixels = 4096,
     minPaletteContinuationPixels = Infinity,
+    minBlendedPalettePixels = Infinity,
     minBlendRectanglePixels = Infinity,
     minSolidRectanglePixels = Infinity,
   } = {},
@@ -132,6 +139,13 @@ export function installRomAccelerators(
       throw new Error('Kingston RGB565 solid rectangle kernels do not match verified ROM');
   }
 
+  const accelerateBlendedPalette = Number.isFinite(minBlendedPalettePixels);
+  if (accelerateBlendedPalette) {
+    const code = cpu.read(PALETTE_BLEND_ENTRY, PALETTE_BLEND_SIGNATURE.length);
+    if (!PALETTE_BLEND_SIGNATURE.every((value, index) => code[index] === value))
+      throw new Error('Kingston blended palette kernel does not match verified ROM');
+  }
+
   const stats = {
     fills: 0,
     pixels: 0,
@@ -148,6 +162,8 @@ export function installRomAccelerators(
     paletteRows: 0,
     paletteBatches: 0,
     paletteContinuations: 0,
+    blendedPaletteBatches: 0,
+    blendedPalettePixels: 0,
     palettePixels: 0,
     paletteWrites: 0,
     paletteFallbacks: 0,
@@ -431,13 +447,20 @@ export function installRomAccelerators(
     }
     const count = cpu.regRead('r6');
     const narrow = count < minPaletteRowPixels;
+    if (count < 1 || count > 512 || (narrow && count < 12)) {
+      stats.paletteFallbacks++;
+      return;
+    }
+    const mode = cpu.regRead('r9');
+    const blended = accelerateBlendedPalette && mode >= 1 && mode <= 3;
+    const continuationPixels = blended ? minBlendedPalettePixels : minPaletteContinuationPixels;
     const canContinue =
-      narrow &&
+      (narrow || blended) &&
       count >= 12 &&
       !cpu.runCounted &&
       cpu.runStop === 0x23fff000 &&
-      Number.isFinite(minPaletteContinuationPixels);
-    if (count < 1 || (narrow && count < 32 && !canContinue) || count > 512) {
+      Number.isFinite(continuationPixels);
+    if (narrow && count < 32 && !canContinue) {
       stats.paletteFallbacks++;
       return;
     }
@@ -447,19 +470,26 @@ export function installRomAccelerators(
       stats.paletteFallbacks++;
       return;
     }
-    if (cpu.regRead('r9') !== 0 || cpu.regRead('r3') !== 0) {
+    if ((mode !== 0 && !(blended && canContinue)) || cpu.regRead('r3') !== 0) {
       stats.paletteFallbacks++;
       return;
     }
-    const rowIndex = cpu.read32(stack),
-      image = cpu.read32(stack + 0x30);
-    const height = rowIndex < 512 && inRam(image, 0x260) ? (cpu.read32(image + 0x4c) | 0) >> 16 : 0;
+    const rowIndex = cpu.read32(stack);
+    // Try blending only at the first row. The later rows of an unsupported
+    // image should fall through without reading its descriptor again.
+    if (blended && rowIndex !== 0) {
+      stats.paletteFallbacks++;
+      return;
+    }
+    const image = cpu.read32(stack + 0x30);
+    const imageBytes = blended ? 0x270 : 0x260;
+    const height =
+      rowIndex < 512 && inRam(image, imageBytes) ? (cpu.read32(image + 0x4c) | 0) >> 16 : 0;
     const remainingRows = height - rowIndex;
     // Reject small sprites before reading their palette and pixel buffers.
     if (
-      narrow &&
-      remainingRows * count < minPaletteBatchPixels &&
-      !(canContinue && (remainingRows - 1) * count >= minPaletteContinuationPixels)
+      (blended || (narrow && remainingRows * count < minPaletteBatchPixels)) &&
+      !(canContinue && (remainingRows - 1) * count >= continuationPixels)
     ) {
       stats.paletteFallbacks++;
       return;
@@ -541,7 +571,10 @@ export function installRomAccelerators(
         !intersects(source, candidateInput, stack, 0x34) &&
         !intersects(palette, paletteBytes, stack, 0x34) &&
         !intersects(image + 0x4c, 4, stack, 0x34) &&
-        !intersects(image + 0x25c, 4, stack, 0x34)
+        !intersects(image + 0x25c, 4, stack, 0x34) &&
+        (!blended ||
+          (!intersects(destination, candidateOutput, image + 0x268, 8) &&
+            !intersects(image + 0x268, 8, stack, 0x34)))
       ) {
         rows = candidateRows;
         sourceStepBits = candidateStep;
@@ -552,19 +585,19 @@ export function installRomAccelerators(
     // Resume at the current translated row entry with the state of the last
     // row. This avoids a PC write and a translated-block exit for small sprites.
     // Reserve the worst-case work through the native last row and its return.
+    const visibleCost = blended ? 33 : 7;
     const continueLastRow =
       canContinue &&
       rows > 1 &&
-      (rows - 1) * count >= minPaletteContinuationPixels &&
+      (rows - 1) * count >= continuationPixels &&
       budget != null &&
-      budget >= rows * (62 + 52 * count) + 128;
+      budget >= rows * (62 + 2 * (19 + visibleCost) * count) + 128;
     if (continueLastRow) rows--;
     const inputLength = Math.ceil((bitOffset + (rows - 1) * sourceStepBits + count * bits) / 8),
       outputLength = (rows - 1) * destinationStride + outputBytes;
     if (
       !continueLastRow &&
-      narrow &&
-      (count < 32 || rows < 2 || rows * count < minPaletteBatchPixels)
+      (blended || (narrow && (count < 32 || rows < 2 || rows * count < minPaletteBatchPixels)))
     ) {
       stats.paletteFallbacks++;
       return;
@@ -572,8 +605,16 @@ export function installRomAccelerators(
     const input = cpu.read(source, inputLength),
       colors = cpu.read(palette, paletteBytes),
       output = cpu.read(destination, outputLength);
+    const sourceMasks = blended ? cpu.read32(image + 0x268) : 0;
+    const destinationMasks = blended ? cpu.read32(image + 0x26c) : 0;
+    const sourceHalf = sourceMasks & 0xffff,
+      sourceQuarter = sourceMasks >>> 16;
+    const destinationHalf = destinationMasks & 0xffff,
+      destinationQuarter = destinationMasks >>> 16;
     let writes = 0,
-      lastColor = transparent;
+      lastColor = transparent,
+      lastDestination = 0,
+      lastDestinationHalf = 0;
     for (let y = 0; y < rows; y++) {
       for (let i = 0; i < count; i++) {
         const bit = bitOffset + y * sourceStepBits + i * bits,
@@ -581,14 +622,25 @@ export function installRomAccelerators(
           out = y * destinationStride + i * 2;
         lastColor = transparent;
         if (index !== transparent) {
-          output[out] = colors[index * 2];
-          output[out + 1] = colors[index * 2 + 1];
           lastColor = colors[index * 2] | (colors[index * 2 + 1] << 8);
+          if (blended) {
+            lastColor = ((lastColor >>> 1) & sourceHalf) + ((lastColor >>> 2) & sourceQuarter);
+            lastDestination = output[out] | (output[out + 1] << 8);
+            lastDestinationHalf = (lastDestination >>> 1) & destinationHalf;
+            const pixel =
+              lastColor + lastDestinationHalf + ((lastDestination >>> 2) & destinationQuarter);
+            output[out] = pixel & 255;
+            output[out + 1] = (pixel >>> 8) & 255;
+          } else {
+            output[out] = colors[index * 2];
+            output[out + 1] = colors[index * 2 + 1];
+          }
           writes++;
         }
       }
     }
-    // Each pixel costs 19 instructions, plus 7 for a visible pixel. Resuming
+    // Each pixel costs 19 instructions, plus 7 for a visible copy or 33 for a
+    // visible blend. Resuming
     // at a row entry skips complete rows: 3 entry, 2 initial CMP/BLT and
     // 26 outer-loop instructions per row. For the older exit shortcut the
     // first entry is charged and the last outer loop is still native.
@@ -596,7 +648,7 @@ export function installRomAccelerators(
     const betweenRows = cpu.runCounted ? 5 : 31;
     const skipped =
         count * rows * 19 +
-        writes * 7 +
+        writes * visibleCost +
         (continueLastRow ? rows * 31 : 2 + (rows - 1) * betweenRows),
       work = skipped * 2;
     if (budget != null && work > budget) {
@@ -620,6 +672,11 @@ export function installRomAccelerators(
     cpu.regWrite('r8', count);
     cpu.regWrite('r12', continueLastRow ? rowIndex + rowAdvance : bits);
     cpu.regWrite('lr', lastColor);
+    if (blended && writes) {
+      cpu.regWrite('r7', lastDestination);
+      cpu.regWrite('r10', lastDestinationHalf);
+      cpu.regWrite('r11', destinationQuarter);
+    }
     cpu.regWrite(
       'cpsr',
       ((flags & 0x0fffffff) | (continueLastRow ? 0x20000000 : 0x60000000)) >>> 0,
@@ -628,6 +685,10 @@ export function installRomAccelerators(
     else cpu.regWrite('pc', PALETTE_ROW_EXIT);
     if (budget != null) cpu.blockBudget = budget - work;
     onSkippedInstructions(skipped);
+    if (blended) {
+      stats.blendedPaletteBatches++;
+      stats.blendedPalettePixels += count * rows;
+    }
     stats.paletteRows += rows;
     stats.paletteBatches++;
     stats.palettePixels += count * rows;

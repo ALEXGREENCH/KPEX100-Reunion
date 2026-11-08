@@ -32,6 +32,19 @@ def original_files():
         if not (ROOT / "web" / entry["url"]).resolve().is_relative_to(ROOT / "web"):
             raise ValueError("Catalogue asset escapes web directory")
     result = {"web/" + entry["url"]: entry for entry in entries}
+    for game in catalog["games"]:
+        source = game.get("cartridge", {}).get("sourceArchive")
+        if source is None:
+            continue
+        name = source["url"]
+        path = (ROOT / name).resolve()
+        if (
+            not path.is_relative_to(ROOT / "demos")
+            or path.suffix != ".zip"
+            or name in result
+        ):
+            raise ValueError("Invalid homebrew source archive path")
+        result[name] = source
     research = json.loads(
         (ROOT / "web/research/catalog.json").read_text(encoding="utf-8")
     )["artifacts"]

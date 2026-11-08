@@ -74,16 +74,14 @@ export function identifyAsset(catalog, name, bytes, digest) {
     compatibility: 'research',
   };
   if (/\.(gbc?|nes|gg)$/i.test(name)) {
-    const folder = cartridgeFormat(name, bytes);
+    const known = catalog.games.find((game) => game.cartridge?.sha256 === digest);
+    const folder = known?.cartridge.path.split('/')[0] ?? cartridgeFormat(name, bytes);
     const templates = {
       GB: 'demo-pocket-lab',
       GBC: 'demo-prism-relay',
       NES: 'demo-orbital-courier',
       GG: 'demo-prism-vault',
     };
-    const known = catalog.games.find(
-      (game) => game.cartridge?.sha256 === digest && game.cartridge.path.startsWith(folder + '/'),
-    );
     return {
       kind: 'games',
       entry: {
