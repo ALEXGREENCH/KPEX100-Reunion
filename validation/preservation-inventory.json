@@ -3,6 +3,384 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "ktf-real-soccer-match-replays",
+      "repositoryPath": "research/archives/Real-Soccer-KTF-Match-and-Install-Replays.zip",
+      "bytes": 331576,
+      "sha256": "c72ffe80d745cce9a8aa1e26fba33b9b3dff166ad17023e9f2cfef5a4d426033",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "2007/replay.lua",
+          "bytes": 734,
+          "crc32": "0be0f22d",
+          "sha256": "5233ea1c661ddf605a60f2e4cd2c4982cca50358309e48e1d641d130deff42c5"
+        },
+        {
+          "path": "2007/stock-1500000/later.png",
+          "bytes": 12052,
+          "crc32": "bedeb281",
+          "sha256": "8677c2683866534e8c1e6e794c4689d0b9d1fc7cd41f8ce8f879110b230939bb"
+        },
+        {
+          "path": "2007/stock-1500000/trace.ndjson",
+          "bytes": 26396,
+          "crc32": "30f4787c",
+          "sha256": "07b4c0563e06c3e28f2c142cd7a0ea04e30a336d9e1bc60f5cecfb29e97cacda"
+        },
+        {
+          "path": "2007/stock-200000/later.png",
+          "bytes": 2105,
+          "crc32": "5133b950",
+          "sha256": "7fcb55c2ef3621d9879c406fc68505bd08dd8b4c4360acdc7d1f49634bf54052"
+        },
+        {
+          "path": "2007/stock-200000/trace.ndjson",
+          "bytes": 26342,
+          "crc32": "a3294cc6",
+          "sha256": "984a507c5083e4585f8e04eebadc087051408b4733748959ebd307bb98113f41"
+        },
+        {
+          "path": "2009/aram/directory-stat-probe/1800.png",
+          "bytes": 2229,
+          "crc32": "03d85210",
+          "sha256": "4251568be4924f2b3f4ffc33e9eb8cfa60a2f5540e36ba16f0041f306484a058"
+        },
+        {
+          "path": "2009/aram/directory-stat-probe/hosttrace.txt",
+          "bytes": 43,
+          "crc32": "0f13798a",
+          "sha256": "471537bf7ab53729c51fcc18db53e07230893e840dac5a22b15aa3689a74dd1b"
+        },
+        {
+          "path": "2009/aram/directory-stat-probe/replay.lua",
+          "bytes": 142,
+          "crc32": "dc9feb14",
+          "sha256": "5c01034fa5e28d184cf8944eaa5ff5ab481abb8b3eb5954f80d37381dd809029"
+        },
+        {
+          "path": "2009/aram/directory-stat-probe/trace.ndjson",
+          "bytes": 4958,
+          "crc32": "c4463b7d",
+          "sha256": "875d0e50e0e268ff6e75c8a9528be4ed6089eee975ef0bc1a7bdb3c67bd97f3f"
+        },
+        {
+          "path": "2009/aram/stock/hosttrace.txt",
+          "bytes": 6021,
+          "crc32": "7511f815",
+          "sha256": "99a46384ce0b7af57b6a5be000cf45501d57e0e9a241ba98382be941d08b2077"
+        },
+        {
+          "path": "2009/aram/stock/replay.lua",
+          "bytes": 124,
+          "crc32": "7fef8311",
+          "sha256": "1d548700629a8bd40bb8821482233b4c52c0e3e5435ef597081276d3179522d8"
+        },
+        {
+          "path": "2009/aram/stock/terminal.png",
+          "bytes": 1907,
+          "crc32": "c933582d",
+          "sha256": "141a4642da21e2e97ea53ed8c884eff5b8c83f735c91c6a80bd0b27757519898"
+        },
+        {
+          "path": "2009/aram/stock/trace.ndjson",
+          "bytes": 3764,
+          "crc32": "7facab22",
+          "sha256": "156643d02e8a9e0954ac362236a613b28d3726ceed58346454cae7ef2c2e8b9e"
+        },
+        {
+          "path": "2009/wie/active-1.png",
+          "bytes": 41611,
+          "crc32": "e817ef66",
+          "sha256": "8ccdaa7caa113b8da5c3e879c5dd046f25d2ec3adb8ba6438827c856ffcf18f8"
+        },
+        {
+          "path": "2009/wie/active-3.png",
+          "bytes": 47872,
+          "crc32": "271a258d",
+          "sha256": "3b0c340b2c18ac3a2ac6b8a2c56fec4fa737107609aea7414281a0b4fb616b9e"
+        },
+        {
+          "path": "2009/wie/active-4.png",
+          "bytes": 52291,
+          "crc32": "c8ae4eca",
+          "sha256": "df46319546d49508643c8e75891c47e4da79871db2370dc719af40b5f8d6bc39"
+        },
+        {
+          "path": "2009/wie/active-5.png",
+          "bytes": 50168,
+          "crc32": "3215f5ee",
+          "sha256": "83efd324968621c9f856717372fc5b62b8bbf84a9d781d60105ffad621a39c43"
+        },
+        {
+          "path": "2009/wie/active-6.png",
+          "bytes": 49747,
+          "crc32": "6a4ce8f4",
+          "sha256": "704495811f5b2e63fea033a68a08f80843a07ba67d2facb6c9cf191953c9722b"
+        },
+        {
+          "path": "2009/wie/engine-manifest.json",
+          "bytes": 756,
+          "crc32": "f44c304d",
+          "sha256": "0b290085d28ff61edfe2847189de3a2beb72e856318e98d9fa994c55ee4c57d3"
+        },
+        {
+          "path": "2009/wie/kickoff-1.png",
+          "bytes": 55358,
+          "crc32": "e839dcce",
+          "sha256": "54c1c74b5bbb5a2d4fdb494d6a4b14d1bf5b298fb6fd5ef64ad3010746378582"
+        },
+        {
+          "path": "2009/wie/replay.mjs",
+          "bytes": 4340,
+          "crc32": "7ce198b9",
+          "sha256": "cf586b2c7c3be298bac525f2e55281c3bb5a4ff65800bc009ce4648e0d004584"
+        },
+        {
+          "path": "2009/wie/verification.json",
+          "bytes": 7897,
+          "crc32": "04096c4c",
+          "sha256": "016ff07092674eec426a1d1b938acc2fec196bf3be75255b750a6df933958b06"
+        },
+        {
+          "path": "evidence/verification.json",
+          "bytes": 1927,
+          "crc32": "2c22856e",
+          "sha256": "19403a613108bd94213d6ac795f9a71def8141ed2914a665b04336c5f2c5b570"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4092,
+          "crc32": "5541f06d",
+          "sha256": "551416204f484bb8a4745f1d143009e614c9bc5f86395c9e0c6d8ff5afc9b07c"
+        }
+      ]
+    },
+    {
+      "id": "ktf-dragon-knight-lapis-brain-game",
+      "repositoryPath": "research/archives/Dubigame-Dragon-Knight-Lapis-Brain-Game-KTF.zip",
+      "bytes": 3782954,
+      "sha256": "f6109812322a9095cebf9651336b5b4b601fb7c5edf43cb1578b0b2bcd10f009",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derivatives/lapis-logo.wav",
+          "bytes": 504544,
+          "crc32": "0d56ab52",
+          "sha256": "ce75db744032611f514b795fca8c2d59c836832c14d55ac54872697bc61d8967"
+        },
+        {
+          "path": "evidence/brain-game-q/control/after.png",
+          "bytes": 37752,
+          "crc32": "874529d3",
+          "sha256": "94ca575482022aed2c6bb6bfbc0846ecceaa577f246ed0b1bdaf1fb7c318e2c5"
+        },
+        {
+          "path": "evidence/brain-game-q/control/before.png",
+          "bytes": 37752,
+          "crc32": "874529d3",
+          "sha256": "94ca575482022aed2c6bb6bfbc0846ecceaa577f246ed0b1bdaf1fb7c318e2c5"
+        },
+        {
+          "path": "evidence/brain-game-q/control/replay.lua",
+          "bytes": 320,
+          "crc32": "b7bb040c",
+          "sha256": "4c6baf7f89d1f5ee57cc47f85687a6b473719d71c442eeed5fa43c8b5bd2cc95"
+        },
+        {
+          "path": "evidence/brain-game-q/control/trace.ndjson",
+          "bytes": 12188,
+          "crc32": "aea0ca0c",
+          "sha256": "92e596f1fe87fe1ea098670370e7d768869d7a669b400472558d73152b55f50e"
+        },
+        {
+          "path": "evidence/brain-game-q/input/after.png",
+          "bytes": 37950,
+          "crc32": "b5517057",
+          "sha256": "63b1428f6da0bdc336cbee60b172f981a5d735b6efef440b9d840912f83e75cf"
+        },
+        {
+          "path": "evidence/brain-game-q/input/before.png",
+          "bytes": 37752,
+          "crc32": "874529d3",
+          "sha256": "94ca575482022aed2c6bb6bfbc0846ecceaa577f246ed0b1bdaf1fb7c318e2c5"
+        },
+        {
+          "path": "evidence/brain-game-q/input/replay.lua",
+          "bytes": 324,
+          "crc32": "5bf44508",
+          "sha256": "369cc0038dbbd3eedb66897931cdc66a515a676b85c7fc293991b1770924ae94"
+        },
+        {
+          "path": "evidence/brain-game-q/input/trace.ndjson",
+          "bytes": 12185,
+          "crc32": "184adeb7",
+          "sha256": "20befa8905a61ea1e6028cbdbedf9abf79481329b06399400b053323719f76b3"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/control/after.png",
+          "bytes": 2684,
+          "crc32": "db79f55b",
+          "sha256": "1afb560915206eadb46f75889868b85b4fad565e50ddeef168c1a6ff0735dd95"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/control/before.png",
+          "bytes": 2859,
+          "crc32": "49d86390",
+          "sha256": "8e7dacacdedff5d741912d52d9f6cda21b393e5bb5168497326f8ebe083d2246"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/control/replay.lua",
+          "bytes": 385,
+          "crc32": "092fa4b6",
+          "sha256": "99d3f217cd7fd0179c909f5de4595538f1e957344dd7d116e9c5982bfc2bbdd6"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/control/trace.ndjson",
+          "bytes": 14494,
+          "crc32": "b8a2a90d",
+          "sha256": "1b171d51c848d4163b279c15e860788377ab3e4184fea715b1df356743c3fbd9"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/input/after.png",
+          "bytes": 15938,
+          "crc32": "2a47fd49",
+          "sha256": "643566c2a312a2e28f63aec0d7d201ee90f70037e2ff2a71627af4c93236489d"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/input/before.png",
+          "bytes": 2859,
+          "crc32": "49d86390",
+          "sha256": "8e7dacacdedff5d741912d52d9f6cda21b393e5bb5168497326f8ebe083d2246"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/input/replay.lua",
+          "bytes": 391,
+          "crc32": "35305514",
+          "sha256": "91fb99a9a5d9870d9b674da01919bfb2b61c569122727412fad68810b67eebd8"
+        },
+        {
+          "path": "evidence/dragon-knight-ex/input/trace.ndjson",
+          "bytes": 14497,
+          "crc32": "5d4cc702",
+          "sha256": "6d64fe0c6a8b86cbac5f95590dfa29d821dfc73a451896e71b484e1650a6332b"
+        },
+        {
+          "path": "evidence/lapis-lazuli/control/after.png",
+          "bytes": 16141,
+          "crc32": "faf559e0",
+          "sha256": "c8564b52f79323979960b1eafc915e7ea3789e960a5c92e8c7037420005032e3"
+        },
+        {
+          "path": "evidence/lapis-lazuli/control/before.png",
+          "bytes": 16142,
+          "crc32": "3026c439",
+          "sha256": "eff94d30e178eb506a2b26ff5a1e93d62bfbd1cb58f0c7089e6d9f89983bfe32"
+        },
+        {
+          "path": "evidence/lapis-lazuli/control/held.png",
+          "bytes": 16132,
+          "crc32": "3868eadf",
+          "sha256": "143e691b140bf52a74db7da98a392c4023f85318acb57a8c9df986f08f44e167"
+        },
+        {
+          "path": "evidence/lapis-lazuli/control/replay.lua",
+          "bytes": 414,
+          "crc32": "e1b65c2b",
+          "sha256": "0559a6f5582f8ca86a26c1edd8aa68eff836da990707202aad3457b2994be7e4"
+        },
+        {
+          "path": "evidence/lapis-lazuli/control/trace.ndjson",
+          "bytes": 14765,
+          "crc32": "3ae1cafa",
+          "sha256": "acf7a82ddd01a7e441fcd654ce4448587ab4b00ea1cfc0a59a2c3b097717163c"
+        },
+        {
+          "path": "evidence/lapis-lazuli/input/after.png",
+          "bytes": 16431,
+          "crc32": "d9ca8341",
+          "sha256": "eea2bddf7d4ab262209fcabdeedc6aa9909683dc7d468b190f53bfcb7410c313"
+        },
+        {
+          "path": "evidence/lapis-lazuli/input/before.png",
+          "bytes": 16142,
+          "crc32": "3026c439",
+          "sha256": "eff94d30e178eb506a2b26ff5a1e93d62bfbd1cb58f0c7089e6d9f89983bfe32"
+        },
+        {
+          "path": "evidence/lapis-lazuli/input/held.png",
+          "bytes": 16526,
+          "crc32": "43aa01c9",
+          "sha256": "712666b577ed371ad53abbbef31c82b7593fdfa479d955ab9d870817762f4519"
+        },
+        {
+          "path": "evidence/lapis-lazuli/input/replay.lua",
+          "bytes": 454,
+          "crc32": "f6002155",
+          "sha256": "e0c6eee8682b05755188c871426c77b7485d2a6aea12af029cd7b6432fbd4476"
+        },
+        {
+          "path": "evidence/lapis-lazuli/input/trace.ndjson",
+          "bytes": 16976,
+          "crc32": "be9c5431",
+          "sha256": "35c058118c7762c68a1b79390f77f84e8290e02bd9bfaa4c4d9966b49e282960"
+        },
+        {
+          "path": "evidence/verification.json",
+          "bytes": 292343,
+          "crc32": "7c59c7ce",
+          "sha256": "5ee345c10ef3b94e51e768c6cb5e55fa61f8b8ac54296422d57342708b16112b"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 6573,
+          "crc32": "d6b543ab",
+          "sha256": "e945f44251c184e21352d48b1f98c20d92998c4e46eee0c586bf6c35e7bd2162"
+        },
+        {
+          "path": "originals/두뇌게임q.zip",
+          "bytes": 610397,
+          "crc32": "8d68dbb8",
+          "sha256": "abf9293add5e84471b857c7a402fb5213b128695ab7b5af5bd817a0afe462b22"
+        },
+        {
+          "path": "originals/드래곤나이트_ex.zip",
+          "bytes": 637198,
+          "crc32": "09a1740b",
+          "sha256": "c94d6477792690f014853bb4bec0a9f8b19bb238a070095b5766488ee15fe780"
+        },
+        {
+          "path": "originals/라피스라줄리.zip",
+          "bytes": 1951495,
+          "crc32": "64ba2697",
+          "sha256": "934fa5b9ff41b7aa8d849903439ad69805bc3d5621c7bd78a866038f62a73898"
+        },
+        {
+          "path": "source/dubigame-34.html",
+          "bytes": 48146,
+          "crc32": "c07fb7bf",
+          "sha256": "a825d6030863dd2b657d62a621a95f091643b10e191d5218c8aee49e0296435d"
+        },
+        {
+          "path": "source/dubigame-35.html",
+          "bytes": 46729,
+          "crc32": "81a72eaa",
+          "sha256": "74e7b5425e8339cbe0466412b51be749188323ca72f05b48f682cdda27ac3fc6"
+        },
+        {
+          "path": "source/dubigame-40.html",
+          "bytes": 49228,
+          "crc32": "1b8a344b",
+          "sha256": "6d302bce429fe8674f516a4493e0311fa3964aefb3e18476f2b7fbfeecb19462"
+        },
+        {
+          "path": "source/gamevil-lapis-press.html",
+          "bytes": 95793,
+          "crc32": "710e0d2e",
+          "sha256": "1a4298e57e95aa6af1b5f05443aa7522fa9740a874e487b1a9af4ca1d924dc63"
+        }
+      ]
+    },
+    {
       "id": "ktf-real-soccer-and-master-of-sword",
       "repositoryPath": "research/archives/Dubigame-Real-Soccer-and-Master-of-Sword.zip",
       "bytes": 3800039,
@@ -227116,9 +227494,9 @@
     }
   ],
   "counts": {
-    "archives": 134,
-    "archiveBytes": 2539585355,
-    "fileMembers": 37651,
-    "uniqueMemberHashes": 22779
+    "archives": 136,
+    "archiveBytes": 2543699885,
+    "fileMembers": 37711,
+    "uniqueMemberHashes": 22826
   }
 }

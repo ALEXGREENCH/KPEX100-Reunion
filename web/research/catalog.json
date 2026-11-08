@@ -4,6 +4,52 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "ktf-real-soccer-match-replays",
+      "title": "Real Soccer KTF · матч и повторная проверка установки",
+      "category": "Игры и игровые сборки",
+      "description": "Старт матча Real Soccer 2009 в WIE, трасса установки в ARAM и сравнение двух бюджетов исполнения Real Soccer 2007.",
+      "sources": [
+        {
+          "label": "WIE",
+          "url": "https://github.com/Jun025/wie/tree/1ca15ebf5a3ebc691a680a7854e99a32e75d46f4"
+        },
+        {
+          "label": "ARAM",
+          "url": "https://github.com/mirusu400/aram-core/tree/fea299cba15696ed1460f965b76626d6edab5e03"
+        }
+      ],
+      "repositoryPath": "research/archives/Real-Soccer-KTF-Match-and-Install-Replays.zip",
+      "bytes": 331576,
+      "sha256": "c72ffe80d745cce9a8aa1e26fba33b9b3dff166ad17023e9f2cfef5a4d426033"
+    },
+    {
+      "id": "ktf-dragon-knight-lapis-brain-game",
+      "title": "Dragon Knight EX, Lapis Lazuli и Brain Game Q · KTF",
+      "category": "Игры и игровые сборки",
+      "description": "Три исходных ZIP с побайтным сравнением уже сохранённых JAR, парными прогонами ARAM и проверкой 29 звуков Lapis Lazuli.",
+      "sources": [
+        {
+          "label": "두뇌게임Q",
+          "url": "https://dubigame.tistory.com/34"
+        },
+        {
+          "label": "드래곤나이트 EX",
+          "url": "https://dubigame.tistory.com/35"
+        },
+        {
+          "label": "라피스라줄리",
+          "url": "https://dubigame.tistory.com/40"
+        },
+        {
+          "label": "Пресс-релиз Gamevil",
+          "url": "https://www.newswire.co.kr/newsRead.php?no=271041"
+        }
+      ],
+      "repositoryPath": "research/archives/Dubigame-Dragon-Knight-Lapis-Brain-Game-KTF.zip",
+      "bytes": 3782954,
+      "sha256": "f6109812322a9095cebf9651336b5b4b601fb7c5edf43cb1578b0b2bcd10f009"
+    },
+    {
       "id": "ktf-real-soccer-and-master-of-sword",
       "title": "Real Soccer 2007 и 2009, Master of Sword 3 · KTF",
       "category": "Игры и игровые сборки",
@@ -2723,6 +2769,10 @@
     }
   ],
   "reports": [
+    {
+      "repositoryPath": "doc/ktf-dragon-knight-lapis-brain-game.md",
+      "title": "Dragon Knight EX, Lapis Lazuli и Brain Game Q для KTF"
+    },
     {
       "repositoryPath": "doc/ktf-real-soccer-and-master-of-sword.md",
       "title": "Real Soccer и Master of Sword 3 для KTF"
