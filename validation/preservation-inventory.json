@@ -3,6 +3,540 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "samsung-w420-anycall-games",
+      "repositoryPath": "research/archives/Samsung-SCH-W420-Anycall-Games-and-SMAF.zip",
+      "bytes": 1539576,
+      "sha256": "defd4508f482cabfc885b1e99add6ed996d9547985a936a979fce03182624425",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "audio/bluetooth-janggi/0cbac.mmf",
+          "bytes": 227,
+          "crc32": "446c16fe",
+          "sha256": "0469ddf3620a9151fbc02be6bbea315648257eeec9caac716b93fd5d5edc6367"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0cc8f.mmf",
+          "bytes": 482,
+          "crc32": "5e609a50",
+          "sha256": "07de1cac64f53496734fbb125627c47ec1b6ad6dad4fb6239ea14a9eae313052"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0ce71.mmf",
+          "bytes": 1136,
+          "crc32": "5b1e06f8",
+          "sha256": "9161146352c87adeb3a5830039908b3458c74240adace8fcfba646b8f1df0f28"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0d2e1.mmf",
+          "bytes": 315,
+          "crc32": "eedb5bd0",
+          "sha256": "77f8a09ba26cd368c99a4fdd06c1069766764df5ad5d2c384f1029db1df63fba"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0d41c.mmf",
+          "bytes": 471,
+          "crc32": "f9e09b97",
+          "sha256": "3b34bbbaa44b56f318a55eac79845cebb5ef082d7b6120b6742f3fc6a03a691f"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0d5f3.mmf",
+          "bytes": 826,
+          "crc32": "56233bc0",
+          "sha256": "b8704f2b45bbfdc4fd9b13abd97693fca7ac9289aaf497ff9073dbff29b53fe8"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0d92d.mmf",
+          "bytes": 239,
+          "crc32": "056a7861",
+          "sha256": "58098b6463348b459dd35c59f131945a277eeca99c4a942e3ddb08891dcf979d"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0da1c.mmf",
+          "bytes": 240,
+          "crc32": "3a945c9f",
+          "sha256": "3820c44aa6c897218c84af8391b2c8169a6a2a3247f18178ab6d3bf27f714659"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0db0c.mmf",
+          "bytes": 2893,
+          "crc32": "046d4ec3",
+          "sha256": "a73b3f561777d24be03f3528346ac5bcadca1c1fffb2f7104c08c927b28e6370"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0e659.mmf",
+          "bytes": 315,
+          "crc32": "f38457f9",
+          "sha256": "80fcbd9644c4f4389f69f00b1cb6687fd5b00a448c3c861b8eaa721994866ecc"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0e794.mmf",
+          "bytes": 3374,
+          "crc32": "8f1033ed",
+          "sha256": "6f0d17cc3e26c324336fb61dac9cfbee1b8e46139b78a06ca00556af06b1c399"
+        },
+        {
+          "path": "audio/bluetooth-janggi/0f4c2.mmf",
+          "bytes": 1244,
+          "crc32": "334f20eb",
+          "sha256": "09738caba5f80fd1e6ac99e5bebe3b6026c8fd26a3da3f5c9e59ead615e67bb7"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/3f0f4.mmf",
+          "bytes": 2128,
+          "crc32": "0ea23d77",
+          "sha256": "27d655f83b1f2a7da0a4640554708fb86f013fb37c2180d15321d156afa46734"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/3f944.mmf",
+          "bytes": 478,
+          "crc32": "0ca1892c",
+          "sha256": "a228adcb1fd06d315d8294cda7dd15a5577762b353e309b8bc48be81e07341bd"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/3fb22.mmf",
+          "bytes": 971,
+          "crc32": "8a7f74b4",
+          "sha256": "95e5d93bb98bd264bddeb69a6007c0492c70462dee764970af35cc2b5507f4e6"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/3feed.mmf",
+          "bytes": 1471,
+          "crc32": "7b52328d",
+          "sha256": "5bd041f3d98264c8f950db12059c0579a3ccf3837d4e466ea896f7fe6323c7a2"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/404ac.mmf",
+          "bytes": 312,
+          "crc32": "d629a001",
+          "sha256": "6e28f03a5c0dca7865a22701dbf09f221e86bb3e4a8bc81a39ea12e4b52a75ea"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/405e4.mmf",
+          "bytes": 299,
+          "crc32": "7b856e5b",
+          "sha256": "f3588046fa8fd4fd28a54053387f898ffdaf2133812bb8ecbe66111482befac3"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/4070f.mmf",
+          "bytes": 1304,
+          "crc32": "27b37315",
+          "sha256": "5a2bb066bfb5ccafa0f31aa7d2505b3f385eeb0766b69edf4eebb8500019f905"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/40c27.mmf",
+          "bytes": 339,
+          "crc32": "9895929c",
+          "sha256": "a09e16a154d9c705c7933c0c1940a1c52279f27753c9201f5c3aba63cc7138eb"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/40d7a.mmf",
+          "bytes": 349,
+          "crc32": "6c43958c",
+          "sha256": "8699e61493b0bc696807954ef9e4ec1b065b09e599d2420dcc59c60e1f1db5ec"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/40ed7.mmf",
+          "bytes": 1308,
+          "crc32": "0d9b61a8",
+          "sha256": "51a10e02e0db53706713485341fea11ba4a83826f7093f7c81a6679631724525"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/413f3.mmf",
+          "bytes": 3101,
+          "crc32": "280fc818",
+          "sha256": "312859c99eb2d2edb5c801c038d8113e2a2e0db0bd29870b486487bcd9681ad5"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/42010.mmf",
+          "bytes": 2634,
+          "crc32": "62d3ccc6",
+          "sha256": "3c444ccab56f168387f3513426539e8059f959319c8e31769d0e97bb02104c0b"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/42a5a.mmf",
+          "bytes": 1311,
+          "crc32": "4e62829a",
+          "sha256": "3b1dbffbc9f2c85417ff827b173f8c2bf3bc79b713105e9b8c981041d0017887"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/42f79.mmf",
+          "bytes": 946,
+          "crc32": "f8a24e73",
+          "sha256": "844287ed769757af8fe98edcee6915487a3228825998a04d9d38df5f2e596777"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/4332b.mmf",
+          "bytes": 163,
+          "crc32": "f2666cd1",
+          "sha256": "ed64c47bf0fad86f85b58839399c8c649357d7b03e334c63df47f5e24d5bdda1"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/433ce.mmf",
+          "bytes": 993,
+          "crc32": "edec5eaf",
+          "sha256": "32d0b2a538cdfcaaf45e05d7557ff81f4e8014e94a1e5fa3efebd20f7083aee3"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/437af.mmf",
+          "bytes": 1071,
+          "crc32": "29e1fad7",
+          "sha256": "476d9c4b014730f73f74efc436365567f64b68f87f8f1bab739afed0dfb5d679"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/43bde.mmf",
+          "bytes": 824,
+          "crc32": "03d33932",
+          "sha256": "d2f7ec62967dc0c2a9038c20e05637c7122466ead510f732194ad713189b0833"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/43f16.mmf",
+          "bytes": 992,
+          "crc32": "3a240025",
+          "sha256": "5da803151b374d1eaef228d920b29d5b27fd58bd6f08a743340fa58012277bc1"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/442f6.mmf",
+          "bytes": 746,
+          "crc32": "6eddf7b9",
+          "sha256": "fd4211e7949c9a5c638d34b23c332b91f38f98017fc9f0d098ff653dfba870d1"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/445e0.mmf",
+          "bytes": 992,
+          "crc32": "6de97ffe",
+          "sha256": "9c32fa682d80fc5bbbc1708dd6e4d4f79b5b70d14b2849ee7084feb376a84df5"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/449c0.mmf",
+          "bytes": 899,
+          "crc32": "3160d005",
+          "sha256": "17f6acd27a6af788693d9fc4c2e28cf495a346af62f346869d0dc258e7da0c40"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/44d43.mmf",
+          "bytes": 2665,
+          "crc32": "75a2f494",
+          "sha256": "4a7f8d4fb2f477b98d453131e5448a72d0072442640b9c6ba136629ca75e8fb0"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/457ac.mmf",
+          "bytes": 757,
+          "crc32": "adfe3b46",
+          "sha256": "4648537c0218b2095701b40a4e79a1b7782d8821f250da64b11981c6f04b9fde"
+        },
+        {
+          "path": "audio/mini-game-heaven-anycall/45aa1.mmf",
+          "bytes": 505,
+          "crc32": "8478a03c",
+          "sha256": "889c5be8978e4674bfa7f50e4acc0a025a93741930819423bd0a7d64ab66f335"
+        },
+        {
+          "path": "audio/nom-2/43d94.mmf",
+          "bytes": 681,
+          "crc32": "4af4c360",
+          "sha256": "13f2d4fe71315881f53fd0a09e18536e6522f1441008b6519cee1026f6adf3ad"
+        },
+        {
+          "path": "audio/nom-2/4403d.mmf",
+          "bytes": 487,
+          "crc32": "3fad85e1",
+          "sha256": "7a7a647ee7eb54e9dc4d3c128dbd73458c06a69227262a0e0c10ce0c2e323c4b"
+        },
+        {
+          "path": "audio/nom-2/44224.mmf",
+          "bytes": 2923,
+          "crc32": "17cf73aa",
+          "sha256": "202b6e313515e04f40fb08e68976d1b0629c7583c7881dd7f07846463c20cd7e"
+        },
+        {
+          "path": "audio/nom-2/44d8f.mmf",
+          "bytes": 1504,
+          "crc32": "b7f50324",
+          "sha256": "11c30e495bd8311bdb370f8aa0bb3557035d8894a08e4599f7c92432f5fd1f0d"
+        },
+        {
+          "path": "audio/nom-2/4536f.mmf",
+          "bytes": 1447,
+          "crc32": "0b97261a",
+          "sha256": "d001ffb2dedf0ee53555d5dbd526a6130b7d9816d79b0eb71d5a9f91460f22a2"
+        },
+        {
+          "path": "audio/nom-2/45916.mmf",
+          "bytes": 8947,
+          "crc32": "710bab4e",
+          "sha256": "6a0120863625354ed4a0a07be55f8b29d65dc9891390ee3bb10c6206ca6c4fc7"
+        },
+        {
+          "path": "audio/nom-2/47c09.mmf",
+          "bytes": 2084,
+          "crc32": "923ca0ba",
+          "sha256": "8ef9340d590fb22b55fec9ad1c6a048ae8cddc1ee703d2e0aa173c0486a41341"
+        },
+        {
+          "path": "audio/nom-2/4842d.mmf",
+          "bytes": 1911,
+          "crc32": "893f05f6",
+          "sha256": "0125f5fabecb0f2491f58a5284701ac27e9ee2eced3627bcc855e030db405de2"
+        },
+        {
+          "path": "audio/nom-2/48ba4.mmf",
+          "bytes": 1839,
+          "crc32": "0dcba2ce",
+          "sha256": "c4ae2827bb1d8b49c343b86fb52ad300218c7dec210f63a8ed9dd21083421f44"
+        },
+        {
+          "path": "audio/nom-2/492d3.mmf",
+          "bytes": 1778,
+          "crc32": "cc2e4d2f",
+          "sha256": "320467c950a0a1e69e9c7a0e050a8544bff5ad0b1e7e9c341c65388df634a681"
+        },
+        {
+          "path": "audio/nom-2/499c5.mmf",
+          "bytes": 1394,
+          "crc32": "b9a9804d",
+          "sha256": "7ad5b4aef27925299bf7d2b9d32868f119cafcd8b7014236cca415ad264094f1"
+        },
+        {
+          "path": "audio/nom-2/49f37.mmf",
+          "bytes": 1951,
+          "crc32": "3cff0d72",
+          "sha256": "58f17bfe4a43588b47370f9d6489d743199e66fc673b5fca86975b5250b44c02"
+        },
+        {
+          "path": "audio/nom-2/4a6d6.mmf",
+          "bytes": 2102,
+          "crc32": "344264bb",
+          "sha256": "65a0c83325ab294ebf12c77a3262934de3259d8bf03374b6ec827d13d219aee1"
+        },
+        {
+          "path": "audio/nom-2/4af0c.mmf",
+          "bytes": 1626,
+          "crc32": "66f64dd6",
+          "sha256": "c89462ca96425bf4df906361c5c4a0dea78349b90b784a877124a5ace9f849f6"
+        },
+        {
+          "path": "audio/nom-2/4b566.mmf",
+          "bytes": 270,
+          "crc32": "675ba66a",
+          "sha256": "905a595b492971ad0d35cd95dcc75114ddacd46a6bc622d0e52ce97e4869cba9"
+        },
+        {
+          "path": "audio/nom-2/4b674.mmf",
+          "bytes": 925,
+          "crc32": "a9ca1a17",
+          "sha256": "8b676f249ec2d2d05bf4299beae95249afb424e182e629097e7a35eb98f58e85"
+        },
+        {
+          "path": "audio/nom-2/4ba11.mmf",
+          "bytes": 745,
+          "crc32": "9d010e1f",
+          "sha256": "d3cf83906d87ab4d638bd4e87764622a40e9699590e6f46c12810c0343448f41"
+        },
+        {
+          "path": "audio/nom-2/4bcfa.mmf",
+          "bytes": 4013,
+          "crc32": "4c3b2ae8",
+          "sha256": "8a963dc1d0abd00629093801469fb281fd2776b6feb922cbb369d43e01b00e89"
+        },
+        {
+          "path": "audio/nom-2/4cca7.mmf",
+          "bytes": 1923,
+          "crc32": "1b64a228",
+          "sha256": "c46aa8013cd93069df4bf54cf5e2793c98880fd0b74d931fbbf02162e5258360"
+        },
+        {
+          "path": "audio/nom-2/4d42a.mmf",
+          "bytes": 4054,
+          "crc32": "f1710cde",
+          "sha256": "d16e71ec7d0018018192ec1395c8cd132a9f34bb1ea01e1792a8bc34ef928c5b"
+        },
+        {
+          "path": "audio/nom-2/4e400.mmf",
+          "bytes": 1326,
+          "crc32": "ee5df1dc",
+          "sha256": "5196340deb47288a5b30468e76da0a3753fe290aaf7c382d775f63066ceea95d"
+        },
+        {
+          "path": "audio/nom-2/4e92e.mmf",
+          "bytes": 4232,
+          "crc32": "84ed95c4",
+          "sha256": "5e3b1528a93a966b35023968afd5657fb2b75ca31a77dff92a6b97860aeff6a4"
+        },
+        {
+          "path": "derivatives/audio/mini-game-heaven-anycall/3f0f4.wav",
+          "bytes": 198668,
+          "crc32": "9e8cb569",
+          "sha256": "c269ca7d4e5b9cba4adf77b455f0239e12dc7259d313b93b2eef92bd4893025c"
+        },
+        {
+          "path": "derivatives/audio/mini-game-heaven-anycall/40ed7.wav",
+          "bytes": 3911840,
+          "crc32": "5fd5ad38",
+          "sha256": "0d47c1536289c375bf45a8961e9242936ae8a58e9d1aeafd02ec3690c8bc6942"
+        },
+        {
+          "path": "evidence/Bluetooth-Janggi/stderr.txt",
+          "bytes": 85,
+          "crc32": "1385da67",
+          "sha256": "1cdbbcf04f03a15cb89f8318f0b3e86ba202ef9983635bfae78935044ae05237"
+        },
+        {
+          "path": "evidence/Com2uS-trace/opening.png",
+          "bytes": 825,
+          "crc32": "e4ded667",
+          "sha256": "dd7eabc020b8106e66e356eed5c3a0aca66302f8eded530cfd66985a4d8de8e8"
+        },
+        {
+          "path": "evidence/Com2uS-trace/stderr.txt",
+          "bytes": 3781,
+          "crc32": "bfb21565",
+          "sha256": "05dd2d1ce93c6cfc5157f7fc799a7a192496e9bcac8e2fb667594be31d3906dd"
+        },
+        {
+          "path": "evidence/Com2uS-trace/stdout.ndjson",
+          "bytes": 4709,
+          "crc32": "6d3ec27e",
+          "sha256": "71cbe207d2826b8b7dac08c77f7d1c506b7ff9db9b01306b776b1ad8d0841b38"
+        },
+        {
+          "path": "evidence/Com2uS-unidentified-oem/opening.png",
+          "bytes": 825,
+          "crc32": "e4ded667",
+          "sha256": "dd7eabc020b8106e66e356eed5c3a0aca66302f8eded530cfd66985a4d8de8e8"
+        },
+        {
+          "path": "evidence/Com2uS-unidentified-oem/stdout.ndjson",
+          "bytes": 4709,
+          "crc32": "6d3ec27e",
+          "sha256": "71cbe207d2826b8b7dac08c77f7d1c506b7ff9db9b01306b776b1ad8d0841b38"
+        },
+        {
+          "path": "evidence/Com2uS-unidentified/stderr.txt",
+          "bytes": 319,
+          "crc32": "b9cc59a0",
+          "sha256": "b4ae98c8164458aa15afe1ad7eb927599d48e5e07a62f7ed0b33dedbf73d9b23"
+        },
+        {
+          "path": "evidence/Com2uS-unidentified/stdout.ndjson",
+          "bytes": 1027,
+          "crc32": "9c2bc795",
+          "sha256": "8b6534ade862bfabfa2a8dab675761999f0b13a2f76547590ef538bc8e4495fd"
+        },
+        {
+          "path": "evidence/Gamevil-Nom-2-oem/stderr.txt",
+          "bytes": 383,
+          "crc32": "af07648f",
+          "sha256": "cacadcfbbaa62af4297bbc43030f1a95b64fad504702ec5c08a70a78edabce54"
+        },
+        {
+          "path": "evidence/Gamevil-Nom-2/stderr.txt",
+          "bytes": 319,
+          "crc32": "b9cc59a0",
+          "sha256": "b4ae98c8164458aa15afe1ad7eb927599d48e5e07a62f7ed0b33dedbf73d9b23"
+        },
+        {
+          "path": "evidence/Gamevil-Nom-2/stdout.ndjson",
+          "bytes": 1021,
+          "crc32": "2c95522e",
+          "sha256": "5106c0d8175d716d1fd50d56b58613d2b94002e6c7580c37e77d049e44b55b8a"
+        },
+        {
+          "path": "evidence/opening.lua",
+          "bytes": 60,
+          "crc32": "fe70f584",
+          "sha256": "cd851b6e7a92d238ed178cc863ea96557c18bb640b81ccab211362ef7db2030b"
+        },
+        {
+          "path": "evidence/runtime.txt",
+          "bytes": 535,
+          "crc32": "eb8d21df",
+          "sha256": "81233641cb53aeb1a0e756237d935901973be828d9e8afb191e4da12e6dec65a"
+        },
+        {
+          "path": "evidence/verification.json",
+          "bytes": 56113,
+          "crc32": "f03dcece",
+          "sha256": "f8aad3221a00f14f8a0b5a2e50e6fc2483f5551514f0beeb35d891420a4bf1ff"
+        },
+        {
+          "path": "games/bluetooth-janggi.eads",
+          "bytes": 280872,
+          "crc32": "744425fd",
+          "sha256": "1ec9dddb22fcb4b37dd7f3f5b0b35756d26ce50d9273d012bc866ec4d62172d8"
+        },
+        {
+          "path": "games/mini-game-heaven-anycall.eads",
+          "bytes": 298328,
+          "crc32": "52bdea01",
+          "sha256": "ce0b74b65888f24aa0cd55e3cd4d9a4409145a0442017258b0f78d381f14f0d4"
+        },
+        {
+          "path": "games/nom-2.eads",
+          "bytes": 394496,
+          "crc32": "d38089f3",
+          "sha256": "050d6aca810d2850fd1c49857824714ec6d95760a9b8ed96c45969250ae47350"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 14183,
+          "crc32": "be0453f8",
+          "sha256": "561d70d1f3fd47908376fc441f4ebc804cd9a7c94ea4c809d6ee138954b3758f"
+        }
+      ]
+    },
+    {
+      "id": "mado-gvm-prototype",
+      "repositoryPath": "research/archives/Mado-GVM-Prototype-2006.zip",
+      "bytes": 1552937,
+      "sha256": "48409b46f82daeb43dcd13615aaaabd6c874ad54845674f250ce43307026a937",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derivatives/page-245.png",
+          "bytes": 299483,
+          "crc32": "779702cd",
+          "sha256": "da39553db02aa2751fd9065e9ae7acfc16adf8bfe7a90aeb1381e432226055a6"
+        },
+        {
+          "path": "derivatives/page-246.png",
+          "bytes": 253144,
+          "crc32": "ec2d46ae",
+          "sha256": "5d1670142996dd7004a8087976bc01f88f05db86cdbfd577d388281ad6dab3a9"
+        },
+        {
+          "path": "derivatives/page-247.png",
+          "bytes": 282866,
+          "crc32": "8dd095ac",
+          "sha256": "c65d1625aa47fa70d4215c6e8f7b0ab96e5dc2a932f1f5f85e1fa0966e1e9a42"
+        },
+        {
+          "path": "evidence/provenance.json",
+          "bytes": 1026,
+          "crc32": "9b244159",
+          "sha256": "d18a7aff6bbc3c4a4a08f8c948bfbe4df6e9627b0a68cd48bb460866787368bd"
+        },
+        {
+          "path": "http/kci.headers",
+          "bytes": 348,
+          "crc32": "eb27cd32",
+          "sha256": "8f11e81d3174e1fcd63e6ca0f1a7a1ebf652b6b0beb6f58536c1052b115e451d"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 1059,
+          "crc32": "8433d06f",
+          "sha256": "7ea8e6b20ef5907344619cd8ecba95fcec0febdf68b20fac5d026e51abb0b907"
+        },
+        {
+          "path": "originals/Mado-GVM-Prototype-2006.pdf",
+          "bytes": 882426,
+          "crc32": "6ca3e899",
+          "sha256": "b9bf3e54daa1d8593b65f6cbaf3a9eec319536cfca1120360407365d736b7338"
+        }
+      ]
+    },
+    {
       "id": "mdream-gvm-catalogue-and-demos",
       "repositoryPath": "research/archives/MDream-GVM-Game-Catalogue-and-Demos.zip",
       "bytes": 3361687,
@@ -217951,9 +218485,9 @@
     }
   ],
   "counts": {
-    "archives": 127,
-    "archiveBytes": 2524837299,
-    "fileMembers": 36134,
-    "uniqueMemberHashes": 21296
+    "archives": 129,
+    "archiveBytes": 2527929812,
+    "fileMembers": 36220,
+    "uniqueMemberHashes": 21379
   }
 }

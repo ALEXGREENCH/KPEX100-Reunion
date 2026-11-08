@@ -24,29 +24,29 @@
 
 ## Карта конкретных целей
 
-| Устройство / прошивка                   | Игры или комплект                                             | Формат / способ сохранения                 | Текущий результат                                                           |
-| --------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------------------- |
-| Nokia 3410, NHM-2 5.46                  | Munkiki’s Castles 1.06                                        | Java ME JAR из gzip-потоков сервисного EXE | **Извлечено и проверено**, 15 упаковок / 14 наборов файлов одной игры       |
-| Nokia 2100, 5.49                        | Snake II, Space Impact, Link5                                 | Нативный код в `2100.fls`                  | Автор Nokstalgia документирует запуск игр                                   |
-| Nokia 3310, NHM-5 6.39                  | Snake II, Space Impact, Bantumi, Pairs II                     | Нативный код и ресурсы MCU/PPM/PMM         | Есть карты кода, извлечение ресурсов и C-реконструкции                      |
-| Nokia 3210 / 5110                       | Snake, Memory, Rotation / Snake, Memory, Logic                | Нативные игры                              | Есть модельные исследования и реконструкции                                 |
-| Nokia S40 DCT4 / BB5                    | Предустановленные JAR, темы, Flash Lite                       | CNT / файловая система / FAT16             | Готовый массовый извлекатель `predeftool`; ограничения зависят от поколения |
-| Samsung SCH-W830 DL21 / DA18, W860 DA06 | MinigameQVGAOEM                                               | ARM Thumb EADS                             | Извлечены два разных образа. Оба прошли тест ARAM                           |
-| Samsung SCH-W770 DA05                   | Minigame WQVGA, Sudoku WQVGA, Pangya                          | ARM Thumb EADS                             | Все три извлечены. Minigame прошла тест ARAM                                |
-| Samsung SCH-W210 / W240                 | Bomb Link, у W240 также Bluetooth Stony 2 и Janggi            | ARM Thumb EADS                             | Bomb Link совпадает побайтно на обеих моделях и прошла тест ARAM            |
-| Samsung SGH-A800                        | Fortress, Space War, X-Flighter                               | Пока не установлен                         | Названия подтверждены руководством; извлечённого образа нет                 |
-| Samsung SGH-E700                        | Honey Ball, Go! Hamster, Bowling                              | Пока не установлен                         | Набор подтверждён руководством Orange                                       |
-| Samsung SCH-W420 CD16                   | Nom 2, Bluetooth Janggi и запись с URL Com2uS                 | ARM Thumb EADS                             | Три записи извлечены из точного DAT, запуск не проверен                     |
-| Sanyo SCP-5300 V1036SP                  | Ms. PAC-MAN DEMO, Astrosmash, JAMDAT Bowling                  | Java ME MIDP 1.0 / CLDC 1.0                | Три JAR извлечены и проверены по CRC и манифестам                           |
-| LG CYON SH150A, SW15A712_00             | Space Commando, Zoo Zoo Club, Mobile Bowling, Grand Golf      | KDZ, формат игр неизвестен                 | Игры перечислены в руководстве. Для KDZ пока есть карточка и старый URL     |
-| Panasonic P903i / P903iX                | Dirge of Cerberus: Lost Episode, предустановленная демоверсия | DoJa: JAR + JAM + SP + внешние ресурсы     | **Архив демоверсии проверен**; предустановка подтверждена Square Enix       |
-| Panasonic P-01A                         | Kingdom Hearts coded: Olympus Coliseum — Side Episode         | i-appli / MascotCapsule eruption           | Предустановка подтверждена Square Enix; есть отчёт об извлечении            |
-| Sony Ericsson W53S                      | Metal Gear Solid Mobile trial                                 | BREW                                       | Сохранение предустановленной версии описано участниками проекта             |
-| Panasonic P-06C                         | Rockman.EXE Phantom / Legend of Network                       | i-appli и файловая система телефона        | Полные игры восстановлены другим проектом; это пользовательские загрузки    |
-| Samsung YP-T8, 1.38 FR                  | Hurdle, Hextris, PipePlus, Dart                               | XEOVIA / `.XOV`                            | **Проверен runtime в ROM**; отдельные XOV ещё не извлечены                  |
-| Oracom UB-880, UB-890, UB-950, UB-950M  | Aiolos                                                        | GNEX SGS v4                                | Из FNT извлечены две сборки, обе доходят до первого уровня в Reunion        |
-| Samsung YH-J70                          | ClearScreen, Othello, Omok, Tetris, Chips                     | Движок пока не установлен                  | Названия из руководства производителя                                       |
-| iRiver U10 / clix                       | LogJam и другие Flash-игры                                    | SWF из отдельных комплектов                | **LogJam скачан и проверен**; это не извлечение из ROM                      |
+| Устройство / прошивка                   | Игры или комплект                                             | Формат / способ сохранения                 | Текущий результат                                                                |
+| --------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- |
+| Nokia 3410, NHM-2 5.46                  | Munkiki’s Castles 1.06                                        | Java ME JAR из gzip-потоков сервисного EXE | **Извлечено и проверено**, 15 упаковок / 14 наборов файлов одной игры            |
+| Nokia 2100, 5.49                        | Snake II, Space Impact, Link5                                 | Нативный код в `2100.fls`                  | Автор Nokstalgia документирует запуск игр                                        |
+| Nokia 3310, NHM-5 6.39                  | Snake II, Space Impact, Bantumi, Pairs II                     | Нативный код и ресурсы MCU/PPM/PMM         | Есть карты кода, извлечение ресурсов и C-реконструкции                           |
+| Nokia 3210 / 5110                       | Snake, Memory, Rotation / Snake, Memory, Logic                | Нативные игры                              | Есть модельные исследования и реконструкции                                      |
+| Nokia S40 DCT4 / BB5                    | Предустановленные JAR, темы, Flash Lite                       | CNT / файловая система / FAT16             | Готовый массовый извлекатель `predeftool`; ограничения зависят от поколения      |
+| Samsung SCH-W830 DL21 / DA18, W860 DA06 | MinigameQVGAOEM                                               | ARM Thumb EADS                             | Извлечены два разных образа. Оба прошли тест ARAM                                |
+| Samsung SCH-W770 DA05                   | Minigame WQVGA, Sudoku WQVGA, Pangya                          | ARM Thumb EADS                             | Все три извлечены. Minigame прошла тест ARAM                                     |
+| Samsung SCH-W210 / W240                 | Bomb Link, у W240 также Bluetooth Stony 2 и Janggi            | ARM Thumb EADS                             | Bomb Link совпадает побайтно на обеих моделях и прошла тест ARAM                 |
+| Samsung SGH-A800                        | Fortress, Space War, X-Flighter                               | Пока не установлен                         | Названия подтверждены руководством; извлечённого образа нет                      |
+| Samsung SGH-E700                        | Honey Ball, Go! Hamster, Bowling                              | Пока не установлен                         | Набор подтверждён руководством Orange                                            |
+| Samsung SCH-W420 CD16                   | Nom 2, Bluetooth Janggi и Mini Game Heaven Anycall            | ARM Thumb EADS                             | Три записи извлечены из точного DAT. [Проверка](samsung-w420-minigame-heaven.md) |
+| Sanyo SCP-5300 V1036SP                  | Ms. PAC-MAN DEMO, Astrosmash, JAMDAT Bowling                  | Java ME MIDP 1.0 / CLDC 1.0                | Три JAR извлечены и проверены по CRC и манифестам                                |
+| LG CYON SH150A, SW15A712_00             | Space Commando, Zoo Zoo Club, Mobile Bowling, Grand Golf      | KDZ, формат игр неизвестен                 | Игры перечислены в руководстве. Для KDZ пока есть карточка и старый URL          |
+| Panasonic P903i / P903iX                | Dirge of Cerberus: Lost Episode, предустановленная демоверсия | DoJa: JAR + JAM + SP + внешние ресурсы     | **Архив демоверсии проверен**; предустановка подтверждена Square Enix            |
+| Panasonic P-01A                         | Kingdom Hearts coded: Olympus Coliseum — Side Episode         | i-appli / MascotCapsule eruption           | Предустановка подтверждена Square Enix; есть отчёт об извлечении                 |
+| Sony Ericsson W53S                      | Metal Gear Solid Mobile trial                                 | BREW                                       | Сохранение предустановленной версии описано участниками проекта                  |
+| Panasonic P-06C                         | Rockman.EXE Phantom / Legend of Network                       | i-appli и файловая система телефона        | Полные игры восстановлены другим проектом; это пользовательские загрузки         |
+| Samsung YP-T8, 1.38 FR                  | Hurdle, Hextris, PipePlus, Dart                               | XEOVIA / `.XOV`                            | **Проверен runtime в ROM**; отдельные XOV ещё не извлечены                       |
+| Oracom UB-880, UB-890, UB-950, UB-950M  | Aiolos                                                        | GNEX SGS v4                                | Из FNT извлечены две сборки, обе доходят до первого уровня в Reunion             |
+| Samsung YH-J70                          | ClearScreen, Othello, Omok, Tetris, Chips                     | Движок пока не установлен                  | Названия из руководства производителя                                            |
+| iRiver U10 / clix                       | LogJam и другие Flash-игры                                    | SWF из отдельных комплектов                | **LogJam скачан и проверен**; это не извлечение из ROM                           |
 
 Источники и ограничения каждой группы приведены ниже. Сводка не приравнивает
 сообщение о запуске меню к прохождению всех игр до конца.
@@ -199,14 +199,14 @@ SHA-256 `c72e381ab9a29313c9e52876db314dd0285cdf438f5f57aa9b33c12cc959e706`).
 | `0x1210da4`    | `ADS2_AppMgr`   |             258 076 | Менеджер приложений                                                                                                                               |
 | `0x124fdf0`    | `ADS2_DlMgr`    |             227 100 | Менеджер загрузок                                                                                                                                 |
 | `0x128753c`    | `Title(Main)`   |             394 496 | **Nom 2 (놈투)**. В теле есть `External World Contact Game` и URL Gamevil. [Релиз разработчика](https://www.newswire.co.kr/newsRead.php?no=46219) |
-| `0x12e7a3c`    | `Title(Main)`   |             298 328 | Точное название не установлено. В теле есть `ktf.com2us.com/MHTML/mini.asp`.                                                                      |
+| `0x12e7a3c`    | `Title(Main)`   |             298 328 | **Mini Game Heaven / 미니게임천국, выпуск Anycall**. [Строки и звуки из образа](samsung-w420-minigame-heaven.md).                                 |
 | `0x13307ac`    | `블루투스_장기` |             280 872 | **Bluetooth Janggi**. Название декодируется из CP949.                                                                                             |
 
 Все пять записей имеют границы внутри DAT, раздельные диапазоны памяти для
 кода и BSS и Thumb-пролог `00 b5`. Извлечённые записи сохранены с исходными
 48-байтовыми заголовками. Для Janggi учтено имя CP949. Опубликованная
-версия парсера ARAM требует ASCII. Зависимости от API телефона и запуск не
-проверялись. [Хеши и диапазоны извлечения](../validation/phone-firmware-20261105-extractions.json).
+версия парсера ARAM требует ASCII. Прогоны Nom 2 и Mini Game Heaven пока
+остановились до первого игрового кадра. [Хеши и диапазоны извлечения](../validation/phone-firmware-20261105-extractions.json) · [Проверка запуска](samsung-w420-minigame-heaven.md).
 
 В том же DAT есть `SKT_GVM://` на 41 726 820 и 44 240 308 и
 `application/x-gnex-sgs` на 53 856 708, 56 027 512 и 56 044 856. Эти

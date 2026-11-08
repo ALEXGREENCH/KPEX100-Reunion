@@ -4,6 +4,36 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "samsung-w420-anycall-games",
+      "title": "Samsung SCH-W420 · Mini Game Heaven Anycall, Nom 2 и Janggi",
+      "category": "Игры и игровые сборки",
+      "description": "Три исходных EADS из CD16, подтверждение версии Mini Game Heaven для Anycall и 59 звуков SMAF с проверкой CRC16.",
+      "sources": [
+        {
+          "label": "Оригинальная прошивка SCH-W420 CD16",
+          "url": "https://archive.org/download/gt-b-7722_20250528/SCH-W420.zip"
+        }
+      ],
+      "repositoryPath": "research/archives/Samsung-SCH-W420-Anycall-Games-and-SMAF.zip",
+      "bytes": 1539576,
+      "sha256": "defd4508f482cabfc885b1e99add6ed996d9547985a936a979fce03182624425"
+    },
+    {
+      "id": "mado-gvm-prototype",
+      "title": "마도전기 · мобильный прототип Mado на GVM",
+      "category": "Документация и инструменты",
+      "description": "Оригинальная статья 2006 года и проверенные кадры ПК-версии, мобильного боя и коридора. Есть описание реализации для GVM.",
+      "sources": [
+        {
+          "label": "Оригинальная статья KCI",
+          "url": "https://journal.kci.go.kr/jksci/archive/articlePdf?artiId=ART001176424&download=1"
+        }
+      ],
+      "repositoryPath": "research/archives/Mado-GVM-Prototype-2006.zip",
+      "bytes": 1552937,
+      "sha256": "48409b46f82daeb43dcd13615aaaabd6c874ad54845674f250ce43307026a937"
+    },
+    {
       "id": "mdream-gvm-catalogue-and-demos",
       "title": "MDream · каталог GVM и демонстрации игр",
       "category": "Wayback и форумы",
@@ -2578,6 +2608,14 @@
     }
   ],
   "reports": [
+    {
+      "repositoryPath": "doc/samsung-w420-minigame-heaven.md",
+      "title": "Игры и звуки Anycall из Samsung SCH-W420"
+    },
+    {
+      "repositoryPath": "doc/mado-gvm-prototype.md",
+      "title": "Мобильный прототип Mado на GVM"
+    },
     {
       "title": "Ранние игры MDream для GVM и демонстрация Moon Patrol",
       "repositoryPath": "doc/mdream-gvm-catalogue-and-demos.md"
