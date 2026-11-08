@@ -3,6 +3,1467 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "mdream-gvm-catalogue-and-demos",
+      "repositoryPath": "research/archives/MDream-GVM-Game-Catalogue-and-Demos.zip",
+      "bytes": 3361687,
+      "sha256": "00ccbfe37b93bfc216e648457258f35ee24acb11d12270ae0a0f4bb33e4d2990",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/avm1.json",
+          "bytes": 8746,
+          "crc32": "7af46999",
+          "sha256": "e006b373d9ec6b322efcdde44042e47a4852461ad5bf46a4b961b82360867759"
+        },
+        {
+          "path": "evidence/moonpatrol-before.png",
+          "bytes": 19890,
+          "crc32": "b44e4b4d",
+          "sha256": "15fcb5b0566fbecae0c627451a77d35d737531ecba0f7ab1182edd9c4d9ccec4"
+        },
+        {
+          "path": "evidence/moonpatrol-click-1.png",
+          "bytes": 19966,
+          "crc32": "bf21922d",
+          "sha256": "d4eca4c90d410c327e9cc6a8485d4879f4d4f87b69132bea426787b273da5e64"
+        },
+        {
+          "path": "evidence/moonpatrol-click-2.png",
+          "bytes": 20098,
+          "crc32": "2cc820d4",
+          "sha256": "4384039f5b496e52627b97fdfc8221f140ee7d7df1883b031a0b5ab8ac058f8a"
+        },
+        {
+          "path": "evidence/moonpatrol-contact.png",
+          "bytes": 9355,
+          "crc32": "d38e6bda",
+          "sha256": "d7c7bde2ead575a7cdde46cb30cee0c9e9414e10adbfd59ffa983085ddd538d7"
+        },
+        {
+          "path": "evidence/moonpatrol-preview.json",
+          "bytes": 240,
+          "crc32": "69a02d7d",
+          "sha256": "624696e9abeb0abf8d47e2154082f0a4f94186570fc8bc27b837fee6af22e74e"
+        },
+        {
+          "path": "evidence/originals.json",
+          "bytes": 53136,
+          "crc32": "d86ac196",
+          "sha256": "c10484823e42546d141a643a6f83d12bcfbe6d565dcdc99cc053fdaa21d89fa3"
+        },
+        {
+          "path": "evidence/preview-index.html",
+          "bytes": 460,
+          "crc32": "146ff283",
+          "sha256": "a0478b274ebf791ef8e3b9b8a69633a7a016cd7d3c12dbbae58d82ea78f78fd9"
+        },
+        {
+          "path": "evidence/preview.mjs",
+          "bytes": 1570,
+          "crc32": "8080ba8c",
+          "sha256": "80caac40c8771412346c3e312bcb1022b531a3e864d4ee1bd0472791ff2f65da"
+        },
+        {
+          "path": "evidence/replay-audit.json",
+          "bytes": 354491,
+          "crc32": "6307acbc",
+          "sha256": "13f17b4bdf49404c5998e6fb9ae11f347d6abd1ad09907b0e67463a0ecee5565"
+        },
+        {
+          "path": "evidence/ruffle-release.json",
+          "bytes": 1922,
+          "crc32": "8a41d5bf",
+          "sha256": "2c7eb17edd694ecaa528f9782285f37bd969363907640bbbfec723a0c6d7f848"
+        },
+        {
+          "path": "http/mobile/0001.css.headers",
+          "bytes": 1919,
+          "crc32": "238ede51",
+          "sha256": "c95818b8338259848e32aeee9129dadcc203be17f5c6441eb5b5eeff2d8df919"
+        },
+        {
+          "path": "http/mobile/0002.swf.headers",
+          "bytes": 1962,
+          "crc32": "6d14525b",
+          "sha256": "d42edeb6500e72c0b4cf6ed04a8f23475d5a15c7f8aa4ec419c85f1dab0da01e"
+        },
+        {
+          "path": "http/mobile/0003.gif.headers",
+          "bytes": 1970,
+          "crc32": "b7560881",
+          "sha256": "70756f08f71fd5f7ac2c0b22d8ca1214f1207ca7e03a325f484b34f9341f09fd"
+        },
+        {
+          "path": "http/mobile/0004.gif.headers",
+          "bytes": 1972,
+          "crc32": "f98a312b",
+          "sha256": "11549938b20168beae1a6f39dd8ca98912feee60fef91ae804788d123e832f87"
+        },
+        {
+          "path": "http/mobile/0005.gif.headers",
+          "bytes": 1980,
+          "crc32": "2ca9ff16",
+          "sha256": "6ad17973a96651b1ae3fbf180a3908f966fb404d557db07d892f7c1a5c209afb"
+        },
+        {
+          "path": "http/mobile/0007.gif.headers",
+          "bytes": 1976,
+          "crc32": "02e0c968",
+          "sha256": "d152c6b5f281b0c6874795a5b98ec50d076f7e8b1c6074a5cfbec9e67af62db0"
+        },
+        {
+          "path": "http/mobile/0008.gif.headers",
+          "bytes": 2009,
+          "crc32": "ef847a9f",
+          "sha256": "f8e43b18c31462faf14f22345ae80369186e7be9c11a6bfddeb75d6f9ed0b667"
+        },
+        {
+          "path": "http/mobile/0009.gif.headers",
+          "bytes": 2012,
+          "crc32": "12277207",
+          "sha256": "753dedda76dcaa322b678abc7ccac784e11fc160218a26f69ffa2eca4daeaae4"
+        },
+        {
+          "path": "http/mobile/0010.gif.headers",
+          "bytes": 2016,
+          "crc32": "1bfb6c93",
+          "sha256": "8ab91209c22263b2f6d9ea9950a0d236c6fec9c9bb4171610fd4ec2122da332b"
+        },
+        {
+          "path": "http/mobile/0012.gif.headers",
+          "bytes": 1997,
+          "crc32": "f496aaa0",
+          "sha256": "130cea3f9344c464a8d8326a4c0c7e7f580258225ce1ced3797ee60766d07cdb"
+        },
+        {
+          "path": "http/mobile/0013.gif.headers",
+          "bytes": 1941,
+          "crc32": "d43fc720",
+          "sha256": "f488c4f26a02316828c429957fdfa0e45440352a5bc98564ccfac8d3157c91c1"
+        },
+        {
+          "path": "http/mobile/0014.gif.headers",
+          "bytes": 1973,
+          "crc32": "1c12918b",
+          "sha256": "4ba1ebe42925c30bfbb391d97bacba73536f4da1c61d8b9db7f47413c1b25f86"
+        },
+        {
+          "path": "http/mobile/0015.gif.headers",
+          "bytes": 1978,
+          "crc32": "4bbcfa8e",
+          "sha256": "39f2e8f38015b71cf8d56246614a18897ca7097f3186ec1bbf8c99c3db33174d"
+        },
+        {
+          "path": "http/mobile/0023.gif.headers",
+          "bytes": 1961,
+          "crc32": "7615c015",
+          "sha256": "117ccbe174a6bfe3dfe592c61d11d7e6297df4960b9480ec6385fcb1d2d33725"
+        },
+        {
+          "path": "http/mobile/0028.swf.headers",
+          "bytes": 1955,
+          "crc32": "4608c8d7",
+          "sha256": "dda01ae5c117b7902b61e1bd0daf4a3246a1f12ecc16bb0b951b3f2bf8ef843e"
+        },
+        {
+          "path": "http/mobile/0041.gif.headers",
+          "bytes": 1946,
+          "crc32": "686588ec",
+          "sha256": "b1c36611657333cd080a89561ba76223dec2c7ac4f0abfc22450033dd6f04a89"
+        },
+        {
+          "path": "http/mobile/0058.gif.headers",
+          "bytes": 1966,
+          "crc32": "475d25fc",
+          "sha256": "ce20f41f791f2aacea763b6b26b0146ec71c469588736c3e4e01e918a8f27dce"
+        },
+        {
+          "path": "http/mobile/0059.gif.headers",
+          "bytes": 1965,
+          "crc32": "843ad43b",
+          "sha256": "f456ac5c7f943e2ddc7a870fbcbea10239127764c76d69c2991c64fb664a7cac"
+        },
+        {
+          "path": "http/mobile/0067.gif.headers",
+          "bytes": 1973,
+          "crc32": "761f65e3",
+          "sha256": "ea1018c832c1455d40636c4eac7ccbcdde11252e01d9a05bf255daa1dea6544b"
+        },
+        {
+          "path": "http/mobile/0076.gif.headers",
+          "bytes": 1991,
+          "crc32": "c181fa7b",
+          "sha256": "0e28e5d598c7b14b4b24a8d582594514d663583916c0baf8a4fc66ed76f65673"
+        },
+        {
+          "path": "http/mobile/0077.gif.headers",
+          "bytes": 1987,
+          "crc32": "e28fb9a3",
+          "sha256": "50eefc34f8e643c95825d05d9e7b355421d17a58c0ebe210310edfa45057af8c"
+        },
+        {
+          "path": "http/mobile/0086.gif.headers",
+          "bytes": 1995,
+          "crc32": "09435947",
+          "sha256": "f84085416596f4d66124a94967883fd351b2a15519c59a0d4a0b8c05677a030d"
+        },
+        {
+          "path": "http/mobile/0103.gif.headers",
+          "bytes": 1975,
+          "crc32": "9a435e96",
+          "sha256": "a8e739714a9413eed7610ff0fe171fdcceee6f08173b0d40e12415ff48d95701"
+        },
+        {
+          "path": "http/mobile/0104.gif.headers",
+          "bytes": 1987,
+          "crc32": "f56aa4a7",
+          "sha256": "f14e6df995bb44cccd6bc6b182326ff2a34c195d631d45a4ae2d312e7229eb8d"
+        },
+        {
+          "path": "http/mobile/0105.gif.headers",
+          "bytes": 1989,
+          "crc32": "e5d9f879",
+          "sha256": "39ef67a7973a7f2a3f48ffdf2365ee5ee09d721da18aca8ac32f9415f1bd08d0"
+        },
+        {
+          "path": "http/mobile/0106.gif.headers",
+          "bytes": 2002,
+          "crc32": "7bbb0d95",
+          "sha256": "8c65f33e65366ad9109da5e957ffe87c36348fe34112608bedb6804aaddd6583"
+        },
+        {
+          "path": "http/mobile/0107.gif.headers",
+          "bytes": 2003,
+          "crc32": "ee7fe296",
+          "sha256": "fb26f6117171c4e553e4c3d59d42a8df15ff05bbc9c6ff8c587953d9f7a45973"
+        },
+        {
+          "path": "http/mobile/0108.gif.headers",
+          "bytes": 1987,
+          "crc32": "d9596d8c",
+          "sha256": "7568a372c252414dfb00e216e3b8094e4ed737b861d384be501dc4a4eed82f1b"
+        },
+        {
+          "path": "http/mobile/0109.gif.headers",
+          "bytes": 1999,
+          "crc32": "af7f749b",
+          "sha256": "d7c91a351d6fbf61c96e928e440921a6b5689221121111f73fc5e9450671bcc0"
+        },
+        {
+          "path": "http/mobile/0110.gif.headers",
+          "bytes": 1972,
+          "crc32": "c2ee35c3",
+          "sha256": "230fad8f81a7fd83808a1d7b2e3e2a2f78cab4bfd85c3e8515f3efb4a59e46f2"
+        },
+        {
+          "path": "http/mobile/0120.gif.headers",
+          "bytes": 1994,
+          "crc32": "b8e26b07",
+          "sha256": "6c3f5a026160b54735029703a8e0db813142d9b0cb359793fc84960fea8a8232"
+        },
+        {
+          "path": "http/mobile/0121.gif.headers",
+          "bytes": 1969,
+          "crc32": "02359598",
+          "sha256": "d36c78c8c60e302b21b84623fd3719cbb16272af8e65d4ddd6f225fc643fd728"
+        },
+        {
+          "path": "http/mobile/0127.gif.headers",
+          "bytes": 1918,
+          "crc32": "eca80f89",
+          "sha256": "bfbd8db493d633c7aeef349dad89544ef9bfb771d33f389a5aeaa4826cbf089d"
+        },
+        {
+          "path": "http/mobile/0131.swf.headers",
+          "bytes": 1961,
+          "crc32": "6d2a1b69",
+          "sha256": "231942e6f0ea226fd3cf5766b423dbe81387b64835c3e50ed67394d81ac81ce0"
+        },
+        {
+          "path": "http/mobile/0155.gif.headers",
+          "bytes": 1980,
+          "crc32": "a9f9c81a",
+          "sha256": "16e9071003bf5a9ebbd33bb68e6fdc4adeb2003ace606a27a8bc157b3901d642"
+        },
+        {
+          "path": "http/mobile/0156.gif.headers",
+          "bytes": 1982,
+          "crc32": "68a86980",
+          "sha256": "27152a82136ae7b90f5a31a2b926d6ac02972aca339182f0ac0f3f495081e25f"
+        },
+        {
+          "path": "http/mobile/0157.gif.headers",
+          "bytes": 1978,
+          "crc32": "c80d34f5",
+          "sha256": "9a9bbbf1c6d473c384e9737b2248233945a605583ee46f94fd6cf3d8ddced3e1"
+        },
+        {
+          "path": "http/mobile/0158.gif.headers",
+          "bytes": 1949,
+          "crc32": "8f15345f",
+          "sha256": "99b731e1b3011e3098cee1cc957439eb5f00280012607e22b510c89e13654d15"
+        },
+        {
+          "path": "http/mobile/0159.gif.headers",
+          "bytes": 1948,
+          "crc32": "ba9de536",
+          "sha256": "3889e1e95275976c2e3eeeac51bbee0527fa95ecafd4c193a9eddf6d70a946ae"
+        },
+        {
+          "path": "http/mobile/0160.swf.headers",
+          "bytes": 1968,
+          "crc32": "73063af5",
+          "sha256": "20eb9a1492b058a0617c0bcf07a9cc7173f2752c3f9fba442c3ac9ef86f5b622"
+        },
+        {
+          "path": "http/mobile/0161.gif.headers",
+          "bytes": 2015,
+          "crc32": "af4ab442",
+          "sha256": "18061e02282acfa7c08c0a4d89e2bc5cd234810e056d1fa70184e9fd91858625"
+        },
+        {
+          "path": "http/mobile/0170.gif.headers",
+          "bytes": 1974,
+          "crc32": "865b22fb",
+          "sha256": "155f0673077ccb75431c939f1e74e37fa6ba78f3fc40297e9c81f6eaf7ff4219"
+        },
+        {
+          "path": "http/mobile/0172.html.headers",
+          "bytes": 1779,
+          "crc32": "9772ef0e",
+          "sha256": "54e84508f617fa233646d24f157046bf03f31295b06e8f4c4b1da3e44fc807c3"
+        },
+        {
+          "path": "http/mobile/0173.html.headers",
+          "bytes": 1780,
+          "crc32": "6bbed2e4",
+          "sha256": "8b7dd512952c5984c7e13f810c945a9b667d7b18462a2118e7a2328134901c0a"
+        },
+        {
+          "path": "http/mobile/0174.html.headers",
+          "bytes": 1780,
+          "crc32": "1cbfd9a7",
+          "sha256": "5d83d73b4f47885dd6bea13c6fcff2301183ff12a75e079d5b1f1e205f298e1a"
+        },
+        {
+          "path": "http/mobile/0175.html.headers",
+          "bytes": 1782,
+          "crc32": "db985126",
+          "sha256": "006ebf6d5b079b3149fd3e49a7d51d617961855e301b4a129af73daa091f7fe2"
+        },
+        {
+          "path": "http/mobile/0176.html.headers",
+          "bytes": 1781,
+          "crc32": "cd90cbdd",
+          "sha256": "663fa6a830401d56d3eb7c69b6a398844fc09e331ec8803db40fa02a475cdd78"
+        },
+        {
+          "path": "http/mobile/0177.html.headers",
+          "bytes": 1783,
+          "crc32": "6c903167",
+          "sha256": "d25453f91c1698492f3bf681089f0ab814eb2e674bd9ddfac72f72dc759bf440"
+        },
+        {
+          "path": "http/mobile/0178.html.headers",
+          "bytes": 1781,
+          "crc32": "ba1b26b0",
+          "sha256": "aaee8ed0e537034412a78eaecbb715979a447a33513d679edd9eccd8d3a3fba8"
+        },
+        {
+          "path": "http/mobile/0179.html.headers",
+          "bytes": 1780,
+          "crc32": "9f8405ab",
+          "sha256": "86e91c32a0ace5429eab59548832d1ad0472349c26ac600b16782a32846bb566"
+        },
+        {
+          "path": "http/mobile/0180.html.headers",
+          "bytes": 1784,
+          "crc32": "0c3b7f92",
+          "sha256": "ccfc08e9fffe6e1dbca9f94a562e481c72c19582b6c035797f13886b9b5bb73a"
+        },
+        {
+          "path": "http/mobile/0181.html.headers",
+          "bytes": 1780,
+          "crc32": "e513d6fd",
+          "sha256": "4d5f198d3b81275c78fa5c2b95f78bc11d223a1c83ae13a71f845cab49a0cc2c"
+        },
+        {
+          "path": "http/mobile/0182.html.headers",
+          "bytes": 1782,
+          "crc32": "993bb286",
+          "sha256": "56658381c2515c6af75907437ba0c50e0b2d78bbf4258af63d6b2ebd4cb4ad0e"
+        },
+        {
+          "path": "http/mobile/0183.html.headers",
+          "bytes": 1778,
+          "crc32": "478d9906",
+          "sha256": "d834ae38df8ef49b6abdda0416e1b67159414890621b34cf1ed290d8893e7201"
+        },
+        {
+          "path": "http/mobile/0184.html.headers",
+          "bytes": 1778,
+          "crc32": "ec3dabb7",
+          "sha256": "d7c866081e59005dd83b49cb6895be1f7d1eb862ba9e14ef28210dfa3f238668"
+        },
+        {
+          "path": "http/mobile/0185.html.headers",
+          "bytes": 1785,
+          "crc32": "cce031a5",
+          "sha256": "3533f729648c7bd6d0aaa5e97a6206faa2739807fd647ecc2a2a7b47dd17f334"
+        },
+        {
+          "path": "http/mobile/0188.html.headers",
+          "bytes": 1780,
+          "crc32": "90698725",
+          "sha256": "853c4d8c81303ad24d6794867709c7f7eedcdd71ce9b97d68648525c50eb112e"
+        },
+        {
+          "path": "http/mobile/0192.html.headers",
+          "bytes": 1779,
+          "crc32": "6e8b3ea7",
+          "sha256": "fe368ee1c41df1d5a8e77f14a934c59677e7848043cd619bf03e9cab11a6bfda"
+        },
+        {
+          "path": "http/mobile/0193.html.headers",
+          "bytes": 1778,
+          "crc32": "0c139795",
+          "sha256": "6e058920dbd81889cb002af7aecff05f8ee67d0d0671fd4c58ff9a009e8f9dd3"
+        },
+        {
+          "path": "http/mobile/0201.html.headers",
+          "bytes": 1773,
+          "crc32": "dcf0ac27",
+          "sha256": "795dae2a90709d82cc049dfc22a6bbe3ba9ea5c72aa12f034c92e0600884d18d"
+        },
+        {
+          "path": "http/mobile/0221.gif.headers",
+          "bytes": 1924,
+          "crc32": "25e5872f",
+          "sha256": "0fda5365b1c365bc229b36e7d0c4c6e29ce986885894f2dc6bfe9f71015162b6"
+        },
+        {
+          "path": "http/mobile/0224.gif.headers",
+          "bytes": 1940,
+          "crc32": "f3fcd20e",
+          "sha256": "8469ed663d7189c24e37342207bc79f86aa00608d7cfdd5145d2f7968c069bf1"
+        },
+        {
+          "path": "http/mobile/0225.gif.headers",
+          "bytes": 1972,
+          "crc32": "065e19cc",
+          "sha256": "f4d3fd38fdc46a91e58a3950ff71b6e3f1d93d5136be5da67c405d07a4f37589"
+        },
+        {
+          "path": "http/mobile/0226.gif.headers",
+          "bytes": 1971,
+          "crc32": "8c30993d",
+          "sha256": "e882f216d93c6f5941e0871b1e0c5bc7f7fcbb98637fe56f4d7cf6bb59e79d70"
+        },
+        {
+          "path": "http/mobile/0228.gif.headers",
+          "bytes": 1973,
+          "crc32": "39c5c908",
+          "sha256": "2b979e829715d3a69c63233998e8413817522e337dd4b6cd1fc86e198c6e4e96"
+        },
+        {
+          "path": "http/mobile/0229.gif.headers",
+          "bytes": 1966,
+          "crc32": "b6675fcc",
+          "sha256": "d93a19325bbd753edca1622f09dfd1991ee517d1ebefd77b9695a69d238297e9"
+        },
+        {
+          "path": "http/mobile/0230.gif.headers",
+          "bytes": 1971,
+          "crc32": "ad3c64e3",
+          "sha256": "de30be6fb3801b1e1f0e7adf9963b31cb6ed70d4871002d01266cbef88fd5da4"
+        },
+        {
+          "path": "http/mobile/0231.gif.headers",
+          "bytes": 1970,
+          "crc32": "58acae99",
+          "sha256": "383c37b4197117a5129c8845defd90c4a45dda8f218ef6291c4472aef73458fd"
+        },
+        {
+          "path": "http/mobile/0232.swf.headers",
+          "bytes": 1871,
+          "crc32": "10c520f8",
+          "sha256": "45290ee32aaf7e24b041c849accdbab29398a3c66df33df6331413e52e0512cf"
+        },
+        {
+          "path": "http/mobile/0234.swf.headers",
+          "bytes": 1944,
+          "crc32": "010ff3b5",
+          "sha256": "2b9250ef8319678219e847d6476e3a35de94ad127f9fbcc81404dc3260f825e6"
+        },
+        {
+          "path": "http/mobile/0241.swf.headers",
+          "bytes": 1926,
+          "crc32": "716afe2c",
+          "sha256": "765c4588a064441b3634cab3e2ff22fdef8ac8dca6ed840b770749b08f7c7179"
+        },
+        {
+          "path": "http/mobile/0243.swf.headers",
+          "bytes": 1963,
+          "crc32": "99816563",
+          "sha256": "6c281ac63061f66da28c4739c95799c117bde10aab4a37f01e7e9091aba62607"
+        },
+        {
+          "path": "http/mobile/0244.swf.headers",
+          "bytes": 1926,
+          "crc32": "64788dc2",
+          "sha256": "0297b9ca2dbf717384b0ff949a7497126e4d3a7c3969a64a35d892a98ba09d21"
+        },
+        {
+          "path": "http/mobile/0245.swf.headers",
+          "bytes": 1948,
+          "crc32": "82ed04b6",
+          "sha256": "a0ae53f93c33e791374edec9705bbb256bdfb4473c63024d92674cbf7123aed6"
+        },
+        {
+          "path": "http/mobile/0246.swf.headers",
+          "bytes": 1939,
+          "crc32": "6126fa6a",
+          "sha256": "43c218997c3df3c37d75398dd6804f94633017ca59dae1c896b0a96c567b5f33"
+        },
+        {
+          "path": "http/mobile/0255.swf.headers",
+          "bytes": 1973,
+          "crc32": "6def06f4",
+          "sha256": "01c0804efaac58cd4f2e0f91938691e8fff814f1571aa1026ff4d50530bc44d0"
+        },
+        {
+          "path": "http/service/0002.html.headers",
+          "bytes": 1841,
+          "crc32": "3dcdd7d3",
+          "sha256": "d1aeee26fa00eeb6e95b02bad490bf085c83c04d2b859a0e6790d7816d01f16e"
+        },
+        {
+          "path": "http/service/0004.html.headers",
+          "bytes": 1835,
+          "crc32": "69922833",
+          "sha256": "e14fbe764a4e027352a3de682125dbb1684f207e17b1e7865f95ed232fd94a17"
+        },
+        {
+          "path": "http/service/0028.html.headers",
+          "bytes": 1793,
+          "crc32": "f0087bbc",
+          "sha256": "44de605a185bef83b2faa2beb1ab52d93881aaf904febf6d71c26572b14069b3"
+        },
+        {
+          "path": "http/service/0029.html.headers",
+          "bytes": 1786,
+          "crc32": "3699c99b",
+          "sha256": "01756576780ab59ba990e834264243feb6d52b65f6d916268f61d1709cf73800"
+        },
+        {
+          "path": "http/service/0030.html.headers",
+          "bytes": 1809,
+          "crc32": "cf44a812",
+          "sha256": "b99de680f2b05330a7542ea4d1803f3d7e947dd3fe70765e6646fea1e773e2b5"
+        },
+        {
+          "path": "http/service/0031.html.headers",
+          "bytes": 1798,
+          "crc32": "2e15b9fb",
+          "sha256": "aaa6a925fea6f7a8033da388a5f11f866d4e377eebc46c3d194cb3b0ff2e22e1"
+        },
+        {
+          "path": "http/service/0032.html.headers",
+          "bytes": 1780,
+          "crc32": "a208af74",
+          "sha256": "5b4589065e11b20497363361621735069d0eecb7ae1430a54ec894024925a171"
+        },
+        {
+          "path": "http/service/0033.html.headers",
+          "bytes": 1769,
+          "crc32": "f49556a8",
+          "sha256": "ac77117f8e2dabf685f4e7089b7831a7fdfa563105dd0d5de1edad60b3b16cc8"
+        },
+        {
+          "path": "http/service/0035.html.headers",
+          "bytes": 1798,
+          "crc32": "dca76900",
+          "sha256": "e73630315abae9842ea27be0816a684ef53be950a0f04e18a018e46d67c30c7f"
+        },
+        {
+          "path": "http/service/0037.html.headers",
+          "bytes": 1801,
+          "crc32": "ad1d395b",
+          "sha256": "deb07b22c7f27cab17c66b80805eb6fb941b1a83da65d67abe34109db959e42d"
+        },
+        {
+          "path": "http/service/0038.html.headers",
+          "bytes": 1785,
+          "crc32": "88ee8816",
+          "sha256": "720f9c542e9142668bf613d2d02a5c6acac9bcff96c1b04acc18fced8b6112cc"
+        },
+        {
+          "path": "http/service/0040.swf.headers",
+          "bytes": 1955,
+          "crc32": "4608c8d7",
+          "sha256": "dda01ae5c117b7902b61e1bd0daf4a3246a1f12ecc16bb0b951b3f2bf8ef843e"
+        },
+        {
+          "path": "http/service/0046.html.headers",
+          "bytes": 1802,
+          "crc32": "e2d627aa",
+          "sha256": "414ad1d466eb95ba14cdbaaac72494ae77b4500d58bd53472d823126d791e9d7"
+        },
+        {
+          "path": "http/service/0056.swf.headers",
+          "bytes": 1950,
+          "crc32": "4a5367a2",
+          "sha256": "ec7ec91abda8b842cd30c6bf433bc22ed5f4e6a451777fb462370b4d05de25c9"
+        },
+        {
+          "path": "http/service/0081.html.headers",
+          "bytes": 1805,
+          "crc32": "d6cb5567",
+          "sha256": "29d80925c67907b4a3ee15af24396bc9c63318d30057f0e6ec29f06c7a08a7e2"
+        },
+        {
+          "path": "http/service/0082.html.headers",
+          "bytes": 1813,
+          "crc32": "06ea563c",
+          "sha256": "cd33d497de7490649864b7b62b6c56a408edb857ec933102e940184cf65367c0"
+        },
+        {
+          "path": "http/service/0083.swf.headers",
+          "bytes": 1976,
+          "crc32": "b64a19bc",
+          "sha256": "1894218abb873fb81f067e3e86333ca238b3674fdfcff3c349f6b6d055c1782f"
+        },
+        {
+          "path": "http/service/0084.swf.headers",
+          "bytes": 1960,
+          "crc32": "269f8913",
+          "sha256": "9e9e92e066d641a0cd79896e3d8e25f6cc05723a7ba650d5d95e3604846f0b2d"
+        },
+        {
+          "path": "http/service/0085.html.headers",
+          "bytes": 1860,
+          "crc32": "b8352eff",
+          "sha256": "63f2eb38b24f59055dbaff2ad8514963db33928af921869d9cd07cfe05aca658"
+        },
+        {
+          "path": "http/service/0086.html.headers",
+          "bytes": 1857,
+          "crc32": "a2b62b76",
+          "sha256": "e64c8fd24a98bb42871fbcfec0859576b8938d617542115c2c2c5a4a1105e7f9"
+        },
+        {
+          "path": "http/service/0127.html.headers",
+          "bytes": 1762,
+          "crc32": "190af426",
+          "sha256": "50386cba0a90655b790f7a628cf84733e24f59b0020386c99d929503f4fb8e10"
+        },
+        {
+          "path": "http/swf/0003.swf.headers",
+          "bytes": 1955,
+          "crc32": "4608c8d7",
+          "sha256": "dda01ae5c117b7902b61e1bd0daf4a3246a1f12ecc16bb0b951b3f2bf8ef843e"
+        },
+        {
+          "path": "http/swf/0010.swf.headers",
+          "bytes": 1951,
+          "crc32": "f82dbb53",
+          "sha256": "28c2023b6af58b14eb12949db123b537f10b11e08f909863247413b8d83088d5"
+        },
+        {
+          "path": "http/swf/0019.swf.headers",
+          "bytes": 1974,
+          "crc32": "90402e54",
+          "sha256": "ef3260167d2128f894e4d72ea7dd47a0610b3ff7974247638cc0d973d63dd219"
+        },
+        {
+          "path": "http/swf/0031.swf.headers",
+          "bytes": 1955,
+          "crc32": "4608c8d7",
+          "sha256": "dda01ae5c117b7902b61e1bd0daf4a3246a1f12ecc16bb0b951b3f2bf8ef843e"
+        },
+        {
+          "path": "http/swf/0037.swf.headers",
+          "bytes": 1973,
+          "crc32": "02c8e848",
+          "sha256": "971c7d2df211fe393c0ba72cf2ed21a5d88aff765b93336bcaf25781244e9599"
+        },
+        {
+          "path": "http/swf/0038.swf.headers",
+          "bytes": 1961,
+          "crc32": "6d2a1b69",
+          "sha256": "231942e6f0ea226fd3cf5766b423dbe81387b64835c3e50ed67394d81ac81ce0"
+        },
+        {
+          "path": "http/swf/0039.swf.headers",
+          "bytes": 1961,
+          "crc32": "64e43fc5",
+          "sha256": "cf0be3d96e0ca98c7eb613b03747c08669a150d51dcca8b654ba0ed36c2f2663"
+        },
+        {
+          "path": "http/swf/0040.swf.headers",
+          "bytes": 1942,
+          "crc32": "304131cf",
+          "sha256": "57bced5b267d984fded158b9d272d1ab5a80f0830d1533eee29d65dba70b1e5d"
+        },
+        {
+          "path": "http/swf/0042.swf.headers",
+          "bytes": 1973,
+          "crc32": "d8b28e29",
+          "sha256": "1b5007aa5f90f7ac506563c4b538466799a2faf39e870bd418c2a46aae5db86d"
+        },
+        {
+          "path": "http/swf/0043.swf.headers",
+          "bytes": 1967,
+          "crc32": "e11d0a14",
+          "sha256": "0a574b71d71dbcd39662f39f6de237dd8d5b20da959ce14bc7eb152946c5caaa"
+        },
+        {
+          "path": "http/swf/0052.swf.headers",
+          "bytes": 1957,
+          "crc32": "77a59791",
+          "sha256": "7d3488d84ec2f6bcba0b62d0195a92571491d27c0131bb1eab9cc242853e7e9c"
+        },
+        {
+          "path": "http/swf/0053.swf.headers",
+          "bytes": 1928,
+          "crc32": "c2fee823",
+          "sha256": "d0037aa93661042c4b737fe1b0bef83235f985e842163fda7dbc5eabe42a395f"
+        },
+        {
+          "path": "http/swf/0054.swf.headers",
+          "bytes": 1929,
+          "crc32": "8546b779",
+          "sha256": "9d7aac84db077abf7e7d1cbd7a3146082c032b3f6e567586dd116fccf2767cd5"
+        },
+        {
+          "path": "http/swf/0056.swf.headers",
+          "bytes": 1964,
+          "crc32": "36dbf6d3",
+          "sha256": "e062576ed95ef63ecb4306b1f7a401c5bc150330902ab4c35b4737c823cb47f8"
+        },
+        {
+          "path": "http/swf/0059.swf.headers",
+          "bytes": 1939,
+          "crc32": "6126fa6a",
+          "sha256": "43c218997c3df3c37d75398dd6804f94633017ca59dae1c896b0a96c567b5f33"
+        },
+        {
+          "path": "indexes/binaries.json",
+          "bytes": 4807,
+          "crc32": "d8676cd8",
+          "sha256": "665bac3aaaf76b24d9d8c7ef8e77430c0f44825d79c1f2c59818bd3aa0d90ede"
+        },
+        {
+          "path": "indexes/binaries.json.headers",
+          "bytes": 648,
+          "crc32": "4e83ed50",
+          "sha256": "2aecbbc9e7ff4f1b12fe704347b86fade9cd7f9fa96cafef84436e6dcd22edc5"
+        },
+        {
+          "path": "indexes/domain-5000-cdx.json",
+          "bytes": 1022336,
+          "crc32": "a83271de",
+          "sha256": "18e488b4cd3cfd6e4afbfec562887b838d3b2edd3bf5855227352d90e2f0cb20"
+        },
+        {
+          "path": "indexes/domain-5000-cdx.json.headers",
+          "bytes": 647,
+          "crc32": "629627a3",
+          "sha256": "91785d03b5227eb5b9deaab9d1a315841209a8f5cb86d7540b64d228a94c50d6"
+        },
+        {
+          "path": "indexes/gametop-patrol.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "indexes/gametop-patrol.json.headers",
+          "bytes": 647,
+          "crc32": "5a678e4e",
+          "sha256": "4c3bb0c2536f5ab2f1c51d25d2e8f9270a20ea146550cf627a5e04ede0a71b3b"
+        },
+        {
+          "path": "indexes/gametop.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "indexes/gametop.json.headers",
+          "bytes": 648,
+          "crc32": "7f9edfad",
+          "sha256": "4b1dcc1a9a0c62144575117285ba85cbbb2f011337ce098cf542d218f2a8fa01"
+        },
+        {
+          "path": "indexes/history.json",
+          "bytes": 4444,
+          "crc32": "507ce093",
+          "sha256": "e2515d2a90844ca42e0b809399416cf6997f2317fd4276a39e9bc9d8ba4be330"
+        },
+        {
+          "path": "indexes/history.json.headers",
+          "bytes": 645,
+          "crc32": "5221a179",
+          "sha256": "ba63634bc43a8adaa9b75e9d0e33b7105b5d729d6555a394f898c791bbf3d686"
+        },
+        {
+          "path": "indexes/mobile.json",
+          "bytes": 47578,
+          "crc32": "59936ff0",
+          "sha256": "62488a9ed79743dba27a20074701c4aeb25e8c64198ec1067336905c2cdc7d75"
+        },
+        {
+          "path": "indexes/mobile.json.headers",
+          "bytes": 645,
+          "crc32": "0ed475ef",
+          "sha256": "363e26ab574f61c08464872d963974b6191542a7aea878bde5b2a3a1688de12f"
+        },
+        {
+          "path": "indexes/service.json",
+          "bytes": 1534145,
+          "crc32": "5a2a6d4c",
+          "sha256": "2de92d8daa4d5436039ab91cdb5159755b02c0943e11a0a4b5e283d9cff358df"
+        },
+        {
+          "path": "indexes/service.json.headers",
+          "bytes": 648,
+          "crc32": "8b5412ca",
+          "sha256": "0ace49486d8a6a093a6fba37d02ea9196538c70a955b03a2e708baf0fbf326f4"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 43837,
+          "crc32": "4b42601c",
+          "sha256": "31f709f17ed046e351d091f79e76df3f10fcf4b37972ad1ed8570e7252fdc85f"
+        },
+        {
+          "path": "originals/0018bb4af971-galaga.swf",
+          "bytes": 158764,
+          "crc32": "4ca4f862",
+          "sha256": "0018bb4af971a8cf0188fa8aca138eef32a771b80428bb22439c5bb23faba9ab"
+        },
+        {
+          "path": "originals/0225453cc005-game_control.html",
+          "bytes": 10197,
+          "crc32": "2e043d3a",
+          "sha256": "0225453cc00552fbb5c2a8323879b5c45708f1b0473118271340f908d908d412"
+        },
+        {
+          "path": "originals/03a5f6b06f03-game_control.html",
+          "bytes": 15850,
+          "crc32": "b51ca009",
+          "sha256": "03a5f6b06f0344278bfd416b0bf7fad01d9b00a253b076f809e0eba5b6a1ca56"
+        },
+        {
+          "path": "originals/0827e2ac6132-mobile_down_24.html",
+          "bytes": 14893,
+          "crc32": "7e8a8a7f",
+          "sha256": "0827e2ac6132ea9515c6f4241c3fd179fa2167a92dc0108108ef60eccf99314f"
+        },
+        {
+          "path": "originals/0fe5269d0c83-handphone.swf",
+          "bytes": 17765,
+          "crc32": "072d1387",
+          "sha256": "0fe5269d0c83db7a4a534d89de4f5a3099d5277c3b94ff419a35afb4f7ee2068"
+        },
+        {
+          "path": "originals/105fe4252f27-mobile_down_17.html",
+          "bytes": 16163,
+          "crc32": "75dfee8b",
+          "sha256": "105fe4252f271d52a17215d00fb0594c79560b93529ab047db2d2e57ce5293c7"
+        },
+        {
+          "path": "originals/111c79f7bbf6-menu_14.gif",
+          "bytes": 549,
+          "crc32": "a4ea0351",
+          "sha256": "111c79f7bbf681085073c00df58173c3cba9ab6e18664c05edaecbb6e02db783"
+        },
+        {
+          "path": "originals/11deac681b49-mobile_down_10.html",
+          "bytes": 15694,
+          "crc32": "a9fdaf0f",
+          "sha256": "11deac681b49f87a1269850df74f2112cdc73142b9be4097ef95e9af12af71a7"
+        },
+        {
+          "path": "originals/151ff1ac984a-main_img.swf",
+          "bytes": 40043,
+          "crc32": "74117a18",
+          "sha256": "151ff1ac984a493127042c3e9d0f323433c232720cd5dcf1b5b52eec739cb2f5"
+        },
+        {
+          "path": "originals/153e42dde6ca-game_connect.html",
+          "bytes": 42335,
+          "crc32": "eeaa0d65",
+          "sha256": "153e42dde6ca1888e89ab164520470f207b93f4b6b7f0b10827407c2f31e0fa1"
+        },
+        {
+          "path": "originals/162578cd2288-loveMessenger_demo.swf",
+          "bytes": 866806,
+          "crc32": "5f1566ee",
+          "sha256": "162578cd2288e82da2b93741a6e40bb89ff370c72fddb0c597e9bad39741baba"
+        },
+        {
+          "path": "originals/16f3c14cfdb8-mobile_down_12.html",
+          "bytes": 16845,
+          "crc32": "f733a987",
+          "sha256": "16f3c14cfdb83a601076be883412a92fc9ee8c715b6af7869621151ceb01b235"
+        },
+        {
+          "path": "originals/1ca90424465b-mon_left.gif",
+          "bytes": 248,
+          "crc32": "5d7c7fa2",
+          "sha256": "1ca90424465ba37a46b48277fdaa0374c103dae6ab4ef20e3aa066bcdf41c95d"
+        },
+        {
+          "path": "originals/1d247ae13fa7-menu_24_1.gif",
+          "bytes": 437,
+          "crc32": "59845121",
+          "sha256": "1d247ae13fa7d0b7bc883bce868818cfdc74aa201f23548ef86fdd1732ef06b0"
+        },
+        {
+          "path": "originals/1db13c3f3945-c4c2a3.gif",
+          "bytes": 2366,
+          "crc32": "57dbb0da",
+          "sha256": "1db13c3f3945867336d67f8b5a4a40ec1804c934d8ca5b18e41992c9bc5817a3"
+        },
+        {
+          "path": "originals/22afacf3d207-boat.swf",
+          "bytes": 8788,
+          "crc32": "e3e309d6",
+          "sha256": "22afacf3d207a450ad0db579c3aa6e625acc3a28bbd452f199d4f56f20ea481d"
+        },
+        {
+          "path": "originals/23ff38cdbf41-c333.gif",
+          "bytes": 2938,
+          "crc32": "646a278e",
+          "sha256": "23ff38cdbf417c02914545c4caccf7fa411412f0d477e80b650100dda4abddc9"
+        },
+        {
+          "path": "originals/240c553b54e6-hidden_index.html",
+          "bytes": 8520,
+          "crc32": "13344e09",
+          "sha256": "240c553b54e63d5ff39d7639b4f9bf3c27c132001841b3b8e3d4f568b2ce223b"
+        },
+        {
+          "path": "originals/2741a734c115-connect.html",
+          "bytes": 8604,
+          "crc32": "d224f45d",
+          "sha256": "2741a734c11544ee7f05f6e53981ce7029a3240ccb31681ca6cc0b2923583c2f"
+        },
+        {
+          "path": "originals/2c59ab5ad18e-captain_title.gif",
+          "bytes": 15135,
+          "crc32": "2b1e12ee",
+          "sha256": "2c59ab5ad18ef4935cb3c9a722a20ae17ee50bd81e752f5bb9c4013f4bf17122"
+        },
+        {
+          "path": "originals/33d8e17ff822-chess_title.gif",
+          "bytes": 14368,
+          "crc32": "f21ca282",
+          "sha256": "33d8e17ff8224b2df70c9af226b1978265d82370dcb96d9cc1d8e05067e8ca59"
+        },
+        {
+          "path": "originals/34eb3d46f9bf-mobile_sis_4.html",
+          "bytes": 9396,
+          "crc32": "b713167c",
+          "sha256": "34eb3d46f9bf1ce358c115d7b14bda4bda914bec54c9989a9ddbea1eaac2fefb"
+        },
+        {
+          "path": "originals/3901a97d8b2f-chain_left.gif",
+          "bytes": 274,
+          "crc32": "ce32f026",
+          "sha256": "3901a97d8b2f8f1e9642b5025e9ca1b5af1b0a567b40dce60b86810b5248eed5"
+        },
+        {
+          "path": "originals/3c684686bdf7-bobble_title.gif",
+          "bytes": 11235,
+          "crc32": "a6b5ab4d",
+          "sha256": "3c684686bdf7f69d034b99d1bc36efe16b9ce535f32bbd00680ae68759fa0f3f"
+        },
+        {
+          "path": "originals/42fb370c0766-chian_title.gif",
+          "bytes": 13025,
+          "crc32": "ada49210",
+          "sha256": "42fb370c0766172a9cbef33644504eef666bc3f4ca7ebaa17747698b4ff75895"
+        },
+        {
+          "path": "originals/43dc92673eed-galag_down.gif",
+          "bytes": 216,
+          "crc32": "46279909",
+          "sha256": "43dc92673eed3fd89c5d3e18352f867901ba8073355c1e1d6544e9d74edaf282"
+        },
+        {
+          "path": "originals/44e6d8f65128-game-1.html",
+          "bytes": 11140,
+          "crc32": "2bf90b19",
+          "sha256": "44e6d8f651280996a900b047186e141e4859b7f64979552e8ef34cb843ec7e2c"
+        },
+        {
+          "path": "originals/474fd56650e4-connect.html",
+          "bytes": 6256,
+          "crc32": "499e723b",
+          "sha256": "474fd56650e467352afb116f01707c53c440b359ee8010e120c8a389ddd5ade3"
+        },
+        {
+          "path": "originals/48a760d6e82e-menu_1.gif",
+          "bytes": 439,
+          "crc32": "38e056db",
+          "sha256": "48a760d6e82efa5fdfa742e0536d412cd510059e12bd6f075b79334c04e95dcf"
+        },
+        {
+          "path": "originals/4bc3984601ce-servant_title.gif",
+          "bytes": 11641,
+          "crc32": "2daa9e45",
+          "sha256": "4bc3984601cef28c09caf52c9145c385c59a1604ad1970a0da4dd8c2c4c34c1d"
+        },
+        {
+          "path": "originals/4cf525d4ef14-mobile_down_18.html",
+          "bytes": 16351,
+          "crc32": "42793040",
+          "sha256": "4cf525d4ef140f37ab9ec843eb43cb52ab647d644777206061be93a598b88e0f"
+        },
+        {
+          "path": "originals/4d263c8e79d6-menu_26_2.gif",
+          "bytes": 429,
+          "crc32": "2a884c42",
+          "sha256": "4d263c8e79d6de5ab5ed7f08ac5525ee1a9183bb4f03108e9445318d3ce61d01"
+        },
+        {
+          "path": "originals/4f67cbe9401b-menu_23-2.gif",
+          "bytes": 500,
+          "crc32": "95835f7d",
+          "sha256": "4f67cbe9401bdb7cd8c0f34d6d8542752f8457553dd749b2cc581cd0af3d131a"
+        },
+        {
+          "path": "originals/52c4a8deef5d-menu_6.gif",
+          "bytes": 508,
+          "crc32": "7b685d61",
+          "sha256": "52c4a8deef5d3a54cfa86f14a12c691f4a352ad2b5360e79275e38b4e516c3e3"
+        },
+        {
+          "path": "originals/532ab0ecd1b1-gostop.swf",
+          "bytes": 74448,
+          "crc32": "f730f892",
+          "sha256": "532ab0ecd1b1eb940918b3d0ede23cbc465b5a80d1b7afbcc375c5ff09d30714"
+        },
+        {
+          "path": "originals/56dc4df9bc9b-mobile_down_15.html",
+          "bytes": 16755,
+          "crc32": "0f62656b",
+          "sha256": "56dc4df9bc9b4b3bd9266100a23e73d457b41d6fc52f7c8ce7f782bd3665fd88"
+        },
+        {
+          "path": "originals/572022f76c3f-sample1.swf",
+          "bytes": 191307,
+          "crc32": "136c6707",
+          "sha256": "572022f76c3f09a71379df4701e7993ff938b9a16530ef14ac67f70e2a3eac4c"
+        },
+        {
+          "path": "originals/5911b483ae2b-hidden_title.gif",
+          "bytes": 16148,
+          "crc32": "de353abf",
+          "sha256": "5911b483ae2b8046fd929566a96dd33b317e65e0a8157395ac1f0775617fda4b"
+        },
+        {
+          "path": "originals/5c13462917bc-menu2_5-1.gif",
+          "bytes": 481,
+          "crc32": "f81c6f04",
+          "sha256": "5c13462917bc941df54136ee60dc7dfadb7c0af348905f9aa6d0fff7278b34be"
+        },
+        {
+          "path": "originals/5ee1cf1c145c-menu_22_1.gif",
+          "bytes": 423,
+          "crc32": "a57cd2ef",
+          "sha256": "5ee1cf1c145c92d276d7dcbe6bef91f9bb421a1ad2aa887ce94027d8805fba5c"
+        },
+        {
+          "path": "originals/5f5549eddbf8-game.html",
+          "bytes": 11095,
+          "crc32": "081aeb95",
+          "sha256": "5f5549eddbf8a5349a0ea2272d274528b21c3b6c4eea53c8d24db4b8021a301e"
+        },
+        {
+          "path": "originals/661a0be9e07a-bobble_demo.gif",
+          "bytes": 14081,
+          "crc32": "c541a62a",
+          "sha256": "661a0be9e07a505eb25eab8a7d292c773dfb8b77d8391fcc477918bff645b104"
+        },
+        {
+          "path": "originals/68df7c095322-mobile_down_20.html",
+          "bytes": 15903,
+          "crc32": "284502da",
+          "sha256": "68df7c09532252ac61035f2dc9f247f04cb0482a7eb51e3407a82994b05fd96f"
+        },
+        {
+          "path": "originals/691b93ae5827-a10b02c01.gif",
+          "bytes": 14614,
+          "crc32": "5865c0c3",
+          "sha256": "691b93ae582759ec11feac4a29a0e397527b940895aa667a1d56518e13034475"
+        },
+        {
+          "path": "originals/697911fbc287-gangi.swf",
+          "bytes": 42413,
+          "crc32": "5bb63ab0",
+          "sha256": "697911fbc2874b4d979f5601c8b229b904bd585bf01f55ab597bab36bc698a43"
+        },
+        {
+          "path": "originals/6cbc6fcfeef4-moonpatrol.swf",
+          "bytes": 39014,
+          "crc32": "a0dd59c1",
+          "sha256": "6cbc6fcfeef415d3e244083f297429b2187ed76c5319d42a98378378b4b8d9c3"
+        },
+        {
+          "path": "originals/6faf3c9a1509-democolor.swf",
+          "bytes": 9406,
+          "crc32": "c31d954e",
+          "sha256": "6faf3c9a1509280f29fb730a7bbbad36f772c5be86f181cdd04ead04abc5de20"
+        },
+        {
+          "path": "originals/7703fcfb27fc-hidden_way3.html",
+          "bytes": 13455,
+          "crc32": "4203730e",
+          "sha256": "7703fcfb27fcc5599fdc3445f5255a47b965c4f45dd8fd2ff3ceb74d46f6eff1"
+        },
+        {
+          "path": "originals/784ab8c5dcff-menu3_1-1.gif",
+          "bytes": 483,
+          "crc32": "70079159",
+          "sha256": "784ab8c5dcfffc97f14d38c8276ae1ca3cc75d580f66c2909904daea1b1fdafc"
+        },
+        {
+          "path": "originals/78dcf164c0cc-saparidemo.gif",
+          "bytes": 9947,
+          "crc32": "c81d7e9a",
+          "sha256": "78dcf164c0ccb5d8de8df4d631a290009eb2dca1bb2e45cc217bdf0c24871d1e"
+        },
+        {
+          "path": "originals/7ae016d67cbb-mobile_down_19.html",
+          "bytes": 15884,
+          "crc32": "01ae874f",
+          "sha256": "7ae016d67cbbf4e324129ec0673fa4fc8ce6957d41010bec7fe2a3f17b71b85d"
+        },
+        {
+          "path": "originals/7e35a32ebdc6-char4_title.gif",
+          "bytes": 2407,
+          "crc32": "c0385db6",
+          "sha256": "7e35a32ebdc61abc8ef27e2a9460ea7f535ee488b9e09780aea388db3b213096"
+        },
+        {
+          "path": "originals/8400ab19a1db-menu_10-2.gif",
+          "bytes": 454,
+          "crc32": "43d6fb07",
+          "sha256": "8400ab19a1dbc7cb0a5c7f82c2d532c5a563002f453c449f62e1897a4e614e39"
+        },
+        {
+          "path": "originals/840480218425-c2c1a1.gif",
+          "bytes": 4240,
+          "crc32": "1118882d",
+          "sha256": "840480218425676beda5865f1e5023fbca34f87dc2f6e64c081fdbb3fac9977a"
+        },
+        {
+          "path": "originals/85a979ac403b-cr_5.gif",
+          "bytes": 2525,
+          "crc32": "ee8dcc40",
+          "sha256": "85a979ac403bde5eba6ac01cd098d629cf7b321db279e0a8f23e3647cedfe4d8"
+        },
+        {
+          "path": "originals/85bf18b67917-mobile_down_13.html",
+          "bytes": 16674,
+          "crc32": "0b63b4b9",
+          "sha256": "85bf18b67917f571177f7e67beef06ac5f32e868275cc761e755bcabf0cd64e2"
+        },
+        {
+          "path": "originals/88cc194ca588-menu_26-1.gif",
+          "bytes": 450,
+          "crc32": "1f7192cc",
+          "sha256": "88cc194ca588ad554790ed06e848ebf36fe3f7843117061d41bae2df276e719d"
+        },
+        {
+          "path": "originals/8927647fbd7b-menu_23_1.gif",
+          "bytes": 516,
+          "crc32": "0618dc14",
+          "sha256": "8927647fbd7b87fd946624dc14000340407edeefe354078fbb28ddd2bfb970d7"
+        },
+        {
+          "path": "originals/89cafe8052b6-menu_7-2.gif",
+          "bytes": 488,
+          "crc32": "afabdb2d",
+          "sha256": "89cafe8052b6021b45db6a5221575ac90d240a7807fc10c77fef57c264ac92a2"
+        },
+        {
+          "path": "originals/8b3ab2282761-menu_22_2.gif",
+          "bytes": 410,
+          "crc32": "fa92fce4",
+          "sha256": "8b3ab2282761edbb5204b2f125be19cbd584219b7c13a0d431661b51abcd6bb6"
+        },
+        {
+          "path": "originals/8c57045d7e7b-c03.gif",
+          "bytes": 295,
+          "crc32": "e293a25a",
+          "sha256": "8c57045d7e7bb452517c5f22ce234d2cf00ba55ea63613b9605df0871b141403"
+        },
+        {
+          "path": "originals/8d17794b4728-mobile_down_5.html",
+          "bytes": 17111,
+          "crc32": "73284b55",
+          "sha256": "8d17794b4728a234c3ba7bf3a55ae88b846186c2f82e4d8bde5157f4b58d9b2a"
+        },
+        {
+          "path": "originals/8dcea6a762b6-moonpatrol.swf",
+          "bytes": 70441,
+          "crc32": "74c69444",
+          "sha256": "8dcea6a762b6af919d4a74c994b791c876dcc460368e87d2a1c897577699b8ec"
+        },
+        {
+          "path": "originals/9084d6bccd61-night.swf",
+          "bytes": 28714,
+          "crc32": "a567ea5d",
+          "sha256": "9084d6bccd61dbc3e7cd74bf4b0af3f1ce1a0826bd385cf74c316e958fb6362c"
+        },
+        {
+          "path": "originals/9aec29fcb624-pokerdemo.swf",
+          "bytes": 8654,
+          "crc32": "2e7e6b28",
+          "sha256": "9aec29fcb6241e39eab952eda6d124f84a2c2abd24037c8f00392b3f7b542ac7"
+        },
+        {
+          "path": "originals/9afbdbd8efda-GALS_20PANIC.SWF",
+          "bytes": 111333,
+          "crc32": "a3344d94",
+          "sha256": "9afbdbd8efda96fc96c093fbafa8052adfc1c77393117b5216272f1787dfa807"
+        },
+        {
+          "path": "originals/9bc44e672f93-worms_title.gif",
+          "bytes": 18842,
+          "crc32": "400c2892",
+          "sha256": "9bc44e672f9348fd24270e69706527caebcabfc927b18eae0afe30a53e7b02e0"
+        },
+        {
+          "path": "originals/9c456da26876-mobile_down_16.html",
+          "bytes": 16280,
+          "crc32": "29a19466",
+          "sha256": "9c456da268765e86693eb63a9a1ab529a4feb6f0e47eaa9456591b6960ead28f"
+        },
+        {
+          "path": "originals/a0ad97b3fe58-game_connect.html",
+          "bytes": 11076,
+          "crc32": "eccd8eb2",
+          "sha256": "a0ad97b3fe5849e2d8bea36f003f0933efe5e6292ad6c171f7562a20204d21a8"
+        },
+        {
+          "path": "originals/a20d3bb5a0f3-menu_25_2.gif",
+          "bytes": 427,
+          "crc32": "c4df59da",
+          "sha256": "a20d3bb5a0f3a3531dd2b2896d086d0f494ae0dc3abd512dc63281f4c26a7414"
+        },
+        {
+          "path": "originals/aae703db5890-rang.swf",
+          "bytes": 397200,
+          "crc32": "2911ea2a",
+          "sha256": "aae703db58907248fb61312c845fb9714ab190865e88bcafa6edb32983d05c3b"
+        },
+        {
+          "path": "originals/ab0d52d8586a-mobile_down_21.html",
+          "bytes": 15651,
+          "crc32": "66059dfe",
+          "sha256": "ab0d52d8586a11deab1a0a9f7ebc5954194f068aee903b63e05e305302b35d0b"
+        },
+        {
+          "path": "originals/ab7896cfa238-boat_title.gif",
+          "bytes": 16069,
+          "crc32": "4f60331b",
+          "sha256": "ab7896cfa238b819cb59fa44a2c880308d3f612143332ea31e01b539eba65019"
+        },
+        {
+          "path": "originals/ad95638e531d-mobile_down_11.html",
+          "bytes": 16223,
+          "crc32": "60d532c0",
+          "sha256": "ad95638e531d1972735338eb614ff28e52b6efe7345d00c8a30df162852202a8"
+        },
+        {
+          "path": "originals/af9f2c53892d-servantdemo.gif",
+          "bytes": 12050,
+          "crc32": "8c9ff6c5",
+          "sha256": "af9f2c53892d8ba68310daeb391099244188c28640516d4c22c9716ae04d072f"
+        },
+        {
+          "path": "originals/b13657d28176-menu2_4.gif",
+          "bytes": 530,
+          "crc32": "fa435a2c",
+          "sha256": "b13657d281762ea77f60cb701f22d29d7a9056f22deb7ae9b0a36be37c893c05"
+        },
+        {
+          "path": "originals/b454f72d41f0-mobile_down_4.html",
+          "bytes": 16694,
+          "crc32": "69a3cc7d",
+          "sha256": "b454f72d41f0c9a7fe0ccf7368ef816cce7f3a58ad0b6d53d70d84d978141d26"
+        },
+        {
+          "path": "originals/b485e2020d74-game_connect.html",
+          "bytes": 11284,
+          "crc32": "48b226c4",
+          "sha256": "b485e2020d7444416aec7d62ad08a07cf7a526310af9ea83d19a6800c7172cb6"
+        },
+        {
+          "path": "originals/b7dbe0733bfe-game.html",
+          "bytes": 11002,
+          "crc32": "3c6db43c",
+          "sha256": "b7dbe0733bfe10c17c9c7704f373273de62456599e1182ae38a46ebdb0831968"
+        },
+        {
+          "path": "originals/bb3640948410-hiddenway2.swf",
+          "bytes": 7484,
+          "crc32": "93e470dc",
+          "sha256": "bb364094841053236d12e5d64788e47d5a14c4091e7f8912b31727d0515cfb20"
+        },
+        {
+          "path": "originals/be7d4ba499e0-c3c1a2.gif",
+          "bytes": 3325,
+          "crc32": "fe03c0c5",
+          "sha256": "be7d4ba499e0a6e421fc68d54f04b753f438f69d8038429a222127302f79d286"
+        },
+        {
+          "path": "originals/c221ba7d6cf0-moonpatrol_index.html",
+          "bytes": 10030,
+          "crc32": "5866a85b",
+          "sha256": "c221ba7d6cf0de275426bd8fb61f44d8ac5ae32fdc5a87981685ea0bbe62ecb5"
+        },
+        {
+          "path": "originals/c23e0f7829c8-game.html",
+          "bytes": 9774,
+          "crc32": "28282b8f",
+          "sha256": "c23e0f7829c8fe4b19208f4296d2e05f09a271f84972422a29db30980b190a6b"
+        },
+        {
+          "path": "originals/c79fe80c2be0-c1c2a2.gif",
+          "bytes": 2435,
+          "crc32": "6e1c3a8b",
+          "sha256": "c79fe80c2be0f60e529a8a2959928b6d6b4d455f49e3e4b404501e47390ce766"
+        },
+        {
+          "path": "originals/cab8ff45a6c7-same_title.gif",
+          "bytes": 6856,
+          "crc32": "19193ccb",
+          "sha256": "cab8ff45a6c7ef7ebd38a223fb99635ef7258fd93de99a411c2d26eb71874348"
+        },
+        {
+          "path": "originals/cc7a3626e875-soccer_title.gif",
+          "bytes": 8904,
+          "crc32": "7d5dc04b",
+          "sha256": "cc7a3626e8757abc726c70cd12bb340b382995c589cf97ae675e490050a7df51"
+        },
+        {
+          "path": "originals/cee521116019-same_demo.gif",
+          "bytes": 3486,
+          "crc32": "65335a49",
+          "sha256": "cee521116019a81505a5a086ba1c7ad2f0ccaf8d0e0e9cb28e00f6dcdd85590e"
+        },
+        {
+          "path": "originals/d1d1e55f9806-mobile_down_14.html",
+          "bytes": 16320,
+          "crc32": "0031c678",
+          "sha256": "d1d1e55f9806d56db7f891fc849e7919d54588e9c64516991f5d6cbc61dab483"
+        },
+        {
+          "path": "originals/da3818f899ed-mobile_down_1.html",
+          "bytes": 16373,
+          "crc32": "14dc6427",
+          "sha256": "da3818f899edb329131ab2f093b400ed29640d4d8995ebc869fb923f4e73a9fb"
+        },
+        {
+          "path": "originals/df75c0c74c26-space.swf",
+          "bytes": 4802,
+          "crc32": "8c1db00e",
+          "sha256": "df75c0c74c2653a91227f9a0170da7a03db48b5d065f21d98cc51a208739816d"
+        },
+        {
+          "path": "originals/e169ce52ab5b-mobile.css",
+          "bytes": 2675,
+          "crc32": "cbf5042e",
+          "sha256": "e169ce52ab5b82164b06f581861995f4aa8a3a3c37a6029ae3200e74e3c68fa0"
+        },
+        {
+          "path": "originals/e5bc136bd6f7-index.html",
+          "bytes": 3279,
+          "crc32": "b93cb0cc",
+          "sha256": "e5bc136bd6f77d7ffb10a2dbb359067f544377f4358ff29f91114ed5059305f5"
+        },
+        {
+          "path": "originals/e6e2e10ab8ce-moonpatrol_link.html",
+          "bytes": 17584,
+          "crc32": "4efd8b4e",
+          "sha256": "e6e2e10ab8ce1edfde79ae5c53ab0e938757fc58d05b23fae2417819eee8d34c"
+        },
+        {
+          "path": "originals/e70379664c4d-game.html",
+          "bytes": 11906,
+          "crc32": "aa47fd72",
+          "sha256": "e70379664c4d3f782974f2b284f1d34efe67b1f9c6aec6a018cc545b9722925e"
+        },
+        {
+          "path": "originals/eb9ab7c7ab2a-pang.swf",
+          "bytes": 18850,
+          "crc32": "6fe99f14",
+          "sha256": "eb9ab7c7ab2ad0f81f402a91cebc49c8916b1607d761c4a482c7f4d91846b679"
+        },
+        {
+          "path": "originals/edb3ab6e0963-moonpatrol.swf",
+          "bytes": 38882,
+          "crc32": "8cac768f",
+          "sha256": "edb3ab6e0963773bea857f28909afdd9dd551609fd881776816ead9fff923cd6"
+        },
+        {
+          "path": "originals/ef73028b049d-chainshotdemo.gif",
+          "bytes": 4604,
+          "crc32": "78157641",
+          "sha256": "ef73028b049de72ea21d3794d3fe3d007465b1b5ee6658e4a64cd21b152b49ee"
+        },
+        {
+          "path": "originals/f2c01647c21c-mobile_down_2.html",
+          "bytes": 16579,
+          "crc32": "c6da7d33",
+          "sha256": "f2c01647c21c4ea3d1ed27c2667ae1b5a7feaca8c52223f5ccb12cadb779c3bb"
+        },
+        {
+          "path": "originals/fa459bc8bee6-chain_right.gif",
+          "bytes": 550,
+          "crc32": "6382e18b",
+          "sha256": "fa459bc8bee6c9135d57acfea2cbe5fb4b963c42ba3cdbae7dcfc0ea673a71e8"
+        },
+        {
+          "path": "originals/fa893726faa2-c5c3a2.gif",
+          "bytes": 5255,
+          "crc32": "7d19c087",
+          "sha256": "fa893726faa20b7e69265c45aea2d5bc547a15bc902f27bd4429752ca1f6ce2b"
+        },
+        {
+          "path": "originals/fab25d949515-MATCHIT.swf",
+          "bytes": 106017,
+          "crc32": "bf763465",
+          "sha256": "fab25d94951544721b8c1088124e2244125510a8572f255c00ee97e4c6384586"
+        },
+        {
+          "path": "originals/fdb2410fe0cb-Match_20It.swf",
+          "bytes": 124849,
+          "crc32": "69bcdb87",
+          "sha256": "fdb2410fe0cbb28a7fd46a0deb11519cc8ab195e1e561d6e036580f242311018"
+        },
+        {
+          "path": "originals/ff2f820d73cc-soccer.swf",
+          "bytes": 21777,
+          "crc32": "a3d9be91",
+          "sha256": "ff2f820d73cc1eee7ebc203df39dde4ece8d7520da66db4586268dc4a134991f"
+        },
+        {
+          "path": "originals/ffa43444ead0-MAGIC.SWF",
+          "bytes": 241605,
+          "crc32": "79f41d27",
+          "sha256": "ffa43444ead02719656ad7028e8d5a05adbddcf10bab282ca3dfa1b71931c290"
+        }
+      ]
+    },
+    {
       "id": "dubigame-skt-fifteen",
       "repositoryPath": "research/archives/Dubigame-SKT-15-Game-Packages.zip",
       "bytes": 6960264,
@@ -216490,9 +217951,9 @@
     }
   ],
   "counts": {
-    "archives": 126,
-    "archiveBytes": 2521475612,
-    "fileMembers": 35892,
-    "uniqueMemberHashes": 21061
+    "archives": 127,
+    "archiveBytes": 2524837299,
+    "fileMembers": 36134,
+    "uniqueMemberHashes": 21296
   }
 }

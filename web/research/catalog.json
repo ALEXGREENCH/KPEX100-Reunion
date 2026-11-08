@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "mdream-gvm-catalogue-and-demos",
+      "title": "MDream · каталог GVM и демонстрации игр",
+      "category": "Wayback и форумы",
+      "description": "Оригиналы сайта MDream, в том числе 23 SWF и интерактивное руководство Moon Patrol. Ссылки на выдачу игр SKT и хеши Wayback.",
+      "repositoryPath": "research/archives/MDream-GVM-Game-Catalogue-and-Demos.zip",
+      "bytes": 3361687,
+      "sha256": "00ccbfe37b93bfc216e648457258f35ee24acb11d12270ae0a0f4bb33e4d2990",
+      "sources": [
+        {
+          "label": "Карточка Galaga",
+          "url": "https://web.archive.org/web/20030124013530id_/http://www.m-dream.com:80/eng/mobilegame/mobile_down_1.html"
+        },
+        {
+          "label": "Выдача Moon Patrol, SKT 011",
+          "url": "https://web.archive.org/web/20020805042800id_/http://www.m-dream.com:80/service/vm_moonpatrol/011/game_connect.html"
+        },
+        {
+          "label": "Интерактивная демонстрация Moon Patrol",
+          "url": "https://web.archive.org/web/20031019181013id_/http://www.m-dream.com:80/service/vm_moonpatrol/images/handphone.swf"
+        }
+      ]
+    },
+    {
       "id": "dubigame-skt-fifteen",
       "title": "Dubigame · 15 пакетов SKT",
       "category": "Игры и игровые сборки",
@@ -2555,6 +2578,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Ранние игры MDream для GVM и демонстрация Moon Patrol",
+      "repositoryPath": "doc/mdream-gvm-catalogue-and-demos.md"
+    },
     {
       "title": "Пакеты SKT, KTF и LGT из двух зеркал Dubigame",
       "repositoryPath": "doc/dubigame-mirror-game-recovery.md"
