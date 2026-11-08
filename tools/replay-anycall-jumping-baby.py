@@ -85,8 +85,21 @@ ADDITIONAL_GAMES = {
         "보글보글동자승2.mbin",
         "3ae1e04708000af39f87482c7d34e4e6ce8717f2c72eff2da7b044827cd72407",
     ),
+    "hysteric-girl": (
+        "버전 다름/히스테리_걸.mbin",
+        "f388724afbda8d5f2c121eb9c8ac4f2f21c7a54cd6fe9459e46d7536ddead7e2",
+    ),
+    "dalma-lets-play": (
+        "버전 다름/달마야놀자.mbin",
+        "0613b05dbdeba2f77624afe6bdfb54210b55dca6a6865c440035928fa23ec308",
+    ),
+    "independence-day-anycall": (
+        "버전 다름/인디팬던스_데이.mbin",
+        "36502925ecdd62bba963a3916d052ad3455022b66be54e44218098ac394b6f21",
+    ),
 }
 ADDITIONAL_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
+ACTION_GAMES = ("hysteric-girl", "dalma-lets-play", "independence-day-anycall")
 DRAWING_TIMERS = {
     "119-rescue": 1,
     "merry-christmas": 0,
@@ -96,8 +109,26 @@ DRAWING_TIMERS = {
     "cheombangjichuk-othello": 1,
     "couple-bowling": 1,
     "bubble-monk-2": 1,
+    **dict.fromkeys(ACTION_GAMES, 1),
 }
-RANDOM_GAMES = ("udon-time", "mobile-gostop", "couple-bowling", "bubble-monk-2")
+RANDOM_GAMES = (
+    "udon-time",
+    "mobile-gostop",
+    "couple-bowling",
+    "bubble-monk-2",
+    *ACTION_GAMES,
+)
+# Exact original guest calls with additional complete raster rows in the MQ payload.
+# Each tuple is descriptor, packed geometry, transparency index, link register, stored pixels.
+MQ_PADDING = {
+    "dalma-lets-play": {
+        0x66FF: (BSS + 0xB9C, 0x1361E, 0xE3, TEXT + 0x468B, 1650),
+        0xACD6: (BSS + 0xD58, 0x15C78, 0xE3, TEXT + 0x468B, 11520),
+    },
+    "independence-day-anycall": {
+        0x1A0FA: (BSS + 0x1098, 0x1082C, 0, TEXT + 0x6691, 440),
+    },
+}
 RGB332 = [
     bytes(
         ((value >> 5) * 255 // 7, ((value >> 2) & 7) * 255 // 7, (value & 3) * 255 // 3)
@@ -110,7 +141,10 @@ MQ = runpy.run_path(str(Path(__file__).with_name("extract-samsung-w420-mq.py")))
 class Replay:
     def __init__(self, original, *, game_id="jumping-baby"):
         self.game_id = game_id
-        self.instruction_budget = 1_000_000 if game_id == "bubble-monk-2" else 25_000
+        self.instruction_budget = {
+            "bubble-monk-2": 1_000_000,
+            "hysteric-girl": 150_000,
+        }.get(game_id, 25_000)
         self.original_sha256 = sha256(original).hexdigest()
         expected = (
             MBIN_SHA256 if game_id == "jumping-baby" else ADDITIONAL_GAMES[game_id][1]
@@ -122,15 +156,24 @@ class Replay:
             if game_id == "jumping-baby"
             else STUB_SLOTS | ADDITIONAL_STUB_SLOTS
         )
+        if game_id in ACTION_GAMES:
+            self.stub_slots.add(0x08)
         self.height = (
             144
             if game_id
-            in ("pocket-billiards", "cheombangjichuk-othello", "couple-bowling")
+            in (
+                "pocket-billiards",
+                "cheombangjichuk-othello",
+                "couple-bowling",
+                "hysteric-girl",
+                "independence-day-anycall",
+            )
             else HEIGHT
         )
         self.body = original[HEADER_BYTES:]
         self.sprites = {}
         self.resources = {}
+        self.padded_mq = {}
         self.calls = Counter()
         self.frames = 0
         self.error = None
@@ -187,14 +230,16 @@ class Replay:
         offset = address - TEXT
         header = MQ["MQ_HEADER"]
         magic, count, size = header.unpack_from(self.body, offset)
-        if (
-            magic != b"MQ"
-            or count != width * height
-            or not header.size < size <= len(self.body) - offset
-        ):
+        if magic != b"MQ" or not header.size < size <= len(self.body) - offset:
             raise ValueError(f"invalid MQ record at guest address {address:#x}")
         record = self.body[offset : offset + size]
         key = transparency & 255
+        if count != width * height:
+            caller = self.cpu.reg_read(UC_ARM_REG_LR)
+            if (descriptor, geometry, key, caller, count) != MQ_PADDING.get(
+                self.game_id, {}
+            ).get(offset):
+                raise ValueError(f"invalid MQ record at guest address {address:#x}")
         pixels = MQ["decode"](record, count, key)
         self.sprites[descriptor] = (width, height, key, pixels)
         self.resources[offset] = {
@@ -205,6 +250,28 @@ class Replay:
             "bytes": size,
             "sha256": sha256(record).hexdigest(),
         }
+        if count != width * height:
+            tail_rows = []
+            for start in range(width * height, count, width):
+                row = pixels[start : start + width]
+                tail_rows.append(
+                    {
+                        "nonTransparent": width - row.count(key),
+                        "uniqueIndices": len(set(row)),
+                        "sha256": sha256(row).hexdigest(),
+                    }
+                )
+            self.padded_mq[offset] = {
+                **self.resources[offset],
+                "bodyOffset": offset,
+                "descriptor": f"{descriptor:#010x}",
+                "packedGeometry": f"{geometry:#010x}",
+                "linkRegister": f"{caller:#010x}",
+                "storedPixels": count,
+                "storedRows": count // width,
+                "decodedSha256": sha256(pixels).hexdigest(),
+                "tailRows": tail_rows,
+            }
 
     def blit(self, position, descriptor):
         x, y = struct.unpack("<hh", struct.pack("<I", position))
@@ -272,7 +339,15 @@ class DrawingReplay(Replay):
 
     def host(self, cpu, address, size, data):
         slot = address - STUBS
-        if slot == 0x48 and self.game_id != "cheombangjichuk-othello":
+        if slot == 0x0C and self.game_id == "hysteric-girl":
+            if (
+                cpu.reg_read(UC_ARM_REG_R0) != BSS + 0x4878
+                or cpu.reg_read(UC_ARM_REG_LR) != TEXT + 0x56E5
+            ):
+                raise ValueError("unexpected ADS slot 0x0c session save")
+            self.record_special_call(slot)
+            cpu.reg_write(UC_ARM_REG_R0, 0)
+        elif slot == 0x48 and self.game_id != "cheombangjichuk-othello":
             # A synthetic clock for this replay, in units of presented frames.
             cpu.mem_write(self.output_address() + 12, struct.pack("<I", self.frames))
             cpu.reg_write(UC_ARM_REG_R0, 0)
@@ -658,6 +733,7 @@ def replay_mobile_gostop(original, output):
 
 
 def replay_paired_boards(original, output, game_id):
+    start_ticks = 100
     if game_id == "cheombangjichuk-othello":
         setup_keys = [19, 19, 19, 19, 11, 11, 11, 11, 13, 13]
         intervals = [21, 80]
@@ -670,7 +746,7 @@ def replay_paired_boards(original, output, game_id):
                 "coordinates": "zero-based",
             },
         }
-    else:
+    elif game_id == "couple-bowling":
         setup_keys = [19, 19, 19, 19, 19, 12, 19, 11, 19]
         intervals = [20, 20, 20, 40]
         inputs = [(None, "idle"), (11, "right"), (19, "confirm")]
@@ -683,7 +759,16 @@ def replay_paired_boards(original, output, game_id):
                 "confirm": "Opens the power meter early. The first shot scores 6.",
             },
         }
-    sequence = [(None, 100)] + [(key, 20) for key in setup_keys]
+    else:
+        start_ticks = 140
+        setup_keys = [19, 19]
+        intervals = [0, 1, 3, 8, 12]
+        inputs = [(None, "idle"), (11, "right"), (19, "confirm")]
+        details = {
+            "randomSeed": 0x12345678,
+            "clock": "synthetic count of presented frames",
+        }
+    sequence = [(None, start_ticks)] + [(key, 20) for key in setup_keys]
     common = []
     branches = []
     idle_frames = []
@@ -723,7 +808,7 @@ def replay_paired_boards(original, output, game_id):
             changed = sum(
                 a != b for a, b in zip(frame, idle_frames[index], strict=True)
             )
-            if key is not None and not changed:
+            if key is not None and elapsed and not changed:
                 raise RuntimeError(f"no gameplay difference after key {key}")
             checkpoints.append(
                 {
@@ -741,6 +826,13 @@ def replay_paired_boards(original, output, game_id):
         )
         if key is None:
             identity = replay_identity(game, original)
+            if game_id in ACTION_GAMES:
+                expected_mq = MQ_PADDING.get(game_id, {})
+                if game.padded_mq.keys() != expected_mq.keys():
+                    raise RuntimeError("expected padded MQ resource was not used")
+                details["paddedMq"] = [
+                    game.padded_mq[off] for off in sorted(expected_mq)
+                ]
 
     manifest = {
         **identity,
@@ -884,7 +976,7 @@ def main():
             replay_mobile_gostop(original, args.output)
         elif args.game == "bubble-monk-2":
             replay_bubble_monk(original, args.output)
-        elif args.game in ("cheombangjichuk-othello", "couple-bowling"):
+        elif args.game in ("cheombangjichuk-othello", "couple-bowling", *ACTION_GAMES):
             replay_paired_boards(original, args.output, args.game)
         elif args.game in DRAWING_TIMERS and args.game != "119-rescue":
             replay_controls(original, args.output, args.game)

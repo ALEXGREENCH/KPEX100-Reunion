@@ -1,0 +1,273 @@
+{
+  "schema": 1,
+  "game": "hysteric-girl",
+  "originalMember": "버전 다름/히스테리_걸.mbin",
+  "mbinSha256": "f388724afbda8d5f2c121eb9c8ac4f2f21c7a54cd6fe9459e46d7536ddead7e2",
+  "mbinBytes": 116933,
+  "size": [
+    120,
+    144
+  ],
+  "palette": "provisional RGB332",
+  "hostCallCounts": {
+    "0x04": 1,
+    "0x08": 2,
+    "0x0c": 1,
+    "0x18": 2,
+    "0x24": 18,
+    "0x30": 2,
+    "0x34": 206,
+    "0x3c": 1,
+    "0x40": 24,
+    "0x48": 39,
+    "0x5c": 1,
+    "0x68": 1,
+    "0x70": 741,
+    "0x74": 4,
+    "0x7c": 128,
+    "0x8c": 112,
+    "0x98": 16,
+    "0x9c": 2,
+    "0xa0": 100,
+    "0xb0": 133
+  },
+  "stubSlots": [
+    "0x08",
+    "0x18",
+    "0x24",
+    "0x2c",
+    "0x30",
+    "0x34",
+    "0x3c",
+    "0x5c",
+    "0x68",
+    "0x9c"
+  ],
+  "sourceArchive": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+  "originalMemberCrc32": "46fa8b95",
+  "timerArgument": 1,
+  "randomSeed": 305419896,
+  "clock": "synthetic count of presented frames",
+  "paddedMq": [],
+  "commonSequence": [
+    {
+      "key": null,
+      "ticks": 140,
+      "capture": {
+        "file": "setup-00.png",
+        "presentation": 36,
+        "indexedSha256": "b8065ba1155bb281fd5c44955d0eafce2296cd17512f36be8e46d944900b2460",
+        "pngSha256": "a19845f90926e9a4bfc5d3be192b95cd8bec18e31462d18c2c2433debbb55e78",
+        "eventCount": 141
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-01.png",
+        "presentation": 56,
+        "indexedSha256": "abf8935fa4556dfee516454e17721adaf2359a619f975ac1cd026e3ae961a3a5",
+        "pngSha256": "d569cadce529c1c8ebccb80ec098ac909ddeff65c4ca4d93fc15c971c409514e",
+        "eventCount": 162
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-02.png",
+        "presentation": 76,
+        "indexedSha256": "49028a1b1967036444c9e145586ac54ccbf6ad84b9e2909c428eb2352bcd1040",
+        "pngSha256": "f831f351aed180f1aa8a0b89dde46c942e43d53f7a98f05c8abf0a598d2e2284",
+        "eventCount": 183
+      }
+    }
+  ],
+  "timerIntervals": [
+    0,
+    1,
+    3,
+    8,
+    12
+  ],
+  "branches": [
+    {
+      "key": null,
+      "checkpoints": [
+        {
+          "file": "idle-0.png",
+          "presentation": 76,
+          "indexedSha256": "49028a1b1967036444c9e145586ac54ccbf6ad84b9e2909c428eb2352bcd1040",
+          "pngSha256": "f831f351aed180f1aa8a0b89dde46c942e43d53f7a98f05c8abf0a598d2e2284",
+          "eventCount": 183,
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-1.png",
+          "presentation": 77,
+          "indexedSha256": "ce01e689e14d658431f00847883101b38aa4360db6a91e285deeaa31bfaa51c5",
+          "pngSha256": "ce23192a033d13c914591d7d2c6f9815e990e24e8d32d07f1293be7d5a78e9b6",
+          "eventCount": 184,
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-4.png",
+          "presentation": 80,
+          "indexedSha256": "337cd72c2ac6f0d4ddf859ec0b959995dc4aeb8a63441906650859978eecf845",
+          "pngSha256": "3d57447cca4d1823cbf9ab6c42ffb149324c347657a8f7a45fd1d6b785eec508",
+          "eventCount": 187,
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-12.png",
+          "presentation": 88,
+          "indexedSha256": "b75dfc362d7acbb585979c0afdc2b29d2e2eb91eeb417f5c585bcc20d61f1929",
+          "pngSha256": "9701acf73a081af699e7017f3bb4d1193bc6edfa2ece2fe02b224d4ad734719d",
+          "eventCount": 195,
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-24.png",
+          "presentation": 100,
+          "indexedSha256": "5b3411da5b850cbe084ca6912a9bb34ac599a94e601cafcb3275429a43752c84",
+          "pngSha256": "8efd88752630d7d68b3c67b3179ccaafd215dea24a64f8a6026a0e13fe317654",
+          "eventCount": 207,
+          "changedPixels": 0
+        }
+      ],
+      "specialCalls": [
+        {
+          "slot": "0x0c",
+          "completedEvents": 162,
+          "presentation": 56,
+          "arguments": [
+            "0xf5004878",
+            "0x00900078",
+            "0xf4007700",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf40056e5"
+        }
+      ]
+    },
+    {
+      "key": 11,
+      "checkpoints": [
+        {
+          "file": "right-0.png",
+          "presentation": 76,
+          "indexedSha256": "49028a1b1967036444c9e145586ac54ccbf6ad84b9e2909c428eb2352bcd1040",
+          "pngSha256": "f831f351aed180f1aa8a0b89dde46c942e43d53f7a98f05c8abf0a598d2e2284",
+          "eventCount": 184,
+          "changedPixels": 0
+        },
+        {
+          "file": "right-1.png",
+          "presentation": 77,
+          "indexedSha256": "cb34757a3871662ac84133dfc76d1ac0f59fe6c3569fd661f96a469a860ead77",
+          "pngSha256": "1fbe9830d3349f96faa27f047515e3b37aa4b41fa074ec49b8d8a4fb3ae19a0e",
+          "eventCount": 185,
+          "changedPixels": 220
+        },
+        {
+          "file": "right-4.png",
+          "presentation": 80,
+          "indexedSha256": "356dafc7ee8f79565ae34a1ab13f65aba0efc61f6d5a1779991161b336c627f3",
+          "pngSha256": "d049d493250cbc9a28415a425d923f25eb02b088d524738304ab6c9e98c43728",
+          "eventCount": 188,
+          "changedPixels": 220
+        },
+        {
+          "file": "right-12.png",
+          "presentation": 88,
+          "indexedSha256": "821af5f5e983ca5879aa3c672d9e52f17be0ca422add6241df933cbf4306bd02",
+          "pngSha256": "fc06a194eccb6eadea1d47edf92dcc9f2b02695175cbe745c7b82184f5cadeb8",
+          "eventCount": 196,
+          "changedPixels": 220
+        },
+        {
+          "file": "right-24.png",
+          "presentation": 100,
+          "indexedSha256": "10af75d98cc90782767a1019e0d9f0ed7389d0391d100c507d7e86e5b671fb35",
+          "pngSha256": "1741146a71411f54def37110eaadfe8fa2d4687718a612582f69d5b094bff8c9",
+          "eventCount": 208,
+          "changedPixels": 220
+        }
+      ],
+      "specialCalls": [
+        {
+          "slot": "0x0c",
+          "completedEvents": 162,
+          "presentation": 56,
+          "arguments": [
+            "0xf5004878",
+            "0x00900078",
+            "0xf4007700",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf40056e5"
+        }
+      ]
+    },
+    {
+      "key": 19,
+      "checkpoints": [
+        {
+          "file": "confirm-0.png",
+          "presentation": 76,
+          "indexedSha256": "49028a1b1967036444c9e145586ac54ccbf6ad84b9e2909c428eb2352bcd1040",
+          "pngSha256": "f831f351aed180f1aa8a0b89dde46c942e43d53f7a98f05c8abf0a598d2e2284",
+          "eventCount": 184,
+          "changedPixels": 0
+        },
+        {
+          "file": "confirm-1.png",
+          "presentation": 77,
+          "indexedSha256": "aa1fc44a638b41f628a4e5dccec033a0aa6dd3203fe547b8b9a92dc44afe263b",
+          "pngSha256": "eb2bac35eafe2f9a55df269428b3ad1bb1cb117979a573c731391f8a896436af",
+          "eventCount": 185,
+          "changedPixels": 302
+        },
+        {
+          "file": "confirm-4.png",
+          "presentation": 80,
+          "indexedSha256": "b721ded377125b6edf1549b25a44bc39ffe51ed7c74cc66bb7ff619dd9e9a748",
+          "pngSha256": "6d795755c2249c0371a3a16c32695974c11e6255c9f40b2af284e48534af928b",
+          "eventCount": 188,
+          "changedPixels": 256
+        },
+        {
+          "file": "confirm-12.png",
+          "presentation": 88,
+          "indexedSha256": "10e6e3a2c5075223a0229c856d60b96c271b023323cae3c122d6289534774206",
+          "pngSha256": "2aa2a7fb7ebaa74ef294923d7b42e27fcc09868fc01029bfbcfec83a17a29382",
+          "eventCount": 196,
+          "changedPixels": 214
+        },
+        {
+          "file": "confirm-24.png",
+          "presentation": 100,
+          "indexedSha256": "0e4c1f796f8f8a43430c7d24dc45b7a71a5b67f47f554b979ddda1f88e2de30f",
+          "pngSha256": "67cf6685827757d2418ba8e00d2b441425805639f8cecb1e14c383ec01fb4c8e",
+          "eventCount": 208,
+          "changedPixels": 214
+        }
+      ],
+      "specialCalls": [
+        {
+          "slot": "0x0c",
+          "completedEvents": 162,
+          "presentation": 56,
+          "arguments": [
+            "0xf5004878",
+            "0x00900078",
+            "0xf4007700",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf40056e5"
+        }
+      ]
+    }
+  ]
+}

@@ -135,16 +135,71 @@ const PROFILES = [
     stubs: RANDOM_DRAWING_STUBS,
     eventBudget: 75000,
   },
+  {
+    id: 'hysteric-girl',
+    title: 'Hysteric Girl',
+    bytes: 116933,
+    sha256: 'f388724afbda8d5f2c121eb9c8ac4f2f21c7a54cd6fe9459e46d7536ddead7e2',
+    timerArgument: 1,
+    height: 144,
+    stubs: RANDOM_DRAWING_STUBS,
+    eventBudget: 150000,
+    sessionSave: { address: BSS + 0x4878, caller: TEXT + 0x56e5 },
+  },
+  {
+    id: 'dalma-lets-play',
+    title: "Dalma, Let's Play",
+    bytes: 119602,
+    sha256: '0613b05dbdeba2f77624afe6bdfb54210b55dca6a6865c440035928fa23ec308',
+    timerArgument: 1,
+    stubs: RANDOM_DRAWING_STUBS,
+    mqRasters: {
+      0x66ff: {
+        descriptor: BSS + 0x0b9c,
+        geometry: 0x0001361e,
+        key: 0xe3,
+        caller: TEXT + 0x468b,
+        pixels: 30 * 55,
+      },
+      0xacd6: {
+        descriptor: BSS + 0x0d58,
+        geometry: 0x00015c78,
+        key: 0xe3,
+        caller: TEXT + 0x468b,
+        pixels: 120 * 96,
+      },
+    },
+  },
+  {
+    id: 'independence-day-anycall',
+    title: 'Independence Day (Anycall)',
+    bytes: 130744,
+    sha256: '36502925ecdd62bba963a3916d052ad3455022b66be54e44218098ac394b6f21',
+    timerArgument: 1,
+    height: 144,
+    stubs: RANDOM_DRAWING_STUBS,
+    mqRasters: {
+      0x1a0fa: {
+        descriptor: BSS + 0x1098,
+        geometry: 0x0001082c,
+        key: 0,
+        caller: TEXT + 0x6691,
+        pixels: 44 * 10,
+      },
+    },
+  },
 ];
 const signed = (value) => (value << 16) >> 16;
 const hex = (value) => '0x' + value.toString(16);
-const palette = new Uint8Array(256 * 4);
+const palette = new Uint32Array(256);
+// Define RGBA bytes first so reading a word uses the platform's byte order.
+const paletteBytes = new Uint8Array(palette.buffer);
 for (let color = 0; color < 256; color++) {
   const offset = color * 4;
-  palette[offset] = ((color >>> 5) * 255) / 7;
-  palette[offset + 1] = (((color >>> 2) & 7) * 255) / 7;
-  palette[offset + 2] = (color & 3) * 85;
-  palette[offset + 3] = 255;
+  paletteBytes[offset] = ((color >>> 5) * 255) / 7;
+  paletteBytes[offset + 1] = (((color >>> 2) & 7) * 255) / 7;
+  paletteBytes[offset + 2] = (color & 3) * 85;
+  paletteBytes[offset + 3] = 255;
 }
 
 function displayFrame(indices, height) {
@@ -155,13 +210,8 @@ function displayFrame(indices, height) {
     get data() {
       if (!data) {
         data = new Uint8ClampedArray(indices.length * 4);
-        for (let i = 0, dst = 0; i < indices.length; i++) {
-          const src = indices[i] * 4;
-          data[dst++] = palette[src];
-          data[dst++] = palette[src + 1];
-          data[dst++] = palette[src + 2];
-          data[dst++] = 255;
-        }
+        const pixels = new Uint32Array(data.buffer);
+        for (let i = 0; i < indices.length; i++) pixels[i] = palette[indices[i]];
       }
       return data;
     },
@@ -487,7 +537,18 @@ export class AdsRuntime {
         const width = b & 255;
         const height = (b >>> 8) & 255;
         const key = transparency & 255;
-        const pixels = decodeMq(this.#body, address - TEXT, width * height, key);
+        const offset = address - TEXT;
+        const raster = this.#profile.mqRasters?.[offset];
+        // These records store taller rasters than the guest's blit descriptors.
+        const count =
+          raster &&
+          a === raster.descriptor &&
+          b === raster.geometry &&
+          key === raster.key &&
+          cpu.regRead('lr') === raster.caller
+            ? raster.pixels
+            : width * height;
+        const pixels = decodeMq(this.#body, offset, count, key);
         this.#sprites.set(a, { width, height, key, pixels });
         break;
       }

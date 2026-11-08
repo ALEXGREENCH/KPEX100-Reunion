@@ -48,10 +48,20 @@ test('ADS can transfer its RGBA buffer and regenerate the same frame on request'
     await replay(record, (game) => {
       advance(game, 100);
       const frame = game.framebuffer;
-      const indexedHash = hash(game.readIndexedFrame());
+      const indices = game.readIndexedFrame();
+      const indexedHash = hash(indices);
       const original = frame.data;
       const expected = hash(original);
       assert.equal(original.length, record.size[0] * record.size[1] * 4);
+      const rgba = new Uint8Array(original.length);
+      for (let i = 0; i < indices.length; i++) {
+        const color = indices[i];
+        rgba[i * 4] = ((color >>> 5) * 255) / 7;
+        rgba[i * 4 + 1] = (((color >>> 2) & 7) * 255) / 7;
+        rgba[i * 4 + 2] = (color & 3) * 85;
+        rgba[i * 4 + 3] = 255;
+      }
+      assert.equal(expected, hash(rgba));
       const pixels = frame.takePixels();
       assert.equal(pixels, original);
       const transferred = structuredClone(pixels, { transfer: [pixels.buffer] });
@@ -159,6 +169,9 @@ for (const [gameId, keys] of [
   ['mobile-gostop', [1, 5, 7]],
   ['cheombangjichuk-othello', [19]],
   ['couple-bowling', [11, 19]],
+  ['hysteric-girl', [11, 19]],
+  ['dalma-lets-play', [11, 19]],
+  ['independence-day-anycall', [11, 19]],
 ]) {
   test(`ADS: ${gameId} matches the independent idle and keypad replays on ARM/WASM`, async () => {
     const record = json(`../validation/anycall-${gameId}.json`);
@@ -189,7 +202,7 @@ for (const [gameId, keys] of [
               (count, pixel, i) => count + (pixel !== idle[index][i]),
               0,
             );
-            assert.ok(changed > 0, expected.file);
+            if (ticks > 0) assert.ok(changed > 0, expected.file);
             assert.equal(changed, expected.changedPixels, expected.file);
           }
         }

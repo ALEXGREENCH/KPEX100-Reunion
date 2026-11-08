@@ -7,11 +7,11 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-The collection includes 9 firmware images, 102 SGS applications, 13 Anycall ADS games, 3 quick-start
+The collection includes 9 firmware images, 102 SGS applications, 16 Anycall ADS games, 3 quick-start
 snapshots and the original Swerve 2.1 module. The catalogue records SHA-256
 hashes and tested runtime profiles.
 
-Thirteen Samsung Anycall games launch from the browser library using their original MBIN files and embedded SMAF audio. Each has a gameplay and input check. Timers, palette and synthesized timbres are approximate. ADS saves currently last for the active session. [Anycall controls and source archives](doc/samsung-anycall-ads-mbin.md#запуск-в-браузере)
+Sixteen Samsung Anycall games launch from the browser library using their original MBIN files and embedded SMAF audio. Each has a gameplay and input check. Timers, palette and synthesized timbres are approximate. ADS saves currently last for the active session. [Anycall controls and source archives](doc/samsung-anycall-ads-mbin.md#запуск-в-браузере)
 
 [World League and Bounce from S60](doc/s60-library-completion.md): three previously preserved SGS builds are now in the launch library, with fresh paired scene/control checks. Menu rendering and external-audio limits remain documented.
 
