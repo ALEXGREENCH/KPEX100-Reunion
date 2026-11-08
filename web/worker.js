@@ -52,7 +52,7 @@ let timers = new TimerScheduler(),
   pausedAt = null,
   lastFrame = 0,
   framePending = false,
-  lastFirmwareLcdWrites = null,
+  lastDisplayUpdate = null,
   lastStatus = 0,
   firmwareBudget = 100000;
 const frameInterval = 1000 / 60;
@@ -117,8 +117,8 @@ function status(extra = {}) {
 }
 function frame(force = false) {
   if (!machine) return;
-  const lcdWrites = mode === 'firmware' ? machine.lcd_pixel_writes : undefined;
-  if (!force && lcdWrites !== undefined && lcdWrites === lastFirmwareLcdWrites) {
+  const displayUpdate = mode === 'firmware' ? machine.lcd_pixel_writes : machine.framebuffer;
+  if (!force && displayUpdate !== undefined && displayUpdate === lastDisplayUpdate) {
     framePending = false;
     return;
   }
@@ -130,7 +130,7 @@ function frame(force = false) {
   emit({ type: 'frame', width: machine.width || 220, height: machine.height || 176, pixels }, [
     pixels.buffer,
   ]);
-  if (mode === 'firmware') lastFirmwareLcdWrites = lcdWrites;
+  lastDisplayUpdate = displayUpdate;
   framePending = false;
   lastFrame = performance.now();
 }
@@ -203,7 +203,7 @@ async function load(message) {
   machine?.close?.();
   machine = null;
   framePending = false;
-  lastFirmwareLcdWrites = null;
+  lastDisplayUpdate = null;
   firmwareBudget = 100000;
   timers = new TimerScheduler();
   nativeStarts.clear();

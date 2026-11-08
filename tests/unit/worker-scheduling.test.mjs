@@ -144,6 +144,25 @@ test('worker transfers an independent frame without detaching the guest framebuf
   assert.equal(frame.pixels[0], 10, 'Transferred pixels must not alias live guest memory');
 });
 
+test('the worker sends a game frame only after presentation, or when requested', async () => {
+  const h = harness();
+  const frames = () => h.messages.filter((message) => message.type === 'frame');
+  h.guest.framebuffer = { data: h.guest.framebufferRGBA };
+  await h.load();
+  h.advance(20);
+  await h.command({ type: 'key', sessionId: 1, key: 'a', pressed: true });
+  assert.equal(frames().length, 1);
+
+  h.guest.framebufferRGBA = Uint8ClampedArray.of(99, 20, 30, 255);
+  h.guest.framebuffer = { data: h.guest.framebufferRGBA };
+  await h.command({ type: 'key', sessionId: 1, key: 'a', pressed: false });
+  assert.equal(frames().length, 2);
+  assert.equal(frames().at(-1).pixels[0], 99);
+
+  await h.command({ type: 'step', sessionId: 1 });
+  assert.equal(frames().length, 3, 'a forced frame is emitted even without a new image');
+});
+
 test('throttled key frames flush at the display deadline without another guest timer', async () => {
   const h = harness((guest, name) => {
     if (name === 'KEYPRESS') guest.framebufferRGBA[0]++;

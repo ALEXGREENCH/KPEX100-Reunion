@@ -1,0 +1,511 @@
+{
+  "schema": 1,
+  "baseline": "e2611d613c89a40244fb35316290d6f8f160cabb",
+  "parameters": {
+    "explicitTimeouts": 120,
+    "pairedRuns": 3,
+    "warmupsPerProcess": 1,
+    "order": [
+      "before/after",
+      "after/before",
+      "before/after"
+    ]
+  },
+  "scope": "Node host time for guest actions and eager framebuffer conversion. Fingerprint and instrumentation outside the measured interval.",
+  "equality": "Each paired run had identical full frame sequence digest, checkpoints, final framebuffer, VM status, event count, syscalls, timers and virtual time.",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "arch": "x64",
+    "cpu": "AMD Ryzen 5 5500                               "
+  },
+  "romSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+  "files": {
+    "web/engine/gnex.js": {
+      "before": "96fb78e78fee6ccc742304732f894c390bbdadebfc8d757e9c0b4c85548fd8e3",
+      "after": "1ca03e19894228a2be77199fff4eafdb0a4dfe0660cb25098aa43acadcb3ebb9"
+    },
+    "web/worker.js": {
+      "before": "804ed8970ac0183e08e9f2c643c7a0512fe986f57914608a3d6cd604ea55a009",
+      "after": "8207866ec9cb0a5a12f23201b67e3fc2018e32eea2ea5c48711b7eaba5314b5d"
+    }
+  },
+  "games": [
+    {
+      "id": "keroro-mini-game-ktf",
+      "format": 4,
+      "gameSha256": "6118d506a81c2339c0f40b3194e6762fb502923cb98b5acf14b4cf78ff0a73bd",
+      "reference": {
+        "rgbaSha256": "c0be37a493d43c33fbaf60f83b5a1da39e2b9f94cb2fe79df7400d0fb4c78b2f",
+        "frameTrailSha256": "0525fcfe45d1e5c63e551903112b8b7cc586839847cd5a553905be5903f17b4a",
+        "width": 240,
+        "height": 320,
+        "status": "idle",
+        "error": null,
+        "events": 145,
+        "syscalls": {
+          "0x0000006b": 1,
+          "0x0000008b": 1,
+          "0x00000095": 1,
+          "0x00000090": 1,
+          "0x00000027": 101,
+          "0x00000046": 291,
+          "0x000000a5": 21284,
+          "0x0000002f": 150,
+          "0x00000028": 323,
+          "0x00000005": 120,
+          "0x0000005f": 120,
+          "0x00000051": 7,
+          "0x00000052": 99,
+          "0x00000030": 2366,
+          "0x0000009f": 1264,
+          "0x000000a0": 15798,
+          "0x000000a6": 11692,
+          "0x000000a1": 1014,
+          "0x00000057": 260,
+          "0x000000c9": 138,
+          "0x0000003c": 955,
+          "0x00000083": 1,
+          "0x00000082": 1,
+          "0x00000025": 3505,
+          "0x0000003a": 1,
+          "0x00000047": 2
+        },
+        "timerStates": [
+          {
+            "channel": 0,
+            "delay": 150,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ],
+        "virtualMs": 18000,
+        "checkpoints": [
+          {
+            "frame": 0,
+            "timeMs": 0,
+            "rgbaSha256": "4d856b7a9008759aff68a0d1cde95b895fb952761719549f339d00d6eda9f543",
+            "events": 1
+          },
+          {
+            "frame": 20,
+            "timeMs": 3000,
+            "rgbaSha256": "9b1a4f3b807b6e74adba3ffbcf109fa2a567211c52e8c68776b6679fbf748f18",
+            "events": 25
+          },
+          {
+            "frame": 40,
+            "timeMs": 6000,
+            "rgbaSha256": "690973a3f8e70aab421b9d5c007d5f6f96c1c523a2a5b2985e8aea120e4012a0",
+            "events": 49
+          },
+          {
+            "frame": 60,
+            "timeMs": 9000,
+            "rgbaSha256": "5813232926593e779c69a7719812d74d2dbf042f0d233ebe560f9fb97776c87c",
+            "events": 73
+          },
+          {
+            "frame": 80,
+            "timeMs": 12000,
+            "rgbaSha256": "5d0397d5654b4e30c2ea05772c120888610fe1e9716cedf241fa3e1759bb9824",
+            "events": 97
+          },
+          {
+            "frame": 100,
+            "timeMs": 15000,
+            "rgbaSha256": "c0be37a493d43c33fbaf60f83b5a1da39e2b9f94cb2fe79df7400d0fb4c78b2f",
+            "events": 121
+          },
+          {
+            "frame": 120,
+            "timeMs": 18000,
+            "rgbaSha256": "c0be37a493d43c33fbaf60f83b5a1da39e2b9f94cb2fe79df7400d0fb4c78b2f",
+            "events": 145
+          }
+        ]
+      },
+      "runs": [
+        {
+          "beforeMs": 2019.8835000000004,
+          "afterMs": 2044.5922000000019,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        },
+        {
+          "beforeMs": 2065.1552000000006,
+          "afterMs": 1974.4107000000026,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        },
+        {
+          "beforeMs": 2224.2888999999986,
+          "afterMs": 1993.2811999999972,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        }
+      ],
+      "medianBeforeMs": 2065.1552000000006,
+      "medianAfterMs": 1993.2811999999972
+    },
+    {
+      "id": "hellfire",
+      "format": 4,
+      "gameSha256": "e13a9ddadaf05774b7f4d71a4f9a43ff742835bfc3b8c3389703bcf679391622",
+      "reference": {
+        "rgbaSha256": "98a75c5b19fb288b6fe8e543ad91392b5761f14e2fb1a5a9f896f10cef6b34d1",
+        "frameTrailSha256": "a550ab1a7dd24e0b94a82947896d0a603d25b5f0b5280158643eef087282c62b",
+        "width": 220,
+        "height": 176,
+        "status": "idle",
+        "error": null,
+        "events": 145,
+        "syscalls": {
+          "0x00000082": 36,
+          "0x00000095": 1,
+          "0x0000003a": 119,
+          "0x000000c9": 149,
+          "0x0000005f": 119,
+          "0x000000b0": 114,
+          "0x00000055": 114,
+          "0x0000008e": 2
+        },
+        "timerStates": [
+          {
+            "channel": 0,
+            "delay": 300,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ],
+        "virtualMs": 36000,
+        "checkpoints": [
+          {
+            "frame": 0,
+            "timeMs": 0,
+            "rgbaSha256": "ab5fad0747a920f010b1c15fbf1b89dfd692a312b10e856ea2eff01d973e2497",
+            "events": 1
+          },
+          {
+            "frame": 20,
+            "timeMs": 6000,
+            "rgbaSha256": "c085daf5b3f8251ba78897ff2db1e6b94a98aa9c4854024116caf0205fa9cb43",
+            "events": 25
+          },
+          {
+            "frame": 40,
+            "timeMs": 12000,
+            "rgbaSha256": "88142b2c4422999ee41a18959a661e74cad6d941c532feafc4676ed462b37d4a",
+            "events": 49
+          },
+          {
+            "frame": 60,
+            "timeMs": 18000,
+            "rgbaSha256": "35cd9ec1d3f23e2894ffe073a137035abb6995e43b86a1dd04e34b261512a2f1",
+            "events": 73
+          },
+          {
+            "frame": 80,
+            "timeMs": 24000,
+            "rgbaSha256": "bdcbd2872ceea8ac2d644d5c039ae00edaf80c4cb310c185d8efe2752fbc7867",
+            "events": 97
+          },
+          {
+            "frame": 100,
+            "timeMs": 30000,
+            "rgbaSha256": "a923f6d0aa38813431db811e37a65d6bc233abc6fc220ae21a9f456b4f42b780",
+            "events": 121
+          },
+          {
+            "frame": 120,
+            "timeMs": 36000,
+            "rgbaSha256": "98a75c5b19fb288b6fe8e543ad91392b5761f14e2fb1a5a9f896f10cef6b34d1",
+            "events": 145
+          }
+        ]
+      },
+      "runs": [
+        {
+          "beforeMs": 530.5785000000051,
+          "afterMs": 530.661100000003,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        },
+        {
+          "beforeMs": 570.4976000000033,
+          "afterMs": 530.1626000000051,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        },
+        {
+          "beforeMs": 542.4191000000001,
+          "afterMs": 544.3156000000026,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        }
+      ],
+      "medianBeforeMs": 542.4191000000001,
+      "medianAfterMs": 530.661100000003
+    },
+    {
+      "id": "gnex1_1zimae",
+      "format": 4,
+      "gameSha256": "827f08f5d1f280d4f2d391b4a325adff73379400340e7773b6aa5c8c171514d9",
+      "reference": {
+        "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+        "frameTrailSha256": "fe7af2886948c628628e7d48de3970d8d33fe95fb7b13197962fdba41be6cced",
+        "width": 128,
+        "height": 160,
+        "status": "idle",
+        "error": null,
+        "events": 145,
+        "syscalls": {
+          "0x00000001": 3,
+          "0x000000a5": 160,
+          "0x000000a0": 43,
+          "0x000000a6": 16,
+          "0x0000009f": 7,
+          "0x00000002": 1,
+          "0x000000a4": 1,
+          "0x000000a1": 3,
+          "0x000000a2": 2,
+          "0x000000a3": 2,
+          "0x000000c5": 151,
+          "0x00000093": 1,
+          "0x0000006b": 1,
+          "0x000000c9": 48,
+          "0x00000095": 1,
+          "0x00000005": 121,
+          "0x000000c8": 1,
+          "0x00000052": 120,
+          "0x0000003a": 50,
+          "0x00000022": 8,
+          "0x00000023": 8,
+          "0x0000005f": 120,
+          "0x0000003b": 1,
+          "0x00000051": 1,
+          "0x00000028": 140,
+          "0x00000056": 350,
+          "0x00000026": 4,
+          "0x00000047": 4
+        },
+        "timerStates": [
+          {
+            "channel": 0,
+            "delay": 10,
+            "repeat": true,
+            "revision": 1,
+            "armedAt": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ],
+        "virtualMs": 1200,
+        "checkpoints": [
+          {
+            "frame": 0,
+            "timeMs": 0,
+            "rgbaSha256": "d1fe1ec2e968b2141504ca2b2a4a261d5dbc1e26ecef7525600d70c05bf3f3c8",
+            "events": 1
+          },
+          {
+            "frame": 20,
+            "timeMs": 200,
+            "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+            "events": 25
+          },
+          {
+            "frame": 40,
+            "timeMs": 400,
+            "rgbaSha256": "adde4ca1c1c70d564329f47b052f5787e59b8f4d2defb3fbdbdddf2b5689a9ed",
+            "events": 49
+          },
+          {
+            "frame": 60,
+            "timeMs": 600,
+            "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+            "events": 73
+          },
+          {
+            "frame": 80,
+            "timeMs": 800,
+            "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+            "events": 97
+          },
+          {
+            "frame": 100,
+            "timeMs": 1000,
+            "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+            "events": 121
+          },
+          {
+            "frame": 120,
+            "timeMs": 1200,
+            "rgbaSha256": "8192e25b9898f551ef448fc1bafbf02a0ec9a834327528c14700e29256b43918",
+            "events": 145
+          }
+        ]
+      },
+      "runs": [
+        {
+          "beforeMs": 474.70020000001114,
+          "afterMs": 507.61249999999654,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        },
+        {
+          "beforeMs": 498.2004999999954,
+          "afterMs": 447.8204999999971,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        },
+        {
+          "beforeMs": 460.2902000000113,
+          "afterMs": 458.62150000000656,
+          "beforeUpdates": 145,
+          "afterUpdates": 120
+        }
+      ],
+      "medianBeforeMs": 474.70020000001114,
+      "medianAfterMs": 458.62150000000656
+    },
+    {
+      "id": "sample-gvm-ranking",
+      "format": 1,
+      "gameSha256": "b7ac3b3061920b256c886a10ec719e92b8e511c75850b334202aab257f85d012",
+      "reference": {
+        "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+        "frameTrailSha256": "894989530e932706091ad86e18958b590141e52582ba7a30de4a624cdae206ed",
+        "width": 120,
+        "height": 100,
+        "status": "idle",
+        "error": null,
+        "events": 13,
+        "syscalls": {},
+        "timerStates": [
+          {
+            "channel": 0,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 1,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          },
+          {
+            "channel": 2,
+            "delay": null,
+            "repeat": false,
+            "revision": 0
+          }
+        ],
+        "virtualMs": 6000,
+        "checkpoints": [
+          {
+            "frame": 0,
+            "timeMs": 0,
+            "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "events": 1
+          },
+          {
+            "frame": 20,
+            "timeMs": 1000,
+            "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "events": 3
+          },
+          {
+            "frame": 40,
+            "timeMs": 2000,
+            "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "events": 5
+          },
+          {
+            "frame": 60,
+            "timeMs": 3000,
+            "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "events": 7
+          },
+          {
+            "frame": 80,
+            "timeMs": 4000,
+            "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "events": 9
+          },
+          {
+            "frame": 100,
+            "timeMs": 5000,
+            "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "events": 11
+          },
+          {
+            "frame": 120,
+            "timeMs": 6000,
+            "rgbaSha256": "46e6d21ff4a506d7fc2f5f7019c619a7994feb0cc45f9d69f8e5c362589025b9",
+            "events": 13
+          }
+        ]
+      },
+      "runs": [
+        {
+          "beforeMs": 5.3682000000007974,
+          "afterMs": 5.748700000005556,
+          "beforeUpdates": 13,
+          "afterUpdates": 1
+        },
+        {
+          "beforeMs": 5.416100000001279,
+          "afterMs": 7.23979999999392,
+          "beforeUpdates": 13,
+          "afterUpdates": 1
+        },
+        {
+          "beforeMs": 6.4773000000077445,
+          "afterMs": 4.685999999998785,
+          "beforeUpdates": 13,
+          "afterUpdates": 1
+        }
+      ],
+      "medianBeforeMs": 5.416100000001279,
+      "medianAfterMs": 5.748700000005556
+    }
+  ]
+}

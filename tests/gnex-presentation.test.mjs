@@ -82,10 +82,12 @@ test('FlushPartial presents its endpoint rectangle and retains pixels outside it
         assert.deepEqual(pixel(g, x, y), [color, color, color, 255], `pixel ${x},${y}`);
       }
     }
+    const frame = g.framebuffer;
     const presented = g.framebufferRGBA.slice();
     g.event('KEYPRESS', 20);
     assert.equal(g.status, 'idle', g.error);
     assert.deepEqual(g.framebufferRGBA, presented, 'unflushed drawing stays in the backbuffer');
+    assert.equal(g.framebuffer, frame, 'unflushed drawing keeps the presented image');
   } finally {
     g.close();
   }
@@ -108,9 +110,11 @@ test('first partial flush normalizes and clips endpoints; offscreen updates pres
     const expected = initial.slice();
     expected.set([255, 255, 255, 255], (64 * 64 - 1) * 4);
     assert.deepEqual(g.framebufferRGBA, expected, 'only the clipped inclusive corner is presented');
+    const frame = g.framebuffer;
     g.event('KEYPRESS', 20);
     assert.equal(g.status, 'idle', g.error);
     assert.deepEqual(g.framebufferRGBA, expected, 'fully offscreen partial flush has no effect');
+    assert.equal(g.framebuffer, frame, 'fully offscreen partial flush reuses the image');
   } finally {
     g.close();
   }

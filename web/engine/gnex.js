@@ -425,7 +425,8 @@ export class GnexRuntime {
     const p = this._read(0x20b41260),
       src = this.cpu.read(p, this.width * this.height * 2);
     if (!bounds) {
-      this.presentedLCD = src.slice();
+      this.presentedLCD = src;
+      this.lcdNeedsRefresh = true;
       return;
     }
     // FlushPartial takes inclusive endpoints. The native adapter swaps reversed
@@ -438,22 +439,24 @@ export class GnexRuntime {
     x2 = Math.min(this.width - 1, x2);
     y2 = Math.min(this.height - 1, y2);
     this.presentedLCD ??= this.lcdPixels.slice();
-    for (let y = y1; y <= y2 && x1 <= x2; y++) {
+    if (x1 > x2 || y1 > y2) return;
+    for (let y = y1; y <= y2; y++) {
       const first = (y * this.width + x1) * 2,
         end = (y * this.width + x2 + 1) * 2;
       this.presentedLCD.set(src.subarray(first, end), first);
     }
+    this.lcdNeedsRefresh = true;
   }
   _refreshLCD() {
-    const p = this._read(0x20b41260),
-      // Flush copies drawing memory to the physical screen. A subsequent
-      // RestoreLCD prepares the next frame and must not erase that screen.
-      // K-PEX retains its startup preview until the first explicit flush; phone
-      // profiles initialize the physical display during construction.
-      src = this.presentedLCD || this.cpu.read(p, this.width * this.height * 2),
+    // Before the first explicit flush, K-PEX previews the drawing memory.
+    // Once a physical image is available, only a flush can change it.
+    if (this.presentedLCD && !this.lcdNeedsRefresh) return;
+    const src =
+        this.presentedLCD || this.cpu.read(this._read(0x20b41260), this.width * this.height * 2),
       rgba = rgb565ToRGBA(src);
     this.lcdPixels = src;
     this.framebuffer = { width: this.width, height: this.height, data: rgba };
+    this.lcdNeedsRefresh = false;
   }
   _hook(address) {
     try {
