@@ -3,6 +3,339 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "kneosoft-new-zealand-story",
+      "repositoryPath": "research/archives/NeoSoft-New-Zealand-Story-Publisher-Archive.zip",
+      "bytes": 174020,
+      "sha256": "6cf06abb7ef7863e8a268732dba3f7e68a105f291d60c956f0e8d6450de48d87",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/captures.json",
+          "bytes": 12608,
+          "crc32": "4fb723d6",
+          "sha256": "986a7d981a6a5553af31bd40d6e8f2e0a601041bc269c62b0b5e3a0e3474dddd"
+        },
+        {
+          "path": "evidence/handsets.json",
+          "bytes": 1136,
+          "crc32": "d43e629e",
+          "sha256": "9f189de1bc86fdd8675803785fbd94974f2c68386ed57d78489afef8ea20eb4d"
+        },
+        {
+          "path": "evidence/probes.json",
+          "bytes": 53094,
+          "crc32": "d7558bd6",
+          "sha256": "7ceacd0fefc8070ae52d01edac3bea2374f4023d4edaf01f257321236c8c4c37"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 175,
+          "crc32": "0488dbe4",
+          "sha256": "846cadf66a4ea23563a143d558182a83fd008ca27d246d000e36e3498357299f"
+        },
+        {
+          "path": "press/nz-game-donga-17.jpg",
+          "bytes": 6908,
+          "crc32": "beb3a84c",
+          "sha256": "b2f991f1bf1c116c16db566a9c070c03301fd54d4a9582d84bf13523d35681d4"
+        },
+        {
+          "path": "press/nz-game-donga-18.jpg",
+          "bytes": 7594,
+          "crc32": "b545d0ef",
+          "sha256": "22a176503fbec217552532a21ce45d6d8ef48d890bb1d2642147f8d68dd06a22"
+        },
+        {
+          "path": "press/nz-game-donga-19.jpg",
+          "bytes": 6264,
+          "crc32": "0771a4cc",
+          "sha256": "e17537682044b5a7299ddd2bc16752822dcc4ecd673188454eba7a006fd0366d"
+        },
+        {
+          "path": "press/nz-game-donga-20.jpg",
+          "bytes": 7055,
+          "crc32": "18dbb893",
+          "sha256": "7470d8e8ebc004e09d3cfec992fc9f29741280d3ca3904684bb6b4e3d5b0f8c7"
+        },
+        {
+          "path": "press/nz-gg-image.gif",
+          "bytes": 11541,
+          "crc32": "55e193f6",
+          "sha256": "b035a9ab976daaa6517397fdef7d006635af5526223077297d91f8224753718f"
+        },
+        {
+          "path": "publisher/kneo-20040701-korean-.html",
+          "bytes": 17228,
+          "crc32": "b5436d12",
+          "sha256": "3126e3730ec8d9e67b01e2ffcb1d316977c7dbe6b2452bf50fb50a1dc72a204a"
+        },
+        {
+          "path": "publisher/kneo-20041207103222-korean-.html",
+          "bytes": 17458,
+          "crc32": "e0430118",
+          "sha256": "a6c88f313cbd6ee7efc11a9641295068b004d000819632c9f4007ea97bcfacac"
+        },
+        {
+          "path": "publisher/kneo-home.html",
+          "bytes": 363,
+          "crc32": "4116248f",
+          "sha256": "ca8c9629e66e5090695a892bd7d7935132b561e5ef9548e84dd901544cec040a"
+        },
+        {
+          "path": "publisher/ko-games.html",
+          "bytes": 19281,
+          "crc32": "76ddd007",
+          "sha256": "bc477fe7adea5133627d39445705edde9addc8dc6a886e3a69dbdd5ac3720729"
+        },
+        {
+          "path": "publisher/ko-news40.html",
+          "bytes": 13607,
+          "crc32": "3efc1c67",
+          "sha256": "ad366fa41f59792fe3eedf841869a433a1d13129b1464b1df9081adaeb6b8b31"
+        },
+        {
+          "path": "publisher/nz-bbs-1.html",
+          "bytes": 29820,
+          "crc32": "3ec9ffe0",
+          "sha256": "7968d3f6423faf40418eaf548de1dbcb71255db899311155ee9f39968111f99a"
+        },
+        {
+          "path": "publisher/nz-customer-exact.html",
+          "bytes": 21969,
+          "crc32": "95426f5e",
+          "sha256": "a96e2a0654e75d5e8993411e08610209dbfbae96090728e4fc50199d6814e9f4"
+        },
+        {
+          "path": "publisher/nz-home-20040628.html",
+          "bytes": 11191,
+          "crc32": "32d1e500",
+          "sha256": "33cec24080ab3374ad89fa7bc825b29e869522b1cf20e878eb566f71c32a353a"
+        },
+        {
+          "path": "publisher/nz-home-20050101.html",
+          "bytes": 2697,
+          "crc32": "d9bc4f50",
+          "sha256": "2e440c9580bd76b57e638892cd1eab3c1cd4959b5a705ceb3dc3861e68e6a1c2"
+        },
+        {
+          "path": "publisher/nz-i-main.html",
+          "bytes": 8927,
+          "crc32": "7cdf2ed1",
+          "sha256": "ae696046b561614fe4afe0465863a0450ae5a0e2850338e0829fc98cd039c80c"
+        },
+        {
+          "path": "publisher/nz-launch.html",
+          "bytes": 5818,
+          "crc32": "970fc5a1",
+          "sha256": "0fe4f4993b93125f0debdfa932ca7c4fd4d00d7bd2a6d5c5e7c05e6667be2dd7"
+        },
+        {
+          "path": "publisher/nz-notice.html",
+          "bytes": 6040,
+          "crc32": "ba1c8998",
+          "sha256": "8fb63de0541321cdf08073f9424899db6dd336157eadce0254e13164b015c517"
+        },
+        {
+          "path": "publisher/nz-side.html",
+          "bytes": 858,
+          "crc32": "3b3c9633",
+          "sha256": "2d7c716ac5a23fa5874fc917c5bfd40bcbf22cb142b4a2ce5ba7488f1c77c031"
+        },
+        {
+          "path": "publisher/nz-supported.html",
+          "bytes": 6541,
+          "crc32": "8f208fed",
+          "sha256": "f9c5643af581b7aff0cbc80c9e4f5271fa8774f98a844c683c069a66d4de9887"
+        },
+        {
+          "path": "publisher/nz-top.html",
+          "bytes": 1578,
+          "crc32": "7f494622",
+          "sha256": "7fca05b73bfe704adab69e3783e40502b9324fc40cd74ea9c1f70e4f0be3468b"
+        },
+        {
+          "path": "publisher/nz-xmas.html",
+          "bytes": 5750,
+          "crc32": "77631a3b",
+          "sha256": "26dc468c833eb1cac78ada69bf18ebb1119ecb6c7b69e9f71049d19d7e493cae"
+        },
+        {
+          "path": "publisher/side.swf",
+          "bytes": 38478,
+          "crc32": "12722260",
+          "sha256": "930322ec22281d726fadefe0a53170c4f273d81165d51155da27fd8931c0d438"
+        },
+        {
+          "path": "publisher/top.swf",
+          "bytes": 32044,
+          "crc32": "b52cc96d",
+          "sha256": "6526ec7401e485750ca483b7cdfbfe4d2a4bb1de9ea07cb3558e62ed9101f644"
+        },
+        {
+          "path": "sources/kneo-20040701-korean-.headers.txt",
+          "bytes": 652,
+          "crc32": "75750375",
+          "sha256": "fe1917474b461f27faefcc040dba94a05531b41b85dffa3cb2cc8657478d18e1"
+        },
+        {
+          "path": "sources/kneo-20041207103222-korean-.headers.txt",
+          "bytes": 652,
+          "crc32": "89dd095b",
+          "sha256": "a617a083e8e41d23669d70e6dbd8722b45125c45f2810c92deddfaee666ca224"
+        },
+        {
+          "path": "sources/kneo-home.headers.txt",
+          "bytes": 624,
+          "crc32": "68c85aad",
+          "sha256": "a7051930ce05cdccdd884a936c4c922087d6e8b6bb8edc552ee8707b43567739"
+        },
+        {
+          "path": "sources/ko-cdx-exact.cdx.txt",
+          "bytes": 1692,
+          "crc32": "bbe178c2",
+          "sha256": "6be1d16f1367f7aa1628880ad4b8c637cb7d219ef3ff43d2c90d8f7a51ffbc2c"
+        },
+        {
+          "path": "sources/ko-games.headers.txt",
+          "bytes": 696,
+          "crc32": "26b88cfa",
+          "sha256": "682894d70d9cac718e7a74f64772d04be581a877939ecd13f72aab0dc52a5dce"
+        },
+        {
+          "path": "sources/ko-news40.headers.txt",
+          "bytes": 800,
+          "crc32": "47495c2b",
+          "sha256": "099a5475666c65376ea7ee1e891b44d837c1e19772ebfc2a37380ede407b7c96"
+        },
+        {
+          "path": "sources/nz-banner.headers.txt",
+          "bytes": 742,
+          "crc32": "e08a1d9f",
+          "sha256": "2d3f5f54d070f0f199c0482b4d864c7f539edda0da30b2d5fcc9261acdbb5875"
+        },
+        {
+          "path": "sources/nz-bbs-1.headers.txt",
+          "bytes": 1032,
+          "crc32": "1f0f87fe",
+          "sha256": "a2ffc18f79bdb18fe4c514460afbc2fd6499b28a6ea104013b089e28b004f5d7"
+        },
+        {
+          "path": "sources/nz-customer-exact.headers.txt",
+          "bytes": 996,
+          "crc32": "ae2a5bcb",
+          "sha256": "89a6c39d21efb17548e6c4b6ec701c7ad92a7a0b7ec3f6776df82fa87c7592be"
+        },
+        {
+          "path": "sources/nz-digest-early.cdx.txt",
+          "bytes": 91,
+          "crc32": "4e46deba",
+          "sha256": "cbcfccdc7b47104f1b52721f3b6c20bd3858df7c81149d74f85bb1145a92b4e1"
+        },
+        {
+          "path": "sources/nz-digest-handsets.cdx.txt",
+          "bytes": 119,
+          "crc32": "03dd6033",
+          "sha256": "5fef0604446308937aead94d72af99c0117f1df9e4f3cfa53834b8b912a5b15d"
+        },
+        {
+          "path": "sources/nz-game-donga-17.headers.txt",
+          "bytes": 98,
+          "crc32": "379e80bf",
+          "sha256": "18b19f4792fae6a63c7c913a2904023f88c8752ab7e66bd284ea9cf0068cc776"
+        },
+        {
+          "path": "sources/nz-game-donga-18.headers.txt",
+          "bytes": 98,
+          "crc32": "e34c6234",
+          "sha256": "dcfb97e8c311e0bd268b50264d5f7db70e17e4f2c85b1c08b91553ae088bc741"
+        },
+        {
+          "path": "sources/nz-game-donga-19.headers.txt",
+          "bytes": 98,
+          "crc32": "48a73400",
+          "sha256": "b59097b57f68efb2cda81143789303faf0f14895ab260d9027e1a5a06a03f548"
+        },
+        {
+          "path": "sources/nz-game-donga-20.headers.txt",
+          "bytes": 98,
+          "crc32": "c4935a23",
+          "sha256": "22b56b34ed746d4e7ac21eaff823fcdc9f24c277a06c5dbded349fc00574d462"
+        },
+        {
+          "path": "sources/nz-gg-image.headers.txt",
+          "bytes": 98,
+          "crc32": "a3d4863f",
+          "sha256": "efc11637fdba2a5df7092109e46073de1acaf890c6f8e32d6b7e39c6952debf7"
+        },
+        {
+          "path": "sources/nz-home-20040628.headers.txt",
+          "bytes": 640,
+          "crc32": "bb0c15e6",
+          "sha256": "623f08db0de7041516da5fa83981a7a3ba86295a8224252294e8229553af52fe"
+        },
+        {
+          "path": "sources/nz-home-20050101.headers.txt",
+          "bytes": 689,
+          "crc32": "bdb54309",
+          "sha256": "b0f13dea40a1c48ced6b729233f8ea1336803342428614fe85ec46ab041a800a"
+        },
+        {
+          "path": "sources/nz-i-main.headers.txt",
+          "bytes": 680,
+          "crc32": "413fe4de",
+          "sha256": "8429fc4a5684a8bc22ffadf6e8e9becf375c0f0d739820e381f243dc9f1fa615"
+        },
+        {
+          "path": "sources/nz-launch.headers.txt",
+          "bytes": 760,
+          "crc32": "f2e40c19",
+          "sha256": "119978bbeddedca72e147e6bd00cc071108a058332e81a8d5574c25bdb1b9362"
+        },
+        {
+          "path": "sources/nz-menu.headers.txt",
+          "bytes": 746,
+          "crc32": "9c2cc5ef",
+          "sha256": "983a7a6214fb51ee78aeae32c8f7997a1f5c721d4bb8e8cc25bbe3f4b0baae1e"
+        },
+        {
+          "path": "sources/nz-notice.headers.txt",
+          "bytes": 752,
+          "crc32": "97092a3b",
+          "sha256": "bf9f10324e0ac80d8148ec078c2ce54e3fae1450c175c05bb70e0a73608d67bb"
+        },
+        {
+          "path": "sources/nz-side.headers.txt",
+          "bytes": 672,
+          "crc32": "d82368aa",
+          "sha256": "1c10d2a8e74dc8f00cde63bdf9fbd681f622db1fcc6c53428995e698381c2f81"
+        },
+        {
+          "path": "sources/nz-supported.headers.txt",
+          "bytes": 752,
+          "crc32": "e4844f29",
+          "sha256": "0f637c61eb6300c99b7693bd09ec6bcb98c02c3f5ab746b797b9b3d91138b875"
+        },
+        {
+          "path": "sources/nz-top.headers.txt",
+          "bytes": 668,
+          "crc32": "1b530607",
+          "sha256": "003564cd8ca7a1fda0d58cbad1bb81a7c1b8c23d2fab52a2cea2933a00fe5edd"
+        },
+        {
+          "path": "sources/nz-xmas.headers.txt",
+          "bytes": 760,
+          "crc32": "ba03f1f1",
+          "sha256": "1f401c2754958f1c6f71b7e8e2166246da120c681472f91f941d35f0620a0f90"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 9441,
+          "crc32": "f5911c67",
+          "sha256": "c39af9a5814de3fbaa0c2ca0a79c8da4b434761de6a9a28e3a6b1b1225b4b2a0"
+        }
+      ]
+    },
+    {
       "id": "brewgames-ktf-brew-rpg",
       "repositoryPath": "research/archives/Brewgames-KTF-BREW-RPG-and-Mini-Games.zip",
       "bytes": 28939115,
@@ -212470,9 +212803,9 @@
     }
   ],
   "counts": {
-    "archives": 116,
-    "archiveBytes": 2307469541,
-    "fileMembers": 35237,
-    "uniqueMemberHashes": 20498
+    "archives": 117,
+    "archiveBytes": 2307643561,
+    "fileMembers": 35291,
+    "uniqueMemberHashes": 20552
   }
 }
