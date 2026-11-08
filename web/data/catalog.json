@@ -1543,8 +1543,8 @@
       "title": "Flooder · Game Boy Color на GNEX",
       "nativeTitle": "Flooder",
       "url": "data/games/demo-flooder.sgs",
-      "sha256": "53e6f7d49713b885f371a18f30c283f7d169d72ed3fa6dbdc959be00dd8ac691",
-      "bytes": 196008,
+      "sha256": "18cdadec012c6cc4fd4e54612b39b56b0ed06120c0589e229b26f074aa296e92",
+      "bytes": 197132,
       "format": 4,
       "resources": 8,
       "platform": "kpex",
@@ -1632,6 +1632,32 @@
       "provenance": "Shiru's 2011 public-domain NES puzzle. The SGS reads LAN.NES from the author's archived release unchanged."
     },
     {
+      "id": "demo-chase",
+      "title": "Chase · NES на GNEX",
+      "nativeTitle": "Chase",
+      "url": "data/games/demo-chase.sgs",
+      "sha256": "a979f5708ccb7b0d3fa95fa0f737826af4cf00f8c13cc628eafef07901d8de4a",
+      "bytes": 112324,
+      "format": 4,
+      "resources": 3,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "cartridge": {
+        "path": "NES/CHASE.NES",
+        "sidecar": "CHASE.NES",
+        "launcher": "CHASE.SGS",
+        "sha256": "e32a445436b916835547c9716d8f461bcbbf3f3edd87f68116bbc7eb2108e3c0",
+        "licenseFile": "demos/nes/chase/LICENSE.txt"
+      },
+      "startHint": "PLAY — начать или поставить на паузу. Стрелки — собрать кристаллы и уйти от преследователей.",
+      "sourceUrl": "https://web.archive.org/web/20160327132502id_/http://shiru.untergrund.net/files/nes/chase.zip",
+      "provenance": "Shiru's public-domain NES maze game. Unmodified cartridge from the author's original ZIP."
+    },
+    {
       "id": "demo-prism-vault",
       "title": "Prism Vault · Game Gear на GNEX",
       "nativeTitle": "Prism Vault",
@@ -1671,6 +1697,30 @@
       },
       "startHint": "Влево и вправо — ракетка, SELECT — подача, PLAY — заново.",
       "provenance": "Original Reunion Z80 cartridge with a paddle, ball, and eight breakable nodes."
+    },
+    {
+      "id": "demo-pulse-relay",
+      "title": "Pulse Relay · Game Gear на GNEX",
+      "nativeTitle": "Pulse Relay",
+      "url": "data/games/demo-pulse-relay.sgs",
+      "sha256": "433d62a2b7197210a520367a96dd482d9eaea0fe3e55d63fbd50991765e4fe2c",
+      "bytes": 130952,
+      "format": 4,
+      "resources": 3,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "cartridge": {
+        "path": "GG/PULSE.GG",
+        "sidecar": "PULSE.GGR",
+        "launcher": "PULSE.SGS",
+        "sha256": "37f524a6ca06a70e99c703739d4cff5f9b0538c4dbf35c9c2f19bf53a96ace79"
+      },
+      "startHint": "Влево и вправо — выбрать дорожку. SELECT — играть. Нажимай стрелку, когда нота дойдёт до линии. PLAY — к выбору.",
+      "provenance": "Original Reunion Z80 timing game with three 24-note charts and four lanes."
     },
     {
       "id": "demo-gnex-benchmark",

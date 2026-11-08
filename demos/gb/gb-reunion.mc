@@ -12,6 +12,8 @@
 #DEFINE VALIDTERM 255
 %}
 
+#define FLOODER_DIVISION 0
+
 // ROM-only DMG/CGB prototype. The cartridge runs in Mobile C bytecode.
 int cart[8192], video[16384], ram[8192], colors[64];
 int seen[360], seenVersion[360], tileVersion[768], paletteVersion[8], dmgVersion;
@@ -362,6 +364,48 @@ int UntilVBlank() {
     return 135888 - phase;
 }
 
+#if FLOODER_DIVISION
+// Recognize the SDCC unsigned divider's complete 16-bit loop. Restrict
+// batching to a byte divisor, a reduced remainder and a stack in WRAM.
+int SmallDivideLoop(int at, int budget) {
+    int word, stack, flags, shifted, cost;
+    if (at < 0 || at > 32732 || (at & 3) || a < 2 || a > 16 ||
+        sp < 49156 || sp > 57344 || d || b || c >= e || budget < 152)
+        return 0;
+    word = at >> 2;
+    if (cart[word] != 0xcb15cbf5 || cart[word + 1] != 0xcb11cb14 ||
+        cart[word + 2] != 0x9b79c510 || cart[word + 3] != 0x479a784f ||
+        cart[word + 4] != 0xc108383f || cart[word + 5] != 0x20b73df1 ||
+        cart[word + 6] != 0x330918e7 || cart[word + 7] != 0x373df133 ||
+        cart[word + 8] != 0x0018de20)
+        return 0;
+
+    stack = sp - 49156;
+    flags = (zero << 7) | (subtract << 6) | (half << 5) | (carry << 4);
+    cost = 0;
+    while (a > 1 && budget - cost >= 152) {
+        shifted = (c << 1) | (hl >> 15);
+        hl = ((hl << 1) | carry) & 65535;
+        // PUSH AF and PUSH BC leave these bytes behind after the loop pops.
+        ram[stack] = shifted & 255;
+        ram[stack + 1] = shifted >> 8;
+        ram[stack + 2] = flags;
+        ram[stack + 3] = a;
+        carry = shifted >= e;
+        c = shifted - e * carry;
+        a--;
+        flags = carry << 4;
+        cost += 144 + carry * 8;
+    }
+    zero = 0;
+    subtract = 0;
+    half = 0;
+    pc = at;
+    return cost;
+}
+
+#endif
+
 int StepFull(int budget) {
     int op, dst, src, value, pair, delta, at, rounds, limit, i, waitStart, waitCost;
     op = Fetch8();
@@ -372,6 +416,12 @@ int StepFull(int budget) {
     limit = budget;
     if (ime && (interruptMask & 1) && (lcd & 128) && UntilVBlank() < limit)
         limit = UntilVBlank();
+#if FLOODER_DIVISION
+    if (colorMode && !eiDelay && op == 245) {
+        value = SmallDivideLoop(at, limit);
+        if (value) return value;
+    }
+#endif
     // The loop must stay in immutable ROM, and a fused group ends at the
     // same instruction and with the same registers as complete iterations.
     if (!eiDelay && at >= 0 && at <= 32749 && limit >= 36) {

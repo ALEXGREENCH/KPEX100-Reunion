@@ -23,7 +23,7 @@ int backgroundEpoch, scannedEpoch, scanLeft;
 int viewCol, viewRow, viewCols, viewRows, tileSize, lastSpriteMode;
 int viewRight, viewBottom;
 int dirtyCells[64], dirtyHead, dirtyCount;
-int inNmi;
+int inNmi;$extra_paint_state
 
 int ROM(int offset) {
     return (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
@@ -251,7 +251,7 @@ int StatusAddress(int address) {
     return address >= 8192 && address < 16384 && (address & 7) == 2;
 }
 
-void Step() {
+${extra_cpu_helpers}void Step() {
     int op, addr, value, destination;
     op = Fetch();
     switch (op) {
@@ -386,12 +386,12 @@ void Step() {
             if (ctrl & 128) {
                 if (pc == addr && CpuRead(addr) == 197) guestYield = 1;
                 if (pc == destination &&
-                    CpuRead(destination) == 165 && CpuRead(destination + 2) == 197) guestYield = 1;
+                    CpuRead(destination) == 165 && CpuRead(destination + 2) == 197) guestYield = 1;$extra_cpu_wait
             }
             break;
         case 246: addr = (Fetch() + x) & 255; ram[addr] = (ram[addr] + 1) & 255; nz = ram[addr]; break;
         case 254: addr = (Word() + x) & 65535; nz = (CpuRead(addr) + 1) & 255; CpuWrite(addr, nz); break;
-        default: failed = 1; break;
+${extra_cpu_cases}        default: failed = 1; break;
     }
 }
 
@@ -477,17 +477,16 @@ void DrawTile(int sx, int sy, int pattern, int pal, int flags, int sprite) {
     }
 }
 
-int PaintCell(int col, int row, int force) {
-    int base, attr, tile, pal, key, cell;
+${extra_paint_helpers}int PaintCell(int col, int row, int force) {
+    int base, attr, tile, pal, key, cell;$extra_cell_locals
     if (col < viewCol || col >= viewCol + viewCols || row < viewRow || row >= viewRow + viewRows) return 0;
     base = 8192 + (ctrl & 3) * 1024;
     tile = PpuRead(base + row * 32 + col);
     attr = PpuRead(base + 960 + (row >> 2) * 8 + (col >> 2));
     pal = ((attr >> ((row & 2) * 2 + (col & 2))) & 3) * 4;
-    key = (paletteEpoch << 13) | ((ctrl & 16) << 8) | (pal << 8) | tile;
+$cell_key
     cell = (row - viewRow) * viewCols + col - viewCol;
-    if (!force && seen[cell] == key) return 0;
-    seen[cell] = key;
+$cell_compare
     DrawTile(originX + (col - viewCol) * tileSize, originY + (row - viewRow) * tileSize,
              ((ctrl & 16) << 8) + tile * 16, pal, 0, 0);
     return 1;
@@ -546,13 +545,13 @@ void Paint() {
     for (i = 0; i < 64; i++) {
         if (oam[i * 4] >= 239 && lastSprites[i] == -1) continue;
         signature = SpriteSignature(i * 4);
-        if (signature != lastSprites[i] || (signature != -1 && mode != lastSpriteMode)) {
+        if (signature != lastSprites[i] || (signature != -1 && $sprite_changes)) {
             changed = 1;
             if (painted) changed |= RestoreSprite(lastSprites[i], lastSpriteMode);
             lastSprites[i] = signature;
         }
     }
-    lastSpriteMode = mode;
+    lastSpriteMode = mode;$extra_sprite_update
     if (scannedEpoch != backgroundEpoch) {
         scannedEpoch = backgroundEpoch;
         scanLeft = viewRows * viewCols;
@@ -658,8 +657,7 @@ $pad_sample
     vblank = 128;
     if ((ctrl & 128) && !inNmi) nmiPending = 1;
     guestYield = 0;
-    limit = 512;
-    if (!(mask & 24)) limit = 768;
+$guest_limit
     for (i = 0; i < limit && !failed && !guestYield; i++) {
         if (nmiPending && !inNmi) Nmi();
         Step();

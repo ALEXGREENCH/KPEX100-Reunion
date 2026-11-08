@@ -445,6 +445,88 @@ CONTAINERS = {
     "orbital-courier": ("Orbital Courier", 993, "ORBITAL.NES", (3, 5, 26, 20, 8)),
     "neon-ranger": ("Neon Ranger", 996, "NEON.NES", (0, 2, 32, 28, 6)),
     "lan-master": ("Lan Master", 997, "LAN.NES", (0, 2, 32, 28, 6)),
+    "chase": ("Chase", 1003, "CHASE.NES", (0, 2, 32, 28, 6)),
+}
+
+
+CC65_CPU = {
+    "extra_cpu_helpers": """int IndirectY() {
+    int addr;
+    addr = Fetch();
+    return (ram[addr] + (ram[(addr + 1) & 255] << 8) + y) & 65535;
+}
+
+""",
+    "extra_cpu_cases": """        case 17: a |= CpuRead(IndirectY()); nz = a; break;
+        case 38:
+            addr = Fetch(); value = ram[addr];
+            nz = ((value << 1) | carry) & 255;
+            carry = value >> 7;
+            ram[addr] = nz;
+            break;
+        case 49: a &= CpuRead(IndirectY()); nz = a; break;
+        case 57: addr = Word(); a &= CpuRead((addr + y) & 65535); nz = a; break;
+        case 70:
+            addr = Fetch(); value = ram[addr];
+            carry = value & 1;
+            nz = value >> 1;
+            ram[addr] = nz;
+            break;
+        case 89: addr = Word(); a ^= CpuRead((addr + y) & 65535); nz = a; break;
+        case 113: Add(CpuRead(IndirectY())); break;
+        case 145: addr = IndirectY(); CpuWrite(addr, a); break;
+        case 209: Compare(a, CpuRead(IndirectY())); break;
+        case 229: Add(ram[Fetch()] ^ 255); break;
+        case 237: Add(CpuRead(Word()) ^ 255); break;
+""",
+    "extra_cpu_wait": """
+                // neslib's NTSC compensation waits for the next frame at count 5.
+                if (pc == destination && CpuRead(destination) == 165 && CpuRead(destination + 1) == 2 &&
+                    CpuRead(destination + 2) == 201 && CpuRead(destination + 3) == 5) guestYield = 1;""",
+}
+
+
+PAINT_DEFAULT = {
+    "extra_paint_state": "",
+    "extra_paint_helpers": "",
+    "extra_cell_locals": "",
+    "cell_key": "    key = (paletteEpoch << 13) | ((ctrl & 16) << 8) | (pal << 8) | tile;",
+    "cell_compare": """    if (!force && seen[cell] == key) return 0;
+    seen[cell] = key;""",
+    "sprite_changes": "mode != lastSpriteMode",
+    "extra_sprite_update": "",
+}
+
+
+# Chase switches between CHR halves and changes one palette entry on its title.
+# Compare the visible pattern and colors before drawing an unchanged cell.
+CHASE_PAINT = {
+    "extra_paint_state": "\nint seenColors[896], bankMatch[256], lastSpriteColors;",
+    "extra_paint_helpers": """int BackgroundPattern(int tile) {
+    int addr, i;
+    if (!(ctrl & 16)) return tile;
+    if (!bankMatch[tile]) {
+        addr = chrStart + tile * 16;
+        for (i = 0; i < 16; i++) if (ROM(addr + i) != ROM(addr + 4096 + i)) break;
+        bankMatch[tile] = (i == 16) + 1;
+    }
+    if (bankMatch[tile] == 2) return tile;
+    return tile + 256;
+}
+
+""",
+    "extra_cell_locals": "\n    int colors, index;",
+    "cell_key": """    key = BackgroundPattern(tile);
+    index = SolidPattern(key * 16);
+    if (index == 0) { key = -2; colors = palettes[0]; }
+    else if (index > 0) { key = -2; colors = palettes[pal + index]; }
+    else colors = palettes[0] | (palettes[pal + 1] << 6) |
+                  (palettes[pal + 2] << 12) | (palettes[pal + 3] << 18);""",
+    "cell_compare": """    if (!force && seen[cell] == key && seenColors[cell] == colors) return 0;
+    seen[cell] = key;
+    seenColors[cell] = colors;""",
+    "sprite_changes": "(mode != lastSpriteMode || paletteEpoch != lastSpriteColors)",
+    "extra_sprite_update": "\n    lastSpriteColors = paletteEpoch;",
 }
 
 
@@ -511,11 +593,13 @@ PAD_TRIPLE_REPORT = {
 def build_container(sdk, cart, profile, plain=False):
     title, app_id, filename, viewport = CONTAINERS[profile]
     col, row, cols, rows, size = viewport
-    # Lan Master's grid uses one-pixel tile edges. Sampling the center of
-    # each output pixel keeps both edges visible at six pixels per tile.
-    center = profile == "lan-master"
+    # Shiru's boards use one-pixel tile edges. Center sampling keeps both
+    # edges visible at six pixels per tile.
+    center = profile in ("lan-master", "chase")
     script = Template(SOURCE.read_text(encoding="ascii")).substitute(
         **(PAD_TRIPLE_REPORT if center else PAD_DEFAULT),
+        **(CHASE_PAINT if profile == "chase" else PAINT_DEFAULT),
+        **(CC65_CPU if profile == "chase" else dict.fromkeys(CC65_CPU, "")),
         title=title,
         app_id=app_id,
         loading=f"{title.upper()} / LOADING",
@@ -525,6 +609,11 @@ def build_container(sdk, cart, profile, plain=False):
         view_cols=cols,
         view_rows=rows,
         tile_size=size,
+        guest_limit=(
+            "    limit = 1024;"
+            if profile == "chase"
+            else "    limit = 512;\n    if (!(mask & 24)) limit = 768;"
+        ),
         fetch_body=(
             """    int addr;
     addr = pc;
@@ -568,6 +657,7 @@ def main():
     variant.add_argument(
         "--lan-master", dest="profile", action="store_const", const="lan-master"
     )
+    variant.add_argument("--chase", dest="profile", action="store_const", const="chase")
     parser.set_defaults(profile="orbital-courier")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--cart", type=Path, help="optional iNES mapper-0 test cartridge")

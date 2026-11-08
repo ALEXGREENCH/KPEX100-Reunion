@@ -38,17 +38,17 @@ test('Flooder preserves short taps and draws the resulting CGB cursor and flood'
     ticks(45);
     assert.equal(frame(), 'f6ecd0ec3989e423956554e831d6ccf10cce54ff795403f44a92b40e5b9b277b');
     tap(21);
-    ticks(226);
+    ticks(103);
     assert.deepEqual([oam(0), oam(34), boardHead()], [60, 8, 0]);
     assert.equal(frame(), 'd82cce5cce3986bcaf0f371f8428c117cbc76692d1202edeb6bc89cbf539d7df');
 
     tap(19);
-    ticks(5);
+    ticks(6);
     assert.equal(oam(0), 76);
     assert.equal(frame(), 'e10502986b440681552f71a7c5a4bdb89acb8b4d64d6eff3aed478c4d2e13f22');
 
     tap(20);
-    ticks(16);
+    ticks(17);
     assert.deepEqual([oam(34), boardHead()], [7, 1]);
     assert.equal(frame(), '49bb543d929f36c27b9f3a757a9b403fe2567b041319e4a62729026752fb6988');
   } finally {

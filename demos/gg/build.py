@@ -18,6 +18,7 @@ from cart import (
     RAM_ROOM,
     cartridge_image,
 )
+from pulse_relay import pulse_cartridge
 from signal_breaker import breaker_cartridge
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -489,16 +490,25 @@ def main():
         action="store_true",
         help="write the original standalone cartridge",
     )
-    parser.add_argument(
+    examples = parser.add_mutually_exclusive_group()
+    examples.add_argument(
         "--signal-breaker", action="store_true", help="build Signal Breaker"
     )
+    examples.add_argument(
+        "--pulse-relay", action="store_true", help="build Pulse Relay"
+    )
     args = parser.parse_args()
-    if args.signal_breaker and args.cart:
-        parser.error("--signal-breaker uses its original cartridge")
+    variant = None
+    if args.signal_breaker:
+        variant = ("Signal Breaker", "BREAKER.GGR", 1002, breaker_cartridge)
+    if args.pulse_relay:
+        variant = ("Pulse Relay", "PULSE.GGR", 1004, pulse_cartridge)
+    if variant and args.cart:
+        parser.error("The selected game uses its original cartridge")
     if args.cart:
         cart = args.cart.read_bytes()
-    elif args.signal_breaker:
-        cart = breaker_cartridge()
+    elif variant:
+        cart = variant[3]()
     else:
         cart = demo_cartridge()
     check_cartridge(cart)
@@ -507,20 +517,23 @@ def main():
     else:
         if not args.sdk:
             parser.error("--sdk is required for SGS output")
-        if args.signal_breaker:
-            filename = "BREAKER.GGR"
-            with TemporaryDirectory(prefix="reunion-breaker-") as directory:
-                variant = Path(directory) / SOURCE.name
-                variant.write_text(
-                    "#define REUNION_BREAKER_INPUT 1\n"
+        if variant:
+            title, filename, app_id, _ = variant
+            defines = "#define REUNION_BREAKER_INPUT 1\n"
+            if args.pulse_relay:
+                defines += "#define REUNION_RESET_COLOR 1\n"
+            with TemporaryDirectory(prefix="reunion-gg-") as directory:
+                source = Path(directory) / SOURCE.name
+                source.write_text(
+                    defines
                     + SOURCE.read_text(encoding="ascii")
-                    .replace("#DEFINE APPID 995", "#DEFINE APPID 1002")
-                    .replace('"Prism Vault"', '"Signal Breaker"')
+                    .replace("#DEFINE APPID 995", f"#DEFINE APPID {app_id}")
+                    .replace('"Prism Vault"', f'"{title}"')
                     .replace('"VAULT.GGR"', f'"{filename}"')
-                    .replace("PRISM VAULT / LOADING", "SIGNAL BREAKER / LOADING"),
+                    .replace("PRISM VAULT / LOADING", f"{title.upper()} / LOADING"),
                     encoding="ascii",
                 )
-                sgs = build_sgs(args.sdk, variant)
+                sgs = build_sgs(args.sdk, source)
         else:
             filename = "VAULT.GGR"
             sgs = build_sgs(args.sdk, SOURCE)

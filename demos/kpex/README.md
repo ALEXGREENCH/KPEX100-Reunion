@@ -6,7 +6,7 @@
 
 Для копирования на плеер распакуйте ZIP и объедините его папку `GAME` с папкой `GAME` накопителя. Выбирайте файл `.SGS` из меню плеера. Отдельные папки содержат те же ROM с обычными расширениями для других эмуляторов.
 
-В браузере кнопка «Добавить файлы» принимает `.gb`, `.gbc`, `.nes` и `.gg`. Локальный картридж появляется во вкладке «Игры». При запуске Reunion подставляет его в подходящий SGS и хранит исходный файл только в браузере. Raw Snake, Flooder, Lan Master, Neon Ranger и Signal Breaker узнаются по SHA-256. Для холодного старта локальный ROM копируется в свою папку FAT. Готовые лаунчеры Kingston в ZIP открывают свои штатные картриджи.
+В браузере кнопка «Добавить файлы» принимает `.gb`, `.gbc`, `.nes` и `.gg`. Локальный картридж появляется во вкладке «Игры». При запуске Reunion подставляет его в подходящий SGS и хранит исходный файл только в браузере. Raw Snake, Flooder, Lan Master, Chase, Neon Ranger, Signal Breaker и Pulse Relay узнаются по SHA-256. Для холодного старта локальный ROM копируется в свою папку FAT. Готовые лаунчеры Kingston в ZIP открывают свои штатные картриджи.
 
 Импорт принимает GB/GBC без контроллера банков на 32 КиБ, iNES mapper 0 с PRG 16/32 КиБ и CHR 8 КиБ, а также Game Gear на 32 КиБ с заголовком `TMR SEGA`. Совместимость программы зависит от реализованных инструкций и видеорежимов. Для запуска в сборке без бинарников сначала добавьте оригинальную Kingston 2.12 и SGS соответствующей платформы.
 
@@ -19,12 +19,14 @@
 | `ORBITAL.SGS` | `ORBITAL.NES`        | `NES/ORBITAL.NES` | [Orbital Courier](../nes/README.md)       |
 | `NEON.SGS`    | `NEON.NES`           | `NES/NEON.NES`    | [Neon Ranger](../nes/README.md)           |
 | `LAN.SGS`     | `LAN.NES`            | `NES/LAN.NES`     | [Lan Master](../nes/lan-master/README.md) |
+| `CHASE.SGS`   | `CHASE.NES`          | `NES/CHASE.NES`   | [Chase](../nes/chase/README.md)           |
 | `VAULT.SGS`   | `VAULT.GGR`          | `GG/VAULT.GG`     | [Prism Vault](../gg/README.md)            |
 | `BREAKER.SGS` | `BREAKER.GGR`        | `GG/BREAKER.GG`   | [Signal Breaker](../gg/README.md)         |
+| `PULSE.SGS`   | `PULSE.GGR`          | `GG/PULSE.GG`     | [Pulse Relay](../gg/README.md)            |
 
 У оригинальной Kingston 2.12 загрузчик SGS принимает XOR `0xA5`. В полном запуске `FileOpen` ищет плоское имя в `GAME`. Проверка с `GAME/GBC/PRISM.GBC` дала ошибку смены каталога. Короткое расширение `.GB` также не прошло сравнение имени в FAT. Для запуска используется трёхбуквенное `.GBR`. Обе копии каждого картриджа совпадают побайтно.
 
-В полной эмуляции Kingston 2.12 проверены запуск и игровой ввод Pocket Lab, Prism Relay, Orbital Courier, Neon Ranger, Prism Vault, Raw Snake и Signal Breaker. В Lan Master проверены вход на первый уровень, одиночный шаг вправо и два отдельных поворота кабеля. В Flooder проверены выбор цвета и перекрашивание доски в прямом режиме SGS. Замеры и тесты на физическом плеере ещё нужны. В ZIP лежат лицензии MIT для Reunion и Flooder, Unlicense для Neon Ranger и Raw Snake и отметка о public domain для Lan Master.
+В полной эмуляции Kingston 2.12 проверены запуск и игровой ввод Pocket Lab, Prism Relay, Orbital Courier, Neon Ranger, Prism Vault, Raw Snake, Signal Breaker и Pulse Relay. В Lan Master проверены вход на первый уровень, одиночный шаг вправо и два отдельных поворота кабеля. В Flooder через меню Kingston проверены выбор цвета и первый ход, а в прямом режиме SGS решена вся доска. Замеры и тесты на физическом плеере ещё нужны. В Chase проверены движение, подбор кристалла и пауза в прямом режиме. В ZIP лежат лицензии MIT для Reunion и Flooder, Unlicense для Neon Ranger и Raw Snake и отметки о public domain для Lan Master и Chase.
 
 Повторная упаковка из проверенных файлов репозитория
 

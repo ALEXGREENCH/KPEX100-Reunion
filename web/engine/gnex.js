@@ -271,6 +271,7 @@ export class GnexRuntime {
     if (this.fastVmExecution) {
       this.romAccelerators = installRomAccelerators(cpu, {
         romHash,
+        minPaletteContinuationPixels: 192,
         enabled: () => this._fastEventActive,
         onSkippedInstructions: (count) => {
           if (this.profile === 'phone') this.softwareInstructions += count;

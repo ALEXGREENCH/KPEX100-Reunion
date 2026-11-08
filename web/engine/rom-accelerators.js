@@ -69,6 +69,7 @@ export function installRomAccelerators(
     minRectanglePixels = 4096,
     minPaletteRowPixels = 128,
     minPaletteBatchPixels = 4096,
+    minPaletteContinuationPixels = Infinity,
   } = {},
 ) {
   if (romHash !== KINGSTON_212_SHA256)
@@ -109,6 +110,7 @@ export function installRomAccelerators(
     rectangleSmall: 0,
     paletteRows: 0,
     paletteBatches: 0,
+    paletteContinuations: 0,
     palettePixels: 0,
     paletteWrites: 0,
     paletteFallbacks: 0,
@@ -254,7 +256,13 @@ export function installRomAccelerators(
     }
     const count = cpu.regRead('r6');
     const narrow = count < minPaletteRowPixels;
-    if (count < 1 || (narrow && count < 32) || count > 512) {
+    const canContinue =
+      narrow &&
+      count >= 12 &&
+      !cpu.runCounted &&
+      cpu.runStop === 0x23fff000 &&
+      Number.isFinite(minPaletteContinuationPixels);
+    if (count < 1 || (narrow && count < 32 && !canContinue) || count > 512) {
       stats.paletteFallbacks++;
       return;
     }
@@ -264,21 +272,20 @@ export function installRomAccelerators(
       stats.paletteFallbacks++;
       return;
     }
-    // Short rows are worthwhile only as a large, verified image batch. Reject
-    // small sprites before reading their palette and pixel buffers.
-    if (narrow) {
-      const image = cpu.read32(stack + 0x30),
-        row = cpu.read32(stack);
-      if (
-        !inRam(image, 0x260) ||
-        row >= 512 ||
-        (((cpu.read32(image + 0x4c) | 0) >> 16) - row) * count < minPaletteBatchPixels
-      ) {
-        stats.paletteFallbacks++;
-        return;
-      }
-    }
     if (cpu.regRead('r9') !== 0 || cpu.regRead('r3') !== 0) {
+      stats.paletteFallbacks++;
+      return;
+    }
+    const rowIndex = cpu.read32(stack),
+      image = cpu.read32(stack + 0x30);
+    const height = rowIndex < 512 && inRam(image, 0x260) ? (cpu.read32(image + 0x4c) | 0) >> 16 : 0;
+    const remainingRows = height - rowIndex;
+    // Reject small sprites before reading their palette and pixel buffers.
+    if (
+      narrow &&
+      remainingRows * count < minPaletteBatchPixels &&
+      !(canContinue && (remainingRows - 1) * count >= minPaletteContinuationPixels)
+    ) {
       stats.paletteFallbacks++;
       return;
     }
@@ -328,17 +335,14 @@ export function installRomAccelerators(
     let rows = 1,
       sourceStepBits = 0,
       destinationStride = 0;
-    const rowIndex = cpu.read32(stack),
-      image = cpu.read32(stack + 0x30);
     const outsideKernel =
       Number.isInteger(cpu.runStop) &&
       (cpu.runStop < PALETTE_ROW_ENTRY || cpu.runStop > 0x2004e7b8);
-    if (outsideKernel && rowIndex < 512 && inRam(image, 0x260)) {
-      const height = (cpu.read32(image + 0x4c) | 0) >> 16,
-        stride = (cpu.read32(image + 0x25c) | 0) >> 16,
+    if (outsideKernel && remainingRows > 1) {
+      const stride = (cpu.read32(image + 0x25c) | 0) >> 16,
         paddingBits = cpu.read32(stack + 4),
         paddingBytes = cpu.read32(stack + 8) | 0,
-        candidateRows = height - rowIndex,
+        candidateRows = remainingRows,
         candidateStep = count * bits + paddingBytes * 8 + paddingBits,
         candidateInput = Math.ceil(
           (bitOffset + (candidateRows - 1) * candidateStep + count * bits) / 8,
@@ -346,7 +350,6 @@ export function installRomAccelerators(
         candidateOutput = (candidateRows - 1) * stride * 2 + outputBytes;
       const intersects = (a, an, b, bn) => a < b + bn && b < a + an;
       if (
-        candidateRows > 1 &&
         candidateRows <= 512 &&
         stride >= count &&
         stride <= 512 &&
@@ -370,9 +373,24 @@ export function installRomAccelerators(
         destinationStride = stride * 2;
       }
     }
+    const budget = cpu.blockBudget;
+    // Resume at the current translated row entry with the state of the last
+    // row. This avoids a PC write and a translated-block exit for small sprites.
+    // Reserve the worst-case work through the native last row and its return.
+    const continueLastRow =
+      canContinue &&
+      rows > 1 &&
+      (rows - 1) * count >= minPaletteContinuationPixels &&
+      budget != null &&
+      budget >= rows * (62 + 52 * count) + 128;
+    if (continueLastRow) rows--;
     const inputLength = Math.ceil((bitOffset + (rows - 1) * sourceStepBits + count * bits) / 8),
       outputLength = (rows - 1) * destinationStride + outputBytes;
-    if (narrow && (rows < 2 || rows * count < minPaletteBatchPixels)) {
+    if (
+      !continueLastRow &&
+      narrow &&
+      (count < 32 || rows < 2 || rows * count < minPaletteBatchPixels)
+    ) {
       stats.paletteFallbacks++;
       return;
     }
@@ -395,33 +413,45 @@ export function installRomAccelerators(
         }
       }
     }
-    // Entry's three instructions are already charged. Initial CMP/BLT cost 2;
-    // each pixel costs 19 instructions, plus 7 when the index is not transparent.
-    // Unicorn 1.0.3's counted run omits the outer fall-through block's 26
-    // instructions from BLOCK notifications; uncounted guarded runs include it.
-    // Preserve each native mode's observed clock, not an invented common clock.
+    // Each pixel costs 19 instructions, plus 7 for a visible pixel. Resuming
+    // at a row entry skips complete rows: 3 entry, 2 initial CMP/BLT and
+    // 26 outer-loop instructions per row. For the older exit shortcut the
+    // first entry is charged and the last outer loop is still native.
+    // Counted Unicorn runs omit the 26-instruction block from notifications.
     const betweenRows = cpu.runCounted ? 5 : 31;
-    const skipped = 2 + count * rows * 19 + writes * 7 + (rows - 1) * betweenRows,
+    const skipped =
+        count * rows * 19 +
+        writes * 7 +
+        (continueLastRow ? rows * 31 : 2 + (rows - 1) * betweenRows),
       work = skipped * 2;
-    if (cpu.blockBudget != null && work > cpu.blockBudget) {
+    if (budget != null && work > budget) {
       stats.paletteFallbacks++;
       return;
     }
     if (writes) cpu.write(destination, output);
-    const endBit = bitOffset + (rows - 1) * sourceStepBits + count * bits;
-    if (rows > 1) {
-      cpu.write32(stack, rowIndex + rows - 1);
-      cpu.write32(stack + 0x0c, destination + (rows - 1) * destinationStride);
+    const endBit =
+      bitOffset +
+      (continueLastRow ? rows * sourceStepBits : (rows - 1) * sourceStepBits + count * bits);
+    const rowAdvance = continueLastRow ? rows : rows - 1;
+    if (rowAdvance > 0) {
+      cpu.write32(stack, rowIndex + rowAdvance);
+      cpu.write32(stack + 0x0c, destination + rowAdvance * destinationStride);
     }
-    cpu.regWrite('r0', destination + outputLength);
+    // The outer CMP(height, row) sets C before a new row. The native entry
+    // then reloads r0 from the updated stack and clears r8 for the last row.
+    cpu.regWrite('r0', continueLastRow ? height : destination + outputLength);
     cpu.regWrite('r1', endBit & 7);
     cpu.regWrite('r2', source + (endBit >>> 3));
     cpu.regWrite('r8', count);
-    cpu.regWrite('r12', bits);
+    cpu.regWrite('r12', continueLastRow ? rowIndex + rowAdvance : bits);
     cpu.regWrite('lr', lastColor);
-    cpu.regWrite('cpsr', ((flags & 0x0fffffff) | 0x60000000) >>> 0);
-    cpu.regWrite('pc', PALETTE_ROW_EXIT);
-    if (cpu.blockBudget != null) cpu.blockBudget -= work;
+    cpu.regWrite(
+      'cpsr',
+      ((flags & 0x0fffffff) | (continueLastRow ? 0x20000000 : 0x60000000)) >>> 0,
+    );
+    if (continueLastRow) stats.paletteContinuations++;
+    else cpu.regWrite('pc', PALETTE_ROW_EXIT);
+    if (budget != null) cpu.blockBudget = budget - work;
     onSkippedInstructions(skipped);
     stats.paletteRows += rows;
     stats.paletteBatches++;

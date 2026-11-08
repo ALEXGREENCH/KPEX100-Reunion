@@ -733,3 +733,91 @@ test('Short, counted, unaligned and overlapping copies use the ARM routine', asy
     fast.cpu.close();
   }
 });
+
+test('small transparent palette images resume the final native row without changing CPU state', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      minPaletteContinuationPixels: 192,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    const shapes = [
+      {
+        bits: 1,
+        offset: 3,
+        count: 18,
+        height: 13,
+        paddingBytes: 3,
+        paddingBits: 1,
+        transparent: 0,
+      },
+      {
+        bits: 2,
+        offset: 6,
+        count: 33,
+        height: 9,
+        firstRow: 2,
+        paddingBits: 2,
+        paddingBytes: 5,
+        transparent: 3,
+      },
+      { bits: 4, offset: 4, count: 64, height: 4, paddingBits: 4, transparent: 15 },
+      { bits: 8, count: 99, height: 4, stride: 101, transparent: 255 },
+      { bits: 8, count: 64, height: 5, fill: 255, transparent: 255, flags: 0x18000013 },
+    ];
+    for (const shape of shapes) {
+      const expected = paletteRow(native, shape, 1_000_000);
+      assert.deepEqual(paletteRow(fast, shape, 1_000_000), expected, JSON.stringify(shape));
+    }
+    assert.equal(fast.accelerator.stats.paletteContinuations, shapes.length);
+    const shape = shapes[2];
+    const full = paletteRow(native, shape, 1_000_000).instructions * 2;
+    const reserve = shape.height * (62 + 52 * shape.count) + 128 + 8;
+    for (const budget of [
+      1,
+      6,
+      10,
+      14,
+      100,
+      full - 20,
+      full - 4,
+      full - 2,
+      full,
+      full + 2,
+      reserve - 2,
+      reserve,
+      reserve + 2,
+    ]) {
+      assert.deepEqual(
+        paletteRow(fast, shape, budget),
+        paletteRow(native, shape, budget),
+        'budget ' + budget,
+      );
+    }
+    assert.equal(fast.accelerator.stats.paletteContinuations, shapes.length + 1);
+    const before = fast.accelerator.stats.paletteContinuations;
+    for (const shape of [
+      { ...shapes[2], source: BUFFER + 2048 },
+      { ...shapes[2], palette: BUFFER + 2048 },
+      { ...shapes[2], count: 31 },
+      { ...shapes[2], paddingBits: 1 },
+      { ...shapes[2], stopAt: 0x2004e4e0 },
+      { ...shapes[2], stride: 32 },
+    ]) {
+      assert.deepEqual(
+        paletteRow(fast, shape, 1_000_000),
+        paletteRow(native, shape, 1_000_000),
+        JSON.stringify(shape),
+      );
+    }
+    assert.deepEqual(paletteRow(fast, shapes[2]), paletteRow(native, shapes[2]));
+    assert.equal(fast.accelerator.stats.paletteContinuations, before);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});

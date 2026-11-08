@@ -465,6 +465,10 @@ void EVENT_TIMEOUT() {
         Status(1);
         return;
     }
+#ifdef REUNION_RESET_COLOR
+    // The original firmware may change its brush between callbacks.
+    lastColor = -1;
+#endif
     Paint();
 }
 

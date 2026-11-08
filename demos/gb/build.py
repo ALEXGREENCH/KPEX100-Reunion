@@ -347,6 +347,10 @@ def main():
             )
             if expanded:
                 text = text.replace("expanded = 0;", "expanded = 1;")
+            if args.flooder:
+                text = text.replace(
+                    "#define FLOODER_DIVISION 0", "#define FLOODER_DIVISION 1"
+                )
             variant.write_text(text, encoding="ascii")
             sgs = build_sgs(args.sdk, variant)
     else:
