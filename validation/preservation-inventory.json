@@ -3,6 +3,438 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "dubigame-maplestory-and-skipping-stone",
+      "repositoryPath": "research/archives/Dubigame-MapleStory-My-Princess-Skipping-Stone.zip",
+      "bytes": 3792039,
+      "sha256": "898d9471a8cc81b9e8193d084dcf4ae5595844e16d9c3464612813ec9051b85c",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/maplestory-2007/control/after.png",
+          "bytes": 9559,
+          "crc32": "43bf95c5",
+          "sha256": "ed3f47095d32afb4ee9b59f78aeaa4bca1c692a9453c74b5c30ee15f4b29d158"
+        },
+        {
+          "path": "evidence/maplestory-2007/control/before.png",
+          "bytes": 9469,
+          "crc32": "d920ee98",
+          "sha256": "630ed1026b512f2fd2b605e777cc8b5a9ccc50721b59ae03f6847d77942501e2"
+        },
+        {
+          "path": "evidence/maplestory-2007/control/replay.lua",
+          "bytes": 275,
+          "crc32": "3dcc216d",
+          "sha256": "0f743349c756e9c7fdcf46fb91561d244e881493a837336da2d326caf7e178c7"
+        },
+        {
+          "path": "evidence/maplestory-2007/control/trace.ndjson",
+          "bytes": 14507,
+          "crc32": "fb9374bb",
+          "sha256": "a6d602fcebc760a25cff59be99a6335057fdc85cf9619de8741b12a65870f46c"
+        },
+        {
+          "path": "evidence/maplestory-2007/input/after.png",
+          "bytes": 9519,
+          "crc32": "1a8f19bb",
+          "sha256": "e1497cc3925e1f3ce1961881625675988e3ec3d06145c37fac434074e913ba64"
+        },
+        {
+          "path": "evidence/maplestory-2007/input/before.png",
+          "bytes": 9469,
+          "crc32": "d920ee98",
+          "sha256": "630ed1026b512f2fd2b605e777cc8b5a9ccc50721b59ae03f6847d77942501e2"
+        },
+        {
+          "path": "evidence/maplestory-2007/input/replay.lua",
+          "bytes": 283,
+          "crc32": "49d966d4",
+          "sha256": "0f62d73b98818b54a6c0957e98ec251f1604e246f4c956e562402dc03cc7cc4d"
+        },
+        {
+          "path": "evidence/maplestory-2007/input/trace.ndjson",
+          "bytes": 14554,
+          "crc32": "4a959e91",
+          "sha256": "0c0d14e325ee929940ad7c0f483a48d8adf351e908e6755fe54fcf669d60cdbf"
+        },
+        {
+          "path": "evidence/maplestory-magician/control/after.png",
+          "bytes": 11714,
+          "crc32": "a349446f",
+          "sha256": "eea9b72ae3bfc8329c3257e612d642c931195328103efe6848f9d86be05a53b1"
+        },
+        {
+          "path": "evidence/maplestory-magician/control/before.png",
+          "bytes": 11714,
+          "crc32": "a349446f",
+          "sha256": "eea9b72ae3bfc8329c3257e612d642c931195328103efe6848f9d86be05a53b1"
+        },
+        {
+          "path": "evidence/maplestory-magician/control/replay.lua",
+          "bytes": 259,
+          "crc32": "43222f1b",
+          "sha256": "d601c2d50a2dd7eebeedd72cc5089438f2ee4d1f44e41ca4d9da9526a0384c9a"
+        },
+        {
+          "path": "evidence/maplestory-magician/control/trace.ndjson",
+          "bytes": 13751,
+          "crc32": "183ae662",
+          "sha256": "a384baf30eb2c7611f7e2b756289d0af1de1bbcce1a2979bf0d13495bcd6f32b"
+        },
+        {
+          "path": "evidence/maplestory-magician/input/after.png",
+          "bytes": 11561,
+          "crc32": "47b4caa9",
+          "sha256": "fadd58c8c211d30873d2353cc398e13b741159c8a0557dba9007a94de2c1d5c9"
+        },
+        {
+          "path": "evidence/maplestory-magician/input/before.png",
+          "bytes": 11714,
+          "crc32": "a349446f",
+          "sha256": "eea9b72ae3bfc8329c3257e612d642c931195328103efe6848f9d86be05a53b1"
+        },
+        {
+          "path": "evidence/maplestory-magician/input/replay.lua",
+          "bytes": 264,
+          "crc32": "2d15ffb5",
+          "sha256": "c066fe0fa7e9fe7cd2a2d952b4d56f3193ae6f804b4ce67430b5bc548beb00a2"
+        },
+        {
+          "path": "evidence/maplestory-magician/input/trace.ndjson",
+          "bytes": 13750,
+          "crc32": "e6299aed",
+          "sha256": "39acd32b1e6f4d308ca888c096e24140f5f16833768846a275414f844553e550"
+        },
+        {
+          "path": "evidence/maplestory-warrior/control/after.png",
+          "bytes": 18445,
+          "crc32": "44fd8e8d",
+          "sha256": "9b0074893dbae551fa23b0e40a53f661647b88263dc2ddc090b19837138032ea"
+        },
+        {
+          "path": "evidence/maplestory-warrior/control/before.png",
+          "bytes": 18445,
+          "crc32": "44fd8e8d",
+          "sha256": "9b0074893dbae551fa23b0e40a53f661647b88263dc2ddc090b19837138032ea"
+        },
+        {
+          "path": "evidence/maplestory-warrior/control/replay.lua",
+          "bytes": 361,
+          "crc32": "f22ba84d",
+          "sha256": "078f8642f5a68e0d07f17cb71388c40ea5241670bea59f1b02b5d0163690854c"
+        },
+        {
+          "path": "evidence/maplestory-warrior/control/trace.ndjson",
+          "bytes": 20272,
+          "crc32": "3fdcf02b",
+          "sha256": "9223e469c7d1031a28267400b64b7ded041a3dcf6c2de6d1cfec8439148055c9"
+        },
+        {
+          "path": "evidence/maplestory-warrior/input/after.png",
+          "bytes": 18752,
+          "crc32": "82de5307",
+          "sha256": "b7c5edb441c8143bf58d0dc731f7efb0c4be211f9ff8ed00083309a7619f8f38"
+        },
+        {
+          "path": "evidence/maplestory-warrior/input/before.png",
+          "bytes": 18445,
+          "crc32": "44fd8e8d",
+          "sha256": "9b0074893dbae551fa23b0e40a53f661647b88263dc2ddc090b19837138032ea"
+        },
+        {
+          "path": "evidence/maplestory-warrior/input/replay.lua",
+          "bytes": 366,
+          "crc32": "18c7ef2a",
+          "sha256": "9c842666cf784a2036eca4a3fef0e2423996a4bf5002c8201e290e16ce605669"
+        },
+        {
+          "path": "evidence/maplestory-warrior/input/trace.ndjson",
+          "bytes": 20265,
+          "crc32": "26c61a2c",
+          "sha256": "77b5727ac13fe8e9cf81e0cd7c36403ab02f32658130e346f2ae04dea0bc7312"
+        },
+        {
+          "path": "evidence/my-princess-2/control/after.png",
+          "bytes": 45258,
+          "crc32": "e23ad216",
+          "sha256": "0b3035c7898e5da7cfc6871fdf6d4d8d466deca541214c6866b8b7fd8217e601"
+        },
+        {
+          "path": "evidence/my-princess-2/control/before.png",
+          "bytes": 45253,
+          "crc32": "1bae7cb2",
+          "sha256": "d1293bdb9c3db71c2704bdc9ff82d120f1ed6c79e4fda5d3ccc6a65deb0147e5"
+        },
+        {
+          "path": "evidence/my-princess-2/control/replay.lua",
+          "bytes": 226,
+          "crc32": "7258ff82",
+          "sha256": "13c1e60a99abde9e6f38588ca4eab7fa22a04346a55622726daa7d3583fcb499"
+        },
+        {
+          "path": "evidence/my-princess-2/control/trace.ndjson",
+          "bytes": 11273,
+          "crc32": "6d2367fe",
+          "sha256": "7899343c304b88bf1edbe278e24010d2dd2a62ab2f1ea5f8a18467b0e01b7487"
+        },
+        {
+          "path": "evidence/my-princess-2/input/after.png",
+          "bytes": 6339,
+          "crc32": "5921f156",
+          "sha256": "6038d7f26355d4a96d46769713c5a97771b77196dfc71769bedd5c8c37eb4d6a"
+        },
+        {
+          "path": "evidence/my-princess-2/input/before.png",
+          "bytes": 45253,
+          "crc32": "1bae7cb2",
+          "sha256": "d1293bdb9c3db71c2704bdc9ff82d120f1ed6c79e4fda5d3ccc6a65deb0147e5"
+        },
+        {
+          "path": "evidence/my-princess-2/input/replay.lua",
+          "bytes": 231,
+          "crc32": "486ce979",
+          "sha256": "713d78fcb253a24fbc4419feb9ce7784aee983382bfaddfd65aef0e8071678ac"
+        },
+        {
+          "path": "evidence/my-princess-2/input/trace.ndjson",
+          "bytes": 11263,
+          "crc32": "75cd13f3",
+          "sha256": "28308b2c435aad209bf61dd6202e008d0078a78f1dc402be18b2b6599fc3ae5e"
+        },
+        {
+          "path": "evidence/skipping-stone-3/control/after.png",
+          "bytes": 4083,
+          "crc32": "b1eab135",
+          "sha256": "6975fe96a03cf7028955c4ae1ecf0ab3d9dd5eda3f068d4dbf2104c212e2ffeb"
+        },
+        {
+          "path": "evidence/skipping-stone-3/control/before.png",
+          "bytes": 3541,
+          "crc32": "8b51af63",
+          "sha256": "c4011a9457cdbdef5be279d4ca932211ff128bcdb2edf915d03f9436ed08c4f6"
+        },
+        {
+          "path": "evidence/skipping-stone-3/control/replay.lua",
+          "bytes": 226,
+          "crc32": "e15a7910",
+          "sha256": "97a8d0cfc116d726eba33e9cc07038a51375e6674a5d00266ed01cca7a1eaec6"
+        },
+        {
+          "path": "evidence/skipping-stone-3/control/trace.ndjson",
+          "bytes": 11485,
+          "crc32": "032ec2e9",
+          "sha256": "0919a0244ad17ba5c848dd2fef9195b6ad6e8eb499e3ace69e774b063484200d"
+        },
+        {
+          "path": "evidence/skipping-stone-3/input/after.png",
+          "bytes": 12471,
+          "crc32": "d343f723",
+          "sha256": "3448a19de99ef63ad4934ecca430ef073622ef0d23ff19f62772b132a523c03f"
+        },
+        {
+          "path": "evidence/skipping-stone-3/input/before.png",
+          "bytes": 3541,
+          "crc32": "8b51af63",
+          "sha256": "c4011a9457cdbdef5be279d4ca932211ff128bcdb2edf915d03f9436ed08c4f6"
+        },
+        {
+          "path": "evidence/skipping-stone-3/input/replay.lua",
+          "bytes": 233,
+          "crc32": "202dc8ad",
+          "sha256": "e65f92824f151e2aae362f81e421cbcead103d5bde3eb6474177659f766f2ec0"
+        },
+        {
+          "path": "evidence/skipping-stone-3/input/trace.ndjson",
+          "bytes": 11483,
+          "crc32": "3412866f",
+          "sha256": "ad89bde18bc60b18948e0fb309e76278bebd11ce0edbf5573e03a4417076f80c"
+        },
+        {
+          "path": "evidence/verification.json",
+          "bytes": 641156,
+          "crc32": "dc1084d4",
+          "sha256": "5b12ca7181be82d037b0fd71b0908618ad4f45a28d7fa37d040ad0620cf598f0"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 9752,
+          "crc32": "078befd1",
+          "sha256": "f0f3dce5d0589e793905aebc4aee1158968b2ccfde59816c12a8d5ce48b93295"
+        },
+        {
+          "path": "originals/마이프린세스2.zip",
+          "bytes": 857088,
+          "crc32": "a96f0728",
+          "sha256": "41466fc7f709c43a7b110d795c86e3e4eda25226b54c87c51576ffd15def3b78"
+        },
+        {
+          "path": "originals/메이플스토리(법사편).zip",
+          "bytes": 567076,
+          "crc32": "3073909d",
+          "sha256": "7da5a1b08859e9e7f4ea35e29414e69b6effa2bff8357419de07aad801d84265"
+        },
+        {
+          "path": "originals/메이플스토리(전사편).zip",
+          "bytes": 611046,
+          "crc32": "10f08e43",
+          "sha256": "e178cfd14846c9b44a3455d2fd034169513c73bbd84a2e51b3572eded8921897"
+        },
+        {
+          "path": "originals/메이플스토리2007.zip",
+          "bytes": 749071,
+          "crc32": "7f63f8e8",
+          "sha256": "8fdd8f52b5bfddcf550a7bc5c4550c3731b4939498a84a2c65ab15a59d73a55b"
+        },
+        {
+          "path": "originals/물가에돌튕기기3.zip",
+          "bytes": 435130,
+          "crc32": "cfe95c09",
+          "sha256": "6350b347278915217c9a4c56d82970bcf0ff1c686542c6cf9aff38ec42a7eb3d"
+        },
+        {
+          "path": "source/dubigame-52.html",
+          "bytes": 45682,
+          "crc32": "40f01d35",
+          "sha256": "5090ab24005ecab4fad6984ca7fc8087c883e9d1bbfca28dc23ccff6cce60b5a"
+        },
+        {
+          "path": "source/dubigame-58.html",
+          "bytes": 47683,
+          "crc32": "457465fd",
+          "sha256": "7c110629cac00610b3730717cbbcdc824b72adb383ee869994a60c6189cf66bf"
+        },
+        {
+          "path": "source/dubigame-59.html",
+          "bytes": 49707,
+          "crc32": "e4701500",
+          "sha256": "f6ab3523a9aa0a0cd8549613a6ea9b61ce8ecbb19ef15c7ea730c5fd610d6452"
+        },
+        {
+          "path": "source/dubigame-60.html",
+          "bytes": 47385,
+          "crc32": "a411ee34",
+          "sha256": "e7a1cb223b624aa9ba6978876b32d81d3bf16bce4c8c8693f354643076c5af1e"
+        },
+        {
+          "path": "source/dubigame-62.html",
+          "bytes": 45491,
+          "crc32": "0862f3c8",
+          "sha256": "9164526348b9ffba7599ec3a6721d7e6096d0a0ab7904b4f65a39e976f4eb814"
+        }
+      ]
+    },
+    {
+      "id": "com2us-phonegame-minigame-heaven-2005",
+      "repositoryPath": "research/archives/Com2uS-Phonegame-and-Mini-Game-Heaven-2005.zip",
+      "bytes": 280559,
+      "sha256": "7db9bc4aa4cbee50544adeb1b985ab9e1834384c115905d724f6b30e8a2ad229",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/provenance.json",
+          "bytes": 2562,
+          "crc32": "402ed6a9",
+          "sha256": "e1ee9f11d6d859c70ee722002bb75830cf1f8c26095faf4c2b692f5f8f9eaecb"
+        },
+        {
+          "path": "http/animation-false-200.html",
+          "bytes": 9996,
+          "crc32": "858d10c2",
+          "sha256": "fa7a396082a43fcab372e06bca2c0f93699c08d6cd2fb65b5be12fbea15cd467"
+        },
+        {
+          "path": "http/com2us-press-image.headers",
+          "bytes": 299,
+          "crc32": "2c566a64",
+          "sha256": "dfcb53a9ec5bebe7f176fcb0d165e4f5b78e1233ae2faf2ebac24b5d87cbc208"
+        },
+        {
+          "path": "http/com2us-press.headers",
+          "bytes": 377,
+          "crc32": "3ab096f6",
+          "sha256": "09e81f92a755f6f87f61f3e509e23a4e964c8bd544c145a74cc78ae6ce2814a3"
+        },
+        {
+          "path": "http/com2us-wayback.headers",
+          "bytes": 1814,
+          "crc32": "f274e3d1",
+          "sha256": "bc2f26750002e2526b8ece42b031bf3738361b5353f59ac2fe48f462621ec1fa"
+        },
+        {
+          "path": "http/minigame-anigif.headers",
+          "bytes": 1782,
+          "crc32": "bbb03980",
+          "sha256": "f9179dd8d4cc196a7cfab460d241844c13d31c08758cc200ce7f437ad43e0723"
+        },
+        {
+          "path": "http/phonegame-wayback.headers",
+          "bytes": 1801,
+          "crc32": "f19c85ee",
+          "sha256": "014cac5ec9b4a54209ff5c110dd70412017e987407f560e774428f82787e21df"
+        },
+        {
+          "path": "http/wayback-card.json",
+          "bytes": 2915,
+          "crc32": "1c96e5d6",
+          "sha256": "fc40cd65c840bf78e36e20044e2a2828c9498fe9dc9e7b0ed62c11c258f52992"
+        },
+        {
+          "path": "http/wayback-player-and-gtp.json",
+          "bytes": 3193,
+          "crc32": "6d5c0dcc",
+          "sha256": "8343075fe885bafa38e3006cee25fe3a91f6e374ed63efd18dc699228b832353"
+        },
+        {
+          "path": "http/wayback-popups.json",
+          "bytes": 2967,
+          "crc32": "bff16294",
+          "sha256": "42b3cf2f0fc96adb8f9f02488a05628c1ee143c540add8ef757f8f0931b824d0"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 2896,
+          "crc32": "5336a522",
+          "sha256": "b13ef00e525df3ef572b5649773d738a6bd56384ff44b08d42e5b8f27ee2b476"
+        },
+        {
+          "path": "originals/com2us-home-20051001.html",
+          "bytes": 93443,
+          "crc32": "042c767f",
+          "sha256": "9710a105d9e9c1c9090a89a8808a51332fa3bbe91e6505cec0f4d1fe3aee3690"
+        },
+        {
+          "path": "originals/com2us-press-20051106.html",
+          "bytes": 102420,
+          "crc32": "0af96aea",
+          "sha256": "c21ef7607e558473ebd2773c3ad6675f62ddb7f52139a02545c9be578e06c5db"
+        },
+        {
+          "path": "originals/com2us-press-image.jpg",
+          "bytes": 205504,
+          "crc32": "f7e96d6a",
+          "sha256": "dcdb25007f26f0c90bea5151ed132d716135bb5c93391044413bff6f2d2bba9f"
+        },
+        {
+          "path": "originals/gtp-com2us-373.html",
+          "bytes": 43026,
+          "crc32": "f249a7c5",
+          "sha256": "3aeb2b34f2767a7b628748922f3de0ace45c49dcf457fdb986cb805ae5d9ddc4"
+        },
+        {
+          "path": "originals/minigame-heaven-card-20051202.html",
+          "bytes": 123806,
+          "crc32": "f82c0c0f",
+          "sha256": "c36bb29bf787a5684542309cd9579cabc6206a2718d847ffeca2e3e064b767ee"
+        },
+        {
+          "path": "originals/phonegame-home-20040622.html",
+          "bytes": 73956,
+          "crc32": "84b19eee",
+          "sha256": "20b07a3e43f54aa04a84f2b8f35700ebe82905888132bd1608cb4f581bc95e52"
+        }
+      ]
+    },
+    {
       "id": "samsung-w420-minigame-heaven-mq",
       "repositoryPath": "research/archives/Samsung-SCH-W420-Mini-Game-Heaven-MQ.zip",
       "bytes": 950007,
@@ -226246,9 +226678,9 @@
     }
   ],
   "counts": {
-    "archives": 130,
-    "archiveBytes": 2528879819,
-    "fileMembers": 37512,
-    "uniqueMemberHashes": 22657
+    "archives": 132,
+    "archiveBytes": 2532952417,
+    "fileMembers": 37581,
+    "uniqueMemberHashes": 22715
   }
 }
