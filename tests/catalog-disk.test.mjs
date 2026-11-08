@@ -9,7 +9,7 @@ const digest = (data) => createHash('sha256').update(data).digest('hex');
 
 test('all catalogue ROMs, SGS and reached states retain original bytes', () => {
   assert.equal(catalog.firmwares.length, 9);
-  assert.equal(catalog.games.length, 98);
+  assert.equal(catalog.games.length, 99);
   assert.equal(catalog.states.length, 3);
   for (const group of [catalog.firmwares, catalog.games, catalog.states]) {
     assert.equal(new Set(group.map((x) => x.id)).size, group.length);
