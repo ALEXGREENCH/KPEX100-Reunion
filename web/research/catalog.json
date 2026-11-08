@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "reakosys-m3d-archive",
+      "title": "Reakosys M3D · документация и демонстрации",
+      "category": "Документация и инструменты",
+      "description": "Оригинальный 67-страничный справочник API, листок ReakoLite, четыре SWF, страницы портала и индекс Wayback.",
+      "repositoryPath": "research/archives/Reakosys-M3D-Documentation-and-Demos.zip",
+      "bytes": 2334874,
+      "sha256": "93049e13be6ed955fd5853f91e1e169fbf404b0fcfd9c8e36106bf7f26a65bf9",
+      "sources": [
+        {
+          "label": "Справочник M3D API",
+          "url": "https://web.archive.org/web/20050319044935id_/http://partner.reakosys.com:80/board/dev/download/M3D_API_Reference.pdf"
+        },
+        {
+          "label": "Архивный портал Reakosys",
+          "url": "https://web.archive.org/web/20040805115812id_/http://partner.reakosys.com:80/board/dev/sdk_list.asp"
+        }
+      ]
+    },
+    {
       "id": "samsung-x6000-net-alkkagi",
       "title": "Net Alkkagi · KTF BREW из Samsung SPH-X6000",
       "category": "Игры и игровые сборки",
@@ -2483,6 +2502,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Reakosys M3D · API, демонстрации и ссылки на инструменты",
+      "repositoryPath": "doc/reakosys-m3d-archive.md"
+    },
     {
       "title": "Lost Planet и хранилище Samsung SPH-X9300",
       "repositoryPath": "doc/samsung-x9300-ffs.md"
