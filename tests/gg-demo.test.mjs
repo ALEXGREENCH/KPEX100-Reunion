@@ -41,8 +41,14 @@ test('Prism Vault reads the standalone ROM and completes both gates, both shards
     assert.equal(game.vfs.diagnostics.operations, 3);
     assert.equal(game.vfs.diagnostics.openHandles, 0);
     assert.equal(game.vfs.diagnostics.readonlyFiles, 1);
-    ticks(95);
+    const loading = game.framebufferRGBA.slice();
+    ticks(73);
+    assert.deepEqual(game.framebufferRGBA, loading);
+    ticks(1);
     const initial = game.framebufferRGBA.slice();
+    assert.notDeepEqual(initial, loading);
+    ticks(21);
+    assert.deepEqual(game.framebufferRGBA, initial);
     const ship = pixel(8, 8);
     const cyanClosed = pixel(12, 10);
     const amberOpen = pixel(18, 13);

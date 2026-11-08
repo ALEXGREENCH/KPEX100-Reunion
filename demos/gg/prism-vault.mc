@@ -14,7 +14,7 @@
 
 // Fixed-ROM Game Gear with the Z80 and Mode 4 features used by Prism Vault.
 int rom[8193], ram[8192], vram[4096], cram[32], vdpRegs[11], solids[512];
-int queue[360], queued[360], head, tail, count;
+int queue[360], queued[360], head, tail, count, paintedInitially;
 int a, b, c, d, e, hl, sp, pc, zero, carry, failed;
 int access, address, latch, commandLow, cramLow, vblank, vdpRead, table;
 int pad, pending, yieldGuest, statusPc, lastColor, ox, oy, ready;
@@ -341,7 +341,8 @@ void Paint() {
         queued[index] = 0;
         DrawTile(index % 20, index / 20);
     }
-    Flush();
+    if (!count) paintedInitially = 1;
+    if (paintedInitially) Flush();
 }
 
 int Key(int code) {
