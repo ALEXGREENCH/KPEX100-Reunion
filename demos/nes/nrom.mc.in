@@ -355,7 +355,7 @@ ${extra_cpu_helpers}void Step() {
         case 166: x = ram[Fetch()]; nz = x; break;
         case 168: y = a; nz = y; break;
         case 169: a = Fetch(); nz = a; break;
-        case 170: x = a; nz = x; break;
+        case 170:$extra_transfer_x x = a; nz = x; break;
         case 172: y = CpuRead(Word()); nz = y; break;
         case 173:
             addr = Word();

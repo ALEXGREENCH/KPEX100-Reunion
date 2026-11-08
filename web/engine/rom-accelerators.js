@@ -97,6 +97,7 @@ export function installRomAccelerators(
     minPaletteRowPixels = 128,
     minPaletteBatchPixels = 4096,
     minPaletteContinuationPixels = Infinity,
+    mirrorPalette = false,
     minBlendedPalettePixels = Infinity,
     minRgbPaletteEntries = Infinity,
     minBlendRectanglePixels = Infinity,
@@ -177,6 +178,8 @@ export function installRomAccelerators(
     paletteRows: 0,
     paletteBatches: 0,
     paletteContinuations: 0,
+    mirroredPaletteBatches: 0,
+    mirroredPalettePixels: 0,
     blendedPaletteBatches: 0,
     blendedPalettePixels: 0,
     rgbPalettes: 0,
@@ -585,24 +588,27 @@ export function installRomAccelerators(
       bits = cpu.read32(stack + 0x14),
       shift = cpu.read32(stack + 0x18),
       transparent = cpu.read32(stack + 0x1c),
-      step = cpu.read32(stack + 0x2c);
+      step = cpu.read32(stack + 0x2c) | 0;
+    const mirrored = step === -1 && mirrorPalette && canContinue && !blended;
+    // The native row starts at its rightmost pixel when the step is negative.
+    const outputStart = mirrored ? destination - (count - 1) * 2 : destination;
     const sourceBytes = Math.ceil((bitOffset + count * bits) / 8),
       outputBytes = count * 2,
       paletteBytes = (mask + 1) * 2;
     const overlaps = (first, length) =>
-      destination < first + length && first < destination + outputBytes;
+      outputStart < first + length && first < outputStart + outputBytes;
     if (
       ![1, 2, 4, 8].includes(bits) ||
       mask !== (1 << bits) - 1 ||
       shift !== 8 - bits ||
       bitOffset > 7 ||
       bitOffset % bits !== 0 ||
-      step !== 1 ||
+      (step !== 1 && !mirrored) ||
       size !== 12 ||
       destination & 1 ||
       palette & 1 ||
-      destination < 0x23000000 ||
-      destination + outputBytes > 0x23ff0000 ||
+      outputStart < 0x23000000 ||
+      outputStart + outputBytes > 0x23ff0000 ||
       !inRam(source, sourceBytes) ||
       !inRam(palette, paletteBytes) ||
       overlaps(source, sourceBytes) ||
@@ -639,19 +645,19 @@ export function installRomAccelerators(
         paddingBytes >= 0 &&
         paddingBits < 8 &&
         paddingBits % bits === 0 &&
-        destination + candidateOutput <= 0x23ff0000 &&
+        outputStart + candidateOutput <= 0x23ff0000 &&
         inRam(source, candidateInput) &&
-        !intersects(destination, candidateOutput, source, candidateInput) &&
-        !intersects(destination, candidateOutput, palette, paletteBytes) &&
-        !intersects(destination, candidateOutput, stack, 0x34) &&
-        !intersects(destination, candidateOutput, image + 0x4c, 4) &&
-        !intersects(destination, candidateOutput, image + 0x25c, 4) &&
+        !intersects(outputStart, candidateOutput, source, candidateInput) &&
+        !intersects(outputStart, candidateOutput, palette, paletteBytes) &&
+        !intersects(outputStart, candidateOutput, stack, 0x34) &&
+        !intersects(outputStart, candidateOutput, image + 0x4c, 4) &&
+        !intersects(outputStart, candidateOutput, image + 0x25c, 4) &&
         !intersects(source, candidateInput, stack, 0x34) &&
         !intersects(palette, paletteBytes, stack, 0x34) &&
         !intersects(image + 0x4c, 4, stack, 0x34) &&
         !intersects(image + 0x25c, 4, stack, 0x34) &&
         (!blended ||
-          (!intersects(destination, candidateOutput, image + 0x268, 8) &&
+          (!intersects(outputStart, candidateOutput, image + 0x268, 8) &&
             !intersects(image + 0x268, 8, stack, 0x34)))
       ) {
         rows = candidateRows;
@@ -675,14 +681,16 @@ export function installRomAccelerators(
       outputLength = (rows - 1) * destinationStride + outputBytes;
     if (
       !continueLastRow &&
-      (blended || (narrow && (count < 32 || rows < 2 || rows * count < minPaletteBatchPixels)))
+      (mirrored ||
+        blended ||
+        (narrow && (count < 32 || rows < 2 || rows * count < minPaletteBatchPixels)))
     ) {
       stats.paletteFallbacks++;
       return;
     }
     const input = cpu.read(source, inputLength),
       colors = cpu.read(palette, paletteBytes),
-      output = cpu.read(destination, outputLength);
+      output = cpu.read(outputStart, outputLength);
     const sourceMasks = blended ? cpu.read32(image + 0x268) : 0;
     const destinationMasks = blended ? cpu.read32(image + 0x26c) : 0;
     const sourceHalf = sourceMasks & 0xffff,
@@ -693,11 +701,13 @@ export function installRomAccelerators(
       lastColor = transparent,
       lastDestination = 0,
       lastDestinationHalf = 0;
+    const firstPixel = mirrored ? outputBytes - 2 : 0;
+    const pixelStep = step * 2;
     for (let y = 0; y < rows; y++) {
-      for (let i = 0; i < count; i++) {
+      let out = y * destinationStride + firstPixel;
+      for (let i = 0; i < count; i++, out += pixelStep) {
         const bit = bitOffset + y * sourceStepBits + i * bits,
-          index = (input[bit >>> 3] >>> (shift - (bit & 7))) & mask,
-          out = y * destinationStride + i * 2;
+          index = (input[bit >>> 3] >>> (shift - (bit & 7))) & mask;
         lastColor = transparent;
         if (index !== transparent) {
           lastColor = colors[index * 2] | (colors[index * 2 + 1] << 8);
@@ -733,7 +743,7 @@ export function installRomAccelerators(
       stats.paletteFallbacks++;
       return;
     }
-    if (writes) cpu.write(destination, output);
+    if (writes) cpu.write(outputStart, output);
     const endBit =
       bitOffset +
       (continueLastRow ? rows * sourceStepBits : (rows - 1) * sourceStepBits + count * bits);
@@ -763,6 +773,10 @@ export function installRomAccelerators(
     else cpu.regWrite('pc', PALETTE_ROW_EXIT);
     if (budget != null) cpu.blockBudget = budget - work;
     onSkippedInstructions(skipped);
+    if (mirrored) {
+      stats.mirroredPaletteBatches++;
+      stats.mirroredPalettePixels += count * rows;
+    }
     if (blended) {
       stats.blendedPaletteBatches++;
       stats.blendedPalettePixels += count * rows;

@@ -26,6 +26,8 @@ test('Zooming Secretary displays the office and walks in both directions', async
     game.cpu.read32(game.varAddresses[base + variable] + offset * 4) >>> 0;
   // The first 24 OAM entries mask the right border. The secretary follows.
   const player = () => [guest(4, 99), guest(4, 96)];
+  // The original game increments ring_cnt on every office frame.
+  const officeFrame = () => guest(1, 0x6ec) | (guest(1, 0x6ed) << 8);
   const tick = () => {
     game.event('TIMEOUT', 0);
     assert.equal(game.status, 'idle', game.diagnostics.error);
@@ -58,19 +60,28 @@ test('Zooming Secretary displays the office and walks in both directions', async
     );
 
     hold(21, 16);
-    until(() => player().join() === '120,151', 440, 'Day 1 secretary at the office entrance');
-    ticks(4);
-    hold(17, 40);
-    ticks(4);
-    assert.deepEqual(player(), [133, 151]);
+    until(
+      () => officeFrame() === 12 && guest(12) === 0x8315,
+      480,
+      'Day 1 office at its frame wait',
+    );
+    assert.deepEqual(player(), [120, 151]);
     // This includes the full office, ladders, cabinets, floor, and legible HUD.
     assert.equal(
       hash(game.framebufferRGBA),
-      '2ba9444f0cccd6633d6b2765ba3ff6998bbe44f4252aea20fe58ff9b2c118382',
+      '874c6b9fc1262c62a501b12bfbd98bba146a77df43cefe031fb6489b522ce610',
     );
+
+    hold(17, 40);
+    ticks(4);
+    const right = player();
+    assert.equal(right[1], 151);
+    assert.ok(right[0] >= 133, 'secretary walks right');
     hold(16, 40);
     ticks(4);
-    assert.deepEqual(player(), [119, 151]);
+    const left = player();
+    assert.equal(left[1], 151);
+    assert.ok(left[0] < right[0], 'secretary walks back left');
   } finally {
     game.close();
   }

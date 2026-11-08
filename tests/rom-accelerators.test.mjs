@@ -1138,6 +1138,96 @@ test('blended palette images preserve packed pixels, native state and watchdog e
   }
 });
 
+test('mirrored palette sprites preserve backwards destination writes and ARM watchdog edges', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      minPaletteContinuationPixels: 192,
+      mirrorPalette: true,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    const cases = [
+      { step: -1, bits: 1, offset: 3, count: 31, height: 10, transparent: 0, paddingBits: 3 },
+      {
+        step: -1,
+        bits: 2,
+        offset: 6,
+        count: 44,
+        height: 9,
+        firstRow: 2,
+        transparent: 2,
+        paddingBytes: 1,
+      },
+      {
+        step: -1,
+        bits: 4,
+        offset: 4,
+        count: 64,
+        height: 6,
+        transparent: 15,
+        paddingBits: 4,
+        transparentLastRow: true,
+      },
+      { step: -1, bits: 8, count: 99, height: 4, stride: 101, transparent: 255 },
+      { step: -1, bits: 8, count: 64, height: 5, fill: 255, transparent: 255, flags: 0x18000013 },
+    ];
+    for (const input of cases)
+      assert.deepEqual(
+        paletteRow(fast, input, 1_000_000),
+        paletteRow(native, input, 1_000_000),
+        JSON.stringify(input),
+      );
+    assert.equal(fast.accelerator.stats.mirroredPaletteBatches, cases.length);
+    const shape = cases[2];
+    const full = paletteRow(native, shape, 1_000_000).instructions * 2;
+    for (const budget of [
+      1,
+      12,
+      64,
+      1000,
+      full - 16,
+      full - 2,
+      full,
+      full + 2,
+      full + 16,
+      full + 30_000,
+    ])
+      assert.deepEqual(
+        paletteRow(fast, shape, budget),
+        paletteRow(native, shape, budget),
+        'budget ' + budget,
+      );
+    const before = fast.accelerator.stats.mirroredPaletteBatches;
+    assert.equal(before, cases.length + 1);
+    // The first pixel on a mirrored row is at the right edge. These overlaps
+    // occur in its left portion, outside the range of a forward row.
+    const left = BUFFER + 2048 + (shape.height - 1) * 220 * 2 - (shape.count - 1) * 2;
+    for (const input of [
+      { ...shape, height: 3 },
+      { ...shape, step: -2 },
+      { ...shape, mode: 2 },
+      { ...shape, source: left },
+      { ...shape, palette: left },
+      { ...shape, count: 160 },
+      { ...shape, stopAt: 0x2004e4d0 },
+    ])
+      assert.deepEqual(
+        paletteRow(fast, input, 1_000_000),
+        paletteRow(native, input, 1_000_000),
+        JSON.stringify(input),
+      );
+    assert.deepEqual(paletteRow(fast, shape), paletteRow(native, shape));
+    assert.equal(fast.accelerator.stats.mirroredPaletteBatches, before);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
 test('small transparent palette images resume the final native row without changing CPU state', async () => {
   const native = await machine(false),
     fast = await machine(false);

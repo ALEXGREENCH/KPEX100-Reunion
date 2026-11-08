@@ -283,6 +283,7 @@ export class GnexRuntime {
       this.romAccelerators = installRomAccelerators(cpu, {
         romHash,
         minPaletteContinuationPixels: 192,
+        mirrorPalette: true,
         minBlendedPalettePixels: 256,
         minRgbPaletteEntries: hasLargeRgbPalette ? RGB_PALETTE_MIN_ENTRIES : Infinity,
         minBlendRectanglePixels: 256,
