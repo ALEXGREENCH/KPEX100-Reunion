@@ -7,11 +7,11 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-The collection includes 9 firmware images, 114 SGS applications, 21 Anycall ADS games, 3 quick-start
+The collection includes 9 firmware images, 116 SGS applications, 21 Anycall ADS games, 3 quick-start
 snapshots and the original Swerve 2.1 module. The catalogue records SHA-256
 hashes and tested runtime profiles.
 
-A Kingston cold boot includes Reunion homebrew on the virtual FAT16 storage.
+A Kingston cold boot adds 13 homebrew games to the virtual FAT16 storage, with SGS launchers and ROM collections under `GAME/GB`, `GAME/GBC`, `GAME/NES`, and `GAME/GG`.
 [Player pack and instructions](demos/kpex/README.md).
 
 Eighteen Samsung Anycall games launch from the browser library using their original MBIN files and embedded SMAF audio. Each has a gameplay and input check. Timers, palette and synthesized timbres are approximate. ADS saves currently last for the active session. [Anycall controls and source archives](doc/samsung-anycall-ads-mbin.md#запуск-в-браузере)
@@ -24,10 +24,9 @@ variant, with original archives and paired input/control checks.
 
 The Games tab contains SGS and ADS builds, a playable
 [Fortress Tournament reconstruction](doc/fortress-tournament.md), and the
-Mosquito utility. The Examples tab contains four historical samples and Reunion's own
-[Pocket Lab and Prism Relay (GB/GBC)](demos/gb/README.md),
-[Orbital Courier and Neon Ranger (NES)](demos/nes/README.md), [Prism Vault (Game Gear)](demos/gg/README.md), and
-[GNEX Bench](demos/benchmark/README.md). Preserved attachments,
+Mosquito utility. The Examples tab contains four historical samples, homebrew for
+[Game Boy and Game Boy Color](demos/gb/README.md), [NES](demos/nes/README.md), and
+[Game Gear](demos/gg/README.md), plus [GNEX Bench](demos/benchmark/README.md). Preserved attachments,
 source projects and research downloads are available on the
 [archive page](https://alexgreench.github.io/KPEX100-Reunion/research/), with
 provenance, sizes and SHA-256 hashes. Native PXO and Flash finds are preserved

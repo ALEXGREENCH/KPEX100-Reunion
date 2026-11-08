@@ -308,15 +308,23 @@ def main():
     releases.add_argument(
         "--flooder", action="store_true", help="build Obalfour's Flooder"
     )
+    releases.add_argument(
+        "--2048",
+        dest="twenty48",
+        action="store_true",
+        help="build Wyatt Ferguson's 2048",
+    )
     parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
     args = parser.parse_args()
-    expanded = args.raw_snake or args.flooder
+    expanded = args.raw_snake or args.flooder or args.twenty48
     if expanded and (args.color or args.cart):
-        parser.error("--raw-snake and --flooder each select their own cartridge")
+        parser.error("The selected release uses its original cartridge")
     if args.raw_snake:
         cart = (HERE / "raw-snake/SNAKE.GB").read_bytes()
     elif args.flooder:
         cart = (HERE / "flooder/FLOODER.GBC").read_bytes()
+    elif args.twenty48:
+        cart = (HERE / "2048/2048.GB").read_bytes()
     else:
         cart = args.cart.read_bytes() if args.cart else demo_cartridge(args.color)
     check_cartridge(cart)
@@ -337,6 +345,8 @@ def main():
                 title, appid, filename = "Raw Snake", 998, "SNAKE.GBR"
             elif args.flooder:
                 title, appid, filename = "Flooder", 1001, "FLOODER.GBC"
+            elif args.twenty48:
+                title, appid, filename = "2048", 1005, "2048.GBR"
             else:
                 title, appid, filename = "Reunion CGB", 992, "PRISM.GBC"
             text = (
@@ -351,6 +361,8 @@ def main():
                 text = text.replace(
                     "#define FLOODER_DIVISION 0", "#define FLOODER_DIVISION 1"
                 )
+            if args.twenty48:
+                text = text.replace("#define DMG_WINDOW 0", "#define DMG_WINDOW 1")
             variant.write_text(text, encoding="ascii")
             sgs = build_sgs(args.sdk, variant)
     else:

@@ -24,6 +24,7 @@ int viewCol, viewRow, viewCols, viewRows, tileSize, lastSpriteMode;
 int viewRight, viewBottom;
 int dirtyCells[64], dirtyHead, dirtyCount;
 int inNmi;$extra_paint_state
+$audio_code
 
 int ROM(int offset) {
     return (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
@@ -146,7 +147,7 @@ $pad_strobe
         }
         return;
     }
-    if (addr >= 16384) return;
+$apu_write
     switch (addr & 7) {
         case 0:
             if ((value & 128) && !(ctrl & 128) && vblank) nmiPending = 1;
@@ -667,7 +668,7 @@ $guest_limit
         Status(1);
         return;
     }
-    Paint();
+    Paint();$audio_tick
 }
 
 void EVENT_KEYPRESS() {

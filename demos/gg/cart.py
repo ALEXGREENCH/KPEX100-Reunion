@@ -6,6 +6,7 @@ from struct import pack
 PATTERNS = 0x1000
 ROOM = 0x1800
 COLORS = 0x1C00
+EXTRA = 0x2000
 NAME_LENGTH = 32 * 28
 RAM_ROOM = 0xC000
 CX, CY = 0xD002, 0xD003
@@ -35,6 +36,19 @@ FONT = {
     "1": (4, 12, 4, 4, 4, 4, 14),
     "/": (1, 2, 2, 4, 8, 8, 16),
 }
+
+DIGITS = (
+    (14, 17, 19, 21, 25, 17, 14),
+    FONT["1"],
+    (14, 17, 1, 2, 4, 8, 31),
+    (30, 1, 1, 14, 1, 1, 30),
+    (2, 6, 10, 18, 31, 2, 2),
+    (31, 16, 16, 30, 1, 1, 30),
+    (14, 16, 16, 30, 17, 17, 14),
+    (31, 1, 2, 4, 8, 8, 8),
+    (14, 17, 17, 14, 17, 17, 14),
+    (14, 17, 17, 15, 1, 1, 14),
+)
 
 
 class Code:
@@ -105,14 +119,17 @@ class Code:
         self.relative(0x20, label)
 
 
-def cartridge_image(z, patterns, cells, palette):
+def cartridge_image(z, patterns, cells, palette, *, extra=b""):
     rom = bytearray(32768)
     code = z.resolve()
     assert len(code) < PATTERNS
+    assert len(patterns) <= ROOM - PATTERNS and len(cells) <= COLORS - ROOM
+    assert len(palette) <= EXTRA - COLORS and len(extra) <= 0x7FF0 - EXTRA
     rom[: len(code)] = code
     rom[PATTERNS : PATTERNS + len(patterns)] = patterns
     rom[ROOM : ROOM + len(cells)] = cells
     rom[COLORS : COLORS + len(palette)] = palette
+    rom[EXTRA : EXTRA + len(extra)] = extra
     rom[0x7FF0:0x7FF8] = b"TMR SEGA"
     rom[0x7FFA:0x7FFC] = pack("<H", sum(rom[:0x7FF0]) & 65535)
     rom[0x7FFF] = 0x6C

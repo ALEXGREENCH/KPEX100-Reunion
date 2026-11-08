@@ -1522,6 +1522,32 @@
       "provenance": "Albert Gonzalez's Unlicense Game Boy homebrew. The SGS reads the unchanged upstream ROM as SNAKE.GBR."
     },
     {
+      "id": "demo-2048",
+      "title": "2048 · Game Boy на GNEX",
+      "nativeTitle": "2048",
+      "url": "data/games/demo-2048.sgs",
+      "sha256": "fd63def3a81861b5ea1b5215065ba1311a0dc2b05b69842cbf9241f68b50c3fc",
+      "bytes": 199923,
+      "format": 4,
+      "resources": 8,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "cartridge": {
+        "path": "GB/2048.GB",
+        "sidecar": "2048.GBR",
+        "launcher": "2048.SGS",
+        "sha256": "46f9ab6a5e9acb81c76e9c2c6526db1ed4e03b4fb6f36c23fb786e31f9659fc5",
+        "licenseFile": "demos/gb/2048/LICENSE"
+      },
+      "startHint": "PLAY — начать. Стрелки — сдвиг плиток. SELECT — новая партия.",
+      "sourceUrl": "https://github.com/wyattferguson/2048-gb/tree/167788105db659f2049dd2d537ee12f63d87b1e7",
+      "provenance": "Wyatt Ferguson's MIT-licensed 2048, unchanged 32 KiB cartridge from the author's repository."
+    },
+    {
       "id": "demo-prism-relay",
       "title": "Prism Relay · Game Boy Color на GNEX",
       "nativeTitle": "Reunion CGB",
@@ -1610,10 +1636,10 @@
       "title": "Lan Master · NES на GNEX",
       "nativeTitle": "Lan Master",
       "url": "data/games/demo-lan-master.sgs",
-      "sha256": "5803563e590c38cfb74424dc82fcce4278fb759862c77e37912f2a18baebeedb",
-      "bytes": 122874,
+      "sha256": "7eca1aa1133f317006ef75d82051eee04b6d6f63a07d89dbc19fa81c25bff7fc",
+      "bytes": 124542,
       "format": 4,
-      "resources": 3,
+      "resources": 6,
       "platform": "kpex",
       "compatibility": "sample",
       "applicationType": "sample",
@@ -1636,10 +1662,10 @@
       "title": "Chase · NES на GNEX",
       "nativeTitle": "Chase",
       "url": "data/games/demo-chase.sgs",
-      "sha256": "a979f5708ccb7b0d3fa95fa0f737826af4cf00f8c13cc628eafef07901d8de4a",
-      "bytes": 112324,
+      "sha256": "bcff5729ca287fb44fdd0b784b5b80608d2966eb027272d9266efbb896b9780f",
+      "bytes": 113996,
       "format": 4,
-      "resources": 3,
+      "resources": 6,
       "platform": "kpex",
       "compatibility": "sample",
       "applicationType": "sample",
@@ -1721,6 +1747,30 @@
       },
       "startHint": "Влево и вправо — выбрать дорожку. SELECT — играть. Нажимай стрелку, когда нота дойдёт до линии. PLAY — к выбору.",
       "provenance": "Original Reunion Z80 timing game with three 24-note charts and four lanes."
+    },
+    {
+      "id": "demo-freight-shift",
+      "title": "Freight Shift · Game Gear на GNEX",
+      "nativeTitle": "Freight Shift",
+      "url": "data/games/demo-freight-shift.sgs",
+      "sha256": "92b83a930d8ef775ae518562b821e7ad74cc278e6934421bae13ff94f684177d",
+      "bytes": 130958,
+      "format": 4,
+      "resources": 3,
+      "platform": "kpex",
+      "compatibility": "sample",
+      "applicationType": "sample",
+      "runtime": {
+        "profile": "kpex"
+      },
+      "cartridge": {
+        "path": "GG/FREIGHT.GG",
+        "sidecar": "FREIGHT.GGR",
+        "launcher": "FREIGHT.SGS",
+        "sha256": "2d56d38ae212f68c92e1994b96e0adbecceaa60548278090e50fa158856ae57c"
+      },
+      "startHint": "Стрелки — движение и толчок. SELECT — отмена. PLAY — перезапуск комнаты или переход в следующую.",
+      "provenance": "Original Reunion Z80 crate puzzle with four rooms and a 32-step undo history."
     },
     {
       "id": "demo-gnex-benchmark",

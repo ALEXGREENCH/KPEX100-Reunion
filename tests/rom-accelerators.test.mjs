@@ -39,7 +39,7 @@ async function machine(
   return result;
 }
 
-function callHelper(cpu, entry, guarded, budget) {
+function callHelper(cpu, entry, guarded, budget, stop = STOP) {
   // Enter as a real ARM call, not a direct emu_start at the helper itself.
   // BL helper; LDR pc,[pc,#-4]; STOP literal.
   const code = new Uint8Array(12),
@@ -48,8 +48,8 @@ function callHelper(cpu, entry, guarded, budget) {
   view.setUint32(4, 0xe51ff004, true);
   view.setUint32(8, STOP, true);
   cpu.write(CALLER, code);
-  if (guarded) cpu.runGuarded(CALLER, STOP, budget);
-  else cpu.run(CALLER, STOP, 5_000_000);
+  if (guarded) cpu.runGuarded(CALLER, stop, budget);
+  else cpu.run(CALLER, stop, 5_000_000);
 }
 
 function execute(
@@ -243,13 +243,21 @@ function rectangle(
     alignment = 0,
     buffer = BUFFER,
     flags = 0xf8000013,
+    mode = 0,
+    stop = STOP,
   },
   budget = null,
 ) {
   const { cpu } = machine;
   const start = buffer + alignment,
     span = stride * Math.max(height, y2 + 1) * 2 + 16;
-  cpu.write(buffer - 8, new Uint8Array(span + 8).fill(0xa7));
+  const background = new Uint8Array(span + 8).fill(0xa7);
+  if (mode !== 0) {
+    for (let i = 0; i < background.length; i++) background[i] = (i * 29 + (i >>> 9) * 71) & 255;
+    const blendMasks = 0x100000 + (0x21f4ed90 - 0x21c00000);
+    cpu.write(0x21f4ed90, rom.subarray(blendMasks, blendMasks + 32));
+  }
+  cpu.write(buffer - 8, background);
   cpu.write32(0x20b41260, start);
   cpu.write32(0x20b4126c, (stride << 16) | 1);
   cpu.write32(0x20b41270, stride * height * 2);
@@ -259,9 +267,9 @@ function rectangle(
   cpu.regWrite('lr', STOP);
   for (const [i, value] of [x1, y1, x2, y2].entries()) cpu.regWrite('r' + i, value);
   cpu.write32(0x23fe0000, color);
-  cpu.write32(0x23fe0004, 0); // opaque mode; original prologue selects the verified kernel
+  cpu.write32(0x23fe0004, mode);
   machine.instructions = 0;
-  callHelper(cpu, 0x2004f998, budget !== null, budget);
+  callHelper(cpu, 0x2004f998, budget !== null, budget, stop);
   return {
     registers: Object.fromEntries(registers.map((r) => [r, cpu.regRead(r)])),
     bytes: cpu.read(buffer - 8, span + 8),
@@ -318,6 +326,74 @@ test('rectangle fallbacks retain original boundary for empty, unusual and budget
         rectangle(native, {}, budget),
         'boundary=' + budget,
       );
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('blended RGB565 rectangles preserve pixels, ARM state and instruction budget boundaries', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      minBlendRectanglePixels: 256,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    const cases = [
+      { mode: 1 },
+      { mode: 2, x1: 0, y1: 0, x2: 219, y2: 175, color: 0xffff },
+      { mode: 3, x1: 29, y1: 6, x2: 41, y2: 66, color: 0x12345678, flags: 0x18000013 },
+      { mode: 1, x1: 0, y1: 1, x2: 511, y2: 3, stride: 512, height: 4, color: 0x07e0 },
+    ];
+    for (const input of cases)
+      assert.deepEqual(
+        rectangle(fast, input, 10_000_000),
+        rectangle(native, input, 10_000_000),
+        JSON.stringify(input),
+      );
+    assert.equal(fast.accelerator.stats.blendedRectangles, cases.length);
+    const before = fast.accelerator.stats.blendedRectangles;
+    for (const input of [
+      { mode: 4 },
+      { mode: 1, x1: 0, y1: 0, x2: 219, y2: 0 },
+      { mode: 1, x1: 5, x2: 12, y1: 3, y2: 7 },
+      { mode: 1, x1: 1, x2: 13, y1: 0, y2: 20, buffer: 0x23fe0000 - 60 },
+      { mode: 2, buffer: 0x22010000 },
+      { mode: 3, stop: 0x2004fa20 },
+    ])
+      assert.deepEqual(
+        rectangle(fast, input, 10_000_000),
+        rectangle(native, input, 10_000_000),
+        JSON.stringify(input),
+      );
+    assert.deepEqual(rectangle(fast, cases[0]), rectangle(native, cases[0]));
+    assert.equal(fast.accelerator.stats.blendedRectangles, before);
+    const shape = { mode: 2, x1: 2, x2: 41, y1: 2, y2: 10, color: 0xf81f };
+    const full = rectangle(native, shape, 1_000_000).instructions * 2;
+    for (const budget of [
+      1,
+      16,
+      38,
+      100,
+      1000,
+      full - 12,
+      full - 4,
+      full - 2,
+      full,
+      full + 2,
+      full + 12,
+      full + 256,
+    ])
+      assert.deepEqual(
+        rectangle(fast, shape, budget),
+        rectangle(native, shape, budget),
+        'budget ' + budget,
+      );
+    assert.equal(fast.accelerator.stats.blendedRectangles, before + 1);
   } finally {
     native.cpu.close();
     fast.cpu.close();

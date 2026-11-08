@@ -2,7 +2,18 @@
 
 from struct import pack
 
-from cart import COLORS, CX, CY, FONT, NAME_LENGTH, PATTERNS, RAM_ROOM, ROOM, Code
+from cart import (
+    COLORS,
+    CX,
+    CY,
+    DIGITS,
+    FONT,
+    NAME_LENGTH,
+    PATTERNS,
+    RAM_ROOM,
+    ROOM,
+    Code,
+)
 from cart import cartridge_image
 
 
@@ -31,18 +42,6 @@ GLYPHS = {
     "K": (17, 18, 20, 24, 20, 18, 17),
     "Y": (17, 17, 10, 4, 4, 4, 4),
 }
-DIGITS = (
-    (14, 17, 19, 21, 25, 17, 14),
-    FONT["1"],
-    (14, 17, 1, 2, 4, 8, 31),
-    (30, 1, 1, 14, 1, 1, 30),
-    (2, 6, 10, 18, 31, 2, 2),
-    (31, 16, 16, 30, 1, 1, 30),
-    (14, 16, 16, 30, 17, 17, 14),
-    (31, 1, 2, 4, 8, 8, 8),
-    (14, 17, 17, 14, 17, 17, 14),
-    (14, 17, 17, 15, 1, 1, 14),
-)
 CHAR = {letter: GLYPH_FIRST + i for i, letter in enumerate(GLYPHS)}
 CHAR.update({str(digit): DIGIT_FIRST + digit for digit in range(10)})
 

@@ -7,7 +7,7 @@ import { SgsFile } from '../web/engine/sgs.js';
 
 const read = (path) => readFileSync(new URL(path, import.meta.url));
 
-test('Chase starts the original maze, collects a gem and pauses on Play', async () => {
+test('Chase plays its original pulse notes, collects a gem and pauses on Play', async () => {
   const cart = read('../demos/nes/chase/CHASE.NES');
   const sgs = read('../web/data/games/demo-chase.sgs');
   assert.equal(
@@ -19,7 +19,15 @@ test('Chase starts the original maze, collects a gem and pauses on Play', async 
   assert.deepEqual(script.body.subarray(-cart.length), cart);
 
   const firmware = read('../web/data/firmware/Kingston-2.12.rom');
-  const game = await GnexRuntime.create(firmware, sgs, { profile: 'kpex' });
+  const waves = [];
+  const game = await GnexRuntime.create(firmware, sgs, {
+    profile: 'kpex',
+    audio: {
+      play(data, mime) {
+        if (waves.length < 3) waves.push({ data: Buffer.from(data), mime });
+      },
+    },
+  });
   const readWord = (variable, index) => game._read(game.varAddresses[variable] + index * 4);
   // The guest alternates metasprite priority. Find each character by its
   // upper-left tile and palette instead of assuming fixed OAM slots.
@@ -59,6 +67,7 @@ test('Chase starts the original maze, collects a gem and pauses on Play', async 
     assert.equal(game.vfs.diagnostics.openHandles, 0);
     ticks(220);
     assert.equal(player(), undefined);
+    assert.equal(waves.length, 0);
 
     tap(21);
     until(
@@ -71,6 +80,30 @@ test('Chase starts the original maze, collects a gem and pauses on Play', async 
     );
     assert.deepEqual(player(), [80, 80]);
     assert.equal(gemCount(), 0);
+    assert.equal(waves.length, 3);
+    // JSNES 2.1.0 traces of the unmodified Start sound write 0x7f to
+    // $4000 (25% duty, volume 15) and these successive timers to $4002/$4003.
+    for (const [i, period] of [427, 319, 284].entries()) {
+      const { data, mime } = waves[i];
+      assert.equal(mime, 'audio/wav');
+      assert.equal(data.toString('ascii', 0, 4), 'RIFF');
+      assert.equal(data.readUInt32LE(24), 16000);
+      assert.equal(data.readUInt16LE(34), 16);
+      assert.equal(data.readUInt32LE(40), 8320);
+      let high = 0;
+      const rising = [];
+      for (let sample = 0; sample < 4160; sample++) {
+        const offset = 44 + sample * 2;
+        if (data.readInt16LE(offset) <= 0) continue;
+        high++;
+        if (sample && data.readInt16LE(offset - 2) <= 0) rising.push(sample);
+      }
+      const measured = (rising.at(-1) - rising[0]) / (rising.length - 1);
+      const expected = (16000 * 16 * (period + 1)) / 1789773;
+      assert.ok(Math.abs(measured - expected) < 0.05, `${measured} vs ${expected}`);
+      assert.ok(Math.abs(high / 4160 - 0.25) < 0.01);
+    }
+    assert.equal(game.audioDiagnostics.lastError, null);
     const board = game.framebufferRGBA.slice();
 
     tap(17);

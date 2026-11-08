@@ -13,6 +13,7 @@ from sgs_build import build_sgs, encode_kpex, pack_vfs  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 SOURCE = HERE / "nrom.mc.in"
+AUDIO = HERE / "pulse-audio.mc"
 NAME = b"NES\x1a"
 MAP = 0x8800
 PALETTE = 0x8C00
@@ -600,6 +601,17 @@ def build_container(sdk, cart, profile, plain=False):
         **(PAD_TRIPLE_REPORT if center else PAD_DEFAULT),
         **(CHASE_PAINT if profile == "chase" else PAINT_DEFAULT),
         **(CC65_CPU if profile == "chase" else dict.fromkeys(CC65_CPU, "")),
+        audio_code=("\n" + AUDIO.read_text(encoding="ascii") if center else ""),
+        apu_write=(
+            """    if (addr >= 16384) {
+        if (addr < 16392) apuPulse[addr - 16384] = value;
+        else if (addr == 16405) apuEnable = value;
+        return;
+    }"""
+            if center
+            else "    if (addr >= 16384) return;"
+        ),
+        audio_tick="\n    AudioTick();" if center else "",
         title=title,
         app_id=app_id,
         loading=f"{title.upper()} / LOADING",

@@ -177,7 +177,15 @@ test('Lan Master keeps short presses through its three controller reports', asyn
     lan.subarray(-cart.length).map((byte) => byte ^ 0xa5),
     cart,
   );
-  const game = await GnexRuntime.create(rom, lan, { profile: 'kpex' });
+  const waves = [];
+  const game = await GnexRuntime.create(rom, lan, {
+    profile: 'kpex',
+    audio: {
+      play(data, mime) {
+        if (waves.length < 2) waves.push({ data: Buffer.from(data), mime });
+      },
+    },
+  });
   const frameHash = () => createHash('sha256').update(game.framebufferRGBA).digest('hex');
   const ticks = (count) => {
     for (let i = 0; i < count; i++) {
@@ -196,6 +204,14 @@ test('Lan Master keeps short presses through its three controller reports', asyn
     assert.equal(game.vfs.diagnostics.openHandles, 0);
     assert.equal(game.vfs.diagnostics.operations, 3);
     ticks(155);
+    assert.equal(waves.length, 2);
+    for (const { data, mime } of waves) {
+      assert.equal(mime, 'audio/wav');
+      assert.equal(data.readUInt32LE(24), 16000);
+      assert.ok(data.subarray(44).some((byte) => byte !== 0));
+    }
+    assert.notDeepEqual(waves[0].data, waves[1].data);
+    assert.equal(game.audioDiagnostics.lastError, null);
     game.setKey(21, true);
     ticks(3);
     game.setKey(21, false);

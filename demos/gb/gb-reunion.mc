@@ -13,10 +13,29 @@
 %}
 
 #define FLOODER_DIVISION 0
+#define DMG_WINDOW 0
+
+#if DMG_WINDOW
+#define PAINT_CELLS 380
+#define PAINT_SLICES 7
+#define BUFFERED_INPUT 1
+#define MAIN_BUTTON 64
+#define TILE_ROWS maxRows
+#define MAP_ROW sourceY
+#define DRAW_Y drawY
+#else
+#define PAINT_CELLS 360
+#define PAINT_SLICES 6
+#define BUFFERED_INPUT colorMode
+#define MAIN_BUTTON 16
+#define TILE_ROWS 8
+#define MAP_ROW y
+#define DRAW_Y y * 8
+#endif
 
 // ROM-only DMG/CGB prototype. The cartridge runs in Mobile C bytecode.
 int cart[8192], video[16384], ram[8192], colors[64];
-int seen[360], seenVersion[360], tileVersion[768], paletteVersion[8], dmgVersion;
+int seen[PAINT_CELLS], seenVersion[PAINT_CELLS], tileVersion[768], paletteVersion[8], dmgVersion;
 int a, b, c, d, e, hl, pc, zero, buttons, p1, lcd, bgp;
 int ready, failure, ox, oy, paintRow, pendingButtons, repaintSlices, joypadWait;
 int colorMode, bank, colorIndex, paintColor;
@@ -24,6 +43,10 @@ int expanded, sp, carry, half, subtract, ime, eiDelay, halted, interruptMask, in
 int phase, divider, oam[160], highRam[127], obp0, obp1, spritesDirty, paintedOam[160];
 
 int objColors[64], objIndex, windowX, windowY;
+#if DMG_WINDOW
+int splitY, bgRows, screenRows, bgMap, winMap, layout;
+int layoutEpoch, seenLayout[PAINT_CELLS], tileWritePC;
+#endif
 // Keep a tap through all reads of the selected JOYP group.
 int heldButtons, latchedButtons, polledButtons;
 
@@ -67,6 +90,10 @@ int Read8(int addr) {
         if (addr == 65348 && (lcd & 128)) return phase / 456;
         if (addr == 65348) return 0;
         if (addr == 65351) return bgp;
+#if DMG_WINDOW
+        if (addr == 65354) return windowY;
+        if (addr == 65355) return windowX;
+#endif
         if (addr == 65352) return obp0;
         if (addr == 65353) return obp1;
     }
@@ -90,7 +117,7 @@ void Write8(int addr, int value) {
         if (video[index] != value) {
             video[index] = value;
             if (offset < 6144) tileVersion[bank * 384 + offset / 16]++;
-            repaintSlices = 6;
+            repaintSlices = PAINT_SLICES;
         }
         return;
     }
@@ -115,8 +142,8 @@ void Write8(int addr, int value) {
                 }
             }
         }
-        if (addr == 65354) { windowY = value; repaintSlices = 6; }
-        if (addr == 65355) { windowX = value; repaintSlices = 6; }
+        if (addr == 65354) { windowY = value; repaintSlices = PAINT_SLICES; }
+        if (addr == 65355) { windowX = value; repaintSlices = PAINT_SLICES; }
         if (addr == 65352 && obp0 != value) { obp0 = value; spritesDirty = 1; }
         if (addr == 65353 && obp1 != value) { obp1 = value; spritesDirty = 1; }
     }
@@ -132,13 +159,13 @@ void Write8(int addr, int value) {
     if (addr == 65344 && lcd != value) {
         if ((lcd ^ value) & 128) phase = 0;
         lcd = value;
-        repaintSlices = 6;
+        repaintSlices = PAINT_SLICES;
         spritesDirty = 1;
     }
     if (addr == 65351 && bgp != value) {
         bgp = value;
         dmgVersion++;
-        repaintSlices = 6;
+        repaintSlices = PAINT_SLICES;
     }
     if (!colorMode) return;
     if (addr == 65359) bank = value & 1;
@@ -157,7 +184,7 @@ void Write8(int addr, int value) {
         if (colors[index] != value) {
             colors[index] = value;
             paletteVersion[index / 8]++;
-            repaintSlices = 6;
+            repaintSlices = PAINT_SLICES;
         }
         if (colorIndex & 128) colorIndex = 128 | ((index + 1) & 63);
     }
@@ -406,6 +433,56 @@ int SmallDivideLoop(int at, int budget) {
 
 #endif
 
+#if DMG_WINDOW
+// This GBDK set_tile_xy variant returns through POP HL / INC SP / JP HL.
+// Cache its address only after verifying the complete immutable routine.
+void BindTileWrite() {
+    int i;
+    i = 1291; // $142c, including the preceding three bytes.
+    if (cart[i] == 0x570b1809 && cart[i+1] == 0x08e640f0 &&
+        cart[i+2] == 0x98060420 && cart[i+3] == 0x9c060218 &&
+        cart[i+4] == 0xa57a1f2e && cart[i+5] == 0x48a57b57 &&
+        cart[i+6] == 0x5f0737cb && cart[i+7] == 0x478103e6 &&
+        cart[i+8] == 0x82a3e03e && cart[i+9] == 0xf002f84f &&
+        cart[i+10] == 0x2002e641 && cart[i+11] == 0xe1027efa &&
+        cart[i+12] == 0x6069e933) tileWritePC = 5167; // $142f.
+}
+
+int WriteTileAndReturn(int budget) {
+    int prefix, dot, wait, cost, tileRow, stack, page;
+    if (sp < 49152 || sp > 57341) return 0;
+    prefix = 148;
+    page = 152;
+    if (lcd & 8) { prefix = 140; page = 156; }
+    wait = 0;
+    if (lcd & 128) {
+        dot = (phase + prefix) % 70224;
+        if (dot < 65664 && dot % 456 < 252) wait = (252 - dot % 456 + 31) / 32;
+    }
+    cost = prefix + wait * 32 + 68;
+    if (cost > budget) return 0;
+
+    // Preserve the argument slot and return address. The guest routine only
+    // reads them, changes the register pairs, and advances SP by three bytes.
+    d = a & 31;
+    tileRow = e & 31;
+    e = ((tileRow << 5) | (tileRow >> 3)) & 255;
+    b = page + (tileRow >> 3);
+    c = (tileRow & 7) * 32 + d;
+    stack = sp - 49152;
+    a = ram[stack + 2];
+    Write8((b << 8) | c, a);
+    hl = ram[stack] | (ram[stack + 1] << 8);
+    sp += 3;
+    pc = hl;
+    zero = 1;
+    subtract = 0;
+    half = 1;
+    carry = 0;
+    return cost;
+}
+#endif
+
 int StepFull(int budget) {
     int op, dst, src, value, pair, delta, at, rounds, limit, i, waitStart, waitCost;
     op = Fetch8();
@@ -419,6 +496,12 @@ int StepFull(int budget) {
 #if FLOODER_DIVISION
     if (colorMode && !eiDelay && op == 245) {
         value = SmallDivideLoop(at, limit);
+        if (value) return value;
+    }
+#endif
+#if DMG_WINDOW
+    if (at == tileWritePC && tileWritePC && !eiDelay) {
+        value = WriteTileAndReturn(limit);
         if (value) return value;
     }
 #endif
@@ -446,6 +529,25 @@ int StepFull(int budget) {
             pc = at;
             return rounds * 40;
         }
+#if DMG_WINDOW
+        // GBDK waits for LY to cross a line before changing LCDC.
+        if (op == 240 && (lcd & 128) && Read8(pc) == 68 &&
+            Read8(pc + 1) == 254 && Read8(pc + 4) == 250) {
+            value = Read8(pc + 2);
+            waitStart = Read8(pc + 3);
+            delta = 0;
+            if (waitStart == 56 && phase < value * 456) delta = value * 456 - phase;
+            if (waitStart == 48 && phase >= value * 456) delta = 70224 - phase;
+            if (delta > 0 && value > 0 && value < 154) {
+                rounds = (delta + 31) / 32;
+                if (rounds > limit / 32) rounds = limit / 32;
+                a = (phase + (rounds - 1) * 32) / 456;
+                Alu(7, value);
+                pc = at;
+                return rounds * 32;
+            }
+        }
+#endif
         if ((op == 240 || (op == 250 && Read8(pc + 1) == 255)) &&
             (lcd & 128) && phase < 65664 && Read8(pc) == 68) {
             waitStart = pc + 1;
@@ -649,8 +751,12 @@ int StepFull(int budget) {
 void TickFull() {
     int remaining, steps, limit, cost, pending, bit;
     remaining = 70224;
+#if DMG_WINDOW
+    limit = 600;
+#else
     limit = 320;
     if (colorMode) limit = 600;
+#endif
     for (steps = 0; steps < limit && remaining > 0 && !failure; steps++) {
         pending = interruptMask & interruptFlags;
         if (pending) halted = 0;
@@ -706,6 +812,9 @@ void Color(int index, int attr) {
 
 void TileRun(int x, int y, int key, int count) {
     int row, end, bit, lo, hi, index, start, last, at, first, step, base, stride, attr, tile, dx;
+#if DMG_WINDOW
+    int maxRows;
+#endif
     attr = key >> 10;
     tile = key & 1023;
     first = 7;
@@ -721,14 +830,20 @@ void TileRun(int x, int y, int key, int count) {
         base += 14;
         stride = -2;
     }
+#if DMG_WINDOW
+    // Only the visible portion of the final tile in each layer is drawn.
+    maxRows = oy + 144 - y;
+    if (y < oy + splitY) maxRows = oy + splitY - y;
+    if (maxRows > 8) maxRows = 8;
+#endif
     // Merge adjacent identical rows before drawing their horizontal runs.
-    for (row = 0; row < 8; row = end) {
+    for (row = 0; row < TILE_ROWS; row = end) {
         at = base + row * stride;
         lo = video[at];
         hi = video[at + 1];
         end = row + 1;
         at += stride;
-        while (end < 8) {
+        while (end < TILE_ROWS) {
             if (video[at] != lo || video[at + 1] != hi) break;
             end++;
             at += stride;
@@ -768,10 +883,60 @@ int CellKey(int map, int x, int y) {
     return (attr << 10) | tile;
 }
 
+#if DMG_WINDOW
+void SetLayout(int background) {
+    int next;
+    bgMap = background;
+    winMap = 6144;
+    if (lcd & 64) winMap = 7168;
+    splitY = 144;
+    if ((lcd & 32) && windowX == 7 && windowY < 144) splitY = windowY;
+    bgRows = (splitY + 7) / 8;
+    screenRows = bgRows + (151 - splitY) / 8;
+    next = splitY | ((lcd & 88) << 8);
+    if (layout != next) {
+        layout = next;
+        layoutEpoch++;
+        paintRow = 0;
+        repaintSlices = PAINT_SLICES;
+    }
+}
+
+int SourceRow(int row) {
+    if (row < bgRows) return row;
+    return row - bgRows;
+}
+
+int ScreenY(int row) {
+    if (row < bgRows) return row * 8;
+    return splitY + (row - bgRows) * 8;
+}
+
+int RowMap(int row) {
+    if (row < bgRows) return bgMap;
+    return winMap;
+}
+#endif
+
 void RestoreSprite(int map, int x, int y) {
+#if DMG_WINDOW
+    int firstX, lastX, row, col, top;
+#else
     int firstX, firstY, lastX, lastY, row, col;
+#endif
     if (x <= -8 || x >= 160 || y <= -8 || y >= 144) return;
     firstX = 0;
+#if DMG_WINDOW
+    if (x > 0) firstX = x / 8;
+    lastX = (x + 7) / 8;
+    if (lastX > 19) lastX = 19;
+    for (row = 0; row < screenRows; row++) {
+        top = ScreenY(row);
+        if (top > y + 7 || top + 7 < y) continue;
+        for (col = firstX; col <= lastX; col++)
+            TileRun(ox + col * 8, oy + top, CellKey(RowMap(row), col, SourceRow(row)), 1);
+    }
+#else
     firstY = 0;
     if (x > 0) firstX = x / 8;
     if (y > 0) firstY = y / 8;
@@ -782,6 +947,7 @@ void RestoreSprite(int map, int x, int y) {
     for (row = firstY; row <= lastY; row++)
         for (col = firstX; col <= lastX; col++)
             TileRun(ox + col * 8, oy + row * 8, CellKey(map, col, row), 1);
+#endif
 }
 
 void DrawSprite(int x, int y, int tile, int attr) {
@@ -875,8 +1041,11 @@ void main() {
         Status(1);
         return;
     }
-    for (i = 0; i < 360; i++) seen[i] = -1;
+    for (i = 0; i < PAINT_CELLS; i++) seen[i] = -1;
     colorMode = (Read8(323) & 128) != 0;
+#if DMG_WINDOW
+    BindTileWrite();
+#endif
     Status(0);
     pc = 256;
     if (expanded && colorMode) {
@@ -904,7 +1073,7 @@ int PhysicalButtons() {
     if (held & (1 << 16)) mask |= 2;
     if (held & (1 << 18)) mask |= 4;
     if (held & (1 << 19)) mask |= 8;
-    if (held & (1 << 20)) mask |= 16;
+    if (held & (1 << 20)) mask |= MAIN_BUTTON;
     if (held & (1 << 10)) mask |= 32;
     if (held & (1 << 21)) mask |= 128;
     return mask;
@@ -912,16 +1081,19 @@ int PhysicalButtons() {
 
 void EVENT_TIMEOUT() {
     int i, x, y, tile, n, updated, map, attr, offset, version, key, first, count, runKey, old;
+#if DMG_WINDOW
+    int sourceY, drawY;
+#endif
     if (!ready) return;
     if (expanded) old = Joypad();
     buttons = pendingButtons;
-    if (expanded && colorMode) {
+    if (expanded && BUFFERED_INPUT) {
         latchedButtons |= pendingButtons;
         buttons = heldButtons;
     }
     pendingButtons = 0;
     if (expanded) {
-        if (!colorMode) buttons |= PhysicalButtons();
+        if (!BUFFERED_INPUT) buttons |= PhysicalButtons();
         if (old & (Joypad() ^ 255) & 15) interruptFlags |= 16;
         TickFull();
     } else {
@@ -939,17 +1111,28 @@ void EVENT_TIMEOUT() {
     updated = 0;
     map = 6144;
     if (lcd & 8) map = 7168;
+#if DMG_WINDOW
+    SetLayout(map);
+#else
     if (expanded && (lcd & 32) && windowX == 7 && windowY == 0) {
         map = 6144;
         if (lcd & 64) map = 7168;
     }
+#endif
     if (repaintSlices) {
       repaintSlices--;
+#if DMG_WINDOW
+      for (y = paintRow; y < paintRow + 3 && y < screenRows; y++) {
+        sourceY = SourceRow(y);
+        drawY = ScreenY(y);
+        map = RowMap(y);
+#else
       for (y = paintRow; y < paintRow + 3; y++) {
+#endif
         count = 0;
         for (x = 0; x < 20; x++) {
             n = y * 20 + x;
-            offset = map + y * 32 + x;
+            offset = map + MAP_ROW * 32 + x;
             tile = video[offset];
             attr = 0;
             version = dmgVersion;
@@ -961,13 +1144,17 @@ void EVENT_TIMEOUT() {
             if (attr & 8) tile += 384;
             key = (attr << 10) | tile;
             version += tileVersion[tile];
+#if DMG_WINDOW
+            if (seen[n] == key && seenVersion[n] == version && seenLayout[n] == layoutEpoch) {
+#else
             if (seen[n] == key && seenVersion[n] == version) {
-                if (count) TileRun(ox + first * 8, oy + y * 8, runKey, count);
+#endif
+                if (count) TileRun(ox + first * 8, oy + DRAW_Y, runKey, count);
                 count = 0;
                 continue;
             }
             if (count && runKey != key) {
-                TileRun(ox + first * 8, oy + y * 8, runKey, count);
+                TileRun(ox + first * 8, oy + DRAW_Y, runKey, count);
                 count = 0;
             }
             if (!count) {
@@ -977,12 +1164,20 @@ void EVENT_TIMEOUT() {
             count++;
             seen[n] = key;
             seenVersion[n] = version;
+#if DMG_WINDOW
+            seenLayout[n] = layoutEpoch;
+#endif
             updated = 1;
         }
-        if (count) TileRun(ox + first * 8, oy + y * 8, runKey, count);
+        if (count) TileRun(ox + first * 8, oy + DRAW_Y, runKey, count);
       }
     }
+#if DMG_WINDOW
+    paintRow += 3;
+    if (paintRow >= screenRows) paintRow = 0;
+#else
     paintRow = (paintRow + 3) % 18;
+#endif
     if (expanded && (updated || spritesDirty)) {
         PaintSprites(map);
         updated = 1;
@@ -993,7 +1188,7 @@ void EVENT_TIMEOUT() {
 void EVENT_KEYPRESS() {
     int key;
     if (expanded) {
-        if (colorMode && swData == 255) {
+        if (BUFFERED_INPUT && swData == 255) {
             key = heldButtons & PhysicalButtons();
             // Kingston can report the old held mask after its release event.
             if (key == heldButtons) key = 0;
@@ -1005,10 +1200,10 @@ void EVENT_KEYPRESS() {
         if (swData == 16) key = 2;
         if (swData == 18) key = 4;
         if (swData == 19) key = 8;
-        if (swData == 20) key = 16;
+        if (swData == 20) key = MAIN_BUTTON;
         if (swData == 10) key = 32;
         if (swData == 21) key = 128;
-        if (colorMode) {
+        if (BUFFERED_INPUT) {
             if (!(heldButtons & key)) pendingButtons |= key;
             heldButtons |= key;
         } else pendingButtons |= key;

@@ -4,6 +4,9 @@ const FILL_ENTRY = 0x2005067c;
 const DESCRIPTOR = 0x20b41258;
 const RECT_ENTRY = 0x2004f9c4;
 const RECT_EXIT = 0x2004f9f8;
+const BLEND_RECT_ENTRY = 0x2004fa04;
+const BLEND_MASK_LITERAL = 0x2005035c;
+const BLEND_MASKS = 0x21f4ed90;
 const PALETTE_ROW_ENTRY = 0x2004e4c4;
 const PALETTE_ROW_EXIT = 0x2004e74c;
 const COLOR_MATCH_ENTRY = 0x20055a7c;
@@ -48,6 +51,11 @@ const RECT_SIGNATURE = Uint8Array.from(
     .match(/../g)
     .map((value) => Number.parseInt(value, 16)),
 );
+const BLEND_RECT_SIGNATURE = Uint8Array.from(
+  '03005ce3240000ca50599fe50170a0e18c5185e01d0000ea0e10a0e10060a0e1150000ea01c0d5e50080d5e50290d5e504a0d5e50c8488e103c0d5e5a48008e0016086e20c9489e124c109e00c9088e005c0d5e5b080d1e10ca48ae1a8c00ae00c9089e007c0d5e506a0d5e50ca48ae128c10ae00cc089e0b2c0c1e0020056e1e7ffffdab611dbe1017087e281e08ee0030057e1dfffffdaf08fbde8'
+    .match(/../g)
+    .map((value) => Number.parseInt(value, 16)),
+);
 const FILL_SIGNATURE = Uint8Array.from(
   '2c129fe5182091e5081091e5a230a0e10020a0e3030052e1b200c13001208232fbffff3a0ef0a0e1'
     .match(/../g)
@@ -70,6 +78,7 @@ export function installRomAccelerators(
     minPaletteRowPixels = 128,
     minPaletteBatchPixels = 4096,
     minPaletteContinuationPixels = Infinity,
+    minBlendRectanglePixels = Infinity,
   } = {},
 ) {
   if (romHash !== KINGSTON_212_SHA256)
@@ -99,6 +108,16 @@ export function installRomAccelerators(
   if (!ALIGNED_COPY_SIGNATURE.every((value, index) => copyCode[index] === value))
     throw new Error('Kingston aligned copy routine does not match verified ROM');
 
+  const accelerateBlend = Number.isFinite(minBlendRectanglePixels);
+  if (accelerateBlend) {
+    const blendCode = cpu.read(BLEND_RECT_ENTRY - 8, BLEND_RECT_SIGNATURE.length);
+    if (
+      !BLEND_RECT_SIGNATURE.every((value, index) => blendCode[index] === value) ||
+      cpu.read32(BLEND_MASK_LITERAL) !== BLEND_MASKS
+    )
+      throw new Error('Kingston RGB565 blended rectangle kernel does not match verified ROM');
+  }
+
   const stats = {
     fills: 0,
     pixels: 0,
@@ -108,6 +127,8 @@ export function installRomAccelerators(
     rectanglePixels: 0,
     rectangleFallbacks: 0,
     rectangleSmall: 0,
+    blendedRectangles: 0,
+    blendedRectanglePixels: 0,
     paletteRows: 0,
     paletteBatches: 0,
     paletteContinuations: 0,
@@ -246,6 +267,82 @@ export function installRomAccelerators(
     stats.rectanglePixels += width * rows;
     stats.skippedInstructions += skipped;
   });
+  // Alpha modes 1–3 combine two fixed bit masks per source and destination
+  // pixel. Keep the last row and the register-restoring epilogue in ARM.
+  const removeBlendRectangle = accelerateBlend
+    ? cpu.addBlockShortcut(BLEND_RECT_ENTRY, (address, size) => {
+        const budget = cpu.blockBudget;
+        if (
+          !enabled() ||
+          cpu.runCounted ||
+          cpu.runStop !== 0x23fff000 ||
+          size !== 16 ||
+          budget == null
+        )
+          return;
+        const x1 = cpu.regRead('r0'),
+          y1 = cpu.regRead('r1');
+        const x2 = cpu.regRead('r2'),
+          y2 = cpu.regRead('r3');
+        const width = x2 - x1 + 1,
+          rows = y2 - y1;
+        if (width <= 0 || rows <= 0 || width * rows < minBlendRectanglePixels) return;
+        const mode = cpu.regRead('r12');
+        if (mode < 1 || mode > 3 || cpu.regRead('r11') !== DESCRIPTOR || cpu.regRead('cpsr') & 0x20)
+          return;
+        const stride = cpu.read32(DESCRIPTOR + 0x14) >>> 16;
+        const height = cpu.read32(DESCRIPTOR + 0x18) / (stride * 2);
+        const buffer = cpu.read32(DESCRIPTOR + 8),
+          first = cpu.regRead('lr');
+        const end = first + (rows * stride + width) * 2;
+        const sp = cpu.regRead('sp');
+        if (
+          x2 >= stride ||
+          y2 >= height ||
+          stride > 512 ||
+          height > 512 ||
+          !Number.isInteger(height) ||
+          first !== buffer + (y1 * stride + x1) * 2 ||
+          first & 1 ||
+          first < 0x23000000 ||
+          end > 0x23ff0000 ||
+          (first < sp + 36 && sp < end)
+        )
+          return;
+        // A completed row costs 3 setup, 2 first compare, 24 per pixel and
+        // 5 row advance instructions. The entry's initial check is still native.
+        const perRow = 10 + 24 * width;
+        if (budget < (rows + 1) * perRow * 2 + 64) return;
+        const color = cpu.regRead('r4');
+        const sourceMasks = cpu.read32(BLEND_MASKS + mode * 8);
+        const destinationMasks = cpu.read32(BLEND_MASKS + mode * 8 + 4);
+        const source =
+          ((color >>> 1) & (sourceMasks & 0xffff)) + ((color >>> 2) & (sourceMasks >>> 16));
+        const low = destinationMasks & 0xffff,
+          high = destinationMasks >>> 16;
+        const output = cpu.read(first, ((rows - 1) * stride + width) * 2);
+        for (let row = 0; row < rows; row++) {
+          const start = row * stride * 2;
+          for (let at = start, stop = start + width * 2; at < stop; at += 2) {
+            const pixel = output[at] | (output[at + 1] << 8);
+            const result = source + ((pixel >>> 1) & low) + ((pixel >>> 2) & high);
+            output[at] = result & 0xff;
+            output[at + 1] = (result >>> 8) & 0xff;
+          }
+        }
+        cpu.write(first, output);
+        // Start the translated setup block at the last row. The final row
+        // initializes the same scratch registers and returns through the native POP.
+        cpu.regWrite('r1', y2);
+        cpu.regWrite('lr', first + rows * stride * 2);
+        const skipped = rows * perRow;
+        cpu.blockBudget = budget - skipped * 2;
+        onSkippedInstructions(skipped);
+        stats.blendedRectangles++;
+        stats.blendedRectanglePixels += rows * width;
+        stats.skippedInstructions += skipped;
+      })
+    : null;
   // Enter once per row, before MOV r8,#0 / LDR r0,[sp,#12]. Unsupported
   // drawing modes therefore pay one guard per row, not one guard per pixel.
   const removePaletteRow = cpu.addBlockShortcut(PALETTE_ROW_ENTRY, (address, size) => {
@@ -568,6 +665,7 @@ export function installRomAccelerators(
     dispose() {
       removeFill();
       removeRectangle();
+      removeBlendRectangle?.();
       removePaletteRow();
       removeColorMatch();
       removeBulkCopy();

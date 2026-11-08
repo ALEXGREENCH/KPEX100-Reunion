@@ -52,3 +52,18 @@ python demos/gg/build.py --pulse-relay --sdk C:/path/to/sdk --output PULSE.SGS
 Для Kingston 2.12 скопируйте [PULSE.SGS](../../web/data/games/demo-pulse-relay.sgs) и картридж под именем `PULSE.GGR` в папку `GAME`. В прямом режиме Reunion читает этот же ROM из SGS.
 
 На оригинальной прошивке Kingston 2.12 с виртуальным диском проверены загрузка картриджа, выбор второй дорожки, запуск кнопкой A и попадание по первой ноте. Счёт и серия выросли до `01` на LCD.
+
+## Freight Shift
+
+Расставьте грузы на отмеченные клетки в четырёх комнатах. Стрелки двигают грузчика. За раз можно толкнуть один ящик. Кнопка 1 на Game Gear или A на K-PEX отменяет до 32 ходов, включая толчки. Start перезапускает текущую комнату или открывает следующую после решения.
+
+[Исходник Freight Shift](freight_shift.py) содержит карты комнат, графику и игровой цикл Z80. [Самостоятельный картридж](freight-shift.gg) прошёл все четыре комнаты в [Gearsystem](https://github.com/drhelius/Gearsystem). [Тест Reunion](../../tests/gg-freight-shift.test.mjs) также проверяет недопустимый толчок двух ящиков, отмену толчка и последнего хода после победы, сброс и переполнение истории ходов.
+
+```powershell
+python demos/gg/build.py --freight-shift --rom-only --output freight-shift.gg
+python demos/gg/build.py --freight-shift --sdk C:/path/to/sdk --output FREIGHT.SGS
+```
+
+Для Kingston 2.12 скопируйте [FREIGHT.SGS](../../web/data/games/demo-freight-shift.sgs) и картридж под именем `FREIGHT.GGR` в папку `GAME`. В прямом режиме Reunion читает этот же ROM из SGS.
+
+На оригинальной Kingston 2.12 с виртуальным диском проверены толчок, отмена с побайтным восстановлением кадра, решение первой комнаты и переход во вторую кнопкой Play.
