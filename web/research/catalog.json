@@ -4,6 +4,44 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "intromobile-early-game-catalogues",
+      "title": "IntroMobile · каталоги GVM, MAP, SKVM и BREW",
+      "category": "Документация и первичные источники",
+      "description": "53 оригинальных страниц, изображений и документов, сверенных с Wayback. Индекс 2 833 адресов.",
+      "sources": [
+        {
+          "label": "IntroMobile · GVM",
+          "url": "https://web.archive.org/web/20030103071827id_/http://www.intromobile.com:80/services/gvm_menu.htm"
+        },
+        {
+          "label": "IntroMobile · MAP",
+          "url": "https://web.archive.org/web/20030103071354id_/http://www.intromobile.com:80/services/map_menu.htm"
+        },
+        {
+          "label": "Буклет Mobile Game",
+          "url": "https://web.archive.org/web/20030402093004id_/http://www.intromobile.com:80/services/mobilegame.pdf"
+        }
+      ],
+      "repositoryPath": "research/archives/IntroMobile-Early-Game-Catalogues.zip",
+      "bytes": 492448,
+      "sha256": "34463006880457e2e06b6a61761ab943fc91a157d018d33f734c8cd93fc2177a"
+    },
+    {
+      "id": "anycall-pocket-billiards",
+      "title": "Pocket Billiards · Samsung Anycall",
+      "category": "Игры и игровые сборки",
+      "description": "Удар на первом столе в исходном MBIN и парные кадры с разрешением 120 × 144.",
+      "sources": [
+        {
+          "label": "Вложения Anycall Land",
+          "url": "https://m.blog.naver.com/sendei333/222605737137"
+        }
+      ],
+      "repositoryPath": "research/archives/Samsung-Anycall-Pocket-Billiards-Replay.zip",
+      "bytes": 37891,
+      "sha256": "b5bcb000f2c388eb9494f6ba3f6c3bda915cb50f8c6d1f2ae63d7e98dd8f375e"
+    },
+    {
       "id": "anycall-intromobile-replays",
       "title": "Hungry Hunter, Love Love и Oh My Head · Samsung Anycall",
       "category": "Игры и игровые сборки",
@@ -2799,6 +2837,14 @@
     }
   ],
   "reports": [
+    {
+      "title": "IntroMobile · ранние игры и каталоги разработчика",
+      "repositoryPath": "doc/intromobile-early-game-catalogues.md"
+    },
+    {
+      "title": "Pocket Billiards · проверка удара",
+      "repositoryPath": "doc/anycall-pocket-billiards.md"
+    },
     {
       "title": "Samsung Anycall · три игры IntroMobile с проверкой ввода",
       "repositoryPath": "doc/anycall-intromobile-replays.md"

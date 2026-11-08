@@ -1,0 +1,491 @@
+{
+  "schema": 1,
+  "game": "pocket-billiards",
+  "originalMember": "포켓_빌리어드.mbin",
+  "mbinSha256": "ba8019b03d62389edb7c10137023e7a38d0c75fb0e8fa3415bd303e2f58655cc",
+  "mbinBytes": 80592,
+  "size": [
+    120,
+    144
+  ],
+  "palette": "provisional RGB332",
+  "hostCallCounts": {
+    "0x04": 1,
+    "0x18": 36,
+    "0x24": 2,
+    "0x34": 1,
+    "0x70": 1574,
+    "0x74": 660,
+    "0x9c": 90,
+    "0xa0": 187,
+    "0xb0": 44
+  },
+  "stubSlots": [
+    "0x18",
+    "0x24",
+    "0x2c",
+    "0x30",
+    "0x34",
+    "0x3c",
+    "0x40",
+    "0x48",
+    "0x5c",
+    "0x68",
+    "0x9c"
+  ],
+  "commonSequence": [
+    {
+      "ticks": 100,
+      "key": null
+    },
+    {
+      "ticks": 30,
+      "key": 19
+    },
+    {
+      "ticks": 20,
+      "key": 19
+    }
+  ],
+  "gameplayInput": {
+    "key": 19,
+    "ticks": 38,
+    "inputTicks": [
+      0,
+      2
+    ]
+  },
+  "changedPixels": 251,
+  "captures": [
+    {
+      "file": "01-title.png",
+      "presentation": 101,
+      "indexedSha256": "ef4dfc831d285e6a41fada4b5c4237b74f3f98130b24f18c96a309bab6872876",
+      "pngSha256": "244c1343da4444d682907825a3c786082f38f468f7aa5250cfde84552d620a22"
+    },
+    {
+      "file": "02-menu.png",
+      "presentation": 131,
+      "indexedSha256": "9042580fb990b121baa1aee5acf5577651e5db939ab4d4f8936bca3fc52a8d8f",
+      "pngSha256": "6c0f580327313223de87de354a0ec87801a344a83e5bd9fa6701681f7be24b17"
+    },
+    {
+      "file": "04-before-input.png",
+      "presentation": 149,
+      "indexedSha256": "f7ba75885c23184efca5cf4a0451c4d4a23664f79d784dc2aa5c869dde00722f",
+      "pngSha256": "f95e30b1389f89c164c7f2da6ef2097209731be40ce351391b247d19a1212d66"
+    },
+    {
+      "file": "05-no-input.png",
+      "presentation": 187,
+      "indexedSha256": "f7ba75885c23184efca5cf4a0451c4d4a23664f79d784dc2aa5c869dde00722f",
+      "pngSha256": "f95e30b1389f89c164c7f2da6ef2097209731be40ce351391b247d19a1212d66"
+    },
+    {
+      "file": "06-input.png",
+      "presentation": 187,
+      "indexedSha256": "fcbf3abe15da2ac82e18500706e87149af65e3f3646f0ba723baa9643965a07b",
+      "pngSha256": "aae913c7253109bd079ac910a00d4b576613dd547b495e8d650673bc2f900f51"
+    }
+  ],
+  "mqRecords": [
+    {
+      "mbinOffset": 17517,
+      "width": 49,
+      "height": 18,
+      "transparentIndex": 227,
+      "bytes": 241,
+      "sha256": "ed9092969d1aa1e326526f2166cfa7224560c2735138cc6ff44961de1e3256b6"
+    },
+    {
+      "mbinOffset": 17758,
+      "width": 49,
+      "height": 18,
+      "transparentIndex": 227,
+      "bytes": 246,
+      "sha256": "6f133b92ef283384c4f40fd5d88a23d05c8317ecd95ab27910249bb57b79f27c"
+    },
+    {
+      "mbinOffset": 18004,
+      "width": 49,
+      "height": 18,
+      "transparentIndex": 227,
+      "bytes": 241,
+      "sha256": "2d66c7f2b876e2f9e7eae4cc2c1c4e251c6a56a0ab9e86443b95d75f2243d08d"
+    },
+    {
+      "mbinOffset": 18245,
+      "width": 49,
+      "height": 18,
+      "transparentIndex": 227,
+      "bytes": 204,
+      "sha256": "a2eda603c597876306c753d06de45b73054883e0018ccebc549c68105e6acc09"
+    },
+    {
+      "mbinOffset": 18449,
+      "width": 49,
+      "height": 18,
+      "transparentIndex": 227,
+      "bytes": 177,
+      "sha256": "d43a6db475cfc2b225ca33a3f7277eb39490a29b3b4770f44eb94d69db76a15e"
+    },
+    {
+      "mbinOffset": 18626,
+      "width": 55,
+      "height": 16,
+      "transparentIndex": 255,
+      "bytes": 180,
+      "sha256": "eccada7ba8bfc40d6201aed149f646279d50c691042a186a27fcaaf08eeace7a"
+    },
+    {
+      "mbinOffset": 18806,
+      "width": 55,
+      "height": 16,
+      "transparentIndex": 255,
+      "bytes": 174,
+      "sha256": "0cfd41fe80d876a027e0278d57ea9fe1d5a788beecb6ea1fdf7f0500a652f2b3"
+    },
+    {
+      "mbinOffset": 18980,
+      "width": 55,
+      "height": 16,
+      "transparentIndex": 255,
+      "bytes": 183,
+      "sha256": "1d9d0e4ad3d8fc89ba01c4836fbae20e12f485bdc077d68147111c21f07ea88a"
+    },
+    {
+      "mbinOffset": 19163,
+      "width": 55,
+      "height": 16,
+      "transparentIndex": 255,
+      "bytes": 163,
+      "sha256": "525c865cfe7b464f5e6d58e45ca8f6c4bf74d3bcaad96e1635d18b0b2b2cd1b0"
+    },
+    {
+      "mbinOffset": 19326,
+      "width": 55,
+      "height": 16,
+      "transparentIndex": 255,
+      "bytes": 154,
+      "sha256": "50ab94e5882a876b332e7d719e71839d1a90165c8ac36ac4d3fb75b92f90fc01"
+    },
+    {
+      "mbinOffset": 19480,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 227,
+      "bytes": 2302,
+      "sha256": "f45e080205b0e1d5b5a14bdc3da56eb91336d0df3fa7191f952deb6061021663"
+    },
+    {
+      "mbinOffset": 21782,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 227,
+      "bytes": 2534,
+      "sha256": "549de2777289167a9df80d434694f834b0ffed52fa854f39b07cd8f20c35c603"
+    },
+    {
+      "mbinOffset": 24316,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 227,
+      "bytes": 2327,
+      "sha256": "7bc90b02767836f7caf72e4a98f68d62baf25ef7680a39b963de84512b926400"
+    },
+    {
+      "mbinOffset": 26643,
+      "width": 22,
+      "height": 15,
+      "transparentIndex": 227,
+      "bytes": 78,
+      "sha256": "f683fcd0413288ebe799f8bb8ca6794d8ec8da227de2c38c51cb1caeea7be031"
+    },
+    {
+      "mbinOffset": 26721,
+      "width": 22,
+      "height": 15,
+      "transparentIndex": 227,
+      "bytes": 78,
+      "sha256": "71284e5ef2a8aa0852331e673c9fdd574a6c4becbc3c7d58a4b483c80326697c"
+    },
+    {
+      "mbinOffset": 26799,
+      "width": 22,
+      "height": 15,
+      "transparentIndex": 227,
+      "bytes": 83,
+      "sha256": "69603ea2cafc5fcf73d4ba6197f2ebe30db2bba95e30f9777c37ccb8cc172d05"
+    },
+    {
+      "mbinOffset": 26882,
+      "width": 22,
+      "height": 15,
+      "transparentIndex": 227,
+      "bytes": 83,
+      "sha256": "f667e23842b73c66801c12934acb3a0dee9a9e0cea670065e91988f3546be867"
+    },
+    {
+      "mbinOffset": 26965,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 255,
+      "bytes": 10060,
+      "sha256": "8ec7f3e0986c14a7e3c8749167162b2a61e1f23b8ce4926cd7f4200949dbebb6"
+    },
+    {
+      "mbinOffset": 37025,
+      "width": 100,
+      "height": 90,
+      "transparentIndex": 255,
+      "bytes": 1651,
+      "sha256": "78348b88c43b8b7b51a4e6b60ffd86219965a67a293fa462e01d206e8b35903b"
+    },
+    {
+      "mbinOffset": 38676,
+      "width": 100,
+      "height": 90,
+      "transparentIndex": 255,
+      "bytes": 1627,
+      "sha256": "5a2f1341b8368a8edcde5a86b947f643021f7fdbb4c2c6f3dafb08e329133737"
+    },
+    {
+      "mbinOffset": 40303,
+      "width": 20,
+      "height": 94,
+      "transparentIndex": 255,
+      "bytes": 1003,
+      "sha256": "dd1b750783fdc86aa2e73f857f25f8de88421de79be1b5d4bb2d77c353b526c5"
+    },
+    {
+      "mbinOffset": 41306,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 255,
+      "bytes": 3974,
+      "sha256": "70ac9b77620f7c394955934a4eb7ebb2f45e7ee81d09709a67d1afc35dbc0e7e"
+    },
+    {
+      "mbinOffset": 45280,
+      "width": 3,
+      "height": 80,
+      "transparentIndex": 227,
+      "bytes": 44,
+      "sha256": "c9b400c49b142d5c1feb1bd8f41ce48f281bab85e91ed813760d76fb94a45623"
+    },
+    {
+      "mbinOffset": 45324,
+      "width": 9,
+      "height": 9,
+      "transparentIndex": 227,
+      "bytes": 67,
+      "sha256": "917d6cfa918e3354435abfadbb162fc47119d205d6a94602ce04851f5b448aea"
+    },
+    {
+      "mbinOffset": 45391,
+      "width": 9,
+      "height": 9,
+      "transparentIndex": 227,
+      "bytes": 69,
+      "sha256": "c3f92272a6a1f0047f186b2c082feef779aef4a270f5091c3bb2a48cd0e6ceed"
+    },
+    {
+      "mbinOffset": 45460,
+      "width": 9,
+      "height": 9,
+      "transparentIndex": 227,
+      "bytes": 66,
+      "sha256": "4336c6c92320ee185d5542d717d977b88f704f76a9acc421135d0f9aaf73db31"
+    },
+    {
+      "mbinOffset": 45526,
+      "width": 9,
+      "height": 9,
+      "transparentIndex": 227,
+      "bytes": 43,
+      "sha256": "cbc3a8676f5eccf04a9539cede91708efa95268205ce2b00b18611eced920d53"
+    },
+    {
+      "mbinOffset": 45569,
+      "width": 11,
+      "height": 11,
+      "transparentIndex": 227,
+      "bytes": 37,
+      "sha256": "795bd9ab90e1936161acd206b14973ee80b52e94fec31639e4192b425de92d47"
+    },
+    {
+      "mbinOffset": 45606,
+      "width": 20,
+      "height": 20,
+      "transparentIndex": 255,
+      "bytes": 276,
+      "sha256": "6a5b130c70412abfe2a6944c8eb9faa589084d3e545ca8ec6c90b9332d2a1c33"
+    },
+    {
+      "mbinOffset": 45882,
+      "width": 10,
+      "height": 10,
+      "transparentIndex": 255,
+      "bytes": 49,
+      "sha256": "1ea5acfdb940bb4c9fae18dbe99de09ad7c5920b56d9168d387a1fb13f6d112f"
+    },
+    {
+      "mbinOffset": 45931,
+      "width": 10,
+      "height": 10,
+      "transparentIndex": 255,
+      "bytes": 55,
+      "sha256": "2cf8154d800d5dbc38968e1a520f37d355917f202e979b0df8a522b194f9a0a2"
+    },
+    {
+      "mbinOffset": 45986,
+      "width": 10,
+      "height": 20,
+      "transparentIndex": 227,
+      "bytes": 96,
+      "sha256": "11ba49b80549867eee495488de213c9209109fad5d8216ad58243539efb15d93"
+    },
+    {
+      "mbinOffset": 46082,
+      "width": 10,
+      "height": 20,
+      "transparentIndex": 227,
+      "bytes": 87,
+      "sha256": "05ba422c18af470ed3cf9ff805e6e4daf8cf7d39b115b2640c957c6ad081f963"
+    },
+    {
+      "mbinOffset": 46169,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 255,
+      "bytes": 6383,
+      "sha256": "74b5f3bb66e5ed0d558e9d13eebba64fda4c675139d678c1c0ee8bae0adac953"
+    },
+    {
+      "mbinOffset": 52552,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 255,
+      "bytes": 6841,
+      "sha256": "aa2e932581341b473c2cdb3fc2874d2ca5ab746771c14c0a1f6700b389a24611"
+    },
+    {
+      "mbinOffset": 59393,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 255,
+      "bytes": 8718,
+      "sha256": "67e22f8c1c992c7ab6497611591ba0ce7599daa4e93a4f1cd56c2dbf743c5fba"
+    },
+    {
+      "mbinOffset": 68111,
+      "width": 10,
+      "height": 10,
+      "transparentIndex": 255,
+      "bytes": 49,
+      "sha256": "787f1b9b758044684dab6a7a5d54e821f30e40a41f80be69d200ac9075f30a53"
+    },
+    {
+      "mbinOffset": 68160,
+      "width": 10,
+      "height": 10,
+      "transparentIndex": 227,
+      "bytes": 67,
+      "sha256": "9b62d2a9c615f91b4bc9b8679858fffb246823e0164d189de663500f6d6657d8"
+    },
+    {
+      "mbinOffset": 68227,
+      "width": 10,
+      "height": 10,
+      "transparentIndex": 227,
+      "bytes": 52,
+      "sha256": "afad53018084c1fa5cda587df4a80395a43ead98e97e3e03a2ee070727a04d79"
+    },
+    {
+      "mbinOffset": 68279,
+      "width": 55,
+      "height": 16,
+      "transparentIndex": 227,
+      "bytes": 162,
+      "sha256": "cb8077a650e38e458542831e37e77ef397a97070574d652a60852146497746db"
+    },
+    {
+      "mbinOffset": 68441,
+      "width": 55,
+      "height": 16,
+      "transparentIndex": 227,
+      "bytes": 162,
+      "sha256": "c4e8959290d6d6b3c713b02b0f197007ece33bdde916ed5e3a1bce8422b23221"
+    },
+    {
+      "mbinOffset": 68603,
+      "width": 44,
+      "height": 10,
+      "transparentIndex": 0,
+      "bytes": 89,
+      "sha256": "b67674be8c8ab23d5981198e045cbfb50ff87818c64a6c597d7c985dc64bb6b4"
+    },
+    {
+      "mbinOffset": 68692,
+      "width": 86,
+      "height": 10,
+      "transparentIndex": 0,
+      "bytes": 116,
+      "sha256": "92ba7d76658df7dda00904b74d213a227f8dce9f0edac6fbcff5f68ffa3029c5"
+    },
+    {
+      "mbinOffset": 68808,
+      "width": 120,
+      "height": 144,
+      "transparentIndex": 0,
+      "bytes": 3068,
+      "sha256": "a3f3bb30cbdbf52a6923b6d3a190c911d5fc124e2be34ef6a767d62e811b0bcc"
+    }
+  ],
+  "original": {
+    "source": "https://m.blog.naver.com/sendei333/222605737137",
+    "repositoryPath": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+    "nestedZip": "original/Anycall-Land-games.zip"
+  },
+  "dependencies": {
+    "unicorn": "2.1.4",
+    "Pillow": "13.0.0"
+  },
+  "archive": {
+    "repositoryPath": "research/archives/Samsung-Anycall-Pocket-Billiards-Replay.zip",
+    "bytes": 37891,
+    "sha256": "b5bcb000f2c388eb9494f6ba3f6c3bda915cb50f8c6d1f2ae63d7e98dd8f375e",
+    "members": {
+      "01-title.png": {
+        "bytes": 14575,
+        "crc32": "4d80f59f",
+        "sha256": "244c1343da4444d682907825a3c786082f38f468f7aa5250cfde84552d620a22"
+      },
+      "02-menu.png": {
+        "bytes": 5733,
+        "crc32": "1902f27a",
+        "sha256": "6c0f580327313223de87de354a0ec87801a344a83e5bd9fa6701681f7be24b17"
+      },
+      "04-before-input.png": {
+        "bytes": 4579,
+        "crc32": "1c0839f6",
+        "sha256": "f95e30b1389f89c164c7f2da6ef2097209731be40ce351391b247d19a1212d66"
+      },
+      "05-no-input.png": {
+        "bytes": 4579,
+        "crc32": "1c0839f6",
+        "sha256": "f95e30b1389f89c164c7f2da6ef2097209731be40ce351391b247d19a1212d66"
+      },
+      "06-input.png": {
+        "bytes": 4548,
+        "crc32": "27dc3c89",
+        "sha256": "aae913c7253109bd079ac910a00d4b576613dd547b495e8d650673bc2f900f51"
+      },
+      "replay.json": {
+        "bytes": 11995,
+        "crc32": "8ec3f3de",
+        "sha256": "df0769c96fa5187067096dd4c0b93054d18268deced4e347da22ba33404503f8"
+      }
+    }
+  }
+}

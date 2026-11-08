@@ -33,10 +33,9 @@ STUBS = TABLE + 0x1000
 RETURN = TABLE + 0x3000
 STACK = 0x08000000
 WIDTH, HEIGHT = 120, 128
-FRAME_BYTES = WIDTH * HEIGHT
 ARGS = (UC_ARM_REG_R0, UC_ARM_REG_R1, UC_ARM_REG_R2, UC_ARM_REG_R3)
 STUB_SLOTS = {0x18, 0x24, 0x3C, 0x40, 0x48, 0x68}
-INTRO_GAMES = {
+ADDITIONAL_GAMES = {
     "hungry-hunter": (
         "Hungry_Hunter.mbin",
         "be7a23f99e205ab13674706ad750cebb01558e6dd65835cfbdc31546b8c5a8be",
@@ -49,8 +48,12 @@ INTRO_GAMES = {
         "버전 다름/오마이_헤드.mbin",
         "53e0e20bc8e615eee973fae319b40ebbaccb6fdafc3d8a91d8e8c6228031e74f",
     ),
+    "pocket-billiards": (
+        "포켓_빌리어드.mbin",
+        "ba8019b03d62389edb7c10137023e7a38d0c75fb0e8fa3415bd303e2f58655cc",
+    ),
 }
-INTRO_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
+ADDITIONAL_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
 RGB332 = [
     bytes(
         ((value >> 5) * 255 // 7, ((value >> 2) & 7) * 255 // 7, (value & 3) * 255 // 3)
@@ -64,12 +67,17 @@ class Replay:
     def __init__(self, original, *, game_id="jumping-baby"):
         self.game_id = game_id
         self.original_sha256 = sha256(original).hexdigest()
-        expected = MBIN_SHA256 if game_id == "jumping-baby" else INTRO_GAMES[game_id][1]
+        expected = (
+            MBIN_SHA256 if game_id == "jumping-baby" else ADDITIONAL_GAMES[game_id][1]
+        )
         if self.original_sha256 != expected:
             raise ValueError(f"unexpected {game_id} MBIN SHA-256")
         self.stub_slots = (
-            STUB_SLOTS if game_id == "jumping-baby" else STUB_SLOTS | INTRO_STUB_SLOTS
+            STUB_SLOTS
+            if game_id == "jumping-baby"
+            else STUB_SLOTS | ADDITIONAL_STUB_SLOTS
         )
+        self.height = 144 if game_id == "pocket-billiards" else HEIGHT
         self.body = original[HEADER_BYTES:]
         self.sprites = {}
         self.resources = {}
@@ -114,6 +122,9 @@ class Replay:
         elif slot == 0x70:
             self.blit(a, b)
             return
+        elif slot == 0x74 and self.game_id == "pocket-billiards":
+            self.plot_pixel(a, b, c, d)
+            return
         elif slot == 0xA0:
             self.frames += 1
         elif slot not in self.stub_slots:
@@ -151,7 +162,7 @@ class Replay:
         left, right = max(0, -x), min(width, WIDTH - x)
         if left >= right:
             return
-        for row in range(max(0, -y), min(height, HEIGHT - y)):
+        for row in range(max(0, -y), min(height, self.height - y)):
             address = FRAMEBUFFER + (y + row) * WIDTH + x + left
             source = pixels[row * width + left : row * width + right]
             if key in source:
@@ -161,6 +172,14 @@ class Replay:
                 )
             self.cpu.mem_write(address, source)
 
+    def plot_pixel(self, position, clip, color, target):
+        if target != FRAMEBUFFER:
+            raise ValueError(f"unexpected ADS pixel target {target:#x}")
+        x, y = struct.unpack("<hh", struct.pack("<I", position))
+        width, height = struct.unpack("<HH", struct.pack("<I", clip))
+        if 0 <= x < min(width, WIDTH) and 0 <= y < min(height, self.height):
+            self.cpu.mem_write(target + y * WIDTH + x, bytes([color & 255]))
+
     def tick(self, frames=1):
         for _ in range(frames):
             self.dispatch(5)
@@ -169,14 +188,14 @@ class Replay:
         self.dispatch(4, code)
 
     def frame(self):
-        return bytes(self.cpu.mem_read(FRAMEBUFFER, FRAME_BYTES))
+        return bytes(self.cpu.mem_read(FRAMEBUFFER, WIDTH * self.height))
 
 
 def save_frame(output, name, game):
     indices = game.frame()
     rgb = b"".join(RGB332[index] for index in indices)
     path = output / f"{name}.png"
-    Image.frombytes("RGB", (WIDTH, HEIGHT), rgb).save(path)
+    Image.frombytes("RGB", (WIDTH, game.height), rgb).save(path)
     return {
         "file": path.name,
         "presentation": game.frames,
@@ -194,26 +213,36 @@ def read_original(path, member="점핑!_베이비.mbin"):
         return games.read(member)
 
 
-def replay_intro(original, output, game_id):
+def replay_game(original, output, game_id):
     game = Replay(original, game_id=game_id)
     control = Replay(original, game_id=game_id)
     captures = []
-    sequence = [(100, None, "01-title"), (20, 19, "02-menu")]
-    if game_id == "oh-my-head":
-        sequence.append((11, 19, "03-ready"))
-    sequence.append((11 if game_id == "hungry-hunter" else 12, 19, "04-before-input"))
-    for ticks, key, name in sequence:
+    if game_id == "pocket-billiards":
+        sequence = [
+            (100, None, "01-title"),
+            (30, 19, "02-menu"),
+            (20, 19, "04-before-input"),
+        ]
+        input_key, ticks, input_ticks = 19, 38, [0, 2]
+    else:
+        sequence = [(100, None, "01-title"), (20, 19, "02-menu")]
+        if game_id == "oh-my-head":
+            sequence.append((11, 19, "03-ready"))
+        sequence.append(
+            (11 if game_id == "hungry-hunter" else 12, 19, "04-before-input")
+        )
+        input_key = 2 if game_id == "hungry-hunter" else 10
+        ticks = 5 if game_id == "hungry-hunter" else 20
+        input_ticks = [0] if game_id == "hungry-hunter" else list(range(0, ticks, 3))
+    for stage_ticks, key, name in sequence:
         for replay in (game, control):
             if key is not None:
                 replay.key(key)
-            replay.tick(ticks)
+            replay.tick(stage_ticks)
         captures.append(save_frame(output, name, game))
 
     if game.frame() != control.frame():
         raise RuntimeError("control diverged before gameplay input")
-    input_key = 2 if game_id == "hungry-hunter" else 10
-    ticks = 5 if game_id == "hungry-hunter" else 20
-    input_ticks = [0] if game_id == "hungry-hunter" else list(range(0, ticks, 3))
     for index in range(ticks):
         if index in input_ticks:
             game.key(input_key)
@@ -228,10 +257,10 @@ def replay_intro(original, output, game_id):
     manifest = {
         "schema": 1,
         "game": game_id,
-        "originalMember": INTRO_GAMES[game_id][0],
+        "originalMember": ADDITIONAL_GAMES[game_id][0],
         "mbinSha256": game.original_sha256,
         "mbinBytes": len(original),
-        "size": [WIDTH, HEIGHT],
+        "size": [WIDTH, game.height],
         "palette": "provisional RGB332",
         "hostCallCounts": {
             f"0x{slot:02x}": count for slot, count in sorted(game.calls.items())
@@ -258,13 +287,13 @@ def main():
     )
     parser.add_argument("output", type=Path)
     parser.add_argument(
-        "--game", choices=("jumping-baby", *INTRO_GAMES), default="jumping-baby"
+        "--game", choices=("jumping-baby", *ADDITIONAL_GAMES), default="jumping-baby"
     )
     args = parser.parse_args()
     if args.game != "jumping-baby":
-        original = read_original(args.source, INTRO_GAMES[args.game][0])
+        original = read_original(args.source, ADDITIONAL_GAMES[args.game][0])
         args.output.mkdir(parents=True, exist_ok=True)
-        replay_intro(original, args.output, args.game)
+        replay_game(original, args.output, args.game)
         return
     original = read_original(args.source)
     args.output.mkdir(parents=True, exist_ok=True)

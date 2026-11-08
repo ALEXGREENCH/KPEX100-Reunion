@@ -3,6 +3,402 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "intromobile-early-game-catalogues",
+      "repositoryPath": "research/archives/IntroMobile-Early-Game-Catalogues.zip",
+      "bytes": 492448,
+      "sha256": "34463006880457e2e06b6a61761ab943fc91a157d018d33f734c8cd93fc2177a",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/initial-linked-receipts.json",
+          "bytes": 22686,
+          "crc32": "cf337931",
+          "sha256": "ec020d25882779d98951498c6d1612137b862dc5fa56af5dc46da226219d395f"
+        },
+        {
+          "path": "evidence/intromobile-cdx-2000-2004.json",
+          "bytes": 530090,
+          "crc32": "15070116",
+          "sha256": "fd8c3f6bc6162de34e6082f2c0307575882002af68f7e054a05d5894516d6be9"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 56833,
+          "crc32": "e7937277",
+          "sha256": "5971841e4086f521551bf09a18e38e4c53dbbe29f6a09e0fdb60bb7a1a5cf698"
+        },
+        {
+          "path": "original/press/inews24-50559.html",
+          "bytes": 175937,
+          "crc32": "843c6f22",
+          "sha256": "1d98c9f6cae495d7b035e0386919bef441bc923e21e207e8b7937024ace5e2d0"
+        },
+        {
+          "path": "original/services/brew_menu.htm",
+          "bytes": 4808,
+          "crc32": "a655b541",
+          "sha256": "897671ac5a98b48f1f9f981568646652ac5eeec078867fa09e163e83c4e34913"
+        },
+        {
+          "path": "original/services/brew_menu_images/cannon2.gif",
+          "bytes": 3864,
+          "crc32": "85a51b84",
+          "sha256": "0fa20aeea6b8086030628ed44e5852a2bf8096f0822a3acbb4367b1b8157ea9c"
+        },
+        {
+          "path": "original/services/brew_menu_images/cop2.gif",
+          "bytes": 3698,
+          "crc32": "e8ad055f",
+          "sha256": "dc8e6c04a28b87b5c3236ec15a1d244b5c3235c6f996fb25aefb0d90eb0e06c2"
+        },
+        {
+          "path": "original/services/brew_menu_images/hiphop2.gif",
+          "bytes": 3725,
+          "crc32": "0f03450b",
+          "sha256": "764f09ee9991b427d24d2f041a76ebc5d228f12d9db07e7e23b1c6bf9dbbe460"
+        },
+        {
+          "path": "original/services/brew_menu_images/nu2.gif",
+          "bytes": 3946,
+          "crc32": "ab294b8a",
+          "sha256": "a79193795a05c97fa422a36b014cf3b51df0a010264c8d77d075b694f05e7feb"
+        },
+        {
+          "path": "original/services/brew_menu_images/poker2.gif",
+          "bytes": 3758,
+          "crc32": "30a912da",
+          "sha256": "21fb418ad2ee654ac6dae9cc3f04b07ffbf04e4aad710763a912d5ea7cd2e15b"
+        },
+        {
+          "path": "original/services/brew_menu_images/rot2.gif",
+          "bytes": 3776,
+          "crc32": "97dd8f79",
+          "sha256": "7bb6585aa8e114ae2d0e70cd4b2fa5fadba2f3b8f8460ec604a423ffd066486b"
+        },
+        {
+          "path": "original/services/brew_menu_images/worldcup2.gif",
+          "bytes": 3491,
+          "crc32": "74868daf",
+          "sha256": "6b46f9e43023a75d3b0b50cd1229e6aad5036c3e31911466263f41751f208dee"
+        },
+        {
+          "path": "original/services/ebrew_menu.htm",
+          "bytes": 4738,
+          "crc32": "0528acce",
+          "sha256": "9a15ddcfccd04d1c9e75845488a99972dd48be6d697722600b889a7b6e739e81"
+        },
+        {
+          "path": "original/services/egame_index.html",
+          "bytes": 469,
+          "crc32": "abc9c499",
+          "sha256": "9ce1bb131ad8b0070d37c75dbf0326ddfc649e56d8208252ed17e3b0f0b38063"
+        },
+        {
+          "path": "original/services/egame_top.html",
+          "bytes": 2276,
+          "crc32": "d796eba4",
+          "sha256": "edd3d0c3c691611624c8e7f36cfaffe007300f1957bf1a637607956102653530"
+        },
+        {
+          "path": "original/services/egvm_menu.htm",
+          "bytes": 2165,
+          "crc32": "8b1b8377",
+          "sha256": "71757ae2467261ba063aa1c30ee20daace273079044ea4c9f931e7b20b2038ae"
+        },
+        {
+          "path": "original/services/emap_menu.htm",
+          "bytes": 5902,
+          "crc32": "b774658d",
+          "sha256": "e01687c229feab91e652a716b2921202fa05c8f6d7aadfd65105c507cd00e5e0"
+        },
+        {
+          "path": "original/services/eskvm_menu.htm",
+          "bytes": 2173,
+          "crc32": "4e1d0cd5",
+          "sha256": "ab8301a28de22e2a36b16635c41f2efe7e11b67f3d012a7da56a289ac5194370"
+        },
+        {
+          "path": "original/services/game_bottom.html",
+          "bytes": 424,
+          "crc32": "f3696f75",
+          "sha256": "bbd94fd7ae0424c2411598791cc7cec7babcfa4a48e76c250214b764fea6faad"
+        },
+        {
+          "path": "original/services/game_index.html",
+          "bytes": 482,
+          "crc32": "3a193d4f",
+          "sha256": "6cc20bc5d2b9688aea3d1faf20022e0f919b63db28680f9ac4f9c9504771f7c3"
+        },
+        {
+          "path": "original/services/game_top.html",
+          "bytes": 2332,
+          "crc32": "0088455b",
+          "sha256": "22de4fe407352bbcc825c6c3e63527c0ca6a74fd665a3e2b50388bc133a94a5f"
+        },
+        {
+          "path": "original/services/gvm_menu.htm",
+          "bytes": 2264,
+          "crc32": "515ca144",
+          "sha256": "b27218b7d082f4953092944da207a22f00373cbd004f2740906b395c78af3368"
+        },
+        {
+          "path": "original/services/gvm_menu_images/name_gvm.gif",
+          "bytes": 1736,
+          "crc32": "cc9b9468",
+          "sha256": "e877c49ca218ecb8b6337a098f3be2b4fec5961e7498a9c2e22d29a375422e1c"
+        },
+        {
+          "path": "original/services/map_menu.htm",
+          "bytes": 6075,
+          "crc32": "70214a05",
+          "sha256": "cb395ae7abc59ea0c200648429c3d2379d83e725f66a74acfd9013712f2b3eea"
+        },
+        {
+          "path": "original/services/map_menu_images/bottom_linebar.gif",
+          "bytes": 666,
+          "crc32": "9fc85ab1",
+          "sha256": "fcfa5b639c8d1047b7b9335646cffccdff5bf030cf1e453abbff7c936ae5fad5"
+        },
+        {
+          "path": "original/services/map_menu_images/game_1.gif",
+          "bytes": 2365,
+          "crc32": "cea2dc52",
+          "sha256": "5b445d012298d629a4415582255e78bcc839f28ff6d1db7b9bbce6f3f3167ce5"
+        },
+        {
+          "path": "original/services/map_menu_images/game_2.gif",
+          "bytes": 2609,
+          "crc32": "abde5c3a",
+          "sha256": "8e2c430f2c2686fd4ef76fcdeddaa2dec7965759616846148c0dd6938a34b287"
+        },
+        {
+          "path": "original/services/map_menu_images/game_3.gif",
+          "bytes": 2460,
+          "crc32": "d2272752",
+          "sha256": "6a867a96970164a20c41ca3ffb5af5e4967fe2e8deb9fcbdc60604ce4d034da2"
+        },
+        {
+          "path": "original/services/map_menu_images/game_4.gif",
+          "bytes": 2279,
+          "crc32": "344bb785",
+          "sha256": "084e8ee281394d5ba2662b055a61e41d7e12effcc2014de4c28b126892964d09"
+        },
+        {
+          "path": "original/services/map_menu_images/game_5.gif",
+          "bytes": 3449,
+          "crc32": "64f557bf",
+          "sha256": "7616ecca4f2c1b059e19c01c9f0be4a6afbbd7b519096dac0a066fb10fbff2c9"
+        },
+        {
+          "path": "original/services/map_menu_images/game_6.gif",
+          "bytes": 1860,
+          "crc32": "55e78d25",
+          "sha256": "7fded6228f7e80c006667e27bb7853b487c1240d168d39cca56763f3a360f4c9"
+        },
+        {
+          "path": "original/services/map_menu_images/game_7.gif",
+          "bytes": 2083,
+          "crc32": "b642855e",
+          "sha256": "d56657e1ac380becd2ca66b0bb761e3da9af75dc05cd160c1a2bd7bef31d861e"
+        },
+        {
+          "path": "original/services/map_menu_images/game_8.gif",
+          "bytes": 2761,
+          "crc32": "ceb316ef",
+          "sha256": "f377da8e2ab3e63d71f8c6db1fa6f581920d7b8579f7c235947a90b6a2597462"
+        },
+        {
+          "path": "original/services/map_menu_images/game_9.gif",
+          "bytes": 2693,
+          "crc32": "d9c190b0",
+          "sha256": "5225ca3a5bf6d4228cc2a24b05fb9eac8761be08b9d6114c2e686ea144bc27f0"
+        },
+        {
+          "path": "original/services/map_menu_images/left_line.gif",
+          "bytes": 538,
+          "crc32": "cb16839c",
+          "sha256": "5d25732d03a21522e11481290da9edbf44345bc335cffa8f93d98cc9da4998b5"
+        },
+        {
+          "path": "original/services/map_menu_images/map_warrior.gif",
+          "bytes": 2027,
+          "crc32": "1bea28fa",
+          "sha256": "ca82c1af86a901e090c4e5a0db678bf4b6a44a3d1cb5c6d099a8c33704b5e593"
+        },
+        {
+          "path": "original/services/map_menu_images/name_brew.gif",
+          "bytes": 1339,
+          "crc32": "de0bce96",
+          "sha256": "8303dd3e8b7d9c994e1a4e928ce71fd16cf8d2f5d2ac9ccda96f0be19f5c2cc7"
+        },
+        {
+          "path": "original/services/map_menu_images/name_map.gif",
+          "bytes": 2485,
+          "crc32": "d04d217c",
+          "sha256": "5a6ed948aa9c357f6174750eff982a781f8a44609b9eea13ca2d987ed6916e56"
+        },
+        {
+          "path": "original/services/map_menu_images/right_line.gif",
+          "bytes": 121,
+          "crc32": "380ce2cb",
+          "sha256": "8adf0a0d70e560d00f0cd15f3825352e95d35db4bebe354b29e23828531aa66e"
+        },
+        {
+          "path": "original/services/map_menu_images/spacer.gif",
+          "bytes": 43,
+          "crc32": "ab68bd76",
+          "sha256": "548f2d6f4d0d820c6c5ffbeffcbd7f0e73193e2932eefe542accc84762deec87"
+        },
+        {
+          "path": "original/services/map_menu_images/worldcup.gif",
+          "bytes": 2327,
+          "crc32": "4f691968",
+          "sha256": "be0124eb4e8589e9dd4555086603acad5a70b5e402facecd90be0f46d665cf68"
+        },
+        {
+          "path": "original/services/mobilegame.pdf",
+          "bytes": 235696,
+          "crc32": "3285adb3",
+          "sha256": "83a419879fbe193ca39a002f630ba4519c5714f770295a8dd6a97f64380bd075"
+        },
+        {
+          "path": "original/services/molys.css",
+          "bytes": 2359,
+          "crc32": "52cface2",
+          "sha256": "99d3af2cbcefbda0b3458700210bca2cafa39a75980830e3f9431eba5ec56d43"
+        },
+        {
+          "path": "original/services/services_04.php",
+          "bytes": 34848,
+          "crc32": "61609fe6",
+          "sha256": "660ff75551e05f245bbc9836ee30a94831d77ef5c096df60ff5e7373ae4c2dbb"
+        },
+        {
+          "path": "original/services/skvm_menu.htm",
+          "bytes": 2215,
+          "crc32": "685c1128",
+          "sha256": "8bf80a0827f9b0a4664e343f4b393c384af0996b39873d46377cdf7325db38ae"
+        },
+        {
+          "path": "original/services/skvm_menu_images/name_skvm.gif",
+          "bytes": 1906,
+          "crc32": "1cc79d3e",
+          "sha256": "01332da114f5feee51de71e9af95ff7943249e9d99b2a00c1ee8f03e0191913b"
+        },
+        {
+          "path": "original/services/skvm_menu_images/nu.gif",
+          "bytes": 2377,
+          "crc32": "996f380f",
+          "sha256": "e19e9d39cc4a44cb895aed02201c77e5df804145915803d068b5d39c1a237fed"
+        },
+        {
+          "path": "original/services/skvm_menu_images/warrior.gif",
+          "bytes": 1653,
+          "crc32": "0e6b586a",
+          "sha256": "56f6e3fc1f7bfdaa5a6037873102099550934def4e07fb932f5408ae73b828bd"
+        },
+        {
+          "path": "original/services/skvm_menu_images/worldcup.gif",
+          "bytes": 2813,
+          "crc32": "4e7e9a2c",
+          "sha256": "5a3bb20994ab41ddcf984f0cf550d7bd9fa964f9f9d1c47d5495dc5b2ed2d343"
+        },
+        {
+          "path": "original/services/vm_top_images/brew.gif",
+          "bytes": 499,
+          "crc32": "990f1345",
+          "sha256": "f85e300671f2d808b3a23e3c387204c9d5cdd5342c483993f1d2468b1b5fe128"
+        },
+        {
+          "path": "original/services/vm_top_images/gvm.gif",
+          "bytes": 457,
+          "crc32": "67af8c85",
+          "sha256": "bc2070c928ecc1a9294cd3320f4d93fe47e5d069cdeba01bd1a63b2f3ab7db80"
+        },
+        {
+          "path": "original/services/vm_top_images/map.gif",
+          "bytes": 442,
+          "crc32": "4b537aeb",
+          "sha256": "4360e14d5798829bc221fb080d836ee4cce754f9f920135aab9cf84a34552ff8"
+        },
+        {
+          "path": "original/services/vm_top_images/skvm.gif",
+          "bytes": 499,
+          "crc32": "76aca971",
+          "sha256": "a2ab9701331c7ed1e10d0babbf2b9dd24bfadec60638645f93d4ce8a677661a0"
+        },
+        {
+          "path": "original/services/vm_top_images/vm_top_01.gif",
+          "bytes": 90,
+          "crc32": "77be6844",
+          "sha256": "d729c21a0ba0f0e71ccf65064031c92680da5c8123af1016bd18e279c02519d8"
+        },
+        {
+          "path": "original/services/vm_top_images/vm_top_02.gif",
+          "bytes": 50,
+          "crc32": "24ec4880",
+          "sha256": "270f46307cacd8989fdf72ab02b243d23da10c124343cc20029da0926518b9ab"
+        },
+        {
+          "path": "original/services/vm_top_images/vm_top_07.gif",
+          "bytes": 97,
+          "crc32": "227742ed",
+          "sha256": "333e7d871f4a6e2372aaa4da3ce9fdbca0526c79c1bae6d9ffe78da822c74809"
+        },
+        {
+          "path": "original/services/vm_top_images/vm_top_08.gif",
+          "bytes": 50,
+          "crc32": "24ec4880",
+          "sha256": "270f46307cacd8989fdf72ab02b243d23da10c124343cc20029da0926518b9ab"
+        }
+      ]
+    },
+    {
+      "id": "anycall-pocket-billiards",
+      "repositoryPath": "research/archives/Samsung-Anycall-Pocket-Billiards-Replay.zip",
+      "bytes": 37891,
+      "sha256": "b5bcb000f2c388eb9494f6ba3f6c3bda915cb50f8c6d1f2ae63d7e98dd8f375e",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "01-title.png",
+          "bytes": 14575,
+          "crc32": "4d80f59f",
+          "sha256": "244c1343da4444d682907825a3c786082f38f468f7aa5250cfde84552d620a22"
+        },
+        {
+          "path": "02-menu.png",
+          "bytes": 5733,
+          "crc32": "1902f27a",
+          "sha256": "6c0f580327313223de87de354a0ec87801a344a83e5bd9fa6701681f7be24b17"
+        },
+        {
+          "path": "04-before-input.png",
+          "bytes": 4579,
+          "crc32": "1c0839f6",
+          "sha256": "f95e30b1389f89c164c7f2da6ef2097209731be40ce351391b247d19a1212d66"
+        },
+        {
+          "path": "05-no-input.png",
+          "bytes": 4579,
+          "crc32": "1c0839f6",
+          "sha256": "f95e30b1389f89c164c7f2da6ef2097209731be40ce351391b247d19a1212d66"
+        },
+        {
+          "path": "06-input.png",
+          "bytes": 4548,
+          "crc32": "27dc3c89",
+          "sha256": "aae913c7253109bd079ac910a00d4b576613dd547b495e8d650673bc2f900f51"
+        },
+        {
+          "path": "replay.json",
+          "bytes": 11995,
+          "crc32": "8ec3f3de",
+          "sha256": "df0769c96fa5187067096dd4c0b93054d18268deced4e347da22ba33404503f8"
+        }
+      ]
+    },
+    {
       "id": "anycall-intromobile-replays",
       "repositoryPath": "research/archives/Samsung-Anycall-IntroMobile-Replays.zip",
       "bytes": 128578,
@@ -227668,9 +228064,9 @@
     }
   ],
   "counts": {
-    "archives": 138,
-    "archiveBytes": 2543851645,
-    "fileMembers": 37737,
-    "uniqueMemberHashes": 22852
+    "archives": 140,
+    "archiveBytes": 2544381984,
+    "fileMembers": 37800,
+    "uniqueMemberHashes": 22913
   }
 }

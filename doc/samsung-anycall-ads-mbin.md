@@ -29,7 +29,8 @@ SHA-256 указаны в манифесте. Сохранены байты вс
 Hammer и Oh My Head дошли до игрового процесса и дали разницу в парных
 прогонах с вводом и без него.
 [Воспроизведение Jumping Baby](anycall-jumping-baby-replay.md) ·
-[Три игры IntroMobile](anycall-intromobile-replays.md).
+[Три игры IntroMobile](anycall-intromobile-replays.md) ·
+[Удар в Pocket Billiards](anycall-pocket-billiards.md).
 
 Mobiletop поставляла эту ветку технологии Samsung как ADS, а KTF
 предлагала MAP. В инструкции Samsung SCH-V300 ADS и NATE GVM
