@@ -1,0 +1,105 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import test from 'node:test';
+import { GnexRuntime } from '../web/engine/gnex.js';
+
+const data = (path) => readFileSync(new URL(`../web/data/${path}`, import.meta.url));
+const rom = data('firmware/Kingston-2.12.rom');
+const sgs = data('games/demo-orbital-courier.sgs');
+const NES_HEADER_LENGTH = 16;
+const NROM_128_PRG_LENGTH = 16384;
+const CHR_LENGTH = 8192;
+const CART_LENGTH = NES_HEADER_LENGTH + NROM_128_PRG_LENGTH + CHR_LENGTH;
+
+test('Orbital Courier boots its iNES file, blocks debris, links three beacons, and restarts', async () => {
+  const game = await GnexRuntime.create(rom, sgs, { profile: 'kpex' });
+  const ticks = (count) => {
+    for (let i = 0; i < count; i++) {
+      game.event('TIMEOUT', 0);
+      assert.equal(game.status, 'idle', game.diagnostics.error);
+    }
+  };
+  const pixel = (col, row, dx = 3, dy = 0) => {
+    const x = 6 + (col - 3) * 8 + dx;
+    const y = 8 + (row - 5) * 8 + dy;
+    return Array.from(game.framebufferRGBA.subarray((y * 220 + x) * 4, (y * 220 + x) * 4 + 4));
+  };
+  const tap = (code, count = 1) => {
+    for (let i = 0; i < count; i++) {
+      game.setKey(code, true);
+      game.setKey(code, false);
+      ticks(3);
+    }
+  };
+  try {
+    game.event('START');
+    assert.deepEqual(game.vfs.diagnostics.files, ['cart.nes']);
+    assert.equal(game.vfs.diagnostics.operations, 3);
+    assert.equal(game.vfs.diagnostics.openHandles, 0);
+    assert.equal(game.vfs.diagnostics.readonlyFiles, 1);
+    const loading = game.framebufferRGBA.slice();
+    ticks(20);
+    assert.deepEqual(game.framebufferRGBA, loading);
+    ticks(55);
+    const initialFrame = game.framebufferRGBA.slice();
+    const ship = [213, 218, 230, 255];
+    const meters = () => [23, 25, 27].map((col) => pixel(col, 23, 3, 3));
+    const empty = meters();
+    assert.deepEqual(pixel(6, 15), ship);
+    assert.notDeepEqual(pixel(7, 15), ship);
+
+    tap(17);
+    assert.deepEqual(pixel(7, 15), ship);
+    tap(16);
+    assert.deepEqual(game.framebufferRGBA, initialFrame);
+    tap(17, 3);
+    ticks(12);
+    assert.deepEqual(pixel(9, 15), ship);
+    const first = meters();
+    assert.notDeepEqual(first[0], empty[0]);
+    assert.deepEqual(first.slice(1), empty.slice(1));
+
+    tap(17, 3);
+    assert.deepEqual(pixel(12, 15), ship);
+    tap(17);
+    assert.deepEqual(pixel(12, 15), ship);
+    assert.notDeepEqual(pixel(13, 15), ship);
+    for (const [key, count, x, y] of [
+      [18, 3, 12, 12],
+      [17, 4, 16, 12],
+      [19, 3, 16, 15],
+      [19, 3, 16, 18],
+      [17, 6, 22, 18],
+      [18, 3, 22, 15],
+    ]) {
+      tap(key, count);
+      assert.deepEqual(pixel(x, y), ship);
+    }
+    ticks(12);
+    assert.deepEqual(meters(), [first[0], first[0], first[0]]);
+    tap(17);
+    assert.deepEqual(pixel(22, 15), ship);
+    assert.notDeepEqual(pixel(23, 15), ship);
+    tap(20);
+    ticks(75);
+    assert.deepEqual(game.framebufferRGBA, initialFrame);
+  } finally {
+    game.close();
+  }
+});
+
+test('Orbital Courier closes an unsupported mapper cartridge without starting a timer', async () => {
+  const incompatible = Buffer.from(sgs);
+  assert.equal(incompatible.subarray(-CART_LENGTH, -CART_LENGTH + 4).toString(), 'NES\x1a');
+  incompatible[incompatible.length - CART_LENGTH + 6] |= 0x10;
+  const game = await GnexRuntime.create(rom, incompatible, { profile: 'kpex' });
+  try {
+    game.event('START');
+    assert.equal(game.status, 'idle');
+    assert.equal(game.vfs.diagnostics.operations, 3);
+    assert.equal(game.vfs.diagnostics.openHandles, 0);
+    assert.equal(game.timerStates[0].delay, null);
+  } finally {
+    game.close();
+  }
+});

@@ -8,7 +8,7 @@ const rom = data('firmware/Kingston-2.12.rom');
 const sgs = data('games/demo-pocket-lab.sgs');
 
 test('Pocket Lab reads its cartridge via GNEX VFS and moves the DMG tile on all four directions', async () => {
-  const game = await GnexRuntime.create(rom, sgs);
+  const game = await GnexRuntime.create(rom, sgs, { profile: 'kpex' });
   const ticks = (count) => {
     for (let i = 0; i < count; i++) game.event('TIMEOUT', 0);
     assert.equal(game.status, 'idle');
@@ -46,7 +46,9 @@ test('Pocket Lab reads its cartridge via GNEX VFS and moves the DMG tile on all 
 });
 
 test('Pocket Lab stops at the error screen if the VFS cartridge is missing', async () => {
-  const game = await GnexRuntime.create(rom, sgs.subarray(0, sgs.readUInt32LE(120)));
+  const game = await GnexRuntime.create(rom, sgs.subarray(0, sgs.readUInt32LE(120)), {
+    profile: 'kpex',
+  });
   try {
     game.event('START');
     assert.equal(game.status, 'idle');

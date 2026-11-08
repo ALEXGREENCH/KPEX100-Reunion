@@ -7,7 +7,7 @@ graphics routines. Game logic and assets come from unmodified SGS files.
 [Русский README](README.md) · [Documentation](doc/README.md) ·
 [Compatibility](doc/compatibility.md) · [Play in your browser](https://alexgreench.github.io/KPEX100-Reunion/)
 
-The collection includes 9 firmware images, 103 SGS applications, 21 Anycall ADS games, 3 quick-start
+The collection includes 9 firmware images, 106 SGS applications, 21 Anycall ADS games, 3 quick-start
 snapshots and the original Swerve 2.1 module. The catalogue records SHA-256
 hashes and tested runtime profiles.
 
@@ -21,7 +21,10 @@ variant, with original archives and paired input/control checks.
 
 The Games tab contains SGS and ADS builds, a playable
 [Fortress Tournament reconstruction](doc/fortress-tournament.md), and the
-Mosquito utility. The Examples tab contains four developer SGS samples. Preserved attachments,
+Mosquito utility. The Examples tab contains four historical samples and Reunion's own
+[Pocket Lab and Prism Relay (GB/GBC)](demos/gb/README.md),
+[Orbital Courier (NES)](demos/nes/README.md), and
+[GNEX Bench](demos/benchmark/README.md). Preserved attachments,
 source projects and research downloads are available on the
 [archive page](https://alexgreench.github.io/KPEX100-Reunion/research/), with
 provenance, sizes and SHA-256 hashes. Native PXO and Flash finds are preserved

@@ -6,10 +6,14 @@
 
 Настольная Python-версия имеет отдельное покрытие: четыре игры K-PEX и экспериментальный полный запуск Kingston 2.12. Телефонная совместимость из таблицы ниже относится к веб-ядру. См. [настольную версию](desktop.md).
 
-Во вкладке «Примеры» доступны четыре учебных SGS. Для RANKING подтверждено
+Во вкладке «Примеры» доступны четыре исторических учебных SGS. Для RANKING подтверждено
 локальное меню. В двух упражнениях с персонажем проверено движение,
 в Hello GVM — реакция на кнопку и стартовый звук.
 [RANKING и упражнения](korean-developer-samples.md), [Hello GVM](milkclub-gvm-materials.md).
+
+В этом же разделе доступны оригинальные проекты Reunion. [Демки GB и GBC](../demos/gb/README.md)
+и [демка NES](../demos/nes/README.md) исполняют свои картриджи из файлов GNEX VFS.
+[GNEX Bench](../demos/benchmark/README.md) измеряет таймер, арифметику и вывод.
 
 Отдельные сборки Mini Game Paradise, Ppunyu Ppunyu Pong Remix,
 Super Action Hero, Penoa Chronicles 2, Sketcher и Com2uS Soccer

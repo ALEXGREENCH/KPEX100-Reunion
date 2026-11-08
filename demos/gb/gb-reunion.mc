@@ -12,26 +12,56 @@
 #DEFINE VALIDTERM 255
 %}
 
-// ROM-only DMG prototype. The cartridge runs in Mobile C bytecode.
-int cart[8192], video[8192], seen[360];
+// ROM-only DMG/CGB prototype. The cartridge runs in Mobile C bytecode.
+int cart[8192], video[16384], ram[8192], colors[64];
+int seen[360], seenVersion[360], tileVersion[768], paletteVersion[8], dmgVersion;
 int a, b, c, d, e, hl, pc, zero, buttons, p1, lcd, bgp;
 int ready, failure, ox, oy, paintRow, pendingButtons;
+int colorMode, bank, colorIndex, paintColor;
 
 int Read8(int addr) {
     if (addr < 32768) return (cart[addr >> 2] >> ((addr & 3) * 8)) & 255;
-    if (addr < 40960) return video[addr - 32768];
+    if (addr < 40960) return video[bank * 8192 + addr - 32768];
+    if (addr >= 49152 && addr < 57344) return ram[addr - 49152];
     if (addr == 65280) {
         if ((p1 & 16) == 0) return 192 | p1 | (15 ^ buttons);
         return 192 | p1 | 15;
     }
+    if (colorMode && addr == 65359) return 254 | bank;
+    if (colorMode && addr == 65384) return 64 | colorIndex;
+    if (colorMode && addr == 65385) return colors[colorIndex & 63];
     return 255;
 }
 
 void Write8(int addr, int value) {
-    if (addr >= 32768 && addr < 40960) video[addr - 32768] = value & 255;
+    int offset, index;
+    if (addr >= 32768 && addr < 40960) {
+        offset = addr - 32768;
+        index = bank * 8192 + offset;
+        if (video[index] != value) {
+            video[index] = value;
+            if (offset < 6144) tileVersion[bank * 384 + offset / 16]++;
+        }
+        return;
+    }
+    if (addr >= 49152 && addr < 57344) ram[addr - 49152] = value;
     if (addr == 65280) p1 = value & 48;
     if (addr == 65344) lcd = value;
-    if (addr == 65351) bgp = value;
+    if (addr == 65351 && bgp != value) {
+        bgp = value;
+        dmgVersion++;
+    }
+    if (!colorMode) return;
+    if (addr == 65359) bank = value & 1;
+    if (addr == 65384) colorIndex = value & 191;
+    if (addr == 65385) {
+        index = colorIndex & 63;
+        if (colors[index] != value) {
+            colors[index] = value;
+            paletteVersion[index / 8]++;
+        }
+        if (colorIndex & 128) colorIndex = 128 | ((index + 1) & 63);
+    }
 }
 
 int Fetch8() {
@@ -73,44 +103,94 @@ void Step() {
         case 32: JumpRelative(!zero); break;
         case 33: hl = Fetch16(); break;
         case 34: Write8(hl, a); hl = (hl + 1) & 65535; break;
+        case 35: hl = (hl + 1) & 65535; break;
         case 40: JumpRelative(zero); break;
         case 47: a = a ^ 255; break;
         case 54: Write8(hl, Fetch8()); break;
+        case 60: a = (a + 1) & 255; zero = a == 0; break;
         case 61: a = (a - 1) & 255; zero = a == 0; break;
         case 62: a = Fetch8(); break;
+        case 87: d = a; break;
+        case 95: e = a; break;
         case 120: a = b; break;
         case 122: a = d; break;
         case 123: a = e; break;
+        case 126: a = Read8(hl); break;
         case 177: a = a | c; zero = a == 0; break;
         case 195: pc = Fetch16(); break;
         case 224: Write8(65280 + Fetch8(), a); break;
         case 230: a = a & Fetch8(); zero = a == 0; break;
+        case 234: Write8(Fetch16(), a); break;
         case 240: a = Read8(65280 + Fetch8()); break;
+        case 250: a = Read8(Fetch16()); break;
         case 254: zero = a == Fetch8(); break;
         default: failure = op + 1; break;
     }
 }
 
-void Color(int index) {
+void Color(int index, int attr) {
+    int offset, rgb, r, g, b;
+    if (colorMode) {
+        offset = (attr & 7) * 8 + index * 2;
+        rgb = colors[offset] | ((colors[offset + 1] & 127) << 8);
+        if (paintColor == rgb) return;
+        paintColor = rgb;
+        r = rgb & 31;
+        g = (rgb >> 5) & 31;
+        b = (rgb >> 10) & 31;
+        SetColorRGB((r << 3) | (r >> 2), (g << 3) | (g >> 2), (b << 3) | (b >> 2));
+        return;
+    }
+    index = (bgp >> (index * 2)) & 3;
+    if (paintColor == index + 32768) return;
+    paintColor = index + 32768;
     if (index == 0) SetColorRGB(192, 217, 127);
     if (index == 1) SetColorRGB(120, 165, 82);
     if (index == 2) SetColorRGB(63, 109, 58);
     if (index == 3) SetColorRGB(23, 57, 42);
 }
 
-void Tile(int x, int y, int tile) {
-    int row, bit, lo, hi, index, start, last;
-    for (row = 0; row < 8; row++) {
-        lo = video[tile * 16 + row * 2];
-        hi = video[tile * 16 + row * 2 + 1];
+void Tile(int x, int y, int offset, int attr) {
+    int row, end, bit, lo, hi, index, start, last, at, first, step, base, stride;
+    first = 7;
+    step = -1;
+    if (attr & 32) {
+        first = 0;
+        step = 1;
+    }
+    base = offset;
+    stride = 2;
+    if (attr & 64) {
+        base += 14;
+        stride = -2;
+    }
+    // Merge adjacent identical rows before drawing their horizontal runs.
+    for (row = 0; row < 8; row = end) {
+        at = base + row * stride;
+        lo = video[at];
+        hi = video[at + 1];
+        end = row + 1;
+        at += stride;
+        while (end < 8) {
+            if (video[at] != lo || video[at + 1] != hi) break;
+            end++;
+            at += stride;
+        }
+        if ((lo == 0 || lo == 255) && (hi == 0 || hi == 255)) {
+            Color((lo & 1) | ((hi & 1) << 1), attr);
+            FillRect(x, y + row, x + 7, y + end - 1);
+            continue;
+        }
         start = 0;
-        last = (lo >> 7) | ((hi >> 7) << 1);
+        last = ((lo >> first) & 1) | (((hi >> first) & 1) << 1);
+        at = first;
         for (bit = 1; bit <= 8; bit++) {
+            at += step;
             if (bit == 8) index = -1;
-            else index = ((lo >> (7 - bit)) & 1) | (((hi >> (7 - bit)) & 1) << 1);
+            else index = ((lo >> at) & 1) | (((hi >> at) & 1) << 1);
             if (index != last) {
-                Color((bgp >> (last * 2)) & 3);
-                FillRect(x + start, y + row, x + bit - 1, y + row);
+                Color(last, attr);
+                FillRect(x + start, y + row, x + bit - 1, y + end - 1);
                 start = bit;
                 last = index;
             }
@@ -119,15 +199,18 @@ void Tile(int x, int y, int tile) {
 }
 
 void Status(int failed) {
+    paintColor = -1;
     SetColorRGB(13, 35, 29);
     FillRect(0, 0, swWidth - 1, swHeight - 1);
     SetColorRGB(192, 217, 127);
     FillRect(0, 0, swWidth - 1, 14);
     if (failed) DrawStr(8, 3, "GB: unsupported cartridge");
     else {
-        DrawStr(8, 3, "REUNION / POCKET LAB");
+        if (colorMode) DrawStr(8, 3, "REUNION / PRISM RELAY");
+        else DrawStr(8, 3, "REUNION / POCKET LAB");
         FillRect(0, swHeight - 14, swWidth - 1, swHeight - 1);
-        DrawStr(8, swHeight - 11, "D-PAD / MOVE");
+        if (colorMode) DrawStr(8, swHeight - 11, "GET 3 CELLS / REACH EXIT");
+        else DrawStr(8, swHeight - 11, "D-PAD / MOVE");
     }
     Flush();
 }
@@ -136,13 +219,12 @@ void main() {
     int file, count, i;
     ox = (swWidth - 160) / 2;
     oy = (swHeight - 144) / 2;
-    Status(0);
     file = FileOpen("cart.gb", 3);
     if (file >= 0) {
         count = FileReadInt(file, &cart[0], 8192);
         if (FileClose(file) < 0) count = 0;
     } else count = 0;
-    if (count != 32768 || Read8(327) != 0 || Read8(328) != 0 || (Read8(323) & 128)) {
+    if (count != 32768 || Read8(327) != 0 || Read8(328) != 0) {
         Status(1);
         return;
     }
@@ -151,6 +233,8 @@ void main() {
         return;
     }
     for (i = 0; i < 360; i++) seen[i] = -1;
+    colorMode = (Read8(323) & 128) != 0;
+    Status(0);
     pc = 256;
     p1 = 48;
     bgp = 228;
@@ -159,7 +243,7 @@ void main() {
 }
 
 void EVENT_TIMEOUT() {
-    int i, x, y, tile, n, updated;
+    int i, x, y, tile, n, updated, map, attr, offset, version, key;
     if (!ready) return;
     buttons = pendingButtons;
     pendingButtons = 0;
@@ -171,13 +255,31 @@ void EVENT_TIMEOUT() {
     }
     if ((lcd & 128) == 0) return;
     updated = 0;
+    map = 6144;
+    if (lcd & 8) map = 7168;
     for (y = paintRow; y < paintRow + 3; y++) {
         for (x = 0; x < 20; x++) {
             n = y * 20 + x;
-            tile = video[6144 + y * 32 + x];
-            if (seen[n] != tile) {
-                Tile(ox + x * 8, oy + y * 8, tile);
-                seen[n] = tile;
+            offset = map + y * 32 + x;
+            tile = video[offset];
+            attr = 0;
+            version = dmgVersion;
+            if (colorMode) {
+                attr = video[8192 + offset] & 111;
+                version = paletteVersion[attr & 7];
+            }
+            if (!(lcd & 16) && tile < 128) tile += 256;
+            offset = tile * 16;
+            if (attr & 8) {
+                offset += 8192;
+                tile += 384;
+            }
+            key = (attr << 10) | tile;
+            version += tileVersion[tile];
+            if (seen[n] != key || seenVersion[n] != version) {
+                Tile(ox + x * 8, oy + y * 8, offset, attr);
+                seen[n] = key;
+                seenVersion[n] = version;
                 updated = 1;
             }
         }

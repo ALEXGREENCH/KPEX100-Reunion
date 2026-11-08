@@ -7,13 +7,16 @@
 [English quick start](README.en.md) · [Совместимость](doc/compatibility.md) ·
 [Документация](doc/README.md) · [Играть в браузере](https://alexgreench.github.io/KPEX100-Reunion/)
 
-Коллекция включает 9 прошивок, 103 SGS-приложения, 21 игру Anycall ADS, 3 быстрых состояния
+Коллекция включает 9 прошивок, 106 SGS-приложений, 21 игру Anycall ADS, 3 быстрых состояния
 и оригинальный модуль Swerve 2.1. Каталог фиксирует размеры, SHA-256 и
 проверенные профили. Дополнительные файлы можно загрузить в браузере.
 
 Во вкладке «Игры» доступны сборки SGS и ADS, восстановление
 [Fortress Tournament](doc/fortress-tournament.md) и утилита Mosquito.
-Во вкладке «Примеры» — четыре учебных SGS. Оригинальные вложения,
+Во вкладке «Примеры» — четыре исторических образца и собственные демки
+[Pocket Lab и Prism Relay (GB/GBC)](demos/gb/README.md),
+[Orbital Courier (NES)](demos/nes/README.md) и
+[GNEX Bench](demos/benchmark/README.md). Оригинальные вложения,
 исходники и исследовательские находки доступны на
 [странице архивов](https://alexgreench.github.io/KPEX100-Reunion/research/).
 Для каждого архива сохранены источник, размер и SHA-256; найденные native PXO
