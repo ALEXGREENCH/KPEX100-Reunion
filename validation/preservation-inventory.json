@@ -3,6 +3,207 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "anycall-merry-ramen-udon",
+      "repositoryPath": "research/archives/Samsung-Anycall-Merry-Ramen-Udon-Replays.zip",
+      "bytes": 410560,
+      "sha256": "669b413ea2efa23e56dd91f3685d962cdd61e20417883b1c3c1caee48df3203c",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "original/merry-christmas.mbin",
+          "bytes": 92462,
+          "crc32": "659e43e0",
+          "sha256": "7114c2494d25d708a3ebda216e090c0039c25f6bcbe0f3a1d83108a1e340895a"
+        },
+        {
+          "path": "merry-christmas/01-menu.png",
+          "bytes": 1998,
+          "crc32": "1d94b292",
+          "sha256": "ca7c17c630a5164539e5c92b0d6f280bddbc6394dcd78d5790edcfdb763f7aaf"
+        },
+        {
+          "path": "merry-christmas/04-before-input.png",
+          "bytes": 1682,
+          "crc32": "6bc1d5d6",
+          "sha256": "0bb3978235020798edb26cca94fff88fae3ae30a1a4b71269879fc8e31a0047c"
+        },
+        {
+          "path": "merry-christmas/05-no-input.png",
+          "bytes": 1746,
+          "crc32": "baf7afa3",
+          "sha256": "921bb4e265033f05ad5557d72dba65207737851e516ae397ee4b47fcbb9fb263"
+        },
+        {
+          "path": "merry-christmas/key-02.png",
+          "bytes": 1765,
+          "crc32": "99314f5e",
+          "sha256": "5a545e0c06a39f08af567a3cdf2d7fa5a5502c0dbd9d8fabd629422ba6bd4fbf"
+        },
+        {
+          "path": "merry-christmas/key-04.png",
+          "bytes": 1752,
+          "crc32": "2be2a46d",
+          "sha256": "04a6fcf82b1c278ed4f945623fbc11404f493fb5f661ccf4ceff46fe0d6e3020"
+        },
+        {
+          "path": "merry-christmas/key-06.png",
+          "bytes": 1756,
+          "crc32": "dabeb572",
+          "sha256": "02d558e74a8cfa70bc18894d1ca91dae26c05f448cc3f74cb493f9175e3d23a5"
+        },
+        {
+          "path": "merry-christmas/replay.json",
+          "bytes": 51736,
+          "crc32": "08cc2baa",
+          "sha256": "850a3d27eaa6dc9cdeee31b159b83b7c2d9a28ae7b5c6abbd13eb86a35d1ef20"
+        },
+        {
+          "path": "original/mr-ramen.mbin",
+          "bytes": 129976,
+          "crc32": "8563c572",
+          "sha256": "6b13f774d53bbf641e778a069b013cfd31555d84ec4af45504596a748629f0af"
+        },
+        {
+          "path": "mr-ramen/01-menu.png",
+          "bytes": 5929,
+          "crc32": "067d87b7",
+          "sha256": "d2d9cdf0248edbe062c713dd9553f0d606b1a29cd1a69cdf25e46675f2d4d374"
+        },
+        {
+          "path": "mr-ramen/02-counter-settings.png",
+          "bytes": 4951,
+          "crc32": "1fee6b01",
+          "sha256": "06f760e7c411e7a6b85abccaac6a05b62e109e77af927201e5af12fe6346c6a7"
+        },
+        {
+          "path": "mr-ramen/03-recipe.png",
+          "bytes": 4872,
+          "crc32": "d43be9f4",
+          "sha256": "6d4d7ca1110892a67ff002fb8d14288848ec889942d9c0765b677ec4976027c2"
+        },
+        {
+          "path": "mr-ramen/04-before-input.png",
+          "bytes": 4942,
+          "crc32": "cd713051",
+          "sha256": "6be10f3310fd70a7d10046c118176ae0ea0f9869acbc97436d35d88dbb2ab9c3"
+        },
+        {
+          "path": "mr-ramen/05-no-input.png",
+          "bytes": 4942,
+          "crc32": "cd713051",
+          "sha256": "6be10f3310fd70a7d10046c118176ae0ea0f9869acbc97436d35d88dbb2ab9c3"
+        },
+        {
+          "path": "mr-ramen/key-01.png",
+          "bytes": 5499,
+          "crc32": "dbdfa1db",
+          "sha256": "afe9ce4888bb2b05ce5cc8b00ac9f5425e7c79a1a2e4c673f838e4d4866c4734"
+        },
+        {
+          "path": "mr-ramen/key-02.png",
+          "bytes": 5513,
+          "crc32": "8cd983fd",
+          "sha256": "1b450bcac45d206e343f0ce4b4c6d2fd0898f64e67217f67c40d632be552819d"
+        },
+        {
+          "path": "mr-ramen/key-03.png",
+          "bytes": 5497,
+          "crc32": "fa5948ed",
+          "sha256": "051240390fb0b2179b0d05a3ad2d9b278060d43d76f0405267709a51ced3226e"
+        },
+        {
+          "path": "mr-ramen/key-04.png",
+          "bytes": 5571,
+          "crc32": "e4ed11c7",
+          "sha256": "54910fe8638162d597aa47173bcc0717354b9b4524ceb2aa09257379f6b78b9b"
+        },
+        {
+          "path": "mr-ramen/key-05.png",
+          "bytes": 5540,
+          "crc32": "22566e82",
+          "sha256": "cee6661e7ccba06c6bed8597288870eae037d3ecb4a907117a333fd073f0dc66"
+        },
+        {
+          "path": "mr-ramen/key-06.png",
+          "bytes": 5526,
+          "crc32": "0878a37f",
+          "sha256": "85800d63f0924517b63e8f67a519e308d7ec51703a64b92dc774c199c810fabf"
+        },
+        {
+          "path": "mr-ramen/key-07.png",
+          "bytes": 5361,
+          "crc32": "ef989807",
+          "sha256": "247b1b5f13bd99d13a07ce3fba775469997d29df0af93b6248e0c750ece2df81"
+        },
+        {
+          "path": "mr-ramen/key-08.png",
+          "bytes": 5349,
+          "crc32": "ecff8dd7",
+          "sha256": "b624a6f86c601a8e7f18b1915820d2be5dfcd2f59e45f720d61fceb91627e689"
+        },
+        {
+          "path": "mr-ramen/key-09.png",
+          "bytes": 5345,
+          "crc32": "5fa58bca",
+          "sha256": "af91e459e7f0171672cf81611372fd03da4c11378566cb8e177185575cc14f5f"
+        },
+        {
+          "path": "mr-ramen/replay.json",
+          "bytes": 44073,
+          "crc32": "64268db2",
+          "sha256": "d41f8e9180926d702883d3867c9f9ba2c59ea124fa92beab1dff102222b5d83a"
+        },
+        {
+          "path": "original/udon-time.mbin",
+          "bytes": 102948,
+          "crc32": "eef31061",
+          "sha256": "0d589cca6fc22e01f8e90f5fe7e43150cc2ce09317d5d822c5c438e439407672"
+        },
+        {
+          "path": "udon-time/01-menu.png",
+          "bytes": 11555,
+          "crc32": "8c0269db",
+          "sha256": "46d6a712b69523289aaced3b02b13270102f62e2ba4c3ee2334010c6477ecdbf"
+        },
+        {
+          "path": "udon-time/04-before-input.png",
+          "bytes": 4339,
+          "crc32": "4a5e0d82",
+          "sha256": "d8cbfdd346b75f63fc4ba33e2c5c696a0b3fcc85041a9816c221626d9e3ad0ae"
+        },
+        {
+          "path": "udon-time/05-no-input.png",
+          "bytes": 4339,
+          "crc32": "4a5e0d82",
+          "sha256": "d8cbfdd346b75f63fc4ba33e2c5c696a0b3fcc85041a9816c221626d9e3ad0ae"
+        },
+        {
+          "path": "udon-time/key-02.png",
+          "bytes": 4703,
+          "crc32": "a5b5b47b",
+          "sha256": "f6c67564106b3946a58eff4a3aa594bc2b872cfaabdf24ba253a0dccbe14e38b"
+        },
+        {
+          "path": "udon-time/key-05.png",
+          "bytes": 4575,
+          "crc32": "172f3bef",
+          "sha256": "741fb0eb7329b4589e9d30563d1f47184f12ec550d87b3da4b10624427fd4302"
+        },
+        {
+          "path": "udon-time/key-08.png",
+          "bytes": 4548,
+          "crc32": "c8752b28",
+          "sha256": "c8dbdf98d93eee2bc8a35436a2b2ce0276c5a46d55d92de099ef2ba9c0382059"
+        },
+        {
+          "path": "udon-time/replay.json",
+          "bytes": 30100,
+          "crc32": "c74acda6",
+          "sha256": "e7d553cf7e2d33473f504cfaa92a77071c7877b713772f2030fc87e23b150ffe"
+        }
+      ]
+    },
+    {
       "id": "anycall-119-rescue",
       "repositoryPath": "research/archives/Samsung-Anycall-119-Rescue-Replay.zip",
       "bytes": 32222,
@@ -228109,9 +228310,9 @@
     }
   ],
   "counts": {
-    "archives": 141,
-    "archiveBytes": 2544414206,
-    "fileMembers": 37806,
-    "uniqueMemberHashes": 22919
+    "archives": 142,
+    "archiveBytes": 2544824766,
+    "fileMembers": 37838,
+    "uniqueMemberHashes": 22949
   }
 }

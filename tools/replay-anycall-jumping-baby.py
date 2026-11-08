@@ -56,8 +56,21 @@ ADDITIONAL_GAMES = {
         "119_구조대.mbin",
         "982b6f0d3b66c8c4d4d9f3b73b16a3233fe71afee4a7b58a8e4e43ba4acdda73",
     ),
+    "merry-christmas": (
+        "버전 다름/메리_크리스마스.mbin",
+        "7114c2494d25d708a3ebda216e090c0039c25f6bcbe0f3a1d83108a1e340895a",
+    ),
+    "mr-ramen": (
+        "버전 다름/Mr_라면왕.mbin",
+        "6b13f774d53bbf641e778a069b013cfd31555d84ec4af45504596a748629f0af",
+    ),
+    "udon-time": (
+        "버전 다름/우동타임.mbin",
+        "0d589cca6fc22e01f8e90f5fe7e43150cc2ce09317d5d822c5c438e439407672",
+    ),
 }
 ADDITIONAL_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
+DRAWING_TIMERS = {"119-rescue": 1, "merry-christmas": 0, "mr-ramen": 2, "udon-time": 2}
 RGB332 = [
     bytes(
         ((value >> 5) * 255 // 7, ((value >> 2) & 7) * 255 // 7, (value & 3) * 255 // 3)
@@ -195,23 +208,37 @@ class Replay:
         return bytes(self.cpu.mem_read(FRAMEBUFFER, WIDTH * self.height))
 
 
-class RescueReplay(Replay):
-    def __init__(self, original):
+class DrawingReplay(Replay):
+    def __init__(self, original, game_id):
         self.color = 0
-        super().__init__(original, game_id="119-rescue")
+        self.random_state = 0x12345678
+        super().__init__(original, game_id=game_id)
         self.stub_slots = (self.stub_slots | {0x08}) - {0x48}
+        if game_id == "udon-time":
+            self.stub_slots = (self.stub_slots | {0x0C}) - {0x40}
 
     def tick(self, frames=1):
         for _ in range(frames):
-            self.dispatch(5, 1)
+            self.dispatch(5, DRAWING_TIMERS[self.game_id])
+
+    def output_address(self):
+        stack = self.cpu.reg_read(UC_ARM_REG_SP)
+        return struct.unpack("<I", self.cpu.mem_read(stack, 4))[0]
 
     def host(self, cpu, address, size, data):
         slot = address - STUBS
         if slot == 0x48:
             # A synthetic clock for this replay, in units of presented frames.
-            stack = cpu.reg_read(UC_ARM_REG_SP)
-            target = struct.unpack("<I", cpu.mem_read(stack, 4))[0]
-            cpu.mem_write(target + 12, struct.pack("<I", self.frames))
+            cpu.mem_write(self.output_address() + 12, struct.pack("<I", self.frames))
+            cpu.reg_write(UC_ARM_REG_R0, 0)
+        elif slot == 0x40 and self.game_id == "udon-time":
+            bounds = cpu.reg_read(UC_ARM_REG_R0)
+            low, high = bounds & 65535, bounds >> 16
+            if low > high:
+                raise ValueError("reversed ADS random bounds")
+            self.random_state = (1664525 * self.random_state + 1013904223) & 0xFFFFFFFF
+            choice = low + (self.random_state >> 16) % (high - low + 1)
+            cpu.mem_write(self.output_address(), struct.pack("<H", choice))
             cpu.reg_write(UC_ARM_REG_R0, 0)
         elif slot == 0x74:
             self.plot_pixel(*(cpu.reg_read(register) for register in ARGS))
@@ -280,9 +307,107 @@ def read_original(path, member="점핑!_베이비.mbin"):
         return games.read(member)
 
 
+def replay_identity(game, original):
+    return {
+        "schema": 1,
+        "game": game.game_id,
+        "originalMember": ADDITIONAL_GAMES[game.game_id][0],
+        "mbinSha256": game.original_sha256,
+        "mbinBytes": len(original),
+        "size": [WIDTH, game.height],
+        "palette": "provisional RGB332",
+        "hostCallCounts": {
+            f"0x{slot:02x}": count for slot, count in sorted(game.calls.items())
+        },
+        "stubSlots": [f"0x{slot:02x}" for slot in sorted(game.stub_slots)],
+    }
+
+
+def replay_controls(original, output, game_id):
+    sequence = [(520, None, "01-menu")]
+    if game_id == "mr-ramen":
+        sequence += [
+            (40, 19, "02-counter-settings"),
+            (40, 19, "03-recipe"),
+            (200, None, None),
+        ]
+        keys, ticks = range(1, 10), 12
+    elif game_id == "udon-time":
+        keys, ticks = (2, 5, 8), 6
+    else:
+        keys, ticks = (2, 4, 6), 10
+    sequence.append((40, 19, "04-before-input"))
+
+    control = DrawingReplay(original, game_id)
+    captures = []
+    for count, key, name in sequence:
+        if key is not None:
+            control.key(key)
+        control.tick(count)
+        if name:
+            captures.append(save_frame(output, name, control))
+    before_input = control.frame()
+    control.tick(ticks)
+    baseline = control.frame()
+    captures.append(save_frame(output, "05-no-input", control))
+
+    inputs = []
+    for button in keys:
+        game = DrawingReplay(original, game_id)
+        for count, key, _ in sequence:
+            if key is not None:
+                game.key(key)
+            game.tick(count)
+        if game.frame() != before_input:
+            raise RuntimeError("control diverged before gameplay input")
+        game.key(button)
+        game.tick(ticks)
+        changed = [i for i, (a, b) in enumerate(zip(game.frame(), baseline)) if a != b]
+        if not changed:
+            raise RuntimeError(f"no gameplay difference after key {button}")
+        xs = [i % WIDTH for i in changed]
+        inputs.append(
+            {
+                "key": button,
+                "changedPixels": len(changed),
+                "changedBounds": [
+                    min(xs),
+                    changed[0] // WIDTH,
+                    max(xs) + 1,
+                    changed[-1] // WIDTH + 1,
+                ],
+                "capture": save_frame(output, f"key-{button:02d}", game),
+            }
+        )
+    if len({row["capture"]["indexedSha256"] for row in inputs}) != len(inputs):
+        raise RuntimeError("some gameplay buttons produced identical frames")
+    manifest = {
+        **replay_identity(control, original),
+        "timerArgument": DRAWING_TIMERS[game_id],
+        "clock": "synthetic count of presented frames",
+        "commonSequence": [{"ticks": count, "key": key} for count, key, _ in sequence],
+        "pairedTimerEvents": ticks,
+        "captures": captures,
+        "inputs": inputs,
+        "mqRecords": [
+            control.resources[offset] for offset in sorted(control.resources)
+        ],
+    }
+    if game_id == "udon-time":
+        manifest["randomSeed"] = 0x12345678
+    (output / "replay.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    print(
+        f"{game_id}: {len(control.resources)} MQ records, {len(inputs)} verified input comparisons"
+    )
+
+
 def replay_game(original, output, game_id):
     if game_id == "119-rescue":
-        game, control = RescueReplay(original), RescueReplay(original)
+        game, control = DrawingReplay(original, game_id), DrawingReplay(
+            original, game_id
+        )
     else:
         game, control = Replay(original, game_id=game_id), Replay(
             original, game_id=game_id
@@ -333,17 +458,7 @@ def replay_game(original, output, game_id):
     captures.append(save_frame(output, "06-input", game))
 
     manifest = {
-        "schema": 1,
-        "game": game_id,
-        "originalMember": ADDITIONAL_GAMES[game_id][0],
-        "mbinSha256": game.original_sha256,
-        "mbinBytes": len(original),
-        "size": [WIDTH, game.height],
-        "palette": "provisional RGB332",
-        "hostCallCounts": {
-            f"0x{slot:02x}": count for slot, count in sorted(game.calls.items())
-        },
-        "stubSlots": [f"0x{slot:02x}" for slot in sorted(game.stub_slots)],
+        **replay_identity(game, original),
         "commonSequence": [{"ticks": ticks, "key": key} for ticks, key, _ in sequence],
         "gameplayInput": {"key": input_key, "ticks": ticks, "inputTicks": input_ticks},
         "changedPixels": changed,
@@ -374,7 +489,10 @@ def main():
     if args.game != "jumping-baby":
         original = read_original(args.source, ADDITIONAL_GAMES[args.game][0])
         args.output.mkdir(parents=True, exist_ok=True)
-        replay_game(original, args.output, args.game)
+        if args.game in DRAWING_TIMERS and args.game != "119-rescue":
+            replay_controls(original, args.output, args.game)
+        else:
+            replay_game(original, args.output, args.game)
         return
     original = read_original(args.source)
     args.output.mkdir(parents=True, exist_ok=True)
