@@ -1,4 +1,4 @@
-import { GnexRuntime } from './engine/gnex.js';
+import { GnexRuntime, ROM_SHA256 } from './engine/gnex.js';
 import { LegacyRuntime } from './engine/legacy.js';
 import { detectVersion } from './engine/sgs.js';
 import { TimerScheduler } from './engine/timers.js';
@@ -73,7 +73,11 @@ let timers = new TimerScheduler(),
   framePending = false,
   lastDisplayUpdate = null,
   lastStatus = 0,
-  firmwareBudget = 100000;
+  firmwareBudget = 100000,
+  firmwareYields = 0;
+let firmwareChannel;
+let paceFirmware = false,
+  firmwareDue = 0;
 const frameInterval = 1000 / 60;
 const adsTimers = [{ channel: 0, delay: frameInterval, repeat: true, revision: 1 }];
 let queue = Promise.resolve();
@@ -260,6 +264,9 @@ async function load(message) {
   framePending = false;
   lastDisplayUpdate = null;
   firmwareBudget = 100000;
+  firmwareYields = 0;
+  paceFirmware = false;
+  firmwareDue = 0;
   timers = new TimerScheduler();
   nativeStarts.clear();
   nativeReleases.clear();
@@ -325,6 +332,7 @@ async function load(message) {
       fastIdle: true,
       traceInstructions: false,
     });
+    paceFirmware = message.firmwareClock === true && machine.rom_info?.sha256 === ROM_SHA256;
     if (message.type === 'loadState') {
       await machine.loadState(content);
       for (const key of ['up', 'down', 'left', 'right', 'a', 'b', 'menu', 'start', 'mode', 'rec'])
@@ -344,7 +352,11 @@ async function command(message) {
   }
   if (message.sessionId != null && message.sessionId !== activeSession) return;
   if (!machine) return;
-  if (message.type === 'key') {
+  if (message.type === 'firmwareClock' && mode === 'firmware') {
+    paceFirmware = message.enabled === true && machine.rom_info?.sha256 === ROM_SHA256;
+    lastLoad.firmwareClock = paceFirmware;
+    firmwareDue = 0;
+  } else if (message.type === 'key') {
     const key = message.key,
       pressed = !!message.pressed;
     if (isAds) setAdsKey(key, pressed, message.repeat);
@@ -382,6 +394,7 @@ async function command(message) {
   } else if (message.type === 'resume') {
     if (pausedAt !== null) timers.shift(performance.now() - pausedAt);
     pausedAt = null;
+    firmwareDue = 0;
     running = true;
     checkState();
     if (running) audio.resume();
@@ -409,18 +422,22 @@ onmessage = (event) => {
 function tick() {
   try {
     if (running && machine) {
-      if (mode === 'firmware') {
-        const started = performance.now();
+      const started = performance.now();
+      if (mode === 'firmware' && started >= firmwareDue) {
         let budget = firmwareBudget;
+        const clock = paceFirmware ? machine.nominalCpuHz : 0;
+        const before = machine.instructions;
+        if (clock > 0) budget = Math.min(budget, Math.max(1, Math.floor(clock / 50)));
         for (const at of nativeReleases.values())
           budget = Math.min(budget, Math.max(1, at - machine.instructions));
         machine.run(budget, { snapshot: false });
+        if (clock > 0) firmwareDue = started + ((machine.instructions - before) * 1000) / clock;
         releaseNative();
         const elapsed = Math.max(1, performance.now() - started);
         firmwareBudget = Math.max(2000, Math.min(1000000, Math.round((budget * 20) / elapsed)));
         checkState();
         frame();
-      } else {
+      } else if (mode === 'game') {
         const timer = timers.next();
         if (timer && performance.now() >= timer.at) {
           fireTimer(timer.channel, timer.at);
@@ -436,6 +453,29 @@ function tick() {
   } catch (error) {
     fail(error);
   }
+  const clockWait = running && mode === 'firmware' ? firmwareDue - performance.now() : 0;
+  if (clockWait > 0) {
+    firmwareYields = 0;
+    setTimeout(tick, Math.ceil(clockWait));
+    return;
+  }
+  if (
+    running &&
+    mode === 'firmware' &&
+    firmwareYields < 2 &&
+    typeof MessageChannel === 'function'
+  ) {
+    // Yield to another task without nesting a timer after every CPU slice.
+    // Keep a timer after every third slice so background pacing still applies.
+    if (!firmwareChannel) {
+      firmwareChannel = new MessageChannel();
+      firmwareChannel.port1.onmessage = tick;
+    }
+    firmwareYields++;
+    firmwareChannel.port2.postMessage(null);
+    return;
+  }
+  firmwareYields = 0;
   let delay = running ? 1 : 25;
   if (running && isAds) {
     const due = Math.min(

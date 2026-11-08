@@ -26,9 +26,11 @@ let toastTimer = 0;
 let loadSequence = 0;
 let sessionCounter = 0;
 let soundEnabled = true;
+let firmwareClock = false;
 let userVolume = 75;
 let lastVolume = 75;
 try {
+  firmwareClock = localStorage.getItem('reunion-firmware-clock') === 'true';
   const saved = localStorage.getItem('reunion-volume');
   if (saved !== null && Number.isFinite(Number(saved)))
     userVolume = Math.max(0, Math.min(100, Math.round(Number(saved) / 5) * 5));
@@ -95,6 +97,7 @@ function setStatus(text, kind = '') {
 }
 
 function updateTransport() {
+  $('firmwareClock').disabled = current?.kind !== 'firmware' || current.rom?.id !== 'kingston-2.12';
   $('playPause').disabled = !current || !workerReady || machineOff;
   $('reset').disabled = !current || !workerReady;
   $('playPause').querySelector('span').textContent = running ? 'Пауза' : 'Продолжить';
@@ -251,6 +254,16 @@ $('deviceSelect').addEventListener('change', (event) => {
   }
   applyDevice();
 });
+$('firmwareClock').checked = firmwareClock;
+$('firmwareClock').addEventListener('change', (event) => {
+  firmwareClock = event.target.checked;
+  try {
+    localStorage.setItem('reunion-firmware-clock', String(firmwareClock));
+  } catch {
+    /* optional preference */
+  }
+  if (current?.kind === 'firmware') post({ type: 'firmwareClock', enabled: firmwareClock });
+});
 for (const [id, dialog] of [
   ['openLibrary', 'libraryDrawer'],
   ['emptyLibrary', 'libraryDrawer'],
@@ -308,6 +321,7 @@ function beginSession(details, command) {
   audio.stop();
   current = { ...details, sessionId: ++sessionCounter };
   command = { ...command, sessionId: current.sessionId };
+  if (current.kind === 'firmware') command.firmwareClock = firmwareClock;
   running = false;
   machineOff = false;
   hasFrame = false;
@@ -449,7 +463,7 @@ function updateLibraryHint() {
     libraryTab !== 'firmwares'
       ? available === entries.length && available > 0
         ? libraryTab === 'samples'
-          ? 'Учебные примеры · Mobile C / GNEX'
+          ? 'Демки Reunion и примеры SDK · Mobile C / GNEX'
           : 'Оригинальные игры · GNEX и Anycall'
         : `Доступно ${available} из ${entries.length} · добавьте свои файлы`
       : available > 0

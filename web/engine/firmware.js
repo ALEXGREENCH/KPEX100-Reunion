@@ -554,7 +554,10 @@ export class FirmwareMachine {
     if (!this.milestones.includes('Delivered hardware timer interrupt'))
       this.milestones.push('Delivered hardware timer interrupt');
   }
-  _clockRatio() {
+  get nominalCpuHz() {
+    return this._clockRatio(true);
+  }
+  _clockRatio(cpuOnly = false) {
     const pll = this.mmio[0x80000404] ?? 0x2e02,
       m = (pll >>> 8) & 63,
       p = pll & 63,
@@ -569,7 +572,7 @@ export class FirmwareMachine {
       ts = [source, 12000000, 32768, 0][(tclk >>> 8) & 3],
       tp = tclk & 63,
       timer = div & 256 ? ts / (tp + 1) : (ts * tp) / 64;
-    return timer / Math.max(1, cpu);
+    return cpuOnly ? cpu : timer / Math.max(1, cpu);
   }
   _advanceTimers(batch = null) {
     const elapsed = this.instructions - this.timer_last;

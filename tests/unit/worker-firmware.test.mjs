@@ -8,15 +8,17 @@ const source = fs
   .readFileSync(new URL('../../web/worker.js', import.meta.url), 'utf8')
   .replace(/^import .*;\r?$/gm, '');
 
-function harness({ deferredFetch = false } = {}) {
+function harness({ deferredFetch = false, firmwareChannel = false } = {}) {
   let now = 1000;
   const fetched = [],
     pending = new Map(),
     created = [],
     disks = [],
-    messages = [];
+    messages = [],
+    scheduled = [];
   const sandbox = {
     TimerScheduler,
+    ROM_SHA256: 'kingston',
     performance: { now: () => now },
     fetch(url) {
       fetched.push(url);
@@ -42,6 +44,8 @@ function harness({ deferredFetch = false } = {}) {
           height: 1,
           framebufferRGBA: Uint8ClampedArray.of(0, 0, 0, 255),
           lcd_pixel_writes: 0,
+          nominalCpuHz: 200000,
+          rom_info: { sha256: rom[0] === 1 ? 'kingston' : 'other' },
           keys: [],
           budgets: [],
           runOptions: [],
@@ -71,8 +75,15 @@ function harness({ deferredFetch = false } = {}) {
     postMessage(message, transfer = []) {
       messages.push(structuredClone(message, { transfer }));
     },
-    setTimeout() {},
+    setTimeout(_callback, delay) {
+      scheduled.push(delay);
+    },
   };
+  if (firmwareChannel)
+    sandbox.MessageChannel = class {
+      port1 = {};
+      port2 = { postMessage: () => scheduled.push(this.port1.onmessage) };
+    };
   vm.createContext(sandbox);
   vm.runInContext(source + '\nglobalThis.control = { command, tick };', sandbox);
   return {
@@ -81,6 +92,7 @@ function harness({ deferredFetch = false } = {}) {
     created,
     disks,
     messages,
+    scheduled,
     reply(url, bytes) {
       assert.ok(pending.has(url), 'Download started: ' + url);
       pending.get(url)(bytes);
@@ -90,6 +102,40 @@ function harness({ deferredFetch = false } = {}) {
     },
   };
 }
+
+test('firmware yields through queued tasks with periodic timer pacing and stops on pause', async () => {
+  const h = harness({ firmwareChannel: true });
+  await h.boot();
+  h.tick();
+  assert.equal(h.scheduled.at(-1), h.tick);
+  h.scheduled.at(-1)();
+  assert.equal(h.scheduled.at(-1), h.tick);
+  h.scheduled.at(-1)();
+  assert.equal(h.scheduled.at(-1), 1);
+
+  h.tick();
+  assert.equal(h.scheduled.at(-1), h.tick);
+  await h.command({ type: 'pause', sessionId: 1 });
+  const before = h.created[0].guest.instructions;
+  h.scheduled.at(-1)();
+  assert.equal(h.created[0].guest.instructions, before);
+  assert.equal(h.scheduled.at(-1), 25);
+});
+
+test('nominal clock pacing caps each supported slice and skips work before its deadline', async () => {
+  const h = harness({ firmwareChannel: true });
+  await h.boot();
+  await h.command({ type: 'firmwareClock', sessionId: 1, enabled: true });
+  const g = h.created[0].guest;
+  h.tick();
+  assert.equal(g.instructions, 4000);
+  assert.equal(h.scheduled.at(-1), 20);
+  h.tick();
+  assert.equal(g.instructions, 4000);
+  await h.command({ type: 'firmwareClock', sessionId: 1, enabled: false });
+  h.tick();
+  assert.ok(g.instructions > 8000);
+});
 
 test('cold boot fetches ROM and all supplied local/hosted games concurrently and adopts only its new disk', async () => {
   const h = harness({ deferredFetch: true });
