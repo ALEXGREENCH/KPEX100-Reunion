@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "archive": {
+    "id": "inotia-ktf-original-aid",
+    "repositoryPath": "research/archives/Inotia-Chronicles-KTF-Original-AID.zip",
+    "manifestMembers": 14,
+    "bytes": 1375768,
+    "sha256": "a993caacb416a7b4d5c28aefad21d386766d8d10a726104962764c51260456c0",
+    "crc32": "eb4e334f"
+  },
+  "originals": [
+    {
+      "source": "https://archive.org/details/ktf-brew",
+      "parent": "Dubigame-KTF-BREW-358-Original-Collection.zip",
+      "path": "0467_이노티아연대기by그대의빛.zip",
+      "bytes": 984928,
+      "sha256": "118bdb8e73b2c6461ae0ac181d25a1612258986f2b548db26ef42ab69a326382",
+      "crc32": "4040811c"
+    },
+    {
+      "source": "https://wipix.tistory.com/36",
+      "parent": "research/archives/WIPI-X-30-Games-and-Sketcher-QVGA.zip",
+      "path": "after-up.png",
+      "bytes": 985530,
+      "sha256": "93d5b6b8ceb5cf4ce15784e369a7af9cd8ef7a49d6f15816d665aedadc487a4a",
+      "crc32": "f55e0e17"
+    }
+  ],
+  "game": {
+    "aid": "01039177",
+    "pid": "PD005362",
+    "version": "01.00.05",
+    "bytes": 982833,
+    "sha256": "f62b620d4a526a8ad81bc303ad124dceefd9b569ccab0b32d318b538e63f12bc",
+    "crc32": "9581c48c"
+  },
+  "unchangedJar": {
+    "bytes": 632047,
+    "sha256": "ef86ea5e31531071df1f59c2eaa0e7987bae445ac75040a48f235bf3e06dc014",
+    "crc32": "1f6b6a3e"
+  },
+  "replacements": [
+    {
+      "path": "P/char.dat",
+      "original": {
+        "bytes": 45677,
+        "sha256": "1517f305ae0e60a2129ffa985da0994a795a84b082fd910483ae7fd842fc72a7",
+        "crc32": "94d13e84"
+      },
+      "replacement": {
+        "bytes": 45677,
+        "sha256": "fe8a50281179eb5325f5386327b07f60761451e5f250e5ff852af85346bc4e94",
+        "crc32": "c87d5fae"
+      }
+    },
+    {
+      "path": "P/map.dat",
+      "original": {
+        "bytes": 163179,
+        "sha256": "799ee69a3bb7f251b8af1d78b4097b87c60bdb8f00f5cca4a758bb3d1d9d7186",
+        "crc32": "558b9f16"
+      },
+      "replacement": {
+        "bytes": 163179,
+        "sha256": "e0510fad0aaded17bddab8f48d92e4fe531795f9bed048f84fc1987f7b34d662",
+        "crc32": "3f68618e"
+      }
+    },
+    {
+      "path": "P/mon.dat",
+      "original": {
+        "bytes": 182527,
+        "sha256": "be2f6c6849923df979df50c5ba929aa9fc7084a3395b6449cd9cef64c6f913bb",
+        "crc32": "1f1cabc0"
+      },
+      "replacement": {
+        "bytes": 182527,
+        "sha256": "ba8b8c990d2c2bef9f9f8737013d19b478b363c396174a5b8ede366b918cbdf1",
+        "crc32": "43b0caea"
+      }
+    },
+    {
+      "path": "P/pattern.dat",
+      "original": {
+        "bytes": 76964,
+        "sha256": "7a2bf044224ec7f82ae18c2e5bef7e26af4ee6174a802ade38204ff2604aff65",
+        "crc32": "cb043068"
+      },
+      "replacement": {
+        "bytes": 76964,
+        "sha256": "806b438983fb97ec642736572df1cd1b79a64e826b025d5a5adbd29c99142097",
+        "crc32": "97a85142"
+      }
+    },
+    {
+      "path": "P/prefs",
+      "original": {
+        "bytes": 64,
+        "sha256": "871f552d5767049c66c7608721fa1430a90194306088e399e572bc8051ff5866",
+        "crc32": "ab0c0ac2"
+      },
+      "replacement": {
+        "bytes": 64,
+        "sha256": "2a702cdf2db4b96f44516872ba97b674f6b6d5f53f1f6a9598a4be57ba075fcb",
+        "crc32": "36e7d451"
+      }
+    },
+    {
+      "path": "P/tile.dat",
+      "original": {
+        "bytes": 155061,
+        "sha256": "110fabf58f31229b2ab8f4481750ee773d63f9e2ae95c7f28619e2c607209b8c",
+        "crc32": "642fd165"
+      },
+      "replacement": {
+        "bytes": 155061,
+        "sha256": "eb44ad07c481aa421ec69b6f75ca74ab417434c3cbd2cc33245db459b61b574e",
+        "crc32": "3883b04f"
+      }
+    }
+  ],
+  "removed": [
+    "P/save0.dat"
+  ],
+  "aram": {
+    "revision": "fea299cba15696ed1460f965b76626d6edab5e03",
+    "runBudget": 200000,
+    "screen": [
+      176,
+      220
+    ]
+  },
+  "villageFrame": 6062,
+  "villageVirtualMs": 96992
+}

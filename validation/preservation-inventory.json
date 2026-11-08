@@ -3,6 +3,105 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "inotia-ktf-original-aid",
+      "repositoryPath": "research/archives/Inotia-Chronicles-KTF-Original-AID.zip",
+      "bytes": 1375768,
+      "sha256": "a993caacb416a7b4d5c28aefad21d386766d8d10a726104962764c51260456c0",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/matrix.json",
+          "bytes": 5079,
+          "crc32": "35d13d9d",
+          "sha256": "16b6076738a5da04be979e84dcf09058f13e502dab01e76190689de443272551"
+        },
+        {
+          "path": "evidence/provenance.json",
+          "bytes": 3541,
+          "crc32": "537c13c6",
+          "sha256": "22a2f51ec61d5ae024668f8b68da6c466aa5216832984bdea7b30675d88f60e5"
+        },
+        {
+          "path": "evidence/village.json",
+          "bytes": 959,
+          "crc32": "f088e173",
+          "sha256": "d26596cb46c0a4769a074e2008e334ce71e577369429c38a8aba0435a6ad9626"
+        },
+        {
+          "path": "evidence/wie-original.json",
+          "bytes": 1505,
+          "crc32": "2251d0fd",
+          "sha256": "bfc2a98ac5be2a98789f3928208798038d807f4a8eeb43e983cfdbfde5919c99"
+        },
+        {
+          "path": "evidence/wie-wipix.json",
+          "bytes": 1505,
+          "crc32": "466e7652",
+          "sha256": "d0f5d061c365be00756091c1f64233e2c454309d1cee34059f1afaa4eb85d3c5"
+        },
+        {
+          "path": "game.zip",
+          "bytes": 982833,
+          "crc32": "9581c48c",
+          "sha256": "f62b620d4a526a8ad81bc303ad124dceefd9b569ccab0b32d318b538e63f12bc"
+        },
+        {
+          "path": "replay/control/after-up.png",
+          "bytes": 32718,
+          "crc32": "4711803a",
+          "sha256": "9a9b5bb2158140c4cdd9e71f750cdf6bc59a703fbd78eaba9e9c25e1f4709f04"
+        },
+        {
+          "path": "replay/control/replay.lua",
+          "bytes": 935,
+          "crc32": "773cfdc1",
+          "sha256": "4156e31a27587d20e944ba2f84912e78896b6e9ac3c8563d47bf8891d0166c1d"
+        },
+        {
+          "path": "replay/control/result.ndjson",
+          "bytes": 120071,
+          "crc32": "71e7e5a0",
+          "sha256": "80fc23f8f39bdba9c4a565b0f6c739d9c96d8416d1e0e973049e51559e21c8ef"
+        },
+        {
+          "path": "replay/input/after-up.png",
+          "bytes": 21967,
+          "crc32": "51c27378",
+          "sha256": "ba2e80d8e1ec32f066a092aa1466a431fbb6065b65405e66d5a90acc3c5c7058"
+        },
+        {
+          "path": "replay/input/replay.lua",
+          "bytes": 940,
+          "crc32": "d3d47a84",
+          "sha256": "6ea6867ef500f000361722bceb762b177afccd9c0053fdcc88b89f1b8ed8deff"
+        },
+        {
+          "path": "replay/input/result.ndjson",
+          "bytes": 120105,
+          "crc32": "3a797b8d",
+          "sha256": "cc46b4e6e15b5946aa2d0aca74a22fc772b8fb800949cca7c9ca255cf2944044"
+        },
+        {
+          "path": "replay/wie-original-download-prompt.png",
+          "bytes": 157110,
+          "crc32": "891ef357",
+          "sha256": "1a9ed22b5f019b02b512ce7b08ba245262b35dad03c2180446aa5953187b12e3"
+        },
+        {
+          "path": "replay/wie-wipix-download-prompt.png",
+          "bytes": 157596,
+          "crc32": "b127caee",
+          "sha256": "06bf6047c3a086a43153bc52d118868eba2b32a4f259043fb788378b0fcb161d"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 2463,
+          "crc32": "98926dab",
+          "sha256": "8e4681930ade4ed0f131017c19f66bad9b22a581095ee8f4cb5604bc4ea7eacb"
+        }
+      ]
+    },
+    {
       "id": "otterpebble-wie-web",
       "repositoryPath": "research/archives/Otterpebble-WIE-Web-and-Dongmul-Demo.zip",
       "bytes": 25018942,
@@ -213364,9 +213463,9 @@
     }
   ],
   "counts": {
-    "archives": 120,
-    "archiveBytes": 2478792412,
-    "fileMembers": 35380,
-    "uniqueMemberHashes": 20636
+    "archives": 121,
+    "archiveBytes": 2480168180,
+    "fileMembers": 35395,
+    "uniqueMemberHashes": 20651
   }
 }

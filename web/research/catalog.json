@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "inotia-ktf-original-aid",
+      "title": "Inotia Chronicles · версия KTF с исходным AID",
+      "category": "Игры и игровые сборки",
+      "description": "Сборка 01.00.05 с исходным JAR и данными WIPI-X. В ARAM проверены создание героя, вступление и меню навыков в деревне.",
+      "repositoryPath": "research/archives/Inotia-Chronicles-KTF-Original-AID.zip",
+      "bytes": 1375768,
+      "sha256": "a993caacb416a7b4d5c28aefad21d386766d8d10a726104962764c51260456c0",
+      "sources": [
+        {
+          "label": "Оригинальный пакет KTF",
+          "url": "https://archive.org/details/ktf-brew"
+        },
+        {
+          "label": "Ресурсы WIPI-X",
+          "url": "https://wipix.tistory.com/36"
+        }
+      ]
+    },
+    {
       "id": "otterpebble-wie-web",
       "title": "Otterpebble · WIE для браузера и Dongmul Julmatchum",
       "category": "Эмуляторы и инструменты",
@@ -2449,6 +2468,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Inotia Chronicles KTF · данные и запуск",
+      "repositoryPath": "doc/inotia-ktf-original-aid.md"
+    },
     {
       "title": "Браузерный WIE и демоигра Dongmul Julmatchum",
       "repositoryPath": "doc/otterpebble-wie-web.md"
