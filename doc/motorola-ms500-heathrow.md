@@ -1,0 +1,9 @@
+# Motorola MS500 Heathrow
+
+В комплект вошли инженерный Turbo Downloader 0.42.14, два руководства Motorola, лист характеристик и страницы производителя. ZIP инструмента прошёл проверку CRC для всех четырёх файлов. Сохранены исходные ответы, размеры, SHA‑256 и адреса источников. Для четырёх снимков Wayback совпали SHA‑1 из CDX. [Скачать комплект](../research/archives/Motorola-MS500-Heathrow-TurboDownloader-and-Manuals.zip) · [Манифест и проверка](../validation/motorola-ms500-heathrow.json)
+
+В `TurboDownloader_0.42.14.zip` лежат Windows EXE, `HEATHROW.adp`, карта `NvMap_HEATHROW.csv` и файл удаления программы. В EXE видны название сборки Heathrow Engineering, строка `Reading WIPI contents ->` и фильтры `*.efs`, `*.nvi`, `*.prl`, `*.bin`. Смещения и кодировки строк записаны в отчёте. Связь этих строк с конкретной операцией чтения ещё требует проверки на устройстве. [Каталог Turbo Downloader](https://firmware.center/firmware/Motorola/MS500%20%28Heathrow%20KCDMA%29/PC%20Software/Turbo%20Downloader/)
+
+На печатной странице 41 английского руководства меню SKT Service → mPlayon открывает загруженный контент, в том числе игры. На иллюстрации видно меню телефона. Из руководства нельзя определить, какие игры были установлены. [Руководство Motorola](https://firmware.center/firmware/Motorola/MS500%20%28Heathrow%20KCDMA%29/Product%20Info/User%20Manuals/MS500.PDF)
+
+Motorola направляла владельцев MS500 в каталог PC Sync на `mymotorola.co.kr`. Снимок `/download/pcsoftware/` от 8 июня 2007 года содержит страницу ошибки, хотя HTTP-ответ имеет код 200. Установщик PC Sync, полный образ Heathrow и телефонный проигрыватель `GNEX_GIGA13` пока не найдены. [Поддержка Motorola](https://en-us.support.motorola.com/app/answers/detail/a_id/43384) · [Архивная страница](https://web.archive.org/web/20070608161011id_/http://www.mymotorola.co.kr/download/pcsoftware/) · [Шаблоны реестра MS500](palletshipping-wipi-tools-and-ms500.md)

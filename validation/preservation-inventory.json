@@ -3,6 +3,345 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "motorola-ms500-heathrow",
+      "repositoryPath": "research/archives/Motorola-MS500-Heathrow-TurboDownloader-and-Manuals.zip",
+      "bytes": 29986078,
+      "sha256": "8118e3b8d436c7095ff83afbeb3e5887981bf138dde9e241dddae228f6cdc4e2",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/listing-receipts.json",
+          "bytes": 1666,
+          "crc32": "fd150114",
+          "sha256": "71c3c61bd8556586315c1a16430c54fefd55051f1fbc42fff0492e5436acfdaa"
+        },
+        {
+          "path": "evidence/motorola-download-probes.json",
+          "bytes": 4590,
+          "crc32": "1021bb2a",
+          "sha256": "93adf4ebc06f8001f79bc2b168faaf9a5ef0fce0befb150fa66690086f9f4f60"
+        },
+        {
+          "path": "evidence/motorola-model-probes.json",
+          "bytes": 5731,
+          "crc32": "bd9f95d6",
+          "sha256": "f63173c46f1565a0964d0313180faeee007008504a1d0ec6e47d36010ecf32a0"
+        },
+        {
+          "path": "evidence/motorola-portal-probes.json",
+          "bytes": 2539,
+          "crc32": "b7700c40",
+          "sha256": "f7340bb11933bd6404f727ff1b4ef66bab681322bc10f6181cc1b5074eb7b339"
+        },
+        {
+          "path": "evidence/motorola-support-probes.json",
+          "bytes": 4460,
+          "crc32": "c0a4484b",
+          "sha256": "4761875578de31736eb1b468d205ce1c83cc225335929a06aef6b02d0d57679e"
+        },
+        {
+          "path": "evidence/pdf-receipts.json",
+          "bytes": 1412,
+          "crc32": "2428c5c3",
+          "sha256": "842663b95445576d23fcc4dd7608d4f5490e94f33776c67ac9b295ff6d20cf7e"
+        },
+        {
+          "path": "evidence/turbo-receipt.json",
+          "bytes": 1141,
+          "crc32": "0cfb00fa",
+          "sha256": "69e67499be61420018fa6c683a49ebe13629eeb8583ca39e64b1dcafd545815f"
+        },
+        {
+          "path": "evidence/verified-sources.json",
+          "bytes": 10658,
+          "crc32": "a5ef44c2",
+          "sha256": "7b086317945342ae830b5c482ed8e80b235396b44647de1151a38dfee7aee350"
+        },
+        {
+          "path": "headers/MS500-0610.pdf.headers.txt",
+          "bytes": 737,
+          "crc32": "8311d256",
+          "sha256": "40f07c9a99b8f5811813b741c657ead8391646464f568424df732d0f73e67d10"
+        },
+        {
+          "path": "headers/MS500-Fact-Sheet.pdf.headers.txt",
+          "bytes": 733,
+          "crc32": "156a7b4e",
+          "sha256": "57a80d9e986e56fcfdf9161b52e7c9f5f08207b103e1f59b2ce8e98b51398fe5"
+        },
+        {
+          "path": "headers/MS500.PDF.headers.txt",
+          "bytes": 733,
+          "crc32": "58b8a541",
+          "sha256": "a6c447570ae48ea3e3dc36a5e6a2e9c8c5e15fa13c4c521c783bd206208c3f0c"
+        },
+        {
+          "path": "headers/blackrazr-entry.headers.txt",
+          "bytes": 1883,
+          "crc32": "115633de",
+          "sha256": "a03e2e36f18b3d4c33a73a6481d743d007312fed7908eb0694ea61c9706d4a42"
+        },
+        {
+          "path": "headers/blackrazr-main.headers.txt",
+          "bytes": 1970,
+          "crc32": "4d2e0c7c",
+          "sha256": "12b6ee381a25a0f4f944c37e02438a312edc6619137e3816123ff1bc05dcd48d"
+        },
+        {
+          "path": "headers/moto-download-cdx-2.headers.txt",
+          "bytes": 636,
+          "crc32": "6af6c5c5",
+          "sha256": "41d1a3142f0772c4d5ff334335777a9536c6a83b70171d8eebb4658ee807c023"
+        },
+        {
+          "path": "headers/moto-specific-cdx-2.headers.txt",
+          "bytes": 635,
+          "crc32": "41a079e9",
+          "sha256": "bc412e275e09b14f393e58f9c6c50fc09bf7c9080ad14b251660ca851288113c"
+        },
+        {
+          "path": "headers/motorola-cdx-0.headers.txt",
+          "bytes": 647,
+          "crc32": "2e0997a6",
+          "sha256": "aa8e288cc1b674337f594b9c9aa96fbf852f1a3a0e1730a0387a5c11a719d7ba"
+        },
+        {
+          "path": "headers/motorola-cdx-1.headers.txt",
+          "bytes": 645,
+          "crc32": "b8ffc77f",
+          "sha256": "a8c86f3283db103773d732283d3d76b6e6bc057f66d951796dfe01fce0b58070"
+        },
+        {
+          "path": "headers/motorola-cdx-2.headers.txt",
+          "bytes": 646,
+          "crc32": "6177a39b",
+          "sha256": "6b6fca005356239dc1e2cf4b2a6711ca60e1d4e4b92eb22ed7530c393a990c2f"
+        },
+        {
+          "path": "headers/motorola-cdx-3.headers.txt",
+          "bytes": 648,
+          "crc32": "cc4e0118",
+          "sha256": "5d5804c7ffe4f2c636cac5114ed307474b1e411a89891b59ec84e19ad0de105e"
+        },
+        {
+          "path": "headers/motorola-main-aspx.headers.txt",
+          "bytes": 2871,
+          "crc32": "9e9c3397",
+          "sha256": "d0785ca3fc13873775215c7f4ce70aaf314a3b96d9576b8a7986eb524a34f052"
+        },
+        {
+          "path": "headers/motorola-main-cdx-0.headers.txt",
+          "bytes": 647,
+          "crc32": "1092a2bb",
+          "sha256": "9afb5681369703096b6f7dbb48182395f38b02930045d3e552f015938850a30a"
+        },
+        {
+          "path": "headers/motorola-main-cdx-1.headers.txt",
+          "bytes": 647,
+          "crc32": "090cc31a",
+          "sha256": "e93d24794beb81d877d922e2f11be85f3d74daab7534e538e3c604acc84c9de1"
+        },
+        {
+          "path": "headers/motorola-main-cdx-2.headers.txt",
+          "bytes": 645,
+          "crc32": "3c77ff44",
+          "sha256": "2c30f99ccd361041c78ff873990cb029098aa82a8c9251896a033a57d2b9adc2"
+        },
+        {
+          "path": "headers/motorola-pcsoftware.headers.txt",
+          "bytes": 2079,
+          "crc32": "ad9a39f7",
+          "sha256": "ce99854aded805e01a36fb4b8dc81ac0aa774afe94f2bb5ce9ce35f89933785a"
+        },
+        {
+          "path": "headers/motorola-support.headers.txt",
+          "bytes": 1340,
+          "crc32": "ca2daf5b",
+          "sha256": "f7746c979775354cdd7b8a927d94fcf00e40726cc5fa619c4496fad95e6f5698"
+        },
+        {
+          "path": "headers/ms500-manuals.html.headers.txt",
+          "bytes": 848,
+          "crc32": "1aad7fc9",
+          "sha256": "b7efe182bc5bcce133f093f0e002dfbc5970c9969e6afb5baf36317c95f29fa3"
+        },
+        {
+          "path": "headers/ms500-pcsync-contemporary.headers.txt",
+          "bytes": 636,
+          "crc32": "d1096798",
+          "sha256": "c010d866d01bc02e7cdfb189631cd35f2c1b7391390bdf3fb00fc7a469da7da3"
+        },
+        {
+          "path": "headers/ms500-product.html.headers.txt",
+          "bytes": 844,
+          "crc32": "e5628eb3",
+          "sha256": "3fd2b78ab7cde7c590c2d950a81c74a1bc60be6c615d031efbb3d21122b38d6a"
+        },
+        {
+          "path": "headers/ms500-root.html.headers.txt",
+          "bytes": 844,
+          "crc32": "00b70a11",
+          "sha256": "aeb5cafee2974e83b203a692883b8848394050bec18f83408ec7df90d97e6d5f"
+        },
+        {
+          "path": "headers/turbo-listing.html.headers.txt",
+          "bytes": 852,
+          "crc32": "5eb6ee4d",
+          "sha256": "310848ceace234c1ee75b57bda150c04ab9de2587fbed6caa9afdca786435ec7"
+        },
+        {
+          "path": "headers/turbo.headers.txt",
+          "bytes": 811,
+          "crc32": "27abc1ee",
+          "sha256": "b557956a75632425be37d7535d26e56e347d45a786e9b2daedb294ab75d976d2"
+        },
+        {
+          "path": "originals/cdx/moto-download-cdx-2.body.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "originals/cdx/moto-specific-cdx-2.body.json",
+          "bytes": 231,
+          "crc32": "5d556d2f",
+          "sha256": "e07e0074851471e9de7b16272ef464a015a50557723127c67d627590af806a07"
+        },
+        {
+          "path": "originals/cdx/motorola-cdx-0.body.json",
+          "bytes": 329717,
+          "crc32": "441a55af",
+          "sha256": "c75e93168c0bad887598cba357b5e17243169f241805a56365c9ff6c37a43430"
+        },
+        {
+          "path": "originals/cdx/motorola-cdx-1.body.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "originals/cdx/motorola-cdx-2.body.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "originals/cdx/motorola-cdx-3.body.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "originals/cdx/motorola-main-cdx-0.body.json",
+          "bytes": 231,
+          "crc32": "0c0ce548",
+          "sha256": "60612472242610bcc308ddd39038f7545accb84e22f721cc2f1f93bd1ac2ace1"
+        },
+        {
+          "path": "originals/cdx/motorola-main-cdx-1.body.json",
+          "bytes": 231,
+          "crc32": "0c0ce548",
+          "sha256": "60612472242610bcc308ddd39038f7545accb84e22f721cc2f1f93bd1ac2ace1"
+        },
+        {
+          "path": "originals/cdx/motorola-main-cdx-2.body.json",
+          "bytes": 231,
+          "crc32": "0c0ce548",
+          "sha256": "60612472242610bcc308ddd39038f7545accb84e22f721cc2f1f93bd1ac2ace1"
+        },
+        {
+          "path": "originals/mirror/MS500-0610.pdf",
+          "bytes": 20031263,
+          "crc32": "f17f049b",
+          "sha256": "d9b378670a9e3b52a3f57ab3d7d1999213eb5f2e9b8c46c5e849c4ca83be9ef6"
+        },
+        {
+          "path": "originals/mirror/MS500-Fact-Sheet.pdf",
+          "bytes": 122511,
+          "crc32": "c7705a91",
+          "sha256": "dd752e98d2c77a08c362ec043096c335489a0cac081e232300264da8707e3650"
+        },
+        {
+          "path": "originals/mirror/MS500.PDF",
+          "bytes": 9313164,
+          "crc32": "1e26fb85",
+          "sha256": "974ab6b70240d34f957edf6bac504f4fea4818b38ce615b7600502cd04dd9f08"
+        },
+        {
+          "path": "originals/mirror/TurboDownloader_0.42.14.zip",
+          "bytes": 378091,
+          "crc32": "66260cc3",
+          "sha256": "a119c0995ac47447555f8e3b2e8ee04629536522fd05f11af1930e079e4ff288"
+        },
+        {
+          "path": "originals/mirror/ms500-manuals.html",
+          "bytes": 2479,
+          "crc32": "8118a09c",
+          "sha256": "90ddfe881e901027955694d1757c1a0cb47aa6a0df1be037f260a92ae78259d8"
+        },
+        {
+          "path": "originals/mirror/ms500-product.html",
+          "bytes": 2775,
+          "crc32": "61dd8a81",
+          "sha256": "d45868102771ecd812c6f18a794f8a7c16ddd5c3dc53f7a50b3cdaf7e195f759"
+        },
+        {
+          "path": "originals/mirror/ms500-root.html",
+          "bytes": 2418,
+          "crc32": "a6effc6a",
+          "sha256": "605416b9942ebd8a12e5d1800bfed9f862ba6237862eb8d715e299b5ed085bd5"
+        },
+        {
+          "path": "originals/mirror/turbo-listing.html",
+          "bytes": 2211,
+          "crc32": "579c6b49",
+          "sha256": "a11d38137d91a1479583587fa77374d6099a32016e4d2e06943852fc643981ef"
+        },
+        {
+          "path": "originals/pages/blackrazr-entry.html",
+          "bytes": 85,
+          "crc32": "d653c4d7",
+          "sha256": "0467165c005b27975b5aec39bd6dfab7413c77e445bc4d836cdf839d9a110c83"
+        },
+        {
+          "path": "originals/pages/blackrazr-main.html",
+          "bytes": 2316,
+          "crc32": "5b87d92f",
+          "sha256": "fba08fee16f375a121852ef782a01cc7b397ec1d305ea0ef17383c5d148809b9"
+        },
+        {
+          "path": "originals/pages/motorola-main-aspx.html",
+          "bytes": 12470,
+          "crc32": "d883f889",
+          "sha256": "8c2cc9237958b8f4fe02ec82173051f14bf8cdb9064dce70e8355b6c6cafb22a"
+        },
+        {
+          "path": "originals/pages/motorola-pcsoftware.html",
+          "bytes": 1840,
+          "crc32": "6ab2f2c4",
+          "sha256": "64da48c1a9331374d20da69f462f422e7b2ec080e6139802780cba5dc8bd0f40"
+        },
+        {
+          "path": "originals/pages/motorola-support.html",
+          "bytes": 57501,
+          "crc32": "c75992c0",
+          "sha256": "145345b8db4bfb051c709addc8b53423e0a36d5a98cc0d668fb5a4cbeb00f15f"
+        },
+        {
+          "path": "originals/pages/ms500-pcsync-contemporary.html",
+          "bytes": 114075,
+          "crc32": "007f6e10",
+          "sha256": "8ce346058ae1a23147c10f4b3a7eaf8b7cf5a1b85af3bba97c4e3fcac0467724"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 10054,
+          "crc32": "ae84d458",
+          "sha256": "a69f51c8a8b62b046c4cb1cabb2563ec6c36befa8bc0fcc9801002eb5745a531"
+        }
+      ]
+    },
+    {
       "id": "dadumbi-nate-gvm-catalogues",
       "repositoryPath": "research/archives/Dadumbi-NATE-GVM-Catalogues-and-Media.zip",
       "bytes": 226489,
@@ -204265,9 +204604,9 @@
     }
   ],
   "counts": {
-    "archives": 111,
-    "archiveBytes": 2195691080,
-    "fileMembers": 33877,
-    "uniqueMemberHashes": 19355
+    "archives": 112,
+    "archiveBytes": 2225677158,
+    "fileMembers": 33932,
+    "uniqueMemberHashes": 19404
   }
 }

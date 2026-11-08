@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "motorola-ms500-heathrow",
+      "title": "Motorola MS500 Heathrow и Turbo Downloader",
+      "category": "Инструменты и SDK",
+      "description": "Инженерная сборка 0.42.14, карта NV, три документа Motorola и архивный каталог PC Sync.",
+      "repositoryPath": "research/archives/Motorola-MS500-Heathrow-TurboDownloader-and-Manuals.zip",
+      "bytes": 29986078,
+      "sha256": "8118e3b8d436c7095ff83afbeb3e5887981bf138dde9e241dddae228f6cdc4e2",
+      "sources": [
+        {
+          "label": "Turbo Downloader",
+          "url": "https://firmware.center/firmware/Motorola/MS500%20%28Heathrow%20KCDMA%29/PC%20Software/Turbo%20Downloader/"
+        },
+        {
+          "label": "Руководства Motorola",
+          "url": "https://firmware.center/firmware/Motorola/MS500%20%28Heathrow%20KCDMA%29/Product%20Info/User%20Manuals/"
+        },
+        {
+          "label": "Поддержка Motorola",
+          "url": "https://en-us.support.motorola.com/app/answers/detail/a_id/43384"
+        }
+      ]
+    },
+    {
       "id": "dadumbi-nate-gvm-catalogues",
       "title": "Dadumbi и NATE: CU@지하철, A Scary Game и Super Board",
       "category": "История и документация",
@@ -2220,6 +2243,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Motorola MS500 Heathrow",
+      "repositoryPath": "doc/motorola-ms500-heathrow.md"
+    },
     {
       "title": "Dadumbi и пять игр в каталоге NATE",
       "repositoryPath": "doc/dadumbi-nate-gvm-catalogues.md"
