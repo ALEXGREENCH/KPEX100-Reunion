@@ -4,6 +4,29 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "softenter-mobilize-early-gvm",
+      "title": "SoftEnter и Mobilize: ранние игры GVM",
+      "category": "История и документация",
+      "description": "Карточки пяти релизов SoftEnter, оригинальные кадры A Scary Game и Super Board, патентная заявка с тремя ранними названиями GVM.",
+      "repositoryPath": "research/archives/SoftEnter-and-Mobilize-Early-GVM-Game-Sources.zip",
+      "bytes": 5994417,
+      "sha256": "bb78aaba7ebba94acdc8c073cb8029fd13263e9640641ddf59bced4d70fbe4a2",
+      "sources": [
+        {
+          "label": "A Scary Game",
+          "url": "https://web.archive.org/web/20030422094624id_/http://www.softenter.com:80/index.html?page=contents_zb&lang=&no=9"
+        },
+        {
+          "label": "Новости SoftEnter",
+          "url": "https://web.archive.org/web/20030927090753id_/http://www.softenter.com:80/?page=news&lang="
+        },
+        {
+          "label": "KR20030072693A",
+          "url": "https://patents.google.com/patent/KR20030072693A/ko"
+        }
+      ]
+    },
+    {
       "id": "palletshipping-lgt-33-rpg",
       "title": "Palletshipping: 33 игры LGT из раздела RPG",
       "category": "Игры и игровые сборки",
@@ -2071,6 +2094,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Ранние GVM-игры SoftEnter и Mobilize",
+      "repositoryPath": "doc/softenter-mobilize-early-gvm.md"
+    },
     {
       "title": "59 пакетов LGT из Palletshipping",
       "repositoryPath": "doc/palletshipping-59-lgt-wipi.md"

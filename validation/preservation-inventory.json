@@ -3,6 +3,813 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "softenter-mobilize-early-gvm",
+      "repositoryPath": "research/archives/SoftEnter-and-Mobilize-Early-GVM-Game-Sources.zip",
+      "bytes": 5994417,
+      "sha256": "bb78aaba7ebba94acdc8c073cb8029fd13263e9640641ddf59bced4d70fbe4a2",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/asset-receipts.json",
+          "bytes": 757,
+          "crc32": "556c7773",
+          "sha256": "343ce80f56cc0fb0bf4ebc317aa657632ed47e6cdb47b54f8480e4145535429d"
+        },
+        {
+          "path": "evidence/catalogue-receipts.json",
+          "bytes": 81691,
+          "crc32": "6b3725e5",
+          "sha256": "e65b44b32634a84a80e5e6b69c353e70546c497aae36dd8b207bc775a007df24"
+        },
+        {
+          "path": "evidence/confirmed-materials.json",
+          "bytes": 62880,
+          "crc32": "26422db2",
+          "sha256": "158b12dc77ef2f34d4fbec9d2f7ba642d8b4c7a420b0204cab8fe7fff8462e17"
+        },
+        {
+          "path": "evidence/domain-probes.json",
+          "bytes": 9234,
+          "crc32": "84d1d400",
+          "sha256": "4343e7c0d813779f822f3d4ccae1710ba578121a6539ae7d4ec7a3e4db8994f4"
+        },
+        {
+          "path": "evidence/extra-media-probes.json",
+          "bytes": 5439,
+          "crc32": "0d1050d0",
+          "sha256": "41c680c6cfd59d7461ae614558507fd66956f1e5ec879fc5991c080b8156c904"
+        },
+        {
+          "path": "evidence/media-receipts.json",
+          "bytes": 31831,
+          "crc32": "51493bd0",
+          "sha256": "4885da58793d374341aac684b8be4f51fef6631dd55887c54cdb517b48ab33c6"
+        },
+        {
+          "path": "evidence/mobilize-receipts.json",
+          "bytes": 621,
+          "crc32": "080f9942",
+          "sha256": "a0720fdf352037aafe02bd3a24f41fe8bec7219e28961a3ce0a1da1172d65f30"
+        },
+        {
+          "path": "evidence/page-receipts.json",
+          "bytes": 950,
+          "crc32": "cf6d3c8f",
+          "sha256": "25796b8b0e06358ac49a7e999c2b1461318f8d98ed95cd935071c876662cd070"
+        },
+        {
+          "path": "headers/KR20030072693A.pdf.headers.txt",
+          "bytes": 730,
+          "crc32": "de47b267",
+          "sha256": "e53ee7860f6409546873d6e4aceea5ac9e81b1498d5d15423face74ccd4f8856"
+        },
+        {
+          "path": "headers/catalogue-01.headers.txt",
+          "bytes": 1692,
+          "crc32": "89f303bd",
+          "sha256": "a69f58a6007df2cfa909a16b57fdbc5755bbbff5c92620ca33221cd6e2ac08be"
+        },
+        {
+          "path": "headers/catalogue-02.headers.txt",
+          "bytes": 1756,
+          "crc32": "1f270481",
+          "sha256": "db431ea92d26d43dfc7687dd26d1014323cf65d22c51e7832c99810254e6ace7"
+        },
+        {
+          "path": "headers/catalogue-03.headers.txt",
+          "bytes": 1772,
+          "crc32": "50422e18",
+          "sha256": "8354f247a9957e4d26c9ff10b268117c0862d535bf94b9cd2f7310f317c204b2"
+        },
+        {
+          "path": "headers/catalogue-04.headers.txt",
+          "bytes": 1794,
+          "crc32": "75a714f5",
+          "sha256": "4cbd323e3520b910b295b4518d86427bc793a3800fad51e973e7d4e94b476c47"
+        },
+        {
+          "path": "headers/catalogue-05.headers.txt",
+          "bytes": 1730,
+          "crc32": "7372b3d7",
+          "sha256": "2b98a6231aee49fb2b9a46982ed2eef69377c7fb9b785f27b35bdd9e8cf1269b"
+        },
+        {
+          "path": "headers/catalogue-06.headers.txt",
+          "bytes": 1804,
+          "crc32": "5e909de6",
+          "sha256": "373e9d8b655edb605f55509399b75e605bf2e0e790578a5f0c33bb07da617ac0"
+        },
+        {
+          "path": "headers/catalogue-08.headers.txt",
+          "bytes": 1802,
+          "crc32": "20fa3a6e",
+          "sha256": "6384b573571d2e88e378932fa30c6932a1e0343bd608287484f71e72b697857a"
+        },
+        {
+          "path": "headers/catalogue-12.headers.txt",
+          "bytes": 1806,
+          "crc32": "b459517b",
+          "sha256": "7b1096e26c79ed9d45b371326a5683e387ac98992e5362614f29beb4f6951b87"
+        },
+        {
+          "path": "headers/catalogue-13.headers.txt",
+          "bytes": 1807,
+          "crc32": "26c44a93",
+          "sha256": "7dad365207d2fbe4d5533cc62b4472522d9629e82f27babd84b3792faa8277bb"
+        },
+        {
+          "path": "headers/catalogue-14.headers.txt",
+          "bytes": 1830,
+          "crc32": "a4f8aa90",
+          "sha256": "95bafe0a37e55a872aec60f1110c0ce3229e0120c226689cdc571e9e68d30240"
+        },
+        {
+          "path": "headers/catalogue-18.headers.txt",
+          "bytes": 1827,
+          "crc32": "0355c658",
+          "sha256": "bf77f752537780fe4b0bb6bf9ce6b4cc6c727bc57c4d0a9c454a3aa2039db9d1"
+        },
+        {
+          "path": "headers/catalogue-20.headers.txt",
+          "bytes": 1821,
+          "crc32": "c5dce95d",
+          "sha256": "d11f6c4578b6ff92c718eb89735cd82d9f5e70e2a58a51d62db27a17eb54fd78"
+        },
+        {
+          "path": "headers/catalogue-21.headers.txt",
+          "bytes": 1825,
+          "crc32": "890fc1d3",
+          "sha256": "0bec618da9ad3251b509e95d2ebbe0a09923da83e6fc773f4951df383ce64554"
+        },
+        {
+          "path": "headers/catalogue-22.headers.txt",
+          "bytes": 1822,
+          "crc32": "be9134ef",
+          "sha256": "30476af6e5459924f97067f02fbbc3ded04daf83a6ab1ada8de685fec7b6b376"
+        },
+        {
+          "path": "headers/catalogue-26.headers.txt",
+          "bytes": 1821,
+          "crc32": "c8f630e7",
+          "sha256": "4ff3deeda956abb669fb9fd576aafb54b67a1bd401fe6efe3f7acc354839b3df"
+        },
+        {
+          "path": "headers/catalogue-28.headers.txt",
+          "bytes": 1822,
+          "crc32": "c3066656",
+          "sha256": "8f041ffd86005f16b1e172cf9057a3856ca4030eb5b334fa349a2e9f27be7e57"
+        },
+        {
+          "path": "headers/catalogue-29.headers.txt",
+          "bytes": 1820,
+          "crc32": "bc07c896",
+          "sha256": "a4b57dfd46a44a43daa773317c811df7fef4205478c8c337a46c5e8dda8a945f"
+        },
+        {
+          "path": "headers/catalogue-30.headers.txt",
+          "bytes": 1819,
+          "crc32": "34211308",
+          "sha256": "f95deaeb73c0ce0d7a3e168c3e0bfb74c738ff1d0307ed2008f82761dbe62432"
+        },
+        {
+          "path": "headers/catalogue-31.headers.txt",
+          "bytes": 1819,
+          "crc32": "cb5b3de7",
+          "sha256": "d5c17227b3401f0e6248a9d8fd733b7f677e3fb9a97c3cbc2daec4d683083185"
+        },
+        {
+          "path": "headers/catalogue-32.headers.txt",
+          "bytes": 1783,
+          "crc32": "8a1c272d",
+          "sha256": "f27a7455ea86aaba59c02b622776cdf655bfedb649471018b5db145ed67b3392"
+        },
+        {
+          "path": "headers/catalogue-33.headers.txt",
+          "bytes": 1805,
+          "crc32": "ce8e7ebb",
+          "sha256": "77b4e1502d03b4094363696f2bc75c8271a08c3ecf12dfa61d74f3c866d5b85b"
+        },
+        {
+          "path": "headers/catalogue-34.headers.txt",
+          "bytes": 1811,
+          "crc32": "cd7af569",
+          "sha256": "bbdb7d9afa1f396c12c8ae6cfee34afe08e251dac577a074c2d684ef7cb07e51"
+        },
+        {
+          "path": "headers/catalogue-35.headers.txt",
+          "bytes": 1813,
+          "crc32": "f0ba4d68",
+          "sha256": "ff71a7d92776eabecd109838c97991125f6ddb372348a8821f507991bee4e39c"
+        },
+        {
+          "path": "headers/catalogue-36.headers.txt",
+          "bytes": 1810,
+          "crc32": "5c7f3c2a",
+          "sha256": "cbfb7c838c2792cc93c570597dce8b1b3467a59363a3f96a3d283ed4c1817b1a"
+        },
+        {
+          "path": "headers/catalogue-41.headers.txt",
+          "bytes": 1823,
+          "crc32": "b1e9af77",
+          "sha256": "0489e3cfd0276b88dd4f0e38b3e2ad110401a6e0a84e44ebcd39f41f4375bfba"
+        },
+        {
+          "path": "headers/catalogue-42.headers.txt",
+          "bytes": 2829,
+          "crc32": "dc49db87",
+          "sha256": "9897f5ab4e88dc2eef84e26dca006c226ab001e5406b5e53689c73cdfdd20abf"
+        },
+        {
+          "path": "headers/catalogue-43.headers.txt",
+          "bytes": 1826,
+          "crc32": "737d65b4",
+          "sha256": "a56d6a5e65385dd8d9ca5a28f9c386f62dab4417f27a2c1855aef102d649c820"
+        },
+        {
+          "path": "headers/catalogue-44.headers.txt",
+          "bytes": 1823,
+          "crc32": "6175d245",
+          "sha256": "064b62aa32abaef8a190449d95d616be4a12c642974b6d35ea69a7cefd4b2a3b"
+        },
+        {
+          "path": "headers/catalogue-49.headers.txt",
+          "bytes": 1824,
+          "crc32": "f133307a",
+          "sha256": "8d172921d7df50d59c95e315a47899cba02d57a42608fb53a6c8b63aa51e685f"
+        },
+        {
+          "path": "headers/catalogue-54.headers.txt",
+          "bytes": 1831,
+          "crc32": "43f2f906",
+          "sha256": "6b63b5962ca5855e9fb83d6ede4450f35602750cb22f3fccbd8e1912d504ed55"
+        },
+        {
+          "path": "headers/catalogue-55.headers.txt",
+          "bytes": 1830,
+          "crc32": "3a2ea97a",
+          "sha256": "2d5d9ae22c0b562e444ecae4cc32804d68d621e0b5763b13a2e973e9a995463d"
+        },
+        {
+          "path": "headers/catalogue-56.headers.txt",
+          "bytes": 1832,
+          "crc32": "8bf4be62",
+          "sha256": "bbf12973b724cac6ecc5aad12d82b3c34e2a4273f299c852bf9a2d4229924351"
+        },
+        {
+          "path": "headers/catalogue-57.headers.txt",
+          "bytes": 1831,
+          "crc32": "6607f336",
+          "sha256": "a8a9fb73585ce8f17814b1442ea80021870998b4df2e588db40c5adfcddf74cb"
+        },
+        {
+          "path": "headers/catalogue-58.headers.txt",
+          "bytes": 1827,
+          "crc32": "268a8405",
+          "sha256": "abc0d07cb643cedb8e3d9449dcba2acf2965e5848796422ffdf63a2cd507132c"
+        },
+        {
+          "path": "headers/catalogue-66.headers.txt",
+          "bytes": 1828,
+          "crc32": "06ebae56",
+          "sha256": "f664da9c44945f53b76c2724b9b1ee34d015280ff798fe7e79d7357f99038581"
+        },
+        {
+          "path": "headers/catalogue-68.headers.txt",
+          "bytes": 1827,
+          "crc32": "abe23d4f",
+          "sha256": "0e43c68d5f8b062a8bc5cb5596bbe4270a1c255ebd1b46f8148be489cef37253"
+        },
+        {
+          "path": "headers/catalogue-69.headers.txt",
+          "bytes": 1801,
+          "crc32": "add18ea4",
+          "sha256": "33ffa50d79e22b17b3d0a50754f1d3f806ea6994757058e9571cdb045329254e"
+        },
+        {
+          "path": "headers/catalogue-70.headers.txt",
+          "bytes": 1813,
+          "crc32": "04538f8b",
+          "sha256": "b5a72a43228e3145fbcdd4d492ca4b562dae7361da6be3f9b15abdd2f23aa585"
+        },
+        {
+          "path": "headers/catalogue-71.headers.txt",
+          "bytes": 1766,
+          "crc32": "a6121edf",
+          "sha256": "f8bdf1972863235d9114b973548425e754c4809eb3dbbb359c32e8c28df60701"
+        },
+        {
+          "path": "headers/chosun-superboard.headers.txt",
+          "bytes": 1435,
+          "crc32": "db016757",
+          "sha256": "cb772de290d6c51f5d853539f42c69ed7bc8dc2a42e122761a22fdc1bf5e37d3"
+        },
+        {
+          "path": "headers/horror-3-no-port.headers.txt",
+          "bytes": 1887,
+          "crc32": "e5de3c93",
+          "sha256": "de0c803de768f37116164f5dfd91773878e4df31c04a0d13578802c7e450c394"
+        },
+        {
+          "path": "headers/horror-4-no-port.headers.txt",
+          "bytes": 1891,
+          "crc32": "7e92c554",
+          "sha256": "8e5e7dc9fad990a6450ab0ea1f266ef812577924465c977501d6d45a772b408f"
+        },
+        {
+          "path": "headers/media-09.headers.txt",
+          "bytes": 1890,
+          "crc32": "138a4595",
+          "sha256": "5b1b95e5f9b2fc503c3dd4b9568aa0d496a8df13ae475b3946eed7f75afef870"
+        },
+        {
+          "path": "headers/media-10.headers.txt",
+          "bytes": 2059,
+          "crc32": "f61c751e",
+          "sha256": "c777711d912d6685ddeabd6d9c9fcb2f9a7a62f8cf66cb17381ca29e4d0eef97"
+        },
+        {
+          "path": "headers/media-11.headers.txt",
+          "bytes": 2062,
+          "crc32": "c1007fb0",
+          "sha256": "14887de8c189b6d34376ac1c7560b6dbfc1ca2e2397bc7653d11c7f522a45e9b"
+        },
+        {
+          "path": "headers/media-16.headers.txt",
+          "bytes": 2057,
+          "crc32": "24c16958",
+          "sha256": "500a4dd50b3ad1b55d8ee2dffeadf2194a6b25eaa79b87d1ffd6d2b2a82293ee"
+        },
+        {
+          "path": "headers/media-17.headers.txt",
+          "bytes": 2056,
+          "crc32": "dff062fc",
+          "sha256": "5693126eb1af53d4006be120470544962a2824f79de00409fb95f09fcfa6d5c4"
+        },
+        {
+          "path": "headers/media-18.headers.txt",
+          "bytes": 2058,
+          "crc32": "076f4b22",
+          "sha256": "bf39325656983379d67f953eb70da3738dab1f615b6fef565d5a2bf102361a7e"
+        },
+        {
+          "path": "headers/media-24.headers.txt",
+          "bytes": 2058,
+          "crc32": "bd03cd39",
+          "sha256": "c9a9da8f11d9d226a88e9e773baa2800004fb207135f9c5710273067a7222ddd"
+        },
+        {
+          "path": "headers/media-25.headers.txt",
+          "bytes": 2059,
+          "crc32": "7d3f7493",
+          "sha256": "31bb7806b21bd04f57330ec0f4e6df5a73b130f09bf7f3feeac92fbfec5645d5"
+        },
+        {
+          "path": "headers/media-26.headers.txt",
+          "bytes": 2055,
+          "crc32": "8849d820",
+          "sha256": "50044516e80733f5d3a50e16666ff4ea6f785ac07eb7f7d174e6c1e26b5cbf77"
+        },
+        {
+          "path": "headers/mobilize-etnews.html.headers.txt",
+          "bytes": 159,
+          "crc32": "308ff1e9",
+          "sha256": "8292fb9cfe78665042ff1bc164691a9e7d0304b8c33baa2cad1aa78bbfc6ad3c"
+        },
+        {
+          "path": "headers/mobilize-fish-fighters.headers.txt",
+          "bytes": 465,
+          "crc32": "5ff731f3",
+          "sha256": "9c3447b8378a7ba3bba5b08f13a4fee5cab7ab09d247dd2c27c02946b26b518b"
+        },
+        {
+          "path": "headers/mobilize-inews24.html.headers.txt",
+          "bytes": 465,
+          "crc32": "fd7f2edd",
+          "sha256": "0b42065bda6427eef4f2c24f27d134e6d82bd0074842ca0116e3c60a39548226"
+        },
+        {
+          "path": "headers/patent-KR20030072693A.headers.txt",
+          "bytes": 564,
+          "crc32": "68b967c3",
+          "sha256": "37a05b73d0ec73daa1dd6f5dd592514a8cfcfef4fb56710f5bba88e51a7cb8f4"
+        },
+        {
+          "path": "headers/softenter-cdx.txt",
+          "bytes": 635,
+          "crc32": "9f884f97",
+          "sha256": "bb7902171647e6b3b92f75d3f6dc53ac4ed06fc1a654b581fd2997b858946d1a"
+        },
+        {
+          "path": "headers/softenter-dadumbi-award.headers.txt",
+          "bytes": 159,
+          "crc32": "d6eb913f",
+          "sha256": "93893db15825053edb3fb10a52caec3168fd6d5727782228cecf3740efeba023"
+        },
+        {
+          "path": "headers/softenter-etnews-image.jpg.headers.txt",
+          "bytes": 236,
+          "crc32": "fbffdc8f",
+          "sha256": "287b443f8ae0dcb7600a28027cbeb1e4e9e483217f871275a1753663cd6da167"
+        },
+        {
+          "path": "headers/softenter-etnews.headers.txt",
+          "bytes": 159,
+          "crc32": "539658a6",
+          "sha256": "34520bd06b80b11d8cca8083b0568f2684b2e393aae3aead58977fc8e3b7f3a1"
+        },
+        {
+          "path": "headers/softenter-gamemeca.headers.txt",
+          "bytes": 430,
+          "crc32": "5cb1c85d",
+          "sha256": "12604b5fd291d6c291b8b6a0d9af8478bd0c410fa1ca8135f967516c87e1ec5c"
+        },
+        {
+          "path": "headers/softenter-priston-release.headers.txt",
+          "bytes": 844,
+          "crc32": "39abb26d",
+          "sha256": "7def407268d8c2f4d827530cc3176cc11674f67318c5403d49a5d9e42776f559"
+        },
+        {
+          "path": "originals/references/KR20030072693A.pdf",
+          "bytes": 6320103,
+          "crc32": "b9949301",
+          "sha256": "4b38e9a7638009089bfb0efd17de7a74aecc33854cd5da43e40adc0241825c0a"
+        },
+        {
+          "path": "originals/references/chosun-superboard.html",
+          "bytes": 245886,
+          "crc32": "430a1b2c",
+          "sha256": "bbe430c1d1dea29b398281bbecc9f07f4f00f2db9c9e628383c79689c760ef44"
+        },
+        {
+          "path": "originals/references/mobilize-etnews.html",
+          "bytes": 53353,
+          "crc32": "0103e478",
+          "sha256": "e2b6487ab0fe44aa75ce4a4dbdeb08b6327596d0da9bd6260d4d313ef9a8c119"
+        },
+        {
+          "path": "originals/references/mobilize-fish-fighters.html",
+          "bytes": 174180,
+          "crc32": "f5c934ec",
+          "sha256": "c7f90bcc364151d457bb0e0934e9133a8553d8e108689e78a532d84fcdada5d0"
+        },
+        {
+          "path": "originals/references/mobilize-inews24.html",
+          "bytes": 184939,
+          "crc32": "14f34e96",
+          "sha256": "40a1d7733d20db4298f617b4f825a958a7bd33770876764b7c1e1798b011d8c0"
+        },
+        {
+          "path": "originals/references/patent-KR20030072693A.html",
+          "bytes": 141649,
+          "crc32": "1aa53c0e",
+          "sha256": "b40f0daad2cf53ecc5855df67f052ed8e0180ce3c61616ea2309f743db78e845"
+        },
+        {
+          "path": "originals/references/softenter-dadumbi-award.html",
+          "bytes": 60854,
+          "crc32": "ffbef97e",
+          "sha256": "eaf970b36cabfec60b55d2560eadfa46670def2718976c4889551a020d7da7e0"
+        },
+        {
+          "path": "originals/references/softenter-etnews-image.jpg",
+          "bytes": 30599,
+          "crc32": "9f2e0daf",
+          "sha256": "736b01d3c91df1aa43af38cb5c556fe6f4b12b847838a09592c28ea07853e3b8"
+        },
+        {
+          "path": "originals/references/softenter-etnews.html",
+          "bytes": 49084,
+          "crc32": "f2704e3b",
+          "sha256": "8701ed91ccdf8ad3136be94eaf83d536f35a385c13c651381e7edd5d8ef1eb2a"
+        },
+        {
+          "path": "originals/references/softenter-gamemeca.html",
+          "bytes": 72973,
+          "crc32": "7203f83f",
+          "sha256": "fb468dbde1ab3d914b19f42cc602e9ed0f920e6a7afdf86feb2c1b92a9f1d1e7"
+        },
+        {
+          "path": "originals/references/softenter-priston-release.html",
+          "bytes": 53385,
+          "crc32": "9ebb2190",
+          "sha256": "e554f9a92a015923e81144ea2a2cf1759d75a6cca4218761fee376994b06005a"
+        },
+        {
+          "path": "originals/softenter/catalogue-01.html",
+          "bytes": 7668,
+          "crc32": "0ee25f48",
+          "sha256": "ecc4c5fd0cb7f316ef1d4fafa12d3e240fb134319c64b697a6bd65fabacf8b42"
+        },
+        {
+          "path": "originals/softenter/catalogue-02.html",
+          "bytes": 6984,
+          "crc32": "3b8edece",
+          "sha256": "22b3e5bada480135fe9d8c67d8232a878edf1be136112625bde6828caa51ba27"
+        },
+        {
+          "path": "originals/softenter/catalogue-03.html",
+          "bytes": 8883,
+          "crc32": "a2dd6a53",
+          "sha256": "5e1209077308a042b1f7e2ef1e7f3097b7582445e4cde6981ef56524bc3f7d87"
+        },
+        {
+          "path": "originals/softenter/catalogue-04.html",
+          "bytes": 8820,
+          "crc32": "fb2bdfa1",
+          "sha256": "e1158810e60d0aeb40a6ea882c03f774497a6db40871017d5721718d94b0d39d"
+        },
+        {
+          "path": "originals/softenter/catalogue-05.html",
+          "bytes": 15363,
+          "crc32": "1724331a",
+          "sha256": "cf34a46e0a60bb3e10ea25d86a9bebc4f58c3f46c910f69c3367566aacf3434a"
+        },
+        {
+          "path": "originals/softenter/catalogue-06.html",
+          "bytes": 7463,
+          "crc32": "f22a94a0",
+          "sha256": "259f6d9dba2739d6a5fe0c5bbf495322d4641e0ed4054c0514c41b32f87b3930"
+        },
+        {
+          "path": "originals/softenter/catalogue-08.html",
+          "bytes": 7331,
+          "crc32": "2001a87c",
+          "sha256": "0a327abc8416991aba17da29b6f73d654b03a0991960647341132d58249ce7d3"
+        },
+        {
+          "path": "originals/softenter/catalogue-12.html",
+          "bytes": 7625,
+          "crc32": "2993e612",
+          "sha256": "f6e5f9695bff763c350e3f12d08c0ad678356a1cbcb31a53ce7951b93ba5a0f6"
+        },
+        {
+          "path": "originals/softenter/catalogue-13.html",
+          "bytes": 7349,
+          "crc32": "9e19bad7",
+          "sha256": "38867e6bf84dc9b895b834327b2ef06c27616314b26b07630fc8b7ccea6b347f"
+        },
+        {
+          "path": "originals/softenter/catalogue-14.html",
+          "bytes": 6984,
+          "crc32": "3b8edece",
+          "sha256": "22b3e5bada480135fe9d8c67d8232a878edf1be136112625bde6828caa51ba27"
+        },
+        {
+          "path": "originals/softenter/catalogue-18.html",
+          "bytes": 8989,
+          "crc32": "c2a64d01",
+          "sha256": "28c489a85619cb59f65612bfe4fa5972e6e4b61b19460a206523cec7ab9be9f0"
+        },
+        {
+          "path": "originals/softenter/catalogue-20.html",
+          "bytes": 8189,
+          "crc32": "41876c3a",
+          "sha256": "25df4dc28173e8738a420a8898d8d008d38cadde6468d8d947988c94fa9cc03c"
+        },
+        {
+          "path": "originals/softenter/catalogue-21.html",
+          "bytes": 8177,
+          "crc32": "077d7515",
+          "sha256": "1fef7d0cd9b5b279be1850468e65867c333227827b5953c8e9199a530bdec13b"
+        },
+        {
+          "path": "originals/softenter/catalogue-22.html",
+          "bytes": 8223,
+          "crc32": "8beffaa7",
+          "sha256": "2c9758209c3d26fd802cb12081bbf09ca669bbb1934764d9aa9f75e10da4be82"
+        },
+        {
+          "path": "originals/softenter/catalogue-26.html",
+          "bytes": 8902,
+          "crc32": "4dd3393a",
+          "sha256": "ff633b30e391db66c0f4ba60dd689e90e7f1ba038d786e75eb85025c95b154fa"
+        },
+        {
+          "path": "originals/softenter/catalogue-28.html",
+          "bytes": 8592,
+          "crc32": "8c983194",
+          "sha256": "2c8358e1a42e96e9b2ba672dec694c653a805ef4c2f2acc61c8e5d3ed713de48"
+        },
+        {
+          "path": "originals/softenter/catalogue-29.html",
+          "bytes": 8398,
+          "crc32": "709cbba5",
+          "sha256": "68f6a9ffc4738cb1b73bdfd9ffba39fadc0f0f8f7df5c9cbb9c4104960fac7f6"
+        },
+        {
+          "path": "originals/softenter/catalogue-30.html",
+          "bytes": 8994,
+          "crc32": "25f2856e",
+          "sha256": "37f9975d80b33c7f94616ccee8dcb425faea0c25105041d177d0cbe2d1065c54"
+        },
+        {
+          "path": "originals/softenter/catalogue-31.html",
+          "bytes": 8886,
+          "crc32": "6027b03b",
+          "sha256": "7d09f7a387fc9e08e50b370d9e3573c28ff19382abb0bcc77cdd8cdf8fd365ec"
+        },
+        {
+          "path": "originals/softenter/catalogue-32.html",
+          "bytes": 9670,
+          "crc32": "497d9aca",
+          "sha256": "0fe732a8bc34c234699bed437889b6ffd9218bc73ab962843ec0ddbb0b0b8063"
+        },
+        {
+          "path": "originals/softenter/catalogue-33.html",
+          "bytes": 9040,
+          "crc32": "b5866fd1",
+          "sha256": "bc283f57e52d9f4286eac0838d7bfe22b8d0d610541938aaf4a7f5d8092e4b2e"
+        },
+        {
+          "path": "originals/softenter/catalogue-34.html",
+          "bytes": 7485,
+          "crc32": "594f5c71",
+          "sha256": "1b28dea745cb1d8b7a4a7cfa03d1b1f075ae1e4e13fa74e025d05582d040b0df"
+        },
+        {
+          "path": "originals/softenter/catalogue-35.html",
+          "bytes": 7386,
+          "crc32": "7c76add3",
+          "sha256": "c6260e337d139c3d85847ee732955833ed25fe4a63610ec297e6ac02398f778b"
+        },
+        {
+          "path": "originals/softenter/catalogue-36.html",
+          "bytes": 7342,
+          "crc32": "30710bb3",
+          "sha256": "4187c490bfa92c2db48d5db40b0a28a94c16c7e244778360147be5ec7f7204f2"
+        },
+        {
+          "path": "originals/softenter/catalogue-41.html",
+          "bytes": 7503,
+          "crc32": "750c117d",
+          "sha256": "d809cbf797f2f18c7697462f7c2a51872c4960367031f1a722f3c6d968b5ab8f"
+        },
+        {
+          "path": "originals/softenter/catalogue-42.html",
+          "bytes": 7072,
+          "crc32": "27bc6c8c",
+          "sha256": "ab6e2e3ca0b941deba7adaeade8e0d169b2fff1b2c88f9e401d0abbf0309d40e"
+        },
+        {
+          "path": "originals/softenter/catalogue-43.html",
+          "bytes": 7159,
+          "crc32": "44537d6e",
+          "sha256": "433bb0118a5a6cafe1f68f6a8d242ca4d29f9c9ad93119ddd91e8cbebc92d4a0"
+        },
+        {
+          "path": "originals/softenter/catalogue-44.html",
+          "bytes": 7410,
+          "crc32": "a6374f44",
+          "sha256": "16a048f58166dce2d11e79c9a1aafffc4f58572c836b0e187d2a590c80136386"
+        },
+        {
+          "path": "originals/softenter/catalogue-49.html",
+          "bytes": 7665,
+          "crc32": "37f8bab5",
+          "sha256": "201ecdf048cf1d11175c5f9801488fcba02881e30000c02acecaadd357f847e3"
+        },
+        {
+          "path": "originals/softenter/catalogue-54.html",
+          "bytes": 8932,
+          "crc32": "73c2d36c",
+          "sha256": "e28f4b05b6937d1c2c65b562b12c5b36d35c8f17e8fbc59074fb25595dd0d76f"
+        },
+        {
+          "path": "originals/softenter/catalogue-55.html",
+          "bytes": 9035,
+          "crc32": "92a50582",
+          "sha256": "a8a76cf697849489d3e970df7e13cf28cc1d8bd5edf94678cc916a8cbda2af40"
+        },
+        {
+          "path": "originals/softenter/catalogue-56.html",
+          "bytes": 9192,
+          "crc32": "1efa6352",
+          "sha256": "7273feffcc0b762135b71b469fba68025b7bf12ab2c6ad51683808e3765ade46"
+        },
+        {
+          "path": "originals/softenter/catalogue-57.html",
+          "bytes": 8235,
+          "crc32": "1c213cfc",
+          "sha256": "a87f9117d5b202bed54797b91df85e77ef93bb819e8ec5262eb777357373cf0a"
+        },
+        {
+          "path": "originals/softenter/catalogue-58.html",
+          "bytes": 8223,
+          "crc32": "4885a4bb",
+          "sha256": "e62c98a870debcf8c7e0191805d6e5679483718646d92f2b4f6a6e56656dccaf"
+        },
+        {
+          "path": "originals/softenter/catalogue-66.html",
+          "bytes": 8444,
+          "crc32": "97c88cc0",
+          "sha256": "613c3c257a558ed62c069c26290e3e7c77ac8ecf368820264841b4ba0e7bb12e"
+        },
+        {
+          "path": "originals/softenter/catalogue-68.html",
+          "bytes": 8932,
+          "crc32": "206d35a9",
+          "sha256": "ff10236d57afd5db8ebe76128d4ec7443037d0a9a028b7e393f4aa98d85b3ab4"
+        },
+        {
+          "path": "originals/softenter/catalogue-69.html",
+          "bytes": 10547,
+          "crc32": "369d533f",
+          "sha256": "e11cdd3775bff454a6bca19ea2d31b6284a93b27148cd69d1336ff0c276b59f3"
+        },
+        {
+          "path": "originals/softenter/catalogue-70.html",
+          "bytes": 9086,
+          "crc32": "96efd4f8",
+          "sha256": "5fc16af5762031288c226bdf326ea3acc840fd36fa8bd838da91fd02b6d4f554"
+        },
+        {
+          "path": "originals/softenter/catalogue-71.html",
+          "bytes": 9132,
+          "crc32": "a735c4fb",
+          "sha256": "1ca8438f11b48e0cdf92b4a23167ecc7e098d52cfd68e46045d2a34f30ffe4d2"
+        },
+        {
+          "path": "originals/softenter/media/media-09.gif",
+          "bytes": 11982,
+          "crc32": "26671663",
+          "sha256": "ac9a0188490d39a5cce662b28813dd08b36c2aff2a416836805456c8bc1504f5"
+        },
+        {
+          "path": "originals/softenter/media/media-10.jpg",
+          "bytes": 26831,
+          "crc32": "847590b0",
+          "sha256": "cddd49d37348905bb3585d552d0fcdf2d3414c84dbfb14655f6a5a53929554d7"
+        },
+        {
+          "path": "originals/softenter/media/media-11.jpg",
+          "bytes": 23571,
+          "crc32": "ebd75794",
+          "sha256": "83b4b3c473f2b43110105dca143ea1204689ab42c7a2ced73dc6500088e1cc72"
+        },
+        {
+          "path": "originals/softenter/media/media-16.jpg",
+          "bytes": 29021,
+          "crc32": "44b18869",
+          "sha256": "00583834ef7ade006f2368248aecf2f2e9c087445f9ed6073f66a613557c9b03"
+        },
+        {
+          "path": "originals/softenter/media/media-17.jpg",
+          "bytes": 27229,
+          "crc32": "96010668",
+          "sha256": "6b83f2b83e954ea17e8ad7a2b19bc4c970c5e43873b45347951fb4d01491f657"
+        },
+        {
+          "path": "originals/softenter/media/media-18.jpg",
+          "bytes": 28160,
+          "crc32": "aa946b8d",
+          "sha256": "875cceea22932d1a003fb2908bc63fb8ec976aebb0793c53726be91f665ac4c3"
+        },
+        {
+          "path": "originals/softenter/media/media-24.jpg",
+          "bytes": 31962,
+          "crc32": "3918dfdb",
+          "sha256": "6d3348d07ca9ae083949916397a972b708d4d8366ad46be799b911f1ec137fb3"
+        },
+        {
+          "path": "originals/softenter/media/media-25.jpg",
+          "bytes": 26364,
+          "crc32": "185064dc",
+          "sha256": "ae376413b2f27a0aa218849a447731e8466b994d0a54425c6e81c4c55170906c"
+        },
+        {
+          "path": "originals/softenter/media/media-26.jpg",
+          "bytes": 27772,
+          "crc32": "ac1d927e",
+          "sha256": "1ca4278b1ce768adeabe20455a7f0a832ca535c6d6c15e7a096ec3b0bddc1009"
+        },
+        {
+          "path": "originals/softenter/media/ss_horror_color_3.gif",
+          "bytes": 4057,
+          "crc32": "4923ef3e",
+          "sha256": "92b865a61a946cbe824697ab356288e594b1838ed57991ff41c067db14cda79e"
+        },
+        {
+          "path": "originals/softenter/media/ss_horror_color_4.gif",
+          "bytes": 4979,
+          "crc32": "2a55f9af",
+          "sha256": "0c86a31841c2df54c925d61959de97dbf4c7b29e93ea305a257243b87f21151a"
+        },
+        {
+          "path": "originals/wayback/softenter-cdx.json",
+          "bytes": 165225,
+          "crc32": "05751756",
+          "sha256": "7e7ace30b9fd8bae94aadbcdd0fab72460d2d768f5a6a64ca206f6c1963f6767"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 24512,
+          "crc32": "15655b79",
+          "sha256": "cd4a93ded48c28bde40ac24762a5b28c0ad6cb94ba2ebd5344e874eeda529d0b"
+        }
+      ]
+    },
+    {
       "id": "palletshipping-lgt-33-rpg",
       "repositoryPath": "research/archives/Palletshipping-LGT-33-RPG-Game-Packages.zip",
       "bytes": 70930888,
@@ -196480,9 +197287,9 @@
     }
   ],
   "counts": {
-    "archives": 104,
-    "archiveBytes": 2009384179,
-    "fileMembers": 32590,
-    "uniqueMemberHashes": 18285
+    "archives": 105,
+    "archiveBytes": 2015378596,
+    "fileMembers": 32723,
+    "uniqueMemberHashes": 18417
   }
 }
