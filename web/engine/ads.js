@@ -26,6 +26,47 @@ const RANDOM_DRAWING_STUBS = DRAWING_STUBS.filter((slot) => slot !== 0x40);
 const UDON_STUBS = [0x0c, ...RANDOM_DRAWING_STUBS];
 const PROFILES = [
   {
+    id: 'badger',
+    title: 'Badger',
+    bytes: 81178,
+    sha256: '007800b1ce6fb69b09ec70811bf04c2f2f69a3da5e7c7676dfca8e670434a6a4',
+    timerArgument: 1,
+    stubs: RANDOM_DRAWING_STUBS,
+    eventBudget: 50000,
+  },
+  {
+    id: 'push-push-ice-world',
+    title: 'Push Push Ice World',
+    bytes: 98526,
+    sha256: '55121d80b13011564a3e7b0ba8b8c1e8809f591f3502ad5a517ca006beb62bb4',
+    timerArgument: 1,
+    height: 144,
+    stubs: RANDOM_DRAWING_STUBS,
+    mqRasters: {
+      0x12ff8: {
+        descriptor: BSS + 0x14b0,
+        geometry: 0x00011011,
+        key: 0xe3,
+        caller: TEXT + 0x202d,
+        pixels: 17 * 18,
+      },
+      0x1307c: {
+        descriptor: BSS + 0x14bc,
+        geometry: 0x00011011,
+        key: 0xe3,
+        caller: TEXT + 0x202d,
+        pixels: 17 * 18,
+      },
+      0x130ed: {
+        descriptor: BSS + 0x14c8,
+        geometry: 0x00011011,
+        key: 0xe3,
+        caller: TEXT + 0x202d,
+        pixels: 17 * 18,
+      },
+    },
+  },
+  {
     id: 'merry-christmas',
     title: 'Merry Christmas',
     bytes: 92462,

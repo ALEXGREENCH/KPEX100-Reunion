@@ -151,7 +151,11 @@ function frame(force = false) {
   ]);
   lastDisplayUpdate = displayUpdate;
   framePending = false;
-  lastFrame = performance.now();
+  const sent = performance.now();
+  // Keep the ADS display on its existing refresh phase after small delays.
+  // A forced frame or a missed slot starts a new phase.
+  lastFrame =
+    isAds && !force && sent - lastFrame < frameInterval * 2 ? lastFrame + frameInterval : sent;
 }
 function fail(error) {
   running = false;
@@ -166,12 +170,15 @@ function fail(error) {
 function syncTimer(firedChannel = null, now = performance.now()) {
   if (mode === 'game') timers.sync(isAds ? adsTimers : machine.timerStates, now, firedChannel);
 }
-function fireTimer(channel) {
+function fireTimer(channel, scheduledAt = null) {
   const started = performance.now();
   if (isAds) machine.tick();
   else machine.event('TIMEOUT', channel);
-  // Guest execution consumes the interval; do not add another full delay after it.
-  syncTimer(channel, started);
+  // Minor wake-up delays must not accumulate on the fixed ADS timer. Rebase
+  // after a missed period or a manual step instead of dispatching a backlog.
+  const anchor =
+    isAds && scheduledAt !== null && scheduledAt + frameInterval > started ? scheduledAt : started;
+  syncTimer(channel, anchor);
 }
 function setAdsKey(key, pressed, repeat) {
   const code = adsKeys[key];
@@ -411,7 +418,7 @@ function tick() {
       } else {
         const timer = timers.next();
         if (timer && performance.now() >= timer.at) {
-          fireTimer(timer.channel);
+          fireTimer(timer.channel, timer.at);
           checkState();
           frame();
         }
@@ -430,7 +437,7 @@ function tick() {
       timers.next()?.at ?? Infinity,
       framePending ? lastFrame + frameInterval : Infinity,
     );
-    delay = Math.max(1, Math.min(25, due - performance.now()));
+    delay = Math.max(1, Math.min(25, Math.ceil(due - performance.now())));
   }
   setTimeout(tick, delay);
 }

@@ -1,0 +1,766 @@
+{
+  "schema": 1,
+  "status": "scratch-offline-gameplay-research",
+  "original": {
+    "bundle": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+    "bundleSha256": "a3d0b13b64199ce6e4eb04285d1a7e9324d29fce90a2cd6d65e3a3399fb8ff20",
+    "nestedMember": "original/Anycall-Land-games.zip",
+    "nestedSha256": "2b2a05fa72c0215f413cedca20afba23052ec6b2ef15c451420ef156831caee2",
+    "member": "버전 다름/스톤에이지.mbin",
+    "bytes": 131147,
+    "crc32": "92ad0a1f",
+    "sha256": "80a2028f08f74976352b80397f46a3ad4771a138d7d0e8e462ccf56eb2377152",
+    "bodyOffset": 265,
+    "bodySha256": "41282784419a3fd2474dcb53548fcdbe31bbb0f004d3b708f5a7882ff6fb0b1e"
+  },
+  "host": {
+    "cpu": "ARM Thumb / Unicorn WASM",
+    "textBase": "0xf4000000",
+    "bssBase": "0xf5000000",
+    "lcdAddress": "0xf5040000",
+    "size": [
+      120,
+      128
+    ],
+    "palette": "provisional RGB332",
+    "timerEvent": 5,
+    "timerArgument": 1,
+    "keyEvent": 4,
+    "watchdogHalfwords": 150000
+  },
+  "setup": [
+    {
+      "ticks": 100
+    },
+    {
+      "key": 19,
+      "ticks": 30
+    },
+    {
+      "key": 19,
+      "ticks": 30
+    },
+    {
+      "injectedEvent": 17,
+      "argument": 0,
+      "ticks": 70
+    }
+  ],
+  "offline": {
+    "acknowledgedSlots": [
+      "0x194",
+      "0x190",
+      "0x198"
+    ],
+    "networkRequestsSent": 0,
+    "readinessFlagAddress": "0xf500019b",
+    "connectArgumentTextAddress": "0xf400d840",
+    "connectArgumentPort": 5477
+  },
+  "mq": {
+    "outputAddress": "0xf5000a40",
+    "outputBytesCopiedByGuest": 16,
+    "verifiedPointerOffset": 0,
+    "scratchOtherWords": [
+      0,
+      0,
+      0
+    ],
+    "historySeedIndex": 227,
+    "assets": [
+      {
+        "bodyOffset": "0x17ed7",
+        "pixels": 3024,
+        "packedBytes": 1592,
+        "packedSha256": "c2f3ddb7ba473a7a8521b229add2597121acb5022aa2b82379abd26a15cac420",
+        "decodedSha256": "e911fe18035f3559b8e2b9277f2935d042aa3ed380304204063984f6f47b64d5"
+      },
+      {
+        "bodyOffset": "0x17d62",
+        "pixels": 576,
+        "packedBytes": 373,
+        "packedSha256": "6241d11c9a6704de1c215bd5a6e257969ee6efa009f468cfe6f7154b56e452a4",
+        "decodedSha256": "f95dfdd6d21232145096673f6f4127f11ef00598b6690742a8ce00ad08134ab6"
+      },
+      {
+        "bodyOffset": "0x192db",
+        "pixels": 576,
+        "packedBytes": 266,
+        "packedSha256": "095fe5a4fc4fe7e89e55f8543151af57707e6a8f9d5e35a05574c0b3811ad9b2",
+        "decodedSha256": "9bb03045501546482616639542c743c71937bd30cb0b93af944f4d4c66eecc61"
+      },
+      {
+        "bodyOffset": "0x12a28",
+        "pixels": 3328,
+        "packedBytes": 1612,
+        "packedSha256": "64d7cface7572d389ca5a6fa9685356e436c9321ec318e8967d8511686b4add4",
+        "decodedSha256": "83017adb86b5095bc4af7816181e6638a6e6d051128227d8ab7cdeadb23e7c92"
+      }
+    ]
+  },
+  "paired": {
+    "timerTicks": 12,
+    "tapBeforeEveryTick": true,
+    "branches": [
+      {
+        "key": null,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 246,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 1,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 2,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 4,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 5,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 6,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 8,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 10,
+        "indexedSha256": "fced7920f839e13962c2d98e6a8647561a865e6dc4446966592935a370df1ecb",
+        "changedPixels": 7675,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 18
+      },
+      {
+        "key": 11,
+        "indexedSha256": "01ea55e36342faa2059c36902450323f1b893dc6ac5e35185fea8b34bec97006",
+        "changedPixels": 500,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 12,
+        "indexedSha256": "657cfba00cbe465c1c48a621fa9ae0745626952eb096270c256d415e5d98537b",
+        "changedPixels": 4794,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 13,
+        "indexedSha256": "88cec61bbd1b579671798da1cfa7a6a50b7124e1cc30430abd3589fee3544795",
+        "changedPixels": 6382,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 14,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 15,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 19,
+        "indexedSha256": "34517ecbf9ca9731daa3b2dd122203186b55bef8ec04e80df62a9282e7e1d6f8",
+        "changedPixels": 11045,
+        "presentations": 242,
+        "completedEvents": 258,
+        "emptyTilesSkipped": 0
+      }
+    ]
+  },
+  "walking": {
+    "additionalTimerTicks": 960,
+    "tapEveryTimerTicks": 3,
+    "inputsChangeEveryTimerTicks": 160,
+    "inputs": [
+      "branch key",
+      11,
+      12,
+      10,
+      13,
+      19
+    ],
+    "branches": [
+      {
+        "key": null,
+        "indexedSha256": "3826ef8f0e5a3b0b4e0d1309a9c73aa71fd8ab5f384dc7f11814826a03efb6e3",
+        "changedPixels": 0,
+        "presentations": 1202,
+        "completedEvents": 1206,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 10,
+        "indexedSha256": "aac01144edc800a17a83d0101a195984dabfb07dc285b3b415e26db1a95982a5",
+        "changedPixels": 12505,
+        "presentations": 1202,
+        "completedEvents": 1538,
+        "emptyTilesSkipped": 1575
+      },
+      {
+        "key": 11,
+        "indexedSha256": "aac01144edc800a17a83d0101a195984dabfb07dc285b3b415e26db1a95982a5",
+        "changedPixels": 12505,
+        "presentations": 1202,
+        "completedEvents": 1538,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 12,
+        "indexedSha256": "aac01144edc800a17a83d0101a195984dabfb07dc285b3b415e26db1a95982a5",
+        "changedPixels": 12505,
+        "presentations": 1202,
+        "completedEvents": 1538,
+        "emptyTilesSkipped": 0
+      },
+      {
+        "key": 13,
+        "indexedSha256": "5cef4b4782b168b3a9460a605b564ac00363932e45e77223ab4ded3301bb143d",
+        "changedPixels": 12779,
+        "presentations": 1202,
+        "completedEvents": 1538,
+        "emptyTilesSkipped": 0
+      }
+    ]
+  },
+  "corpus": {
+    "uniqueBodiesScanned": 69,
+    "matchesForBothWrappers": 13,
+    "scan": "Aligned little-endian Thumb halfwords, after removing 0x109-byte header and deduplicating by body SHA-256. Compare each word and its reference after applying the listed mask.",
+    "signatures": {
+      "mqOut": {
+        "bodyOffset": "0xdc0",
+        "words": [
+          "b5b8",
+          "4b08",
+          "1c07",
+          "4c08",
+          "1c08",
+          "6019",
+          "9400",
+          "1d1a",
+          "ca06",
+          "4d06",
+          "68db",
+          "682d",
+          "f00f",
+          "fb47",
+          "cc3c",
+          "c73c",
+          "bdb8"
+        ],
+        "masks": [
+          "ffff",
+          "ff00",
+          "ffff",
+          "ff00",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ff00",
+          "ffff",
+          "ffff",
+          "0000",
+          "0000",
+          "ffff",
+          "ffff",
+          "ffff"
+        ]
+      },
+      "regionBlit": {
+        "bodyOffset": "0xd88",
+        "words": [
+          "b5f8",
+          "4f0a",
+          "9c08",
+          "9d07",
+          "9e06",
+          "6038",
+          "7139",
+          "80fa",
+          "813b",
+          "817e",
+          "81bd",
+          "81fc",
+          "4a05",
+          "1d3b",
+          "9200",
+          "cb0e",
+          "4f04",
+          "683f",
+          "f00f",
+          "fb5f",
+          "bdf8"
+        ],
+        "masks": [
+          "ffff",
+          "ff00",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ff00",
+          "ffff",
+          "ffff",
+          "ffff",
+          "ff00",
+          "ffff",
+          "0000",
+          "0000",
+          "ffff"
+        ]
+      }
+    },
+    "matches": [
+      {
+        "member": "버전 다름/니들이그때를알아.mbin",
+        "sha256": "61d722affae7ec15e46b3f41bac91cb168af458a985d8927cc4f5ee4b60194f2",
+        "paths": {
+          "mqOut": [
+            "0x14ac"
+          ],
+          "regionBlit": [
+            "0x11f0"
+          ]
+        }
+      },
+      {
+        "member": "버전 다름/무대리절대복종.mbin",
+        "sha256": "c462075987569eaca3415c86265d4506e45d5d36057bd34d2e6d424431741f5d",
+        "paths": {
+          "mqOut": [
+            "0x5948"
+          ],
+          "regionBlit": [
+            "0x568c"
+          ]
+        }
+      },
+      {
+        "member": "버전 다름/세븐포커.mbin",
+        "sha256": "ae62a965dda16072ffd28c1bf3b1a6b99378151a8a1c774528cb2c32a7cdffd1",
+        "paths": {
+          "mqOut": [
+            "0x2048"
+          ],
+          "regionBlit": [
+            "0x1d8c"
+          ]
+        }
+      },
+      {
+        "member": "버전 다름/스톤에이지.mbin",
+        "sha256": "80a2028f08f74976352b80397f46a3ad4771a138d7d0e8e462ccf56eb2377152",
+        "paths": {
+          "mqOut": [
+            "0xdc0"
+          ],
+          "regionBlit": [
+            "0xd88"
+          ]
+        }
+      },
+      {
+        "member": "버전 다름/오목.mbin",
+        "sha256": "23c37635d5de54bd2cfad95c080ad70487c24feb52997f60d1223c900d568f08",
+        "paths": {
+          "mqOut": [
+            "0x4d48"
+          ],
+          "regionBlit": [
+            "0x4a8c"
+          ]
+        }
+      },
+      {
+        "member": "버전 다름/졸라쏴라.mbin",
+        "sha256": "9a1d675e8c9d5e8f66d0e34cbb003cd8ccd943bfdc39ca6a6328c969c5ede91f",
+        "paths": {
+          "mqOut": [
+            "0x2098"
+          ],
+          "regionBlit": [
+            "0x1ddc"
+          ]
+        }
+      },
+      {
+        "member": "무대리스키&스파이.mbin",
+        "sha256": "cd692e16ccab0c04dc9d4a06e342f3632163c4dc240a90103853920f5fd6dca1",
+        "paths": {
+          "mqOut": [
+            "0x2784"
+          ],
+          "regionBlit": [
+            "0x24c8"
+          ]
+        }
+      },
+      {
+        "member": "세븐포커.mbin",
+        "sha256": "07a367dfb3889ab4da929bf36cc70e6247fc01ead018a7ee2a156f0486e603fb",
+        "paths": {
+          "mqOut": [
+            "0x23ae"
+          ],
+          "regionBlit": [
+            "0x20f2"
+          ]
+        }
+      },
+      {
+        "member": "스톤에이지(신형).mbin",
+        "sha256": "86185a8761d091deedcd71f7b8d7bbb3b81404940a18e21a199a27eccdec0e55",
+        "paths": {
+          "mqOut": [
+            "0x10ee"
+          ],
+          "regionBlit": [
+            "0x10b6"
+          ]
+        }
+      },
+      {
+        "member": "스톤에이지.mbin",
+        "sha256": "2402ee7c4ed37e787d5dc10783209c461cd59a1c771746fb0eb618ecb5111f05",
+        "paths": {
+          "mqOut": [
+            "0xeb2"
+          ],
+          "regionBlit": [
+            "0xe7a"
+          ]
+        }
+      },
+      {
+        "member": "오목.mbin",
+        "sha256": "f53c3e35f05370d01566bb2a603789edf53d20cfb0b3715a2b3899b90d7337c6",
+        "paths": {
+          "mqOut": [
+            "0x5018"
+          ],
+          "regionBlit": [
+            "0x4d5c"
+          ]
+        }
+      },
+      {
+        "member": "인디아나_조수.mbin",
+        "sha256": "6a7b64810f68f753395276f3d481c27f728e53a66de51375306372919e944585",
+        "paths": {
+          "mqOut": [
+            "0x18e4"
+          ],
+          "regionBlit": [
+            "0x1628"
+          ]
+        }
+      },
+      {
+        "member": "졸라맨졸라마리오2.mbin",
+        "sha256": "1a5144628aaba8b763c99604d7a1863c96bbf1d64f600fa7bcfadce5b977bc94",
+        "paths": {
+          "mqOut": [
+            "0x1bdc"
+          ],
+          "regionBlit": [
+            "0x1920"
+          ]
+        }
+      }
+    ]
+  },
+  "textCall": {
+    "slot": "0x5c",
+    "textEncoding": "CP949",
+    "descriptorRegister": "r0",
+    "knownOffsets": {
+      "lcdPointer": 0,
+      "geometry": 4,
+      "destination": 8,
+      "nulTerminatedTextPointer": 12
+    },
+    "observations": [
+      {
+        "completedEvents": 1,
+        "caller": "0xf40009f7",
+        "text": "Loading..",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x00560008",
+          "0xf4000aa8",
+          "0xf5000101",
+          "0x00000000",
+          "0x00000000",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0xf5000080"
+        ]
+      },
+      {
+        "completedEvents": 61,
+        "caller": "0xf4000c61",
+        "text": "(C) ENIUM 2002",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x006c0010",
+          "0xf400b614",
+          "0xf5000111",
+          "0x00000000",
+          "0x00000049",
+          "0x00000000",
+          "0x00000002",
+          "0x00750000",
+          "0xf5000080"
+        ]
+      },
+      {
+        "completedEvents": 102,
+        "caller": "0xf4000c61",
+        "text": "처음부터",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x0014001f",
+          "0xf400b924",
+          "0x00000111",
+          "0x00000000",
+          "0x000000de",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0xf4000080"
+        ]
+      },
+      {
+        "completedEvents": 102,
+        "caller": "0xf4000c61",
+        "text": "이어하기",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x0023001f",
+          "0xf400b930",
+          "0x00000111",
+          "0x00000000",
+          "0x00000071",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0xf4000080"
+        ]
+      },
+      {
+        "completedEvents": 102,
+        "caller": "0xf4000c61",
+        "text": "게임설명",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x0032001f",
+          "0xf400b93c",
+          "0x00000111",
+          "0x00000000",
+          "0x00000071",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0xf4000080"
+        ]
+      },
+      {
+        "completedEvents": 102,
+        "caller": "0xf4000c61",
+        "text": "게임사용법",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x0041001f",
+          "0xf400b948",
+          "0x00000111",
+          "0x00000000",
+          "0x00000071",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0xf4000080"
+        ]
+      },
+      {
+        "completedEvents": 102,
+        "caller": "0xf4000c61",
+        "text": "온라인으로 전송",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x0050001f",
+          "0xf400b954",
+          "0x00000111",
+          "0x00000000",
+          "0x00000071",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0xf4000080"
+        ]
+      },
+      {
+        "completedEvents": 102,
+        "caller": "0xf4000c61",
+        "text": "게임종료",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x005f001f",
+          "0xf400b964",
+          "0x00000111",
+          "0x00000000",
+          "0x00000071",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0xf4000080"
+        ]
+      },
+      {
+        "completedEvents": 133,
+        "caller": "0xf4000c61",
+        "text": "서버체크중...",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x0038001b",
+          "0xf400ddd4",
+          "0x00000111",
+          "0x00000000",
+          "0x000000ff",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0x00000080"
+        ]
+      },
+      {
+        "completedEvents": 236,
+        "caller": "0xf4000c61",
+        "text": "이전*",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x00700008",
+          "0xf400b164",
+          "0xf5000111",
+          "0x00000000",
+          "0x000000ff",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0x00000080"
+        ]
+      },
+      {
+        "completedEvents": 236,
+        "caller": "0xf4000c61",
+        "text": "닫기0",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x00700030",
+          "0xf400b16c",
+          "0xf5000111",
+          "0x00000000",
+          "0x000000ff",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0x00000080"
+        ]
+      },
+      {
+        "completedEvents": 236,
+        "caller": "0xf4000c61",
+        "text": "다음#",
+        "descriptorWords": [
+          "0xf5040000",
+          "0x00800078",
+          "0x00700058",
+          "0xf400b174",
+          "0xf5000111",
+          "0x00000000",
+          "0x000000ff",
+          "0x00000000",
+          "0x00000000",
+          "0x00780000",
+          "0x00000080"
+        ]
+      }
+    ],
+    "characterSprite": {
+      "bodyOffset": "0x12a28",
+      "size": [
+        16,
+        208
+      ],
+      "decodedSha256": "83017adb86b5095bc4af7816181e6638a6e6d051128227d8ab7cdeadb23e7c92"
+    }
+  }
+}

@@ -85,6 +85,14 @@ ADDITIONAL_GAMES = {
         "보글보글동자승2.mbin",
         "3ae1e04708000af39f87482c7d34e4e6ce8717f2c72eff2da7b044827cd72407",
     ),
+    "badger": (
+        "오소리.mbin",
+        "007800b1ce6fb69b09ec70811bf04c2f2f69a3da5e7c7676dfca8e670434a6a4",
+    ),
+    "push-push-ice-world": (
+        "버전 다름/푸쉬푸쉬얼음나라.mbin",
+        "55121d80b13011564a3e7b0ba8b8c1e8809f591f3502ad5a517ca006beb62bb4",
+    ),
     "hysteric-girl": (
         "버전 다름/히스테리_걸.mbin",
         "f388724afbda8d5f2c121eb9c8ac4f2f21c7a54cd6fe9459e46d7536ddead7e2",
@@ -109,6 +117,8 @@ DRAWING_TIMERS = {
     "cheombangjichuk-othello": 1,
     "couple-bowling": 1,
     "bubble-monk-2": 1,
+    "badger": 1,
+    "push-push-ice-world": 1,
     **dict.fromkeys(ACTION_GAMES, 1),
 }
 RANDOM_GAMES = (
@@ -116,6 +126,8 @@ RANDOM_GAMES = (
     "mobile-gostop",
     "couple-bowling",
     "bubble-monk-2",
+    "badger",
+    "push-push-ice-world",
     *ACTION_GAMES,
 )
 # Exact original guest calls with additional complete raster rows in the MQ payload.
@@ -127,6 +139,11 @@ MQ_PADDING = {
     },
     "independence-day-anycall": {
         0x1A0FA: (BSS + 0x1098, 0x1082C, 0, TEXT + 0x6691, 440),
+    },
+    "push-push-ice-world": {
+        0x12FF8: (BSS + 0x14B0, 0x11011, 0xE3, TEXT + 0x202D, 306),
+        0x1307C: (BSS + 0x14BC, 0x11011, 0xE3, TEXT + 0x202D, 306),
+        0x130ED: (BSS + 0x14C8, 0x11011, 0xE3, TEXT + 0x202D, 306),
     },
 }
 RGB332 = [
@@ -144,6 +161,7 @@ class Replay:
         self.instruction_budget = {
             "bubble-monk-2": 1_000_000,
             "hysteric-girl": 150_000,
+            "badger": 150_000,
         }.get(game_id, 25_000)
         self.original_sha256 = sha256(original).hexdigest()
         expected = (
@@ -167,6 +185,7 @@ class Replay:
                 "couple-bowling",
                 "hysteric-girl",
                 "independence-day-anycall",
+                "push-push-ice-world",
             )
             else HEIGHT
         )
@@ -734,6 +753,7 @@ def replay_mobile_gostop(original, output):
 
 def replay_paired_boards(original, output, game_id):
     start_ticks = 100
+    setup_ticks = 20
     if game_id == "cheombangjichuk-othello":
         setup_keys = [19, 19, 19, 19, 11, 11, 11, 11, 13, 13]
         intervals = [21, 80]
@@ -759,6 +779,24 @@ def replay_paired_boards(original, output, game_id):
                 "confirm": "Opens the power meter early. The first shot scores 6.",
             },
         }
+    elif game_id in ("badger", "push-push-ice-world"):
+        start_ticks = 165
+        setup_ticks = 18
+        setup_keys = [19, 19]
+        intervals = [24]
+        if game_id == "badger":
+            keys = (1, 3, 4, 6, 7, 9, 10, 11)
+            direction_pairs = [[10, 4], [11, 6]]
+        else:
+            keys = (2, 4, 6, 8, 10, 11, 12, 13)
+            direction_pairs = [[10, 4], [11, 6], [12, 2], [13, 8]]
+        inputs = [(None, "idle")] + [(key, f"key-{key:02d}") for key in keys]
+        details = {
+            "randomSeed": 0x12345678,
+            "clock": "synthetic count of presented frames",
+            "inputEveryTicks": 4,
+            "directionPairs": direction_pairs,
+        }
     else:
         start_ticks = 140
         setup_keys = [19, 19]
@@ -768,7 +806,8 @@ def replay_paired_boards(original, output, game_id):
             "randomSeed": 0x12345678,
             "clock": "synthetic count of presented frames",
         }
-    sequence = [(None, start_ticks)] + [(key, 20) for key in setup_keys]
+    sequence = [(None, start_ticks)] + [(key, setup_ticks) for key in setup_keys]
+    input_every = details.get("inputEveryTicks")
     common = []
     branches = []
     idle_frames = []
@@ -795,13 +834,19 @@ def replay_paired_boards(original, output, game_id):
             ):
                 raise RuntimeError("control diverged before gameplay input")
 
-        if key is not None:
+        if key is not None and input_every is None:
             game.key(key)
         checkpoints = []
         elapsed = 0
         for index, ticks in enumerate(intervals):
+            if key is not None and input_every is not None:
+                for tick in range(elapsed, elapsed + ticks):
+                    if tick % input_every == 0:
+                        game.key(key)
+                    game.tick()
+            else:
+                game.tick(ticks)
             elapsed += ticks
-            game.tick(ticks)
             frame = game.frame()
             if key is None:
                 idle_frames.append(frame)
@@ -826,7 +871,7 @@ def replay_paired_boards(original, output, game_id):
         )
         if key is None:
             identity = replay_identity(game, original)
-            if game_id in ACTION_GAMES:
+            if game_id in ACTION_GAMES or game_id in MQ_PADDING:
                 expected_mq = MQ_PADDING.get(game_id, {})
                 if game.padded_mq.keys() != expected_mq.keys():
                     raise RuntimeError("expected padded MQ resource was not used")
@@ -976,7 +1021,13 @@ def main():
             replay_mobile_gostop(original, args.output)
         elif args.game == "bubble-monk-2":
             replay_bubble_monk(original, args.output)
-        elif args.game in ("cheombangjichuk-othello", "couple-bowling", *ACTION_GAMES):
+        elif args.game in (
+            "cheombangjichuk-othello",
+            "couple-bowling",
+            "badger",
+            "push-push-ice-world",
+            *ACTION_GAMES,
+        ):
             replay_paired_boards(original, args.output, args.game)
         elif args.game in DRAWING_TIMERS and args.game != "119-rescue":
             replay_controls(original, args.output, args.game)

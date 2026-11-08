@@ -30,11 +30,16 @@ function harness(onEvent = () => {}) {
     setKey() {
       this.event('KEYPRESS');
     },
+    tick() {
+      this.event('TIMEOUT');
+    },
+    releaseKeys() {},
   };
   const Runtime = { create: async () => guest };
   const sandbox = {
     GnexRuntime: Runtime,
     LegacyRuntime: Runtime,
+    AdsRuntime: Runtime,
     detectVersion: () => 4,
     TimerScheduler,
     performance: { now: () => now },
@@ -62,9 +67,15 @@ function harness(onEvent = () => {}) {
     advance(milliseconds) {
       now += milliseconds;
     },
-    load() {
+    load(engine) {
+      if (engine === 'ads') {
+        guest.framebuffer = {
+          takePixels: () => new Uint8ClampedArray(guest.framebufferRGBA),
+        };
+      }
       return sandbox.control.command({
         type: 'loadGame',
+        engine,
         sessionId: 1,
         romUrl: 'rom',
         gameUrl: 'game',
@@ -72,6 +83,55 @@ function harness(onEvent = () => {}) {
     },
   };
 }
+
+test('ADS timer retains its phase after wake-up jitter and rebases after a missed period', async () => {
+  const h = harness();
+  const interval = 1000 / 60;
+  await h.load('ads');
+  h.tick();
+  assert.equal(h.tasks.at(-1).delay, 17, 'Wake after the fractional deadline');
+
+  h.advance(17);
+  h.tick();
+  assert.equal(h.events.length, 1);
+  assert.ok(Math.abs(h.deadline(0) - (1000 + 2 * interval)) < 1e-9);
+
+  h.advance(200);
+  h.tick();
+  assert.equal(h.events.length, 2, 'A late wake must run a single guest timer');
+  assert.ok(Math.abs(h.deadline(0) - (h.now() + interval)) < 1e-9);
+
+  await h.command({ type: 'pause', sessionId: 1 });
+  h.advance(50);
+  await h.command({ type: 'step', sessionId: 1 });
+  assert.equal(h.events.length, 3);
+  assert.ok(Math.abs(h.deadline(0) - (h.now() + interval)) < 1e-9);
+});
+
+test('ADS keeps consecutive refresh slots when one frame takes longer to render', async () => {
+  let updates = 0;
+  const h = harness((guest, name, channel, spend) => {
+    if (name !== 'TIMEOUT') return;
+    const color = ++updates;
+    guest.framebuffer = { takePixels: () => Uint8ClampedArray.of(color, 0, 0, 255) };
+    if (color === 1) spend(8);
+  });
+  const frames = () => h.messages.filter((message) => message.type === 'frame');
+  await h.load('ads');
+
+  h.advance(17);
+  h.tick();
+  assert.equal(frames().length, 2);
+  assert.equal(h.now(), 1025);
+  h.advance(9);
+  h.tick();
+  assert.deepEqual(
+    frames()
+      .slice(1)
+      .map((frame) => frame.pixels[0]),
+    [1, 2],
+  );
+});
 
 test('worker anchors new START/key timers before guest work and retains untouched deadlines', async () => {
   const h = harness((guest, name, channel, spend) => {

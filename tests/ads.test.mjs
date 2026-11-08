@@ -172,15 +172,25 @@ for (const [gameId, keys] of [
   ['hysteric-girl', [11, 19]],
   ['dalma-lets-play', [11, 19]],
   ['independence-day-anycall', [11, 19]],
+  ['badger', [1, 3, 4, 6, 7, 9, 10, 11]],
+  ['push-push-ice-world', [2, 4, 6, 8, 10, 11, 12, 13]],
 ]) {
   test(`ADS: ${gameId} matches the independent idle and keypad replays on ARM/WASM`, async () => {
     const record = json(`../validation/anycall-${gameId}.json`);
-    const { branches, commonSequence, size, timerIntervals } = record;
+    const {
+      branches,
+      commonSequence,
+      directionPairs = [],
+      inputEveryTicks,
+      size,
+      timerIntervals,
+    } = record;
     assert.deepEqual(
       branches.map(({ key }) => key),
       [null, ...keys],
     );
     const idle = [];
+    const finalFrames = new Map();
     for (const { key, checkpoints } of branches) {
       assert.equal(checkpoints.length, timerIntervals.length);
       await replay(record, (game) => {
@@ -189,9 +199,18 @@ for (const [gameId, keys] of [
           advance(game, step.ticks);
           assertCapture(game, step.capture, size);
         }
-        press(game, key);
+        if (!inputEveryTicks) press(game, key);
+        let elapsed = 0;
         for (const [index, ticks] of timerIntervals.entries()) {
-          advance(game, ticks);
+          if (inputEveryTicks && key !== null) {
+            for (let tick = elapsed; tick < elapsed + ticks; tick++) {
+              if (tick % inputEveryTicks === 0) press(game, key);
+              game.tick();
+            }
+          } else {
+            advance(game, ticks);
+          }
+          elapsed += ticks;
           const expected = checkpoints[index];
           assertCapture(game, expected, size);
           const frame = game.readIndexedFrame();
@@ -205,8 +224,18 @@ for (const [gameId, keys] of [
             if (ticks > 0) assert.ok(changed > 0, expected.file);
             assert.equal(changed, expected.changedPixels, expected.file);
           }
+          if (directionPairs.length && index === checkpoints.length - 1)
+            finalFrames.set(key, frame);
         }
       });
+    }
+    for (const [direction, number] of directionPairs) {
+      assert.ok(finalFrames.has(direction) && finalFrames.has(number));
+      assert.deepEqual(
+        finalFrames.get(direction),
+        finalFrames.get(number),
+        `${direction} and ${number}`,
+      );
     }
   });
 }

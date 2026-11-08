@@ -42,7 +42,7 @@ Mobiletop поставляла эту ветку технологии Samsung к
 
 ## Запуск в браузере
 
-Шестнадцать игр доступны во вкладке «Игры». Профиль Anycall выбирается
+Восемнадцать игр доступны во вкладке «Игры». Профиль Anycall выбирается
 автоматически, Enter и Z соответствуют экранной кнопке OK. Для запуска
 без готовой коллекции импортируйте соответствующий оригинальный MBIN.
 [Открыть библиотеку](https://alexgreench.github.io/KPEX100-Reunion/) ·
@@ -60,13 +60,15 @@ Mobiletop поставляла эту ветку технологии Samsung к
 | [Cheombangjichuk Othello](anycall-cheombangjichuk-othello.md)        | Стрелки двигают курсор, OK ставит фишку                              |
 | [Couple Bowling](anycall-couple-bowling.md)                          | Стрелки меняют прицел, OK управляет силой броска                     |
 | [Bubble Monk 2](anycall-bubble-monk-2.md)                            | OK выбирает персонажа, стрелки и цифры 2, 4, 5, 6 двигают героя      |
-| [Hysteric Girl](anycall-hysteric-dalma-independence.md)              | Стрелки или 6 двигают курсор вправо, OK или 5 открывает карточку     |
+| [Hysteric Girl](anycall-hysteric-dalma-independence.md)              | Стрелка вправо или 6 двигает курсор, OK или 5 открывает карточку     |
 | [Dalma, Let's Play](anycall-hysteric-dalma-independence.md)          | Стрелки двигают молоток, OK — удар                                   |
 | [Independence Day (Anycall)](anycall-hysteric-dalma-independence.md) | Стрелки двигают корабль, OK — выстрел                                |
+| [Badger](anycall-badger-push-push.md)                                | Стрелки влево и вправо или цифры 4 и 6 двигают героя                 |
+| [Push Push Ice World](anycall-badger-push-push.md)                   | Стрелки или цифры 2, 4, 6 и 8 двигают героя и толкают блоки          |
 
-Pocket Billiards, Othello, Couple Bowling, Hysteric Girl и Independence Day
-выводят кадр 120 × 144, остальные одиннадцать — 120 × 128. Палитра RGB332
-и таймеры приближённые.
+Pocket Billiards, Othello, Couple Bowling, Hysteric Girl, Independence Day
+и Push Push Ice World выводят кадр 120 × 144, остальные двенадцать —
+120 × 128. Палитра RGB332 и таймеры приближённые.
 Сохранение между запусками и часть системных надписей пока недоступны.
 
 ADS-воркер передаёт готовый RGBA-буфер напрямую. На кадрах
@@ -78,9 +80,18 @@ ADS-воркер передаёт готовый RGBA-буфер напряму�
 Замер включает выделение буфера и преобразование палитры.
 [Проверка передачи и цветов](../tests/ads.test.mjs).
 
+В ADS расписание тактов и вывода сохраняет фазу при коротком опоздании.
+После пропущенного периода воркер начинает отсчёт заново и выполняет
+один такт. Задержка округляется вверх до целой миллисекунды.
+В двух локальных сравнениях Chrome Bubble Monk 2 показала 56,7–57,2
+обновления canvas в секунду вместо 38,7–39,8. У Hysteric Girl было
+50,4–52,2 вместо 38,7–39,9. Замер учитывает завершённые вызовы
+`putImageData` в игровом окне 1280 × 900.
+[Тест расписания](../tests/unit/worker-scheduling.test.mjs).
+
 ## Звук ADS
 
-В шестнадцати оригиналах есть 135 клипов SMAF. Смещения в MBIN, размеры,
+В восемнадцати оригиналах есть 159 клипов SMAF. Смещения в MBIN, размеры,
 SHA‑256 и CRC16 зафиксированы в [инвентаре](../validation/anycall-smaf-inventory.json).
 По всем 82 записям исходного ZIP инспектор подтвердил 789 вхождений
 и 366 разных клипов по SHA‑256.
