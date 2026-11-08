@@ -25,8 +25,11 @@ SHA-256 указаны в манифесте. Сохранены байты вс
 проверены следующие инструкции. В телах есть сообщения среды ARM/Thumb.
 Статическая проверка SGS версий 1, 2, 4 и 36, включая XOR `0xa5`,
 совпадений не дала. Для Jumping Baby отдельно проверены запуск до уровня
-и прыжок с оригинальным кодом игры.
-[Воспроизведение Jumping Baby](anycall-jumping-baby-replay.md).
+и прыжок с оригинальным кодом игры. Hungry Hunter, Love Love Ppyong
+Hammer и Oh My Head дошли до игрового процесса и дали разницу в парных
+прогонах с вводом и без него.
+[Воспроизведение Jumping Baby](anycall-jumping-baby-replay.md) ·
+[Три игры IntroMobile](anycall-intromobile-replays.md).
 
 Mobiletop поставляла эту ветку технологии Samsung как ADS, а KTF
 предлагала MAP. В инструкции Samsung SCH-V300 ADS и NATE GVM

@@ -1,4 +1,4 @@
-"""Replay the original Jumping Baby ADS Thumb program with a partial host."""
+"""Replay original Samsung Anycall ADS Thumb games with a partial host."""
 
 import argparse
 from collections import Counter
@@ -36,6 +36,21 @@ WIDTH, HEIGHT = 120, 128
 FRAME_BYTES = WIDTH * HEIGHT
 ARGS = (UC_ARM_REG_R0, UC_ARM_REG_R1, UC_ARM_REG_R2, UC_ARM_REG_R3)
 STUB_SLOTS = {0x18, 0x24, 0x3C, 0x40, 0x48, 0x68}
+INTRO_GAMES = {
+    "hungry-hunter": (
+        "Hungry_Hunter.mbin",
+        "be7a23f99e205ab13674706ad750cebb01558e6dd65835cfbdc31546b8c5a8be",
+    ),
+    "love-love": (
+        "러브러브_뿅망치.mbin",
+        "d976b7800d9ba20ebd726212afcfaa387240eace6a7892de4560c4c82479ceba",
+    ),
+    "oh-my-head": (
+        "버전 다름/오마이_헤드.mbin",
+        "53e0e20bc8e615eee973fae319b40ebbaccb6fdafc3d8a91d8e8c6228031e74f",
+    ),
+}
+INTRO_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
 RGB332 = [
     bytes(
         ((value >> 5) * 255 // 7, ((value >> 2) & 7) * 255 // 7, (value & 3) * 255 // 3)
@@ -46,9 +61,15 @@ MQ = runpy.run_path(str(Path(__file__).with_name("extract-samsung-w420-mq.py")))
 
 
 class Replay:
-    def __init__(self, original):
-        if sha256(original).hexdigest() != MBIN_SHA256:
-            raise ValueError("unexpected Jumping Baby MBIN SHA-256")
+    def __init__(self, original, *, game_id="jumping-baby"):
+        self.game_id = game_id
+        self.original_sha256 = sha256(original).hexdigest()
+        expected = MBIN_SHA256 if game_id == "jumping-baby" else INTRO_GAMES[game_id][1]
+        if self.original_sha256 != expected:
+            raise ValueError(f"unexpected {game_id} MBIN SHA-256")
+        self.stub_slots = (
+            STUB_SLOTS if game_id == "jumping-baby" else STUB_SLOTS | INTRO_STUB_SLOTS
+        )
         self.body = original[HEADER_BYTES:]
         self.sprites = {}
         self.resources = {}
@@ -56,7 +77,7 @@ class Replay:
         self.frames = 0
         self.error = None
         self.cpu = Uc(UC_ARCH_ARM, UC_MODE_THUMB)
-        self.cpu.mem_map(TEXT, 0x10000)
+        self.cpu.mem_map(TEXT, (len(self.body) + 0xFFF) & ~0xFFF)
         self.cpu.mem_write(TEXT, self.body)
         self.cpu.mem_map(BSS, 0x80000)
         self.cpu.mem_map(TABLE, 0x4000)
@@ -86,14 +107,16 @@ class Replay:
         if slot == 0x04:
             cpu.mem_write(a, struct.pack("<I", FRAMEBUFFER))
         elif slot == 0xB0:
-            self.load_sprite(a, b, c, d)
+            # This build passes an empty descriptor during resource loading.
+            if self.game_id != "oh-my-head" or a or b or c or d:
+                self.load_sprite(a, b, c, d)
             return
         elif slot == 0x70:
             self.blit(a, b)
             return
         elif slot == 0xA0:
             self.frames += 1
-        elif slot not in STUB_SLOTS:
+        elif slot not in self.stub_slots:
             self.error = f"unhandled ADS call at table offset {slot:#04x}"
             cpu.emu_stop()
         cpu.reg_write(UC_ARM_REG_R0, 0)
@@ -162,22 +185,87 @@ def save_frame(output, name, game):
     }
 
 
-def read_original(path):
+def read_original(path, member="점핑!_베이비.mbin"):
     if path.suffix.lower() != ".zip":
         return path.read_bytes()
     with ZipFile(path) as preserved:
         original_zip = preserved.read("original/Anycall-Land-games.zip")
     with ZipFile(BytesIO(original_zip), metadata_encoding="cp949") as games:
-        return games.read("점핑!_베이비.mbin")
+        return games.read(member)
+
+
+def replay_intro(original, output, game_id):
+    game = Replay(original, game_id=game_id)
+    control = Replay(original, game_id=game_id)
+    captures = []
+    sequence = [(100, None, "01-title"), (20, 19, "02-menu")]
+    if game_id == "oh-my-head":
+        sequence.append((11, 19, "03-ready"))
+    sequence.append((11 if game_id == "hungry-hunter" else 12, 19, "04-before-input"))
+    for ticks, key, name in sequence:
+        for replay in (game, control):
+            if key is not None:
+                replay.key(key)
+            replay.tick(ticks)
+        captures.append(save_frame(output, name, game))
+
+    if game.frame() != control.frame():
+        raise RuntimeError("control diverged before gameplay input")
+    input_key = 2 if game_id == "hungry-hunter" else 10
+    ticks = 5 if game_id == "hungry-hunter" else 20
+    input_ticks = [0] if game_id == "hungry-hunter" else list(range(0, ticks, 3))
+    for index in range(ticks):
+        if index in input_ticks:
+            game.key(input_key)
+        game.tick()
+        control.tick()
+    changed = sum(a != b for a, b in zip(game.frame(), control.frame()))
+    if game.frames != control.frames or not changed:
+        raise RuntimeError("expected distinct frames at the same gameplay tick")
+    captures.append(save_frame(output, "05-no-input", control))
+    captures.append(save_frame(output, "06-input", game))
+
+    manifest = {
+        "schema": 1,
+        "game": game_id,
+        "originalMember": INTRO_GAMES[game_id][0],
+        "mbinSha256": game.original_sha256,
+        "mbinBytes": len(original),
+        "size": [WIDTH, HEIGHT],
+        "palette": "provisional RGB332",
+        "hostCallCounts": {
+            f"0x{slot:02x}": count for slot, count in sorted(game.calls.items())
+        },
+        "stubSlots": [f"0x{slot:02x}" for slot in sorted(game.stub_slots)],
+        "commonSequence": [{"ticks": ticks, "key": key} for ticks, key, _ in sequence],
+        "gameplayInput": {"key": input_key, "ticks": ticks, "inputTicks": input_ticks},
+        "changedPixels": changed,
+        "captures": captures,
+        "mqRecords": [game.resources[offset] for offset in sorted(game.resources)],
+    }
+    (output / "replay.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    print(
+        f"{game_id}: {len(game.resources)} MQ records, {game.frames} presentations, {changed} pixels changed"
+    )
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "source", type=Path, help="Jumping Baby MBIN or Samsung-Anycall-ADS-MBIN.zip"
+        "source", type=Path, help="Original MBIN or Samsung-Anycall-ADS-MBIN.zip"
     )
     parser.add_argument("output", type=Path)
+    parser.add_argument(
+        "--game", choices=("jumping-baby", *INTRO_GAMES), default="jumping-baby"
+    )
     args = parser.parse_args()
+    if args.game != "jumping-baby":
+        original = read_original(args.source, INTRO_GAMES[args.game][0])
+        args.output.mkdir(parents=True, exist_ok=True)
+        replay_intro(original, args.output, args.game)
+        return
     original = read_original(args.source)
     args.output.mkdir(parents=True, exist_ok=True)
     game = Replay(original)
