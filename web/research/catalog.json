@@ -4,6 +4,105 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "dadumbi-nate-gvm-catalogues",
+      "title": "Dadumbi и NATE: CU@지하철, A Scary Game и Super Board",
+      "category": "История и документация",
+      "description": "19 снимков 2002 года, анимации CU@지하철, три иллюстрации эпизодов Super Board и страницы загрузки.",
+      "repositoryPath": "research/archives/Dadumbi-NATE-GVM-Catalogues-and-Media.zip",
+      "bytes": 226489,
+      "sha256": "08b01d440d26ef49ce66b9b7bee2575d0bfccb5ab7124621397401feb0e36772",
+      "sources": [
+        {
+          "label": "CU@지하철",
+          "url": "https://web.archive.org/web/20021021182623id_/http://www.dadumbi.com/nate_subway/"
+        },
+        {
+          "label": "Super Board",
+          "url": "https://web.archive.org/web/20020806182656id_/http://www.dadumbi.com/nate_super/super_kind_down.html"
+        }
+      ]
+    },
+    {
+      "id": "wipi-manager-ms500-audio",
+      "title": "Palletshipping: WIPI Manager, реестр GNEX для MS500 и SMAF",
+      "category": "Инструменты и SDK",
+      "description": "WIPI Manager, WMRMake, BitPim, Yamaha MidRadio и исходный шаблон GNEX_GIGA13 36.15.0.",
+      "repositoryPath": "research/archives/Palletshipping-WIPI-Manager-MS500-Registry-and-SMAF.zip",
+      "bytes": 22867286,
+      "sha256": "9b3ad16e3dd877315b75b76b680af0d0bf3b21eb2fe303145ee3da12cd31809f",
+      "sources": [
+        {
+          "label": "Реестр MS500",
+          "url": "https://m.blog.naver.com/palletshipping/222298326285"
+        },
+        {
+          "label": "WIPI Manager",
+          "url": "https://m.blog.naver.com/palletshipping/222267386146"
+        },
+        {
+          "label": "Образцы SMAF",
+          "url": "https://m.blog.naver.com/palletshipping/222527431686"
+        }
+      ]
+    },
+    {
+      "id": "qpst-dfs-service-tools",
+      "title": "Palletshipping: QPST и DFS",
+      "category": "Инструменты и SDK",
+      "description": "QPST 2.7.264, три тома QPST 2.7.419 и DFS с результатами проверки ZIP.",
+      "repositoryPath": "research/archives/Palletshipping-QPST-and-DFS-Service-Tools.zip",
+      "bytes": 41862001,
+      "sha256": "30d170e5d77411bffe1d76dcc313ed6447fdd3571e36b2da67758bfb80ab7f25",
+      "sources": [
+        {
+          "label": "QPST 2.7.419",
+          "url": "https://m.blog.naver.com/palletshipping/222267384189"
+        },
+        {
+          "label": "DFS",
+          "url": "https://m.blog.naver.com/palletshipping/222267384590"
+        }
+      ]
+    },
+    {
+      "id": "samsung-usb-driver",
+      "title": "Palletshipping: драйвер Samsung USB",
+      "category": "Инструменты и SDK",
+      "description": "Четыре исходных тома с результатом общей проверки ZIP.",
+      "repositoryPath": "research/archives/Palletshipping-Samsung-USB-Driver-Original-Volumes.zip",
+      "bytes": 36929991,
+      "sha256": "bb9cf6e49f1138f5eede327fa5328e84301e8d863aa83438ed0b80054aabdf0c",
+      "sources": [
+        {
+          "label": "Драйвер Samsung",
+          "url": "https://m.blog.naver.com/palletshipping/222289432010"
+        }
+      ]
+    },
+    {
+      "id": "legacy-lg-pantech-skt-usb-drivers",
+      "title": "Palletshipping: драйверы LG, Pantech и SKT",
+      "category": "Инструменты и SDK",
+      "description": "LG United Mobile Driver 3.5, Pantech 4.15.2.0 и UniUSBDriver SKT.",
+      "repositoryPath": "research/archives/Palletshipping-LG-Pantech-and-SKT-USB-Drivers.zip",
+      "bytes": 18634786,
+      "sha256": "c7b4e1c80f0c2ce2bff38e5ba8871d3502d6b0e809caf3ab9547db17efb54def",
+      "sources": [
+        {
+          "label": "LG",
+          "url": "https://m.blog.naver.com/palletshipping/222289431472"
+        },
+        {
+          "label": "Pantech",
+          "url": "https://m.blog.naver.com/palletshipping/222267387328"
+        },
+        {
+          "label": "SKT",
+          "url": "https://m.blog.naver.com/palletshipping/222301742065"
+        }
+      ]
+    },
+    {
       "id": "palletshipping-70-ktf-and-keroro",
       "title": "Palletshipping: 70 пакетов KTF и Keroro Mini Game",
       "category": "Игры и игровые сборки",
@@ -2121,6 +2220,14 @@
     }
   ],
   "reports": [
+    {
+      "title": "Dadumbi и пять игр в каталоге NATE",
+      "repositoryPath": "doc/dadumbi-nate-gvm-catalogues.md"
+    },
+    {
+      "title": "WIPI Manager, реестр Motorola MS500 и инструменты для телефонов",
+      "repositoryPath": "doc/palletshipping-wipi-tools-and-ms500.md"
+    },
     {
       "title": "Keroro Mini Game и 70 пакетов KTF",
       "repositoryPath": "doc/palletshipping-70-ktf-and-keroro.md"

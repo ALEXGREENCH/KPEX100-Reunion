@@ -3,6 +3,1341 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "dadumbi-nate-gvm-catalogues",
+      "repositoryPath": "research/archives/Dadumbi-NATE-GVM-Catalogues-and-Media.zip",
+      "bytes": 226489,
+      "sha256": "08b01d440d26ef49ce66b9b7bee2575d0bfccb5ab7124621397401feb0e36772",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/captures.json",
+          "bytes": 27754,
+          "crc32": "26836f54",
+          "sha256": "dfdefd26b7b5852d565ac13d1ae1bc89d6527608b182020f352cbee4bfa75d5a"
+        },
+        {
+          "path": "evidence/dadumbi-binary-probes.json",
+          "bytes": 5745,
+          "crc32": "96354993",
+          "sha256": "264eb987cadc730dfac63d5a42b17af1168945b7f0912eeed32c9ad0586df9c7"
+        },
+        {
+          "path": "evidence/dadumbi-exact-probes.json",
+          "bytes": 17454,
+          "crc32": "7c3af423",
+          "sha256": "725d5a33d54236ac595d6ea5f93baf6e6fa083db68bca124155261361629d358"
+        },
+        {
+          "path": "evidence/dadumbi-followup.json",
+          "bytes": 3557,
+          "crc32": "9a953537",
+          "sha256": "35ea0d8cbff9a514804d5be9ec8b2bc3d3c7f0996c26cb358ce63e68c77951ab"
+        },
+        {
+          "path": "evidence/dadumbi-linked-media.json",
+          "bytes": 8844,
+          "crc32": "a61df0c5",
+          "sha256": "81042bddf356b94529c10bf7f143e0a1689b75f2f2d09a5c32c1c7dfae857ae8"
+        },
+        {
+          "path": "evidence/dadumbi-loader-probes.json",
+          "bytes": 10839,
+          "crc32": "a14d3858",
+          "sha256": "5d36763fbc3aa4a06e09f0414537536ec696c2e28674a18a4cd86810659a9de6"
+        },
+        {
+          "path": "evidence/dadumbi-rescued-media.json",
+          "bytes": 2657,
+          "crc32": "1364b322",
+          "sha256": "c0944ade0e9d7a0bbc5ec0f9b3653c26001dadbb079134410697d2dba3e5aba0"
+        },
+        {
+          "path": "evidence/dadumbi-retry-cdx.json",
+          "bytes": 7297,
+          "crc32": "29904f64",
+          "sha256": "92202bb6194ecb084d3076b095ddbefcda0430ac43f2f8826439438085bf1cde"
+        },
+        {
+          "path": "evidence/dadumbi-samjang-probes.json",
+          "bytes": 2446,
+          "crc32": "8f267642",
+          "sha256": "a1ebb19fe853db779c757a9aa40eff11bc30f7049001e0fd48ea649fc9f9c365"
+        },
+        {
+          "path": "evidence/dadumbi-subway-probes.json",
+          "bytes": 5401,
+          "crc32": "283894b8",
+          "sha256": "19fa365f87681392b8c2f23a2d8c5a507622d070879de4bac5ea47ed269dd41e"
+        },
+        {
+          "path": "headers/bill-super-cdx.headers.txt",
+          "bytes": 635,
+          "crc32": "8f65e259",
+          "sha256": "59fe3bf29640bf48670dcdcd1bc86b5a561f518f64a76de6c0479894722f921f"
+        },
+        {
+          "path": "headers/chosun-20020607-launch.headers.txt",
+          "bytes": 1169,
+          "crc32": "0d33be79",
+          "sha256": "61730335152e8576f4c8f0459c833fffc1b496d13ce4dcd0b00e15cfdcb1dd8d"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-01.headers.txt",
+          "bytes": 647,
+          "crc32": "52639b5f",
+          "sha256": "ef115311a4bb3d1920df5253c0a54b0626aaae06d0502f4bd56c7159f48cf187"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-02.headers.txt",
+          "bytes": 647,
+          "crc32": "45f397f2",
+          "sha256": "200c001cb3889bd7d0eb6a98ff7e9ddfc2a35a9dbb6a4f847067db1e0892322a"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-03.headers.txt",
+          "bytes": 647,
+          "crc32": "a521eed9",
+          "sha256": "9a50b225d6e54fcb4e34d3096f461999d4fbc8ae319affaf665a50b177baad4e"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-04.headers.txt",
+          "bytes": 647,
+          "crc32": "461d87ee",
+          "sha256": "bb9666049c6f927a73c483e57ca896235c6a86700570e5c25b7aaab30d0828a0"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-09.headers.txt",
+          "bytes": 647,
+          "crc32": "c76b7a9e",
+          "sha256": "652993a4fb50a02f4288921d6d295df78c0cdf3eced2928342b8dcb3aae86798"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-10.headers.txt",
+          "bytes": 647,
+          "crc32": "81305d6f",
+          "sha256": "b05e8d930afb035b186b7cc0014e8fe4f0dbb9912c91d179de487ed9570c931f"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-11.headers.txt",
+          "bytes": 647,
+          "crc32": "0e0b7bf5",
+          "sha256": "a1f727bfc1fe713d43bbe648798ddab32d59d922269c359189fabae538a7665b"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-12.headers.txt",
+          "bytes": 646,
+          "crc32": "b37db99d",
+          "sha256": "9757c99be380ecd482d2204f2b0ead1a53f3916f09d5be47dded6107fb63f3d7"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-13.headers.txt",
+          "bytes": 648,
+          "crc32": "005da322",
+          "sha256": "4a2e467309ce2cae32740f47c9f25eb493915f5db4751ba366d13e9baf479b36"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-14.headers.txt",
+          "bytes": 647,
+          "crc32": "833a59ef",
+          "sha256": "4997ca27461b1e680681d1d0f709cc1bbbcdcea0a2996075d2c61b7a2abdb6cb"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-15.headers.txt",
+          "bytes": 646,
+          "crc32": "69c5da67",
+          "sha256": "cc94403836703d58601e1a011c81e423532e467a70b07cf73c89b2df2bad6c02"
+        },
+        {
+          "path": "headers/dadumbi-exact-cdx-16.headers.txt",
+          "bytes": 648,
+          "crc32": "8144a9d5",
+          "sha256": "003f21b1546f158a5bdb6ae91f367220abd3c82c281a875cb52e3e0d7e70efb4"
+        },
+        {
+          "path": "headers/dadumbi-linked-09.headers.txt",
+          "bytes": 2830,
+          "crc32": "3c040d7d",
+          "sha256": "2feb66b44cdc4334cb37219775394873ebf7acb8af135de5721e8d2a980d6102"
+        },
+        {
+          "path": "headers/dadumbi-linked-12.headers.txt",
+          "bytes": 2877,
+          "crc32": "5952dccb",
+          "sha256": "d13d3188be2731a0c502f3162ac87ab9920588e38de295d2e7858119f5c5d1a8"
+        },
+        {
+          "path": "headers/dadumbi-rescue-6-0.headers.txt",
+          "bytes": 1889,
+          "crc32": "15ca017e",
+          "sha256": "ce2f910bccf26c52296c70f4853bffa20817633a9b57fc228e95c8cc909c4961"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-01.headers.txt",
+          "bytes": 647,
+          "crc32": "98fd14fd",
+          "sha256": "f82d32f4ec12222f01c27ac4629f5bcfa7f50edfec21d864723b0db8048f75b3"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-02.headers.txt",
+          "bytes": 647,
+          "crc32": "e1aae584",
+          "sha256": "06ea66f751cd201cb0e9b7f66590934961565a5018689e356db795b7a3e8f8f6"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-03.headers.txt",
+          "bytes": 645,
+          "crc32": "9b77c86c",
+          "sha256": "9ea7230aa071323c2919b796a469401e4663f0ae08d04cb3dae785d0ed5d9c97"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-04.headers.txt",
+          "bytes": 648,
+          "crc32": "936c3eaa",
+          "sha256": "f811319ca668baa9ec74a74744759d289664d6133bd6beb31b043d0d88023f75"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-05.headers.txt",
+          "bytes": 645,
+          "crc32": "20554b8c",
+          "sha256": "75375a251a5f0e6dae4056b1ceeb5e2994a698dea164575e2e88292393d8fa15"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-06.headers.txt",
+          "bytes": 647,
+          "crc32": "bd97d875",
+          "sha256": "7caac9cb78d4f61c7e8a1e1e76db4b0c31bc2019afe332a6466210b0a9da4c86"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-07.headers.txt",
+          "bytes": 647,
+          "crc32": "7ed833a6",
+          "sha256": "3aaaaa98bcc03d26ef6377904cbff3c470f6cbbb6d55b2f87f8ee5378202566f"
+        },
+        {
+          "path": "headers/dadumbi-retry-cdx-08.headers.txt",
+          "bytes": 647,
+          "crc32": "878ee36d",
+          "sha256": "c55ecd27623819b82467e223a631f9fba445db6f012a9907e5c5a0f336389604"
+        },
+        {
+          "path": "headers/dadumbi-samjang-www.headers.txt",
+          "bytes": 1893,
+          "crc32": "c9d44cc7",
+          "sha256": "f1faa47cf2738b424309e10cd343119b9765bf2c78c1789194e9549997f6b13e"
+        },
+        {
+          "path": "headers/dadumbi-subway-0.headers.txt",
+          "bytes": 2671,
+          "crc32": "f57d1772",
+          "sha256": "dc167f9284b043a5480952896f188fe76d180b92fa13acf455d57ea4c5872c23"
+        },
+        {
+          "path": "headers/dadumbi-subway-1.headers.txt",
+          "bytes": 2844,
+          "crc32": "afde0bb3",
+          "sha256": "2b4c7dbc0772115cf173a2fb07a7c1de52034cee956919fad5ee89ae91c6888e"
+        },
+        {
+          "path": "headers/dadumbi-subway-2.headers.txt",
+          "bytes": 2874,
+          "crc32": "fbf0a89d",
+          "sha256": "5f011b3c06b912bdbf6e940a24165165d1decf58821f4b41d89544643de931f0"
+        },
+        {
+          "path": "headers/dadumbi-subway-3.headers.txt",
+          "bytes": 2874,
+          "crc32": "6392e4e3",
+          "sha256": "4235559fc142ad05e22edf80fc94a4fe1335d069ed710c243149edfac04efbc7"
+        },
+        {
+          "path": "headers/dadumbi-subway-4.headers.txt",
+          "bytes": 2876,
+          "crc32": "f4d53644",
+          "sha256": "bcdf5130a0759a94fc623918f7fbbb2c882ab53a1d6b7571332b71cfb4717a91"
+        },
+        {
+          "path": "headers/dadumbi-subway-5.headers.txt",
+          "bytes": 2879,
+          "crc32": "78a6129a",
+          "sha256": "e4f01055363621eac2d46a5cec85ecb2a540f49c868ed7c33ff8129564a8f21d"
+        },
+        {
+          "path": "headers/horror-card-no-www.headers.txt",
+          "bytes": 2670,
+          "crc32": "d5020634",
+          "sha256": "dbfdf4249abf0ac8b710f9408277cac06449275342a040f08ef39b37093d00ee"
+        },
+        {
+          "path": "headers/nate_horror-page-2.headers.txt",
+          "bytes": 2733,
+          "crc32": "80b536eb",
+          "sha256": "58ebee85a0e0b9d009c45aab6246ff00f28c72f61c79df5c2a818a5d65fb7cc3"
+        },
+        {
+          "path": "headers/nate_subway-page-3.headers.txt",
+          "bytes": 2742,
+          "crc32": "a033adc8",
+          "sha256": "685b87353827a74321871b501bafcacd8f0b4b8aab3730391718ea7542899307"
+        },
+        {
+          "path": "headers/nate_super-page-1.headers.txt",
+          "bytes": 2708,
+          "crc32": "194e041f",
+          "sha256": "0e6f019d549811f462c8bca6132332c48bdcaec4ef43e6bbc2933147cc6a6a06"
+        },
+        {
+          "path": "headers/nate_super-page-2.headers.txt",
+          "bytes": 2735,
+          "crc32": "ff07a4b6",
+          "sha256": "64ca959ac3276dccc7e7a35c73ab8dd9bc4d47f6626760584ab182473bb7d83b"
+        },
+        {
+          "path": "headers/nate_super-page-3.headers.txt",
+          "bytes": 2742,
+          "crc32": "50559ffb",
+          "sha256": "4932c945787740725e08e5f366ee2de4430f93cde171c54ff5d95dfb3769b8c2"
+        },
+        {
+          "path": "headers/super-banner-1.headers.txt",
+          "bytes": 1775,
+          "crc32": "319a880a",
+          "sha256": "2d3d5c59f230f9402948a53ab596044decdeecca78fe7c69997b85fa536dc7e2"
+        },
+        {
+          "path": "headers/super-banner-3.headers.txt",
+          "bytes": 1775,
+          "crc32": "0507eee4",
+          "sha256": "5e3be93032783acf5774081cc64a1873ffb80259004cd23d556b1e5defb39bda"
+        },
+        {
+          "path": "headers/super-kind-down.headers.txt",
+          "bytes": 2748,
+          "crc32": "bb5e9d2f",
+          "sha256": "d6a801d2bee13291c66a561a769184f9451248cf04b4d1cc58e7e71f49fcd5f1"
+        },
+        {
+          "path": "originals/cdx/bill-super-cdx.body.json",
+          "bytes": 434,
+          "crc32": "3e473f77",
+          "sha256": "ee5c929f9dc3ee17f57ada33e171421d231d42d30d4901611474b2d8da3c7dd7"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-01.body.json",
+          "bytes": 226,
+          "crc32": "a81e9aa8",
+          "sha256": "1fd60e59aa5280389a947a03ff9d3cecfb567140cb01bdc0542a92f0b36e815b"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-02.body.json",
+          "bytes": 260,
+          "crc32": "58323c78",
+          "sha256": "c09168835d8c803634249ef4c344b919977db32d02f9471848f23b1e93cd7565"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-03.body.json",
+          "bytes": 257,
+          "crc32": "8b013ce5",
+          "sha256": "fa6ed6828ceb1084d45974c9781091015e7b16224cb189b3af7c1275a5c1b5d4"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-04.body.json",
+          "bytes": 257,
+          "crc32": "6000e781",
+          "sha256": "3b161e3b8aaf72eddf6dbbd0aaf99eddc49752c21a80f0b757772e5b6e53ae5d"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-09.body.json",
+          "bytes": 245,
+          "crc32": "ac07602e",
+          "sha256": "d0575c58fcb509032536797c1cf7f072c62c1ec607581daebe762439d4cc83ed"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-10.body.json",
+          "bytes": 257,
+          "crc32": "fe98d16f",
+          "sha256": "42f7fae254d41d5d1bd06d0fe521e944ae98c7fe181765e74e46cb01a89140ca"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-11.body.json",
+          "bytes": 259,
+          "crc32": "fb7ac8c7",
+          "sha256": "13a4dce6dc875245fe0ca080726c6631307a2f3e77dedd08005a9439cf58e19a"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-12.body.json",
+          "bytes": 265,
+          "crc32": "affc6c90",
+          "sha256": "ed0430dd6427a5cc3e2e90013be3cf24da4c5c963afa09e51a189ddb281933c0"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-13.body.json",
+          "bytes": 256,
+          "crc32": "9aad22a0",
+          "sha256": "0af2cffcbbbc5bbe759f3f26bef326fd2f3aaa7adcf91312dbd8fef8a93f8117"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-14.body.json",
+          "bytes": 256,
+          "crc32": "00d81446",
+          "sha256": "cebc8020303eb3d80a175e796c5221f0a8813f14669a24886fad00a8344ca8be"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-15.body.json",
+          "bytes": 226,
+          "crc32": "af571c45",
+          "sha256": "02e17ffe049bdb88f0efbb2209daee4fc81eba515360cec8466a93554aabdcdc"
+        },
+        {
+          "path": "originals/cdx/dadumbi-exact-cdx-16.body.json",
+          "bytes": 251,
+          "crc32": "17d71d28",
+          "sha256": "9e75d46aef31aca0d5b9680a6b4e33784cf6b17b6165d753faa2606f2fa07e64"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-01.body.json",
+          "bytes": 440,
+          "crc32": "f719baa4",
+          "sha256": "bdeb9b7b78f5f071f66190f38ce8a19c77059e6dfae3c8b62b78ca893b0091a9"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-02.body.json",
+          "bytes": 279,
+          "crc32": "7da28f0d",
+          "sha256": "6d36af5d0dba2dd45d8188a6cc1bd397519a6c729c40b2d33c6cbbf583fa83cb"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-03.body.json",
+          "bytes": 261,
+          "crc32": "a4494ec8",
+          "sha256": "d8a23def4f5d5abc014a28177e81e635cfc65c00fecd6ea6389c7970c96a8ccb"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-04.body.json",
+          "bytes": 983,
+          "crc32": "ae58d14d",
+          "sha256": "513db68dd62e9d81d7a59cfa8a146725594094a6b225fab981898e5dd71d46c4"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-05.body.json",
+          "bytes": 277,
+          "crc32": "63c95ac8",
+          "sha256": "1e74d969b5c4fe3000605d58d0d5125fe3ea721df76774b006d0baa4d4d64bea"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-06.body.json",
+          "bytes": 255,
+          "crc32": "13dbcbd7",
+          "sha256": "6443907447d5317c309a5b503298222e11202c2e9a549b22c500b61e6d384c0d"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-07.body.json",
+          "bytes": 259,
+          "crc32": "6068e836",
+          "sha256": "7e828fb934edd83ac4042445a152f34121786082e3a0d00f99b181a92d102d17"
+        },
+        {
+          "path": "originals/cdx/dadumbi-retry-cdx-08.body.json",
+          "bytes": 3,
+          "crc32": "7068d244",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "originals/dadumbi/nate_horror/game_method.html",
+          "bytes": 7562,
+          "crc32": "3a021f4d",
+          "sha256": "79bd4406380fba12d28b84aa52d83d5c77c5c4989373f113f8e17dbb2d55c2d8"
+        },
+        {
+          "path": "originals/dadumbi/nate_horror/index.html",
+          "bytes": 7924,
+          "crc32": "1e21b5dc",
+          "sha256": "807ce1ea60ec41eff14a090249cc75dd1785f4d7d087975cd6df088f5859b8bd"
+        },
+        {
+          "path": "originals/dadumbi/nate_subway/game_connect.html",
+          "bytes": 6651,
+          "crc32": "a813cd6f",
+          "sha256": "f70ad402cec86c50ef1d11326fc0f3bbf004feea7c2a13032f38e7bac1b01ec4"
+        },
+        {
+          "path": "originals/dadumbi/nate_subway/images/banner_subway_new.gif",
+          "bytes": 2601,
+          "crc32": "e0e51648",
+          "sha256": "133a3f6ee09df921e5c3d597a28889c3716e647af14d97d30724608be7d35b87"
+        },
+        {
+          "path": "originals/dadumbi/nate_subway/images/preview.gif",
+          "bytes": 15319,
+          "crc32": "310bf719",
+          "sha256": "54b5dd69fa99e91798dc3e9ac0083b48ef47dab0f9d16f06c734152a042515d3"
+        },
+        {
+          "path": "originals/dadumbi/nate_subway/images/sshot1.gif",
+          "bytes": 2770,
+          "crc32": "90f1317a",
+          "sha256": "91c770d18fac70aa154dbb1878265b69796c0e0b92aefd9fdd96d45ccc1c6df7"
+        },
+        {
+          "path": "originals/dadumbi/nate_subway/images/sshot2.gif",
+          "bytes": 2628,
+          "crc32": "855b95d7",
+          "sha256": "02b7bdbab823b020b5d6ec04e09e86f9e7ddaa7e454ce04a8510f17d6dd00dde"
+        },
+        {
+          "path": "originals/dadumbi/nate_subway/images/sshot3.gif",
+          "bytes": 2444,
+          "crc32": "35dc9364",
+          "sha256": "b717ed1f3e7e5e89e4a205ccda8cab313c7279e87dc18022c05233d2496b9569"
+        },
+        {
+          "path": "originals/dadumbi/nate_subway/index.html",
+          "bytes": 8570,
+          "crc32": "a0171628",
+          "sha256": "128a60533b019523d5e2e4156b8df8bfe5bbe9d507d6944bd22d18c45c44c41a"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/game_connect.html",
+          "bytes": 6280,
+          "crc32": "386e8082",
+          "sha256": "40f0439731089eed709aafed709fa9e83a83fab81bf5dacd4b83990f2175eddb"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/game_method.html",
+          "bytes": 8780,
+          "crc32": "5d61643e",
+          "sha256": "9b9937753181545f84e32226ef4af055d27f4aa6f65b37580746ce4a0dad3e28"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/images/banner_horror_new.gif",
+          "bytes": 3616,
+          "crc32": "186a1fab",
+          "sha256": "86313f7ebada44127d28a9e1068a30fef13db1b2cf8e7a10cca5131085ef5761"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/images/sam.jpg",
+          "bytes": 32157,
+          "crc32": "289fe761",
+          "sha256": "679d4349933bf94efbdaea322102160d3119f064f38058b68098763aaae9fde5"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/images/samjang.jpg",
+          "bytes": 29981,
+          "crc32": "59ae48e2",
+          "sha256": "58cce648a86b27bc8c4fb2124cc8b9c4d456d284fa54d5a10744baa2b710b13b"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/images/savsj.jpg",
+          "bytes": 27658,
+          "crc32": "aa9b9e52",
+          "sha256": "7d632f301ec4ec0297de79137a9b45e39b8cee07d19dea89add996df45470d15"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/index.html",
+          "bytes": 9926,
+          "crc32": "454e2047",
+          "sha256": "e1f46638a7eb6bdaf6705f83a3ff5e51aea6cc64d7bc1425ad7422b7a3a17163"
+        },
+        {
+          "path": "originals/dadumbi/nate_super/super_kind_down.html",
+          "bytes": 9015,
+          "crc32": "c6122253",
+          "sha256": "12ccb67f826bdec9207556033ca0fcdb09c01a5ff61fced8bb8348fe1b5d8487"
+        },
+        {
+          "path": "originals/dadumbi/vm/gvm/super/html/banner1.php",
+          "bytes": 1379,
+          "crc32": "fb6ff84b",
+          "sha256": "1f106b3c161d293488b79174cb3af56ecaac11a6d7562c319c9b7845ba6df38d"
+        },
+        {
+          "path": "originals/dadumbi/vm/gvm/super/html/banner3.php",
+          "bytes": 78,
+          "crc32": "63286bf8",
+          "sha256": "36b1e7b9a5bd83a1d28a162da02366532e1d3721fb3af724bc6e0571429d0c9b"
+        },
+        {
+          "path": "originals/references/chosun-20020607-launch.html",
+          "bytes": 65006,
+          "crc32": "e0684c66",
+          "sha256": "fb58dd2ebb5815ac9ee9023e0c309f50370cd69a33a1e176c897fa7e43ff231f"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 17514,
+          "crc32": "ae2fad10",
+          "sha256": "0335847ec4660e97d04199e768ae43ac75174cc148b3fb0e137511686b924634"
+        }
+      ]
+    },
+    {
+      "id": "wipi-manager-ms500-audio",
+      "repositoryPath": "research/archives/Palletshipping-WIPI-Manager-MS500-Registry-and-SMAF.zip",
+      "bytes": 22867286,
+      "sha256": "9b3ad16e3dd877315b75b76b680af0d0bf3b21eb2fe303145ee3da12cd31809f",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/222267386146/zip-container-listing.txt",
+          "bytes": 504,
+          "crc32": "31af3068",
+          "sha256": "80ae27f6619e446d8cd605d1f2dfca9e0b2a34994b9480db0e1828c04d0889ef"
+        },
+        {
+          "path": "evidence/222267386146/zip-container-test.txt",
+          "bytes": 279,
+          "crc32": "c1648cb0",
+          "sha256": "b8b30fea4a01a43e29b643521c7bbe614ffb92e726f2d6c3be366590754f8fe1"
+        },
+        {
+          "path": "evidence/222298326285/zip-container-listing.txt",
+          "bytes": 908,
+          "crc32": "c6ae0309",
+          "sha256": "f41d31e61f6283c4c94a2229853c504cb21c60901a75596bb80aae19e8a6bf7d"
+        },
+        {
+          "path": "evidence/222298326285/zip-container-test.txt",
+          "bytes": 293,
+          "crc32": "10af99be",
+          "sha256": "675f72b0bbb393314b2637251f7e73be7a2c11a6ca2d57057add9528cf5d44ec"
+        },
+        {
+          "path": "evidence/222298335433/zip-container-listing.txt",
+          "bytes": 570,
+          "crc32": "8bedcabc",
+          "sha256": "d6819e27a9bb187c3e1103ed1c064457cd629f21e6a97e76505c25fe03744d5f"
+        },
+        {
+          "path": "evidence/222298335433/zip-container-test.txt",
+          "bytes": 273,
+          "crc32": "410a04a3",
+          "sha256": "c11f5568f0f46165c54138c56266aa67546eee424fdaef0b267fa06afa4b41db"
+        },
+        {
+          "path": "evidence/222298336243/zip-container-listing.txt",
+          "bytes": 705,
+          "crc32": "cf8160dc",
+          "sha256": "69e80b3e5f0bb1e929daab8d5b0e558fea8b87f286ee623ace3ed151df79e25a"
+        },
+        {
+          "path": "evidence/222298336243/zip-container-test.txt",
+          "bytes": 406,
+          "crc32": "2956d37a",
+          "sha256": "db631c7ae377d391cd089ac910160ce25990a35a407c57dca0620200c916d7b6"
+        },
+        {
+          "path": "evidence/attachments.json",
+          "bytes": 18530,
+          "crc32": "8d69bca3",
+          "sha256": "ebe50b84ab2e40cd30456ed07173d92205052feaebb6a8b3a4f6a6bd96e29fb2"
+        },
+        {
+          "path": "evidence/inspection.json",
+          "bytes": 3668,
+          "crc32": "a7a4ac0a",
+          "sha256": "68f473f7c8a7c43f576778988f3100e67ae3d3f01e6bd62e8daba771350febaa"
+        },
+        {
+          "path": "evidence/ms500-registry.json",
+          "bytes": 1422,
+          "crc32": "8f7b03a4",
+          "sha256": "3d0132b7beb88519dfe5e13fe90cbc0799a99f7ef385af940fa7b979b09d597d"
+        },
+        {
+          "path": "evidence/pages.json",
+          "bytes": 3325,
+          "crc32": "e9a4ac71",
+          "sha256": "705da8a0c0632defb64725f2040034339f03bfd1faec73a705862fe4753850f8"
+        },
+        {
+          "path": "evidence/wipi-manager.json",
+          "bytes": 261,
+          "crc32": "23cfee45",
+          "sha256": "3e2bab476bb9cc6d4c99140ae565f8d58902f61a08978f188b7b523947629916"
+        },
+        {
+          "path": "originals/222267386146/prjWIPIMgr.exe",
+          "bytes": 40960,
+          "crc32": "4c0051c9",
+          "sha256": "2948cd43309ca55d6811670a066a64baac1f3f9b23622feffe4c883e9f616057"
+        },
+        {
+          "path": "originals/222267386146/prjWIPIMgr.zip",
+          "bytes": 12440,
+          "crc32": "7b43e1f0",
+          "sha256": "572f887bfbdf556dc62411aa4f959ab3ae214c57f119d9b11ebb40fb966b931f"
+        },
+        {
+          "path": "originals/222298326285/복구용registry.zip",
+          "bytes": 631,
+          "crc32": "dd4ca41e",
+          "sha256": "bfc01d3aa5d8adfaa153e4e63181284bfdb169603383f109a3964cc73fcbc04b"
+        },
+        {
+          "path": "originals/222298335433/wmrmake.zip",
+          "bytes": 90586,
+          "crc32": "86f869d8",
+          "sha256": "19f874a80aaf78b29078fac12973a19a50dbf9dc6f535383f23a80a09cd3e71e"
+        },
+        {
+          "path": "originals/222298336243/bitpim-1.0.7-setup.z01",
+          "bytes": 10485760,
+          "crc32": "3095e364",
+          "sha256": "582cabf3ee10fe6f2f424b46750b2acdfe314b8bdf32d78429e53a2bf3538b71"
+        },
+        {
+          "path": "originals/222298336243/bitpim-1.0.7-setup.zip",
+          "bytes": 1276445,
+          "crc32": "7b349327",
+          "sha256": "d92094b53537c0d5fbf7acc408821b0900a7592237d1e124973ec588df75990d"
+        },
+        {
+          "path": "originals/222321177097/MidRadio Player.exe",
+          "bytes": 9713416,
+          "crc32": "40f4f224",
+          "sha256": "a5bd6bd41bbda2e2a922fe067332938ef12eb105b0c22af02485a3985ab0661f"
+        },
+        {
+          "path": "originals/222527431686/animals_canival.mmf",
+          "bytes": 48471,
+          "crc32": "1a111484",
+          "sha256": "f99b2e4fd1bdb1766e9b8ba5540631021c7f22d6f4143d884b4312fb9cca630f"
+        },
+        {
+          "path": "originals/222527431686/cantata.mmf",
+          "bytes": 46654,
+          "crc32": "cf394eaa",
+          "sha256": "f9f11a90a272acab7fa8bfc9d270c762e9c75965a4f1ae8ffd54ef1fea4f1303"
+        },
+        {
+          "path": "originals/222527431686/destiny.mmf",
+          "bytes": 48325,
+          "crc32": "c90f1a30",
+          "sha256": "de1b1b61f6bde79a317c7d066a903dfea86f7380d4c4d29bcb914196e59d13ca"
+        },
+        {
+          "path": "originals/222527431686/fantasy.mmf",
+          "bytes": 45219,
+          "crc32": "d1ac2d4d",
+          "sha256": "1995cc7327c1318739ca9a002ea84220bfa9ef139bdda450dd848f5c43f37e64"
+        },
+        {
+          "path": "originals/222527431686/fantasy.mp3",
+          "bytes": 670406,
+          "crc32": "f42fdd76",
+          "sha256": "1920ab2324be66f9e8218ee1f0a7cf32d559783dae752322ab6b099a6665e819"
+        },
+        {
+          "path": "originals/222527431686/greeting_love.mmf",
+          "bytes": 46439,
+          "crc32": "a9c78c35",
+          "sha256": "865e78197662701d7bc282c99b804859f8d3f06401148a0d6e7366d42d379588"
+        },
+        {
+          "path": "originals/222527431686/humoresque.mmf",
+          "bytes": 47624,
+          "crc32": "38daeaf6",
+          "sha256": "11fa4298f81533cfcc1da79588dd8e75764e6a28aacb8fae7f67d51b39f1584c"
+        },
+        {
+          "path": "originals/222527431686/joy_of_love.mmf",
+          "bytes": 46560,
+          "crc32": "15f7be05",
+          "sha256": "8db13edc9441e0cb2c6abdf581f3cd6df5352ba9b6257f3dcd385bd0d0a5b2f4"
+        },
+        {
+          "path": "originals/222527431686/spring_songs.mmf",
+          "bytes": 49206,
+          "crc32": "e4f429d8",
+          "sha256": "21ba2b856ed22ab2a30b6dd6068c3a50fac8f71bb3d8d36321dd1f4c308bc275"
+        },
+        {
+          "path": "originals/222527431686/spring_songs_walz.mmf",
+          "bytes": 48809,
+          "crc32": "8e8099d1",
+          "sha256": "7d41fde33e39e5ff8ff6b552f1e00e5a23e29f813f3fb188874c4647214356be"
+        },
+        {
+          "path": "originals/222527431686/toccata_and_fugue.mmf",
+          "bytes": 12244,
+          "crc32": "48947bc5",
+          "sha256": "80b0a30975b2a6ac6bf19202cde2e562d95ec08c89db255ff17a5011dfcfbee8"
+        },
+        {
+          "path": "sources/222267386146/page.headers.txt",
+          "bytes": 399,
+          "crc32": "5435dc2c",
+          "sha256": "af54dca473dff8918c502b8f1422b4aa3abf8247a12f63f618df32e62ad73f98"
+        },
+        {
+          "path": "sources/222267386146/page.html",
+          "bytes": 50607,
+          "crc32": "5ceddb77",
+          "sha256": "74c4de3cae24a833abf017d92f209b10809c84ac75f8f06a549887bc61a9c22b"
+        },
+        {
+          "path": "sources/222267386146/pallet-222267386146-1.headers.txt",
+          "bytes": 257,
+          "crc32": "4aa53a70",
+          "sha256": "e59ac644cb3b948af8c663892c28d1ff91c14737410240a7c421baed64aad484"
+        },
+        {
+          "path": "sources/222267386146/pallet-222267386146-2.headers.txt",
+          "bytes": 257,
+          "crc32": "b27a9fbd",
+          "sha256": "7716895e93c4f9d222d3f54384c3bc2b96911e0b8af44dea6a95e1b048d130f8"
+        },
+        {
+          "path": "sources/222298326285/page.headers.txt",
+          "bytes": 399,
+          "crc32": "0240ee73",
+          "sha256": "2f177496cd0caafe108ae13dd192f19aebc1182df7441377d19a80b9c956726f"
+        },
+        {
+          "path": "sources/222298326285/page.html",
+          "bytes": 123412,
+          "crc32": "10ed4748",
+          "sha256": "2d3ae2394bf4d4a7bbc1d5df5f0c2f8c4471085d230ba446c67c282e12f2fc4f"
+        },
+        {
+          "path": "sources/222298326285/pallet-222298326285-1.headers.txt",
+          "bytes": 287,
+          "crc32": "0985e3e5",
+          "sha256": "fbe80543beb3c547afc59c8dc1d8a762ced1268a35f4504b0bcf61651c751063"
+        },
+        {
+          "path": "sources/222298335433/page.headers.txt",
+          "bytes": 362,
+          "crc32": "082eda05",
+          "sha256": "582df125128967ad8e7c8c27cf7a2d03ddae1762e0acd3ba67b2d9d1e3684a64"
+        },
+        {
+          "path": "sources/222298335433/page.html",
+          "bytes": 46770,
+          "crc32": "39d4e7ae",
+          "sha256": "d40ec74940ba1acc65376720e063c9b14a318553816f80d9c8e9500b884992a9"
+        },
+        {
+          "path": "sources/222298335433/pallet-222298335433-1.headers.txt",
+          "bytes": 251,
+          "crc32": "77f700d0",
+          "sha256": "792c170f821a5cc37c7ccff88bf977300935c05f6a64ea170d29615c1354a3c0"
+        },
+        {
+          "path": "sources/222298336243/page.headers.txt",
+          "bytes": 362,
+          "crc32": "61db5195",
+          "sha256": "749d95e0d209f98a1d8d435def91c19937dbca458052458ceb1f3c7f46cc412c"
+        },
+        {
+          "path": "sources/222298336243/page.html",
+          "bytes": 49143,
+          "crc32": "20c1c191",
+          "sha256": "7632d27d2a7687015cba58a7fbb3c4eecc0f6c7fb07b1549858552f84ddc98d1"
+        },
+        {
+          "path": "sources/222298336243/pallet-222298336243-1.headers.txt",
+          "bytes": 275,
+          "crc32": "6f97e7f4",
+          "sha256": "f1e44355b81d41be1eb5293b63ce60fe83463ce9ff7e270f4d8c1714c4b09a8c"
+        },
+        {
+          "path": "sources/222298336243/pallet-222298336243-2.headers.txt",
+          "bytes": 276,
+          "crc32": "cc81cdec",
+          "sha256": "481d74208ea64fc174c55dbe1fafb261878974d3600bf7cb6f943d90bf8cf4d4"
+        },
+        {
+          "path": "sources/222321177097/page.headers.txt",
+          "bytes": 399,
+          "crc32": "5a6ebba2",
+          "sha256": "f9a8f9f0356115217e1a37fc7a1e372bf79d554f202046b35b695e7ee2b8eb91"
+        },
+        {
+          "path": "sources/222321177097/page.html",
+          "bytes": 57627,
+          "crc32": "6cc32acd",
+          "sha256": "14b85dd9c9383f4050828ff29ce83f7f62e107d280e4e928c9b49cc0033748d0"
+        },
+        {
+          "path": "sources/222321177097/pallet-222321177097-1.headers.txt",
+          "bytes": 271,
+          "crc32": "6e324a53",
+          "sha256": "b5b5493144ec56ceb2477a5a8cb5e42978aaaa2889f5b3f62c2ba7bd8ade0f50"
+        },
+        {
+          "path": "sources/222527431686/page.headers.txt",
+          "bytes": 399,
+          "crc32": "9dd9d374",
+          "sha256": "2bc72c2e5fd6090a3965e38917d7949d5cf09f5600deb0e26458b255b48acb5f"
+        },
+        {
+          "path": "sources/222527431686/page.html",
+          "bytes": 76831,
+          "crc32": "192d7276",
+          "sha256": "8389a8409bbd73b57c4f08ae5bd8e900806138589750ae5e1cc3b0764b1bab2e"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-1.headers.txt",
+          "bytes": 267,
+          "crc32": "3139f166",
+          "sha256": "c92bef74097cddadc7dd818d8ec9e3c0c1d4fb7dd83c824ad9bcc433302a15fa"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-10.headers.txt",
+          "bytes": 271,
+          "crc32": "6e1a0221",
+          "sha256": "4e582e46349d0afb68baabfc134b1906af492f3c47ab6699113668a9ae67981f"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-11.headers.txt",
+          "bytes": 252,
+          "crc32": "498b9f5e",
+          "sha256": "f587a740c93935f3c039e1272bb0f270d2a8e1d4982a4e5c1a3682fb51a605da"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-2.headers.txt",
+          "bytes": 251,
+          "crc32": "3541feb6",
+          "sha256": "78ff5cdc0f28631698a176f7adf6cad37e14a3fd5c48ab781a8edb0e0d95d045"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-3.headers.txt",
+          "bytes": 251,
+          "crc32": "b157e361",
+          "sha256": "5af0ac64dcd3aefd148d0dc45820d6e5e0404c2290eed82ac60dd75979ea6675"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-4.headers.txt",
+          "bytes": 251,
+          "crc32": "eb0ea2ca",
+          "sha256": "534a744811d208048d54b86d1591fdaef02078f60b832adc6f4842268e1aef54"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-5.headers.txt",
+          "bytes": 263,
+          "crc32": "cd17809f",
+          "sha256": "d5c07fce7d156b363c4b9eea697bd7217385de17cda3dc0eb7265c6ff00c8efb"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-6.headers.txt",
+          "bytes": 257,
+          "crc32": "201e87a2",
+          "sha256": "6155d6826d81c04a8ef5d72dc964c9ab8cc0bd6d0e0c26314b3bb1724ce15769"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-7.headers.txt",
+          "bytes": 259,
+          "crc32": "ada10f5a",
+          "sha256": "4e4309d6cedd9910e2b83a7b1708746ae005f7bfe7ae07fa147fd8b50d92ca7a"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-8.headers.txt",
+          "bytes": 261,
+          "crc32": "2058aa3a",
+          "sha256": "93171acc857ec4c876e0d88cea7ea4e10ed8aa841816743dadb2d1bcb3dc9ab8"
+        },
+        {
+          "path": "sources/222527431686/pallet-222527431686-9.headers.txt",
+          "bytes": 271,
+          "crc32": "0edd0f26",
+          "sha256": "522e95a222cf117cdfd24e71ba3a819f4de4dfeeee4a56d6f29d1148f6cec6b3"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 11718,
+          "crc32": "540a911c",
+          "sha256": "5b563f2f878a14c9f15ed45f5053ecb50ce8ca10d7909e7f5e27c10b133803e1"
+        }
+      ]
+    },
+    {
+      "id": "qpst-dfs-service-tools",
+      "repositoryPath": "research/archives/Palletshipping-QPST-and-DFS-Service-Tools.zip",
+      "bytes": 41862001,
+      "sha256": "30d170e5d77411bffe1d76dcc313ed6447fdd3571e36b2da67758bfb80ab7f25",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/222267382357/zip-container-listing.txt",
+          "bytes": 6383,
+          "crc32": "9f75a6ed",
+          "sha256": "32c9c9f9d48579a4dc7f3d8235eaa2b66cd046f635bb4f2f1c881c88e951ee6a"
+        },
+        {
+          "path": "evidence/222267382357/zip-container-test.txt",
+          "bytes": 395,
+          "crc32": "ce6c23a3",
+          "sha256": "273c33388b90df595843cd028a88f8888dd90c9e8d05f1b65540628bb78bd51a"
+        },
+        {
+          "path": "evidence/222267384189/zip-container-listing.txt",
+          "bytes": 2410,
+          "crc32": "7aa1edcf",
+          "sha256": "bf7f2b24dab3ea5121c93482a3d2b78c32da4a6f2d0da5ff9871430c60fd6b8e"
+        },
+        {
+          "path": "evidence/222267384189/zip-container-test.txt",
+          "bytes": 414,
+          "crc32": "a3d3b024",
+          "sha256": "e25df83388a4ab0c80c35762a12f2ef060aa2b794bbc3a46ddaf382b865eb557"
+        },
+        {
+          "path": "evidence/222267384590/zip-container-listing.txt",
+          "bytes": 22121,
+          "crc32": "03accc66",
+          "sha256": "6a8562fb8cd8595b40631d9b88eaa0c02bb3834e5729ba6cd35eec9b03450023"
+        },
+        {
+          "path": "evidence/222267384590/zip-container-test.txt",
+          "bytes": 297,
+          "crc32": "64fd6103",
+          "sha256": "d147b0f827f929253f6efb200f539ab52c53dded3ba22ed624f4cff360483b8c"
+        },
+        {
+          "path": "evidence/attachments.json",
+          "bytes": 18551,
+          "crc32": "2c19632c",
+          "sha256": "7481322dc52e762beefc75133d221f77f110fabf3f7c99c50a14cc72431fbc14"
+        },
+        {
+          "path": "evidence/inspection.json",
+          "bytes": 900,
+          "crc32": "1afc9b8d",
+          "sha256": "a84a24e682b0d0b33844ba443a3f3632b9627b38555df6a7641cf5bd11c776e5"
+        },
+        {
+          "path": "evidence/pages.json",
+          "bytes": 1684,
+          "crc32": "6bcc1a97",
+          "sha256": "4362785b70785db19673de170aeb73782849a34a04236280add10ebbde74dcb7"
+        },
+        {
+          "path": "originals/222267382357/QPST 2.7.264 (체크메이트, 레이저).zip",
+          "bytes": 9234753,
+          "crc32": "42f3fe62",
+          "sha256": "fd04f3ec8ed2a86ccc706aa75feeb2bc5e5d4b6c62c73870b654ad15063c2866"
+        },
+        {
+          "path": "originals/222267384189/QPST.2.7.419.z01",
+          "bytes": 10485760,
+          "crc32": "57ba77a5",
+          "sha256": "3d30ab52a3955cf898ff161265d4da24d0e5c4413ea0bdfdc6c695b438017288"
+        },
+        {
+          "path": "originals/222267384189/QPST.2.7.419.z02",
+          "bytes": 10485760,
+          "crc32": "7459b3a1",
+          "sha256": "66c2ae16703fa2156473d1a941def5b5a123913186403105cb85c0afd92fa381"
+        },
+        {
+          "path": "originals/222267384189/QPST.2.7.419.zip",
+          "bytes": 5692714,
+          "crc32": "1391626b",
+          "sha256": "12e62dcef005374be87a505b3831c34de8eab4650a9158805d6342cc52abe792"
+        },
+        {
+          "path": "originals/222267384590/DFS.zip",
+          "bytes": 5897557,
+          "crc32": "7664ff70",
+          "sha256": "94280ad23192fd0ef4c1b9eb9a10304c16ca45940590e74194294c69b925fe74"
+        },
+        {
+          "path": "sources/222267382357/page.headers.txt",
+          "bytes": 399,
+          "crc32": "107504e1",
+          "sha256": "e6fc7e2336c4d99df5d8f1a1473018c3b8cad94eb6f28683bc261279e0cd46fd"
+        },
+        {
+          "path": "sources/222267382357/page.html",
+          "bytes": 51710,
+          "crc32": "c049f10a",
+          "sha256": "dab7c48f5e552b0f04224f211792517cb6bf7108de1f2f991dfd2457bc0455c8"
+        },
+        {
+          "path": "sources/222267382357/pallet-222267382357-1.headers.txt",
+          "bytes": 381,
+          "crc32": "f9663d4c",
+          "sha256": "c9d90d9cb11d1ff8e13af803a8a180f0f370f3b874a8b3cd163dfc5a60c81807"
+        },
+        {
+          "path": "sources/222267384189/page.headers.txt",
+          "bytes": 399,
+          "crc32": "e4d0664d",
+          "sha256": "a20fc92459982bb73ae2e12612e285c089736528661cd780548eb0cd9c574878"
+        },
+        {
+          "path": "sources/222267384189/page.html",
+          "bytes": 51470,
+          "crc32": "3f3dc82a",
+          "sha256": "7a5890d64ffb31a189fae8eb691e0410b341ced4f57d923a53046742378a07f3"
+        },
+        {
+          "path": "sources/222267384189/pallet-222267384189-1.headers.txt",
+          "bytes": 263,
+          "crc32": "c4dd5a97",
+          "sha256": "9966a3c88e775b12b3e78584794b0e0c61dd17fead443206bd6e0bccce4eb9dd"
+        },
+        {
+          "path": "sources/222267384189/pallet-222267384189-2.headers.txt",
+          "bytes": 264,
+          "crc32": "06a05cf2",
+          "sha256": "fedb18c40086b3d48623798db6ab707bcab897cc7e4b32165c7de18d63bbdf4a"
+        },
+        {
+          "path": "sources/222267384189/pallet-222267384189-3.headers.txt",
+          "bytes": 264,
+          "crc32": "252f205f",
+          "sha256": "b79f1ada5091d05510812671f99765afc0817a84c285b7c986254aa140bfae94"
+        },
+        {
+          "path": "sources/222267384590/page.headers.txt",
+          "bytes": 362,
+          "crc32": "94a2a30c",
+          "sha256": "f570267a8dca36da9309fb61c51764bbd8d172a7ffca26bbd299fe44a304320b"
+        },
+        {
+          "path": "sources/222267384590/page.html",
+          "bytes": 47424,
+          "crc32": "3a33a77d",
+          "sha256": "fb596a96d82fadfb38dd8968a98034e10aec1bd90f2ac0a19f401279d0e8f2b2"
+        },
+        {
+          "path": "sources/222267384590/pallet-222267384590-1.headers.txt",
+          "bytes": 245,
+          "crc32": "0e32c9cf",
+          "sha256": "86ed80eba22873471aba4cc1834913a2efed034b7c9332755dde2b19640f9877"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4790,
+          "crc32": "52f08906",
+          "sha256": "4ca3ef8ca737f38fb82ef51592de43e9db943e0c8ff727723a96030a2d08549f"
+        }
+      ]
+    },
+    {
+      "id": "samsung-usb-driver",
+      "repositoryPath": "research/archives/Palletshipping-Samsung-USB-Driver-Original-Volumes.zip",
+      "bytes": 36929991,
+      "sha256": "bb9cf6e49f1138f5eede327fa5328e84301e8d863aa83438ed0b80054aabdf0c",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/222289432010/zip-container-listing.txt",
+          "bytes": 759,
+          "crc32": "fee1483c",
+          "sha256": "7c496734a8ce6aaae5bd1e3d64ed6bb3b29b9cb71fd9a84e5fd1cb1cdfc0359e"
+        },
+        {
+          "path": "evidence/222289432010/zip-container-test.txt",
+          "bytes": 442,
+          "crc32": "12e1d89d",
+          "sha256": "a4d60f1d0fa5853e4d83823ed2711bd09bf3cafaacf4e4a2204b7efcacac740b"
+        },
+        {
+          "path": "evidence/attachments.json",
+          "bytes": 4320,
+          "crc32": "ddb94a18",
+          "sha256": "2967ef1c8a6a68b6e76a64a47b521f0816e1f19dbf22bbeeb1cfeaef47641d06"
+        },
+        {
+          "path": "evidence/inspection.json",
+          "bytes": 348,
+          "crc32": "2711a0bd",
+          "sha256": "2e688888fc89b3bf2d9dd4b3fa8db9eb3b864c34dd2e2d8d00308674d0cd5ffc"
+        },
+        {
+          "path": "evidence/pages.json",
+          "bytes": 557,
+          "crc32": "387bb851",
+          "sha256": "435fa7352ff40e2117a65717ed6f6149ced2679c2b4d25fc8f66edb8d634ceb8"
+        },
+        {
+          "path": "originals/222289432010/SAMSUNG_USB_Driver_for_Mobile_Phones.z01",
+          "bytes": 10485760,
+          "crc32": "a77828d3",
+          "sha256": "66c38df2b18947ac82d46d6928e7b55a2aba5e460da8276458c74b7f43675417"
+        },
+        {
+          "path": "originals/222289432010/SAMSUNG_USB_Driver_for_Mobile_Phones.z02",
+          "bytes": 10485760,
+          "crc32": "1775ed39",
+          "sha256": "da1bc1b5174f7bf08b44ac815421ac70cc94bb96f305836d1a9f8c30e14b9c94"
+        },
+        {
+          "path": "originals/222289432010/SAMSUNG_USB_Driver_for_Mobile_Phones.z03",
+          "bytes": 10485760,
+          "crc32": "76288a00",
+          "sha256": "b87c9911b4be73a594f44614bff97884f57d0f6e3a00afb67499f81ff9dba605"
+        },
+        {
+          "path": "originals/222289432010/SAMSUNG_USB_Driver_for_Mobile_Phones.zip",
+          "bytes": 5449894,
+          "crc32": "2939a139",
+          "sha256": "b990a02cdef888be90663116fc9b7e8cc97020b7b7980b56c3c7de98ca806eba"
+        },
+        {
+          "path": "sources/222289432010/page.headers.txt",
+          "bytes": 399,
+          "crc32": "1eab7077",
+          "sha256": "bb33a632858e7f1e009a36ea204460cc0fe0bd2675d304bd846fd89dd42999a5"
+        },
+        {
+          "path": "sources/222289432010/page.html",
+          "bytes": 54711,
+          "crc32": "6c77a397",
+          "sha256": "58e8b0bf624ec501ce030f8e864ed8faf134ea1933e8fe6a297df116e217b3f4"
+        },
+        {
+          "path": "sources/222289432010/pallet-222289432010-1.headers.txt",
+          "bytes": 311,
+          "crc32": "6eb2deed",
+          "sha256": "02a74903c1b029b04c797346247954c87dc162030556a4a3e6f46fcc50d668a0"
+        },
+        {
+          "path": "sources/222289432010/pallet-222289432010-2.headers.txt",
+          "bytes": 312,
+          "crc32": "e7b3581d",
+          "sha256": "1b72afd20c1e240124fb6fc53958747a00927ba34fd9f6c102344bb0850333d7"
+        },
+        {
+          "path": "sources/222289432010/pallet-222289432010-3.headers.txt",
+          "bytes": 312,
+          "crc32": "4c8ce082",
+          "sha256": "8a7b91c4b3d4602c35ada0ba0781be979b1870dec1113d4cdf12ef36e174153c"
+        },
+        {
+          "path": "sources/222289432010/pallet-222289432010-4.headers.txt",
+          "bytes": 312,
+          "crc32": "97c415a9",
+          "sha256": "718bcd0864e36923cc76e945613799f2d0a86a16793c7b888df61311ed5323e2"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 2954,
+          "crc32": "68d32277",
+          "sha256": "fa23cbe30180545560529261148f6b5d1b409038c06e60dff3f1d08d4024a3b0"
+        }
+      ]
+    },
+    {
+      "id": "legacy-lg-pantech-skt-usb-drivers",
+      "repositoryPath": "research/archives/Palletshipping-LG-Pantech-and-SKT-USB-Drivers.zip",
+      "bytes": 18634786,
+      "sha256": "c7b4e1c80f0c2ce2bff38e5ba8871d3502d6b0e809caf3ab9547db17efb54def",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/222289431472/zip-container-listing.txt",
+          "bytes": 704,
+          "crc32": "16488fdb",
+          "sha256": "41fe0c2325052ba01f770e4fe49ebfd50a5b51de116475b07cf1b963fbff8777"
+        },
+        {
+          "path": "evidence/222289431472/zip-container-test.txt",
+          "bytes": 372,
+          "crc32": "9cdb7178",
+          "sha256": "340d472021654ac848dfb8d997f8bdecdf167c4b23823d9d08c97f236978bca7"
+        },
+        {
+          "path": "evidence/attachments.json",
+          "bytes": 3425,
+          "crc32": "56af71bb",
+          "sha256": "7fe17fdad242fe29ea8444f3c25a91f2e24467489488fad1cd38eeacd05103b9"
+        },
+        {
+          "path": "evidence/inspection.json",
+          "bytes": 743,
+          "crc32": "e5d61307",
+          "sha256": "86d8f0770416f908efe5d6630e6c098966aa817c275d99ef898b112cf99b6003"
+        },
+        {
+          "path": "evidence/pages.json",
+          "bytes": 1655,
+          "crc32": "501fa88c",
+          "sha256": "8f5cb2a916b275db025d44cd33c362ae9776ad9f71933c76ad34f8e75b67fd43"
+        },
+        {
+          "path": "originals/222267387328/Pantech_USB_Driver_V4.15.2.0.exe",
+          "bytes": 7811136,
+          "crc32": "cdcd5ee4",
+          "sha256": "31b523d1ded9a05b420f420fe92884a36dfc37360316651fbfeb2cf431492573"
+        },
+        {
+          "path": "originals/222289431472/LGUnitedMobileDriver_S4981CAN35AP22_ML_WHQL_Ver_3.5.zip",
+          "bytes": 9286143,
+          "crc32": "65d978e2",
+          "sha256": "8dd9db7cfef89832da81339d41a7cd30ceafdf828149cfd27a7a9cf1e0524730"
+        },
+        {
+          "path": "originals/222301742065/UniUSBDriver.exe",
+          "bytes": 1483962,
+          "crc32": "773d0dac",
+          "sha256": "cde7ba0deb05dc237df878df892afa1b43929c13ae5a71f81a21658b1947738b"
+        },
+        {
+          "path": "sources/222267387328/page.headers.txt",
+          "bytes": 362,
+          "crc32": "ad75dc2c",
+          "sha256": "09f67a99faeca11110286d5c1088ab21d75fb0800c3c2d794c944ccfc051586c"
+        },
+        {
+          "path": "sources/222267387328/page.html",
+          "bytes": 47453,
+          "crc32": "e370a62d",
+          "sha256": "69feef6488fd02376be4b0ed43f3f5edffff1dc177f4371e6bacb2bc0de78adc"
+        },
+        {
+          "path": "sources/222267387328/pallet-222267387328-1.headers.txt",
+          "bytes": 295,
+          "crc32": "a0cd877c",
+          "sha256": "ecdc8e07dbdd814134f421d550f4acbc7a04213558d26c75efd950818dffa794"
+        },
+        {
+          "path": "sources/222289431472/page.headers.txt",
+          "bytes": 362,
+          "crc32": "a208c5cf",
+          "sha256": "2fa506a5a3a7a3e09284be831fc10bdf9714646baad80474c8c8f077fd1d56fa"
+        },
+        {
+          "path": "sources/222289431472/page.html",
+          "bytes": 47495,
+          "crc32": "e8dabe98",
+          "sha256": "6807856389cea902ec3ed00a0389d07499ecd37112036bcc3290b3953a17ddc5"
+        },
+        {
+          "path": "sources/222289431472/pallet-222289431472-1.headers.txt",
+          "bytes": 341,
+          "crc32": "47a6b0df",
+          "sha256": "0dc1ba92c84dda956a89619cc55ca01e009a5526c937dc12adaea47c0e906a73"
+        },
+        {
+          "path": "sources/222301742065/page.headers.txt",
+          "bytes": 399,
+          "crc32": "48ea8e7d",
+          "sha256": "77dae286566e60a005b457bceed47efdbf59d0338428a808f6b31a7e8a76d1a4"
+        },
+        {
+          "path": "sources/222301742065/page.html",
+          "bytes": 49342,
+          "crc32": "fb2328c4",
+          "sha256": "788c37a9ce7cb43987472e74f73d4154e27471d09bd437fb42767358d17ef2e1"
+        },
+        {
+          "path": "sources/222301742065/pallet-222301742065-1.headers.txt",
+          "bytes": 263,
+          "crc32": "7b3d51a5",
+          "sha256": "d10547535bee98b75854e3f40fb1d332dcb0e686db7b26d7176c4f93acd9ce23"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 3250,
+          "crc32": "2272334f",
+          "sha256": "2df38f61c8116453ab045ae18db1a336e677ac51acbc4e4cd123ad14c3d33936"
+        }
+      ]
+    },
+    {
       "id": "palletshipping-70-ktf-and-keroro",
       "repositoryPath": "research/archives/Palletshipping-70-KTF-Packages-and-Keroro-Mini-Game.zip",
       "bytes": 59791931,
@@ -202930,9 +204265,9 @@
     }
   ],
   "counts": {
-    "archives": 106,
-    "archiveBytes": 2075170527,
-    "fileMembers": 33662,
-    "uniqueMemberHashes": 19141
+    "archives": 111,
+    "archiveBytes": 2195691080,
+    "fileMembers": 33877,
+    "uniqueMemberHashes": 19355
   }
 }
