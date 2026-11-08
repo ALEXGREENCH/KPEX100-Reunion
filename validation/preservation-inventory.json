@@ -3,6 +3,237 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "otterpebble-wie-web",
+      "repositoryPath": "research/archives/Otterpebble-WIE-Web-and-Dongmul-Demo.zip",
+      "bytes": 25018942,
+      "sha256": "f6c68293ae5e212ecf1ed40abe4eddb8f0506aaaedd42919493664d0e4eee9be",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/demo-members.json",
+          "bytes": 4982,
+          "crc32": "d7483c9d",
+          "sha256": "1bd16caebe3579bf4515631d4a52d378ff07c32c69a7a038dff7d92832489f03"
+        },
+        {
+          "path": "evidence/source-members.json",
+          "bytes": 393080,
+          "crc32": "0700b4dd",
+          "sha256": "8bd7d85e00bd675ed9e1e50448f842db6b64dc4ca37164043ad6ac267c3918bd"
+        },
+        {
+          "path": "evidence/sources.json",
+          "bytes": 5108,
+          "crc32": "47417126",
+          "sha256": "24e197a1c2469a1596454fe51fb57718ce387748079abe4037f66952f31afa1f"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 352,
+          "crc32": "96c55f88",
+          "sha256": "0decd562ae0bc03c32bb4cd1b1d76d17a01307dafb33b47b09d97daf124993ae"
+        },
+        {
+          "path": "originals/THIRD-PARTY-NOTICES.txt",
+          "bytes": 417181,
+          "crc32": "f58e5df0",
+          "sha256": "76f98e9cf4d1029f29d6af1fa5c6a3c0bf536eb496a0a94eeb416a98214986cd"
+        },
+        {
+          "path": "originals/dongmul-julmatchum.LICENSE.txt",
+          "bytes": 1068,
+          "crc32": "9ed2c0b3",
+          "sha256": "06a7d63c727eb76cb3e8962b40609f8a8296715db2d4080b6c861753e3a1a03f"
+        },
+        {
+          "path": "originals/dongmul-julmatchum.jar",
+          "bytes": 58753,
+          "crc32": "4f0ecfed",
+          "sha256": "88f99a9a0de36695acf7cdd0bf57b33cd3433112b309c1daccb36279cdb4085f"
+        },
+        {
+          "path": "originals/engine-manifest.json",
+          "bytes": 756,
+          "crc32": "f44c304d",
+          "sha256": "0b290085d28ff61edfe2847189de3a2beb72e856318e98d9fa994c55ee4c57d3"
+        },
+        {
+          "path": "originals/wie-source.zip",
+          "bytes": 18989928,
+          "crc32": "324bc6c7",
+          "sha256": "07dc0d77d50f6192545be7ecf1cab21e1d0e2d72ac90b75a7424b0c6499122c3"
+        },
+        {
+          "path": "originals/wie_web.js",
+          "bytes": 39859,
+          "crc32": "5aaf1f3a",
+          "sha256": "02392ec64ed87938e5f432fbee76c030725b559e67461aaea9164aa8dbaad88b"
+        },
+        {
+          "path": "originals/wie_web_bg.wasm",
+          "bytes": 17925360,
+          "crc32": "fd57e4f7",
+          "sha256": "a4a32d289c2281239d2d4e9c00c065d10203fe151969a6f324761e4e3a38ecdf"
+        },
+        {
+          "path": "replay/after-five.png",
+          "bytes": 65986,
+          "crc32": "c12e2675",
+          "sha256": "00f74d1d81e79be2be37929833fc4ac2edfba51b3eec314f457e2d1543301a56"
+        },
+        {
+          "path": "replay/after-ok.png",
+          "bytes": 62828,
+          "crc32": "dbce90ec",
+          "sha256": "d4282011e99c0a4e93663b3d032834ac08083fe6d8d239e1eb04765e2f319c66"
+        },
+        {
+          "path": "replay/board-right.png",
+          "bytes": 134570,
+          "crc32": "122dd96f",
+          "sha256": "2b402bd529db44822815ef33742cac28757e1f7e03c5bcc9a0c334a478c1e645"
+        },
+        {
+          "path": "replay/board-select.png",
+          "bytes": 137690,
+          "crc32": "7a666fc7",
+          "sha256": "4ee308d34ef7efe09c6243f0813b89d5fff355d39717bad11dce10c8ba6e4d83"
+        },
+        {
+          "path": "replay/board.png",
+          "bytes": 134372,
+          "crc32": "30d2b6de",
+          "sha256": "2fe742c1bc74b72e61176ffefa6e5a61612caada0e2ae082fe9fa33926863e0a"
+        },
+        {
+          "path": "replay/chrome.json",
+          "bytes": 1770,
+          "crc32": "76146aa1",
+          "sha256": "00d00b8e1512857b4c58ee9faef99eddd9ed26e9c23489958265417d18c3ecaa"
+        },
+        {
+          "path": "sources/otterpebble-demo.html",
+          "bytes": 26076,
+          "crc32": "67614845",
+          "sha256": "c714420bc920743350b12321be05a278cb2dd2d878df2bc71fc4ccf0d739f82c"
+        },
+        {
+          "path": "sources/otterpebble-demo.html.headers.txt",
+          "bytes": 76,
+          "crc32": "ab783a36",
+          "sha256": "149a7322803e6d98ce5824a40d666371099c0e6bea485c7b81b7d4627aaa2e20"
+        },
+        {
+          "path": "sources/otterpebble-dongmul.LICENSE.txt.headers.txt",
+          "bytes": 139,
+          "crc32": "97d54a16",
+          "sha256": "0a685d6abde9ea59016cb6493178b298bec0e53d8ae4804201504d36e168d260"
+        },
+        {
+          "path": "sources/otterpebble-dongmul.jar.headers.txt",
+          "bytes": 154,
+          "crc32": "974ab6cd",
+          "sha256": "c4b3bf4e2f2597c1bb9edd40421fc06bbda37f3b3f8d79c48c688f08ed7cc82b"
+        },
+        {
+          "path": "sources/otterpebble-engine-direct.wasm.headers.txt",
+          "bytes": 149,
+          "crc32": "74d945b8",
+          "sha256": "f5006fe764f9fd4c4e3ac284d3d17de30f357f1a5edbd796b13108c601039b55"
+        },
+        {
+          "path": "sources/otterpebble-engine-manifest.json.headers.txt",
+          "bytes": 144,
+          "crc32": "d888ef08",
+          "sha256": "396b9cae3bce3f95e6c503219e2a7b22fb0aa1bb40d4b95d0c4e248bdf2417f1"
+        },
+        {
+          "path": "sources/otterpebble-engine.js.headers.txt",
+          "bytes": 145,
+          "crc32": "4e065739",
+          "sha256": "14577004f61fde237bc98778679816ddac16ccafabed8386def8d695aa72fd10"
+        },
+        {
+          "path": "sources/otterpebble-licenses.html",
+          "bytes": 233730,
+          "crc32": "5133508a",
+          "sha256": "deae549019e3fed11b40640716786f9ab8847455e3b8369a5baafdaa9cc996f3"
+        },
+        {
+          "path": "sources/otterpebble-licenses.html.headers.txt",
+          "bytes": 76,
+          "crc32": "23e598c4",
+          "sha256": "4eb37a8bbdb5a4002ed01a9df145c236c3c788353731dd8f7bc5957527d176d7"
+        },
+        {
+          "path": "sources/otterpebble-support.html",
+          "bytes": 343899,
+          "crc32": "bf60a491",
+          "sha256": "a7636075e9a82e837a9197d24e3de77efebf9dd0dda865f6a50955460bb3ce8e"
+        },
+        {
+          "path": "sources/otterpebble-support.html.headers.txt",
+          "bytes": 76,
+          "crc32": "aeb12ffd",
+          "sha256": "101e56842f1cb9264e9452a334bea175f0526a40c121d8cdbb15cbaca2502dd3"
+        },
+        {
+          "path": "sources/otterpebble-third-party.txt.headers.txt",
+          "bytes": 141,
+          "crc32": "fcfd9171",
+          "sha256": "b607ef125b1cb82bfa84a1cd466a8256d39cd29676759bf4a21d6e9a512d0e5c"
+        },
+        {
+          "path": "sources/wie-4ac3856.json.headers.txt",
+          "bytes": 218,
+          "crc32": "c77e85df",
+          "sha256": "5cf1be06d95ecd3281b00cf3547b0de436c8480806d0674dacd569394147a95a"
+        },
+        {
+          "path": "sources/wie-e5a76be3.json.headers.txt",
+          "bytes": 218,
+          "crc32": "925b73f9",
+          "sha256": "4a1a273a5182b0a851027b1f2ee19d38602e8ec9e28d0cda1f9f988eee5f847c"
+        },
+        {
+          "path": "sources/wie-notices-commit.json",
+          "bytes": 24096,
+          "crc32": "6f92a901",
+          "sha256": "95d646a4db7adc0600285884c5c05d946bee1f774775b37217f3ef347acfec2b"
+        },
+        {
+          "path": "sources/wie-production-commit.json",
+          "bytes": 36286,
+          "crc32": "cbd3827e",
+          "sha256": "b413dc1dc4a39abb404e80b90ccf06d18da89038fbcf533a2bb3d3bb974a4139"
+        },
+        {
+          "path": "sources/wie-production-commit.json.headers.txt",
+          "bytes": 218,
+          "crc32": "7eb60f61",
+          "sha256": "a329f045430b76500f776ec8ea3778b8b4fe3a11c27e020e337b83c9c44d73e6"
+        },
+        {
+          "path": "sources/wie-production-source.zip.headers.txt",
+          "bytes": 155,
+          "crc32": "5ac70400",
+          "sha256": "0ffbb889a8270050e6647a9694a6971f56431d720835543d1cb8226a235bf7e7"
+        },
+        {
+          "path": "sources/wie-public-data-commit.json",
+          "bytes": 67653,
+          "crc32": "a8e8837f",
+          "sha256": "9dd81ae78cdcc04843227af9876979aa969370a820dce84aaa51f9b3ee2286a3"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 6606,
+          "crc32": "635d1f42",
+          "sha256": "a45465be62caf3d474a081d3722ca845e782a3c8e847c4199d9424a80aa762f8"
+        }
+      ]
+    },
+    {
       "id": "kraze-emule-ktf-brew",
       "repositoryPath": "research/archives/Kraze-eMule-KTF-BREW-Original-Collection.zip",
       "bytes": 49349060,
@@ -213133,9 +213364,9 @@
     }
   ],
   "counts": {
-    "archives": 119,
-    "archiveBytes": 2453773470,
-    "fileMembers": 35343,
-    "uniqueMemberHashes": 20599
+    "archives": 120,
+    "archiveBytes": 2478792412,
+    "fileMembers": 35380,
+    "uniqueMemberHashes": 20636
   }
 }

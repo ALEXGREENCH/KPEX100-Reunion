@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "otterpebble-wie-web",
+      "title": "Otterpebble · WIE для браузера и Dongmul Julmatchum",
+      "category": "Эмуляторы и инструменты",
+      "description": "Движок WIPI, SKVM и J2ME из публичной сборки WIE, исходники той же ревизии и демоигра MIDP с проверкой управления.",
+      "repositoryPath": "research/archives/Otterpebble-WIE-Web-and-Dongmul-Demo.zip",
+      "bytes": 25018942,
+      "sha256": "f6c68293ae5e212ecf1ed40abe4eddb8f0506aaaedd42919493664d0e4eee9be",
+      "sources": [
+        {
+          "label": "Веб-эмулятор",
+          "url": "https://featurephone.otterpebble.com/"
+        },
+        {
+          "label": "Ревизия исходников",
+          "url": "https://github.com/Jun025/wie/tree/1ca15ebf5a3ebc691a680a7854e99a32e75d46f4"
+        }
+      ]
+    },
+    {
       "id": "kraze-emule-ktf-brew",
       "title": "Kraze · ранние игры KTF из eMule",
       "category": "Игры и игровые сборки",
@@ -2430,6 +2449,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Браузерный WIE и демоигра Dongmul Julmatchum",
+      "repositoryPath": "doc/otterpebble-wie-web.md"
+    },
     {
       "title": "Коллекция ранних игр KTF от Kraze",
       "repositoryPath": "doc/kraze-emule-ktf-brew.md"
