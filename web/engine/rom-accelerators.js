@@ -47,6 +47,13 @@ const PALETTE_ROW_SIGNATURES = [
   address,
   Uint8Array.from(hex.match(/../g).map((value) => Number.parseInt(value, 16))),
 ]);
+const RGB_PALETTE_ENTRY = 0x2004e268;
+const RGB_PALETTE_OUTPUT = 0x20b41bfc;
+const RGB_PALETTE_SIGNATURE = Uint8Array.from(
+  '060057e307f18f90240000ea0b0000ea0a0000ea090000ea020000ea160000ea150000ea140000ea0030d8e500308de501a0d8e502b0d8e5023088e2160000ea0030d8e5403f63e25331a0e1ff3063e200308de501c0d8e5023088e240cf6ce25cc1a0e1ffa06ce202c0d8e540cf6ce25cc1a0e1ffb06ce2070000ea0030d8e53332a0e100308de501c0d8e5023088e23ca2a0e102c0d8e53cb2a0e1018083e200309de5fcc00ae2f83003e20334a0e18c3183e10bcca0e1ac3d83e1b230c4e0010080e2050050e1ccffffbafe8fbde8'
+    .match(/../g)
+    .map((value) => Number.parseInt(value, 16)),
+);
 const PALETTE_BLEND_ENTRY = 0x2004e53c;
 const PALETTE_BLEND_SIGNATURE = Uint8Array.from(
   '030059e3550000ca8cc085e0b0e0dce130c09de5010053e36972dce568c2dce507748ce130c09de5ae7007e06ba2dce56ac2dce50aa48ce12ec10ae00ce087e030c09de56da2dce56cc2dce5b070d0e10aa48ce130c09de5a7a00ae06fb2dce56ec2dce50bb48ce127c10be00cc08ae00ec08ce0b0c0c0e15a00001a'
@@ -91,6 +98,7 @@ export function installRomAccelerators(
     minPaletteBatchPixels = 4096,
     minPaletteContinuationPixels = Infinity,
     minBlendedPalettePixels = Infinity,
+    minRgbPaletteEntries = Infinity,
     minBlendRectanglePixels = Infinity,
     minSolidRectanglePixels = Infinity,
   } = {},
@@ -146,6 +154,13 @@ export function installRomAccelerators(
       throw new Error('Kingston blended palette kernel does not match verified ROM');
   }
 
+  const accelerateRgbPalette = Number.isFinite(minRgbPaletteEntries);
+  if (accelerateRgbPalette) {
+    const code = cpu.read(0x2004e1a4, RGB_PALETTE_SIGNATURE.length);
+    if (!RGB_PALETTE_SIGNATURE.every((value, index) => code[index] === value))
+      throw new Error('Kingston RGB palette conversion does not match verified ROM');
+  }
+
   const stats = {
     fills: 0,
     pixels: 0,
@@ -164,6 +179,8 @@ export function installRomAccelerators(
     paletteContinuations: 0,
     blendedPaletteBatches: 0,
     blendedPalettePixels: 0,
+    rgbPalettes: 0,
+    rgbPaletteEntries: 0,
     palettePixels: 0,
     paletteWrites: 0,
     paletteFallbacks: 0,
@@ -437,6 +454,67 @@ export function installRomAccelerators(
     stats.solidRectanglePixels += rows * width;
     stats.skippedInstructions += skipped;
   };
+  // The plain RGB mode copies triples from a resource into the interpreter's
+  // palette workspace. Let the last color write the scratch stack and return.
+  const rgbReadRegisters = ['r7', 'r0', 'cpsr', 'r4', 'r8', 'sp', 'r10'];
+  const rgbRead = accelerateRgbPalette && cpu.createRegisterBatch?.(rgbReadRegisters);
+  const rgbWrite = rgbRead && cpu.createRegisterBatch?.(['r0', 'r4', 'r8']);
+  const rgbPalette = (address, size) => {
+    if (
+      !enabled() ||
+      address === cpu.runStart ||
+      cpu.runCounted ||
+      cpu.runStop !== 0x23fff000 ||
+      size !== 8
+    )
+      return;
+    const count = cpu.regRead('r5');
+    if (count < 2 || count < minRgbPaletteEntries || count > 256) return;
+    const budget = cpu.blockBudget;
+    if (budget == null || budget < count * 42 + 32) return;
+    const regs = rgbRead.read();
+    if (regs[0] !== 3 || regs[1] !== 0 || regs[2] & 0x20) return;
+    const dest = regs[3],
+      source = regs[4],
+      stack = regs[5];
+    const sourceEnd = source + count * 3,
+      destEnd = dest + count * 2;
+    if (
+      dest !== RGB_PALETTE_OUTPUT ||
+      regs[6] !== dest - 0x54 ||
+      source < 0x20000000 ||
+      sourceEnd > 0x24000000 ||
+      stack & 3 ||
+      stack < 0x20000000 ||
+      stack + 48 > 0x24000000 ||
+      (source < destEnd && dest < sourceEnd) ||
+      (source < stack + 48 && stack < sourceEnd) ||
+      (dest < stack + 48 && stack < destEnd)
+    )
+      return;
+    const colors = count - 1;
+    const input = cpu.read(source, colors * 3),
+      output = new Uint8Array(colors * 2);
+    for (let i = 0, j = 0; i < input.length; i += 3, j += 2) {
+      const color = ((input[i] & 0xf8) << 8) | ((input[i + 1] & 0xfc) << 3) | (input[i + 2] >>> 3);
+      output[j] = color & 255;
+      output[j + 1] = color >>> 8;
+    }
+    cpu.write(dest, output);
+    rgbWrite.write(colors, dest + output.length, source + input.length);
+    // Two dispatch instructions, one jump-table branch, six input and
+    // twelve conversion/output instructions per skipped entry.
+    const skipped = colors * 21;
+    cpu.blockBudget = budget - skipped * 2;
+    onSkippedInstructions(skipped);
+    stats.rgbPalettes++;
+    stats.rgbPaletteEntries += colors;
+    stats.skippedInstructions += skipped;
+  };
+  let rgbPaletteHook =
+    rgbRead && rgbWrite
+      ? cpu.onBlock(rgbPalette, { begin: RGB_PALETTE_ENTRY, end: RGB_PALETTE_ENTRY })
+      : null;
   // Enter once per row, before MOV r8,#0 / LDR r0,[sp,#12]. Unsupported
   // drawing modes therefore pay one guard per row, not one guard per pixel.
   const removePaletteRow = cpu.addBlockShortcut(PALETTE_ROW_ENTRY, (address, size) => {
@@ -810,6 +888,10 @@ export function installRomAccelerators(
       removeFill();
       removeRectangle();
       removeBlendRectangle?.();
+      if (rgbPaletteHook) {
+        cpu.removeHook(rgbPaletteHook);
+        rgbPaletteHook = null;
+      }
       for (const remove of removeSolidRectangles) remove();
       removePaletteRow();
       removeColorMatch();

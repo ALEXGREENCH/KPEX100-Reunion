@@ -2,20 +2,46 @@
 const encoder = new TextEncoder();
 const cartridgeFolders = ['NES', 'GB', 'GBC', 'GG'];
 export function createDisk(files, rom) {
-  const total = 131072,
-    start = 32768,
+  const start = 32768,
     reserved = 1,
     roots = 512,
     spc = 4,
-    part = total - start,
+    clusterBytes = spc * 512,
     rootSectors = 32;
-  let fatSectors = 1,
+  const folders = new Map([['GAME', []], ...cartridgeFolders.map((name) => [name, []])]);
+  const clustersFor = (bytes) => Math.ceil(bytes / clusterBytes);
+  const directoryClusters = (entries) => clustersFor((entries + 2) * 32);
+  let usedClusters = 0;
+  for (const file of files) {
+    const group = folders.get(file.folder ?? 'GAME');
+    if (!group) throw new Error('Unknown disk folder: ' + file.folder);
+    group.push(file);
+    usedClusters += clustersFor(file.data.length);
+  }
+  const withCartridges = cartridgeFolders.some((name) => folders.get(name).length > 0);
+  const gameFiles = folders.get('GAME').length + (withCartridges ? cartridgeFolders.length : 0);
+  usedClusters += directoryClusters(gameFiles) + 4; // GAME and the other root directories.
+  if (withCartridges)
+    for (const name of cartridgeFolders)
+      usedClusters += directoryClusters(folders.get(name).length);
+
+  // Keep the original 64 MiB layout for small collections.
+  let total = 131072,
+    part,
+    fatSectors,
     clusters;
   while (true) {
-    clusters = Math.floor((part - reserved - 2 * fatSectors - rootSectors) / spc);
-    const needed = Math.ceil((2 * (clusters + 2)) / 512);
-    if (needed <= fatSectors) break;
-    fatSectors = needed;
+    part = total - start;
+    fatSectors = 1;
+    while (true) {
+      clusters = Math.floor((part - reserved - 2 * fatSectors - rootSectors) / spc);
+      const needed = Math.ceil((2 * (clusters + 2)) / 512);
+      if (needed <= fatSectors) break;
+      fatSectors = needed;
+    }
+    if (clusters >= usedClusters) break;
+    if (total === 262144) throw new Error('Игры не помещаются на виртуальный диск');
+    total += 8192; // Grow in 4 MiB steps, up to 128 MiB.
   }
   const image = new Uint8Array(total * 512),
     view = new DataView(image.buffer),
@@ -54,7 +80,7 @@ export function createDisk(files, rom) {
   let next = 2;
   function allocate(payload) {
     if (!payload.length) return 0;
-    const n = Math.ceil(payload.length / 2048),
+    const n = clustersFor(payload.length),
       first = next;
     if (first + n > clusters + 2) throw new Error('Игры не помещаются на виртуальный диск');
     for (let i = 0; i < n; i++) {
@@ -76,17 +102,9 @@ export function createDisk(files, rom) {
     u16(at + 26, cluster);
     u32(at + 28, size);
   }
-  const folders = new Map([['GAME', []], ...cartridgeFolders.map((name) => [name, []])]);
-  for (const file of files) {
-    const group = folders.get(file.folder ?? 'GAME');
-    if (!group) throw new Error('Unknown disk folder: ' + file.folder);
-    group.push(file);
-  }
-  const withCartridges = cartridgeFolders.some((name) => folders.get(name).length > 0);
-  const gameFiles = folders.get('GAME').length + (withCartridges ? cartridgeFolders.length : 0);
   function addDirectory(at, name, parentCluster, entries) {
     // Reserve contiguous directory clusters before allocating file data.
-    const cluster = allocate(new Uint8Array(Math.ceil(((entries + 2) * 32) / 2048) * 2048));
+    const cluster = allocate(new Uint8Array(directoryClusters(entries) * clusterBytes));
     const first = (dataLba + (cluster - 2) * spc) * 512;
     entry(first, '.          ', 0x10, cluster);
     entry(first + 32, '..         ', 0x10, parentCluster);

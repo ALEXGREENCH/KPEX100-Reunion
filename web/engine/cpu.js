@@ -64,6 +64,50 @@ export class ArmCPU {
     this.uc.setValue(this.scratch, value | 0, 'i32');
     this.check(this.uc._uc_reg_write(this.handle, this.regId(reg), this.scratch));
   }
+  createRegisterBatch(registers) {
+    const uc = this.uc;
+    if (
+      typeof uc._uc_reg_read_batch !== 'function' ||
+      typeof uc._uc_reg_write_batch !== 'function' ||
+      typeof uc.reunionWasmMemory !== 'function'
+    )
+      return null;
+    const count = registers.length;
+    if (!Number.isInteger(count) || count < 1 || count > 18)
+      throw Error('Invalid ARM register batch size');
+    const ids = registers.map((register) => {
+      if (typeof register !== 'string' || !Object.hasOwn(this.regs, register.toLowerCase()))
+        throw Error('Unknown 32-bit ARM register ' + register);
+      return this.regId(register);
+    });
+    const pointer = uc._malloc(count * 12);
+    if (!pointer) return null;
+    this.allocations.push(pointer);
+    const memory = uc.reunionWasmMemory();
+    const pointerTable = pointer + count * 4;
+    const valuesAddress = pointerTable + count * 4;
+    const layout = new Uint32Array(memory.buffer, pointer, count * 2);
+    layout.set(ids);
+    for (let i = 0; i < count; i++) layout[count + i] = valuesAddress + i * 4;
+    let values = new Uint32Array(memory.buffer, valuesAddress, count);
+    const currentValues = () => {
+      if (values.buffer !== memory.buffer)
+        values = new Uint32Array(memory.buffer, valuesAddress, count);
+      return values;
+    };
+    return {
+      // This view is borrowed until the next read, write, or WASM heap growth.
+      read: () => {
+        this.check(uc._uc_reg_read_batch(this.handle, pointer, pointerTable, count));
+        return currentValues();
+      },
+      write: (...registerValues) => {
+        if (registerValues.length !== count) throw Error('Wrong number of ARM register values');
+        currentValues().set(registerValues);
+        this.check(uc._uc_reg_write_batch(this.handle, pointer, pointerTable, count));
+      },
+    };
+  }
   map(address, size, permissions = 7) {
     this.engine.mem_map(address, size, permissions);
   }

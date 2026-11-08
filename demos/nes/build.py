@@ -447,6 +447,7 @@ CONTAINERS = {
     "neon-ranger": ("Neon Ranger", 996, "NEON.NES", (0, 2, 32, 28, 6)),
     "lan-master": ("Lan Master", 997, "LAN.NES", (0, 2, 32, 28, 6)),
     "chase": ("Chase", 1003, "CHASE.NES", (0, 2, 32, 28, 6)),
+    "zooming-secretary": ("Zooming Secretary", 1009, "ZOOM.NES", (0, 1, 32, 28, 6)),
 }
 
 
@@ -456,6 +457,7 @@ CC65_CPU = {
     addr = Fetch();
     return (ram[addr] + (ram[(addr + 1) & 255] << 8) + y) & 65535;
 }
+
 
 """,
     "extra_cpu_cases": """        case 17: a |= CpuRead(IndirectY()); nz = a; break;
@@ -486,6 +488,113 @@ CC65_CPU = {
                     CpuRead(destination + 2) == 201 && CpuRead(destination + 3) == 5) guestYield = 1;""",
 }
 
+
+ZOOM_CPU = {
+    **CC65_CPU,
+    "extra_cpu_helpers": CC65_CPU["extra_cpu_helpers"]
+    + """int HasMaskLoop() {
+    // Complete immutable mask loop at A8A2, then decsp4, oam_spr and popa.
+    return rom[2604] == 0xd68d00a9 && rom[2605] == 0xb060c906 &&
+        rom[2606] == 0xc1262031 && rom[2607] == 0x03a0f8a9 &&
+        rom[2608] == 0xd5ad2091 && rom[2609] == 0x20918806 &&
+        rom[2610] == 0x9188ffa9 && rom[2611] == 0x8800a920 &&
+        rom[2612] == 0xd6ad2091 && rom[2613] == 0x82a52006 &&
+        rom[2614] == 0x6d1808a9 && rom[2615] == 0xd58d06d5 &&
+        rom[2616] == 0x1804a906 && rom[2617] == 0x4c06d66d &&
+        rom[2618] == 0x25ada8a2 &&
+        rom[4173] == 0x20a56021 && rom[4174] == 0x8504e938 &&
+        rom[4175] == 0x60019020 && rom[4176] == 0xa56021c6 &&
+        rom[173] == 0x0220aa60 && rom[174] == 0x02029dc2 &&
+        rom[175] == 0x9dc20220 && rom[176] == 0x02200201 &&
+        rom[177] == 0x02009dc2 && rom[178] == 0x9dc20220 &&
+        rom[179] == 0x188a0203 && rom[180] == 0x85600469 &&
+        rom[4228] == 0x00a06068 && rom[4229] == 0x20e620b1 &&
+        rom[4230] == 0xe66001f0 && rom[4231] == 0xa0486021;
+}
+
+int WriteMaskSprites() {
+    int offset, softStack;
+    if (!maskLoop || a || ram[0x6d5] != 15) return 0;
+    softStack = ram[0x20] | (ram[0x21] << 8);
+    if (softStack < 0x704 || softStack > 0x800) return 0;
+    for (offset = 0; offset < 96; offset += 4) {
+        ram[0x200 + offset] = 15 + offset * 2;
+        ram[0x201 + offset] = 255;
+        ram[0x202 + offset] = 0;
+        ram[0x203 + offset] = 248;
+    }
+    // The loop leaves the last oam_spr arguments and return words in RAM.
+    ram[softStack - 4] = 0;
+    ram[softStack - 3] = 255;
+    ram[softStack - 2] = 199;
+    ram[softStack - 1] = 248;
+    ram[0x100 + sp] = 0xa8;
+    ram[0x100 + ((sp - 1) & 255)] = 0xc7;
+    ram[0x100 + ((sp - 2) & 255)] = 0x82;
+    ram[0x100 + ((sp - 3) & 255)] = 0xba;
+    ram[0x6d5] = 207;
+    ram[0x6d6] = 96;
+    a = 96;
+    x = 92;
+    y = 0;
+    carry = 1;
+    nz = 0;
+    overflow = 0;
+    pc = 0xa8da;
+    return 1;
+}
+
+int ClearStartupVideo() {
+    int i;
+    // Zooming Secretary's cc65 startup fills the full PPU address space
+    // with zero. CHR is read-only, so only the writable tables can change.
+    if (a || x || ctrl || mask || painted || vramAddr != 8192 ||
+        CpuRead(0x803b) != 0xa0 || CpuRead(0x803c) != 0x40 ||
+        CpuRead(0x803d) != 0x8d || CpuRead(0x803e) != 0x07 ||
+        CpuRead(0x803f) != 0x20 || CpuRead(0x8040) != 0xc8 ||
+        CpuRead(0x8041) != 0xd0 || CpuRead(0x8042) != 0xfa ||
+        CpuRead(0x8043) != 0xe8 || CpuRead(0x8044) != 0xd0 ||
+        CpuRead(0x8045) != 0xf5) return 0;
+    for (i = 0; i < 2048; i++) if (names[i]) {
+        names[i] = 0;
+        backgroundEpoch++;
+    }
+    for (i = 0; i < 32; i++) if (palettes[i]) {
+        palettes[i] = 0;
+        paletteEpoch++;
+        backgroundEpoch++;
+    }
+    y = 0;
+    nz = 0;
+    pc = 0x8046;
+    return 1;
+}
+
+""",
+    "extra_cpu_cases": CC65_CPU["extra_cpu_cases"]
+    + """        case 161:
+            addr = (Fetch() + x) & 255;
+            a = CpuRead(ram[addr] | (ram[(addr + 1) & 255] << 8));
+            nz = a;
+            break;
+""",
+    "extra_cpu_wait": CC65_CPU["extra_cpu_wait"].replace(
+        "destination + 1) == 2", "destination + 1) == 1"
+    ),
+}
+
+
+SOLID_SPRITES = """
+    if (sprite) {
+        index = SolidPattern(pattern);
+        if (index >= 0) {
+            if (index && firstY < lastY) {
+                Color(palettes[pal + index]);
+                FillRect(sx + firstX, sy + firstY, sx + lastX - 1, sy + lastY - 1);
+            }
+            return;
+        }
+    }"""
 
 PAINT_DEFAULT = {
     "extra_paint_state": "",
@@ -596,11 +705,25 @@ def build_container(sdk, cart, profile, plain=False):
     col, row, cols, rows, size = viewport
     # Shiru's boards use one-pixel tile edges. Center sampling keeps both
     # edges visible at six pixels per tile.
-    center = profile in ("lan-master", "chase")
+    zoom = profile == "zooming-secretary"
+    cc65 = profile == "chase" or zoom
+    center = profile == "lan-master" or cc65
     script = Template(SOURCE.read_text(encoding="ascii")).substitute(
         **(PAD_TRIPLE_REPORT if center else PAD_DEFAULT),
-        **(CHASE_PAINT if profile == "chase" else PAINT_DEFAULT),
-        **(CC65_CPU if profile == "chase" else dict.fromkeys(CC65_CPU, "")),
+        **(CHASE_PAINT if cc65 else PAINT_DEFAULT),
+        **(ZOOM_CPU if zoom else CC65_CPU if cc65 else dict.fromkeys(CC65_CPU, "")),
+        extra_cpu_state="\nint maskLoop;" if zoom else "",
+        extra_load_y=" if (pc == 0x803c && ClearStartupVideo()) break;" if zoom else "",
+        extra_store_abs=(
+            " if (pc == 0xa8a3 && WriteMaskSprites()) break;" if zoom else ""
+        ),
+        extra_startup="\n    maskLoop = HasMaskLoop();" if zoom else "",
+        extra_paint_reset="\n    currentColor = -1;" if zoom else "",
+        extra_sprite_fill=SOLID_SPRITES if zoom else "",
+        sample_locals="\n    int font;" if zoom else "",
+        sample_setup=(
+            "\n    font = !sprite && pattern >= 16 && pattern <= 0x3a0;" if zoom else ""
+        ),
         audio_code=("\n" + AUDIO.read_text(encoding="ascii") if center else ""),
         apu_write=(
             """    if (addr >= 16384) {
@@ -621,20 +744,33 @@ def build_container(sdk, cart, profile, plain=False):
         view_cols=cols,
         view_rows=rows,
         tile_size=size,
+        nmi_schedule=(
+            "    if ((ctrl & 128) && !inNmi && (guestYield || !(mask & 24))) nmiPending = 1;"
+            if zoom
+            else "    if ((ctrl & 128) && !inNmi) nmiPending = 1;"
+        ),
         guest_limit=(
             "    limit = 1024;"
-            if profile == "chase"
+            if cc65
             else "    limit = 512;\n    if (!(mask & 24)) limit = 768;"
         ),
         sample_scan=(
-            "if (tileSize == 6) scan += (row >= 1) + (row >= 4);"
-            if center
-            else "if (tileSize == 6 && row >= 3) scan++;"
+            "scan += font ? 1 : (row >= 1) + (row >= 4);"
+            if zoom
+            else (
+                "if (tileSize == 6) scan += (row >= 1) + (row >= 4);"
+                if center
+                else "if (tileSize == 6 && row >= 3) scan++;"
+            )
         ),
         sample_bit=(
-            "if (tileSize == 6) bit += (px >= 1) + (px >= 4);"
-            if center
-            else "if (tileSize == 6 && px >= 3) bit++;"
+            "bit += font ? 1 : (px >= 1) + (px >= 4);"
+            if zoom
+            else (
+                "if (tileSize == 6) bit += (px >= 1) + (px >= 4);"
+                if center
+                else "if (tileSize == 6 && px >= 3) bit++;"
+            )
         ),
     )
     with TemporaryDirectory(prefix="reunion-nes-") as directory:
@@ -657,6 +793,12 @@ def main():
         "--lan-master", dest="profile", action="store_const", const="lan-master"
     )
     variant.add_argument("--chase", dest="profile", action="store_const", const="chase")
+    variant.add_argument(
+        "--zooming-secretary",
+        dest="profile",
+        action="store_const",
+        const="zooming-secretary",
+    )
     parser.set_defaults(profile="orbital-courier")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--cart", type=Path, help="optional iNES mapper-0 test cartridge")

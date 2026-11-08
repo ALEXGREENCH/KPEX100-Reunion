@@ -51,19 +51,22 @@ test('cold boot and the player pack contain the same homebrew launchers and cart
     disks.push({ name: entry.cartridge.launcher, data: sgs }, ...files);
   }
   const zip = unzipSync(await buildHomebrewPack(fileURLToPath(web)));
-  for (const { cartridge } of entries) {
+  const sourceMembers = {
+    'demo-geometrix': ['Makefile', 'source/'],
+    'demo-zooming-secretary': ['zooming_secretary_src/game.c', 'zooming_secretary_src/compile.bat'],
+  };
+  for (const { id, cartridge } of entries) {
     const name = cartridge.launcher.replace(/\.SGS$/, '');
     if (cartridge.licenseFile) {
       const license = readFileSync(new URL('../' + cartridge.licenseFile, import.meta.url));
       assert.deepEqual(zip['LICENSES/' + name + '.txt'], new Uint8Array(license));
     }
-    if (cartridge.sourceArchive) {
+    if (cartridge.sourceArchive || sourceMembers[id]) {
+      assert.ok(cartridge.sourceArchive, id);
       const source = readFileSync(new URL('../' + cartridge.sourceArchive.url, import.meta.url));
       assert.deepEqual(zip['SOURCES/' + name + '.zip'], new Uint8Array(source));
       const members = unzipSync(source);
-      assert.ok(
-        members.Makefile && Object.keys(members).some((file) => file.startsWith('source/')),
-      );
+      for (const member of sourceMembers[id] ?? []) assert.ok(members[member], member);
     }
   }
   for (const { id, cartridge } of entries.filter((entry) => entry.cartridge.sha256)) {

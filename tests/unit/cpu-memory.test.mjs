@@ -46,7 +46,7 @@ test('bulk ARM reads preserve arbitrary byte alignment and never alias guest or 
   }
 });
 
-test('bulk copies and mapped views resolve the current heap after WASM growth', async () => {
+test('bulk copies, mapped views and register batches resolve the current heap after WASM growth', async () => {
   const cpu = await createARM({ isolated: true });
   let allocation = 0;
   try {
@@ -55,9 +55,22 @@ test('bulk copies and mapped views resolve the current heap after WASM growth', 
     const before = cpu.read(0x1000, 4);
     const view = cpu.uc.viewArrayFromMemory(pointer, 4);
     assert.deepEqual(view, before);
+    const registers = cpu.createRegisterBatch(['r0', 'r2', 'sp']);
+    assert.throws(() => cpu.createRegisterBatch(['q0']), /Unknown 32-bit ARM register/);
+    assert.throws(() => registers.write(1), /Wrong number of ARM register values/);
+    registers.write(0xff000001, 0x8d000002, 0x1000);
+    assert.equal(cpu.regRead('r2'), 0x8d000002);
+    const initialRegisters = registers.read();
+    assert.deepEqual(initialRegisters, Uint32Array.of(0xff000001, 0x8d000002, 0x1000));
     allocation = cpu.uc._malloc(128 * 1024 * 1024);
     assert.ok(allocation);
     assert.equal(view.byteLength, 0, 'WASM growth detaches previously borrowed views');
+    assert.equal(initialRegisters.byteLength, 0);
+    assert.deepEqual(registers.read(), Uint32Array.of(0xff000001, 0x8d000002, 0x1000));
+    cpu.regWrite('r0', 2);
+    assert.deepEqual(registers.read(), Uint32Array.of(2, 0x8d000002, 0x1000));
+    registers.write(9, 8, 0x2000);
+    assert.equal(cpu.regRead('sp'), 0x2000);
     cpu.uc.writeArrayToMemory(Uint8Array.of(0, 255, 128, 1), allocation);
     assert.deepEqual(cpu.uc.readArrayFromMemory(allocation, 4), Uint8Array.of(0, 255, 128, 1));
     assert.deepEqual(cpu.read(0x1000, 4), before);

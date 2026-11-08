@@ -12,6 +12,7 @@ const RELOC = 0x2000f8dc,
   STACK = 0x20b3f5a0,
   VM_PC = 0x20b3eb84;
 const EVENT_WORK_BUDGET = 20_000_000;
+const RGB_PALETTE_MIN_ENTRIES = 32;
 const hex = (n) => '0x' + (n >>> 0).toString(16).padStart(8, '0');
 const boundedPush = (list, item, n) => {
   list.push(item);
@@ -269,10 +270,21 @@ export class GnexRuntime {
       }
     }
     if (this.fastVmExecution) {
+      // RGB image resources put the palette count immediately before their
+      // triples. The high header bit selects the extended layout, and zero
+      // represents 256 entries. Dynamic-only palettes use ARM unless this
+      // script already has a qualifying palette in its initial resources.
+      const hasLargeRgbPalette = this.sgs.resources.some(({ type, data }) => {
+        if ((type !== 0x100 && type !== 0x101) || (data[0] & 0x7f) !== 0x0c) return false;
+        const headerLength = data[0] & 0x80 ? 11 : 7;
+        const count = data[headerLength - 1] || 256;
+        return count >= RGB_PALETTE_MIN_ENTRIES && data.length >= headerLength + count * 3;
+      });
       this.romAccelerators = installRomAccelerators(cpu, {
         romHash,
         minPaletteContinuationPixels: 192,
         minBlendedPalettePixels: 256,
+        minRgbPaletteEntries: hasLargeRgbPalette ? RGB_PALETTE_MIN_ENTRIES : Infinity,
         minBlendRectanglePixels: 256,
         minSolidRectanglePixels: 256,
         enabled: () => this._fastEventActive,

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
 import { createARM } from '../web/engine/cpu.js';
+import { GnexRuntime } from '../web/engine/gnex.js';
 import { installRomAccelerators } from '../web/engine/rom-accelerators.js';
 
 const rom = fs.readFileSync(new URL('../web/data/firmware/Kingston-2.12.rom', import.meta.url));
@@ -912,6 +913,143 @@ test('Short, counted, unaligned and overlapping copies use the ARM routine', asy
       );
     }
     assert.equal(fast.accelerator.stats.bulkCopies, 0);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('the RGB palette hook is installed only for scripts with a large initial RGB palette', async () => {
+  for (const [name, expectedHooks] of [
+    ['star-fighter', 7],
+    ['hellfire', 6],
+  ]) {
+    const sgs = fs.readFileSync(new URL(`../web/data/games/${name}.sgs`, import.meta.url));
+    const runtime = await GnexRuntime.create(rom, sgs, { profile: 'kpex' });
+    try {
+      assert.equal(runtime.cpu.hooks.length, expectedHooks, name);
+      assert.equal(runtime.cpu.blockShortcuts.size, 6, name);
+    } finally {
+      runtime.close();
+    }
+  }
+});
+
+test('RGB palette conversion preserves native output, stack, registers and watchdog edges', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  const target = 0x20b41bfc;
+  const executePalette = (
+    machine,
+    {
+      count = 74,
+      mode = 3,
+      index = 0,
+      source = 0x21010000,
+      dest = target,
+      descriptor = dest - 0x54,
+      stop = STOP,
+    } = {},
+    budget = null,
+  ) => {
+    const { cpu } = machine;
+    const stack = 0x23fe0000;
+    cpu.write(dest - 8, new Uint8Array(528).fill(0xa7));
+    cpu.write(
+      source,
+      Uint8Array.from({ length: 780 }, (_, i) => (i * 53 + (i >>> 2) * 27) & 255),
+    );
+    cpu.write(
+      stack,
+      Uint8Array.from({ length: 64 }, (_, i) => (i * 47 + 19) & 255),
+    );
+    cpu.write32(stack + 44, STOP);
+    for (let i = 0; i < 15; i++) cpu.regWrite('r' + i, 0x10100000 + i * 0x101);
+    cpu.regWrite('cpsr', 0x98000013);
+    cpu.regWrite('sp', stack);
+    for (const [reg, value] of [
+      ['r0', index],
+      ['r1', 3 - mode],
+      ['r2', mode - 3],
+      ['r4', dest],
+      ['r5', count],
+      ['r7', mode],
+      ['r8', source],
+      ['r10', descriptor],
+    ])
+      cpu.regWrite(reg, value);
+    machine.instructions = 0;
+    callHelper(cpu, 0x2004e268, budget !== null, budget, stop);
+    return {
+      registers: registers.map((reg) => cpu.regRead(reg)),
+      output: cpu.read(dest - 8, 528),
+      source: cpu.read(source, 780),
+      stack: cpu.read(stack, 64),
+      instructions: machine.instructions,
+    };
+  };
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      minRgbPaletteEntries: 32,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    for (const count of [32, 74, 255, 256]) {
+      assert.deepEqual(
+        executePalette(fast, { count }, 100_000),
+        executePalette(native, { count }, 100_000),
+      );
+    }
+    assert.equal(fast.accelerator.stats.rgbPalettes, 4);
+    assert.equal(fast.accelerator.stats.rgbPaletteEntries, 31 + 73 + 254 + 255);
+    for (const input of [
+      { count: 0 },
+      { count: 1 },
+      { count: 31 },
+      { mode: 2 },
+      { mode: 4 },
+      { index: 1 },
+      { dest: 0x23010000 },
+      { descriptor: target - 0x50 },
+      { source: target + 2 },
+      { stop: 0x2004e240 },
+    ]) {
+      assert.deepEqual(
+        executePalette(fast, input, 100_000),
+        executePalette(native, input, 100_000),
+        JSON.stringify(input),
+      );
+    }
+    assert.deepEqual(executePalette(fast), executePalette(native));
+    assert.equal(fast.accelerator.stats.rgbPalettes, 4);
+    const full = executePalette(native, {}, 100_000).instructions * 2;
+    for (const budget of [
+      1,
+      8,
+      40,
+      100,
+      1000,
+      full - 8,
+      full - 2,
+      full,
+      full + 2,
+      full + 8,
+      full + 64,
+    ])
+      assert.deepEqual(
+        executePalette(fast, {}, budget),
+        executePalette(native, {}, budget),
+        'budget ' + budget,
+      );
+    assert.equal(fast.accelerator.stats.rgbPalettes, 5);
+    fast.accelerator.dispose();
+    fast.accelerator.dispose();
+    fast.cpu.createRegisterBatch = undefined;
+    fast.accelerator = installRomAccelerators(fast.cpu, { romHash, minRgbPaletteEntries: 32 });
+    assert.deepEqual(executePalette(fast, {}, 100_000), executePalette(native, {}, 100_000));
+    assert.equal(fast.accelerator.stats.rgbPalettes, 0);
   } finally {
     native.cpu.close();
     fast.cpu.close();
