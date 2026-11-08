@@ -7,13 +7,14 @@
   "archive": "https://github.com/AlexAltea/unicorn.js/releases/download/v1.0.3/unicorn_arm_1.0.3.zip",
   "modifications": [
     "Renamed unicorn_arm.js to unicorn_arm_legacy.js; appended globalThis.MUnicornLegacy = MUnicorn for module-worker loading.",
-    "Added readArrayFromMemory(pointer,length) for an owned copy and viewArrayFromMemory(pointer,length) for bounded access to caller-owned allocations. Both resolve the current WASM heap on each call. No changes to the ARM WASM."
+    "Added readArrayFromMemory(pointer,length) for an owned copy and viewArrayFromMemory(pointer,length) for bounded access to caller-owned allocations. Both resolve the current WASM heap on each call. No changes to the ARM WASM.",
+    "Exposed the existing WASM memory through reunionWasmMemory() for the firmware instruction monitor. The ARM WASM remains byte-for-byte upstream."
   ],
   "files": [
     {
       "path": "unicorn_arm_legacy.js",
-      "bytes": 35364,
-      "sha256": "e1ee9c947cd7c3a1acd546ab716e2df2995772b50347018801af6262b8dddb05"
+      "bytes": 35407,
+      "sha256": "9bf6a241c6a338733307d13d83780b91aa20c4d468386a8b729e14b596cfa369"
     },
     {
       "path": "unicorn_arm.wasm",

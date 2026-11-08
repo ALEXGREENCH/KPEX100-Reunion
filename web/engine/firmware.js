@@ -1,6 +1,7 @@
 // K-PEX / TCC76x hardware model, port of kpex/firmware.py.
 // Actual ARM instructions execute inside Unicorn WASM. Unknown hardware stops.
 import { ArmCPU, initCpu, getCpuModule } from './cpu.js';
+import { installInstructionMonitor, loadInstructionMonitor } from './instruction-monitor.js';
 import { unzipSync } from '../vendor/fflate.js';
 const U32 = (x) => x >>> 0,
   hex = (x) => '0x' + U32(x).toString(16).padStart(8, '0');
@@ -86,9 +87,18 @@ export function inspectRom(rom) {
 }
 export class FirmwareMachine {
   static async create(rom, options = {}) {
-    await initCpu();
+    const fastMonitor =
+      options.traceInstructions === false && options.fastInstructionMonitor !== false;
+    const [, instructionModule] = await Promise.all([
+      initCpu(),
+      fastMonitor ? loadInstructionMonitor() : null,
+    ]);
     const machine = new FirmwareMachine(rom, options);
     await machine.ready;
+    if (instructionModule && machine.rom_info.sha256 === key212) {
+      machine._instructionModule = instructionModule;
+      machine._installInstructionMonitor();
+    }
     return machine;
   }
   constructor(
@@ -109,6 +119,7 @@ export class FirmwareMachine {
     this.strict_mmio = strictMMIO;
     this.fast_idle = fastIdle;
     this.traceInstructions = traceInstructions;
+    this._instructionModule = null;
     this.disk_image = diskImage
       ? diskImage instanceof Uint8Array
         ? adoptDiskImage
@@ -127,6 +138,8 @@ export class FirmwareMachine {
   }
   reset() {
     if (this.cpu) this.cpu.close();
+    this._instructionMonitor = null;
+    this._instructionMonitorRunning = false;
     this.cpu = new ArmCPU(this.uc);
     const c = this.cpu;
     this._sdramPointer = c.mapAlias([0x20000000, 0x21000000], 0x1000000);
@@ -240,17 +253,56 @@ export class FirmwareMachine {
     };
     for (let i = 0; i < 6; i++) defaults[0x80000208 + i * 16] = i < 4 ? 0xffff : 0xfffff;
     for (const [a, v] of Object.entries(defaults)) this._writeMMIO(Number(a), v);
-    c.onCode((a, s) => this._code(a, s));
+    this._instructionSlowHook = c.onCode((a, s) => this._code(a, s));
+    // Device handlers may run between two code hooks and need the count of
+    // the instruction whose bus access they are currently servicing.
+    const device =
+      (handler) =>
+      (...args) => {
+        if (this._instructionMonitorRunning)
+          this.instructions = Number(this._instructionMonitor.counter.value);
+        handler.apply(this, args);
+      };
     for (const [begin, end] of [
       [0x80000000, 0x80000fff],
       [0xf0000000, 0xf0000fff],
       [0xfffff000, 0xffffffff],
     ])
-      c.onMemory((...v) => this._memory(...v), { begin, end });
-    c.onMemory((...v) => this._lcdMemory(...v), { begin: 0x50000000, end: 0x50000fff });
-    c.onMemory((...v) => this._ataMemory(...v), { begin: 0x40000000, end: 0x40000fff });
-    c.onMemory((...v) => this._invalidMemory(...v), { invalid: true });
+      c.onMemory(device(this._memory), { begin, end });
+    c.onMemory(device(this._lcdMemory), { begin: 0x50000000, end: 0x50000fff });
+    c.onMemory(device(this._ataMemory), { begin: 0x40000000, end: 0x40000fff });
+    c.onMemory(device(this._invalidMemory), { invalid: true });
     c.onInterrupt((n) => this._stop('CPU exception ' + n + ' at ' + hex(c.regRead('pc'))));
+    this._installInstructionMonitor();
+  }
+  _installInstructionMonitor() {
+    if (!this._instructionModule || this.traceInstructions || !this.uc.reunionWasmMemory) return;
+    const c = this.cpu;
+    let monitor;
+    try {
+      monitor = installInstructionMonitor(this._instructionModule, c, (a, s) => {
+        if (!this._instructionMonitorRunning) {
+          this._code(U32(a), s);
+          return;
+        }
+        this.instructions = Number(monitor.counter.value);
+        try {
+          this._code(U32(a), s);
+        } finally {
+          monitor.counter.value = BigInt(this.instructions);
+          monitor.flags.value = this._instructionFlags();
+        }
+      });
+    } catch {
+      // Alternate bridges and browsers can decline the optional native hook.
+      // Keep the reference hook registered until its replacement is ready.
+      return;
+    }
+    monitor.sdram.value = this._sdramPointer;
+    monitor.rom.value = this._romPointer;
+    c.removeHook(this._instructionSlowHook);
+    this._instructionMonitor = monitor;
+    this._instructionMonitorHookCount = c.hooks.length;
   }
   get registers() {
     const r = Object.fromEntries(R.map((n) => [n, this.cpu.regRead(n)]));
@@ -313,7 +365,11 @@ export class FirmwareMachine {
     this.mmio[a] = U32(v);
     this.cpu.write32(a, v);
   }
+  _instructionFlags() {
+    return 1 | (this._deferred_writes ? 2 : 0) | (this._enteredSDRAM ? 4 : 0);
+  }
   _deferMMIO(a, v) {
+    if (this._instructionMonitorRunning) this._instructionMonitor.flags.value |= 2;
     (this._deferred_writes ??= {})[a] = v;
   }
   _instruction(address) {
@@ -928,6 +984,21 @@ export class FirmwareMachine {
       return snapshot ? this.snapshot() : undefined;
     this.status = 'running';
     this._run_end = this.instructions + budget;
+    const monitor = this._instructionMonitor;
+    if (
+      monitor &&
+      !this.traceInstructions &&
+      // External CPU observers can read instructions from inside a hook.
+      this.cpu.hooks.length === this._instructionMonitorHookCount &&
+      this.rom_info.sha256 === key212 &&
+      this.instructions >= 0 &&
+      Number.isSafeInteger(this._run_end)
+    ) {
+      this._instructionMonitorRunning = true;
+      monitor.counter.value = BigInt(this.instructions);
+      monitor.end.value = BigInt(this._run_end);
+      monitor.flags.value = this._instructionFlags();
+    }
     const pc = this.cpu.regRead('pc'),
       thumb = !!(this.cpu.regRead('cpsr') & 32);
     try {
@@ -940,6 +1011,11 @@ export class FirmwareMachine {
         this.stop_reason = String(e);
       }
     } finally {
+      if (this._instructionMonitorRunning) {
+        this.instructions = Number(monitor.counter.value);
+        monitor.flags.value = 0;
+        this._instructionMonitorRunning = false;
+      }
       this._run_end = null;
     }
     if (this.status === 'running') this.status = 'paused';

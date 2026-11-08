@@ -18,6 +18,7 @@ if (source.split(anchor).length !== 2) throw Error('Ambiguous bridge export');
 // Emscripten replaces HEAPU8 when memory grows. The view is only for callers
 // that own the underlying allocation and can refresh detached views.
 const memoryViews =
+  'Module["reunionWasmMemory"]=()=>wasmMemory;' +
   'const checkArrayRange=(pointer,length)=>{if(!Number.isSafeInteger(pointer)||!Number.isSafeInteger(length)||pointer<0||length<0||pointer+length>HEAPU8.length)throw new RangeError("WASM memory copy bounds")};' +
   'Module["viewArrayFromMemory"]=(pointer,length)=>{checkArrayRange(pointer,length);return HEAPU8.subarray(pointer,pointer+length)};' +
   'Module["readArrayFromMemory"]=(pointer,length)=>{checkArrayRange(pointer,length);return HEAPU8.slice(pointer,pointer+length)};';
