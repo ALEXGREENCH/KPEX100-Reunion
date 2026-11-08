@@ -163,3 +163,34 @@ test('ADS: mobile-gostop matches the independent idle and keypad replays on ARM/
     });
   }
 });
+
+test('ADS: mobile-gostop continues through three later-round transitions', async () => {
+  const record = json('../validation/anycall-mobile-gostop.json');
+  const inputs = [1, 2, 3, 4, 5, 6, 7, 19];
+  // Indexed frames from a separate Python Unicorn run, before and after
+  // the first round transition and after two more calls at the same site.
+  const checkpoints = new Map([
+    [1900, 'd8cb8859bda0e365872d08615f805c9d50c701ed7fd48e72ac0c0479e56cfacb'],
+    [2080, '8f20c4e086834211fde61b862f63284457e40560074dfa71d3a17615d29ec9aa'],
+    [5320, 'c82252144899da184b407af4cce72f6c07d0c2fac24d45ef90a7d1c20ad48a78'],
+  ]);
+  await replay(record, (game) => {
+    for (const { key, ticks } of record.commonSequence) {
+      press(game, key);
+      advance(game, ticks);
+    }
+    press(game, 5);
+    advance(game, 80);
+    for (let turn = 0; turn < 28; turn++) {
+      press(game, inputs[turn % inputs.length]);
+      advance(game, 180);
+      const expected = checkpoints.get(game.presentations);
+      if (expected) {
+        assert.equal(hash(game.readIndexedFrame()), expected, `presentation ${game.presentations}`);
+        checkpoints.delete(game.presentations);
+      }
+    }
+    assert.equal(checkpoints.size, 0);
+    assert.equal(game.eventCount, 5355);
+  });
+});

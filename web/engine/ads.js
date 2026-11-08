@@ -356,6 +356,11 @@ export class AdsRuntime {
     const a = cpu.regRead('r0');
     if (slot === 0x04) {
       this.#writeOutput(a, DISPLAY);
+    } else if (slot === 0x0c && this.#profile.id === 'mobile-gostop') {
+      // GoStop keeps its updated balances in this block between hands.
+      // Acknowledge the save request for this session's in-memory state.
+      if (a !== BSS + 0x1940 || cpu.regRead('lr') !== TEXT + 0x554b)
+        throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
     } else if (slot === 0x40) {
       const low = a & 65535;
       const high = a >>> 16;
