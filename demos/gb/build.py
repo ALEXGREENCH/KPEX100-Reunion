@@ -13,6 +13,7 @@ sys.path.insert(0, str(HERE.parent))
 from sgs_build import build_sgs, encode_kpex, pack_vfs
 
 GEOMETRIX_SHA256 = "56efdf82118e5faf22511c18dd1fc2ab8bc0c5e44cd634b8e06050ff08124586"
+K32_SHA256 = "78e9b1c971cd23de99411198b22e11a8e503e392581e7c6e39deb629e3c5c7fa"
 
 
 def demo_cartridge(color=False):
@@ -320,9 +321,14 @@ def main():
     releases.add_argument(
         "--geometrix", action="store_true", help="build Antonio Niño Díaz's Geometrix"
     )
+    releases.add_argument(
+        "--k32", action="store_true", help="build Jona32u4's K32 Super Rocket Rev4"
+    )
     parser.add_argument("--plain", action="store_true", help="omit the K-PEX encoding")
     args = parser.parse_args()
-    expanded = args.raw_snake or args.flooder or args.twenty48 or args.geometrix
+    expanded = (
+        args.raw_snake or args.flooder or args.twenty48 or args.geometrix or args.k32
+    )
     if expanded and (args.color or args.cart):
         parser.error("The selected release uses its original cartridge")
     if args.raw_snake:
@@ -333,6 +339,8 @@ def main():
         cart = (HERE / "2048/2048.GB").read_bytes()
     elif args.geometrix:
         cart = (HERE / "geometrix/GEOM.GBC").read_bytes()
+    elif args.k32:
+        cart = (HERE / "k32-super-rocket/K32.GBC").read_bytes()
     else:
         cart = args.cart.read_bytes() if args.cart else demo_cartridge(args.color)
     if args.geometrix:
@@ -340,6 +348,8 @@ def main():
             raise ValueError("Geometrix must use the pinned upstream cartridge")
     else:
         check_cartridge(cart)
+    if args.k32 and sha256(cart).hexdigest() != K32_SHA256:
+        raise ValueError("K32 must use the pinned upstream Rev4 cartridge")
     color = bool(cart[0x143] & 0x80)
     if args.color and not color:
         parser.error("--color requires a CGB cartridge")
@@ -361,6 +371,8 @@ def main():
                 title, appid, filename = "2048", 1005, "2048.GBR"
             elif args.geometrix:
                 title, appid, filename = "Geometrix", 1007, "GEOM.GBC"
+            elif args.k32:
+                title, appid, filename = "K32 Super Rocket", 1051, "K32.GBC"
             else:
                 title, appid, filename = "Reunion CGB", 992, "PRISM.GBC"
             text = (
@@ -377,8 +389,10 @@ def main():
                 )
             if args.twenty48:
                 text = text.replace("#define DMG_WINDOW 0", "#define DMG_WINDOW 1")
-            if args.geometrix:
+            if args.geometrix or args.k32:
                 text = text.replace("#define CGB_MBC5 0", "#define CGB_MBC5 1")
+            if args.k32:
+                text = text.replace("#define K32_RASTER 0", "#define K32_RASTER 1")
             variant.write_text(text, encoding="ascii")
             sgs = build_sgs(args.sdk, variant)
     else:

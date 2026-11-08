@@ -18,6 +18,7 @@
 | `PRISM.SGS`   | `PRISM.GBC`          | `GBC/PRISM.GBC`   | [Prism Relay](../gb/README.md)                          |
 | `GEOM.SGS`    | `GEOM.GBC`           | `GBC/GEOM.GBC`    | [Geometrix](../gb/geometrix/README.md)                  |
 | `FLOODER.SGS` | `FLOODER.GBC`        | `GBC/FLOODER.GBC` | [Flooder](../gb/flooder/README.md)                      |
+| `K32.SGS`     | `K32.GBC`            | `GBC/K32.GBC`     | [K32 Super Rocket](../gb/k32-super-rocket/README.md)    |
 | `ORBITAL.SGS` | `ORBITAL.NES`        | `NES/ORBITAL.NES` | [Orbital Courier](../nes/README.md)                     |
 | `NEON.SGS`    | `NEON.NES`           | `NES/NEON.NES`    | [Neon Ranger](../nes/README.md)                         |
 | `LAN.SGS`     | `LAN.NES`            | `NES/LAN.NES`     | [Lan Master](../nes/lan-master/README.md)               |

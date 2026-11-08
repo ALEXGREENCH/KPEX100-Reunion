@@ -8,8 +8,9 @@
 - **2048 · Game Boy на GNEX**. Play начинает партию, стрелки сдвигают плитки, Select сбрасывает поле. Используется [оригинальный картридж Уайатта Фергюсона](2048/README.md).
 - **Geometrix · Game Boy Color на GNEX**. Стрелки двигают курсор, Select меняет фигуры местами, Esc поворачивает курсор. [Картридж и исходники](geometrix/README.md).
 - **Flooder · Game Boy Color на GNEX**. Стрелки меняют выбранный цвет, Select перекрашивает связанную область. Используется [оригинальный картридж Обальфура](flooder/README.md).
+- **K32 Super Rocket · Game Boy Color на GNEX**. Play открывает заставку и продолжает вступление. Стрелки двигают корабль, Select стреляет, Esc сбрасывает бомбу. [Картридж Rev4 и проверка](k32-super-rocket/README.md).
 
-SGS читает `POCKET.GBR`, `PRISM.GBC`, `SNAKE.GBR`, `2048.GBR` или `FLOODER.GBC` вызовами `FileOpen`, `FileReadInt` и `FileClose`. Картридж заполняет VRAM и работает с регистром кнопок `$FF00`. [Программа Mobile C](gb-reunion.mc) подаёт ввод, исполняет инструкции SM83 и рисует кадр. [Генератор](build.py) содержит программы Pocket Lab и Prism Relay и упаковывает выбранный картридж в SGS как файл VFS.
+SGS читает картридж вызовами `FileOpen`, `FileReadInt` и `FileClose`. Картридж заполняет VRAM и работает с регистром кнопок `$FF00`. [Программа Mobile C](gb-reunion.mc) подаёт ввод, исполняет инструкции SM83 и рисует кадр. [Генератор](build.py) содержит программы Pocket Lab и Prism Relay и упаковывает выбранный картридж в SGS как файл VFS.
 
 Прототип поддерживает 32-КиБ ROM-only картриджи и отдельный профиль MBC5 с 8 КиБ SRAM для Geometrix. Для DMG реализованы 2-битные тайлы и палитра `BGP`. CGB добавляет второй банк VRAM, атрибуты карты, отражение тайлов и фоновые RGB555-палитры через `VBK`, `BGPI` и `BGPD`. При записи картриджем нового тайла или цвета перерисовываются только затронутые ячейки. Экран выводится целиком при размере не менее 160 × 144. Pocket Lab и Prism Relay работают в фоновом режиме. Вариант Raw Snake добавляет стек, прерывания кнопок и VBlank, а также 8 × 8 DMG-спрайты. Вариант 2048 добавляет полноширинное окно DMG с произвольной строкой начала и ускоряет ожидание строки LCD и вывод тайлов GBDK. Время PPU приближённое. В Geometrix работают перенос GDMA в обе карты VRAM, прерывания совпадения LY/LYC для меню паузы и файл рекордов. Остальные контроллеры, режимы PPU и звук Game Boy требуют отдельной реализации.
 
@@ -32,6 +33,8 @@ python demos/gb/build.py --sdk C:/path/to/sdk --2048 --output 2048.SGS
 python demos/gb/build.py --rom-only --2048 --output 2048.GBR
 python demos/gb/build.py --sdk C:/path/to/sdk --geometrix --output GEOM.SGS
 python demos/gb/build.py --rom-only --geometrix --output GEOM.GBC
+python demos/gb/build.py --sdk C:/path/to/sdk --k32 --output K32.SGS
+python demos/gb/build.py --rom-only --k32 --output K32.GBC
 ```
 
 В Reunion готовые [Pocket Lab](../../web/data/games/demo-pocket-lab.sgs), [Prism Relay](../../web/data/games/demo-prism-relay.sgs) и [Raw Snake](../../web/data/games/demo-raw-snake.sgs) можно импортировать как обычные SGS. Флаг `--cart` подставляет свой совместимый ROM-only файл в прототип Pocket Lab или Prism Relay. Режим и имя внутри SGS определяются флагом CGB в заголовке картриджа. `--plain` отключает кодирование XOR для другого загрузчика. Для проверки отрисовки и ввода доступны [тест Pocket Lab](../../tests/pocket-lab.test.mjs) и [прохождение Prism Relay](../../tests/prism-relay.test.mjs).

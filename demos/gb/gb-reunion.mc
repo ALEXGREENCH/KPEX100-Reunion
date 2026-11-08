@@ -15,6 +15,7 @@
 #define FLOODER_DIVISION 0
 #define DMG_WINDOW 0
 #define CGB_MBC5 0
+#define K32_RASTER 0
 
 #if DMG_WINDOW
 #define PAINT_CELLS 380
@@ -67,6 +68,227 @@ int sampledLine, capturedLayout[144], drawnLayout[144];
 int stripeOffset, stripeHeight;
 int dmaSourceHigh, dmaSourceLow, dmaTargetHigh, dmaTargetLow, dmaRuns, dmaDebt;
 
+#if K32_RASTER
+// K32's HUD changes the window tile map during visible lines. Capture that
+// map at scanline transfer, then compose a complete frame from a snapshot.
+int scrollX, windowMatched, windowLine;
+int captureRaster[144], captureWindow[144], captureWinMap[9216];
+int rasterLines[144], rasterWindow[144], rasterWinMap[9216];
+int rasterVideo[16384], rasterOam[160];
+int rasterY, rasterFrame;
+// A GNEX RGB indexed image. 67 palette entries align its 208-byte header
+// to a 32-bit word, and the two CGB sets occupy the first 64 entries.
+image rasterImage;
+int rasterHeader[52], rasterRowWords[40];
+int rasterSpread[16], rasterFlip[16];
+int rasterOamCount;
+
+int InitK32Raster() {
+    int i, result;
+    for (i = 0; i < 16; i++) {
+        rasterSpread[i] = (i >> 3) | ((i & 4) << 6) | ((i & 2) << 15) | ((i & 1) << 24);
+        rasterFlip[i] = (i & 1) | ((i & 2) << 7) | ((i & 4) << 14) | ((i & 8) << 21);
+    }
+    result = SetMediaSize(rasterImage, 23248);
+    return GetMediaSize(rasterImage) >= 23248;
+}
+
+void CaptureK32Lines(int end) {
+    int layout, map, row;
+    layout = scrollY | (scrollX << 8) | ((lcd & 127) << 16);
+    while (sampledLine < end) {
+        captureRaster[sampledLine] = layout;
+        captureWindow[sampledLine] = -1;
+        if (sampledLine == windowY) windowMatched = 1;
+        if ((lcd & 32) && windowMatched && windowX <= 166) {
+            row = windowLine & 255;
+            captureWindow[sampledLine] = row | (windowX << 8);
+            map = 6144 + (row >> 3) * 32;
+            if (lcd & 64) map += 1024;
+            MemCpyInt(&captureWinMap[sampledLine * 64], &video[map], 32);
+            MemCpyInt(&captureWinMap[sampledLine * 64 + 32], &video[8192 + map], 32);
+            windowLine++;
+        }
+        sampledLine++;
+    }
+}
+
+void RasterHeaderByte(int offset, int value) {
+    rasterHeader[offset >> 2] |= value << ((offset & 3) * 8);
+}
+
+void QueueK32Frame() {
+    int i, color, r, g, b;
+    if (rasterY < 144) return;
+    MemCpyInt(&rasterLines[0], &captureRaster[0], 144);
+    MemCpyInt(&rasterWindow[0], &captureWindow[0], 144);
+    MemCpyInt(&rasterWinMap[0], &captureWinMap[0], 9216);
+    MemCpyInt(&rasterVideo[0], &video[0], 16384);
+    rasterOamCount = 0;
+    for (i = 0; i < 160; i += 4) {
+        // X-hidden objects still count toward the ten-object line limit.
+        if (!oam[i] || oam[i] >= 160) continue;
+        MemCpyInt(&rasterOam[rasterOamCount], &oam[i], 4);
+        rasterOamCount += 4;
+    }
+    // MemSetInt measures bytes, including the full 52-word image header.
+    MemSetInt(&rasterHeader[0], 0, 208);
+    rasterHeader[0] = 0x0090a00c;
+    rasterHeader[1] = 0x00430000;
+    for (i = 0; i < 64; i++) {
+        if (i < 32) color = colors[i * 2] | ((colors[i * 2 + 1] & 127) << 8);
+        else color = objColors[(i - 32) * 2] | ((objColors[(i - 32) * 2 + 1] & 127) << 8);
+        r = color & 31;
+        g = (color >> 5) & 31;
+        b = (color >> 10) & 31;
+        RasterHeaderByte(7 + i * 3, (r << 3) | (r >> 2));
+        RasterHeaderByte(8 + i * 3, (g << 3) | (g >> 2));
+        RasterHeaderByte(9 + i * 3, (b << 3) | (b >> 2));
+    }
+    MemCpyIntToMedia(rasterImage, 0, &rasterHeader[0], 52);
+    rasterY = 0;
+}
+
+// Append 1-4 index bytes at an arbitrary screen X. A new word is assigned
+// before later spans fill its remaining bytes, so old row data cannot leak.
+void RasterSpan(int x, int word, int count) {
+    int index, shift, rest;
+    index = x >> 2;
+    shift = (x & 3) * 8;
+    if (count < 4) word &= (1 << (count * 8)) - 1;
+    if (!shift) rasterRowWords[index] = word;
+    else {
+        rasterRowWords[index] |= word << shift;
+        rest = shift + count * 8 - 32;
+        if (rest > 0)
+            rasterRowWords[index + 1] = (word >> (32 - shift)) & ((1 << rest) - 1);
+    }
+}
+
+void K32Background(int row, int layout, int window) {
+    int x, bgY, screenWindowX, px, py, map, col, tile, attr, end;
+    int at, lo, hi, palette, left, right, skip, count;
+    bgY = (row + layout) & 255;
+    screenWindowX = 160;
+    if (window >= 0) screenWindowX = (window >> 8) - 7;
+    x = 0;
+    while (x < 160) {
+        if (x >= screenWindowX) {
+            px = x - screenWindowX;
+            py = window & 255;
+            col = (px >> 3) & 31;
+            at = row * 64 + col;
+            tile = rasterWinMap[at];
+            attr = rasterWinMap[at + 32];
+        } else {
+            px = (x + ((layout >> 8) & 255)) & 255;
+            py = bgY;
+            map = 6144;
+            if (layout & 524288) map = 7168;
+            at = map + (py >> 3) * 32 + (px >> 3);
+            tile = rasterVideo[at];
+            attr = rasterVideo[8192 + at];
+        }
+        end = x + 8 - (px & 7);
+        if (x < screenWindowX && end > screenWindowX) end = screenWindowX;
+        if (end > 160) end = 160;
+        if (!(layout & 1048576) && tile < 128) tile += 256;
+        at = tile * 16;
+        if (attr & 8) at += 8192;
+        py &= 7;
+        if (attr & 64) py = 7 - py;
+        at += py * 2;
+        lo = rasterVideo[at];
+        hi = rasterVideo[at + 1];
+        // Low six bits are the palette index, bit 7 holds BG priority.
+        palette = (((attr & 7) << 2) | (attr & 128)) * 0x01010101;
+        if (attr & 32) {
+            left = palette | rasterFlip[lo & 15] | (rasterFlip[hi & 15] << 1);
+            right = palette | rasterFlip[lo >> 4] | (rasterFlip[hi >> 4] << 1);
+        } else {
+            left = palette | rasterSpread[lo >> 4] | (rasterSpread[hi >> 4] << 1);
+            right = palette | rasterSpread[lo & 15] | (rasterSpread[hi & 15] << 1);
+        }
+        if (!(x & 3) && end - x == 8) {
+            rasterRowWords[x >> 2] = left;
+            rasterRowWords[(x >> 2) + 1] = right;
+            x = end;
+            continue;
+        }
+        skip = px & 7;
+        if (skip < 4) {
+            count = 4 - skip;
+            if (count > end - x) count = end - x;
+            RasterSpan(x, left >> (skip * 8), count);
+            x += count;
+            skip = 4;
+        }
+        if (x < end) RasterSpan(x, right >> ((skip - 4) * 8), end - x);
+        x = end;
+    }
+}
+
+void K32Objects(int row, int layout) {
+    int i, height, count, x, y, py, tile, attr, at, lo, hi, bit, pos, shade, bg;
+    int slot, shift;
+    if (!(layout & 131072)) return;
+    height = 8;
+    if (layout & 262144) height = 16;
+    count = 0;
+    for (i = 0; i < rasterOamCount && count < 10; i += 4) {
+        y = rasterOam[i] - 16;
+        py = row - y;
+        if (py < 0 || py >= height) continue;
+        count++;
+        x = rasterOam[i + 1] - 8;
+        if (x <= -8 || x >= 160) continue;
+        tile = rasterOam[i + 2];
+        attr = rasterOam[i + 3];
+        if (height == 16) tile &= 254;
+        if (attr & 64) py = height - 1 - py;
+        at = tile * 16 + py * 2;
+        if (attr & 8) at += 8192;
+        lo = rasterVideo[at];
+        hi = rasterVideo[at + 1];
+        for (pos = 0; pos < 8; pos++) {
+            if (x + pos < 0 || x + pos >= 160) continue;
+            slot = (x + pos) >> 2;
+            shift = ((x + pos) & 3) * 8;
+            bg = (rasterRowWords[slot] >> shift) & 255;
+            if (bg & 64) continue;
+            bit = 7 - pos;
+            if (attr & 32) bit = pos;
+            shade = ((lo >> bit) & 1) | (((hi >> bit) & 1) << 1);
+            if (!shade) continue;
+            // Earlier nontransparent OAM pixel wins before BG priority.
+            if (!(layout & 65536) || !(bg & 3) || !((bg | attr) & 128))
+                bg = 32 + (attr & 7) * 4 + shade;
+            rasterRowWords[slot] = (rasterRowWords[slot] & ((255 << shift) ^ -1)) | ((bg | 64) << shift);
+        }
+    }
+}
+
+void PaintK32Frame() {
+    int end, x, row;
+    if (rasterY >= 144) return;
+    end = rasterY + 32;
+    if (rasterOamCount) end = rasterY + 16;
+    if (end > 144) end = 144;
+    for (row = rasterY; row < end; row++) {
+        K32Background(row, rasterLines[row], rasterWindow[row]);
+        K32Objects(row, rasterLines[row]);
+        for (x = 0; x < 40; x++) rasterRowWords[x] &= 0x3f3f3f3f;
+        MemCpyIntToMedia(rasterImage, 208 + row * 160, &rasterRowWords[0], 40);
+    }
+    rasterY = end;
+    if (end == 144) {
+        rasterFrame++;
+        CopyImage(ox, oy, rasterImage);
+        Flush();
+    }
+}
+#endif
+
 int UntilLyc() {
     int delta;
     if (!(statControl & 64) || lyc >= 154 || !(lcd & 128)) return 70224;
@@ -91,11 +313,15 @@ int StatAt(int dot) {
 void CaptureLines(int end) {
     int layout;
     if (end > 144) end = 144;
+#if K32_RASTER
+    CaptureK32Lines(end);
+#else
     layout = scrollY | ((lcd & 24) << 8);
     while (sampledLine < end) {
         capturedLayout[sampledLine] = layout;
         sampledLine++;
     }
+#endif
 }
 
 void CapturePriorLines() {
@@ -112,6 +338,9 @@ void AdvanceLCD(int cost) {
     if (cost >= UntilVBlank()) {
         interruptFlags |= 1;
         CaptureLines(144);
+#if K32_RASTER
+        QueueK32Frame();
+#else
         differs = 0;
         for (i = 0; i < 144; i++) {
             if (drawnLayout[i] != capturedLayout[i]) {
@@ -125,11 +354,16 @@ void AdvanceLCD(int cost) {
             repaintSlices = PAINT_SLICES;
             spritesDirty = 1;
         }
+#endif
     }
     phase += cost;
     if (phase >= 70224) {
         phase -= 70224;
         sampledLine = 0;
+#if K32_RASTER
+        windowMatched = 0;
+        windowLine = 0;
+#endif
     }
 }
 
@@ -216,6 +450,9 @@ int Read8(int addr) {
         if (addr == 65344) return lcd;
 #if CGB_MBC5
         if (addr == 65346) return scrollY;
+#if K32_RASTER
+        if (addr == 65347) return scrollX;
+#endif
         if (addr == 65345) return StatAt(phase);
         if (addr == 65349) return lyc;
 #else
@@ -276,16 +513,28 @@ void Write8(int addr, int value) {
         return;
     }
     if (addr < 32768) {
+#if K32_RASTER
+        return;
+#else
         if (addr < 8192) {
             cartRamEnabled = (value & 15) == 10;
             if (!cartRamEnabled) SaveCartRam();
         } else if (addr < 12288) romBank = value & 1;
         return;
+#endif
     }
     if (addr >= 40960 && addr < 49152) {
         if (cartRamEnabled) WriteCartRam(addr - 40960, value);
         return;
     }
+#if K32_RASTER
+    if (addr == 65347 && scrollX != value) {
+        CapturePriorLines();
+        scrollX = value;
+    }
+    if ((addr == 65354 && windowY != value) || (addr == 65355 && windowX != value))
+        CapturePriorLines();
+#endif
     if (addr == 65346 && scrollY != value) {
         CapturePriorLines();
         scrollY = value;
@@ -304,6 +553,9 @@ void Write8(int addr, int value) {
         offset = addr - 32768;
         index = bank * 8192 + offset;
         if (video[index] != value) {
+#if K32_RASTER
+            if (offset >= 6144 && (lcd & 32)) CapturePriorLines();
+#endif
             video[index] = value;
             if (offset < 6144) tileVersion[bank * 384 + offset / 16]++;
             repaintSlices = PAINT_SLICES;
@@ -347,10 +599,20 @@ void Write8(int addr, int value) {
     }
     if (addr == 65344 && lcd != value) {
 #if CGB_MBC5
+#if K32_RASTER
+        if ((lcd ^ value) & 127) CapturePriorLines();
+        if ((lcd & 32) && !(value & 32)) windowMatched = 0;
+#else
         if ((lcd ^ value) & 24) CapturePriorLines();
+#endif
         if ((lcd ^ value) & 128) {
             phase = 0;
             sampledLine = 0;
+#if K32_RASTER
+            windowMatched = 0;
+            windowLine = 0;
+            rasterY = 144;
+#endif
             if ((value & 128) && (statControl & 64) && lyc == 0) interruptFlags |= 2;
         }
 #else
@@ -778,6 +1040,32 @@ int StepFull(int budget) {
     // same instruction and with the same registers as complete iterations.
     if (!eiDelay && at >= 0 && at <= 32749 && limit >= 36) {
 #if CGB_MBC5
+#if K32_RASTER
+        // Exact LDH A,[LY]; CP B/imm; JR NZ loop. Skip only iterations
+        // before the requested line or the next enabled interrupt.
+        if (op == 240 && (lcd & 128) && Read8(pc) == 68) {
+            waitCost = 0;
+            value = 0;
+            if (Read8(pc + 1) == 184 && Read8(pc + 2) == 32 && Read8(pc + 3) == 251) {
+                value = b;
+                waitCost = 28;
+            }
+            if (Read8(pc + 1) == 254 && Read8(pc + 3) == 32 && Read8(pc + 4) == 250) {
+                value = Read8(pc + 2);
+                waitCost = 32;
+            }
+            if (waitCost && value < 154 && phase / 456 != value) {
+                delta = value * 456 - phase;
+                if (delta < 0) delta += 70224;
+                rounds = (delta + waitCost - 1) / waitCost;
+                if (rounds > limit / waitCost) rounds = limit / waitCost;
+                a = ((phase + (rounds - 1) * waitCost) % 70224) / 456;
+                Alu(7, value);
+                pc = at;
+                return rounds * waitCost;
+            }
+        }
+#endif
         if (op == 240 && Read8(pc) == 65 && Read8(pc + 1) == 203 &&
             Read8(pc + 2) == 79 && Read8(pc + 3) == 32 && Read8(pc + 4) == 250) {
             if ((lcd & 128) && phase < 65664 && phase % 456 < 252) {
@@ -1533,7 +1821,11 @@ void main() {
         if (FileClose(file) < 0) count = 0;
     } else count = 0;
 #if CGB_MBC5
+#if K32_RASTER
+    if (count != 32768 || Read8(323) != 128 || Read8(327) != 0 || Read8(328) != 0 || Read8(329) != 0) {
+#else
     if (count != 32768 || Read8(327) != 27 || Read8(328) != 0 || Read8(329) != 2) {
+#endif
 #else
     if (count != 32768 || Read8(327) != 0 || Read8(328) != 0) {
 #endif
@@ -1548,7 +1840,13 @@ void main() {
     colorMode = (Read8(323) & 128) != 0;
 #if CGB_MBC5
     romBank = 1;
+#if K32_RASTER
+    lcd = 145;
+    rasterY = 144;
+    if (!InitK32Raster()) { Status(1); return; }
+#else
     LoadCartRam();
+#endif
 #endif
 #if DMG_WINDOW
     BindTileWrite();
@@ -1615,6 +1913,10 @@ void EVENT_TIMEOUT() {
     if ((lcd & 128) == 0) return;
     // The firmware can change the current draw color between callbacks.
     if (expanded && (repaintSlices || spritesDirty)) paintColor = -1;
+#if K32_RASTER
+    PaintK32Frame();
+    return;
+#endif
 #if CGB_MBC5
     updated = 0;
     y = paintRow;
