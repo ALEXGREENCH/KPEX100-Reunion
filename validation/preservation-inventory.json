@@ -3,6 +3,2886 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "dubigame-skt-fifteen",
+      "repositoryPath": "research/archives/Dubigame-SKT-15-Game-Packages.zip",
+      "bytes": 6960264,
+      "sha256": "7affba0a3beddeb47ed924eabc215e98302ab1acab98c521f4eb1a3840943d66",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/may-range-receipts.json",
+          "bytes": 24444,
+          "crc32": "35d4e8ce",
+          "sha256": "7a8a50eb549770fc4adb17f9cbef71320cfbd17ca6e9c5c26cd181b48b7d62c5"
+        },
+        {
+          "path": "evidence/nested-audit.json",
+          "bytes": 1176160,
+          "crc32": "df2438ec",
+          "sha256": "fccae71dfc9ed3b428fc854b7e8902c88e89bf4ec249bfb8475e6743b5a4eccd"
+        },
+        {
+          "path": "evidence/opening.json",
+          "bytes": 10755,
+          "crc32": "190aa5a4",
+          "sha256": "fb7ae34449a784dab47383c411522e4a070f3e95c33931a676ed7013c2c7f7c5"
+        },
+        {
+          "path": "evidence/paired.json",
+          "bytes": 8016,
+          "crc32": "91accf62",
+          "sha256": "540727bb454d56341d8031790c25f89fe87f2e959086ee0150f366277de5cc6b"
+        },
+        {
+          "path": "evidence/second-paired.json",
+          "bytes": 4820,
+          "crc32": "a8ca84d4",
+          "sha256": "6d5652844c823f53aba3474b2d5d5ba1744c3cf02fb6cad93308b5184b85bf2e"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 31382,
+          "crc32": "cacd51a3",
+          "sha256": "4805241c102ed48e24954cf5aea67cf388380b59aa21c023a44a26687abbc817"
+        },
+        {
+          "path": "originals/skt/Chaos블레이드.zip",
+          "bytes": 262579,
+          "crc32": "e112c79b",
+          "sha256": "eefc947d83374af5785201f34941e0e1d51cb12115d8d00edfd942179e8afe53"
+        },
+        {
+          "path": "originals/skt/강호동맞고2.zip",
+          "bytes": 369308,
+          "crc32": "8e4173d9",
+          "sha256": "47fe675bfffd64161141e2d9c4815be3c441164e15a12098e925a944febd94b5"
+        },
+        {
+          "path": "originals/skt/나이트메이커.zip",
+          "bytes": 263418,
+          "crc32": "dc4c54e3",
+          "sha256": "965b45de09ac8d062cfbe6cfb174a9b1f5dd0b81d39a76312ca59ce35627d749"
+        },
+        {
+          "path": "originals/skt/노리맥스영웅전.zip",
+          "bytes": 516139,
+          "crc32": "6001a4e1",
+          "sha256": "c33090c12755710fc599957a16a19b27babe161de34c8bb743d5e1557d089e70"
+        },
+        {
+          "path": "originals/skt/다크슬레이어2.zip",
+          "bytes": 423601,
+          "crc32": "c0b92c20",
+          "sha256": "06c7a38343c7c48ad8ef362ffe1cd5ba2384a0b4e1cc8111acb6e2d72bf7b5e6"
+        },
+        {
+          "path": "originals/skt/닥터k.zip",
+          "bytes": 417679,
+          "crc32": "c443a09a",
+          "sha256": "858d7a152d34e18d798234783868fb42908a15a74f704e3618fcbc3e57c0d30c"
+        },
+        {
+          "path": "originals/skt/당신은골프왕.zip",
+          "bytes": 416798,
+          "crc32": "0028fb2e",
+          "sha256": "9e2307e4fa88b6ceba9ab387aea325d7011ea895eab12cba4d818f3e5711f1a9"
+        },
+        {
+          "path": "originals/skt/대해적시대.zip",
+          "bytes": 478680,
+          "crc32": "3721529f",
+          "sha256": "9a34adba5432d8dbed7fc2fabae9cebd5a91217b940a21d1a6be056c6fee7e4f"
+        },
+        {
+          "path": "originals/skt/댄스배틀오디션.zip",
+          "bytes": 475310,
+          "crc32": "b6ee601f",
+          "sha256": "14a62a8521a0d434f8fffc7b85c1d2427335dac5d81e9f6b966f12d42ce5abce"
+        },
+        {
+          "path": "originals/skt/더팜2.zip",
+          "bytes": 862361,
+          "crc32": "9e6deda1",
+          "sha256": "8bf2f80c0723fd97c9915e0cb741484a2872d56c8b541ef0f0e59214e472612b"
+        },
+        {
+          "path": "originals/skt/드래곤나이트EX.zip",
+          "bytes": 417854,
+          "crc32": "41bf2ead",
+          "sha256": "fa1fc7826e4f2dbd10a4793177d9aed3282e5b9812d47863edc2f64761850cc2"
+        },
+        {
+          "path": "originals/skt/미니고치.zip",
+          "bytes": 312015,
+          "crc32": "c5e60413",
+          "sha256": "b2c773779634d0ae2c9112e3404a776dd5ffdfbdea8f436127f0f87050f077f9"
+        },
+        {
+          "path": "originals/skt/미니동화TING.zip",
+          "bytes": 140467,
+          "crc32": "b6d22e6f",
+          "sha256": "776f8ffa4d1e483bfccad54ae174cab8c131dfa651906a14691ef435e3aa4526"
+        },
+        {
+          "path": "originals/skt/스페셜포스.zip",
+          "bytes": 367007,
+          "crc32": "aa58abd9",
+          "sha256": "44b6356d13f87b7f513abb462baf37e6c3ddf17b19195d3f9a331c1fe7320515"
+        },
+        {
+          "path": "originals/skt/엑스맨.zip",
+          "bytes": 286286,
+          "crc32": "657a9b1e",
+          "sha256": "f483ba078c14a2ea0e19a0cbe28ce36ffe7e16b6afc6847aa67f4a54f66feb72"
+        },
+        {
+          "path": "replays/opening.lua",
+          "bytes": 260,
+          "crc32": "e3ecc3b3",
+          "sha256": "15b804e07813fe29054214c8aa666285d10bfcdcbd5e88d460145ec41da32c1e"
+        },
+        {
+          "path": "replays/opening/skt/Chaos블레이드/after-ok.png",
+          "bytes": 1333,
+          "crc32": "afaf0fa0",
+          "sha256": "b178abad70c59c6f2518ec4332d6c30a0fccc712e8c1319970c8b99fbae8bed5"
+        },
+        {
+          "path": "replays/opening/skt/Chaos블레이드/after-second-ok.png",
+          "bytes": 1333,
+          "crc32": "afaf0fa0",
+          "sha256": "b178abad70c59c6f2518ec4332d6c30a0fccc712e8c1319970c8b99fbae8bed5"
+        },
+        {
+          "path": "replays/opening/skt/Chaos블레이드/after-up.png",
+          "bytes": 1333,
+          "crc32": "afaf0fa0",
+          "sha256": "b178abad70c59c6f2518ec4332d6c30a0fccc712e8c1319970c8b99fbae8bed5"
+        },
+        {
+          "path": "replays/opening/skt/Chaos블레이드/opening.png",
+          "bytes": 1333,
+          "crc32": "afaf0fa0",
+          "sha256": "b178abad70c59c6f2518ec4332d6c30a0fccc712e8c1319970c8b99fbae8bed5"
+        },
+        {
+          "path": "replays/opening/skt/Chaos블레이드/trace.ndjson",
+          "bytes": 3049,
+          "crc32": "3e111b91",
+          "sha256": "d8c55947cf04ff2a6ada66f5fa077d4bb3af0419a265d2c74456d084e805913d"
+        },
+        {
+          "path": "replays/opening/skt/강호동맞고2/after-ok.png",
+          "bytes": 8759,
+          "crc32": "79cf8a07",
+          "sha256": "d3a57808d4e85b36a5fdc48735e7627ef5b7fef28fbb6798a36c8e741f85d3bc"
+        },
+        {
+          "path": "replays/opening/skt/강호동맞고2/after-second-ok.png",
+          "bytes": 3118,
+          "crc32": "8e6f742c",
+          "sha256": "5574e9d01ab770776fb7e0b582920aa916e04136ae5816069c6c801acd428b60"
+        },
+        {
+          "path": "replays/opening/skt/강호동맞고2/after-up.png",
+          "bytes": 13361,
+          "crc32": "d3e4aa7f",
+          "sha256": "0869288f6957d2800d9606eb30e15234582b5b4403ea036c3a46554f5dbd9076"
+        },
+        {
+          "path": "replays/opening/skt/강호동맞고2/opening.png",
+          "bytes": 2397,
+          "crc32": "280aef41",
+          "sha256": "b1669d9e915b51918a58f3d275ef5294615d4b568ae52ed72183a0db2663cdaa"
+        },
+        {
+          "path": "replays/opening/skt/강호동맞고2/trace.ndjson",
+          "bytes": 3049,
+          "crc32": "74a5c4d2",
+          "sha256": "03a7d00ec1f2244d924322bb5d49ef712754e4888d749441392ab9c838e2ce6f"
+        },
+        {
+          "path": "replays/opening/skt/나이트메이커/after-ok.png",
+          "bytes": 6420,
+          "crc32": "3ee6980d",
+          "sha256": "fd3c89ee446aac8ecb2f8d676a714b0adf492ff373d28f07ab235ce42ddb0156"
+        },
+        {
+          "path": "replays/opening/skt/나이트메이커/after-second-ok.png",
+          "bytes": 7327,
+          "crc32": "615890a9",
+          "sha256": "8433e2d1c64ebee7d3ad6ccbc1268422ff6910b0398c20b6e47bfe7dc57fd419"
+        },
+        {
+          "path": "replays/opening/skt/나이트메이커/after-up.png",
+          "bytes": 6408,
+          "crc32": "81867fff",
+          "sha256": "9d8ea61f7ac9f4a3eb9287dfc1c9545b1c2360bec79f2fcb3c64e80e5758fd34"
+        },
+        {
+          "path": "replays/opening/skt/나이트메이커/opening.png",
+          "bytes": 8719,
+          "crc32": "3d10729f",
+          "sha256": "974a3b8f13f70b636580899f4c2aac166c3ed822b336debd9752db1bd1329c1f"
+        },
+        {
+          "path": "replays/opening/skt/나이트메이커/trace.ndjson",
+          "bytes": 3049,
+          "crc32": "c38854dd",
+          "sha256": "79da135a820cd5e8a145b8462d575c3741591fd3fa1705e15b96f5c380546487"
+        },
+        {
+          "path": "replays/opening/skt/노리맥스영웅전/after-ok.png",
+          "bytes": 1141,
+          "crc32": "03dd0e69",
+          "sha256": "6f402973eb8127aef58fa26c5a0d35fe20396e2ed4f0639af3e3b4faeed71ff0"
+        },
+        {
+          "path": "replays/opening/skt/노리맥스영웅전/after-second-ok.png",
+          "bytes": 1141,
+          "crc32": "03dd0e69",
+          "sha256": "6f402973eb8127aef58fa26c5a0d35fe20396e2ed4f0639af3e3b4faeed71ff0"
+        },
+        {
+          "path": "replays/opening/skt/노리맥스영웅전/after-up.png",
+          "bytes": 1141,
+          "crc32": "03dd0e69",
+          "sha256": "6f402973eb8127aef58fa26c5a0d35fe20396e2ed4f0639af3e3b4faeed71ff0"
+        },
+        {
+          "path": "replays/opening/skt/노리맥스영웅전/opening.png",
+          "bytes": 1141,
+          "crc32": "03dd0e69",
+          "sha256": "6f402973eb8127aef58fa26c5a0d35fe20396e2ed4f0639af3e3b4faeed71ff0"
+        },
+        {
+          "path": "replays/opening/skt/노리맥스영웅전/trace.ndjson",
+          "bytes": 3049,
+          "crc32": "35016d87",
+          "sha256": "7aae3a68ed0c53f68e45cfc658016651ac22ed66f866f9be5b48c5728bdf639a"
+        },
+        {
+          "path": "replays/opening/skt/다크슬레이어2/after-ok.png",
+          "bytes": 525,
+          "crc32": "dfff5258",
+          "sha256": "679781e449e34745fecb06a8f24a933698370806151f72c33b893d54a58f1d1b"
+        },
+        {
+          "path": "replays/opening/skt/다크슬레이어2/after-second-ok.png",
+          "bytes": 525,
+          "crc32": "dfff5258",
+          "sha256": "679781e449e34745fecb06a8f24a933698370806151f72c33b893d54a58f1d1b"
+        },
+        {
+          "path": "replays/opening/skt/다크슬레이어2/after-up.png",
+          "bytes": 525,
+          "crc32": "dfff5258",
+          "sha256": "679781e449e34745fecb06a8f24a933698370806151f72c33b893d54a58f1d1b"
+        },
+        {
+          "path": "replays/opening/skt/다크슬레이어2/opening.png",
+          "bytes": 525,
+          "crc32": "dfff5258",
+          "sha256": "679781e449e34745fecb06a8f24a933698370806151f72c33b893d54a58f1d1b"
+        },
+        {
+          "path": "replays/opening/skt/다크슬레이어2/trace.ndjson",
+          "bytes": 2997,
+          "crc32": "7d51c077",
+          "sha256": "8959593150e7049cc74892bd32e3b279580ac6a5352141d19a202b3d73921543"
+        },
+        {
+          "path": "replays/opening/skt/닥터k/after-ok.png",
+          "bytes": 563,
+          "crc32": "2f3f1539",
+          "sha256": "8863ecf0d5fba89849cf9fe5bb9da2ed13c01faf6e77f7764b1465d172ae6af3"
+        },
+        {
+          "path": "replays/opening/skt/닥터k/after-second-ok.png",
+          "bytes": 7249,
+          "crc32": "21ac5405",
+          "sha256": "246304ef05302de2b2edd074d46295886cb09db9979f75f5bcb38e60f537f5b7"
+        },
+        {
+          "path": "replays/opening/skt/닥터k/after-up.png",
+          "bytes": 3997,
+          "crc32": "b4f35f32",
+          "sha256": "44107fcc085d10efb340a1c41ee9593bdefc5ea08f76f3f76d68287fd24a68e5"
+        },
+        {
+          "path": "replays/opening/skt/닥터k/opening.png",
+          "bytes": 833,
+          "crc32": "bef5b5c8",
+          "sha256": "6d25f4ff4a18777e7d64d442d28f2de27301d159b0cd7c2a87bd7b08b2ac4beb"
+        },
+        {
+          "path": "replays/opening/skt/닥터k/trace.ndjson",
+          "bytes": 3049,
+          "crc32": "62b5bbce",
+          "sha256": "b9416767f0c532c675a4b69e466f96d50988fa453bf01047f74171c44b71814e"
+        },
+        {
+          "path": "replays/opening/skt/당신은골프왕/after-ok.png",
+          "bytes": 13057,
+          "crc32": "7a71b3b4",
+          "sha256": "a5c503edaaada9a4457a3c940467d54a3d05842f06a3c47d5c3b29b365ebdbcd"
+        },
+        {
+          "path": "replays/opening/skt/당신은골프왕/after-second-ok.png",
+          "bytes": 13251,
+          "crc32": "b5c9b921",
+          "sha256": "397f5337710f35fcaac4d8672fd18b024793c94560b367c93ccd9655ddbe8de9"
+        },
+        {
+          "path": "replays/opening/skt/당신은골프왕/after-up.png",
+          "bytes": 12961,
+          "crc32": "fa52d409",
+          "sha256": "a2f822cf4698c922bfa7f89f7e146545a8094d47a0035e0a3773d82c18363392"
+        },
+        {
+          "path": "replays/opening/skt/당신은골프왕/opening.png",
+          "bytes": 19304,
+          "crc32": "6cb7d9ee",
+          "sha256": "0bc87a8164bf36ea319da85f19514967f28fdedd91d275eeeb90e5934bd7d5bc"
+        },
+        {
+          "path": "replays/opening/skt/당신은골프왕/trace.ndjson",
+          "bytes": 3041,
+          "crc32": "d865add7",
+          "sha256": "371cd60b436995e287afb34b6033137d2fbf61cd0451510a34c672a810451502"
+        },
+        {
+          "path": "replays/opening/skt/대해적시대/after-ok.png",
+          "bytes": 5516,
+          "crc32": "875c2e05",
+          "sha256": "3f0b87cd2c4b091fe4e98e7eab2a24a993ed02f24b7bed50f507ac6b6925799d"
+        },
+        {
+          "path": "replays/opening/skt/대해적시대/after-second-ok.png",
+          "bytes": 5617,
+          "crc32": "76394550",
+          "sha256": "34ece9c8c408be24b3e25f48261735e773b29c8541675dd0978e35134e206123"
+        },
+        {
+          "path": "replays/opening/skt/대해적시대/after-up.png",
+          "bytes": 5503,
+          "crc32": "0a862ec8",
+          "sha256": "8846a05208ffce59d3b79aa35d006b322befe8a9b4ac7fbf48f0ff8b324eedec"
+        },
+        {
+          "path": "replays/opening/skt/대해적시대/opening.png",
+          "bytes": 14058,
+          "crc32": "37247ac8",
+          "sha256": "e3569ba138f76aab1c79436cd5ef3c1166cc70c641cbf9c742794381a8a899a2"
+        },
+        {
+          "path": "replays/opening/skt/대해적시대/trace.ndjson",
+          "bytes": 3049,
+          "crc32": "842acd86",
+          "sha256": "f540544db3b4c3ffb081ec721a7f0b27d7aa1a9b9bb7e8fbc765511d94886e81"
+        },
+        {
+          "path": "replays/opening/skt/댄스배틀오디션/after-ok.png",
+          "bytes": 6537,
+          "crc32": "776b280b",
+          "sha256": "c881e7693f222b20e93270d78374ff402b193c5f2eb6d00b607cfaf460a504f6"
+        },
+        {
+          "path": "replays/opening/skt/댄스배틀오디션/after-second-ok.png",
+          "bytes": 3178,
+          "crc32": "54e0f682",
+          "sha256": "d17cdf1947f71e596e757a4f0f7efd2cf3364177e0f422a83e74b6e26dcfc652"
+        },
+        {
+          "path": "replays/opening/skt/댄스배틀오디션/after-up.png",
+          "bytes": 6458,
+          "crc32": "1ba1f4bd",
+          "sha256": "acc17a8e7f86762b8b0072215bb27042cd939f177cf57dcf64e4b9b235aaf0fb"
+        },
+        {
+          "path": "replays/opening/skt/댄스배틀오디션/opening.png",
+          "bytes": 7468,
+          "crc32": "890333b2",
+          "sha256": "4bb69996cee4d3976717ac872dbced4f503819d2f08d91c52bbad45fefd04923"
+        },
+        {
+          "path": "replays/opening/skt/댄스배틀오디션/trace.ndjson",
+          "bytes": 3041,
+          "crc32": "22da132c",
+          "sha256": "6a94e0f3a5db45425024ea41ebfa6b9654b47c787733c24204d9c3a2850824fd"
+        },
+        {
+          "path": "replays/opening/skt/더팜2/after-ok.png",
+          "bytes": 635,
+          "crc32": "e51584a2",
+          "sha256": "e2c9fce2a5f8bbda9ddc68f8dc6777572f3a90eb8ab8779f2d6dc10e55e2ca4f"
+        },
+        {
+          "path": "replays/opening/skt/더팜2/after-second-ok.png",
+          "bytes": 635,
+          "crc32": "e51584a2",
+          "sha256": "e2c9fce2a5f8bbda9ddc68f8dc6777572f3a90eb8ab8779f2d6dc10e55e2ca4f"
+        },
+        {
+          "path": "replays/opening/skt/더팜2/after-up.png",
+          "bytes": 635,
+          "crc32": "e51584a2",
+          "sha256": "e2c9fce2a5f8bbda9ddc68f8dc6777572f3a90eb8ab8779f2d6dc10e55e2ca4f"
+        },
+        {
+          "path": "replays/opening/skt/더팜2/opening.png",
+          "bytes": 635,
+          "crc32": "e51584a2",
+          "sha256": "e2c9fce2a5f8bbda9ddc68f8dc6777572f3a90eb8ab8779f2d6dc10e55e2ca4f"
+        },
+        {
+          "path": "replays/opening/skt/더팜2/trace.ndjson",
+          "bytes": 2953,
+          "crc32": "2f94f6b9",
+          "sha256": "c17bf1cf70ccbbc10d5ac1af1fa918204f1bd242527d79ad8987e4bc20a42fca"
+        },
+        {
+          "path": "replays/opening/skt/드래곤나이트EX/after-ok.png",
+          "bytes": 11756,
+          "crc32": "5a384246",
+          "sha256": "fea9384809f7aa299dbfb38a24176571859490cdde19fcf57741e852abacd25a"
+        },
+        {
+          "path": "replays/opening/skt/드래곤나이트EX/after-second-ok.png",
+          "bytes": 7265,
+          "crc32": "15c291c0",
+          "sha256": "a9522ebb6493e3308846fe11df684fb83003fbb06362a8f0b11ed90f9c6a2f36"
+        },
+        {
+          "path": "replays/opening/skt/드래곤나이트EX/after-up.png",
+          "bytes": 11790,
+          "crc32": "31688352",
+          "sha256": "81c1d8391f0beb950e4322d9054c2f3858fccf0082c05b3fbdf7b6a262dbf5c3"
+        },
+        {
+          "path": "replays/opening/skt/드래곤나이트EX/opening.png",
+          "bytes": 11717,
+          "crc32": "eca8a184",
+          "sha256": "9d3d3be2126f6e073e884ba036e80e0cad0d4401e03e66d987a0910d7d3b3f96"
+        },
+        {
+          "path": "replays/opening/skt/드래곤나이트EX/trace.ndjson",
+          "bytes": 3041,
+          "crc32": "af2b5e09",
+          "sha256": "59c5b3964b52720fca1b74bf8e14b49442319b9f3f6c884f45b6b4342187ea70"
+        },
+        {
+          "path": "replays/opening/skt/미니고치/after-ok.png",
+          "bytes": 2890,
+          "crc32": "f082b751",
+          "sha256": "a35eb913d6ef93dd87fced68e5bab0ea4e6b67e8204eb30ae158f264ba03c6bf"
+        },
+        {
+          "path": "replays/opening/skt/미니고치/after-second-ok.png",
+          "bytes": 2890,
+          "crc32": "f082b751",
+          "sha256": "a35eb913d6ef93dd87fced68e5bab0ea4e6b67e8204eb30ae158f264ba03c6bf"
+        },
+        {
+          "path": "replays/opening/skt/미니고치/after-up.png",
+          "bytes": 2850,
+          "crc32": "2095a5f5",
+          "sha256": "5c426b62b45d78bb3061f9bf1d4101a8a21fee408fce9ccc24916fc93b71cec4"
+        },
+        {
+          "path": "replays/opening/skt/미니고치/opening.png",
+          "bytes": 8165,
+          "crc32": "c0d4881a",
+          "sha256": "d538039812c9fa12cb2081562747284093c89d66dabbb2b82d28adc21cfd0599"
+        },
+        {
+          "path": "replays/opening/skt/미니고치/trace.ndjson",
+          "bytes": 3049,
+          "crc32": "b7a4425f",
+          "sha256": "212de49d9d57047343d7d9f505270c627f22a36557792a563b5bccf02da777f9"
+        },
+        {
+          "path": "replays/opening/skt/미니동화TING/after-ok.png",
+          "bytes": 11471,
+          "crc32": "77653a53",
+          "sha256": "8281fe606cba9d4e029bae5a1b445aff740f9f7219d59cb6839fbd0c588afd54"
+        },
+        {
+          "path": "replays/opening/skt/미니동화TING/after-second-ok.png",
+          "bytes": 11968,
+          "crc32": "1f7c3a4f",
+          "sha256": "9e95f71880131579a022caf1417daeddb3fabb42e0361548c5c76fc210311362"
+        },
+        {
+          "path": "replays/opening/skt/미니동화TING/after-up.png",
+          "bytes": 11348,
+          "crc32": "1802818c",
+          "sha256": "9fc72c5031e1b342c272afcd83233e20c893db41dae199730dc26ff35745f16f"
+        },
+        {
+          "path": "replays/opening/skt/미니동화TING/opening.png",
+          "bytes": 12057,
+          "crc32": "655f4c5d",
+          "sha256": "30dd991584cc4a991c4287f8eebfe5a0e7aec1eb1be4525aedfc27e002cd5be6"
+        },
+        {
+          "path": "replays/opening/skt/미니동화TING/trace.ndjson",
+          "bytes": 3048,
+          "crc32": "b9788c34",
+          "sha256": "7cdb87474833531a00e614a635d52c77af1021df830c17bc8533e106908712b3"
+        },
+        {
+          "path": "replays/opening/skt/스페셜포스/after-ok.png",
+          "bytes": 2024,
+          "crc32": "dfeb5b1c",
+          "sha256": "4878aace47dd3ce59656e3afd420bc7817e2e58cde7b529951c54b2ce433a67f"
+        },
+        {
+          "path": "replays/opening/skt/스페셜포스/after-second-ok.png",
+          "bytes": 2024,
+          "crc32": "dfeb5b1c",
+          "sha256": "4878aace47dd3ce59656e3afd420bc7817e2e58cde7b529951c54b2ce433a67f"
+        },
+        {
+          "path": "replays/opening/skt/스페셜포스/after-up.png",
+          "bytes": 2024,
+          "crc32": "dfeb5b1c",
+          "sha256": "4878aace47dd3ce59656e3afd420bc7817e2e58cde7b529951c54b2ce433a67f"
+        },
+        {
+          "path": "replays/opening/skt/스페셜포스/opening.png",
+          "bytes": 2024,
+          "crc32": "dfeb5b1c",
+          "sha256": "4878aace47dd3ce59656e3afd420bc7817e2e58cde7b529951c54b2ce433a67f"
+        },
+        {
+          "path": "replays/opening/skt/스페셜포스/trace.ndjson",
+          "bytes": 3037,
+          "crc32": "59905923",
+          "sha256": "fa19b4147a0c56d5f599f2c87a2941c419480e6a9a048ce83c67271b9d5c1ede"
+        },
+        {
+          "path": "replays/opening/skt/엑스맨/after-ok.png",
+          "bytes": 6457,
+          "crc32": "b6f9db30",
+          "sha256": "1b6280fa135dc0b53a5fd4f8632702c3ba7b007759f6d84009c57f39c7acd4e9"
+        },
+        {
+          "path": "replays/opening/skt/엑스맨/after-second-ok.png",
+          "bytes": 1110,
+          "crc32": "9d093176",
+          "sha256": "eac263bd0f2870354c12e9a63f3f50477115ed68d88edce414bfff4f7a543df8"
+        },
+        {
+          "path": "replays/opening/skt/엑스맨/after-up.png",
+          "bytes": 6426,
+          "crc32": "77a456c8",
+          "sha256": "80dfe400ed211eaae7a3e5906a6c043578395ca83cab7c3add6f76e011d5e8d0"
+        },
+        {
+          "path": "replays/opening/skt/엑스맨/opening.png",
+          "bytes": 15605,
+          "crc32": "25fd7ac0",
+          "sha256": "7b0c70b2e4d338d04117c20230ad7106d98616b0fc5e19337c5e2fde8aead1c4"
+        },
+        {
+          "path": "replays/opening/skt/엑스맨/trace.ndjson",
+          "bytes": 3045,
+          "crc32": "0785d1b3",
+          "sha256": "0c691398a3b4d93be2d11056d6ed6f1afbc3a91418be15032a7c9ae595578479"
+        },
+        {
+          "path": "replays/pairs/doctor-k/control/after.png",
+          "bytes": 7398,
+          "crc32": "0b592199",
+          "sha256": "df3f52fe7506f56376f7e1f01f9b8322367a9cce435860f7015d0cbe4df526be"
+        },
+        {
+          "path": "replays/pairs/doctor-k/control/before.png",
+          "bytes": 1034,
+          "crc32": "b83ab6b0",
+          "sha256": "3d557ad434e0c58b80c1a1fdae1f4c421418e4387156da84faa1f8ecc2f218ba"
+        },
+        {
+          "path": "replays/pairs/doctor-k/control/replay.lua",
+          "bytes": 156,
+          "crc32": "89651cfd",
+          "sha256": "4cc1b0583942dd01f83d767c27171b6475d318fd9a3c96a96572e140af836ffb"
+        },
+        {
+          "path": "replays/pairs/doctor-k/control/trace.ndjson",
+          "bytes": 2036,
+          "crc32": "22494082",
+          "sha256": "08b928449386dab54c3852fdad064a44cf72a3f33e953b447b7cb6bf5fc65930"
+        },
+        {
+          "path": "replays/pairs/doctor-k/input/after.png",
+          "bytes": 7398,
+          "crc32": "0b592199",
+          "sha256": "df3f52fe7506f56376f7e1f01f9b8322367a9cce435860f7015d0cbe4df526be"
+        },
+        {
+          "path": "replays/pairs/doctor-k/input/before.png",
+          "bytes": 1034,
+          "crc32": "b83ab6b0",
+          "sha256": "3d557ad434e0c58b80c1a1fdae1f4c421418e4387156da84faa1f8ecc2f218ba"
+        },
+        {
+          "path": "replays/pairs/doctor-k/input/replay.lua",
+          "bytes": 161,
+          "crc32": "532f2760",
+          "sha256": "5174c028187e461b7ac80a8cae1629b5efa05e55888ddd8252e7d0059507493e"
+        },
+        {
+          "path": "replays/pairs/doctor-k/input/trace.ndjson",
+          "bytes": 2035,
+          "crc32": "3b20bd1d",
+          "sha256": "4c5bbdbf4d93dca8f06f2f7fc2bd3804d6c3bd6871d0b3b882be9016eaaa01d3"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/control/after.png",
+          "bytes": 11756,
+          "crc32": "5a384246",
+          "sha256": "fea9384809f7aa299dbfb38a24176571859490cdde19fcf57741e852abacd25a"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/control/before.png",
+          "bytes": 11756,
+          "crc32": "5a384246",
+          "sha256": "fea9384809f7aa299dbfb38a24176571859490cdde19fcf57741e852abacd25a"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/control/replay.lua",
+          "bytes": 156,
+          "crc32": "89651cfd",
+          "sha256": "4cc1b0583942dd01f83d767c27171b6475d318fd9a3c96a96572e140af836ffb"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/control/trace.ndjson",
+          "bytes": 2028,
+          "crc32": "034062e9",
+          "sha256": "47d9ab9c59571f33646ae7bade68560d4afcbce0ca4710f9b12d6f595c1c4430"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/input/after.png",
+          "bytes": 6916,
+          "crc32": "e7b62a81",
+          "sha256": "358977a719fa156ef6d8ff1aa5e93374ba4fd6a169b613efb73a9c1c9a437912"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/input/before.png",
+          "bytes": 11756,
+          "crc32": "5a384246",
+          "sha256": "fea9384809f7aa299dbfb38a24176571859490cdde19fcf57741e852abacd25a"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/input/replay.lua",
+          "bytes": 161,
+          "crc32": "532f2760",
+          "sha256": "5174c028187e461b7ac80a8cae1629b5efa05e55888ddd8252e7d0059507493e"
+        },
+        {
+          "path": "replays/pairs/dragon-knight-ex/input/trace.ndjson",
+          "bytes": 2027,
+          "crc32": "5b68878d",
+          "sha256": "6404b5d530d700ddee1942952bcf7454331b70fe83b333fec9aaf576bafa7341"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/control/after.png",
+          "bytes": 5516,
+          "crc32": "875c2e05",
+          "sha256": "3f0b87cd2c4b091fe4e98e7eab2a24a993ed02f24b7bed50f507ac6b6925799d"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/control/before.png",
+          "bytes": 5516,
+          "crc32": "875c2e05",
+          "sha256": "3f0b87cd2c4b091fe4e98e7eab2a24a993ed02f24b7bed50f507ac6b6925799d"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/control/replay.lua",
+          "bytes": 156,
+          "crc32": "89651cfd",
+          "sha256": "4cc1b0583942dd01f83d767c27171b6475d318fd9a3c96a96572e140af836ffb"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/control/trace.ndjson",
+          "bytes": 2036,
+          "crc32": "dab52cd4",
+          "sha256": "c3a8b1a5b93b683258990be0737268682f13b2035822edacb7a8e86836552d3e"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/input/after.png",
+          "bytes": 18402,
+          "crc32": "1ed989e2",
+          "sha256": "ff9dfb847028ef14bbee6c886a20da6cfd504f4d93731b2a3b04ce4849bfe20f"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/input/before.png",
+          "bytes": 5516,
+          "crc32": "875c2e05",
+          "sha256": "3f0b87cd2c4b091fe4e98e7eab2a24a993ed02f24b7bed50f507ac6b6925799d"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/input/replay.lua",
+          "bytes": 161,
+          "crc32": "532f2760",
+          "sha256": "5174c028187e461b7ac80a8cae1629b5efa05e55888ddd8252e7d0059507493e"
+        },
+        {
+          "path": "replays/pairs/great-pirate-age/input/trace.ndjson",
+          "bytes": 2035,
+          "crc32": "d42618c8",
+          "sha256": "37fa37ab41453604b80854e3906b3ee6f280ffcbcedfe11e1497fce64e6574d3"
+        },
+        {
+          "path": "replays/pairs/knight-maker/control/after.png",
+          "bytes": 6420,
+          "crc32": "3ee6980d",
+          "sha256": "fd3c89ee446aac8ecb2f8d676a714b0adf492ff373d28f07ab235ce42ddb0156"
+        },
+        {
+          "path": "replays/pairs/knight-maker/control/before.png",
+          "bytes": 6420,
+          "crc32": "3ee6980d",
+          "sha256": "fd3c89ee446aac8ecb2f8d676a714b0adf492ff373d28f07ab235ce42ddb0156"
+        },
+        {
+          "path": "replays/pairs/knight-maker/control/replay.lua",
+          "bytes": 156,
+          "crc32": "89651cfd",
+          "sha256": "4cc1b0583942dd01f83d767c27171b6475d318fd9a3c96a96572e140af836ffb"
+        },
+        {
+          "path": "replays/pairs/knight-maker/control/trace.ndjson",
+          "bytes": 2036,
+          "crc32": "a4d820ee",
+          "sha256": "bc74dcdd632472a3265307e08099fa9ed7e8898f795c2de53d370ff96ff81a1a"
+        },
+        {
+          "path": "replays/pairs/knight-maker/input/after.png",
+          "bytes": 8565,
+          "crc32": "1d1bcfe6",
+          "sha256": "13234d0abbae77131383255a4a7a0846df4e92affb6cd99bd53d11af74e581ad"
+        },
+        {
+          "path": "replays/pairs/knight-maker/input/before.png",
+          "bytes": 6420,
+          "crc32": "3ee6980d",
+          "sha256": "fd3c89ee446aac8ecb2f8d676a714b0adf492ff373d28f07ab235ce42ddb0156"
+        },
+        {
+          "path": "replays/pairs/knight-maker/input/replay.lua",
+          "bytes": 161,
+          "crc32": "532f2760",
+          "sha256": "5174c028187e461b7ac80a8cae1629b5efa05e55888ddd8252e7d0059507493e"
+        },
+        {
+          "path": "replays/pairs/knight-maker/input/trace.ndjson",
+          "bytes": 2035,
+          "crc32": "071e1529",
+          "sha256": "6cca507a615cdb4c8f7b8499301b8e5112d5b99fe0ba7a3b5f601d7f9d25e202"
+        },
+        {
+          "path": "replays/pairs/x-men/control/after.png",
+          "bytes": 6457,
+          "crc32": "b6f9db30",
+          "sha256": "1b6280fa135dc0b53a5fd4f8632702c3ba7b007759f6d84009c57f39c7acd4e9"
+        },
+        {
+          "path": "replays/pairs/x-men/control/before.png",
+          "bytes": 6457,
+          "crc32": "b6f9db30",
+          "sha256": "1b6280fa135dc0b53a5fd4f8632702c3ba7b007759f6d84009c57f39c7acd4e9"
+        },
+        {
+          "path": "replays/pairs/x-men/control/replay.lua",
+          "bytes": 156,
+          "crc32": "89651cfd",
+          "sha256": "4cc1b0583942dd01f83d767c27171b6475d318fd9a3c96a96572e140af836ffb"
+        },
+        {
+          "path": "replays/pairs/x-men/control/trace.ndjson",
+          "bytes": 2035,
+          "crc32": "16e8fd20",
+          "sha256": "32d483a8a499a69d0e115488f80344f2c2817cb83221cbea57283cca3d5c8c16"
+        },
+        {
+          "path": "replays/pairs/x-men/input/after.png",
+          "bytes": 2069,
+          "crc32": "c34e4f70",
+          "sha256": "ed9ea1b9057db989d47d73860ac6a2b73893923b5f2b96b1730c14c2b4692e3f"
+        },
+        {
+          "path": "replays/pairs/x-men/input/before.png",
+          "bytes": 6457,
+          "crc32": "b6f9db30",
+          "sha256": "1b6280fa135dc0b53a5fd4f8632702c3ba7b007759f6d84009c57f39c7acd4e9"
+        },
+        {
+          "path": "replays/pairs/x-men/input/replay.lua",
+          "bytes": 161,
+          "crc32": "532f2760",
+          "sha256": "5174c028187e461b7ac80a8cae1629b5efa05e55888ddd8252e7d0059507493e"
+        },
+        {
+          "path": "replays/pairs/x-men/input/trace.ndjson",
+          "bytes": 2031,
+          "crc32": "58147e0b",
+          "sha256": "c356b7391e89342df3842eba5c4deb83c6db9a110b0f2fc2be1e3df99e24a2b1"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/control/after.png",
+          "bytes": 6916,
+          "crc32": "e7b62a81",
+          "sha256": "358977a719fa156ef6d8ff1aa5e93374ba4fd6a169b613efb73a9c1c9a437912"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/control/before.png",
+          "bytes": 6916,
+          "crc32": "e7b62a81",
+          "sha256": "358977a719fa156ef6d8ff1aa5e93374ba4fd6a169b613efb73a9c1c9a437912"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/control/replay.lua",
+          "bytes": 191,
+          "crc32": "dc346019",
+          "sha256": "09278a416d7fd01db7d123c12a75cb70f52a43433fdf0212c3905b1f336d568b"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/control/trace.ndjson",
+          "bytes": 2551,
+          "crc32": "f628cf70",
+          "sha256": "bcd12862a7630dc8d6d29a1a97689d90a59c1191a90113e1bdd4aa7a0d5207a1"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/input/after.png",
+          "bytes": 6743,
+          "crc32": "b65e5c66",
+          "sha256": "9e01e2c432f07aa87093c66fb6caedcd1bc0044a2a4c922ca40673d7fe7d0d4b"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/input/before.png",
+          "bytes": 6916,
+          "crc32": "e7b62a81",
+          "sha256": "358977a719fa156ef6d8ff1aa5e93374ba4fd6a169b613efb73a9c1c9a437912"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/input/replay.lua",
+          "bytes": 196,
+          "crc32": "0520b4cd",
+          "sha256": "836413b7c99152dfe8ce1aa6a04f7fdceab068c4dfde7e9a2485a0773b0c9780"
+        },
+        {
+          "path": "replays/second-pairs/dragon-knight-ex/input/trace.ndjson",
+          "bytes": 2550,
+          "crc32": "e8fd9e5d",
+          "sha256": "340cf39b7aa27157b8bbc997bcf881d39c3c29f752c4d9bac4db823a0ab24d57"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/control/after.png",
+          "bytes": 18388,
+          "crc32": "93c5bcbf",
+          "sha256": "4a596d83760aca00e82493a091f7c5042f193a9d0761b31a000565259ee2921a"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/control/before.png",
+          "bytes": 18402,
+          "crc32": "1ed989e2",
+          "sha256": "ff9dfb847028ef14bbee6c886a20da6cfd504f4d93731b2a3b04ce4849bfe20f"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/control/replay.lua",
+          "bytes": 191,
+          "crc32": "dc346019",
+          "sha256": "09278a416d7fd01db7d123c12a75cb70f52a43433fdf0212c3905b1f336d568b"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/control/trace.ndjson",
+          "bytes": 2559,
+          "crc32": "15c3ad2f",
+          "sha256": "4c6f00182ba5a05b91113faaeaf16471e77be81cdb571d702143fbcc5ae95f92"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/input/after.png",
+          "bytes": 8839,
+          "crc32": "f8be7c12",
+          "sha256": "aebab34619b339fd09df97ade78300874b9d73afba06446e3042116ebdad75be"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/input/before.png",
+          "bytes": 18402,
+          "crc32": "1ed989e2",
+          "sha256": "ff9dfb847028ef14bbee6c886a20da6cfd504f4d93731b2a3b04ce4849bfe20f"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/input/replay.lua",
+          "bytes": 196,
+          "crc32": "0520b4cd",
+          "sha256": "836413b7c99152dfe8ce1aa6a04f7fdceab068c4dfde7e9a2485a0773b0c9780"
+        },
+        {
+          "path": "replays/second-pairs/great-pirate-age/input/trace.ndjson",
+          "bytes": 2558,
+          "crc32": "ce206690",
+          "sha256": "531814ce4be9694475d5defecb79870f39e93393ade0a171031b23d4081c2517"
+        },
+        {
+          "path": "replays/second-pairs/x-men/control/after.png",
+          "bytes": 2069,
+          "crc32": "c34e4f70",
+          "sha256": "ed9ea1b9057db989d47d73860ac6a2b73893923b5f2b96b1730c14c2b4692e3f"
+        },
+        {
+          "path": "replays/second-pairs/x-men/control/before.png",
+          "bytes": 2069,
+          "crc32": "c34e4f70",
+          "sha256": "ed9ea1b9057db989d47d73860ac6a2b73893923b5f2b96b1730c14c2b4692e3f"
+        },
+        {
+          "path": "replays/second-pairs/x-men/control/replay.lua",
+          "bytes": 191,
+          "crc32": "dc346019",
+          "sha256": "09278a416d7fd01db7d123c12a75cb70f52a43433fdf0212c3905b1f336d568b"
+        },
+        {
+          "path": "replays/second-pairs/x-men/control/trace.ndjson",
+          "bytes": 2552,
+          "crc32": "88630cf4",
+          "sha256": "4afbbdc0d7e7eab1dd9ea1ac62b11fbc3e3546380f8383dd4dad6c27527d7a1e"
+        },
+        {
+          "path": "replays/second-pairs/x-men/input/after.png",
+          "bytes": 8596,
+          "crc32": "733f5ae2",
+          "sha256": "83d82175e3d9f1a1df9d0d85eee96f50f7514dc0927220e0a1950b4bee028434"
+        },
+        {
+          "path": "replays/second-pairs/x-men/input/before.png",
+          "bytes": 2069,
+          "crc32": "c34e4f70",
+          "sha256": "ed9ea1b9057db989d47d73860ac6a2b73893923b5f2b96b1730c14c2b4692e3f"
+        },
+        {
+          "path": "replays/second-pairs/x-men/input/replay.lua",
+          "bytes": 196,
+          "crc32": "0520b4cd",
+          "sha256": "836413b7c99152dfe8ce1aa6a04f7fdceab068c4dfde7e9a2485a0773b0c9780"
+        },
+        {
+          "path": "replays/second-pairs/x-men/input/trace.ndjson",
+          "bytes": 2552,
+          "crc32": "3183a884",
+          "sha256": "86b421ec620ca8c8a1fa8944ca51e56f4ad48e732fe2b95220d8de4e1873374f"
+        }
+      ]
+    },
+    {
+      "id": "dubigame-ktf-lgt-mirrors",
+      "repositoryPath": "research/archives/Dubigame-KTF-LGT-43-Game-Packages.zip",
+      "bytes": 28784593,
+      "sha256": "4b8cbda88f03ce64a87026b2190606e35a249b6c28d2e9c89897f3e31ed49dd1",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/dubigame-head.headers",
+          "bytes": 2284,
+          "crc32": "2f7078be",
+          "sha256": "56beffa4460e968cbad545e13d0df723d644dba66bb2d4a40a4a8993a3b7a8bb"
+        },
+        {
+          "path": "evidence/dubigame-tail.headers",
+          "bytes": 303,
+          "crc32": "780b6f74",
+          "sha256": "b138ed2917cc4453155411490bbb4aef2ae6ca8ab907139979a2c3d8fec9c1dc"
+        },
+        {
+          "path": "evidence/magic-paired.json",
+          "bytes": 1633,
+          "crc32": "a092796a",
+          "sha256": "49598ccb060817670c5cf0a68eeffbc1694853b660a46b7e31f403ceb03904fa"
+        },
+        {
+          "path": "evidence/magic-shop-source.json",
+          "bytes": 458,
+          "crc32": "a75bc1b1",
+          "sha256": "ab16e27af8b617b5f70c72981969a18329eeccda0e77b3de47c629dbfaa01b0a"
+        },
+        {
+          "path": "evidence/may-range-receipts.json",
+          "bytes": 68528,
+          "crc32": "a4dcbeea",
+          "sha256": "7147ef5f33fda5e95a432198e061635f431ce9d5a4132491a69949d92a237005"
+        },
+        {
+          "path": "evidence/nested-audit.json",
+          "bytes": 3112360,
+          "crc32": "b411f09c",
+          "sha256": "308822f4214d7bfbc3f1af66bc10f97c4176782588e0d7b4fddea1952fa3b8fc"
+        },
+        {
+          "path": "evidence/opening.json",
+          "bytes": 28326,
+          "crc32": "14b56053",
+          "sha256": "c3253c8afd0dfb59371b921a84dd86517f172a3fc3ecf724c1e30f8c8e712f47"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 51787,
+          "crc32": "8a3ff855",
+          "sha256": "4d4ea99e42162796f533c5fd013d91b8fabb0083e0dd516cb3ed6b247a9a2ee4"
+        },
+        {
+          "path": "originals/ktf/Magic-Shop-Tycoon-2.zip",
+          "bytes": 398493,
+          "crc32": "a4740b1f",
+          "sha256": "54cd6ad72f004544b107a111d7270e69447d780ca5d3a22edfdd76096d571fc6"
+        },
+        {
+          "path": "originals/ktf/광란의수족관!.zip",
+          "bytes": 444134,
+          "crc32": "68b1fa8d",
+          "sha256": "aa3fcba4598b4998386ff9a683c0db617ce2bd5fcfd5065a3ef965a218dade44"
+        },
+        {
+          "path": "originals/ktf/궁맞고!.zip",
+          "bytes": 689142,
+          "crc32": "9b680912",
+          "sha256": "4c6cd28b6c1ac09b6962344e5a8c44ec4384ddfea18d1ba49eb15f2e3cbf00c4"
+        },
+        {
+          "path": "originals/ktf/다이하드4.zip",
+          "bytes": 494808,
+          "crc32": "3e0c81e4",
+          "sha256": "3d238165796019d0d861835597d61d9a113bbfcff3e336b9e5153ff0d21087d9"
+        },
+        {
+          "path": "originals/ktf/다크슬레이어2.zip",
+          "bytes": 600504,
+          "crc32": "70a7caeb",
+          "sha256": "44c292be4e4cc417021de29fa7d91b0bc9756a067854fdbb5a23c0a707a81b41"
+        },
+        {
+          "path": "originals/ktf/대박투어타이쿤.zip",
+          "bytes": 310110,
+          "crc32": "7a2e67cc",
+          "sha256": "135d1291501f3dec3765412a057c77fe77cad8a2745ac75c5809387fea7db7d7"
+        },
+        {
+          "path": "originals/ktf/더팜1.zip",
+          "bytes": 552452,
+          "crc32": "47641b18",
+          "sha256": "8c71be3ad26df1ecda6129a58b7344a2abc60a4f6aad8b480ffb401ed6d4c164"
+        },
+        {
+          "path": "originals/ktf/도신노홍철맞고.zip",
+          "bytes": 545841,
+          "crc32": "a7f3daad",
+          "sha256": "dd36286b56924c5219113e2d4cbe3fa142e964b3d38f8b98ee0b9c3911a90dee"
+        },
+        {
+          "path": "originals/ktf/로스트_아일랜드.zip",
+          "bytes": 682885,
+          "crc32": "0c90bd14",
+          "sha256": "e2eda9e90ea155583961db191d19fc0ecdc42cff83c35a7d2791b48dd39e5f39"
+        },
+        {
+          "path": "originals/ktf/루빅스큐브.zip",
+          "bytes": 521850,
+          "crc32": "7593eb93",
+          "sha256": "c3057f46c59bfb5d18962123767e4d0b9212b5c12b42892a79330715e4874c0f"
+        },
+        {
+          "path": "originals/ktf/리얼타짜맞고.zip",
+          "bytes": 1237372,
+          "crc32": "99174b12",
+          "sha256": "3b82763edba8b87063e88c2a8df8fb9e8a1ef6e2a04581307a0fa257986c5702"
+        },
+        {
+          "path": "originals/ktf/미니게임의달인.zip",
+          "bytes": 363479,
+          "crc32": "02fb5cc1",
+          "sha256": "6103e87874c693c7dc04a95dd33056d5c43470090448ffac2c8c98e361704807"
+        },
+        {
+          "path": "originals/ktf/미니고치.zip",
+          "bytes": 460124,
+          "crc32": "65cbf777",
+          "sha256": "0c67145b11dff72242c85d83fb07f77216c71fdc16fc63a332e1830355e56d2a"
+        },
+        {
+          "path": "originals/ktf/미니햄스터키우기.zip",
+          "bytes": 187822,
+          "crc32": "64b7f2c9",
+          "sha256": "6d63b4025bef5daa073bf4376aee9bb70e2981362c578f782cb9313dc94169d2"
+        },
+        {
+          "path": "originals/ktf/박명수호통맞고.zip",
+          "bytes": 658483,
+          "crc32": "1fe31edd",
+          "sha256": "6b51d12b4be679888af06ae3815208a0d7589b51f3c6e9a5b4d4462af79dc7af"
+        },
+        {
+          "path": "originals/ktf/배틀오목.zip",
+          "bytes": 239971,
+          "crc32": "9ea68046",
+          "sha256": "d647131cdc8d97a7ff353a4476ca117690067b33704f89016ed353c6b36c08b7"
+        },
+        {
+          "path": "originals/ktf/붕어빵타이쿤3작은화면.zip",
+          "bytes": 382632,
+          "crc32": "ef09e621",
+          "sha256": "17423775854221e0c46348367e0834e823f62cccbfdae4510e202cc8ea4fec7f"
+        },
+        {
+          "path": "originals/ktf/세븐스소드.zip",
+          "bytes": 587218,
+          "crc32": "000850ec",
+          "sha256": "40334c9cb00d08c62536acf44a97f1ca221cb3ad3bc00065dadb15bdd4d85fa1"
+        },
+        {
+          "path": "originals/ktf/셔터-영혼의울림.zip",
+          "bytes": 449505,
+          "crc32": "fe117880",
+          "sha256": "3c658a46bbfbd67568e322289888180f4b46eac3bd27485681b85f1fd65d4d38"
+        },
+        {
+          "path": "originals/ktf/스노우브라더스2.zip",
+          "bytes": 243035,
+          "crc32": "6b2888cd",
+          "sha256": "484108f6c8ded36582246d0183a10fd69f5efa5475b25b47e03dfbf7b574c7dc"
+        },
+        {
+          "path": "originals/ktf/스도쿠.zip",
+          "bytes": 408596,
+          "crc32": "4858d4d0",
+          "sha256": "4451036a7fb65261ec498f7146530475f7e965f35a445cce987731a0349b2980"
+        },
+        {
+          "path": "originals/ktf/스파이더맨3.zip",
+          "bytes": 442144,
+          "crc32": "195ec52b",
+          "sha256": "8c6821fab9693b480d3dbfcc261c588dfddc715c9901e97a298ee88c66c68b9c"
+        },
+        {
+          "path": "originals/ktf/아르덴전기.zip",
+          "bytes": 787846,
+          "crc32": "f5e3c619",
+          "sha256": "689c491586b91ed8afde488d092c777da0874b29250f0724d7a6c9ee1e690ba8"
+        },
+        {
+          "path": "originals/ktf/얼음낚시.zip",
+          "bytes": 529403,
+          "crc32": "5c934e73",
+          "sha256": "8801ab57a0ee0362a1fbf437fafaa239a2fcfd569060ae6c631edd0b86eab58d"
+        },
+        {
+          "path": "originals/ktf/엑스맨3.zip",
+          "bytes": 479236,
+          "crc32": "b159f14d",
+          "sha256": "cb4217efd669a9c57651499c92a9eba6f71ffb6e935b58952fb8214889242ee7"
+        },
+        {
+          "path": "originals/ktf/영웅전설3(하얀마녀).zip",
+          "bytes": 724005,
+          "crc32": "984751fb",
+          "sha256": "d1fba7ad5d1fcc11cb9d4daded9c117d4569cf8282903c57cdf14404bdb90c91"
+        },
+        {
+          "path": "originals/ktf/웃찾사맞고.zip",
+          "bytes": 483610,
+          "crc32": "6114be8d",
+          "sha256": "75e6050fe2721607c950c0b9ce5f2da6df11e5dd5c1b3baac8af51570c307c20"
+        },
+        {
+          "path": "originals/ktf/정통맞고2007.zip",
+          "bytes": 813473,
+          "crc32": "ba8fbfe6",
+          "sha256": "60bd6cbc5936626ae38e71bccab46cf8896ac5144e7b2f40b6176e53179ded3a"
+        },
+        {
+          "path": "originals/ktf/지상렬신맞고.zip",
+          "bytes": 636572,
+          "crc32": "5ccb8f9f",
+          "sha256": "e09aca27c132c96752c1b8acaab9aacfc81297b2714d3815d8310b020ff37ee9"
+        },
+        {
+          "path": "originals/ktf/체스마스터.zip",
+          "bytes": 225461,
+          "crc32": "75576800",
+          "sha256": "88ba9a9f66ef9a72fbb562f414ad3a88016cbcb1b42b0610a7ca8bdb32944a13"
+        },
+        {
+          "path": "originals/ktf/카우스블레이드.zip",
+          "bytes": 425311,
+          "crc32": "4ffc5c25",
+          "sha256": "51011b242bb5485dde836fed1af8c5dff41a1994e3eb35fc26fc01198d697add"
+        },
+        {
+          "path": "originals/ktf/컴투스_맞고_2006.zip",
+          "bytes": 373231,
+          "crc32": "66a6358a",
+          "sha256": "f2280c6699a0d98b5f482bdaf0258aba85cc41935f7e67e04376ea5c3a41d9ef"
+        },
+        {
+          "path": "originals/ktf/크아bnb2007.zip",
+          "bytes": 505022,
+          "crc32": "bfe85e31",
+          "sha256": "3ccc6cf147d2d537a27b60e151732c2bed0144127bd1b93944591b0e4169373b"
+        },
+        {
+          "path": "originals/ktf/탁재훈신맞고2007.zip",
+          "bytes": 577669,
+          "crc32": "2b028c98",
+          "sha256": "4b6eaa69e0569097632f32dc51673753f691049dbc8da0538bdbc512c0dc21bb"
+        },
+        {
+          "path": "originals/ktf/트랜스포머.zip",
+          "bytes": 754279,
+          "crc32": "fa7c6ad9",
+          "sha256": "77c2d0bcd435059cf89308218541da6f95d59bc486449901f65e6df83a050942"
+        },
+        {
+          "path": "originals/ktf/해신장보고.zip",
+          "bytes": 315306,
+          "crc32": "9b8bf7f6",
+          "sha256": "42b2991a08abf7a1a8d7cad213e5c997a3bdab6c27cba33c61d541adc7b82eb9"
+        },
+        {
+          "path": "originals/lgt/대박맞고-왕후의길.zip",
+          "bytes": 1400946,
+          "crc32": "0df06bab",
+          "sha256": "63a4859013be9a8a6959f9ee01aa84ae92c4300c9ef0274713699d22621734c2"
+        },
+        {
+          "path": "originals/lgt/무한신맞고2009.zip",
+          "bytes": 628962,
+          "crc32": "7c34da47",
+          "sha256": "0baceb1dfe9c388d08e9225fabdf68ee82f289fa42fdfec9cfab77c78f553288"
+        },
+        {
+          "path": "originals/lgt/스파이더맨3.zip",
+          "bytes": 596832,
+          "crc32": "8256e5b2",
+          "sha256": "d01275d61fa9f0bac4d9b20f0b4b9d0b578e67bd2a21754f9e5d618c5126b235"
+        },
+        {
+          "path": "originals/lgt/영웅서기3.zip",
+          "bytes": 1765166,
+          "crc32": "ca1fdfc9",
+          "sha256": "0bc9cc28c05a32157af06cd41a60c626b2510126b01ca0f7ba392a72d5c31880"
+        },
+        {
+          "path": "originals/lgt/정통맞고2009.zip",
+          "bytes": 1197384,
+          "crc32": "c792c6e7",
+          "sha256": "4fdbd64c9fbdfbf6d335847a01054dea5a2feb3efdb2a1e6aa5b288d77fda5de"
+        },
+        {
+          "path": "originals/lgt/체스마스터.zip",
+          "bytes": 255247,
+          "crc32": "cd17856c",
+          "sha256": "4ece6eeeaa04955153005b2e14ddefdfd202443388b434dc4a6e9dda1b77e276"
+        },
+        {
+          "path": "originals/lgt/현영맞고2006.zip",
+          "bytes": 657799,
+          "crc32": "6f3d66b4",
+          "sha256": "1b107b96bf4ed7d2634d778fb45c9c3e3a887f37f35c1b73359ff44c0acb3674"
+        },
+        {
+          "path": "replays/opening.lua",
+          "bytes": 260,
+          "crc32": "e3ecc3b3",
+          "sha256": "15b804e07813fe29054214c8aa666285d10bfcdcbd5e88d460145ec41da32c1e"
+        },
+        {
+          "path": "replays/opening/ktf/광란의수족관!/after-ok.png",
+          "bytes": 45696,
+          "crc32": "beadf95f",
+          "sha256": "a3c745c39a2ab7ccd1d776e3c9ff81f223f1d82bc899e448c80fd6e1073c4ea0"
+        },
+        {
+          "path": "replays/opening/ktf/광란의수족관!/after-second-ok.png",
+          "bytes": 45259,
+          "crc32": "3d385f9c",
+          "sha256": "4b3ebcb2a482066d2265f3b9b6b9837dc619bb050e71ab7d1fbb85ef3d03cd38"
+        },
+        {
+          "path": "replays/opening/ktf/광란의수족관!/after-up.png",
+          "bytes": 45737,
+          "crc32": "9271225d",
+          "sha256": "ad14ddc2da304aa374e0fcfadcfd745bee751ca53a1e2dee95331ccc44333407"
+        },
+        {
+          "path": "replays/opening/ktf/광란의수족관!/opening.png",
+          "bytes": 55088,
+          "crc32": "eca00b35",
+          "sha256": "6625799467e85256f162eca12c8855b0abe7c97748c4ae54b8bf8feaa9d02b61"
+        },
+        {
+          "path": "replays/opening/ktf/광란의수족관!/trace.ndjson",
+          "bytes": 9542,
+          "crc32": "15c490f1",
+          "sha256": "02bd235e9587a7f46d80c947fc00007c45f20104918156425025eccc139e6ba4"
+        },
+        {
+          "path": "replays/opening/ktf/궁맞고!/after-ok.png",
+          "bytes": 83858,
+          "crc32": "461dd495",
+          "sha256": "3929fe487594c0267addf6b636de6547dac1d5bf992123882dbf2a34e55adab8"
+        },
+        {
+          "path": "replays/opening/ktf/궁맞고!/after-second-ok.png",
+          "bytes": 30000,
+          "crc32": "5f24b521",
+          "sha256": "976e05df2f89f30d6c10d293c406ef7126028adfadc5c5eb0a09d3678b8fe792"
+        },
+        {
+          "path": "replays/opening/ktf/궁맞고!/after-up.png",
+          "bytes": 36646,
+          "crc32": "70e849a9",
+          "sha256": "90ef4127d903093209686ba281e91667c775a49d7f06a6c682813c8e6697ff14"
+        },
+        {
+          "path": "replays/opening/ktf/궁맞고!/opening.png",
+          "bytes": 2961,
+          "crc32": "acea272e",
+          "sha256": "baaf20963e6b8443035347c4a5fddde9031f520a08ffb6430aef18a6ce49a4b8"
+        },
+        {
+          "path": "replays/opening/ktf/궁맞고!/trace.ndjson",
+          "bytes": 9609,
+          "crc32": "c8970c7c",
+          "sha256": "982434389ffa3ec05272d25b0ec4365eb097aa8a2173e3d25759fb6fa1278eb7"
+        },
+        {
+          "path": "replays/opening/ktf/다이하드4/after-ok.png",
+          "bytes": 964,
+          "crc32": "5e7f0259",
+          "sha256": "a06bbbc486e84c153ed7c00c2a63132c8bb8875b1b421bbb3df78673e8ce34fb"
+        },
+        {
+          "path": "replays/opening/ktf/다이하드4/after-second-ok.png",
+          "bytes": 1667,
+          "crc32": "2afd7354",
+          "sha256": "24b2731470c172375d1ed02210cf219338bf0270f0080bb038c20a5a423e6427"
+        },
+        {
+          "path": "replays/opening/ktf/다이하드4/after-up.png",
+          "bytes": 964,
+          "crc32": "0362ed90",
+          "sha256": "8af8fd21bcb2fb937c52b36b1052a861d8e56b02490c15babae1cb1c9965f01f"
+        },
+        {
+          "path": "replays/opening/ktf/다이하드4/opening.png",
+          "bytes": 966,
+          "crc32": "253cfd09",
+          "sha256": "98571de1107808ff34c6c980bc6b84610f2e17210aeebe8c835478dfad54df75"
+        },
+        {
+          "path": "replays/opening/ktf/다이하드4/trace.ndjson",
+          "bytes": 9678,
+          "crc32": "40216005",
+          "sha256": "09c40ebd0f4454922fb7a29c30241c54f7b1c2bdc653696111ce0fa9e55f21b5"
+        },
+        {
+          "path": "replays/opening/ktf/다크슬레이어2/after-ok.png",
+          "bytes": 34536,
+          "crc32": "9f253785",
+          "sha256": "3a3795200e202a037d7ec625032c4a059021176139add291b139dd0bdc7fe4d9"
+        },
+        {
+          "path": "replays/opening/ktf/다크슬레이어2/after-second-ok.png",
+          "bytes": 34569,
+          "crc32": "591effc0",
+          "sha256": "c1bdc6fd966bc9be36fd7e11ba1385e724cca517ecec943becb41797c0a71dcc"
+        },
+        {
+          "path": "replays/opening/ktf/다크슬레이어2/after-up.png",
+          "bytes": 34536,
+          "crc32": "9f253785",
+          "sha256": "3a3795200e202a037d7ec625032c4a059021176139add291b139dd0bdc7fe4d9"
+        },
+        {
+          "path": "replays/opening/ktf/다크슬레이어2/opening.png",
+          "bytes": 23774,
+          "crc32": "25a53db5",
+          "sha256": "af55a0a9967ca27d96bf4f7fc4df5f117fc2abcc52ec6ee21ddd43890912cfd8"
+        },
+        {
+          "path": "replays/opening/ktf/다크슬레이어2/trace.ndjson",
+          "bytes": 9724,
+          "crc32": "2a38a139",
+          "sha256": "60f76ddd5a215f0bbc352d5860ddc2cc16cfba93e4de73d2dc16e133aca8f3f8"
+        },
+        {
+          "path": "replays/opening/ktf/대박투어타이쿤/after-ok.png",
+          "bytes": 19301,
+          "crc32": "94fea0cc",
+          "sha256": "bd77cb4696076da21b8605835e18dcb0702ec285bcadcb34334b8e2c709be4a4"
+        },
+        {
+          "path": "replays/opening/ktf/대박투어타이쿤/after-up.png",
+          "bytes": 19240,
+          "crc32": "ad66fbaa",
+          "sha256": "a3b108b8e1e389c60fe4d24b7d97e85b07ab3667fb82fc59b157c54220376c47"
+        },
+        {
+          "path": "replays/opening/ktf/대박투어타이쿤/opening.png",
+          "bytes": 23854,
+          "crc32": "f1823480",
+          "sha256": "f80cf562d753026b45725f95b7750b406937e23d44961b0d9669739f3524eeb3"
+        },
+        {
+          "path": "replays/opening/ktf/대박투어타이쿤/stderr.txt",
+          "bytes": 326,
+          "crc32": "0adaffc8",
+          "sha256": "ca9820c912320ba977302ed7a0abcb015c9e2321e613fda026fe7bb5f6ad4f7f"
+        },
+        {
+          "path": "replays/opening/ktf/대박투어타이쿤/trace.ndjson",
+          "bytes": 7125,
+          "crc32": "8d2d9945",
+          "sha256": "26faf2367cbecca92cc2d1c25eca556aaf0dc01a319cd47d129c0c6d8c630d2b"
+        },
+        {
+          "path": "replays/opening/ktf/더팜1/after-ok.png",
+          "bytes": 38949,
+          "crc32": "d3940181",
+          "sha256": "05a21b2e0cb3062c05077cd246b613573740151df53e6ed48806bdc7cf062906"
+        },
+        {
+          "path": "replays/opening/ktf/더팜1/after-second-ok.png",
+          "bytes": 35566,
+          "crc32": "c51444e7",
+          "sha256": "893b1d36c4adaf0c03c7e0382615ca988a9b6444f92434e4ec6ca9e0abcb7d2f"
+        },
+        {
+          "path": "replays/opening/ktf/더팜1/after-up.png",
+          "bytes": 38949,
+          "crc32": "d3940181",
+          "sha256": "05a21b2e0cb3062c05077cd246b613573740151df53e6ed48806bdc7cf062906"
+        },
+        {
+          "path": "replays/opening/ktf/더팜1/opening.png",
+          "bytes": 1047,
+          "crc32": "c81c1618",
+          "sha256": "1863c712a2056b72a990b79a2faa84f3d5b2eda16c3d7de6330ceb2af5fd679f"
+        },
+        {
+          "path": "replays/opening/ktf/더팜1/trace.ndjson",
+          "bytes": 9797,
+          "crc32": "fea05753",
+          "sha256": "8707e578ac9244e6635bb027a03b78dba7ea4d65993f115f206873fdf591105b"
+        },
+        {
+          "path": "replays/opening/ktf/도신노홍철맞고/after-ok.png",
+          "bytes": 2882,
+          "crc32": "1e97a8ad",
+          "sha256": "cba0f6c195f9cb5a26c1a2eec530bef7c4b1a3e9b957798613ee2d746314aba4"
+        },
+        {
+          "path": "replays/opening/ktf/도신노홍철맞고/after-second-ok.png",
+          "bytes": 18739,
+          "crc32": "ac185adf",
+          "sha256": "48ea6be52a02a9523c4687f9ece098c6bf8f8c129e7f5c487fe7e7ea5d7ff71b"
+        },
+        {
+          "path": "replays/opening/ktf/도신노홍철맞고/after-up.png",
+          "bytes": 2882,
+          "crc32": "1e97a8ad",
+          "sha256": "cba0f6c195f9cb5a26c1a2eec530bef7c4b1a3e9b957798613ee2d746314aba4"
+        },
+        {
+          "path": "replays/opening/ktf/도신노홍철맞고/opening.png",
+          "bytes": 2321,
+          "crc32": "d254441f",
+          "sha256": "c50d197da951ff1fd951d8f0271c87ef2c2b65f9e39cae1e98e9141b5c686e6e"
+        },
+        {
+          "path": "replays/opening/ktf/도신노홍철맞고/trace.ndjson",
+          "bytes": 9449,
+          "crc32": "95151a0c",
+          "sha256": "48e830f7d37e54af8835815e38f8240ed6b967d534a1acca6e965ff17bb03bff"
+        },
+        {
+          "path": "replays/opening/ktf/로스트_아일랜드/after-ok.png",
+          "bytes": 66902,
+          "crc32": "0ddf7588",
+          "sha256": "c70d696982d2e0bb3d635d3a94b6bba53985d1614831bdc935f1b66d61d4fdc4"
+        },
+        {
+          "path": "replays/opening/ktf/로스트_아일랜드/after-second-ok.png",
+          "bytes": 66498,
+          "crc32": "9f59de2d",
+          "sha256": "830a6e774a8d6f18727c5be626a1ee0ecc53bcc44bb615cfcf82a47bdc10d2e4"
+        },
+        {
+          "path": "replays/opening/ktf/로스트_아일랜드/after-up.png",
+          "bytes": 66834,
+          "crc32": "8567520d",
+          "sha256": "e7b81c05cce7d0e7503608219ab67a04911c602e6375f16ee7e0ae6c1288048d"
+        },
+        {
+          "path": "replays/opening/ktf/로스트_아일랜드/opening.png",
+          "bytes": 79973,
+          "crc32": "4540da02",
+          "sha256": "add378d2247a0667d532ccca53bcc45d0be625fe980ab58321430c3bd6b8443d"
+        },
+        {
+          "path": "replays/opening/ktf/로스트_아일랜드/trace.ndjson",
+          "bytes": 9466,
+          "crc32": "eb116820",
+          "sha256": "3f98e1b8f9f24bac16234cfa1bb7175be162450dc1f2572d313b9b6b1362d51a"
+        },
+        {
+          "path": "replays/opening/ktf/루빅스큐브/after-ok.png",
+          "bytes": 6191,
+          "crc32": "157cdaf5",
+          "sha256": "009a0249f3d096cda92526cc389125df25a141a035d5599d9ff31da859a2dddc"
+        },
+        {
+          "path": "replays/opening/ktf/루빅스큐브/after-up.png",
+          "bytes": 6208,
+          "crc32": "080e81a6",
+          "sha256": "1b342a91111a64ab2b8dfc0ec21cc57afc84169f2f1ef06f642d608924e081b2"
+        },
+        {
+          "path": "replays/opening/ktf/루빅스큐브/opening.png",
+          "bytes": 65817,
+          "crc32": "7deb4100",
+          "sha256": "83b5b68002a1e4c202164500451ef55f0a008dfee1473f33e65045dccd12bf2a"
+        },
+        {
+          "path": "replays/opening/ktf/루빅스큐브/stderr.txt",
+          "bytes": 326,
+          "crc32": "0adaffc8",
+          "sha256": "ca9820c912320ba977302ed7a0abcb015c9e2321e613fda026fe7bb5f6ad4f7f"
+        },
+        {
+          "path": "replays/opening/ktf/루빅스큐브/trace.ndjson",
+          "bytes": 7229,
+          "crc32": "246ac570",
+          "sha256": "563cfa7b7968888a6791721ce5f6f36801aaf7e1b16e0718f7e5d94f55866135"
+        },
+        {
+          "path": "replays/opening/ktf/리얼타짜맞고/after-ok.png",
+          "bytes": 87773,
+          "crc32": "3dbd5d27",
+          "sha256": "1412c0b7ade795142ab6b048691aeb9f4a1faa85a699ecb9ee2d187d958657ae"
+        },
+        {
+          "path": "replays/opening/ktf/리얼타짜맞고/after-second-ok.png",
+          "bytes": 47123,
+          "crc32": "b58912af",
+          "sha256": "916d04be3d5e3e76532e2ecc57ac0b1c3d935754c800666ca2fe7050649d29aa"
+        },
+        {
+          "path": "replays/opening/ktf/리얼타짜맞고/after-up.png",
+          "bytes": 49481,
+          "crc32": "88dac9ca",
+          "sha256": "db73731fbd9d642b67242fcf3d2272475b04072bd898fdadb6376f7de0b6ed76"
+        },
+        {
+          "path": "replays/opening/ktf/리얼타짜맞고/opening.png",
+          "bytes": 3925,
+          "crc32": "e4a6563d",
+          "sha256": "54407c93139c3d8881f75fba3621a6791163c717a064fc47d1aa709eece0c3bc"
+        },
+        {
+          "path": "replays/opening/ktf/리얼타짜맞고/trace.ndjson",
+          "bytes": 9494,
+          "crc32": "98e26271",
+          "sha256": "a73805458b962d1ee78317a59f016b442469a04cb2afd06098d1e9019300a79e"
+        },
+        {
+          "path": "replays/opening/ktf/미니게임의달인/after-ok.png",
+          "bytes": 7838,
+          "crc32": "919c17d1",
+          "sha256": "7f5694bafcabe203203971a31648e1805ae95d499fc592cbad76cc64af7cae09"
+        },
+        {
+          "path": "replays/opening/ktf/미니게임의달인/after-up.png",
+          "bytes": 7585,
+          "crc32": "47336092",
+          "sha256": "f22ed96f9344aafdd8ac0d72472588dd5598ac5faeadc594915a87984529bec8"
+        },
+        {
+          "path": "replays/opening/ktf/미니게임의달인/opening.png",
+          "bytes": 22105,
+          "crc32": "3e8b012d",
+          "sha256": "78922ad62e9d0c9a746ab7b37b44b4a03834a8f9e71ecadfc845f563c4fff161"
+        },
+        {
+          "path": "replays/opening/ktf/미니게임의달인/stderr.txt",
+          "bytes": 326,
+          "crc32": "0adaffc8",
+          "sha256": "ca9820c912320ba977302ed7a0abcb015c9e2321e613fda026fe7bb5f6ad4f7f"
+        },
+        {
+          "path": "replays/opening/ktf/미니게임의달인/trace.ndjson",
+          "bytes": 7456,
+          "crc32": "62532841",
+          "sha256": "c59ae5acedf7a2a0dd24cc6924afbcbfd21c0335af7cc353969ef9f7b95881af"
+        },
+        {
+          "path": "replays/opening/ktf/미니고치/after-ok.png",
+          "bytes": 2640,
+          "crc32": "06e400b6",
+          "sha256": "49a7ebdf72c3f7d0d291e9994e00cb5cf44c4d93fb64a81a4bc3c266b748f8e2"
+        },
+        {
+          "path": "replays/opening/ktf/미니고치/after-second-ok.png",
+          "bytes": 2640,
+          "crc32": "06e400b6",
+          "sha256": "49a7ebdf72c3f7d0d291e9994e00cb5cf44c4d93fb64a81a4bc3c266b748f8e2"
+        },
+        {
+          "path": "replays/opening/ktf/미니고치/after-up.png",
+          "bytes": 2640,
+          "crc32": "06e400b6",
+          "sha256": "49a7ebdf72c3f7d0d291e9994e00cb5cf44c4d93fb64a81a4bc3c266b748f8e2"
+        },
+        {
+          "path": "replays/opening/ktf/미니고치/opening.png",
+          "bytes": 7411,
+          "crc32": "0fa8294c",
+          "sha256": "2bfaf9be6f1678a5a94b78d8b4b5980c2c3879e30c81b8e344dc3b88e42e4051"
+        },
+        {
+          "path": "replays/opening/ktf/미니고치/trace.ndjson",
+          "bytes": 11318,
+          "crc32": "01d9168b",
+          "sha256": "a31b0615a786883a80cb1b9781b95c16956954489876fefa9de18a6df1253f5b"
+        },
+        {
+          "path": "replays/opening/ktf/미니햄스터키우기/after-ok.png",
+          "bytes": 7693,
+          "crc32": "e20cf296",
+          "sha256": "3599e4d083e0059af9f0c82fb6f4c38391479bbc0526baf30a0f1f0892fbd861"
+        },
+        {
+          "path": "replays/opening/ktf/미니햄스터키우기/after-second-ok.png",
+          "bytes": 5653,
+          "crc32": "7a883ac3",
+          "sha256": "5f335c093ea158b679c766e074ec031b2e2190900442d6bb3731189472616d59"
+        },
+        {
+          "path": "replays/opening/ktf/미니햄스터키우기/after-up.png",
+          "bytes": 7693,
+          "crc32": "e20cf296",
+          "sha256": "3599e4d083e0059af9f0c82fb6f4c38391479bbc0526baf30a0f1f0892fbd861"
+        },
+        {
+          "path": "replays/opening/ktf/미니햄스터키우기/opening.png",
+          "bytes": 8579,
+          "crc32": "9897bf7f",
+          "sha256": "dc915caaafc5c5c10b5b803616c1be2ec0e657f4914c16fa66c5188b87aed94c"
+        },
+        {
+          "path": "replays/opening/ktf/미니햄스터키우기/trace.ndjson",
+          "bytes": 9722,
+          "crc32": "1d8c8678",
+          "sha256": "6ae786efc046f14d42f058c4a7ec3f76132ffbb6d840d216865aeabd52dafacd"
+        },
+        {
+          "path": "replays/opening/ktf/박명수호통맞고/after-ok.png",
+          "bytes": 4082,
+          "crc32": "62783ebe",
+          "sha256": "d05aff516256067da215733666623fad2f506893fd9d241017ba263e3370f765"
+        },
+        {
+          "path": "replays/opening/ktf/박명수호통맞고/after-second-ok.png",
+          "bytes": 57466,
+          "crc32": "1fe5de07",
+          "sha256": "f1e71d6334a6e9edbfd7a779c50a6ae4170084f723db99825f8aae13721395ca"
+        },
+        {
+          "path": "replays/opening/ktf/박명수호통맞고/after-up.png",
+          "bytes": 10667,
+          "crc32": "7465250a",
+          "sha256": "ff5964bfa68f7568f7e813a3caec6f607da6397871d6f38c2b34050992ee1f08"
+        },
+        {
+          "path": "replays/opening/ktf/박명수호통맞고/opening.png",
+          "bytes": 3030,
+          "crc32": "99a0eb7e",
+          "sha256": "c8d723fede5833c37be27f8a995dc2b033bba79e0e04bef49073e2b85807ae72"
+        },
+        {
+          "path": "replays/opening/ktf/박명수호통맞고/trace.ndjson",
+          "bytes": 9907,
+          "crc32": "4e68bd1f",
+          "sha256": "6a33ec98bfb71683fbb9ae8c2032b594739a9f6558b28ed746f765a2a3f6bf96"
+        },
+        {
+          "path": "replays/opening/ktf/배틀오목/after-ok.png",
+          "bytes": 26401,
+          "crc32": "5942cd51",
+          "sha256": "f0e9e72d9ca38813f9ae9871a21a2ffeb7f58ce13dd8ab3416513d048c771755"
+        },
+        {
+          "path": "replays/opening/ktf/배틀오목/after-second-ok.png",
+          "bytes": 15815,
+          "crc32": "b6d474eb",
+          "sha256": "65ec9ec13e8d42e3c19f4a3cd611d4e48565aea5b474db478040882015e9799e"
+        },
+        {
+          "path": "replays/opening/ktf/배틀오목/after-up.png",
+          "bytes": 26401,
+          "crc32": "5942cd51",
+          "sha256": "f0e9e72d9ca38813f9ae9871a21a2ffeb7f58ce13dd8ab3416513d048c771755"
+        },
+        {
+          "path": "replays/opening/ktf/배틀오목/opening.png",
+          "bytes": 2318,
+          "crc32": "4dca209f",
+          "sha256": "534389ea2f9934fdeddc368027673f82bc490a077510e767c6b6b902d4586126"
+        },
+        {
+          "path": "replays/opening/ktf/배틀오목/trace.ndjson",
+          "bytes": 9342,
+          "crc32": "3041cba3",
+          "sha256": "dc9ec8c68eb90d9776bd50d246463a8fa02e581e1926ee82b5859e4185b2a02f"
+        },
+        {
+          "path": "replays/opening/ktf/붕어빵타이쿤3작은화면/after-ok.png",
+          "bytes": 13725,
+          "crc32": "ed706fb7",
+          "sha256": "4054cfc2bd3a1a0b601761e165074349e90f767462286cbe290ec4e4daccc2de"
+        },
+        {
+          "path": "replays/opening/ktf/붕어빵타이쿤3작은화면/after-second-ok.png",
+          "bytes": 10308,
+          "crc32": "a88d815c",
+          "sha256": "acfb8625d1c28e89e99ab51b8c6b03a0e1988c3e5203a93d6e6f7759222fd8ea"
+        },
+        {
+          "path": "replays/opening/ktf/붕어빵타이쿤3작은화면/after-up.png",
+          "bytes": 7586,
+          "crc32": "f88b2564",
+          "sha256": "46ad815842051fda0af06f77923ef21bfb457294ba887ff11cf66fd54faabc26"
+        },
+        {
+          "path": "replays/opening/ktf/붕어빵타이쿤3작은화면/opening.png",
+          "bytes": 5705,
+          "crc32": "5f407fcb",
+          "sha256": "2cc377d56aa4a13d8ddde4382a0d23765b7532ba063b87d7c3127bf33e7d35c1"
+        },
+        {
+          "path": "replays/opening/ktf/붕어빵타이쿤3작은화면/trace.ndjson",
+          "bytes": 9671,
+          "crc32": "512cd184",
+          "sha256": "67570cf5eb52126339b0999d4b287b74a4ff9fab53a689a613659560b9c561ab"
+        },
+        {
+          "path": "replays/opening/ktf/세븐스소드/after-ok.png",
+          "bytes": 7829,
+          "crc32": "21c6fa84",
+          "sha256": "15b14bce6b9df4b12f0f9a9337a4314188c42b405843bb3efb301b128bcf98a3"
+        },
+        {
+          "path": "replays/opening/ktf/세븐스소드/after-up.png",
+          "bytes": 7862,
+          "crc32": "0cf0029e",
+          "sha256": "36103eed8aa9358673866face5436ce57ba4df3ee1c96f2cbb29fd6c4393ad32"
+        },
+        {
+          "path": "replays/opening/ktf/세븐스소드/opening.png",
+          "bytes": 13515,
+          "crc32": "85f7938b",
+          "sha256": "436804d695e4ae77f0cf8fed29aab5409fa79b702ac3f1702ba0452babc89ee6"
+        },
+        {
+          "path": "replays/opening/ktf/세븐스소드/stderr.txt",
+          "bytes": 328,
+          "crc32": "f2665cd9",
+          "sha256": "b33f3f77cfa802843253d7ff681f0a096bc478710d57892fb59a294090591d92"
+        },
+        {
+          "path": "replays/opening/ktf/세븐스소드/trace.ndjson",
+          "bytes": 8143,
+          "crc32": "09068a94",
+          "sha256": "b7fddf0ffe48dffbd22fd328a6d7d43d50ff3882ec9cd9a35888a6da4f55316f"
+        },
+        {
+          "path": "replays/opening/ktf/셔터-영혼의울림/after-ok.png",
+          "bytes": 18981,
+          "crc32": "a58e83e8",
+          "sha256": "cc5dcc45e2e7a54139499b44688507ba3afa50df28a4d92d3939861817fd7936"
+        },
+        {
+          "path": "replays/opening/ktf/셔터-영혼의울림/after-second-ok.png",
+          "bytes": 13189,
+          "crc32": "a9a30be3",
+          "sha256": "90e38cc55c8602f8858aa03d415aec3b3f87a2f168e77c8b52526605d0ff9281"
+        },
+        {
+          "path": "replays/opening/ktf/셔터-영혼의울림/after-up.png",
+          "bytes": 18981,
+          "crc32": "a58e83e8",
+          "sha256": "cc5dcc45e2e7a54139499b44688507ba3afa50df28a4d92d3939861817fd7936"
+        },
+        {
+          "path": "replays/opening/ktf/셔터-영혼의울림/opening.png",
+          "bytes": 19465,
+          "crc32": "6a5f42a0",
+          "sha256": "70c7b433b72d247539673dc05e8f0bedb48de14dbb780ff592ecc7e4aa9823ca"
+        },
+        {
+          "path": "replays/opening/ktf/셔터-영혼의울림/trace.ndjson",
+          "bytes": 9412,
+          "crc32": "3c8103d5",
+          "sha256": "a7881ac071f91402939c7ce34b1eb32df3925b8f3fa1e0614101ef488880ae35"
+        },
+        {
+          "path": "replays/opening/ktf/스노우브라더스2/after-ok.png",
+          "bytes": 8238,
+          "crc32": "166a2521",
+          "sha256": "a7432472a6c06b1b34cc17bd2298380e5f1e33f227f3b9ae0679bdc4b5375e65"
+        },
+        {
+          "path": "replays/opening/ktf/스노우브라더스2/after-up.png",
+          "bytes": 8193,
+          "crc32": "9e72693c",
+          "sha256": "8c4ebfff9a43d6d5d5342770dcefbc946274f2b3b64bd32534d10e769c4c1347"
+        },
+        {
+          "path": "replays/opening/ktf/스노우브라더스2/opening.png",
+          "bytes": 5944,
+          "crc32": "52b3ed49",
+          "sha256": "7d8919087b2c06afab3924750590185ecad8c9490bce5e791416dea8763f90f9"
+        },
+        {
+          "path": "replays/opening/ktf/스노우브라더스2/stderr.txt",
+          "bytes": 326,
+          "crc32": "0adaffc8",
+          "sha256": "ca9820c912320ba977302ed7a0abcb015c9e2321e613fda026fe7bb5f6ad4f7f"
+        },
+        {
+          "path": "replays/opening/ktf/스노우브라더스2/trace.ndjson",
+          "bytes": 7365,
+          "crc32": "b2158579",
+          "sha256": "6423d76454e164d84cf89ab83888ea5261f27d2f3cdcabb6ca43689c85a99759"
+        },
+        {
+          "path": "replays/opening/ktf/스도쿠/after-ok.png",
+          "bytes": 13993,
+          "crc32": "f5e8fbe9",
+          "sha256": "7cfa11abf441cf67052fce79894ac41a282d354a79d9b09e3ea63c727b7857a7"
+        },
+        {
+          "path": "replays/opening/ktf/스도쿠/after-second-ok.png",
+          "bytes": 14697,
+          "crc32": "a2343d21",
+          "sha256": "41ec789698e8b84fd4c495ee66c148605291e7253e2dee5fb4802e0180a4a759"
+        },
+        {
+          "path": "replays/opening/ktf/스도쿠/after-up.png",
+          "bytes": 13973,
+          "crc32": "446ad0ff",
+          "sha256": "60c8234c905a916f65ff6f1643e56942578f7201ab076c0845dc2faf4f6be1ae"
+        },
+        {
+          "path": "replays/opening/ktf/스도쿠/opening.png",
+          "bytes": 16128,
+          "crc32": "ad16c879",
+          "sha256": "0c14e5491568d121c8aa9e4a979bb3ec424dee9644fc11767fc10400ba04a4a8"
+        },
+        {
+          "path": "replays/opening/ktf/스도쿠/trace.ndjson",
+          "bytes": 9579,
+          "crc32": "5213fcdc",
+          "sha256": "03d43cc669b2317731c982d2c740ff5ed9d2a5f5c460eddb42207f9a3df45892"
+        },
+        {
+          "path": "replays/opening/ktf/스파이더맨3/after-ok.png",
+          "bytes": 49356,
+          "crc32": "6adaf6fd",
+          "sha256": "d3e85bc7ce3c665563e65184fb4ca822977e23072b72dca64bd237b4277a3ff4"
+        },
+        {
+          "path": "replays/opening/ktf/스파이더맨3/after-second-ok.png",
+          "bytes": 4822,
+          "crc32": "24a40daf",
+          "sha256": "4cb035a70e763c0bd8e5c19f96dbfd6dd4128523e941140a750d56899ea1194e"
+        },
+        {
+          "path": "replays/opening/ktf/스파이더맨3/after-up.png",
+          "bytes": 49356,
+          "crc32": "6adaf6fd",
+          "sha256": "d3e85bc7ce3c665563e65184fb4ca822977e23072b72dca64bd237b4277a3ff4"
+        },
+        {
+          "path": "replays/opening/ktf/스파이더맨3/opening.png",
+          "bytes": 71011,
+          "crc32": "fba7e5c1",
+          "sha256": "89029e58434a71bd1dba12d430a1e27002d3f9017e3bffad82e0cffadadd6038"
+        },
+        {
+          "path": "replays/opening/ktf/스파이더맨3/trace.ndjson",
+          "bytes": 9625,
+          "crc32": "7575e7a3",
+          "sha256": "6269af64bc8747ca2f90ffe05b57e6cadb67c10d2b11b36b2284c07b1a53e0b4"
+        },
+        {
+          "path": "replays/opening/ktf/아르덴전기/after-ok.png",
+          "bytes": 2357,
+          "crc32": "9ac9d739",
+          "sha256": "534f81adb660fec13874f42936a940d56cc00f3c7cc138c62c9eb7c8c9773f48"
+        },
+        {
+          "path": "replays/opening/ktf/아르덴전기/after-second-ok.png",
+          "bytes": 2357,
+          "crc32": "9ac9d739",
+          "sha256": "534f81adb660fec13874f42936a940d56cc00f3c7cc138c62c9eb7c8c9773f48"
+        },
+        {
+          "path": "replays/opening/ktf/아르덴전기/after-up.png",
+          "bytes": 2357,
+          "crc32": "9ac9d739",
+          "sha256": "534f81adb660fec13874f42936a940d56cc00f3c7cc138c62c9eb7c8c9773f48"
+        },
+        {
+          "path": "replays/opening/ktf/아르덴전기/opening.png",
+          "bytes": 2357,
+          "crc32": "9ac9d739",
+          "sha256": "534f81adb660fec13874f42936a940d56cc00f3c7cc138c62c9eb7c8c9773f48"
+        },
+        {
+          "path": "replays/opening/ktf/아르덴전기/trace.ndjson",
+          "bytes": 9617,
+          "crc32": "5d326032",
+          "sha256": "22298f073d6bf66c6484cdf1ca9478a4736a9969a4873d7b770ab292e20c6256"
+        },
+        {
+          "path": "replays/opening/ktf/얼음낚시/after-ok.png",
+          "bytes": 5472,
+          "crc32": "0d7d749a",
+          "sha256": "97b534fc6c6b830a9f0fffa550f66255bc71b4c90de79e379ed0017068d30916"
+        },
+        {
+          "path": "replays/opening/ktf/얼음낚시/after-up.png",
+          "bytes": 5495,
+          "crc32": "f06eaf8e",
+          "sha256": "858e3418cfa1e2b75d054ef9cadeabea9b67a35550a2df8a1c9134ac1c116f11"
+        },
+        {
+          "path": "replays/opening/ktf/얼음낚시/opening.png",
+          "bytes": 26896,
+          "crc32": "300f4b4f",
+          "sha256": "77fd1fdfa7faa72417347c3d5a35bdb0dbf3b7eb5f3c9b3a8ea2163e9a7ceaa6"
+        },
+        {
+          "path": "replays/opening/ktf/얼음낚시/stderr.txt",
+          "bytes": 326,
+          "crc32": "0adaffc8",
+          "sha256": "ca9820c912320ba977302ed7a0abcb015c9e2321e613fda026fe7bb5f6ad4f7f"
+        },
+        {
+          "path": "replays/opening/ktf/얼음낚시/trace.ndjson",
+          "bytes": 7157,
+          "crc32": "4bc1d198",
+          "sha256": "eba3a3fa72ee4c96d9d1da91f52714294249f7e109b7f7c9c3915ceab920c72e"
+        },
+        {
+          "path": "replays/opening/ktf/엑스맨3/after-ok.png",
+          "bytes": 901,
+          "crc32": "590e036a",
+          "sha256": "57db4b75ecaf8904caff1ad05ed717a897e8b720c2bca064daf0d3559dd1cd9d"
+        },
+        {
+          "path": "replays/opening/ktf/엑스맨3/after-second-ok.png",
+          "bytes": 5747,
+          "crc32": "802e8584",
+          "sha256": "9ae28e72b78b18798c052448bae2c39ed266d28456ada2d0023b6e5515f03395"
+        },
+        {
+          "path": "replays/opening/ktf/엑스맨3/after-up.png",
+          "bytes": 910,
+          "crc32": "8eefb9ae",
+          "sha256": "ba59ad94d72145c8183ae561f661281556b099e26afe2973654d654c8c8281aa"
+        },
+        {
+          "path": "replays/opening/ktf/엑스맨3/opening.png",
+          "bytes": 31691,
+          "crc32": "2bc2bcd1",
+          "sha256": "25d7fe60ecb5d44f4c9ec5ef0083a3a5ea0ea44241bb7090375713429d1a9b16"
+        },
+        {
+          "path": "replays/opening/ktf/엑스맨3/trace.ndjson",
+          "bytes": 9609,
+          "crc32": "d5a04f6a",
+          "sha256": "050aef23d144501c266ddb3187859b79c68c6be002e5ea32586f3f45c22180fa"
+        },
+        {
+          "path": "replays/opening/ktf/영웅전설3(하얀마녀)/after-ok.png",
+          "bytes": 2976,
+          "crc32": "e62cdfa1",
+          "sha256": "ab3163a7b2e05986603160e7b0b959eb6c4fd5867b2960c4331d0f883e55cc14"
+        },
+        {
+          "path": "replays/opening/ktf/영웅전설3(하얀마녀)/after-second-ok.png",
+          "bytes": 8541,
+          "crc32": "0b4ae580",
+          "sha256": "f8145cdc9fbddb9bbd886a2d2f57f57743e94911a3e5586d8a903459ad3978b9"
+        },
+        {
+          "path": "replays/opening/ktf/영웅전설3(하얀마녀)/after-up.png",
+          "bytes": 4525,
+          "crc32": "adfad76f",
+          "sha256": "6ac1f58060101792a4db7ecae442ad4537e0140bd929da8d017ea2342234b1d4"
+        },
+        {
+          "path": "replays/opening/ktf/영웅전설3(하얀마녀)/opening.png",
+          "bytes": 1417,
+          "crc32": "14f8b348",
+          "sha256": "3596bf7f7084984752a88a1b2b1569fa911ab8a2fd704a70de1a60b807508d2b"
+        },
+        {
+          "path": "replays/opening/ktf/영웅전설3(하얀마녀)/trace.ndjson",
+          "bytes": 9512,
+          "crc32": "2ecf2f96",
+          "sha256": "892af07ead6e04c5ec5fa64f6ab4501410b7e3130d870d780eaf4ce9358245b4"
+        },
+        {
+          "path": "replays/opening/ktf/웃찾사맞고/after-ok.png",
+          "bytes": 4222,
+          "crc32": "1939dc20",
+          "sha256": "e5fd2a7537c8e6f364958f0b961796da42ed4dd0e3e970af2c3b97bdb1c6fd8f"
+        },
+        {
+          "path": "replays/opening/ktf/웃찾사맞고/after-second-ok.png",
+          "bytes": 9214,
+          "crc32": "9ef2138b",
+          "sha256": "3530dfd7a96d6f49968e3adae40634833ce9499afb83fbc9bf764f1d1efcfd3f"
+        },
+        {
+          "path": "replays/opening/ktf/웃찾사맞고/after-up.png",
+          "bytes": 20545,
+          "crc32": "dddbb6f7",
+          "sha256": "d4d54847aa4139564a25159738d4310a707b7d85917bbfd95391259b689a7a7f"
+        },
+        {
+          "path": "replays/opening/ktf/웃찾사맞고/opening.png",
+          "bytes": 2439,
+          "crc32": "b0da6aa5",
+          "sha256": "38d6ca9971fc87150bc098aa66f4a4e236f692d90697c533fec06aec6bd40622"
+        },
+        {
+          "path": "replays/opening/ktf/웃찾사맞고/trace.ndjson",
+          "bytes": 9924,
+          "crc32": "e8293716",
+          "sha256": "6b589838147d8f3face6af7feabdbbbef200d5bd8019a2955afd51656d8c9877"
+        },
+        {
+          "path": "replays/opening/ktf/정통맞고2007/stderr.txt",
+          "bytes": 265,
+          "crc32": "288dc0d4",
+          "sha256": "c53b55692c81fda8090d460553b8929b404cd446ae8f067eb81a00ad3886ad35"
+        },
+        {
+          "path": "replays/opening/ktf/지상렬신맞고/after-ok.png",
+          "bytes": 22529,
+          "crc32": "4c46ad02",
+          "sha256": "d47b2206d9cc0fabcc61b59addb0401aecc5fab1c27114e3e15a67d7686b3660"
+        },
+        {
+          "path": "replays/opening/ktf/지상렬신맞고/after-second-ok.png",
+          "bytes": 9365,
+          "crc32": "907aa06e",
+          "sha256": "7fe928d9732c3a9911767bce0918c7d39ebd96a17ce4a4aff6c9daeb6de68c21"
+        },
+        {
+          "path": "replays/opening/ktf/지상렬신맞고/after-up.png",
+          "bytes": 13050,
+          "crc32": "3701cc22",
+          "sha256": "64597af78a5c731fd85f4225d62308a7ef86d921b58cbcb7639930c9a54523bb"
+        },
+        {
+          "path": "replays/opening/ktf/지상렬신맞고/opening.png",
+          "bytes": 5712,
+          "crc32": "b32bc20c",
+          "sha256": "7844b0a0784ddeab18ae70d5102748cf9d2ff8c32b1c3ea97e37f1b1ca048430"
+        },
+        {
+          "path": "replays/opening/ktf/지상렬신맞고/trace.ndjson",
+          "bytes": 9548,
+          "crc32": "c6ca7cd5",
+          "sha256": "c316a196ba828914798040e8cb08ad035422c9f14106fe87b97ab9ceaaadce49"
+        },
+        {
+          "path": "replays/opening/ktf/체스마스터/after-ok.png",
+          "bytes": 5580,
+          "crc32": "3638d790",
+          "sha256": "3d392ee0d85dabcfab0f1359f75f7284985db42d803749319c5029f6d8d867c7"
+        },
+        {
+          "path": "replays/opening/ktf/체스마스터/after-up.png",
+          "bytes": 5589,
+          "crc32": "3cb53125",
+          "sha256": "a5467d6d4ca742068a160f3441c03030963fb2593521567fab894e178b33a585"
+        },
+        {
+          "path": "replays/opening/ktf/체스마스터/opening.png",
+          "bytes": 11275,
+          "crc32": "ffb91554",
+          "sha256": "b11db524cabf027c7358d56ed26a92adb5417ace4fe5e82d9e33f67c67cb3b7b"
+        },
+        {
+          "path": "replays/opening/ktf/체스마스터/stderr.txt",
+          "bytes": 328,
+          "crc32": "ec0cb4c9",
+          "sha256": "6a1c881c4691ea70194145523d6f3a38740325a83162639f2dbcacdd34bbee78"
+        },
+        {
+          "path": "replays/opening/ktf/체스마스터/trace.ndjson",
+          "bytes": 8224,
+          "crc32": "4e537d32",
+          "sha256": "048a990c4d82a97fea81aecdb9d36b01f331fbec13d414d496d1bce5c3897ad1"
+        },
+        {
+          "path": "replays/opening/ktf/카우스블레이드/after-ok.png",
+          "bytes": 18879,
+          "crc32": "190c571f",
+          "sha256": "463f882d9d73dec6a95238d63c276382e8d7cc0fe9b6ca286e8872603e9c9940"
+        },
+        {
+          "path": "replays/opening/ktf/카우스블레이드/after-second-ok.png",
+          "bytes": 12456,
+          "crc32": "a928227a",
+          "sha256": "79ae80f1edc34c20a81cf3c0102d25840a53da8dbe505325e1621de0c42ede79"
+        },
+        {
+          "path": "replays/opening/ktf/카우스블레이드/after-up.png",
+          "bytes": 18879,
+          "crc32": "190c571f",
+          "sha256": "463f882d9d73dec6a95238d63c276382e8d7cc0fe9b6ca286e8872603e9c9940"
+        },
+        {
+          "path": "replays/opening/ktf/카우스블레이드/opening.png",
+          "bytes": 4596,
+          "crc32": "c67eee74",
+          "sha256": "88051af447ac7cfca334dbcef657c9b6180a32974b9e670408ea46969446a8a1"
+        },
+        {
+          "path": "replays/opening/ktf/카우스블레이드/trace.ndjson",
+          "bytes": 9661,
+          "crc32": "cd46fdea",
+          "sha256": "7ee46876e7a87a9232f68df3da31099240c7d9b4f24cc835050b3edb8352b210"
+        },
+        {
+          "path": "replays/opening/ktf/컴투스_맞고_2006/after-ok.png",
+          "bytes": 7470,
+          "crc32": "21e0c65b",
+          "sha256": "6852f693c7b3bd3835fcc9fd291a30b2433fae2b43f58573499cb95d37d86152"
+        },
+        {
+          "path": "replays/opening/ktf/컴투스_맞고_2006/after-second-ok.png",
+          "bytes": 4103,
+          "crc32": "6485fdbd",
+          "sha256": "42c3c3b2b8759356c9f375f34884f15d63a1eb689e76fc80ced9d80652937437"
+        },
+        {
+          "path": "replays/opening/ktf/컴투스_맞고_2006/after-up.png",
+          "bytes": 4532,
+          "crc32": "58a623a0",
+          "sha256": "3f3628168b4185a69703e0e9462ea32d800ff31bc3545040e6ff58808823399f"
+        },
+        {
+          "path": "replays/opening/ktf/컴투스_맞고_2006/opening.png",
+          "bytes": 2993,
+          "crc32": "a810b7c4",
+          "sha256": "516f88cdadeae85de4789ca45338b1ba48bcf649e510955fe02f229c7c2ddda2"
+        },
+        {
+          "path": "replays/opening/ktf/컴투스_맞고_2006/trace.ndjson",
+          "bytes": 9635,
+          "crc32": "56260488",
+          "sha256": "1b01f5a58468261e7767f9183e9972c7748941a671556cc0a551d0b3ce03adc2"
+        },
+        {
+          "path": "replays/opening/ktf/크아bnb2007/after-ok.png",
+          "bytes": 10603,
+          "crc32": "1f0287db",
+          "sha256": "69d89b3c066d56c7aef7a838a6c51ee057202d64ae0c1d13d06ac41a6cc2389b"
+        },
+        {
+          "path": "replays/opening/ktf/크아bnb2007/after-second-ok.png",
+          "bytes": 2817,
+          "crc32": "bac6400c",
+          "sha256": "481e27f19bcc8ae67629513076c93c6ced727155ab0b77282f3ea263a82764f1"
+        },
+        {
+          "path": "replays/opening/ktf/크아bnb2007/after-up.png",
+          "bytes": 10730,
+          "crc32": "d5876cb6",
+          "sha256": "17e9fd47768bb12a26e6739b044b0c5dba2861edfc7265bd695b9b76eca55291"
+        },
+        {
+          "path": "replays/opening/ktf/크아bnb2007/opening.png",
+          "bytes": 18616,
+          "crc32": "fb883f71",
+          "sha256": "540fa6809ee2fe6c4484e912d6494c70f7bb56324d882376865b1436f8d1e839"
+        },
+        {
+          "path": "replays/opening/ktf/크아bnb2007/trace.ndjson",
+          "bytes": 9745,
+          "crc32": "ac263ca1",
+          "sha256": "b5db7ce27204389d593cf6175e5850610df4eb15c5b1b186ac73e76ad80a63b7"
+        },
+        {
+          "path": "replays/opening/ktf/탁재훈신맞고2007/after-ok.png",
+          "bytes": 2024,
+          "crc32": "de66db2b",
+          "sha256": "0f82b0da854c34f7d1e8780f9202fa05c36847fa8011021905c6d9f3f29b669e"
+        },
+        {
+          "path": "replays/opening/ktf/탁재훈신맞고2007/after-second-ok.png",
+          "bytes": 29952,
+          "crc32": "ae8cc45d",
+          "sha256": "8ef8620f86b1b36729ab8fc6b26ca31efbe0a7fd574de161b8415c18fa0b030a"
+        },
+        {
+          "path": "replays/opening/ktf/탁재훈신맞고2007/after-up.png",
+          "bytes": 15733,
+          "crc32": "f830cdd8",
+          "sha256": "7a1ce7978a0ab49b408e723cce180a1a7db0ad66debadbf38da26442f33de910"
+        },
+        {
+          "path": "replays/opening/ktf/탁재훈신맞고2007/opening.png",
+          "bytes": 4647,
+          "crc32": "2eac0ae8",
+          "sha256": "e4245c48d0a77bf961da533f833088bf62dfed59e913b4132d95c90b600b593f"
+        },
+        {
+          "path": "replays/opening/ktf/탁재훈신맞고2007/trace.ndjson",
+          "bytes": 9523,
+          "crc32": "b8022795",
+          "sha256": "9f6ba8cfa80e481766e88c432bb2d4659b22cc8dc5aa87b580445073a0a54863"
+        },
+        {
+          "path": "replays/opening/ktf/트랜스포머/after-ok.png",
+          "bytes": 80857,
+          "crc32": "5a7aaa46",
+          "sha256": "831a75d48fb0f0f60849ae6e8082c9560d4df13591e7d424962831773a0b384d"
+        },
+        {
+          "path": "replays/opening/ktf/트랜스포머/after-second-ok.png",
+          "bytes": 82851,
+          "crc32": "6225364d",
+          "sha256": "f933e2b09489b4afb3e61804ccff2201dbdae3a8f81e1f540c933bc7a4674f0b"
+        },
+        {
+          "path": "replays/opening/ktf/트랜스포머/after-up.png",
+          "bytes": 80969,
+          "crc32": "864ffc6a",
+          "sha256": "aa611a0ca64fad081ce32aa9c17bcc889831cd298a6c95646be2065da28c1abb"
+        },
+        {
+          "path": "replays/opening/ktf/트랜스포머/opening.png",
+          "bytes": 73422,
+          "crc32": "0ba70e58",
+          "sha256": "8cb56e58be8e32998738e3d552a3759d87a061cf947a37f9d05a69cce1e99539"
+        },
+        {
+          "path": "replays/opening/ktf/트랜스포머/trace.ndjson",
+          "bytes": 9873,
+          "crc32": "0ef9be70",
+          "sha256": "d51d58d171456c21515a8358ced52a5db6cfe976b92eb2a6d99ad5d3aadddb5e"
+        },
+        {
+          "path": "replays/opening/ktf/해신장보고/stderr.txt",
+          "bytes": 761,
+          "crc32": "cc7155c0",
+          "sha256": "f2076c41afcbccdf2ecdd070052968e3baac5ce987a3ce5787ffcafde72efc51"
+        },
+        {
+          "path": "replays/opening/lgt/대박맞고-왕후의길/after-ok.png",
+          "bytes": 934,
+          "crc32": "911ee6a0",
+          "sha256": "45bc7cb924588b6322d70c0239dbdee5b711396cf1339b390910b75824fcbf04"
+        },
+        {
+          "path": "replays/opening/lgt/대박맞고-왕후의길/after-second-ok.png",
+          "bytes": 934,
+          "crc32": "911ee6a0",
+          "sha256": "45bc7cb924588b6322d70c0239dbdee5b711396cf1339b390910b75824fcbf04"
+        },
+        {
+          "path": "replays/opening/lgt/대박맞고-왕후의길/after-up.png",
+          "bytes": 934,
+          "crc32": "911ee6a0",
+          "sha256": "45bc7cb924588b6322d70c0239dbdee5b711396cf1339b390910b75824fcbf04"
+        },
+        {
+          "path": "replays/opening/lgt/대박맞고-왕후의길/opening.png",
+          "bytes": 2664,
+          "crc32": "e47da5f1",
+          "sha256": "5f834b574454134d2ecba86030806c69a244d51b032d83f7afbfa6277ce9f429"
+        },
+        {
+          "path": "replays/opening/lgt/대박맞고-왕후의길/trace.ndjson",
+          "bytes": 9426,
+          "crc32": "0f8b11fb",
+          "sha256": "1c570bf9dd1a617b1797b1232ee3792230ac1404df229b6283fb45d11655e6f7"
+        },
+        {
+          "path": "replays/opening/lgt/무한신맞고2009/after-ok.png",
+          "bytes": 2639,
+          "crc32": "8070cc03",
+          "sha256": "7214a1cef00f7a2ea70536fe6e92713c941ed5d889e387341735445cb2bfa274"
+        },
+        {
+          "path": "replays/opening/lgt/무한신맞고2009/after-second-ok.png",
+          "bytes": 2035,
+          "crc32": "c0167370",
+          "sha256": "ad97aa7b98293532fccca1bed9787477bac8c4439d954b101754cb449fb9cb6c"
+        },
+        {
+          "path": "replays/opening/lgt/무한신맞고2009/after-up.png",
+          "bytes": 2639,
+          "crc32": "8070cc03",
+          "sha256": "7214a1cef00f7a2ea70536fe6e92713c941ed5d889e387341735445cb2bfa274"
+        },
+        {
+          "path": "replays/opening/lgt/무한신맞고2009/opening.png",
+          "bytes": 2765,
+          "crc32": "2b1d9472",
+          "sha256": "05bd05d94a151641eec56c6e583740743e05e4f19779bfe9ba02b864858bc517"
+        },
+        {
+          "path": "replays/opening/lgt/무한신맞고2009/trace.ndjson",
+          "bytes": 9426,
+          "crc32": "55f82a1a",
+          "sha256": "fadcb6af05393d18408908090647cfe1cf2a336ced795989ccf59c8fdff92810"
+        },
+        {
+          "path": "replays/opening/lgt/스파이더맨3/after-ok.png",
+          "bytes": 1071,
+          "crc32": "e7cd295c",
+          "sha256": "a0a6667324d52ded020bf972faa0306d4e51d8bfa9234cfe034e50caad4e5864"
+        },
+        {
+          "path": "replays/opening/lgt/스파이더맨3/after-second-ok.png",
+          "bytes": 1113,
+          "crc32": "7fd643da",
+          "sha256": "04c1c659ac92b91e54043121004ca74d05641db84a840fbecd2fb2de25aa0b4b"
+        },
+        {
+          "path": "replays/opening/lgt/스파이더맨3/after-up.png",
+          "bytes": 1090,
+          "crc32": "f588ecf9",
+          "sha256": "5014a29d7334a160d601386f3ca42d53f8e27876cebf0403be9dcb51f5986c34"
+        },
+        {
+          "path": "replays/opening/lgt/스파이더맨3/opening.png",
+          "bytes": 1038,
+          "crc32": "64d50615",
+          "sha256": "71e7cb79e68ab959543e2a02b14d7a205af98cd53ff2f4928058adef7c541ada"
+        },
+        {
+          "path": "replays/opening/lgt/스파이더맨3/trace.ndjson",
+          "bytes": 11167,
+          "crc32": "d8974155",
+          "sha256": "a3efa090d3d42faaa4ead0dda071e4bdebbfc9b5b815fa85bb2df1bbb596fca1"
+        },
+        {
+          "path": "replays/opening/lgt/영웅서기3/after-ok.png",
+          "bytes": 5006,
+          "crc32": "566ebcea",
+          "sha256": "a78e6e400d7843017321119426eba5a04d2000a926732f12ccbe0fcb8c0a7e72"
+        },
+        {
+          "path": "replays/opening/lgt/영웅서기3/after-second-ok.png",
+          "bytes": 43215,
+          "crc32": "1aae7ad6",
+          "sha256": "e4af6cf9d1e0a391fdc5aa46b6d6fa76d2bc3a288424fb13b23e4af77b0c6e35"
+        },
+        {
+          "path": "replays/opening/lgt/영웅서기3/after-up.png",
+          "bytes": 5006,
+          "crc32": "566ebcea",
+          "sha256": "a78e6e400d7843017321119426eba5a04d2000a926732f12ccbe0fcb8c0a7e72"
+        },
+        {
+          "path": "replays/opening/lgt/영웅서기3/opening.png",
+          "bytes": 2666,
+          "crc32": "93b8fc7e",
+          "sha256": "3d8d6d84fb813fc56a205488d75f7a010d9031c803cd68716c93a37cb95627d1"
+        },
+        {
+          "path": "replays/opening/lgt/영웅서기3/trace.ndjson",
+          "bytes": 9424,
+          "crc32": "fd28fbdc",
+          "sha256": "7ecacca4bbf4f2c0819b0140d2da794ea66e056d9aa88cef4995f90653ec1018"
+        },
+        {
+          "path": "replays/opening/lgt/정통맞고2009/after-ok.png",
+          "bytes": 12388,
+          "crc32": "afed09bb",
+          "sha256": "c0eb708b72d23ee4ec60990ee51b48567bebf2fae50db67c40a2bb5f748da063"
+        },
+        {
+          "path": "replays/opening/lgt/정통맞고2009/after-second-ok.png",
+          "bytes": 2401,
+          "crc32": "23a4bbad",
+          "sha256": "86841571b149b5268b36bf3bcc5e6b9d5d81b03f339c67f6df8d71745130c0b3"
+        },
+        {
+          "path": "replays/opening/lgt/정통맞고2009/after-up.png",
+          "bytes": 4454,
+          "crc32": "4e2a7af7",
+          "sha256": "1235638331ecb1efc56af8aee17170c214cde48a26a300ddced2e8f4d52922dc"
+        },
+        {
+          "path": "replays/opening/lgt/정통맞고2009/opening.png",
+          "bytes": 3103,
+          "crc32": "edf7d3bd",
+          "sha256": "59d68744957fa39f91588e1b4207b77cb58f0b4325975db6f369bcc48b064c37"
+        },
+        {
+          "path": "replays/opening/lgt/정통맞고2009/trace.ndjson",
+          "bytes": 10455,
+          "crc32": "095da290",
+          "sha256": "ea6bded18bacfa4232bb0104798c0060cd5bc9966686086933d5e80c68a23bd2"
+        },
+        {
+          "path": "replays/opening/lgt/체스마스터/after-ok.png",
+          "bytes": 16385,
+          "crc32": "2c31fa20",
+          "sha256": "e50c0f59d660720e6fb27fbff846de136fc4dd6752ae01dfec61bda6f86f3934"
+        },
+        {
+          "path": "replays/opening/lgt/체스마스터/after-second-ok.png",
+          "bytes": 6871,
+          "crc32": "301479e3",
+          "sha256": "c341caa4d1da1311fbf4e78923a008f070e170991ca08b456a8de239a1fda01f"
+        },
+        {
+          "path": "replays/opening/lgt/체스마스터/after-up.png",
+          "bytes": 16385,
+          "crc32": "2c31fa20",
+          "sha256": "e50c0f59d660720e6fb27fbff846de136fc4dd6752ae01dfec61bda6f86f3934"
+        },
+        {
+          "path": "replays/opening/lgt/체스마스터/opening.png",
+          "bytes": 2260,
+          "crc32": "5041860f",
+          "sha256": "6dcee7d637dad1fc40da02746c2b9e8fad9079ce268607366c4a9789c5942895"
+        },
+        {
+          "path": "replays/opening/lgt/체스마스터/trace.ndjson",
+          "bytes": 10690,
+          "crc32": "86f2a263",
+          "sha256": "7e766d7e8366961117aa4d175eea9ce88489ff50207d2a1bf325d99f98d34f6f"
+        },
+        {
+          "path": "replays/opening/lgt/현영맞고2006/after-ok.png",
+          "bytes": 3031,
+          "crc32": "41e5b7f8",
+          "sha256": "495afc8b103b07f67de6d2df72b982b3e77b1013ccd6837a9da5010d40ab9b95"
+        },
+        {
+          "path": "replays/opening/lgt/현영맞고2006/after-second-ok.png",
+          "bytes": 44615,
+          "crc32": "d6e5a8e0",
+          "sha256": "f37e47305f280a3f46f467631ad38f16ba0b774a310846c40ca9dff347898cc1"
+        },
+        {
+          "path": "replays/opening/lgt/현영맞고2006/after-up.png",
+          "bytes": 3031,
+          "crc32": "41e5b7f8",
+          "sha256": "495afc8b103b07f67de6d2df72b982b3e77b1013ccd6837a9da5010d40ab9b95"
+        },
+        {
+          "path": "replays/opening/lgt/현영맞고2006/opening.png",
+          "bytes": 2139,
+          "crc32": "c6ac6268",
+          "sha256": "7998e986947e7869f8e8f1ba125f1e2ccdd356eb5eceb6349548da2508b1fe31"
+        },
+        {
+          "path": "replays/opening/lgt/현영맞고2006/trace.ndjson",
+          "bytes": 11166,
+          "crc32": "a1eecfba",
+          "sha256": "cf0358f67b2464b99eea11d9b07f1a2f62ef90c8d62b2ec5afee25d7090df865"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/control/after.png",
+          "bytes": 20689,
+          "crc32": "8d4283e9",
+          "sha256": "4edcf1098a1c82b4e22d3fb57765179432aead8a56441055566bf0e006c71adf"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/control/before.png",
+          "bytes": 20688,
+          "crc32": "506236c0",
+          "sha256": "d09b3282142487cac94dd4e20d046ad5cd3e687e4f095506bcbb60cd322e7697"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/control/replay.lua",
+          "bytes": 156,
+          "crc32": "89651cfd",
+          "sha256": "4cc1b0583942dd01f83d767c27171b6475d318fd9a3c96a96572e140af836ffb"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/control/trace.ndjson",
+          "bytes": 6800,
+          "crc32": "b3b6bf4c",
+          "sha256": "e7aa578fa07b23874228ea36a71d61800c567593a8e3085d3eb8cd9df4b5c0d5"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/input/after.png",
+          "bytes": 21263,
+          "crc32": "fcb76270",
+          "sha256": "e280ee7b24dd80c2acc6e2679871a94f9bda439a92b66ddaa5f5427bc9076190"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/input/before.png",
+          "bytes": 20688,
+          "crc32": "506236c0",
+          "sha256": "d09b3282142487cac94dd4e20d046ad5cd3e687e4f095506bcbb60cd322e7697"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/input/replay.lua",
+          "bytes": 161,
+          "crc32": "532f2760",
+          "sha256": "5174c028187e461b7ac80a8cae1629b5efa05e55888ddd8252e7d0059507493e"
+        },
+        {
+          "path": "replays/pairs/magic-shop-tycoon-2/input/trace.ndjson",
+          "bytes": 6787,
+          "crc32": "cc1bf0dd",
+          "sha256": "a800cab5e5f4177cf7734772d7fa1a91d6acb07d281cc91bd5e9d0cd0d1aefa8"
+        }
+      ]
+    },
+    {
+      "id": "samsung-s250-native-games",
+      "repositoryPath": "research/archives/Samsung-SCH-S250-Haunted-School-and-Lost-Planet-II.zip",
+      "bytes": 3158224,
+      "sha256": "d48406f7f6dfe998e87402dd5a501f5f7cdff4d90f3307fbb9d39dc520663fc7",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/haunted-school/control.json",
+          "bytes": 1928,
+          "crc32": "a4d90f8f",
+          "sha256": "06a8aaf1ac19679b9ccc4b043b134a9fb06f6ba70a7b8cc8d95424155f3907aa"
+        },
+        {
+          "path": "evidence/haunted-school/input.json",
+          "bytes": 1929,
+          "crc32": "1238ecc4",
+          "sha256": "a97c52cbb3fd4bdff8d40474bb06dbc5ffd1043e79dc7e698cbe1d6af0e96c79"
+        },
+        {
+          "path": "evidence/haunted-school/repeat.json",
+          "bytes": 1929,
+          "crc32": "1238ecc4",
+          "sha256": "a97c52cbb3fd4bdff8d40474bb06dbc5ffd1043e79dc7e698cbe1d6af0e96c79"
+        },
+        {
+          "path": "evidence/lost-planet-ii/control.json",
+          "bytes": 1924,
+          "crc32": "635cfc22",
+          "sha256": "181b8a92b61ea59abb7f04701daacf29b3964b354881b92ed50c07a5567c63eb"
+        },
+        {
+          "path": "evidence/lost-planet-ii/input.json",
+          "bytes": 1925,
+          "crc32": "790d25f2",
+          "sha256": "2ba751ee4e4909e80debb02be8de4708ddf1e0c57a642020f168c2025bb3a90e"
+        },
+        {
+          "path": "evidence/lost-planet-ii/repeat.json",
+          "bytes": 1925,
+          "crc32": "790d25f2",
+          "sha256": "2ba751ee4e4909e80debb02be8de4708ddf1e0c57a642020f168c2025bb3a90e"
+        },
+        {
+          "path": "evidence/native-decoder.txt",
+          "bytes": 106,
+          "crc32": "2fdf08a5",
+          "sha256": "1b2624ee27ac3176352cf96e8df1a2cdc69b3453567d86581d41763edb884bd9"
+        },
+        {
+          "path": "evidence/summary.json",
+          "bytes": 5058,
+          "crc32": "53441736",
+          "sha256": "566a8426d8c5b4c866d7598653d0fa9ca6d241ee761229b52daf53ceffb4cc54"
+        },
+        {
+          "path": "frames/haunted-school/control-after.png",
+          "bytes": 69947,
+          "crc32": "2c8824fd",
+          "sha256": "b2d1764446454357e5cb83a18a7009f7ebcc9dc9b641349352f567985e3007a4"
+        },
+        {
+          "path": "frames/haunted-school/input-after.png",
+          "bytes": 69093,
+          "crc32": "c31d5ed4",
+          "sha256": "598a9099771b1fef9902f2f42b460fb0a3bf96d34ace2b554d044e013d253f9f"
+        },
+        {
+          "path": "frames/haunted-school/input-intro.png",
+          "bytes": 52306,
+          "crc32": "85013598",
+          "sha256": "3f8be448b996f654e91403fcd48f6359023a77b59f454b8ee82ad4f166d1cfb1"
+        },
+        {
+          "path": "frames/haunted-school/input-level.png",
+          "bytes": 69947,
+          "crc32": "2c8824fd",
+          "sha256": "b2d1764446454357e5cb83a18a7009f7ebcc9dc9b641349352f567985e3007a4"
+        },
+        {
+          "path": "frames/haunted-school/input-menu.png",
+          "bytes": 67905,
+          "crc32": "0900cfa8",
+          "sha256": "3e74da522d5d9d38a0e4dac4b1a011656e86a93d3dbb2ad12052e8a339cd3a67"
+        },
+        {
+          "path": "frames/haunted-school/input-title.png",
+          "bytes": 69018,
+          "crc32": "f6b0dd08",
+          "sha256": "c8cef02a968e3336e92baf11b985dde105d7cab150e89942ecc2817581fe95c1"
+        },
+        {
+          "path": "frames/lost-planet-ii/control-after.png",
+          "bytes": 68245,
+          "crc32": "0ee43c59",
+          "sha256": "c030e4ac3c91e93f0da62254ac8c7a6a7673727d919a9324855fe4c0dde002f0"
+        },
+        {
+          "path": "frames/lost-planet-ii/input-after.png",
+          "bytes": 67824,
+          "crc32": "5b01c583",
+          "sha256": "9854df17b892baef498ef3e83a304d1b1d37196ed7bfae8ee941698bba4f1281"
+        },
+        {
+          "path": "frames/lost-planet-ii/input-intro.png",
+          "bytes": 52280,
+          "crc32": "0034796f",
+          "sha256": "5363e29bee87259acbed096c600cb2c6f7329a3d956bab0ae3c073741afc2b43"
+        },
+        {
+          "path": "frames/lost-planet-ii/input-level.png",
+          "bytes": 68006,
+          "crc32": "479bdec6",
+          "sha256": "3a972905c2da25070fc0cbf63bd3902e847c715f6dbb3a20e41480111b34afa6"
+        },
+        {
+          "path": "frames/lost-planet-ii/input-menu.png",
+          "bytes": 80159,
+          "crc32": "04b7c41c",
+          "sha256": "e46df37530d8e1154c5a61e94874a0ebcd92768e6e8de2d84f723ad52ba387dc"
+        },
+        {
+          "path": "frames/lost-planet-ii/input-title.png",
+          "bytes": 90951,
+          "crc32": "28127c79",
+          "sha256": "2e305eac0c6232e1c2439acd90cd9be33d42d7be8a8341c461eb47bca0ef56e1"
+        },
+        {
+          "path": "resources.zip",
+          "bytes": 2349060,
+          "crc32": "b1cdc7a1",
+          "sha256": "a252fa54db0dec62623082947784d7699d6cd9fa5a80fb19c1a199f3eb53ea27"
+        },
+        {
+          "path": "tools/verify-native-amos.py",
+          "bytes": 2327,
+          "crc32": "249588aa",
+          "sha256": "203883f149d9b03aebf285f032b287a461ec6ac96937494fca44d45d1890588c"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4061,
+          "crc32": "a2e7f846",
+          "sha256": "b84bc9e58447d5cd3dc5b7b3000f19d6dbe101b6a7adfddfe1bd5455d71d3506"
+        }
+      ]
+    },
+    {
+      "id": "reakosys-m3d-archive",
+      "repositoryPath": "research/archives/Reakosys-M3D-Documentation-and-Demos.zip",
+      "bytes": 2334874,
+      "sha256": "93049e13be6ed955fd5853f91e1e169fbf404b0fcfd9c8e36106bf7f26a65bf9",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "evidence/captures.json",
+          "bytes": 32589,
+          "crc32": "32659119",
+          "sha256": "366a35f4628bc7924653fe763478b4b8a540193ab603e236b8907a846b23ec5a"
+        },
+        {
+          "path": "evidence/headers/M3D_API_Reference.pdf.txt",
+          "bytes": 143,
+          "crc32": "579f6c3e",
+          "sha256": "4aaaf7f690d70df057813c636084a099542de31c1f78e80473324618e7fae404"
+        },
+        {
+          "path": "evidence/headers/ReakoLite-M3D-Engine.pdf.txt",
+          "bytes": 143,
+          "crc32": "ae860ca8",
+          "sha256": "f4ed2240b8c055e392a86c2ffd817137e6e349127246b4aabc6326f35f197a96"
+        },
+        {
+          "path": "evidence/headers/demo-phone.swf.txt",
+          "bytes": 159,
+          "crc32": "43d526a2",
+          "sha256": "8d3e1eb42c0dbd2f2afa01ccf045ab91c69a9428c264d237506f9361ef8fa371"
+        },
+        {
+          "path": "evidence/headers/english-product.swf.txt",
+          "bytes": 157,
+          "crc32": "8631cc20",
+          "sha256": "d31e20e61d2b19ced7ec115490d8dfe35714998c0cd58b7c22dc0e5de9a3bb54"
+        },
+        {
+          "path": "evidence/headers/flash-demo.swf.txt",
+          "bytes": 153,
+          "crc32": "706fcc70",
+          "sha256": "d14e0870930fc1c1393c5dfae9b5c9fee152e379c942cebc15d1c8345b333834"
+        },
+        {
+          "path": "evidence/headers/korean-product.swf.txt",
+          "bytes": 155,
+          "crc32": "51518115",
+          "sha256": "5c13c74d5cc6d2ac2c2e09a9f67a947141618bae3bdd1cc5d46fd944b9a3c321"
+        },
+        {
+          "path": "evidence/static-structure.txt",
+          "bytes": 1037,
+          "crc32": "52632d98",
+          "sha256": "0f4cc52f9117e7b775165765c8661c633ce8b7a528e2f0a73529813f8ad3e004"
+        },
+        {
+          "path": "evidence/wayback-index.json",
+          "bytes": 219682,
+          "crc32": "e0c8b829",
+          "sha256": "aac40cc2ea73d5a39c2882dc457f18cc41930f45f13f2b9c5c4e278f79b2f832"
+        },
+        {
+          "path": "originals/M3D_API_Reference.pdf",
+          "bytes": 465772,
+          "crc32": "c4227628",
+          "sha256": "8be3a781ed2bed452556d12ce67c459f3475ac5c8f0e66f6c99b37954222a523"
+        },
+        {
+          "path": "originals/ReakoLite-M3D-Engine.pdf",
+          "bytes": 729308,
+          "crc32": "6d482481",
+          "sha256": "d3b2217b8dd324f7a6302f250f07786f9f1a311b3472ff5327b9b7777605cf5b"
+        },
+        {
+          "path": "originals/demo-phone.swf",
+          "bytes": 1564366,
+          "crc32": "2ff1a316",
+          "sha256": "3ea53143429ae0438e2768791f8e1f022fa9ac213b392920213c146b9abfc9f5"
+        },
+        {
+          "path": "originals/english-product.swf",
+          "bytes": 104871,
+          "crc32": "c5f6ed83",
+          "sha256": "5222f2a1db698fb3a11b264cfa981e6606db5b0882330281b829b50c0a489732"
+        },
+        {
+          "path": "originals/flash-demo.swf",
+          "bytes": 5163,
+          "crc32": "1d5fd8eb",
+          "sha256": "89b74c4ea7613f8d5fadbdd602cb9b07e2e024980cd4538343553bdfd41a1fa3"
+        },
+        {
+          "path": "originals/korean-product.swf",
+          "bytes": 77642,
+          "crc32": "062047ae",
+          "sha256": "95eac6c702e9085503ab50fcbe1f017b7f7280726ff59afc168490437a8cd7ca"
+        },
+        {
+          "path": "pages/demo-phone-eng.html",
+          "bytes": 7967,
+          "crc32": "b87c4ccf",
+          "sha256": "99270d3b654250a1196d91c4f6474b6df13403a926207be0a4105e4fc680440c"
+        },
+        {
+          "path": "pages/demo-phone.html",
+          "bytes": 7821,
+          "crc32": "9f0e17e9",
+          "sha256": "c2b35d41ee9ac87bad78b12919181bf2e0913dbac9622a19ddf7398ab29d5093"
+        },
+        {
+          "path": "pages/manual_list.html",
+          "bytes": 41380,
+          "crc32": "cf2fd293",
+          "sha256": "bb650b934c4e744121eb0acdd4f88ab2bb9338ea9c441840dc3cd0cc4147ad67"
+        },
+        {
+          "path": "pages/manual_view-4.html",
+          "bytes": 32705,
+          "crc32": "8fd06a2b",
+          "sha256": "8692769a67f34b842f89c386b147ca0b0fe93cb820d78501e131a3974c344ed7"
+        },
+        {
+          "path": "pages/manual_view-5.html",
+          "bytes": 32840,
+          "crc32": "5be3c60a",
+          "sha256": "788294b8f59a546c7f62a11ae9fbc687e2d9559647d7480b8863281fcdf1e8c1"
+        },
+        {
+          "path": "pages/pds_list.html",
+          "bytes": 34921,
+          "crc32": "2ef0b9b3",
+          "sha256": "dbf5e9b37f81565f8d2a65b118f8c59f337adfa5afef8c8e1ea413b05b10d823"
+        },
+        {
+          "path": "pages/pds_view-15.html",
+          "bytes": 32933,
+          "crc32": "d8a45fe6",
+          "sha256": "eee0073f1bd6b167a719a45fa5d53120022167b9842fd80703077a407356783a"
+        },
+        {
+          "path": "pages/pds_view-16.html",
+          "bytes": 32959,
+          "crc32": "2411401e",
+          "sha256": "9aa53a146cd961ec17d2b67ec04f49b9319293556403c9112827b23526b986ad"
+        },
+        {
+          "path": "pages/pds_view-17.html",
+          "bytes": 32737,
+          "crc32": "29abf4ea",
+          "sha256": "41c95f096b12eeed1178980fa613b62684d2e6acd5b1e1296cbf9ff1c6d9c78f"
+        },
+        {
+          "path": "pages/pro02.html",
+          "bytes": 16179,
+          "crc32": "638a42e3",
+          "sha256": "fd26d92651105e59fa59ed54f5088f515c0cdd8017f2c711ef39fbe21feb2012"
+        },
+        {
+          "path": "pages/sample_view-9.html",
+          "bytes": 33154,
+          "crc32": "f55b3c2a",
+          "sha256": "0c61e2949288488b74e3a01a0c4dc328d4360151db1a24e388772dbc4f7ea5f7"
+        },
+        {
+          "path": "pages/sdk_list.html",
+          "bytes": 28623,
+          "crc32": "e78ff789",
+          "sha256": "c149d30c3670a8f264c5065da16d7ab2f4ea443a036f29dd6bacd343a833c412"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 4814,
+          "crc32": "d325fe10",
+          "sha256": "7db362845e60a8ab9609047b74bde025fe867e15d6fe3a7f30d247dfe8ea0ada"
+        }
+      ]
+    },
+    {
       "id": "samsung-x6000-net-alkkagi",
       "repositoryPath": "research/archives/Samsung-SPH-X6000-Net-Alkkagi.zip",
       "bytes": 69477,
@@ -213610,9 +216490,9 @@
     }
   ],
   "counts": {
-    "archives": 122,
-    "archiveBytes": 2480237657,
-    "fileMembers": 35418,
-    "uniqueMemberHashes": 20674
+    "archives": 126,
+    "archiveBytes": 2521475612,
+    "fileMembers": 35892,
+    "uniqueMemberHashes": 21061
   }
 }

@@ -1,0 +1,4045 @@
+{
+  "schema": 1,
+  "archives": [
+    {
+      "id": "dubigame-skt-fifteen",
+      "title": "Dubigame · 15 пакетов SKT",
+      "category": "Игры и игровые сборки",
+      "description": "Исходные архивы SKT с JAR, MOD и операторскими дескрипторами. Для четырёх игр подтверждён ввод в ARAM.",
+      "repositoryPath": "research/archives/Dubigame-SKT-15-Game-Packages.zip",
+      "bytes": 6960264,
+      "sha256": "7affba0a3beddeb47ed924eabc215e98302ab1acab98c521f4eb1a3840943d66",
+      "sources": [
+        {
+          "label": "Майское зеркало Dubigame, ZIP с диапазонами",
+          "url": "https://archive.org/details/dubi_20210525"
+        }
+      ]
+    },
+    {
+      "id": "dubigame-ktf-lgt-mirrors",
+      "title": "Dubigame · 43 сборки KTF и LGT",
+      "category": "Игры и игровые сборки",
+      "description": "35 сборок KTF и 7 LGT из майского зеркала, плюс Magic Shop Tycoon 2 из январской копии.",
+      "repositoryPath": "research/archives/Dubigame-KTF-LGT-43-Game-Packages.zip",
+      "bytes": 28784593,
+      "sha256": "4b8cbda88f03ce64a87026b2190606e35a249b6c28d2e9c89897f3e31ed49dd1",
+      "sources": [
+        {
+          "label": "Майское зеркало Dubigame, ZIP с диапазонами",
+          "url": "https://archive.org/details/dubi_20210525"
+        },
+        {
+          "label": "Январский снимок Dubigame, оглавление 7z",
+          "url": "https://archive.org/details/dubigame.tistory.com"
+        },
+        {
+          "label": "Magic Shop Tycoon 2, оригинальное вложение",
+          "url": "https://blog.kakaocdn.net/dn/r2VBJ/btqGiLuwmg1/HZAiRKeb6lELI8QknFl2O1/_______2.zip?attach=1&knm=tfile.zip"
+        }
+      ]
+    }
+  ],
+  "mayCandidates": [
+    {
+      "path": "ktf/강철의_연금술사.zip",
+      "bytes": 371463,
+      "sha256": "5bb72487ce587eaa176a4557ee23be1dbcc49ef7b5242b41e86d7ab1ada06671",
+      "crc32": "048f994b",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01030CEA.jar",
+          "bytes": 367849,
+          "crc32": "364cc619",
+          "sha256": "f86f03eaff76f393207ebb36f24efc4bddaa17fbaec18bd5587d6cf125fe1a6b"
+        }
+      ],
+      "memberCount": 7,
+      "sgs": [
+        {
+          "member": "01030CEA.jar!/client.bin29068",
+          "version": 4,
+          "title": "강철의연금술사",
+          "title_bytes_hex": "b0adc3b6c0c7bfacb1ddbcfabbe7",
+          "declared_body_bytes": 701560,
+          "sections": {
+            "a": 173400,
+            "b": 179520,
+            "c": 207720,
+            "d": 246216
+          },
+          "entries": [
+            140294,
+            0,
+            9990,
+            7822,
+            0,
+            0,
+            9210,
+            0,
+            8420,
+            0,
+            0
+          ],
+          "variables": 765,
+          "resources": 3208,
+          "compression_type": 0,
+          "source_offset": 182856,
+          "body_offset": 182856,
+          "wrapper_bytes": 0,
+          "xor_mask": 0,
+          "extracted_bytes": 701560,
+          "raw_sha256": "8a5b58ff1f5435681cd90c44360adc489cf134f9ee7aff126c34cc8e7f525a32",
+          "decoded_body_sha256": "8a5b58ff1f5435681cd90c44360adc489cf134f9ee7aff126c34cc8e7f525a32"
+        }
+      ],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/거상(벚꽃단의음모).zip",
+      "bytes": 695794,
+      "sha256": "0e6cd188729ed48823ea4d6d7638e0f74e6754fea5c21ae4eb0295c0bb67cd6b",
+      "crc32": "7e936806",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01034428.jar",
+          "bytes": 711729,
+          "crc32": "1c3107bf",
+          "sha256": "7da0c1aa5b45017781420d8222546d57e180b08a783ad5a4bfa0399430e5cf2a"
+        }
+      ],
+      "memberCount": 218,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/게임빌프로야구2006.zip",
+      "bytes": 578747,
+      "sha256": "4da44d05d3dab3b400340750cbf0a0d4873317309e390bfdb1f4a58a025b4e35",
+      "crc32": "34b98702",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102F780.jar",
+          "bytes": 556655,
+          "crc32": "64768b83",
+          "sha256": "65d1f633c306922c4c4a4bdf0cdab7644df9ad72dc6cb92d1da31c97a8f44e86"
+        }
+      ],
+      "memberCount": 203,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/광란의수족관!.zip",
+      "bytes": 444134,
+      "sha256": "aa3fcba4598b4998386ff9a683c0db617ce2bd5fcfd5065a3ef965a218dade44",
+      "crc32": "68b1fa8d",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01034949.jar",
+          "bytes": 455989,
+          "crc32": "a3cd6596",
+          "sha256": "c08d47699cc2ed8560d99fbeecf2e8b4b7713ae1b20ea54a526623b828c6a299"
+        }
+      ],
+      "memberCount": 128,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/궁맞고!.zip",
+      "bytes": 689142,
+      "sha256": "4c6cd28b6c1ac09b6962344e5a8c44ec4384ddfea18d1ba49eb15f2e3cbf00c4",
+      "crc32": "9b680912",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102D556.jar",
+          "bytes": 688191,
+          "crc32": "1a5cf478",
+          "sha256": "1341f9fb7d4f54a3c80d1aa642f5de2d2cdca04a39ee83731236f7121c6e2c3f"
+        }
+      ],
+      "memberCount": 80,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/귀혼무사편.zip",
+      "bytes": 816649,
+      "sha256": "eccc5ef475314f2465ab9d4369e851d9e5136ad21508e140caaebae31c04a8e9",
+      "crc32": "63606f0c",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01036754.jar",
+          "bytes": 785067,
+          "crc32": "b4258a1a",
+          "sha256": "48b79e3ae83e11e0d7f0d2bebd48740073bd5a6ecc8a74eb93aed3565f1b6063"
+        }
+      ],
+      "memberCount": 704,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/놈투.zip",
+      "bytes": 499433,
+      "sha256": "3cbb25f886daf00c4b66de4f46f606d962efe1735f8e38205e3efbd8fb209202",
+      "crc32": "652a067b",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010100D5.jar",
+          "bytes": 510502,
+          "crc32": "c614f011",
+          "sha256": "aeadd87840c7b3f1f06548489406dbc0bf833b41de9cdfa3eaf741e832a213c2"
+        }
+      ],
+      "memberCount": 113,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/다이어트타이쿤.zip",
+      "bytes": 1206925,
+      "sha256": "bd6ce010562c4ebf569be9c6b1887392dd848615e3a343d9668a657c3ed51df7",
+      "crc32": "a15cb5a3",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01034DCD.jar",
+          "bytes": 770760,
+          "crc32": "bc5855b8",
+          "sha256": "4901cbf065c467bfb96f3dd5aea72427c81a624c950861d572fea7c92458d14e"
+        }
+      ],
+      "memberCount": 224,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/다이하드4.zip",
+      "bytes": 494808,
+      "sha256": "3d238165796019d0d861835597d61d9a113bbfcff3e336b9e5153ff0d21087d9",
+      "crc32": "3e0c81e4",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01039741.jar",
+          "bytes": 495959,
+          "crc32": "76a78f38",
+          "sha256": "41e3d41316f8a5c51ce8098e326c32cacb4ff717ed5f2f0d001514b127c29a4f"
+        }
+      ],
+      "memberCount": 50,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/다크슬레이어2.zip",
+      "bytes": 600504,
+      "sha256": "44c292be4e4cc417021de29fa7d91b0bc9756a067854fdbb5a23c0a707a81b41",
+      "crc32": "70a7caeb",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102E45A.jar",
+          "bytes": 616381,
+          "crc32": "26d221a6",
+          "sha256": "39e221a9cf5ffa28193d1c5e9ff900723e1d8e2c0a15fdb8951a6a969989d4c8"
+        }
+      ],
+      "memberCount": 206,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/대박투어타이쿤.zip",
+      "bytes": 310110,
+      "sha256": "135d1291501f3dec3765412a057c77fe77cad8a2745ac75c5809387fea7db7d7",
+      "crc32": "7a2e67cc",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01030BEC.jar",
+          "bytes": 334340,
+          "crc32": "7b596d45",
+          "sha256": "eb9a143bb56f9e45048f3f2dbfe698549b2835d657919a07e53b74c49f465ac4"
+        }
+      ],
+      "memberCount": 177,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/더팜1.zip",
+      "bytes": 552452,
+      "sha256": "8c71be3ad26df1ecda6129a58b7344a2abc60a4f6aad8b480ffb401ed6d4c164",
+      "crc32": "47641b18",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01031C95.jar",
+          "bytes": 606876,
+          "crc32": "88490028",
+          "sha256": "047d28e5009f9ca1cfe8cad9d22d1b6085f2cba0b56a2a842d06e0aa9f4843c0"
+        }
+      ],
+      "memberCount": 221,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/더팜2.zip",
+      "bytes": 1137549,
+      "sha256": "76efee0816087fb19f289c654f797654cc5fa4770f5d4f834bbd96589ad9df13",
+      "crc32": "9361bdf9",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0103BE33.jar",
+          "bytes": 758639,
+          "crc32": "18967df7",
+          "sha256": "0d2453aa970ea513e47337436b3d1477a72493bbc2394e1d9252961b02e59c2a"
+        }
+      ],
+      "memberCount": 461,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/던파거너편.alz",
+      "bytes": 630652,
+      "sha256": "5a85f0b46901f070522255883c24604b84be318bf1fc0535580a91ec76791a96",
+      "crc32": "fa2bdd7b",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010209E1.jar",
+          "bytes": 596247,
+          "crc32": "adfcee2c",
+          "sha256": "1cd1f0fba6950a8403cd23222649b1c062ce66856537113e3e20fa2576c7e411"
+        }
+      ],
+      "memberCount": 8,
+      "sgs": [
+        {
+          "member": "010209E1.jar!/client.bin29240",
+          "version": 4,
+          "title": "던파_거너편",
+          "title_bytes_hex": "b4f8c6c45fb0c5b3cac6ed",
+          "declared_body_bytes": 1190828,
+          "sections": {
+            "a": 304680,
+            "b": 321400,
+            "c": 445828,
+            "d": 495160
+          },
+          "entries": [
+            302326,
+            0,
+            154168,
+            152906,
+            0,
+            0,
+            153578,
+            0,
+            153438,
+            0,
+            0
+          ],
+          "variables": 2090,
+          "resources": 4111,
+          "compression_type": 0,
+          "source_offset": 205880,
+          "body_offset": 205880,
+          "wrapper_bytes": 0,
+          "xor_mask": 0,
+          "extracted_bytes": 1190828,
+          "raw_sha256": "a1d7918caf262f1fe3f93faebb6f2f94ec7d643075caa6567cee12df1a714daf",
+          "decoded_body_sha256": "a1d7918caf262f1fe3f93faebb6f2f94ec7d643075caa6567cee12df1a714daf"
+        }
+      ],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/도신노홍철맞고.zip",
+      "bytes": 545841,
+      "sha256": "dd36286b56924c5219113e2d4cbe3fa142e964b3d38f8b98ee0b9c3911a90dee",
+      "crc32": "a7f3daad",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01030F8A.jar",
+          "bytes": 588972,
+          "crc32": "629615ee",
+          "sha256": "a261f0e8573260a2ef1542046a5a804f9ebfe76df255e034b78daade5627dae8"
+        }
+      ],
+      "memberCount": 250,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/두뇌게임q.zip",
+      "bytes": 610397,
+      "sha256": "abf9293add5e84471b857c7a402fb5213b128695ab7b5af5bd817a0afe462b22",
+      "crc32": "8d68dbb8",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01038485.jar",
+          "bytes": 642353,
+          "crc32": "06e6cee0",
+          "sha256": "9af05df3cba0e1b3549ae4f8d150b8545065a26093ca4a142aba30d8b1686acd"
+        }
+      ],
+      "memberCount": 343,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/드래곤나이트_ex.zip",
+      "bytes": 637198,
+      "sha256": "c94d6477792690f014853bb4bec0a9f8b19bb238a070095b5766488ee15fe780",
+      "crc32": "09a1740b",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01032B6C.jar",
+          "bytes": 684721,
+          "crc32": "42dbc0d7",
+          "sha256": "1c1c7261e20c951ee09d38e096452b233064f9bc131a0d0132961f80e692996b"
+        }
+      ],
+      "memberCount": 448,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/라피스라줄리.zip",
+      "bytes": 1951495,
+      "sha256": "934fa5b9ff41b7aa8d849903439ad69805bc3d5621c7bd78a866038f62a73898",
+      "crc32": "64ba2697",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0103632B.jar",
+          "bytes": 792161,
+          "crc32": "8e8db1b3",
+          "sha256": "a4ed0ea7ae5c01f9da0dda869c07ba4b77a015f5fae1baee4189d60a097d2a4e"
+        }
+      ],
+      "memberCount": 493,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/로스트_아일랜드.zip",
+      "bytes": 682885,
+      "sha256": "e2eda9e90ea155583961db191d19fc0ecdc42cff83c35a7d2791b48dd39e5f39",
+      "crc32": "0c90bd14",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01036A4F.jar",
+          "bytes": 674090,
+          "crc32": "98ec4646",
+          "sha256": "d3f36a2d6ebb2a54e91d9de09cd126da8cf6c795690058730086807293edb5a3"
+        }
+      ],
+      "memberCount": 171,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/루빅스큐브.zip",
+      "bytes": 521850,
+      "sha256": "c3057f46c59bfb5d18962123767e4d0b9212b5c12b42892a79330715e4874c0f",
+      "crc32": "7593eb93",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01038518.jar",
+          "bytes": 575486,
+          "crc32": "521c3400",
+          "sha256": "6ef36f911576b746136db0a90883da013b0be6083b842ea850c1055b10ad3c55"
+        }
+      ],
+      "memberCount": 398,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/리얼사커2007.zip",
+      "bytes": 538685,
+      "sha256": "bd1098707ce4e00901d5a0c72a52a22beaacda34d0ee6390e7982ba78477788d",
+      "crc32": "60907d56",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01038897.jar",
+          "bytes": 543750,
+          "crc32": "a61f306c",
+          "sha256": "427558825521864491551b4051020a895e8c073b2245f0a6c5fb42a9b63b331b"
+        }
+      ],
+      "memberCount": 67,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/리얼싸커2009.zip",
+      "bytes": 1131934,
+      "sha256": "36353252b311c1aa5ec8fcece5830bd48f545b5d301d454bdb59ac53835dfc1e",
+      "crc32": "0c045df3",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "W/apps/010100D3/010100D3.jar",
+          "bytes": 1121818,
+          "crc32": "5c1d3bbf",
+          "sha256": "d5588a362336459c658a2d43a914f304575b342fa94bca9be58485cff3c5446e"
+        }
+      ],
+      "memberCount": 29,
+      "sgs": [],
+      "nestedIssues": [
+        {
+          "path": "W/apps/010100D3/010100D3.jar!/lo.z00",
+          "error": "File is not a zip file",
+          "magic": "504b0304140000000000dd827439eb9a"
+        }
+      ]
+    },
+    {
+      "path": "ktf/리얼타짜맞고.zip",
+      "bytes": 1237372,
+      "sha256": "3b82763edba8b87063e88c2a8df8fb9e8a1ef6e2a04581307a0fa257986c5702",
+      "crc32": "99174b12",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0103F515.jar",
+          "bytes": 1468410,
+          "crc32": "5158cb0e",
+          "sha256": "a9debb6519ecc2505b6f57cdd3d3b86140ebc18597380b616f8f10a847974765"
+        }
+      ],
+      "memberCount": 1529,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/마스터오브소드3.zip",
+      "bytes": 679250,
+      "sha256": "3b72d4676d5dcc988cf3c0bf35ee963af0df4a59583af8d9ba2da6aed755784d",
+      "crc32": "7146ec98",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01031823.jar",
+          "bytes": 734605,
+          "crc32": "1455fcfb",
+          "sha256": "d326283b13da900cb1a3b266cd589fc0bc02d7a90b08db0dd048ffa8e2afaf9d"
+        }
+      ],
+      "memberCount": 279,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/마이프린세스2.zip",
+      "bytes": 857088,
+      "sha256": "41466fc7f709c43a7b110d795c86e3e4eda25226b54c87c51576ffd15def3b78",
+      "crc32": "a96f0728",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010379A3.jar",
+          "bytes": 808456,
+          "crc32": "b4a43dce",
+          "sha256": "575560f3e9d264f75b73f2f43e6806ed336ac33fc9aa0ca793f5bbe33872e18f"
+        }
+      ],
+      "memberCount": 1227,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/메이플스토리(법사편).zip",
+      "bytes": 567076,
+      "sha256": "7da5a1b08859e9e7f4ea35e29414e69b6effa2bff8357419de07aad801d84265",
+      "crc32": "3073909d",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102589E.jar",
+          "bytes": 585023,
+          "crc32": "1972a364",
+          "sha256": "c8f23e280ce73e47508cc8d8252c5baebae1b8c0c95ad955a6dbacba53b484a7"
+        }
+      ],
+      "memberCount": 283,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/메이플스토리(전사편).zip",
+      "bytes": 611046,
+      "sha256": "e178cfd14846c9b44a3455d2fd034169513c73bbd84a2e51b3572eded8921897",
+      "crc32": "10f08e43",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102D8D2.jar",
+          "bytes": 732050,
+          "crc32": "54b4a508",
+          "sha256": "32a1f17003a46221b38de8175c0bf4691670bfeba18cc9ca12c7e591a78be4ec"
+        }
+      ],
+      "memberCount": 821,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/메이플스토리2007.zip",
+      "bytes": 749071,
+      "sha256": "8fdd8f52b5bfddcf550a7bc5c4550c3731b4939498a84a2c65ab15a59d73a55b",
+      "crc32": "7f63f8e8",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01038900.jar",
+          "bytes": 663552,
+          "crc32": "db1967e6",
+          "sha256": "ff4564f6d9a68d7c05225b0b7284a748338d84b34b04ed3455f5c611b80a3285"
+        }
+      ],
+      "memberCount": 669,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/물가에돌튕기기3.zip",
+      "bytes": 435130,
+      "sha256": "6350b347278915217c9a4c56d82970bcf0ff1c686542c6cf9aff38ec42a7eb3d",
+      "crc32": "cfe95c09",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01037E36.jar",
+          "bytes": 438340,
+          "crc32": "3e914720",
+          "sha256": "cf6daddbcb4bfef62da5229456955e10a7b3a5739b517f358ba94a6161b753b4"
+        }
+      ],
+      "memberCount": 121,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/미니게임의달인.zip",
+      "bytes": 363479,
+      "sha256": "6103e87874c693c7dc04a95dd33056d5c43470090448ffac2c8c98e361704807",
+      "crc32": "02fb5cc1",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01032C41.jar",
+          "bytes": 385586,
+          "crc32": "ed0dc99c",
+          "sha256": "b647be7dab7d44026ca40ce97693dcbbfdf110307fe19fb157e5912c184ee451"
+        }
+      ],
+      "memberCount": 187,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/미니고치.zip",
+      "bytes": 460124,
+      "sha256": "0c67145b11dff72242c85d83fb07f77216c71fdc16fc63a332e1830355e56d2a",
+      "crc32": "65cbf777",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010291D5.jar",
+          "bytes": 492695,
+          "crc32": "28d52e5b",
+          "sha256": "2edec59408f331f84453ab2876f0976037e1de03fc3ecfa08b11a709da944086"
+        }
+      ],
+      "memberCount": 248,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/미니햄스터키우기.zip",
+      "bytes": 187822,
+      "sha256": "6d63b4025bef5daa073bf4376aee9bb70e2981362c578f782cb9313dc94169d2",
+      "crc32": "64b7f2c9",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102DEF5.jar",
+          "bytes": 230963,
+          "crc32": "b0e8e46c",
+          "sha256": "bbba85262205f9369c3f06fd357a2c9b0c4b636d9ba9bf88705a411cea2266a4"
+        }
+      ],
+      "memberCount": 240,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/박명수호통맞고.zip",
+      "bytes": 658483,
+      "sha256": "6b51d12b4be679888af06ae3815208a0d7589b51f3c6e9a5b4d4462af79dc7af",
+      "crc32": "1fe31edd",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010366FA.jar",
+          "bytes": 719490,
+          "crc32": "54c99a1b",
+          "sha256": "3cddcec4c86c80140ba85abc6d86ec3a9bf6e8c85e107a31b20a51499df33ae5"
+        }
+      ],
+      "memberCount": 443,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/박정석_영웅탄생.zip",
+      "bytes": 794276,
+      "sha256": "cd52fc1447d0139977552416cee169a249cf17cbae73c09abb0ad0b2ffb60a5f",
+      "crc32": "b8debc7a",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01035248.jar",
+          "bytes": 793135,
+          "crc32": "2cd16e74",
+          "sha256": "32849e6cbd49d70e478ab99624278af8405fd2571405a2fb80d79a834b92e3f0"
+        }
+      ],
+      "memberCount": 49,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/배틀오목.zip",
+      "bytes": 239971,
+      "sha256": "d647131cdc8d97a7ff353a4476ca117690067b33704f89016ed353c6b36c08b7",
+      "crc32": "9ea68046",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102D833.jar",
+          "bytes": 235265,
+          "crc32": "437b00af",
+          "sha256": "8a4d9052a54cd2c136e568d350b007b3b64a0f4a9af571f8078d97d677af6743"
+        }
+      ],
+      "memberCount": 47,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/보글보글.zip",
+      "bytes": 263374,
+      "sha256": "be4c622e9c077be2c4c8b15447c6e94c567987ae25901ba2998aa4858e921e40",
+      "crc32": "f8e1b0be",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102B655.jar",
+          "bytes": 270007,
+          "crc32": "93c5bdda",
+          "sha256": "e42fc89f91dc6ddbe0c3478bf8970faf81c867fe5a7cc47acfbdef34588c5380"
+        }
+      ],
+      "memberCount": 43,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/보글보글2.zip",
+      "bytes": 587069,
+      "sha256": "e91d54c2cf26f1269fc2671a387c5cd51f86017505c7cf79107ef4bd9380bcf4",
+      "crc32": "7d6ebac0",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01032EF9.jar",
+          "bytes": 689555,
+          "crc32": "06b97bfc",
+          "sha256": "c6278304d5771b6031f79a4ba41d5b2c2386b919d405657fd07b778bb3207268"
+        }
+      ],
+      "memberCount": 994,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/부루마불2007.zip",
+      "bytes": 444629,
+      "sha256": "929a1b0477c56885208ea84829e2f7b3d6f99fcf0b92c0cfc9de7a6586657e3b",
+      "crc32": "d60abc67",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01033895.jar",
+          "bytes": 555092,
+          "crc32": "90a3c484",
+          "sha256": "3e16939fc466c04a7c800dbd82ed53c7734624e7ff9fc5507a79940eea81331e"
+        }
+      ],
+      "memberCount": 626,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/붕어빵타이쿤3작은화면.zip",
+      "bytes": 382632,
+      "sha256": "17423775854221e0c46348367e0834e823f62cccbfdae4510e202cc8ea4fec7f",
+      "crc32": "ef09e621",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01035E94.jar",
+          "bytes": 410860,
+          "crc32": "94f116d5",
+          "sha256": "4902597863c775f70c60ead56c9b9560a538cf82e4b9f86c045d04587bf56f26"
+        }
+      ],
+      "memberCount": 358,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/사이버포뮬러2.zip",
+      "bytes": 470199,
+      "sha256": "3300ad629a3ec7f8e9cdd4959c2c5f596b5be175e55a8a38714ccdb6b908673b",
+      "crc32": "708d7cbb",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01038BE2.jar",
+          "bytes": 470415,
+          "crc32": "9c4df3f6",
+          "sha256": "d0e24b40c8255063cb37969cd026c89525b7c7abaaf2b3c7ed1d93910326724c"
+        }
+      ],
+      "memberCount": 45,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/삼국축구대전.zip",
+      "bytes": 690862,
+      "sha256": "c33c6b69c72e80d722631e470580aad2feda2e7dd1810be4dab9acc3388c54b7",
+      "crc32": "e2c3f36f",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01038853.jar",
+          "bytes": 762073,
+          "crc32": "bd6454fa",
+          "sha256": "72bd66afd343122ee1561f4af5fa48f934745e4c5ad63ba557dbf4fb4e556b33"
+        }
+      ],
+      "memberCount": 502,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/생과일타이쿤3.zip",
+      "bytes": 737574,
+      "sha256": "032e4f264179a9c8bd38417bf084253f859bedfb8fa3047b83d011a8df43b386",
+      "crc32": "46fd75b3",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01034612.jar",
+          "bytes": 761372,
+          "crc32": "6e34598c",
+          "sha256": "9935dbe9568f0866ff9a69e4b376c388a286c65a24cc89457b652cf48386d60c"
+        }
+      ],
+      "memberCount": 315,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/서든어택.zip",
+      "bytes": 456911,
+      "sha256": "0765b44c7b50722b72c680e8931abec6bb90e5a20e987811f08efcf829df50af",
+      "crc32": "a8c0d5d3",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01033F50.jar",
+          "bytes": 515427,
+          "crc32": "c68bd4b4",
+          "sha256": "ffe36bef989757d3f70b8f1f2e45ff94d28ceb1b10cd39aef4f0acd327bb9be4"
+        }
+      ],
+      "memberCount": 398,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/서울타이쿤2.zip",
+      "bytes": 942351,
+      "sha256": "03680f9e9031e55cb8cbde3c4fbc1b3118b8dd155b61f0ff82e0bd0408f072e5",
+      "crc32": "1ab916d6",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01036924.jar",
+          "bytes": 672721,
+          "crc32": "f9466448",
+          "sha256": "ef4e9015480865c5e3ada9aa8818c623b140c58a02d1beb66fb2725ba3dcb6a6"
+        }
+      ],
+      "memberCount": 336,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/세븐스소드.zip",
+      "bytes": 587218,
+      "sha256": "40334c9cb00d08c62536acf44a97f1ca221cb3ad3bc00065dadb15bdd4d85fa1",
+      "crc32": "000850ec",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0103736F.jar",
+          "bytes": 685821,
+          "crc32": "d8afcab4",
+          "sha256": "19de8310ace3d66eafc6a99c1cccce34da138e2764499c37fcc35baf5f146b07"
+        }
+      ],
+      "memberCount": 759,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/셔터-영혼의울림.zip",
+      "bytes": 449505,
+      "sha256": "3c658a46bbfbd67568e322289888180f4b46eac3bd27485681b85f1fd65d4d38",
+      "crc32": "fe117880",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01035389.jar",
+          "bytes": 451579,
+          "crc32": "9b1b0088",
+          "sha256": "4aea47f9ac631ce3c83287606074ce22a6d22f136e7e666ab4a4e92eaddadab7"
+        }
+      ],
+      "memberCount": 141,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/슈퍼액션히어로.zip",
+      "bytes": 232734,
+      "sha256": "5afefb2479120d980b3e9c831fb04d3bbfc44600e4570ca043261711b66bc66e",
+      "crc32": "5d1274a3",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102D8D2.jar",
+          "bytes": 231828,
+          "crc32": "f41f7021",
+          "sha256": "8b2351e5f06e43cbc6b7998f517673052ab49c4d63e9e64764cf5f0f75e5b638"
+        }
+      ],
+      "memberCount": 31,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/스노우브라더스2.zip",
+      "bytes": 243035,
+      "sha256": "484108f6c8ded36582246d0183a10fd69f5efa5475b25b47e03dfbf7b574c7dc",
+      "crc32": "6b2888cd",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102F9F0.jar",
+          "bytes": 299801,
+          "crc32": "943b962b",
+          "sha256": "7c7f61b0810b7a3aba21a4dd0edddd4c8ca7a11431c45a985ef19fd22daf00be"
+        }
+      ],
+      "memberCount": 351,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/스도쿠.zip",
+      "bytes": 408596,
+      "sha256": "4451036a7fb65261ec498f7146530475f7e965f35a445cce987731a0349b2980",
+      "crc32": "4858d4d0",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102FD1C.jar",
+          "bytes": 419250,
+          "crc32": "582a09b4",
+          "sha256": "2f187db926cbf30d1f51afe164a4e4b067c0a837673e3d62ab51a20209df4331"
+        }
+      ],
+      "memberCount": 88,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/스파이더맨3.zip",
+      "bytes": 442144,
+      "sha256": "8c6821fab9693b480d3dbfcc261c588dfddc715c9901e97a298ee88c66c68b9c",
+      "crc32": "195ec52b",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01038486.jar",
+          "bytes": 448319,
+          "crc32": "6a4a2032",
+          "sha256": "afbdab3ad1fdde68e944c2dcea2f4a1478cc548395f8b8b35b9dda10a2b7766f"
+        }
+      ],
+      "memberCount": 165,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/아르덴전기.zip",
+      "bytes": 787846,
+      "sha256": "689c491586b91ed8afde488d092c777da0874b29250f0724d7a6c9ee1e690ba8",
+      "crc32": "f5e3c619",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0103AB96.jar",
+          "bytes": 810944,
+          "crc32": "0983f1cb",
+          "sha256": "94fb2757c114bf2c6f9285b449b9e3e93bee1f622991d2da79bd47650f07ee72"
+        }
+      ],
+      "memberCount": 168,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/얼음낚시.zip",
+      "bytes": 529403,
+      "sha256": "8801ab57a0ee0362a1fbf437fafaa239a2fcfd569060ae6c631edd0b86eab58d",
+      "crc32": "5c934e73",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102178A.jar",
+          "bytes": 681248,
+          "crc32": "80fd5d81",
+          "sha256": "b51473cce8f99eab78fde27dbbb1b332379769db4fa7faa0bd2ab08c18cbb3c4"
+        }
+      ],
+      "memberCount": 1305,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/엑스맨3.zip",
+      "bytes": 479236,
+      "sha256": "cb4217efd669a9c57651499c92a9eba6f71ffb6e935b58952fb8214889242ee7",
+      "crc32": "b159f14d",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010350AA.jar",
+          "bytes": 499013,
+          "crc32": "cf2be913",
+          "sha256": "f9c1349bbe53cb59e595ef52c48bee43a3b2297fec6ec0df8c79d707c851738c"
+        }
+      ],
+      "memberCount": 281,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/영어뇌습격_1[1].2_큰화.zip",
+      "bytes": 611659,
+      "sha256": "d5a86e344611f102beedb438e1753aa32a99fd91284e5fea7f5b5a1397e5ad92",
+      "crc32": "a11d3b16",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010100D5.jar",
+          "bytes": 628237,
+          "crc32": "a1df4bbe",
+          "sha256": "2b58c9bfb99952fd43141f6f760e888a2ad87701a0d5930e77b35f3f4b2019ec"
+        }
+      ],
+      "memberCount": 316,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/영웅전설3(하얀마녀).zip",
+      "bytes": 724005,
+      "sha256": "d1fba7ad5d1fcc11cb9d4daded9c117d4569cf8282903c57cdf14404bdb90c91",
+      "crc32": "984751fb",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010100D5.jar",
+          "bytes": 743047,
+          "crc32": "4afd3044",
+          "sha256": "a46b19707381d0583ef34a01cd4d089b9cb45a0c24f50cef7a7e5781926b00aa"
+        }
+      ],
+      "memberCount": 250,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/영웅전설4_주홍물방울.zip",
+      "bytes": 740516,
+      "sha256": "182fa44210dc07ab275906a6a5e1ff1c0467017ff6f71492a0db7a73c1db8e61",
+      "crc32": "08914b45",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01037028.jar",
+          "bytes": 761617,
+          "crc32": "81221a49",
+          "sha256": "e01bd4a50f8430dfcb134934d1000d58cd07386b71fdec263c99feb3ea0c9be6"
+        }
+      ],
+      "memberCount": 235,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/우당탕탕헤어샵2.zip",
+      "bytes": 537619,
+      "sha256": "9a98d38ce519f57c588a197f838666dca80b596faa7a133d1554bbd075b3bb8c",
+      "crc32": "f8610495",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01032D4C.jar",
+          "bytes": 612580,
+          "crc32": "d8691828",
+          "sha256": "f41133503c7d6d0df35f6c49182dab8e2664dcfac7805b6bc356631c4ff4a119"
+        }
+      ],
+      "memberCount": 497,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/웃찾사맞고.zip",
+      "bytes": 483610,
+      "sha256": "75e6050fe2721607c950c0b9ce5f2da6df11e5dd5c1b3baac8af51570c307c20",
+      "crc32": "6114be8d",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01037609.jar",
+          "bytes": 507262,
+          "crc32": "d497f95c",
+          "sha256": "b47ec15e919ea1e2fb7b4617fa6ee6a896e97c0b026717a12052fd0658590073"
+        }
+      ],
+      "memberCount": 218,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/이누야샤.zip",
+      "bytes": 351988,
+      "sha256": "cd23c574d689421687cb427aa7b98ae587a81f36c1622c7ab76cf485b478f772",
+      "crc32": "6d130cea",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0103412C.jar",
+          "bytes": 344778,
+          "crc32": "b66874a8",
+          "sha256": "db23fd63b19fbe7f4e81ed9696e753c33aa1110b783b0ae32431422dc5d01bec"
+        }
+      ],
+      "memberCount": 8,
+      "sgs": [
+        {
+          "member": "0103412C.jar!/client.bin29276",
+          "version": 4,
+          "title": "이누야샤",
+          "title_bytes_hex": "c0ccb4a9bedfbbfe",
+          "declared_body_bytes": 621610,
+          "sections": {
+            "a": 174028,
+            "b": 180572,
+            "c": 203708,
+            "d": 243500
+          },
+          "entries": [
+            173650,
+            0,
+            97036,
+            94744,
+            0,
+            0,
+            96086,
+            0,
+            95214,
+            0,
+            0
+          ],
+          "variables": 818,
+          "resources": 3316,
+          "compression_type": 0,
+          "source_offset": 208788,
+          "body_offset": 208788,
+          "wrapper_bytes": 0,
+          "xor_mask": 0,
+          "extracted_bytes": 621610,
+          "raw_sha256": "c9191868f2f5923c86ef61bd77d4065ae8c358f29439472604f51613b0b8570d",
+          "decoded_body_sha256": "c9191868f2f5923c86ef61bd77d4065ae8c358f29439472604f51613b0b8570d"
+        }
+      ],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/인형뽑기타이쿤.zip",
+      "bytes": 603590,
+      "sha256": "8e8e6173731d8d6f1f2cab807aa1e5aba16ae9b1afacb6df000e4cf225f66e59",
+      "crc32": "2f68a6dd",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102E32F.jar",
+          "bytes": 610597,
+          "crc32": "9e84e2ec",
+          "sha256": "0c975109c76b52196d57770bfcd152655b61b3bec99b5aea2e10da3f2ccd53d1"
+        }
+      ],
+      "memberCount": 114,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/일지매_영웅전기.zip",
+      "bytes": 822819,
+      "sha256": "899ed83e8a3cafbf33bc465559baf7a063154c71f25bf4ee2a5fcbe8b3bfcb77",
+      "crc32": "d547dc07",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01029DDA.jar",
+          "bytes": 783862,
+          "crc32": "8a6b03d7",
+          "sha256": "85abab3201ec812cf2ec8e8e91d2baf888d9c8d35b31ed9d64046907582f16cd"
+        }
+      ],
+      "memberCount": 1713,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/전설의_마법학교2.zip",
+      "bytes": 656567,
+      "sha256": "599c132517470b2c52b7f7b2d89c92781422bcf870c531c3726dd6ca40c745df",
+      "crc32": "0def6d56",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01032B8F.jar",
+          "bytes": 680139,
+          "crc32": "3af34288",
+          "sha256": "3a7c826200e370590a7a84ae22f89e4b7a2c00273b623fbfbfbaf5010a4c7ad9"
+        }
+      ],
+      "memberCount": 291,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/정통맞고2007.zip",
+      "bytes": 813473,
+      "sha256": "60bd6cbc5936626ae38e71bccab46cf8896ac5144e7b2f40b6176e53179ded3a",
+      "crc32": "ba8fbfe6",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01037A2B.jar",
+          "bytes": 807510,
+          "crc32": "168cde78",
+          "sha256": "ebec147d1db771045f8fb1fab4169e9104ffdf6f7b0ca3fad381dbd75015ce6c"
+        }
+      ],
+      "memberCount": 7,
+      "sgs": [],
+      "nestedIssues": [
+        {
+          "path": "01037A2B.jar",
+          "error": "File is not a zip file",
+          "magic": "6f64636600020000000000016f64726d"
+        }
+      ]
+    },
+    {
+      "path": "ktf/지상렬신맞고.zip",
+      "bytes": 636572,
+      "sha256": "e09aca27c132c96752c1b8acaab9aacfc81297b2714d3815d8310b020ff37ee9",
+      "crc32": "5ccb8f9f",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0103533C.jar",
+          "bytes": 674531,
+          "crc32": "c1d74803",
+          "sha256": "04126fc0a65671ca627fba3aad676a241ed036db27f958dc05ca28e1f41e718c"
+        }
+      ],
+      "memberCount": 274,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/짜요짜요타이쿤3.zip",
+      "bytes": 789338,
+      "sha256": "016d344f7c328e6713c3e553555069472e82ecae9123eb25dc304bc6d1e2c890",
+      "crc32": "e0d63544",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010217F1.jar",
+          "bytes": 779687,
+          "crc32": "d9a2ab05",
+          "sha256": "d08871a5382f6d371f0c2d29c7564f30d1cbdc20928210c16d9a1a05af0811f7"
+        }
+      ],
+      "memberCount": 48,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/체스마스터.zip",
+      "bytes": 225461,
+      "sha256": "88ba9a9f66ef9a72fbb562f414ad3a88016cbcb1b42b0610a7ca8bdb32944a13",
+      "crc32": "75576800",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010100D3.jar",
+          "bytes": 240670,
+          "crc32": "49f4a0c3",
+          "sha256": "7954236641d15430365449e01e1d5fefd414dee273409703bb1b93b78e0dd717"
+        }
+      ],
+      "memberCount": 158,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/초밥의달인3.zip",
+      "bytes": 517053,
+      "sha256": "dc76a61ddf32868ab9146cab0c6566d936b3d06a98c9dbe8ebdd9d1609d8541d",
+      "crc32": "bdebf038",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010346A2.jar",
+          "bytes": 605886,
+          "crc32": "40d3a97f",
+          "sha256": "a5b778eb9cd684613ea90e86f7763063e9ece6f3a7759a65a67916fef03c6f4f"
+        }
+      ],
+      "memberCount": 447,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/추억의달고나.zip",
+      "bytes": 310420,
+      "sha256": "3d38a46becd98bed1fb47e9fdea8affd2ebf6ab80f83b610fec6ca597191e921",
+      "crc32": "ddbc5a6e",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102CFCB.jar",
+          "bytes": 337372,
+          "crc32": "f67695ed",
+          "sha256": "9715d595e392ade0dd294d72ca0a0ee48d118ccbb5aad7d7d1cde6ea0ffc7281"
+        }
+      ],
+      "memberCount": 364,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/치킨타이쿤.zip",
+      "bytes": 757042,
+      "sha256": "1de6bd532de051a0309e9e769793488aafc4d7c89ab0597ba1c185c1addcb3f7",
+      "crc32": "d3f14e7b",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010384E1.jar",
+          "bytes": 771972,
+          "crc32": "57be640e",
+          "sha256": "e1bcb1448b0673223a880501451a60fe2df1adc87d40b77231eae01deff2f9cb"
+        }
+      ],
+      "memberCount": 277,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/카우스블레이드.zip",
+      "bytes": 425311,
+      "sha256": "51011b242bb5485dde836fed1af8c5dff41a1994e3eb35fc26fc01198d697add",
+      "crc32": "4ffc5c25",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010100D3.jar",
+          "bytes": 434827,
+          "crc32": "042f5693",
+          "sha256": "3025730593921c9a344a4219cf9edfac145cbd0b9604171a42e3dd9ed187206d"
+        }
+      ],
+      "memberCount": 87,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/컴투스_맞고_2006.zip",
+      "bytes": 373231,
+      "sha256": "f2280c6699a0d98b5f482bdaf0258aba85cc41935f7e67e04376ea5c3a41d9ef",
+      "crc32": "66a6358a",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102CA9E.jar",
+          "bytes": 401124,
+          "crc32": "7b15cdb7",
+          "sha256": "008f3694c65ab02b5ce6cd2f26684c0d41f334a8a3c0fefd9b1c963a454c5a88"
+        }
+      ],
+      "memberCount": 442,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/컴투스_바이러스.zip",
+      "bytes": 488654,
+      "sha256": "e2472ec537c6893ef99b408e8a06612922ff4c4f0e5e508adb67ea4e5d93d889",
+      "crc32": "41ab8ab8",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "0102C0FF.jar",
+          "bytes": 560769,
+          "crc32": "66787821",
+          "sha256": "acad43a2e37639d02d3d9ae719bc2c34d12569d8a30a6fa0d6c0d9253457f966"
+        }
+      ],
+      "memberCount": 862,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/컴투스사커2006_한글명단.zip",
+      "bytes": 382552,
+      "sha256": "79a9a73ce52e4b70c31b10d844587067648847d1744299bddf2ca37275dffc2b",
+      "crc32": "781c4180",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01031CC2.jar",
+          "bytes": 374362,
+          "crc32": "efe653ae",
+          "sha256": "087a7f0630c0be4c3ac7c621d381b479acc4b50040d40cbb6af5f8a1a73204d6"
+        }
+      ],
+      "memberCount": 33,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/크로스워드.zip",
+      "bytes": 750874,
+      "sha256": "48c6af0d4048e267f16f0085e0f853672db5522ce608d2b175fc5f4f0fd1be7a",
+      "crc32": "8c32e186",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010395B3.jar",
+          "bytes": 782919,
+          "crc32": "108a2e60",
+          "sha256": "77513979ac0b2cfc8b402e48969ed10847d0f01182d6e2bb53643211a4b3098c"
+        }
+      ],
+      "memberCount": 605,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/크아bnb2007.zip",
+      "bytes": 505022,
+      "sha256": "3ccc6cf147d2d537a27b60e151732c2bed0144127bd1b93944591b0e4169373b",
+      "crc32": "bfe85e31",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01034DC3.jar",
+          "bytes": 608491,
+          "crc32": "7b95b548",
+          "sha256": "1c0139f54c3f07fa53f220e070d893aa19a76b27326c1742dbf15b07d9a28856"
+        }
+      ],
+      "memberCount": 389,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/탁재훈신맞고2007.zip",
+      "bytes": 577669,
+      "sha256": "4b6eaa69e0569097632f32dc51673753f691049dbc8da0538bdbc512c0dc21bb",
+      "crc32": "2b028c98",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010100D3.jar",
+          "bytes": 684351,
+          "crc32": "6f5cd6a9",
+          "sha256": "7e1fc42346c5f45dcb0d96ba6f7408ff0cc58c4c68b7ea069c9571c4030eb6fc"
+        }
+      ],
+      "memberCount": 1032,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/트랜스포머.zip",
+      "bytes": 754279,
+      "sha256": "77c2d0bcd435059cf89308218541da6f95d59bc486449901f65e6df83a050942",
+      "crc32": "fa7c6ad9",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01024DED.jar",
+          "bytes": 734912,
+          "crc32": "e2c149cb",
+          "sha256": "3729f863ef1fb748a5f58197c00937fa3eeefcf41db068ad7e7d635eb5c2e46f"
+        }
+      ],
+      "memberCount": 281,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/팝픈뮤직.zip",
+      "bytes": 815479,
+      "sha256": "4c5da24020cd5e1358851c1c7871ab1b58c5c7bb45ecfb135242cd58fe77c264",
+      "crc32": "db7bced9",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "010100D3.jar",
+          "bytes": 920306,
+          "crc32": "ac3bdffa",
+          "sha256": "b4994143ea2fe43be90cde6d7e40849f36beaa0d295bc2f7c135085175680248"
+        }
+      ],
+      "memberCount": 633,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "ktf/해신장보고.zip",
+      "bytes": 315306,
+      "sha256": "42b2991a08abf7a1a8d7cad213e5c997a3bdab6c27cba33c61d541adc7b82eb9",
+      "crc32": "9b8bf7f6",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "KTF WIPI",
+      "primaryBinaries": [
+        {
+          "path": "01027571.jar",
+          "bytes": 332279,
+          "crc32": "3aade32b",
+          "sha256": "5f949d580ff0ddc7bdf1c9e954c43a8ceca1e1f3edba59dbefee0ecab089f9f4"
+        }
+      ],
+      "memberCount": 146,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/대박맞고-왕후의길.zip",
+      "bytes": 1400946,
+      "sha256": "63a4859013be9a8a6959f9ee01aa84ae92c4300c9ef0274713699d22621734c2",
+      "crc32": "0df06bab",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "0002AABE.jar",
+          "bytes": 1420731,
+          "crc32": "9c9b2f9e",
+          "sha256": "0999ac0395b0f677f6419f4d6df2b24f89b70485e27a6c7b02faa2ef92fa77cd"
+        }
+      ],
+      "memberCount": 324,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/무한신맞고2009.zip",
+      "bytes": 628962,
+      "sha256": "0baceb1dfe9c388d08e9225fabdf68ee82f289fa42fdfec9cfab77c78f553288",
+      "crc32": "7c34da47",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "000287B9.jar",
+          "bytes": 873035,
+          "crc32": "9f9e6b3d",
+          "sha256": "f5050693a6d92a0f088c301a6c52473d998da4e00dc70951dc771d4a1a80861f"
+        }
+      ],
+      "memberCount": 1213,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/스파이더맨3.zip",
+      "bytes": 596832,
+      "sha256": "d01275d61fa9f0bac4d9b20f0b4b9d0b578e67bd2a21754f9e5d618c5126b235",
+      "crc32": "8256e5b2",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "0001D9F7.jar",
+          "bytes": 606179,
+          "crc32": "62b7025e",
+          "sha256": "3439dfdce00cf8400031c6080cdebfc7b92b19d3d45a878a90f35208950c8d27"
+        }
+      ],
+      "memberCount": 208,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/영웅서기3.zip",
+      "bytes": 1765166,
+      "sha256": "0bc9cc28c05a32157af06cd41a60c626b2510126b01ca0f7ba392a72d5c31880",
+      "crc32": "ca1fdfc9",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "0002865E.jar",
+          "bytes": 1882385,
+          "crc32": "bc775bba",
+          "sha256": "6e76d129a136d0ba629192c02723534b52a64b02b6883e3ae2496950809f6b35"
+        }
+      ],
+      "memberCount": 1280,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/정통맞고2009.zip",
+      "bytes": 1197384,
+      "sha256": "4fdbd64c9fbdfbf6d335847a01054dea5a2feb3efdb2a1e6aa5b288d77fda5de",
+      "crc32": "c792c6e7",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "0002A87E.jar",
+          "bytes": 1236871,
+          "crc32": "7b29f2ff",
+          "sha256": "04d7ba3f042f43adda2107fde2da75e25983f2f7c7b11186d2813a071396ee2b"
+        }
+      ],
+      "memberCount": 391,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/체스마스터.zip",
+      "bytes": 255247,
+      "sha256": "4ece6eeeaa04955153005b2e14ddefdfd202443388b434dc4a6e9dda1b77e276",
+      "crc32": "cd17856c",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "000186FF.jar",
+          "bytes": 274231,
+          "crc32": "9a7e9604",
+          "sha256": "b6d9009c71a21409618588cd032a05f7cc7974935527a7acce3633e0efb9db69"
+        }
+      ],
+      "memberCount": 158,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/판타지포에버3.zip",
+      "bytes": 1572591,
+      "sha256": "21819777ad5941daeec64b0f2d3251a81aeb1ca62ad5820e9ff907599437fde4",
+      "crc32": "f2d60a88",
+      "included": false,
+      "previouslyRecordedGameBinaries": true,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "0002ACE6.jar",
+          "bytes": 1613817,
+          "crc32": "157ee95b",
+          "sha256": "caed29a84beaeb0b242872bdc2fc90925a3437a735404750eeac409baf89b2d0"
+        }
+      ],
+      "memberCount": 478,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "lgt/현영맞고2006.zip",
+      "bytes": 657799,
+      "sha256": "1b107b96bf4ed7d2634d778fb45c9c3e3a887f37f35c1b73359ff44c0acb3674",
+      "crc32": "6f3d66b4",
+      "included": true,
+      "previouslyRecordedGameBinaries": false,
+      "format": "Java package",
+      "primaryBinaries": [
+        {
+          "path": "0001518B.jar",
+          "bytes": 665006,
+          "crc32": "9003624b",
+          "sha256": "4520803bbb6898667a5f69847335e70de188f2c600c9fb3ebf03b9fca11fcb9e"
+        }
+      ],
+      "memberCount": 125,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/Chaos블레이드.zip",
+      "bytes": 262579,
+      "sha256": "eefc947d83374af5785201f34941e0e1d51cb12115d8d00edfd942179e8afe53",
+      "crc32": "e112c79b",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0027571859.jar",
+          "bytes": 279381,
+          "crc32": "118945d8",
+          "sha256": "d9078813412c542150b4934dd796c411d0ea0c255b5d3524c14d945feefa6b71"
+        },
+        {
+          "path": "0027571859.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 198,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/강호동맞고2.zip",
+      "bytes": 369308,
+      "sha256": "47fe675bfffd64161141e2d9c4815be3c441164e15a12098e925a944febd94b5",
+      "crc32": "8e4173d9",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0057448616.jar",
+          "bytes": 398776,
+          "crc32": "581bbee8",
+          "sha256": "88ecd2f6fa56b5a5328a45c5f24b3e86f3b7794628badaa322fade38236e31dc"
+        },
+        {
+          "path": "0057448616.mod",
+          "bytes": 514,
+          "crc32": "fb7a0117",
+          "sha256": "75e69ff8e78fc756f4bdbb3071d2a10f46a09ba3b904047d9999e8468bdffd9a"
+        }
+      ],
+      "memberCount": 351,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/나이트메이커.zip",
+      "bytes": 263418,
+      "sha256": "965b45de09ac8d062cfbe6cfb174a9b1f5dd0b81d39a76312ca59ce35627d749",
+      "crc32": "dc4c54e3",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0050092169.jar",
+          "bytes": 301454,
+          "crc32": "380cdb6c",
+          "sha256": "70f60abf687a8e1aa643a9fc76d6ed9af369dea0fde122644fde8e1782483817"
+        },
+        {
+          "path": "0050092169.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 573,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/노리맥스영웅전.zip",
+      "bytes": 516139,
+      "sha256": "c33090c12755710fc599957a16a19b27babe161de34c8bb743d5e1557d089e70",
+      "crc32": "6001a4e1",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0050467670.jar",
+          "bytes": 552182,
+          "crc32": "c43196f5",
+          "sha256": "172ac113bda6c509c36954a717e0ec9d761eeb4e7d6733cf14281733704ae597"
+        },
+        {
+          "path": "0050467670.mod",
+          "bytes": 515,
+          "crc32": "29ad6728",
+          "sha256": "0dfe11da826a9e46ee421f5e204d6caafdc0172f5d69998281454a08d932f245"
+        }
+      ],
+      "memberCount": 573,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/다크슬레이어2.zip",
+      "bytes": 423601,
+      "sha256": "06c7a38343c7c48ad8ef362ffe1cd5ba2384a0b4e1cc8111acb6e2d72bf7b5e6",
+      "crc32": "c0b92c20",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0049884302.jar",
+          "bytes": 437732,
+          "crc32": "27752b29",
+          "sha256": "75f2a29bc9b21c7ff31c253a661129c497a75f752a5071a9512d4236fe9087e5"
+        },
+        {
+          "path": "0049884302.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 211,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/닥터k.zip",
+      "bytes": 417679,
+      "sha256": "858d7a152d34e18d798234783868fb42908a15a74f704e3618fcbc3e57c0d30c",
+      "crc32": "c443a09a",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0056763235.jar",
+          "bytes": 420993,
+          "crc32": "eff4cfcc",
+          "sha256": "7589d6846e967e2df78d6e3602f97d52cf9c313ce5b9d155cb1fd8a99c36cddd"
+        },
+        {
+          "path": "0056763235.mod",
+          "bytes": 507,
+          "crc32": "509d6bcd",
+          "sha256": "8fcb52cfd05b05d5e7684ae35a47f4b5d7b58c5ffb3773c5eea591530d064c81"
+        }
+      ],
+      "memberCount": 103,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/당신은골프왕.zip",
+      "bytes": 416798,
+      "sha256": "9e2307e4fa88b6ceba9ab387aea325d7011ea895eab12cba4d818f3e5711f1a9",
+      "crc32": "0028fb2e",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0062402323.jar",
+          "bytes": 449988,
+          "crc32": "58a64fb6",
+          "sha256": "b68b7cf7548a971ef7297917a170a36425ef8993a68728d838f2c1b303514edd"
+        },
+        {
+          "path": "0062402323.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 286,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/대해적시대.zip",
+      "bytes": 478680,
+      "sha256": "9a34adba5432d8dbed7fc2fabae9cebd5a91217b940a21d1a6be056c6fee7e4f",
+      "crc32": "3721529f",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0055719338.jar",
+          "bytes": 511020,
+          "crc32": "c23d7381",
+          "sha256": "72145ada8be76585242331479162dbd0a16b3a75691d2fe720f4042e9a5ef52c"
+        },
+        {
+          "path": "0055719338.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 443,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/댄스배틀오디션.zip",
+      "bytes": 475310,
+      "sha256": "14a62a8521a0d434f8fffc7b85c1d2427335dac5d81e9f6b966f12d42ce5abce",
+      "crc32": "b6ee601f",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0059839951.jar",
+          "bytes": 573567,
+          "crc32": "35d1222c",
+          "sha256": "d87f21a4a0355a1639f6668175a28657745d979cdd59c3660c41818074d3aca3"
+        },
+        {
+          "path": "0059839951.mod",
+          "bytes": 519,
+          "crc32": "081fd425",
+          "sha256": "e83f46e8f845afecac260a70a06ae7221e1a9efc68fa183fbea823734ca09b6d"
+        }
+      ],
+      "memberCount": 654,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/더팜2.zip",
+      "bytes": 862361,
+      "sha256": "8bf2f80c0723fd97c9915e0cb741484a2872d56c8b541ef0f0e59214e472612b",
+      "crc32": "9e6deda1",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0066286116.jar",
+          "bytes": 884702,
+          "crc32": "1255ff21",
+          "sha256": "1397c7c28be4e1aaa75bdd819f3da15dbc4c6a119a499582bb3e65098b7b171d"
+        },
+        {
+          "path": "0066286116.mod",
+          "bytes": 564,
+          "crc32": "16204b81",
+          "sha256": "6cef80773c342247bc89263f623dfaf859ca78c9e4e684dc36e9c9a94efaf033"
+        }
+      ],
+      "memberCount": 354,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/드래곤나이트EX.zip",
+      "bytes": 417854,
+      "sha256": "fa1fc7826e4f2dbd10a4793177d9aed3282e5b9812d47863edc2f64761850cc2",
+      "crc32": "41bf2ead",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0053597505.jar",
+          "bytes": 461900,
+          "crc32": "87521cd1",
+          "sha256": "6da3f3829e1b368baa3a97776597dde0128951825928d91bee58163c3bf5385e"
+        },
+        {
+          "path": "0053597505.mod",
+          "bytes": 517,
+          "crc32": "3c0a1e9f",
+          "sha256": "8f2e56ba50a7349af72a656c4c091fd48e13917028b3e25279fd76c85bc99181"
+        }
+      ],
+      "memberCount": 472,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/미니고치.zip",
+      "bytes": 312015,
+      "sha256": "b2c773779634d0ae2c9112e3404a776dd5ffdfbdea8f436127f0f87050f077f9",
+      "crc32": "c5e60413",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0100478866.jar",
+          "bytes": 336567,
+          "crc32": "74f0e334",
+          "sha256": "7e660696a36e29a99effaadd76fc434f447300a95025bcd069ca91cdabc09961"
+        },
+        {
+          "path": "0100478866.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 241,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/미니동화TING.zip",
+      "bytes": 140467,
+      "sha256": "776f8ffa4d1e483bfccad54ae174cab8c131dfa651906a14691ef435e3aa4526",
+      "crc32": "b6d22e6f",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0054927091.jar",
+          "bytes": 204798,
+          "crc32": "7acd8edc",
+          "sha256": "58b09b0952ab45c9b0b04ab17364764c5588d17ecbfb3ce4040218b756d514c7"
+        },
+        {
+          "path": "0054927091.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 362,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/스페셜포스.zip",
+      "bytes": 367007,
+      "sha256": "44b6356d13f87b7f513abb462baf37e6c3ddf17b19195d3f9a331c1fe7320515",
+      "crc32": "aa58abd9",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0052197473.jar",
+          "bytes": 383289,
+          "crc32": "6128beaa",
+          "sha256": "f2705b3f53e09ebbb77d9eb2d8888d0212dc593066b1d7fc8b62d928cc0560c5"
+        },
+        {
+          "path": "0052197473.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 307,
+      "sgs": [],
+      "nestedIssues": []
+    },
+    {
+      "path": "skt/엑스맨.zip",
+      "bytes": 286286,
+      "sha256": "f483ba078c14a2ea0e19a0cbe28ce36ffe7e16b6afc6847aa67f4a54f66feb72",
+      "crc32": "657a9b1e",
+      "included": true,
+      "previouslyRecordedGameBinaries": true,
+      "format": "SKT (MSD)",
+      "primaryBinaries": [
+        {
+          "path": "0053594173.jar",
+          "bytes": 400674,
+          "crc32": "a6f70012",
+          "sha256": "3d31cf8adabadfaab1102624ced4c10981c23b1edae49a1e4271e582785e66da"
+        },
+        {
+          "path": "0053594173.mod",
+          "bytes": 488,
+          "crc32": "96c91f92",
+          "sha256": "1a0c989dbfb8a8b07d6fdb96d668cb727f23c0eba4df9b22245f2ed295ae74c0"
+        }
+      ],
+      "memberCount": 624,
+      "sgs": [],
+      "nestedIssues": []
+    }
+  ],
+  "magicShopTycoon2": {
+    "path": "ktf/Magic-Shop-Tycoon-2.zip",
+    "bytes": 398493,
+    "sha256": "54cd6ad72f004544b107a111d7270e69447d780ca5d3a22edfdd76096d571fc6",
+    "crc32": "a4740b1f",
+    "format": "KTF WIPI",
+    "members": [
+      {
+        "path": "__adf__",
+        "bytes": 631,
+        "sha256": "96d1c81647cd30f3f62948def95828bf9ff5446dc01e173e0f9e57d6937cbef4",
+        "crc32": "8473b602"
+      },
+      {
+        "path": "__class__",
+        "bytes": 263,
+        "sha256": "0d246fcbeacd4d4113ef90f49e488feb8032a9330a45c6eedab09bc68d456af0",
+        "crc32": "26736e7b"
+      },
+      {
+        "path": "__env__",
+        "bytes": 124,
+        "sha256": "d505ed2f654464ebf9177259ddddb49b402cdda8c22c7c99360203181770d647",
+        "crc32": "f217388d"
+      },
+      {
+        "path": "01031685.jar",
+        "bytes": 492050,
+        "sha256": "4e480ac7d085b0f96c3e1915a03b238104f157d1db784366dd06b40659b14402",
+        "crc32": "41adab2e"
+      },
+      {
+        "path": "big.icon",
+        "bytes": 6377,
+        "sha256": "a9f95c4194933f4306b62567887e7c66e48e1f75e07cc7628fb60a5ed3a0159e",
+        "crc32": "08bb4ba3"
+      },
+      {
+        "path": "middle.icon",
+        "bytes": 466,
+        "sha256": "6e586a4716725c2d78e603d3f407b062e6404bba12ea0ff8cea84b387d29a153",
+        "crc32": "b85f39e7"
+      },
+      {
+        "path": "small.icon",
+        "bytes": 264,
+        "sha256": "6a768a82c13a9ba6aa211741d00d48aeadbcfebf01573c9bd5b34c13b9f6e4ca",
+        "crc32": "01859b43"
+      },
+      {
+        "path": "01031685.jar!/META-INF/MANIFEST.MF",
+        "bytes": 71,
+        "sha256": "cfae29dd0624ed99532aab42a93a20883cf8007a60c69b643551178c54c086a8",
+        "crc32": "c3b04848"
+      },
+      {
+        "path": "01031685.jar!/al00.png",
+        "bytes": 1567,
+        "sha256": "c07e7f47da8faa6755d191ede1c0ccab25b51b255580ccc59d249763abeb75b0",
+        "crc32": "55dc3059"
+      },
+      {
+        "path": "01031685.jar!/al01.png",
+        "bytes": 221,
+        "sha256": "c576fedf48a1228f77eb0ade4f60071358b9a9060918a1dfd2f0bcd04207e73c",
+        "crc32": "2f4a8c85"
+      },
+      {
+        "path": "01031685.jar!/al02.png",
+        "bytes": 225,
+        "sha256": "3b97368b39df356434b212ec5035e8135f2fc7a45ee72c9076d9b112f2ed3c41",
+        "crc32": "d8ba8d5c"
+      },
+      {
+        "path": "01031685.jar!/al03.png",
+        "bytes": 199,
+        "sha256": "63125a357a42fec5160cb5e516ecef73a7b718348514138cbb5470504fcf53b2",
+        "crc32": "a3d28968"
+      },
+      {
+        "path": "01031685.jar!/al04.png",
+        "bytes": 412,
+        "sha256": "83d0a48da904b4698649467cee43a86f812fbbb7a5e4d75fef6e29b60b4c6766",
+        "crc32": "cb75835b"
+      },
+      {
+        "path": "01031685.jar!/al05.png",
+        "bytes": 495,
+        "sha256": "77cec83e905001b759f8e024d2fc7693ac7e71cf0653a1327642b62169e40097",
+        "crc32": "464cc051"
+      },
+      {
+        "path": "01031685.jar!/al06.png",
+        "bytes": 1781,
+        "sha256": "6a305058cc6b90fea9e7fb7a11694675759fc6f9a5d477e8cbb1933f18d305e9",
+        "crc32": "e858be37"
+      },
+      {
+        "path": "01031685.jar!/al07.png",
+        "bytes": 613,
+        "sha256": "036bd94d654a5016a2f3f7d668e89ebdeb57395a80c0d9c6eb4f20c0043edebd",
+        "crc32": "ccfc2b05"
+      },
+      {
+        "path": "01031685.jar!/al08.png",
+        "bytes": 297,
+        "sha256": "092deb2eabd59e9cef0ee3ec8b67bb76ab9204af49971d46fcd28b575036fc61",
+        "crc32": "7f3e9742"
+      },
+      {
+        "path": "01031685.jar!/al09.png",
+        "bytes": 504,
+        "sha256": "f1c1f53f9fa00b2002825fa8c36eef25bcf627f4fa48d1556b5d90ceef0050d0",
+        "crc32": "d1d96cd9"
+      },
+      {
+        "path": "01031685.jar!/al10.png",
+        "bytes": 212,
+        "sha256": "021c0d05a135137da5a654c73cba8015c90f41c44548519a04a15744b187d751",
+        "crc32": "c70adaa2"
+      },
+      {
+        "path": "01031685.jar!/al11.png",
+        "bytes": 168,
+        "sha256": "ab927e456293d06bfb3cb8c86ecca6d8ab9a6d1a7d9a9c5fbdfc4dce09230d75",
+        "crc32": "81c9c71c"
+      },
+      {
+        "path": "01031685.jar!/al12.png",
+        "bytes": 243,
+        "sha256": "3f0d45506adfb837524e94425e78cb3200c42dc172b89aaeb1b4e2af23161f68",
+        "crc32": "0b274b31"
+      },
+      {
+        "path": "01031685.jar!/al13.png",
+        "bytes": 302,
+        "sha256": "3c64dbe527c7f72998ba8fd604a8adca29ac999ba129b13140cd900d5191e637",
+        "crc32": "1db94a89"
+      },
+      {
+        "path": "01031685.jar!/al14.png",
+        "bytes": 147,
+        "sha256": "a1847dd40e5c6b7ed234e91f982ed78302382b03e5e13cb6288b02fd08d808f0",
+        "crc32": "c9e6f311"
+      },
+      {
+        "path": "01031685.jar!/al15.png",
+        "bytes": 152,
+        "sha256": "996c83774c9ea87d8d6064a496a075d0f4a2edf7f8af712112cf7aa20750c2f1",
+        "crc32": "30fe6338"
+      },
+      {
+        "path": "01031685.jar!/al16.png",
+        "bytes": 195,
+        "sha256": "4c29acb8f0199d0508913a44f4c42c029a00d5d5bbbcd93fa493f9a077771a57",
+        "crc32": "bd86ec43"
+      },
+      {
+        "path": "01031685.jar!/al17.png",
+        "bytes": 1778,
+        "sha256": "41a9dfb63d4734daeba91aef8c92c2c8c5ac8009566eeb935412fa5b2df8dcd6",
+        "crc32": "129f6147"
+      },
+      {
+        "path": "01031685.jar!/al18.png",
+        "bytes": 805,
+        "sha256": "805652d7e64437c3d4819c1d4c9f79da4a401518240061b8069079569900eaf5",
+        "crc32": "1cd09946"
+      },
+      {
+        "path": "01031685.jar!/al19.png",
+        "bytes": 195,
+        "sha256": "49c7bbea9a75ec4bb4d80e2cb58506ef2ed27ce72a649408da89d9b49e71472c",
+        "crc32": "7e941eb9"
+      },
+      {
+        "path": "01031685.jar!/al20.png",
+        "bytes": 2745,
+        "sha256": "1d26b583807b7e9c13e3d5c8fb49b452c285a0dcbbe4ebc0cc3b2dc59fc16965",
+        "crc32": "322f45f5"
+      },
+      {
+        "path": "01031685.jar!/al21.png",
+        "bytes": 281,
+        "sha256": "46b08282667b602fff315fca32203c01b85223272bb0bedce048d1370807305a",
+        "crc32": "f915893c"
+      },
+      {
+        "path": "01031685.jar!/al22.png",
+        "bytes": 173,
+        "sha256": "0fdc47d3bde60cad397169452cd7de47a4d74afefb27440cc04d8ffea9664c75",
+        "crc32": "caf36d38"
+      },
+      {
+        "path": "01031685.jar!/al23.png",
+        "bytes": 158,
+        "sha256": "fe2fa97b3db13119a7a9c9e33cef498c8d38e4ced794d1840f93fbcefeff0d8f",
+        "crc32": "876756dc"
+      },
+      {
+        "path": "01031685.jar!/al24.png",
+        "bytes": 446,
+        "sha256": "e99a31786dc7fea1ac9e4f2728da03c02470adc9532c0ae01a0c9d21bc0dfdae",
+        "crc32": "a97070f8"
+      },
+      {
+        "path": "01031685.jar!/al25.png",
+        "bytes": 264,
+        "sha256": "b724184a171c15ffa6f796aba5133e2bf1dc3740d06315dfa6f194417a98b184",
+        "crc32": "35cd5d15"
+      },
+      {
+        "path": "01031685.jar!/al26.png",
+        "bytes": 325,
+        "sha256": "4154b9b126218e206b11ee9ee716dccd04ab97096f5fb05b26a30e311e397ead",
+        "crc32": "6c04e1fd"
+      },
+      {
+        "path": "01031685.jar!/al27.png",
+        "bytes": 174,
+        "sha256": "503bc15fc296c4ae423beb0fcf580192a61c13e1d2883c9959e6834f798bec77",
+        "crc32": "727ac4ba"
+      },
+      {
+        "path": "01031685.jar!/al28.png",
+        "bytes": 232,
+        "sha256": "c384e1370f50b1574466fbe63bc8b006714d8d1f46b9417da5f05a652acbf3bf",
+        "crc32": "68f51a68"
+      },
+      {
+        "path": "01031685.jar!/al29.png",
+        "bytes": 217,
+        "sha256": "dbd23d83921fa0850924da0167d94c61edeef174d39c66398f933470a7e6c243",
+        "crc32": "ebd6decd"
+      },
+      {
+        "path": "01031685.jar!/al30.png",
+        "bytes": 198,
+        "sha256": "13da961451a0737f2558ba0deaf913ad1cbb6d9f6371fb29c05779dc208e699f",
+        "crc32": "3682a033"
+      },
+      {
+        "path": "01031685.jar!/al31.png",
+        "bytes": 176,
+        "sha256": "1d2c8525c5778139bf3fce2c9b6ae09b3aea5ec0191513403e97d98e981821b2",
+        "crc32": "61ad1948"
+      },
+      {
+        "path": "01031685.jar!/al32.png",
+        "bytes": 188,
+        "sha256": "d6117c4455029c492c79b5ad7384678e92b48d1430d0c6560c9bb8453e03d691",
+        "crc32": "aace2634"
+      },
+      {
+        "path": "01031685.jar!/al33.png",
+        "bytes": 344,
+        "sha256": "09ca3954fa21117abe95471d0cf5fc6d6f04afc8c687d17fb5f67313131c408c",
+        "crc32": "970035c3"
+      },
+      {
+        "path": "01031685.jar!/al34.png",
+        "bytes": 189,
+        "sha256": "f39da806721674987cc8af017ed34682172031893be00c74bb2d7f71c2fc427f",
+        "crc32": "ee5f4455"
+      },
+      {
+        "path": "01031685.jar!/al35.png",
+        "bytes": 281,
+        "sha256": "1a7b9835f21789cb357aa953dddb2c08885390ec9f564c8996dbfb16db0f26d5",
+        "crc32": "1421e15b"
+      },
+      {
+        "path": "01031685.jar!/al36.png",
+        "bytes": 850,
+        "sha256": "4d5e032683216b559b1e966a5a7b1660c6086deb1e74a793b1d4c4779b6321af",
+        "crc32": "b483e1f5"
+      },
+      {
+        "path": "01031685.jar!/at0.png",
+        "bytes": 3237,
+        "sha256": "7c0e3ded60929b0fcfce15a51535f8d3795732153662f0c17def0ffeb2cd7350",
+        "crc32": "32799142"
+      },
+      {
+        "path": "01031685.jar!/at05.png",
+        "bytes": 199,
+        "sha256": "38abee4bda899f05719935ff8e3dd71b0d0081a3eaf7c37cb948c2ca41f0d88f",
+        "crc32": "3940b2b0"
+      },
+      {
+        "path": "01031685.jar!/at06.png",
+        "bytes": 233,
+        "sha256": "7da0aa39a504c7b61d279367588f8a8ae9ac2c07a85772b0d24aab8951661018",
+        "crc32": "9e05809b"
+      },
+      {
+        "path": "01031685.jar!/at07.png",
+        "bytes": 198,
+        "sha256": "3edc1f01b780ea5985b00e70e04624d030814d4c37053b6503099f2b63cc9af7",
+        "crc32": "8ad7dde3"
+      },
+      {
+        "path": "01031685.jar!/at08.png",
+        "bytes": 200,
+        "sha256": "2ffd1f14467d3fdf7621bef4e42571cad999e48ebaa644a1296387d0841ab386",
+        "crc32": "bd5e9db1"
+      },
+      {
+        "path": "01031685.jar!/at09.png",
+        "bytes": 235,
+        "sha256": "81e9e262b83dcc404ffa55bdacba12c5aad938ffd76fbabe6244e0bc5c55346c",
+        "crc32": "880c2710"
+      },
+      {
+        "path": "01031685.jar!/at10.png",
+        "bytes": 307,
+        "sha256": "587f473425648e7bcf439fc50081ca2d0102a11014fe8678e95efeb3e6ad51a2",
+        "crc32": "1d7b96e3"
+      },
+      {
+        "path": "01031685.jar!/at11.png",
+        "bytes": 222,
+        "sha256": "d74f11fe9aa28523c69cb7b90ae2d9d38591a17d40f932323431aa2e1fb95ad9",
+        "crc32": "1b2fbb93"
+      },
+      {
+        "path": "01031685.jar!/at12.png",
+        "bytes": 188,
+        "sha256": "36f9ff4f1592f0cbad9ae98e53055e94dcffd57f1bb2bd86cf633ed984cf70cc",
+        "crc32": "6df1b07f"
+      },
+      {
+        "path": "01031685.jar!/at13.png",
+        "bytes": 612,
+        "sha256": "985af1e4a229e2dc8f6c3724706a6b06e39880174fde31d07c6f6f3d13483b48",
+        "crc32": "e390c736"
+      },
+      {
+        "path": "01031685.jar!/at14.png",
+        "bytes": 2371,
+        "sha256": "f9de2651ef5974f93bd402c49661df15ca463706fa3b33500c615d439d0209a2",
+        "crc32": "db4d891e"
+      },
+      {
+        "path": "01031685.jar!/at15.png",
+        "bytes": 244,
+        "sha256": "db583fa39a51c8392079385cab6e4936c7107336c87d7f4f1d5cdb3cf6862c70",
+        "crc32": "05378e3f"
+      },
+      {
+        "path": "01031685.jar!/at16.png",
+        "bytes": 2233,
+        "sha256": "41bdbb725d5a10beb4b2be75e9fdae6a47e83febe7404dcc068e50bd3f2eb4dc",
+        "crc32": "8c01b88f"
+      },
+      {
+        "path": "01031685.jar!/at17.png",
+        "bytes": 400,
+        "sha256": "a01764d31e210e7a27fd114ae2e4e10ec0bbf6d2464e7c1283f785ba81fa5d93",
+        "crc32": "7f37f7ae"
+      },
+      {
+        "path": "01031685.jar!/at18.png",
+        "bytes": 249,
+        "sha256": "30a03f449f75865e4e7ca748d677dc2440c4fc398ad8de97269d7313db84239f",
+        "crc32": "a5bba3aa"
+      },
+      {
+        "path": "01031685.jar!/at19.png",
+        "bytes": 499,
+        "sha256": "11468bca4945d59d9561bdaab73063090346b81e87afac53a1909b3f57003420",
+        "crc32": "04608ca0"
+      },
+      {
+        "path": "01031685.jar!/at20.png",
+        "bytes": 2685,
+        "sha256": "11cd9db10b65a2b99962a18d8ba633d875f199e4e60299cd27cffeaf2ad0a102",
+        "crc32": "0c401890"
+      },
+      {
+        "path": "01031685.jar!/at21.png",
+        "bytes": 506,
+        "sha256": "3974c4f4d492816dd7a0520b6831aca00f707b00d251c7bf2dead88a538aba91",
+        "crc32": "1a463827"
+      },
+      {
+        "path": "01031685.jar!/at22.png",
+        "bytes": 568,
+        "sha256": "59d75279a2311abb4a66244d3419b934711cc379992aed263a27fab8fa437dd5",
+        "crc32": "d0f05ce5"
+      },
+      {
+        "path": "01031685.jar!/at23.png",
+        "bytes": 589,
+        "sha256": "a4dbec97281efdf77b24fcbc7eeea02531c34eef18b9ac695cd34781f8084656",
+        "crc32": "dc456943"
+      },
+      {
+        "path": "01031685.jar!/at24.png",
+        "bytes": 329,
+        "sha256": "40f070f5b220151cf574edb89d172f5a544d40ed853673d930211b6b29ee6dc7",
+        "crc32": "10ed4bae"
+      },
+      {
+        "path": "01031685.jar!/at25.png",
+        "bytes": 272,
+        "sha256": "88297456f8305e56a58222c5e56ba9e14877bf2943f5de817a77e0df29de625f",
+        "crc32": "41ec9a53"
+      },
+      {
+        "path": "01031685.jar!/at26.png",
+        "bytes": 302,
+        "sha256": "82eceda2eb4dff5f2c6caf108239648b2c3f75e0395985b63af8701114389a95",
+        "crc32": "aa85748a"
+      },
+      {
+        "path": "01031685.jar!/at27.png",
+        "bytes": 690,
+        "sha256": "608975d334d521c199109d09ee46b211f97c6be0cedc4996b54ec63c8c17adbb",
+        "crc32": "8b1cb44a"
+      },
+      {
+        "path": "01031685.jar!/c_02.png",
+        "bytes": 924,
+        "sha256": "c50024d13c3a43df8d1a1c8ff76fd541ea8910b1ffb8741bf05dafc61768f270",
+        "crc32": "2f4546d2"
+      },
+      {
+        "path": "01031685.jar!/c_03.png",
+        "bytes": 1316,
+        "sha256": "9547432de2386415065afacdda1011eed57c844ba3b45b9f1e9660373df365c0",
+        "crc32": "5371cf88"
+      },
+      {
+        "path": "01031685.jar!/c_04.png",
+        "bytes": 1247,
+        "sha256": "c2f764290b9012f7c761f460124ed357d9665138cdb407c52006cc5b650c15bd",
+        "crc32": "f86b7c58"
+      },
+      {
+        "path": "01031685.jar!/c_05.png",
+        "bytes": 1203,
+        "sha256": "b59ed84d41f676caf96d522dc1c395000a14b0292a274218e33ff0325c9505a9",
+        "crc32": "6c46cbe2"
+      },
+      {
+        "path": "01031685.jar!/c_06.png",
+        "bytes": 1241,
+        "sha256": "7bfd18b86c9eeba56813d5861509f52270879d904c47a87d86ea9dd709770a0e",
+        "crc32": "d104feef"
+      },
+      {
+        "path": "01031685.jar!/c_07.png",
+        "bytes": 1087,
+        "sha256": "39f6eb45fc45ff63d656c5a62f6e624403d52d6e849f88f330ab732745628630",
+        "crc32": "636d6674"
+      },
+      {
+        "path": "01031685.jar!/c_08.png",
+        "bytes": 1041,
+        "sha256": "0a9d4d64ec38fed7a3dea5d9bbae7730580ddc9757e68495fb1623cedaba6a91",
+        "crc32": "c5459020"
+      },
+      {
+        "path": "01031685.jar!/c_08a.png",
+        "bytes": 479,
+        "sha256": "0bd66cac92c8fa1575e2ffe728111c1f6698bbfcb2c970e2841ce69a1c0417b2",
+        "crc32": "41cbcb29"
+      },
+      {
+        "path": "01031685.jar!/c_09.png",
+        "bytes": 1040,
+        "sha256": "6019465bd5fc743a8826e99ae463a0a0282c2f438bd15b1e452d1338a342f5c1",
+        "crc32": "e1e8d531"
+      },
+      {
+        "path": "01031685.jar!/c_11.png",
+        "bytes": 1255,
+        "sha256": "372c32398c641d0edb7291fe53bd79ea39b5403f39d95a97de9e6a6186f381dc",
+        "crc32": "0c4a79b4"
+      },
+      {
+        "path": "01031685.jar!/c_12.png",
+        "bytes": 1287,
+        "sha256": "bcb8308a3d3f0b48db1844eab9b6afe8a034c5c7438c0f8146ca881149d9c454",
+        "crc32": "01dc27c4"
+      },
+      {
+        "path": "01031685.jar!/c_13.png",
+        "bytes": 1134,
+        "sha256": "6902a995cf92b984aaff60683a2ca1f3f4b6bebc549a41c1f326bf093954c8cc",
+        "crc32": "d4119686"
+      },
+      {
+        "path": "01031685.jar!/c_14.png",
+        "bytes": 1098,
+        "sha256": "c024df7fad3a95331672e80075f3f5203d7cea52a777e4f4200a910ba60b57fa",
+        "crc32": "c00423dc"
+      },
+      {
+        "path": "01031685.jar!/c_15.png",
+        "bytes": 1198,
+        "sha256": "9fca65c6f7a9e39bf0cd8aaa62cfd9f36d821f1dc93b551bf2f9fb1b48b91be8",
+        "crc32": "9b2b836e"
+      },
+      {
+        "path": "01031685.jar!/c_16.png",
+        "bytes": 1196,
+        "sha256": "6d228632b0f6458554ca1fcd876136159ac698f7b354a5b39705f18c02372d8f",
+        "crc32": "0e296f0d"
+      },
+      {
+        "path": "01031685.jar!/c_17.png",
+        "bytes": 1068,
+        "sha256": "02dc94fd774a4760be7b2eedec80de582118b6c7b5c7fc5bf3849bb6a54492ad",
+        "crc32": "e7fa423b"
+      },
+      {
+        "path": "01031685.jar!/c_18.png",
+        "bytes": 1165,
+        "sha256": "017a22b6c303fde4771f1422ec919924ef59d585c2dcfb8a9161cee6e6de4d89",
+        "crc32": "44a09b69"
+      },
+      {
+        "path": "01031685.jar!/c_19.png",
+        "bytes": 1068,
+        "sha256": "60ee63e493f5051025447f0d255745879ba8f006ef9af60bccd9657dca4c2845",
+        "crc32": "82f40f84"
+      },
+      {
+        "path": "01031685.jar!/c_20.png",
+        "bytes": 850,
+        "sha256": "87c5a13f7f72f49a8051278d9a5c87f0249550c4bccf1bc627c993d5fa4084ed",
+        "crc32": "b7ee8433"
+      },
+      {
+        "path": "01031685.jar!/c_21.png",
+        "bytes": 927,
+        "sha256": "ecece4a28504b55ed808c592e42e02518880aeb102a334bc65d7110fe3d48a38",
+        "crc32": "f2d73da9"
+      },
+      {
+        "path": "01031685.jar!/c_22.png",
+        "bytes": 977,
+        "sha256": "51491787bc1f2e9dde26f62025ba69995e26cd8848eafd6aaa84301a3944ab6d",
+        "crc32": "b26820e3"
+      },
+      {
+        "path": "01031685.jar!/cb0.png",
+        "bytes": 523,
+        "sha256": "c74908cf13e6b24cb346a1eb95ff31037bf9f0a99f563d17e58999617c1dce28",
+        "crc32": "50a5221e"
+      },
+      {
+        "path": "01031685.jar!/cb1.png",
+        "bytes": 681,
+        "sha256": "4c61bdff65db9e0a5bcc042d9c7a8cf6ca2403e3940ce524ddfcd9c34e123cd3",
+        "crc32": "d87069df"
+      },
+      {
+        "path": "01031685.jar!/cb2.png",
+        "bytes": 308,
+        "sha256": "3ab1ba7fe6c5a8ba431d34edfab90029afb037f84d10b0eab221c7a91b829a4e",
+        "crc32": "d3297c61"
+      },
+      {
+        "path": "01031685.jar!/cb3.png",
+        "bytes": 518,
+        "sha256": "64353e41553f5e6691abebed7a4ffd127e89bfd3785b6f847033c75920b3448b",
+        "crc32": "44ee7dbd"
+      },
+      {
+        "path": "01031685.jar!/cb4.png",
+        "bytes": 257,
+        "sha256": "259435d69dc6411c7413c4d396a4b5bfadfd2914f1971f726149c8a2308e4e59",
+        "crc32": "a10f204f"
+      },
+      {
+        "path": "01031685.jar!/cb5.png",
+        "bytes": 891,
+        "sha256": "ae30115bcd94d9ee07b8ba96261614a27c047a4242ce84d79b27b4400c8dbd5d",
+        "crc32": "431ecdf7"
+      },
+      {
+        "path": "01031685.jar!/cb6.png",
+        "bytes": 263,
+        "sha256": "68234fd1c723c7c87856d3479d59815370320d0d4e74f6e77d1437fe607e2229",
+        "crc32": "90b330e8"
+      },
+      {
+        "path": "01031685.jar!/cb7.png",
+        "bytes": 316,
+        "sha256": "a0f3357faf04d07065fd2417aa8c39227b286d86ba467c0ebc53d6ca340cda86",
+        "crc32": "b905c589"
+      },
+      {
+        "path": "01031685.jar!/cb8.png",
+        "bytes": 391,
+        "sha256": "c24907c32805863cc0d875709c3f533024ffaf911daa9bfc3228ba72fd252f88",
+        "crc32": "3a9e2743"
+      },
+      {
+        "path": "01031685.jar!/cb9.png",
+        "bytes": 230,
+        "sha256": "692836f0c7b37464ff945601a04d1d587e5e63d0215fcc6c8d8b2a7e2958690e",
+        "crc32": "3ba39539"
+      },
+      {
+        "path": "01031685.jar!/ch00.png",
+        "bytes": 539,
+        "sha256": "06dbcce9c86397c75d75da64ca8199433922dcf5793f484421690f60162f5da5",
+        "crc32": "df3e9f5e"
+      },
+      {
+        "path": "01031685.jar!/ch01.png",
+        "bytes": 418,
+        "sha256": "ec82e60b7a854548eb11fc99b7c239aa5c0d72696dee5f0f7d7d85360fe0c722",
+        "crc32": "0eaa6382"
+      },
+      {
+        "path": "01031685.jar!/ed0.png",
+        "bytes": 566,
+        "sha256": "615ec839c3dfa30f6f4d990757151478a3105847d623ad1e3c61479e7c1d51c8",
+        "crc32": "6b778993"
+      },
+      {
+        "path": "01031685.jar!/ed1.png",
+        "bytes": 509,
+        "sha256": "cbc1a7c21d80e066177082dd22d4aaa057114d0caf4cdf3e75fe22f25016661c",
+        "crc32": "2adf0141"
+      },
+      {
+        "path": "01031685.jar!/ft0.png",
+        "bytes": 4498,
+        "sha256": "a6d0159280dfd1671eed39c88eb354607d037de08929b6f3c4dc5b1a73daae86",
+        "crc32": "7247c728"
+      },
+      {
+        "path": "01031685.jar!/mc00.png",
+        "bytes": 938,
+        "sha256": "70206481f6b6f96894074e9d0317d8bcfcc2743f0111cddc34b0361bdf9a5a87",
+        "crc32": "0ca24e72"
+      },
+      {
+        "path": "01031685.jar!/mc01.png",
+        "bytes": 492,
+        "sha256": "0d3a9b6ce9f4a22540f7c6056ef5a8ea975c271923783114f48905861feb7065",
+        "crc32": "a47f54f4"
+      },
+      {
+        "path": "01031685.jar!/mc02.png",
+        "bytes": 267,
+        "sha256": "34132e436519edacdb71c483cc1256f7127da7b64ad18993464bcf266d544d8f",
+        "crc32": "016d1032"
+      },
+      {
+        "path": "01031685.jar!/mc03.png",
+        "bytes": 1580,
+        "sha256": "330268da0d48d885a2d93f625cb756f3f9109e3037c010abf4011fac7f00e102",
+        "crc32": "2b3fba5d"
+      },
+      {
+        "path": "01031685.jar!/mc04.png",
+        "bytes": 796,
+        "sha256": "f180bec1f0a752b808a3bfc2b2ea7423b69c45f488959b19a3c7d16227b6ab32",
+        "crc32": "dfe47f84"
+      },
+      {
+        "path": "01031685.jar!/mk00.png",
+        "bytes": 6295,
+        "sha256": "7185f63d6a6143f076020b10b28c3329bd9c7bfeb4ce9cc36b868211d1147725",
+        "crc32": "e4992cb8"
+      },
+      {
+        "path": "01031685.jar!/mk01.png",
+        "bytes": 335,
+        "sha256": "98b357631815fd4269be22f87a9d7220e66cbdd36dd4924a24b1ba591727c005",
+        "crc32": "2cf10059"
+      },
+      {
+        "path": "01031685.jar!/mk02.png",
+        "bytes": 1001,
+        "sha256": "2df2139810a89ec688cb3b6d5efab40cdb6fda123d0c39751e82bc0e2b080e6f",
+        "crc32": "fd52d44b"
+      },
+      {
+        "path": "01031685.jar!/mk03.png",
+        "bytes": 358,
+        "sha256": "e66b6221cfc0b67f1beb34b24984da636e76ea9e9e06e91a6faed18057d21678",
+        "crc32": "ce14cf6e"
+      },
+      {
+        "path": "01031685.jar!/mk04.png",
+        "bytes": 249,
+        "sha256": "8aeb9a11636cc4b53b66b199f9e425e04815edaf1bf775188f54fe0899a7d2e9",
+        "crc32": "4287cd98"
+      },
+      {
+        "path": "01031685.jar!/mk05.png",
+        "bytes": 506,
+        "sha256": "e90bdb6cb188cb18ef66de8326a0c7fcbac142259f8b92ee125b060cfbd60d65",
+        "crc32": "e8a394e8"
+      },
+      {
+        "path": "01031685.jar!/mk06.png",
+        "bytes": 166,
+        "sha256": "5ea7d34d439202f447cc98de5ad0022024fd5c775a51bbd7348decae6e2b77bf",
+        "crc32": "b36763c0"
+      },
+      {
+        "path": "01031685.jar!/mk07.png",
+        "bytes": 220,
+        "sha256": "40e8a7efb013e9398277d9040177f108af3d781fc441b1f57904e6e66bfafe20",
+        "crc32": "ab7b2a82"
+      },
+      {
+        "path": "01031685.jar!/mk08.png",
+        "bytes": 219,
+        "sha256": "c6bae9e9bf913ec42e63c0d2d51433d899335827952cf83f094371bfe7b75f3f",
+        "crc32": "119a2131"
+      },
+      {
+        "path": "01031685.jar!/mk09.png",
+        "bytes": 173,
+        "sha256": "33fa9afa0048627e7ede521c08a09bf5f50239602bf0e9be6518e371c0078c2c",
+        "crc32": "b9396fb8"
+      },
+      {
+        "path": "01031685.jar!/mk10.png",
+        "bytes": 464,
+        "sha256": "738fb7fc42fd26e5eace111f809ddb2a5e087f6d94292b9a8cc1e34bbbf0ea5f",
+        "crc32": "3dfef057"
+      },
+      {
+        "path": "01031685.jar!/mk11.png",
+        "bytes": 275,
+        "sha256": "005368e0366c246081d565f23833016ccd55011bdd56b06ba3f070d05efb3728",
+        "crc32": "c9e906c3"
+      },
+      {
+        "path": "01031685.jar!/mk12.png",
+        "bytes": 262,
+        "sha256": "6e135372809c83c7137d1c4a599c94ffad96b1d8e24257265999774383e8188f",
+        "crc32": "fe4f7156"
+      },
+      {
+        "path": "01031685.jar!/mk13.png",
+        "bytes": 179,
+        "sha256": "65a66d0c142e4a2a381acb87088798c95d31659d566621abf8bc970ebc880df7",
+        "crc32": "d035d85f"
+      },
+      {
+        "path": "01031685.jar!/mk14.png",
+        "bytes": 190,
+        "sha256": "c005c3289f2c56ead2aee36362fd1c1c08971fb304e3f2f0a9842dff108495f1",
+        "crc32": "a6563c2d"
+      },
+      {
+        "path": "01031685.jar!/mk15.png",
+        "bytes": 188,
+        "sha256": "107baf088e787b890dbd64d0234a66a3efef99b14f4ea3b812f6604d8774bf37",
+        "crc32": "7d2ea980"
+      },
+      {
+        "path": "01031685.jar!/mt0.png",
+        "bytes": 2305,
+        "sha256": "600c4508b0203f96a737c610607323212c01b4ff2932ebd584c562d57f36b8e2",
+        "crc32": "a25587f6"
+      },
+      {
+        "path": "01031685.jar!/nvi0.png",
+        "bytes": 2112,
+        "sha256": "c75ac62d31bbfd6069193ddff79426414a822509d9f5e056c835b3027bfdb66d",
+        "crc32": "8f8bfaf7"
+      },
+      {
+        "path": "01031685.jar!/nvi1.png",
+        "bytes": 1953,
+        "sha256": "d6a23ec11d13e2a100d472c4c0f73acf88a9bd69ab2f3eb400cad00a556f967d",
+        "crc32": "e0e496ad"
+      },
+      {
+        "path": "01031685.jar!/nvi2.png",
+        "bytes": 1883,
+        "sha256": "150bcd4b4dc7244a3cb09db354ccbdda7cb648ae4ff5bbacd625ea2b93b66946",
+        "crc32": "3ac46993"
+      },
+      {
+        "path": "01031685.jar!/nvi3.png",
+        "bytes": 2195,
+        "sha256": "4478f590881c855d444054ff05860f15cfee46909331026418f0fa07e193f2d9",
+        "crc32": "b3687a6b"
+      },
+      {
+        "path": "01031685.jar!/nvi4.png",
+        "bytes": 201,
+        "sha256": "703383bfd20707f2fc74815ad2f7a0b0499aeee60349a82694171b1133f79dd1",
+        "crc32": "6ac1aced"
+      },
+      {
+        "path": "01031685.jar!/ob0.png",
+        "bytes": 262,
+        "sha256": "208ea127146ff727799791ebb777689eb6775e7cd3a744ebf868826bbfc1e257",
+        "crc32": "ea1ab516"
+      },
+      {
+        "path": "01031685.jar!/ob1.png",
+        "bytes": 302,
+        "sha256": "9b4d549a784bed47a66f07b959dfb038609dacf8d43676e7494b79575b9f8bb5",
+        "crc32": "b2cf91e5"
+      },
+      {
+        "path": "01031685.jar!/ob2.png",
+        "bytes": 520,
+        "sha256": "607c46c40529815306136e200172884e4a74976a2f7badf5029ed08138c9b790",
+        "crc32": "5e81cf50"
+      },
+      {
+        "path": "01031685.jar!/ob3.png",
+        "bytes": 5341,
+        "sha256": "4eb97a55f3268fbbc10b163e31c069fb43db6e9cf33aa3470a525a5dca0e6828",
+        "crc32": "1c36897f"
+      },
+      {
+        "path": "01031685.jar!/sh06.png",
+        "bytes": 322,
+        "sha256": "19df10fc976c5fad78e02be4155d6cd947a5f204d21367bf60349baa94a3cced",
+        "crc32": "285df9a2"
+      },
+      {
+        "path": "01031685.jar!/sh07.png",
+        "bytes": 337,
+        "sha256": "a9e907d65d035c581e5ac0c91b584911a96bddbb23375f4687d2aba09cc0cb35",
+        "crc32": "8fc3a298"
+      },
+      {
+        "path": "01031685.jar!/sh08.png",
+        "bytes": 3837,
+        "sha256": "7bc93a5334ca9d65106143bf69a993475e421b1d31855b58d1efcfced54fafa5",
+        "crc32": "5dd1fbea"
+      },
+      {
+        "path": "01031685.jar!/sh09.png",
+        "bytes": 1066,
+        "sha256": "c8b8e4132f987351d7dd1c19a4f3060cc10babaf5876ee7c42846d8aaef6b8c1",
+        "crc32": "868df956"
+      },
+      {
+        "path": "01031685.jar!/sh10.png",
+        "bytes": 313,
+        "sha256": "8fc1af46dac6273e719984709ea50c7672cc452dc45f73948fca31bb2df05f33",
+        "crc32": "d6bd0f84"
+      },
+      {
+        "path": "01031685.jar!/sh11.png",
+        "bytes": 193,
+        "sha256": "ed0fad77f2fe63bb49322228c77edf7d62b0b07a80ca0629731b188560930d3c",
+        "crc32": "9c5a5bfb"
+      },
+      {
+        "path": "01031685.jar!/sh12.png",
+        "bytes": 773,
+        "sha256": "6f12934218bde0cafffac670eca535bcf50d132adcb27388567e3c002d5f90cd",
+        "crc32": "4398ca07"
+      },
+      {
+        "path": "01031685.jar!/sh13.png",
+        "bytes": 292,
+        "sha256": "393dff3d88e3efdc7d974fee43f1edad8c35071570e759e90421bf1b0e2964e1",
+        "crc32": "ea6934a5"
+      },
+      {
+        "path": "01031685.jar!/sh14.png",
+        "bytes": 188,
+        "sha256": "107baf088e787b890dbd64d0234a66a3efef99b14f4ea3b812f6604d8774bf37",
+        "crc32": "7d2ea980"
+      },
+      {
+        "path": "01031685.jar!/sh15.png",
+        "bytes": 607,
+        "sha256": "1d87b09359552c7fca1d2d4010e629fd6e3c760c1347ca60fc6085a6928be4df",
+        "crc32": "a403fd4e"
+      },
+      {
+        "path": "01031685.jar!/sh18.png",
+        "bytes": 301,
+        "sha256": "295cb2c3e4aa8ad8418da2d071839a79371fa7c4b01c34d983c9dbfbf75d96d4",
+        "crc32": "57e86107"
+      },
+      {
+        "path": "01031685.jar!/si00.png",
+        "bytes": 192,
+        "sha256": "b51047de224acf6102333d13f74da48ded689396ef8604299db6109e73332252",
+        "crc32": "f12e47cc"
+      },
+      {
+        "path": "01031685.jar!/si01.png",
+        "bytes": 724,
+        "sha256": "604b0b601ff212361640a84e01374a6276f98bccd33471df61b198b38d213167",
+        "crc32": "627e5515"
+      },
+      {
+        "path": "01031685.jar!/sk00.png",
+        "bytes": 313,
+        "sha256": "dbe62da10c18b123fc8abeb445c64789231fd86506f65f8f70fcf5f17782607c",
+        "crc32": "277f3cf3"
+      },
+      {
+        "path": "01031685.jar!/sk01.png",
+        "bytes": 317,
+        "sha256": "4165cd1ccb6f1d617a9cd36ca6f228b0a523550d207f3a6391ff0ad658bc28b8",
+        "crc32": "6c0e03f9"
+      },
+      {
+        "path": "01031685.jar!/sk02.png",
+        "bytes": 425,
+        "sha256": "7b95372f97edf4ceb4ef11e9d254f8a42ebae904c74817e70292c9aba8aa9e48",
+        "crc32": "40202ee2"
+      },
+      {
+        "path": "01031685.jar!/sk03.png",
+        "bytes": 365,
+        "sha256": "6ab7210420c15cbd639c08ec509087e5e0402e4cf52fa53a69ed01a59774b20d",
+        "crc32": "1ed61bf9"
+      },
+      {
+        "path": "01031685.jar!/sk04.png",
+        "bytes": 318,
+        "sha256": "dfed4cedfc887ef8b325e14435ac0fd6a63ac10747c8a52ffd6fbce50d171e9d",
+        "crc32": "492447ac"
+      },
+      {
+        "path": "01031685.jar!/sk05.png",
+        "bytes": 224,
+        "sha256": "e3e1833c98d4ff32e678f21d21ec7ba4f315cd8db09d00d2a14060c97aeb4eb7",
+        "crc32": "d98e89ca"
+      },
+      {
+        "path": "01031685.jar!/sk06.png",
+        "bytes": 269,
+        "sha256": "b9d1774f807d449528e34f6bb6bd5f9fe60581ed472a56b25552fe751f849cdc",
+        "crc32": "c11ce818"
+      },
+      {
+        "path": "01031685.jar!/sk07.png",
+        "bytes": 299,
+        "sha256": "ba4fbe280f2988ff0903de9a99d8e4d35da86c9fe371c67d92df7bbe3e2aaf39",
+        "crc32": "cf3e1b89"
+      },
+      {
+        "path": "01031685.jar!/sk08.png",
+        "bytes": 388,
+        "sha256": "5f9ffe6938145d6af2e854171c68108fa82c31c81eb6634bf1f220e320c021b2",
+        "crc32": "88a33c4a"
+      },
+      {
+        "path": "01031685.jar!/sk09.png",
+        "bytes": 804,
+        "sha256": "04b69a9b62416bf43b9a24080df41354b21dc7dd39bfb80b3caaa36b9b83c4cf",
+        "crc32": "5bb6dfef"
+      },
+      {
+        "path": "01031685.jar!/sk10.png",
+        "bytes": 599,
+        "sha256": "92554912a1d4e5e1799c4653dde9faebcb0582ccca04b6c3dae8f78f2ac98353",
+        "crc32": "4089ba83"
+      },
+      {
+        "path": "01031685.jar!/sk11.png",
+        "bytes": 409,
+        "sha256": "d81c5bb5457e750828748040930f3d55251c674d17a1225cdf3eddafa39e8b4a",
+        "crc32": "1dbd782f"
+      },
+      {
+        "path": "01031685.jar!/sk12.png",
+        "bytes": 230,
+        "sha256": "82d07c9330312fc5a57887ffa5a1a391944234acb6049ac36c58f533047b1913",
+        "crc32": "15270688"
+      },
+      {
+        "path": "01031685.jar!/sk13.png",
+        "bytes": 308,
+        "sha256": "e258f1dee385fa3ec3e2fba3d5ae1243f1ccfb37ea3c3f7e89add76d9c7a1eda",
+        "crc32": "784bab27"
+      },
+      {
+        "path": "01031685.jar!/sk14.png",
+        "bytes": 297,
+        "sha256": "2b60fb62b2b4958e769d6f39f896552ea1cbf205d4f2286a4756509135bf081a",
+        "crc32": "ce5f5940"
+      },
+      {
+        "path": "01031685.jar!/sk15.png",
+        "bytes": 297,
+        "sha256": "129b860ce65b049e4b16c4d66cd3a3073a5f2eb9f21d35f40f24e4df0c666fb9",
+        "crc32": "d73597dc"
+      },
+      {
+        "path": "01031685.jar!/sk16.png",
+        "bytes": 351,
+        "sha256": "bead9d7e7998d88eda091125c8e4eb49d9de2c70c49cbae7962d28b0e65c0cf1",
+        "crc32": "b2144589"
+      },
+      {
+        "path": "01031685.jar!/sk17.png",
+        "bytes": 302,
+        "sha256": "f0d5c031fc06386b8c18fc331ea2dc722fd65e5baa6cc11d932a2f5e59317cbe",
+        "crc32": "c02343de"
+      },
+      {
+        "path": "01031685.jar!/sk18.png",
+        "bytes": 303,
+        "sha256": "d3dc5fe5ea7701c7d0a2cbbaaa45625a370c22ba4a35d727949199ae63907716",
+        "crc32": "a3933c38"
+      },
+      {
+        "path": "01031685.jar!/sk19.png",
+        "bytes": 272,
+        "sha256": "b917aaad37e4f355a149a13e20a60af32ab243f09838c39312d8153b9591afd6",
+        "crc32": "ac987519"
+      },
+      {
+        "path": "01031685.jar!/sk20.png",
+        "bytes": 448,
+        "sha256": "2263cd3c8c81cb0d63eded91245cdced6ccdc9ce0a7d8a4b4e0f198ddc7e4b94",
+        "crc32": "8d6d7914"
+      },
+      {
+        "path": "01031685.jar!/sk21.png",
+        "bytes": 361,
+        "sha256": "38018a63905ac2479cf70db26b602927cea389517ee191c5410bbc5849e8d79f",
+        "crc32": "507adcc6"
+      },
+      {
+        "path": "01031685.jar!/sk22.png",
+        "bytes": 231,
+        "sha256": "5d515afbc9d9e81fd8bd851de27fc59c1192e075b973abfd605f8928ea277aa6",
+        "crc32": "f784b4ae"
+      },
+      {
+        "path": "01031685.jar!/st16.png",
+        "bytes": 202,
+        "sha256": "a63a47ef04671e4b9033a96df5bc2f80bdddea1c80b9ffda8237e0e5f9f30b51",
+        "crc32": "9d47f4d3"
+      },
+      {
+        "path": "01031685.jar!/ti00.png",
+        "bytes": 567,
+        "sha256": "b7253ddef51669a0c095bf392982b39431f2688ecc2660d1e7a03136aa1640e6",
+        "crc32": "98603975"
+      },
+      {
+        "path": "01031685.jar!/ti01.png",
+        "bytes": 742,
+        "sha256": "97b5937bc79ed615e4a4b4812eabca5138ce31491828ac0e9b168b5b8ff43f99",
+        "crc32": "91a45a59"
+      },
+      {
+        "path": "01031685.jar!/ti02.png",
+        "bytes": 345,
+        "sha256": "1c18f9116272925092177f43ccccc57a54eec4fa3fa22d00d1fba160e10c6000",
+        "crc32": "a1c58f8e"
+      },
+      {
+        "path": "01031685.jar!/ti03.png",
+        "bytes": 225,
+        "sha256": "94e743d13c1caf9975620864f2b5bfcc03868c20389c196a1271d3760c4b7e52",
+        "crc32": "a4cbc14c"
+      },
+      {
+        "path": "01031685.jar!/ti04.png",
+        "bytes": 11528,
+        "sha256": "84914af650cf2414d9f21c2dc4bd64e56301003a35a42516b5b0c34f4056fb53",
+        "crc32": "01114b3d"
+      },
+      {
+        "path": "01031685.jar!/ti05.png",
+        "bytes": 244,
+        "sha256": "d37fc2ce520f0bd1040cf8ca7f25504572f9efe8e77a678ac4a6cc79f8d83027",
+        "crc32": "ac2288ca"
+      },
+      {
+        "path": "01031685.jar!/ti06.png",
+        "bytes": 266,
+        "sha256": "0c9bb6a25164b98e610c6095747d2a6d5ee76f4c918dcc9e48c67d597c86a978",
+        "crc32": "7f9fb241"
+      },
+      {
+        "path": "01031685.jar!/ti07.png",
+        "bytes": 222,
+        "sha256": "969c637755afbd4e15459dd7a1543bd1c9bd29c617a9fa571b0a7b933ac12db1",
+        "crc32": "92f5db8e"
+      },
+      {
+        "path": "01031685.jar!/ti08.png",
+        "bytes": 1494,
+        "sha256": "68b9799ffacfa8cdb39b753f84e0ffa2b0f51efac4299e7f7d6aeb9be6befb0f",
+        "crc32": "c4951c52"
+      },
+      {
+        "path": "01031685.jar!/ti09.png",
+        "bytes": 304,
+        "sha256": "9f16dcf99187043bace9fbeac5e97f7ac07592ff8a11dc4ed431ff02ac10bf28",
+        "crc32": "3d8619e8"
+      },
+      {
+        "path": "01031685.jar!/ti10.png",
+        "bytes": 1219,
+        "sha256": "d8202f00d362af8b426dc963210b9f6d72c9279f618af105cbf1448ca9c05211",
+        "crc32": "3f52ab1c"
+      },
+      {
+        "path": "01031685.jar!/ti11.png",
+        "bytes": 262,
+        "sha256": "9272b93af2733f0bbcc07152531857969395c0dc9105a6f2779f1bef4ace5fc3",
+        "crc32": "35ee4109"
+      },
+      {
+        "path": "01031685.jar!/vi0.png",
+        "bytes": 2310,
+        "sha256": "c1aa7ba6ad31398d3c51b4b46944b3be5fa6c7b42c6b74798411e46cb3505f5f",
+        "crc32": "fb8b3640"
+      },
+      {
+        "path": "01031685.jar!/vi1.png",
+        "bytes": 2158,
+        "sha256": "eec114a67ade4040337649a23781d7345eac09281efc9aef9fb3edec361dc0ad",
+        "crc32": "f885764a"
+      },
+      {
+        "path": "01031685.jar!/vi2.png",
+        "bytes": 1927,
+        "sha256": "2e85355a108a956861a93d8a019d388a9dfd5358bdb34552e62a041f8400e18f",
+        "crc32": "10d119ea"
+      },
+      {
+        "path": "01031685.jar!/vi3.png",
+        "bytes": 2313,
+        "sha256": "8edc5d6a41f0cf646f17c42907e0347864f2f709237e858a73c50c9a5792e936",
+        "crc32": "978a051d"
+      },
+      {
+        "path": "01031685.jar!/vi4.png",
+        "bytes": 335,
+        "sha256": "266affa925d64f6bca31c923d5f77c5aab95c58b16036df56ee6bd8017f0b5e0",
+        "crc32": "7b536608"
+      },
+      {
+        "path": "01031685.jar!/vi5.png",
+        "bytes": 399,
+        "sha256": "43e37fe2245e0868a326b6a8968b2e41809c0de322ce8983573280be54e9ae8f",
+        "crc32": "27b200de"
+      },
+      {
+        "path": "01031685.jar!/vi6.png",
+        "bytes": 284,
+        "sha256": "a51cd5d263185325559037aae46d994f82b06aed43eafe22afc3206910028136",
+        "crc32": "d373f43f"
+      },
+      {
+        "path": "01031685.jar!/vo01.png",
+        "bytes": 264,
+        "sha256": "276e25835eac54dc564e2b54fe39b2e868887bae1de8b7237d39df8fd450a2b6",
+        "crc32": "9886d530"
+      },
+      {
+        "path": "01031685.jar!/vo02.png",
+        "bytes": 224,
+        "sha256": "c843d445bbffe502bdb66c35821bb41221b91eccd236a468b221ad08532059ce",
+        "crc32": "f9af5fa7"
+      },
+      {
+        "path": "01031685.jar!/vo03.png",
+        "bytes": 268,
+        "sha256": "4c0ec87a54e79bdd45fa011bd6245a651993b6668dbb69827f388ef994f65b67",
+        "crc32": "703494b4"
+      },
+      {
+        "path": "01031685.jar!/vo04.png",
+        "bytes": 258,
+        "sha256": "27e25f0bcc6887d91031a7bf91009e4d445e69f69f8cc970ef762b641cbd5643",
+        "crc32": "c6662d21"
+      },
+      {
+        "path": "01031685.jar!/vo05.png",
+        "bytes": 248,
+        "sha256": "c6a8931949ba2f08aa9bdd93b173a8fab75c47872fe93e86970bddc59629f6d6",
+        "crc32": "573d4483"
+      },
+      {
+        "path": "01031685.jar!/vo06.png",
+        "bytes": 258,
+        "sha256": "5e803d07563f3718913fb7367cf2bdd3b77b38ad081629d97c6d48cb4b70f785",
+        "crc32": "3d9949aa"
+      },
+      {
+        "path": "01031685.jar!/vo07.png",
+        "bytes": 306,
+        "sha256": "d894298bb317ec024580b5290371b9486bd234718571eaceff64abfe5eb98e07",
+        "crc32": "9ea43717"
+      },
+      {
+        "path": "01031685.jar!/vo08.png",
+        "bytes": 332,
+        "sha256": "34278a09a67862f481731c7a319b42e50e845aa33c3982f25f98b284af0ab98e",
+        "crc32": "3f428bd0"
+      },
+      {
+        "path": "01031685.jar!/vo09.png",
+        "bytes": 320,
+        "sha256": "a89b7896107769c79da3259691bdf34e9d0a725cf210520413a954eef11a3102",
+        "crc32": "cd2a1553"
+      },
+      {
+        "path": "01031685.jar!/vo10.png",
+        "bytes": 339,
+        "sha256": "b5c726e386a6337499d7a28ba7c4b16430bb8e9d163b664c6ff6965bf4ead5a0",
+        "crc32": "49bf3a6e"
+      },
+      {
+        "path": "01031685.jar!/vo11.png",
+        "bytes": 459,
+        "sha256": "7d5e33b54219b358d7d2641f045f7906ce57f83b2a361ecdb4c0b8c53e24b5d5",
+        "crc32": "533ce7bb"
+      },
+      {
+        "path": "01031685.jar!/vo12.png",
+        "bytes": 388,
+        "sha256": "f21fbdfe9c2fa3c7ace2a60cf516f00afeef404ef7588da6d1381554af9644fa",
+        "crc32": "cf7cbe6f"
+      },
+      {
+        "path": "01031685.jar!/vo13.png",
+        "bytes": 362,
+        "sha256": "c4ce799e2d3bb8c84519b0af9e893187b16fce4ea8b79309c2dc7acc3112a6bc",
+        "crc32": "2f528c59"
+      },
+      {
+        "path": "01031685.jar!/vo14.png",
+        "bytes": 407,
+        "sha256": "049c6e2ceabcf6b3e38f41ab027ff0be1d91582c5f7ff987c5c09d58e61e4812",
+        "crc32": "349781f3"
+      },
+      {
+        "path": "01031685.jar!/vo15.png",
+        "bytes": 311,
+        "sha256": "2d2310d340a9fe401764947abe9f2dda2a36ddddd7ed3454752d1083a2797836",
+        "crc32": "143478c6"
+      },
+      {
+        "path": "01031685.jar!/vo16.png",
+        "bytes": 296,
+        "sha256": "722a2380064f49e4f9cb6a7cc8796b01c55aeec949f8a9ab0c2b255d7ff9f901",
+        "crc32": "4ffb7961"
+      },
+      {
+        "path": "01031685.jar!/vo17.png",
+        "bytes": 310,
+        "sha256": "93bf4288a75a2bfdd4b8c1b4d03212c3d1bd5c0549aafcf390ddecd43e267cb2",
+        "crc32": "938e05c7"
+      },
+      {
+        "path": "01031685.jar!/vo18.png",
+        "bytes": 225,
+        "sha256": "9972a402f1e381f2fe03db7aac9a790afa6dcbcdb9050486320dcf81674fba76",
+        "crc32": "f19992da"
+      },
+      {
+        "path": "01031685.jar!/vo19.png",
+        "bytes": 221,
+        "sha256": "7bb719a0fce2a7e2c6f96be78019eb7645f1ca5527b001aed5d8827e61aa4e45",
+        "crc32": "c4606eb0"
+      },
+      {
+        "path": "01031685.jar!/vo20.png",
+        "bytes": 224,
+        "sha256": "2834b2bc75f5d76f8a84b05690475ab8ef87ebb750cfcf6a77ccdf5648c1dda9",
+        "crc32": "da5249a6"
+      },
+      {
+        "path": "01031685.jar!/vo21.png",
+        "bytes": 253,
+        "sha256": "dd01d8a70e8baa401b9a8d0272b0bf7570c4141f5a2652706ef656ecae82d5fb",
+        "crc32": "9145e6d5"
+      },
+      {
+        "path": "01031685.jar!/vo22.png",
+        "bytes": 259,
+        "sha256": "c9ade18261996e1fea45a3d7a2b7eaa049629bdb5d882107525d84dc32c6a6f4",
+        "crc32": "3089b2f5"
+      },
+      {
+        "path": "01031685.jar!/vo23.png",
+        "bytes": 270,
+        "sha256": "64b6d59f8cf03e1eaba9f5f809a5c764a2ff023262c87223d0e40d284377739c",
+        "crc32": "ea0c8cc6"
+      },
+      {
+        "path": "01031685.jar!/vo24.png",
+        "bytes": 255,
+        "sha256": "103c96dac3ee352a7cf1eed362ca5eda4225acaadabda1cd362d1fb66d20242d",
+        "crc32": "327d82aa"
+      },
+      {
+        "path": "01031685.jar!/vo25.png",
+        "bytes": 184,
+        "sha256": "c8640d44302ae1d8438723e710ea31f3c5ff766b6ea50c9bb842c445ae026cde",
+        "crc32": "5fb27fa3"
+      },
+      {
+        "path": "01031685.jar!/vo26.png",
+        "bytes": 292,
+        "sha256": "a9c2509127d335b908ed3a1af1219cd5cdc58479916dc1addd387bbe8ef56056",
+        "crc32": "1c394275"
+      },
+      {
+        "path": "01031685.jar!/vo27.png",
+        "bytes": 239,
+        "sha256": "4435cc8c075727956f8865183b46c289670d5eacdf3782c26b34ce30ea07f7e9",
+        "crc32": "9355112e"
+      },
+      {
+        "path": "01031685.jar!/vo28.png",
+        "bytes": 332,
+        "sha256": "0c48d9c6b793ed0bf833fe89d47505191f9af5f5987ff3b479b54cc130a32bf1",
+        "crc32": "f26227db"
+      },
+      {
+        "path": "01031685.jar!/vo29.png",
+        "bytes": 220,
+        "sha256": "38bce6dd102823402edb3d4fc2c6a2e2a6f10bcff2537a8ec4c26fc672d529b1",
+        "crc32": "3a687545"
+      },
+      {
+        "path": "01031685.jar!/vo30.png",
+        "bytes": 281,
+        "sha256": "fff778883659fe0f29e6272377164d150f61cf9421815e06c5d6df4d9024be8e",
+        "crc32": "acbb7921"
+      },
+      {
+        "path": "01031685.jar!/vo31.png",
+        "bytes": 240,
+        "sha256": "c38b7219921ec7c3f8669e87dbe448ea02e729b497fe16f7b198dd3ba107f064",
+        "crc32": "b212ae74"
+      },
+      {
+        "path": "01031685.jar!/vo32.png",
+        "bytes": 271,
+        "sha256": "3045d33a466ee1964b4a8b38c72fbbe7650ab1a17f92af4a89bf8b322e2bd0d8",
+        "crc32": "a33b5a31"
+      },
+      {
+        "path": "01031685.jar!/vo33.png",
+        "bytes": 206,
+        "sha256": "8c1cfc94f3531c9c6a74f1677e0c3f9bfd734c3d823b4addc08016397345a75f",
+        "crc32": "b883b08b"
+      },
+      {
+        "path": "01031685.jar!/vo34.png",
+        "bytes": 203,
+        "sha256": "61729f5913702cabb6ab2f167ea9dedd1fbac191e37025641b3d2abb25f58db9",
+        "crc32": "dfd7d64d"
+      },
+      {
+        "path": "01031685.jar!/vo35.png",
+        "bytes": 174,
+        "sha256": "06154be62c88498743446260bff14ff25cc1c929d11f25a6eb9385761a9c34fd",
+        "crc32": "bf841b66"
+      },
+      {
+        "path": "01031685.jar!/vo36.png",
+        "bytes": 273,
+        "sha256": "a676209e6c690e890ddc662ca49d011d8abcd927372c3f64b20033cda6cb4168",
+        "crc32": "fcf6f3e1"
+      },
+      {
+        "path": "01031685.jar!/vo37.png",
+        "bytes": 179,
+        "sha256": "c547861896857cb918ac5556877c2d516404d1e0f12c1e143aa5efa707c394ab",
+        "crc32": "59d44fae"
+      },
+      {
+        "path": "01031685.jar!/vo38.png",
+        "bytes": 240,
+        "sha256": "e19fb1e65f43cbe39fe6a805bd036469a5d2ceb01ef1ab5a0b2b6547f9fbeb23",
+        "crc32": "681f79a7"
+      },
+      {
+        "path": "01031685.jar!/vo39.png",
+        "bytes": 202,
+        "sha256": "ded195a3e864e3ad8581a8864b0ebfccd617d9055f4106a19712b13ddfbd4376",
+        "crc32": "b77697f9"
+      },
+      {
+        "path": "01031685.jar!/vo40.png",
+        "bytes": 227,
+        "sha256": "ef013fa4fea67c8806f4f56432dd514202d2b998c8805074dab4545412e9e68b",
+        "crc32": "55a3ff9a"
+      },
+      {
+        "path": "01031685.jar!/vo41.png",
+        "bytes": 358,
+        "sha256": "8c80f2a0c68c5e9724dd8034f3eeabaf098330c6ea0a41faac188767afee11e5",
+        "crc32": "7662ac34"
+      },
+      {
+        "path": "01031685.jar!/vo42.png",
+        "bytes": 209,
+        "sha256": "4dcff3471a87a680c9845b7d3a30de3c70d5846dae7c87211e4b58c4b3d06b4d",
+        "crc32": "577a413f"
+      },
+      {
+        "path": "01031685.jar!/vo43.png",
+        "bytes": 189,
+        "sha256": "828608340b40e344d4218933899f8015d711aa61b102c49e127591c3bd49f7c9",
+        "crc32": "16cee96a"
+      },
+      {
+        "path": "01031685.jar!/vo44.png",
+        "bytes": 236,
+        "sha256": "569a064e8541aa9f9d9006f70d7584ea74cd5f9351157b4d8f83788845f05922",
+        "crc32": "3ecb06dd"
+      },
+      {
+        "path": "01031685.jar!/vo45.png",
+        "bytes": 240,
+        "sha256": "019f9484126e68582f3429ec81d2ccb87c4840a8e8007fb8de341107f5597bd4",
+        "crc32": "60f6c1bf"
+      },
+      {
+        "path": "01031685.jar!/vo46.png",
+        "bytes": 247,
+        "sha256": "864e17a379093654874aa555a6c872b4c5b666df8e5a2f8a733a34728762a9d5",
+        "crc32": "58f37f5d"
+      },
+      {
+        "path": "01031685.jar!/vo47.png",
+        "bytes": 418,
+        "sha256": "b8813b16c42ed258f12182a0a7dc6bc1c266d79714909336b5935412888909f3",
+        "crc32": "c0c6a057"
+      },
+      {
+        "path": "01031685.jar!/vo48.png",
+        "bytes": 340,
+        "sha256": "f06e35475f4d747a910e283ecab9a6fb6942042073b3d40c4012b7833b97fb4d",
+        "crc32": "2fea6ef5"
+      },
+      {
+        "path": "01031685.jar!/vo49.png",
+        "bytes": 197,
+        "sha256": "344687d9507ce273ead9cd6d05152a2045be0f7906c80d28a1b255c926b28d67",
+        "crc32": "0a16b97b"
+      },
+      {
+        "path": "01031685.jar!/vo50.png",
+        "bytes": 195,
+        "sha256": "26011f49753bc4ca390bb4c59bd30354b964983dedf9256698059d7320130c72",
+        "crc32": "a0609366"
+      },
+      {
+        "path": "01031685.jar!/vo51.png",
+        "bytes": 286,
+        "sha256": "805fa0cf356d4204e73df866d05822b4f50243f5682053e6f802769a8c55bf62",
+        "crc32": "c93a03cd"
+      },
+      {
+        "path": "01031685.jar!/vo52.png",
+        "bytes": 254,
+        "sha256": "704203975d89d5f5317168090cc6649b50277818ae2650e2bfd96cff7f6d7b0a",
+        "crc32": "cd0f020c"
+      },
+      {
+        "path": "01031685.jar!/vo53.png",
+        "bytes": 406,
+        "sha256": "39fd01d40f6bf79908109287eb7c035e63138d059813de1f0ffc001332f96cec",
+        "crc32": "0e39f1d1"
+      },
+      {
+        "path": "01031685.jar!/vo54.png",
+        "bytes": 379,
+        "sha256": "7661bdf98277c8edf2dce4e0f098276cc4c766a7320bd42b26cea390093c1717",
+        "crc32": "96d1991f"
+      },
+      {
+        "path": "01031685.jar!/vo55.png",
+        "bytes": 397,
+        "sha256": "3debd6876cbaffd393362816510123b95281ab183efde188737867f979f9bfd5",
+        "crc32": "b83c0c52"
+      },
+      {
+        "path": "01031685.jar!/vo56.png",
+        "bytes": 440,
+        "sha256": "546a099d5cdbed57a5b7436d26df625eb15783667bb022b17a7b858815255d10",
+        "crc32": "549ff148"
+      },
+      {
+        "path": "01031685.jar!/vo57.png",
+        "bytes": 436,
+        "sha256": "d3bb725121d132a4e0d36206f20330d1c560a1f0296373ff918c75577696addb",
+        "crc32": "30b33f6e"
+      },
+      {
+        "path": "01031685.jar!/vo58.png",
+        "bytes": 419,
+        "sha256": "0f461448d283f1708057a7e6e17840358f8cee0f2266f90e92fd6f2da7809647",
+        "crc32": "41b7fe8f"
+      },
+      {
+        "path": "01031685.jar!/vo59.png",
+        "bytes": 371,
+        "sha256": "837eae70ca6a5fc07251dbbeefa54088337e7497ad5ddfb7a35b01b858a1855d",
+        "crc32": "05e94cfa"
+      },
+      {
+        "path": "01031685.jar!/vo60.png",
+        "bytes": 397,
+        "sha256": "7986df89f6998c69a96914a39caaf804799f7ef062eadc0918276567b3af693a",
+        "crc32": "1f665f72"
+      },
+      {
+        "path": "01031685.jar!/vo61.png",
+        "bytes": 378,
+        "sha256": "ca58547bdadead9f25d1184303ce50e95902d053a7382d028524890104003b73",
+        "crc32": "b47927c8"
+      },
+      {
+        "path": "01031685.jar!/vo62.png",
+        "bytes": 343,
+        "sha256": "e500a2a604c0f5b3c003748ae102c1e3b1423d70561bae16e99c5b082c250749",
+        "crc32": "54907c35"
+      },
+      {
+        "path": "01031685.jar!/vo63.png",
+        "bytes": 449,
+        "sha256": "94242347775b3d0421973905bc42125e413900e23d6152a43af574da0e6dad10",
+        "crc32": "a53660fb"
+      },
+      {
+        "path": "01031685.jar!/vo64.png",
+        "bytes": 404,
+        "sha256": "23be5055279e081fa6a20fe28d71dbdf8540f193357b89b0bf52280b8422c064",
+        "crc32": "385ec676"
+      },
+      {
+        "path": "01031685.jar!/vo65.png",
+        "bytes": 459,
+        "sha256": "1865fa393a58045cf891c0a62e86c61c2a6c635aaec18a2aa7b3330970a2d32f",
+        "crc32": "e2804c82"
+      },
+      {
+        "path": "01031685.jar!/vo66.png",
+        "bytes": 229,
+        "sha256": "68a3fce65b9d1aca8e809c93cbedd5a7ab74ee5f701f740bf6d15ec6203b58ef",
+        "crc32": "8e32cc00"
+      },
+      {
+        "path": "01031685.jar!/vo67.png",
+        "bytes": 222,
+        "sha256": "b5369eb83f8a8b3c4c8828550ad5f8bdbcdc25a744390cbcdd881e24622ec5c9",
+        "crc32": "765f3fa8"
+      },
+      {
+        "path": "01031685.jar!/s00.mmf",
+        "bytes": 2492,
+        "sha256": "193c1116ca38a43147020e50208106aa8502cd35cab8d3e057e28fd3ca8ea0e4",
+        "crc32": "a8237efb"
+      },
+      {
+        "path": "01031685.jar!/s01.mmf",
+        "bytes": 3240,
+        "sha256": "95401367a32a03564b5d62411f462484c7c68754a7e822525804f6add4c8276d",
+        "crc32": "d526da7b"
+      },
+      {
+        "path": "01031685.jar!/s02.mmf",
+        "bytes": 1716,
+        "sha256": "793b07c6d7889c269f25351df38da06cb4b9f95ee3e5e9bdf839a0f1873d33ab",
+        "crc32": "4e61cbc6"
+      },
+      {
+        "path": "01031685.jar!/s03.mmf",
+        "bytes": 3120,
+        "sha256": "01cf4d90f60c7fb9fb0a59a710008bfad34c7180ea5d9c38631d369df6795790",
+        "crc32": "8b41f894"
+      },
+      {
+        "path": "01031685.jar!/s04.mmf",
+        "bytes": 1480,
+        "sha256": "0bc6ef919491ae585910d11b0ebd06837efb6afb7a55ef000957da4feb18fbe3",
+        "crc32": "7644f57b"
+      },
+      {
+        "path": "01031685.jar!/s05.mmf",
+        "bytes": 1609,
+        "sha256": "dacc866082e801fcc0883cf43ecec7beb2168deed97a0d1e296299d65412dc78",
+        "crc32": "713c9596"
+      },
+      {
+        "path": "01031685.jar!/s06.mmf",
+        "bytes": 2562,
+        "sha256": "d1b6d3de96b195d4cd59fe0bfae61e7c33a624ebf1cb2f52511be8823fc874b8",
+        "crc32": "c53cc4b4"
+      },
+      {
+        "path": "01031685.jar!/s07.mmf",
+        "bytes": 4493,
+        "sha256": "e9ad97a7646141473770d73586ae681e539888434c096843662a504eff2363b5",
+        "crc32": "92d6659e"
+      },
+      {
+        "path": "01031685.jar!/s08.mmf",
+        "bytes": 1714,
+        "sha256": "0a3acdac0ebc94ad3703bd484460ad47f22e995d5d6c77d72dd0f520ab610364",
+        "crc32": "98fca51c"
+      },
+      {
+        "path": "01031685.jar!/s09.mmf",
+        "bytes": 3697,
+        "sha256": "de55d3148e1c8cd11b638fbe1282d3dba58c602a02c59415d553e0f85c7a7261",
+        "crc32": "06641871"
+      },
+      {
+        "path": "01031685.jar!/s10.mmf",
+        "bytes": 3247,
+        "sha256": "7bed66ee4153da52fe587ccc62f56d7e2351f7a1054c863d577625ca23c8eeb6",
+        "crc32": "f33254c2"
+      },
+      {
+        "path": "01031685.jar!/s11.mmf",
+        "bytes": 2758,
+        "sha256": "6a4387e9fdb139d2c1c94aeba441bd5b4cb6f967151e82519236f874c75972ba",
+        "crc32": "58b969e5"
+      },
+      {
+        "path": "01031685.jar!/s12.mmf",
+        "bytes": 934,
+        "sha256": "687a357f26b03e64171a696919e937962d104520c1764dcf0cd72807e2e0669f",
+        "crc32": "9aacc469"
+      },
+      {
+        "path": "01031685.jar!/s13.mmf",
+        "bytes": 186,
+        "sha256": "2ae40945bd9add9da4c314d47d5ed3ca5764889dbcaec2ebf4b0a8cd3fe61d83",
+        "crc32": "78619d72"
+      },
+      {
+        "path": "01031685.jar!/s14.mmf",
+        "bytes": 538,
+        "sha256": "5ac4fdd7215e1e7cbf91a5e5bea66f2440f9dfa347b17332cde46899b923c0a8",
+        "crc32": "51fa225a"
+      },
+      {
+        "path": "01031685.jar!/s15.mmf",
+        "bytes": 669,
+        "sha256": "7317b16ab0d64fa2a3fb483ca13d8de23e7338bd36d97d6111b197c0b0c4eb5d",
+        "crc32": "7131f07e"
+      },
+      {
+        "path": "01031685.jar!/s16.mmf",
+        "bytes": 1975,
+        "sha256": "80f0b993ebe4bc2b9deef93349ee084886c044145246cba017c59f3cf328bbcd",
+        "crc32": "ec9cd547"
+      },
+      {
+        "path": "01031685.jar!/s17.mmf",
+        "bytes": 558,
+        "sha256": "74287cb8a24ded4a3d2ec376f48d47297abe83de067d672f0a2ea48dc208c96b",
+        "crc32": "6e86b6a0"
+      },
+      {
+        "path": "01031685.jar!/s18.mmf",
+        "bytes": 953,
+        "sha256": "dd7b83f65c6807edc7f391e437370c75d77a6f1d02e051efe9939d38ec3a44ec",
+        "crc32": "b50fb805"
+      },
+      {
+        "path": "01031685.jar!/s19.mmf",
+        "bytes": 994,
+        "sha256": "675d08ee2304cb02f8abcf210ec3d8dbe262618f8481d4036b568ce45cd93df2",
+        "crc32": "75e93bd7"
+      },
+      {
+        "path": "01031685.jar!/s20.mmf",
+        "bytes": 1980,
+        "sha256": "fdbbd8cfa9704e569fd0b6747333bb4fb5d6da946fc5d4c2769dc3001707c6c0",
+        "crc32": "3da6e2cd"
+      },
+      {
+        "path": "01031685.jar!/s21.mmf",
+        "bytes": 624,
+        "sha256": "421e7ce22fdeba2839d8b2050cc29b367def6cf0777988600299995ce776928b",
+        "crc32": "87c43f96"
+      },
+      {
+        "path": "01031685.jar!/map.dat",
+        "bytes": 7032,
+        "sha256": "8ff0aa6d3c2c65687d6140839d5336f603b574f542671e1b65d73ee6d6be4a1c",
+        "crc32": "159a93f3"
+      },
+      {
+        "path": "01031685.jar!/help.txt",
+        "bytes": 10510,
+        "sha256": "7b2cdac2b5d0ea1e39de173f5a96f51e367df5e70f7c0a01a21246da90920b06",
+        "crc32": "bdaf5622"
+      },
+      {
+        "path": "01031685.jar!/talk.txt",
+        "bytes": 34540,
+        "sha256": "130f9e5e771fd0b480ef6f6cfc396ad7517c05c4429b05f2ce64703fae1897ff",
+        "crc32": "524949d3"
+      },
+      {
+        "path": "01031685.jar!/tnpc.txt",
+        "bytes": 10584,
+        "sha256": "f3fd1f6803e29c6f41801647b3bfdd955c05c7182b75d178bf5afc360e6d6bfa",
+        "crc32": "50626717"
+      },
+      {
+        "path": "01031685.jar!/client.bin1056",
+        "bytes": 335568,
+        "sha256": "14123509ff62d49bc449bda648dc6c8f81884ca155f90932431b9a0697d2bc88",
+        "crc32": "c0ea28da"
+      }
+    ],
+    "sgs": [],
+    "previouslyRecordedGameBinaries": true,
+    "included": true
+  },
+  "summary": {
+    "mayDownloaded": 102,
+    "mayPublished": 57,
+    "previouslyRecordedGameBinaries": {
+      "ktf": 44,
+      "lgt": 1,
+      "skt": 15
+    },
+    "sgsMatches": 3
+  },
+  "realSoccerRejoinedPayload": {
+    "bytes": 1758425,
+    "sha256": "fde94c6de2f658789cd81686164c31070ecf1a30e140d027292731c16da3f508",
+    "crc32": "363219b1",
+    "entries": 94,
+    "volumes": 18,
+    "crcVerified": true,
+    "sgsMatches": 0
+  }
+}

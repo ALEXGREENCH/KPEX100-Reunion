@@ -4,6 +4,44 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "dubigame-skt-fifteen",
+      "title": "Dubigame · 15 пакетов SKT",
+      "category": "Игры и игровые сборки",
+      "description": "Исходные архивы SKT с JAR, MOD и операторскими дескрипторами. Для четырёх игр подтверждён ввод в ARAM.",
+      "repositoryPath": "research/archives/Dubigame-SKT-15-Game-Packages.zip",
+      "bytes": 6960264,
+      "sha256": "7affba0a3beddeb47ed924eabc215e98302ab1acab98c521f4eb1a3840943d66",
+      "sources": [
+        {
+          "label": "Майское зеркало Dubigame, ZIP с диапазонами",
+          "url": "https://archive.org/details/dubi_20210525"
+        }
+      ]
+    },
+    {
+      "id": "dubigame-ktf-lgt-mirrors",
+      "title": "Dubigame · 43 сборки KTF и LGT",
+      "category": "Игры и игровые сборки",
+      "description": "35 сборок KTF и 7 LGT из майского зеркала, плюс Magic Shop Tycoon 2 из январской копии.",
+      "repositoryPath": "research/archives/Dubigame-KTF-LGT-43-Game-Packages.zip",
+      "bytes": 28784593,
+      "sha256": "4b8cbda88f03ce64a87026b2190606e35a249b6c28d2e9c89897f3e31ed49dd1",
+      "sources": [
+        {
+          "label": "Майское зеркало Dubigame, ZIP с диапазонами",
+          "url": "https://archive.org/details/dubi_20210525"
+        },
+        {
+          "label": "Январский снимок Dubigame, оглавление 7z",
+          "url": "https://archive.org/details/dubigame.tistory.com"
+        },
+        {
+          "label": "Magic Shop Tycoon 2, оригинальное вложение",
+          "url": "https://blog.kakaocdn.net/dn/r2VBJ/btqGiLuwmg1/HZAiRKeb6lELI8QknFl2O1/_______2.zip?attach=1&knm=tfile.zip"
+        }
+      ]
+    },
+    {
       "id": "samsung-s250-native-games",
       "title": "Haunted School и Lost Planet II · Samsung SCH-S250",
       "category": "Игры и игровые сборки",
@@ -2517,6 +2555,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Пакеты SKT, KTF и LGT из двух зеркал Dubigame",
+      "repositoryPath": "doc/dubigame-mirror-game-recovery.md"
+    },
     {
       "title": "Haunted School и Lost Planet II из прошивки Samsung SCH-S250",
       "repositoryPath": "doc/samsung-s250-native-games.md"
