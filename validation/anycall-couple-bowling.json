@@ -1,0 +1,559 @@
+{
+  "schema": 1,
+  "game": "couple-bowling",
+  "originalMember": "버전 다름/커플볼링.mbin",
+  "mbinSha256": "166f9c83d77e92b3bbd7ecaba470ebfb1fc1b679f7d89a8a6a7a53809bd96102",
+  "mbinBytes": 116817,
+  "size": [
+    120,
+    144
+  ],
+  "palette": "provisional RGB332",
+  "hostCallCounts": {
+    "0x04": 1,
+    "0x18": 8,
+    "0x24": 18,
+    "0x34": 1,
+    "0x3c": 1,
+    "0x40": 23,
+    "0x48": 130,
+    "0x68": 1,
+    "0x70": 1285,
+    "0x74": 4,
+    "0x7c": 380,
+    "0x8c": 64,
+    "0x90": 80,
+    "0x94": 80,
+    "0x98": 156,
+    "0x9c": 41,
+    "0xa0": 380,
+    "0xb0": 163,
+    "0xc4": 1
+  },
+  "stubSlots": [
+    "0x08",
+    "0x18",
+    "0x24",
+    "0x2c",
+    "0x30",
+    "0x34",
+    "0x3c",
+    "0x5c",
+    "0x68",
+    "0x9c"
+  ],
+  "sourceArchive": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+  "originalMemberCrc32": "14dfd52a",
+  "timerArgument": 1,
+  "randomSeed": 305419896,
+  "clock": "synthetic count of presented frames",
+  "observations": {
+    "idle": "Countdown auto-throws and the first shot scores 9.",
+    "right": "Changes the ball trajectory. The first shot scores 9.",
+    "confirm": "Opens the power meter early. The first shot scores 6."
+  },
+  "commonSequence": [
+    {
+      "key": null,
+      "ticks": 100,
+      "capture": {
+        "file": "setup-00.png",
+        "presentation": 100,
+        "indexedSha256": "8ab7734636c211134a007b01b5689b7ae24537817f0f1b51bb5155f525a48286",
+        "pngSha256": "fa66ac786a7037450eafb079e9754dbec7930039c7fc5d01dd00216425e8fc98",
+        "eventCount": 101
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-01.png",
+        "presentation": 120,
+        "indexedSha256": "679660258104794fadd19465c7e3db80cf119239b1a22ab725970c6ae910b86b",
+        "pngSha256": "479fc64428659de1cbbb8f0a3d331b6a600e8fb7285daa3fcbd923fa2cd57146",
+        "eventCount": 122
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-02.png",
+        "presentation": 140,
+        "indexedSha256": "58d7580395f3c2dbda3c60de560757d6ee441eddf98be3fe414e8b55d559d539",
+        "pngSha256": "25b69252e2bc42a34a306afbf47269c581a8982ab03f16afea1fbb30857a5027",
+        "eventCount": 143
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-03.png",
+        "presentation": 160,
+        "indexedSha256": "4a2bec249d07744d383fa8139c22e86a1a4fa6c83ec53d84cca83bde193aae5f",
+        "pngSha256": "78d7e09d5d4a6a7d0bcbe7dddf19354c36581b6ec6c3c81fe4ef9ec9576facea",
+        "eventCount": 164
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-04.png",
+        "presentation": 180,
+        "indexedSha256": "560a8059a5e2838c7ca5be810b4f59e98dc015494226fa368b766f1a356b76bd",
+        "pngSha256": "0aad5f63d0167db4d596a0a96b678414ce650a18ffc08621f6af2e615f696be1",
+        "eventCount": 185
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-05.png",
+        "presentation": 200,
+        "indexedSha256": "0a338cbec99c0f1ddb85597ab1c25e3abd00df3492b95722c7e2be3d466412cb",
+        "pngSha256": "86b84a14f692f75e69805336a32a13361deebc96c7ab7d9ced2e7c060401cd62",
+        "eventCount": 206
+      }
+    },
+    {
+      "key": 12,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-06.png",
+        "presentation": 220,
+        "indexedSha256": "92d68c0feb109d8d05d6449cda7cb241e3789ccdc6ebd354b488c762e7a1058a",
+        "pngSha256": "5bc805a1afb9bb1fc75561c566451add58bac0dd128cb9d08fbbe959a0cd924d",
+        "eventCount": 227
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-07.png",
+        "presentation": 240,
+        "indexedSha256": "f2ebcafbe17a61bce79eb7877b4724b422e7c9ea0213467e9359ed189a3e1bab",
+        "pngSha256": "189352ae71c3136e1fd586344aec1c7f8d9cdfa9608fbff97f5e8f0fdd4d3ad8",
+        "eventCount": 248
+      }
+    },
+    {
+      "key": 11,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-08.png",
+        "presentation": 260,
+        "indexedSha256": "f2ebcafbe17a61bce79eb7877b4724b422e7c9ea0213467e9359ed189a3e1bab",
+        "pngSha256": "189352ae71c3136e1fd586344aec1c7f8d9cdfa9608fbff97f5e8f0fdd4d3ad8",
+        "eventCount": 269
+      }
+    },
+    {
+      "key": 19,
+      "ticks": 20,
+      "capture": {
+        "file": "setup-09.png",
+        "presentation": 280,
+        "indexedSha256": "b6d041b6833ad685705ae2b2a69fa9a0c54f9722fd77b0d91ccd89a0e2002fb7",
+        "pngSha256": "21639c24a9c736fd8705c565fade829b0209510486c1256dc1e0b42260b88382",
+        "eventCount": 290
+      }
+    }
+  ],
+  "timerIntervals": [
+    20,
+    20,
+    20,
+    40
+  ],
+  "branches": [
+    {
+      "key": null,
+      "checkpoints": [
+        {
+          "file": "idle-20.png",
+          "presentation": 300,
+          "indexedSha256": "298a196c59f28492debd9f7b0e58d5cb17114b6c3ee2799a65308d2fdc2e9b1b",
+          "pngSha256": "734c674f2c9835e2c6f77c8ddd2bc72376d639db0a8a976396dfdaae404f2bca",
+          "eventCount": 310,
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-40.png",
+          "presentation": 320,
+          "indexedSha256": "0f2fe3d88148eb14ad685ceff1db36074feb77e3ef58ece642704f5f2def356c",
+          "pngSha256": "336654e002a3b988be5405b6ef982ed0e8a5d598985f3ff3be8ea1e6093f4120",
+          "eventCount": 330,
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-60.png",
+          "presentation": 340,
+          "indexedSha256": "f1abcf2bf33c00e83a8f377d61a468a74b4930d9a9f3fa972ff35b4bca73d8b7",
+          "pngSha256": "15ac4d64b68b34453ecc95b4a5982d24761bf5674c96dcaf43ef60aba3e93187",
+          "eventCount": 350,
+          "changedPixels": 0
+        },
+        {
+          "file": "idle-100.png",
+          "presentation": 380,
+          "indexedSha256": "91f01618d642e65e2c54aa6a6c080cc420716cd8c89f3dfbb4e169fe76f17a79",
+          "pngSha256": "f5a74a5dc20d8c0cbcec6e8bc846e8f95e884f28023191d67205f886da81dd90",
+          "eventCount": 390,
+          "changedPixels": 0
+        }
+      ],
+      "specialCalls": [
+        {
+          "slot": "0xc4",
+          "completedEvents": 14,
+          "presentation": 13,
+          "arguments": [
+            "0x00360049",
+            "0xf5000cec",
+            "0x00000000",
+            "0xf5040000"
+          ],
+          "linkRegister": "0xf4005a05",
+          "descriptorHex": "000000000000000000000000"
+        },
+        {
+          "slot": "0x94",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00010001",
+            "0x00900076",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400302f",
+          "segment": [
+            1,
+            1,
+            118,
+            1
+          ],
+          "color": 219
+        },
+        {
+          "slot": "0x90",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00010001",
+            "0x0090008e",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400307b",
+          "segment": [
+            1,
+            1,
+            1,
+            142
+          ],
+          "color": 219
+        },
+        {
+          "slot": "0x94",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x008e0002",
+            "0x00900076",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400302f",
+          "segment": [
+            2,
+            142,
+            118,
+            142
+          ],
+          "color": 73
+        },
+        {
+          "slot": "0x90",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00020076",
+            "0x0090008e",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400307b",
+          "segment": [
+            118,
+            2,
+            118,
+            142
+          ],
+          "color": 73
+        }
+      ]
+    },
+    {
+      "key": 11,
+      "checkpoints": [
+        {
+          "file": "right-20.png",
+          "presentation": 300,
+          "indexedSha256": "ebf0d5619ce91232f325aeb896b4b2413423b734b0d6fc2bb03c4da9004d1d52",
+          "pngSha256": "0c48c02997ed74108659197faf6d43b1b34eea96cf7a1ce650fe6f97ceb17e1f",
+          "eventCount": 311,
+          "changedPixels": 173
+        },
+        {
+          "file": "right-40.png",
+          "presentation": 320,
+          "indexedSha256": "60b2ac17422a178bc90d848d31aff7430e274d7cc1c262d005e785569b1721fd",
+          "pngSha256": "a62a77e0c5f321044a9e6efaa0b761f6c70b022e6763c9d789d71313e7232057",
+          "eventCount": 331,
+          "changedPixels": 61
+        },
+        {
+          "file": "right-60.png",
+          "presentation": 340,
+          "indexedSha256": "74a776d78418b4d2bdab7cf49290e59628c43178ddc6987294bfb6344ac74e0e",
+          "pngSha256": "4155d889cd61553bc9048034463a5291c0bb7dcfcf0928faf8085dac041a31b2",
+          "eventCount": 351,
+          "changedPixels": 449
+        },
+        {
+          "file": "right-100.png",
+          "presentation": 380,
+          "indexedSha256": "8dd1450f2d2247c2c4eb7f6848c1534cbe3738351b52a97088674133b4a89698",
+          "pngSha256": "ef765800d9b6a1cb94fd6471e841dd34bbeb5f381bfee8872d1a47a1254c61d4",
+          "eventCount": 391,
+          "changedPixels": 68
+        }
+      ],
+      "specialCalls": [
+        {
+          "slot": "0xc4",
+          "completedEvents": 14,
+          "presentation": 13,
+          "arguments": [
+            "0x00360049",
+            "0xf5000cec",
+            "0x00000000",
+            "0xf5040000"
+          ],
+          "linkRegister": "0xf4005a05",
+          "descriptorHex": "000000000000000000000000"
+        },
+        {
+          "slot": "0x94",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00010001",
+            "0x00900076",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400302f",
+          "segment": [
+            1,
+            1,
+            118,
+            1
+          ],
+          "color": 219
+        },
+        {
+          "slot": "0x90",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00010001",
+            "0x0090008e",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400307b",
+          "segment": [
+            1,
+            1,
+            1,
+            142
+          ],
+          "color": 219
+        },
+        {
+          "slot": "0x94",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x008e0002",
+            "0x00900076",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400302f",
+          "segment": [
+            2,
+            142,
+            118,
+            142
+          ],
+          "color": 73
+        },
+        {
+          "slot": "0x90",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00020076",
+            "0x0090008e",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400307b",
+          "segment": [
+            118,
+            2,
+            118,
+            142
+          ],
+          "color": 73
+        }
+      ]
+    },
+    {
+      "key": 19,
+      "checkpoints": [
+        {
+          "file": "confirm-20.png",
+          "presentation": 300,
+          "indexedSha256": "377b876ff5d04a4c791557909dca6bd9a11ee8ba5248d3458fff275e7be6ad66",
+          "pngSha256": "506e3bd3c6a70820e3da57e8b9133562f639b1f3f044315d155850db2bebeb4e",
+          "eventCount": 311,
+          "changedPixels": 874
+        },
+        {
+          "file": "confirm-40.png",
+          "presentation": 320,
+          "indexedSha256": "8bf6819b4950d84baa848a6b4f2ae142f6737d0804c2585ae51a4375dc477b5b",
+          "pngSha256": "2126fa03c12a2e0e58295fd1eaade16ab21f0e157587a7645f7568f843498812",
+          "eventCount": 331,
+          "changedPixels": 14448
+        },
+        {
+          "file": "confirm-60.png",
+          "presentation": 340,
+          "indexedSha256": "74616db89063345911d8adb2e6cfeb4b6865531e301dc855b6e25d406e9413eb",
+          "pngSha256": "57b6de64ce5945d6144c1754af9fb44cc03526a9c29aca4212498cb9638a2afd",
+          "eventCount": 351,
+          "changedPixels": 15802
+        },
+        {
+          "file": "confirm-100.png",
+          "presentation": 380,
+          "indexedSha256": "74616db89063345911d8adb2e6cfeb4b6865531e301dc855b6e25d406e9413eb",
+          "pngSha256": "57b6de64ce5945d6144c1754af9fb44cc03526a9c29aca4212498cb9638a2afd",
+          "eventCount": 391,
+          "changedPixels": 88
+        }
+      ],
+      "specialCalls": [
+        {
+          "slot": "0xc4",
+          "completedEvents": 14,
+          "presentation": 13,
+          "arguments": [
+            "0x00360049",
+            "0xf5000cec",
+            "0x00000000",
+            "0xf5040000"
+          ],
+          "linkRegister": "0xf4005a05",
+          "descriptorHex": "000000000000000000000000"
+        },
+        {
+          "slot": "0x94",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00010001",
+            "0x00900076",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400302f",
+          "segment": [
+            1,
+            1,
+            118,
+            1
+          ],
+          "color": 219
+        },
+        {
+          "slot": "0x90",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00010001",
+            "0x0090008e",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400307b",
+          "segment": [
+            1,
+            1,
+            1,
+            142
+          ],
+          "color": 219
+        },
+        {
+          "slot": "0x94",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x008e0002",
+            "0x00900076",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400302f",
+          "segment": [
+            2,
+            142,
+            118,
+            142
+          ],
+          "color": 73
+        },
+        {
+          "slot": "0x90",
+          "completedEvents": 229,
+          "presentation": 221,
+          "arguments": [
+            "0x00020076",
+            "0x0090008e",
+            "0xf4000001",
+            "0x000000e3"
+          ],
+          "linkRegister": "0xf400307b",
+          "segment": [
+            118,
+            2,
+            118,
+            142
+          ],
+          "color": 73
+        }
+      ]
+    }
+  ]
+}

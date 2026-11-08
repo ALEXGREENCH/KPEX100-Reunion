@@ -7,7 +7,7 @@
 [English quick start](README.en.md) · [Совместимость](doc/compatibility.md) ·
 [Документация](doc/README.md) · [Играть в браузере](https://alexgreench.github.io/KPEX100-Reunion/)
 
-Коллекция включает 9 прошивок, 102 SGS-приложения, 10 игр Anycall ADS, 3 быстрых состояния
+Коллекция включает 9 прошивок, 102 SGS-приложения, 12 игр Anycall ADS, 3 быстрых состояния
 и оригинальный модуль Swerve 2.1. Каталог фиксирует размеры, SHA-256 и
 проверенные профили. Дополнительные файлы можно загрузить в браузере.
 
@@ -25,7 +25,7 @@
 
 [Ladder из LG SD1250](doc/lg-legacy-compressed.md) запускается из библиотеки. В том же отчёте описана распаковка ранних SGS GVM.
 
-[Игры Samsung Anycall ADS](doc/samsung-anycall-ads-mbin.md#запуск-в-браузере) доступны в веб-библиотеке из оригинальных MBIN. Для каждой проверены вход в игровой процесс и действие кнопки. Палитра и таймеры приближённые. Звук и сохранения пока недоступны.
+[Игры Samsung Anycall ADS](doc/samsung-anycall-ads-mbin.md#запуск-в-браузере) доступны в веб-библиотеке из оригинальных MBIN со звуком SMAF. Для каждой проверены вход в игровой процесс и действие кнопки. Палитра, таймеры и тембры приближённые. Сохранение между запусками ADS пока недоступно.
 
 [Новые сборки GVM](doc/brewgames-gvm-games.md): .hack//SIGN, Ragnarok Gaiden,
 Mashimaro Fighting Matgo, Bukbeol, Fresh Fruit Tycoon, Fantasy Blue и вариант

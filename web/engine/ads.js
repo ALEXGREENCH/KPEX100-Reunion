@@ -1,6 +1,7 @@
 /** Verified Samsung Anycall ADS builds hosted on the ARM/Thumb WASM core. */
 import { sha256 } from '../local-assets.js';
 import { createARM } from './cpu.js';
+import { AdsAudio } from './ads-audio.js';
 
 const HEADER_BYTES = 0x109;
 const TEXT = 0xf4000000;
@@ -101,6 +102,29 @@ const PROFILES = [
     sha256: '108f8d823825c936d782e0f0a1d4e090e5812bab5713c92c765cc42fc2a8c197',
     timerArgument: 1,
     stubs: RANDOM_DRAWING_STUBS,
+    sessionSave: { address: BSS + 0x1940, caller: TEXT + 0x554b },
+    emptySplashDescriptor: { address: BSS + 0x132c, caller: TEXT + 0x5755 },
+  },
+  {
+    id: 'cheombangjichuk-othello',
+    title: 'Cheombangjichuk Othello',
+    bytes: 130088,
+    sha256: '30f98f626af9cdbeb2f57180c31040df60153a101f3388926b5a2086dee51bf2',
+    timerArgument: 1,
+    height: 144,
+    stubs: STANDARD_STUBS.filter((slot) => slot !== 0x9c),
+    emptyMqDescriptor: true,
+  },
+  {
+    id: 'couple-bowling',
+    title: 'Couple Bowling',
+    bytes: 116817,
+    sha256: '166f9c83d77e92b3bbd7ecaba470ebfb1fc1b679f7d89a8a6a7a53809bd96102',
+    timerArgument: 1,
+    height: 144,
+    stubs: RANDOM_DRAWING_STUBS,
+    sessionSave: { address: BSS + 0x5510, caller: TEXT + 0x644d },
+    emptySplashDescriptor: { address: BSS + 0x0cec, caller: TEXT + 0x5a05 },
   },
 ];
 const signed = (value) => (value << 16) >> 16;
@@ -173,6 +197,7 @@ function decodeMq(body, offset, count, transparent) {
 
 export class AdsRuntime {
   #cpu;
+  #audio;
   #profile;
   #body;
   #displayPointer;
@@ -186,7 +211,7 @@ export class AdsRuntime {
   #fault = null;
   #closed = false;
 
-  static async create(input, { id } = {}) {
+  static async create(input, { id, audio } = {}) {
     const bytes = input instanceof Uint8Array ? input : new Uint8Array(input);
     if (!PROFILES.some((candidate) => candidate.bytes === bytes.byteLength))
       throw Error('Этот вариант MBIN пока не поддерживается.');
@@ -200,17 +225,18 @@ export class AdsRuntime {
     if (id && id !== profile.id) throw Error('Файл MBIN не соответствует выбранной игре.');
     const cpu = await createARM();
     try {
-      return new AdsRuntime(cpu, profile, original.subarray(HEADER_BYTES));
+      return new AdsRuntime(cpu, profile, original.subarray(HEADER_BYTES), audio);
     } catch (error) {
       cpu.close();
       throw error;
     }
   }
 
-  constructor(cpu, profile, body) {
+  constructor(cpu, profile, body, audio) {
     this.#cpu = cpu;
     this.#profile = profile;
     this.#body = new DataView(body.buffer, body.byteOffset, body.byteLength);
+    if (audio) this.#audio = new AdsAudio(this.#body, audio);
     this.#stubs = new Set(profile.stubs ?? STANDARD_STUBS);
     this.width = WIDTH;
     this.height = profile.height ?? DEFAULT_HEIGHT;
@@ -304,6 +330,7 @@ export class AdsRuntime {
       if (cpu.regRead('pc') !== RETURN) throw Error('Событие ADS превысило лимит инструкций.');
       this.eventCount++;
       if (this.presentations !== presentations) this.#captureDisplay();
+      this.#audio?.flush(this.eventCount, event === 5);
     } catch (error) {
       this.status = 'error';
       throw error;
@@ -349,6 +376,11 @@ export class AdsRuntime {
 
   #service(slot) {
     const cpu = this.#cpu;
+    if (slot === 0x18 && this.#audio) {
+      this.#audio.request(cpu.regRead('r0'), cpu.regRead('r1') - TEXT);
+      cpu.regWrite('r0', 0);
+      return;
+    }
     if (this.#stubs.has(slot)) {
       cpu.regWrite('r0', 0);
       return;
@@ -356,10 +388,10 @@ export class AdsRuntime {
     const a = cpu.regRead('r0');
     if (slot === 0x04) {
       this.#writeOutput(a, DISPLAY);
-    } else if (slot === 0x0c && this.#profile.id === 'mobile-gostop') {
-      // GoStop keeps its updated balances in this block between hands.
-      // Acknowledge the save request for this session's in-memory state.
-      if (a !== BSS + 0x1940 || cpu.regRead('lr') !== TEXT + 0x554b)
+    } else if (slot === 0x0c && this.#profile.sessionSave) {
+      // Acknowledge the save request for state the guest keeps in this session.
+      const { address, caller } = this.#profile.sessionSave;
+      if (a !== address || cpu.regRead('lr') !== caller)
         throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
     } else if (slot === 0x40) {
       const low = a & 65535;
@@ -370,16 +402,20 @@ export class AdsRuntime {
     } else if (slot === 0x48) {
       // The archived replay advances this synthetic clock by presentations.
       this.#writeOutput(this.#outputAddress() + 12, this.presentations);
+    } else if (slot === 0x9c && this.#profile.id === 'cheombangjichuk-othello') {
+      // The board redraw leaves its white background to this call.
+      if (a !== 0xff || cpu.regRead('lr') !== TEXT + 0x42eb)
+        throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
+      this.#display().fill(a);
     } else if (slot === 0xa0) {
       this.presentations++;
-    } else if (slot === 0xc4 && this.#profile.id === 'mobile-gostop') {
-      // This build's splash passes an empty descriptor at this call site.
-      // Only that observed call can be skipped without implementing 0xc4.
-      const descriptor = BSS + 0x132c;
+    } else if (slot === 0xc4 && this.#profile.emptySplashDescriptor) {
+      // Only these observed splash calls with empty descriptors can be skipped.
+      const { address, caller } = this.#profile.emptySplashDescriptor;
       if (
-        cpu.regRead('lr') !== TEXT + 0x5755 ||
-        cpu.regRead('r1') !== descriptor ||
-        cpu.read(descriptor, 12).some((byte) => byte !== 0)
+        cpu.regRead('lr') !== caller ||
+        cpu.regRead('r1') !== address ||
+        cpu.read(address, 12).some((byte) => byte !== 0)
       )
         throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
     } else {
@@ -409,13 +445,22 @@ export class AdsRuntime {
       case 0x8c:
         this.#line(x, y, signed(b), b >> 16);
         break;
+      case 0x90:
+      case 0x94: {
+        if (this.#profile.id !== 'couple-bowling')
+          throw Error(`Неподдерживаемый вызов ADS ${hex(slot)}.`);
+        const end = signed(b);
+        if (slot === 0x90) this.#line(x, y, x, end);
+        else this.#line(x, y, end, y);
+        break;
+      }
       case 0x98:
         this.#fill(x, y, b & 65535, b >>> 16);
         break;
       case 0xb0: {
         const address = cpu.regRead('r2');
         const transparency = cpu.regRead('r3');
-        // Oh My Head uses an empty descriptor while loading its resources.
+        // These builds use an empty descriptor while loading their resources.
         if (
           this.#profile.emptyMqDescriptor &&
           a === 0 &&

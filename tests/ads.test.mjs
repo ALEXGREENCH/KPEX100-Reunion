@@ -35,6 +35,8 @@ function advance(game, ticks) {
 
 function assertCapture(game, expected, [width, height]) {
   assert.equal(game.presentations, expected.presentation, expected.file);
+  if (expected.eventCount !== undefined)
+    assert.equal(game.eventCount, expected.eventCount, expected.file);
   assert.equal(hash(game.readIndexedFrame()), expected.indexedSha256, expected.file);
   assert.deepEqual([game.width, game.height], [width, height], expected.file);
   assert.equal(game.framebuffer.data.length, width * height * 4, expected.file);
@@ -130,39 +132,48 @@ test('ADS: jumping-baby matches all archived captures on ARM/WASM', async () => 
   }
 });
 
-test('ADS: mobile-gostop matches the independent idle and keypad replays on ARM/WASM', async () => {
-  const record = json('../validation/anycall-mobile-gostop.json');
-  const { branches, commonSequence, size, timerIntervals } = record;
-  assert.deepEqual(
-    branches.map(({ key }) => key),
-    [null, 1, 5, 7],
-  );
-  const idle = [];
-  for (const { key, checkpoints } of branches) {
-    assert.equal(checkpoints.length, timerIntervals.length);
-    await replay(record, (game) => {
-      for (const step of commonSequence) {
-        press(game, step.key);
-        advance(game, step.ticks);
-        assertCapture(game, step.capture, size);
-      }
-      press(game, key);
-      for (const [index, ticks] of timerIntervals.entries()) {
-        advance(game, ticks);
-        const expected = checkpoints[index];
-        assertCapture(game, expected, size);
-        const frame = game.readIndexedFrame();
-        if (key === null) {
-          idle.push(frame);
-        } else {
-          const changed = frame.reduce((count, pixel, i) => count + (pixel !== idle[index][i]), 0);
-          assert.ok(changed > 0, expected.file);
-          assert.equal(changed, expected.changedPixels, expected.file);
+for (const [gameId, keys] of [
+  ['mobile-gostop', [1, 5, 7]],
+  ['cheombangjichuk-othello', [19]],
+  ['couple-bowling', [11, 19]],
+]) {
+  test(`ADS: ${gameId} matches the independent idle and keypad replays on ARM/WASM`, async () => {
+    const record = json(`../validation/anycall-${gameId}.json`);
+    const { branches, commonSequence, size, timerIntervals } = record;
+    assert.deepEqual(
+      branches.map(({ key }) => key),
+      [null, ...keys],
+    );
+    const idle = [];
+    for (const { key, checkpoints } of branches) {
+      assert.equal(checkpoints.length, timerIntervals.length);
+      await replay(record, (game) => {
+        for (const step of commonSequence) {
+          press(game, step.key);
+          advance(game, step.ticks);
+          assertCapture(game, step.capture, size);
         }
-      }
-    });
-  }
-});
+        press(game, key);
+        for (const [index, ticks] of timerIntervals.entries()) {
+          advance(game, ticks);
+          const expected = checkpoints[index];
+          assertCapture(game, expected, size);
+          const frame = game.readIndexedFrame();
+          if (key === null) {
+            idle.push(frame);
+          } else {
+            const changed = frame.reduce(
+              (count, pixel, i) => count + (pixel !== idle[index][i]),
+              0,
+            );
+            assert.ok(changed > 0, expected.file);
+            assert.equal(changed, expected.changedPixels, expected.file);
+          }
+        }
+      });
+    }
+  });
+}
 
 test('ADS: mobile-gostop continues through three later-round transitions', async () => {
   const record = json('../validation/anycall-mobile-gostop.json');
@@ -192,5 +203,32 @@ test('ADS: mobile-gostop continues through three later-round transitions', async
     }
     assert.equal(checkpoints.size, 0);
     assert.equal(game.eventCount, 5355);
+  });
+});
+
+test('ADS: couple-bowling continues through two late score updates', async () => {
+  const record = json('../validation/anycall-couple-bowling.json');
+  const inputs = [19, 11, 19, 10, 19, 19, 13, 19, 19, 12, 19, 19];
+  // Independent Unicorn captures after each session score write and after another shot.
+  const checkpoints = new Map([
+    [38, [3970, '126c6b9ea175c2ece3e77017b8b50c7eec2f6887f56ac31c8a7e82dc76d6d186']],
+    [42, [4350, '6f5872c59c99bbc8b4bb1f5489bf70ddb4e2f9cf6a32049539be7a2ea16c07ef']],
+    [43, [4460, '81fe20c825e90ea53c557f63a39e48cfe05fb8ab6971560348f1b3c154a9fb80']],
+  ]);
+  await replay(record, (game) => {
+    for (const { key, ticks } of record.commonSequence) {
+      press(game, key);
+      advance(game, ticks);
+    }
+    for (let turn = 0; turn < 44; turn++) {
+      press(game, inputs[turn % inputs.length]);
+      advance(game, 80 + (turn % 4) * 10);
+      const checkpoint = checkpoints.get(turn);
+      if (!checkpoint) continue;
+      const [presentation, expected] = checkpoint;
+      assert.equal(game.presentations, presentation, `turn ${turn}`);
+      assert.equal(hash(game.readIndexedFrame()), expected, `turn ${turn}`);
+    }
+    assert.equal(game.eventCount, 4514);
   });
 });

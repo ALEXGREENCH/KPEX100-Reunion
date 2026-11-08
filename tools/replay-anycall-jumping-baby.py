@@ -9,6 +9,7 @@ from pathlib import Path
 import runpy
 import struct
 from zipfile import ZipFile
+from zlib import crc32
 
 from PIL import Image
 from unicorn import UC_ARCH_ARM, UC_HOOK_CODE, UC_MODE_THUMB, Uc
@@ -72,6 +73,14 @@ ADDITIONAL_GAMES = {
         "버전 다름/모바일 고스톱.mbin",
         "108f8d823825c936d782e0f0a1d4e090e5812bab5713c92c765cc42fc2a8c197",
     ),
+    "cheombangjichuk-othello": (
+        "버전 다름/천방지축_오델로.mbin",
+        "30f98f626af9cdbeb2f57180c31040df60153a101f3388926b5a2086dee51bf2",
+    ),
+    "couple-bowling": (
+        "버전 다름/커플볼링.mbin",
+        "166f9c83d77e92b3bbd7ecaba470ebfb1fc1b679f7d89a8a6a7a53809bd96102",
+    ),
 }
 ADDITIONAL_STUB_SLOTS = {0x2C, 0x30, 0x34, 0x5C, 0x9C}
 DRAWING_TIMERS = {
@@ -80,7 +89,10 @@ DRAWING_TIMERS = {
     "mr-ramen": 2,
     "udon-time": 2,
     "mobile-gostop": 1,
+    "cheombangjichuk-othello": 1,
+    "couple-bowling": 1,
 }
+RANDOM_GAMES = ("udon-time", "mobile-gostop", "couple-bowling")
 RGB332 = [
     bytes(
         ((value >> 5) * 255 // 7, ((value >> 2) & 7) * 255 // 7, (value & 3) * 255 // 3)
@@ -104,7 +116,12 @@ class Replay:
             if game_id == "jumping-baby"
             else STUB_SLOTS | ADDITIONAL_STUB_SLOTS
         )
-        self.height = 144 if game_id == "pocket-billiards" else HEIGHT
+        self.height = (
+            144
+            if game_id
+            in ("pocket-billiards", "cheombangjichuk-othello", "couple-bowling")
+            else HEIGHT
+        )
         self.body = original[HEADER_BYTES:]
         self.sprites = {}
         self.resources = {}
@@ -223,9 +240,14 @@ class DrawingReplay(Replay):
         self.color = 0
         self.random_state = 0x12345678
         self.empty_descriptor_calls = []
+        self.special_calls = []
+        self.events = 0
         super().__init__(original, game_id=game_id)
-        self.stub_slots = (self.stub_slots | {0x08}) - {0x48}
-        if game_id in ("udon-time", "mobile-gostop"):
+        if game_id == "cheombangjichuk-othello":
+            self.stub_slots.remove(0x9C)
+        else:
+            self.stub_slots = (self.stub_slots | {0x08}) - {0x48}
+        if game_id in RANDOM_GAMES:
             self.stub_slots -= {0x40}
         if game_id == "udon-time":
             self.stub_slots.add(0x0C)
@@ -234,17 +256,21 @@ class DrawingReplay(Replay):
         for _ in range(frames):
             self.dispatch(5, DRAWING_TIMERS[self.game_id])
 
+    def dispatch(self, event, argument=0):
+        super().dispatch(event, argument)
+        self.events += 1
+
     def output_address(self):
         stack = self.cpu.reg_read(UC_ARM_REG_SP)
         return struct.unpack("<I", self.cpu.mem_read(stack, 4))[0]
 
     def host(self, cpu, address, size, data):
         slot = address - STUBS
-        if slot == 0x48:
+        if slot == 0x48 and self.game_id != "cheombangjichuk-othello":
             # A synthetic clock for this replay, in units of presented frames.
             cpu.mem_write(self.output_address() + 12, struct.pack("<I", self.frames))
             cpu.reg_write(UC_ARM_REG_R0, 0)
-        elif slot == 0x40 and self.game_id in ("udon-time", "mobile-gostop"):
+        elif slot == 0x40 and self.game_id in RANDOM_GAMES:
             bounds = cpu.reg_read(UC_ARM_REG_R0)
             low, high = bounds & 65535, bounds >> 16
             if low > high:
@@ -266,28 +292,73 @@ class DrawingReplay(Replay):
             else:
                 width, height = struct.unpack("<HH", struct.pack("<I", second))
                 self.fill_rect(x, y, width, height)
-        elif slot == 0xC4 and self.game_id == "mobile-gostop":
+        elif slot in (0x90, 0x94) and self.game_id == "couple-bowling":
+            position, endpoint = (cpu.reg_read(register) for register in ARGS[:2])
+            x, y = struct.unpack("<hh", struct.pack("<I", position))
+            end = struct.unpack("<h", struct.pack("<H", endpoint & 0xFFFF))[0]
+            end_x, end_y = (x, end) if slot == 0x90 else (end, y)
+            if self.calls[slot] < 2:
+                self.record_special_call(
+                    slot, segment=[x, y, end_x, end_y], color=self.color
+                )
+            self.draw_line(x, y, end_x, end_y)
+        elif slot == 0x9C and self.game_id == "cheombangjichuk-othello":
+            if (
+                cpu.reg_read(UC_ARM_REG_LR) != TEXT + 0x42EB
+                or cpu.reg_read(UC_ARM_REG_R0) != 255
+            ):
+                raise ValueError("unexpected ADS slot 0x9c screen clear")
+            self.record_special_call(slot)
+            cpu.mem_write(FRAMEBUFFER, bytes([255]) * WIDTH * self.height)
+            cpu.reg_write(UC_ARM_REG_R0, 0)
+        elif (
+            slot == 0xB0
+            and self.game_id == "cheombangjichuk-othello"
+            and not any(cpu.reg_read(register) for register in ARGS)
+        ):
+            self.record_special_call(slot)
+        elif slot == 0xC4 and self.game_id in ("mobile-gostop", "couple-bowling"):
             arguments = [cpu.reg_read(register) for register in ARGS]
             descriptor = arguments[1]
             caller = cpu.reg_read(UC_ARM_REG_LR)
-            if descriptor != BSS + 0x132C or caller != TEXT + 0x5755:
+            expected = (
+                (0x132C, 0x5755) if self.game_id == "mobile-gostop" else (0xCEC, 0x5A05)
+            )
+            if descriptor != BSS + expected[0] or caller != TEXT + expected[1]:
                 raise ValueError("unexpected ADS slot 0xc4 call site")
             descriptor_bytes = cpu.mem_read(descriptor, 12)
             if any(descriptor_bytes):
                 raise ValueError("unexpected nonempty ADS slot 0xc4 descriptor")
-            self.empty_descriptor_calls.append(
-                {
-                    "presentation": self.frames,
-                    "arguments": [f"0x{value:08x}" for value in arguments],
-                    "linkRegister": f"0x{caller:08x}",
-                    "descriptorHex": descriptor_bytes.hex(),
-                }
-            )
+            if self.game_id == "mobile-gostop":
+                self.empty_descriptor_calls.append(
+                    {
+                        "presentation": self.frames,
+                        "arguments": [f"0x{value:08x}" for value in arguments],
+                        "linkRegister": f"0x{caller:08x}",
+                        "descriptorHex": descriptor_bytes.hex(),
+                    }
+                )
+            else:
+                self.record_special_call(slot, descriptorHex=descriptor_bytes.hex())
             cpu.reg_write(UC_ARM_REG_R0, 0)
         else:
             super().host(cpu, address, size, data)
             return
         self.calls[slot] += 1
+
+    def record_special_call(self, slot, **details):
+        self.special_calls.append(
+            {
+                "slot": f"0x{slot:02x}",
+                "completedEvents": self.events,
+                "presentation": self.frames,
+                "arguments": [
+                    f"0x{self.cpu.reg_read(register):08x}" for register in ARGS
+                ],
+                "linkRegister": f"0x{self.cpu.reg_read(UC_ARM_REG_LR):08x}",
+                **details,
+            }
+        )
 
     def fill_rect(self, x, y, width, height):
         left, right = max(0, x), min(WIDTH, x + width)
@@ -580,6 +651,111 @@ def replay_mobile_gostop(original, output):
     )
 
 
+def replay_paired_boards(original, output, game_id):
+    if game_id == "cheombangjichuk-othello":
+        setup_keys = [19, 19, 19, 19, 11, 11, 11, 11, 13, 13]
+        intervals = [21, 80]
+        inputs = [(None, "idle"), (19, "legal-move")]
+        details = {
+            "legalMove": {
+                "key": 19,
+                "column": 4,
+                "row": 2,
+                "coordinates": "zero-based",
+            },
+        }
+    else:
+        setup_keys = [19, 19, 19, 19, 19, 12, 19, 11, 19]
+        intervals = [20, 20, 20, 40]
+        inputs = [(None, "idle"), (11, "right"), (19, "confirm")]
+        details = {
+            "randomSeed": 0x12345678,
+            "clock": "synthetic count of presented frames",
+            "observations": {
+                "idle": "Countdown auto-throws and the first shot scores 9.",
+                "right": "Changes the ball trajectory. The first shot scores 9.",
+                "confirm": "Opens the power meter early. The first shot scores 6.",
+            },
+        }
+    sequence = [(None, 100)] + [(key, 20) for key in setup_keys]
+    common = []
+    branches = []
+    idle_frames = []
+    for key, label in inputs:
+        game = DrawingReplay(original, game_id)
+        for index, (button, ticks) in enumerate(sequence):
+            if button is not None:
+                game.key(button)
+            game.tick(ticks)
+            if key is None:
+                common.append(
+                    {
+                        "key": button,
+                        "ticks": ticks,
+                        "capture": {
+                            **save_frame(output, f"setup-{index:02d}", game),
+                            "eventCount": game.events,
+                        },
+                    }
+                )
+            elif (
+                sha256(game.frame()).hexdigest()
+                != common[index]["capture"]["indexedSha256"]
+            ):
+                raise RuntimeError("control diverged before gameplay input")
+
+        if key is not None:
+            game.key(key)
+        checkpoints = []
+        elapsed = 0
+        for index, ticks in enumerate(intervals):
+            elapsed += ticks
+            game.tick(ticks)
+            frame = game.frame()
+            if key is None:
+                idle_frames.append(frame)
+            changed = sum(
+                a != b for a, b in zip(frame, idle_frames[index], strict=True)
+            )
+            if key is not None and not changed:
+                raise RuntimeError(f"no gameplay difference after key {key}")
+            checkpoints.append(
+                {
+                    **save_frame(output, f"{label}-{elapsed}", game),
+                    "eventCount": game.events,
+                    "changedPixels": changed,
+                }
+            )
+        branches.append(
+            {
+                "key": key,
+                "checkpoints": checkpoints,
+                "specialCalls": game.special_calls,
+            }
+        )
+        if key is None:
+            identity = replay_identity(game, original)
+
+    manifest = {
+        **identity,
+        "sourceArchive": "research/archives/Samsung-Anycall-ADS-MBIN.zip",
+        "originalMemberCrc32": f"{crc32(original):08x}",
+        "timerArgument": DRAWING_TIMERS[game_id],
+        **details,
+        "commonSequence": common,
+        "timerIntervals": intervals,
+        "branches": branches,
+    }
+    (output / "replay.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    print(
+        f"{game_id}: {len(common)} setup and {len(branches) * len(intervals)} paired captures"
+    )
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -595,6 +771,8 @@ def main():
         args.output.mkdir(parents=True, exist_ok=True)
         if args.game == "mobile-gostop":
             replay_mobile_gostop(original, args.output)
+        elif args.game in ("cheombangjichuk-othello", "couple-bowling"):
+            replay_paired_boards(original, args.output, args.game)
         elif args.game in DRAWING_TIMERS and args.game != "119-rescue":
             replay_controls(original, args.output, args.game)
         else:

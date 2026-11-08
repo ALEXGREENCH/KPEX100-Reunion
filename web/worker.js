@@ -276,7 +276,7 @@ async function load(message) {
   ]);
   if (isAds) {
     try {
-      machine = await AdsRuntime.create(content, { id: message.gameId });
+      machine = await AdsRuntime.create(content, { id: message.gameId, audio });
     } catch (error) {
       // A successful HTTP response can still fail the MBIN integrity check.
       cache.delete(message.gameUrl);
