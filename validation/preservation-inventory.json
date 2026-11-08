@@ -3,6 +3,273 @@
   "scope": "Every catalogued research ZIP and every direct file member. Nested archives/installers are preserved as exact files; their internal payloads have separate research audits. No vendor code executed. Member paths use Python ZIP decoding; legacy filename bytes remain unchanged in the original archives.",
   "archives": [
     {
+      "id": "electric-island-puyo-puyo-2",
+      "repositoryPath": "research/archives/Electric-Island-Game-Catalogues-and-Puyo-Puyo-2-Media.zip",
+      "bytes": 249750,
+      "sha256": "baab9727e188a3b204dc5ddd6c78a4d2d3f0d8a7af8520066cca162dfcaf0202",
+      "zipCrcPassed": true,
+      "members": [
+        {
+          "path": "derived/2012-02-08-index.html",
+          "bytes": 23766,
+          "crc32": "90faf2c8",
+          "sha256": "a34792b96580054438aebbc2cd5dad712364056383e63342550241d3f62ee7bb"
+        },
+        {
+          "path": "derived/mobile0040-animation-frames.png",
+          "bytes": 56348,
+          "crc32": "122a13a9",
+          "sha256": "b68116129e6d44d2979bf1138c96d4faaae18de233ba36a15e342464a226743c"
+        },
+        {
+          "path": "evidence/20060310-game-links.json",
+          "bytes": 2752,
+          "crc32": "c63ffad1",
+          "sha256": "0acd443fe986ca8cbcd38e1f0c57715e38ed03c381712e73b3e1bdc535a3696f"
+        },
+        {
+          "path": "evidence/2012-index-receipt.json",
+          "bytes": 3239,
+          "crc32": "c0a89dfe",
+          "sha256": "cacb052470c01e76d6edbd6aa007c75a56ce21c448c24ddd3101556a81cb9367"
+        },
+        {
+          "path": "evidence/board-and-v2-replays.json",
+          "bytes": 8898,
+          "crc32": "3f4f7daa",
+          "sha256": "b31f7fa1cbe336d58fe49430b6cb0c70492f4aa30542a3a75e9e57458de832ff"
+        },
+        {
+          "path": "evidence/common-crawl-2012.jsonl",
+          "bytes": 2005,
+          "crc32": "399129ff",
+          "sha256": "341d3a332b83a11e8c7931a6e107607006a6941fa5eb2492cf4f1f4885157747"
+        },
+        {
+          "path": "evidence/game-data-cdx.json",
+          "bytes": 293,
+          "crc32": "ef2c2d46",
+          "sha256": "1d9dd62db0176e528149aa02d1b0a0fcea366b45f42c68111b5d491e710c86ee"
+        },
+        {
+          "path": "evidence/homepage-cdx.json",
+          "bytes": 8161,
+          "crc32": "04ba226d",
+          "sha256": "0174d4c171b66164441bd49830ae07af64a93348ef299336d2f28609479ca866"
+        },
+        {
+          "path": "evidence/homepage-replays.json",
+          "bytes": 11058,
+          "crc32": "8bc4858a",
+          "sha256": "68abbd9c853855a50377a1bee8632f4e2ac7add267d37243ad3700292193fb1e"
+        },
+        {
+          "path": "evidence/mobile0040-animation.json",
+          "bytes": 858,
+          "crc32": "e8d8b781",
+          "sha256": "3994ac977f40fb8cf689939a4a821f37b8fc4333d2dfa76226d3405bd046b759"
+        },
+        {
+          "path": "headers/2005-release-announcement-daum.txt",
+          "bytes": 118,
+          "crc32": "e16cb274",
+          "sha256": "09de92ed32b6a810864a3ebc452097d6ef3bab1540cd1b0a8b491ac2d6cf7bdd"
+        },
+        {
+          "path": "headers/20051221-home.txt",
+          "bytes": 2707,
+          "crc32": "eb7fe1f8",
+          "sha256": "d97eb338d175fdb52c8656420f2a535e9f24dddc017b897c5a5c6f76aaa6e0ad"
+        },
+        {
+          "path": "headers/20060310-games.txt",
+          "bytes": 2746,
+          "crc32": "04c74830",
+          "sha256": "1d82aeffde9ed8f4a88dae2d7580b6c2c4fce931b21f9ebfeb15d17fef46a298"
+        },
+        {
+          "path": "headers/2012-electric-island-arc.txt",
+          "bytes": 621,
+          "crc32": "c01afdd9",
+          "sha256": "0386317f3429ac31e163fa439e60b65deecb854c0d4b136514f5936f35463d55"
+        },
+        {
+          "path": "headers/frameset-20041213213250.txt",
+          "bytes": 1712,
+          "crc32": "131cd288",
+          "sha256": "48abe7f6dc913da20146db7866e0f398b4ab18e3d1cfc15b8ccdf9b8026cbff3"
+        },
+        {
+          "path": "headers/frameset-20050206123457.txt",
+          "bytes": 1712,
+          "crc32": "d5e8d613",
+          "sha256": "fa46f569a2805004a7ddb62257b377402cd3e2c9c9e0542a5f9e260e44a7b5e8"
+        },
+        {
+          "path": "headers/frameset-20050211182408.txt",
+          "bytes": 1711,
+          "crc32": "5e3ad3b7",
+          "sha256": "87740040ae620bbcd4b419b294feed87b081cfd83642360fafd9d7c060138a20"
+        },
+        {
+          "path": "headers/frameset-20050219035357.txt",
+          "bytes": 1714,
+          "crc32": "6787d002",
+          "sha256": "3a045d293cc2b6a0ced818b69d0081b6b2a87d355a08ded50ded5d632cac780e"
+        },
+        {
+          "path": "headers/frameset-20050306234828.txt",
+          "bytes": 1703,
+          "crc32": "4624b399",
+          "sha256": "48d097dfbb8bdd8bc64ce87b4a03a93f548d61c29d404d693141242ac220ef32"
+        },
+        {
+          "path": "headers/frameset-20050408064213.txt",
+          "bytes": 1700,
+          "crc32": "3a5df579",
+          "sha256": "f002556893edf9fe8c773abbbd139103eafbeb26aeb81d82cafdb8b20de07f46"
+        },
+        {
+          "path": "headers/frameset-20050511003057.txt",
+          "bytes": 1708,
+          "crc32": "6ee765ac",
+          "sha256": "87ffa6d13403414d288989f05683d77d978c65e4635494eae9f16b061012e9ce"
+        },
+        {
+          "path": "headers/frameset-20050819160750.txt",
+          "bytes": 1714,
+          "crc32": "1d1ecddd",
+          "sha256": "dc83fc36c7d47a7957b26cfffa5f7252075bd6b0fa555c50cdb34888438a9e01"
+        },
+        {
+          "path": "headers/frameset-20050830135125.txt",
+          "bytes": 1716,
+          "crc32": "f9fc3b64",
+          "sha256": "10fb16d9bf249a516c88b57664bdb836524ec7ffd0726676248bfc7038bfba61"
+        },
+        {
+          "path": "headers/frameset-20051016001942.txt",
+          "bytes": 1718,
+          "crc32": "463cf3d3",
+          "sha256": "8ccc0a244d16cdb19d70cbcef8ed0e9d46ef3036e0ce5ff1ac7c7dda86679d6f"
+        },
+        {
+          "path": "headers/frameset-20051124061404.txt",
+          "bytes": 1722,
+          "crc32": "a6fcb19e",
+          "sha256": "38544dabf89a2e4347b4b69417d2b728b0b50f9c6baec009e14e8c70a3c17615"
+        },
+        {
+          "path": "headers/mobile0040-animation.txt",
+          "bytes": 1974,
+          "crc32": "fe971e43",
+          "sha256": "7ee3b67e35281e0d3d81ab01ba7311c1c191ea07742b12ea824de3bd129324b4"
+        },
+        {
+          "path": "originals/common-crawl/2012-electric-island-arc-member.gz",
+          "bytes": 4559,
+          "crc32": "c39801f0",
+          "sha256": "a671294dbf3b72a26a3f293471381b59b137410da5ba628a2cf9d158fbbb5066"
+        },
+        {
+          "path": "originals/wayback/20051221-home.html",
+          "bytes": 22192,
+          "crc32": "a9e09de5",
+          "sha256": "e24af77d210910a24efd54102555e0554c2411f1bf42a9a735e75e304a2d1da3"
+        },
+        {
+          "path": "originals/wayback/20060310-games.html",
+          "bytes": 47425,
+          "crc32": "5e10947f",
+          "sha256": "6b9ddc68b2eb0ae489a6a37c4f87a5b13919b02011126fd6bf2bf787b8b7b6d0"
+        },
+        {
+          "path": "originals/wayback/frameset-20041213213250.html",
+          "bytes": 397,
+          "crc32": "59932c4c",
+          "sha256": "3f775d1807cfe8c0a6e1d1a7608a1aa136e8d3b20af4ccabb5572e325539b3c6"
+        },
+        {
+          "path": "originals/wayback/frameset-20050206123457.html",
+          "bytes": 753,
+          "crc32": "1fc67060",
+          "sha256": "cfbc02128e003638d02a1bd489f3a4a0fca1645b0acb38f1cc6b9442ed3acd6b"
+        },
+        {
+          "path": "originals/wayback/frameset-20050211182408.html",
+          "bytes": 753,
+          "crc32": "b0c5b91a",
+          "sha256": "fed42cb6787f125f7aa2128644c0ddff3d934355ba38cfe41abeeb50e8cd4331"
+        },
+        {
+          "path": "originals/wayback/frameset-20050219035357.html",
+          "bytes": 753,
+          "crc32": "5aa43b7a",
+          "sha256": "7e2a51de9648cad41bc9a041796813f02b53e7779378eb565c68acfb9b0f5087"
+        },
+        {
+          "path": "originals/wayback/frameset-20050306234828.html",
+          "bytes": 753,
+          "crc32": "9e00a033",
+          "sha256": "07c137ba1eac5550ee416f69b870ddda4e5f493eed8ad9c3ad38f72be679519f"
+        },
+        {
+          "path": "originals/wayback/frameset-20050408064213.html",
+          "bytes": 753,
+          "crc32": "ab162554",
+          "sha256": "b34ceff77488b2675be5008f14bd446310e4510a9ef9ffd845a997878cf07a7f"
+        },
+        {
+          "path": "originals/wayback/frameset-20050511003057.html",
+          "bytes": 753,
+          "crc32": "8025d80f",
+          "sha256": "a6080a6a81c87ec88da19ae71705dafc3af029537608ceba2c3a7e8669f9a7db"
+        },
+        {
+          "path": "originals/wayback/frameset-20050819160750.html",
+          "bytes": 753,
+          "crc32": "940e8902",
+          "sha256": "be6356a7f5c4c5d82a1d9756e1e8e5eb6e47bf1f12bdf5462f905ab4f7b2436a"
+        },
+        {
+          "path": "originals/wayback/frameset-20050830135125.html",
+          "bytes": 753,
+          "crc32": "385f1c56",
+          "sha256": "baf6071ff6a24fe08eba090c278fa5cb3e70673e15175a93c010df5155c32adc"
+        },
+        {
+          "path": "originals/wayback/frameset-20051016001942.html",
+          "bytes": 753,
+          "crc32": "34703e0e",
+          "sha256": "ac07310a6fab6201af2c3eba9ec5a29de9922840a908824a04f801467decf5c8"
+        },
+        {
+          "path": "originals/wayback/frameset-20051124061404.html",
+          "bytes": 753,
+          "crc32": "76f06ddc",
+          "sha256": "263f1c701ecce49ca6692cf08c0274800ad2b47374a6d280c79be2d52d9a53ba"
+        },
+        {
+          "path": "originals/wayback/mobile0040-animation.gif",
+          "bytes": 135626,
+          "crc32": "3b8a71b5",
+          "sha256": "79b9ba2e2563fd41845fff7735124faa89eaff16141c685768c325c43d1af02d"
+        },
+        {
+          "path": "sources/2005-release-announcement-daum.html",
+          "bytes": 90338,
+          "crc32": "7a57b947",
+          "sha256": "7a895eb19d7c49cdeb970e36ddfe53e098010843f91b300807666af9130fcc51"
+        },
+        {
+          "path": "manifest.json",
+          "bytes": 7879,
+          "crc32": "1543b826",
+          "sha256": "db6a788591da4dd7dbafbe29b492360c52303c819784c8b4a380d813480e7373"
+        }
+      ]
+    },
+    {
       "id": "palletshipping-31-ktf-wipi",
       "repositoryPath": "research/archives/Palletshipping-31-KTF-Packages-and-Master-of-Sword-2-Expansion.zip",
       "bytes": 28508593,
@@ -188572,9 +188839,9 @@
     }
   ],
   "counts": {
-    "archives": 100,
-    "archiveBytes": 1869645890,
-    "fileMembers": 31278,
-    "uniqueMemberHashes": 17328
+    "archives": 101,
+    "archiveBytes": 1869895640,
+    "fileMembers": 31321,
+    "uniqueMemberHashes": 17371
   }
 }
