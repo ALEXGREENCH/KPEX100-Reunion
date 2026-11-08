@@ -626,19 +626,6 @@ def build_container(sdk, cart, profile, plain=False):
             if profile == "chase"
             else "    limit = 512;\n    if (!(mask & 24)) limit = 768;"
         ),
-        fetch_body=(
-            """    int addr;
-    addr = pc;
-    pc = (pc + 1) & 65535;
-    if (addr < 32768) return CpuRead(addr);
-    addr = 16 + (addr & (prgSize - 1));
-    return (rom[addr >> 2] >> ((addr & 3) * 8)) & 255;"""
-            if center
-            else """    int value;
-    value = CpuRead(pc);
-    pc = (pc + 1) & 65535;
-    return value;"""
-        ),
         sample_scan=(
             "if (tileSize == 6) scan += (row >= 1) + (row >= 4);"
             if center

@@ -273,6 +273,7 @@ export class GnexRuntime {
         romHash,
         minPaletteContinuationPixels: 192,
         minBlendRectanglePixels: 256,
+        minSolidRectanglePixels: 256,
         enabled: () => this._fastEventActive,
         onSkippedInstructions: (count) => {
           if (this.profile === 'phone') this.softwareInstructions += count;
@@ -494,6 +495,9 @@ export class GnexRuntime {
           `Original GNEX exception ${this.cpu.regRead('r0')} at SGS ${hex(this._read(VM_PC) - BASE)}`,
         );
       const n = this.cpu.regRead('r0');
+      // Register the two solid-rectangle shortcuts when a script first uses them.
+      if (this._fastEventActive && (n === 0x37 || n === 0x39))
+        this.romAccelerators?.enableSolidRectangles();
       this.syscalls[hex(n)] = (this.syscalls[hex(n)] || 0) + 1;
       boundedPush(this.trace, `calls ${hex(n)} @ SGS ${hex(this._read(VM_PC) - BASE)}`, 60);
       if (this._syscall(n)) this._return();

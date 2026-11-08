@@ -7,6 +7,7 @@ const RECT_EXIT = 0x2004f9f8;
 const BLEND_RECT_ENTRY = 0x2004fa04;
 const BLEND_MASK_LITERAL = 0x2005035c;
 const BLEND_MASKS = 0x21f4ed90;
+const SOLID_RECT_ENTRIES = [0x200505e8, 0x20050634];
 const PALETTE_ROW_ENTRY = 0x2004e4c4;
 const PALETTE_ROW_EXIT = 0x2004e74c;
 const COLOR_MATCH_ENTRY = 0x20055a7c;
@@ -56,6 +57,11 @@ const BLEND_RECT_SIGNATURE = Uint8Array.from(
     .match(/../g)
     .map((value) => Number.parseInt(value, 16)),
 );
+const SOLID_RECT_SIGNATURE = Uint8Array.from(
+  '0010a0e1020051e11c5096d59c0505d085508ed0815085d0b040c5d1011081d2f7ffffda01c08ce203005ce1f3ffffda7080bde870402de9b0629fe510409de508e096e501c0a0e1090000ea0010a0e1020051e11c5096d59c0505d085508ed0815085d0b040c5d1011081d2f7ffffda01c08ce203005ce1f3ffffda7080bde8'
+    .match(/../g)
+    .map((value) => Number.parseInt(value, 16)),
+);
 const FILL_SIGNATURE = Uint8Array.from(
   '2c129fe5182091e5081091e5a230a0e10020a0e3030052e1b200c13001208232fbffff3a0ef0a0e1'
     .match(/../g)
@@ -79,6 +85,7 @@ export function installRomAccelerators(
     minPaletteBatchPixels = 4096,
     minPaletteContinuationPixels = Infinity,
     minBlendRectanglePixels = Infinity,
+    minSolidRectanglePixels = Infinity,
   } = {},
 ) {
   if (romHash !== KINGSTON_212_SHA256)
@@ -118,6 +125,13 @@ export function installRomAccelerators(
       throw new Error('Kingston RGB565 blended rectangle kernel does not match verified ROM');
   }
 
+  const accelerateSolidRectangle = Number.isFinite(minSolidRectanglePixels);
+  if (accelerateSolidRectangle) {
+    const code = cpu.read(0x200505c0, SOLID_RECT_SIGNATURE.length);
+    if (!SOLID_RECT_SIGNATURE.every((value, index) => code[index] === value))
+      throw new Error('Kingston RGB565 solid rectangle kernels do not match verified ROM');
+  }
+
   const stats = {
     fills: 0,
     pixels: 0,
@@ -129,6 +143,8 @@ export function installRomAccelerators(
     rectangleSmall: 0,
     blendedRectangles: 0,
     blendedRectanglePixels: 0,
+    solidRectangles: 0,
+    solidRectanglePixels: 0,
     paletteRows: 0,
     paletteBatches: 0,
     paletteContinuations: 0,
@@ -343,6 +359,68 @@ export function installRomAccelerators(
         stats.skippedInstructions += skipped;
       })
     : null;
+  // RGB and packed-color solid fills share the same row loop. Hook the
+  // initial outer compare and let the last row and POP run on ARM.
+  const removeSolidRectangles = [];
+  const solidRectangle = (address, size) => {
+    const budget = cpu.blockBudget;
+    if (!enabled() || cpu.runCounted || cpu.runStop !== 0x23fff000 || size !== 8 || budget == null)
+      return;
+    const x1 = cpu.regRead('r0'),
+      x2 = cpu.regRead('r2');
+    const y1 = cpu.regRead('r12'),
+      y2 = cpu.regRead('r3');
+    const width = x2 - x1 + 1,
+      rows = y2 - y1;
+    if (
+      width <= 0 ||
+      rows <= 0 ||
+      width * rows < minSolidRectanglePixels ||
+      cpu.regRead('r6') !== DESCRIPTOR ||
+      cpu.regRead('cpsr') & 0x20
+    )
+      return;
+    const stride = cpu.read32(DESCRIPTOR + 0x1c);
+    const height = cpu.read32(DESCRIPTOR + 0x18) / (stride * 2);
+    const buffer = cpu.regRead('lr'),
+      first = buffer + (y1 * stride + x1) * 2;
+    const end = first + (rows * stride + width) * 2;
+    const stack = cpu.regRead('sp');
+    if (
+      x2 >= stride ||
+      y2 >= height ||
+      stride > 512 ||
+      height > 512 ||
+      !Number.isInteger(height) ||
+      buffer !== cpu.read32(DESCRIPTOR + 8) ||
+      first & 1 ||
+      first < 0x23000000 ||
+      end > 0x23ff0000 ||
+      (first < stack + 16 && stack < end)
+    )
+      return;
+    // Each row has one MOV, eight instructions per pixel and final
+    // failed test, plus three for the outer loop.
+    const perRow = 8 * width + 12;
+    if (budget < (rows + 1) * perRow * 2 + 32) return;
+    const color = cpu.regRead('r4');
+    const row = new Uint8Array(width * 2);
+    for (let at = 0; at < row.length; at += 2) {
+      row[at] = color & 255;
+      row[at + 1] = (color >>> 8) & 255;
+    }
+    const length = ((rows - 1) * stride + width) * 2;
+    const output = width === stride ? new Uint8Array(length) : cpu.read(first, length);
+    for (let y = 0; y < rows; y++) output.set(row, y * stride * 2);
+    cpu.write(first, output);
+    cpu.regWrite('r12', y2);
+    const skipped = rows * perRow;
+    cpu.blockBudget = budget - skipped * 2;
+    onSkippedInstructions(skipped);
+    stats.solidRectangles++;
+    stats.solidRectanglePixels += rows * width;
+    stats.skippedInstructions += skipped;
+  };
   // Enter once per row, before MOV r8,#0 / LDR r0,[sp,#12]. Unsupported
   // drawing modes therefore pay one guard per row, not one guard per pixel.
   const removePaletteRow = cpu.addBlockShortcut(PALETTE_ROW_ENTRY, (address, size) => {
@@ -662,10 +740,16 @@ export function installRomAccelerators(
   });
   return {
     stats,
+    enableSolidRectangles() {
+      if (!accelerateSolidRectangle || removeSolidRectangles.length) return;
+      for (const entry of SOLID_RECT_ENTRIES)
+        removeSolidRectangles.push(cpu.addBlockShortcut(entry, solidRectangle));
+    },
     dispose() {
       removeFill();
       removeRectangle();
       removeBlendRectangle?.();
+      for (const remove of removeSolidRectangles) remove();
       removePaletteRow();
       removeColorMatch();
       removeBulkCopy();

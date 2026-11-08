@@ -11,7 +11,7 @@ const sgsGames = catalog.games.filter((entry) => entry.engine !== 'ads');
 
 test('all catalogue ROMs, games and reached states retain original bytes', () => {
   assert.equal(catalog.firmwares.length, 9);
-  assert.equal(sgsGames.length, 116);
+  assert.equal(sgsGames.length, 117);
   assert.equal(catalog.games.length - sgsGames.length, 21);
   assert.equal(catalog.states.length, 3);
   for (const group of [catalog.firmwares, catalog.games, catalog.states]) {

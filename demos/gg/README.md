@@ -67,3 +67,16 @@ python demos/gg/build.py --freight-shift --sdk C:/path/to/sdk --output FREIGHT.S
 Для Kingston 2.12 скопируйте [FREIGHT.SGS](../../web/data/games/demo-freight-shift.sgs) и картридж под именем `FREIGHT.GGR` в папку `GAME`. В прямом режиме Reunion читает этот же ROM из SGS.
 
 На оригинальной Kingston 2.12 с виртуальным диском проверены толчок, отмена с побайтным восстановлением кадра, решение первой комнаты и переход во вторую кнопкой Play.
+
+## Coil Runner
+
+Перепрыгивайте провалы и патрули в трёх секторах. Стрелки влево и вправо задают направление, кнопка 1 на Game Gear или A на K-PEX поднимает героя в прыжок. В воздухе герой продолжает движение в выбранном направлении. Пружина позволяет добраться до верхнего настила. Две батареи открывают шлюз, а отмеченная флажком контрольная точка сохраняет собранный заряд после падения. Start перезапускает сектор или переводит в следующий после открытия шлюза и выхода.
+
+[Исходник Coil Runner](coil_runner.py) содержит карты, графику, физику прыжков и патруль на Z80. Все три сектора [самостоятельного картриджа](coil-runner.gg) пройдены в [Gearsystem](https://github.com/drhelius/Gearsystem). [Тест Reunion](../../tests/gg-coil-runner.test.mjs) проверяет тот же игровой цикл, в том числе прыжок с пружины, возврат к флажку с сохранением заряда и финальный переход. На оригинальной Kingston 2.12 с виртуальным диском проверены загрузка ROM, батарея, прыжок через провал и возврат к контрольной точке.
+
+```powershell
+python demos/gg/build.py --coil-runner --rom-only --output coil-runner.gg
+python demos/gg/build.py --coil-runner --sdk C:/path/to/sdk --output COIL.SGS
+```
+
+Для Kingston 2.12 скопируйте [COIL.SGS](../../web/data/games/demo-coil-runner.sgs) и картридж под именем `COIL.GGR` в папку `GAME`. В прямом режиме Reunion читает тот же ROM из SGS.

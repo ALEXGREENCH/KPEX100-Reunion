@@ -245,6 +245,8 @@ function rectangle(
     flags = 0xf8000013,
     mode = 0,
     stop = STOP,
+    entry = 0x2004f998,
+    rgb = [0xf0, 0x28, 0x12],
   },
   budget = null,
 ) {
@@ -261,15 +263,20 @@ function rectangle(
   cpu.write32(0x20b41260, start);
   cpu.write32(0x20b4126c, (stride << 16) | 1);
   cpu.write32(0x20b41270, stride * height * 2);
+  cpu.write32(0x20b41274, stride);
   for (let i = 0; i < 15; i++) cpu.regWrite('r' + i, 0x10100000 + i * 0x101);
   cpu.regWrite('cpsr', flags);
   cpu.regWrite('sp', 0x23fe0000);
   cpu.regWrite('lr', STOP);
   for (const [i, value] of [x1, y1, x2, y2].entries()) cpu.regWrite('r' + i, value);
-  cpu.write32(0x23fe0000, color);
-  cpu.write32(0x23fe0004, mode);
+  if (entry === 0x2005058c) {
+    rgb.forEach((value, index) => cpu.write32(0x23fe0000 + index * 4, value));
+  } else {
+    cpu.write32(0x23fe0000, color);
+    cpu.write32(0x23fe0004, mode);
+  }
   machine.instructions = 0;
-  callHelper(cpu, 0x2004f998, budget !== null, budget, stop);
+  callHelper(cpu, entry, budget !== null, budget, stop);
   return {
     registers: Object.fromEntries(registers.map((r) => [r, cpu.regRead(r)])),
     bytes: cpu.read(buffer - 8, span + 8),
@@ -394,6 +401,91 @@ test('blended RGB565 rectangles preserve pixels, ARM state and instruction budge
         'budget ' + budget,
       );
     assert.equal(fast.accelerator.stats.blendedRectangles, before + 1);
+  } finally {
+    native.cpu.close();
+    fast.cpu.close();
+  }
+});
+
+test('solid RGB rectangle kernels keep native pixels, registers, stack and exact watchdog edges', async () => {
+  const native = await machine(false),
+    fast = await machine(false);
+  try {
+    fast.accelerator = installRomAccelerators(fast.cpu, {
+      romHash,
+      minSolidRectanglePixels: 256,
+      onSkippedInstructions: (count) => {
+        fast.instructions += count;
+      },
+    });
+    const rgb = 0x2005058c,
+      packed = 0x200505f4;
+    assert.deepEqual(
+      rectangle(fast, { entry: rgb }, 10_000_000),
+      rectangle(native, { entry: rgb }, 10_000_000),
+    );
+    assert.equal(fast.accelerator.stats.solidRectangles, 0);
+    fast.accelerator.enableSolidRectangles();
+    fast.accelerator.enableSolidRectangles();
+    const cases = [
+      { entry: rgb },
+      { entry: packed, x1: 0, y1: 0, x2: 219, y2: 175, color: 0xffff },
+      {
+        entry: rgb,
+        x1: 29,
+        y1: 6,
+        x2: 41,
+        y2: 66,
+        rgb: [0x12345678, 0xa4, 0xff12],
+        flags: 0x18000013,
+      },
+      { entry: packed, x1: 0, y1: 1, x2: 511, y2: 3, stride: 512, height: 4, color: 0x07e0 },
+    ];
+    for (const input of cases)
+      assert.deepEqual(
+        rectangle(fast, input, 10_000_000),
+        rectangle(native, input, 10_000_000),
+        JSON.stringify(input),
+      );
+    assert.equal(fast.accelerator.stats.solidRectangles, cases.length);
+    const before = fast.accelerator.stats.solidRectangles;
+    for (const input of [
+      { entry: packed, x1: 0, y1: 0, x2: 219, y2: 0 },
+      { entry: rgb, x1: 5, x2: 12, y1: 3, y2: 7 },
+      { entry: rgb, x1: 9, x2: 5 },
+      { entry: packed, x1: 1, x2: 13, y1: 0, y2: 20, buffer: 0x23fe0000 - 38 },
+      { entry: rgb, buffer: 0x22010000 },
+      { entry: packed, stop: 0x20050610 },
+    ])
+      assert.deepEqual(
+        rectangle(fast, input, 10_000_000),
+        rectangle(native, input, 10_000_000),
+        JSON.stringify(input),
+      );
+    assert.deepEqual(rectangle(fast, cases[0]), rectangle(native, cases[0]));
+    assert.equal(fast.accelerator.stats.solidRectangles, before);
+    const shape = { entry: packed, x1: 2, x2: 41, y1: 2, y2: 10, color: 0xf81f };
+    const full = rectangle(native, shape, 1_000_000).instructions * 2;
+    for (const budget of [
+      1,
+      16,
+      38,
+      100,
+      1000,
+      full - 12,
+      full - 4,
+      full - 2,
+      full,
+      full + 2,
+      full + 12,
+      full + 256,
+    ])
+      assert.deepEqual(
+        rectangle(fast, shape, budget),
+        rectangle(native, shape, budget),
+        'budget ' + budget,
+      );
+    assert.equal(fast.accelerator.stats.solidRectangles, before + 1);
   } finally {
     native.cpu.close();
     fast.cpu.close();

@@ -18,6 +18,7 @@ from cart import (
     RAM_ROOM,
     cartridge_image,
 )
+from coil_runner import coil_cartridge
 from freight_shift import freight_cartridge
 from pulse_relay import pulse_cartridge
 from signal_breaker import breaker_cartridge
@@ -501,6 +502,9 @@ def main():
     examples.add_argument(
         "--freight-shift", action="store_true", help="build Freight Shift"
     )
+    examples.add_argument(
+        "--coil-runner", action="store_true", help="build Coil Runner"
+    )
     args = parser.parse_args()
     variant = None
     if args.signal_breaker:
@@ -509,6 +513,8 @@ def main():
         variant = ("Pulse Relay", "PULSE.GGR", 1004, pulse_cartridge)
     if args.freight_shift:
         variant = ("Freight Shift", "FREIGHT.GGR", 1006, freight_cartridge)
+    if args.coil_runner:
+        variant = ("Coil Runner", "COIL.GGR", 1008, coil_cartridge)
     if variant and args.cart:
         parser.error("The selected game uses its original cartridge")
     if args.cart:
@@ -526,7 +532,7 @@ def main():
         if variant:
             title, filename, app_id, _ = variant
             defines = "#define REUNION_BREAKER_INPUT 1\n"
-            if args.pulse_relay or args.freight_shift:
+            if not args.signal_breaker:
                 defines += "#define REUNION_RESET_COLOR 1\n"
             with TemporaryDirectory(prefix="reunion-gg-") as directory:
                 source = Path(directory) / SOURCE.name

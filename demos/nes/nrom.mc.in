@@ -15,7 +15,7 @@
 // RP2A03/NROM and a frame-stepped PPU for the original cartridge.
 int rom[10245], ram[2048], names[2048], palettes[32], oam[256];
 int seen[896], hue[16], solid[512], lastSprites[64];
-int prgSize, chrStart, vertical, pc, sp, a, x, y, carry, nz, overflow, irqOff, decimal, nmiPending;
+int prgMask, chrStart, vertical, pc, sp, a, x, y, carry, nz, overflow, irqOff, decimal, nmiPending;
 int ctrl, mask, vramAddr, addrHigh, addrLatch, oamAddr, vblank, ppuBuffer, pollPc, guestYield;
 int buttons, pending, strobe, shift;$pad_state
 int ready, failed, originX, originY, paintAt, painted, paletteEpoch, currentColor;
@@ -94,7 +94,10 @@ void PpuWrite(int addr, int value) {
 
 int CpuRead(int addr) {
     int result, value;
-    if (addr >= 32768) return ROM(16 + (addr & (prgSize - 1)));
+    if (addr >= 32768) {
+        addr &= prgMask;
+        return (rom[4 + (addr >> 2)] >> ((addr & 3) << 3)) & 255;
+    }
     if (addr < 8192) return ram[addr & 2047];
     if (addr == 16406) {
         if (strobe) return 64 | (buttons & 1);
@@ -172,11 +175,24 @@ $apu_write
 }
 
 int Fetch() {
-$fetch_body
+    int addr;
+    addr = pc;
+    pc = (pc + 1) & 65535;
+    if (addr < 32768) return CpuRead(addr);
+    addr &= prgMask;
+    return (rom[4 + (addr >> 2)] >> ((addr & 3) << 3)) & 255;
 }
 
 int Word() {
-    int lo;
+    int addr, lo;
+    addr = pc;
+    // When both bytes share a packed ROM word, use one read. The
+    // byte-wise path handles word and mirrored-bank boundaries.
+    if (addr >= 32768 && (addr & 3) != 3) {
+        pc = (pc + 2) & 65535;
+        addr &= prgMask;
+        return (rom[4 + (addr >> 2)] >> ((addr & 3) << 3)) & 65535;
+    }
     lo = Fetch();
     return lo | (Fetch() << 8);
 }
@@ -617,8 +633,8 @@ void main() {
         count = FileReadInt(file, &rom[0], 10245);
         if (FileClose(file) < 0) count = 0;
     }
-    prgSize = ROM(4) * 16384;
-    chrStart = 16 + prgSize;
+    prgMask = ROM(4) * 16384 - 1;
+    chrStart = 17 + prgMask; // iNES header plus the number of PRG bytes.
     viewCol = $view_col;
     viewRow = $view_row;
     viewCols = $view_cols;
