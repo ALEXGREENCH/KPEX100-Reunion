@@ -860,13 +860,21 @@ void GgImageAlignedTile(int name, int row, int dest) {
 
 // The Petris playfield and its menus keep the window tile-aligned.
 void GgImageAlignedBackground(int y) {
-    int row, map, dest, names;
+    int row, map, dest, names, previous;
     row = y & 7;
     map = (ggImageTable >> 2) + ((y + 24) >> 3) * 16 + 3;
+    previous = -1;
     for (dest = 0; dest < 40; dest += 4) {
         names = ggImageVram[map];
-        GgImageAlignedTile(names & 65535, row, dest);
-        GgImageAlignedTile((names >> 16) & 65535, row, dest + 2);
+        if (dest && names == previous) MemCpyInt(&ggImageWords[dest], &ggImageWords[dest - 4], 4);
+        else {
+            GgImageAlignedTile(names & 65535, row, dest);
+            if ((names & 65535) == ((names >> 16) & 65535)) {
+                ggImageWords[dest + 2] = ggImageWords[dest];
+                ggImageWords[dest + 3] = ggImageWords[dest + 1];
+            } else GgImageAlignedTile((names >> 16) & 65535, row, dest + 2);
+        }
+        previous = names;
         map++;
     }
 }
