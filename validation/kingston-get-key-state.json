@@ -1,0 +1,78 @@
+{
+  "firmware": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+  "syscall": 480,
+  "table": 548699980,
+  "handler": 537276532,
+  "helper": 537182628,
+  "state": 548671912,
+  "cases": [
+    {
+      "value": 0,
+      "result": 0,
+      "retained": 0
+    },
+    {
+      "value": 8,
+      "result": 8,
+      "retained": 8
+    },
+    {
+      "value": 2,
+      "result": 2,
+      "retained": 2
+    },
+    {
+      "value": 128,
+      "result": 128,
+      "retained": 128
+    },
+    {
+      "value": 4294967295,
+      "result": 4294967295,
+      "retained": 4294967295
+    }
+  ],
+  "commonRelease": {
+    "scope": "Isolated original keyboard-event ARM helper with a return-only callback installed in RAM.",
+    "helper": 537182640,
+    "commonReleaseTranslator": 537278052,
+    "translatorBytes": "0200a0e30010a0e3070000ea",
+    "cases": [
+      {
+        "initial": 131072,
+        "eventType": 2,
+        "key": 0,
+        "retained": 131072,
+        "callbackData": 255
+      },
+      {
+        "initial": 131072,
+        "eventType": 2,
+        "key": 17,
+        "retained": 0,
+        "callbackData": 255
+      },
+      {
+        "initial": 2097152,
+        "eventType": 2,
+        "key": 0,
+        "retained": 2097152,
+        "callbackData": 255
+      },
+      {
+        "initial": 2097152,
+        "eventType": 2,
+        "key": 21,
+        "retained": 0,
+        "callbackData": 255
+      },
+      {
+        "initial": 4294967295,
+        "eventType": 2,
+        "key": 0,
+        "retained": 4294967294,
+        "callbackData": 255
+      }
+    ]
+  }
+}
