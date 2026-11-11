@@ -154,8 +154,11 @@ int VideoInterrupt() {
     return (vdpHint && (vdpRegs[0] & 16)) || ((vblank & 128) && (vdpRegs[1] & 32));
 }
 int Fetch() {
-    int value;
-    value = Read(pc);
+    int value, offset;
+    if (pc < 49152) {
+        offset = pc & 32767;
+        value = (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
+    } else value = ram[pc & 8191];
     pc = (pc + 1) & 65535;
     return value;
 }
@@ -719,6 +722,7 @@ int ggImageScrollY, ggImageTable, ggImageRow, ggImageFrame, ggImageReady;
 int ggImageHeader[28], ggImageWords[40], ggImageSpread[256], ggImageFlip[256];
 int ggImageSpriteTop[64], ggImageSpriteLeft[64], ggImageSpritePattern[64];
 int ggImageSpriteCount, ggImageSpriteZoom, ggImageSpriteHeight, ggImageSpriteWidth;
+int ggImageMaskFirst, ggImageMaskEnd;
 
 int GgInitImage() {
     int i, p0, p1, size;
@@ -866,6 +870,10 @@ void GgImageAlignedBackground(int y) {
     previous = -1;
     for (dest = 0; dest < 40; dest += 4) {
         names = ggImageVram[map];
+        if (names & 0x10001000) {
+            if (dest < ggImageMaskFirst) ggImageMaskFirst = dest;
+            ggImageMaskEnd = dest + 4;
+        }
         if (dest && names == previous) MemCpyInt(&ggImageWords[dest], &ggImageWords[dest - 4], 4);
         else {
             GgImageAlignedTile(names & 65535, row, dest);
@@ -903,6 +911,10 @@ void GgImageBackground(int y) {
         planes = ggImageVram[pattern * 8 + row];
         // Bits 0..4 carry the palette index. Bit 5 marks BG priority.
         palette = ((flags & 24) << 1) * 0x01010101;
+        if (flags & 16) {
+            if ((x >> 2) < ggImageMaskFirst) ggImageMaskFirst = x >> 2;
+            ggImageMaskEnd = (end + 3) >> 2;
+        }
         if (flags & 2) {
             first = palette | GgImagePixels(planes, 1);
             second = palette | GgImagePixels(planes >> 4, 1);
@@ -947,6 +959,8 @@ void GgImageSprites(int y) {
         x = left;
         if (x < 0) x = 0;
         if (right > 160) right = 160;
+        if ((x >> 2) < ggImageMaskFirst) ggImageMaskFirst = x >> 2;
+        if (((right + 3) >> 2) > ggImageMaskEnd) ggImageMaskEnd = (right + 3) >> 2;
         for (; x < right; x++) {
             slot = x >> 2;
             shift = (x & 3) * 8;
@@ -967,10 +981,13 @@ void GgImageSprites(int y) {
 void GgComposeImageLine(int y) {
     int i, backdrop;
     if (ggImageRegs[1] & 64) {
+        ggImageMaskFirst = 40;
+        ggImageMaskEnd = 0;
         if (ggImageScrollX[y] || ggImageScrollY) GgImageBackground(y);
         else GgImageAlignedBackground(y);
-        GgImageSprites(y);
-        for (i = 0; i < 40; i++) ggImageWords[i] &= 0x1f1f1f1f;
+        if (ggImageSpriteCount) GgImageSprites(y);
+        // Priority and sprite-occupancy tags only need clearing where written.
+        for (i = ggImageMaskFirst; i < ggImageMaskEnd; i++) ggImageWords[i] &= 0x1f1f1f1f;
         return;
     }
     backdrop = (16 | (ggImageRegs[7] & 15)) * 0x01010101;
