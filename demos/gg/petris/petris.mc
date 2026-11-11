@@ -1240,14 +1240,23 @@ void main() {
     SetTimer(20, 1);
 }
 
+int heldPad;
+
+int PhysicalButtons() {
+    int code, physical, buttons;
+    physical = GetKeyState();
+    buttons = 0;
+    if (physical & (1 << 10)) buttons |= 32;
+    for (code = 16; code <= 21; code++)
+        if (physical & (1 << code)) buttons |= Key(code);
+    return buttons;
+}
+
 void EVENT_TIMEOUT() {
-    int i, held, cycles, frameStart, rows;
+    int cycles, frameStart, rows;
     if (!ready) return;
-    held = GetKeyState();
     // Preserve short taps across callbacks until the cartridge polls that port.
-    pad = pending;
-    if (held & (1 << 10)) pad |= 32;
-    for (i = 16; i <= 21; i++) if (held & (1 << i)) pad |= Key(i);
+    pad = pending | heldPad;
     frameStart = vdpFrame;
     for (stepsLeft = 320; stepsLeft > 0 && !failed && frameStart == vdpFrame; stepsLeft--) {
         if (iff1 && !eiDelay && VideoInterrupt()) cycles = Z80Interrupt();
@@ -1283,5 +1292,15 @@ void EVENT_TIMEOUT() {
 }
 
 void EVENT_KEYPRESS() {
-    pending |= Key(swData);
+    int key, remaining;
+    if (swData == 255) {
+        remaining = heldPad & PhysicalButtons();
+        // Kingston can retain its old key bitmap after delivering a release.
+        if (remaining == heldPad) remaining = 0;
+        heldPad = remaining;
+        return;
+    }
+    key = Key(swData);
+    if (!(heldPad & key)) pending |= key;
+    heldPad |= key;
 }
