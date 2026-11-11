@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "petris-kingston-native-replay",
+      "title": "Petris · запуск через Kingston 2.12",
+      "category": "Игры и игровые сборки",
+      "description": "Оригинальный картридж прочитан через FAT16. Проверены движение, поворот и отпускание коротких нажатий. Восемь кадров LCD, события клавиатуры, исходники лаунчера и инструмент воспроизведения. Время относится к модели ARM.",
+      "sources": [
+        {
+          "label": "Инструмент и условия проверки Reunion",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/petris-native.md"
+        },
+        {
+          "label": "Petris — bbbbbr",
+          "url": "https://bbbbbr.itch.io/petris"
+        }
+      ],
+      "repositoryPath": "research/archives/Petris-Kingston-Native-Replay.zip",
+      "bytes": 2279956,
+      "sha256": "2bffcc1c99f8cd0599aac8191e56d24701d00dd21d67afd9f08701d5a749211f"
+    },
+    {
       "id": "kingston-key-input-probes",
       "title": "Kingston 2.12 · отпускание клавиш и автоповтор",
       "category": "Прошивки и аппаратные проверки",
@@ -3032,6 +3051,11 @@
     }
   ],
   "reports": [
+    {
+      "id": "petris-native",
+      "title": "Petris через оригинальную Kingston 2.12",
+      "repositoryPath": "doc/petris-native.md"
+    },
     {
       "title": "Omok и Othello Good & Evil · правила, управление и прогоны",
       "repositoryPath": "doc/anycall-omok-othello-good-evil.md"
