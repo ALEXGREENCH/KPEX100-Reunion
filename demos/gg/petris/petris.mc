@@ -164,7 +164,16 @@ int Fetch() {
 }
 
 int Word() {
-    int low;
+    int low, offset;
+    if (pc < 49151) {
+        offset = pc & 32767;
+        low = rom[offset >> 2] >> ((offset & 3) * 8);
+        if ((offset & 3) == 3)
+            low = (low & 255) | ((rom[((offset + 1) & 32767) >> 2] & 255) << 8);
+        else low &= 65535;
+        pc += 2;
+        return low;
+    }
     low = Fetch();
     return low | (Fetch() << 8);
 }
@@ -205,8 +214,14 @@ int ix, iy, interruptPage, refresh, iff1, iff2, eiDelay, interruptMode, halted;
 int lastInstruction;
 
 int M1() {
+    int value, offset;
     refresh = (refresh & 128) | ((refresh + 1) & 127);
-    return Fetch();
+    if (pc < 49152) {
+        offset = pc & 32767;
+        value = (rom[offset >> 2] >> ((offset & 3) * 8)) & 255;
+    } else value = ram[pc & 8191];
+    pc = (pc + 1) & 65535;
+    return value;
 }
 
 int SignedByte(int value) {
@@ -1288,10 +1303,11 @@ void EVENT_TIMEOUT() {
             refresh = (refresh & 128) | ((refresh + cycles) & 127);
             cycles <<= 2;
         } else {
-            cycles = FoldPetrisRemainder();
-            if (!cycles) cycles = FoldPetrisTile();
-            if (!cycles) cycles = FoldPetrisClear();
-            if (!cycles) cycles = FoldPetrisUpload();
+            cycles = 0;
+            if (pc == 0x638a) cycles = FoldPetrisRemainder();
+            else if (pc == 0x64a9) cycles = FoldPetrisTile();
+            else if (pc == 0x6441) cycles = FoldPetrisClear();
+            else if (pc == 0x64e4) cycles = FoldPetrisUpload();
             if (!cycles) cycles = Z80Step();
         }
         if (eiDelay) eiDelay--;

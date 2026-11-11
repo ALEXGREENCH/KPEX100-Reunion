@@ -130,3 +130,54 @@ test('Petris executes mirrored ROM and RAM across memory boundaries with Z80 pre
     game.close();
   }
 });
+
+test('Petris CALL reads little-endian operands across packed words and memory windows', async () => {
+  for (const address of [
+    0x200, 0x201, 0x202, 0x203, 0x638a, 0x6441, 0x64a9, 0x64e4, 0x7ffe, 0xbffe, 0xfffe,
+  ]) {
+    const rom = Buffer.alloc(32768);
+    rom.write('TMR SEGA', 0x7ff0, 'ascii');
+    rom[0x7fff] = 0x7a;
+    // Both a cold reset and a wrapped operand see this JP opcode at ROM 0000.
+    rom.set([0xc3, 0x00, 0x01]);
+    const program = [0xf3, 0x31, 0xf0, 0xff];
+    const storeRam = (where, bytes) => {
+      program.push(0x21, where & 255, where >> 8);
+      for (const byte of bytes) program.push(0x36, byte, 0x23);
+    };
+    // A correct CALL reaches C37A, stores a marker, and leaves its return
+    // address on the stack. The three window-crossing cases all target C37A.
+    storeRam(0xc37a, [0x3e, 0x42, 0x32, 0x00, 0xc1, 0x76]);
+    if (address < 0x7ffe) rom.set([0xcd, 0x7a, 0xc3], address);
+    else if (address === 0x7ffe) rom[0x7ffe] = 0xcd;
+    else if (address === 0xbffe) {
+      rom.set([0xcd, 0x7a], 0x3ffe);
+      storeRam(0xc000, [0xc3]);
+    } else storeRam(0xfffe, [0xcd, 0x7a]);
+    program.push(0xc3, address & 255, address >> 8);
+    rom.set(program, 0x100);
+    const game = await GnexRuntime.create(
+      read('web/data/firmware/Kingston-2.12.rom'),
+      replaceCartridge(read('web/data/games/demo-petris.sgs'), 'PETRIS.GGR', rom),
+      { profile: 'kpex' },
+    );
+    try {
+      game.event('START');
+      const base = game.sgs.variables.findIndex(
+        (v, i) => v[1] === 8193 && game.sgs.variables[i + 1]?.[1] === 8192,
+      );
+      const ram = (i) => game.cpu.read32(game.varAddresses[base + 1] + i * 4) & 255;
+      for (let i = 0; i < 10 && ram(0x100) !== 0x42; i++) {
+        game.event('TIMEOUT', 0);
+        assert.equal(game.status, 'idle', game.error);
+      }
+      const label = address.toString(16);
+      assert.equal(ram(0x100), 0x42, `CALL target at ${label}`);
+      const returnAddress = (address + 3) & 65535;
+      assert.equal(ram(0x1fee), returnAddress & 255, `return low at ${label}`);
+      assert.equal(ram(0x1fef), returnAddress >> 8, `return high at ${label}`);
+    } finally {
+      game.close();
+    }
+  }
+});

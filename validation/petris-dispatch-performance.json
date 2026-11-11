@@ -1,0 +1,193 @@
+{
+  "scope": "Unchanged original Petris cartridge on Kingston 2.12 GNEX interpreter, direct K-PEX runtime. Work is charged ARM block budget, not physical FPS.",
+  "baselineCommit": "1d3fe049f824b880ffba55c7cfaabd063cea2678",
+  "beforeSgs": "87496117dc51df74fb305948a71d3f60e4c465ce7de45196fbbf69a7505e3e2b",
+  "afterSgs": "cb0e390fbd7b06ef54955d9edd64fb2a22a5c8109aa335942808c58958fc826f",
+  "cartridgeSha256": "2de507b5708cc66020a700e3f4674216cb3374fc5d39369da86221bb34a07ba9",
+  "firmwareSha256": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+  "directRoute": {
+    "callbacks": 3749,
+    "beforeWork": 20402767792,
+    "afterWork": 16401858546,
+    "savedPct": 19.609639666480795,
+    "maxTimerWork": 9134386,
+    "watchdogLimit": 20000000,
+    "allStageFramesAndCallbackSchedulesMatch": true,
+    "stages": [
+      {
+        "stage": "title",
+        "events": 1120,
+        "frame": 250,
+        "chargedWork": 4957822738,
+        "pc": "6464",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "39488a8775dc4ac8fcea68e84827e03e5496546da3ca7c2c2d8d859826455259"
+      },
+      {
+        "stage": "start",
+        "events": 1305,
+        "frame": 317,
+        "chargedWork": 5923892892,
+        "pc": "64f7",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "6a2980be040e3b08ed12ae2187552ff9a5181480a155adc2867539f6b71d0f38"
+      },
+      {
+        "stage": "confirm",
+        "events": 1718,
+        "frame": 384,
+        "chargedWork": 7886293474,
+        "pc": "64df",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "6a2980be040e3b08ed12ae2187552ff9a5181480a155adc2867539f6b71d0f38"
+      },
+      {
+        "stage": "second-confirm",
+        "events": 2215,
+        "frame": 486,
+        "chargedWork": 10406568742,
+        "pc": "638a",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "6a2980be040e3b08ed12ae2187552ff9a5181480a155adc2867539f6b71d0f38"
+      },
+      {
+        "stage": "right",
+        "events": 2397,
+        "frame": 506,
+        "chargedWork": 11249126176,
+        "pc": "638a",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "5f424643e1aea935c6848f62e362464acaca02e4512385b036e176011abae8db"
+      },
+      {
+        "stage": "down",
+        "events": 2518,
+        "frame": 536,
+        "chargedWork": 11701615658,
+        "pc": "2f68",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "93b165a109d2345c37171b792524a36d3ff3537f778d517924c6cb289a61501c"
+      },
+      {
+        "stage": "board",
+        "events": 3513,
+        "frame": 786,
+        "chargedWork": 15508535194,
+        "pc": "6464",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "441283efaa946744f5943194f2e3461f5fa0ef054f6539a0e2a918a9f8f848d8"
+      },
+      {
+        "stage": "piece-right",
+        "events": 3543,
+        "frame": 800,
+        "chargedWork": 15612417684,
+        "pc": "6464",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "69b8e05998895d512617fca293571740d23e4b03699f169072d6fef5e9467b00"
+      },
+      {
+        "stage": "piece-rotate",
+        "events": 3564,
+        "frame": 810,
+        "chargedWork": 15698366396,
+        "pc": "6464",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "16a03b740a3d6895603b2221687c9cb9d69f327039b64e07d0f7609616ff9299"
+      },
+      {
+        "stage": "piece-drop",
+        "events": 3749,
+        "frame": 890,
+        "chargedWork": 16401858546,
+        "pc": "6464",
+        "regs": [
+          6,
+          224,
+          0,
+          0
+        ],
+        "sha256": "e25c10da221fca38e3d87e1e6e47d4f4825ad83055501cd10ac44551821dbc32"
+      }
+    ]
+  },
+  "intermediateWordAndM1": {
+    "sgs": "3bc412ca7999c31b1e89321f627035e960812235ee840c1935acaa13f59dbb3c",
+    "work": 20127125992,
+    "savedPct": 1.351001995464951,
+    "allTenFramesMatch": true
+  },
+  "first30GuestFrames": {
+    "versions": {
+      "before": {
+        "sha256": "87496117dc51df74fb305948a71d3f60e4c465ce7de45196fbbf69a7505e3e2b",
+        "callbacks": 145,
+        "totalBlockWork": 830697472,
+        "peakBlockWork": 8622116
+      },
+      "after": {
+        "sha256": "3bc412ca7999c31b1e89321f627035e960812235ee840c1935acaa13f59dbb3c",
+        "callbacks": 145,
+        "totalBlockWork": 821511474,
+        "peakBlockWork": 8605428
+      },
+      "dispatch": {
+        "sha256": "cb0e390fbd7b06ef54955d9edd64fb2a22a5c8109aa335942808c58958fc826f",
+        "callbacks": 145,
+        "totalBlockWork": 669357344,
+        "peakBlockWork": 7873290
+      }
+    },
+    "savedPct": 19.422248584861467
+  },
+  "limits": [
+    "Physical K-PEX FPS is unmeasured.",
+    "Original firmware long-hold autorepeat release issue is unchanged.",
+    "Game Gear PSG is not implemented."
+  ]
+}
