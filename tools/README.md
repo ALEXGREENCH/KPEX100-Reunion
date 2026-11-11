@@ -2,6 +2,7 @@
 
 See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes and commands.
 
+- `probe-kingston-adc.py` replays the verified Kingston 2.12 scanner in isolated ARM memory using Unicorn. It checks short holds, autorepeat and release across twelve sequences. `--release-fix` tests a five-word release-predicate change in the test instance. See the [keyboard evidence and commands](../doc/hardware.md#кнопки-и-adc).
 - `sdk-static.py`: inventory or extract the known GNEX SDK 2.10/2.12 InstallShield container as data.
 - `sdk-syscalls.py`: reproduce the SDK 2.12 syscall name/signature catalogue from MASM and MCC.
 - `pe_reader.py`: bounded PE32 parsing shared by those two Python tools; standard library only.

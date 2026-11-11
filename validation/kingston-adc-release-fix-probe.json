@@ -1,0 +1,464 @@
+{
+  "scope": "Experimental five-word release predicate fix in isolated ARM memory. Boot and physical player behavior remain untested.",
+  "firmware": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
+  "cases": [
+    {
+      "holdSamples": 4,
+      "drainEvery": 1,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 1,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 5,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 4,
+      "drainEvery": 4,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 4,
+          "adc": 1023,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 5,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 4,
+      "drainEvery": 20,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 4,
+          "adc": 1023,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 5,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 20,
+      "drainEvery": 1,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 1,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 21,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 20,
+      "drainEvery": 4,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 4,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 21,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 20,
+      "drainEvery": 20,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 20,
+          "adc": 1023,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 21,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 40,
+      "drainEvery": 1,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 1,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 41,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 40,
+      "drainEvery": 4,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 4,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 41,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 40,
+      "drainEvery": 20,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 0,
+      "trace": [
+        {
+          "tick": 20,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 41,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 3,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 80,
+      "drainEvery": 1,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 11,
+      "trace": [
+        {
+          "tick": 1,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 41,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 45,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 49,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 53,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 57,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 61,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 65,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 69,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 73,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 77,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 81,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 5,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 80,
+      "drainEvery": 4,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 11,
+      "trace": [
+        {
+          "tick": 4,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 44,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 48,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 52,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 56,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 60,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 64,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 68,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 72,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 76,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 80,
+          "adc": 1023,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 81,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 5,
+          "firmwareKey": 30
+        }
+      ]
+    },
+    {
+      "holdSamples": 80,
+      "drainEvery": 20,
+      "finalRaw": 255,
+      "releaseEvents": 1,
+      "repeatEvents": 3,
+      "trace": [
+        {
+          "tick": 20,
+          "adc": 675,
+          "raw": 1,
+          "kind": 3,
+          "firmwareKey": 1
+        },
+        {
+          "tick": 60,
+          "adc": 675,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 80,
+          "adc": 1023,
+          "raw": 1,
+          "kind": 5,
+          "firmwareKey": 16
+        },
+        {
+          "tick": 81,
+          "adc": 1023,
+          "raw": 14,
+          "kind": 5,
+          "firmwareKey": 30
+        }
+      ]
+    }
+  ],
+  "otherEventsMatchOriginal": true,
+  "patchWords": [
+    {
+      "offset": "0x10598",
+      "before": "0xe3500003",
+      "after": "0xe2400003"
+    },
+    {
+      "offset": "0x1059c",
+      "before": "0x13500004",
+      "after": "0xe3500002"
+    },
+    {
+      "offset": "0x105a0",
+      "before": "0x5c3c000",
+      "after": "0x95c3c000"
+    },
+    {
+      "offset": "0x105a4",
+      "before": "0x5c31002",
+      "after": "0x95c31002"
+    },
+    {
+      "offset": "0x105a8",
+      "before": "0x15c32002",
+      "after": "0x85c32002"
+    }
+  ]
+}
