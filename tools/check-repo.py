@@ -58,6 +58,12 @@ def original_files():
         ):
             raise ValueError("Invalid research archive path")
         result[name] = entry
+    # This is a compiled MIT-licensed Reunion test program, not a historical
+    # game. Pin its exact bytes instead of allowing arbitrary SGS fixtures.
+    result["tools/fixtures/kingston-callback-clock/clock.sgs"] = {
+        "bytes": 2420,
+        "sha256": "8c79353af9698c1a7259415894271b0c31a8323f41f4c51bb9c1b4a5a4502573",
+    }
     return result
 
 
