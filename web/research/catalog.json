@@ -4,6 +4,21 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "kingston-callback-clock",
+      "title": "Kingston 2.12 · GetTick внутри callback",
+      "category": "Прошивки и аппаратные проверки",
+      "description": "Исходный Mobile C, SGS и инструмент запуска через штатное меню. GetTick не изменился за 17,7 млн ARM-инструкций одного обработчика. Журнал IRQ и времени модели; физический плеер не измерялся.",
+      "sources": [
+        {
+          "label": "Исследование и воспроизведение Reunion",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/kingston-callback-clock.md"
+        }
+      ],
+      "repositoryPath": "research/archives/Kingston-Callback-Clock-Probe.zip",
+      "bytes": 8087,
+      "sha256": "b6b09aba02cd6770dfc06c2fc0f6f4d3d5e02e60a915858f54b9d646dca9e0db"
+    },
+    {
       "id": "petris-kingston-native-replay",
       "title": "Petris · запуск через Kingston 2.12",
       "category": "Игры и игровые сборки",
@@ -3051,6 +3066,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Kingston 2.12: GetTick и короткие нажатия Petris",
+      "repositoryPath": "doc/kingston-callback-clock.md"
+    },
     {
       "id": "petris-native",
       "title": "Petris через оригинальную Kingston 2.12",

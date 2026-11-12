@@ -10,7 +10,8 @@ import { createDisk } from '../web/engine/disk.js';
 import { SgsFile } from '../web/engine/sgs.js';
 import { VirtualFileSystem } from '../web/engine/vfs.js';
 
-const usage = 'node tools/replay-petris-native.mjs --output DIRECTORY [--sgs PETRIS.SGS]';
+const usage =
+  'node tools/replay-petris-native.mjs --output DIRECTORY [--sgs PETRIS.SGS] [--pulse-ms 40..120]';
 const args = process.argv.slice(2);
 if (args.length === 1 && args[0] === '--help') {
   console.log(usage);
@@ -20,7 +21,7 @@ const options = Object.create(null);
 for (let i = 0; i < args.length; i += 2) {
   const flag = args[i];
   if (
-    !['--output', '--sgs'].includes(flag) ||
+    !['--output', '--sgs', '--pulse-ms'].includes(flag) ||
     !args[i + 1] ||
     args[i + 1].startsWith('--') ||
     Object.hasOwn(options, flag)
@@ -29,6 +30,9 @@ for (let i = 0; i < args.length; i += 2) {
   options[flag] = args[i + 1];
 }
 if (!options['--output']) throw Error(usage);
+const pulseMs = options['--pulse-ms'] === undefined ? null : Number(options['--pulse-ms']);
+if (pulseMs !== null && (!Number.isInteger(pulseMs) || pulseMs < 40 || pulseMs > 120))
+  throw Error('Pulse duration must be an integer from 40 to 120 modeled milliseconds');
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = path.resolve(options['--output']);
 if (fs.existsSync(output) && fs.readdirSync(output).length)
@@ -151,6 +155,7 @@ function receipt() {
         scope:
           'Original Kingston 2.12 menu and ADC on emulated ARM. Modeled time is not a physical-device measurement. Short presses only; long-hold firmware release behavior is a separate check.',
         status,
+        pulseMs,
         appHash: digest(app),
         cartHash: digest(cart),
         firmwareHash: digest(firmware),
@@ -198,15 +203,27 @@ function stage(name, target) {
 }
 function hold(name, code, count) {
   const input = { name, code, pressed: time(), pressedFrame: state().frame };
+  const firstKey = keys.length;
   inputs.push(input);
   machine.key(name, true);
   try {
-    waitFrame(state().frame + count, name);
+    if (pulseMs === null) waitFrame(state().frame + count, name);
+    else {
+      const deadline = elapsed + pulseMs;
+      while (elapsed < deadline) run(100_000);
+    }
   } finally {
     input.released = time();
     input.releasedFrame = state().frame;
     machine.key(name, false);
   }
+  if (pulseMs !== null)
+    until(
+      () => keys.slice(firstKey).some((key) => key.key === code),
+      name + ' pulse delivery',
+      200_000_000,
+      1_000_000,
+    );
 }
 try {
   run(500_000_000);

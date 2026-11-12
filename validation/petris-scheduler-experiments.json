@@ -1,0 +1,72 @@
+{
+  "scope": "Original Kingston 2.12 on emulated ARM. Rejected experiments; these binaries are not shipped.",
+  "baseline": "web/data/games/demo-petris.sgs",
+  "cases": [
+    {
+      "variant": "candidate640",
+      "sha256": "34e4b84fa6f4440e76a25a59c13f3945e48a1bbe66725043e1786f6b0d5d86d4",
+      "status": "rejected: Play callback absent after pulse and 200 million additional ARM instructions",
+      "receiptStatus": "incomplete",
+      "input": {
+        "name": "start",
+        "code": 21,
+        "pressed": {
+          "instructions": 4584000000,
+          "modeledMs": 31885.804144907674
+        },
+        "pressedFrame": 250,
+        "released": {
+          "instructions": 4595600000,
+          "modeledMs": 31966.359700463323
+        },
+        "releasedFrame": 250
+      },
+      "keys": [],
+      "lastState": {
+        "frame": 258,
+        "pc": 18787,
+        "pad": 0,
+        "pending": 0,
+        "failure": 0
+      },
+      "time": {
+        "instructions": 4795600000,
+        "modeledMs": 33355.24858935237
+      },
+      "firmwareHash": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a"
+    },
+    {
+      "variant": "candidate-adaptive",
+      "sha256": "895597583c54bad000b2bf3a6e36f96e55fd0203c2db41b1c5fdd077cb66b0b9",
+      "status": "rejected: Play callback absent after pulse and 200 million additional ARM instructions",
+      "receiptStatus": "incomplete",
+      "input": {
+        "name": "start",
+        "code": 21,
+        "pressed": {
+          "instructions": 4744000000,
+          "modeledMs": 32996.915256018794
+        },
+        "pressedFrame": 250,
+        "released": {
+          "instructions": 4755600000,
+          "modeledMs": 33077.47081157444
+        },
+        "releasedFrame": 251
+      },
+      "keys": [],
+      "lastState": {
+        "frame": 258,
+        "pc": 18896,
+        "pad": 0,
+        "pending": 0,
+        "failure": 0
+      },
+      "time": {
+        "instructions": 4955600000,
+        "modeledMs": 34466.359700463494
+      },
+      "firmwareHash": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a"
+    }
+  ]
+}

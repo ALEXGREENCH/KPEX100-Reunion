@@ -4,6 +4,7 @@ See [the reproducibility guide](../doc/tools-guide.md) for exact inputs, hashes 
 
 - `probe-kingston-adc.py` replays the verified Kingston 2.12 scanner in isolated ARM memory using Unicorn. It checks short holds, autorepeat and release across twelve sequences. `--release-fix` tests a five-word release-predicate change in the test instance. See the [keyboard evidence and commands](../doc/hardware.md#кнопки-и-adc).
 - `replay-petris-native.mjs` boots original Kingston 2.12, launches Petris from the FAT16 menu, records native filesystem/key events, and checks movement, rotation and short-press releases. It writes raw LCD frames and a JSON receipt to a new or empty directory. See the [inputs, commands and limits](../doc/petris-native.md).
+- `probe-kingston-callback-clock.mjs --output NEW.json` observes `GetTick(0/9)` before and after one long Mobile C callback through the original firmware menu. The compiled probe and its source are in `tools/fixtures/kingston-callback-clock`. It checks the firmware/probe hashes and records ARM instruction, modeled time and IRQ counters. [Results and limits](../doc/kingston-callback-clock.md).
 - `sdk-static.py`: inventory or extract the known GNEX SDK 2.10/2.12 InstallShield container as data.
 - `sdk-syscalls.py`: reproduce the SDK 2.12 syscall name/signature catalogue from MASM and MCC.
 - `pe_reader.py`: bounded PE32 parsing shared by those two Python tools; standard library only.
