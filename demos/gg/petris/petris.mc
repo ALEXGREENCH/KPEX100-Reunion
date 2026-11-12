@@ -738,6 +738,9 @@ int ggImageHeader[28], ggImageWords[40], ggImageSpread[256], ggImageFlip[256];
 int ggImageSpriteTop[64], ggImageSpriteLeft[64], ggImageSpritePattern[64];
 int ggImageSpriteCount, ggImageSpriteZoom, ggImageSpriteHeight, ggImageSpriteWidth;
 int ggImageMaskFirst, ggImageMaskEnd;
+int bgRowNames[1440], bgRowPlanes[2880], bgRowWords[5760];
+int bgRowValid[144], bgRowMaskFirst[144], bgRowMaskEnd[144];
+
 
 int GgInitImage() {
     int i, p0, p1, size;
@@ -751,6 +754,7 @@ int GgInitImage() {
             (p0 & 1) | ((p0 & 2) << 7) | ((p0 & 4) << 14) | ((p0 & 8) << 21) |
             ((p1 & 1) << 1) | ((p1 & 2) << 8) | ((p1 & 4) << 15) | ((p1 & 8) << 22);
     }
+    MemSetInt(&bgRowValid[0], 0, 576);
     ggImageRow = 144;
     size = SetMediaSize(ggImage, 23152);
     ggImageReady = size && GetMediaSize(ggImage) >= 23152;
@@ -902,6 +906,78 @@ void GgImageAlignedBackground(int y) {
     }
 }
 
+
+// Compare exact name words and plane rows; no hash can admit stale pixels.
+int GgBackgroundMatches(int y) {
+    int row, map, key, planesKey, i, names, previous, first, second, line, planes;
+    row = y & 7;
+    map = (ggImageTable >> 2) + ((y + 24) >> 3) * 16 + 3;
+    key = y * 10;
+    planesKey = y * 20;
+    previous = -1;
+    for (i = 0; i < 10; i++) {
+        names = ggImageVram[map + i];
+        if (bgRowNames[key + i] != names) return 0;
+        if (i && names == previous) continue;
+        first = names & 65535;
+        second = (names >> 16) & 65535;
+        line = row;
+        if (first & 1024) line = 7 - row;
+        planes = ggImageVram[(first & 511) * 8 + line];
+        if (bgRowPlanes[planesKey + i * 2] != planes) return 0;
+        if (second != first) {
+            line = row;
+            if (second & 1024) line = 7 - row;
+            planes = ggImageVram[(second & 511) * 8 + line];
+        }
+        if (bgRowPlanes[planesKey + i * 2 + 1] != planes) return 0;
+        previous = names;
+    }
+    return 1;
+}
+
+void GgRememberBackground(int y) {
+    int row, map, key, planesKey, i, names, previous, first, second, line, planes;
+    row = y & 7;
+    map = (ggImageTable >> 2) + ((y + 24) >> 3) * 16 + 3;
+    key = y * 10;
+    planesKey = y * 20;
+    previous = -1;
+    for (i = 0; i < 10; i++) {
+        names = ggImageVram[map + i];
+        bgRowNames[key + i] = names;
+        if (i && names == previous) continue;
+        first = names & 65535;
+        second = (names >> 16) & 65535;
+        line = row;
+        if (first & 1024) line = 7 - row;
+        planes = ggImageVram[(first & 511) * 8 + line];
+        bgRowPlanes[planesKey + i * 2] = planes;
+        if (second != first) {
+            line = row;
+            if (second & 1024) line = 7 - row;
+            planes = ggImageVram[(second & 511) * 8 + line];
+        }
+        bgRowPlanes[planesKey + i * 2 + 1] = planes;
+        previous = names;
+    }
+    MemCpyInt(&bgRowWords[y * 40], &ggImageWords[0], 40);
+    bgRowMaskFirst[y] = ggImageMaskFirst;
+    bgRowMaskEnd[y] = ggImageMaskEnd;
+    bgRowValid[y] = 1;
+}
+
+void GgCachedBackground(int y) {
+    if (bgRowValid[y] && GgBackgroundMatches(y)) {
+        MemCpyInt(&ggImageWords[0], &bgRowWords[y * 40], 40);
+        ggImageMaskFirst = bgRowMaskFirst[y];
+        ggImageMaskEnd = bgRowMaskEnd[y];
+        return;
+    }
+    GgImageAlignedBackground(y);
+    GgRememberBackground(y);
+}
+
 void GgImageBackground(int y) {
     int line, scrollX, scrollY, mapX, mapY, x, end, name, pattern, flags;
     int row, planes, palette, lockRight, first, second, skip, count;
@@ -999,7 +1075,7 @@ void GgComposeImageLine(int y) {
         ggImageMaskFirst = 40;
         ggImageMaskEnd = 0;
         if (ggImageScrollX[y] || ggImageScrollY) GgImageBackground(y);
-        else GgImageAlignedBackground(y);
+        else GgCachedBackground(y);
         if (ggImageSpriteCount) GgImageSprites(y);
         // Priority and sprite-occupancy tags only need clearing where written.
         for (i = ggImageMaskFirst; i < ggImageMaskEnd; i++) ggImageWords[i] &= 0x1f1f1f1f;

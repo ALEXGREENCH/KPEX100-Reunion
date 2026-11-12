@@ -1,7 +1,8 @@
 {
   "scope": "Original Kingston 2.12 menu and ADC on emulated ARM. Modeled time is not a physical-device measurement. Short presses only; long-hold firmware release behavior is a separate check.",
   "status": "passed",
-  "appHash": "cb0e390fbd7b06ef54955d9edd64fb2a22a5c8109aa335942808c58958fc826f",
+  "pulseMs": null,
+  "appHash": "cb2dc0fa9d02d3bd16656daf1d1dc9ff9d5f9f38f131f3feed96215856e53a9d",
   "cartHash": "2de507b5708cc66020a700e3f4674216cb3374fc5d39369da86221bb34a07ba9",
   "firmwareHash": "743d0b9a377dc6a3f0a80b7816cee575ad2f8249643876367c4bfaac54ddd19a",
   "io": [
@@ -25,63 +26,63 @@
   "keys": [
     {
       "key": 21,
-      "instructions": 5153926814,
-      "modeledMs": 35843.62924212994
+      "instructions": 5117370526,
+      "modeledMs": 35589.76613101883
     },
     {
       "key": 255,
-      "instructions": 5246753042,
-      "modeledMs": 36488.25582546328
+      "instructions": 5206970386,
+      "modeledMs": 36211.98738101883
     },
     {
       "key": 20,
-      "instructions": 5993299355,
-      "modeledMs": 41672.605221296675
+      "instructions": 5929504667,
+      "modeledMs": 41229.58655463
     },
     {
       "key": 255,
-      "instructions": 6028064274,
-      "modeledMs": 41914.02826990779
+      "instructions": 5971437074,
+      "modeledMs": 41520.78382546334
     },
     {
       "key": 20,
-      "instructions": 7695341211,
-      "modeledMs": 53492.34033240792
+      "instructions": 7607533467,
+      "modeledMs": 52882.564332407914
     },
     {
       "key": 255,
-      "instructions": 7732490238,
-      "modeledMs": 53750.31968657459
+      "instructions": 7652208894,
+      "modeledMs": 53192.81035324125
     },
     {
       "key": 17,
-      "instructions": 14408406924,
-      "modeledMs": 100110.85222823817
+      "instructions": 14247968672,
+      "modeledMs": 98996.6977004605
     },
     {
       "key": 255,
-      "instructions": 14448673042,
-      "modeledMs": 100390.4780476826
+      "instructions": 14268039442,
+      "modeledMs": 99136.0780476827
     },
     {
       "key": 20,
-      "instructions": 14612461211,
-      "modeledMs": 101527.89588796027
+      "instructions": 14447956123,
+      "modeledMs": 100385.49944351593
     },
     {
       "key": 255,
-      "instructions": 14624646930,
-      "modeledMs": 101612.51893657136
+      "instructions": 14466950674,
+      "modeledMs": 100517.40604768258
     },
     {
       "key": 19,
-      "instructions": 14871584170,
-      "modeledMs": 103327.36088101566
+      "instructions": 14709587370,
+      "modeledMs": 102202.38310323798
     },
     {
       "key": 255,
-      "instructions": 14889145874,
-      "modeledMs": 103449.31715879342
+      "instructions": 14750086674,
+      "modeledMs": 102483.62826990463
     }
   ],
   "inputs": [
@@ -89,27 +90,27 @@
       "name": "start",
       "code": 21,
       "pressed": {
-        "instructions": 5144000000,
-        "modeledMs": 35774.693033796604
+        "instructions": 5104000000,
+        "modeledMs": 35496.91525601882
       },
       "pressedFrame": 250,
       "released": {
-        "instructions": 5244000000,
-        "modeledMs": 36469.13747824106
+        "instructions": 5204000000,
+        "modeledMs": 36191.359700463276
       },
-      "releasedFrame": 254
+      "releasedFrame": 253
     },
     {
       "name": "a",
       "code": 20,
       "pressed": {
-        "instructions": 5984000000,
-        "modeledMs": 41608.026367130005
+        "instructions": 5924000000,
+        "modeledMs": 41191.359700463334
       },
-      "pressedFrame": 318,
+      "pressedFrame": 317,
       "released": {
-        "instructions": 6024000000,
-        "modeledMs": 41885.80414490779
+        "instructions": 5964000000,
+        "modeledMs": 41469.137478241115
       },
       "releasedFrame": 321
     },
@@ -117,41 +118,41 @@
       "name": "a",
       "code": 20,
       "pressed": {
-        "instructions": 7684000000,
-        "modeledMs": 53413.5819226857
+        "instructions": 7604000000,
+        "modeledMs": 52858.026367130136
       },
       "pressedFrame": 384,
       "released": {
-        "instructions": 7724000000,
-        "modeledMs": 53691.35970046348
+        "instructions": 7644000000,
+        "modeledMs": 53135.80414490792
       },
-      "releasedFrame": 387
+      "releasedFrame": 388
     },
     {
       "name": "right",
       "code": 17,
       "pressed": {
-        "instructions": 14404000000,
-        "modeledMs": 100080.24858934928
+        "instructions": 14244000000,
+        "modeledMs": 98969.13747823828
       },
-      "pressedFrame": 787,
+      "pressedFrame": 786,
       "released": {
-        "instructions": 14444000000,
-        "modeledMs": 100358.02636712704
+        "instructions": 14264000000,
+        "modeledMs": 99108.02636712715
       },
-      "releasedFrame": 792
+      "releasedFrame": 789
     },
     {
       "name": "a",
       "code": 20,
       "pressed": {
-        "instructions": 14604000000,
-        "modeledMs": 101469.13747823804
+        "instructions": 14444000000,
+        "modeledMs": 100358.02636712704
       },
       "pressedFrame": 817,
       "released": {
-        "instructions": 14624000000,
-        "modeledMs": 101608.02636712692
+        "instructions": 14464000000,
+        "modeledMs": 100496.91525601591
       },
       "releasedFrame": 820
     },
@@ -159,30 +160,30 @@
       "name": "down",
       "code": 19,
       "pressed": {
-        "instructions": 14864000000,
-        "modeledMs": 103274.69303379343
+        "instructions": 14704000000,
+        "modeledMs": 102163.58192268242
       },
-      "pressedFrame": 846,
+      "pressedFrame": 848,
       "released": {
-        "instructions": 14884000000,
-        "modeledMs": 103413.58192268231
+        "instructions": 14744000000,
+        "modeledMs": 102441.35970046018
       },
-      "releasedFrame": 849
+      "releasedFrame": 853
     }
   ],
   "stages": [
     {
       "stage": "title",
-      "instructions": 5144000000,
-      "modeledMs": 35774.693033796604,
+      "instructions": 5104000000,
+      "modeledMs": 35496.91525601882,
       "state": {
         "frame": 250,
-        "pc": 18791,
+        "pc": 26284,
         "pad": 0,
         "pending": 0,
         "failure": 0
       },
-      "sha256": "4a6801297e9b4fa7cff666b5c14cb874190fd896c6bbc5bc51a1149bca04041a",
+      "sha256": "8673c46f057ff7dad0ef90feb2e16c1933b85e69883e0e96cab1e5b569b36410",
       "sprites": [
         [
           37,
@@ -211,17 +212,17 @@
         ],
         [
           49,
-          96,
+          97,
           5
         ],
         [
           49,
-          104,
+          105,
           7
         ],
         [
           49,
-          112,
+          113,
           8
         ],
         [
@@ -348,11 +349,11 @@
     },
     {
       "stage": "start",
-      "instructions": 5984000000,
-      "modeledMs": 41608.026367130005,
+      "instructions": 5924000000,
+      "modeledMs": 41191.359700463334,
       "state": {
-        "frame": 318,
-        "pc": 25847,
+        "frame": 317,
+        "pc": 25833,
         "pad": 0,
         "pending": 0,
         "failure": 0
@@ -523,11 +524,11 @@
     },
     {
       "stage": "confirm",
-      "instructions": 7684000000,
-      "modeledMs": 53413.5819226857,
+      "instructions": 7604000000,
+      "modeledMs": 52858.026367130136,
       "state": {
         "frame": 384,
-        "pc": 25828,
+        "pc": 12077,
         "pad": 0,
         "pending": 0,
         "failure": 0
@@ -698,8 +699,8 @@
     },
     {
       "stage": "second-confirm",
-      "instructions": 9784000000,
-      "modeledMs": 67996.91525601894,
+      "instructions": 9664000000,
+      "modeledMs": 67163.58192268568,
       "state": {
         "frame": 486,
         "pc": 22004,
@@ -873,11 +874,11 @@
     },
     {
       "stage": "board",
-      "instructions": 14404000000,
-      "modeledMs": 100080.24858934928,
+      "instructions": 14244000000,
+      "modeledMs": 98969.13747823828,
       "state": {
-        "frame": 787,
-        "pc": 25700,
+        "frame": 786,
+        "pc": 26328,
         "pad": 0,
         "pending": 0,
         "failure": 0
@@ -1048,11 +1049,11 @@
     },
     {
       "stage": "piece-right",
-      "instructions": 14604000000,
-      "modeledMs": 101469.13747823804,
+      "instructions": 14444000000,
+      "modeledMs": 100358.02636712704,
       "state": {
         "frame": 817,
-        "pc": 26304,
+        "pc": 26084,
         "pad": 0,
         "pending": 0,
         "failure": 0
@@ -1223,11 +1224,11 @@
     },
     {
       "stage": "piece-rotate",
-      "instructions": 14864000000,
-      "modeledMs": 103274.69303379343,
+      "instructions": 14704000000,
+      "modeledMs": 102163.58192268242,
       "state": {
-        "frame": 846,
-        "pc": 26075,
+        "frame": 848,
+        "pc": 26011,
         "pad": 0,
         "pending": 0,
         "failure": 0
@@ -1398,19 +1399,19 @@
     },
     {
       "stage": "piece-drop",
-      "instructions": 15064000000,
-      "modeledMs": 104663.58192268219,
+      "instructions": 14904000000,
+      "modeledMs": 103552.47081157118,
       "state": {
-        "frame": 878,
-        "pc": 17965,
+        "frame": 879,
+        "pc": 25700,
         "pad": 0,
         "pending": 0,
         "failure": 0
       },
-      "sha256": "7ada65d571868eb3bcab5cbad5f05aa9a108f52262012868c61d7dc08fc7f60f",
+      "sha256": "569a63bbd3cb15609c825551a264e60bd437419d8afbbd3abdf89e063f3f083b",
       "sprites": [
         [
-          47,
+          55,
           160,
           5
         ],
@@ -1573,14 +1574,14 @@
     }
   ],
   "state": {
-    "frame": 878,
-    "pc": 17965,
+    "frame": 879,
+    "pc": 25700,
     "pad": 0,
     "pending": 0,
     "failure": 0
   },
   "time": {
-    "instructions": 15064000000,
-    "modeledMs": 104663.58192268219
+    "instructions": 14904000000,
+    "modeledMs": 103552.47081157118
   }
 }

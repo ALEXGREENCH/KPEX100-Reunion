@@ -4,6 +4,25 @@
   "revision": "main",
   "artifacts": [
     {
+      "id": "petris-background-cache",
+      "title": "Petris · кэш фона и замеры Kingston",
+      "category": "Игры и игровые сборки",
+      "description": "Две версии SGS, исходники, контрольные состояния и кадры. Работа VM ниже на 2,01%; на отдельном нейтральном участке Kingston — на 3,50% ARM-инструкций. Движение и поворот проверены через прошивку. Физический FPS не измерялся.",
+      "sources": [
+        {
+          "label": "Методика, ввод и воспроизведение Reunion",
+          "url": "https://github.com/ALEXGREENCH/KPEX100-Reunion/blob/main/doc/petris-background-cache.md"
+        },
+        {
+          "label": "Petris — bbbbbr",
+          "url": "https://bbbbbr.itch.io/petris"
+        }
+      ],
+      "repositoryPath": "research/archives/Petris-Background-Cache-Verification.zip",
+      "bytes": 11065960,
+      "sha256": "f47a370d1bfc255dd262b0d5b68fac1692babc080d04a26bad839e260269cd98"
+    },
+    {
       "id": "kingston-callback-clock",
       "title": "Kingston 2.12 · GetTick внутри callback",
       "category": "Прошивки и аппаратные проверки",
@@ -3066,6 +3085,10 @@
     }
   ],
   "reports": [
+    {
+      "title": "Petris: кэш фона, ARM-замер и проверка ввода",
+      "repositoryPath": "doc/petris-background-cache.md"
+    },
     {
       "title": "Kingston 2.12: GetTick и короткие нажатия Petris",
       "repositoryPath": "doc/kingston-callback-clock.md"
